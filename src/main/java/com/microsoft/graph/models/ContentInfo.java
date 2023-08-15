@@ -21,7 +21,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      */
     private String identifier;
     /**
-     * Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName.
+     * Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIPLabelGUID_PropName.
      */
     private java.util.List<KeyValuePair> metadata;
     /**
@@ -36,7 +36,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new contentInfo and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ContentInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a contentInfo
      */
-    @javax.annotation.Nonnull
-    public static ContentInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ContentInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ContentInfo();
     }
@@ -54,7 +54,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("format", (n) -> { this.setFormat(n.getEnumValue(ContentFormat.class)); });
@@ -76,7 +76,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * Gets the format property value. The format property
      * @return a contentFormat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ContentFormat getFormat() {
         return this.format;
     }
@@ -84,15 +84,15 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * Gets the identifier property value. Identifier used for Azure Information Protection Analytics.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIdentifier() {
         return this.identifier;
     }
     /**
-     * Gets the metadata property value. Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName.
+     * Gets the metadata property value. Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIPLabelGUID_PropName.
      * @return a keyValuePair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getMetadata() {
         return this.metadata;
     }
@@ -100,7 +100,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -108,7 +108,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * Gets the state property value. The state property
      * @return a contentState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ContentState getState() {
         return this.state;
     }
@@ -117,8 +117,8 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("format", this.getFormat());
         writer.writeStringValue("identifier", this.getIdentifier());
@@ -129,11 +129,11 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the format property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFormat(@javax.annotation.Nullable final ContentFormat value) {
+    @jakarta.annotation.Nonnull
+    public void setFormat(@jakarta.annotation.Nullable final ContentFormat value) {
         this.format = value;
     }
     /**
@@ -150,26 +150,26 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the identifier property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentifier(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentifier(@jakarta.annotation.Nullable final String value) {
         this.identifier = value;
     }
     /**
-     * Sets the metadata property value. Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName.
+     * Sets the metadata property value. Existing Microsoft Purview Information Protection metadata is passed as key/value pairs, where the key is the MSIPLabelGUID_PropName.
      * @param value Value to set for the metadata property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMetadata(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
+    @jakarta.annotation.Nonnull
+    public void setMetadata(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this.metadata = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -177,8 +177,8 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final ContentState value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final ContentState value) {
         this.state = value;
     }
 }

@@ -22,7 +22,7 @@ public class DeliveryOptimizationBandwidthHoursWithPercentage extends DeliveryOp
      * Instantiates a new deliveryOptimizationBandwidthHoursWithPercentage and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeliveryOptimizationBandwidthHoursWithPercentage() {
         super();
         this.setOdataType("#microsoft.graph.deliveryOptimizationBandwidthHoursWithPercentage");
@@ -32,8 +32,8 @@ public class DeliveryOptimizationBandwidthHoursWithPercentage extends DeliveryOp
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deliveryOptimizationBandwidthHoursWithPercentage
      */
-    @javax.annotation.Nonnull
-    public static DeliveryOptimizationBandwidthHoursWithPercentage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeliveryOptimizationBandwidthHoursWithPercentage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeliveryOptimizationBandwidthHoursWithPercentage();
     }
@@ -41,7 +41,7 @@ public class DeliveryOptimizationBandwidthHoursWithPercentage extends DeliveryOp
      * Gets the bandwidthBackgroundPercentageHours property value. Background download percentage hours.
      * @return a deliveryOptimizationBandwidthBusinessHoursLimit
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeliveryOptimizationBandwidthBusinessHoursLimit getBandwidthBackgroundPercentageHours() {
         return this.bandwidthBackgroundPercentageHours;
     }
@@ -49,7 +49,7 @@ public class DeliveryOptimizationBandwidthHoursWithPercentage extends DeliveryOp
      * Gets the bandwidthForegroundPercentageHours property value. Foreground download percentage hours.
      * @return a deliveryOptimizationBandwidthBusinessHoursLimit
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeliveryOptimizationBandwidthBusinessHoursLimit getBandwidthForegroundPercentageHours() {
         return this.bandwidthForegroundPercentageHours;
     }
@@ -57,7 +57,7 @@ public class DeliveryOptimizationBandwidthHoursWithPercentage extends DeliveryOp
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("bandwidthBackgroundPercentageHours", (n) -> { this.setBandwidthBackgroundPercentageHours(n.getObjectValue(DeliveryOptimizationBandwidthBusinessHoursLimit::createFromDiscriminatorValue)); });
@@ -69,8 +69,8 @@ public class DeliveryOptimizationBandwidthHoursWithPercentage extends DeliveryOp
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("bandwidthBackgroundPercentageHours", this.getBandwidthBackgroundPercentageHours());
@@ -81,8 +81,8 @@ public class DeliveryOptimizationBandwidthHoursWithPercentage extends DeliveryOp
      * @param value Value to set for the bandwidthBackgroundPercentageHours property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBandwidthBackgroundPercentageHours(@javax.annotation.Nullable final DeliveryOptimizationBandwidthBusinessHoursLimit value) {
+    @jakarta.annotation.Nonnull
+    public void setBandwidthBackgroundPercentageHours(@jakarta.annotation.Nullable final DeliveryOptimizationBandwidthBusinessHoursLimit value) {
         this.bandwidthBackgroundPercentageHours = value;
     }
     /**
@@ -90,8 +90,8 @@ public class DeliveryOptimizationBandwidthHoursWithPercentage extends DeliveryOp
      * @param value Value to set for the bandwidthForegroundPercentageHours property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBandwidthForegroundPercentageHours(@javax.annotation.Nullable final DeliveryOptimizationBandwidthBusinessHoursLimit value) {
+    @jakarta.annotation.Nonnull
+    public void setBandwidthForegroundPercentageHours(@jakarta.annotation.Nullable final DeliveryOptimizationBandwidthBusinessHoursLimit value) {
         this.bandwidthForegroundPercentageHours = value;
     }
 }

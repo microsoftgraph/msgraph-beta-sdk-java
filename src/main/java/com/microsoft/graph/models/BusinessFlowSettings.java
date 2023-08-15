@@ -15,7 +15,7 @@ public class BusinessFlowSettings extends AccessReviewSettings implements Parsab
      * Instantiates a new businessFlowSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BusinessFlowSettings() {
         super();
         this.setOdataType("#microsoft.graph.businessFlowSettings");
@@ -25,8 +25,8 @@ public class BusinessFlowSettings extends AccessReviewSettings implements Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a businessFlowSettings
      */
-    @javax.annotation.Nonnull
-    public static BusinessFlowSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BusinessFlowSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BusinessFlowSettings();
     }
@@ -34,7 +34,7 @@ public class BusinessFlowSettings extends AccessReviewSettings implements Parsab
      * Gets the durationInDays property value. The durationInDays property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDurationInDays() {
         return this.durationInDays;
     }
@@ -42,7 +42,7 @@ public class BusinessFlowSettings extends AccessReviewSettings implements Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("durationInDays", (n) -> { this.setDurationInDays(n.getIntegerValue()); });
@@ -53,8 +53,8 @@ public class BusinessFlowSettings extends AccessReviewSettings implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("durationInDays", this.getDurationInDays());
@@ -64,8 +64,8 @@ public class BusinessFlowSettings extends AccessReviewSettings implements Parsab
      * @param value Value to set for the durationInDays property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDurationInDays(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setDurationInDays(@jakarta.annotation.Nullable final Integer value) {
         this.durationInDays = value;
     }
 }

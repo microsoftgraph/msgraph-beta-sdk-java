@@ -35,7 +35,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * Instantiates a new deviceManagementConfigurationWindowsSettingApplicability and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationWindowsSettingApplicability() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability");
@@ -45,8 +45,8 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationWindowsSettingApplicability
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationWindowsSettingApplicability createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationWindowsSettingApplicability createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationWindowsSettingApplicability();
     }
@@ -54,7 +54,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * Gets the configurationServiceProviderVersion property value. Version of CSP setting is a part of
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConfigurationServiceProviderVersion() {
         return this.configurationServiceProviderVersion;
     }
@@ -62,7 +62,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("configurationServiceProviderVersion", (n) -> { this.setConfigurationServiceProviderVersion(n.getStringValue()); });
@@ -77,7 +77,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * Gets the maximumSupportedVersion property value. Maximum supported version of Windows
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMaximumSupportedVersion() {
         return this.maximumSupportedVersion;
     }
@@ -85,7 +85,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * Gets the minimumSupportedVersion property value. Minimum supported version of Windows
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMinimumSupportedVersion() {
         return this.minimumSupportedVersion;
     }
@@ -93,7 +93,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * Gets the requiredAzureAdTrustType property value. Required AAD Trust Type
      * @return a deviceManagementConfigurationAzureAdTrustType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationAzureAdTrustType getRequiredAzureAdTrustType() {
         return this.requiredAzureAdTrustType;
     }
@@ -101,7 +101,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * Gets the requiresAzureAd property value. AzureAD setting requirement
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequiresAzureAd() {
         return this.requiresAzureAd;
     }
@@ -109,7 +109,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * Gets the windowsSkus property value. List of Windows SKUs that the setting is applicable for
      * @return a deviceManagementConfigurationWindowsSkus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationWindowsSkus> getWindowsSkus() {
         return this.windowsSkus;
     }
@@ -118,8 +118,8 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("configurationServiceProviderVersion", this.getConfigurationServiceProviderVersion());
@@ -134,8 +134,8 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * @param value Value to set for the configurationServiceProviderVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigurationServiceProviderVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setConfigurationServiceProviderVersion(@jakarta.annotation.Nullable final String value) {
         this.configurationServiceProviderVersion = value;
     }
     /**
@@ -143,8 +143,8 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * @param value Value to set for the maximumSupportedVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaximumSupportedVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMaximumSupportedVersion(@jakarta.annotation.Nullable final String value) {
         this.maximumSupportedVersion = value;
     }
     /**
@@ -152,8 +152,8 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * @param value Value to set for the minimumSupportedVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumSupportedVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMinimumSupportedVersion(@jakarta.annotation.Nullable final String value) {
         this.minimumSupportedVersion = value;
     }
     /**
@@ -161,8 +161,8 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * @param value Value to set for the requiredAzureAdTrustType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequiredAzureAdTrustType(@javax.annotation.Nullable final DeviceManagementConfigurationAzureAdTrustType value) {
+    @jakarta.annotation.Nonnull
+    public void setRequiredAzureAdTrustType(@jakarta.annotation.Nullable final DeviceManagementConfigurationAzureAdTrustType value) {
         this.requiredAzureAdTrustType = value;
     }
     /**
@@ -170,8 +170,8 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * @param value Value to set for the requiresAzureAd property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequiresAzureAd(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRequiresAzureAd(@jakarta.annotation.Nullable final Boolean value) {
         this.requiresAzureAd = value;
     }
     /**
@@ -179,8 +179,8 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * @param value Value to set for the windowsSkus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindowsSkus(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationWindowsSkus> value) {
+    @jakarta.annotation.Nonnull
+    public void setWindowsSkus(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationWindowsSkus> value) {
         this.windowsSkus = value;
     }
 }

@@ -70,15 +70,21 @@ public enum RemoteAction implements ValuedEnum {
     /** Add device action of RotateLocalAdminPassword */
     RotateLocalAdminPassword("rotateLocalAdminPassword"),
     /** Evolvable enumeration sentinel value. Do not use. */
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    /** Add device action of Remote Help Launch */
+    LaunchRemoteHelp("launchRemoteHelp"),
+    /** Revoke all Apple Vpp licenses for a device */
+    RevokeAppleVppLicenses("revokeAppleVppLicenses"),
+    /** Indicate IT Admin initiates an action to remove devices from Device Firmware Configuration Interface management */
+    RemoveDeviceFirmwareConfigurationInterfaceManagement("removeDeviceFirmwareConfigurationInterfaceManagement");
     public final String value;
     RemoteAction(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static RemoteAction forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static RemoteAction forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;
@@ -113,6 +119,9 @@ public enum RemoteAction implements ValuedEnum {
             case "initiateOnDemandProactiveRemediation": return InitiateOnDemandProactiveRemediation;
             case "rotateLocalAdminPassword": return RotateLocalAdminPassword;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "launchRemoteHelp": return LaunchRemoteHelp;
+            case "revokeAppleVppLicenses": return RevokeAppleVppLicenses;
+            case "removeDeviceFirmwareConfigurationInterfaceManagement": return RemoveDeviceFirmwareConfigurationInterfaceManagement;
             default: return null;
         }
     }

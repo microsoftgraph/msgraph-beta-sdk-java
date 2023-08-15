@@ -42,7 +42,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * Instantiates a new windowsPhone81CertificateProfileBase and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsPhone81CertificateProfileBase() {
         super();
         this.setOdataType("#microsoft.graph.windowsPhone81CertificateProfileBase");
@@ -52,8 +52,8 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsPhone81CertificateProfileBase
      */
-    @javax.annotation.Nonnull
-    public static WindowsPhone81CertificateProfileBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsPhone81CertificateProfileBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -68,7 +68,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @return a certificateValidityPeriodScale
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CertificateValidityPeriodScale getCertificateValidityPeriodScale() {
         return this.certificateValidityPeriodScale;
     }
@@ -76,7 +76,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * Gets the certificateValidityPeriodValue property value. Value for the Certificate Validtiy Period.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCertificateValidityPeriodValue() {
         return this.certificateValidityPeriodValue;
     }
@@ -84,7 +84,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * Gets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      * @return a extendedKeyUsage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ExtendedKeyUsage> getExtendedKeyUsages() {
         return this.extendedKeyUsages;
     }
@@ -92,7 +92,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("certificateValidityPeriodScale", (n) -> { this.setCertificateValidityPeriodScale(n.getEnumValue(CertificateValidityPeriodScale.class)); });
@@ -108,7 +108,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * Gets the keyStorageProvider property value. Key Storage Provider (KSP) Import Options.
      * @return a keyStorageProviderOption
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public KeyStorageProviderOption getKeyStorageProvider() {
         return this.keyStorageProvider;
     }
@@ -116,7 +116,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * Gets the renewalThresholdPercentage property value. Certificate renewal threshold percentage.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRenewalThresholdPercentage() {
         return this.renewalThresholdPercentage;
     }
@@ -124,7 +124,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * Gets the subjectAlternativeNameType property value. Subject Alternative Name Options.
      * @return a subjectAlternativeNameType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectAlternativeNameType getSubjectAlternativeNameType() {
         return this.subjectAlternativeNameType;
     }
@@ -132,7 +132,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * Gets the subjectNameFormat property value. Subject Name Format Options.
      * @return a subjectNameFormat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectNameFormat getSubjectNameFormat() {
         return this.subjectNameFormat;
     }
@@ -141,8 +141,8 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("certificateValidityPeriodScale", this.getCertificateValidityPeriodScale());
@@ -158,8 +158,8 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * @param value Value to set for the certificateValidityPeriodScale property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateValidityPeriodScale(@javax.annotation.Nullable final CertificateValidityPeriodScale value) {
+    @jakarta.annotation.Nonnull
+    public void setCertificateValidityPeriodScale(@jakarta.annotation.Nullable final CertificateValidityPeriodScale value) {
         this.certificateValidityPeriodScale = value;
     }
     /**
@@ -167,8 +167,8 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * @param value Value to set for the certificateValidityPeriodValue property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateValidityPeriodValue(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setCertificateValidityPeriodValue(@jakarta.annotation.Nullable final Integer value) {
         this.certificateValidityPeriodValue = value;
     }
     /**
@@ -176,8 +176,8 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * @param value Value to set for the extendedKeyUsages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExtendedKeyUsages(@javax.annotation.Nullable final java.util.List<ExtendedKeyUsage> value) {
+    @jakarta.annotation.Nonnull
+    public void setExtendedKeyUsages(@jakarta.annotation.Nullable final java.util.List<ExtendedKeyUsage> value) {
         this.extendedKeyUsages = value;
     }
     /**
@@ -185,8 +185,8 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * @param value Value to set for the keyStorageProvider property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKeyStorageProvider(@javax.annotation.Nullable final KeyStorageProviderOption value) {
+    @jakarta.annotation.Nonnull
+    public void setKeyStorageProvider(@jakarta.annotation.Nullable final KeyStorageProviderOption value) {
         this.keyStorageProvider = value;
     }
     /**
@@ -194,8 +194,8 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * @param value Value to set for the renewalThresholdPercentage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRenewalThresholdPercentage(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setRenewalThresholdPercentage(@jakarta.annotation.Nullable final Integer value) {
         this.renewalThresholdPercentage = value;
     }
     /**
@@ -203,8 +203,8 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * @param value Value to set for the subjectAlternativeNameType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubjectAlternativeNameType(@javax.annotation.Nullable final SubjectAlternativeNameType value) {
+    @jakarta.annotation.Nonnull
+    public void setSubjectAlternativeNameType(@jakarta.annotation.Nullable final SubjectAlternativeNameType value) {
         this.subjectAlternativeNameType = value;
     }
     /**
@@ -212,8 +212,8 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * @param value Value to set for the subjectNameFormat property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubjectNameFormat(@javax.annotation.Nullable final SubjectNameFormat value) {
+    @jakarta.annotation.Nonnull
+    public void setSubjectNameFormat(@jakarta.annotation.Nullable final SubjectNameFormat value) {
         this.subjectNameFormat = value;
     }
 }

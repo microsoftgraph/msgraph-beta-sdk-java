@@ -35,7 +35,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * Instantiates a new macOSAssociatedDomainsItem and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSAssociatedDomainsItem() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -44,8 +44,8 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a macOSAssociatedDomainsItem
      */
-    @javax.annotation.Nonnull
-    public static MacOSAssociatedDomainsItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MacOSAssociatedDomainsItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MacOSAssociatedDomainsItem();
     }
@@ -53,7 +53,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -61,7 +61,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * Gets the applicationIdentifier property value. The application identifier of the app to associate domains with.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
@@ -69,7 +69,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * Gets the directDownloadsEnabled property value. Determines whether data should be downloaded directly or via a CDN.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDirectDownloadsEnabled() {
         return this.directDownloadsEnabled;
     }
@@ -77,7 +77,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * Gets the domains property value. The list of domains to associate.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getDomains() {
         return this.domains;
     }
@@ -85,7 +85,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("applicationIdentifier", (n) -> { this.setApplicationIdentifier(n.getStringValue()); });
@@ -98,7 +98,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -107,8 +107,8 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("applicationIdentifier", this.getApplicationIdentifier());
         writer.writeBooleanValue("directDownloadsEnabled", this.getDirectDownloadsEnabled());
@@ -118,11 +118,11 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -130,8 +130,8 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the applicationIdentifier property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicationIdentifier(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicationIdentifier(@jakarta.annotation.Nullable final String value) {
         this.applicationIdentifier = value;
     }
     /**
@@ -139,8 +139,8 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the directDownloadsEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDirectDownloadsEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDirectDownloadsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.directDownloadsEnabled = value;
     }
     /**
@@ -148,17 +148,17 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the domains property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDomains(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.domains = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

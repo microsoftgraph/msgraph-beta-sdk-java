@@ -47,7 +47,7 @@ public class Workspace extends Place implements Parsable {
      * Instantiates a new workspace and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Workspace() {
         super();
         this.setOdataType("#microsoft.graph.workspace");
@@ -57,8 +57,8 @@ public class Workspace extends Place implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workspace
      */
-    @javax.annotation.Nonnull
-    public static Workspace createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Workspace createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Workspace();
     }
@@ -66,7 +66,7 @@ public class Workspace extends Place implements Parsable {
      * Gets the building property value. Specifies the building name or building number that the workspace is in.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBuilding() {
         return this.building;
     }
@@ -74,7 +74,7 @@ public class Workspace extends Place implements Parsable {
      * Gets the capacity property value. Specifies the capacity of the workspace.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCapacity() {
         return this.capacity;
     }
@@ -82,7 +82,7 @@ public class Workspace extends Place implements Parsable {
      * Gets the emailAddress property value. Email address of the workspace.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmailAddress() {
         return this.emailAddress;
     }
@@ -90,7 +90,7 @@ public class Workspace extends Place implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("building", (n) -> { this.setBuilding(n.getStringValue()); });
@@ -108,7 +108,7 @@ public class Workspace extends Place implements Parsable {
      * Gets the floorLabel property value. Specifies a descriptive label for the floor, for example, P.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFloorLabel() {
         return this.floorLabel;
     }
@@ -116,7 +116,7 @@ public class Workspace extends Place implements Parsable {
      * Gets the floorNumber property value. Specifies the floor number that the workspace is on.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFloorNumber() {
         return this.floorNumber;
     }
@@ -124,7 +124,7 @@ public class Workspace extends Place implements Parsable {
      * Gets the isWheelChairAccessible property value. Specifies whether the workspace is wheelchair accessible.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsWheelChairAccessible() {
         return this.isWheelChairAccessible;
     }
@@ -132,7 +132,7 @@ public class Workspace extends Place implements Parsable {
      * Gets the label property value. Specifies a descriptive label for the workspace, for example, a number or name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLabel() {
         return this.label;
     }
@@ -140,7 +140,7 @@ public class Workspace extends Place implements Parsable {
      * Gets the nickname property value. Specifies a nickname for the workspace, for example, 'quiet workspace'.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNickname() {
         return this.nickname;
     }
@@ -148,7 +148,7 @@ public class Workspace extends Place implements Parsable {
      * Gets the tags property value. Specifies additional features of the workspace, for example, details like the type of view or furniture type.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
         return this.tags;
     }
@@ -157,8 +157,8 @@ public class Workspace extends Place implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("building", this.getBuilding());
@@ -176,8 +176,8 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the building property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBuilding(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setBuilding(@jakarta.annotation.Nullable final String value) {
         this.building = value;
     }
     /**
@@ -185,8 +185,8 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the capacity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCapacity(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setCapacity(@jakarta.annotation.Nullable final Integer value) {
         this.capacity = value;
     }
     /**
@@ -194,8 +194,8 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.emailAddress = value;
     }
     /**
@@ -203,8 +203,8 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the floorLabel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFloorLabel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFloorLabel(@jakarta.annotation.Nullable final String value) {
         this.floorLabel = value;
     }
     /**
@@ -212,8 +212,8 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the floorNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFloorNumber(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setFloorNumber(@jakarta.annotation.Nullable final Integer value) {
         this.floorNumber = value;
     }
     /**
@@ -221,8 +221,8 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the isWheelChairAccessible property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsWheelChairAccessible(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsWheelChairAccessible(@jakarta.annotation.Nullable final Boolean value) {
         this.isWheelChairAccessible = value;
     }
     /**
@@ -230,8 +230,8 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the label property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLabel(@jakarta.annotation.Nullable final String value) {
         this.label = value;
     }
     /**
@@ -239,8 +239,8 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the nickname property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNickname(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNickname(@jakarta.annotation.Nullable final String value) {
         this.nickname = value;
     }
     /**
@@ -248,8 +248,8 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.tags = value;
     }
 }

@@ -56,7 +56,7 @@ public class BaseItem extends Entity implements Parsable {
      * Instantiates a new baseItem and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BaseItem() {
         super();
     }
@@ -65,13 +65,14 @@ public class BaseItem extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a baseItem
      */
-    @javax.annotation.Nonnull
-    public static BaseItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BaseItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.baseSitePage": return new BaseSitePage();
                 case "#microsoft.graph.drive": return new Drive();
                 case "#microsoft.graph.driveItem": return new DriveItem();
                 case "#microsoft.graph.list": return new List();
@@ -87,7 +88,7 @@ public class BaseItem extends Entity implements Parsable {
      * Gets the createdBy property value. Identity of the user, device, or application which created the item. Read-only.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -95,7 +96,7 @@ public class BaseItem extends Entity implements Parsable {
      * Gets the createdByUser property value. The createdByUser property
      * @return a user
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public User getCreatedByUser() {
         return this.createdByUser;
     }
@@ -103,7 +104,7 @@ public class BaseItem extends Entity implements Parsable {
      * Gets the createdDateTime property value. Date and time of item creation. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -111,7 +112,7 @@ public class BaseItem extends Entity implements Parsable {
      * Gets the description property value. The description property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -119,7 +120,7 @@ public class BaseItem extends Entity implements Parsable {
      * Gets the eTag property value. ETag for the item. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getETag() {
         return this.eTag;
     }
@@ -127,7 +128,7 @@ public class BaseItem extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -147,7 +148,7 @@ public class BaseItem extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -155,7 +156,7 @@ public class BaseItem extends Entity implements Parsable {
      * Gets the lastModifiedByUser property value. The lastModifiedByUser property
      * @return a user
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public User getLastModifiedByUser() {
         return this.lastModifiedByUser;
     }
@@ -163,7 +164,7 @@ public class BaseItem extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. Date and time the item was last modified. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -171,7 +172,7 @@ public class BaseItem extends Entity implements Parsable {
      * Gets the name property value. The name of the item. Read-write.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -179,7 +180,7 @@ public class BaseItem extends Entity implements Parsable {
      * Gets the parentReference property value. Parent information, if the item has a parent. Read-write.
      * @return a itemReference
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemReference getParentReference() {
         return this.parentReference;
     }
@@ -187,7 +188,7 @@ public class BaseItem extends Entity implements Parsable {
      * Gets the webUrl property value. URL that displays the resource in the browser. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebUrl() {
         return this.webUrl;
     }
@@ -196,8 +197,8 @@ public class BaseItem extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("createdBy", this.getCreatedBy());
@@ -217,8 +218,8 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
@@ -226,8 +227,8 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the createdByUser property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedByUser(@javax.annotation.Nullable final User value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedByUser(@jakarta.annotation.Nullable final User value) {
         this.createdByUser = value;
     }
     /**
@@ -235,8 +236,8 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -244,8 +245,8 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -253,8 +254,8 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the eTag property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setETag(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setETag(@jakarta.annotation.Nullable final String value) {
         this.eTag = value;
     }
     /**
@@ -262,8 +263,8 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
@@ -271,8 +272,8 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedByUser property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedByUser(@javax.annotation.Nullable final User value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedByUser(@jakarta.annotation.Nullable final User value) {
         this.lastModifiedByUser = value;
     }
     /**
@@ -280,8 +281,8 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -289,8 +290,8 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -298,8 +299,8 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the parentReference property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParentReference(@javax.annotation.Nullable final ItemReference value) {
+    @jakarta.annotation.Nonnull
+    public void setParentReference(@jakarta.annotation.Nullable final ItemReference value) {
         this.parentReference = value;
     }
     /**
@@ -307,8 +308,8 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }
 }

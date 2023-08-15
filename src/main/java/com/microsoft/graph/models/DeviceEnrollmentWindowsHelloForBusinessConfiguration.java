@@ -70,7 +70,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * Instantiates a new deviceEnrollmentWindowsHelloForBusinessConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceEnrollmentWindowsHelloForBusinessConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.deviceEnrollmentWindowsHelloForBusinessConfiguration");
@@ -80,8 +80,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceEnrollmentWindowsHelloForBusinessConfiguration
      */
-    @javax.annotation.Nonnull
-    public static DeviceEnrollmentWindowsHelloForBusinessConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceEnrollmentWindowsHelloForBusinessConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceEnrollmentWindowsHelloForBusinessConfiguration();
     }
@@ -89,7 +89,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * Gets the enhancedBiometricsState property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getEnhancedBiometricsState() {
         return this.enhancedBiometricsState;
     }
@@ -97,7 +97,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * Gets the enhancedSignInSecurity property value. Setting to configure Enahcned sign-in security. Default is enabled on one secure modality (face or fingerprint)
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getEnhancedSignInSecurity() {
         return this.enhancedSignInSecurity;
     }
@@ -105,7 +105,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("enhancedBiometricsState", (n) -> { this.setEnhancedBiometricsState(n.getEnumValue(Enablement.class)); });
@@ -128,7 +128,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * Gets the pinExpirationInDays property value. Controls the period of time (in days) that a PIN can be used before the system requires the user to change it. This must be set between 0 and 730, inclusive. If set to 0, the user's PIN will never expire
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPinExpirationInDays() {
         return this.pinExpirationInDays;
     }
@@ -136,7 +136,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * Gets the pinLowercaseCharactersUsage property value. Windows Hello for Business pin usage options
      * @return a windowsHelloForBusinessPinUsage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsHelloForBusinessPinUsage getPinLowercaseCharactersUsage() {
         return this.pinLowercaseCharactersUsage;
     }
@@ -144,7 +144,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * Gets the pinMaximumLength property value. Controls the maximum number of characters allowed for the Windows Hello for Business PIN. This value must be between 4 and 127, inclusive. This value must be greater than or equal to the value set for the minimum PIN.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPinMaximumLength() {
         return this.pinMaximumLength;
     }
@@ -152,7 +152,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * Gets the pinMinimumLength property value. Controls the minimum number of characters required for the Windows Hello for Business PIN.  This value must be between 4 and 127, inclusive, and less than or equal to the value set for the maximum PIN.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPinMinimumLength() {
         return this.pinMinimumLength;
     }
@@ -160,7 +160,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * Gets the pinPreviousBlockCount property value. Controls the ability to prevent users from using past PINs. This must be set between 0 and 50, inclusive, and the current PIN of the user is included in that count. If set to 0, previous PINs are not stored. PIN history is not preserved through a PIN reset.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPinPreviousBlockCount() {
         return this.pinPreviousBlockCount;
     }
@@ -168,7 +168,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * Gets the pinSpecialCharactersUsage property value. Windows Hello for Business pin usage options
      * @return a windowsHelloForBusinessPinUsage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsHelloForBusinessPinUsage getPinSpecialCharactersUsage() {
         return this.pinSpecialCharactersUsage;
     }
@@ -176,7 +176,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * Gets the pinUppercaseCharactersUsage property value. Windows Hello for Business pin usage options
      * @return a windowsHelloForBusinessPinUsage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsHelloForBusinessPinUsage getPinUppercaseCharactersUsage() {
         return this.pinUppercaseCharactersUsage;
     }
@@ -184,7 +184,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * Gets the remotePassportEnabled property value. Controls the use of Remote Windows Hello for Business. Remote Windows Hello for Business provides the ability for a portable, registered device to be usable as a companion for desktop authentication. The desktop must be Azure AD joined and the companion device must have a Windows Hello for Business PIN.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRemotePassportEnabled() {
         return this.remotePassportEnabled;
     }
@@ -192,7 +192,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * Gets the securityDeviceRequired property value. Controls whether to require a Trusted Platform Module (TPM) for provisioning Windows Hello for Business. A TPM provides an additional security benefit in that data stored on it cannot be used on other devices. If set to False, all devices can provision Windows Hello for Business even if there is not a usable TPM.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSecurityDeviceRequired() {
         return this.securityDeviceRequired;
     }
@@ -200,7 +200,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * Gets the securityKeyForSignIn property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getSecurityKeyForSignIn() {
         return this.securityKeyForSignIn;
     }
@@ -208,7 +208,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * Gets the state property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getState() {
         return this.state;
     }
@@ -216,7 +216,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * Gets the unlockWithBiometricsEnabled property value. Controls the use of biometric gestures, such as face and fingerprint, as an alternative to the Windows Hello for Business PIN.  If set to False, biometric gestures are not allowed. Users must still configure a PIN as a backup in case of failures.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getUnlockWithBiometricsEnabled() {
         return this.unlockWithBiometricsEnabled;
     }
@@ -225,8 +225,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("enhancedBiometricsState", this.getEnhancedBiometricsState());
@@ -249,8 +249,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the enhancedBiometricsState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnhancedBiometricsState(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setEnhancedBiometricsState(@jakarta.annotation.Nullable final Enablement value) {
         this.enhancedBiometricsState = value;
     }
     /**
@@ -258,8 +258,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the enhancedSignInSecurity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnhancedSignInSecurity(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setEnhancedSignInSecurity(@jakarta.annotation.Nullable final Integer value) {
         this.enhancedSignInSecurity = value;
     }
     /**
@@ -267,8 +267,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinExpirationInDays property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPinExpirationInDays(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPinExpirationInDays(@jakarta.annotation.Nullable final Integer value) {
         this.pinExpirationInDays = value;
     }
     /**
@@ -276,8 +276,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinLowercaseCharactersUsage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPinLowercaseCharactersUsage(@javax.annotation.Nullable final WindowsHelloForBusinessPinUsage value) {
+    @jakarta.annotation.Nonnull
+    public void setPinLowercaseCharactersUsage(@jakarta.annotation.Nullable final WindowsHelloForBusinessPinUsage value) {
         this.pinLowercaseCharactersUsage = value;
     }
     /**
@@ -285,8 +285,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinMaximumLength property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPinMaximumLength(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPinMaximumLength(@jakarta.annotation.Nullable final Integer value) {
         this.pinMaximumLength = value;
     }
     /**
@@ -294,8 +294,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinMinimumLength property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPinMinimumLength(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPinMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.pinMinimumLength = value;
     }
     /**
@@ -303,8 +303,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinPreviousBlockCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPinPreviousBlockCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPinPreviousBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.pinPreviousBlockCount = value;
     }
     /**
@@ -312,8 +312,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinSpecialCharactersUsage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPinSpecialCharactersUsage(@javax.annotation.Nullable final WindowsHelloForBusinessPinUsage value) {
+    @jakarta.annotation.Nonnull
+    public void setPinSpecialCharactersUsage(@jakarta.annotation.Nullable final WindowsHelloForBusinessPinUsage value) {
         this.pinSpecialCharactersUsage = value;
     }
     /**
@@ -321,8 +321,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinUppercaseCharactersUsage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPinUppercaseCharactersUsage(@javax.annotation.Nullable final WindowsHelloForBusinessPinUsage value) {
+    @jakarta.annotation.Nonnull
+    public void setPinUppercaseCharactersUsage(@jakarta.annotation.Nullable final WindowsHelloForBusinessPinUsage value) {
         this.pinUppercaseCharactersUsage = value;
     }
     /**
@@ -330,8 +330,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the remotePassportEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemotePassportEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRemotePassportEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.remotePassportEnabled = value;
     }
     /**
@@ -339,8 +339,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the securityDeviceRequired property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityDeviceRequired(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSecurityDeviceRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.securityDeviceRequired = value;
     }
     /**
@@ -348,8 +348,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the securityKeyForSignIn property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityKeyForSignIn(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setSecurityKeyForSignIn(@jakarta.annotation.Nullable final Enablement value) {
         this.securityKeyForSignIn = value;
     }
     /**
@@ -357,8 +357,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final Enablement value) {
         this.state = value;
     }
     /**
@@ -366,8 +366,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the unlockWithBiometricsEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnlockWithBiometricsEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setUnlockWithBiometricsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.unlockWithBiometricsEnabled = value;
     }
 }

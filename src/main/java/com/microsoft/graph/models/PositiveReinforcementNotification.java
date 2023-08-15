@@ -15,7 +15,7 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
      * Instantiates a new positiveReinforcementNotification and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PositiveReinforcementNotification() {
         super();
         this.setOdataType("#microsoft.graph.positiveReinforcementNotification");
@@ -25,8 +25,8 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a positiveReinforcementNotification
      */
-    @javax.annotation.Nonnull
-    public static PositiveReinforcementNotification createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PositiveReinforcementNotification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PositiveReinforcementNotification();
     }
@@ -34,7 +34,7 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
      * Gets the deliveryPreference property value. The deliveryPreference property
      * @return a notificationDeliveryPreference
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public NotificationDeliveryPreference getDeliveryPreference() {
         return this.deliveryPreference;
     }
@@ -42,7 +42,7 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deliveryPreference", (n) -> { this.setDeliveryPreference(n.getEnumValue(NotificationDeliveryPreference.class)); });
@@ -53,8 +53,8 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("deliveryPreference", this.getDeliveryPreference());
@@ -64,8 +64,8 @@ public class PositiveReinforcementNotification extends BaseEndUserNotification i
      * @param value Value to set for the deliveryPreference property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeliveryPreference(@javax.annotation.Nullable final NotificationDeliveryPreference value) {
+    @jakarta.annotation.Nonnull
+    public void setDeliveryPreference(@jakarta.annotation.Nullable final NotificationDeliveryPreference value) {
         this.deliveryPreference = value;
     }
 }

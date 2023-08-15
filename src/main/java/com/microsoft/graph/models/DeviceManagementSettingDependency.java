@@ -31,7 +31,7 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      * Instantiates a new deviceManagementSettingDependency and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementSettingDependency() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -40,8 +40,8 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementSettingDependency
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementSettingDependency createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementSettingDependency createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementSettingDependency();
     }
@@ -49,7 +49,7 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -57,7 +57,7 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      * Gets the constraints property value. Collection of constraints for the dependency setting value
      * @return a deviceManagementConstraint
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConstraint> getConstraints() {
         return this.constraints;
     }
@@ -65,7 +65,7 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      * Gets the definitionId property value. The setting definition ID of the setting depended on
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDefinitionId() {
         return this.definitionId;
     }
@@ -73,7 +73,7 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("constraints", (n) -> { this.setConstraints(n.getCollectionOfObjectValues(DeviceManagementConstraint::createFromDiscriminatorValue)); });
@@ -85,7 +85,7 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -94,8 +94,8 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("constraints", this.getConstraints());
         writer.writeStringValue("definitionId", this.getDefinitionId());
@@ -104,11 +104,11 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -116,8 +116,8 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      * @param value Value to set for the constraints property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConstraints(@javax.annotation.Nullable final java.util.List<DeviceManagementConstraint> value) {
+    @jakarta.annotation.Nonnull
+    public void setConstraints(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConstraint> value) {
         this.constraints = value;
     }
     /**
@@ -125,17 +125,17 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      * @param value Value to set for the definitionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefinitionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.definitionId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

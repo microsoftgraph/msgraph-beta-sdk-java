@@ -16,7 +16,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      */
     private String clientId;
     /**
-     * The client secret for the application obtained when registering the application with the identity provider. The clientSecret has a dependency on responseType. When responseType is code, a secret is required for the auth code exchange.When responseType is id_token the secret is not required because there is no code exchange. The id_token is returned directly from the authorization response. This is write-only. A read operation returns ****.
+     * The client secret for the application obtained when registering the application with the identity provider. The clientSecret has a dependency on responseType. When responseType is code, a secret is required for the auth code exchange.When responseType is idtoken the secret is not required because there is no code exchange. The idtoken is returned directly from the authorization response. This is write-only. A read operation returns .
      */
     private String clientSecret;
     /**
@@ -43,7 +43,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * Instantiates a new openIdConnectIdentityProvider and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OpenIdConnectIdentityProvider() {
         super();
         this.setOdataType("#microsoft.graph.openIdConnectIdentityProvider");
@@ -53,8 +53,8 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a openIdConnectIdentityProvider
      */
-    @javax.annotation.Nonnull
-    public static OpenIdConnectIdentityProvider createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OpenIdConnectIdentityProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OpenIdConnectIdentityProvider();
     }
@@ -62,7 +62,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * Gets the claimsMapping property value. After the OIDC provider sends an ID token back to Azure AD, Azure AD needs to be able to map the claims from the received token to the claims that Azure AD recognizes and uses. This complex type captures that mapping. Required.
      * @return a claimsMapping
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ClaimsMapping getClaimsMapping() {
         return this.claimsMapping;
     }
@@ -70,15 +70,15 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * Gets the clientId property value. The client identifier for the application obtained when registering the application with the identity provider. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClientId() {
         return this.clientId;
     }
     /**
-     * Gets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. The clientSecret has a dependency on responseType. When responseType is code, a secret is required for the auth code exchange.When responseType is id_token the secret is not required because there is no code exchange. The id_token is returned directly from the authorization response. This is write-only. A read operation returns ****.
+     * Gets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. The clientSecret has a dependency on responseType. When responseType is code, a secret is required for the auth code exchange.When responseType is idtoken the secret is not required because there is no code exchange. The idtoken is returned directly from the authorization response. This is write-only. A read operation returns .
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClientSecret() {
         return this.clientSecret;
     }
@@ -86,7 +86,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * Gets the domainHint property value. The domain hint can be used to skip directly to the sign-in page of the specified identity provider, instead of having the user make a selection among the list of available identity providers.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDomainHint() {
         return this.domainHint;
     }
@@ -94,7 +94,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("claimsMapping", (n) -> { this.setClaimsMapping(n.getObjectValue(ClaimsMapping::createFromDiscriminatorValue)); });
@@ -111,7 +111,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * Gets the metadataUrl property value. The URL for the metadata document of the OpenID Connect identity provider. Every OpenID Connect identity provider describes a metadata document that contains most of the information required to perform sign-in. This includes information such as the URLs to use and the location of the service's public signing keys. The OpenID Connect metadata document is always located at an endpoint that ends in .well-known/openid-configuration. Provide the metadata URL for the OpenID Connect identity provider you add. Read-only. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMetadataUrl() {
         return this.metadataUrl;
     }
@@ -119,7 +119,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * Gets the responseMode property value. The responseMode property
      * @return a openIdConnectResponseMode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OpenIdConnectResponseMode getResponseMode() {
         return this.responseMode;
     }
@@ -127,7 +127,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * Gets the responseType property value. The responseType property
      * @return a openIdConnectResponseTypes
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OpenIdConnectResponseTypes getResponseType() {
         return this.responseType;
     }
@@ -135,7 +135,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * Gets the scope property value. Scope defines the information and permissions you are looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users are not able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended, separated by a space. For more details about the scope limitations see RFC6749 Section 3.3. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getScope() {
         return this.scope;
     }
@@ -144,8 +144,8 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("claimsMapping", this.getClaimsMapping());
@@ -162,8 +162,8 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param value Value to set for the claimsMapping property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClaimsMapping(@javax.annotation.Nullable final ClaimsMapping value) {
+    @jakarta.annotation.Nonnull
+    public void setClaimsMapping(@jakarta.annotation.Nullable final ClaimsMapping value) {
         this.claimsMapping = value;
     }
     /**
@@ -171,17 +171,17 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param value Value to set for the clientId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setClientId(@jakarta.annotation.Nullable final String value) {
         this.clientId = value;
     }
     /**
-     * Sets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. The clientSecret has a dependency on responseType. When responseType is code, a secret is required for the auth code exchange.When responseType is id_token the secret is not required because there is no code exchange. The id_token is returned directly from the authorization response. This is write-only. A read operation returns ****.
+     * Sets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. The clientSecret has a dependency on responseType. When responseType is code, a secret is required for the auth code exchange.When responseType is idtoken the secret is not required because there is no code exchange. The idtoken is returned directly from the authorization response. This is write-only. A read operation returns .
      * @param value Value to set for the clientSecret property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientSecret(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setClientSecret(@jakarta.annotation.Nullable final String value) {
         this.clientSecret = value;
     }
     /**
@@ -189,8 +189,8 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param value Value to set for the domainHint property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDomainHint(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDomainHint(@jakarta.annotation.Nullable final String value) {
         this.domainHint = value;
     }
     /**
@@ -198,8 +198,8 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param value Value to set for the metadataUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMetadataUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMetadataUrl(@jakarta.annotation.Nullable final String value) {
         this.metadataUrl = value;
     }
     /**
@@ -207,8 +207,8 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param value Value to set for the responseMode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResponseMode(@javax.annotation.Nullable final OpenIdConnectResponseMode value) {
+    @jakarta.annotation.Nonnull
+    public void setResponseMode(@jakarta.annotation.Nullable final OpenIdConnectResponseMode value) {
         this.responseMode = value;
     }
     /**
@@ -216,8 +216,8 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param value Value to set for the responseType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResponseType(@javax.annotation.Nullable final OpenIdConnectResponseTypes value) {
+    @jakarta.annotation.Nonnull
+    public void setResponseType(@jakarta.annotation.Nullable final OpenIdConnectResponseTypes value) {
         this.responseType = value;
     }
     /**
@@ -225,8 +225,8 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param value Value to set for the scope property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScope(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setScope(@jakarta.annotation.Nullable final String value) {
         this.scope = value;
     }
 }

@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     /**
      * The elevationDuration property
      */
-    private Period elevationDuration;
+    private PeriodAndDuration elevationDuration;
     /**
      * The isMfaOnElevationConfigurable property
      */
@@ -31,7 +31,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     /**
      * The maxElavationDuration property
      */
-    private Period maxElavationDuration;
+    private PeriodAndDuration maxElavationDuration;
     /**
      * The mfaOnElevation property
      */
@@ -39,7 +39,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     /**
      * The minElevationDuration property
      */
-    private Period minElevationDuration;
+    private PeriodAndDuration minElevationDuration;
     /**
      * The notificationToUserOnElevation property
      */
@@ -52,7 +52,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * Instantiates a new privilegedRoleSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrivilegedRoleSettings() {
         super();
     }
@@ -61,8 +61,8 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a privilegedRoleSettings
      */
-    @javax.annotation.Nonnull
-    public static PrivilegedRoleSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrivilegedRoleSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PrivilegedRoleSettings();
     }
@@ -70,7 +70,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * Gets the approvalOnElevation property value. The approvalOnElevation property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getApprovalOnElevation() {
         return this.approvalOnElevation;
     }
@@ -78,33 +78,33 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * Gets the approverIds property value. The approverIds property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getApproverIds() {
         return this.approverIds;
     }
     /**
      * Gets the elevationDuration property value. The elevationDuration property
-     * @return a Period
+     * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
-    public Period getElevationDuration() {
+    @jakarta.annotation.Nullable
+    public PeriodAndDuration getElevationDuration() {
         return this.elevationDuration;
     }
     /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("approvalOnElevation", (n) -> { this.setApprovalOnElevation(n.getBooleanValue()); });
         deserializerMap.put("approverIds", (n) -> { this.setApproverIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("elevationDuration", (n) -> { this.setElevationDuration(n.getPeriodValue()); });
+        deserializerMap.put("elevationDuration", (n) -> { this.setElevationDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("isMfaOnElevationConfigurable", (n) -> { this.setIsMfaOnElevationConfigurable(n.getBooleanValue()); });
         deserializerMap.put("lastGlobalAdmin", (n) -> { this.setLastGlobalAdmin(n.getBooleanValue()); });
-        deserializerMap.put("maxElavationDuration", (n) -> { this.setMaxElavationDuration(n.getPeriodValue()); });
+        deserializerMap.put("maxElavationDuration", (n) -> { this.setMaxElavationDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("mfaOnElevation", (n) -> { this.setMfaOnElevation(n.getBooleanValue()); });
-        deserializerMap.put("minElevationDuration", (n) -> { this.setMinElevationDuration(n.getPeriodValue()); });
+        deserializerMap.put("minElevationDuration", (n) -> { this.setMinElevationDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("notificationToUserOnElevation", (n) -> { this.setNotificationToUserOnElevation(n.getBooleanValue()); });
         deserializerMap.put("ticketingInfoOnElevation", (n) -> { this.setTicketingInfoOnElevation(n.getBooleanValue()); });
         return deserializerMap;
@@ -113,7 +113,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * Gets the isMfaOnElevationConfigurable property value. The isMfaOnElevationConfigurable property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsMfaOnElevationConfigurable() {
         return this.isMfaOnElevationConfigurable;
     }
@@ -121,39 +121,39 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * Gets the lastGlobalAdmin property value. The lastGlobalAdmin property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getLastGlobalAdmin() {
         return this.lastGlobalAdmin;
     }
     /**
      * Gets the maxElavationDuration property value. The maxElavationDuration property
-     * @return a Period
+     * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
-    public Period getMaxElavationDuration() {
+    @jakarta.annotation.Nullable
+    public PeriodAndDuration getMaxElavationDuration() {
         return this.maxElavationDuration;
     }
     /**
      * Gets the mfaOnElevation property value. The mfaOnElevation property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getMfaOnElevation() {
         return this.mfaOnElevation;
     }
     /**
      * Gets the minElevationDuration property value. The minElevationDuration property
-     * @return a Period
+     * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
-    public Period getMinElevationDuration() {
+    @jakarta.annotation.Nullable
+    public PeriodAndDuration getMinElevationDuration() {
         return this.minElevationDuration;
     }
     /**
      * Gets the notificationToUserOnElevation property value. The notificationToUserOnElevation property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getNotificationToUserOnElevation() {
         return this.notificationToUserOnElevation;
     }
@@ -161,7 +161,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * Gets the ticketingInfoOnElevation property value. The ticketingInfoOnElevation property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getTicketingInfoOnElevation() {
         return this.ticketingInfoOnElevation;
     }
@@ -170,18 +170,18 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("approvalOnElevation", this.getApprovalOnElevation());
         writer.writeCollectionOfPrimitiveValues("approverIds", this.getApproverIds());
-        writer.writePeriodValue("elevationDuration", this.getElevationDuration());
+        writer.writePeriodAndDurationValue("elevationDuration", this.getElevationDuration());
         writer.writeBooleanValue("isMfaOnElevationConfigurable", this.getIsMfaOnElevationConfigurable());
         writer.writeBooleanValue("lastGlobalAdmin", this.getLastGlobalAdmin());
-        writer.writePeriodValue("maxElavationDuration", this.getMaxElavationDuration());
+        writer.writePeriodAndDurationValue("maxElavationDuration", this.getMaxElavationDuration());
         writer.writeBooleanValue("mfaOnElevation", this.getMfaOnElevation());
-        writer.writePeriodValue("minElevationDuration", this.getMinElevationDuration());
+        writer.writePeriodAndDurationValue("minElevationDuration", this.getMinElevationDuration());
         writer.writeBooleanValue("notificationToUserOnElevation", this.getNotificationToUserOnElevation());
         writer.writeBooleanValue("ticketingInfoOnElevation", this.getTicketingInfoOnElevation());
     }
@@ -190,8 +190,8 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * @param value Value to set for the approvalOnElevation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApprovalOnElevation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setApprovalOnElevation(@jakarta.annotation.Nullable final Boolean value) {
         this.approvalOnElevation = value;
     }
     /**
@@ -199,8 +199,8 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * @param value Value to set for the approverIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApproverIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setApproverIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.approverIds = value;
     }
     /**
@@ -208,8 +208,8 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * @param value Value to set for the elevationDuration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setElevationDuration(@javax.annotation.Nullable final Period value) {
+    @jakarta.annotation.Nonnull
+    public void setElevationDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.elevationDuration = value;
     }
     /**
@@ -217,8 +217,8 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * @param value Value to set for the isMfaOnElevationConfigurable property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsMfaOnElevationConfigurable(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsMfaOnElevationConfigurable(@jakarta.annotation.Nullable final Boolean value) {
         this.isMfaOnElevationConfigurable = value;
     }
     /**
@@ -226,8 +226,8 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * @param value Value to set for the lastGlobalAdmin property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastGlobalAdmin(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setLastGlobalAdmin(@jakarta.annotation.Nullable final Boolean value) {
         this.lastGlobalAdmin = value;
     }
     /**
@@ -235,8 +235,8 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * @param value Value to set for the maxElavationDuration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaxElavationDuration(@javax.annotation.Nullable final Period value) {
+    @jakarta.annotation.Nonnull
+    public void setMaxElavationDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.maxElavationDuration = value;
     }
     /**
@@ -244,8 +244,8 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * @param value Value to set for the mfaOnElevation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMfaOnElevation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setMfaOnElevation(@jakarta.annotation.Nullable final Boolean value) {
         this.mfaOnElevation = value;
     }
     /**
@@ -253,8 +253,8 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * @param value Value to set for the minElevationDuration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinElevationDuration(@javax.annotation.Nullable final Period value) {
+    @jakarta.annotation.Nonnull
+    public void setMinElevationDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.minElevationDuration = value;
     }
     /**
@@ -262,8 +262,8 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * @param value Value to set for the notificationToUserOnElevation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotificationToUserOnElevation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setNotificationToUserOnElevation(@jakarta.annotation.Nullable final Boolean value) {
         this.notificationToUserOnElevation = value;
     }
     /**
@@ -271,8 +271,8 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * @param value Value to set for the ticketingInfoOnElevation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTicketingInfoOnElevation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setTicketingInfoOnElevation(@jakarta.annotation.Nullable final Boolean value) {
         this.ticketingInfoOnElevation = value;
     }
 }

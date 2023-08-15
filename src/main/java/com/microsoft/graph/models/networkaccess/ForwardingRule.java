@@ -23,7 +23,7 @@ public class ForwardingRule extends PolicyRule implements Parsable {
      * Instantiates a new forwardingRule and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ForwardingRule() {
         super();
         this.setOdataType("#microsoft.graph.networkaccess.forwardingRule");
@@ -33,8 +33,8 @@ public class ForwardingRule extends PolicyRule implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a forwardingRule
      */
-    @javax.annotation.Nonnull
-    public static ForwardingRule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ForwardingRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -50,7 +50,7 @@ public class ForwardingRule extends PolicyRule implements Parsable {
      * Gets the action property value. The action property
      * @return a forwardingRuleAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ForwardingRuleAction getAction() {
         return this.action;
     }
@@ -58,7 +58,7 @@ public class ForwardingRule extends PolicyRule implements Parsable {
      * Gets the destinations property value. Destinations maintain a list of potential destinations and destination types that the user may access within the context of a network filtering policy. This includes IP addresses and fully qualified domain names (FQDNs)/URLs.
      * @return a ruleDestination
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<RuleDestination> getDestinations() {
         return this.destinations;
     }
@@ -66,7 +66,7 @@ public class ForwardingRule extends PolicyRule implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(ForwardingRuleAction.class)); });
@@ -78,7 +78,7 @@ public class ForwardingRule extends PolicyRule implements Parsable {
      * Gets the ruleType property value. The ruleType property
      * @return a networkDestinationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public NetworkDestinationType getRuleType() {
         return this.ruleType;
     }
@@ -87,8 +87,8 @@ public class ForwardingRule extends PolicyRule implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("action", this.getAction());
@@ -100,8 +100,8 @@ public class ForwardingRule extends PolicyRule implements Parsable {
      * @param value Value to set for the action property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAction(@javax.annotation.Nullable final ForwardingRuleAction value) {
+    @jakarta.annotation.Nonnull
+    public void setAction(@jakarta.annotation.Nullable final ForwardingRuleAction value) {
         this.action = value;
     }
     /**
@@ -109,8 +109,8 @@ public class ForwardingRule extends PolicyRule implements Parsable {
      * @param value Value to set for the destinations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDestinations(@javax.annotation.Nullable final java.util.List<RuleDestination> value) {
+    @jakarta.annotation.Nonnull
+    public void setDestinations(@jakarta.annotation.Nullable final java.util.List<RuleDestination> value) {
         this.destinations = value;
     }
     /**
@@ -118,8 +118,8 @@ public class ForwardingRule extends PolicyRule implements Parsable {
      * @param value Value to set for the ruleType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRuleType(@javax.annotation.Nullable final NetworkDestinationType value) {
+    @jakarta.annotation.Nonnull
+    public void setRuleType(@jakarta.annotation.Nullable final NetworkDestinationType value) {
         this.ruleType = value;
     }
 }

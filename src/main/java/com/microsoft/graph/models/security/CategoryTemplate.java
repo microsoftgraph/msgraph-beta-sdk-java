@@ -15,7 +15,7 @@ public class CategoryTemplate extends FilePlanDescriptorTemplate implements Pars
      * Instantiates a new categoryTemplate and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CategoryTemplate() {
         super();
     }
@@ -24,8 +24,8 @@ public class CategoryTemplate extends FilePlanDescriptorTemplate implements Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a categoryTemplate
      */
-    @javax.annotation.Nonnull
-    public static CategoryTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CategoryTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CategoryTemplate();
     }
@@ -33,7 +33,7 @@ public class CategoryTemplate extends FilePlanDescriptorTemplate implements Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("subCategories", (n) -> { this.setSubCategories(n.getCollectionOfObjectValues(SubCategoryTemplate::createFromDiscriminatorValue)); });
@@ -43,7 +43,7 @@ public class CategoryTemplate extends FilePlanDescriptorTemplate implements Pars
      * Gets the subCategories property value. Represents all subcategories under a particular category.
      * @return a subCategoryTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SubCategoryTemplate> getSubCategories() {
         return this.subCategories;
     }
@@ -52,8 +52,8 @@ public class CategoryTemplate extends FilePlanDescriptorTemplate implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("subCategories", this.getSubCategories());
@@ -63,8 +63,8 @@ public class CategoryTemplate extends FilePlanDescriptorTemplate implements Pars
      * @param value Value to set for the subCategories property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubCategories(@javax.annotation.Nullable final java.util.List<SubCategoryTemplate> value) {
+    @jakarta.annotation.Nonnull
+    public void setSubCategories(@jakarta.annotation.Nullable final java.util.List<SubCategoryTemplate> value) {
         this.subCategories = value;
     }
 }

@@ -18,7 +18,7 @@ public class WindowsKioskSingleUWPApp extends WindowsKioskAppConfiguration imple
      * Instantiates a new windowsKioskSingleUWPApp and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsKioskSingleUWPApp() {
         super();
         this.setOdataType("#microsoft.graph.windowsKioskSingleUWPApp");
@@ -28,8 +28,8 @@ public class WindowsKioskSingleUWPApp extends WindowsKioskAppConfiguration imple
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsKioskSingleUWPApp
      */
-    @javax.annotation.Nonnull
-    public static WindowsKioskSingleUWPApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsKioskSingleUWPApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsKioskSingleUWPApp();
     }
@@ -37,7 +37,7 @@ public class WindowsKioskSingleUWPApp extends WindowsKioskAppConfiguration imple
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("uwpApp", (n) -> { this.setUwpApp(n.getObjectValue(WindowsKioskUWPApp::createFromDiscriminatorValue)); });
@@ -47,7 +47,7 @@ public class WindowsKioskSingleUWPApp extends WindowsKioskAppConfiguration imple
      * Gets the uwpApp property value. The uwpApp property
      * @return a windowsKioskUWPApp
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsKioskUWPApp getUwpApp() {
         return this.uwpApp;
     }
@@ -56,8 +56,8 @@ public class WindowsKioskSingleUWPApp extends WindowsKioskAppConfiguration imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("uwpApp", this.getUwpApp());
@@ -67,8 +67,8 @@ public class WindowsKioskSingleUWPApp extends WindowsKioskAppConfiguration imple
      * @param value Value to set for the uwpApp property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUwpApp(@javax.annotation.Nullable final WindowsKioskUWPApp value) {
+    @jakarta.annotation.Nonnull
+    public void setUwpApp(@jakarta.annotation.Nullable final WindowsKioskUWPApp value) {
         this.uwpApp = value;
     }
 }

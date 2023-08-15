@@ -17,10 +17,10 @@ public enum KioskModeManagedHomeScreenPinComplexity implements ValuedEnum {
     KioskModeManagedHomeScreenPinComplexity(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static KioskModeManagedHomeScreenPinComplexity forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static KioskModeManagedHomeScreenPinComplexity forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

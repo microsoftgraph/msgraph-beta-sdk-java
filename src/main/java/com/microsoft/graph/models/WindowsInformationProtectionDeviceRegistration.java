@@ -39,7 +39,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * Instantiates a new windowsInformationProtectionDeviceRegistration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsInformationProtectionDeviceRegistration() {
         super();
     }
@@ -48,8 +48,8 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsInformationProtectionDeviceRegistration
      */
-    @javax.annotation.Nonnull
-    public static WindowsInformationProtectionDeviceRegistration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsInformationProtectionDeviceRegistration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsInformationProtectionDeviceRegistration();
     }
@@ -57,7 +57,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * Gets the deviceMacAddress property value. Device Mac address.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceMacAddress() {
         return this.deviceMacAddress;
     }
@@ -65,7 +65,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * Gets the deviceName property value. Device name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -73,7 +73,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * Gets the deviceRegistrationId property value. Device identifier for this device registration record.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceRegistrationId() {
         return this.deviceRegistrationId;
     }
@@ -81,7 +81,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * Gets the deviceType property value. Device type, for example, Windows laptop VS Windows phone.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceType() {
         return this.deviceType;
     }
@@ -89,7 +89,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceMacAddress", (n) -> { this.setDeviceMacAddress(n.getStringValue()); });
@@ -104,7 +104,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * Gets the lastCheckInDateTime property value. Last checkin time of the device.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastCheckInDateTime() {
         return this.lastCheckInDateTime;
     }
@@ -112,7 +112,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * Gets the userId property value. UserId associated with this device registration record.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -121,8 +121,8 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("deviceMacAddress", this.getDeviceMacAddress());
@@ -137,8 +137,8 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * @param value Value to set for the deviceMacAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceMacAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceMacAddress(@jakarta.annotation.Nullable final String value) {
         this.deviceMacAddress = value;
     }
     /**
@@ -146,8 +146,8 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * @param value Value to set for the deviceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
@@ -155,8 +155,8 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * @param value Value to set for the deviceRegistrationId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceRegistrationId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceRegistrationId(@jakarta.annotation.Nullable final String value) {
         this.deviceRegistrationId = value;
     }
     /**
@@ -164,8 +164,8 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * @param value Value to set for the deviceType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceType(@jakarta.annotation.Nullable final String value) {
         this.deviceType = value;
     }
     /**
@@ -173,8 +173,8 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * @param value Value to set for the lastCheckInDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastCheckInDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastCheckInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastCheckInDateTime = value;
     }
     /**
@@ -182,8 +182,8 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      * @param value Value to set for the userId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
 }

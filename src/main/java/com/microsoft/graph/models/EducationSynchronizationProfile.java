@@ -48,7 +48,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * Instantiates a new educationSynchronizationProfile and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSynchronizationProfile() {
         super();
     }
@@ -57,8 +57,8 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationSynchronizationProfile
      */
-    @javax.annotation.Nonnull
-    public static EducationSynchronizationProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationSynchronizationProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationSynchronizationProfile();
     }
@@ -66,7 +66,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * Gets the dataProvider property value. The dataProvider property
      * @return a educationSynchronizationDataProvider
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSynchronizationDataProvider getDataProvider() {
         return this.dataProvider;
     }
@@ -74,7 +74,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * Gets the displayName property value. Name of the configuration profile for syncing identities.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -82,7 +82,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * Gets the errors property value. All errors associated with this synchronization profile.
      * @return a educationSynchronizationError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationSynchronizationError> getErrors() {
         return this.errors;
     }
@@ -90,7 +90,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * Gets the expirationDate property value. The date the profile should be considered expired and cease syncing. Provide the date in YYYY-MM-DD format, following ISO 8601. Maximum value is 18 months from profile creation.  (optional)
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getExpirationDate() {
         return this.expirationDate;
     }
@@ -98,7 +98,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("dataProvider", (n) -> { this.setDataProvider(n.getObjectValue(EducationSynchronizationDataProvider::createFromDiscriminatorValue)); });
@@ -116,7 +116,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * Gets the handleSpecialCharacterConstraint property value. Determines if School Data Sync should automatically replace unsupported special characters while syncing from source.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHandleSpecialCharacterConstraint() {
         return this.handleSpecialCharacterConstraint;
     }
@@ -124,7 +124,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * Gets the identitySynchronizationConfiguration property value. The identitySynchronizationConfiguration property
      * @return a educationIdentitySynchronizationConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationIdentitySynchronizationConfiguration getIdentitySynchronizationConfiguration() {
         return this.identitySynchronizationConfiguration;
     }
@@ -132,7 +132,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * Gets the licensesToAssign property value. License setup configuration.
      * @return a educationSynchronizationLicenseAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationSynchronizationLicenseAssignment> getLicensesToAssign() {
         return this.licensesToAssign;
     }
@@ -140,7 +140,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * Gets the profileStatus property value. The synchronization status.
      * @return a educationSynchronizationProfileStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSynchronizationProfileStatus getProfileStatus() {
         return this.profileStatus;
     }
@@ -148,7 +148,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * Gets the state property value. The state of the profile. Possible values are: provisioning, provisioned, provisioningFailed, deleting, deletionFailed.
      * @return a educationSynchronizationProfileState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSynchronizationProfileState getState() {
         return this.state;
     }
@@ -157,8 +157,8 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("dataProvider", this.getDataProvider());
@@ -176,8 +176,8 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * @param value Value to set for the dataProvider property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDataProvider(@javax.annotation.Nullable final EducationSynchronizationDataProvider value) {
+    @jakarta.annotation.Nonnull
+    public void setDataProvider(@jakarta.annotation.Nullable final EducationSynchronizationDataProvider value) {
         this.dataProvider = value;
     }
     /**
@@ -185,8 +185,8 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -194,8 +194,8 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * @param value Value to set for the errors property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrors(@javax.annotation.Nullable final java.util.List<EducationSynchronizationError> value) {
+    @jakarta.annotation.Nonnull
+    public void setErrors(@jakarta.annotation.Nullable final java.util.List<EducationSynchronizationError> value) {
         this.errors = value;
     }
     /**
@@ -203,8 +203,8 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * @param value Value to set for the expirationDate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDate(@javax.annotation.Nullable final LocalDate value) {
+    @jakarta.annotation.Nonnull
+    public void setExpirationDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.expirationDate = value;
     }
     /**
@@ -212,8 +212,8 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * @param value Value to set for the handleSpecialCharacterConstraint property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHandleSpecialCharacterConstraint(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setHandleSpecialCharacterConstraint(@jakarta.annotation.Nullable final Boolean value) {
         this.handleSpecialCharacterConstraint = value;
     }
     /**
@@ -221,8 +221,8 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * @param value Value to set for the identitySynchronizationConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentitySynchronizationConfiguration(@javax.annotation.Nullable final EducationIdentitySynchronizationConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentitySynchronizationConfiguration(@jakarta.annotation.Nullable final EducationIdentitySynchronizationConfiguration value) {
         this.identitySynchronizationConfiguration = value;
     }
     /**
@@ -230,8 +230,8 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * @param value Value to set for the licensesToAssign property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLicensesToAssign(@javax.annotation.Nullable final java.util.List<EducationSynchronizationLicenseAssignment> value) {
+    @jakarta.annotation.Nonnull
+    public void setLicensesToAssign(@jakarta.annotation.Nullable final java.util.List<EducationSynchronizationLicenseAssignment> value) {
         this.licensesToAssign = value;
     }
     /**
@@ -239,8 +239,8 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * @param value Value to set for the profileStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProfileStatus(@javax.annotation.Nullable final EducationSynchronizationProfileStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setProfileStatus(@jakarta.annotation.Nullable final EducationSynchronizationProfileStatus value) {
         this.profileStatus = value;
     }
     /**
@@ -248,8 +248,8 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final EducationSynchronizationProfileState value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final EducationSynchronizationProfileState value) {
         this.state = value;
     }
 }

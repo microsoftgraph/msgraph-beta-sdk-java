@@ -30,7 +30,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * Instantiates a new deviceManagementComplianceActionItem and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementComplianceActionItem() {
         super();
     }
@@ -39,8 +39,8 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementComplianceActionItem
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementComplianceActionItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementComplianceActionItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementComplianceActionItem();
     }
@@ -48,7 +48,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * Gets the actionType property value. Scheduled Action Type Enum
      * @return a deviceManagementComplianceActionType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementComplianceActionType getActionType() {
         return this.actionType;
     }
@@ -56,7 +56,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("actionType", (n) -> { this.setActionType(n.getEnumValue(DeviceManagementComplianceActionType.class)); });
@@ -69,7 +69,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * Gets the gracePeriodHours property value. Number of hours to wait till the action will be enforced. Valid values 0 to 8760
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getGracePeriodHours() {
         return this.gracePeriodHours;
     }
@@ -77,7 +77,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * Gets the notificationMessageCCList property value. A list of group IDs to speicify who to CC this notification message to. This collection can contain a maximum of 100 elements.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getNotificationMessageCCList() {
         return this.notificationMessageCCList;
     }
@@ -85,7 +85,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * Gets the notificationTemplateId property value. What notification Message template to use
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNotificationTemplateId() {
         return this.notificationTemplateId;
     }
@@ -94,8 +94,8 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("actionType", this.getActionType());
@@ -108,8 +108,8 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * @param value Value to set for the actionType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActionType(@javax.annotation.Nullable final DeviceManagementComplianceActionType value) {
+    @jakarta.annotation.Nonnull
+    public void setActionType(@jakarta.annotation.Nullable final DeviceManagementComplianceActionType value) {
         this.actionType = value;
     }
     /**
@@ -117,8 +117,8 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * @param value Value to set for the gracePeriodHours property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGracePeriodHours(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setGracePeriodHours(@jakarta.annotation.Nullable final Integer value) {
         this.gracePeriodHours = value;
     }
     /**
@@ -126,8 +126,8 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * @param value Value to set for the notificationMessageCCList property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotificationMessageCCList(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setNotificationMessageCCList(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.notificationMessageCCList = value;
     }
     /**
@@ -135,8 +135,8 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
      * @param value Value to set for the notificationTemplateId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotificationTemplateId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNotificationTemplateId(@jakarta.annotation.Nullable final String value) {
         this.notificationTemplateId = value;
     }
 }

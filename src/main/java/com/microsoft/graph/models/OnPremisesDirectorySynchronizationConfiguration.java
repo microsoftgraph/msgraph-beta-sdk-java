@@ -1,10 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -32,7 +32,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     /**
      * Interval of time that the customer requested the sync client waits between sync cycles.
      */
-    private Period customerRequestedSynchronizationInterval;
+    private PeriodAndDuration customerRequestedSynchronizationInterval;
     /**
      * The OdataType property
      */
@@ -44,7 +44,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     /**
      * Interval of time the sync client should honor between sync cycles
      */
-    private Period synchronizationInterval;
+    private PeriodAndDuration synchronizationInterval;
     /**
      * Configuration to control how cloud created or owned objects are synchronized back to the on-premises directory.
      */
@@ -53,7 +53,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * Instantiates a new onPremisesDirectorySynchronizationConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnPremisesDirectorySynchronizationConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -62,8 +62,8 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a onPremisesDirectorySynchronizationConfiguration
      */
-    @javax.annotation.Nonnull
-    public static OnPremisesDirectorySynchronizationConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OnPremisesDirectorySynchronizationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OnPremisesDirectorySynchronizationConfiguration();
     }
@@ -71,7 +71,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * Gets the accidentalDeletionPrevention property value. Contains the accidental deletion prevention configuration for a tenant.
      * @return a onPremisesAccidentalDeletionPrevention
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnPremisesAccidentalDeletionPrevention getAccidentalDeletionPrevention() {
         return this.accidentalDeletionPrevention;
     }
@@ -79,7 +79,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -87,7 +87,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * Gets the anchorAttribute property value. The anchor attribute allows customers to customize the property used to create source anchors for synchronization enabled objects.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAnchorAttribute() {
         return this.anchorAttribute;
     }
@@ -95,7 +95,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * Gets the applicationId property value. The identifier of the on-premises directory synchronization client application that is configured for the tenant.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getApplicationId() {
         return this.applicationId;
     }
@@ -103,33 +103,33 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * Gets the currentExportData property value. Data for the current export run.
      * @return a onPremisesCurrentExportData
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnPremisesCurrentExportData getCurrentExportData() {
         return this.currentExportData;
     }
     /**
      * Gets the customerRequestedSynchronizationInterval property value. Interval of time that the customer requested the sync client waits between sync cycles.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
-    public Period getCustomerRequestedSynchronizationInterval() {
+    @jakarta.annotation.Nullable
+    public PeriodAndDuration getCustomerRequestedSynchronizationInterval() {
         return this.customerRequestedSynchronizationInterval;
     }
     /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("accidentalDeletionPrevention", (n) -> { this.setAccidentalDeletionPrevention(n.getObjectValue(OnPremisesAccidentalDeletionPrevention::createFromDiscriminatorValue)); });
         deserializerMap.put("anchorAttribute", (n) -> { this.setAnchorAttribute(n.getStringValue()); });
         deserializerMap.put("applicationId", (n) -> { this.setApplicationId(n.getStringValue()); });
         deserializerMap.put("currentExportData", (n) -> { this.setCurrentExportData(n.getObjectValue(OnPremisesCurrentExportData::createFromDiscriminatorValue)); });
-        deserializerMap.put("customerRequestedSynchronizationInterval", (n) -> { this.setCustomerRequestedSynchronizationInterval(n.getPeriodValue()); });
+        deserializerMap.put("customerRequestedSynchronizationInterval", (n) -> { this.setCustomerRequestedSynchronizationInterval(n.getPeriodAndDurationValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("synchronizationClientVersion", (n) -> { this.setSynchronizationClientVersion(n.getStringValue()); });
-        deserializerMap.put("synchronizationInterval", (n) -> { this.setSynchronizationInterval(n.getPeriodValue()); });
+        deserializerMap.put("synchronizationInterval", (n) -> { this.setSynchronizationInterval(n.getPeriodAndDurationValue()); });
         deserializerMap.put("writebackConfiguration", (n) -> { this.setWritebackConfiguration(n.getObjectValue(OnPremisesWritebackConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -137,7 +137,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -145,23 +145,23 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * Gets the synchronizationClientVersion property value. Indicates the version of the on-premises directory synchronization application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSynchronizationClientVersion() {
         return this.synchronizationClientVersion;
     }
     /**
      * Gets the synchronizationInterval property value. Interval of time the sync client should honor between sync cycles
-     * @return a Period
+     * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
-    public Period getSynchronizationInterval() {
+    @jakarta.annotation.Nullable
+    public PeriodAndDuration getSynchronizationInterval() {
         return this.synchronizationInterval;
     }
     /**
      * Gets the writebackConfiguration property value. Configuration to control how cloud created or owned objects are synchronized back to the on-premises directory.
      * @return a onPremisesWritebackConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnPremisesWritebackConfiguration getWritebackConfiguration() {
         return this.writebackConfiguration;
     }
@@ -170,17 +170,17 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("accidentalDeletionPrevention", this.getAccidentalDeletionPrevention());
         writer.writeStringValue("anchorAttribute", this.getAnchorAttribute());
         writer.writeStringValue("applicationId", this.getApplicationId());
         writer.writeObjectValue("currentExportData", this.getCurrentExportData());
-        writer.writePeriodValue("customerRequestedSynchronizationInterval", this.getCustomerRequestedSynchronizationInterval());
+        writer.writePeriodAndDurationValue("customerRequestedSynchronizationInterval", this.getCustomerRequestedSynchronizationInterval());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("synchronizationClientVersion", this.getSynchronizationClientVersion());
-        writer.writePeriodValue("synchronizationInterval", this.getSynchronizationInterval());
+        writer.writePeriodAndDurationValue("synchronizationInterval", this.getSynchronizationInterval());
         writer.writeObjectValue("writebackConfiguration", this.getWritebackConfiguration());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -189,17 +189,17 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * @param value Value to set for the accidentalDeletionPrevention property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccidentalDeletionPrevention(@javax.annotation.Nullable final OnPremisesAccidentalDeletionPrevention value) {
+    @jakarta.annotation.Nonnull
+    public void setAccidentalDeletionPrevention(@jakarta.annotation.Nullable final OnPremisesAccidentalDeletionPrevention value) {
         this.accidentalDeletionPrevention = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -207,8 +207,8 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * @param value Value to set for the anchorAttribute property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnchorAttribute(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAnchorAttribute(@jakarta.annotation.Nullable final String value) {
         this.anchorAttribute = value;
     }
     /**
@@ -216,8 +216,8 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * @param value Value to set for the applicationId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicationId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicationId(@jakarta.annotation.Nullable final String value) {
         this.applicationId = value;
     }
     /**
@@ -225,8 +225,8 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * @param value Value to set for the currentExportData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrentExportData(@javax.annotation.Nullable final OnPremisesCurrentExportData value) {
+    @jakarta.annotation.Nonnull
+    public void setCurrentExportData(@jakarta.annotation.Nullable final OnPremisesCurrentExportData value) {
         this.currentExportData = value;
     }
     /**
@@ -234,17 +234,17 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * @param value Value to set for the customerRequestedSynchronizationInterval property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomerRequestedSynchronizationInterval(@javax.annotation.Nullable final Period value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomerRequestedSynchronizationInterval(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.customerRequestedSynchronizationInterval = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -252,8 +252,8 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * @param value Value to set for the synchronizationClientVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSynchronizationClientVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSynchronizationClientVersion(@jakarta.annotation.Nullable final String value) {
         this.synchronizationClientVersion = value;
     }
     /**
@@ -261,8 +261,8 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * @param value Value to set for the synchronizationInterval property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSynchronizationInterval(@javax.annotation.Nullable final Period value) {
+    @jakarta.annotation.Nonnull
+    public void setSynchronizationInterval(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.synchronizationInterval = value;
     }
     /**
@@ -270,8 +270,8 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * @param value Value to set for the writebackConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWritebackConfiguration(@javax.annotation.Nullable final OnPremisesWritebackConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setWritebackConfiguration(@jakarta.annotation.Nullable final OnPremisesWritebackConfiguration value) {
         this.writebackConfiguration = value;
     }
 }

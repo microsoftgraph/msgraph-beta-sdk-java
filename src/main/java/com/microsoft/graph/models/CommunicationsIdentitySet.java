@@ -43,7 +43,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * Instantiates a new communicationsIdentitySet and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CommunicationsIdentitySet() {
         super();
         this.setOdataType("#microsoft.graph.communicationsIdentitySet");
@@ -53,8 +53,8 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a communicationsIdentitySet
      */
-    @javax.annotation.Nonnull
-    public static CommunicationsIdentitySet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CommunicationsIdentitySet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CommunicationsIdentitySet();
     }
@@ -62,7 +62,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * Gets the applicationInstance property value. The application instance associated with this action.
      * @return a identity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Identity getApplicationInstance() {
         return this.applicationInstance;
     }
@@ -70,7 +70,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * Gets the assertedIdentity property value. An identity the participant would like to present itself as to the other participants in the call.
      * @return a identity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Identity getAssertedIdentity() {
         return this.assertedIdentity;
     }
@@ -78,7 +78,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * Gets the azureCommunicationServicesUser property value. The Azure Communication Services user associated with this action.
      * @return a identity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Identity getAzureCommunicationServicesUser() {
         return this.azureCommunicationServicesUser;
     }
@@ -86,7 +86,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * Gets the encrypted property value. The encrypted user associated with this action.
      * @return a identity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Identity getEncrypted() {
         return this.encrypted;
     }
@@ -94,7 +94,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * Gets the endpointType property value. Type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
      * @return a endpointType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EndpointType getEndpointType() {
         return this.endpointType;
     }
@@ -102,7 +102,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicationInstance", (n) -> { this.setApplicationInstance(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
@@ -119,7 +119,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * Gets the guest property value. The guest user associated with this action.
      * @return a identity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Identity getGuest() {
         return this.guest;
     }
@@ -127,7 +127,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * Gets the onPremises property value. The Skype for Business On-Premises user associated with this action.
      * @return a identity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Identity getOnPremises() {
         return this.onPremises;
     }
@@ -135,7 +135,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * Gets the phone property value. Inherited from identitySet. The phone user associated with this action.
      * @return a identity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Identity getPhone() {
         return this.phone;
     }
@@ -144,8 +144,8 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("applicationInstance", this.getApplicationInstance());
@@ -162,8 +162,8 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the applicationInstance property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicationInstance(@javax.annotation.Nullable final Identity value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicationInstance(@jakarta.annotation.Nullable final Identity value) {
         this.applicationInstance = value;
     }
     /**
@@ -171,8 +171,8 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the assertedIdentity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssertedIdentity(@javax.annotation.Nullable final Identity value) {
+    @jakarta.annotation.Nonnull
+    public void setAssertedIdentity(@jakarta.annotation.Nullable final Identity value) {
         this.assertedIdentity = value;
     }
     /**
@@ -180,8 +180,8 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the azureCommunicationServicesUser property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureCommunicationServicesUser(@javax.annotation.Nullable final Identity value) {
+    @jakarta.annotation.Nonnull
+    public void setAzureCommunicationServicesUser(@jakarta.annotation.Nullable final Identity value) {
         this.azureCommunicationServicesUser = value;
     }
     /**
@@ -189,8 +189,8 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the encrypted property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEncrypted(@javax.annotation.Nullable final Identity value) {
+    @jakarta.annotation.Nonnull
+    public void setEncrypted(@jakarta.annotation.Nullable final Identity value) {
         this.encrypted = value;
     }
     /**
@@ -198,8 +198,8 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the endpointType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndpointType(@javax.annotation.Nullable final EndpointType value) {
+    @jakarta.annotation.Nonnull
+    public void setEndpointType(@jakarta.annotation.Nullable final EndpointType value) {
         this.endpointType = value;
     }
     /**
@@ -207,8 +207,8 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the guest property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGuest(@javax.annotation.Nullable final Identity value) {
+    @jakarta.annotation.Nonnull
+    public void setGuest(@jakarta.annotation.Nullable final Identity value) {
         this.guest = value;
     }
     /**
@@ -216,8 +216,8 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the onPremises property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnPremises(@javax.annotation.Nullable final Identity value) {
+    @jakarta.annotation.Nonnull
+    public void setOnPremises(@jakarta.annotation.Nullable final Identity value) {
         this.onPremises = value;
     }
     /**
@@ -225,8 +225,8 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the phone property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhone(@javax.annotation.Nullable final Identity value) {
+    @jakarta.annotation.Nonnull
+    public void setPhone(@jakarta.annotation.Nullable final Identity value) {
         this.phone = value;
     }
 }

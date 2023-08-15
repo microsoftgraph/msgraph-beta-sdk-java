@@ -15,7 +15,7 @@ public class CustomAppScope extends AppScope implements Parsable {
      * Instantiates a new customAppScope and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CustomAppScope() {
         super();
         this.setOdataType("#microsoft.graph.customAppScope");
@@ -25,8 +25,8 @@ public class CustomAppScope extends AppScope implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a customAppScope
      */
-    @javax.annotation.Nonnull
-    public static CustomAppScope createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CustomAppScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CustomAppScope();
     }
@@ -34,7 +34,7 @@ public class CustomAppScope extends AppScope implements Parsable {
      * Gets the customAttributes property value. The customAttributes property
      * @return a customAppScopeAttributesDictionary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CustomAppScopeAttributesDictionary getCustomAttributes() {
         return this.customAttributes;
     }
@@ -42,7 +42,7 @@ public class CustomAppScope extends AppScope implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("customAttributes", (n) -> { this.setCustomAttributes(n.getObjectValue(CustomAppScopeAttributesDictionary::createFromDiscriminatorValue)); });
@@ -53,8 +53,8 @@ public class CustomAppScope extends AppScope implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("customAttributes", this.getCustomAttributes());
@@ -64,8 +64,8 @@ public class CustomAppScope extends AppScope implements Parsable {
      * @param value Value to set for the customAttributes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomAttributes(@javax.annotation.Nullable final CustomAppScopeAttributesDictionary value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomAttributes(@jakarta.annotation.Nullable final CustomAppScopeAttributesDictionary value) {
         this.customAttributes = value;
     }
 }

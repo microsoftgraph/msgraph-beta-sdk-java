@@ -48,7 +48,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * Instantiates a new sequentialActivationRenewalsAlertIncident and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SequentialActivationRenewalsAlertIncident() {
         super();
         this.setOdataType("#microsoft.graph.sequentialActivationRenewalsAlertIncident");
@@ -58,8 +58,8 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a sequentialActivationRenewalsAlertIncident
      */
-    @javax.annotation.Nonnull
-    public static SequentialActivationRenewalsAlertIncident createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SequentialActivationRenewalsAlertIncident createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SequentialActivationRenewalsAlertIncident();
     }
@@ -67,7 +67,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * Gets the activationCount property value. The length of sequential activation of the same role.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getActivationCount() {
         return this.activationCount;
     }
@@ -75,7 +75,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * Gets the assigneeDisplayName property value. Display name of the subject that the incident applies to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssigneeDisplayName() {
         return this.assigneeDisplayName;
     }
@@ -83,7 +83,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * Gets the assigneeId property value. The identifier of the subject that the incident applies to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssigneeId() {
         return this.assigneeId;
     }
@@ -91,7 +91,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * Gets the assigneeUserPrincipalName property value. User principal name of the subject that the incident applies to. Applies to user principals.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssigneeUserPrincipalName() {
         return this.assigneeUserPrincipalName;
     }
@@ -99,7 +99,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activationCount", (n) -> { this.setActivationCount(n.getIntegerValue()); });
@@ -117,7 +117,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * Gets the roleDefinitionId property value. The identifier for the directory role definition that's in scope of this incident.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
@@ -125,7 +125,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * Gets the roleDisplayName property value. The display name for the directory role.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleDisplayName() {
         return this.roleDisplayName;
     }
@@ -133,7 +133,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * Gets the roleTemplateId property value. The globally unique identifier for the directory role.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleTemplateId() {
         return this.roleTemplateId;
     }
@@ -141,7 +141,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * Gets the sequenceEndDateTime property value. End date time of the sequential activation event.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getSequenceEndDateTime() {
         return this.sequenceEndDateTime;
     }
@@ -149,7 +149,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * Gets the sequenceStartDateTime property value. Start date time of the sequential activation event.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getSequenceStartDateTime() {
         return this.sequenceStartDateTime;
     }
@@ -158,8 +158,8 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("activationCount", this.getActivationCount());
@@ -177,8 +177,8 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * @param value Value to set for the activationCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivationCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setActivationCount(@jakarta.annotation.Nullable final Integer value) {
         this.activationCount = value;
     }
     /**
@@ -186,8 +186,8 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * @param value Value to set for the assigneeDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssigneeDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssigneeDisplayName(@jakarta.annotation.Nullable final String value) {
         this.assigneeDisplayName = value;
     }
     /**
@@ -195,8 +195,8 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * @param value Value to set for the assigneeId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssigneeId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssigneeId(@jakarta.annotation.Nullable final String value) {
         this.assigneeId = value;
     }
     /**
@@ -204,8 +204,8 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * @param value Value to set for the assigneeUserPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssigneeUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssigneeUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.assigneeUserPrincipalName = value;
     }
     /**
@@ -213,8 +213,8 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.roleDefinitionId = value;
     }
     /**
@@ -222,8 +222,8 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * @param value Value to set for the roleDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDisplayName(@jakarta.annotation.Nullable final String value) {
         this.roleDisplayName = value;
     }
     /**
@@ -231,8 +231,8 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * @param value Value to set for the roleTemplateId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleTemplateId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleTemplateId(@jakarta.annotation.Nullable final String value) {
         this.roleTemplateId = value;
     }
     /**
@@ -240,8 +240,8 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * @param value Value to set for the sequenceEndDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSequenceEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setSequenceEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.sequenceEndDateTime = value;
     }
     /**
@@ -249,8 +249,8 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      * @param value Value to set for the sequenceStartDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSequenceStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setSequenceStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.sequenceStartDateTime = value;
     }
 }

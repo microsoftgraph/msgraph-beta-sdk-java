@@ -30,7 +30,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * Instantiates a new executeActionPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExecuteActionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -39,8 +39,8 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a executeActionPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static ExecuteActionPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ExecuteActionPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ExecuteActionPostRequestBody();
     }
@@ -48,7 +48,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * Gets the actionName property value. An enum type to represent approval actions of single or list of drivers.
      * @return a driverApprovalAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DriverApprovalAction getActionName() {
         return this.actionName;
     }
@@ -56,7 +56,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -64,7 +64,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * Gets the deploymentDate property value. The deploymentDate property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getDeploymentDate() {
         return this.deploymentDate;
     }
@@ -72,7 +72,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * Gets the driverIds property value. The driverIds property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getDriverIds() {
         return this.driverIds;
     }
@@ -80,7 +80,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("actionName", (n) -> { this.setActionName(n.getEnumValue(DriverApprovalAction.class)); });
@@ -93,8 +93,8 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("actionName", this.getActionName());
         writer.writeOffsetDateTimeValue("deploymentDate", this.getDeploymentDate());
@@ -106,17 +106,17 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the actionName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActionName(@javax.annotation.Nullable final DriverApprovalAction value) {
+    @jakarta.annotation.Nonnull
+    public void setActionName(@jakarta.annotation.Nullable final DriverApprovalAction value) {
         this.actionName = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -124,8 +124,8 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the deploymentDate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeploymentDate(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setDeploymentDate(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.deploymentDate = value;
     }
     /**
@@ -133,8 +133,8 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the driverIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDriverIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setDriverIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.driverIds = value;
     }
 }

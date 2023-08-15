@@ -19,7 +19,7 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
      * Instantiates a new addToReviewSetOperation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AddToReviewSetOperation() {
         super();
     }
@@ -28,8 +28,8 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a addToReviewSetOperation
      */
-    @javax.annotation.Nonnull
-    public static AddToReviewSetOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AddToReviewSetOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AddToReviewSetOperation();
     }
@@ -37,7 +37,7 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("reviewSet", (n) -> { this.setReviewSet(n.getObjectValue(ReviewSet::createFromDiscriminatorValue)); });
@@ -48,7 +48,7 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
      * Gets the reviewSet property value. The review set to which items matching the source collection query are added to.
      * @return a reviewSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ReviewSet getReviewSet() {
         return this.reviewSet;
     }
@@ -56,7 +56,7 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
      * Gets the sourceCollection property value. The sourceCollection that items are being added from.
      * @return a sourceCollection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SourceCollection getSourceCollection() {
         return this.sourceCollection;
     }
@@ -65,8 +65,8 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("reviewSet", this.getReviewSet());
@@ -77,8 +77,8 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
      * @param value Value to set for the reviewSet property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewSet(@javax.annotation.Nullable final ReviewSet value) {
+    @jakarta.annotation.Nonnull
+    public void setReviewSet(@jakarta.annotation.Nullable final ReviewSet value) {
         this.reviewSet = value;
     }
     /**
@@ -86,8 +86,8 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
      * @param value Value to set for the sourceCollection property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourceCollection(@javax.annotation.Nullable final SourceCollection value) {
+    @jakarta.annotation.Nonnull
+    public void setSourceCollection(@jakarta.annotation.Nullable final SourceCollection value) {
         this.sourceCollection = value;
     }
 }

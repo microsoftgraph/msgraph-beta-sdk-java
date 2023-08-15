@@ -60,7 +60,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * Instantiates a new customSecurityAttributeAudit and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CustomSecurityAttributeAudit() {
         super();
     }
@@ -69,8 +69,8 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a customSecurityAttributeAudit
      */
-    @javax.annotation.Nonnull
-    public static CustomSecurityAttributeAudit createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CustomSecurityAttributeAudit createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CustomSecurityAttributeAudit();
     }
@@ -78,7 +78,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * Gets the activityDateTime property value. The activityDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
         return this.activityDateTime;
     }
@@ -86,7 +86,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * Gets the activityDisplayName property value. The activityDisplayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActivityDisplayName() {
         return this.activityDisplayName;
     }
@@ -94,7 +94,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * Gets the additionalDetails property value. The additionalDetails property
      * @return a keyValue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getAdditionalDetails() {
         return this.additionalDetails;
     }
@@ -102,7 +102,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * Gets the category property value. The category property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory() {
         return this.category;
     }
@@ -110,7 +110,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * Gets the correlationId property value. The correlationId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCorrelationId() {
         return this.correlationId;
     }
@@ -118,7 +118,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activityDateTime", (n) -> { this.setActivityDateTime(n.getOffsetDateTimeValue()); });
@@ -139,7 +139,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * Gets the initiatedBy property value. The initiatedBy property
      * @return a auditActivityInitiator
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuditActivityInitiator getInitiatedBy() {
         return this.initiatedBy;
     }
@@ -147,7 +147,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * Gets the loggedByService property value. The loggedByService property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLoggedByService() {
         return this.loggedByService;
     }
@@ -155,7 +155,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * Gets the operationType property value. The operationType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOperationType() {
         return this.operationType;
     }
@@ -163,7 +163,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * Gets the result property value. The result property
      * @return a operationResult
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OperationResult getResult() {
         return this.result;
     }
@@ -171,7 +171,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * Gets the resultReason property value. The resultReason property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResultReason() {
         return this.resultReason;
     }
@@ -179,7 +179,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * Gets the targetResources property value. The targetResources property
      * @return a targetResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TargetResource> getTargetResources() {
         return this.targetResources;
     }
@@ -187,7 +187,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * Gets the userAgent property value. The userAgent property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserAgent() {
         return this.userAgent;
     }
@@ -196,8 +196,8 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("activityDateTime", this.getActivityDateTime());
@@ -218,8 +218,8 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * @param value Value to set for the activityDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.activityDateTime = value;
     }
     /**
@@ -227,8 +227,8 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * @param value Value to set for the activityDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setActivityDisplayName(@jakarta.annotation.Nullable final String value) {
         this.activityDisplayName = value;
     }
     /**
@@ -236,8 +236,8 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * @param value Value to set for the additionalDetails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalDetails(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalDetails(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
         this.additionalDetails = value;
     }
     /**
@@ -245,8 +245,8 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCategory(@jakarta.annotation.Nullable final String value) {
         this.category = value;
     }
     /**
@@ -254,8 +254,8 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * @param value Value to set for the correlationId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCorrelationId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
         this.correlationId = value;
     }
     /**
@@ -263,8 +263,8 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * @param value Value to set for the initiatedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitiatedBy(@javax.annotation.Nullable final AuditActivityInitiator value) {
+    @jakarta.annotation.Nonnull
+    public void setInitiatedBy(@jakarta.annotation.Nullable final AuditActivityInitiator value) {
         this.initiatedBy = value;
     }
     /**
@@ -272,8 +272,8 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * @param value Value to set for the loggedByService property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLoggedByService(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLoggedByService(@jakarta.annotation.Nullable final String value) {
         this.loggedByService = value;
     }
     /**
@@ -281,8 +281,8 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * @param value Value to set for the operationType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperationType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOperationType(@jakarta.annotation.Nullable final String value) {
         this.operationType = value;
     }
     /**
@@ -290,8 +290,8 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * @param value Value to set for the result property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResult(@javax.annotation.Nullable final OperationResult value) {
+    @jakarta.annotation.Nonnull
+    public void setResult(@jakarta.annotation.Nullable final OperationResult value) {
         this.result = value;
     }
     /**
@@ -299,8 +299,8 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * @param value Value to set for the resultReason property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResultReason(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResultReason(@jakarta.annotation.Nullable final String value) {
         this.resultReason = value;
     }
     /**
@@ -308,8 +308,8 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * @param value Value to set for the targetResources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetResources(@javax.annotation.Nullable final java.util.List<TargetResource> value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetResources(@jakarta.annotation.Nullable final java.util.List<TargetResource> value) {
         this.targetResources = value;
     }
     /**
@@ -317,8 +317,8 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
      * @param value Value to set for the userAgent property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserAgent(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserAgent(@jakarta.annotation.Nullable final String value) {
         this.userAgent = value;
     }
 }

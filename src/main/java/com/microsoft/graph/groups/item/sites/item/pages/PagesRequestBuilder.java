@@ -1,10 +1,10 @@
 package com.microsoft.graph.groups.item.sites.item.pages;
 
 import com.microsoft.graph.groups.item.sites.item.pages.count.CountRequestBuilder;
-import com.microsoft.graph.groups.item.sites.item.pages.item.SitePageItemRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.pages.item.BaseSitePageItemRequestBuilder;
+import com.microsoft.graph.models.BaseSitePage;
+import com.microsoft.graph.models.BaseSitePageCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.models.SitePage;
-import com.microsoft.graph.models.SitePageCollectionResponse;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,21 +26,21 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the pages property of the microsoft.graph.site entity.
-     * @param sitePageId Unique identifier of the item
-     * @return a SitePageItemRequestBuilder
+     * @param baseSitePageId The unique identifier of baseSitePage
+     * @return a BaseSitePageItemRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public SitePageItemRequestBuilder bySitePageId(@javax.annotation.Nonnull final String sitePageId) {
-        Objects.requireNonNull(sitePageId);
+    @jakarta.annotation.Nonnull
+    public BaseSitePageItemRequestBuilder byBaseSitePageId(@jakarta.annotation.Nonnull final String baseSitePageId) {
+        Objects.requireNonNull(baseSitePageId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("sitePage%2Did", sitePageId);
-        return new SitePageItemRequestBuilder(urlTplParams, requestAdapter);
+        urlTplParams.put("baseSitePage%2Did", baseSitePageId);
+        return new BaseSitePageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new PagesRequestBuilder and sets the default values.
@@ -48,8 +48,8 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public PagesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public PagesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
@@ -58,45 +58,45 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public PagesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public PagesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the collection of [sitePage][] objects from the site pages [list][] in a site [site][]. All pages in the site are returned (with pagination). Sort alphabetically by `name` in ascending order.
-     * @return a CompletableFuture of sitePageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/sitepage-list?view=graph-rest-1.0">Find more info here</a>
+     * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
+     * @return a CompletableFuture of baseSitePageCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/basesitepage-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SitePageCollectionResponse> get() {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<BaseSitePageCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, SitePageCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, BaseSitePageCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<SitePageCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<SitePageCollectionResponse>();
+            final java.util.concurrent.CompletableFuture<BaseSitePageCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<BaseSitePageCollectionResponse>();
             executionException.completeExceptionally(ex);
             return executionException;
         }
     }
     /**
-     * Get the collection of [sitePage][] objects from the site pages [list][] in a site [site][]. All pages in the site are returned (with pagination). Sort alphabetically by `name` in ascending order.
+     * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sitePageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/sitepage-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of baseSitePageCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/basesitepage-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SitePageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<BaseSitePageCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, SitePageCollectionResponse::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, BaseSitePageCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<SitePageCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<SitePageCollectionResponse>();
+            final java.util.concurrent.CompletableFuture<BaseSitePageCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<BaseSitePageCollectionResponse>();
             executionException.completeExceptionally(ex);
             return executionException;
         }
@@ -104,19 +104,19 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new [sitePage][] in the site pages [list][] in a [site][].
      * @param body The request body
-     * @return a CompletableFuture of sitePage
-     * @see <a href="https://docs.microsoft.com/graph/api/sitepage-create?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of baseSitePage
+     * @see <a href="https://learn.microsoft.com/graph/api/sitepage-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SitePage> post(@javax.annotation.Nonnull final SitePage body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<BaseSitePage> post(@jakarta.annotation.Nonnull final BaseSitePage body) {
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, SitePage::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, BaseSitePage::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<SitePage> executionException = new java.util.concurrent.CompletableFuture<SitePage>();
+            final java.util.concurrent.CompletableFuture<BaseSitePage> executionException = new java.util.concurrent.CompletableFuture<BaseSitePage>();
             executionException.completeExceptionally(ex);
             return executionException;
         }
@@ -125,39 +125,39 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
      * Create a new [sitePage][] in the site pages [list][] in a [site][].
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sitePage
-     * @see <a href="https://docs.microsoft.com/graph/api/sitepage-create?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of baseSitePage
+     * @see <a href="https://learn.microsoft.com/graph/api/sitepage-create?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SitePage> post(@javax.annotation.Nonnull final SitePage body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<BaseSitePage> post(@jakarta.annotation.Nonnull final BaseSitePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
             errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
             errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, SitePage::createFromDiscriminatorValue, errorMapping);
+            return this.requestAdapter.sendAsync(requestInfo, BaseSitePage::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<SitePage> executionException = new java.util.concurrent.CompletableFuture<SitePage>();
+            final java.util.concurrent.CompletableFuture<BaseSitePage> executionException = new java.util.concurrent.CompletableFuture<BaseSitePage>();
             executionException.completeExceptionally(ex);
             return executionException;
         }
     }
     /**
-     * Get the collection of [sitePage][] objects from the site pages [list][] in a site [site][]. All pages in the site are returned (with pagination). Sort alphabetically by `name` in ascending order.
+     * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the collection of [sitePage][] objects from the site pages [list][] in a site [site][]. All pages in the site are returned (with pagination). Sort alphabetically by `name` in ascending order.
+     * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -177,8 +177,8 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final SitePage body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final BaseSitePage body) throws URISyntaxException {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -187,8 +187,8 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final SitePage body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final BaseSitePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -205,56 +205,56 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the collection of [sitePage][] objects from the site pages [list][] in a site [site][]. All pages in the site are returned (with pagination). Sort alphabetically by `name` in ascending order.
+     * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
      */
     public class GetQueryParameters {
         /**
          * Include count of items
          */
         @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Boolean count;
         /**
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Filter items by property values
          */
         @QueryParameter(name = "%24filter")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String filter;
         /**
          * Order items by property values
          */
         @QueryParameter(name = "%24orderby")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] orderby;
         /**
          * Search items by search phrases
          */
         @QueryParameter(name = "%24search")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String search;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
         /**
          * Skip the first n items
          */
         @QueryParameter(name = "%24skip")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer skip;
         /**
          * Show only the first n items
          */
         @QueryParameter(name = "%24top")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer top;
     }
     /**
@@ -264,7 +264,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

@@ -43,7 +43,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * Instantiates a new embeddedSIMActivationCodePool and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmbeddedSIMActivationCodePool() {
         super();
     }
@@ -52,8 +52,8 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a embeddedSIMActivationCodePool
      */
-    @javax.annotation.Nonnull
-    public static EmbeddedSIMActivationCodePool createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EmbeddedSIMActivationCodePool createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EmbeddedSIMActivationCodePool();
     }
@@ -61,7 +61,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * Gets the activationCodeCount property value. The total count of activation codes which belong to this pool.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getActivationCodeCount() {
         return this.activationCodeCount;
     }
@@ -69,7 +69,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * Gets the activationCodes property value. The activation codes which belong to this pool. This navigation property is used to post activation codes to Intune but cannot be used to read activation codes from Intune.
      * @return a embeddedSIMActivationCode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EmbeddedSIMActivationCode> getActivationCodes() {
         return this.activationCodes;
     }
@@ -77,7 +77,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * Gets the assignments property value. Navigational property to a list of targets to which this pool is assigned.
      * @return a embeddedSIMActivationCodePoolAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EmbeddedSIMActivationCodePoolAssignment> getAssignments() {
         return this.assignments;
     }
@@ -85,7 +85,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * Gets the createdDateTime property value. The time the embedded SIM activation code pool was created. Generated service side.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -93,7 +93,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * Gets the deviceStates property value. Navigational property to a list of device states for this pool.
      * @return a embeddedSIMDeviceState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EmbeddedSIMDeviceState> getDeviceStates() {
         return this.deviceStates;
     }
@@ -101,7 +101,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * Gets the displayName property value. The admin defined name of the embedded SIM activation code pool.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -109,7 +109,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activationCodeCount", (n) -> { this.setActivationCodeCount(n.getIntegerValue()); });
@@ -125,7 +125,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * Gets the modifiedDateTime property value. The time the embedded SIM activation code pool was last modified. Updated service side.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
         return this.modifiedDateTime;
     }
@@ -134,8 +134,8 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("activationCodeCount", this.getActivationCodeCount());
@@ -151,8 +151,8 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * @param value Value to set for the activationCodeCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivationCodeCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setActivationCodeCount(@jakarta.annotation.Nullable final Integer value) {
         this.activationCodeCount = value;
     }
     /**
@@ -160,8 +160,8 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * @param value Value to set for the activationCodes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivationCodes(@javax.annotation.Nullable final java.util.List<EmbeddedSIMActivationCode> value) {
+    @jakarta.annotation.Nonnull
+    public void setActivationCodes(@jakarta.annotation.Nullable final java.util.List<EmbeddedSIMActivationCode> value) {
         this.activationCodes = value;
     }
     /**
@@ -169,8 +169,8 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignments(@javax.annotation.Nullable final java.util.List<EmbeddedSIMActivationCodePoolAssignment> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<EmbeddedSIMActivationCodePoolAssignment> value) {
         this.assignments = value;
     }
     /**
@@ -178,8 +178,8 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -187,8 +187,8 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * @param value Value to set for the deviceStates property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceStates(@javax.annotation.Nullable final java.util.List<EmbeddedSIMDeviceState> value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceStates(@jakarta.annotation.Nullable final java.util.List<EmbeddedSIMDeviceState> value) {
         this.deviceStates = value;
     }
     /**
@@ -196,8 +196,8 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -205,8 +205,8 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.modifiedDateTime = value;
     }
 }

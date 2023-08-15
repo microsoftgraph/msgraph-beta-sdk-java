@@ -122,7 +122,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Instantiates a new windowsWifiEnterpriseEAPConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsWifiEnterpriseEAPConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsWifiEnterpriseEAPConfiguration");
@@ -132,8 +132,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsWifiEnterpriseEAPConfiguration
      */
-    @javax.annotation.Nonnull
-    public static WindowsWifiEnterpriseEAPConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsWifiEnterpriseEAPConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsWifiEnterpriseEAPConfiguration();
     }
@@ -141,7 +141,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the authenticationMethod property value. Specify the authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential.
      * @return a wiFiAuthenticationMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WiFiAuthenticationMethod getAuthenticationMethod() {
         return this.authenticationMethod;
     }
@@ -149,7 +149,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the authenticationPeriodInSeconds property value. Specify the number of seconds for the client to wait after an authentication attempt before failing. Valid range 1-3600.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getAuthenticationPeriodInSeconds() {
         return this.authenticationPeriodInSeconds;
     }
@@ -157,7 +157,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the authenticationRetryDelayPeriodInSeconds property value. Specify the number of seconds between a failed authentication and the next authentication attempt. Valid range 1-3600.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getAuthenticationRetryDelayPeriodInSeconds() {
         return this.authenticationRetryDelayPeriodInSeconds;
     }
@@ -165,7 +165,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If youre using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
      * @return a wifiAuthenticationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WifiAuthenticationType getAuthenticationType() {
         return this.authenticationType;
     }
@@ -173,7 +173,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the cacheCredentials property value. Specify whether to cache user credentials on the device so that users dont need to keep entering them each time they connect.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCacheCredentials() {
         return this.cacheCredentials;
     }
@@ -181,7 +181,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the disableUserPromptForServerValidation property value. Specify whether to prevent the user from being prompted to authorize new servers for trusted certification authorities when EAP type is selected as PEAP.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDisableUserPromptForServerValidation() {
         return this.disableUserPromptForServerValidation;
     }
@@ -189,7 +189,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the eapolStartPeriodInSeconds property value. Specify the number of seconds to wait before sending an EAPOL (Extensible Authentication Protocol over LAN) Start message. Valid range 1-3600.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getEapolStartPeriodInSeconds() {
         return this.eapolStartPeriodInSeconds;
     }
@@ -197,7 +197,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
      * @return a eapType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EapType getEapType() {
         return this.eapType;
     }
@@ -205,7 +205,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the enablePairwiseMasterKeyCaching property value. Specify whether the wifi connection should enable pairwise master key caching.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnablePairwiseMasterKeyCaching() {
         return this.enablePairwiseMasterKeyCaching;
     }
@@ -213,7 +213,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the enablePreAuthentication property value. Specify whether pre-authentication should be enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnablePreAuthentication() {
         return this.enablePreAuthentication;
     }
@@ -221,7 +221,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod.class)); });
@@ -257,7 +257,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the identityCertificateForClientAuthentication property value. Specify identity certificate for client authentication.
      * @return a windowsCertificateProfileBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsCertificateProfileBase getIdentityCertificateForClientAuthentication() {
         return this.identityCertificateForClientAuthentication;
     }
@@ -265,7 +265,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @return a nonEapAuthenticationMethodForEapTtlsType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public NonEapAuthenticationMethodForEapTtlsType getInnerAuthenticationProtocolForEAPTTLS() {
         return this.innerAuthenticationProtocolForEAPTTLS;
     }
@@ -273,7 +273,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the maximumAuthenticationFailures property value. Specify the maximum authentication failures allowed for a set of credentials. Valid range 1-100.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaximumAuthenticationFailures() {
         return this.maximumAuthenticationFailures;
     }
@@ -281,7 +281,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the maximumAuthenticationTimeoutInSeconds property value. Specify maximum authentication timeout (in seconds).  Valid range: 1-120
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaximumAuthenticationTimeoutInSeconds() {
         return this.maximumAuthenticationTimeoutInSeconds;
     }
@@ -289,7 +289,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the maximumEAPOLStartMessages property value. Specifiy the maximum number of EAPOL (Extensible Authentication Protocol over LAN) Start messages to be sent before returning failure. Valid range 1-100.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaximumEAPOLStartMessages() {
         return this.maximumEAPOLStartMessages;
     }
@@ -297,7 +297,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the maximumNumberOfPairwiseMasterKeysInCache property value. Specify maximum number of pairwise master keys in cache.  Valid range: 1-255
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaximumNumberOfPairwiseMasterKeysInCache() {
         return this.maximumNumberOfPairwiseMasterKeysInCache;
     }
@@ -305,7 +305,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the maximumPairwiseMasterKeyCacheTimeInMinutes property value. Specify maximum pairwise master key cache time (in minutes).  Valid range: 5-1440
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaximumPairwiseMasterKeyCacheTimeInMinutes() {
         return this.maximumPairwiseMasterKeyCacheTimeInMinutes;
     }
@@ -313,7 +313,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the maximumPreAuthenticationAttempts property value. Specify maximum pre-authentication attempts.  Valid range: 1-16
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaximumPreAuthenticationAttempts() {
         return this.maximumPreAuthenticationAttempts;
     }
@@ -321,7 +321,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the networkSingleSignOn property value. Specify the network single sign on type. Possible values are: disabled, prelogon, postlogon.
      * @return a networkSingleSignOnType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public NetworkSingleSignOnType getNetworkSingleSignOn() {
         return this.networkSingleSignOn;
     }
@@ -329,7 +329,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the outerIdentityPrivacyTemporaryValue property value. Specify the string to replace usernames for privacy when using EAP TTLS or PEAP.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOuterIdentityPrivacyTemporaryValue() {
         return this.outerIdentityPrivacyTemporaryValue;
     }
@@ -337,7 +337,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the performServerValidation property value. Specify whether to enable verification of server's identity by validating the certificate when EAP type is selected as PEAP.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPerformServerValidation() {
         return this.performServerValidation;
     }
@@ -345,7 +345,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the promptForAdditionalAuthenticationCredentials property value. Specify whether the wifi connection should prompt for additional authentication credentials.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPromptForAdditionalAuthenticationCredentials() {
         return this.promptForAdditionalAuthenticationCredentials;
     }
@@ -353,7 +353,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the requireCryptographicBinding property value. Specify whether to enable cryptographic binding when EAP type is selected as PEAP.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequireCryptographicBinding() {
         return this.requireCryptographicBinding;
     }
@@ -361,7 +361,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the rootCertificateForClientValidation property value. Specify root certificate for client validation.
      * @return a windows81TrustedRootCertificate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Windows81TrustedRootCertificate getRootCertificateForClientValidation() {
         return this.rootCertificateForClientValidation;
     }
@@ -369,7 +369,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the rootCertificatesForServerValidation property value. Specify root certificate for server validation. This collection can contain a maximum of 500 elements.
      * @return a windows81TrustedRootCertificate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Windows81TrustedRootCertificate> getRootCertificatesForServerValidation() {
         return this.rootCertificatesForServerValidation;
     }
@@ -377,7 +377,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the trustedServerCertificateNames property value. Specify trusted server certificate names.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTrustedServerCertificateNames() {
         return this.trustedServerCertificateNames;
     }
@@ -385,7 +385,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Gets the userBasedVirtualLan property value. Specifiy whether to change the virtual LAN used by the device based on the users credentials. Cannot be used when NetworkSingleSignOnType is set to Disabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getUserBasedVirtualLan() {
         return this.userBasedVirtualLan;
     }
@@ -394,8 +394,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("authenticationMethod", this.getAuthenticationMethod());
@@ -431,8 +431,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationMethod(@javax.annotation.Nullable final WiFiAuthenticationMethod value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationMethod(@jakarta.annotation.Nullable final WiFiAuthenticationMethod value) {
         this.authenticationMethod = value;
     }
     /**
@@ -440,8 +440,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the authenticationPeriodInSeconds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationPeriodInSeconds(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationPeriodInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.authenticationPeriodInSeconds = value;
     }
     /**
@@ -449,8 +449,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the authenticationRetryDelayPeriodInSeconds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationRetryDelayPeriodInSeconds(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationRetryDelayPeriodInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.authenticationRetryDelayPeriodInSeconds = value;
     }
     /**
@@ -458,8 +458,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the authenticationType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationType(@javax.annotation.Nullable final WifiAuthenticationType value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationType(@jakarta.annotation.Nullable final WifiAuthenticationType value) {
         this.authenticationType = value;
     }
     /**
@@ -467,8 +467,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the cacheCredentials property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCacheCredentials(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setCacheCredentials(@jakarta.annotation.Nullable final Boolean value) {
         this.cacheCredentials = value;
     }
     /**
@@ -476,8 +476,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the disableUserPromptForServerValidation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisableUserPromptForServerValidation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDisableUserPromptForServerValidation(@jakarta.annotation.Nullable final Boolean value) {
         this.disableUserPromptForServerValidation = value;
     }
     /**
@@ -485,8 +485,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the eapolStartPeriodInSeconds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEapolStartPeriodInSeconds(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setEapolStartPeriodInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.eapolStartPeriodInSeconds = value;
     }
     /**
@@ -494,8 +494,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the eapType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEapType(@javax.annotation.Nullable final EapType value) {
+    @jakarta.annotation.Nonnull
+    public void setEapType(@jakarta.annotation.Nullable final EapType value) {
         this.eapType = value;
     }
     /**
@@ -503,8 +503,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the enablePairwiseMasterKeyCaching property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnablePairwiseMasterKeyCaching(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnablePairwiseMasterKeyCaching(@jakarta.annotation.Nullable final Boolean value) {
         this.enablePairwiseMasterKeyCaching = value;
     }
     /**
@@ -512,8 +512,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the enablePreAuthentication property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnablePreAuthentication(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnablePreAuthentication(@jakarta.annotation.Nullable final Boolean value) {
         this.enablePreAuthentication = value;
     }
     /**
@@ -521,8 +521,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the identityCertificateForClientAuthentication property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityCertificateForClientAuthentication(@javax.annotation.Nullable final WindowsCertificateProfileBase value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentityCertificateForClientAuthentication(@jakarta.annotation.Nullable final WindowsCertificateProfileBase value) {
         this.identityCertificateForClientAuthentication = value;
     }
     /**
@@ -530,8 +530,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the innerAuthenticationProtocolForEAPTTLS property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInnerAuthenticationProtocolForEAPTTLS(@javax.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
+    @jakarta.annotation.Nonnull
+    public void setInnerAuthenticationProtocolForEAPTTLS(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
         this.innerAuthenticationProtocolForEAPTTLS = value;
     }
     /**
@@ -539,8 +539,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the maximumAuthenticationFailures property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaximumAuthenticationFailures(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMaximumAuthenticationFailures(@jakarta.annotation.Nullable final Integer value) {
         this.maximumAuthenticationFailures = value;
     }
     /**
@@ -548,8 +548,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the maximumAuthenticationTimeoutInSeconds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaximumAuthenticationTimeoutInSeconds(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMaximumAuthenticationTimeoutInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.maximumAuthenticationTimeoutInSeconds = value;
     }
     /**
@@ -557,8 +557,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the maximumEAPOLStartMessages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaximumEAPOLStartMessages(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMaximumEAPOLStartMessages(@jakarta.annotation.Nullable final Integer value) {
         this.maximumEAPOLStartMessages = value;
     }
     /**
@@ -566,8 +566,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the maximumNumberOfPairwiseMasterKeysInCache property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaximumNumberOfPairwiseMasterKeysInCache(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMaximumNumberOfPairwiseMasterKeysInCache(@jakarta.annotation.Nullable final Integer value) {
         this.maximumNumberOfPairwiseMasterKeysInCache = value;
     }
     /**
@@ -575,8 +575,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the maximumPairwiseMasterKeyCacheTimeInMinutes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaximumPairwiseMasterKeyCacheTimeInMinutes(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMaximumPairwiseMasterKeyCacheTimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.maximumPairwiseMasterKeyCacheTimeInMinutes = value;
     }
     /**
@@ -584,8 +584,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the maximumPreAuthenticationAttempts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaximumPreAuthenticationAttempts(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMaximumPreAuthenticationAttempts(@jakarta.annotation.Nullable final Integer value) {
         this.maximumPreAuthenticationAttempts = value;
     }
     /**
@@ -593,8 +593,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the networkSingleSignOn property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkSingleSignOn(@javax.annotation.Nullable final NetworkSingleSignOnType value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkSingleSignOn(@jakarta.annotation.Nullable final NetworkSingleSignOnType value) {
         this.networkSingleSignOn = value;
     }
     /**
@@ -602,8 +602,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the outerIdentityPrivacyTemporaryValue property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOuterIdentityPrivacyTemporaryValue(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOuterIdentityPrivacyTemporaryValue(@jakarta.annotation.Nullable final String value) {
         this.outerIdentityPrivacyTemporaryValue = value;
     }
     /**
@@ -611,8 +611,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the performServerValidation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPerformServerValidation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPerformServerValidation(@jakarta.annotation.Nullable final Boolean value) {
         this.performServerValidation = value;
     }
     /**
@@ -620,8 +620,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the promptForAdditionalAuthenticationCredentials property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPromptForAdditionalAuthenticationCredentials(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPromptForAdditionalAuthenticationCredentials(@jakarta.annotation.Nullable final Boolean value) {
         this.promptForAdditionalAuthenticationCredentials = value;
     }
     /**
@@ -629,8 +629,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the requireCryptographicBinding property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequireCryptographicBinding(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRequireCryptographicBinding(@jakarta.annotation.Nullable final Boolean value) {
         this.requireCryptographicBinding = value;
     }
     /**
@@ -638,8 +638,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the rootCertificateForClientValidation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRootCertificateForClientValidation(@javax.annotation.Nullable final Windows81TrustedRootCertificate value) {
+    @jakarta.annotation.Nonnull
+    public void setRootCertificateForClientValidation(@jakarta.annotation.Nullable final Windows81TrustedRootCertificate value) {
         this.rootCertificateForClientValidation = value;
     }
     /**
@@ -647,8 +647,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the rootCertificatesForServerValidation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRootCertificatesForServerValidation(@javax.annotation.Nullable final java.util.List<Windows81TrustedRootCertificate> value) {
+    @jakarta.annotation.Nonnull
+    public void setRootCertificatesForServerValidation(@jakarta.annotation.Nullable final java.util.List<Windows81TrustedRootCertificate> value) {
         this.rootCertificatesForServerValidation = value;
     }
     /**
@@ -656,8 +656,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the trustedServerCertificateNames property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrustedServerCertificateNames(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setTrustedServerCertificateNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.trustedServerCertificateNames = value;
     }
     /**
@@ -665,8 +665,8 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * @param value Value to set for the userBasedVirtualLan property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserBasedVirtualLan(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setUserBasedVirtualLan(@jakarta.annotation.Nullable final Boolean value) {
         this.userBasedVirtualLan = value;
     }
 }

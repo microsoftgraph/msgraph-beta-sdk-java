@@ -28,7 +28,7 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
      * Instantiates a new governanceNotificationPolicy and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceNotificationPolicy() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a governanceNotificationPolicy
      */
-    @javax.annotation.Nonnull
-    public static GovernanceNotificationPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GovernanceNotificationPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GovernanceNotificationPolicy();
     }
@@ -46,7 +46,7 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
      * Gets the enabledTemplateTypes property value. The enabledTemplateTypes property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getEnabledTemplateTypes() {
         return this.enabledTemplateTypes;
     }
@@ -62,7 +62,7 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("enabledTemplateTypes", (n) -> { this.setEnabledTemplateTypes(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -74,7 +74,7 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
      * Gets the notificationTemplates property value. The notificationTemplates property
      * @return a governanceNotificationTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GovernanceNotificationTemplate> getNotificationTemplates() {
         return this.notificationTemplates;
     }
@@ -82,7 +82,7 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -91,8 +91,8 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("enabledTemplateTypes", this.getEnabledTemplateTypes());
         writer.writeCollectionOfObjectValues("notificationTemplates", this.getNotificationTemplates());
@@ -101,11 +101,11 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -113,8 +113,8 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
      * @param value Value to set for the enabledTemplateTypes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnabledTemplateTypes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setEnabledTemplateTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.enabledTemplateTypes = value;
     }
     /**
@@ -122,17 +122,17 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
      * @param value Value to set for the notificationTemplates property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotificationTemplates(@javax.annotation.Nullable final java.util.List<GovernanceNotificationTemplate> value) {
+    @jakarta.annotation.Nonnull
+    public void setNotificationTemplates(@jakarta.annotation.Nullable final java.util.List<GovernanceNotificationTemplate> value) {
         this.notificationTemplates = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

@@ -72,7 +72,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      * Instantiates a new teamworkDevice and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkDevice() {
         super();
     }
@@ -81,8 +81,8 @@ public class TeamworkDevice extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teamworkDevice
      */
-    @javax.annotation.Nonnull
-    public static TeamworkDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeamworkDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeamworkDevice();
     }
@@ -90,7 +90,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      * Gets the activity property value. The activity properties that change based on the device usage.
      * @return a teamworkDeviceActivity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkDeviceActivity getActivity() {
         return this.activity;
     }
@@ -98,7 +98,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      * Gets the activityState property value. The activity state of the device. The possible values are: unknown, busy, idle, unavailable, unknownFutureValue.
      * @return a teamworkDeviceActivityState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkDeviceActivityState getActivityState() {
         return this.activityState;
     }
@@ -106,7 +106,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      * Gets the companyAssetTag property value. The company asset tag assigned by the admin on the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCompanyAssetTag() {
         return this.companyAssetTag;
     }
@@ -114,7 +114,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      * Gets the configuration property value. The configuration properties of the device.
      * @return a teamworkDeviceConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkDeviceConfiguration getConfiguration() {
         return this.configuration;
     }
@@ -122,7 +122,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      * Gets the createdBy property value. Identity of the user who enrolled the device to the tenant.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -130,7 +130,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      * Gets the createdDateTime property value. The UTC date and time when the device was enrolled to the tenant.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -138,7 +138,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      * Gets the currentUser property value. The signed-in user on the device.
      * @return a teamworkUserIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkUserIdentity getCurrentUser() {
         return this.currentUser;
     }
@@ -146,7 +146,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      * Gets the deviceType property value. The deviceType property
      * @return a teamworkDeviceType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkDeviceType getDeviceType() {
         return this.deviceType;
     }
@@ -154,7 +154,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activity", (n) -> { this.setActivity(n.getObjectValue(TeamworkDeviceActivity::createFromDiscriminatorValue)); });
@@ -178,7 +178,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      * Gets the hardwareDetail property value. The hardwareDetail property
      * @return a teamworkHardwareDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkHardwareDetail getHardwareDetail() {
         return this.hardwareDetail;
     }
@@ -186,7 +186,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      * Gets the health property value. The health properties of the device.
      * @return a teamworkDeviceHealth
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkDeviceHealth getHealth() {
         return this.health;
     }
@@ -194,7 +194,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      * Gets the healthStatus property value. The health status of the device. The possible values are: unknown, offline, critical, nonUrgent, healthy, unknownFutureValue.
      * @return a teamworkDeviceHealthStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkDeviceHealthStatus getHealthStatus() {
         return this.healthStatus;
     }
@@ -202,7 +202,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. Identity of the user who last modified the device details.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -210,7 +210,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The UTC date and time when the device detail was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -218,7 +218,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      * Gets the notes property value. The notes added by the admin to the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNotes() {
         return this.notes;
     }
@@ -226,7 +226,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      * Gets the operations property value. The async operations on the device.
      * @return a teamworkDeviceOperation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TeamworkDeviceOperation> getOperations() {
         return this.operations;
     }
@@ -235,8 +235,8 @@ public class TeamworkDevice extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("activity", this.getActivity());
@@ -260,8 +260,8 @@ public class TeamworkDevice extends Entity implements Parsable {
      * @param value Value to set for the activity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivity(@javax.annotation.Nullable final TeamworkDeviceActivity value) {
+    @jakarta.annotation.Nonnull
+    public void setActivity(@jakarta.annotation.Nullable final TeamworkDeviceActivity value) {
         this.activity = value;
     }
     /**
@@ -269,8 +269,8 @@ public class TeamworkDevice extends Entity implements Parsable {
      * @param value Value to set for the activityState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityState(@javax.annotation.Nullable final TeamworkDeviceActivityState value) {
+    @jakarta.annotation.Nonnull
+    public void setActivityState(@jakarta.annotation.Nullable final TeamworkDeviceActivityState value) {
         this.activityState = value;
     }
     /**
@@ -278,8 +278,8 @@ public class TeamworkDevice extends Entity implements Parsable {
      * @param value Value to set for the companyAssetTag property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompanyAssetTag(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCompanyAssetTag(@jakarta.annotation.Nullable final String value) {
         this.companyAssetTag = value;
     }
     /**
@@ -287,8 +287,8 @@ public class TeamworkDevice extends Entity implements Parsable {
      * @param value Value to set for the configuration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfiguration(@javax.annotation.Nullable final TeamworkDeviceConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setConfiguration(@jakarta.annotation.Nullable final TeamworkDeviceConfiguration value) {
         this.configuration = value;
     }
     /**
@@ -296,8 +296,8 @@ public class TeamworkDevice extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
@@ -305,8 +305,8 @@ public class TeamworkDevice extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -314,8 +314,8 @@ public class TeamworkDevice extends Entity implements Parsable {
      * @param value Value to set for the currentUser property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrentUser(@javax.annotation.Nullable final TeamworkUserIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setCurrentUser(@jakarta.annotation.Nullable final TeamworkUserIdentity value) {
         this.currentUser = value;
     }
     /**
@@ -323,8 +323,8 @@ public class TeamworkDevice extends Entity implements Parsable {
      * @param value Value to set for the deviceType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceType(@javax.annotation.Nullable final TeamworkDeviceType value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceType(@jakarta.annotation.Nullable final TeamworkDeviceType value) {
         this.deviceType = value;
     }
     /**
@@ -332,8 +332,8 @@ public class TeamworkDevice extends Entity implements Parsable {
      * @param value Value to set for the hardwareDetail property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHardwareDetail(@javax.annotation.Nullable final TeamworkHardwareDetail value) {
+    @jakarta.annotation.Nonnull
+    public void setHardwareDetail(@jakarta.annotation.Nullable final TeamworkHardwareDetail value) {
         this.hardwareDetail = value;
     }
     /**
@@ -341,8 +341,8 @@ public class TeamworkDevice extends Entity implements Parsable {
      * @param value Value to set for the health property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHealth(@javax.annotation.Nullable final TeamworkDeviceHealth value) {
+    @jakarta.annotation.Nonnull
+    public void setHealth(@jakarta.annotation.Nullable final TeamworkDeviceHealth value) {
         this.health = value;
     }
     /**
@@ -350,8 +350,8 @@ public class TeamworkDevice extends Entity implements Parsable {
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHealthStatus(@javax.annotation.Nullable final TeamworkDeviceHealthStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setHealthStatus(@jakarta.annotation.Nullable final TeamworkDeviceHealthStatus value) {
         this.healthStatus = value;
     }
     /**
@@ -359,8 +359,8 @@ public class TeamworkDevice extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
@@ -368,8 +368,8 @@ public class TeamworkDevice extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -377,8 +377,8 @@ public class TeamworkDevice extends Entity implements Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotes(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNotes(@jakarta.annotation.Nullable final String value) {
         this.notes = value;
     }
     /**
@@ -386,8 +386,8 @@ public class TeamworkDevice extends Entity implements Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperations(@javax.annotation.Nullable final java.util.List<TeamworkDeviceOperation> value) {
+    @jakarta.annotation.Nonnull
+    public void setOperations(@jakarta.annotation.Nullable final java.util.List<TeamworkDeviceOperation> value) {
         this.operations = value;
     }
 }

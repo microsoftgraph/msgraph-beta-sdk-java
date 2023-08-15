@@ -45,7 +45,7 @@ public class DeviceLink extends Entity implements Parsable {
      * Instantiates a new deviceLink and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceLink() {
         super();
     }
@@ -54,8 +54,8 @@ public class DeviceLink extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceLink
      */
-    @javax.annotation.Nonnull
-    public static DeviceLink createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceLink createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceLink();
     }
@@ -63,7 +63,7 @@ public class DeviceLink extends Entity implements Parsable {
      * Gets the bandwidthCapacityInMbps property value. Determines the maximum allowed Mbps (megabits per second) bandwidth from a branch site. The possible values are:250,500,750,1000.
      * @return a bandwidthCapacityInMbps
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BandwidthCapacityInMbps getBandwidthCapacityInMbps() {
         return this.bandwidthCapacityInMbps;
     }
@@ -71,7 +71,7 @@ public class DeviceLink extends Entity implements Parsable {
      * Gets the bgpConfiguration property value. The bgpConfiguration property
      * @return a bgpConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BgpConfiguration getBgpConfiguration() {
         return this.bgpConfiguration;
     }
@@ -79,7 +79,7 @@ public class DeviceLink extends Entity implements Parsable {
      * Gets the deviceVendor property value. The deviceVendor property
      * @return a deviceVendor
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceVendor getDeviceVendor() {
         return this.deviceVendor;
     }
@@ -87,7 +87,7 @@ public class DeviceLink extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("bandwidthCapacityInMbps", (n) -> { this.setBandwidthCapacityInMbps(n.getEnumValue(BandwidthCapacityInMbps.class)); });
@@ -104,7 +104,7 @@ public class DeviceLink extends Entity implements Parsable {
      * Gets the ipAddress property value. Specifies the client IPv4 of the link
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIpAddress() {
         return this.ipAddress;
     }
@@ -112,7 +112,7 @@ public class DeviceLink extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. last modified time.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -120,7 +120,7 @@ public class DeviceLink extends Entity implements Parsable {
      * Gets the name property value. Name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -128,7 +128,7 @@ public class DeviceLink extends Entity implements Parsable {
      * Gets the redundancyConfiguration property value. The redundancyConfiguration property
      * @return a redundancyConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RedundancyConfiguration getRedundancyConfiguration() {
         return this.redundancyConfiguration;
     }
@@ -136,7 +136,7 @@ public class DeviceLink extends Entity implements Parsable {
      * Gets the tunnelConfiguration property value. The tunnelConfiguration property
      * @return a tunnelConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TunnelConfiguration getTunnelConfiguration() {
         return this.tunnelConfiguration;
     }
@@ -145,8 +145,8 @@ public class DeviceLink extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("bandwidthCapacityInMbps", this.getBandwidthCapacityInMbps());
@@ -163,8 +163,8 @@ public class DeviceLink extends Entity implements Parsable {
      * @param value Value to set for the bandwidthCapacityInMbps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBandwidthCapacityInMbps(@javax.annotation.Nullable final BandwidthCapacityInMbps value) {
+    @jakarta.annotation.Nonnull
+    public void setBandwidthCapacityInMbps(@jakarta.annotation.Nullable final BandwidthCapacityInMbps value) {
         this.bandwidthCapacityInMbps = value;
     }
     /**
@@ -172,8 +172,8 @@ public class DeviceLink extends Entity implements Parsable {
      * @param value Value to set for the bgpConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBgpConfiguration(@javax.annotation.Nullable final BgpConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setBgpConfiguration(@jakarta.annotation.Nullable final BgpConfiguration value) {
         this.bgpConfiguration = value;
     }
     /**
@@ -181,8 +181,8 @@ public class DeviceLink extends Entity implements Parsable {
      * @param value Value to set for the deviceVendor property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceVendor(@javax.annotation.Nullable final DeviceVendor value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceVendor(@jakarta.annotation.Nullable final DeviceVendor value) {
         this.deviceVendor = value;
     }
     /**
@@ -190,8 +190,8 @@ public class DeviceLink extends Entity implements Parsable {
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIpAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIpAddress(@jakarta.annotation.Nullable final String value) {
         this.ipAddress = value;
     }
     /**
@@ -199,8 +199,8 @@ public class DeviceLink extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -208,8 +208,8 @@ public class DeviceLink extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -217,8 +217,8 @@ public class DeviceLink extends Entity implements Parsable {
      * @param value Value to set for the redundancyConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRedundancyConfiguration(@javax.annotation.Nullable final RedundancyConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setRedundancyConfiguration(@jakarta.annotation.Nullable final RedundancyConfiguration value) {
         this.redundancyConfiguration = value;
     }
     /**
@@ -226,8 +226,8 @@ public class DeviceLink extends Entity implements Parsable {
      * @param value Value to set for the tunnelConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTunnelConfiguration(@javax.annotation.Nullable final TunnelConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setTunnelConfiguration(@jakarta.annotation.Nullable final TunnelConfiguration value) {
         this.tunnelConfiguration = value;
     }
 }

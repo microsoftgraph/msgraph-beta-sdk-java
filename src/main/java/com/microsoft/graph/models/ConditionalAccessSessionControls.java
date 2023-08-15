@@ -48,7 +48,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * Instantiates a new conditionalAccessSessionControls and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConditionalAccessSessionControls() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -57,8 +57,8 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a conditionalAccessSessionControls
      */
-    @javax.annotation.Nonnull
-    public static ConditionalAccessSessionControls createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ConditionalAccessSessionControls createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ConditionalAccessSessionControls();
     }
@@ -66,7 +66,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -74,7 +74,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * Gets the applicationEnforcedRestrictions property value. Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control.
      * @return a applicationEnforcedRestrictionsSessionControl
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ApplicationEnforcedRestrictionsSessionControl getApplicationEnforcedRestrictions() {
         return this.applicationEnforcedRestrictions;
     }
@@ -82,7 +82,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * Gets the cloudAppSecurity property value. Session control to apply cloud app security.
      * @return a cloudAppSecuritySessionControl
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudAppSecuritySessionControl getCloudAppSecurity() {
         return this.cloudAppSecurity;
     }
@@ -90,7 +90,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * Gets the continuousAccessEvaluation property value. Session control for continuous access evaluation settings.
      * @return a continuousAccessEvaluationSessionControl
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ContinuousAccessEvaluationSessionControl getContinuousAccessEvaluation() {
         return this.continuousAccessEvaluation;
     }
@@ -98,7 +98,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * Gets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDisableResilienceDefaults() {
         return this.disableResilienceDefaults;
     }
@@ -106,7 +106,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("applicationEnforcedRestrictions", (n) -> { this.setApplicationEnforcedRestrictions(n.getObjectValue(ApplicationEnforcedRestrictionsSessionControl::createFromDiscriminatorValue)); });
@@ -123,7 +123,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -131,7 +131,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * Gets the persistentBrowser property value. Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
      * @return a persistentBrowserSessionControl
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PersistentBrowserSessionControl getPersistentBrowser() {
         return this.persistentBrowser;
     }
@@ -139,7 +139,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * Gets the secureSignInSession property value. The secureSignInSession property
      * @return a secureSignInSessionControl
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SecureSignInSessionControl getSecureSignInSession() {
         return this.secureSignInSession;
     }
@@ -147,7 +147,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * Gets the signInFrequency property value. Session control to enforce signin frequency.
      * @return a signInFrequencySessionControl
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SignInFrequencySessionControl getSignInFrequency() {
         return this.signInFrequency;
     }
@@ -156,8 +156,8 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("applicationEnforcedRestrictions", this.getApplicationEnforcedRestrictions());
         writer.writeObjectValue("cloudAppSecurity", this.getCloudAppSecurity());
@@ -171,11 +171,11 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -183,8 +183,8 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param value Value to set for the applicationEnforcedRestrictions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicationEnforcedRestrictions(@javax.annotation.Nullable final ApplicationEnforcedRestrictionsSessionControl value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicationEnforcedRestrictions(@jakarta.annotation.Nullable final ApplicationEnforcedRestrictionsSessionControl value) {
         this.applicationEnforcedRestrictions = value;
     }
     /**
@@ -192,8 +192,8 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param value Value to set for the cloudAppSecurity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudAppSecurity(@javax.annotation.Nullable final CloudAppSecuritySessionControl value) {
+    @jakarta.annotation.Nonnull
+    public void setCloudAppSecurity(@jakarta.annotation.Nullable final CloudAppSecuritySessionControl value) {
         this.cloudAppSecurity = value;
     }
     /**
@@ -201,8 +201,8 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param value Value to set for the continuousAccessEvaluation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContinuousAccessEvaluation(@javax.annotation.Nullable final ContinuousAccessEvaluationSessionControl value) {
+    @jakarta.annotation.Nonnull
+    public void setContinuousAccessEvaluation(@jakarta.annotation.Nullable final ContinuousAccessEvaluationSessionControl value) {
         this.continuousAccessEvaluation = value;
     }
     /**
@@ -210,17 +210,17 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param value Value to set for the disableResilienceDefaults property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisableResilienceDefaults(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDisableResilienceDefaults(@jakarta.annotation.Nullable final Boolean value) {
         this.disableResilienceDefaults = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -228,8 +228,8 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param value Value to set for the persistentBrowser property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPersistentBrowser(@javax.annotation.Nullable final PersistentBrowserSessionControl value) {
+    @jakarta.annotation.Nonnull
+    public void setPersistentBrowser(@jakarta.annotation.Nullable final PersistentBrowserSessionControl value) {
         this.persistentBrowser = value;
     }
     /**
@@ -237,8 +237,8 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param value Value to set for the secureSignInSession property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecureSignInSession(@javax.annotation.Nullable final SecureSignInSessionControl value) {
+    @jakarta.annotation.Nonnull
+    public void setSecureSignInSession(@jakarta.annotation.Nullable final SecureSignInSessionControl value) {
         this.secureSignInSession = value;
     }
     /**
@@ -246,8 +246,8 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param value Value to set for the signInFrequency property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSignInFrequency(@javax.annotation.Nullable final SignInFrequencySessionControl value) {
+    @jakarta.annotation.Nonnull
+    public void setSignInFrequency(@jakarta.annotation.Nullable final SignInFrequencySessionControl value) {
         this.signInFrequency = value;
     }
 }

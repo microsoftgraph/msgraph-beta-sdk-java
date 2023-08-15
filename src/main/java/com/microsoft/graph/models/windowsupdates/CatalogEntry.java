@@ -25,7 +25,7 @@ public class CatalogEntry extends Entity implements Parsable {
      * Instantiates a new catalogEntry and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CatalogEntry() {
         super();
     }
@@ -34,8 +34,8 @@ public class CatalogEntry extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a catalogEntry
      */
-    @javax.annotation.Nonnull
-    public static CatalogEntry createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CatalogEntry createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -53,7 +53,7 @@ public class CatalogEntry extends Entity implements Parsable {
      * Gets the deployableUntilDateTime property value. The date on which the content is no longer available to deploy using the service. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getDeployableUntilDateTime() {
         return this.deployableUntilDateTime;
     }
@@ -61,7 +61,7 @@ public class CatalogEntry extends Entity implements Parsable {
      * Gets the displayName property value. The display name of the content. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -69,7 +69,7 @@ public class CatalogEntry extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deployableUntilDateTime", (n) -> { this.setDeployableUntilDateTime(n.getOffsetDateTimeValue()); });
@@ -81,7 +81,7 @@ public class CatalogEntry extends Entity implements Parsable {
      * Gets the releaseDateTime property value. The release date for the content. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getReleaseDateTime() {
         return this.releaseDateTime;
     }
@@ -90,8 +90,8 @@ public class CatalogEntry extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("deployableUntilDateTime", this.getDeployableUntilDateTime());
@@ -103,8 +103,8 @@ public class CatalogEntry extends Entity implements Parsable {
      * @param value Value to set for the deployableUntilDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeployableUntilDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setDeployableUntilDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.deployableUntilDateTime = value;
     }
     /**
@@ -112,8 +112,8 @@ public class CatalogEntry extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -121,8 +121,8 @@ public class CatalogEntry extends Entity implements Parsable {
      * @param value Value to set for the releaseDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReleaseDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setReleaseDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.releaseDateTime = value;
     }
 }

@@ -35,7 +35,7 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
      * Instantiates a new deviceManagementIntentCustomizedSetting and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementIntentCustomizedSetting() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -44,8 +44,8 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementIntentCustomizedSetting
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementIntentCustomizedSetting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementIntentCustomizedSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementIntentCustomizedSetting();
     }
@@ -53,7 +53,7 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -61,7 +61,7 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
      * Gets the customizedJson property value. JSON representation of the customized value, if different from default
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomizedJson() {
         return this.customizedJson;
     }
@@ -69,7 +69,7 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
      * Gets the defaultJson property value. JSON representation of the default value from the template
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDefaultJson() {
         return this.defaultJson;
     }
@@ -77,7 +77,7 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
      * Gets the definitionId property value. The ID of the setting definition for this setting
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDefinitionId() {
         return this.definitionId;
     }
@@ -85,7 +85,7 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("customizedJson", (n) -> { this.setCustomizedJson(n.getStringValue()); });
@@ -98,7 +98,7 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -107,8 +107,8 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("customizedJson", this.getCustomizedJson());
         writer.writeStringValue("defaultJson", this.getDefaultJson());
@@ -118,11 +118,11 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -130,8 +130,8 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
      * @param value Value to set for the customizedJson property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomizedJson(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomizedJson(@jakarta.annotation.Nullable final String value) {
         this.customizedJson = value;
     }
     /**
@@ -139,8 +139,8 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
      * @param value Value to set for the defaultJson property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultJson(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaultJson(@jakarta.annotation.Nullable final String value) {
         this.defaultJson = value;
     }
     /**
@@ -148,17 +148,17 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
      * @param value Value to set for the definitionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefinitionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.definitionId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

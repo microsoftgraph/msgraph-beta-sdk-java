@@ -61,7 +61,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * Instantiates a new userSimulationDetails and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserSimulationDetails() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -70,8 +70,8 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userSimulationDetails
      */
-    @javax.annotation.Nonnull
-    public static UserSimulationDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserSimulationDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserSimulationDetails();
     }
@@ -79,7 +79,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -87,7 +87,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * Gets the assignedTrainingsCount property value. Number of trainings assigned to a user in an attack simulation and training campaign.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getAssignedTrainingsCount() {
         return this.assignedTrainingsCount;
     }
@@ -95,7 +95,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * Gets the completedTrainingsCount property value. Number of trainings completed by a user in an attack simulation and training campaign.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCompletedTrainingsCount() {
         return this.completedTrainingsCount;
     }
@@ -103,7 +103,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * Gets the compromisedDateTime property value. Date and time of the compromising online action by a user in an attack simulation and training campaign.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCompromisedDateTime() {
         return this.compromisedDateTime;
     }
@@ -111,7 +111,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("assignedTrainingsCount", (n) -> { this.setAssignedTrainingsCount(n.getIntegerValue()); });
@@ -131,7 +131,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * Gets the inProgressTrainingsCount property value. Number of trainings in progress by a user in an attack simulation and training campaign.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getInProgressTrainingsCount() {
         return this.inProgressTrainingsCount;
     }
@@ -139,7 +139,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * Gets the isCompromised property value. Indicates whether a user was compromised in an attack simulation and training campaign.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsCompromised() {
         return this.isCompromised;
     }
@@ -147,7 +147,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * Gets the latestSimulationActivity property value. Indicates latest user activity.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLatestSimulationActivity() {
         return this.latestSimulationActivity;
     }
@@ -155,7 +155,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -163,7 +163,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * Gets the reportedPhishDateTime property value. Date and time when a user reported the delivered payload as phishing in the attack simulation and training campaign.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getReportedPhishDateTime() {
         return this.reportedPhishDateTime;
     }
@@ -171,7 +171,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * Gets the simulationEvents property value. List of simulation events of a user in the attack simulation and training campaign.
      * @return a userSimulationEventInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UserSimulationEventInfo> getSimulationEvents() {
         return this.simulationEvents;
     }
@@ -179,7 +179,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * Gets the simulationUser property value. The user in an attack simulation and training campaign.
      * @return a attackSimulationUser
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AttackSimulationUser getSimulationUser() {
         return this.simulationUser;
     }
@@ -187,7 +187,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * Gets the trainingEvents property value. List of training events of a user in the attack simulation and training campaign.
      * @return a userTrainingEventInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UserTrainingEventInfo> getTrainingEvents() {
         return this.trainingEvents;
     }
@@ -196,8 +196,8 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("assignedTrainingsCount", this.getAssignedTrainingsCount());
         writer.writeIntegerValue("completedTrainingsCount", this.getCompletedTrainingsCount());
@@ -214,11 +214,11 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -226,8 +226,8 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the assignedTrainingsCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignedTrainingsCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignedTrainingsCount(@jakarta.annotation.Nullable final Integer value) {
         this.assignedTrainingsCount = value;
     }
     /**
@@ -235,8 +235,8 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the completedTrainingsCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedTrainingsCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletedTrainingsCount(@jakarta.annotation.Nullable final Integer value) {
         this.completedTrainingsCount = value;
     }
     /**
@@ -244,8 +244,8 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the compromisedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompromisedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCompromisedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.compromisedDateTime = value;
     }
     /**
@@ -253,8 +253,8 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the inProgressTrainingsCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInProgressTrainingsCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setInProgressTrainingsCount(@jakarta.annotation.Nullable final Integer value) {
         this.inProgressTrainingsCount = value;
     }
     /**
@@ -262,8 +262,8 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isCompromised property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsCompromised(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsCompromised(@jakarta.annotation.Nullable final Boolean value) {
         this.isCompromised = value;
     }
     /**
@@ -271,17 +271,17 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the latestSimulationActivity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLatestSimulationActivity(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLatestSimulationActivity(@jakarta.annotation.Nullable final String value) {
         this.latestSimulationActivity = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -289,8 +289,8 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the reportedPhishDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReportedPhishDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setReportedPhishDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.reportedPhishDateTime = value;
     }
     /**
@@ -298,8 +298,8 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the simulationEvents property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSimulationEvents(@javax.annotation.Nullable final java.util.List<UserSimulationEventInfo> value) {
+    @jakarta.annotation.Nonnull
+    public void setSimulationEvents(@jakarta.annotation.Nullable final java.util.List<UserSimulationEventInfo> value) {
         this.simulationEvents = value;
     }
     /**
@@ -307,8 +307,8 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the simulationUser property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSimulationUser(@javax.annotation.Nullable final AttackSimulationUser value) {
+    @jakarta.annotation.Nonnull
+    public void setSimulationUser(@jakarta.annotation.Nullable final AttackSimulationUser value) {
         this.simulationUser = value;
     }
     /**
@@ -316,8 +316,8 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the trainingEvents property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrainingEvents(@javax.annotation.Nullable final java.util.List<UserTrainingEventInfo> value) {
+    @jakarta.annotation.Nonnull
+    public void setTrainingEvents(@jakarta.annotation.Nullable final java.util.List<UserTrainingEventInfo> value) {
         this.trainingEvents = value;
     }
 }

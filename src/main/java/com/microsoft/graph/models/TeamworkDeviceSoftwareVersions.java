@@ -40,7 +40,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      * Instantiates a new teamworkDeviceSoftwareVersions and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkDeviceSoftwareVersions() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +49,8 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teamworkDeviceSoftwareVersions
      */
-    @javax.annotation.Nonnull
-    public static TeamworkDeviceSoftwareVersions createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeamworkDeviceSoftwareVersions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeamworkDeviceSoftwareVersions();
     }
@@ -58,7 +58,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +66,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      * Gets the adminAgentSoftwareVersion property value. The software version for the admin agent running on the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAdminAgentSoftwareVersion() {
         return this.adminAgentSoftwareVersion;
     }
@@ -74,7 +74,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("adminAgentSoftwareVersion", (n) -> { this.setAdminAgentSoftwareVersion(n.getStringValue()); });
@@ -89,7 +89,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      * Gets the firmwareSoftwareVersion property value. The software version for the firmware running on the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFirmwareSoftwareVersion() {
         return this.firmwareSoftwareVersion;
     }
@@ -97,7 +97,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -105,7 +105,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      * Gets the operatingSystemSoftwareVersion property value. The software version for the operating system on the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOperatingSystemSoftwareVersion() {
         return this.operatingSystemSoftwareVersion;
     }
@@ -113,7 +113,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      * Gets the partnerAgentSoftwareVersion property value. The software version for the partner agent running on the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPartnerAgentSoftwareVersion() {
         return this.partnerAgentSoftwareVersion;
     }
@@ -121,7 +121,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      * Gets the teamsClientSoftwareVersion property value. The software version for the Teams client running on the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTeamsClientSoftwareVersion() {
         return this.teamsClientSoftwareVersion;
     }
@@ -130,8 +130,8 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("adminAgentSoftwareVersion", this.getAdminAgentSoftwareVersion());
         writer.writeStringValue("firmwareSoftwareVersion", this.getFirmwareSoftwareVersion());
@@ -143,11 +143,11 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -155,8 +155,8 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      * @param value Value to set for the adminAgentSoftwareVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdminAgentSoftwareVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAdminAgentSoftwareVersion(@jakarta.annotation.Nullable final String value) {
         this.adminAgentSoftwareVersion = value;
     }
     /**
@@ -164,17 +164,17 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      * @param value Value to set for the firmwareSoftwareVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirmwareSoftwareVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFirmwareSoftwareVersion(@jakarta.annotation.Nullable final String value) {
         this.firmwareSoftwareVersion = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -182,8 +182,8 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      * @param value Value to set for the operatingSystemSoftwareVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperatingSystemSoftwareVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOperatingSystemSoftwareVersion(@jakarta.annotation.Nullable final String value) {
         this.operatingSystemSoftwareVersion = value;
     }
     /**
@@ -191,8 +191,8 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      * @param value Value to set for the partnerAgentSoftwareVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPartnerAgentSoftwareVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPartnerAgentSoftwareVersion(@jakarta.annotation.Nullable final String value) {
         this.partnerAgentSoftwareVersion = value;
     }
     /**
@@ -200,8 +200,8 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      * @param value Value to set for the teamsClientSoftwareVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTeamsClientSoftwareVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTeamsClientSoftwareVersion(@jakarta.annotation.Nullable final String value) {
         this.teamsClientSoftwareVersion = value;
     }
 }

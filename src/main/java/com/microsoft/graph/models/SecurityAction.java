@@ -68,7 +68,7 @@ public class SecurityAction extends Entity implements Parsable {
      * Instantiates a new securityAction and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SecurityAction() {
         super();
     }
@@ -77,8 +77,8 @@ public class SecurityAction extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a securityAction
      */
-    @javax.annotation.Nonnull
-    public static SecurityAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SecurityAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SecurityAction();
     }
@@ -86,7 +86,7 @@ public class SecurityAction extends Entity implements Parsable {
      * Gets the actionReason property value. Reason for invoking this action.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActionReason() {
         return this.actionReason;
     }
@@ -94,7 +94,7 @@ public class SecurityAction extends Entity implements Parsable {
      * Gets the appId property value. The Application ID of the calling application that submitted (POST) the action. The appId should be extracted from the auth token and not entered manually by the calling application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppId() {
         return this.appId;
     }
@@ -102,7 +102,7 @@ public class SecurityAction extends Entity implements Parsable {
      * Gets the azureTenantId property value. Azure tenant ID of the entity to determine which tenant the entity belongs to (multi-tenancy support). The azureTenantId should be extracted from the auth token and not entered manually by the calling application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureTenantId() {
         return this.azureTenantId;
     }
@@ -110,7 +110,7 @@ public class SecurityAction extends Entity implements Parsable {
      * Gets the clientContext property value. The clientContext property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClientContext() {
         return this.clientContext;
     }
@@ -118,7 +118,7 @@ public class SecurityAction extends Entity implements Parsable {
      * Gets the completedDateTime property value. Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
         return this.completedDateTime;
     }
@@ -126,7 +126,7 @@ public class SecurityAction extends Entity implements Parsable {
      * Gets the createdDateTime property value. Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -134,7 +134,7 @@ public class SecurityAction extends Entity implements Parsable {
      * Gets the errorInfo property value. Error info when the action fails.
      * @return a resultInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResultInfo getErrorInfo() {
         return this.errorInfo;
     }
@@ -142,7 +142,7 @@ public class SecurityAction extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("actionReason", (n) -> { this.setActionReason(n.getStringValue()); });
@@ -165,7 +165,7 @@ public class SecurityAction extends Entity implements Parsable {
      * Gets the lastActionDateTime property value. Timestamp when this action was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
         return this.lastActionDateTime;
     }
@@ -173,7 +173,7 @@ public class SecurityAction extends Entity implements Parsable {
      * Gets the name property value. Action name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -181,7 +181,7 @@ public class SecurityAction extends Entity implements Parsable {
      * Gets the parameters property value. Collection of parameters (key-value pairs) necessary to invoke the action, for example, URL or fileHash to block.). Required.
      * @return a keyValuePair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getParameters() {
         return this.parameters;
     }
@@ -189,7 +189,7 @@ public class SecurityAction extends Entity implements Parsable {
      * Gets the states property value. Collection of securityActionState to keep the history of an action.
      * @return a securityActionState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SecurityActionState> getStates() {
         return this.states;
     }
@@ -197,7 +197,7 @@ public class SecurityAction extends Entity implements Parsable {
      * Gets the status property value. Status of the action. Possible values are: NotStarted, Running, Completed, Failed.
      * @return a operationStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OperationStatus getStatus() {
         return this.status;
     }
@@ -205,7 +205,7 @@ public class SecurityAction extends Entity implements Parsable {
      * Gets the user property value. The user principal name of the signed-in user that submitted  (POST) the action. The user should be extracted from the auth token and not entered manually by the calling application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUser() {
         return this.user;
     }
@@ -213,7 +213,7 @@ public class SecurityAction extends Entity implements Parsable {
      * Gets the vendorInformation property value. Complex Type containing details about the Security product/service vendor, provider, and sub-provider (for example, vendor=Microsoft; provider=Windows Defender ATP; sub-provider=AppLocker).
      * @return a securityVendorInformation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {
         return this.vendorInformation;
     }
@@ -222,8 +222,8 @@ public class SecurityAction extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("actionReason", this.getActionReason());
@@ -246,8 +246,8 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the actionReason property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActionReason(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setActionReason(@jakarta.annotation.Nullable final String value) {
         this.actionReason = value;
     }
     /**
@@ -255,8 +255,8 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the appId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }
     /**
@@ -264,8 +264,8 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAzureTenantId(@jakarta.annotation.Nullable final String value) {
         this.azureTenantId = value;
     }
     /**
@@ -273,8 +273,8 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the clientContext property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientContext(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setClientContext(@jakarta.annotation.Nullable final String value) {
         this.clientContext = value;
     }
     /**
@@ -282,8 +282,8 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completedDateTime = value;
     }
     /**
@@ -291,8 +291,8 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -300,8 +300,8 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the errorInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorInfo(@javax.annotation.Nullable final ResultInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setErrorInfo(@jakarta.annotation.Nullable final ResultInfo value) {
         this.errorInfo = value;
     }
     /**
@@ -309,8 +309,8 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the lastActionDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastActionDateTime = value;
     }
     /**
@@ -318,8 +318,8 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -327,8 +327,8 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the parameters property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParameters(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
+    @jakarta.annotation.Nonnull
+    public void setParameters(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this.parameters = value;
     }
     /**
@@ -336,8 +336,8 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the states property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStates(@javax.annotation.Nullable final java.util.List<SecurityActionState> value) {
+    @jakarta.annotation.Nonnull
+    public void setStates(@jakarta.annotation.Nullable final java.util.List<SecurityActionState> value) {
         this.states = value;
     }
     /**
@@ -345,8 +345,8 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final OperationStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final OperationStatus value) {
         this.status = value;
     }
     /**
@@ -354,8 +354,8 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the user property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUser(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUser(@jakarta.annotation.Nullable final String value) {
         this.user = value;
     }
     /**
@@ -363,8 +363,8 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the vendorInformation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
+    @jakarta.annotation.Nonnull
+    public void setVendorInformation(@jakarta.annotation.Nullable final SecurityVendorInformation value) {
         this.vendorInformation = value;
     }
 }

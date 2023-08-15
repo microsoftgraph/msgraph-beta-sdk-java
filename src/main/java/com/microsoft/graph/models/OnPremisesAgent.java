@@ -31,7 +31,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
      * Instantiates a new onPremisesAgent and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnPremisesAgent() {
         super();
     }
@@ -40,8 +40,8 @@ public class OnPremisesAgent extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a onPremisesAgent
      */
-    @javax.annotation.Nonnull
-    public static OnPremisesAgent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OnPremisesAgent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OnPremisesAgent();
     }
@@ -49,7 +49,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
      * Gets the agentGroups property value. List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
      * @return a onPremisesAgentGroup
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OnPremisesAgentGroup> getAgentGroups() {
         return this.agentGroups;
     }
@@ -57,7 +57,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
      * Gets the externalIp property value. The external IP address as detected by the service for the agent machine. Read-only
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalIp() {
         return this.externalIp;
     }
@@ -65,7 +65,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("agentGroups", (n) -> { this.setAgentGroups(n.getCollectionOfObjectValues(OnPremisesAgentGroup::createFromDiscriminatorValue)); });
@@ -79,7 +79,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
      * Gets the machineName property value. The name of the machine that the aggent is running on. Read-only
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMachineName() {
         return this.machineName;
     }
@@ -87,7 +87,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a agentStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AgentStatus getStatus() {
         return this.status;
     }
@@ -95,7 +95,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
      * Gets the supportedPublishingTypes property value. The supportedPublishingTypes property
      * @return a onPremisesPublishingType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OnPremisesPublishingType> getSupportedPublishingTypes() {
         return this.supportedPublishingTypes;
     }
@@ -104,8 +104,8 @@ public class OnPremisesAgent extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("agentGroups", this.getAgentGroups());
@@ -119,8 +119,8 @@ public class OnPremisesAgent extends Entity implements Parsable {
      * @param value Value to set for the agentGroups property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAgentGroups(@javax.annotation.Nullable final java.util.List<OnPremisesAgentGroup> value) {
+    @jakarta.annotation.Nonnull
+    public void setAgentGroups(@jakarta.annotation.Nullable final java.util.List<OnPremisesAgentGroup> value) {
         this.agentGroups = value;
     }
     /**
@@ -128,8 +128,8 @@ public class OnPremisesAgent extends Entity implements Parsable {
      * @param value Value to set for the externalIp property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalIp(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalIp(@jakarta.annotation.Nullable final String value) {
         this.externalIp = value;
     }
     /**
@@ -137,8 +137,8 @@ public class OnPremisesAgent extends Entity implements Parsable {
      * @param value Value to set for the machineName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMachineName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMachineName(@jakarta.annotation.Nullable final String value) {
         this.machineName = value;
     }
     /**
@@ -146,8 +146,8 @@ public class OnPremisesAgent extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final AgentStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final AgentStatus value) {
         this.status = value;
     }
     /**
@@ -155,8 +155,8 @@ public class OnPremisesAgent extends Entity implements Parsable {
      * @param value Value to set for the supportedPublishingTypes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedPublishingTypes(@javax.annotation.Nullable final java.util.List<OnPremisesPublishingType> value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedPublishingTypes(@jakarta.annotation.Nullable final java.util.List<OnPremisesPublishingType> value) {
         this.supportedPublishingTypes = value;
     }
 }

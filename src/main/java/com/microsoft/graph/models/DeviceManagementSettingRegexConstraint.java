@@ -18,7 +18,7 @@ public class DeviceManagementSettingRegexConstraint extends DeviceManagementCons
      * Instantiates a new deviceManagementSettingRegexConstraint and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementSettingRegexConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingRegexConstraint");
@@ -28,8 +28,8 @@ public class DeviceManagementSettingRegexConstraint extends DeviceManagementCons
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementSettingRegexConstraint
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementSettingRegexConstraint createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementSettingRegexConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementSettingRegexConstraint();
     }
@@ -37,7 +37,7 @@ public class DeviceManagementSettingRegexConstraint extends DeviceManagementCons
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("regex", (n) -> { this.setRegex(n.getStringValue()); });
@@ -47,7 +47,7 @@ public class DeviceManagementSettingRegexConstraint extends DeviceManagementCons
      * Gets the regex property value. The RegEx pattern to match against
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRegex() {
         return this.regex;
     }
@@ -56,8 +56,8 @@ public class DeviceManagementSettingRegexConstraint extends DeviceManagementCons
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("regex", this.getRegex());
@@ -67,8 +67,8 @@ public class DeviceManagementSettingRegexConstraint extends DeviceManagementCons
      * @param value Value to set for the regex property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegex(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRegex(@jakarta.annotation.Nullable final String value) {
         this.regex = value;
     }
 }

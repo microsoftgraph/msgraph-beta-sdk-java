@@ -33,7 +33,7 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
      * Instantiates a new itemActivityTimeSet and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemActivityTimeSet() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +42,8 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a itemActivityTimeSet
      */
-    @javax.annotation.Nonnull
-    public static ItemActivityTimeSet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ItemActivityTimeSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ItemActivityTimeSet();
     }
@@ -51,7 +51,7 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -59,7 +59,7 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("lastRecordedDateTime", (n) -> { this.setLastRecordedDateTime(n.getOffsetDateTimeValue()); });
@@ -72,7 +72,7 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
      * Gets the lastRecordedDateTime property value. The lastRecordedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastRecordedDateTime() {
         return this.lastRecordedDateTime;
     }
@@ -80,7 +80,7 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
      * Gets the observedDateTime property value. When the activity was observed to take place.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getObservedDateTime() {
         return this.observedDateTime;
     }
@@ -88,7 +88,7 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -96,7 +96,7 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
      * Gets the recordedDateTime property value. When the observation was recorded on the service.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRecordedDateTime() {
         return this.recordedDateTime;
     }
@@ -105,8 +105,8 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastRecordedDateTime", this.getLastRecordedDateTime());
         writer.writeOffsetDateTimeValue("observedDateTime", this.getObservedDateTime());
@@ -116,11 +116,11 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -128,8 +128,8 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastRecordedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastRecordedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastRecordedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastRecordedDateTime = value;
     }
     /**
@@ -137,17 +137,17 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the observedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setObservedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setObservedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.observedDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -155,8 +155,8 @@ public class ItemActivityTimeSet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the recordedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecordedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setRecordedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.recordedDateTime = value;
     }
 }

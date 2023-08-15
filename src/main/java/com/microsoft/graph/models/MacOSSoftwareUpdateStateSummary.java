@@ -39,7 +39,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * Instantiates a new macOSSoftwareUpdateStateSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateStateSummary() {
         super();
     }
@@ -48,8 +48,8 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a macOSSoftwareUpdateStateSummary
      */
-    @javax.annotation.Nonnull
-    public static MacOSSoftwareUpdateStateSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MacOSSoftwareUpdateStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MacOSSoftwareUpdateStateSummary();
     }
@@ -57,7 +57,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * Gets the displayName property value. Human readable name of the software update
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -65,7 +65,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -80,7 +80,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * Gets the lastUpdatedDateTime property value. Last date time the report for this device and product key was updated.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
         return this.lastUpdatedDateTime;
     }
@@ -88,7 +88,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * Gets the productKey property value. Product key of the software update.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProductKey() {
         return this.productKey;
     }
@@ -96,7 +96,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * Gets the state property value. MacOS Software Update State
      * @return a macOSSoftwareUpdateState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateState getState() {
         return this.state;
     }
@@ -104,7 +104,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * Gets the updateCategory property value. MacOS Software Update Category
      * @return a macOSSoftwareUpdateCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateCategory getUpdateCategory() {
         return this.updateCategory;
     }
@@ -112,7 +112,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * Gets the updateVersion property value. Version of the software update
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUpdateVersion() {
         return this.updateVersion;
     }
@@ -121,8 +121,8 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -137,8 +137,8 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -146,8 +146,8 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
@@ -155,8 +155,8 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * @param value Value to set for the productKey property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProductKey(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProductKey(@jakarta.annotation.Nullable final String value) {
         this.productKey = value;
     }
     /**
@@ -164,8 +164,8 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final MacOSSoftwareUpdateState value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final MacOSSoftwareUpdateState value) {
         this.state = value;
     }
     /**
@@ -173,8 +173,8 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * @param value Value to set for the updateCategory property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdateCategory(@javax.annotation.Nullable final MacOSSoftwareUpdateCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setUpdateCategory(@jakarta.annotation.Nullable final MacOSSoftwareUpdateCategory value) {
         this.updateCategory = value;
     }
     /**
@@ -182,8 +182,8 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements Parsable 
      * @param value Value to set for the updateVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdateVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUpdateVersion(@jakarta.annotation.Nullable final String value) {
         this.updateVersion = value;
     }
 }

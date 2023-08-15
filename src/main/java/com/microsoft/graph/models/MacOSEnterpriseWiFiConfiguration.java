@@ -50,7 +50,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * Instantiates a new macOSEnterpriseWiFiConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSEnterpriseWiFiConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSEnterpriseWiFiConfiguration");
@@ -60,8 +60,8 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a macOSEnterpriseWiFiConfiguration
      */
-    @javax.annotation.Nonnull
-    public static MacOSEnterpriseWiFiConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MacOSEnterpriseWiFiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MacOSEnterpriseWiFiConfiguration();
     }
@@ -69,7 +69,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * Gets the authenticationMethod property value. Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
      * @return a wiFiAuthenticationMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WiFiAuthenticationMethod getAuthenticationMethod() {
         return this.authenticationMethod;
     }
@@ -77,7 +77,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * Gets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
      * @return a eapFastConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EapFastConfiguration getEapFastConfiguration() {
         return this.eapFastConfiguration;
     }
@@ -85,7 +85,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * Gets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
      * @return a eapType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EapType getEapType() {
         return this.eapType;
     }
@@ -93,7 +93,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod.class)); });
@@ -111,7 +111,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * Gets the identityCertificateForClientAuthentication property value. Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
      * @return a macOSCertificateProfileBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSCertificateProfileBase getIdentityCertificateForClientAuthentication() {
         return this.identityCertificateForClientAuthentication;
     }
@@ -119,7 +119,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * Gets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @return a nonEapAuthenticationMethodForEapTtlsType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public NonEapAuthenticationMethodForEapTtlsType getInnerAuthenticationProtocolForEapTtls() {
         return this.innerAuthenticationProtocolForEapTtls;
     }
@@ -127,7 +127,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * Gets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this Wi-Fi connection using their real username is displayed as 'anonymous'.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOuterIdentityPrivacyTemporaryValue() {
         return this.outerIdentityPrivacyTemporaryValue;
     }
@@ -135,7 +135,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * Gets the rootCertificateForServerValidation property value. Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP.
      * @return a macOSTrustedRootCertificate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSTrustedRootCertificate getRootCertificateForServerValidation() {
         return this.rootCertificateForServerValidation;
     }
@@ -143,7 +143,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * Gets the rootCertificatesForServerValidation property value. Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa. This collection can contain a maximum of 500 elements.
      * @return a macOSTrustedRootCertificate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MacOSTrustedRootCertificate> getRootCertificatesForServerValidation() {
         return this.rootCertificatesForServerValidation;
     }
@@ -151,7 +151,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * Gets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this Wi-Fi network.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTrustedServerCertificateNames() {
         return this.trustedServerCertificateNames;
     }
@@ -160,8 +160,8 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("authenticationMethod", this.getAuthenticationMethod());
@@ -179,8 +179,8 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationMethod(@javax.annotation.Nullable final WiFiAuthenticationMethod value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationMethod(@jakarta.annotation.Nullable final WiFiAuthenticationMethod value) {
         this.authenticationMethod = value;
     }
     /**
@@ -188,8 +188,8 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * @param value Value to set for the eapFastConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEapFastConfiguration(@javax.annotation.Nullable final EapFastConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setEapFastConfiguration(@jakarta.annotation.Nullable final EapFastConfiguration value) {
         this.eapFastConfiguration = value;
     }
     /**
@@ -197,8 +197,8 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * @param value Value to set for the eapType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEapType(@javax.annotation.Nullable final EapType value) {
+    @jakarta.annotation.Nonnull
+    public void setEapType(@jakarta.annotation.Nullable final EapType value) {
         this.eapType = value;
     }
     /**
@@ -206,8 +206,8 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * @param value Value to set for the identityCertificateForClientAuthentication property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityCertificateForClientAuthentication(@javax.annotation.Nullable final MacOSCertificateProfileBase value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentityCertificateForClientAuthentication(@jakarta.annotation.Nullable final MacOSCertificateProfileBase value) {
         this.identityCertificateForClientAuthentication = value;
     }
     /**
@@ -215,8 +215,8 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * @param value Value to set for the innerAuthenticationProtocolForEapTtls property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInnerAuthenticationProtocolForEapTtls(@javax.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
+    @jakarta.annotation.Nonnull
+    public void setInnerAuthenticationProtocolForEapTtls(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
         this.innerAuthenticationProtocolForEapTtls = value;
     }
     /**
@@ -224,8 +224,8 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * @param value Value to set for the outerIdentityPrivacyTemporaryValue property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOuterIdentityPrivacyTemporaryValue(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOuterIdentityPrivacyTemporaryValue(@jakarta.annotation.Nullable final String value) {
         this.outerIdentityPrivacyTemporaryValue = value;
     }
     /**
@@ -233,8 +233,8 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * @param value Value to set for the rootCertificateForServerValidation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRootCertificateForServerValidation(@javax.annotation.Nullable final MacOSTrustedRootCertificate value) {
+    @jakarta.annotation.Nonnull
+    public void setRootCertificateForServerValidation(@jakarta.annotation.Nullable final MacOSTrustedRootCertificate value) {
         this.rootCertificateForServerValidation = value;
     }
     /**
@@ -242,8 +242,8 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * @param value Value to set for the rootCertificatesForServerValidation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRootCertificatesForServerValidation(@javax.annotation.Nullable final java.util.List<MacOSTrustedRootCertificate> value) {
+    @jakarta.annotation.Nonnull
+    public void setRootCertificatesForServerValidation(@jakarta.annotation.Nullable final java.util.List<MacOSTrustedRootCertificate> value) {
         this.rootCertificatesForServerValidation = value;
     }
     /**
@@ -251,8 +251,8 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * @param value Value to set for the trustedServerCertificateNames property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrustedServerCertificateNames(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setTrustedServerCertificateNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.trustedServerCertificateNames = value;
     }
 }

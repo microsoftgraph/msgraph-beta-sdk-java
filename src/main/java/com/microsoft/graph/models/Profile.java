@@ -87,7 +87,7 @@ public class Profile extends Entity implements Parsable {
      * Instantiates a new profile and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Profile() {
         super();
     }
@@ -96,8 +96,8 @@ public class Profile extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a profile
      */
-    @javax.annotation.Nonnull
-    public static Profile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Profile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Profile();
     }
@@ -105,7 +105,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the account property value. The account property
      * @return a userAccountInformation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UserAccountInformation> getAccount() {
         return this.account;
     }
@@ -113,7 +113,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the addresses property value. Represents details of addresses associated with the user.
      * @return a itemAddress
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ItemAddress> getAddresses() {
         return this.addresses;
     }
@@ -121,7 +121,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the anniversaries property value. Represents the details of meaningful dates associated with a person.
      * @return a personAnnualEvent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PersonAnnualEvent> getAnniversaries() {
         return this.anniversaries;
     }
@@ -129,7 +129,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the awards property value. Represents the details of awards or honors associated with a person.
      * @return a personAward
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PersonAward> getAwards() {
         return this.awards;
     }
@@ -137,7 +137,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the certifications property value. Represents the details of certifications associated with a person.
      * @return a personCertification
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PersonCertification> getCertifications() {
         return this.certifications;
     }
@@ -145,7 +145,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the educationalActivities property value. Represents data that a user has supplied related to undergraduate, graduate, postgraduate or other educational activities.
      * @return a educationalActivity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationalActivity> getEducationalActivities() {
         return this.educationalActivities;
     }
@@ -153,7 +153,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the emails property value. Represents detailed information about email addresses associated with the user.
      * @return a itemEmail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ItemEmail> getEmails() {
         return this.emails;
     }
@@ -161,7 +161,7 @@ public class Profile extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("account", (n) -> { this.setAccount(n.getCollectionOfObjectValues(UserAccountInformation::createFromDiscriminatorValue)); });
@@ -189,7 +189,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the interests property value. Provides detailed information about interests the user has associated with themselves in various services.
      * @return a personInterest
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PersonInterest> getInterests() {
         return this.interests;
     }
@@ -197,7 +197,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the languages property value. Represents detailed information about languages that a user has added to their profile.
      * @return a languageProficiency
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<LanguageProficiency> getLanguages() {
         return this.languages;
     }
@@ -205,7 +205,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the names property value. Represents the names a user has added to their profile.
      * @return a personName
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PersonName> getNames() {
         return this.names;
     }
@@ -213,7 +213,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the notes property value. Represents notes that a user has added to their profile.
      * @return a personAnnotation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PersonAnnotation> getNotes() {
         return this.notes;
     }
@@ -221,7 +221,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the patents property value. Represents patents that a user has added to their profile.
      * @return a itemPatent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ItemPatent> getPatents() {
         return this.patents;
     }
@@ -229,7 +229,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the phones property value. Represents detailed information about phone numbers associated with a user in various services.
      * @return a itemPhone
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ItemPhone> getPhones() {
         return this.phones;
     }
@@ -237,7 +237,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the positions property value. Represents detailed information about work positions associated with a user's profile.
      * @return a workPosition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WorkPosition> getPositions() {
         return this.positions;
     }
@@ -245,7 +245,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the projects property value. Represents detailed information about projects associated with a user.
      * @return a projectParticipation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ProjectParticipation> getProjects() {
         return this.projects;
     }
@@ -253,7 +253,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the publications property value. Represents details of any publications a user has added to their profile.
      * @return a itemPublication
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ItemPublication> getPublications() {
         return this.publications;
     }
@@ -261,7 +261,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the skills property value. Represents detailed information about skills associated with a user in various services.
      * @return a skillProficiency
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SkillProficiency> getSkills() {
         return this.skills;
     }
@@ -269,7 +269,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the webAccounts property value. Represents web accounts the user has indicated they use or has added to their user profile.
      * @return a webAccount
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WebAccount> getWebAccounts() {
         return this.webAccounts;
     }
@@ -277,7 +277,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the websites property value. Represents detailed information about websites associated with a user in various services.
      * @return a personWebsite
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PersonWebsite> getWebsites() {
         return this.websites;
     }
@@ -286,8 +286,8 @@ public class Profile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("account", this.getAccount());
@@ -315,8 +315,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the account property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccount(@javax.annotation.Nullable final java.util.List<UserAccountInformation> value) {
+    @jakarta.annotation.Nonnull
+    public void setAccount(@jakarta.annotation.Nullable final java.util.List<UserAccountInformation> value) {
         this.account = value;
     }
     /**
@@ -324,8 +324,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the addresses property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddresses(@javax.annotation.Nullable final java.util.List<ItemAddress> value) {
+    @jakarta.annotation.Nonnull
+    public void setAddresses(@jakarta.annotation.Nullable final java.util.List<ItemAddress> value) {
         this.addresses = value;
     }
     /**
@@ -333,8 +333,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the anniversaries property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnniversaries(@javax.annotation.Nullable final java.util.List<PersonAnnualEvent> value) {
+    @jakarta.annotation.Nonnull
+    public void setAnniversaries(@jakarta.annotation.Nullable final java.util.List<PersonAnnualEvent> value) {
         this.anniversaries = value;
     }
     /**
@@ -342,8 +342,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the awards property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAwards(@javax.annotation.Nullable final java.util.List<PersonAward> value) {
+    @jakarta.annotation.Nonnull
+    public void setAwards(@jakarta.annotation.Nullable final java.util.List<PersonAward> value) {
         this.awards = value;
     }
     /**
@@ -351,8 +351,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the certifications property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertifications(@javax.annotation.Nullable final java.util.List<PersonCertification> value) {
+    @jakarta.annotation.Nonnull
+    public void setCertifications(@jakarta.annotation.Nullable final java.util.List<PersonCertification> value) {
         this.certifications = value;
     }
     /**
@@ -360,8 +360,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the educationalActivities property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEducationalActivities(@javax.annotation.Nullable final java.util.List<EducationalActivity> value) {
+    @jakarta.annotation.Nonnull
+    public void setEducationalActivities(@jakarta.annotation.Nullable final java.util.List<EducationalActivity> value) {
         this.educationalActivities = value;
     }
     /**
@@ -369,8 +369,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the emails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmails(@javax.annotation.Nullable final java.util.List<ItemEmail> value) {
+    @jakarta.annotation.Nonnull
+    public void setEmails(@jakarta.annotation.Nullable final java.util.List<ItemEmail> value) {
         this.emails = value;
     }
     /**
@@ -378,8 +378,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the interests property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInterests(@javax.annotation.Nullable final java.util.List<PersonInterest> value) {
+    @jakarta.annotation.Nonnull
+    public void setInterests(@jakarta.annotation.Nullable final java.util.List<PersonInterest> value) {
         this.interests = value;
     }
     /**
@@ -387,8 +387,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the languages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLanguages(@javax.annotation.Nullable final java.util.List<LanguageProficiency> value) {
+    @jakarta.annotation.Nonnull
+    public void setLanguages(@jakarta.annotation.Nullable final java.util.List<LanguageProficiency> value) {
         this.languages = value;
     }
     /**
@@ -396,8 +396,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the names property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNames(@javax.annotation.Nullable final java.util.List<PersonName> value) {
+    @jakarta.annotation.Nonnull
+    public void setNames(@jakarta.annotation.Nullable final java.util.List<PersonName> value) {
         this.names = value;
     }
     /**
@@ -405,8 +405,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotes(@javax.annotation.Nullable final java.util.List<PersonAnnotation> value) {
+    @jakarta.annotation.Nonnull
+    public void setNotes(@jakarta.annotation.Nullable final java.util.List<PersonAnnotation> value) {
         this.notes = value;
     }
     /**
@@ -414,8 +414,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the patents property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPatents(@javax.annotation.Nullable final java.util.List<ItemPatent> value) {
+    @jakarta.annotation.Nonnull
+    public void setPatents(@jakarta.annotation.Nullable final java.util.List<ItemPatent> value) {
         this.patents = value;
     }
     /**
@@ -423,8 +423,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the phones property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhones(@javax.annotation.Nullable final java.util.List<ItemPhone> value) {
+    @jakarta.annotation.Nonnull
+    public void setPhones(@jakarta.annotation.Nullable final java.util.List<ItemPhone> value) {
         this.phones = value;
     }
     /**
@@ -432,8 +432,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the positions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPositions(@javax.annotation.Nullable final java.util.List<WorkPosition> value) {
+    @jakarta.annotation.Nonnull
+    public void setPositions(@jakarta.annotation.Nullable final java.util.List<WorkPosition> value) {
         this.positions = value;
     }
     /**
@@ -441,8 +441,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the projects property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProjects(@javax.annotation.Nullable final java.util.List<ProjectParticipation> value) {
+    @jakarta.annotation.Nonnull
+    public void setProjects(@jakarta.annotation.Nullable final java.util.List<ProjectParticipation> value) {
         this.projects = value;
     }
     /**
@@ -450,8 +450,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the publications property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublications(@javax.annotation.Nullable final java.util.List<ItemPublication> value) {
+    @jakarta.annotation.Nonnull
+    public void setPublications(@jakarta.annotation.Nullable final java.util.List<ItemPublication> value) {
         this.publications = value;
     }
     /**
@@ -459,8 +459,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the skills property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSkills(@javax.annotation.Nullable final java.util.List<SkillProficiency> value) {
+    @jakarta.annotation.Nonnull
+    public void setSkills(@jakarta.annotation.Nullable final java.util.List<SkillProficiency> value) {
         this.skills = value;
     }
     /**
@@ -468,8 +468,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the webAccounts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebAccounts(@javax.annotation.Nullable final java.util.List<WebAccount> value) {
+    @jakarta.annotation.Nonnull
+    public void setWebAccounts(@jakarta.annotation.Nullable final java.util.List<WebAccount> value) {
         this.webAccounts = value;
     }
     /**
@@ -477,8 +477,8 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the websites property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebsites(@javax.annotation.Nullable final java.util.List<PersonWebsite> value) {
+    @jakarta.annotation.Nonnull
+    public void setWebsites(@jakarta.annotation.Nullable final java.util.List<PersonWebsite> value) {
         this.websites = value;
     }
 }

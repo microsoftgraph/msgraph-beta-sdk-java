@@ -176,7 +176,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Instantiates a new printerCapabilities and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrinterCapabilities() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -185,8 +185,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a printerCapabilities
      */
-    @javax.annotation.Nonnull
-    public static PrinterCapabilities createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrinterCapabilities createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PrinterCapabilities();
     }
@@ -194,7 +194,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -202,7 +202,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the bottomMargins property value. A list of supported bottom margins(in microns) for the printer.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Integer> getBottomMargins() {
         return this.bottomMargins;
     }
@@ -210,7 +210,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the collation property value. True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCollation() {
         return this.collation;
     }
@@ -218,7 +218,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the colorModes property value. The color modes supported by the printer. Valid values are described in the following table.
      * @return a printColorMode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintColorMode> getColorModes() {
         return this.colorModes;
     }
@@ -226,7 +226,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the contentTypes property value. A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getContentTypes() {
         return this.contentTypes;
     }
@@ -234,7 +234,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the copiesPerJob property value. The range of copies per job supported by the printer.
      * @return a integerRange
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IntegerRange getCopiesPerJob() {
         return this.copiesPerJob;
     }
@@ -242,7 +242,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the dpis property value. The list of print resolutions in DPI that are supported by the printer.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Integer> getDpis() {
         return this.dpis;
     }
@@ -250,7 +250,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the duplexModes property value. The list of duplex modes that are supported by the printer. Valid values are described in the following table.
      * @return a printDuplexMode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintDuplexMode> getDuplexModes() {
         return this.duplexModes;
     }
@@ -258,7 +258,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the feedDirections property value. The feedDirections property
      * @return a printerFeedDirection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrinterFeedDirection> getFeedDirections() {
         return this.feedDirections;
     }
@@ -266,7 +266,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the feedOrientations property value. The list of feed orientations that are supported by the printer.
      * @return a printerFeedOrientation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrinterFeedOrientation> getFeedOrientations() {
         return this.feedOrientations;
     }
@@ -274,7 +274,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(40);
         deserializerMap.put("bottomMargins", (n) -> { this.setBottomMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
@@ -323,7 +323,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the finishings property value. Finishing processes the printer supports for a printed document.
      * @return a printFinishing
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintFinishing> getFinishings() {
         return this.finishings;
     }
@@ -331,7 +331,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the inputBins property value. Supported input bins for the printer.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getInputBins() {
         return this.inputBins;
     }
@@ -339,7 +339,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the isColorPrintingSupported property value. True if color printing is supported by the printer; false otherwise. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsColorPrintingSupported() {
         return this.isColorPrintingSupported;
     }
@@ -347,7 +347,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the isPageRangeSupported property value. True if the printer supports printing by page ranges; false otherwise.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsPageRangeSupported() {
         return this.isPageRangeSupported;
     }
@@ -355,7 +355,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the leftMargins property value. A list of supported left margins(in microns) for the printer.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Integer> getLeftMargins() {
         return this.leftMargins;
     }
@@ -363,7 +363,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the mediaColors property value. The media (i.e., paper) colors supported by the printer.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getMediaColors() {
         return this.mediaColors;
     }
@@ -371,7 +371,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the mediaSizes property value. The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getMediaSizes() {
         return this.mediaSizes;
     }
@@ -379,7 +379,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the mediaTypes property value. The media types supported by the printer.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getMediaTypes() {
         return this.mediaTypes;
     }
@@ -387,7 +387,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the multipageLayouts property value. The presentation directions supported by the printer. Supported values are described in the following table.
      * @return a printMultipageLayout
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintMultipageLayout> getMultipageLayouts() {
         return this.multipageLayouts;
     }
@@ -395,7 +395,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -403,7 +403,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the orientations property value. The print orientations supported by the printer. Valid values are described in the following table.
      * @return a printOrientation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintOrientation> getOrientations() {
         return this.orientations;
     }
@@ -411,7 +411,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the outputBins property value. The printer's supported output bins (trays).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getOutputBins() {
         return this.outputBins;
     }
@@ -419,7 +419,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the pagesPerSheet property value. Supported number of Input Pages to impose upon a single Impression.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Integer> getPagesPerSheet() {
         return this.pagesPerSheet;
     }
@@ -427,7 +427,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the qualities property value. The print qualities supported by the printer.
      * @return a printQuality
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintQuality> getQualities() {
         return this.qualities;
     }
@@ -435,7 +435,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the rightMargins property value. A list of supported right margins(in microns) for the printer.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Integer> getRightMargins() {
         return this.rightMargins;
     }
@@ -443,7 +443,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the scalings property value. Supported print scalings.
      * @return a printScaling
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintScaling> getScalings() {
         return this.scalings;
     }
@@ -451,7 +451,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the supportedColorConfigurations property value. The supportedColorConfigurations property
      * @return a printColorConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintColorConfiguration> getSupportedColorConfigurations() {
         return this.supportedColorConfigurations;
     }
@@ -459,7 +459,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the supportedCopiesPerJob property value. The supportedCopiesPerJob property
      * @return a integerRange
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IntegerRange getSupportedCopiesPerJob() {
         return this.supportedCopiesPerJob;
     }
@@ -467,7 +467,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the supportedDocumentMimeTypes property value. The supportedDocumentMimeTypes property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedDocumentMimeTypes() {
         return this.supportedDocumentMimeTypes;
     }
@@ -475,7 +475,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the supportedDuplexConfigurations property value. The supportedDuplexConfigurations property
      * @return a printDuplexConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintDuplexConfiguration> getSupportedDuplexConfigurations() {
         return this.supportedDuplexConfigurations;
     }
@@ -483,7 +483,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the supportedFinishings property value. The supportedFinishings property
      * @return a printFinishing
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintFinishing> getSupportedFinishings() {
         return this.supportedFinishings;
     }
@@ -491,7 +491,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the supportedMediaColors property value. The supportedMediaColors property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedMediaColors() {
         return this.supportedMediaColors;
     }
@@ -499,7 +499,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the supportedMediaSizes property value. The supportedMediaSizes property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedMediaSizes() {
         return this.supportedMediaSizes;
     }
@@ -507,7 +507,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the supportedMediaTypes property value. The supportedMediaTypes property
      * @return a printMediaType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintMediaType> getSupportedMediaTypes() {
         return this.supportedMediaTypes;
     }
@@ -515,7 +515,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the supportedOrientations property value. The supportedOrientations property
      * @return a printOrientation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintOrientation> getSupportedOrientations() {
         return this.supportedOrientations;
     }
@@ -523,7 +523,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the supportedOutputBins property value. The supportedOutputBins property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedOutputBins() {
         return this.supportedOutputBins;
     }
@@ -531,7 +531,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the supportedPagesPerSheet property value. The supportedPagesPerSheet property
      * @return a integerRange
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IntegerRange getSupportedPagesPerSheet() {
         return this.supportedPagesPerSheet;
     }
@@ -539,7 +539,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the supportedPresentationDirections property value. The supportedPresentationDirections property
      * @return a printPresentationDirection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintPresentationDirection> getSupportedPresentationDirections() {
         return this.supportedPresentationDirections;
     }
@@ -547,7 +547,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the supportedPrintQualities property value. The supportedPrintQualities property
      * @return a printQuality
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintQuality> getSupportedPrintQualities() {
         return this.supportedPrintQualities;
     }
@@ -555,7 +555,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the supportsFitPdfToPage property value. True if the printer supports scaling PDF pages to match the print media size; false otherwise.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSupportsFitPdfToPage() {
         return this.supportsFitPdfToPage;
     }
@@ -563,7 +563,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Gets the topMargins property value. A list of supported top margins(in microns) for the printer.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Integer> getTopMargins() {
         return this.topMargins;
     }
@@ -572,8 +572,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("bottomMargins", this.getBottomMargins());
         writer.writeBooleanValue("collation", this.getCollation());
@@ -619,11 +619,11 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -631,8 +631,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the bottomMargins property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBottomMargins(@javax.annotation.Nullable final java.util.List<Integer> value) {
+    @jakarta.annotation.Nonnull
+    public void setBottomMargins(@jakarta.annotation.Nullable final java.util.List<Integer> value) {
         this.bottomMargins = value;
     }
     /**
@@ -640,8 +640,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the collation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCollation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setCollation(@jakarta.annotation.Nullable final Boolean value) {
         this.collation = value;
     }
     /**
@@ -649,8 +649,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the colorModes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setColorModes(@javax.annotation.Nullable final java.util.List<PrintColorMode> value) {
+    @jakarta.annotation.Nonnull
+    public void setColorModes(@jakarta.annotation.Nullable final java.util.List<PrintColorMode> value) {
         this.colorModes = value;
     }
     /**
@@ -658,8 +658,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contentTypes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentTypes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setContentTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.contentTypes = value;
     }
     /**
@@ -667,8 +667,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the copiesPerJob property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCopiesPerJob(@javax.annotation.Nullable final IntegerRange value) {
+    @jakarta.annotation.Nonnull
+    public void setCopiesPerJob(@jakarta.annotation.Nullable final IntegerRange value) {
         this.copiesPerJob = value;
     }
     /**
@@ -676,8 +676,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the dpis property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDpis(@javax.annotation.Nullable final java.util.List<Integer> value) {
+    @jakarta.annotation.Nonnull
+    public void setDpis(@jakarta.annotation.Nullable final java.util.List<Integer> value) {
         this.dpis = value;
     }
     /**
@@ -685,8 +685,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the duplexModes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDuplexModes(@javax.annotation.Nullable final java.util.List<PrintDuplexMode> value) {
+    @jakarta.annotation.Nonnull
+    public void setDuplexModes(@jakarta.annotation.Nullable final java.util.List<PrintDuplexMode> value) {
         this.duplexModes = value;
     }
     /**
@@ -694,8 +694,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the feedDirections property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeedDirections(@javax.annotation.Nullable final java.util.List<PrinterFeedDirection> value) {
+    @jakarta.annotation.Nonnull
+    public void setFeedDirections(@jakarta.annotation.Nullable final java.util.List<PrinterFeedDirection> value) {
         this.feedDirections = value;
     }
     /**
@@ -703,8 +703,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the feedOrientations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeedOrientations(@javax.annotation.Nullable final java.util.List<PrinterFeedOrientation> value) {
+    @jakarta.annotation.Nonnull
+    public void setFeedOrientations(@jakarta.annotation.Nullable final java.util.List<PrinterFeedOrientation> value) {
         this.feedOrientations = value;
     }
     /**
@@ -712,8 +712,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the finishings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFinishings(@javax.annotation.Nullable final java.util.List<PrintFinishing> value) {
+    @jakarta.annotation.Nonnull
+    public void setFinishings(@jakarta.annotation.Nullable final java.util.List<PrintFinishing> value) {
         this.finishings = value;
     }
     /**
@@ -721,8 +721,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the inputBins property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInputBins(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setInputBins(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.inputBins = value;
     }
     /**
@@ -730,8 +730,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isColorPrintingSupported property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsColorPrintingSupported(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsColorPrintingSupported(@jakarta.annotation.Nullable final Boolean value) {
         this.isColorPrintingSupported = value;
     }
     /**
@@ -739,8 +739,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isPageRangeSupported property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsPageRangeSupported(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsPageRangeSupported(@jakarta.annotation.Nullable final Boolean value) {
         this.isPageRangeSupported = value;
     }
     /**
@@ -748,8 +748,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the leftMargins property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLeftMargins(@javax.annotation.Nullable final java.util.List<Integer> value) {
+    @jakarta.annotation.Nonnull
+    public void setLeftMargins(@jakarta.annotation.Nullable final java.util.List<Integer> value) {
         this.leftMargins = value;
     }
     /**
@@ -757,8 +757,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mediaColors property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaColors(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaColors(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.mediaColors = value;
     }
     /**
@@ -766,8 +766,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mediaSizes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaSizes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaSizes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.mediaSizes = value;
     }
     /**
@@ -775,8 +775,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mediaTypes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaTypes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.mediaTypes = value;
     }
     /**
@@ -784,17 +784,17 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the multipageLayouts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMultipageLayouts(@javax.annotation.Nullable final java.util.List<PrintMultipageLayout> value) {
+    @jakarta.annotation.Nonnull
+    public void setMultipageLayouts(@jakarta.annotation.Nullable final java.util.List<PrintMultipageLayout> value) {
         this.multipageLayouts = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -802,8 +802,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the orientations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrientations(@javax.annotation.Nullable final java.util.List<PrintOrientation> value) {
+    @jakarta.annotation.Nonnull
+    public void setOrientations(@jakarta.annotation.Nullable final java.util.List<PrintOrientation> value) {
         this.orientations = value;
     }
     /**
@@ -811,8 +811,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the outputBins property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOutputBins(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setOutputBins(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.outputBins = value;
     }
     /**
@@ -820,8 +820,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the pagesPerSheet property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPagesPerSheet(@javax.annotation.Nullable final java.util.List<Integer> value) {
+    @jakarta.annotation.Nonnull
+    public void setPagesPerSheet(@jakarta.annotation.Nullable final java.util.List<Integer> value) {
         this.pagesPerSheet = value;
     }
     /**
@@ -829,8 +829,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the qualities property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQualities(@javax.annotation.Nullable final java.util.List<PrintQuality> value) {
+    @jakarta.annotation.Nonnull
+    public void setQualities(@jakarta.annotation.Nullable final java.util.List<PrintQuality> value) {
         this.qualities = value;
     }
     /**
@@ -838,8 +838,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the rightMargins property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRightMargins(@javax.annotation.Nullable final java.util.List<Integer> value) {
+    @jakarta.annotation.Nonnull
+    public void setRightMargins(@jakarta.annotation.Nullable final java.util.List<Integer> value) {
         this.rightMargins = value;
     }
     /**
@@ -847,8 +847,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the scalings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScalings(@javax.annotation.Nullable final java.util.List<PrintScaling> value) {
+    @jakarta.annotation.Nonnull
+    public void setScalings(@jakarta.annotation.Nullable final java.util.List<PrintScaling> value) {
         this.scalings = value;
     }
     /**
@@ -856,8 +856,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedColorConfigurations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedColorConfigurations(@javax.annotation.Nullable final java.util.List<PrintColorConfiguration> value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedColorConfigurations(@jakarta.annotation.Nullable final java.util.List<PrintColorConfiguration> value) {
         this.supportedColorConfigurations = value;
     }
     /**
@@ -865,8 +865,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedCopiesPerJob property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedCopiesPerJob(@javax.annotation.Nullable final IntegerRange value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedCopiesPerJob(@jakarta.annotation.Nullable final IntegerRange value) {
         this.supportedCopiesPerJob = value;
     }
     /**
@@ -874,8 +874,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedDocumentMimeTypes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedDocumentMimeTypes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedDocumentMimeTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.supportedDocumentMimeTypes = value;
     }
     /**
@@ -883,8 +883,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedDuplexConfigurations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedDuplexConfigurations(@javax.annotation.Nullable final java.util.List<PrintDuplexConfiguration> value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedDuplexConfigurations(@jakarta.annotation.Nullable final java.util.List<PrintDuplexConfiguration> value) {
         this.supportedDuplexConfigurations = value;
     }
     /**
@@ -892,8 +892,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedFinishings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedFinishings(@javax.annotation.Nullable final java.util.List<PrintFinishing> value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedFinishings(@jakarta.annotation.Nullable final java.util.List<PrintFinishing> value) {
         this.supportedFinishings = value;
     }
     /**
@@ -901,8 +901,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedMediaColors property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedMediaColors(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedMediaColors(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.supportedMediaColors = value;
     }
     /**
@@ -910,8 +910,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedMediaSizes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedMediaSizes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedMediaSizes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.supportedMediaSizes = value;
     }
     /**
@@ -919,8 +919,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedMediaTypes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedMediaTypes(@javax.annotation.Nullable final java.util.List<PrintMediaType> value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedMediaTypes(@jakarta.annotation.Nullable final java.util.List<PrintMediaType> value) {
         this.supportedMediaTypes = value;
     }
     /**
@@ -928,8 +928,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedOrientations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedOrientations(@javax.annotation.Nullable final java.util.List<PrintOrientation> value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedOrientations(@jakarta.annotation.Nullable final java.util.List<PrintOrientation> value) {
         this.supportedOrientations = value;
     }
     /**
@@ -937,8 +937,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedOutputBins property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedOutputBins(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedOutputBins(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.supportedOutputBins = value;
     }
     /**
@@ -946,8 +946,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedPagesPerSheet property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedPagesPerSheet(@javax.annotation.Nullable final IntegerRange value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedPagesPerSheet(@jakarta.annotation.Nullable final IntegerRange value) {
         this.supportedPagesPerSheet = value;
     }
     /**
@@ -955,8 +955,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedPresentationDirections property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedPresentationDirections(@javax.annotation.Nullable final java.util.List<PrintPresentationDirection> value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedPresentationDirections(@jakarta.annotation.Nullable final java.util.List<PrintPresentationDirection> value) {
         this.supportedPresentationDirections = value;
     }
     /**
@@ -964,8 +964,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedPrintQualities property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedPrintQualities(@javax.annotation.Nullable final java.util.List<PrintQuality> value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedPrintQualities(@jakarta.annotation.Nullable final java.util.List<PrintQuality> value) {
         this.supportedPrintQualities = value;
     }
     /**
@@ -973,8 +973,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportsFitPdfToPage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportsFitPdfToPage(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportsFitPdfToPage(@jakarta.annotation.Nullable final Boolean value) {
         this.supportsFitPdfToPage = value;
     }
     /**
@@ -982,8 +982,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the topMargins property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTopMargins(@javax.annotation.Nullable final java.util.List<Integer> value) {
+    @jakarta.annotation.Nonnull
+    public void setTopMargins(@jakarta.annotation.Nullable final java.util.List<Integer> value) {
         this.topMargins = value;
     }
 }

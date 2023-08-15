@@ -52,7 +52,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * Instantiates a new authenticationMethodsPolicy and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationMethodsPolicy() {
         super();
     }
@@ -61,8 +61,8 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a authenticationMethodsPolicy
      */
-    @javax.annotation.Nonnull
-    public static AuthenticationMethodsPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AuthenticationMethodsPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AuthenticationMethodsPolicy();
     }
@@ -70,7 +70,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * Gets the authenticationMethodConfigurations property value. Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
      * @return a authenticationMethodConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodConfiguration> getAuthenticationMethodConfigurations() {
         return this.authenticationMethodConfigurations;
     }
@@ -78,7 +78,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * Gets the description property value. A description of the policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -86,7 +86,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * Gets the displayName property value. The name of the policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -94,7 +94,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationMethodConfigurations", (n) -> { this.setAuthenticationMethodConfigurations(n.getCollectionOfObjectValues(AuthenticationMethodConfiguration::createFromDiscriminatorValue)); });
@@ -113,7 +113,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time of the last update to the policy.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -121,7 +121,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * Gets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authenication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
      * @return a authenticationMethodsPolicyMigrationState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationMethodsPolicyMigrationState getPolicyMigrationState() {
         return this.policyMigrationState;
     }
@@ -129,7 +129,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * Gets the policyVersion property value. The version of the policy in use.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPolicyVersion() {
         return this.policyVersion;
     }
@@ -137,7 +137,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * Gets the reconfirmationInDays property value. Days before the user will be asked to reconfirm their method.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getReconfirmationInDays() {
         return this.reconfirmationInDays;
     }
@@ -145,7 +145,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * Gets the registrationEnforcement property value. Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
      * @return a registrationEnforcement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RegistrationEnforcement getRegistrationEnforcement() {
         return this.registrationEnforcement;
     }
@@ -153,7 +153,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * Gets the reportSuspiciousActivitySettings property value. Enable users to report unexpected voice call or phone app notification multi-factor authentication prompts as suspicious.
      * @return a reportSuspiciousActivitySettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ReportSuspiciousActivitySettings getReportSuspiciousActivitySettings() {
         return this.reportSuspiciousActivitySettings;
     }
@@ -161,7 +161,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * Gets the systemCredentialPreferences property value. Prompt users with their most-preferred credential for multifactor authentication.
      * @return a systemCredentialPreferences
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SystemCredentialPreferences getSystemCredentialPreferences() {
         return this.systemCredentialPreferences;
     }
@@ -170,8 +170,8 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("authenticationMethodConfigurations", this.getAuthenticationMethodConfigurations());
@@ -190,8 +190,8 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the authenticationMethodConfigurations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationMethodConfigurations(@javax.annotation.Nullable final java.util.List<AuthenticationMethodConfiguration> value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationMethodConfigurations(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodConfiguration> value) {
         this.authenticationMethodConfigurations = value;
     }
     /**
@@ -199,8 +199,8 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -208,8 +208,8 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -217,8 +217,8 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -226,8 +226,8 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the policyMigrationState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyMigrationState(@javax.annotation.Nullable final AuthenticationMethodsPolicyMigrationState value) {
+    @jakarta.annotation.Nonnull
+    public void setPolicyMigrationState(@jakarta.annotation.Nullable final AuthenticationMethodsPolicyMigrationState value) {
         this.policyMigrationState = value;
     }
     /**
@@ -235,8 +235,8 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the policyVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPolicyVersion(@jakarta.annotation.Nullable final String value) {
         this.policyVersion = value;
     }
     /**
@@ -244,8 +244,8 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the reconfirmationInDays property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReconfirmationInDays(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setReconfirmationInDays(@jakarta.annotation.Nullable final Integer value) {
         this.reconfirmationInDays = value;
     }
     /**
@@ -253,8 +253,8 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the registrationEnforcement property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegistrationEnforcement(@javax.annotation.Nullable final RegistrationEnforcement value) {
+    @jakarta.annotation.Nonnull
+    public void setRegistrationEnforcement(@jakarta.annotation.Nullable final RegistrationEnforcement value) {
         this.registrationEnforcement = value;
     }
     /**
@@ -262,8 +262,8 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the reportSuspiciousActivitySettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReportSuspiciousActivitySettings(@javax.annotation.Nullable final ReportSuspiciousActivitySettings value) {
+    @jakarta.annotation.Nonnull
+    public void setReportSuspiciousActivitySettings(@jakarta.annotation.Nullable final ReportSuspiciousActivitySettings value) {
         this.reportSuspiciousActivitySettings = value;
     }
     /**
@@ -271,8 +271,8 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the systemCredentialPreferences property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSystemCredentialPreferences(@javax.annotation.Nullable final SystemCredentialPreferences value) {
+    @jakarta.annotation.Nonnull
+    public void setSystemCredentialPreferences(@jakarta.annotation.Nullable final SystemCredentialPreferences value) {
         this.systemCredentialPreferences = value;
     }
 }

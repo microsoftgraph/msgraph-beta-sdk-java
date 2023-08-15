@@ -55,7 +55,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * Instantiates a new windowsFeatureUpdateProfile and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsFeatureUpdateProfile() {
         super();
     }
@@ -64,8 +64,8 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsFeatureUpdateProfile
      */
-    @javax.annotation.Nonnull
-    public static WindowsFeatureUpdateProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsFeatureUpdateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsFeatureUpdateProfile();
     }
@@ -73,7 +73,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * Gets the assignments property value. The list of group assignments of the profile.
      * @return a windowsFeatureUpdateProfileAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WindowsFeatureUpdateProfileAssignment> getAssignments() {
         return this.assignments;
     }
@@ -81,7 +81,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date time that the profile was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -89,7 +89,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * Gets the deployableContentDisplayName property value. Friendly display name of the quality update profile deployable content
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeployableContentDisplayName() {
         return this.deployableContentDisplayName;
     }
@@ -97,7 +97,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * Gets the description property value. The description of the profile which is specified by the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -105,7 +105,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * Gets the displayName property value. The display name of the profile.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -113,7 +113,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * Gets the endOfSupportDate property value. The last supported date for a feature update
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEndOfSupportDate() {
         return this.endOfSupportDate;
     }
@@ -121,7 +121,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * Gets the featureUpdateVersion property value. The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFeatureUpdateVersion() {
         return this.featureUpdateVersion;
     }
@@ -129,7 +129,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(WindowsFeatureUpdateProfileAssignment::createFromDiscriminatorValue)); });
@@ -148,7 +148,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date time that the profile was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -156,7 +156,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Feature Update entity.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
         return this.roleScopeTagIds;
     }
@@ -164,7 +164,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * Gets the rolloutSettings property value. The windows update rollout settings, including offer start date time, offer end date time, and days between each set of offers.
      * @return a windowsUpdateRolloutSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsUpdateRolloutSettings getRolloutSettings() {
         return this.rolloutSettings;
     }
@@ -173,8 +173,8 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
@@ -193,8 +193,8 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignments(@javax.annotation.Nullable final java.util.List<WindowsFeatureUpdateProfileAssignment> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<WindowsFeatureUpdateProfileAssignment> value) {
         this.assignments = value;
     }
     /**
@@ -202,8 +202,8 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -211,8 +211,8 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the deployableContentDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeployableContentDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeployableContentDisplayName(@jakarta.annotation.Nullable final String value) {
         this.deployableContentDisplayName = value;
     }
     /**
@@ -220,8 +220,8 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -229,8 +229,8 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -238,8 +238,8 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the endOfSupportDate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndOfSupportDate(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setEndOfSupportDate(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endOfSupportDate = value;
     }
     /**
@@ -247,8 +247,8 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the featureUpdateVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeatureUpdateVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFeatureUpdateVersion(@jakarta.annotation.Nullable final String value) {
         this.featureUpdateVersion = value;
     }
     /**
@@ -256,8 +256,8 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -265,8 +265,8 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTagIds = value;
     }
     /**
@@ -274,8 +274,8 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the rolloutSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRolloutSettings(@javax.annotation.Nullable final WindowsUpdateRolloutSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setRolloutSettings(@jakarta.annotation.Nullable final WindowsUpdateRolloutSettings value) {
         this.rolloutSettings = value;
     }
 }

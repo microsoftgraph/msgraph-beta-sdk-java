@@ -32,6 +32,10 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     private java.util.List<CloudPcExternalPartnerSetting> externalPartnerSettings;
     /**
+     * The frontLineServicePlans property
+     */
+    private java.util.List<CloudPcFrontLineServicePlan> frontLineServicePlans;
+    /**
      * The gallery image resource on Cloud PC.
      */
     private java.util.List<CloudPcGalleryImage> galleryImages;
@@ -75,7 +79,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * Instantiates a new virtualEndpoint and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VirtualEndpoint() {
         super();
     }
@@ -84,8 +88,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a virtualEndpoint
      */
-    @javax.annotation.Nonnull
-    public static VirtualEndpoint createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static VirtualEndpoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new VirtualEndpoint();
     }
@@ -93,7 +97,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * Gets the auditEvents property value. Cloud PC audit event.
      * @return a cloudPcAuditEvent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPcAuditEvent> getAuditEvents() {
         return this.auditEvents;
     }
@@ -101,7 +105,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * Gets the bulkActions property value. The bulkActions property
      * @return a cloudPcBulkAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPcBulkAction> getBulkActions() {
         return this.bulkActions;
     }
@@ -109,7 +113,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * Gets the cloudPCs property value. Cloud managed virtual desktops.
      * @return a cloudPC
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPC> getCloudPCs() {
         return this.cloudPCs;
     }
@@ -117,7 +121,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * Gets the crossCloudGovernmentOrganizationMapping property value. Cloud PC organization mapping between public and US Government Community Cloud (GCC) organizations.
      * @return a cloudPcCrossCloudGovernmentOrganizationMapping
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcCrossCloudGovernmentOrganizationMapping getCrossCloudGovernmentOrganizationMapping() {
         return this.crossCloudGovernmentOrganizationMapping;
     }
@@ -125,7 +129,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * Gets the deviceImages property value. The image resource on Cloud PC.
      * @return a cloudPcDeviceImage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPcDeviceImage> getDeviceImages() {
         return this.deviceImages;
     }
@@ -133,7 +137,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * Gets the externalPartnerSettings property value. The external partner settings on a Cloud PC.
      * @return a cloudPcExternalPartnerSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPcExternalPartnerSetting> getExternalPartnerSettings() {
         return this.externalPartnerSettings;
     }
@@ -141,7 +145,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("auditEvents", (n) -> { this.setAuditEvents(n.getCollectionOfObjectValues(CloudPcAuditEvent::createFromDiscriminatorValue)); });
@@ -150,6 +154,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         deserializerMap.put("crossCloudGovernmentOrganizationMapping", (n) -> { this.setCrossCloudGovernmentOrganizationMapping(n.getObjectValue(CloudPcCrossCloudGovernmentOrganizationMapping::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceImages", (n) -> { this.setDeviceImages(n.getCollectionOfObjectValues(CloudPcDeviceImage::createFromDiscriminatorValue)); });
         deserializerMap.put("externalPartnerSettings", (n) -> { this.setExternalPartnerSettings(n.getCollectionOfObjectValues(CloudPcExternalPartnerSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("frontLineServicePlans", (n) -> { this.setFrontLineServicePlans(n.getCollectionOfObjectValues(CloudPcFrontLineServicePlan::createFromDiscriminatorValue)); });
         deserializerMap.put("galleryImages", (n) -> { this.setGalleryImages(n.getCollectionOfObjectValues(CloudPcGalleryImage::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesConnections", (n) -> { this.setOnPremisesConnections(n.getCollectionOfObjectValues(CloudPcOnPremisesConnection::createFromDiscriminatorValue)); });
         deserializerMap.put("organizationSettings", (n) -> { this.setOrganizationSettings(n.getObjectValue(CloudPcOrganizationSettings::createFromDiscriminatorValue)); });
@@ -163,10 +168,18 @@ public class VirtualEndpoint extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
+     * Gets the frontLineServicePlans property value. The frontLineServicePlans property
+     * @return a cloudPcFrontLineServicePlan
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CloudPcFrontLineServicePlan> getFrontLineServicePlans() {
+        return this.frontLineServicePlans;
+    }
+    /**
      * Gets the galleryImages property value. The gallery image resource on Cloud PC.
      * @return a cloudPcGalleryImage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPcGalleryImage> getGalleryImages() {
         return this.galleryImages;
     }
@@ -174,7 +187,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * Gets the onPremisesConnections property value. A defined collection of Azure resource information that can be used to establish on-premises network connectivity for Cloud PCs.
      * @return a cloudPcOnPremisesConnection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPcOnPremisesConnection> getOnPremisesConnections() {
         return this.onPremisesConnections;
     }
@@ -182,7 +195,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * Gets the organizationSettings property value. The Cloud PC organization settings for a tenant.
      * @return a cloudPcOrganizationSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcOrganizationSettings getOrganizationSettings() {
         return this.organizationSettings;
     }
@@ -190,7 +203,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * Gets the provisioningPolicies property value. Cloud PC provisioning policy.
      * @return a cloudPcProvisioningPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPcProvisioningPolicy> getProvisioningPolicies() {
         return this.provisioningPolicies;
     }
@@ -198,7 +211,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * Gets the reports property value. Cloud PC related reports.
      * @return a cloudPcReports
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcReports getReports() {
         return this.reports;
     }
@@ -206,7 +219,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * Gets the servicePlans property value. Cloud PC service plans.
      * @return a cloudPcServicePlan
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPcServicePlan> getServicePlans() {
         return this.servicePlans;
     }
@@ -214,7 +227,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * Gets the sharedUseServicePlans property value. Cloud PC shared-use service plans.
      * @return a cloudPcSharedUseServicePlan
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPcSharedUseServicePlan> getSharedUseServicePlans() {
         return this.sharedUseServicePlans;
     }
@@ -222,7 +235,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * Gets the snapshots property value. Cloud PC snapshots.
      * @return a cloudPcSnapshot
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPcSnapshot> getSnapshots() {
         return this.snapshots;
     }
@@ -230,7 +243,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * Gets the supportedRegions property value. Cloud PC supported regions.
      * @return a cloudPcSupportedRegion
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPcSupportedRegion> getSupportedRegions() {
         return this.supportedRegions;
     }
@@ -238,7 +251,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * Gets the userSettings property value. Cloud PC user settings.
      * @return a cloudPcUserSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPcUserSetting> getUserSettings() {
         return this.userSettings;
     }
@@ -247,8 +260,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("auditEvents", this.getAuditEvents());
@@ -257,6 +270,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         writer.writeObjectValue("crossCloudGovernmentOrganizationMapping", this.getCrossCloudGovernmentOrganizationMapping());
         writer.writeCollectionOfObjectValues("deviceImages", this.getDeviceImages());
         writer.writeCollectionOfObjectValues("externalPartnerSettings", this.getExternalPartnerSettings());
+        writer.writeCollectionOfObjectValues("frontLineServicePlans", this.getFrontLineServicePlans());
         writer.writeCollectionOfObjectValues("galleryImages", this.getGalleryImages());
         writer.writeCollectionOfObjectValues("onPremisesConnections", this.getOnPremisesConnections());
         writer.writeObjectValue("organizationSettings", this.getOrganizationSettings());
@@ -273,8 +287,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param value Value to set for the auditEvents property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuditEvents(@javax.annotation.Nullable final java.util.List<CloudPcAuditEvent> value) {
+    @jakarta.annotation.Nonnull
+    public void setAuditEvents(@jakarta.annotation.Nullable final java.util.List<CloudPcAuditEvent> value) {
         this.auditEvents = value;
     }
     /**
@@ -282,8 +296,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param value Value to set for the bulkActions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBulkActions(@javax.annotation.Nullable final java.util.List<CloudPcBulkAction> value) {
+    @jakarta.annotation.Nonnull
+    public void setBulkActions(@jakarta.annotation.Nullable final java.util.List<CloudPcBulkAction> value) {
         this.bulkActions = value;
     }
     /**
@@ -291,8 +305,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param value Value to set for the cloudPCs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudPCs(@javax.annotation.Nullable final java.util.List<CloudPC> value) {
+    @jakarta.annotation.Nonnull
+    public void setCloudPCs(@jakarta.annotation.Nullable final java.util.List<CloudPC> value) {
         this.cloudPCs = value;
     }
     /**
@@ -300,8 +314,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param value Value to set for the crossCloudGovernmentOrganizationMapping property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCrossCloudGovernmentOrganizationMapping(@javax.annotation.Nullable final CloudPcCrossCloudGovernmentOrganizationMapping value) {
+    @jakarta.annotation.Nonnull
+    public void setCrossCloudGovernmentOrganizationMapping(@jakarta.annotation.Nullable final CloudPcCrossCloudGovernmentOrganizationMapping value) {
         this.crossCloudGovernmentOrganizationMapping = value;
     }
     /**
@@ -309,8 +323,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param value Value to set for the deviceImages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceImages(@javax.annotation.Nullable final java.util.List<CloudPcDeviceImage> value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceImages(@jakarta.annotation.Nullable final java.util.List<CloudPcDeviceImage> value) {
         this.deviceImages = value;
     }
     /**
@@ -318,17 +332,26 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param value Value to set for the externalPartnerSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalPartnerSettings(@javax.annotation.Nullable final java.util.List<CloudPcExternalPartnerSetting> value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalPartnerSettings(@jakarta.annotation.Nullable final java.util.List<CloudPcExternalPartnerSetting> value) {
         this.externalPartnerSettings = value;
+    }
+    /**
+     * Sets the frontLineServicePlans property value. The frontLineServicePlans property
+     * @param value Value to set for the frontLineServicePlans property.
+     * @return a void
+     */
+    @jakarta.annotation.Nonnull
+    public void setFrontLineServicePlans(@jakarta.annotation.Nullable final java.util.List<CloudPcFrontLineServicePlan> value) {
+        this.frontLineServicePlans = value;
     }
     /**
      * Sets the galleryImages property value. The gallery image resource on Cloud PC.
      * @param value Value to set for the galleryImages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGalleryImages(@javax.annotation.Nullable final java.util.List<CloudPcGalleryImage> value) {
+    @jakarta.annotation.Nonnull
+    public void setGalleryImages(@jakarta.annotation.Nullable final java.util.List<CloudPcGalleryImage> value) {
         this.galleryImages = value;
     }
     /**
@@ -336,8 +359,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param value Value to set for the onPremisesConnections property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnPremisesConnections(@javax.annotation.Nullable final java.util.List<CloudPcOnPremisesConnection> value) {
+    @jakarta.annotation.Nonnull
+    public void setOnPremisesConnections(@jakarta.annotation.Nullable final java.util.List<CloudPcOnPremisesConnection> value) {
         this.onPremisesConnections = value;
     }
     /**
@@ -345,8 +368,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param value Value to set for the organizationSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrganizationSettings(@javax.annotation.Nullable final CloudPcOrganizationSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setOrganizationSettings(@jakarta.annotation.Nullable final CloudPcOrganizationSettings value) {
         this.organizationSettings = value;
     }
     /**
@@ -354,8 +377,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param value Value to set for the provisioningPolicies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProvisioningPolicies(@javax.annotation.Nullable final java.util.List<CloudPcProvisioningPolicy> value) {
+    @jakarta.annotation.Nonnull
+    public void setProvisioningPolicies(@jakarta.annotation.Nullable final java.util.List<CloudPcProvisioningPolicy> value) {
         this.provisioningPolicies = value;
     }
     /**
@@ -363,8 +386,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param value Value to set for the reports property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReports(@javax.annotation.Nullable final CloudPcReports value) {
+    @jakarta.annotation.Nonnull
+    public void setReports(@jakarta.annotation.Nullable final CloudPcReports value) {
         this.reports = value;
     }
     /**
@@ -372,8 +395,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param value Value to set for the servicePlans property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServicePlans(@javax.annotation.Nullable final java.util.List<CloudPcServicePlan> value) {
+    @jakarta.annotation.Nonnull
+    public void setServicePlans(@jakarta.annotation.Nullable final java.util.List<CloudPcServicePlan> value) {
         this.servicePlans = value;
     }
     /**
@@ -381,8 +404,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param value Value to set for the sharedUseServicePlans property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharedUseServicePlans(@javax.annotation.Nullable final java.util.List<CloudPcSharedUseServicePlan> value) {
+    @jakarta.annotation.Nonnull
+    public void setSharedUseServicePlans(@jakarta.annotation.Nullable final java.util.List<CloudPcSharedUseServicePlan> value) {
         this.sharedUseServicePlans = value;
     }
     /**
@@ -390,8 +413,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param value Value to set for the snapshots property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSnapshots(@javax.annotation.Nullable final java.util.List<CloudPcSnapshot> value) {
+    @jakarta.annotation.Nonnull
+    public void setSnapshots(@jakarta.annotation.Nullable final java.util.List<CloudPcSnapshot> value) {
         this.snapshots = value;
     }
     /**
@@ -399,8 +422,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param value Value to set for the supportedRegions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedRegions(@javax.annotation.Nullable final java.util.List<CloudPcSupportedRegion> value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedRegions(@jakarta.annotation.Nullable final java.util.List<CloudPcSupportedRegion> value) {
         this.supportedRegions = value;
     }
     /**
@@ -408,8 +431,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
      * @param value Value to set for the userSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserSettings(@javax.annotation.Nullable final java.util.List<CloudPcUserSetting> value) {
+    @jakarta.annotation.Nonnull
+    public void setUserSettings(@jakarta.annotation.Nullable final java.util.List<CloudPcUserSetting> value) {
         this.userSettings = value;
     }
 }

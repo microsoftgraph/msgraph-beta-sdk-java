@@ -67,7 +67,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * Instantiates a new mobileAppInstallStatus and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MobileAppInstallStatus() {
         super();
     }
@@ -76,8 +76,8 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a mobileAppInstallStatus
      */
-    @javax.annotation.Nonnull
-    public static MobileAppInstallStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MobileAppInstallStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MobileAppInstallStatus();
     }
@@ -85,7 +85,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * Gets the app property value. The navigation link to the mobile app.
      * @return a mobileApp
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MobileApp getApp() {
         return this.app;
     }
@@ -93,7 +93,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * Gets the deviceId property value. Device ID
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -101,7 +101,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * Gets the deviceName property value. Device name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -109,7 +109,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * Gets the displayVersion property value. Human readable version of the application
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayVersion() {
         return this.displayVersion;
     }
@@ -117,7 +117,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * Gets the errorCode property value. The error code for install or uninstall failures.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getErrorCode() {
         return this.errorCode;
     }
@@ -125,7 +125,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("app", (n) -> { this.setApp(n.getObjectValue(MobileApp::createFromDiscriminatorValue)); });
@@ -147,7 +147,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * Gets the installState property value. A list of possible states for application status on an individual device. When devices contact the Intune service and find targeted application enforcement intent, the status of the enforcement is recorded and becomes accessible in the Graph API. Since the application status is identified during device interaction with the Intune service, status records do not immediately appear upon application group assignment; it is created only after the assignment is evaluated in the service and devices start receiving the policy during check-ins.
      * @return a resultantAppState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResultantAppState getInstallState() {
         return this.installState;
     }
@@ -155,7 +155,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * Gets the installStateDetail property value. Enum indicating additional details regarding why an application has a particular install state.
      * @return a resultantAppStateDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResultantAppStateDetail getInstallStateDetail() {
         return this.installStateDetail;
     }
@@ -163,7 +163,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * Gets the lastSyncDateTime property value. Last sync date time
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
         return this.lastSyncDateTime;
     }
@@ -171,7 +171,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * Gets the mobileAppInstallStatusValue property value. A list of possible states for application status on an individual device. When devices contact the Intune service and find targeted application enforcement intent, the status of the enforcement is recorded and becomes accessible in the Graph API. Since the application status is identified during device interaction with the Intune service, status records do not immediately appear upon application group assignment; it is created only after the assignment is evaluated in the service and devices start receiving the policy during check-ins.
      * @return a resultantAppState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResultantAppState getMobileAppInstallStatusValue() {
         return this.mobileAppInstallStatusValue;
     }
@@ -179,7 +179,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * Gets the osDescription property value. OS Description
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsDescription() {
         return this.osDescription;
     }
@@ -187,7 +187,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * Gets the osVersion property value. OS Version
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsVersion() {
         return this.osVersion;
     }
@@ -195,7 +195,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * Gets the userName property value. Device User Name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserName() {
         return this.userName;
     }
@@ -203,7 +203,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * Gets the userPrincipalName property value. User Principal Name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
@@ -212,8 +212,8 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("app", this.getApp());
@@ -235,8 +235,8 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the app property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApp(@javax.annotation.Nullable final MobileApp value) {
+    @jakarta.annotation.Nonnull
+    public void setApp(@jakarta.annotation.Nullable final MobileApp value) {
         this.app = value;
     }
     /**
@@ -244,8 +244,8 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the deviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
@@ -253,8 +253,8 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the deviceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
@@ -262,8 +262,8 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the displayVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayVersion(@jakarta.annotation.Nullable final String value) {
         this.displayVersion = value;
     }
     /**
@@ -271,8 +271,8 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the errorCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorCode(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setErrorCode(@jakarta.annotation.Nullable final Integer value) {
         this.errorCode = value;
     }
     /**
@@ -280,8 +280,8 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the installState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstallState(@javax.annotation.Nullable final ResultantAppState value) {
+    @jakarta.annotation.Nonnull
+    public void setInstallState(@jakarta.annotation.Nullable final ResultantAppState value) {
         this.installState = value;
     }
     /**
@@ -289,8 +289,8 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the installStateDetail property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstallStateDetail(@javax.annotation.Nullable final ResultantAppStateDetail value) {
+    @jakarta.annotation.Nonnull
+    public void setInstallStateDetail(@jakarta.annotation.Nullable final ResultantAppStateDetail value) {
         this.installStateDetail = value;
     }
     /**
@@ -298,8 +298,8 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSyncDateTime = value;
     }
     /**
@@ -307,8 +307,8 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the mobileAppInstallStatusValue property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMobileAppInstallStatusValue(@javax.annotation.Nullable final ResultantAppState value) {
+    @jakarta.annotation.Nonnull
+    public void setMobileAppInstallStatusValue(@jakarta.annotation.Nullable final ResultantAppState value) {
         this.mobileAppInstallStatusValue = value;
     }
     /**
@@ -316,8 +316,8 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the osDescription property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsDescription(@jakarta.annotation.Nullable final String value) {
         this.osDescription = value;
     }
     /**
@@ -325,8 +325,8 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the osVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsVersion(@jakarta.annotation.Nullable final String value) {
         this.osVersion = value;
     }
     /**
@@ -334,8 +334,8 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the userName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
     /**
@@ -343,8 +343,8 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

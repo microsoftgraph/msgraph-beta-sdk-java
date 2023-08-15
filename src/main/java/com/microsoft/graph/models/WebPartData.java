@@ -44,7 +44,7 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * Instantiates a new webPartData and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WebPartData() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +53,8 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a webPartData
      */
-    @javax.annotation.Nonnull
-    public static WebPartData createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WebPartData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WebPartData();
     }
@@ -62,7 +62,7 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +70,7 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * Gets the audiences property value. Audience information of the web part. By using this property, specific content will be prioritized to specific audiences.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAudiences() {
         return this.audiences;
     }
@@ -78,7 +78,7 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * Gets the dataVersion property value. Data version of the web part. The value is defined by the web part developer. Different dataVersions usually refers to a different property structure.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDataVersion() {
         return this.dataVersion;
     }
@@ -86,7 +86,7 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * Gets the description property value. Description of the web part.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -94,7 +94,7 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("audiences", (n) -> { this.setAudiences(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -110,7 +110,7 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -118,7 +118,7 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * Gets the properties property value. Properties bag of the web part.
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getProperties() {
         return this.properties;
     }
@@ -126,7 +126,7 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * Gets the serverProcessedContent property value. Contains collections of data that can be processed by server side services like search index and link fixup.
      * @return a serverProcessedContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServerProcessedContent getServerProcessedContent() {
         return this.serverProcessedContent;
     }
@@ -134,7 +134,7 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * Gets the title property value. Title of the web part.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTitle() {
         return this.title;
     }
@@ -143,8 +143,8 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("audiences", this.getAudiences());
         writer.writeStringValue("dataVersion", this.getDataVersion());
@@ -157,11 +157,11 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -169,8 +169,8 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the audiences property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAudiences(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setAudiences(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.audiences = value;
     }
     /**
@@ -178,8 +178,8 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the dataVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDataVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDataVersion(@jakarta.annotation.Nullable final String value) {
         this.dataVersion = value;
     }
     /**
@@ -187,17 +187,17 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -205,8 +205,8 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the properties property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProperties(@javax.annotation.Nullable final Json value) {
+    @jakarta.annotation.Nonnull
+    public void setProperties(@jakarta.annotation.Nullable final Json value) {
         this.properties = value;
     }
     /**
@@ -214,8 +214,8 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the serverProcessedContent property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServerProcessedContent(@javax.annotation.Nullable final ServerProcessedContent value) {
+    @jakarta.annotation.Nonnull
+    public void setServerProcessedContent(@jakarta.annotation.Nullable final ServerProcessedContent value) {
         this.serverProcessedContent = value;
     }
     /**
@@ -223,8 +223,8 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTitle(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
 }

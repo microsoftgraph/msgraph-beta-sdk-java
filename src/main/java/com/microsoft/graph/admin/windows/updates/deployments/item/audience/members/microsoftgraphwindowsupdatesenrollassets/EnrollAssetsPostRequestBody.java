@@ -26,7 +26,7 @@ public class EnrollAssetsPostRequestBody implements AdditionalDataHolder, Parsab
      * Instantiates a new enrollAssetsPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EnrollAssetsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -35,8 +35,8 @@ public class EnrollAssetsPostRequestBody implements AdditionalDataHolder, Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a enrollAssetsPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static EnrollAssetsPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EnrollAssetsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EnrollAssetsPostRequestBody();
     }
@@ -44,7 +44,7 @@ public class EnrollAssetsPostRequestBody implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -52,7 +52,7 @@ public class EnrollAssetsPostRequestBody implements AdditionalDataHolder, Parsab
      * Gets the assets property value. The assets property
      * @return a updatableAsset
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getAssets() {
         return this.assets;
     }
@@ -60,7 +60,7 @@ public class EnrollAssetsPostRequestBody implements AdditionalDataHolder, Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("assets", (n) -> { this.setAssets(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
@@ -71,7 +71,7 @@ public class EnrollAssetsPostRequestBody implements AdditionalDataHolder, Parsab
      * Gets the updateCategory property value. The updateCategory property
      * @return a updateCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UpdateCategory getUpdateCategory() {
         return this.updateCategory;
     }
@@ -80,8 +80,8 @@ public class EnrollAssetsPostRequestBody implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("assets", this.getAssets());
         writer.writeEnumValue("updateCategory", this.getUpdateCategory());
@@ -89,11 +89,11 @@ public class EnrollAssetsPostRequestBody implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -101,8 +101,8 @@ public class EnrollAssetsPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the assets property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssets(@javax.annotation.Nullable final java.util.List<UpdatableAsset> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssets(@jakarta.annotation.Nullable final java.util.List<UpdatableAsset> value) {
         this.assets = value;
     }
     /**
@@ -110,8 +110,8 @@ public class EnrollAssetsPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the updateCategory property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdateCategory(@javax.annotation.Nullable final UpdateCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setUpdateCategory(@jakarta.annotation.Nullable final UpdateCategory value) {
         this.updateCategory = value;
     }
 }

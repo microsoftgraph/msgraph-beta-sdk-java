@@ -18,7 +18,7 @@ public class DeviceManagementAbstractComplexSettingDefinition extends DeviceMana
      * Instantiates a new deviceManagementAbstractComplexSettingDefinition and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementAbstractComplexSettingDefinition() {
         super();
     }
@@ -27,8 +27,8 @@ public class DeviceManagementAbstractComplexSettingDefinition extends DeviceMana
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementAbstractComplexSettingDefinition
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementAbstractComplexSettingDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementAbstractComplexSettingDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementAbstractComplexSettingDefinition();
     }
@@ -36,7 +36,7 @@ public class DeviceManagementAbstractComplexSettingDefinition extends DeviceMana
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("implementations", (n) -> { this.setImplementations(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -46,7 +46,7 @@ public class DeviceManagementAbstractComplexSettingDefinition extends DeviceMana
      * Gets the implementations property value. List of definition IDs for all possible implementations of this abstract complex setting
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getImplementations() {
         return this.implementations;
     }
@@ -55,8 +55,8 @@ public class DeviceManagementAbstractComplexSettingDefinition extends DeviceMana
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("implementations", this.getImplementations());
@@ -66,8 +66,8 @@ public class DeviceManagementAbstractComplexSettingDefinition extends DeviceMana
      * @param value Value to set for the implementations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImplementations(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setImplementations(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.implementations = value;
     }
 }

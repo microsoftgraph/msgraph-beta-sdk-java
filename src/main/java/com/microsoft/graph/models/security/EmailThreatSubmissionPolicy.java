@@ -64,7 +64,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * Instantiates a new emailThreatSubmissionPolicy and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailThreatSubmissionPolicy() {
         super();
     }
@@ -73,8 +73,8 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a emailThreatSubmissionPolicy
      */
-    @javax.annotation.Nonnull
-    public static EmailThreatSubmissionPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EmailThreatSubmissionPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EmailThreatSubmissionPolicy();
     }
@@ -82,7 +82,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * Gets the customizedNotificationSenderEmailAddress property value. Specifies the email address of the sender from which email notifications will be sent to end users to inform them whether an email is spam, phish or clean. The default value is null. Optional for creation.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomizedNotificationSenderEmailAddress() {
         return this.customizedNotificationSenderEmailAddress;
     }
@@ -90,7 +90,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * Gets the customizedReportRecipientEmailAddress property value. Specifies the destination where the reported messages from end users will land whenever they report something as phish, junk or not junk. The default value is null. Optional for creation.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomizedReportRecipientEmailAddress() {
         return this.customizedReportRecipientEmailAddress;
     }
@@ -98,7 +98,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("customizedNotificationSenderEmailAddress", (n) -> { this.setCustomizedNotificationSenderEmailAddress(n.getStringValue()); });
@@ -120,7 +120,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * Gets the isAlwaysReportEnabledForUsers property value. Indicates whether end users can report a message as spam, phish or junk directly without a confirmation(popup). The default value is true.  Optional for creation.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAlwaysReportEnabledForUsers() {
         return this.isAlwaysReportEnabledForUsers;
     }
@@ -128,7 +128,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * Gets the isAskMeEnabledForUsers property value. Indicates whether end users can confirm using a popup before reporting messages as spam, phish or not junk. The default value is true.  Optional for creation.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAskMeEnabledForUsers() {
         return this.isAskMeEnabledForUsers;
     }
@@ -136,7 +136,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * Gets the isCustomizedMessageEnabled property value. Indicates whether the email notifications sent to end users to inform them if an email is phish, spam or junk is customized or not. The default value is false. Optional for creation.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsCustomizedMessageEnabled() {
         return this.isCustomizedMessageEnabled;
     }
@@ -144,7 +144,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * Gets the isCustomizedMessageEnabledForPhishing property value. If enabled, customized message only shows when email is reported as phishing. The default value is false. Optional for creation.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsCustomizedMessageEnabledForPhishing() {
         return this.isCustomizedMessageEnabledForPhishing;
     }
@@ -152,7 +152,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * Gets the isCustomizedNotificationSenderEnabled property value. Indicates whether to use the sender email address set using customizedNotificationSenderEmailAddress for sending email notifications to end users. The default value is false. Optional for creation.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsCustomizedNotificationSenderEnabled() {
         return this.isCustomizedNotificationSenderEnabled;
     }
@@ -160,7 +160,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * Gets the isNeverReportEnabledForUsers property value. Indicates whether end users can simply move the message from one folder to another based on the action of spam, phish or not junk without actually reporting it. The default value is true. Optional for creation.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsNeverReportEnabledForUsers() {
         return this.isNeverReportEnabledForUsers;
     }
@@ -168,7 +168,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * Gets the isOrganizationBrandingEnabled property value. Indicates whether the branding logo should be used in the email notifications sent to end users. The default value is false. Optional for creation.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsOrganizationBrandingEnabled() {
         return this.isOrganizationBrandingEnabled;
     }
@@ -176,7 +176,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * Gets the isReportFromQuarantineEnabled property value. Indicates whether end users can submit from the quarantine page. The default value is true. Optional for creation.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsReportFromQuarantineEnabled() {
         return this.isReportFromQuarantineEnabled;
     }
@@ -184,7 +184,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * Gets the isReportToCustomizedEmailAddressEnabled property value. Indicates whether emails reported by end users should be send to the custom mailbox configured using customizedReportRecipientEmailAddress.  The default value is false. Optional for creation.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsReportToCustomizedEmailAddressEnabled() {
         return this.isReportToCustomizedEmailAddressEnabled;
     }
@@ -192,7 +192,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * Gets the isReportToMicrosoftEnabled property value. If enabled, the email will be sent to Microsoft for analysis. The default value is false. Required for creation.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsReportToMicrosoftEnabled() {
         return this.isReportToMicrosoftEnabled;
     }
@@ -200,7 +200,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * Gets the isReviewEmailNotificationEnabled property value. Indicates whether an email notification is sent to the end user who reported the email when it has been reviewed by the admin. The default value is false. Optional for creation.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsReviewEmailNotificationEnabled() {
         return this.isReviewEmailNotificationEnabled;
     }
@@ -209,8 +209,8 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("customizedNotificationSenderEmailAddress", this.getCustomizedNotificationSenderEmailAddress());
@@ -232,8 +232,8 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * @param value Value to set for the customizedNotificationSenderEmailAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomizedNotificationSenderEmailAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomizedNotificationSenderEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.customizedNotificationSenderEmailAddress = value;
     }
     /**
@@ -241,8 +241,8 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * @param value Value to set for the customizedReportRecipientEmailAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomizedReportRecipientEmailAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomizedReportRecipientEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.customizedReportRecipientEmailAddress = value;
     }
     /**
@@ -250,8 +250,8 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * @param value Value to set for the isAlwaysReportEnabledForUsers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAlwaysReportEnabledForUsers(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsAlwaysReportEnabledForUsers(@jakarta.annotation.Nullable final Boolean value) {
         this.isAlwaysReportEnabledForUsers = value;
     }
     /**
@@ -259,8 +259,8 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * @param value Value to set for the isAskMeEnabledForUsers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAskMeEnabledForUsers(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsAskMeEnabledForUsers(@jakarta.annotation.Nullable final Boolean value) {
         this.isAskMeEnabledForUsers = value;
     }
     /**
@@ -268,8 +268,8 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * @param value Value to set for the isCustomizedMessageEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsCustomizedMessageEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsCustomizedMessageEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isCustomizedMessageEnabled = value;
     }
     /**
@@ -277,8 +277,8 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * @param value Value to set for the isCustomizedMessageEnabledForPhishing property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsCustomizedMessageEnabledForPhishing(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsCustomizedMessageEnabledForPhishing(@jakarta.annotation.Nullable final Boolean value) {
         this.isCustomizedMessageEnabledForPhishing = value;
     }
     /**
@@ -286,8 +286,8 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * @param value Value to set for the isCustomizedNotificationSenderEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsCustomizedNotificationSenderEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsCustomizedNotificationSenderEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isCustomizedNotificationSenderEnabled = value;
     }
     /**
@@ -295,8 +295,8 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * @param value Value to set for the isNeverReportEnabledForUsers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsNeverReportEnabledForUsers(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsNeverReportEnabledForUsers(@jakarta.annotation.Nullable final Boolean value) {
         this.isNeverReportEnabledForUsers = value;
     }
     /**
@@ -304,8 +304,8 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * @param value Value to set for the isOrganizationBrandingEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsOrganizationBrandingEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsOrganizationBrandingEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isOrganizationBrandingEnabled = value;
     }
     /**
@@ -313,8 +313,8 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * @param value Value to set for the isReportFromQuarantineEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsReportFromQuarantineEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsReportFromQuarantineEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isReportFromQuarantineEnabled = value;
     }
     /**
@@ -322,8 +322,8 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * @param value Value to set for the isReportToCustomizedEmailAddressEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsReportToCustomizedEmailAddressEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsReportToCustomizedEmailAddressEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isReportToCustomizedEmailAddressEnabled = value;
     }
     /**
@@ -331,8 +331,8 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * @param value Value to set for the isReportToMicrosoftEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsReportToMicrosoftEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsReportToMicrosoftEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isReportToMicrosoftEnabled = value;
     }
     /**
@@ -340,8 +340,8 @@ public class EmailThreatSubmissionPolicy extends Entity implements Parsable {
      * @param value Value to set for the isReviewEmailNotificationEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsReviewEmailNotificationEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsReviewEmailNotificationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isReviewEmailNotificationEnabled = value;
     }
 }

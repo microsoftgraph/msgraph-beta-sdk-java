@@ -52,7 +52,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * Instantiates a new aggregatedInboundStatistics and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AggregatedInboundStatistics() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -61,8 +61,8 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a aggregatedInboundStatistics
      */
-    @javax.annotation.Nonnull
-    public static AggregatedInboundStatistics createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AggregatedInboundStatistics createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AggregatedInboundStatistics();
     }
@@ -70,7 +70,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -78,7 +78,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * Gets the errors property value. The aggregate count of errors encountered by activities during this run.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getErrors() {
         return this.errors;
     }
@@ -86,7 +86,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("errors", (n) -> { this.setErrors(n.getIntegerValue()); });
@@ -104,7 +104,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * Gets the groups property value. The aggregate count of active inbound groups processed during the run.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getGroups() {
         return this.groups;
     }
@@ -112,7 +112,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * Gets the matchedPeopleByRole property value. The aggregate count of active people matched to an Azure Active Directory user, by role.
      * @return a industryDataRunRoleCountMetric
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IndustryDataRunRoleCountMetric> getMatchedPeopleByRole() {
         return this.matchedPeopleByRole;
     }
@@ -120,7 +120,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * Gets the memberships property value. The aggregate count of active inbound memberships processed during the run.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMemberships() {
         return this.memberships;
     }
@@ -128,7 +128,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -136,7 +136,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * Gets the organizations property value. The aggregate count of active inbound organizations processed during the run.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getOrganizations() {
         return this.organizations;
     }
@@ -144,7 +144,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * Gets the people property value. The aggregate count of active inbound people processed during the run.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPeople() {
         return this.people;
     }
@@ -152,7 +152,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * Gets the unmatchedPeopleByRole property value. The aggregate count of active people not matched to an Azure Active Directory user, by role.
      * @return a industryDataRunRoleCountMetric
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IndustryDataRunRoleCountMetric> getUnmatchedPeopleByRole() {
         return this.unmatchedPeopleByRole;
     }
@@ -160,7 +160,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * Gets the warnings property value. The aggregate count of warnings generated by activities during this run.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getWarnings() {
         return this.warnings;
     }
@@ -169,19 +169,19 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -189,8 +189,8 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * @param value Value to set for the errors property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrors(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setErrors(@jakarta.annotation.Nullable final Integer value) {
         this.errors = value;
     }
     /**
@@ -198,8 +198,8 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * @param value Value to set for the groups property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroups(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setGroups(@jakarta.annotation.Nullable final Integer value) {
         this.groups = value;
     }
     /**
@@ -207,8 +207,8 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * @param value Value to set for the matchedPeopleByRole property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMatchedPeopleByRole(@javax.annotation.Nullable final java.util.List<IndustryDataRunRoleCountMetric> value) {
+    @jakarta.annotation.Nonnull
+    public void setMatchedPeopleByRole(@jakarta.annotation.Nullable final java.util.List<IndustryDataRunRoleCountMetric> value) {
         this.matchedPeopleByRole = value;
     }
     /**
@@ -216,17 +216,17 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * @param value Value to set for the memberships property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMemberships(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMemberships(@jakarta.annotation.Nullable final Integer value) {
         this.memberships = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -234,8 +234,8 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * @param value Value to set for the organizations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrganizations(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setOrganizations(@jakarta.annotation.Nullable final Integer value) {
         this.organizations = value;
     }
     /**
@@ -243,8 +243,8 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * @param value Value to set for the people property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPeople(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPeople(@jakarta.annotation.Nullable final Integer value) {
         this.people = value;
     }
     /**
@@ -252,8 +252,8 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * @param value Value to set for the unmatchedPeopleByRole property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnmatchedPeopleByRole(@javax.annotation.Nullable final java.util.List<IndustryDataRunRoleCountMetric> value) {
+    @jakarta.annotation.Nonnull
+    public void setUnmatchedPeopleByRole(@jakarta.annotation.Nullable final java.util.List<IndustryDataRunRoleCountMetric> value) {
         this.unmatchedPeopleByRole = value;
     }
     /**
@@ -261,8 +261,8 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      * @param value Value to set for the warnings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWarnings(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setWarnings(@jakarta.annotation.Nullable final Integer value) {
         this.warnings = value;
     }
 }

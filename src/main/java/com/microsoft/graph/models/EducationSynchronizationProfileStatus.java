@@ -32,7 +32,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * Instantiates a new educationSynchronizationProfileStatus and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSynchronizationProfileStatus() {
         super();
     }
@@ -41,8 +41,8 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationSynchronizationProfileStatus
      */
-    @javax.annotation.Nonnull
-    public static EducationSynchronizationProfileStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationSynchronizationProfileStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationSynchronizationProfileStatus();
     }
@@ -50,7 +50,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * Gets the errorCount property value. Number of errors during synchronization.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getErrorCount() {
         return this.errorCount;
     }
@@ -58,7 +58,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("errorCount", (n) -> { this.setErrorCount(n.getLongValue()); });
@@ -72,7 +72,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * Gets the lastActivityDateTime property value. Date and time when most recent changes were observed in the profile.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastActivityDateTime() {
         return this.lastActivityDateTime;
     }
@@ -80,7 +80,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * Gets the lastSynchronizationDateTime property value. Date and time of the most recent successful synchronization.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSynchronizationDateTime() {
         return this.lastSynchronizationDateTime;
     }
@@ -88,7 +88,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * Gets the status property value. The status of a sync. The possible values are: paused, inProgress, success, error, validationError, quarantined, unknownFutureValue, extracting, validating. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: extracting, validating.
      * @return a educationSynchronizationStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSynchronizationStatus getStatus() {
         return this.status;
     }
@@ -96,7 +96,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * Gets the statusMessage property value. Status message for the synchronization stage of the current profile.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStatusMessage() {
         return this.statusMessage;
     }
@@ -105,8 +105,8 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeLongValue("errorCount", this.getErrorCount());
@@ -120,8 +120,8 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * @param value Value to set for the errorCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorCount(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setErrorCount(@jakarta.annotation.Nullable final Long value) {
         this.errorCount = value;
     }
     /**
@@ -129,8 +129,8 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * @param value Value to set for the lastActivityDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastActivityDateTime = value;
     }
     /**
@@ -138,8 +138,8 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * @param value Value to set for the lastSynchronizationDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSynchronizationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastSynchronizationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSynchronizationDateTime = value;
     }
     /**
@@ -147,8 +147,8 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final EducationSynchronizationStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final EducationSynchronizationStatus value) {
         this.status = value;
     }
     /**
@@ -156,8 +156,8 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * @param value Value to set for the statusMessage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatusMessage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStatusMessage(@jakarta.annotation.Nullable final String value) {
         this.statusMessage = value;
     }
 }

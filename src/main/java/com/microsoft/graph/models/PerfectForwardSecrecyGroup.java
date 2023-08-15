@@ -25,10 +25,10 @@ public enum PerfectForwardSecrecyGroup implements ValuedEnum {
     PerfectForwardSecrecyGroup(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static PerfectForwardSecrecyGroup forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static PerfectForwardSecrecyGroup forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "pfs1": return Pfs1;

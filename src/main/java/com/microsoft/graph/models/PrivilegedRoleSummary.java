@@ -31,7 +31,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * Instantiates a new privilegedRoleSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrivilegedRoleSummary() {
         super();
     }
@@ -40,8 +40,8 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a privilegedRoleSummary
      */
-    @javax.annotation.Nonnull
-    public static PrivilegedRoleSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrivilegedRoleSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PrivilegedRoleSummary();
     }
@@ -49,7 +49,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * Gets the elevatedCount property value. The elevatedCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getElevatedCount() {
         return this.elevatedCount;
     }
@@ -57,7 +57,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("elevatedCount", (n) -> { this.setElevatedCount(n.getIntegerValue()); });
@@ -71,7 +71,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * Gets the managedCount property value. The managedCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getManagedCount() {
         return this.managedCount;
     }
@@ -79,7 +79,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * Gets the mfaEnabled property value. The mfaEnabled property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getMfaEnabled() {
         return this.mfaEnabled;
     }
@@ -87,7 +87,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a roleSummaryStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RoleSummaryStatus getStatus() {
         return this.status;
     }
@@ -95,7 +95,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * Gets the usersCount property value. The usersCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getUsersCount() {
         return this.usersCount;
     }
@@ -104,8 +104,8 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("elevatedCount", this.getElevatedCount());
@@ -119,8 +119,8 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * @param value Value to set for the elevatedCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setElevatedCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setElevatedCount(@jakarta.annotation.Nullable final Integer value) {
         this.elevatedCount = value;
     }
     /**
@@ -128,8 +128,8 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * @param value Value to set for the managedCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedCount(@jakarta.annotation.Nullable final Integer value) {
         this.managedCount = value;
     }
     /**
@@ -137,8 +137,8 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * @param value Value to set for the mfaEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMfaEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setMfaEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.mfaEnabled = value;
     }
     /**
@@ -146,8 +146,8 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final RoleSummaryStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final RoleSummaryStatus value) {
         this.status = value;
     }
     /**
@@ -155,8 +155,8 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * @param value Value to set for the usersCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUsersCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.usersCount = value;
     }
 }

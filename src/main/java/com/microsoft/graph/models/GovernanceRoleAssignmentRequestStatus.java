@@ -32,7 +32,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
      * Instantiates a new governanceRoleAssignmentRequestStatus and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceRoleAssignmentRequestStatus() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a governanceRoleAssignmentRequestStatus
      */
-    @javax.annotation.Nonnull
-    public static GovernanceRoleAssignmentRequestStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GovernanceRoleAssignmentRequestStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GovernanceRoleAssignmentRequestStatus();
     }
@@ -50,7 +50,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +58,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -71,7 +71,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -79,7 +79,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
      * Gets the status property value. The status of the role assignment request. The value can be InProgress or Closed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStatus() {
         return this.status;
     }
@@ -87,7 +87,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
      * Gets the statusDetails property value. The details of the status of the role assignment request. It represents the evaluation results of different rules.
      * @return a keyValue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getStatusDetails() {
         return this.statusDetails;
     }
@@ -95,7 +95,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
      * Gets the subStatus property value. The sub status of the role assignment request. The values can be Accepted, PendingEvaluation, Granted, Denied, PendingProvisioning, Provisioned, PendingRevocation, Revoked, Canceled, Failed, PendingApprovalProvisioning, PendingApproval, FailedAsResourceIsLocked, PendingAdminDecision, AdminApproved, AdminDenied, TimedOut, and ProvisioningStarted.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubStatus() {
         return this.subStatus;
     }
@@ -104,8 +104,8 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("status", this.getStatus());
@@ -115,20 +115,20 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -136,8 +136,8 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final String value) {
         this.status = value;
     }
     /**
@@ -145,8 +145,8 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
      * @param value Value to set for the statusDetails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatusDetails(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
+    @jakarta.annotation.Nonnull
+    public void setStatusDetails(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
         this.statusDetails = value;
     }
     /**
@@ -154,8 +154,8 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
      * @param value Value to set for the subStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubStatus(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSubStatus(@jakarta.annotation.Nullable final String value) {
         this.subStatus = value;
     }
 }

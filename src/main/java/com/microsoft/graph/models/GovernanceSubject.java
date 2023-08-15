@@ -27,7 +27,7 @@ public class GovernanceSubject extends Entity implements Parsable {
      * Instantiates a new governanceSubject and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceSubject() {
         super();
     }
@@ -36,8 +36,8 @@ public class GovernanceSubject extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a governanceSubject
      */
-    @javax.annotation.Nonnull
-    public static GovernanceSubject createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GovernanceSubject createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GovernanceSubject();
     }
@@ -45,7 +45,7 @@ public class GovernanceSubject extends Entity implements Parsable {
      * Gets the displayName property value. The display name of the subject.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -53,7 +53,7 @@ public class GovernanceSubject extends Entity implements Parsable {
      * Gets the email property value. The email address of the user subject. If the subject is in other types, it is empty.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmail() {
         return this.email;
     }
@@ -61,7 +61,7 @@ public class GovernanceSubject extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -74,7 +74,7 @@ public class GovernanceSubject extends Entity implements Parsable {
      * Gets the principalName property value. The principal name of the user subject. If the subject is in other types, it is empty.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrincipalName() {
         return this.principalName;
     }
@@ -82,7 +82,7 @@ public class GovernanceSubject extends Entity implements Parsable {
      * Gets the type property value. The type of the subject. The value can be User, Group, and ServicePrincipal.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getType() {
         return this.type;
     }
@@ -91,8 +91,8 @@ public class GovernanceSubject extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -105,8 +105,8 @@ public class GovernanceSubject extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -114,8 +114,8 @@ public class GovernanceSubject extends Entity implements Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmail(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
@@ -123,8 +123,8 @@ public class GovernanceSubject extends Entity implements Parsable {
      * @param value Value to set for the principalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.principalName = value;
     }
     /**
@@ -132,8 +132,8 @@ public class GovernanceSubject extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
 }

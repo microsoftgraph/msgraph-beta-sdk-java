@@ -19,7 +19,7 @@ public class InsightsSettings extends Entity implements Parsable {
      * Instantiates a new insightsSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InsightsSettings() {
         super();
     }
@@ -28,8 +28,8 @@ public class InsightsSettings extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a insightsSettings
      */
-    @javax.annotation.Nonnull
-    public static InsightsSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static InsightsSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new InsightsSettings();
     }
@@ -37,7 +37,7 @@ public class InsightsSettings extends Entity implements Parsable {
      * Gets the disabledForGroup property value. The ID of an Azure Active Directory group, of which the specified type of insights are disabled for its members. Default is empty. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisabledForGroup() {
         return this.disabledForGroup;
     }
@@ -45,7 +45,7 @@ public class InsightsSettings extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("disabledForGroup", (n) -> { this.setDisabledForGroup(n.getStringValue()); });
@@ -56,7 +56,7 @@ public class InsightsSettings extends Entity implements Parsable {
      * Gets the isEnabledInOrganization property value. true if the specified type of insights are enabled for the organization; false if the specified type of insights are disabled for all users without exceptions. Default is true. Optional.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsEnabledInOrganization() {
         return this.isEnabledInOrganization;
     }
@@ -65,8 +65,8 @@ public class InsightsSettings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("disabledForGroup", this.getDisabledForGroup());
@@ -77,8 +77,8 @@ public class InsightsSettings extends Entity implements Parsable {
      * @param value Value to set for the disabledForGroup property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisabledForGroup(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisabledForGroup(@jakarta.annotation.Nullable final String value) {
         this.disabledForGroup = value;
     }
     /**
@@ -86,8 +86,8 @@ public class InsightsSettings extends Entity implements Parsable {
      * @param value Value to set for the isEnabledInOrganization property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsEnabledInOrganization(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsEnabledInOrganization(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabledInOrganization = value;
     }
 }

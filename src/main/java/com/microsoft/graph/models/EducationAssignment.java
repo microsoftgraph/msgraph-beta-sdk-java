@@ -89,6 +89,10 @@ public class EducationAssignment extends Entity implements Parsable {
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
+     * The URL of the module from which to access the assignment.
+     */
+    private String moduleUrl;
+    /**
      * Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl is not allowed after the assignment has been published.
      */
     private String notificationChannelUrl;
@@ -120,7 +124,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Instantiates a new educationAssignment and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationAssignment() {
         super();
     }
@@ -129,8 +133,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationAssignment
      */
-    @javax.annotation.Nonnull
-    public static EducationAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationAssignment();
     }
@@ -138,7 +142,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the addedStudentAction property value. Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none. Supported values are: none, assignIfOpen. For example, a teacher can use assignIfOpen to indicate that an assignment should be assigned to any new student who joins the class while the assignment is still open, and none to indicate that an assignment should not be assigned to new students.
      * @return a educationAddedStudentAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationAddedStudentAction getAddedStudentAction() {
         return this.addedStudentAction;
     }
@@ -146,7 +150,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the addToCalendarAction property value. Optional field to control the assignment behavior  for adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
      * @return a educationAddToCalendarOptions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationAddToCalendarOptions getAddToCalendarAction() {
         return this.addToCalendarAction;
     }
@@ -154,7 +158,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the allowLateSubmissions property value. Identifies whether students can submit after the due date. If this property is not specified during create, it defaults to true.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowLateSubmissions() {
         return this.allowLateSubmissions;
     }
@@ -162,7 +166,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the allowStudentsToAddResourcesToSubmission property value. Identifies whether students can add their own resources to a submission or if they can only modify resources added by the teacher.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowStudentsToAddResourcesToSubmission() {
         return this.allowStudentsToAddResourcesToSubmission;
     }
@@ -170,7 +174,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the assignDateTime property value. The date when the assignment should become active.  If in the future, the assignment is not shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getAssignDateTime() {
         return this.assignDateTime;
     }
@@ -178,7 +182,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the assignedDateTime property value. The moment that the assignment was published to students and the assignment shows up on the students timeline.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getAssignedDateTime() {
         return this.assignedDateTime;
     }
@@ -186,7 +190,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the assignTo property value. Which users, or whole class should receive a submission object once the assignment is published.
      * @return a educationAssignmentRecipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationAssignmentRecipient getAssignTo() {
         return this.assignTo;
     }
@@ -194,7 +198,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the categories property value. When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
      * @return a educationCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationCategory> getCategories() {
         return this.categories;
     }
@@ -202,7 +206,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the classId property value. Class which this assignment belongs.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClassId() {
         return this.classId;
     }
@@ -210,7 +214,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the closeDateTime property value. Date when the assignment will be closed for submissions. This is an optional field that can be null if the assignment does not allowLateSubmissions or when the closeDateTime is the same as the dueDateTime. But if specified, then the closeDateTime must be greater than or equal to the dueDateTime. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCloseDateTime() {
         return this.closeDateTime;
     }
@@ -218,7 +222,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the createdBy property value. Who created the assignment.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -226,7 +230,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the createdDateTime property value. Moment when the assignment was created.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -234,7 +238,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the displayName property value. Name of the assignment.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -242,7 +246,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the dueDateTime property value. Date when the students assignment is due.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getDueDateTime() {
         return this.dueDateTime;
     }
@@ -250,7 +254,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the feedbackResourcesFolderUrl property value. Folder URL where all the feedback file resources for this assignment are stored.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFeedbackResourcesFolderUrl() {
         return this.feedbackResourcesFolderUrl;
     }
@@ -258,7 +262,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("addedStudentAction", (n) -> { this.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction.class)); });
@@ -281,6 +285,7 @@ public class EducationAssignment extends Entity implements Parsable {
         deserializerMap.put("instructions", (n) -> { this.setInstructions(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("moduleUrl", (n) -> { this.setModuleUrl(n.getStringValue()); });
         deserializerMap.put("notificationChannelUrl", (n) -> { this.setNotificationChannelUrl(n.getStringValue()); });
         deserializerMap.put("resources", (n) -> { this.setResources(n.getCollectionOfObjectValues(EducationAssignmentResource::createFromDiscriminatorValue)); });
         deserializerMap.put("resourcesFolderUrl", (n) -> { this.setResourcesFolderUrl(n.getStringValue()); });
@@ -294,7 +299,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the grading property value. How the assignment will be graded.
      * @return a educationAssignmentGradeType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationAssignmentGradeType getGrading() {
         return this.grading;
     }
@@ -302,7 +307,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the gradingCategory property value. The gradingCategory property
      * @return a educationGradingCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationGradingCategory getGradingCategory() {
         return this.gradingCategory;
     }
@@ -310,7 +315,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the instructions property value. Instructions for the assignment.  This along with the display name tell the student what to do.
      * @return a educationItemBody
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationItemBody getInstructions() {
         return this.instructions;
     }
@@ -318,7 +323,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. Who last modified the assignment.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -326,15 +331,23 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. Moment when the assignment was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
+    }
+    /**
+     * Gets the moduleUrl property value. The URL of the module from which to access the assignment.
+     * @return a string
+     */
+    @jakarta.annotation.Nullable
+    public String getModuleUrl() {
+        return this.moduleUrl;
     }
     /**
      * Gets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl is not allowed after the assignment has been published.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNotificationChannelUrl() {
         return this.notificationChannelUrl;
     }
@@ -342,7 +355,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the resources property value. Learning objects that are associated with this assignment.  Only teachers can modify this list. Nullable.
      * @return a educationAssignmentResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationAssignmentResource> getResources() {
         return this.resources;
     }
@@ -350,7 +363,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the resourcesFolderUrl property value. Folder URL where all the file resources for this assignment are stored.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourcesFolderUrl() {
         return this.resourcesFolderUrl;
     }
@@ -358,7 +371,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the rubric property value. When set, the grading rubric attached to this assignment.
      * @return a educationRubric
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationRubric getRubric() {
         return this.rubric;
     }
@@ -366,7 +379,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the status property value. Status of the Assignment.  You can not PATCH this value.  Possible values are: draft, scheduled, published, assigned, unknownFutureValue and inactive. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: inactive.
      * @return a educationAssignmentStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationAssignmentStatus getStatus() {
         return this.status;
     }
@@ -374,7 +387,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the submissions property value. Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
      * @return a educationSubmission
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationSubmission> getSubmissions() {
         return this.submissions;
     }
@@ -382,7 +395,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Gets the webUrl property value. The deep link URL for the given assignment.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebUrl() {
         return this.webUrl;
     }
@@ -391,8 +404,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("addedStudentAction", this.getAddedStudentAction());
@@ -408,6 +421,7 @@ public class EducationAssignment extends Entity implements Parsable {
         writer.writeObjectValue("grading", this.getGrading());
         writer.writeObjectValue("gradingCategory", this.getGradingCategory());
         writer.writeObjectValue("instructions", this.getInstructions());
+        writer.writeStringValue("moduleUrl", this.getModuleUrl());
         writer.writeStringValue("notificationChannelUrl", this.getNotificationChannelUrl());
         writer.writeCollectionOfObjectValues("resources", this.getResources());
         writer.writeObjectValue("rubric", this.getRubric());
@@ -418,8 +432,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the addedStudentAction property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddedStudentAction(@javax.annotation.Nullable final EducationAddedStudentAction value) {
+    @jakarta.annotation.Nonnull
+    public void setAddedStudentAction(@jakarta.annotation.Nullable final EducationAddedStudentAction value) {
         this.addedStudentAction = value;
     }
     /**
@@ -427,8 +441,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the addToCalendarAction property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddToCalendarAction(@javax.annotation.Nullable final EducationAddToCalendarOptions value) {
+    @jakarta.annotation.Nonnull
+    public void setAddToCalendarAction(@jakarta.annotation.Nullable final EducationAddToCalendarOptions value) {
         this.addToCalendarAction = value;
     }
     /**
@@ -436,8 +450,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the allowLateSubmissions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowLateSubmissions(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowLateSubmissions(@jakarta.annotation.Nullable final Boolean value) {
         this.allowLateSubmissions = value;
     }
     /**
@@ -445,8 +459,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the allowStudentsToAddResourcesToSubmission property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowStudentsToAddResourcesToSubmission(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowStudentsToAddResourcesToSubmission(@jakarta.annotation.Nullable final Boolean value) {
         this.allowStudentsToAddResourcesToSubmission = value;
     }
     /**
@@ -454,8 +468,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the assignDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.assignDateTime = value;
     }
     /**
@@ -463,8 +477,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the assignedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.assignedDateTime = value;
     }
     /**
@@ -472,8 +486,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the assignTo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignTo(@javax.annotation.Nullable final EducationAssignmentRecipient value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignTo(@jakarta.annotation.Nullable final EducationAssignmentRecipient value) {
         this.assignTo = value;
     }
     /**
@@ -481,8 +495,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategories(@javax.annotation.Nullable final java.util.List<EducationCategory> value) {
+    @jakarta.annotation.Nonnull
+    public void setCategories(@jakarta.annotation.Nullable final java.util.List<EducationCategory> value) {
         this.categories = value;
     }
     /**
@@ -490,8 +504,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the classId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClassId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setClassId(@jakarta.annotation.Nullable final String value) {
         this.classId = value;
     }
     /**
@@ -499,8 +513,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the closeDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloseDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCloseDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.closeDateTime = value;
     }
     /**
@@ -508,8 +522,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
@@ -517,8 +531,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -526,8 +540,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -535,8 +549,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the dueDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDueDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setDueDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.dueDateTime = value;
     }
     /**
@@ -544,8 +558,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the feedbackResourcesFolderUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeedbackResourcesFolderUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFeedbackResourcesFolderUrl(@jakarta.annotation.Nullable final String value) {
         this.feedbackResourcesFolderUrl = value;
     }
     /**
@@ -553,8 +567,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the grading property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGrading(@javax.annotation.Nullable final EducationAssignmentGradeType value) {
+    @jakarta.annotation.Nonnull
+    public void setGrading(@jakarta.annotation.Nullable final EducationAssignmentGradeType value) {
         this.grading = value;
     }
     /**
@@ -562,8 +576,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the gradingCategory property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGradingCategory(@javax.annotation.Nullable final EducationGradingCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setGradingCategory(@jakarta.annotation.Nullable final EducationGradingCategory value) {
         this.gradingCategory = value;
     }
     /**
@@ -571,8 +585,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the instructions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstructions(@javax.annotation.Nullable final EducationItemBody value) {
+    @jakarta.annotation.Nonnull
+    public void setInstructions(@jakarta.annotation.Nullable final EducationItemBody value) {
         this.instructions = value;
     }
     /**
@@ -580,8 +594,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
@@ -589,17 +603,26 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
+    }
+    /**
+     * Sets the moduleUrl property value. The URL of the module from which to access the assignment.
+     * @param value Value to set for the moduleUrl property.
+     * @return a void
+     */
+    @jakarta.annotation.Nonnull
+    public void setModuleUrl(@jakarta.annotation.Nullable final String value) {
+        this.moduleUrl = value;
     }
     /**
      * Sets the notificationChannelUrl property value. Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl is not allowed after the assignment has been published.
      * @param value Value to set for the notificationChannelUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotificationChannelUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNotificationChannelUrl(@jakarta.annotation.Nullable final String value) {
         this.notificationChannelUrl = value;
     }
     /**
@@ -607,8 +630,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the resources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResources(@javax.annotation.Nullable final java.util.List<EducationAssignmentResource> value) {
+    @jakarta.annotation.Nonnull
+    public void setResources(@jakarta.annotation.Nullable final java.util.List<EducationAssignmentResource> value) {
         this.resources = value;
     }
     /**
@@ -616,8 +639,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the resourcesFolderUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourcesFolderUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResourcesFolderUrl(@jakarta.annotation.Nullable final String value) {
         this.resourcesFolderUrl = value;
     }
     /**
@@ -625,8 +648,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the rubric property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRubric(@javax.annotation.Nullable final EducationRubric value) {
+    @jakarta.annotation.Nonnull
+    public void setRubric(@jakarta.annotation.Nullable final EducationRubric value) {
         this.rubric = value;
     }
     /**
@@ -634,8 +657,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final EducationAssignmentStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final EducationAssignmentStatus value) {
         this.status = value;
     }
     /**
@@ -643,8 +666,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the submissions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubmissions(@javax.annotation.Nullable final java.util.List<EducationSubmission> value) {
+    @jakarta.annotation.Nonnull
+    public void setSubmissions(@jakarta.annotation.Nullable final java.util.List<EducationSubmission> value) {
         this.submissions = value;
     }
     /**
@@ -652,8 +675,8 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }
 }

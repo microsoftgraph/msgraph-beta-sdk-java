@@ -80,7 +80,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Instantiates a new accessReviewInstanceDecisionItem and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessReviewInstanceDecisionItem() {
         super();
     }
@@ -89,8 +89,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessReviewInstanceDecisionItem
      */
-    @javax.annotation.Nonnull
-    public static AccessReviewInstanceDecisionItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessReviewInstanceDecisionItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessReviewInstanceDecisionItem();
     }
@@ -98,7 +98,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Gets the accessReviewId property value. The identifier of the accessReviewInstance parent. Supports $select. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAccessReviewId() {
         return this.accessReviewId;
     }
@@ -106,7 +106,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Gets the appliedBy property value. The identifier of the user who applied the decision. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't applied the decision or it was automatically applied. Read-only.
      * @return a userIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserIdentity getAppliedBy() {
         return this.appliedBy;
     }
@@ -114,7 +114,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Gets the appliedDateTime property value. The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getAppliedDateTime() {
         return this.appliedDateTime;
     }
@@ -122,7 +122,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Gets the applyResult property value. The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getApplyResult() {
         return this.applyResult;
     }
@@ -130,7 +130,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Gets the decision property value. Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow. Supports $select, $orderby, and $filter (eq only).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDecision() {
         return this.decision;
     }
@@ -138,7 +138,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessReviewId", (n) -> { this.setAccessReviewId(n.getStringValue()); });
@@ -164,7 +164,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Gets the insights property value. Insights are recommendations to reviewers on whether to approve or deny a decision. There can be multiple insights associated with an accessReviewInstanceDecisionItem.
      * @return a governanceInsight
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GovernanceInsight> getInsights() {
         return this.insights;
     }
@@ -172,7 +172,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Gets the instance property value. There is exactly one accessReviewInstance associated with each decision. The instance is the parent of the decision item, representing the recurrence of the access review the decision is made on.
      * @return a accessReviewInstance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessReviewInstance getInstance() {
         return this.instance;
     }
@@ -180,7 +180,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Gets the justification property value. Justification left by the reviewer when they made the decision.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getJustification() {
         return this.justification;
     }
@@ -188,7 +188,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Gets the principal property value. Every decision item in an access review represents a principal's access to a resource. This property represents details of the principal. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is 'Bob' and the resource is 'Sales'. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.
      * @return a identity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Identity getPrincipal() {
         return this.principal;
     }
@@ -196,7 +196,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Gets the principalLink property value. Link to the principal object. For example: https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrincipalLink() {
         return this.principalLink;
     }
@@ -204,7 +204,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Gets the principalResourceMembership property value. Every decision item in an access review represents a principal's membership to a resource. This property provides the details of the membership. For example, whether the principal has direct access or indirect access to the resource. Supports $select. Read-only.
      * @return a decisionItemPrincipalResourceMembership
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DecisionItemPrincipalResourceMembership getPrincipalResourceMembership() {
         return this.principalResourceMembership;
     }
@@ -212,7 +212,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Gets the recommendation property value. A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRecommendation() {
         return this.recommendation;
     }
@@ -220,7 +220,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Gets the resource property value. Every decision item in an access review represents a principal's access to a resource. This property represents details of the resource. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is Bob and the resource is 'Sales'. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource. Read-only.
      * @return a accessReviewInstanceDecisionItemResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessReviewInstanceDecisionItemResource getResource() {
         return this.resource;
     }
@@ -228,7 +228,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Gets the resourceLink property value. A link to the resource. For example, https://graph.microsoft.com/v1.0/servicePrincipals/c86300f3-8695-4320-9f6e-32a2555f5ff8. Supports $select. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceLink() {
         return this.resourceLink;
     }
@@ -236,7 +236,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Gets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Supports $select. Read-only.
      * @return a userIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserIdentity getReviewedBy() {
         return this.reviewedBy;
     }
@@ -244,7 +244,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Gets the reviewedDateTime property value. The timestamp when the review decision occurred. Supports $select. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getReviewedDateTime() {
         return this.reviewedDateTime;
     }
@@ -252,7 +252,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * Gets the target property value. The target of this specific decision. Decision targets can be of different types  each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0.
      * @return a accessReviewInstanceDecisionItemTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessReviewInstanceDecisionItemTarget getTarget() {
         return this.target;
     }
@@ -261,8 +261,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("accessReviewId", this.getAccessReviewId());
@@ -288,8 +288,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the accessReviewId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessReviewId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessReviewId(@jakarta.annotation.Nullable final String value) {
         this.accessReviewId = value;
     }
     /**
@@ -297,8 +297,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the appliedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppliedBy(@javax.annotation.Nullable final UserIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setAppliedBy(@jakarta.annotation.Nullable final UserIdentity value) {
         this.appliedBy = value;
     }
     /**
@@ -306,8 +306,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the appliedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppliedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setAppliedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.appliedDateTime = value;
     }
     /**
@@ -315,8 +315,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the applyResult property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplyResult(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setApplyResult(@jakarta.annotation.Nullable final String value) {
         this.applyResult = value;
     }
     /**
@@ -324,8 +324,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the decision property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDecision(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDecision(@jakarta.annotation.Nullable final String value) {
         this.decision = value;
     }
     /**
@@ -333,8 +333,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the insights property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInsights(@javax.annotation.Nullable final java.util.List<GovernanceInsight> value) {
+    @jakarta.annotation.Nonnull
+    public void setInsights(@jakarta.annotation.Nullable final java.util.List<GovernanceInsight> value) {
         this.insights = value;
     }
     /**
@@ -342,8 +342,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the instance property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstance(@javax.annotation.Nullable final AccessReviewInstance value) {
+    @jakarta.annotation.Nonnull
+    public void setInstance(@jakarta.annotation.Nullable final AccessReviewInstance value) {
         this.instance = value;
     }
     /**
@@ -351,8 +351,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the justification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJustification(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setJustification(@jakarta.annotation.Nullable final String value) {
         this.justification = value;
     }
     /**
@@ -360,8 +360,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the principal property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipal(@javax.annotation.Nullable final Identity value) {
+    @jakarta.annotation.Nonnull
+    public void setPrincipal(@jakarta.annotation.Nullable final Identity value) {
         this.principal = value;
     }
     /**
@@ -369,8 +369,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the principalLink property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipalLink(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrincipalLink(@jakarta.annotation.Nullable final String value) {
         this.principalLink = value;
     }
     /**
@@ -378,8 +378,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the principalResourceMembership property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipalResourceMembership(@javax.annotation.Nullable final DecisionItemPrincipalResourceMembership value) {
+    @jakarta.annotation.Nonnull
+    public void setPrincipalResourceMembership(@jakarta.annotation.Nullable final DecisionItemPrincipalResourceMembership value) {
         this.principalResourceMembership = value;
     }
     /**
@@ -387,8 +387,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the recommendation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecommendation(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRecommendation(@jakarta.annotation.Nullable final String value) {
         this.recommendation = value;
     }
     /**
@@ -396,8 +396,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the resource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResource(@javax.annotation.Nullable final AccessReviewInstanceDecisionItemResource value) {
+    @jakarta.annotation.Nonnull
+    public void setResource(@jakarta.annotation.Nullable final AccessReviewInstanceDecisionItemResource value) {
         this.resource = value;
     }
     /**
@@ -405,8 +405,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the resourceLink property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceLink(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceLink(@jakarta.annotation.Nullable final String value) {
         this.resourceLink = value;
     }
     /**
@@ -414,8 +414,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the reviewedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewedBy(@javax.annotation.Nullable final UserIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setReviewedBy(@jakarta.annotation.Nullable final UserIdentity value) {
         this.reviewedBy = value;
     }
     /**
@@ -423,8 +423,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the reviewedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setReviewedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.reviewedDateTime = value;
     }
     /**
@@ -432,8 +432,8 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @param value Value to set for the target property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTarget(@javax.annotation.Nullable final AccessReviewInstanceDecisionItemTarget value) {
+    @jakarta.annotation.Nonnull
+    public void setTarget(@jakarta.annotation.Nullable final AccessReviewInstanceDecisionItemTarget value) {
         this.target = value;
     }
 }

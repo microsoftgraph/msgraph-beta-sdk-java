@@ -28,7 +28,7 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
      * Instantiates a new contentApplicabilitySettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ContentApplicabilitySettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a contentApplicabilitySettings
      */
-    @javax.annotation.Nonnull
-    public static ContentApplicabilitySettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ContentApplicabilitySettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ContentApplicabilitySettings();
     }
@@ -46,7 +46,7 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -66,7 +66,7 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -74,7 +74,7 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
      * Gets the offerWhileRecommendedBy property value. Offer if the update is recommended by a vendor in the list, otherwise withhold the offer.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getOfferWhileRecommendedBy() {
         return this.offerWhileRecommendedBy;
     }
@@ -82,7 +82,7 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
      * Gets the safeguard property value. Settings for governing safeguard holds on offering content.
      * @return a safeguardSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SafeguardSettings getSafeguard() {
         return this.safeguard;
     }
@@ -91,8 +91,8 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("offerWhileRecommendedBy", this.getOfferWhileRecommendedBy());
@@ -101,20 +101,20 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -122,8 +122,8 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the offerWhileRecommendedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOfferWhileRecommendedBy(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setOfferWhileRecommendedBy(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.offerWhileRecommendedBy = value;
     }
     /**
@@ -131,8 +131,8 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the safeguard property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSafeguard(@javax.annotation.Nullable final SafeguardSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setSafeguard(@jakarta.annotation.Nullable final SafeguardSettings value) {
         this.safeguard = value;
     }
 }

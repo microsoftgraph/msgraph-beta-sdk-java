@@ -71,7 +71,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * Instantiates a new bitLockerSystemDrivePolicy and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BitLockerSystemDrivePolicy() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -80,8 +80,8 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a bitLockerSystemDrivePolicy
      */
-    @javax.annotation.Nonnull
-    public static BitLockerSystemDrivePolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BitLockerSystemDrivePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BitLockerSystemDrivePolicy();
     }
@@ -89,7 +89,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -97,7 +97,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * Gets the encryptionMethod property value. Select the encryption method for operating system drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
      * @return a bitLockerEncryptionMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BitLockerEncryptionMethod getEncryptionMethod() {
         return this.encryptionMethod;
     }
@@ -105,7 +105,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
         deserializerMap.put("encryptionMethod", (n) -> { this.setEncryptionMethod(n.getEnumValue(BitLockerEncryptionMethod.class)); });
@@ -127,7 +127,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * Gets the minimumPinLength property value. Indicates the minimum length of startup pin. Valid values 4 to 20
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMinimumPinLength() {
         return this.minimumPinLength;
     }
@@ -135,7 +135,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -143,7 +143,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * Gets the prebootRecoveryEnableMessageAndUrl property value. Enable pre-boot recovery message and Url. If requireStartupAuthentication is false, this value does not affect.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPrebootRecoveryEnableMessageAndUrl() {
         return this.prebootRecoveryEnableMessageAndUrl;
     }
@@ -151,7 +151,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * Gets the prebootRecoveryMessage property value. Defines a custom recovery message.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrebootRecoveryMessage() {
         return this.prebootRecoveryMessage;
     }
@@ -159,7 +159,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * Gets the prebootRecoveryUrl property value. Defines a custom recovery URL.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrebootRecoveryUrl() {
         return this.prebootRecoveryUrl;
     }
@@ -167,7 +167,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * Gets the recoveryOptions property value. Allows to recover BitLocker encrypted operating system drives in the absence of the required startup key information. This policy setting is applied when you turn on BitLocker.
      * @return a bitLockerRecoveryOptions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BitLockerRecoveryOptions getRecoveryOptions() {
         return this.recoveryOptions;
     }
@@ -175,7 +175,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * Gets the startupAuthenticationBlockWithoutTpmChip property value. Indicates whether to allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getStartupAuthenticationBlockWithoutTpmChip() {
         return this.startupAuthenticationBlockWithoutTpmChip;
     }
@@ -183,7 +183,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * Gets the startupAuthenticationRequired property value. Require additional authentication at startup.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getStartupAuthenticationRequired() {
         return this.startupAuthenticationRequired;
     }
@@ -191,7 +191,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * Gets the startupAuthenticationTpmKeyUsage property value. Possible values of the ConfigurationUsage list.
      * @return a configurationUsage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConfigurationUsage getStartupAuthenticationTpmKeyUsage() {
         return this.startupAuthenticationTpmKeyUsage;
     }
@@ -199,7 +199,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * Gets the startupAuthenticationTpmPinAndKeyUsage property value. Possible values of the ConfigurationUsage list.
      * @return a configurationUsage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConfigurationUsage getStartupAuthenticationTpmPinAndKeyUsage() {
         return this.startupAuthenticationTpmPinAndKeyUsage;
     }
@@ -207,7 +207,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * Gets the startupAuthenticationTpmPinUsage property value. Possible values of the ConfigurationUsage list.
      * @return a configurationUsage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConfigurationUsage getStartupAuthenticationTpmPinUsage() {
         return this.startupAuthenticationTpmPinUsage;
     }
@@ -215,7 +215,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * Gets the startupAuthenticationTpmUsage property value. Possible values of the ConfigurationUsage list.
      * @return a configurationUsage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConfigurationUsage getStartupAuthenticationTpmUsage() {
         return this.startupAuthenticationTpmUsage;
     }
@@ -224,8 +224,8 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("encryptionMethod", this.getEncryptionMethod());
         writer.writeIntegerValue("minimumPinLength", this.getMinimumPinLength());
@@ -244,11 +244,11 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -256,8 +256,8 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the encryptionMethod property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEncryptionMethod(@javax.annotation.Nullable final BitLockerEncryptionMethod value) {
+    @jakarta.annotation.Nonnull
+    public void setEncryptionMethod(@jakarta.annotation.Nullable final BitLockerEncryptionMethod value) {
         this.encryptionMethod = value;
     }
     /**
@@ -265,17 +265,17 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the minimumPinLength property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumPinLength(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMinimumPinLength(@jakarta.annotation.Nullable final Integer value) {
         this.minimumPinLength = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -283,8 +283,8 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the prebootRecoveryEnableMessageAndUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrebootRecoveryEnableMessageAndUrl(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPrebootRecoveryEnableMessageAndUrl(@jakarta.annotation.Nullable final Boolean value) {
         this.prebootRecoveryEnableMessageAndUrl = value;
     }
     /**
@@ -292,8 +292,8 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the prebootRecoveryMessage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrebootRecoveryMessage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrebootRecoveryMessage(@jakarta.annotation.Nullable final String value) {
         this.prebootRecoveryMessage = value;
     }
     /**
@@ -301,8 +301,8 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the prebootRecoveryUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrebootRecoveryUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrebootRecoveryUrl(@jakarta.annotation.Nullable final String value) {
         this.prebootRecoveryUrl = value;
     }
     /**
@@ -310,8 +310,8 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the recoveryOptions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecoveryOptions(@javax.annotation.Nullable final BitLockerRecoveryOptions value) {
+    @jakarta.annotation.Nonnull
+    public void setRecoveryOptions(@jakarta.annotation.Nullable final BitLockerRecoveryOptions value) {
         this.recoveryOptions = value;
     }
     /**
@@ -319,8 +319,8 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the startupAuthenticationBlockWithoutTpmChip property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartupAuthenticationBlockWithoutTpmChip(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setStartupAuthenticationBlockWithoutTpmChip(@jakarta.annotation.Nullable final Boolean value) {
         this.startupAuthenticationBlockWithoutTpmChip = value;
     }
     /**
@@ -328,8 +328,8 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the startupAuthenticationRequired property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartupAuthenticationRequired(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setStartupAuthenticationRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.startupAuthenticationRequired = value;
     }
     /**
@@ -337,8 +337,8 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the startupAuthenticationTpmKeyUsage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartupAuthenticationTpmKeyUsage(@javax.annotation.Nullable final ConfigurationUsage value) {
+    @jakarta.annotation.Nonnull
+    public void setStartupAuthenticationTpmKeyUsage(@jakarta.annotation.Nullable final ConfigurationUsage value) {
         this.startupAuthenticationTpmKeyUsage = value;
     }
     /**
@@ -346,8 +346,8 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the startupAuthenticationTpmPinAndKeyUsage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartupAuthenticationTpmPinAndKeyUsage(@javax.annotation.Nullable final ConfigurationUsage value) {
+    @jakarta.annotation.Nonnull
+    public void setStartupAuthenticationTpmPinAndKeyUsage(@jakarta.annotation.Nullable final ConfigurationUsage value) {
         this.startupAuthenticationTpmPinAndKeyUsage = value;
     }
     /**
@@ -355,8 +355,8 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the startupAuthenticationTpmPinUsage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartupAuthenticationTpmPinUsage(@javax.annotation.Nullable final ConfigurationUsage value) {
+    @jakarta.annotation.Nonnull
+    public void setStartupAuthenticationTpmPinUsage(@jakarta.annotation.Nullable final ConfigurationUsage value) {
         this.startupAuthenticationTpmPinUsage = value;
     }
     /**
@@ -364,8 +364,8 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the startupAuthenticationTpmUsage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartupAuthenticationTpmUsage(@javax.annotation.Nullable final ConfigurationUsage value) {
+    @jakarta.annotation.Nonnull
+    public void setStartupAuthenticationTpmUsage(@jakarta.annotation.Nullable final ConfigurationUsage value) {
         this.startupAuthenticationTpmUsage = value;
     }
 }

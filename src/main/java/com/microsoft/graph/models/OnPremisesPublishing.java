@@ -108,7 +108,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Instantiates a new onPremisesPublishing and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnPremisesPublishing() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -117,8 +117,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a onPremisesPublishing
      */
-    @javax.annotation.Nonnull
-    public static OnPremisesPublishing createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OnPremisesPublishing createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OnPremisesPublishing();
     }
@@ -126,7 +126,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -134,7 +134,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the alternateUrl property value. If you are configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that will point to the traffic manager.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAlternateUrl() {
         return this.alternateUrl;
     }
@@ -142,7 +142,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the applicationServerTimeout property value. The duration the connector will wait for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getApplicationServerTimeout() {
         return this.applicationServerTimeout;
     }
@@ -150,7 +150,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the applicationType property value. Indicates if this application is an Application Proxy configured application. This is pre-set by the system. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getApplicationType() {
         return this.applicationType;
     }
@@ -158,7 +158,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the externalAuthenticationType property value. Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Passthru does not require authentication. Possible values are: passthru, aadPreAuthentication.
      * @return a externalAuthenticationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExternalAuthenticationType getExternalAuthenticationType() {
         return this.externalAuthenticationType;
     }
@@ -166,7 +166,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the externalUrl property value. The published external url for the application. For example, https://intranet-contoso.msappproxy.net/.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalUrl() {
         return this.externalUrl;
     }
@@ -174,7 +174,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(23);
         deserializerMap.put("alternateUrl", (n) -> { this.setAlternateUrl(n.getStringValue()); });
@@ -206,7 +206,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the internalUrl property value. The internal url of the application. For example, https://intranet/.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInternalUrl() {
         return this.internalUrl;
     }
@@ -214,7 +214,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the isAccessibleViaZTNAClient property value. The isAccessibleViaZTNAClient property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAccessibleViaZTNAClient() {
         return this.isAccessibleViaZTNAClient;
     }
@@ -222,7 +222,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the isBackendCertificateValidationEnabled property value. Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property will be set to true by default. For all existing apps, the property will be set to false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsBackendCertificateValidationEnabled() {
         return this.isBackendCertificateValidationEnabled;
     }
@@ -230,7 +230,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the isHttpOnlyCookieEnabled property value. Indicates if the HTTPOnly cookie flag should be set in the HTTP response headers. Set this value to true to have Application Proxy cookies include the HTTPOnly flag in the HTTP response headers. If using Remote Desktop Services, set this value to False. Default value is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsHttpOnlyCookieEnabled() {
         return this.isHttpOnlyCookieEnabled;
     }
@@ -238,7 +238,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the isOnPremPublishingEnabled property value. Indicates if the application is currently being published via Application Proxy or not. This is pre-set by the system. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsOnPremPublishingEnabled() {
         return this.isOnPremPublishingEnabled;
     }
@@ -246,7 +246,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the isPersistentCookieEnabled property value. Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can't share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Azure Active Directory. Default value is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsPersistentCookieEnabled() {
         return this.isPersistentCookieEnabled;
     }
@@ -254,7 +254,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the isSecureCookieEnabled property value. Indicates if the Secure cookie flag should be set in the HTTP response headers. Set this value to true to transmit cookies over a secure channel such as an encrypted HTTPS request. Default value is true.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSecureCookieEnabled() {
         return this.isSecureCookieEnabled;
     }
@@ -262,7 +262,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the isStateSessionEnabled property value. Indicates whether validation of the state parameter when the client uses the OAuth 2.0 authorization code grant flow is enabled. This setting allows admins to specify whether they want to enable CSRF protection for their apps.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsStateSessionEnabled() {
         return this.isStateSessionEnabled;
     }
@@ -270,7 +270,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the isTranslateHostHeaderEnabled property value. Indicates if the application should translate urls in the reponse headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsTranslateHostHeaderEnabled() {
         return this.isTranslateHostHeaderEnabled;
     }
@@ -278,7 +278,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the isTranslateLinksInBodyEnabled property value. Indicates if the application should translate urls in the application body. Keep this value as false unless you have hardcoded HTML links to other on-premises applications and don't use custom domains. For more information, see Link translation with Application Proxy. Default value is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsTranslateLinksInBodyEnabled() {
         return this.isTranslateLinksInBodyEnabled;
     }
@@ -286,7 +286,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -294,7 +294,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the onPremisesApplicationSegments property value. The onPremisesApplicationSegments property
      * @return a onPremisesApplicationSegment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OnPremisesApplicationSegment> getOnPremisesApplicationSegments() {
         return this.onPremisesApplicationSegments;
     }
@@ -302,7 +302,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the segmentsConfiguration property value. Represents the collection of application segments for an on-premises wildcard application that's published through Azure AD Application Proxy.
      * @return a segmentConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SegmentConfiguration getSegmentsConfiguration() {
         return this.segmentsConfiguration;
     }
@@ -310,7 +310,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the singleSignOnSettings property value. Represents the single sign-on configuration for the on-premises application.
      * @return a onPremisesPublishingSingleSignOn
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnPremisesPublishingSingleSignOn getSingleSignOnSettings() {
         return this.singleSignOnSettings;
     }
@@ -318,7 +318,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the useAlternateUrlForTranslationAndRedirect property value. The useAlternateUrlForTranslationAndRedirect property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getUseAlternateUrlForTranslationAndRedirect() {
         return this.useAlternateUrlForTranslationAndRedirect;
     }
@@ -326,7 +326,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the verifiedCustomDomainCertificatesMetadata property value. Details of the certificate associated with the application when a custom domain is in use. null when using the default domain. Read-only.
      * @return a verifiedCustomDomainCertificatesMetadata
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VerifiedCustomDomainCertificatesMetadata getVerifiedCustomDomainCertificatesMetadata() {
         return this.verifiedCustomDomainCertificatesMetadata;
     }
@@ -334,7 +334,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the verifiedCustomDomainKeyCredential property value. The associated key credential for the custom domain used.
      * @return a keyCredential
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public KeyCredential getVerifiedCustomDomainKeyCredential() {
         return this.verifiedCustomDomainKeyCredential;
     }
@@ -342,7 +342,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Gets the verifiedCustomDomainPasswordCredential property value. The associated password credential for the custom domain used.
      * @return a passwordCredential
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PasswordCredential getVerifiedCustomDomainPasswordCredential() {
         return this.verifiedCustomDomainPasswordCredential;
     }
@@ -351,8 +351,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("alternateUrl", this.getAlternateUrl());
         writer.writeStringValue("applicationServerTimeout", this.getApplicationServerTimeout());
@@ -381,11 +381,11 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -393,8 +393,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the alternateUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlternateUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAlternateUrl(@jakarta.annotation.Nullable final String value) {
         this.alternateUrl = value;
     }
     /**
@@ -402,8 +402,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the applicationServerTimeout property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicationServerTimeout(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicationServerTimeout(@jakarta.annotation.Nullable final String value) {
         this.applicationServerTimeout = value;
     }
     /**
@@ -411,8 +411,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the applicationType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicationType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicationType(@jakarta.annotation.Nullable final String value) {
         this.applicationType = value;
     }
     /**
@@ -420,8 +420,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the externalAuthenticationType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalAuthenticationType(@javax.annotation.Nullable final ExternalAuthenticationType value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalAuthenticationType(@jakarta.annotation.Nullable final ExternalAuthenticationType value) {
         this.externalAuthenticationType = value;
     }
     /**
@@ -429,8 +429,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the externalUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalUrl(@jakarta.annotation.Nullable final String value) {
         this.externalUrl = value;
     }
     /**
@@ -438,8 +438,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the internalUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInternalUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setInternalUrl(@jakarta.annotation.Nullable final String value) {
         this.internalUrl = value;
     }
     /**
@@ -447,8 +447,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isAccessibleViaZTNAClient property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAccessibleViaZTNAClient(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsAccessibleViaZTNAClient(@jakarta.annotation.Nullable final Boolean value) {
         this.isAccessibleViaZTNAClient = value;
     }
     /**
@@ -456,8 +456,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isBackendCertificateValidationEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsBackendCertificateValidationEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsBackendCertificateValidationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isBackendCertificateValidationEnabled = value;
     }
     /**
@@ -465,8 +465,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isHttpOnlyCookieEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsHttpOnlyCookieEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsHttpOnlyCookieEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isHttpOnlyCookieEnabled = value;
     }
     /**
@@ -474,8 +474,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isOnPremPublishingEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsOnPremPublishingEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsOnPremPublishingEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isOnPremPublishingEnabled = value;
     }
     /**
@@ -483,8 +483,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isPersistentCookieEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsPersistentCookieEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsPersistentCookieEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isPersistentCookieEnabled = value;
     }
     /**
@@ -492,8 +492,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isSecureCookieEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSecureCookieEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsSecureCookieEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isSecureCookieEnabled = value;
     }
     /**
@@ -501,8 +501,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isStateSessionEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsStateSessionEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsStateSessionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isStateSessionEnabled = value;
     }
     /**
@@ -510,8 +510,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isTranslateHostHeaderEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsTranslateHostHeaderEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsTranslateHostHeaderEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isTranslateHostHeaderEnabled = value;
     }
     /**
@@ -519,17 +519,17 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isTranslateLinksInBodyEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsTranslateLinksInBodyEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsTranslateLinksInBodyEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isTranslateLinksInBodyEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -537,8 +537,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the onPremisesApplicationSegments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnPremisesApplicationSegments(@javax.annotation.Nullable final java.util.List<OnPremisesApplicationSegment> value) {
+    @jakarta.annotation.Nonnull
+    public void setOnPremisesApplicationSegments(@jakarta.annotation.Nullable final java.util.List<OnPremisesApplicationSegment> value) {
         this.onPremisesApplicationSegments = value;
     }
     /**
@@ -546,8 +546,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the segmentsConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSegmentsConfiguration(@javax.annotation.Nullable final SegmentConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setSegmentsConfiguration(@jakarta.annotation.Nullable final SegmentConfiguration value) {
         this.segmentsConfiguration = value;
     }
     /**
@@ -555,8 +555,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the singleSignOnSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSingleSignOnSettings(@javax.annotation.Nullable final OnPremisesPublishingSingleSignOn value) {
+    @jakarta.annotation.Nonnull
+    public void setSingleSignOnSettings(@jakarta.annotation.Nullable final OnPremisesPublishingSingleSignOn value) {
         this.singleSignOnSettings = value;
     }
     /**
@@ -564,8 +564,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the useAlternateUrlForTranslationAndRedirect property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUseAlternateUrlForTranslationAndRedirect(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setUseAlternateUrlForTranslationAndRedirect(@jakarta.annotation.Nullable final Boolean value) {
         this.useAlternateUrlForTranslationAndRedirect = value;
     }
     /**
@@ -573,8 +573,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the verifiedCustomDomainCertificatesMetadata property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVerifiedCustomDomainCertificatesMetadata(@javax.annotation.Nullable final VerifiedCustomDomainCertificatesMetadata value) {
+    @jakarta.annotation.Nonnull
+    public void setVerifiedCustomDomainCertificatesMetadata(@jakarta.annotation.Nullable final VerifiedCustomDomainCertificatesMetadata value) {
         this.verifiedCustomDomainCertificatesMetadata = value;
     }
     /**
@@ -582,8 +582,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the verifiedCustomDomainKeyCredential property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVerifiedCustomDomainKeyCredential(@javax.annotation.Nullable final KeyCredential value) {
+    @jakarta.annotation.Nonnull
+    public void setVerifiedCustomDomainKeyCredential(@jakarta.annotation.Nullable final KeyCredential value) {
         this.verifiedCustomDomainKeyCredential = value;
     }
     /**
@@ -591,8 +591,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the verifiedCustomDomainPasswordCredential property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVerifiedCustomDomainPasswordCredential(@javax.annotation.Nullable final PasswordCredential value) {
+    @jakarta.annotation.Nonnull
+    public void setVerifiedCustomDomainPasswordCredential(@jakarta.annotation.Nullable final PasswordCredential value) {
         this.verifiedCustomDomainPasswordCredential = value;
     }
 }

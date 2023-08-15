@@ -11,7 +11,7 @@ public class YearReferenceValue extends ReferenceValue implements Parsable {
      * Instantiates a new yearReferenceValue and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public YearReferenceValue() {
         super();
         this.setOdataType("#microsoft.graph.industryData.yearReferenceValue");
@@ -21,8 +21,8 @@ public class YearReferenceValue extends ReferenceValue implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a yearReferenceValue
      */
-    @javax.annotation.Nonnull
-    public static YearReferenceValue createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static YearReferenceValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new YearReferenceValue();
     }
@@ -30,7 +30,7 @@ public class YearReferenceValue extends ReferenceValue implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         return deserializerMap;
@@ -40,8 +40,8 @@ public class YearReferenceValue extends ReferenceValue implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
     }

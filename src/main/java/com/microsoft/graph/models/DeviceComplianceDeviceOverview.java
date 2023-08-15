@@ -48,7 +48,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * Instantiates a new deviceComplianceDeviceOverview and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceComplianceDeviceOverview() {
         super();
     }
@@ -57,8 +57,8 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceComplianceDeviceOverview
      */
-    @javax.annotation.Nonnull
-    public static DeviceComplianceDeviceOverview createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceComplianceDeviceOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceComplianceDeviceOverview();
     }
@@ -66,7 +66,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * Gets the configurationVersion property value. Version of the policy for that overview
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getConfigurationVersion() {
         return this.configurationVersion;
     }
@@ -74,7 +74,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * Gets the conflictCount property value. Number of devices in conflict
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getConflictCount() {
         return this.conflictCount;
     }
@@ -82,7 +82,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * Gets the errorCount property value. Number of error devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getErrorCount() {
         return this.errorCount;
     }
@@ -90,7 +90,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * Gets the failedCount property value. Number of failed devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFailedCount() {
         return this.failedCount;
     }
@@ -98,7 +98,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("configurationVersion", (n) -> { this.setConfigurationVersion(n.getIntegerValue()); });
@@ -116,7 +116,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * Gets the lastUpdateDateTime property value. Last update time
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdateDateTime() {
         return this.lastUpdateDateTime;
     }
@@ -124,7 +124,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * Gets the notApplicableCount property value. Number of not applicable devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
         return this.notApplicableCount;
     }
@@ -132,7 +132,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * Gets the notApplicablePlatformCount property value. Number of not applicable devices due to mismatch platform and policy
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNotApplicablePlatformCount() {
         return this.notApplicablePlatformCount;
     }
@@ -140,7 +140,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * Gets the pendingCount property value. Number of pending devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPendingCount() {
         return this.pendingCount;
     }
@@ -148,7 +148,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * Gets the successCount property value. Number of succeeded devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSuccessCount() {
         return this.successCount;
     }
@@ -157,8 +157,8 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("configurationVersion", this.getConfigurationVersion());
@@ -176,8 +176,8 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the configurationVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigurationVersion(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setConfigurationVersion(@jakarta.annotation.Nullable final Integer value) {
         this.configurationVersion = value;
     }
     /**
@@ -185,8 +185,8 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the conflictCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConflictCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setConflictCount(@jakarta.annotation.Nullable final Integer value) {
         this.conflictCount = value;
     }
     /**
@@ -194,8 +194,8 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the errorCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setErrorCount(@jakarta.annotation.Nullable final Integer value) {
         this.errorCount = value;
     }
     /**
@@ -203,8 +203,8 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the failedCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setFailedCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedCount = value;
     }
     /**
@@ -212,8 +212,8 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the lastUpdateDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdateDateTime = value;
     }
     /**
@@ -221,8 +221,8 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the notApplicableCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotApplicableCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNotApplicableCount(@jakarta.annotation.Nullable final Integer value) {
         this.notApplicableCount = value;
     }
     /**
@@ -230,8 +230,8 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the notApplicablePlatformCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotApplicablePlatformCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNotApplicablePlatformCount(@jakarta.annotation.Nullable final Integer value) {
         this.notApplicablePlatformCount = value;
     }
     /**
@@ -239,8 +239,8 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the pendingCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPendingCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPendingCount(@jakarta.annotation.Nullable final Integer value) {
         this.pendingCount = value;
     }
     /**
@@ -248,8 +248,8 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the successCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuccessCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSuccessCount(@jakarta.annotation.Nullable final Integer value) {
         this.successCount = value;
     }
 }

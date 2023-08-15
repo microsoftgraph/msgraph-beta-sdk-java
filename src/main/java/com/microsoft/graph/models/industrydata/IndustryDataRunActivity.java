@@ -29,7 +29,7 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
      * Instantiates a new industryDataRunActivity and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IndustryDataRunActivity() {
         super();
     }
@@ -38,8 +38,8 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a industryDataRunActivity
      */
-    @javax.annotation.Nonnull
-    public static IndustryDataRunActivity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IndustryDataRunActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -55,7 +55,7 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
      * Gets the activity property value. The flow that was run by this activity.
      * @return a industryDataActivity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IndustryDataActivity getActivity() {
         return this.activity;
     }
@@ -63,7 +63,7 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
      * Gets the blockingError property value. An error object to diagnose critical failures in an activity.
      * @return a publicError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PublicError getBlockingError() {
         return this.blockingError;
     }
@@ -71,7 +71,7 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
      * Gets the displayName property value. The name of the running flow.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -79,7 +79,7 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activity", (n) -> { this.setActivity(n.getObjectValue(IndustryDataActivity::createFromDiscriminatorValue)); });
@@ -92,7 +92,7 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a industryDataActivityStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IndustryDataActivityStatus getStatus() {
         return this.status;
     }
@@ -101,8 +101,8 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("activity", this.getActivity());
@@ -113,8 +113,8 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
      * @param value Value to set for the activity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivity(@javax.annotation.Nullable final IndustryDataActivity value) {
+    @jakarta.annotation.Nonnull
+    public void setActivity(@jakarta.annotation.Nullable final IndustryDataActivity value) {
         this.activity = value;
     }
     /**
@@ -122,8 +122,8 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
      * @param value Value to set for the blockingError property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBlockingError(@javax.annotation.Nullable final PublicError value) {
+    @jakarta.annotation.Nonnull
+    public void setBlockingError(@jakarta.annotation.Nullable final PublicError value) {
         this.blockingError = value;
     }
     /**
@@ -131,8 +131,8 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -140,8 +140,8 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final IndustryDataActivityStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final IndustryDataActivityStatus value) {
         this.status = value;
     }
 }

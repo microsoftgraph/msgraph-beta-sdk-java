@@ -18,7 +18,7 @@ public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceMa
      * Instantiates a new deviceManagementConfigurationSimpleSettingInstance and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSimpleSettingInstance() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance");
@@ -28,8 +28,8 @@ public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceMa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationSimpleSettingInstance
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationSimpleSettingInstance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationSimpleSettingInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationSimpleSettingInstance();
     }
@@ -37,7 +37,7 @@ public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceMa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("simpleSettingValue", (n) -> { this.setSimpleSettingValue(n.getObjectValue(DeviceManagementConfigurationSimpleSettingValue::createFromDiscriminatorValue)); });
@@ -47,7 +47,7 @@ public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceMa
      * Gets the simpleSettingValue property value. The simpleSettingValue property
      * @return a deviceManagementConfigurationSimpleSettingValue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSimpleSettingValue getSimpleSettingValue() {
         return this.simpleSettingValue;
     }
@@ -56,8 +56,8 @@ public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceMa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("simpleSettingValue", this.getSimpleSettingValue());
@@ -67,8 +67,8 @@ public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceMa
      * @param value Value to set for the simpleSettingValue property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSimpleSettingValue(@javax.annotation.Nullable final DeviceManagementConfigurationSimpleSettingValue value) {
+    @jakarta.annotation.Nonnull
+    public void setSimpleSettingValue(@jakarta.annotation.Nullable final DeviceManagementConfigurationSimpleSettingValue value) {
         this.simpleSettingValue = value;
     }
 }

@@ -68,7 +68,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * Instantiates a new governanceRoleAssignment and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceRoleAssignment() {
         super();
     }
@@ -77,8 +77,8 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a governanceRoleAssignment
      */
-    @javax.annotation.Nonnull
-    public static GovernanceRoleAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GovernanceRoleAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GovernanceRoleAssignment();
     }
@@ -86,7 +86,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * Gets the assignmentState property value. The state of the assignment. The value can be Eligible for eligible assignment or Active if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssignmentState() {
         return this.assignmentState;
     }
@@ -94,7 +94,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * Gets the endDateTime property value. For a non-permanent role assignment, this is the time when the role assignment will be expired. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
         return this.endDateTime;
     }
@@ -102,7 +102,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * Gets the externalId property value. The external ID the resource that is used to identify the role assignment in the provider.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalId() {
         return this.externalId;
     }
@@ -110,7 +110,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignmentState", (n) -> { this.setAssignmentState(n.getStringValue()); });
@@ -133,7 +133,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * Gets the linkedEligibleRoleAssignment property value. Read-only. If this is an active assignment and created due to activation on an eligible assignment, it represents the object of that eligible assignment; Otherwise, the value is null.
      * @return a governanceRoleAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceRoleAssignment getLinkedEligibleRoleAssignment() {
         return this.linkedEligibleRoleAssignment;
     }
@@ -141,7 +141,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * Gets the linkedEligibleRoleAssignmentId property value. If this is an active assignment and created due to activation on an eligible assignment, it represents the ID of that eligible assignment; Otherwise, the value is null.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLinkedEligibleRoleAssignmentId() {
         return this.linkedEligibleRoleAssignmentId;
     }
@@ -149,7 +149,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * Gets the memberType property value. The type of member. The value can be: Inherited (if the role assignment is inherited from a parent resource scope), Group (if the role assignment is not inherited, but comes from the membership of a group assignment), or User (if the role assignment is neither inherited nor from a group assignment).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMemberType() {
         return this.memberType;
     }
@@ -157,7 +157,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * Gets the resource property value. Read-only. The resource associated with the role assignment.
      * @return a governanceResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceResource getResource() {
         return this.resource;
     }
@@ -165,7 +165,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * Gets the resourceId property value. Required. The ID of the resource which the role assignment is associated with.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceId() {
         return this.resourceId;
     }
@@ -173,7 +173,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * Gets the roleDefinition property value. Read-only. The role definition associated with the role assignment.
      * @return a governanceRoleDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceRoleDefinition getRoleDefinition() {
         return this.roleDefinition;
     }
@@ -181,7 +181,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * Gets the roleDefinitionId property value. Required. The ID of the role definition which the role assignment is associated with.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
@@ -189,7 +189,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * Gets the startDateTime property value. The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this.startDateTime;
     }
@@ -197,7 +197,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStatus() {
         return this.status;
     }
@@ -205,7 +205,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * Gets the subject property value. Read-only. The subject associated with the role assignment.
      * @return a governanceSubject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceSubject getSubject() {
         return this.subject;
     }
@@ -213,7 +213,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * Gets the subjectId property value. Required. The ID of the subject which the role assignment is associated with.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubjectId() {
         return this.subjectId;
     }
@@ -222,8 +222,8 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("assignmentState", this.getAssignmentState());
@@ -246,8 +246,8 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the assignmentState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentState(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignmentState(@jakarta.annotation.Nullable final String value) {
         this.assignmentState = value;
     }
     /**
@@ -255,8 +255,8 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
@@ -264,8 +264,8 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the externalId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }
     /**
@@ -273,8 +273,8 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the linkedEligibleRoleAssignment property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLinkedEligibleRoleAssignment(@javax.annotation.Nullable final GovernanceRoleAssignment value) {
+    @jakarta.annotation.Nonnull
+    public void setLinkedEligibleRoleAssignment(@jakarta.annotation.Nullable final GovernanceRoleAssignment value) {
         this.linkedEligibleRoleAssignment = value;
     }
     /**
@@ -282,8 +282,8 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the linkedEligibleRoleAssignmentId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLinkedEligibleRoleAssignmentId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLinkedEligibleRoleAssignmentId(@jakarta.annotation.Nullable final String value) {
         this.linkedEligibleRoleAssignmentId = value;
     }
     /**
@@ -291,8 +291,8 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the memberType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMemberType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMemberType(@jakarta.annotation.Nullable final String value) {
         this.memberType = value;
     }
     /**
@@ -300,8 +300,8 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResource(@javax.annotation.Nullable final GovernanceResource value) {
+    @jakarta.annotation.Nonnull
+    public void setResource(@jakarta.annotation.Nullable final GovernanceResource value) {
         this.resource = value;
     }
     /**
@@ -309,8 +309,8 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the resourceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceId(@jakarta.annotation.Nullable final String value) {
         this.resourceId = value;
     }
     /**
@@ -318,8 +318,8 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the roleDefinition property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinition(@javax.annotation.Nullable final GovernanceRoleDefinition value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDefinition(@jakarta.annotation.Nullable final GovernanceRoleDefinition value) {
         this.roleDefinition = value;
     }
     /**
@@ -327,8 +327,8 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.roleDefinitionId = value;
     }
     /**
@@ -336,8 +336,8 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
@@ -345,8 +345,8 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final String value) {
         this.status = value;
     }
     /**
@@ -354,8 +354,8 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final GovernanceSubject value) {
+    @jakarta.annotation.Nonnull
+    public void setSubject(@jakarta.annotation.Nullable final GovernanceSubject value) {
         this.subject = value;
     }
     /**
@@ -363,8 +363,8 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the subjectId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubjectId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSubjectId(@jakarta.annotation.Nullable final String value) {
         this.subjectId = value;
     }
 }

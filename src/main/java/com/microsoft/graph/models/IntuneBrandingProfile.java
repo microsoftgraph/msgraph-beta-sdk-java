@@ -151,7 +151,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Instantiates a new intuneBrandingProfile and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IntuneBrandingProfile() {
         super();
     }
@@ -160,8 +160,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a intuneBrandingProfile
      */
-    @javax.annotation.Nonnull
-    public static IntuneBrandingProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IntuneBrandingProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IntuneBrandingProfile();
     }
@@ -169,7 +169,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the assignments property value. The list of group assignments for the branding profile
      * @return a intuneBrandingProfileAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IntuneBrandingProfileAssignment> getAssignments() {
         return this.assignments;
     }
@@ -177,7 +177,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the companyPortalBlockedActions property value. Collection of blocked actions on the company portal as per platform and device ownership types.
      * @return a companyPortalBlockedAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CompanyPortalBlockedAction> getCompanyPortalBlockedActions() {
         return this.companyPortalBlockedActions;
     }
@@ -185,7 +185,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the contactITEmailAddress property value. E-mail address of the person/organization responsible for IT support
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContactITEmailAddress() {
         return this.contactITEmailAddress;
     }
@@ -193,7 +193,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the contactITName property value. Name of the person/organization responsible for IT support
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContactITName() {
         return this.contactITName;
     }
@@ -201,7 +201,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the contactITNotes property value. Text comments regarding the person/organization responsible for IT support
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContactITNotes() {
         return this.contactITNotes;
     }
@@ -209,7 +209,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the contactITPhoneNumber property value. Phone number of the person/organization responsible for IT support
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContactITPhoneNumber() {
         return this.contactITPhoneNumber;
     }
@@ -217,7 +217,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the createdDateTime property value. Time when the BrandingProfile was created
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -225,7 +225,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the customCanSeePrivacyMessage property value. Text comments regarding what the admin has access to on the device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomCanSeePrivacyMessage() {
         return this.customCanSeePrivacyMessage;
     }
@@ -233,7 +233,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the customCantSeePrivacyMessage property value. Text comments regarding what the admin doesn't have access to on the device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomCantSeePrivacyMessage() {
         return this.customCantSeePrivacyMessage;
     }
@@ -241,7 +241,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the customPrivacyMessage property value. Text comments regarding what the admin doesn't have access to on the device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomPrivacyMessage() {
         return this.customPrivacyMessage;
     }
@@ -249,7 +249,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the disableClientTelemetry property value. Applies to telemetry sent from all clients to the Intune service. When disabled, all proactive troubleshooting and issue warnings within the client are turned off, and telemetry settings appear inactive or hidden to the device user.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDisableClientTelemetry() {
         return this.disableClientTelemetry;
     }
@@ -257,7 +257,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the disableDeviceCategorySelection property value. Boolean that indicates if Device Category Selection will be shown in Company Portal
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDisableDeviceCategorySelection() {
         return this.disableDeviceCategorySelection;
     }
@@ -265,7 +265,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the displayName property value. Company/organization name that is displayed to end users
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -273,7 +273,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the enrollmentAvailability property value. Options available for enrollment flow customization
      * @return a enrollmentAvailabilityOptions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EnrollmentAvailabilityOptions getEnrollmentAvailability() {
         return this.enrollmentAvailability;
     }
@@ -281,7 +281,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(IntuneBrandingProfileAssignment::createFromDiscriminatorValue)); });
@@ -324,7 +324,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the isDefaultProfile property value. Boolean that represents whether the profile is used as default or not
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDefaultProfile() {
         return this.isDefaultProfile;
     }
@@ -332,7 +332,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the isFactoryResetDisabled property value. Boolean that represents whether the adminsistrator has disabled the 'Factory Reset' action on corporate owned devices.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsFactoryResetDisabled() {
         return this.isFactoryResetDisabled;
     }
@@ -340,7 +340,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the isRemoveDeviceDisabled property value. Boolean that represents whether the adminsistrator has disabled the 'Remove Device' action on corporate owned devices.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRemoveDeviceDisabled() {
         return this.isRemoveDeviceDisabled;
     }
@@ -348,7 +348,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the landingPageCustomizedImage property value. Customized image displayed in Company Portal apps landing page
      * @return a mimeContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MimeContent getLandingPageCustomizedImage() {
         return this.landingPageCustomizedImage;
     }
@@ -356,7 +356,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. Time when the BrandingProfile was last modified
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -364,7 +364,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the lightBackgroundLogo property value. Logo image displayed in Company Portal apps which have a light background behind the logo
      * @return a mimeContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MimeContent getLightBackgroundLogo() {
         return this.lightBackgroundLogo;
     }
@@ -372,7 +372,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOnlineSupportSiteName() {
         return this.onlineSupportSiteName;
     }
@@ -380,7 +380,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOnlineSupportSiteUrl() {
         return this.onlineSupportSiteUrl;
     }
@@ -388,7 +388,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the privacyUrl property value. URL to the company/organizations privacy policy
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrivacyUrl() {
         return this.privacyUrl;
     }
@@ -396,7 +396,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the profileDescription property value. Description of the profile
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProfileDescription() {
         return this.profileDescription;
     }
@@ -404,7 +404,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the profileName property value. Name of the profile
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProfileName() {
         return this.profileName;
     }
@@ -412,7 +412,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the roleScopeTagIds property value. List of scope tags assigned to the branding profile
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
         return this.roleScopeTagIds;
     }
@@ -420,7 +420,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the sendDeviceOwnershipChangePushNotification property value. Boolean that indicates if a push notification is sent to users when their device ownership type changes from personal to corporate
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSendDeviceOwnershipChangePushNotification() {
         return this.sendDeviceOwnershipChangePushNotification;
     }
@@ -428,7 +428,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the showAzureADEnterpriseApps property value. Boolean that indicates if AzureAD Enterprise Apps will be shown in Company Portal
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowAzureADEnterpriseApps() {
         return this.showAzureADEnterpriseApps;
     }
@@ -436,7 +436,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the showConfigurationManagerApps property value. Boolean that indicates if Configuration Manager Apps will be shown in Company Portal
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowConfigurationManagerApps() {
         return this.showConfigurationManagerApps;
     }
@@ -444,7 +444,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the showDisplayNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image or not
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowDisplayNameNextToLogo() {
         return this.showDisplayNameNextToLogo;
     }
@@ -452,7 +452,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the showLogo property value. Boolean that represents whether the administrator-supplied logo images are shown or not
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowLogo() {
         return this.showLogo;
     }
@@ -460,7 +460,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the showOfficeWebApps property value. Boolean that indicates if Office WebApps will be shown in Company Portal
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowOfficeWebApps() {
         return this.showOfficeWebApps;
     }
@@ -468,7 +468,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the themeColor property value. Primary theme color used in the Company Portal applications and web portal
      * @return a rgbColor
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RgbColor getThemeColor() {
         return this.themeColor;
     }
@@ -476,7 +476,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * Gets the themeColorLogo property value. Logo image displayed in Company Portal apps which have a theme color background behind the logo
      * @return a mimeContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MimeContent getThemeColorLogo() {
         return this.themeColorLogo;
     }
@@ -485,8 +485,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
@@ -529,8 +529,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignments(@javax.annotation.Nullable final java.util.List<IntuneBrandingProfileAssignment> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<IntuneBrandingProfileAssignment> value) {
         this.assignments = value;
     }
     /**
@@ -538,8 +538,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the companyPortalBlockedActions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompanyPortalBlockedActions(@javax.annotation.Nullable final java.util.List<CompanyPortalBlockedAction> value) {
+    @jakarta.annotation.Nonnull
+    public void setCompanyPortalBlockedActions(@jakarta.annotation.Nullable final java.util.List<CompanyPortalBlockedAction> value) {
         this.companyPortalBlockedActions = value;
     }
     /**
@@ -547,8 +547,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the contactITEmailAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContactITEmailAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContactITEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.contactITEmailAddress = value;
     }
     /**
@@ -556,8 +556,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the contactITName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContactITName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContactITName(@jakarta.annotation.Nullable final String value) {
         this.contactITName = value;
     }
     /**
@@ -565,8 +565,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the contactITNotes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContactITNotes(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContactITNotes(@jakarta.annotation.Nullable final String value) {
         this.contactITNotes = value;
     }
     /**
@@ -574,8 +574,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the contactITPhoneNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContactITPhoneNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContactITPhoneNumber(@jakarta.annotation.Nullable final String value) {
         this.contactITPhoneNumber = value;
     }
     /**
@@ -583,8 +583,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -592,8 +592,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the customCanSeePrivacyMessage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomCanSeePrivacyMessage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomCanSeePrivacyMessage(@jakarta.annotation.Nullable final String value) {
         this.customCanSeePrivacyMessage = value;
     }
     /**
@@ -601,8 +601,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the customCantSeePrivacyMessage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomCantSeePrivacyMessage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomCantSeePrivacyMessage(@jakarta.annotation.Nullable final String value) {
         this.customCantSeePrivacyMessage = value;
     }
     /**
@@ -610,8 +610,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the customPrivacyMessage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomPrivacyMessage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomPrivacyMessage(@jakarta.annotation.Nullable final String value) {
         this.customPrivacyMessage = value;
     }
     /**
@@ -619,8 +619,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the disableClientTelemetry property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisableClientTelemetry(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDisableClientTelemetry(@jakarta.annotation.Nullable final Boolean value) {
         this.disableClientTelemetry = value;
     }
     /**
@@ -628,8 +628,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the disableDeviceCategorySelection property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisableDeviceCategorySelection(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDisableDeviceCategorySelection(@jakarta.annotation.Nullable final Boolean value) {
         this.disableDeviceCategorySelection = value;
     }
     /**
@@ -637,8 +637,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -646,8 +646,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the enrollmentAvailability property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentAvailability(@javax.annotation.Nullable final EnrollmentAvailabilityOptions value) {
+    @jakarta.annotation.Nonnull
+    public void setEnrollmentAvailability(@jakarta.annotation.Nullable final EnrollmentAvailabilityOptions value) {
         this.enrollmentAvailability = value;
     }
     /**
@@ -655,8 +655,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the isDefaultProfile property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDefaultProfile(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsDefaultProfile(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefaultProfile = value;
     }
     /**
@@ -664,8 +664,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the isFactoryResetDisabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsFactoryResetDisabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsFactoryResetDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isFactoryResetDisabled = value;
     }
     /**
@@ -673,8 +673,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the isRemoveDeviceDisabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRemoveDeviceDisabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsRemoveDeviceDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isRemoveDeviceDisabled = value;
     }
     /**
@@ -682,8 +682,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the landingPageCustomizedImage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLandingPageCustomizedImage(@javax.annotation.Nullable final MimeContent value) {
+    @jakarta.annotation.Nonnull
+    public void setLandingPageCustomizedImage(@jakarta.annotation.Nullable final MimeContent value) {
         this.landingPageCustomizedImage = value;
     }
     /**
@@ -691,8 +691,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -700,8 +700,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the lightBackgroundLogo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLightBackgroundLogo(@javax.annotation.Nullable final MimeContent value) {
+    @jakarta.annotation.Nonnull
+    public void setLightBackgroundLogo(@jakarta.annotation.Nullable final MimeContent value) {
         this.lightBackgroundLogo = value;
     }
     /**
@@ -709,8 +709,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the onlineSupportSiteName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnlineSupportSiteName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOnlineSupportSiteName(@jakarta.annotation.Nullable final String value) {
         this.onlineSupportSiteName = value;
     }
     /**
@@ -718,8 +718,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the onlineSupportSiteUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnlineSupportSiteUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOnlineSupportSiteUrl(@jakarta.annotation.Nullable final String value) {
         this.onlineSupportSiteUrl = value;
     }
     /**
@@ -727,8 +727,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the privacyUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrivacyUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrivacyUrl(@jakarta.annotation.Nullable final String value) {
         this.privacyUrl = value;
     }
     /**
@@ -736,8 +736,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the profileDescription property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProfileDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProfileDescription(@jakarta.annotation.Nullable final String value) {
         this.profileDescription = value;
     }
     /**
@@ -745,8 +745,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the profileName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProfileName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProfileName(@jakarta.annotation.Nullable final String value) {
         this.profileName = value;
     }
     /**
@@ -754,8 +754,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTagIds = value;
     }
     /**
@@ -763,8 +763,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the sendDeviceOwnershipChangePushNotification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSendDeviceOwnershipChangePushNotification(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSendDeviceOwnershipChangePushNotification(@jakarta.annotation.Nullable final Boolean value) {
         this.sendDeviceOwnershipChangePushNotification = value;
     }
     /**
@@ -772,8 +772,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the showAzureADEnterpriseApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowAzureADEnterpriseApps(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShowAzureADEnterpriseApps(@jakarta.annotation.Nullable final Boolean value) {
         this.showAzureADEnterpriseApps = value;
     }
     /**
@@ -781,8 +781,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the showConfigurationManagerApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowConfigurationManagerApps(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShowConfigurationManagerApps(@jakarta.annotation.Nullable final Boolean value) {
         this.showConfigurationManagerApps = value;
     }
     /**
@@ -790,8 +790,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the showDisplayNameNextToLogo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowDisplayNameNextToLogo(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShowDisplayNameNextToLogo(@jakarta.annotation.Nullable final Boolean value) {
         this.showDisplayNameNextToLogo = value;
     }
     /**
@@ -799,8 +799,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the showLogo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowLogo(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShowLogo(@jakarta.annotation.Nullable final Boolean value) {
         this.showLogo = value;
     }
     /**
@@ -808,8 +808,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the showOfficeWebApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowOfficeWebApps(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShowOfficeWebApps(@jakarta.annotation.Nullable final Boolean value) {
         this.showOfficeWebApps = value;
     }
     /**
@@ -817,8 +817,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the themeColor property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThemeColor(@javax.annotation.Nullable final RgbColor value) {
+    @jakarta.annotation.Nonnull
+    public void setThemeColor(@jakarta.annotation.Nullable final RgbColor value) {
         this.themeColor = value;
     }
     /**
@@ -826,8 +826,8 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      * @param value Value to set for the themeColorLogo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThemeColorLogo(@javax.annotation.Nullable final MimeContent value) {
+    @jakarta.annotation.Nonnull
+    public void setThemeColorLogo(@jakarta.annotation.Nullable final MimeContent value) {
         this.themeColorLogo = value;
     }
 }

@@ -79,7 +79,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * Instantiates a new privilegeManagementElevation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrivilegeManagementElevation() {
         super();
     }
@@ -88,8 +88,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a privilegeManagementElevation
      */
-    @javax.annotation.Nonnull
-    public static PrivilegeManagementElevation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrivilegeManagementElevation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PrivilegeManagementElevation();
     }
@@ -97,7 +97,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * Gets the certificatePayload property value. The certificate payload of the application. This is computed by hashing the certificate information on the client. Example: `32c220482c68413fbf8290e3b1e49b0a85901cfcd62ab0738760568a2a6e8a50`
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCertificatePayload() {
         return this.certificatePayload;
     }
@@ -105,7 +105,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * Gets the companyName property value. The company name of the application. This value is set by the creator of the application. Example: `Microsoft Corporation`
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCompanyName() {
         return this.companyName;
     }
@@ -113,7 +113,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * Gets the deviceId property value. The Intune deviceId. Unique identifier for the managed device. Example: `92ce5047-9553-4731-817f-9b401a999a1b`
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -121,7 +121,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * Gets the deviceName property value. The name associated with the device in the intune database. Example: `JOHNDOE-LAPTOP`.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -129,7 +129,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * Gets the elevationType property value. Indicates the type of elevation occured
      * @return a privilegeManagementElevationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrivilegeManagementElevationType getElevationType() {
         return this.elevationType;
     }
@@ -137,7 +137,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * Gets the eventDateTime property value. The date and time when the application was elevated. Example:`2014-01-01T00:00:00Z`
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
         return this.eventDateTime;
     }
@@ -145,7 +145,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("certificatePayload", (n) -> { this.setCertificatePayload(n.getStringValue()); });
@@ -170,7 +170,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * Gets the fileDescription property value. The file description of the application. This value is set by the creator of the application. Example: `Editor of multiple coding languages.`
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFileDescription() {
         return this.fileDescription;
     }
@@ -178,7 +178,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * Gets the filePath property value. The full file path of the application including the filename and file extension. Example: `C:/Program Files/vscode.exe`
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFilePath() {
         return this.filePath;
     }
@@ -186,7 +186,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * Gets the fileVersion property value. The version of the application. This value is set by the creator of the application. Example: `6.2211.1035.1000`
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFileVersion() {
         return this.fileVersion;
     }
@@ -194,7 +194,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * Gets the hash property value. The sha256 hash of the application. Example: `32c220482c68413fbf8290e3b1e49b0a85901cfcd62ab0738760568a2a6e8a57`
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHash() {
         return this.hash;
     }
@@ -202,7 +202,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * Gets the internalName property value. The internal name of the application. This value is set by the creator of the application. Example: `VS code`
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInternalName() {
         return this.internalName;
     }
@@ -210,7 +210,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * Gets the justification property value. The justification to elevate the application. This is an input by the user when the privilegeManagementElevationType is of type userConfirmedElevation or support approved elevation. This will be null in all other scenarios. The length is capped at 256 char, enforced on the client side. Example: `To install debug tool.`.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getJustification() {
         return this.justification;
     }
@@ -218,7 +218,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * Gets the productName property value. The product name of the application. This value is set by the creator of the application. Example: `Visual Studio`
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProductName() {
         return this.productName;
     }
@@ -226,7 +226,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * Gets the result property value. The result of the elevation action with 0 being success, and everything else being exit code if the elevation was unsuccessful. The value will always be 0 on all unmanaged elevation. Example: `0`. Valid values 0 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getResult() {
         return this.result;
     }
@@ -234,7 +234,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * Gets the upn property value. The User Principal Name of the user who performed the elevation. Example: `john@domain.com`
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUpn() {
         return this.upn;
     }
@@ -242,7 +242,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * Gets the userType property value. The type of user account on Windows that was used to performed the elevation.
      * @return a privilegeManagementEndUserType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrivilegeManagementEndUserType getUserType() {
         return this.userType;
     }
@@ -251,8 +251,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("certificatePayload", this.getCertificatePayload());
@@ -277,8 +277,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param value Value to set for the certificatePayload property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificatePayload(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCertificatePayload(@jakarta.annotation.Nullable final String value) {
         this.certificatePayload = value;
     }
     /**
@@ -286,8 +286,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param value Value to set for the companyName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompanyName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCompanyName(@jakarta.annotation.Nullable final String value) {
         this.companyName = value;
     }
     /**
@@ -295,8 +295,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param value Value to set for the deviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
@@ -304,8 +304,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param value Value to set for the deviceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
@@ -313,8 +313,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param value Value to set for the elevationType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setElevationType(@javax.annotation.Nullable final PrivilegeManagementElevationType value) {
+    @jakarta.annotation.Nonnull
+    public void setElevationType(@jakarta.annotation.Nullable final PrivilegeManagementElevationType value) {
         this.elevationType = value;
     }
     /**
@@ -322,8 +322,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.eventDateTime = value;
     }
     /**
@@ -331,8 +331,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param value Value to set for the fileDescription property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFileDescription(@jakarta.annotation.Nullable final String value) {
         this.fileDescription = value;
     }
     /**
@@ -340,8 +340,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param value Value to set for the filePath property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFilePath(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFilePath(@jakarta.annotation.Nullable final String value) {
         this.filePath = value;
     }
     /**
@@ -349,8 +349,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param value Value to set for the fileVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFileVersion(@jakarta.annotation.Nullable final String value) {
         this.fileVersion = value;
     }
     /**
@@ -358,8 +358,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param value Value to set for the hash property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHash(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setHash(@jakarta.annotation.Nullable final String value) {
         this.hash = value;
     }
     /**
@@ -367,8 +367,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param value Value to set for the internalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInternalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setInternalName(@jakarta.annotation.Nullable final String value) {
         this.internalName = value;
     }
     /**
@@ -376,8 +376,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param value Value to set for the justification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJustification(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setJustification(@jakarta.annotation.Nullable final String value) {
         this.justification = value;
     }
     /**
@@ -385,8 +385,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param value Value to set for the productName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProductName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProductName(@jakarta.annotation.Nullable final String value) {
         this.productName = value;
     }
     /**
@@ -394,8 +394,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param value Value to set for the result property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResult(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setResult(@jakarta.annotation.Nullable final Integer value) {
         this.result = value;
     }
     /**
@@ -403,8 +403,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param value Value to set for the upn property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpn(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUpn(@jakarta.annotation.Nullable final String value) {
         this.upn = value;
     }
     /**
@@ -412,8 +412,8 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      * @param value Value to set for the userType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserType(@javax.annotation.Nullable final PrivilegeManagementEndUserType value) {
+    @jakarta.annotation.Nonnull
+    public void setUserType(@jakarta.annotation.Nullable final PrivilegeManagementEndUserType value) {
         this.userType = value;
     }
 }

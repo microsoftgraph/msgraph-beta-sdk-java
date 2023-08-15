@@ -56,7 +56,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * Instantiates a new deviceLogCollectionResponse and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceLogCollectionResponse() {
         super();
     }
@@ -65,8 +65,8 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceLogCollectionResponse
      */
-    @javax.annotation.Nonnull
-    public static DeviceLogCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceLogCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceLogCollectionResponse();
     }
@@ -74,7 +74,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * Gets the enrolledByUser property value. The User Principal Name (UPN) of the user that enrolled the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEnrolledByUser() {
         return this.enrolledByUser;
     }
@@ -82,7 +82,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * Gets the errorCode property value. The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getErrorCode() {
         return this.errorCode;
     }
@@ -90,7 +90,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * Gets the expirationDateTimeUTC property value. The DateTime of the expiration of the logs.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTimeUTC() {
         return this.expirationDateTimeUTC;
     }
@@ -98,7 +98,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("enrolledByUser", (n) -> { this.setEnrolledByUser(n.getStringValue()); });
@@ -117,7 +117,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * Gets the initiatedByUserPrincipalName property value. The UPN for who initiated the request.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInitiatedByUserPrincipalName() {
         return this.initiatedByUserPrincipalName;
     }
@@ -125,7 +125,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * Gets the managedDeviceId property value. Indicates Intune device unique identifier.
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getManagedDeviceId() {
         return this.managedDeviceId;
     }
@@ -133,7 +133,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * Gets the receivedDateTimeUTC property value. The DateTime the request was received.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getReceivedDateTimeUTC() {
         return this.receivedDateTimeUTC;
     }
@@ -141,7 +141,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * Gets the requestedDateTimeUTC property value. The DateTime of the request.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRequestedDateTimeUTC() {
         return this.requestedDateTimeUTC;
     }
@@ -149,7 +149,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * Gets the size property value. The size of the logs. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getSize() {
         return this.size;
     }
@@ -157,7 +157,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * Gets the sizeInKB property value. The size of the logs in KB. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getSizeInKB() {
         return this.sizeInKB;
     }
@@ -165,7 +165,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * Gets the status property value. AppLogUploadStatus
      * @return a appLogUploadState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AppLogUploadState getStatus() {
         return this.status;
     }
@@ -174,8 +174,8 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("enrolledByUser", this.getEnrolledByUser());
@@ -194,8 +194,8 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the enrolledByUser property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrolledByUser(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEnrolledByUser(@jakarta.annotation.Nullable final String value) {
         this.enrolledByUser = value;
     }
     /**
@@ -203,8 +203,8 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the errorCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorCode(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setErrorCode(@jakarta.annotation.Nullable final Long value) {
         this.errorCode = value;
     }
     /**
@@ -212,8 +212,8 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTimeUTC property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDateTimeUTC(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setExpirationDateTimeUTC(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTimeUTC = value;
     }
     /**
@@ -221,8 +221,8 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the initiatedByUserPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitiatedByUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setInitiatedByUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.initiatedByUserPrincipalName = value;
     }
     /**
@@ -230,8 +230,8 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedDeviceId(@jakarta.annotation.Nullable final UUID value) {
         this.managedDeviceId = value;
     }
     /**
@@ -239,8 +239,8 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the receivedDateTimeUTC property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReceivedDateTimeUTC(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setReceivedDateTimeUTC(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.receivedDateTimeUTC = value;
     }
     /**
@@ -248,8 +248,8 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the requestedDateTimeUTC property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestedDateTimeUTC(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setRequestedDateTimeUTC(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.requestedDateTimeUTC = value;
     }
     /**
@@ -257,8 +257,8 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSize(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setSize(@jakarta.annotation.Nullable final Double value) {
         this.size = value;
     }
     /**
@@ -266,8 +266,8 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the sizeInKB property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSizeInKB(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setSizeInKB(@jakarta.annotation.Nullable final Double value) {
         this.sizeInKB = value;
     }
     /**
@@ -275,8 +275,8 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final AppLogUploadState value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final AppLogUploadState value) {
         this.status = value;
     }
 }

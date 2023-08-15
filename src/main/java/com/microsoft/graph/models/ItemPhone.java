@@ -23,7 +23,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
      * Instantiates a new itemPhone and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemPhone() {
         super();
         this.setOdataType("#microsoft.graph.itemPhone");
@@ -33,8 +33,8 @@ public class ItemPhone extends ItemFacet implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a itemPhone
      */
-    @javax.annotation.Nonnull
-    public static ItemPhone createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ItemPhone createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ItemPhone();
     }
@@ -42,7 +42,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
      * Gets the displayName property value. Friendly name the user has assigned this phone number.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -50,7 +50,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -62,7 +62,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
      * Gets the number property value. Phone number provided by the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNumber() {
         return this.number;
     }
@@ -70,7 +70,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
      * Gets the type property value. The type property
      * @return a phoneType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PhoneType getType() {
         return this.type;
     }
@@ -79,8 +79,8 @@ public class ItemPhone extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -92,8 +92,8 @@ public class ItemPhone extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -101,8 +101,8 @@ public class ItemPhone extends ItemFacet implements Parsable {
      * @param value Value to set for the number property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNumber(@jakarta.annotation.Nullable final String value) {
         this.number = value;
     }
     /**
@@ -110,8 +110,8 @@ public class ItemPhone extends ItemFacet implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final PhoneType value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final PhoneType value) {
         this.type = value;
     }
 }

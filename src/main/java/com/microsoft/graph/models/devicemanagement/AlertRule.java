@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 public class AlertRule extends Entity implements Parsable {
     /**
-     * The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue.
+     * The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
      */
     private AlertRuleTemplate alertRuleTemplate;
     /**
@@ -44,7 +44,7 @@ public class AlertRule extends Entity implements Parsable {
      * Instantiates a new alertRule and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AlertRule() {
         super();
     }
@@ -53,16 +53,16 @@ public class AlertRule extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a alertRule
      */
-    @javax.annotation.Nonnull
-    public static AlertRule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AlertRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AlertRule();
     }
     /**
-     * Gets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue.
+     * Gets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
      * @return a alertRuleTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AlertRuleTemplate getAlertRuleTemplate() {
         return this.alertRuleTemplate;
     }
@@ -70,7 +70,7 @@ public class AlertRule extends Entity implements Parsable {
      * Gets the description property value. The rule description.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -78,7 +78,7 @@ public class AlertRule extends Entity implements Parsable {
      * Gets the displayName property value. The display name of the rule.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -86,7 +86,7 @@ public class AlertRule extends Entity implements Parsable {
      * Gets the enabled property value. The status of the rule that indicates whether the rule is enabled or disabled. If true, the rule is enabled; otherwise, the rule is disabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -94,7 +94,7 @@ public class AlertRule extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alertRuleTemplate", (n) -> { this.setAlertRuleTemplate(n.getEnumValue(AlertRuleTemplate.class)); });
@@ -111,7 +111,7 @@ public class AlertRule extends Entity implements Parsable {
      * Gets the isSystemRule property value. Indicates whether the rule is a system rule. If true, the rule is a system rule; otherwise, the rule is a custom defined rule and can be edited. System rules are built-in and only a few properties can be edited.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSystemRule() {
         return this.isSystemRule;
     }
@@ -119,7 +119,7 @@ public class AlertRule extends Entity implements Parsable {
      * Gets the notificationChannels property value. The notification channels of the rule selected by the user.
      * @return a notificationChannel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<NotificationChannel> getNotificationChannels() {
         return this.notificationChannels;
     }
@@ -127,7 +127,7 @@ public class AlertRule extends Entity implements Parsable {
      * Gets the severity property value. The severity of the rule. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
      * @return a ruleSeverityType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RuleSeverityType getSeverity() {
         return this.severity;
     }
@@ -135,7 +135,7 @@ public class AlertRule extends Entity implements Parsable {
      * Gets the threshold property value. The conditions to send alerts. For example, send alert when provisioning has failed for greater than or equal to 6 Cloud PCs.
      * @return a ruleThreshold
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RuleThreshold getThreshold() {
         return this.threshold;
     }
@@ -144,8 +144,8 @@ public class AlertRule extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("alertRuleTemplate", this.getAlertRuleTemplate());
@@ -158,12 +158,12 @@ public class AlertRule extends Entity implements Parsable {
         writer.writeObjectValue("threshold", this.getThreshold());
     }
     /**
-     * Sets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue.
+     * Sets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
      * @param value Value to set for the alertRuleTemplate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlertRuleTemplate(@javax.annotation.Nullable final AlertRuleTemplate value) {
+    @jakarta.annotation.Nonnull
+    public void setAlertRuleTemplate(@jakarta.annotation.Nullable final AlertRuleTemplate value) {
         this.alertRuleTemplate = value;
     }
     /**
@@ -171,8 +171,8 @@ public class AlertRule extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -180,8 +180,8 @@ public class AlertRule extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -189,8 +189,8 @@ public class AlertRule extends Entity implements Parsable {
      * @param value Value to set for the enabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.enabled = value;
     }
     /**
@@ -198,8 +198,8 @@ public class AlertRule extends Entity implements Parsable {
      * @param value Value to set for the isSystemRule property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSystemRule(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsSystemRule(@jakarta.annotation.Nullable final Boolean value) {
         this.isSystemRule = value;
     }
     /**
@@ -207,8 +207,8 @@ public class AlertRule extends Entity implements Parsable {
      * @param value Value to set for the notificationChannels property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotificationChannels(@javax.annotation.Nullable final java.util.List<NotificationChannel> value) {
+    @jakarta.annotation.Nonnull
+    public void setNotificationChannels(@jakarta.annotation.Nullable final java.util.List<NotificationChannel> value) {
         this.notificationChannels = value;
     }
     /**
@@ -216,8 +216,8 @@ public class AlertRule extends Entity implements Parsable {
      * @param value Value to set for the severity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSeverity(@javax.annotation.Nullable final RuleSeverityType value) {
+    @jakarta.annotation.Nonnull
+    public void setSeverity(@jakarta.annotation.Nullable final RuleSeverityType value) {
         this.severity = value;
     }
     /**
@@ -225,8 +225,8 @@ public class AlertRule extends Entity implements Parsable {
      * @param value Value to set for the threshold property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThreshold(@javax.annotation.Nullable final RuleThreshold value) {
+    @jakarta.annotation.Nonnull
+    public void setThreshold(@jakarta.annotation.Nullable final RuleThreshold value) {
         this.threshold = value;
     }
 }

@@ -32,7 +32,7 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
      * Instantiates a new todoSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TodoSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a todoSettings
      */
-    @javax.annotation.Nonnull
-    public static TodoSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TodoSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TodoSettings();
     }
@@ -50,7 +50,7 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +58,7 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("isExternalJoinEnabled", (n) -> { this.setIsExternalJoinEnabled(n.getBooleanValue()); });
@@ -71,7 +71,7 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
      * Gets the isExternalJoinEnabled property value. Controls whether users can join lists from users external to your organization.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsExternalJoinEnabled() {
         return this.isExternalJoinEnabled;
     }
@@ -79,7 +79,7 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
      * Gets the isExternalShareEnabled property value. Controls whether users can share lists with external users.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsExternalShareEnabled() {
         return this.isExternalShareEnabled;
     }
@@ -87,7 +87,7 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
      * Gets the isPushNotificationEnabled property value. Controls whether push notifications are enabled for your users.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsPushNotificationEnabled() {
         return this.isPushNotificationEnabled;
     }
@@ -95,7 +95,7 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -104,8 +104,8 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isExternalJoinEnabled", this.getIsExternalJoinEnabled());
         writer.writeBooleanValue("isExternalShareEnabled", this.getIsExternalShareEnabled());
@@ -115,11 +115,11 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -127,8 +127,8 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isExternalJoinEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsExternalJoinEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsExternalJoinEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isExternalJoinEnabled = value;
     }
     /**
@@ -136,8 +136,8 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isExternalShareEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsExternalShareEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsExternalShareEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isExternalShareEnabled = value;
     }
     /**
@@ -145,17 +145,17 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isPushNotificationEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsPushNotificationEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsPushNotificationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isPushNotificationEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

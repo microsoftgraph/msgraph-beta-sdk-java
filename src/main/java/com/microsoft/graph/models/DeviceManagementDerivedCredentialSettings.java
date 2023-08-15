@@ -34,7 +34,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * Instantiates a new deviceManagementDerivedCredentialSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings() {
         super();
     }
@@ -43,8 +43,8 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementDerivedCredentialSettings
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementDerivedCredentialSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementDerivedCredentialSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementDerivedCredentialSettings();
     }
@@ -52,7 +52,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * Gets the displayName property value. The display name for the profile.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -60,7 +60,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -74,7 +74,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * Gets the helpUrl property value. The URL that will be accessible to end users as they retrieve a derived credential using the Company Portal.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHelpUrl() {
         return this.helpUrl;
     }
@@ -82,7 +82,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * Gets the issuer property value. Supported values for the derived credential issuer.
      * @return a deviceManagementDerivedCredentialIssuer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialIssuer getIssuer() {
         return this.issuer;
     }
@@ -90,7 +90,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * Gets the notificationType property value. Supported values for the notification type to use.
      * @return a deviceManagementDerivedCredentialNotificationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialNotificationType getNotificationType() {
         return this.notificationType;
     }
@@ -98,7 +98,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * Gets the renewalThresholdPercentage property value. The nominal percentage of time before certificate renewal is initiated by the client.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRenewalThresholdPercentage() {
         return this.renewalThresholdPercentage;
     }
@@ -107,8 +107,8 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -122,8 +122,8 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -131,8 +131,8 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * @param value Value to set for the helpUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHelpUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setHelpUrl(@jakarta.annotation.Nullable final String value) {
         this.helpUrl = value;
     }
     /**
@@ -140,8 +140,8 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * @param value Value to set for the issuer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIssuer(@javax.annotation.Nullable final DeviceManagementDerivedCredentialIssuer value) {
+    @jakarta.annotation.Nonnull
+    public void setIssuer(@jakarta.annotation.Nullable final DeviceManagementDerivedCredentialIssuer value) {
         this.issuer = value;
     }
     /**
@@ -149,8 +149,8 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * @param value Value to set for the notificationType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotificationType(@javax.annotation.Nullable final DeviceManagementDerivedCredentialNotificationType value) {
+    @jakarta.annotation.Nonnull
+    public void setNotificationType(@jakarta.annotation.Nullable final DeviceManagementDerivedCredentialNotificationType value) {
         this.notificationType = value;
     }
     /**
@@ -158,8 +158,8 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * @param value Value to set for the renewalThresholdPercentage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRenewalThresholdPercentage(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setRenewalThresholdPercentage(@jakarta.annotation.Nullable final Integer value) {
         this.renewalThresholdPercentage = value;
     }
 }

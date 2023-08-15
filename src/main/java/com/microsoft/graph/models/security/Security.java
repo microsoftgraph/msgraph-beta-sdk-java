@@ -16,7 +16,7 @@ public class Security extends Entity implements Parsable {
      * Instantiates a new security and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Security() {
         super();
     }
@@ -25,8 +25,8 @@ public class Security extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a security
      */
-    @javax.annotation.Nonnull
-    public static Security createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Security createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Security();
     }
@@ -34,7 +34,7 @@ public class Security extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("informationProtection", (n) -> { this.setInformationProtection(n.getObjectValue(InformationProtection::createFromDiscriminatorValue)); });
@@ -44,7 +44,7 @@ public class Security extends Entity implements Parsable {
      * Gets the informationProtection property value. The informationProtection property
      * @return a informationProtection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InformationProtection getInformationProtection() {
         return this.informationProtection;
     }
@@ -53,8 +53,8 @@ public class Security extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("informationProtection", this.getInformationProtection());
@@ -64,8 +64,8 @@ public class Security extends Entity implements Parsable {
      * @param value Value to set for the informationProtection property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInformationProtection(@javax.annotation.Nullable final InformationProtection value) {
+    @jakarta.annotation.Nonnull
+    public void setInformationProtection(@jakarta.annotation.Nullable final InformationProtection value) {
         this.informationProtection = value;
     }
 }

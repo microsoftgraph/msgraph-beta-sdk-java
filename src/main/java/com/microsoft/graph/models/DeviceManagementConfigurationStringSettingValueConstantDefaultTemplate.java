@@ -18,7 +18,7 @@ public class DeviceManagementConfigurationStringSettingValueConstantDefaultTempl
      * Instantiates a new deviceManagementConfigurationStringSettingValueConstantDefaultTemplate and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationStringSettingValueConstantDefaultTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationStringSettingValueConstantDefaultTemplate");
@@ -28,8 +28,8 @@ public class DeviceManagementConfigurationStringSettingValueConstantDefaultTempl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationStringSettingValueConstantDefaultTemplate
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationStringSettingValueConstantDefaultTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationStringSettingValueConstantDefaultTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationStringSettingValueConstantDefaultTemplate();
     }
@@ -37,7 +37,7 @@ public class DeviceManagementConfigurationStringSettingValueConstantDefaultTempl
      * Gets the constantValue property value. Default Constant Value
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConstantValue() {
         return this.constantValue;
     }
@@ -45,7 +45,7 @@ public class DeviceManagementConfigurationStringSettingValueConstantDefaultTempl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("constantValue", (n) -> { this.setConstantValue(n.getStringValue()); });
@@ -56,8 +56,8 @@ public class DeviceManagementConfigurationStringSettingValueConstantDefaultTempl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("constantValue", this.getConstantValue());
@@ -67,8 +67,8 @@ public class DeviceManagementConfigurationStringSettingValueConstantDefaultTempl
      * @param value Value to set for the constantValue property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConstantValue(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setConstantValue(@jakarta.annotation.Nullable final String value) {
         this.constantValue = value;
     }
 }

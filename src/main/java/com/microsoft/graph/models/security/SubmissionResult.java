@@ -40,7 +40,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * Instantiates a new submissionResult and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubmissionResult() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +49,8 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a submissionResult
      */
-    @javax.annotation.Nonnull
-    public static SubmissionResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SubmissionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SubmissionResult();
     }
@@ -58,7 +58,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +66,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * Gets the category property value. The submission result category. The possible values are: notJunk, spam, phishing, malware, allowedByPolicy, blockedByPolicy, spoof, unknown, noResultAvailable and unkownFutureValue.
      * @return a submissionResultCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubmissionResultCategory getCategory() {
         return this.category;
     }
@@ -74,7 +74,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * Gets the detail property value. Specifies the additional details provided by Microsoft to substantiate their analysis result.
      * @return a submissionResultDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubmissionResultDetail getDetail() {
         return this.detail;
     }
@@ -82,7 +82,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * Gets the detectedFiles property value. Specifies the files detected by Microsoft in the submitted emails.
      * @return a submissionDetectedFile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SubmissionDetectedFile> getDetectedFiles() {
         return this.detectedFiles;
     }
@@ -90,7 +90,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * Gets the detectedUrls property value. Specifes the URLs detected by Microsoft in the submitted email.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getDetectedUrls() {
         return this.detectedUrls;
     }
@@ -98,7 +98,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(SubmissionResultCategory.class)); });
@@ -113,7 +113,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -121,7 +121,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * Gets the userMailboxSetting property value. Specifies the setting for user mailbox denoted by a comma-separated string.
      * @return a userMailboxSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserMailboxSetting getUserMailboxSetting() {
         return this.userMailboxSetting;
     }
@@ -130,8 +130,8 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("category", this.getCategory());
         writer.writeEnumValue("detail", this.getDetail());
@@ -143,11 +143,11 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -155,8 +155,8 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory(@javax.annotation.Nullable final SubmissionResultCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setCategory(@jakarta.annotation.Nullable final SubmissionResultCategory value) {
         this.category = value;
     }
     /**
@@ -164,8 +164,8 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the detail property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetail(@javax.annotation.Nullable final SubmissionResultDetail value) {
+    @jakarta.annotation.Nonnull
+    public void setDetail(@jakarta.annotation.Nullable final SubmissionResultDetail value) {
         this.detail = value;
     }
     /**
@@ -173,8 +173,8 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the detectedFiles property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetectedFiles(@javax.annotation.Nullable final java.util.List<SubmissionDetectedFile> value) {
+    @jakarta.annotation.Nonnull
+    public void setDetectedFiles(@jakarta.annotation.Nullable final java.util.List<SubmissionDetectedFile> value) {
         this.detectedFiles = value;
     }
     /**
@@ -182,17 +182,17 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the detectedUrls property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetectedUrls(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setDetectedUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.detectedUrls = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -200,8 +200,8 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userMailboxSetting property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserMailboxSetting(@javax.annotation.Nullable final UserMailboxSetting value) {
+    @jakarta.annotation.Nonnull
+    public void setUserMailboxSetting(@jakarta.annotation.Nullable final UserMailboxSetting value) {
         this.userMailboxSetting = value;
     }
 }

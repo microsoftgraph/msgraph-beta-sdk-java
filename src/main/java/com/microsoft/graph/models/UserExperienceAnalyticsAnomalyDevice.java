@@ -59,7 +59,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * Instantiates a new userExperienceAnalyticsAnomalyDevice and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAnomalyDevice() {
         super();
     }
@@ -68,8 +68,8 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsAnomalyDevice
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsAnomalyDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsAnomalyDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsAnomalyDevice();
     }
@@ -77,7 +77,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * Gets the anomalyId property value. The unique identifier of the anomaly.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAnomalyId() {
         return this.anomalyId;
     }
@@ -85,7 +85,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * Gets the anomalyOnDeviceFirstOccurrenceDateTime property value. Indicates the first occurance date and time for the anomaly on the device.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getAnomalyOnDeviceFirstOccurrenceDateTime() {
         return this.anomalyOnDeviceFirstOccurrenceDateTime;
     }
@@ -93,7 +93,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * Gets the anomalyOnDeviceLatestOccurrenceDateTime property value. Indicates the latest occurance date and time for the anomaly on the device.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getAnomalyOnDeviceLatestOccurrenceDateTime() {
         return this.anomalyOnDeviceLatestOccurrenceDateTime;
     }
@@ -101,7 +101,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * Gets the correlationGroupId property value. The unique identifier of the correlation group.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCorrelationGroupId() {
         return this.correlationGroupId;
     }
@@ -109,7 +109,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * Gets the deviceId property value. The unique identifier of the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -117,7 +117,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * Gets the deviceManufacturer property value. The manufacturer name of the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceManufacturer() {
         return this.deviceManufacturer;
     }
@@ -125,7 +125,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * Gets the deviceModel property value. The model name of the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceModel() {
         return this.deviceModel;
     }
@@ -133,7 +133,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * Gets the deviceName property value. The name of the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -141,7 +141,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * Gets the deviceStatus property value. Indicates the status of the device in the correlation group. Eg: Device status can be anomalous, affected, at risk.
      * @return a userExperienceAnalyticsDeviceStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsDeviceStatus getDeviceStatus() {
         return this.deviceStatus;
     }
@@ -149,7 +149,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("anomalyId", (n) -> { this.setAnomalyId(n.getStringValue()); });
@@ -169,7 +169,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * Gets the osName property value. The name of the OS installed on the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsName() {
         return this.osName;
     }
@@ -177,7 +177,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * Gets the osVersion property value. The OS version installed on the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsVersion() {
         return this.osVersion;
     }
@@ -186,8 +186,8 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("anomalyId", this.getAnomalyId());
@@ -207,8 +207,8 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * @param value Value to set for the anomalyId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnomalyId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAnomalyId(@jakarta.annotation.Nullable final String value) {
         this.anomalyId = value;
     }
     /**
@@ -216,8 +216,8 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * @param value Value to set for the anomalyOnDeviceFirstOccurrenceDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnomalyOnDeviceFirstOccurrenceDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setAnomalyOnDeviceFirstOccurrenceDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.anomalyOnDeviceFirstOccurrenceDateTime = value;
     }
     /**
@@ -225,8 +225,8 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * @param value Value to set for the anomalyOnDeviceLatestOccurrenceDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnomalyOnDeviceLatestOccurrenceDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setAnomalyOnDeviceLatestOccurrenceDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.anomalyOnDeviceLatestOccurrenceDateTime = value;
     }
     /**
@@ -234,8 +234,8 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * @param value Value to set for the correlationGroupId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCorrelationGroupId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCorrelationGroupId(@jakarta.annotation.Nullable final String value) {
         this.correlationGroupId = value;
     }
     /**
@@ -243,8 +243,8 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * @param value Value to set for the deviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
@@ -252,8 +252,8 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * @param value Value to set for the deviceManufacturer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceManufacturer(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceManufacturer(@jakarta.annotation.Nullable final String value) {
         this.deviceManufacturer = value;
     }
     /**
@@ -261,8 +261,8 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * @param value Value to set for the deviceModel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceModel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
         this.deviceModel = value;
     }
     /**
@@ -270,8 +270,8 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * @param value Value to set for the deviceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
@@ -279,8 +279,8 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * @param value Value to set for the deviceStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceStatus(@javax.annotation.Nullable final UserExperienceAnalyticsDeviceStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceStatus(@jakarta.annotation.Nullable final UserExperienceAnalyticsDeviceStatus value) {
         this.deviceStatus = value;
     }
     /**
@@ -288,8 +288,8 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * @param value Value to set for the osName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsName(@jakarta.annotation.Nullable final String value) {
         this.osName = value;
     }
     /**
@@ -297,8 +297,8 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      * @param value Value to set for the osVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsVersion(@jakarta.annotation.Nullable final String value) {
         this.osVersion = value;
     }
 }

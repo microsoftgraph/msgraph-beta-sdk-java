@@ -36,7 +36,7 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * Instantiates a new exactDataMatchStoreColumn and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExactDataMatchStoreColumn() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a exactDataMatchStoreColumn
      */
-    @javax.annotation.Nonnull
-    public static ExactDataMatchStoreColumn createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ExactDataMatchStoreColumn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ExactDataMatchStoreColumn();
     }
@@ -54,7 +54,7 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("ignoredDelimiters", (n) -> { this.setIgnoredDelimiters(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -76,7 +76,7 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * Gets the ignoredDelimiters property value. The ignoredDelimiters property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getIgnoredDelimiters() {
         return this.ignoredDelimiters;
     }
@@ -84,7 +84,7 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * Gets the isCaseInsensitive property value. The isCaseInsensitive property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsCaseInsensitive() {
         return this.isCaseInsensitive;
     }
@@ -92,7 +92,7 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * Gets the isSearchable property value. The isSearchable property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSearchable() {
         return this.isSearchable;
     }
@@ -100,7 +100,7 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * Gets the name property value. The name property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -108,7 +108,7 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -117,8 +117,8 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("ignoredDelimiters", this.getIgnoredDelimiters());
         writer.writeBooleanValue("isCaseInsensitive", this.getIsCaseInsensitive());
@@ -129,11 +129,11 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * @param value Value to set for the ignoredDelimiters property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIgnoredDelimiters(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setIgnoredDelimiters(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.ignoredDelimiters = value;
     }
     /**
@@ -150,8 +150,8 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * @param value Value to set for the isCaseInsensitive property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsCaseInsensitive(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsCaseInsensitive(@jakarta.annotation.Nullable final Boolean value) {
         this.isCaseInsensitive = value;
     }
     /**
@@ -159,8 +159,8 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * @param value Value to set for the isSearchable property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSearchable(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsSearchable(@jakarta.annotation.Nullable final Boolean value) {
         this.isSearchable = value;
     }
     /**
@@ -168,17 +168,17 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

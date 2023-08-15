@@ -68,7 +68,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * Instantiates a new retireScheduledManagedDevice and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RetireScheduledManagedDevice() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,8 +77,8 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a retireScheduledManagedDevice
      */
-    @javax.annotation.Nonnull
-    public static RetireScheduledManagedDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RetireScheduledManagedDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RetireScheduledManagedDevice();
     }
@@ -86,7 +86,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -94,7 +94,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * Gets the complianceState property value. The complianceState property
      * @return a complianceStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ComplianceStatus getComplianceState() {
         return this.complianceState;
     }
@@ -102,7 +102,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * Gets the deviceCompliancePolicyId property value. Device Compliance PolicyId
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceCompliancePolicyId() {
         return this.deviceCompliancePolicyId;
     }
@@ -110,7 +110,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * Gets the deviceCompliancePolicyName property value. Device Compliance Policy Name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceCompliancePolicyName() {
         return this.deviceCompliancePolicyName;
     }
@@ -118,7 +118,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * Gets the deviceType property value. Device type.
      * @return a deviceType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceType getDeviceType() {
         return this.deviceType;
     }
@@ -126,7 +126,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("complianceState", (n) -> { this.setComplianceState(n.getEnumValue(ComplianceStatus.class)); });
@@ -147,7 +147,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * Gets the id property value. Key of the entity.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -155,7 +155,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * Gets the managedDeviceId property value. Managed DeviceId
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
         return this.managedDeviceId;
     }
@@ -163,7 +163,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * Gets the managedDeviceName property value. Managed Device Name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagedDeviceName() {
         return this.managedDeviceName;
     }
@@ -171,7 +171,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * Gets the managementAgent property value. Management agent type.
      * @return a managementAgentType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagementAgentType getManagementAgent() {
         return this.managementAgent;
     }
@@ -179,7 +179,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -187,7 +187,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * Gets the ownerType property value. Owner type of device.
      * @return a managedDeviceOwnerType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedDeviceOwnerType getOwnerType() {
         return this.ownerType;
     }
@@ -195,7 +195,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * Gets the retireAfterDateTime property value. Managed Device Retire After DateTime
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRetireAfterDateTime() {
         return this.retireAfterDateTime;
     }
@@ -203,7 +203,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
         return this.roleScopeTagIds;
     }
@@ -212,8 +212,8 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("complianceState", this.getComplianceState());
         writer.writeStringValue("deviceCompliancePolicyId", this.getDeviceCompliancePolicyId());
@@ -231,11 +231,11 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -243,8 +243,8 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the complianceState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComplianceState(@javax.annotation.Nullable final ComplianceStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setComplianceState(@jakarta.annotation.Nullable final ComplianceStatus value) {
         this.complianceState = value;
     }
     /**
@@ -252,8 +252,8 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the deviceCompliancePolicyId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceCompliancePolicyId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceCompliancePolicyId(@jakarta.annotation.Nullable final String value) {
         this.deviceCompliancePolicyId = value;
     }
     /**
@@ -261,8 +261,8 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the deviceCompliancePolicyName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceCompliancePolicyName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceCompliancePolicyName(@jakarta.annotation.Nullable final String value) {
         this.deviceCompliancePolicyName = value;
     }
     /**
@@ -270,8 +270,8 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the deviceType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceType(@javax.annotation.Nullable final DeviceType value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceType(@jakarta.annotation.Nullable final DeviceType value) {
         this.deviceType = value;
     }
     /**
@@ -279,8 +279,8 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
@@ -288,8 +288,8 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedDeviceId(@jakarta.annotation.Nullable final String value) {
         this.managedDeviceId = value;
     }
     /**
@@ -297,8 +297,8 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the managedDeviceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedDeviceName(@jakarta.annotation.Nullable final String value) {
         this.managedDeviceName = value;
     }
     /**
@@ -306,17 +306,17 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the managementAgent property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementAgent(@javax.annotation.Nullable final ManagementAgentType value) {
+    @jakarta.annotation.Nonnull
+    public void setManagementAgent(@jakarta.annotation.Nullable final ManagementAgentType value) {
         this.managementAgent = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -324,8 +324,8 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the ownerType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOwnerType(@javax.annotation.Nullable final ManagedDeviceOwnerType value) {
+    @jakarta.annotation.Nonnull
+    public void setOwnerType(@jakarta.annotation.Nullable final ManagedDeviceOwnerType value) {
         this.ownerType = value;
     }
     /**
@@ -333,8 +333,8 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the retireAfterDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRetireAfterDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setRetireAfterDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.retireAfterDateTime = value;
     }
     /**
@@ -342,8 +342,8 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTagIds = value;
     }
 }

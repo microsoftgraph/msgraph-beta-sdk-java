@@ -122,7 +122,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Instantiates a new iosEasEmailProfileConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosEasEmailProfileConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosEasEmailProfileConfiguration");
@@ -132,8 +132,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a iosEasEmailProfileConfiguration
      */
-    @javax.annotation.Nonnull
-    public static IosEasEmailProfileConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IosEasEmailProfileConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IosEasEmailProfileConfiguration();
     }
@@ -141,7 +141,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the accountName property value. Account name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAccountName() {
         return this.accountName;
     }
@@ -149,7 +149,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the authenticationMethod property value. Authentication method for this Email profile. Possible values are: usernameAndPassword, certificate, derivedCredential.
      * @return a easAuthenticationMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EasAuthenticationMethod getAuthenticationMethod() {
         return this.authenticationMethod;
     }
@@ -157,7 +157,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the blockMovingMessagesToOtherEmailAccounts property value. Indicates whether or not to block moving messages to other email accounts.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBlockMovingMessagesToOtherEmailAccounts() {
         return this.blockMovingMessagesToOtherEmailAccounts;
     }
@@ -165,7 +165,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the blockSendingEmailFromThirdPartyApps property value. Indicates whether or not to block sending email from third party apps.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBlockSendingEmailFromThirdPartyApps() {
         return this.blockSendingEmailFromThirdPartyApps;
     }
@@ -173,7 +173,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the blockSyncingRecentlyUsedEmailAddresses property value. Indicates whether or not to block syncing recently used email addresses, for instance - when composing new email.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBlockSyncingRecentlyUsedEmailAddresses() {
         return this.blockSyncingRecentlyUsedEmailAddresses;
     }
@@ -181,7 +181,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
      * @return a deviceManagementDerivedCredentialSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings getDerivedCredentialSettings() {
         return this.derivedCredentialSettings;
     }
@@ -189,7 +189,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @return a emailSyncDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailSyncDuration getDurationOfEmailToSync() {
         return this.durationOfEmailToSync;
     }
@@ -197,7 +197,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the easServices property value. Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders.
      * @return a easServices
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EasServices getEasServices() {
         return this.easServices;
     }
@@ -205,7 +205,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the easServicesUserOverrideEnabled property value. Allow users to change sync settings.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEasServicesUserOverrideEnabled() {
         return this.easServicesUserOverrideEnabled;
     }
@@ -213,7 +213,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the emailAddressSource property value. Possible values for username source or email source.
      * @return a userEmailSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserEmailSource getEmailAddressSource() {
         return this.emailAddressSource;
     }
@@ -221,7 +221,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the encryptionCertificateType property value. Encryption Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
      * @return a emailCertificateType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailCertificateType getEncryptionCertificateType() {
         return this.encryptionCertificateType;
     }
@@ -229,7 +229,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
@@ -265,7 +265,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the hostName property value. Exchange location that (URL) that the native mail app connects to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHostName() {
         return this.hostName;
     }
@@ -273,7 +273,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the identityCertificate property value. Identity certificate.
      * @return a iosCertificateProfileBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosCertificateProfileBase getIdentityCertificate() {
         return this.identityCertificate;
     }
@@ -281,7 +281,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the perAppVPNProfileId property value. Profile ID of the Per-App VPN policy to be used to access emails from the native Mail client
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPerAppVPNProfileId() {
         return this.perAppVPNProfileId;
     }
@@ -289,7 +289,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the requireSmime property value. Indicates whether or not to use S/MIME certificate.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequireSmime() {
         return this.requireSmime;
     }
@@ -297,7 +297,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the requireSsl property value. Indicates whether or not to use SSL.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequireSsl() {
         return this.requireSsl;
     }
@@ -305,7 +305,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the signingCertificateType property value. Signing Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
      * @return a emailCertificateType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailCertificateType getSigningCertificateType() {
         return this.signingCertificateType;
     }
@@ -313,7 +313,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the smimeEnablePerMessageSwitch property value. Indicates whether or not to allow unencrypted emails.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSmimeEnablePerMessageSwitch() {
         return this.smimeEnablePerMessageSwitch;
     }
@@ -321,7 +321,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the smimeEncryptByDefaultEnabled property value. If set to true S/MIME encryption is enabled by default.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSmimeEncryptByDefaultEnabled() {
         return this.smimeEncryptByDefaultEnabled;
     }
@@ -329,7 +329,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the smimeEncryptByDefaultUserOverrideEnabled property value. If set to true, the user can toggle the encryption by default setting.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSmimeEncryptByDefaultUserOverrideEnabled() {
         return this.smimeEncryptByDefaultUserOverrideEnabled;
     }
@@ -337,7 +337,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the smimeEncryptionCertificate property value. S/MIME encryption certificate.
      * @return a iosCertificateProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosCertificateProfile getSmimeEncryptionCertificate() {
         return this.smimeEncryptionCertificate;
     }
@@ -345,7 +345,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the smimeEncryptionCertificateUserOverrideEnabled property value. If set to true the user can select the S/MIME encryption identity.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSmimeEncryptionCertificateUserOverrideEnabled() {
         return this.smimeEncryptionCertificateUserOverrideEnabled;
     }
@@ -353,7 +353,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the smimeSigningCertificate property value. S/MIME signing certificate.
      * @return a iosCertificateProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosCertificateProfile getSmimeSigningCertificate() {
         return this.smimeSigningCertificate;
     }
@@ -361,7 +361,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the smimeSigningCertificateUserOverrideEnabled property value. If set to true, the user can select the signing identity.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSmimeSigningCertificateUserOverrideEnabled() {
         return this.smimeSigningCertificateUserOverrideEnabled;
     }
@@ -369,7 +369,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the smimeSigningEnabled property value. If set to true S/MIME signing is enabled for this account
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSmimeSigningEnabled() {
         return this.smimeSigningEnabled;
     }
@@ -377,7 +377,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the smimeSigningUserOverrideEnabled property value. If set to true, the user can toggle S/MIME signing on or off.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSmimeSigningUserOverrideEnabled() {
         return this.smimeSigningUserOverrideEnabled;
     }
@@ -385,7 +385,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Gets the useOAuth property value. Specifies whether the connection should use OAuth for authentication.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getUseOAuth() {
         return this.useOAuth;
     }
@@ -394,8 +394,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("accountName", this.getAccountName());
@@ -431,8 +431,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the accountName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccountName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAccountName(@jakarta.annotation.Nullable final String value) {
         this.accountName = value;
     }
     /**
@@ -440,8 +440,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationMethod(@javax.annotation.Nullable final EasAuthenticationMethod value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationMethod(@jakarta.annotation.Nullable final EasAuthenticationMethod value) {
         this.authenticationMethod = value;
     }
     /**
@@ -449,8 +449,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the blockMovingMessagesToOtherEmailAccounts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBlockMovingMessagesToOtherEmailAccounts(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setBlockMovingMessagesToOtherEmailAccounts(@jakarta.annotation.Nullable final Boolean value) {
         this.blockMovingMessagesToOtherEmailAccounts = value;
     }
     /**
@@ -458,8 +458,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the blockSendingEmailFromThirdPartyApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBlockSendingEmailFromThirdPartyApps(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setBlockSendingEmailFromThirdPartyApps(@jakarta.annotation.Nullable final Boolean value) {
         this.blockSendingEmailFromThirdPartyApps = value;
     }
     /**
@@ -467,8 +467,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the blockSyncingRecentlyUsedEmailAddresses property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBlockSyncingRecentlyUsedEmailAddresses(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setBlockSyncingRecentlyUsedEmailAddresses(@jakarta.annotation.Nullable final Boolean value) {
         this.blockSyncingRecentlyUsedEmailAddresses = value;
     }
     /**
@@ -476,8 +476,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the derivedCredentialSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDerivedCredentialSettings(@javax.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setDerivedCredentialSettings(@jakarta.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
         this.derivedCredentialSettings = value;
     }
     /**
@@ -485,8 +485,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the durationOfEmailToSync property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDurationOfEmailToSync(@javax.annotation.Nullable final EmailSyncDuration value) {
+    @jakarta.annotation.Nonnull
+    public void setDurationOfEmailToSync(@jakarta.annotation.Nullable final EmailSyncDuration value) {
         this.durationOfEmailToSync = value;
     }
     /**
@@ -494,8 +494,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the easServices property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEasServices(@javax.annotation.Nullable final EasServices value) {
+    @jakarta.annotation.Nonnull
+    public void setEasServices(@jakarta.annotation.Nullable final EasServices value) {
         this.easServices = value;
     }
     /**
@@ -503,8 +503,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the easServicesUserOverrideEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEasServicesUserOverrideEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEasServicesUserOverrideEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.easServicesUserOverrideEnabled = value;
     }
     /**
@@ -512,8 +512,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the emailAddressSource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailAddressSource(@javax.annotation.Nullable final UserEmailSource value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailAddressSource(@jakarta.annotation.Nullable final UserEmailSource value) {
         this.emailAddressSource = value;
     }
     /**
@@ -521,8 +521,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the encryptionCertificateType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEncryptionCertificateType(@javax.annotation.Nullable final EmailCertificateType value) {
+    @jakarta.annotation.Nonnull
+    public void setEncryptionCertificateType(@jakarta.annotation.Nullable final EmailCertificateType value) {
         this.encryptionCertificateType = value;
     }
     /**
@@ -530,8 +530,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the hostName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHostName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setHostName(@jakarta.annotation.Nullable final String value) {
         this.hostName = value;
     }
     /**
@@ -539,8 +539,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the identityCertificate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityCertificate(@javax.annotation.Nullable final IosCertificateProfileBase value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentityCertificate(@jakarta.annotation.Nullable final IosCertificateProfileBase value) {
         this.identityCertificate = value;
     }
     /**
@@ -548,8 +548,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the perAppVPNProfileId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPerAppVPNProfileId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPerAppVPNProfileId(@jakarta.annotation.Nullable final String value) {
         this.perAppVPNProfileId = value;
     }
     /**
@@ -557,8 +557,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the requireSmime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequireSmime(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRequireSmime(@jakarta.annotation.Nullable final Boolean value) {
         this.requireSmime = value;
     }
     /**
@@ -566,8 +566,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the requireSsl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequireSsl(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRequireSsl(@jakarta.annotation.Nullable final Boolean value) {
         this.requireSsl = value;
     }
     /**
@@ -575,8 +575,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the signingCertificateType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSigningCertificateType(@javax.annotation.Nullable final EmailCertificateType value) {
+    @jakarta.annotation.Nonnull
+    public void setSigningCertificateType(@jakarta.annotation.Nullable final EmailCertificateType value) {
         this.signingCertificateType = value;
     }
     /**
@@ -584,8 +584,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeEnablePerMessageSwitch property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSmimeEnablePerMessageSwitch(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSmimeEnablePerMessageSwitch(@jakarta.annotation.Nullable final Boolean value) {
         this.smimeEnablePerMessageSwitch = value;
     }
     /**
@@ -593,8 +593,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeEncryptByDefaultEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSmimeEncryptByDefaultEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSmimeEncryptByDefaultEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.smimeEncryptByDefaultEnabled = value;
     }
     /**
@@ -602,8 +602,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeEncryptByDefaultUserOverrideEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSmimeEncryptByDefaultUserOverrideEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSmimeEncryptByDefaultUserOverrideEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.smimeEncryptByDefaultUserOverrideEnabled = value;
     }
     /**
@@ -611,8 +611,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeEncryptionCertificate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSmimeEncryptionCertificate(@javax.annotation.Nullable final IosCertificateProfile value) {
+    @jakarta.annotation.Nonnull
+    public void setSmimeEncryptionCertificate(@jakarta.annotation.Nullable final IosCertificateProfile value) {
         this.smimeEncryptionCertificate = value;
     }
     /**
@@ -620,8 +620,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeEncryptionCertificateUserOverrideEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSmimeEncryptionCertificateUserOverrideEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSmimeEncryptionCertificateUserOverrideEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.smimeEncryptionCertificateUserOverrideEnabled = value;
     }
     /**
@@ -629,8 +629,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeSigningCertificate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSmimeSigningCertificate(@javax.annotation.Nullable final IosCertificateProfile value) {
+    @jakarta.annotation.Nonnull
+    public void setSmimeSigningCertificate(@jakarta.annotation.Nullable final IosCertificateProfile value) {
         this.smimeSigningCertificate = value;
     }
     /**
@@ -638,8 +638,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeSigningCertificateUserOverrideEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSmimeSigningCertificateUserOverrideEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSmimeSigningCertificateUserOverrideEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.smimeSigningCertificateUserOverrideEnabled = value;
     }
     /**
@@ -647,8 +647,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeSigningEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSmimeSigningEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSmimeSigningEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.smimeSigningEnabled = value;
     }
     /**
@@ -656,8 +656,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeSigningUserOverrideEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSmimeSigningUserOverrideEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSmimeSigningUserOverrideEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.smimeSigningUserOverrideEnabled = value;
     }
     /**
@@ -665,8 +665,8 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the useOAuth property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUseOAuth(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setUseOAuth(@jakarta.annotation.Nullable final Boolean value) {
         this.useOAuth = value;
     }
 }

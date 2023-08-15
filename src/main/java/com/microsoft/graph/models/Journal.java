@@ -54,7 +54,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * Instantiates a new journal and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Journal() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -63,8 +63,8 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a journal
      */
-    @javax.annotation.Nonnull
-    public static Journal createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Journal createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Journal();
     }
@@ -72,7 +72,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * Gets the account property value. The account property
      * @return a account
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Account getAccount() {
         return this.account;
     }
@@ -80,7 +80,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -88,7 +88,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * Gets the balancingAccountId property value. The balancingAccountId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getBalancingAccountId() {
         return this.balancingAccountId;
     }
@@ -96,7 +96,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * Gets the balancingAccountNumber property value. The balancingAccountNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBalancingAccountNumber() {
         return this.balancingAccountNumber;
     }
@@ -104,7 +104,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * Gets the code property value. The code property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCode() {
         return this.code;
     }
@@ -112,7 +112,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -120,7 +120,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("account", (n) -> { this.setAccount(n.getObjectValue(Account::createFromDiscriminatorValue)); });
@@ -138,7 +138,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * Gets the id property value. The id property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getId() {
         return this.id;
     }
@@ -146,7 +146,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * Gets the journalLines property value. The journalLines property
      * @return a journalLine
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<JournalLine> getJournalLines() {
         return this.journalLines;
     }
@@ -154,7 +154,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -162,7 +162,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -171,8 +171,8 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("account", this.getAccount());
         writer.writeUUIDValue("balancingAccountId", this.getBalancingAccountId());
@@ -190,17 +190,17 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the account property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccount(@javax.annotation.Nullable final Account value) {
+    @jakarta.annotation.Nonnull
+    public void setAccount(@jakarta.annotation.Nullable final Account value) {
         this.account = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -208,8 +208,8 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the balancingAccountId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBalancingAccountId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setBalancingAccountId(@jakarta.annotation.Nullable final UUID value) {
         this.balancingAccountId = value;
     }
     /**
@@ -217,8 +217,8 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the balancingAccountNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBalancingAccountNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setBalancingAccountNumber(@jakarta.annotation.Nullable final String value) {
         this.balancingAccountNumber = value;
     }
     /**
@@ -226,8 +226,8 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the code property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCode(@jakarta.annotation.Nullable final String value) {
         this.code = value;
     }
     /**
@@ -235,8 +235,8 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -244,8 +244,8 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final UUID value) {
         this.id = value;
     }
     /**
@@ -253,8 +253,8 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the journalLines property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJournalLines(@javax.annotation.Nullable final java.util.List<JournalLine> value) {
+    @jakarta.annotation.Nonnull
+    public void setJournalLines(@jakarta.annotation.Nullable final java.util.List<JournalLine> value) {
         this.journalLines = value;
     }
     /**
@@ -262,17 +262,17 @@ public class Journal implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

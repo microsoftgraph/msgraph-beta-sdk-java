@@ -19,7 +19,7 @@ public class Acronym extends SearchAnswer implements Parsable {
      * Instantiates a new acronym and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Acronym() {
         super();
     }
@@ -28,8 +28,8 @@ public class Acronym extends SearchAnswer implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a acronym
      */
-    @javax.annotation.Nonnull
-    public static Acronym createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Acronym createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Acronym();
     }
@@ -37,7 +37,7 @@ public class Acronym extends SearchAnswer implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("standsFor", (n) -> { this.setStandsFor(n.getStringValue()); });
@@ -48,7 +48,7 @@ public class Acronym extends SearchAnswer implements Parsable {
      * Gets the standsFor property value. What the acronym stands for.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStandsFor() {
         return this.standsFor;
     }
@@ -56,7 +56,7 @@ public class Acronym extends SearchAnswer implements Parsable {
      * Gets the state property value. The state property
      * @return a answerState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AnswerState getState() {
         return this.state;
     }
@@ -65,8 +65,8 @@ public class Acronym extends SearchAnswer implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("standsFor", this.getStandsFor());
@@ -77,8 +77,8 @@ public class Acronym extends SearchAnswer implements Parsable {
      * @param value Value to set for the standsFor property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStandsFor(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStandsFor(@jakarta.annotation.Nullable final String value) {
         this.standsFor = value;
     }
     /**
@@ -86,8 +86,8 @@ public class Acronym extends SearchAnswer implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final AnswerState value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final AnswerState value) {
         this.state = value;
     }
 }

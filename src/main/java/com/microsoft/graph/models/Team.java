@@ -140,7 +140,7 @@ public class Team extends Entity implements Parsable {
      * Instantiates a new team and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Team() {
         super();
     }
@@ -149,8 +149,8 @@ public class Team extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a team
      */
-    @javax.annotation.Nonnull
-    public static Team createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Team createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Team();
     }
@@ -158,7 +158,7 @@ public class Team extends Entity implements Parsable {
      * Gets the allChannels property value. List of channels either hosted in or shared with the team (incoming channels).
      * @return a channel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Channel> getAllChannels() {
         return this.allChannels;
     }
@@ -166,7 +166,7 @@ public class Team extends Entity implements Parsable {
      * Gets the channels property value. The collection of channels and messages associated with the team.
      * @return a channel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Channel> getChannels() {
         return this.channels;
     }
@@ -174,7 +174,7 @@ public class Team extends Entity implements Parsable {
      * Gets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClassification() {
         return this.classification;
     }
@@ -182,7 +182,7 @@ public class Team extends Entity implements Parsable {
      * Gets the createdDateTime property value. Timestamp at which the team was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -190,7 +190,7 @@ public class Team extends Entity implements Parsable {
      * Gets the description property value. An optional description for the team. Maximum length: 1024 characters.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -198,7 +198,7 @@ public class Team extends Entity implements Parsable {
      * Gets the discoverySettings property value. Settings to configure team discoverability by others.
      * @return a teamDiscoverySettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamDiscoverySettings getDiscoverySettings() {
         return this.discoverySettings;
     }
@@ -206,7 +206,7 @@ public class Team extends Entity implements Parsable {
      * Gets the displayName property value. The name of the team.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -214,7 +214,7 @@ public class Team extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allChannels", (n) -> { this.setAllChannels(n.getCollectionOfObjectValues(Channel::createFromDiscriminatorValue)); });
@@ -255,7 +255,7 @@ public class Team extends Entity implements Parsable {
      * Gets the funSettings property value. Settings to configure use of Giphy, memes, and stickers in the team.
      * @return a teamFunSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamFunSettings getFunSettings() {
         return this.funSettings;
     }
@@ -263,7 +263,7 @@ public class Team extends Entity implements Parsable {
      * Gets the group property value. The group property
      * @return a group
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Group getGroup() {
         return this.group;
     }
@@ -271,7 +271,7 @@ public class Team extends Entity implements Parsable {
      * Gets the guestSettings property value. Settings to configure whether guests can create, update, or delete channels in the team.
      * @return a teamGuestSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamGuestSettings getGuestSettings() {
         return this.guestSettings;
     }
@@ -279,7 +279,7 @@ public class Team extends Entity implements Parsable {
      * Gets the incomingChannels property value. List of channels shared with the team.
      * @return a channel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Channel> getIncomingChannels() {
         return this.incomingChannels;
     }
@@ -287,7 +287,7 @@ public class Team extends Entity implements Parsable {
      * Gets the installedApps property value. The apps installed in this team.
      * @return a teamsAppInstallation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TeamsAppInstallation> getInstalledApps() {
         return this.installedApps;
     }
@@ -295,7 +295,7 @@ public class Team extends Entity implements Parsable {
      * Gets the internalId property value. A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInternalId() {
         return this.internalId;
     }
@@ -303,7 +303,7 @@ public class Team extends Entity implements Parsable {
      * Gets the isArchived property value. Whether this team is in read-only mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsArchived() {
         return this.isArchived;
     }
@@ -311,7 +311,7 @@ public class Team extends Entity implements Parsable {
      * Gets the isMembershipLimitedToOwners property value. If set to true, the team is currently in the owner-only team membership state and not accessible by other team members, such as students.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsMembershipLimitedToOwners() {
         return this.isMembershipLimitedToOwners;
     }
@@ -319,7 +319,7 @@ public class Team extends Entity implements Parsable {
      * Gets the members property value. Members and owners of the team.
      * @return a conversationMember
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ConversationMember> getMembers() {
         return this.members;
     }
@@ -327,7 +327,7 @@ public class Team extends Entity implements Parsable {
      * Gets the memberSettings property value. Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team.
      * @return a teamMemberSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamMemberSettings getMemberSettings() {
         return this.memberSettings;
     }
@@ -335,7 +335,7 @@ public class Team extends Entity implements Parsable {
      * Gets the messagingSettings property value. Settings to configure messaging and mentions in the team.
      * @return a teamMessagingSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamMessagingSettings getMessagingSettings() {
         return this.messagingSettings;
     }
@@ -343,7 +343,7 @@ public class Team extends Entity implements Parsable {
      * Gets the operations property value. The async operations that ran or are running on this team.
      * @return a teamsAsyncOperation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TeamsAsyncOperation> getOperations() {
         return this.operations;
     }
@@ -351,7 +351,7 @@ public class Team extends Entity implements Parsable {
      * Gets the owners property value. The list of this team's owners. Currently, when creating a team using application permissions, exactly one owner must be specified. When using user delegated permissions, no owner can be specified (the current user is the owner). Owner must be specified as an object ID (GUID), not a UPN.
      * @return a user
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<User> getOwners() {
         return this.owners;
     }
@@ -359,7 +359,7 @@ public class Team extends Entity implements Parsable {
      * Gets the permissionGrants property value. A collection of permissions granted to apps to access the team.
      * @return a resourceSpecificPermissionGrant
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ResourceSpecificPermissionGrant> getPermissionGrants() {
         return this.permissionGrants;
     }
@@ -367,7 +367,7 @@ public class Team extends Entity implements Parsable {
      * Gets the photo property value. The team photo.
      * @return a profilePhoto
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ProfilePhoto getPhoto() {
         return this.photo;
     }
@@ -375,7 +375,7 @@ public class Team extends Entity implements Parsable {
      * Gets the primaryChannel property value. The general channel for the team.
      * @return a channel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Channel getPrimaryChannel() {
         return this.primaryChannel;
     }
@@ -383,7 +383,7 @@ public class Team extends Entity implements Parsable {
      * Gets the schedule property value. The schedule of shifts for this team.
      * @return a schedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Schedule getSchedule() {
         return this.schedule;
     }
@@ -391,7 +391,7 @@ public class Team extends Entity implements Parsable {
      * Gets the specialization property value. Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
      * @return a teamSpecialization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamSpecialization getSpecialization() {
         return this.specialization;
     }
@@ -399,7 +399,7 @@ public class Team extends Entity implements Parsable {
      * Gets the summary property value. Contains summary information about the team, including number of owners, members, and guests.
      * @return a teamSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamSummary getSummary() {
         return this.summary;
     }
@@ -407,7 +407,7 @@ public class Team extends Entity implements Parsable {
      * Gets the tags property value. The tags associated with the team.
      * @return a teamworkTag
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TeamworkTag> getTags() {
         return this.tags;
     }
@@ -415,7 +415,7 @@ public class Team extends Entity implements Parsable {
      * Gets the template property value. The template this team was created from. See available templates.
      * @return a teamsTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamsTemplate getTemplate() {
         return this.template;
     }
@@ -423,7 +423,7 @@ public class Team extends Entity implements Parsable {
      * Gets the templateDefinition property value. Generic representation of a team template definition for a team with a specific structure and configuration.
      * @return a teamTemplateDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamTemplateDefinition getTemplateDefinition() {
         return this.templateDefinition;
     }
@@ -431,7 +431,7 @@ public class Team extends Entity implements Parsable {
      * Gets the tenantId property value. The ID of the Azure Active Directory tenant.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -439,7 +439,7 @@ public class Team extends Entity implements Parsable {
      * Gets the visibility property value. The visibility of the group and team. Defaults to Public.
      * @return a teamVisibilityType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamVisibilityType getVisibility() {
         return this.visibility;
     }
@@ -447,7 +447,7 @@ public class Team extends Entity implements Parsable {
      * Gets the webUrl property value. A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebUrl() {
         return this.webUrl;
     }
@@ -456,8 +456,8 @@ public class Team extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("allChannels", this.getAllChannels());
@@ -498,8 +498,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the allChannels property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllChannels(@javax.annotation.Nullable final java.util.List<Channel> value) {
+    @jakarta.annotation.Nonnull
+    public void setAllChannels(@jakarta.annotation.Nullable final java.util.List<Channel> value) {
         this.allChannels = value;
     }
     /**
@@ -507,8 +507,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the channels property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChannels(@javax.annotation.Nullable final java.util.List<Channel> value) {
+    @jakarta.annotation.Nonnull
+    public void setChannels(@jakarta.annotation.Nullable final java.util.List<Channel> value) {
         this.channels = value;
     }
     /**
@@ -516,8 +516,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the classification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClassification(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setClassification(@jakarta.annotation.Nullable final String value) {
         this.classification = value;
     }
     /**
@@ -525,8 +525,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -534,8 +534,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -543,8 +543,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the discoverySettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDiscoverySettings(@javax.annotation.Nullable final TeamDiscoverySettings value) {
+    @jakarta.annotation.Nonnull
+    public void setDiscoverySettings(@jakarta.annotation.Nullable final TeamDiscoverySettings value) {
         this.discoverySettings = value;
     }
     /**
@@ -552,8 +552,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -561,8 +561,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the funSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFunSettings(@javax.annotation.Nullable final TeamFunSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setFunSettings(@jakarta.annotation.Nullable final TeamFunSettings value) {
         this.funSettings = value;
     }
     /**
@@ -570,8 +570,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the group property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroup(@javax.annotation.Nullable final Group value) {
+    @jakarta.annotation.Nonnull
+    public void setGroup(@jakarta.annotation.Nullable final Group value) {
         this.group = value;
     }
     /**
@@ -579,8 +579,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the guestSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGuestSettings(@javax.annotation.Nullable final TeamGuestSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setGuestSettings(@jakarta.annotation.Nullable final TeamGuestSettings value) {
         this.guestSettings = value;
     }
     /**
@@ -588,8 +588,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the incomingChannels property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncomingChannels(@javax.annotation.Nullable final java.util.List<Channel> value) {
+    @jakarta.annotation.Nonnull
+    public void setIncomingChannels(@jakarta.annotation.Nullable final java.util.List<Channel> value) {
         this.incomingChannels = value;
     }
     /**
@@ -597,8 +597,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the installedApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstalledApps(@javax.annotation.Nullable final java.util.List<TeamsAppInstallation> value) {
+    @jakarta.annotation.Nonnull
+    public void setInstalledApps(@jakarta.annotation.Nullable final java.util.List<TeamsAppInstallation> value) {
         this.installedApps = value;
     }
     /**
@@ -606,8 +606,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the internalId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInternalId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setInternalId(@jakarta.annotation.Nullable final String value) {
         this.internalId = value;
     }
     /**
@@ -615,8 +615,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the isArchived property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsArchived(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsArchived(@jakarta.annotation.Nullable final Boolean value) {
         this.isArchived = value;
     }
     /**
@@ -624,8 +624,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the isMembershipLimitedToOwners property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsMembershipLimitedToOwners(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsMembershipLimitedToOwners(@jakarta.annotation.Nullable final Boolean value) {
         this.isMembershipLimitedToOwners = value;
     }
     /**
@@ -633,8 +633,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMembers(@javax.annotation.Nullable final java.util.List<ConversationMember> value) {
+    @jakarta.annotation.Nonnull
+    public void setMembers(@jakarta.annotation.Nullable final java.util.List<ConversationMember> value) {
         this.members = value;
     }
     /**
@@ -642,8 +642,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the memberSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMemberSettings(@javax.annotation.Nullable final TeamMemberSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setMemberSettings(@jakarta.annotation.Nullable final TeamMemberSettings value) {
         this.memberSettings = value;
     }
     /**
@@ -651,8 +651,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the messagingSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessagingSettings(@javax.annotation.Nullable final TeamMessagingSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setMessagingSettings(@jakarta.annotation.Nullable final TeamMessagingSettings value) {
         this.messagingSettings = value;
     }
     /**
@@ -660,8 +660,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperations(@javax.annotation.Nullable final java.util.List<TeamsAsyncOperation> value) {
+    @jakarta.annotation.Nonnull
+    public void setOperations(@jakarta.annotation.Nullable final java.util.List<TeamsAsyncOperation> value) {
         this.operations = value;
     }
     /**
@@ -669,8 +669,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the owners property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOwners(@javax.annotation.Nullable final java.util.List<User> value) {
+    @jakarta.annotation.Nonnull
+    public void setOwners(@jakarta.annotation.Nullable final java.util.List<User> value) {
         this.owners = value;
     }
     /**
@@ -678,8 +678,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the permissionGrants property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPermissionGrants(@javax.annotation.Nullable final java.util.List<ResourceSpecificPermissionGrant> value) {
+    @jakarta.annotation.Nonnull
+    public void setPermissionGrants(@jakarta.annotation.Nullable final java.util.List<ResourceSpecificPermissionGrant> value) {
         this.permissionGrants = value;
     }
     /**
@@ -687,8 +687,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the photo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhoto(@javax.annotation.Nullable final ProfilePhoto value) {
+    @jakarta.annotation.Nonnull
+    public void setPhoto(@jakarta.annotation.Nullable final ProfilePhoto value) {
         this.photo = value;
     }
     /**
@@ -696,8 +696,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the primaryChannel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrimaryChannel(@javax.annotation.Nullable final Channel value) {
+    @jakarta.annotation.Nonnull
+    public void setPrimaryChannel(@jakarta.annotation.Nullable final Channel value) {
         this.primaryChannel = value;
     }
     /**
@@ -705,8 +705,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the schedule property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchedule(@javax.annotation.Nullable final Schedule value) {
+    @jakarta.annotation.Nonnull
+    public void setSchedule(@jakarta.annotation.Nullable final Schedule value) {
         this.schedule = value;
     }
     /**
@@ -714,8 +714,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the specialization property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSpecialization(@javax.annotation.Nullable final TeamSpecialization value) {
+    @jakarta.annotation.Nonnull
+    public void setSpecialization(@jakarta.annotation.Nullable final TeamSpecialization value) {
         this.specialization = value;
     }
     /**
@@ -723,8 +723,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the summary property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSummary(@javax.annotation.Nullable final TeamSummary value) {
+    @jakarta.annotation.Nonnull
+    public void setSummary(@jakarta.annotation.Nullable final TeamSummary value) {
         this.summary = value;
     }
     /**
@@ -732,8 +732,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTags(@javax.annotation.Nullable final java.util.List<TeamworkTag> value) {
+    @jakarta.annotation.Nonnull
+    public void setTags(@jakarta.annotation.Nullable final java.util.List<TeamworkTag> value) {
         this.tags = value;
     }
     /**
@@ -741,8 +741,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the template property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTemplate(@javax.annotation.Nullable final TeamsTemplate value) {
+    @jakarta.annotation.Nonnull
+    public void setTemplate(@jakarta.annotation.Nullable final TeamsTemplate value) {
         this.template = value;
     }
     /**
@@ -750,8 +750,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the templateDefinition property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTemplateDefinition(@javax.annotation.Nullable final TeamTemplateDefinition value) {
+    @jakarta.annotation.Nonnull
+    public void setTemplateDefinition(@jakarta.annotation.Nullable final TeamTemplateDefinition value) {
         this.templateDefinition = value;
     }
     /**
@@ -759,8 +759,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
@@ -768,8 +768,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the visibility property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVisibility(@javax.annotation.Nullable final TeamVisibilityType value) {
+    @jakarta.annotation.Nonnull
+    public void setVisibility(@jakarta.annotation.Nullable final TeamVisibilityType value) {
         this.visibility = value;
     }
     /**
@@ -777,8 +777,8 @@ public class Team extends Entity implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }
 }

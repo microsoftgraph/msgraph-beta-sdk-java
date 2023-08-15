@@ -15,7 +15,7 @@ public class DeviceManagementScriptDeviceStateCollectionResponse extends BaseCol
      * Instantiates a new deviceManagementScriptDeviceStateCollectionResponse and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementScriptDeviceStateCollectionResponse() {
         super();
     }
@@ -24,8 +24,8 @@ public class DeviceManagementScriptDeviceStateCollectionResponse extends BaseCol
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementScriptDeviceStateCollectionResponse
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementScriptDeviceStateCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementScriptDeviceStateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementScriptDeviceStateCollectionResponse();
     }
@@ -33,7 +33,7 @@ public class DeviceManagementScriptDeviceStateCollectionResponse extends BaseCol
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(DeviceManagementScriptDeviceState::createFromDiscriminatorValue)); });
@@ -43,7 +43,7 @@ public class DeviceManagementScriptDeviceStateCollectionResponse extends BaseCol
      * Gets the value property value. The value property
      * @return a deviceManagementScriptDeviceState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptDeviceState> getValue() {
         return this.value;
     }
@@ -52,8 +52,8 @@ public class DeviceManagementScriptDeviceStateCollectionResponse extends BaseCol
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("value", this.getValue());
@@ -63,8 +63,8 @@ public class DeviceManagementScriptDeviceStateCollectionResponse extends BaseCol
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final java.util.List<DeviceManagementScriptDeviceState> value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final java.util.List<DeviceManagementScriptDeviceState> value) {
         this.value = value;
     }
 }

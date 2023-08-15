@@ -46,7 +46,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * Instantiates a new windowsPhone81SCEPCertificateProfile and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsPhone81SCEPCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.windowsPhone81SCEPCertificateProfile");
@@ -56,8 +56,8 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsPhone81SCEPCertificateProfile
      */
-    @javax.annotation.Nonnull
-    public static WindowsPhone81SCEPCertificateProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsPhone81SCEPCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsPhone81SCEPCertificateProfile();
     }
@@ -65,7 +65,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("hashAlgorithm", (n) -> { this.setHashAlgorithm(n.getEnumValue(HashAlgorithms.class)); });
@@ -82,7 +82,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * Gets the hashAlgorithm property value. Hash Algorithm Options.
      * @return a hashAlgorithms
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public HashAlgorithms getHashAlgorithm() {
         return this.hashAlgorithm;
     }
@@ -90,7 +90,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * Gets the keySize property value. Key Size Options.
      * @return a keySize
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public KeySize getKeySize() {
         return this.keySize;
     }
@@ -98,7 +98,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * Gets the keyUsage property value. Key Usage Options.
      * @return a keyUsages
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public KeyUsages getKeyUsage() {
         return this.keyUsage;
     }
@@ -106,7 +106,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      * @return a managedDeviceCertificateState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
         return this.managedDeviceCertificateStates;
     }
@@ -114,7 +114,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * Gets the rootCertificate property value. Trusted Root Certificate.
      * @return a windowsPhone81TrustedRootCertificate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsPhone81TrustedRootCertificate getRootCertificate() {
         return this.rootCertificate;
     }
@@ -122,7 +122,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * Gets the scepServerUrls property value. SCEP Server Url(s).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getScepServerUrls() {
         return this.scepServerUrls;
     }
@@ -130,7 +130,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
         return this.subjectAlternativeNameFormatString;
     }
@@ -138,7 +138,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubjectNameFormatString() {
         return this.subjectNameFormatString;
     }
@@ -147,8 +147,8 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("hashAlgorithm", this.getHashAlgorithm());
@@ -165,8 +165,8 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * @param value Value to set for the hashAlgorithm property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHashAlgorithm(@javax.annotation.Nullable final HashAlgorithms value) {
+    @jakarta.annotation.Nonnull
+    public void setHashAlgorithm(@jakarta.annotation.Nullable final HashAlgorithms value) {
         this.hashAlgorithm = value;
     }
     /**
@@ -174,8 +174,8 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * @param value Value to set for the keySize property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKeySize(@javax.annotation.Nullable final KeySize value) {
+    @jakarta.annotation.Nonnull
+    public void setKeySize(@jakarta.annotation.Nullable final KeySize value) {
         this.keySize = value;
     }
     /**
@@ -183,8 +183,8 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * @param value Value to set for the keyUsage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKeyUsage(@javax.annotation.Nullable final KeyUsages value) {
+    @jakarta.annotation.Nonnull
+    public void setKeyUsage(@jakarta.annotation.Nullable final KeyUsages value) {
         this.keyUsage = value;
     }
     /**
@@ -192,8 +192,8 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * @param value Value to set for the managedDeviceCertificateStates property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedDeviceCertificateStates(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
         this.managedDeviceCertificateStates = value;
     }
     /**
@@ -201,8 +201,8 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * @param value Value to set for the rootCertificate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRootCertificate(@javax.annotation.Nullable final WindowsPhone81TrustedRootCertificate value) {
+    @jakarta.annotation.Nonnull
+    public void setRootCertificate(@jakarta.annotation.Nullable final WindowsPhone81TrustedRootCertificate value) {
         this.rootCertificate = value;
     }
     /**
@@ -210,8 +210,8 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * @param value Value to set for the scepServerUrls property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScepServerUrls(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setScepServerUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.scepServerUrls = value;
     }
     /**
@@ -219,8 +219,8 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubjectAlternativeNameFormatString(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSubjectAlternativeNameFormatString(@jakarta.annotation.Nullable final String value) {
         this.subjectAlternativeNameFormatString = value;
     }
     /**
@@ -228,8 +228,8 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
      * @param value Value to set for the subjectNameFormatString property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubjectNameFormatString(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSubjectNameFormatString(@jakarta.annotation.Nullable final String value) {
         this.subjectNameFormatString = value;
     }
 }

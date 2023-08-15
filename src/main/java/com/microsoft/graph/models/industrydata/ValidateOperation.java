@@ -21,7 +21,7 @@ public class ValidateOperation extends LongRunningOperation implements Parsable 
      * Instantiates a new validateOperation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ValidateOperation() {
         super();
     }
@@ -30,8 +30,8 @@ public class ValidateOperation extends LongRunningOperation implements Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a validateOperation
      */
-    @javax.annotation.Nonnull
-    public static ValidateOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ValidateOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -46,7 +46,7 @@ public class ValidateOperation extends LongRunningOperation implements Parsable 
      * Gets the errors property value. Set of errors discovered through validation.
      * @return a publicError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PublicError> getErrors() {
         return this.errors;
     }
@@ -54,7 +54,7 @@ public class ValidateOperation extends LongRunningOperation implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("errors", (n) -> { this.setErrors(n.getCollectionOfObjectValues(PublicError::createFromDiscriminatorValue)); });
@@ -65,7 +65,7 @@ public class ValidateOperation extends LongRunningOperation implements Parsable 
      * Gets the warnings property value. Set of warnings discovered through validation.
      * @return a publicError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PublicError> getWarnings() {
         return this.warnings;
     }
@@ -74,8 +74,8 @@ public class ValidateOperation extends LongRunningOperation implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
     }
@@ -84,8 +84,8 @@ public class ValidateOperation extends LongRunningOperation implements Parsable 
      * @param value Value to set for the errors property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrors(@javax.annotation.Nullable final java.util.List<PublicError> value) {
+    @jakarta.annotation.Nonnull
+    public void setErrors(@jakarta.annotation.Nullable final java.util.List<PublicError> value) {
         this.errors = value;
     }
     /**
@@ -93,8 +93,8 @@ public class ValidateOperation extends LongRunningOperation implements Parsable 
      * @param value Value to set for the warnings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWarnings(@javax.annotation.Nullable final java.util.List<PublicError> value) {
+    @jakarta.annotation.Nonnull
+    public void setWarnings(@jakarta.annotation.Nullable final java.util.List<PublicError> value) {
         this.warnings = value;
     }
 }

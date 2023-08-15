@@ -12,10 +12,10 @@ public enum AccessReviewTimeoutBehavior implements ValuedEnum {
     AccessReviewTimeoutBehavior(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AccessReviewTimeoutBehavior forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AccessReviewTimeoutBehavior forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "keepAccess": return KeepAccess;

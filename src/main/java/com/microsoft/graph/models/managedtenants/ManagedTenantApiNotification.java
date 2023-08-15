@@ -49,7 +49,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * Instantiates a new managedTenantApiNotification and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedTenantApiNotification() {
         super();
     }
@@ -58,8 +58,8 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedTenantApiNotification
      */
-    @javax.annotation.Nonnull
-    public static ManagedTenantApiNotification createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedTenantApiNotification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagedTenantApiNotification();
     }
@@ -67,7 +67,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * Gets the alert property value. The alert property
      * @return a managedTenantAlert
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedTenantAlert getAlert() {
         return this.alert;
     }
@@ -75,7 +75,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * Gets the createdByUserId property value. The createdByUserId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
         return this.createdByUserId;
     }
@@ -83,7 +83,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * Gets the createdDateTime property value. The createdDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -91,7 +91,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alert", (n) -> { this.setAlert(n.getObjectValue(ManagedTenantAlert::createFromDiscriminatorValue)); });
@@ -109,7 +109,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * Gets the isAcknowledged property value. The isAcknowledged property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAcknowledged() {
         return this.isAcknowledged;
     }
@@ -117,7 +117,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * Gets the lastActionByUserId property value. The lastActionByUserId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
         return this.lastActionByUserId;
     }
@@ -125,7 +125,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * Gets the lastActionDateTime property value. The lastActionDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
         return this.lastActionDateTime;
     }
@@ -133,7 +133,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * Gets the message property value. The message property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMessage() {
         return this.message;
     }
@@ -141,7 +141,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * Gets the title property value. The title property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTitle() {
         return this.title;
     }
@@ -149,7 +149,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * Gets the userId property value. The userId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -158,8 +158,8 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("alert", this.getAlert());
@@ -177,8 +177,8 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * @param value Value to set for the alert property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlert(@javax.annotation.Nullable final ManagedTenantAlert value) {
+    @jakarta.annotation.Nonnull
+    public void setAlert(@jakarta.annotation.Nullable final ManagedTenantAlert value) {
         this.alert = value;
     }
     /**
@@ -186,8 +186,8 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * @param value Value to set for the createdByUserId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedByUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedByUserId(@jakarta.annotation.Nullable final String value) {
         this.createdByUserId = value;
     }
     /**
@@ -195,8 +195,8 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -204,8 +204,8 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * @param value Value to set for the isAcknowledged property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAcknowledged(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsAcknowledged(@jakarta.annotation.Nullable final Boolean value) {
         this.isAcknowledged = value;
     }
     /**
@@ -213,8 +213,8 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * @param value Value to set for the lastActionByUserId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActionByUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLastActionByUserId(@jakarta.annotation.Nullable final String value) {
         this.lastActionByUserId = value;
     }
     /**
@@ -222,8 +222,8 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * @param value Value to set for the lastActionDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastActionDateTime = value;
     }
     /**
@@ -231,8 +231,8 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * @param value Value to set for the message property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMessage(@jakarta.annotation.Nullable final String value) {
         this.message = value;
     }
     /**
@@ -240,8 +240,8 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTitle(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
     /**
@@ -249,8 +249,8 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
 }

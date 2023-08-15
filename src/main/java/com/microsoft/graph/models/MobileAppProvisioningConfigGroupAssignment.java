@@ -18,7 +18,7 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
      * Instantiates a new mobileAppProvisioningConfigGroupAssignment and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MobileAppProvisioningConfigGroupAssignment() {
         super();
     }
@@ -27,8 +27,8 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a mobileAppProvisioningConfigGroupAssignment
      */
-    @javax.annotation.Nonnull
-    public static MobileAppProvisioningConfigGroupAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MobileAppProvisioningConfigGroupAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MobileAppProvisioningConfigGroupAssignment();
     }
@@ -36,7 +36,7 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("targetGroupId", (n) -> { this.setTargetGroupId(n.getStringValue()); });
@@ -46,7 +46,7 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
      * Gets the targetGroupId property value. The ID of the AAD group in which the app provisioning configuration is being targeted.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTargetGroupId() {
         return this.targetGroupId;
     }
@@ -55,8 +55,8 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("targetGroupId", this.getTargetGroupId());
@@ -66,8 +66,8 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
      * @param value Value to set for the targetGroupId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetGroupId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetGroupId(@jakarta.annotation.Nullable final String value) {
         this.targetGroupId = value;
     }
 }

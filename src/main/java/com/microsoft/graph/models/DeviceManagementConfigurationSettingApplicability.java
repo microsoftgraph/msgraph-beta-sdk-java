@@ -36,7 +36,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * Instantiates a new deviceManagementConfigurationSettingApplicability and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingApplicability() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationSettingApplicability
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationSettingApplicability createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationSettingApplicability createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -63,7 +63,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -71,7 +71,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * Gets the description property value. description of the setting
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -79,7 +79,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * Gets the deviceMode property value. Describes applicability for the mode the device is in
      * @return a deviceManagementConfigurationDeviceMode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationDeviceMode getDeviceMode() {
         return this.deviceMode;
     }
@@ -87,7 +87,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -101,7 +101,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -109,7 +109,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * Gets the platform property value. Supported platform types.
      * @return a deviceManagementConfigurationPlatforms
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationPlatforms getPlatform() {
         return this.platform;
     }
@@ -117,7 +117,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * Gets the technologies property value. Describes which technology this setting can be deployed with
      * @return a deviceManagementConfigurationTechnologies
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationTechnologies getTechnologies() {
         return this.technologies;
     }
@@ -126,8 +126,8 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeEnumValue("deviceMode", this.getDeviceMode());
@@ -138,11 +138,11 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -150,8 +150,8 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -159,17 +159,17 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * @param value Value to set for the deviceMode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceMode(@javax.annotation.Nullable final DeviceManagementConfigurationDeviceMode value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceMode(@jakarta.annotation.Nullable final DeviceManagementConfigurationDeviceMode value) {
         this.deviceMode = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -177,8 +177,8 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * @param value Value to set for the platform property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatform(@javax.annotation.Nullable final DeviceManagementConfigurationPlatforms value) {
+    @jakarta.annotation.Nonnull
+    public void setPlatform(@jakarta.annotation.Nullable final DeviceManagementConfigurationPlatforms value) {
         this.platform = value;
     }
     /**
@@ -186,8 +186,8 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * @param value Value to set for the technologies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTechnologies(@javax.annotation.Nullable final DeviceManagementConfigurationTechnologies value) {
+    @jakarta.annotation.Nonnull
+    public void setTechnologies(@jakarta.annotation.Nullable final DeviceManagementConfigurationTechnologies value) {
         this.technologies = value;
     }
 }

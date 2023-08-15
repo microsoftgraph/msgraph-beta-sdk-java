@@ -41,7 +41,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * Instantiates a new referenceDefinition and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ReferenceDefinition() {
         super();
     }
@@ -50,8 +50,8 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a referenceDefinition
      */
-    @javax.annotation.Nonnull
-    public static ReferenceDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ReferenceDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ReferenceDefinition();
     }
@@ -59,7 +59,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * Gets the code property value. The code value for the definition that must be unique within the referenceType.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCode() {
         return this.code;
     }
@@ -67,7 +67,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time when the definition was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -75,7 +75,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
@@ -91,7 +91,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * Gets the isDisabled property value. Indicates whether the definition has been disabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDisabled() {
         return this.isDisabled;
     }
@@ -99,7 +99,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time when the definition was most recently changed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -107,7 +107,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * Gets the referenceType property value. The categorical type for a collection of enumerated values.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getReferenceType() {
         return this.referenceType;
     }
@@ -115,7 +115,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * Gets the sortIndex property value. The ordering index to present the definitions within a type consistently in user interfaces.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSortIndex() {
         return this.sortIndex;
     }
@@ -123,7 +123,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * Gets the source property value. The standards body or organization source which defined the code.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSource() {
         return this.source;
     }
@@ -132,8 +132,8 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("code", this.getCode());
@@ -146,8 +146,8 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * @param value Value to set for the code property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCode(@jakarta.annotation.Nullable final String value) {
         this.code = value;
     }
     /**
@@ -155,8 +155,8 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -164,8 +164,8 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * @param value Value to set for the isDisabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDisabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isDisabled = value;
     }
     /**
@@ -173,8 +173,8 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -182,8 +182,8 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * @param value Value to set for the referenceType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReferenceType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setReferenceType(@jakarta.annotation.Nullable final String value) {
         this.referenceType = value;
     }
     /**
@@ -191,8 +191,8 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * @param value Value to set for the sortIndex property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSortIndex(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSortIndex(@jakarta.annotation.Nullable final Integer value) {
         this.sortIndex = value;
     }
     /**
@@ -200,8 +200,8 @@ public class ReferenceDefinition extends Entity implements Parsable {
      * @param value Value to set for the source property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSource(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSource(@jakarta.annotation.Nullable final String value) {
         this.source = value;
     }
 }

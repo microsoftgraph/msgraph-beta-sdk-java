@@ -39,7 +39,7 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
      * Instantiates a new userExperienceAnalyticsAnomalySeverityOverview and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAnomalySeverityOverview() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -48,8 +48,8 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsAnomalySeverityOverview
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsAnomalySeverityOverview createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsAnomalySeverityOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsAnomalySeverityOverview();
     }
@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -65,7 +65,7 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("highSeverityAnomalyCount", (n) -> { this.setHighSeverityAnomalyCount(n.getIntegerValue()); });
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
      * Gets the highSeverityAnomalyCount property value. Indicates count of high severity anomalies which have been detected. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getHighSeverityAnomalyCount() {
         return this.highSeverityAnomalyCount;
     }
@@ -87,7 +87,7 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
      * Gets the informationalSeverityAnomalyCount property value. Indicates count of informational severity anomalies which have been detected. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getInformationalSeverityAnomalyCount() {
         return this.informationalSeverityAnomalyCount;
     }
@@ -95,7 +95,7 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
      * Gets the lowSeverityAnomalyCount property value. Indicates count of low severity anomalies which have been detected. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getLowSeverityAnomalyCount() {
         return this.lowSeverityAnomalyCount;
     }
@@ -103,7 +103,7 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
      * Gets the mediumSeverityAnomalyCount property value. Indicates count of medium severity anomalies which have been detected. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMediumSeverityAnomalyCount() {
         return this.mediumSeverityAnomalyCount;
     }
@@ -111,7 +111,7 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -120,8 +120,8 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("highSeverityAnomalyCount", this.getHighSeverityAnomalyCount());
         writer.writeIntegerValue("informationalSeverityAnomalyCount", this.getInformationalSeverityAnomalyCount());
@@ -132,11 +132,11 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -144,8 +144,8 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
      * @param value Value to set for the highSeverityAnomalyCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHighSeverityAnomalyCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setHighSeverityAnomalyCount(@jakarta.annotation.Nullable final Integer value) {
         this.highSeverityAnomalyCount = value;
     }
     /**
@@ -153,8 +153,8 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
      * @param value Value to set for the informationalSeverityAnomalyCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInformationalSeverityAnomalyCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setInformationalSeverityAnomalyCount(@jakarta.annotation.Nullable final Integer value) {
         this.informationalSeverityAnomalyCount = value;
     }
     /**
@@ -162,8 +162,8 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
      * @param value Value to set for the lowSeverityAnomalyCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLowSeverityAnomalyCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setLowSeverityAnomalyCount(@jakarta.annotation.Nullable final Integer value) {
         this.lowSeverityAnomalyCount = value;
     }
     /**
@@ -171,17 +171,17 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
      * @param value Value to set for the mediumSeverityAnomalyCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediumSeverityAnomalyCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMediumSeverityAnomalyCount(@jakarta.annotation.Nullable final Integer value) {
         this.mediumSeverityAnomalyCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

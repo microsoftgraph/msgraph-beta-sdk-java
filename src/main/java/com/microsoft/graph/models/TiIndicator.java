@@ -244,7 +244,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Instantiates a new tiIndicator and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TiIndicator() {
         super();
     }
@@ -253,8 +253,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a tiIndicator
      */
-    @javax.annotation.Nonnull
-    public static TiIndicator createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TiIndicator createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TiIndicator();
     }
@@ -262,7 +262,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the action property value. The action to apply if the indicator is matched from within the targetProduct security tool. Possible values are: unknown, allow, block, alert. Required.
      * @return a tiAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TiAction getAction() {
         return this.action;
     }
@@ -270,7 +270,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the activityGroupNames property value. The cyber threat intelligence name(s) for the parties responsible for the malicious activity covered by the threat indicator.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getActivityGroupNames() {
         return this.activityGroupNames;
     }
@@ -278,7 +278,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the additionalInformation property value. A catchall area into which extra data from the indicator not covered by the other tiIndicator properties may be placed. Data placed into additionalInformation will typically not be utilized by the targetProduct security tool.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAdditionalInformation() {
         return this.additionalInformation;
     }
@@ -286,7 +286,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the azureTenantId property value. Stamped by the system when the indicator is ingested. The Azure Active Directory tenant id of submitting client. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureTenantId() {
         return this.azureTenantId;
     }
@@ -294,7 +294,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the confidence property value. An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0  100 with 100 being the highest.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getConfidence() {
         return this.confidence;
     }
@@ -302,7 +302,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the description property value. Brief description (100 characters or less) of the threat represented by the indicator. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -310,7 +310,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the diamondModel property value. The area of the Diamond Model in which this indicator exists. Possible values are: unknown, adversary, capability, infrastructure, victim.
      * @return a diamondModel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DiamondModel getDiamondModel() {
         return this.diamondModel;
     }
@@ -318,7 +318,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the domainName property value. The domainName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDomainName() {
         return this.domainName;
     }
@@ -326,7 +326,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the emailEncoding property value. The emailEncoding property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmailEncoding() {
         return this.emailEncoding;
     }
@@ -334,7 +334,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the emailLanguage property value. The emailLanguage property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmailLanguage() {
         return this.emailLanguage;
     }
@@ -342,7 +342,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the emailRecipient property value. The emailRecipient property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmailRecipient() {
         return this.emailRecipient;
     }
@@ -350,7 +350,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the emailSenderAddress property value. The emailSenderAddress property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmailSenderAddress() {
         return this.emailSenderAddress;
     }
@@ -358,7 +358,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the emailSenderName property value. The emailSenderName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmailSenderName() {
         return this.emailSenderName;
     }
@@ -366,7 +366,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the emailSourceDomain property value. The emailSourceDomain property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmailSourceDomain() {
         return this.emailSourceDomain;
     }
@@ -374,7 +374,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the emailSourceIpAddress property value. The emailSourceIpAddress property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmailSourceIpAddress() {
         return this.emailSourceIpAddress;
     }
@@ -382,7 +382,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the emailSubject property value. The emailSubject property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmailSubject() {
         return this.emailSubject;
     }
@@ -390,7 +390,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the emailXMailer property value. The emailXMailer property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmailXMailer() {
         return this.emailXMailer;
     }
@@ -398,7 +398,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the expirationDateTime property value. DateTime string indicating when the Indicator expires. All indicators must have an expiration date to avoid stale indicators persisting in the system. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
         return this.expirationDateTime;
     }
@@ -406,7 +406,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the externalId property value. An identification number that ties the indicator back to the indicator providers system (e.g. a foreign key).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalId() {
         return this.externalId;
     }
@@ -414,7 +414,7 @@ public class TiIndicator extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(TiAction.class)); });
@@ -481,7 +481,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the fileCompileDateTime property value. The fileCompileDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getFileCompileDateTime() {
         return this.fileCompileDateTime;
     }
@@ -489,7 +489,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the fileCreatedDateTime property value. The fileCreatedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getFileCreatedDateTime() {
         return this.fileCreatedDateTime;
     }
@@ -497,7 +497,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the fileHashType property value. The fileHashType property
      * @return a fileHashType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FileHashType getFileHashType() {
         return this.fileHashType;
     }
@@ -505,7 +505,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the fileHashValue property value. The fileHashValue property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFileHashValue() {
         return this.fileHashValue;
     }
@@ -513,7 +513,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the fileMutexName property value. The fileMutexName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFileMutexName() {
         return this.fileMutexName;
     }
@@ -521,7 +521,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the fileName property value. The fileName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFileName() {
         return this.fileName;
     }
@@ -529,7 +529,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the filePacker property value. The filePacker property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFilePacker() {
         return this.filePacker;
     }
@@ -537,7 +537,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the filePath property value. The filePath property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFilePath() {
         return this.filePath;
     }
@@ -545,7 +545,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the fileSize property value. The fileSize property
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getFileSize() {
         return this.fileSize;
     }
@@ -553,7 +553,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the fileType property value. The fileType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFileType() {
         return this.fileType;
     }
@@ -561,7 +561,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the ingestedDateTime property value. Stamped by the system when the indicator is ingested. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getIngestedDateTime() {
         return this.ingestedDateTime;
     }
@@ -569,7 +569,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the isActive property value. Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to False to deactivate indicators in the system.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsActive() {
         return this.isActive;
     }
@@ -577,7 +577,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the killChain property value. A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See killChain values below for exact values.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getKillChain() {
         return this.killChain;
     }
@@ -585,7 +585,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the knownFalsePositives property value. Scenarios in which the indicator may cause false positives. This should be human-readable text.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getKnownFalsePositives() {
         return this.knownFalsePositives;
     }
@@ -593,7 +593,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the lastReportedDateTime property value. The last time the indicator was seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
         return this.lastReportedDateTime;
     }
@@ -601,7 +601,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the malwareFamilyNames property value. The malware family name associated with an indicator if it exists. Microsoft prefers the Microsoft malware family name if at all possible which can be found via the Windows Defender Security Intelligence threat encyclopedia.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getMalwareFamilyNames() {
         return this.malwareFamilyNames;
     }
@@ -609,7 +609,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the networkCidrBlock property value. The networkCidrBlock property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNetworkCidrBlock() {
         return this.networkCidrBlock;
     }
@@ -617,7 +617,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the networkDestinationAsn property value. The networkDestinationAsn property
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getNetworkDestinationAsn() {
         return this.networkDestinationAsn;
     }
@@ -625,7 +625,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the networkDestinationCidrBlock property value. The networkDestinationCidrBlock property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNetworkDestinationCidrBlock() {
         return this.networkDestinationCidrBlock;
     }
@@ -633,7 +633,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the networkDestinationIPv4 property value. The networkDestinationIPv4 property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNetworkDestinationIPv4() {
         return this.networkDestinationIPv4;
     }
@@ -641,7 +641,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the networkDestinationIPv6 property value. The networkDestinationIPv6 property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNetworkDestinationIPv6() {
         return this.networkDestinationIPv6;
     }
@@ -649,7 +649,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the networkDestinationPort property value. The networkDestinationPort property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNetworkDestinationPort() {
         return this.networkDestinationPort;
     }
@@ -657,7 +657,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the networkIPv4 property value. The networkIPv4 property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNetworkIPv4() {
         return this.networkIPv4;
     }
@@ -665,7 +665,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the networkIPv6 property value. The networkIPv6 property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNetworkIPv6() {
         return this.networkIPv6;
     }
@@ -673,7 +673,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the networkPort property value. The networkPort property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNetworkPort() {
         return this.networkPort;
     }
@@ -681,7 +681,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the networkProtocol property value. The networkProtocol property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNetworkProtocol() {
         return this.networkProtocol;
     }
@@ -689,7 +689,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the networkSourceAsn property value. The networkSourceAsn property
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getNetworkSourceAsn() {
         return this.networkSourceAsn;
     }
@@ -697,7 +697,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the networkSourceCidrBlock property value. The networkSourceCidrBlock property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNetworkSourceCidrBlock() {
         return this.networkSourceCidrBlock;
     }
@@ -705,7 +705,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the networkSourceIPv4 property value. The networkSourceIPv4 property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNetworkSourceIPv4() {
         return this.networkSourceIPv4;
     }
@@ -713,7 +713,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the networkSourceIPv6 property value. The networkSourceIPv6 property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNetworkSourceIPv6() {
         return this.networkSourceIPv6;
     }
@@ -721,7 +721,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the networkSourcePort property value. The networkSourcePort property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNetworkSourcePort() {
         return this.networkSourcePort;
     }
@@ -729,7 +729,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the passiveOnly property value. Determines if the indicator should trigger an event that is visible to an end-user. When set to true, security tools will not notify the end user that a hit has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPassiveOnly() {
         return this.passiveOnly;
     }
@@ -737,7 +737,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the severity property value. An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0  5 where 5 is the most severe and zero is not severe at all. Default value is 3.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSeverity() {
         return this.severity;
     }
@@ -745,7 +745,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the tags property value. A JSON array of strings that stores arbitrary tags/keywords.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
         return this.tags;
     }
@@ -753,7 +753,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the targetProduct property value. A string value representing a single security product to which the indicator should be applied. Acceptable values are: Azure Sentinel, Microsoft Defender ATP. Required
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTargetProduct() {
         return this.targetProduct;
     }
@@ -761,7 +761,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the threatType property value. Each indicator must have a valid Indicator Threat Type. Possible values are: Botnet, C2, CryptoMining, Darknet, DDoS, MaliciousUrl, Malware, Phishing, Proxy, PUA, WatchList. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getThreatType() {
         return this.threatType;
     }
@@ -769,7 +769,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the tlpLevel property value. Traffic Light Protocol value for the indicator. Possible values are: unknown, white, green, amber, red. Required.
      * @return a tlpLevel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TlpLevel getTlpLevel() {
         return this.tlpLevel;
     }
@@ -777,7 +777,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the url property value. The url property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUrl() {
         return this.url;
     }
@@ -785,7 +785,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Gets the userAgent property value. The userAgent property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserAgent() {
         return this.userAgent;
     }
@@ -794,8 +794,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("action", this.getAction());
@@ -862,8 +862,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the action property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAction(@javax.annotation.Nullable final TiAction value) {
+    @jakarta.annotation.Nonnull
+    public void setAction(@jakarta.annotation.Nullable final TiAction value) {
         this.action = value;
     }
     /**
@@ -871,8 +871,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the activityGroupNames property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityGroupNames(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setActivityGroupNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.activityGroupNames = value;
     }
     /**
@@ -880,8 +880,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the additionalInformation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalInformation(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalInformation(@jakarta.annotation.Nullable final String value) {
         this.additionalInformation = value;
     }
     /**
@@ -889,8 +889,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAzureTenantId(@jakarta.annotation.Nullable final String value) {
         this.azureTenantId = value;
     }
     /**
@@ -898,8 +898,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the confidence property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfidence(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setConfidence(@jakarta.annotation.Nullable final Integer value) {
         this.confidence = value;
     }
     /**
@@ -907,8 +907,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -916,8 +916,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the diamondModel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDiamondModel(@javax.annotation.Nullable final DiamondModel value) {
+    @jakarta.annotation.Nonnull
+    public void setDiamondModel(@jakarta.annotation.Nullable final DiamondModel value) {
         this.diamondModel = value;
     }
     /**
@@ -925,8 +925,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the domainName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDomainName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDomainName(@jakarta.annotation.Nullable final String value) {
         this.domainName = value;
     }
     /**
@@ -934,8 +934,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailEncoding property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailEncoding(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailEncoding(@jakarta.annotation.Nullable final String value) {
         this.emailEncoding = value;
     }
     /**
@@ -943,8 +943,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailLanguage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailLanguage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailLanguage(@jakarta.annotation.Nullable final String value) {
         this.emailLanguage = value;
     }
     /**
@@ -952,8 +952,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailRecipient property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailRecipient(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailRecipient(@jakarta.annotation.Nullable final String value) {
         this.emailRecipient = value;
     }
     /**
@@ -961,8 +961,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailSenderAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailSenderAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailSenderAddress(@jakarta.annotation.Nullable final String value) {
         this.emailSenderAddress = value;
     }
     /**
@@ -970,8 +970,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailSenderName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailSenderName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailSenderName(@jakarta.annotation.Nullable final String value) {
         this.emailSenderName = value;
     }
     /**
@@ -979,8 +979,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailSourceDomain property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailSourceDomain(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailSourceDomain(@jakarta.annotation.Nullable final String value) {
         this.emailSourceDomain = value;
     }
     /**
@@ -988,8 +988,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailSourceIpAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailSourceIpAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailSourceIpAddress(@jakarta.annotation.Nullable final String value) {
         this.emailSourceIpAddress = value;
     }
     /**
@@ -997,8 +997,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailSubject property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailSubject(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailSubject(@jakarta.annotation.Nullable final String value) {
         this.emailSubject = value;
     }
     /**
@@ -1006,8 +1006,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailXMailer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailXMailer(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailXMailer(@jakarta.annotation.Nullable final String value) {
         this.emailXMailer = value;
     }
     /**
@@ -1015,8 +1015,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
@@ -1024,8 +1024,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the externalId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }
     /**
@@ -1033,8 +1033,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the fileCompileDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileCompileDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setFileCompileDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.fileCompileDateTime = value;
     }
     /**
@@ -1042,8 +1042,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the fileCreatedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setFileCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.fileCreatedDateTime = value;
     }
     /**
@@ -1051,8 +1051,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the fileHashType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileHashType(@javax.annotation.Nullable final FileHashType value) {
+    @jakarta.annotation.Nonnull
+    public void setFileHashType(@jakarta.annotation.Nullable final FileHashType value) {
         this.fileHashType = value;
     }
     /**
@@ -1060,8 +1060,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the fileHashValue property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileHashValue(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFileHashValue(@jakarta.annotation.Nullable final String value) {
         this.fileHashValue = value;
     }
     /**
@@ -1069,8 +1069,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the fileMutexName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileMutexName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFileMutexName(@jakarta.annotation.Nullable final String value) {
         this.fileMutexName = value;
     }
     /**
@@ -1078,8 +1078,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the fileName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFileName(@jakarta.annotation.Nullable final String value) {
         this.fileName = value;
     }
     /**
@@ -1087,8 +1087,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the filePacker property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFilePacker(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFilePacker(@jakarta.annotation.Nullable final String value) {
         this.filePacker = value;
     }
     /**
@@ -1096,8 +1096,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the filePath property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFilePath(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFilePath(@jakarta.annotation.Nullable final String value) {
         this.filePath = value;
     }
     /**
@@ -1105,8 +1105,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the fileSize property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileSize(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setFileSize(@jakarta.annotation.Nullable final Long value) {
         this.fileSize = value;
     }
     /**
@@ -1114,8 +1114,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the fileType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFileType(@jakarta.annotation.Nullable final String value) {
         this.fileType = value;
     }
     /**
@@ -1123,8 +1123,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the ingestedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIngestedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setIngestedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.ingestedDateTime = value;
     }
     /**
@@ -1132,8 +1132,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the isActive property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsActive(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
         this.isActive = value;
     }
     /**
@@ -1141,8 +1141,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the killChain property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKillChain(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setKillChain(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.killChain = value;
     }
     /**
@@ -1150,8 +1150,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the knownFalsePositives property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKnownFalsePositives(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setKnownFalsePositives(@jakarta.annotation.Nullable final String value) {
         this.knownFalsePositives = value;
     }
     /**
@@ -1159,8 +1159,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the lastReportedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastReportedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastReportedDateTime = value;
     }
     /**
@@ -1168,8 +1168,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the malwareFamilyNames property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMalwareFamilyNames(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setMalwareFamilyNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.malwareFamilyNames = value;
     }
     /**
@@ -1177,8 +1177,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkCidrBlock property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkCidrBlock(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkCidrBlock(@jakarta.annotation.Nullable final String value) {
         this.networkCidrBlock = value;
     }
     /**
@@ -1186,8 +1186,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkDestinationAsn property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkDestinationAsn(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkDestinationAsn(@jakarta.annotation.Nullable final Long value) {
         this.networkDestinationAsn = value;
     }
     /**
@@ -1195,8 +1195,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkDestinationCidrBlock property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkDestinationCidrBlock(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkDestinationCidrBlock(@jakarta.annotation.Nullable final String value) {
         this.networkDestinationCidrBlock = value;
     }
     /**
@@ -1204,8 +1204,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkDestinationIPv4 property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkDestinationIPv4(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkDestinationIPv4(@jakarta.annotation.Nullable final String value) {
         this.networkDestinationIPv4 = value;
     }
     /**
@@ -1213,8 +1213,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkDestinationIPv6 property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkDestinationIPv6(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkDestinationIPv6(@jakarta.annotation.Nullable final String value) {
         this.networkDestinationIPv6 = value;
     }
     /**
@@ -1222,8 +1222,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkDestinationPort property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkDestinationPort(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkDestinationPort(@jakarta.annotation.Nullable final Integer value) {
         this.networkDestinationPort = value;
     }
     /**
@@ -1231,8 +1231,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkIPv4 property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkIPv4(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkIPv4(@jakarta.annotation.Nullable final String value) {
         this.networkIPv4 = value;
     }
     /**
@@ -1240,8 +1240,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkIPv6 property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkIPv6(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkIPv6(@jakarta.annotation.Nullable final String value) {
         this.networkIPv6 = value;
     }
     /**
@@ -1249,8 +1249,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkPort property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkPort(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkPort(@jakarta.annotation.Nullable final Integer value) {
         this.networkPort = value;
     }
     /**
@@ -1258,8 +1258,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkProtocol property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkProtocol(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkProtocol(@jakarta.annotation.Nullable final Integer value) {
         this.networkProtocol = value;
     }
     /**
@@ -1267,8 +1267,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkSourceAsn property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkSourceAsn(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkSourceAsn(@jakarta.annotation.Nullable final Long value) {
         this.networkSourceAsn = value;
     }
     /**
@@ -1276,8 +1276,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkSourceCidrBlock property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkSourceCidrBlock(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkSourceCidrBlock(@jakarta.annotation.Nullable final String value) {
         this.networkSourceCidrBlock = value;
     }
     /**
@@ -1285,8 +1285,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkSourceIPv4 property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkSourceIPv4(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkSourceIPv4(@jakarta.annotation.Nullable final String value) {
         this.networkSourceIPv4 = value;
     }
     /**
@@ -1294,8 +1294,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkSourceIPv6 property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkSourceIPv6(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkSourceIPv6(@jakarta.annotation.Nullable final String value) {
         this.networkSourceIPv6 = value;
     }
     /**
@@ -1303,8 +1303,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkSourcePort property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkSourcePort(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkSourcePort(@jakarta.annotation.Nullable final Integer value) {
         this.networkSourcePort = value;
     }
     /**
@@ -1312,8 +1312,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the passiveOnly property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPassiveOnly(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPassiveOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.passiveOnly = value;
     }
     /**
@@ -1321,8 +1321,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the severity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSeverity(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSeverity(@jakarta.annotation.Nullable final Integer value) {
         this.severity = value;
     }
     /**
@@ -1330,8 +1330,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.tags = value;
     }
     /**
@@ -1339,8 +1339,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the targetProduct property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetProduct(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetProduct(@jakarta.annotation.Nullable final String value) {
         this.targetProduct = value;
     }
     /**
@@ -1348,8 +1348,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the threatType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThreatType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setThreatType(@jakarta.annotation.Nullable final String value) {
         this.threatType = value;
     }
     /**
@@ -1357,8 +1357,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the tlpLevel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTlpLevel(@javax.annotation.Nullable final TlpLevel value) {
+    @jakarta.annotation.Nonnull
+    public void setTlpLevel(@jakarta.annotation.Nullable final TlpLevel value) {
         this.tlpLevel = value;
     }
     /**
@@ -1366,8 +1366,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the url property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUrl(@jakarta.annotation.Nullable final String value) {
         this.url = value;
     }
     /**
@@ -1375,8 +1375,8 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the userAgent property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserAgent(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserAgent(@jakarta.annotation.Nullable final String value) {
         this.userAgent = value;
     }
 }

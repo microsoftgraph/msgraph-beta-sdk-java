@@ -40,7 +40,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new applyPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ApplyPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +49,8 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a applyPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static ApplyPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ApplyPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ApplyPostRequestBody();
     }
@@ -58,7 +58,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +66,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the excludeGroups property value. The excludeGroups property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getExcludeGroups() {
         return this.excludeGroups;
     }
@@ -74,7 +74,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("excludeGroups", (n) -> { this.setExcludeGroups(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -89,7 +89,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the includeAllUsers property value. The includeAllUsers property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIncludeAllUsers() {
         return this.includeAllUsers;
     }
@@ -97,7 +97,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the includeGroups property value. The includeGroups property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeGroups() {
         return this.includeGroups;
     }
@@ -105,7 +105,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the managementTemplateId property value. The managementTemplateId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagementTemplateId() {
         return this.managementTemplateId;
     }
@@ -113,7 +113,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the tenantGroupId property value. The tenantGroupId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantGroupId() {
         return this.tenantGroupId;
     }
@@ -121,7 +121,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the tenantId property value. The tenantId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -130,8 +130,8 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("excludeGroups", this.getExcludeGroups());
         writer.writeBooleanValue("includeAllUsers", this.getIncludeAllUsers());
@@ -143,11 +143,11 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -155,8 +155,8 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the excludeGroups property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExcludeGroups(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setExcludeGroups(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.excludeGroups = value;
     }
     /**
@@ -164,8 +164,8 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the includeAllUsers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncludeAllUsers(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIncludeAllUsers(@jakarta.annotation.Nullable final Boolean value) {
         this.includeAllUsers = value;
     }
     /**
@@ -173,8 +173,8 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the includeGroups property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncludeGroups(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setIncludeGroups(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.includeGroups = value;
     }
     /**
@@ -182,8 +182,8 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the managementTemplateId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManagementTemplateId(@jakarta.annotation.Nullable final String value) {
         this.managementTemplateId = value;
     }
     /**
@@ -191,8 +191,8 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tenantGroupId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantGroupId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantGroupId(@jakarta.annotation.Nullable final String value) {
         this.tenantGroupId = value;
     }
     /**
@@ -200,8 +200,8 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
 }

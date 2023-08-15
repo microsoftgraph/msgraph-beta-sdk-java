@@ -43,7 +43,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * Instantiates a new serviceNowConnection and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServiceNowConnection() {
         super();
     }
@@ -52,8 +52,8 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a serviceNowConnection
      */
-    @javax.annotation.Nonnull
-    public static ServiceNowConnection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ServiceNowConnection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ServiceNowConnection();
     }
@@ -61,7 +61,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * Gets the authenticationMethod property value. Indicates the method used by Intune to authenticate with ServiceNow. Currently supports only web authentication with ServiceNow using the specified app id.
      * @return a serviceNowAuthenticationMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServiceNowAuthenticationMethod getAuthenticationMethod() {
         return this.authenticationMethod;
     }
@@ -69,7 +69,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * Gets the createdDateTime property value. Date Time when connection properties were created. The value cannot be modified and is automatically populated when the connection properties were entered.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -77,7 +77,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getObjectValue(ServiceNowAuthenticationMethod::createFromDiscriminatorValue)); });
@@ -93,7 +93,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * Gets the incidentApiUrl property value. Indicates the ServiceNow incident API URL that Intune will use the fetch incidents. Saved in the format of /api/now/table/incident
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIncidentApiUrl() {
         return this.incidentApiUrl;
     }
@@ -101,7 +101,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * Gets the instanceUrl property value. Indicates the ServiceNow instance URL that Intune will connect to. Saved in the format of https://<instance>.service-now.com
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInstanceUrl() {
         return this.instanceUrl;
     }
@@ -109,7 +109,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. Date Time when connection properties were last updated. The value cannot be modified and is automatically populated when the connection properties were updated.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -117,7 +117,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * Gets the lastQueriedDateTime property value. Date Time when incidents from ServiceNow were last queried
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastQueriedDateTime() {
         return this.lastQueriedDateTime;
     }
@@ -125,7 +125,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * Gets the serviceNowConnectionStatus property value. Status of ServiceNow Connection
      * @return a serviceNowConnectionStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServiceNowConnectionStatus getServiceNowConnectionStatus() {
         return this.serviceNowConnectionStatus;
     }
@@ -134,8 +134,8 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("authenticationMethod", this.getAuthenticationMethod());
@@ -151,8 +151,8 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationMethod(@javax.annotation.Nullable final ServiceNowAuthenticationMethod value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationMethod(@jakarta.annotation.Nullable final ServiceNowAuthenticationMethod value) {
         this.authenticationMethod = value;
     }
     /**
@@ -160,8 +160,8 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -169,8 +169,8 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * @param value Value to set for the incidentApiUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncidentApiUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIncidentApiUrl(@jakarta.annotation.Nullable final String value) {
         this.incidentApiUrl = value;
     }
     /**
@@ -178,8 +178,8 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * @param value Value to set for the instanceUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstanceUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setInstanceUrl(@jakarta.annotation.Nullable final String value) {
         this.instanceUrl = value;
     }
     /**
@@ -187,8 +187,8 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -196,8 +196,8 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * @param value Value to set for the lastQueriedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastQueriedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastQueriedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastQueriedDateTime = value;
     }
     /**
@@ -205,8 +205,8 @@ public class ServiceNowConnection extends Entity implements Parsable {
      * @param value Value to set for the serviceNowConnectionStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServiceNowConnectionStatus(@javax.annotation.Nullable final ServiceNowConnectionStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setServiceNowConnectionStatus(@jakarta.annotation.Nullable final ServiceNowConnectionStatus value) {
         this.serviceNowConnectionStatus = value;
     }
 }

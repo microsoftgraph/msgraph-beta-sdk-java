@@ -48,7 +48,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * Instantiates a new accessReviewDecision and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessReviewDecision() {
         super();
     }
@@ -57,8 +57,8 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessReviewDecision
      */
-    @javax.annotation.Nonnull
-    public static AccessReviewDecision createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessReviewDecision createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessReviewDecision();
     }
@@ -66,7 +66,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * Gets the accessRecommendation property value. The feature- generated recommendation shown to the reviewer, one of Approve, Deny or NotAvailable.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAccessRecommendation() {
         return this.accessRecommendation;
     }
@@ -74,7 +74,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * Gets the accessReviewId property value. The feature-generated id of the access review.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAccessReviewId() {
         return this.accessReviewId;
     }
@@ -82,7 +82,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * Gets the appliedBy property value. When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was auto-applied, the userPrincipalName is empty.
      * @return a userIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserIdentity getAppliedBy() {
         return this.appliedBy;
     }
@@ -90,7 +90,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * Gets the appliedDateTime property value. The date and time when the review decision was applied.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getAppliedDateTime() {
         return this.appliedDateTime;
     }
@@ -98,7 +98,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * Gets the applyResult property value. The outcome of applying the decision, one of NotApplied, Success, Failed, NotFound or NotSupported.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getApplyResult() {
         return this.applyResult;
     }
@@ -106,7 +106,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessRecommendation", (n) -> { this.setAccessRecommendation(n.getStringValue()); });
@@ -124,7 +124,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * Gets the justification property value. The reviewer's business justification, if supplied.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getJustification() {
         return this.justification;
     }
@@ -132,7 +132,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * Gets the reviewedBy property value. The identity of the reviewer. If the recommendation was used as the review, the userPrincipalName is empty.
      * @return a userIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserIdentity getReviewedBy() {
         return this.reviewedBy;
     }
@@ -140,7 +140,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * Gets the reviewedDateTime property value. The reviewedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getReviewedDateTime() {
         return this.reviewedDateTime;
     }
@@ -148,7 +148,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * Gets the reviewResult property value. The result of the review, one of NotReviewed, Deny, DontKnow or Approve.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getReviewResult() {
         return this.reviewResult;
     }
@@ -157,8 +157,8 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("accessRecommendation", this.getAccessRecommendation());
@@ -176,8 +176,8 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the accessRecommendation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessRecommendation(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessRecommendation(@jakarta.annotation.Nullable final String value) {
         this.accessRecommendation = value;
     }
     /**
@@ -185,8 +185,8 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the accessReviewId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessReviewId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessReviewId(@jakarta.annotation.Nullable final String value) {
         this.accessReviewId = value;
     }
     /**
@@ -194,8 +194,8 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the appliedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppliedBy(@javax.annotation.Nullable final UserIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setAppliedBy(@jakarta.annotation.Nullable final UserIdentity value) {
         this.appliedBy = value;
     }
     /**
@@ -203,8 +203,8 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the appliedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppliedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setAppliedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.appliedDateTime = value;
     }
     /**
@@ -212,8 +212,8 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the applyResult property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplyResult(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setApplyResult(@jakarta.annotation.Nullable final String value) {
         this.applyResult = value;
     }
     /**
@@ -221,8 +221,8 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the justification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJustification(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setJustification(@jakarta.annotation.Nullable final String value) {
         this.justification = value;
     }
     /**
@@ -230,8 +230,8 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the reviewedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewedBy(@javax.annotation.Nullable final UserIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setReviewedBy(@jakarta.annotation.Nullable final UserIdentity value) {
         this.reviewedBy = value;
     }
     /**
@@ -239,8 +239,8 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the reviewedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setReviewedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.reviewedDateTime = value;
     }
     /**
@@ -248,8 +248,8 @@ public class AccessReviewDecision extends Entity implements Parsable {
      * @param value Value to set for the reviewResult property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewResult(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setReviewResult(@jakarta.annotation.Nullable final String value) {
         this.reviewResult = value;
     }
 }

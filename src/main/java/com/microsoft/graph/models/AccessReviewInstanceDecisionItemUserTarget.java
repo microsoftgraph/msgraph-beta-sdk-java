@@ -23,7 +23,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
      * Instantiates a new accessReviewInstanceDecisionItemUserTarget and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessReviewInstanceDecisionItemUserTarget() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItemUserTarget");
@@ -33,8 +33,8 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessReviewInstanceDecisionItemUserTarget
      */
-    @javax.annotation.Nonnull
-    public static AccessReviewInstanceDecisionItemUserTarget createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessReviewInstanceDecisionItemUserTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessReviewInstanceDecisionItemUserTarget();
     }
@@ -42,7 +42,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
@@ -54,7 +54,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
      * Gets the userDisplayName property value. The name of user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserDisplayName() {
         return this.userDisplayName;
     }
@@ -62,7 +62,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
      * Gets the userId property value. The identifier of user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -70,7 +70,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
      * Gets the userPrincipalName property value. The user principal name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
@@ -79,8 +79,8 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("userDisplayName", this.getUserDisplayName());
@@ -92,8 +92,8 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
@@ -101,8 +101,8 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
      * @param value Value to set for the userId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
@@ -110,8 +110,8 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

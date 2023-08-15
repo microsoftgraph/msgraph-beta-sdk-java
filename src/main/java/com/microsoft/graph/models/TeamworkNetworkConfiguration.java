@@ -56,7 +56,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * Instantiates a new teamworkNetworkConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkNetworkConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -65,8 +65,8 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teamworkNetworkConfiguration
      */
-    @javax.annotation.Nonnull
-    public static TeamworkNetworkConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeamworkNetworkConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeamworkNetworkConfiguration();
     }
@@ -74,7 +74,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -82,7 +82,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * Gets the defaultGateway property value. The default gateway is the path used to pass information when the destination is unknown to the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDefaultGateway() {
         return this.defaultGateway;
     }
@@ -90,7 +90,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * Gets the domainName property value. The network domain of the device, for example, contoso.com.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDomainName() {
         return this.domainName;
     }
@@ -98,7 +98,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("defaultGateway", (n) -> { this.setDefaultGateway(n.getStringValue()); });
@@ -117,7 +117,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * Gets the hostName property value. The device name on a network.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHostName() {
         return this.hostName;
     }
@@ -125,7 +125,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * Gets the ipAddress property value. The IP address is a numerical label that uniquely identifies every device connected to the internet.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIpAddress() {
         return this.ipAddress;
     }
@@ -133,7 +133,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * Gets the isDhcpEnabled property value. True if DHCP is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDhcpEnabled() {
         return this.isDhcpEnabled;
     }
@@ -141,7 +141,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * Gets the isPCPortEnabled property value. True if the PC port is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsPCPortEnabled() {
         return this.isPCPortEnabled;
     }
@@ -149,7 +149,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -157,7 +157,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * Gets the primaryDns property value. A primary DNS is the first point of contact for a device that translates the hostname into an IP address.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrimaryDns() {
         return this.primaryDns;
     }
@@ -165,7 +165,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * Gets the secondaryDns property value. A secondary DNS is used when the primary DNS is not available.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSecondaryDns() {
         return this.secondaryDns;
     }
@@ -173,7 +173,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * Gets the subnetMask property value. A subnet mask is a number that distinguishes the network address and the host address within an IP address.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubnetMask() {
         return this.subnetMask;
     }
@@ -182,8 +182,8 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("defaultGateway", this.getDefaultGateway());
         writer.writeStringValue("domainName", this.getDomainName());
@@ -199,11 +199,11 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -211,8 +211,8 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the defaultGateway property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultGateway(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaultGateway(@jakarta.annotation.Nullable final String value) {
         this.defaultGateway = value;
     }
     /**
@@ -220,8 +220,8 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the domainName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDomainName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDomainName(@jakarta.annotation.Nullable final String value) {
         this.domainName = value;
     }
     /**
@@ -229,8 +229,8 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the hostName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHostName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setHostName(@jakarta.annotation.Nullable final String value) {
         this.hostName = value;
     }
     /**
@@ -238,8 +238,8 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIpAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIpAddress(@jakarta.annotation.Nullable final String value) {
         this.ipAddress = value;
     }
     /**
@@ -247,8 +247,8 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the isDhcpEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDhcpEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsDhcpEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isDhcpEnabled = value;
     }
     /**
@@ -256,17 +256,17 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the isPCPortEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsPCPortEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsPCPortEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isPCPortEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -274,8 +274,8 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the primaryDns property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrimaryDns(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrimaryDns(@jakarta.annotation.Nullable final String value) {
         this.primaryDns = value;
     }
     /**
@@ -283,8 +283,8 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the secondaryDns property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecondaryDns(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSecondaryDns(@jakarta.annotation.Nullable final String value) {
         this.secondaryDns = value;
     }
     /**
@@ -292,8 +292,8 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the subnetMask property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubnetMask(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSubnetMask(@jakarta.annotation.Nullable final String value) {
         this.subnetMask = value;
     }
 }

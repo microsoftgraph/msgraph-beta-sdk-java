@@ -19,7 +19,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
      * Instantiates a new deviceManagementConfigurationSimpleSettingCollectionDefinition and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSimpleSettingCollectionDefinition() {
         super();
     }
@@ -28,8 +28,8 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationSimpleSettingCollectionDefinition
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationSimpleSettingCollectionDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationSimpleSettingCollectionDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationSimpleSettingCollectionDefinition();
     }
@@ -37,7 +37,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("maximumCount", (n) -> { this.setMaximumCount(n.getIntegerValue()); });
@@ -48,7 +48,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
      * Gets the maximumCount property value. Maximum number of simple settings in the collection
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaximumCount() {
         return this.maximumCount;
     }
@@ -56,7 +56,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
      * Gets the minimumCount property value. Minimum number of simple settings in the collection
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMinimumCount() {
         return this.minimumCount;
     }
@@ -65,8 +65,8 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("maximumCount", this.getMaximumCount());
@@ -77,8 +77,8 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
      * @param value Value to set for the maximumCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaximumCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMaximumCount(@jakarta.annotation.Nullable final Integer value) {
         this.maximumCount = value;
     }
     /**
@@ -86,8 +86,8 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
      * @param value Value to set for the minimumCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMinimumCount(@jakarta.annotation.Nullable final Integer value) {
         this.minimumCount = value;
     }
 }

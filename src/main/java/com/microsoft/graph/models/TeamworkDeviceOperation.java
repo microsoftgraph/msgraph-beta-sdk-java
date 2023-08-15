@@ -48,7 +48,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * Instantiates a new teamworkDeviceOperation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkDeviceOperation() {
         super();
     }
@@ -57,8 +57,8 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teamworkDeviceOperation
      */
-    @javax.annotation.Nonnull
-    public static TeamworkDeviceOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeamworkDeviceOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeamworkDeviceOperation();
     }
@@ -66,7 +66,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * Gets the completedDateTime property value. Time at which the operation reached a final state (for example, Successful, Failed, and Cancelled).
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
         return this.completedDateTime;
     }
@@ -74,7 +74,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * Gets the createdBy property value. Identity of the user who created the device operation.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -82,7 +82,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * Gets the createdDateTime property value. The UTC date and time when the device operation was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -90,7 +90,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * Gets the error property value. Error details are available only in case of a failed status.
      * @return a operationError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OperationError getError() {
         return this.error;
     }
@@ -98,7 +98,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
@@ -116,7 +116,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * Gets the lastActionBy property value. Identity of the user who last modified the device operation.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLastActionBy() {
         return this.lastActionBy;
     }
@@ -124,7 +124,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * Gets the lastActionDateTime property value. The UTC date and time when the device operation was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
         return this.lastActionDateTime;
     }
@@ -132,7 +132,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * Gets the operationType property value. The operationType property
      * @return a teamworkDeviceOperationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkDeviceOperationType getOperationType() {
         return this.operationType;
     }
@@ -140,7 +140,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * Gets the startedDateTime property value. Time at which the operation was started.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {
         return this.startedDateTime;
     }
@@ -148,7 +148,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * Gets the status property value. The current status of the async operation, for example, Queued, Scheduled, InProgress,  Successful, Cancelled, and Failed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStatus() {
         return this.status;
     }
@@ -157,8 +157,8 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("completedDateTime", this.getCompletedDateTime());
@@ -176,8 +176,8 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completedDateTime = value;
     }
     /**
@@ -185,8 +185,8 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
@@ -194,8 +194,8 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -203,8 +203,8 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * @param value Value to set for the error property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setError(@javax.annotation.Nullable final OperationError value) {
+    @jakarta.annotation.Nonnull
+    public void setError(@jakarta.annotation.Nullable final OperationError value) {
         this.error = value;
     }
     /**
@@ -212,8 +212,8 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * @param value Value to set for the lastActionBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActionBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setLastActionBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastActionBy = value;
     }
     /**
@@ -221,8 +221,8 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * @param value Value to set for the lastActionDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastActionDateTime = value;
     }
     /**
@@ -230,8 +230,8 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * @param value Value to set for the operationType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperationType(@javax.annotation.Nullable final TeamworkDeviceOperationType value) {
+    @jakarta.annotation.Nonnull
+    public void setOperationType(@jakarta.annotation.Nullable final TeamworkDeviceOperationType value) {
         this.operationType = value;
     }
     /**
@@ -239,8 +239,8 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * @param value Value to set for the startedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startedDateTime = value;
     }
     /**
@@ -248,8 +248,8 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final String value) {
         this.status = value;
     }
 }

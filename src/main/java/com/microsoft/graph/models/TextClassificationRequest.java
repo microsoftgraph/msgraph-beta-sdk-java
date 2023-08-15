@@ -35,7 +35,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * Instantiates a new textClassificationRequest and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TextClassificationRequest() {
         super();
     }
@@ -44,8 +44,8 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a textClassificationRequest
      */
-    @javax.annotation.Nonnull
-    public static TextClassificationRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TextClassificationRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TextClassificationRequest();
     }
@@ -53,7 +53,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * Gets the contentMetaData property value. The contentMetaData property
      * @return a classificationRequestContentMetaData
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ClassificationRequestContentMetaData getContentMetaData() {
         return this.contentMetaData;
     }
@@ -61,7 +61,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contentMetaData", (n) -> { this.setContentMetaData(n.getObjectValue(ClassificationRequestContentMetaData::createFromDiscriminatorValue)); });
@@ -76,7 +76,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * Gets the fileExtension property value. The fileExtension property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFileExtension() {
         return this.fileExtension;
     }
@@ -84,7 +84,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * Gets the matchTolerancesToInclude property value. The matchTolerancesToInclude property
      * @return a mlClassificationMatchTolerance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MlClassificationMatchTolerance getMatchTolerancesToInclude() {
         return this.matchTolerancesToInclude;
     }
@@ -92,7 +92,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * Gets the scopesToRun property value. The scopesToRun property
      * @return a sensitiveTypeScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SensitiveTypeScope getScopesToRun() {
         return this.scopesToRun;
     }
@@ -100,7 +100,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * Gets the sensitiveTypeIds property value. The sensitiveTypeIds property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSensitiveTypeIds() {
         return this.sensitiveTypeIds;
     }
@@ -108,7 +108,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * Gets the text property value. The text property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getText() {
         return this.text;
     }
@@ -117,8 +117,8 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("contentMetaData", this.getContentMetaData());
@@ -133,8 +133,8 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * @param value Value to set for the contentMetaData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentMetaData(@javax.annotation.Nullable final ClassificationRequestContentMetaData value) {
+    @jakarta.annotation.Nonnull
+    public void setContentMetaData(@jakarta.annotation.Nullable final ClassificationRequestContentMetaData value) {
         this.contentMetaData = value;
     }
     /**
@@ -142,8 +142,8 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * @param value Value to set for the fileExtension property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileExtension(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFileExtension(@jakarta.annotation.Nullable final String value) {
         this.fileExtension = value;
     }
     /**
@@ -151,8 +151,8 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * @param value Value to set for the matchTolerancesToInclude property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMatchTolerancesToInclude(@javax.annotation.Nullable final MlClassificationMatchTolerance value) {
+    @jakarta.annotation.Nonnull
+    public void setMatchTolerancesToInclude(@jakarta.annotation.Nullable final MlClassificationMatchTolerance value) {
         this.matchTolerancesToInclude = value;
     }
     /**
@@ -160,8 +160,8 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * @param value Value to set for the scopesToRun property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScopesToRun(@javax.annotation.Nullable final SensitiveTypeScope value) {
+    @jakarta.annotation.Nonnull
+    public void setScopesToRun(@jakarta.annotation.Nullable final SensitiveTypeScope value) {
         this.scopesToRun = value;
     }
     /**
@@ -169,8 +169,8 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * @param value Value to set for the sensitiveTypeIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSensitiveTypeIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSensitiveTypeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.sensitiveTypeIds = value;
     }
     /**
@@ -178,8 +178,8 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * @param value Value to set for the text property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setText(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setText(@jakarta.annotation.Nullable final String value) {
         this.text = value;
     }
 }

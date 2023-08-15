@@ -24,11 +24,11 @@ import java.util.Objects;
 public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of deviceLocalCredentialInfo entities.
-     * @param deviceLocalCredentialInfoId Unique identifier of the item
+     * @param deviceLocalCredentialInfoId The unique identifier of deviceLocalCredentialInfo
      * @return a DeviceLocalCredentialInfoItemRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public DeviceLocalCredentialInfoItemRequestBuilder byDeviceLocalCredentialInfoId(@javax.annotation.Nonnull final String deviceLocalCredentialInfoId) {
+    @jakarta.annotation.Nonnull
+    public DeviceLocalCredentialInfoItemRequestBuilder byDeviceLocalCredentialInfoId(@jakarta.annotation.Nonnull final String deviceLocalCredentialInfoId) {
         Objects.requireNonNull(deviceLocalCredentialInfoId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceLocalCredentialInfo%2Did", deviceLocalCredentialInfoId);
@@ -40,8 +40,8 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public DeviceLocalCredentialsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public DeviceLocalCredentialsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceLocalCredentials{?%24search,%24filter,%24orderby,%24select}", pathParameters);
     }
     /**
@@ -50,16 +50,16 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public DeviceLocalCredentialsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public DeviceLocalCredentialsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceLocalCredentials{?%24search,%24filter,%24orderby,%24select}", rawUrl);
     }
     /**
      * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
      * @return a CompletableFuture of deviceLocalCredentialInfoCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/devicelocalcredentialinfo-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/devicelocalcredentialinfo-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfoCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -77,10 +77,10 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceLocalCredentialInfoCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/devicelocalcredentialinfo-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/devicelocalcredentialinfo-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfoCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfoCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -98,8 +98,8 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a CompletableFuture of deviceLocalCredentialInfo
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfo> post(@javax.annotation.Nonnull final DeviceLocalCredentialInfo body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfo> post(@jakarta.annotation.Nonnull final DeviceLocalCredentialInfo body) {
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -118,8 +118,8 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceLocalCredentialInfo
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfo> post(@javax.annotation.Nonnull final DeviceLocalCredentialInfo body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfo> post(@jakarta.annotation.Nonnull final DeviceLocalCredentialInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -137,7 +137,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -146,8 +146,8 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -167,8 +167,8 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final DeviceLocalCredentialInfo body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceLocalCredentialInfo body) throws URISyntaxException {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -177,8 +177,8 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final DeviceLocalCredentialInfo body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceLocalCredentialInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -202,25 +202,25 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
          * Filter items by property values
          */
         @QueryParameter(name = "%24filter")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String filter;
         /**
          * Order items by property values
          */
         @QueryParameter(name = "%24orderby")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] orderby;
         /**
          * Search items by search phrases
          */
         @QueryParameter(name = "%24search")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String search;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -230,7 +230,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

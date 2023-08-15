@@ -15,7 +15,7 @@ public class PlannerRelationshipBasedUserType extends PlannerTaskConfigurationRo
      * Instantiates a new plannerRelationshipBasedUserType and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerRelationshipBasedUserType() {
         super();
         this.setOdataType("#microsoft.graph.plannerRelationshipBasedUserType");
@@ -25,8 +25,8 @@ public class PlannerRelationshipBasedUserType extends PlannerTaskConfigurationRo
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a plannerRelationshipBasedUserType
      */
-    @javax.annotation.Nonnull
-    public static PlannerRelationshipBasedUserType createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PlannerRelationshipBasedUserType createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PlannerRelationshipBasedUserType();
     }
@@ -34,7 +34,7 @@ public class PlannerRelationshipBasedUserType extends PlannerTaskConfigurationRo
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(PlannerRelationshipUserRoles.class)); });
@@ -44,7 +44,7 @@ public class PlannerRelationshipBasedUserType extends PlannerTaskConfigurationRo
      * Gets the role property value. The role property
      * @return a plannerRelationshipUserRoles
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerRelationshipUserRoles getRole() {
         return this.role;
     }
@@ -53,8 +53,8 @@ public class PlannerRelationshipBasedUserType extends PlannerTaskConfigurationRo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("role", this.getRole());
@@ -64,8 +64,8 @@ public class PlannerRelationshipBasedUserType extends PlannerTaskConfigurationRo
      * @param value Value to set for the role property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRole(@javax.annotation.Nullable final PlannerRelationshipUserRoles value) {
+    @jakarta.annotation.Nonnull
+    public void setRole(@jakarta.annotation.Nullable final PlannerRelationshipUserRoles value) {
         this.role = value;
     }
 }

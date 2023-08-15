@@ -68,7 +68,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * Instantiates a new privilegedOperationEvent and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrivilegedOperationEvent() {
         super();
     }
@@ -77,8 +77,8 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a privilegedOperationEvent
      */
-    @javax.annotation.Nonnull
-    public static PrivilegedOperationEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrivilegedOperationEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PrivilegedOperationEvent();
     }
@@ -86,7 +86,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * Gets the additionalInformation property value. The additionalInformation property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAdditionalInformation() {
         return this.additionalInformation;
     }
@@ -94,7 +94,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * Gets the creationDateTime property value. The creationDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
         return this.creationDateTime;
     }
@@ -102,7 +102,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * Gets the expirationDateTime property value. The expirationDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
         return this.expirationDateTime;
     }
@@ -110,7 +110,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("additionalInformation", (n) -> { this.setAdditionalInformation(n.getStringValue()); });
@@ -133,7 +133,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * Gets the referenceKey property value. The referenceKey property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getReferenceKey() {
         return this.referenceKey;
     }
@@ -141,7 +141,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * Gets the referenceSystem property value. The referenceSystem property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getReferenceSystem() {
         return this.referenceSystem;
     }
@@ -149,7 +149,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * Gets the requestorId property value. The requestorId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRequestorId() {
         return this.requestorId;
     }
@@ -157,7 +157,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * Gets the requestorName property value. The requestorName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRequestorName() {
         return this.requestorName;
     }
@@ -165,7 +165,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * Gets the requestType property value. The requestType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRequestType() {
         return this.requestType;
     }
@@ -173,7 +173,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * Gets the roleId property value. The roleId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleId() {
         return this.roleId;
     }
@@ -181,7 +181,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * Gets the roleName property value. The roleName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleName() {
         return this.roleName;
     }
@@ -189,7 +189,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * Gets the tenantId property value. The tenantId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -197,7 +197,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * Gets the userId property value. The userId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -205,7 +205,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * Gets the userMail property value. The userMail property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserMail() {
         return this.userMail;
     }
@@ -213,7 +213,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * Gets the userName property value. The userName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserName() {
         return this.userName;
     }
@@ -222,8 +222,8 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("additionalInformation", this.getAdditionalInformation());
@@ -246,8 +246,8 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the additionalInformation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalInformation(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalInformation(@jakarta.annotation.Nullable final String value) {
         this.additionalInformation = value;
     }
     /**
@@ -255,8 +255,8 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the creationDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.creationDateTime = value;
     }
     /**
@@ -264,8 +264,8 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
@@ -273,8 +273,8 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the referenceKey property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReferenceKey(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setReferenceKey(@jakarta.annotation.Nullable final String value) {
         this.referenceKey = value;
     }
     /**
@@ -282,8 +282,8 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the referenceSystem property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReferenceSystem(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setReferenceSystem(@jakarta.annotation.Nullable final String value) {
         this.referenceSystem = value;
     }
     /**
@@ -291,8 +291,8 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the requestorId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestorId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRequestorId(@jakarta.annotation.Nullable final String value) {
         this.requestorId = value;
     }
     /**
@@ -300,8 +300,8 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the requestorName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestorName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRequestorName(@jakarta.annotation.Nullable final String value) {
         this.requestorName = value;
     }
     /**
@@ -309,8 +309,8 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the requestType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRequestType(@jakarta.annotation.Nullable final String value) {
         this.requestType = value;
     }
     /**
@@ -318,8 +318,8 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the roleId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleId(@jakarta.annotation.Nullable final String value) {
         this.roleId = value;
     }
     /**
@@ -327,8 +327,8 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the roleName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleName(@jakarta.annotation.Nullable final String value) {
         this.roleName = value;
     }
     /**
@@ -336,8 +336,8 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
@@ -345,8 +345,8 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
@@ -354,8 +354,8 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the userMail property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserMail(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserMail(@jakarta.annotation.Nullable final String value) {
         this.userMail = value;
     }
     /**
@@ -363,8 +363,8 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the userName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
 }

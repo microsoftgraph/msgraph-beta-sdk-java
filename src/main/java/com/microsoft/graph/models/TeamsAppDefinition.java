@@ -68,7 +68,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Instantiates a new teamsAppDefinition and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamsAppDefinition() {
         super();
     }
@@ -77,8 +77,8 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teamsAppDefinition
      */
-    @javax.annotation.Nonnull
-    public static TeamsAppDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeamsAppDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeamsAppDefinition();
     }
@@ -86,7 +86,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Gets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:team  Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat   Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal  Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
      * @return a teamsAppInstallationScopes
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamsAppInstallationScopes getAllowedInstallationScopes() {
         return this.allowedInstallationScopes;
     }
@@ -94,7 +94,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Gets the authorization property value. Authorization requirements specified in the Teams app manifest.
      * @return a teamsAppAuthorization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamsAppAuthorization getAuthorization() {
         return this.authorization;
     }
@@ -102,7 +102,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Gets the azureADAppId property value. The WebApplicationInfo.Id from the Teams app manifest.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureADAppId() {
         return this.azureADAppId;
     }
@@ -110,7 +110,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Gets the bot property value. The details of the bot specified in the Teams app manifest.
      * @return a teamworkBot
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkBot getBot() {
         return this.bot;
     }
@@ -118,7 +118,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Gets the colorIcon property value. The color version of the Teams app's icon.
      * @return a teamsAppIcon
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamsAppIcon getColorIcon() {
         return this.colorIcon;
     }
@@ -126,7 +126,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Gets the createdBy property value. The createdBy property
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -134,7 +134,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Gets the description property value. The description property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -142,7 +142,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Gets the displayName property value. The name of the app provided by the app developer.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -150,7 +150,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowedInstallationScopes", (n) -> { this.setAllowedInstallationScopes(n.getEnumValue(TeamsAppInstallationScopes.class)); });
@@ -173,7 +173,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -181,7 +181,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Gets the outlineIcon property value. The outline version of the Teams app's icon.
      * @return a teamsAppIcon
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamsAppIcon getOutlineIcon() {
         return this.outlineIcon;
     }
@@ -189,7 +189,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
      * @return a teamsAppPublishingState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamsAppPublishingState getPublishingState() {
         return this.publishingState;
     }
@@ -197,7 +197,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Gets the shortdescription property value. The shortdescription property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getShortdescription() {
         return this.shortdescription;
     }
@@ -205,7 +205,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Gets the teamsAppId property value. The ID from the Teams app manifest.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTeamsAppId() {
         return this.teamsAppId;
     }
@@ -213,7 +213,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Gets the version property value. The version number of the application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersion() {
         return this.version;
     }
@@ -222,8 +222,8 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("allowedInstallationScopes", this.getAllowedInstallationScopes());
@@ -246,8 +246,8 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the allowedInstallationScopes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowedInstallationScopes(@javax.annotation.Nullable final TeamsAppInstallationScopes value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowedInstallationScopes(@jakarta.annotation.Nullable final TeamsAppInstallationScopes value) {
         this.allowedInstallationScopes = value;
     }
     /**
@@ -255,8 +255,8 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the authorization property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthorization(@javax.annotation.Nullable final TeamsAppAuthorization value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthorization(@jakarta.annotation.Nullable final TeamsAppAuthorization value) {
         this.authorization = value;
     }
     /**
@@ -264,8 +264,8 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the azureADAppId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureADAppId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAzureADAppId(@jakarta.annotation.Nullable final String value) {
         this.azureADAppId = value;
     }
     /**
@@ -273,8 +273,8 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the bot property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBot(@javax.annotation.Nullable final TeamworkBot value) {
+    @jakarta.annotation.Nonnull
+    public void setBot(@jakarta.annotation.Nullable final TeamworkBot value) {
         this.bot = value;
     }
     /**
@@ -282,8 +282,8 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the colorIcon property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setColorIcon(@javax.annotation.Nullable final TeamsAppIcon value) {
+    @jakarta.annotation.Nonnull
+    public void setColorIcon(@jakarta.annotation.Nullable final TeamsAppIcon value) {
         this.colorIcon = value;
     }
     /**
@@ -291,8 +291,8 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
@@ -300,8 +300,8 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -309,8 +309,8 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -318,8 +318,8 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -327,8 +327,8 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the outlineIcon property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOutlineIcon(@javax.annotation.Nullable final TeamsAppIcon value) {
+    @jakarta.annotation.Nonnull
+    public void setOutlineIcon(@jakarta.annotation.Nullable final TeamsAppIcon value) {
         this.outlineIcon = value;
     }
     /**
@@ -336,8 +336,8 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the publishingState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublishingState(@javax.annotation.Nullable final TeamsAppPublishingState value) {
+    @jakarta.annotation.Nonnull
+    public void setPublishingState(@jakarta.annotation.Nullable final TeamsAppPublishingState value) {
         this.publishingState = value;
     }
     /**
@@ -345,8 +345,8 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the shortdescription property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShortdescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setShortdescription(@jakarta.annotation.Nullable final String value) {
         this.shortdescription = value;
     }
     /**
@@ -354,8 +354,8 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the teamsAppId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTeamsAppId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTeamsAppId(@jakarta.annotation.Nullable final String value) {
         this.teamsAppId = value;
     }
     /**
@@ -363,8 +363,8 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }
 }

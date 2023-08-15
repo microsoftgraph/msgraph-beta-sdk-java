@@ -32,7 +32,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * Instantiates a new cloudPcExternalPartnerSetting and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcExternalPartnerSetting() {
         super();
     }
@@ -41,8 +41,8 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudPcExternalPartnerSetting
      */
-    @javax.annotation.Nonnull
-    public static CloudPcExternalPartnerSetting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudPcExternalPartnerSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudPcExternalPartnerSetting();
     }
@@ -50,7 +50,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * Gets the enableConnection property value. Enable or disable the connection to an external partner. If true, an external partner API will accept incoming calls from external partners. Required. Supports $filter (eq).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableConnection() {
         return this.enableConnection;
     }
@@ -58,7 +58,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("enableConnection", (n) -> { this.setEnableConnection(n.getBooleanValue()); });
@@ -72,7 +72,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * Gets the lastSyncDateTime property value. Last data sync time for this external partner. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
         return this.lastSyncDateTime;
     }
@@ -80,7 +80,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * Gets the partnerId property value. The external partner ID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPartnerId() {
         return this.partnerId;
     }
@@ -88,7 +88,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a cloudPcExternalPartnerStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcExternalPartnerStatus getStatus() {
         return this.status;
     }
@@ -96,7 +96,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * Gets the statusDetails property value. Status details message.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStatusDetails() {
         return this.statusDetails;
     }
@@ -105,8 +105,8 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("enableConnection", this.getEnableConnection());
@@ -120,8 +120,8 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * @param value Value to set for the enableConnection property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableConnection(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnableConnection(@jakarta.annotation.Nullable final Boolean value) {
         this.enableConnection = value;
     }
     /**
@@ -129,8 +129,8 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSyncDateTime = value;
     }
     /**
@@ -138,8 +138,8 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * @param value Value to set for the partnerId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPartnerId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPartnerId(@jakarta.annotation.Nullable final String value) {
         this.partnerId = value;
     }
     /**
@@ -147,8 +147,8 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final CloudPcExternalPartnerStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final CloudPcExternalPartnerStatus value) {
         this.status = value;
     }
     /**
@@ -156,8 +156,8 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      * @param value Value to set for the statusDetails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatusDetails(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStatusDetails(@jakarta.annotation.Nullable final String value) {
         this.statusDetails = value;
     }
 }

@@ -51,7 +51,7 @@ public class PrinterBase extends Entity implements Parsable {
      * Instantiates a new printerBase and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrinterBase() {
         super();
     }
@@ -60,8 +60,8 @@ public class PrinterBase extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a printerBase
      */
-    @javax.annotation.Nonnull
-    public static PrinterBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrinterBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -77,7 +77,7 @@ public class PrinterBase extends Entity implements Parsable {
      * Gets the capabilities property value. The capabilities property
      * @return a printerCapabilities
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrinterCapabilities getCapabilities() {
         return this.capabilities;
     }
@@ -85,7 +85,7 @@ public class PrinterBase extends Entity implements Parsable {
      * Gets the defaults property value. The defaults property
      * @return a printerDefaults
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrinterDefaults getDefaults() {
         return this.defaults;
     }
@@ -93,7 +93,7 @@ public class PrinterBase extends Entity implements Parsable {
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -101,7 +101,7 @@ public class PrinterBase extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("capabilities", (n) -> { this.setCapabilities(n.getObjectValue(PrinterCapabilities::createFromDiscriminatorValue)); });
@@ -120,7 +120,7 @@ public class PrinterBase extends Entity implements Parsable {
      * Gets the isAcceptingJobs property value. The isAcceptingJobs property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAcceptingJobs() {
         return this.isAcceptingJobs;
     }
@@ -128,7 +128,7 @@ public class PrinterBase extends Entity implements Parsable {
      * Gets the jobs property value. The jobs property
      * @return a printJob
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintJob> getJobs() {
         return this.jobs;
     }
@@ -136,7 +136,7 @@ public class PrinterBase extends Entity implements Parsable {
      * Gets the location property value. The location property
      * @return a printerLocation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrinterLocation getLocation() {
         return this.location;
     }
@@ -144,7 +144,7 @@ public class PrinterBase extends Entity implements Parsable {
      * Gets the manufacturer property value. The manufacturer property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManufacturer() {
         return this.manufacturer;
     }
@@ -152,7 +152,7 @@ public class PrinterBase extends Entity implements Parsable {
      * Gets the model property value. The model property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getModel() {
         return this.model;
     }
@@ -160,7 +160,7 @@ public class PrinterBase extends Entity implements Parsable {
      * Gets the name property value. The name property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -168,7 +168,7 @@ public class PrinterBase extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a printerStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrinterStatus getStatus() {
         return this.status;
     }
@@ -177,8 +177,8 @@ public class PrinterBase extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("capabilities", this.getCapabilities());
@@ -197,8 +197,8 @@ public class PrinterBase extends Entity implements Parsable {
      * @param value Value to set for the capabilities property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCapabilities(@javax.annotation.Nullable final PrinterCapabilities value) {
+    @jakarta.annotation.Nonnull
+    public void setCapabilities(@jakarta.annotation.Nullable final PrinterCapabilities value) {
         this.capabilities = value;
     }
     /**
@@ -206,8 +206,8 @@ public class PrinterBase extends Entity implements Parsable {
      * @param value Value to set for the defaults property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaults(@javax.annotation.Nullable final PrinterDefaults value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaults(@jakarta.annotation.Nullable final PrinterDefaults value) {
         this.defaults = value;
     }
     /**
@@ -215,8 +215,8 @@ public class PrinterBase extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -224,8 +224,8 @@ public class PrinterBase extends Entity implements Parsable {
      * @param value Value to set for the isAcceptingJobs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAcceptingJobs(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsAcceptingJobs(@jakarta.annotation.Nullable final Boolean value) {
         this.isAcceptingJobs = value;
     }
     /**
@@ -233,8 +233,8 @@ public class PrinterBase extends Entity implements Parsable {
      * @param value Value to set for the jobs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJobs(@javax.annotation.Nullable final java.util.List<PrintJob> value) {
+    @jakarta.annotation.Nonnull
+    public void setJobs(@jakarta.annotation.Nullable final java.util.List<PrintJob> value) {
         this.jobs = value;
     }
     /**
@@ -242,8 +242,8 @@ public class PrinterBase extends Entity implements Parsable {
      * @param value Value to set for the location property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocation(@javax.annotation.Nullable final PrinterLocation value) {
+    @jakarta.annotation.Nonnull
+    public void setLocation(@jakarta.annotation.Nullable final PrinterLocation value) {
         this.location = value;
     }
     /**
@@ -251,8 +251,8 @@ public class PrinterBase extends Entity implements Parsable {
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManufacturer(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
@@ -260,8 +260,8 @@ public class PrinterBase extends Entity implements Parsable {
      * @param value Value to set for the model property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
@@ -269,8 +269,8 @@ public class PrinterBase extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -278,8 +278,8 @@ public class PrinterBase extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final PrinterStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final PrinterStatus value) {
         this.status = value;
     }
 }

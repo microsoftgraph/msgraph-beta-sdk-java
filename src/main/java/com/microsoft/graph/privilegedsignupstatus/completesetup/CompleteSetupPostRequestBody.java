@@ -21,7 +21,7 @@ public class CompleteSetupPostRequestBody implements AdditionalDataHolder, Parsa
      * Instantiates a new completeSetupPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CompleteSetupPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -30,8 +30,8 @@ public class CompleteSetupPostRequestBody implements AdditionalDataHolder, Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a completeSetupPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static CompleteSetupPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CompleteSetupPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CompleteSetupPostRequestBody();
     }
@@ -39,7 +39,7 @@ public class CompleteSetupPostRequestBody implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -47,7 +47,7 @@ public class CompleteSetupPostRequestBody implements AdditionalDataHolder, Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
         deserializerMap.put("tenantSetupInfo", (n) -> { this.setTenantSetupInfo(n.getObjectValue(TenantSetupInfo::createFromDiscriminatorValue)); });
@@ -57,7 +57,7 @@ public class CompleteSetupPostRequestBody implements AdditionalDataHolder, Parsa
      * Gets the tenantSetupInfo property value. The tenantSetupInfo property
      * @return a tenantSetupInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TenantSetupInfo getTenantSetupInfo() {
         return this.tenantSetupInfo;
     }
@@ -66,19 +66,19 @@ public class CompleteSetupPostRequestBody implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("tenantSetupInfo", this.getTenantSetupInfo());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -86,8 +86,8 @@ public class CompleteSetupPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the tenantSetupInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantSetupInfo(@javax.annotation.Nullable final TenantSetupInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantSetupInfo(@jakarta.annotation.Nullable final TenantSetupInfo value) {
         this.tenantSetupInfo = value;
     }
 }

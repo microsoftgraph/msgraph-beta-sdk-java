@@ -44,7 +44,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * Instantiates a new staleSignInAlertIncident and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public StaleSignInAlertIncident() {
         super();
         this.setOdataType("#microsoft.graph.staleSignInAlertIncident");
@@ -54,8 +54,8 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a staleSignInAlertIncident
      */
-    @javax.annotation.Nonnull
-    public static StaleSignInAlertIncident createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static StaleSignInAlertIncident createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new StaleSignInAlertIncident();
     }
@@ -63,7 +63,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * Gets the assigneeDisplayName property value. Display name of the subject that the incident applies to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssigneeDisplayName() {
         return this.assigneeDisplayName;
     }
@@ -71,7 +71,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * Gets the assigneeId property value. The identifier of the subject that the incident applies to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssigneeId() {
         return this.assigneeId;
     }
@@ -79,7 +79,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * Gets the assigneeUserPrincipalName property value. User principal name of the subject that the incident applies to. Applies to user principals.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssigneeUserPrincipalName() {
         return this.assigneeUserPrincipalName;
     }
@@ -87,7 +87,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * Gets the assignmentCreatedDateTime property value. Date and time of assignment creation.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getAssignmentCreatedDateTime() {
         return this.assignmentCreatedDateTime;
     }
@@ -95,7 +95,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assigneeDisplayName", (n) -> { this.setAssigneeDisplayName(n.getStringValue()); });
@@ -112,7 +112,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * Gets the lastSignInDateTime property value. Date and time of last sign in.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSignInDateTime() {
         return this.lastSignInDateTime;
     }
@@ -120,7 +120,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * Gets the roleDefinitionId property value. The identifier for the directory role definition that's in scope of this incident.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
@@ -128,7 +128,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * Gets the roleDisplayName property value. The display name for the directory role.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleDisplayName() {
         return this.roleDisplayName;
     }
@@ -136,7 +136,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * Gets the roleTemplateId property value. The globally unique identifier for the directory role.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleTemplateId() {
         return this.roleTemplateId;
     }
@@ -145,8 +145,8 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("assigneeDisplayName", this.getAssigneeDisplayName());
@@ -163,8 +163,8 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * @param value Value to set for the assigneeDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssigneeDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssigneeDisplayName(@jakarta.annotation.Nullable final String value) {
         this.assigneeDisplayName = value;
     }
     /**
@@ -172,8 +172,8 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * @param value Value to set for the assigneeId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssigneeId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssigneeId(@jakarta.annotation.Nullable final String value) {
         this.assigneeId = value;
     }
     /**
@@ -181,8 +181,8 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * @param value Value to set for the assigneeUserPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssigneeUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssigneeUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.assigneeUserPrincipalName = value;
     }
     /**
@@ -190,8 +190,8 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * @param value Value to set for the assignmentCreatedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignmentCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.assignmentCreatedDateTime = value;
     }
     /**
@@ -199,8 +199,8 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * @param value Value to set for the lastSignInDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSignInDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastSignInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSignInDateTime = value;
     }
     /**
@@ -208,8 +208,8 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.roleDefinitionId = value;
     }
     /**
@@ -217,8 +217,8 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * @param value Value to set for the roleDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDisplayName(@jakarta.annotation.Nullable final String value) {
         this.roleDisplayName = value;
     }
     /**
@@ -226,8 +226,8 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      * @param value Value to set for the roleTemplateId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleTemplateId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleTemplateId(@jakarta.annotation.Nullable final String value) {
         this.roleTemplateId = value;
     }
 }

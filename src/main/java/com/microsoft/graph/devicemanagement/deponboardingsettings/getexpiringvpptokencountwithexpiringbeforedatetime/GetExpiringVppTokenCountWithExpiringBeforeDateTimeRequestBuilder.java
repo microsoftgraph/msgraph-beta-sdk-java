@@ -25,8 +25,8 @@ public class GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder ex
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter, @javax.annotation.Nullable final String expiringBeforeDateTime) {
+    @jakarta.annotation.Nullable
+    public GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String expiringBeforeDateTime) {
         super(requestAdapter, "{+baseurl}/deviceManagement/depOnboardingSettings/getExpiringVppTokenCount(expiringBeforeDateTime='{expiringBeforeDateTime}')", pathParameters);
         this.pathParameters.put("expiringBeforeDateTime", expiringBeforeDateTime);
     }
@@ -36,15 +36,15 @@ public class GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder ex
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/depOnboardingSettings/getExpiringVppTokenCount(expiringBeforeDateTime='{expiringBeforeDateTime}')", rawUrl);
     }
     /**
      * Invoke function getExpiringVppTokenCount
      * @return a CompletableFuture of getExpiringVppTokenCountWithExpiringBeforeDateTimeResponse
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetExpiringVppTokenCountWithExpiringBeforeDateTimeResponse> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -63,8 +63,8 @@ public class GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder ex
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of getExpiringVppTokenCountWithExpiringBeforeDateTimeResponse
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetExpiringVppTokenCountWithExpiringBeforeDateTimeResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<GetExpiringVppTokenCountWithExpiringBeforeDateTimeResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -81,7 +81,7 @@ public class GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder ex
      * Invoke function getExpiringVppTokenCount
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -90,8 +90,8 @@ public class GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder ex
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;

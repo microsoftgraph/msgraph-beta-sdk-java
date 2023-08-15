@@ -11,7 +11,7 @@ import java.util.Objects;
  */
 public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implements Parsable {
     /**
-     * Number of active devices for using that app over a 14-day period. Valid values -2147483648 to 2147483647
+     * Number of active devices for using that app over a 14-day period. Valid values 0 to 2147483647
      */
     private Integer activeDevices;
     /**
@@ -27,7 +27,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      */
     private String appPublisher;
     /**
-     * The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days computed across all devices in the tenant. Unit in percentage. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days computed across all devices in the tenant. Unit in percentage. Valid values 0 to 1.79769313486232E+308
      */
     private Double batteryUsagePercentage;
     /**
@@ -38,7 +38,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * Instantiates a new userExperienceAnalyticsBatteryHealthAppImpact and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsBatteryHealthAppImpact() {
         super();
     }
@@ -47,16 +47,16 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsBatteryHealthAppImpact
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsBatteryHealthAppImpact createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsBatteryHealthAppImpact createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsBatteryHealthAppImpact();
     }
     /**
-     * Gets the activeDevices property value. Number of active devices for using that app over a 14-day period. Valid values -2147483648 to 2147483647
+     * Gets the activeDevices property value. Number of active devices for using that app over a 14-day period. Valid values 0 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getActiveDevices() {
         return this.activeDevices;
     }
@@ -64,7 +64,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * Gets the appDisplayName property value. User friendly display name for the app. Eg: Outlook
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppDisplayName() {
         return this.appDisplayName;
     }
@@ -72,7 +72,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * Gets the appName property value. App name. Eg: oltk.exe
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppName() {
         return this.appName;
     }
@@ -80,15 +80,15 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * Gets the appPublisher property value. App publisher. Eg: Microsoft Corporation
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppPublisher() {
         return this.appPublisher;
     }
     /**
-     * Gets the batteryUsagePercentage property value. The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days computed across all devices in the tenant. Unit in percentage. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Gets the batteryUsagePercentage property value. The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days computed across all devices in the tenant. Unit in percentage. Valid values 0 to 1.79769313486232E+308
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getBatteryUsagePercentage() {
         return this.batteryUsagePercentage;
     }
@@ -96,7 +96,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeDevices", (n) -> { this.setActiveDevices(n.getIntegerValue()); });
@@ -111,7 +111,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * Gets the isForegroundApp property value. true if the user had active interaction with the app.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsForegroundApp() {
         return this.isForegroundApp;
     }
@@ -120,8 +120,8 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("activeDevices", this.getActiveDevices());
@@ -132,12 +132,12 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
         writer.writeBooleanValue("isForegroundApp", this.getIsForegroundApp());
     }
     /**
-     * Sets the activeDevices property value. Number of active devices for using that app over a 14-day period. Valid values -2147483648 to 2147483647
+     * Sets the activeDevices property value. Number of active devices for using that app over a 14-day period. Valid values 0 to 2147483647
      * @param value Value to set for the activeDevices property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActiveDevices(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setActiveDevices(@jakarta.annotation.Nullable final Integer value) {
         this.activeDevices = value;
     }
     /**
@@ -145,8 +145,8 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.appDisplayName = value;
     }
     /**
@@ -154,8 +154,8 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * @param value Value to set for the appName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppName(@jakarta.annotation.Nullable final String value) {
         this.appName = value;
     }
     /**
@@ -163,17 +163,17 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * @param value Value to set for the appPublisher property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppPublisher(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppPublisher(@jakarta.annotation.Nullable final String value) {
         this.appPublisher = value;
     }
     /**
-     * Sets the batteryUsagePercentage property value. The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days computed across all devices in the tenant. Unit in percentage. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * Sets the batteryUsagePercentage property value. The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days computed across all devices in the tenant. Unit in percentage. Valid values 0 to 1.79769313486232E+308
      * @param value Value to set for the batteryUsagePercentage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBatteryUsagePercentage(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setBatteryUsagePercentage(@jakarta.annotation.Nullable final Double value) {
         this.batteryUsagePercentage = value;
     }
     /**
@@ -181,8 +181,8 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * @param value Value to set for the isForegroundApp property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsForegroundApp(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsForegroundApp(@jakarta.annotation.Nullable final Boolean value) {
         this.isForegroundApp = value;
     }
 }

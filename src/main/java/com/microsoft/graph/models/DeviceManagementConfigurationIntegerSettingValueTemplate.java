@@ -26,7 +26,7 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      * Instantiates a new deviceManagementConfigurationIntegerSettingValueTemplate and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationIntegerSettingValueTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationIntegerSettingValueTemplate");
@@ -36,8 +36,8 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationIntegerSettingValueTemplate
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationIntegerSettingValueTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationIntegerSettingValueTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationIntegerSettingValueTemplate();
     }
@@ -45,7 +45,7 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      * Gets the defaultValue property value. Integer Setting Value Default Template.
      * @return a deviceManagementConfigurationIntegerSettingValueDefaultTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationIntegerSettingValueDefaultTemplate getDefaultValue() {
         return this.defaultValue;
     }
@@ -53,7 +53,7 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getObjectValue(DeviceManagementConfigurationIntegerSettingValueDefaultTemplate::createFromDiscriminatorValue)); });
@@ -65,7 +65,7 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      * Gets the recommendedValueDefinition property value. Recommended value definition.
      * @return a deviceManagementConfigurationIntegerSettingValueDefinitionTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate getRecommendedValueDefinition() {
         return this.recommendedValueDefinition;
     }
@@ -73,7 +73,7 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      * Gets the requiredValueDefinition property value. Required value definition.
      * @return a deviceManagementConfigurationIntegerSettingValueDefinitionTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate getRequiredValueDefinition() {
         return this.requiredValueDefinition;
     }
@@ -82,8 +82,8 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("defaultValue", this.getDefaultValue());
@@ -95,8 +95,8 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultValue(@javax.annotation.Nullable final DeviceManagementConfigurationIntegerSettingValueDefaultTemplate value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaultValue(@jakarta.annotation.Nullable final DeviceManagementConfigurationIntegerSettingValueDefaultTemplate value) {
         this.defaultValue = value;
     }
     /**
@@ -104,8 +104,8 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      * @param value Value to set for the recommendedValueDefinition property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecommendedValueDefinition(@javax.annotation.Nullable final DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate value) {
+    @jakarta.annotation.Nonnull
+    public void setRecommendedValueDefinition(@jakarta.annotation.Nullable final DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate value) {
         this.recommendedValueDefinition = value;
     }
     /**
@@ -113,8 +113,8 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      * @param value Value to set for the requiredValueDefinition property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequiredValueDefinition(@javax.annotation.Nullable final DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate value) {
+    @jakarta.annotation.Nonnull
+    public void setRequiredValueDefinition(@jakarta.annotation.Nullable final DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate value) {
         this.requiredValueDefinition = value;
     }
 }

@@ -48,7 +48,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * Instantiates a new regionalFormatOverrides and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RegionalFormatOverrides() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -57,8 +57,8 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a regionalFormatOverrides
      */
-    @javax.annotation.Nonnull
-    public static RegionalFormatOverrides createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RegionalFormatOverrides createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RegionalFormatOverrides();
     }
@@ -66,7 +66,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -74,7 +74,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * Gets the calendar property value. The calendar to use, e.g., Gregorian Calendar.Returned by default.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCalendar() {
         return this.calendar;
     }
@@ -82,7 +82,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("calendar", (n) -> { this.setCalendar(n.getStringValue()); });
@@ -99,7 +99,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * Gets the firstDayOfWeek property value. The first day of the week to use, e.g., Sunday.Returned by default.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFirstDayOfWeek() {
         return this.firstDayOfWeek;
     }
@@ -107,7 +107,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * Gets the longDateFormat property value. The long date time format to be used for displaying dates.Returned by default.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLongDateFormat() {
         return this.longDateFormat;
     }
@@ -115,7 +115,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * Gets the longTimeFormat property value. The long time format to be used for displaying time.Returned by default.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLongTimeFormat() {
         return this.longTimeFormat;
     }
@@ -123,7 +123,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -131,7 +131,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * Gets the shortDateFormat property value. The short date time format to be used for displaying dates.Returned by default.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getShortDateFormat() {
         return this.shortDateFormat;
     }
@@ -139,7 +139,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * Gets the shortTimeFormat property value. The short time format to be used for displaying time.Returned by default.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getShortTimeFormat() {
         return this.shortTimeFormat;
     }
@@ -147,7 +147,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * Gets the timeZone property value. The timezone to be used for displaying time.Returned by default.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTimeZone() {
         return this.timeZone;
     }
@@ -156,8 +156,8 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("calendar", this.getCalendar());
         writer.writeStringValue("firstDayOfWeek", this.getFirstDayOfWeek());
@@ -171,11 +171,11 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -183,8 +183,8 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the calendar property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCalendar(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCalendar(@jakarta.annotation.Nullable final String value) {
         this.calendar = value;
     }
     /**
@@ -192,8 +192,8 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the firstDayOfWeek property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirstDayOfWeek(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFirstDayOfWeek(@jakarta.annotation.Nullable final String value) {
         this.firstDayOfWeek = value;
     }
     /**
@@ -201,8 +201,8 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the longDateFormat property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLongDateFormat(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLongDateFormat(@jakarta.annotation.Nullable final String value) {
         this.longDateFormat = value;
     }
     /**
@@ -210,17 +210,17 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the longTimeFormat property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLongTimeFormat(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLongTimeFormat(@jakarta.annotation.Nullable final String value) {
         this.longTimeFormat = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -228,8 +228,8 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the shortDateFormat property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShortDateFormat(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setShortDateFormat(@jakarta.annotation.Nullable final String value) {
         this.shortDateFormat = value;
     }
     /**
@@ -237,8 +237,8 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the shortTimeFormat property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShortTimeFormat(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setShortTimeFormat(@jakarta.annotation.Nullable final String value) {
         this.shortTimeFormat = value;
     }
     /**
@@ -246,8 +246,8 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the timeZone property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTimeZone(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTimeZone(@jakarta.annotation.Nullable final String value) {
         this.timeZone = value;
     }
 }

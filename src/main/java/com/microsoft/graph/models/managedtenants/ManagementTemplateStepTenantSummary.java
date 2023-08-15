@@ -73,7 +73,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * Instantiates a new managementTemplateStepTenantSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagementTemplateStepTenantSummary() {
         super();
     }
@@ -82,8 +82,8 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managementTemplateStepTenantSummary
      */
-    @javax.annotation.Nonnull
-    public static ManagementTemplateStepTenantSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagementTemplateStepTenantSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagementTemplateStepTenantSummary();
     }
@@ -91,7 +91,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * Gets the assignedTenantsCount property value. The assignedTenantsCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getAssignedTenantsCount() {
         return this.assignedTenantsCount;
     }
@@ -99,7 +99,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * Gets the compliantTenantsCount property value. The compliantTenantsCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCompliantTenantsCount() {
         return this.compliantTenantsCount;
     }
@@ -107,7 +107,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * Gets the createdByUserId property value. The createdByUserId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
         return this.createdByUserId;
     }
@@ -115,7 +115,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * Gets the createdDateTime property value. The createdDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -123,7 +123,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * Gets the dismissedTenantsCount property value. The dismissedTenantsCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDismissedTenantsCount() {
         return this.dismissedTenantsCount;
     }
@@ -131,7 +131,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignedTenantsCount", (n) -> { this.setAssignedTenantsCount(n.getIntegerValue()); });
@@ -155,7 +155,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * Gets the ineligibleTenantsCount property value. The ineligibleTenantsCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getIneligibleTenantsCount() {
         return this.ineligibleTenantsCount;
     }
@@ -163,7 +163,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * Gets the lastActionByUserId property value. The lastActionByUserId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
         return this.lastActionByUserId;
     }
@@ -171,7 +171,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * Gets the lastActionDateTime property value. The lastActionDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
         return this.lastActionDateTime;
     }
@@ -179,7 +179,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * Gets the managementTemplateCollectionDisplayName property value. The managementTemplateCollectionDisplayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagementTemplateCollectionDisplayName() {
         return this.managementTemplateCollectionDisplayName;
     }
@@ -187,7 +187,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * Gets the managementTemplateCollectionId property value. The managementTemplateCollectionId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagementTemplateCollectionId() {
         return this.managementTemplateCollectionId;
     }
@@ -195,7 +195,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * Gets the managementTemplateDisplayName property value. The managementTemplateDisplayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagementTemplateDisplayName() {
         return this.managementTemplateDisplayName;
     }
@@ -203,7 +203,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * Gets the managementTemplateId property value. The managementTemplateId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagementTemplateId() {
         return this.managementTemplateId;
     }
@@ -211,7 +211,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * Gets the managementTemplateStepDisplayName property value. The managementTemplateStepDisplayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagementTemplateStepDisplayName() {
         return this.managementTemplateStepDisplayName;
     }
@@ -219,7 +219,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * Gets the managementTemplateStepId property value. The managementTemplateStepId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagementTemplateStepId() {
         return this.managementTemplateStepId;
     }
@@ -227,7 +227,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * Gets the notCompliantTenantsCount property value. The notCompliantTenantsCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNotCompliantTenantsCount() {
         return this.notCompliantTenantsCount;
     }
@@ -236,8 +236,8 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("assignedTenantsCount", this.getAssignedTenantsCount());
@@ -261,8 +261,8 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param value Value to set for the assignedTenantsCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignedTenantsCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignedTenantsCount(@jakarta.annotation.Nullable final Integer value) {
         this.assignedTenantsCount = value;
     }
     /**
@@ -270,8 +270,8 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param value Value to set for the compliantTenantsCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompliantTenantsCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setCompliantTenantsCount(@jakarta.annotation.Nullable final Integer value) {
         this.compliantTenantsCount = value;
     }
     /**
@@ -279,8 +279,8 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param value Value to set for the createdByUserId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedByUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedByUserId(@jakarta.annotation.Nullable final String value) {
         this.createdByUserId = value;
     }
     /**
@@ -288,8 +288,8 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -297,8 +297,8 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param value Value to set for the dismissedTenantsCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDismissedTenantsCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setDismissedTenantsCount(@jakarta.annotation.Nullable final Integer value) {
         this.dismissedTenantsCount = value;
     }
     /**
@@ -306,8 +306,8 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param value Value to set for the ineligibleTenantsCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIneligibleTenantsCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setIneligibleTenantsCount(@jakarta.annotation.Nullable final Integer value) {
         this.ineligibleTenantsCount = value;
     }
     /**
@@ -315,8 +315,8 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param value Value to set for the lastActionByUserId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActionByUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLastActionByUserId(@jakarta.annotation.Nullable final String value) {
         this.lastActionByUserId = value;
     }
     /**
@@ -324,8 +324,8 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param value Value to set for the lastActionDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastActionDateTime = value;
     }
     /**
@@ -333,8 +333,8 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param value Value to set for the managementTemplateCollectionDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateCollectionDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManagementTemplateCollectionDisplayName(@jakarta.annotation.Nullable final String value) {
         this.managementTemplateCollectionDisplayName = value;
     }
     /**
@@ -342,8 +342,8 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param value Value to set for the managementTemplateCollectionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateCollectionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManagementTemplateCollectionId(@jakarta.annotation.Nullable final String value) {
         this.managementTemplateCollectionId = value;
     }
     /**
@@ -351,8 +351,8 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param value Value to set for the managementTemplateDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManagementTemplateDisplayName(@jakarta.annotation.Nullable final String value) {
         this.managementTemplateDisplayName = value;
     }
     /**
@@ -360,8 +360,8 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param value Value to set for the managementTemplateId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManagementTemplateId(@jakarta.annotation.Nullable final String value) {
         this.managementTemplateId = value;
     }
     /**
@@ -369,8 +369,8 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param value Value to set for the managementTemplateStepDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateStepDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManagementTemplateStepDisplayName(@jakarta.annotation.Nullable final String value) {
         this.managementTemplateStepDisplayName = value;
     }
     /**
@@ -378,8 +378,8 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param value Value to set for the managementTemplateStepId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateStepId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManagementTemplateStepId(@jakarta.annotation.Nullable final String value) {
         this.managementTemplateStepId = value;
     }
     /**
@@ -387,8 +387,8 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      * @param value Value to set for the notCompliantTenantsCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotCompliantTenantsCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNotCompliantTenantsCount(@jakarta.annotation.Nullable final Integer value) {
         this.notCompliantTenantsCount = value;
     }
 }

@@ -32,59 +32,59 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getDevicesScheduledToRetire method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public GetDevicesScheduledToRetireRequestBuilder getDevicesScheduledToRetire() {
         return new GetDevicesScheduledToRetireRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getNoncompliantDevicesToRetire method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public GetNoncompliantDevicesToRetireRequestBuilder getNoncompliantDevicesToRetire() {
         return new GetNoncompliantDevicesToRetireRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the hasPayloadLinks method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public HasPayloadLinksRequestBuilder hasPayloadLinks() {
         return new HasPayloadLinksRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the refreshDeviceComplianceReportSummarization method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RefreshDeviceComplianceReportSummarizationRequestBuilder refreshDeviceComplianceReportSummarization() {
         return new RefreshDeviceComplianceReportSummarizationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the setScheduledRetireState method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SetScheduledRetireStateRequestBuilder setScheduledRetireState() {
         return new SetScheduledRetireStateRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the validateComplianceScript method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ValidateComplianceScriptRequestBuilder validateComplianceScript() {
         return new ValidateComplianceScriptRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the deviceCompliancePolicies property of the microsoft.graph.deviceManagement entity.
-     * @param deviceCompliancePolicyId Unique identifier of the item
+     * @param deviceCompliancePolicyId The unique identifier of deviceCompliancePolicy
      * @return a DeviceCompliancePolicyItemRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public DeviceCompliancePolicyItemRequestBuilder byDeviceCompliancePolicyId(@javax.annotation.Nonnull final String deviceCompliancePolicyId) {
+    @jakarta.annotation.Nonnull
+    public DeviceCompliancePolicyItemRequestBuilder byDeviceCompliancePolicyId(@jakarta.annotation.Nonnull final String deviceCompliancePolicyId) {
         Objects.requireNonNull(deviceCompliancePolicyId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceCompliancePolicy%2Did", deviceCompliancePolicyId);
@@ -96,8 +96,8 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public DeviceCompliancePoliciesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public DeviceCompliancePoliciesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
@@ -106,15 +106,15 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public DeviceCompliancePoliciesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public DeviceCompliancePoliciesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
      * The device compliance policies.
      * @return a CompletableFuture of deviceCompliancePolicyCollectionResponse
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -133,8 +133,8 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCompliancePolicyCollectionResponse
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -152,8 +152,8 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a CompletableFuture of deviceCompliancePolicy
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> post(@javax.annotation.Nonnull final DeviceCompliancePolicy body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> post(@jakarta.annotation.Nonnull final DeviceCompliancePolicy body) {
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -172,8 +172,8 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceCompliancePolicy
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> post(@javax.annotation.Nonnull final DeviceCompliancePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> post(@jakarta.annotation.Nonnull final DeviceCompliancePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -191,7 +191,7 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
      * The device compliance policies.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -200,8 +200,8 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -221,8 +221,8 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final DeviceCompliancePolicy body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceCompliancePolicy body) throws URISyntaxException {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -231,8 +231,8 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final DeviceCompliancePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceCompliancePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -256,49 +256,49 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
          * Include count of items
          */
         @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Boolean count;
         /**
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Filter items by property values
          */
         @QueryParameter(name = "%24filter")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String filter;
         /**
          * Order items by property values
          */
         @QueryParameter(name = "%24orderby")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] orderby;
         /**
          * Search items by search phrases
          */
         @QueryParameter(name = "%24search")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String search;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
         /**
          * Skip the first n items
          */
         @QueryParameter(name = "%24skip")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer skip;
         /**
          * Show only the first n items
          */
         @QueryParameter(name = "%24top")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer top;
     }
     /**
@@ -308,7 +308,7 @@ public class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

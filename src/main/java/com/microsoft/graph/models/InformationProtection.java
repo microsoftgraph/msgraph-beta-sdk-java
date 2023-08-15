@@ -35,7 +35,7 @@ public class InformationProtection extends Entity implements Parsable {
      * Instantiates a new informationProtection and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InformationProtection() {
         super();
     }
@@ -44,8 +44,8 @@ public class InformationProtection extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a informationProtection
      */
-    @javax.annotation.Nonnull
-    public static InformationProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static InformationProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new InformationProtection();
     }
@@ -53,7 +53,7 @@ public class InformationProtection extends Entity implements Parsable {
      * Gets the bitlocker property value. The bitlocker property
      * @return a bitlocker
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Bitlocker getBitlocker() {
         return this.bitlocker;
     }
@@ -61,7 +61,7 @@ public class InformationProtection extends Entity implements Parsable {
      * Gets the dataLossPreventionPolicies property value. The dataLossPreventionPolicies property
      * @return a dataLossPreventionPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DataLossPreventionPolicy> getDataLossPreventionPolicies() {
         return this.dataLossPreventionPolicies;
     }
@@ -69,7 +69,7 @@ public class InformationProtection extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("bitlocker", (n) -> { this.setBitlocker(n.getObjectValue(Bitlocker::createFromDiscriminatorValue)); });
@@ -84,7 +84,7 @@ public class InformationProtection extends Entity implements Parsable {
      * Gets the policy property value. The policy property
      * @return a informationProtectionPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InformationProtectionPolicy getPolicy() {
         return this.policy;
     }
@@ -92,7 +92,7 @@ public class InformationProtection extends Entity implements Parsable {
      * Gets the sensitivityLabels property value. The sensitivityLabels property
      * @return a sensitivityLabel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SensitivityLabel> getSensitivityLabels() {
         return this.sensitivityLabels;
     }
@@ -100,7 +100,7 @@ public class InformationProtection extends Entity implements Parsable {
      * Gets the sensitivityPolicySettings property value. The sensitivityPolicySettings property
      * @return a sensitivityPolicySettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SensitivityPolicySettings getSensitivityPolicySettings() {
         return this.sensitivityPolicySettings;
     }
@@ -108,7 +108,7 @@ public class InformationProtection extends Entity implements Parsable {
      * Gets the threatAssessmentRequests property value. The threatAssessmentRequests property
      * @return a threatAssessmentRequest
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ThreatAssessmentRequest> getThreatAssessmentRequests() {
         return this.threatAssessmentRequests;
     }
@@ -117,8 +117,8 @@ public class InformationProtection extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("bitlocker", this.getBitlocker());
@@ -133,8 +133,8 @@ public class InformationProtection extends Entity implements Parsable {
      * @param value Value to set for the bitlocker property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBitlocker(@javax.annotation.Nullable final Bitlocker value) {
+    @jakarta.annotation.Nonnull
+    public void setBitlocker(@jakarta.annotation.Nullable final Bitlocker value) {
         this.bitlocker = value;
     }
     /**
@@ -142,8 +142,8 @@ public class InformationProtection extends Entity implements Parsable {
      * @param value Value to set for the dataLossPreventionPolicies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDataLossPreventionPolicies(@javax.annotation.Nullable final java.util.List<DataLossPreventionPolicy> value) {
+    @jakarta.annotation.Nonnull
+    public void setDataLossPreventionPolicies(@jakarta.annotation.Nullable final java.util.List<DataLossPreventionPolicy> value) {
         this.dataLossPreventionPolicies = value;
     }
     /**
@@ -151,8 +151,8 @@ public class InformationProtection extends Entity implements Parsable {
      * @param value Value to set for the policy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicy(@javax.annotation.Nullable final InformationProtectionPolicy value) {
+    @jakarta.annotation.Nonnull
+    public void setPolicy(@jakarta.annotation.Nullable final InformationProtectionPolicy value) {
         this.policy = value;
     }
     /**
@@ -160,8 +160,8 @@ public class InformationProtection extends Entity implements Parsable {
      * @param value Value to set for the sensitivityLabels property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSensitivityLabels(@javax.annotation.Nullable final java.util.List<SensitivityLabel> value) {
+    @jakarta.annotation.Nonnull
+    public void setSensitivityLabels(@jakarta.annotation.Nullable final java.util.List<SensitivityLabel> value) {
         this.sensitivityLabels = value;
     }
     /**
@@ -169,8 +169,8 @@ public class InformationProtection extends Entity implements Parsable {
      * @param value Value to set for the sensitivityPolicySettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSensitivityPolicySettings(@javax.annotation.Nullable final SensitivityPolicySettings value) {
+    @jakarta.annotation.Nonnull
+    public void setSensitivityPolicySettings(@jakarta.annotation.Nullable final SensitivityPolicySettings value) {
         this.sensitivityPolicySettings = value;
     }
     /**
@@ -178,8 +178,8 @@ public class InformationProtection extends Entity implements Parsable {
      * @param value Value to set for the threatAssessmentRequests property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThreatAssessmentRequests(@javax.annotation.Nullable final java.util.List<ThreatAssessmentRequest> value) {
+    @jakarta.annotation.Nonnull
+    public void setThreatAssessmentRequests(@jakarta.annotation.Nullable final java.util.List<ThreatAssessmentRequest> value) {
         this.threatAssessmentRequests = value;
     }
 }

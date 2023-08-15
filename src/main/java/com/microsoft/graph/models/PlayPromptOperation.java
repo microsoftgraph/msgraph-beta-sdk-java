@@ -15,7 +15,7 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
      * Instantiates a new playPromptOperation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlayPromptOperation() {
         super();
     }
@@ -24,8 +24,8 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a playPromptOperation
      */
-    @javax.annotation.Nonnull
-    public static PlayPromptOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PlayPromptOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PlayPromptOperation();
     }
@@ -33,7 +33,7 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
      * Gets the completionReason property value. Possible values are: unknown, completedSuccessfully, mediaOperationCanceled.
      * @return a playPromptCompletionReason
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlayPromptCompletionReason getCompletionReason() {
         return this.completionReason;
     }
@@ -41,7 +41,7 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("completionReason", (n) -> { this.setCompletionReason(n.getEnumValue(PlayPromptCompletionReason.class)); });
@@ -52,8 +52,8 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("completionReason", this.getCompletionReason());
@@ -63,8 +63,8 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
      * @param value Value to set for the completionReason property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletionReason(@javax.annotation.Nullable final PlayPromptCompletionReason value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletionReason(@jakarta.annotation.Nullable final PlayPromptCompletionReason value) {
         this.completionReason = value;
     }
 }

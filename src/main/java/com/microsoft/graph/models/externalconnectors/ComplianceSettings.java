@@ -13,7 +13,7 @@ public class ComplianceSettings implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Enables the developer to define the appearance of the content and configure conditions that dictate when the template should be displayed. Maximum of two eDiscovery result templates per connection.
+     * The eDiscoveryResultTemplates property
      */
     private java.util.List<DisplayTemplate> eDiscoveryResultTemplates;
     /**
@@ -24,7 +24,7 @@ public class ComplianceSettings implements AdditionalDataHolder, Parsable {
      * Instantiates a new complianceSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ComplianceSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -33,8 +33,8 @@ public class ComplianceSettings implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a complianceSettings
      */
-    @javax.annotation.Nonnull
-    public static ComplianceSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ComplianceSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ComplianceSettings();
     }
@@ -42,15 +42,15 @@ public class ComplianceSettings implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
     /**
-     * Gets the eDiscoveryResultTemplates property value. Enables the developer to define the appearance of the content and configure conditions that dictate when the template should be displayed. Maximum of two eDiscovery result templates per connection.
+     * Gets the eDiscoveryResultTemplates property value. The eDiscoveryResultTemplates property
      * @return a displayTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DisplayTemplate> getEDiscoveryResultTemplates() {
         return this.eDiscoveryResultTemplates;
     }
@@ -58,7 +58,7 @@ public class ComplianceSettings implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("eDiscoveryResultTemplates", (n) -> { this.setEDiscoveryResultTemplates(n.getCollectionOfObjectValues(DisplayTemplate::createFromDiscriminatorValue)); });
@@ -69,7 +69,7 @@ public class ComplianceSettings implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -78,8 +78,8 @@ public class ComplianceSettings implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("eDiscoveryResultTemplates", this.getEDiscoveryResultTemplates());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -87,29 +87,29 @@ public class ComplianceSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the eDiscoveryResultTemplates property value. Enables the developer to define the appearance of the content and configure conditions that dictate when the template should be displayed. Maximum of two eDiscovery result templates per connection.
+     * Sets the eDiscoveryResultTemplates property value. The eDiscoveryResultTemplates property
      * @param value Value to set for the eDiscoveryResultTemplates property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEDiscoveryResultTemplates(@javax.annotation.Nullable final java.util.List<DisplayTemplate> value) {
+    @jakarta.annotation.Nonnull
+    public void setEDiscoveryResultTemplates(@jakarta.annotation.Nullable final java.util.List<DisplayTemplate> value) {
         this.eDiscoveryResultTemplates = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

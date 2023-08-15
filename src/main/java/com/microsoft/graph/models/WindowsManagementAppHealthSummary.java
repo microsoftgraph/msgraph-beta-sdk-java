@@ -26,7 +26,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
      * Instantiates a new windowsManagementAppHealthSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsManagementAppHealthSummary() {
         super();
     }
@@ -35,8 +35,8 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsManagementAppHealthSummary
      */
-    @javax.annotation.Nonnull
-    public static WindowsManagementAppHealthSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsManagementAppHealthSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsManagementAppHealthSummary();
     }
@@ -44,7 +44,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("healthyDeviceCount", (n) -> { this.setHealthyDeviceCount(n.getIntegerValue()); });
@@ -56,7 +56,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
      * Gets the healthyDeviceCount property value. Healthy device count.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getHealthyDeviceCount() {
         return this.healthyDeviceCount;
     }
@@ -64,7 +64,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
      * Gets the unhealthyDeviceCount property value. Unhealthy device count.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getUnhealthyDeviceCount() {
         return this.unhealthyDeviceCount;
     }
@@ -72,7 +72,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
      * Gets the unknownDeviceCount property value. Unknown device count.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {
         return this.unknownDeviceCount;
     }
@@ -81,8 +81,8 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("healthyDeviceCount", this.getHealthyDeviceCount());
@@ -94,8 +94,8 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
      * @param value Value to set for the healthyDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHealthyDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setHealthyDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.healthyDeviceCount = value;
     }
     /**
@@ -103,8 +103,8 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
      * @param value Value to set for the unhealthyDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnhealthyDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setUnhealthyDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.unhealthyDeviceCount = value;
     }
     /**
@@ -112,8 +112,8 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
      * @param value Value to set for the unknownDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnknownDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setUnknownDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.unknownDeviceCount = value;
     }
 }

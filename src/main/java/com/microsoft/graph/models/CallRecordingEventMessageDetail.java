@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
     /**
      * Duration of the call recording.
      */
-    private Period callRecordingDuration;
+    private PeriodAndDuration callRecordingDuration;
     /**
      * Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
      */
@@ -40,7 +40,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * Instantiates a new callRecordingEventMessageDetail and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CallRecordingEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.callRecordingEventMessageDetail");
@@ -50,8 +50,8 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a callRecordingEventMessageDetail
      */
-    @javax.annotation.Nonnull
-    public static CallRecordingEventMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CallRecordingEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CallRecordingEventMessageDetail();
     }
@@ -59,7 +59,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * Gets the callId property value. Unique identifier of the call.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCallId() {
         return this.callId;
     }
@@ -67,23 +67,23 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * Gets the callRecordingDisplayName property value. Display name for the call recording.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCallRecordingDisplayName() {
         return this.callRecordingDisplayName;
     }
     /**
      * Gets the callRecordingDuration property value. Duration of the call recording.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
-    public Period getCallRecordingDuration() {
+    @jakarta.annotation.Nullable
+    public PeriodAndDuration getCallRecordingDuration() {
         return this.callRecordingDuration;
     }
     /**
      * Gets the callRecordingStatus property value. Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
      * @return a callRecordingStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CallRecordingStatus getCallRecordingStatus() {
         return this.callRecordingStatus;
     }
@@ -91,7 +91,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * Gets the callRecordingUrl property value. Call recording URL.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCallRecordingUrl() {
         return this.callRecordingUrl;
     }
@@ -99,12 +99,12 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("callId", (n) -> { this.setCallId(n.getStringValue()); });
         deserializerMap.put("callRecordingDisplayName", (n) -> { this.setCallRecordingDisplayName(n.getStringValue()); });
-        deserializerMap.put("callRecordingDuration", (n) -> { this.setCallRecordingDuration(n.getPeriodValue()); });
+        deserializerMap.put("callRecordingDuration", (n) -> { this.setCallRecordingDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("callRecordingStatus", (n) -> { this.setCallRecordingStatus(n.getEnumValue(CallRecordingStatus.class)); });
         deserializerMap.put("callRecordingUrl", (n) -> { this.setCallRecordingUrl(n.getStringValue()); });
         deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -115,7 +115,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * Gets the initiator property value. Initiator of the event.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
         return this.initiator;
     }
@@ -123,7 +123,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * Gets the meetingOrganizer property value. Organizer of the meeting.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getMeetingOrganizer() {
         return this.meetingOrganizer;
     }
@@ -132,13 +132,13 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("callId", this.getCallId());
         writer.writeStringValue("callRecordingDisplayName", this.getCallRecordingDisplayName());
-        writer.writePeriodValue("callRecordingDuration", this.getCallRecordingDuration());
+        writer.writePeriodAndDurationValue("callRecordingDuration", this.getCallRecordingDuration());
         writer.writeEnumValue("callRecordingStatus", this.getCallRecordingStatus());
         writer.writeStringValue("callRecordingUrl", this.getCallRecordingUrl());
         writer.writeObjectValue("initiator", this.getInitiator());
@@ -149,8 +149,8 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * @param value Value to set for the callId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCallId(@jakarta.annotation.Nullable final String value) {
         this.callId = value;
     }
     /**
@@ -158,8 +158,8 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * @param value Value to set for the callRecordingDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallRecordingDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCallRecordingDisplayName(@jakarta.annotation.Nullable final String value) {
         this.callRecordingDisplayName = value;
     }
     /**
@@ -167,8 +167,8 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * @param value Value to set for the callRecordingDuration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallRecordingDuration(@javax.annotation.Nullable final Period value) {
+    @jakarta.annotation.Nonnull
+    public void setCallRecordingDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.callRecordingDuration = value;
     }
     /**
@@ -176,8 +176,8 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * @param value Value to set for the callRecordingStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallRecordingStatus(@javax.annotation.Nullable final CallRecordingStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setCallRecordingStatus(@jakarta.annotation.Nullable final CallRecordingStatus value) {
         this.callRecordingStatus = value;
     }
     /**
@@ -185,8 +185,8 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * @param value Value to set for the callRecordingUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallRecordingUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCallRecordingUrl(@jakarta.annotation.Nullable final String value) {
         this.callRecordingUrl = value;
     }
     /**
@@ -194,8 +194,8 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * @param value Value to set for the initiator property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }
     /**
@@ -203,8 +203,8 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
      * @param value Value to set for the meetingOrganizer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMeetingOrganizer(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setMeetingOrganizer(@jakarta.annotation.Nullable final IdentitySet value) {
         this.meetingOrganizer = value;
     }
 }

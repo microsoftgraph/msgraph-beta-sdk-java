@@ -19,7 +19,7 @@ public class AddHeader extends MarkContent implements Parsable {
      * Instantiates a new addHeader and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AddHeader() {
         super();
         this.setOdataType("#microsoft.graph.addHeader");
@@ -29,8 +29,8 @@ public class AddHeader extends MarkContent implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a addHeader
      */
-    @javax.annotation.Nonnull
-    public static AddHeader createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AddHeader createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AddHeader();
     }
@@ -38,7 +38,7 @@ public class AddHeader extends MarkContent implements Parsable {
      * Gets the alignment property value. The alignment property
      * @return a alignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Alignment getAlignment() {
         return this.alignment;
     }
@@ -46,7 +46,7 @@ public class AddHeader extends MarkContent implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alignment", (n) -> { this.setAlignment(n.getEnumValue(Alignment.class)); });
@@ -57,7 +57,7 @@ public class AddHeader extends MarkContent implements Parsable {
      * Gets the margin property value. The margin property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMargin() {
         return this.margin;
     }
@@ -66,8 +66,8 @@ public class AddHeader extends MarkContent implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("alignment", this.getAlignment());
@@ -78,8 +78,8 @@ public class AddHeader extends MarkContent implements Parsable {
      * @param value Value to set for the alignment property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlignment(@javax.annotation.Nullable final Alignment value) {
+    @jakarta.annotation.Nonnull
+    public void setAlignment(@jakarta.annotation.Nullable final Alignment value) {
         this.alignment = value;
     }
     /**
@@ -87,8 +87,8 @@ public class AddHeader extends MarkContent implements Parsable {
      * @param value Value to set for the margin property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMargin(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMargin(@jakarta.annotation.Nullable final Integer value) {
         this.margin = value;
     }
 }

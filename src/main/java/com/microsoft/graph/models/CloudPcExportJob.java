@@ -44,7 +44,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * Instantiates a new cloudPcExportJob and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcExportJob() {
         super();
     }
@@ -53,8 +53,8 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudPcExportJob
      */
-    @javax.annotation.Nonnull
-    public static CloudPcExportJob createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudPcExportJob createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudPcExportJob();
     }
@@ -62,7 +62,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * Gets the expirationDateTime property value. The date and time when the export job expires.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
         return this.expirationDateTime;
     }
@@ -70,7 +70,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * Gets the exportJobStatus property value. The status of the export job. The possible values are: notStarted, inProgress, completed, unknownFutureValue. Read-only.
      * @return a cloudPcExportJobStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcExportJobStatus getExportJobStatus() {
         return this.exportJobStatus;
     }
@@ -78,7 +78,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * Gets the exportUrl property value. The storage account URL of the exported report. It can be used to download the file.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExportUrl() {
         return this.exportUrl;
     }
@@ -86,7 +86,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
@@ -103,7 +103,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * Gets the filter property value. The filter applied on the report.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFilter() {
         return this.filter;
     }
@@ -111,7 +111,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * Gets the format property value. The format of the exported report.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFormat() {
         return this.format;
     }
@@ -119,7 +119,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * Gets the reportName property value. The report name. The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, sharedUseLicenseUsageReport, sharedUseLicenseUsageRealTimeReport, unknownFutureValue,  noLicenseAvailableConnectivityFailureReport. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: noLicenseAvailableConnectivityFailureReport.
      * @return a cloudPcReportName
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcReportName getReportName() {
         return this.reportName;
     }
@@ -127,7 +127,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * Gets the requestDateTime property value. The date and time when the export job was requested.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRequestDateTime() {
         return this.requestDateTime;
     }
@@ -135,7 +135,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * Gets the select property value. The selected columns of the report.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSelect() {
         return this.select;
     }
@@ -144,8 +144,8 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
@@ -162,8 +162,8 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
@@ -171,8 +171,8 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * @param value Value to set for the exportJobStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExportJobStatus(@javax.annotation.Nullable final CloudPcExportJobStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setExportJobStatus(@jakarta.annotation.Nullable final CloudPcExportJobStatus value) {
         this.exportJobStatus = value;
     }
     /**
@@ -180,8 +180,8 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * @param value Value to set for the exportUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExportUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExportUrl(@jakarta.annotation.Nullable final String value) {
         this.exportUrl = value;
     }
     /**
@@ -189,8 +189,8 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * @param value Value to set for the filter property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFilter(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFilter(@jakarta.annotation.Nullable final String value) {
         this.filter = value;
     }
     /**
@@ -198,8 +198,8 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * @param value Value to set for the format property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFormat(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFormat(@jakarta.annotation.Nullable final String value) {
         this.format = value;
     }
     /**
@@ -207,8 +207,8 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * @param value Value to set for the reportName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReportName(@javax.annotation.Nullable final CloudPcReportName value) {
+    @jakarta.annotation.Nonnull
+    public void setReportName(@jakarta.annotation.Nullable final CloudPcReportName value) {
         this.reportName = value;
     }
     /**
@@ -216,8 +216,8 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * @param value Value to set for the requestDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setRequestDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.requestDateTime = value;
     }
     /**
@@ -225,8 +225,8 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * @param value Value to set for the select property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSelect(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSelect(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.select = value;
     }
 }

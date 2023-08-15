@@ -36,7 +36,7 @@ public class EntitiesSummary implements AdditionalDataHolder, Parsable {
      * Instantiates a new entitiesSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EntitiesSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class EntitiesSummary implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a entitiesSummary
      */
-    @javax.annotation.Nonnull
-    public static EntitiesSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EntitiesSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EntitiesSummary();
     }
@@ -54,7 +54,7 @@ public class EntitiesSummary implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class EntitiesSummary implements AdditionalDataHolder, Parsable {
      * Gets the deviceCount property value. Count of unique devices that were seen.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getDeviceCount() {
         return this.deviceCount;
     }
@@ -70,7 +70,7 @@ public class EntitiesSummary implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getLongValue()); });
@@ -84,7 +84,7 @@ public class EntitiesSummary implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -92,7 +92,7 @@ public class EntitiesSummary implements AdditionalDataHolder, Parsable {
      * Gets the trafficType property value. The trafficType property
      * @return a trafficType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TrafficType getTrafficType() {
         return this.trafficType;
     }
@@ -100,7 +100,7 @@ public class EntitiesSummary implements AdditionalDataHolder, Parsable {
      * Gets the userCount property value. Count of unique Azure Active Directoy users that were seen.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getUserCount() {
         return this.userCount;
     }
@@ -108,7 +108,7 @@ public class EntitiesSummary implements AdditionalDataHolder, Parsable {
      * Gets the workloadCount property value. Count of unique target workloads or hosts that were seen.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getWorkloadCount() {
         return this.workloadCount;
     }
@@ -117,8 +117,8 @@ public class EntitiesSummary implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLongValue("deviceCount", this.getDeviceCount());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -129,11 +129,11 @@ public class EntitiesSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,17 +141,17 @@ public class EntitiesSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceCount(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceCount(@jakarta.annotation.Nullable final Long value) {
         this.deviceCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -159,8 +159,8 @@ public class EntitiesSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the trafficType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrafficType(@javax.annotation.Nullable final TrafficType value) {
+    @jakarta.annotation.Nonnull
+    public void setTrafficType(@jakarta.annotation.Nullable final TrafficType value) {
         this.trafficType = value;
     }
     /**
@@ -168,8 +168,8 @@ public class EntitiesSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserCount(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setUserCount(@jakarta.annotation.Nullable final Long value) {
         this.userCount = value;
     }
     /**
@@ -177,8 +177,8 @@ public class EntitiesSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the workloadCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkloadCount(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setWorkloadCount(@jakarta.annotation.Nullable final Long value) {
         this.workloadCount = value;
     }
 }

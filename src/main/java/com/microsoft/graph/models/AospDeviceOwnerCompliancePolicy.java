@@ -50,7 +50,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * Instantiates a new aospDeviceOwnerCompliancePolicy and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AospDeviceOwnerCompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.aospDeviceOwnerCompliancePolicy");
@@ -60,8 +60,8 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a aospDeviceOwnerCompliancePolicy
      */
-    @javax.annotation.Nonnull
-    public static AospDeviceOwnerCompliancePolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AospDeviceOwnerCompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AospDeviceOwnerCompliancePolicy();
     }
@@ -69,7 +69,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("minAndroidSecurityPatchLevel", (n) -> { this.setMinAndroidSecurityPatchLevel(n.getStringValue()); });
@@ -87,7 +87,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * Gets the minAndroidSecurityPatchLevel property value. Minimum Android security patch level.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMinAndroidSecurityPatchLevel() {
         return this.minAndroidSecurityPatchLevel;
     }
@@ -95,7 +95,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * Gets the osMaximumVersion property value. Maximum Android version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
         return this.osMaximumVersion;
     }
@@ -103,7 +103,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * Gets the osMinimumVersion property value. Minimum Android version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
         return this.osMinimumVersion;
     }
@@ -111,7 +111,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * Gets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
         return this.passwordMinimumLength;
     }
@@ -119,7 +119,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required. Valid values 1 to 8640
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
         return this.passwordMinutesOfInactivityBeforeLock;
     }
@@ -127,7 +127,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * Gets the passwordRequired property value. Require a password to unlock device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
         return this.passwordRequired;
     }
@@ -135,7 +135,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * Gets the passwordRequiredType property value. Type of characters in password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @return a androidDeviceOwnerRequiredPasswordType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidDeviceOwnerRequiredPasswordType getPasswordRequiredType() {
         return this.passwordRequiredType;
     }
@@ -143,7 +143,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * Gets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSecurityBlockJailbrokenDevices() {
         return this.securityBlockJailbrokenDevices;
     }
@@ -151,7 +151,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * Gets the storageRequireEncryption property value. Require encryption on Android devices.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
         return this.storageRequireEncryption;
     }
@@ -160,8 +160,8 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("minAndroidSecurityPatchLevel", this.getMinAndroidSecurityPatchLevel());
@@ -179,8 +179,8 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the minAndroidSecurityPatchLevel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinAndroidSecurityPatchLevel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMinAndroidSecurityPatchLevel(@jakarta.annotation.Nullable final String value) {
         this.minAndroidSecurityPatchLevel = value;
     }
     /**
@@ -188,8 +188,8 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the osMaximumVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsMaximumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMaximumVersion = value;
     }
     /**
@@ -197,8 +197,8 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the osMinimumVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsMinimumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMinimumVersion = value;
     }
     /**
@@ -206,8 +206,8 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumLength = value;
     }
     /**
@@ -215,8 +215,8 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordMinutesOfInactivityBeforeLock(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinutesOfInactivityBeforeLock = value;
     }
     /**
@@ -224,8 +224,8 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordRequired = value;
     }
     /**
@@ -233,8 +233,8 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordRequiredType(@javax.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
+    @jakarta.annotation.Nonnull
+    public void setPasswordRequiredType(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
         this.passwordRequiredType = value;
     }
     /**
@@ -242,8 +242,8 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the securityBlockJailbrokenDevices property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityBlockJailbrokenDevices(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSecurityBlockJailbrokenDevices(@jakarta.annotation.Nullable final Boolean value) {
         this.securityBlockJailbrokenDevices = value;
     }
     /**
@@ -251,8 +251,8 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the storageRequireEncryption property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStorageRequireEncryption(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setStorageRequireEncryption(@jakarta.annotation.Nullable final Boolean value) {
         this.storageRequireEncryption = value;
     }
 }

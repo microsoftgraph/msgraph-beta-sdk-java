@@ -15,7 +15,7 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
      * Instantiates a new updateManagementEnrollment and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UpdateManagementEnrollment() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.updateManagementEnrollment");
@@ -25,8 +25,8 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a updateManagementEnrollment
      */
-    @javax.annotation.Nonnull
-    public static UpdateManagementEnrollment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UpdateManagementEnrollment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UpdateManagementEnrollment();
     }
@@ -34,7 +34,7 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("updateCategory", (n) -> { this.setUpdateCategory(n.getEnumValue(UpdateCategory.class)); });
@@ -44,7 +44,7 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
      * Gets the updateCategory property value. The updateCategory property
      * @return a updateCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UpdateCategory getUpdateCategory() {
         return this.updateCategory;
     }
@@ -53,8 +53,8 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("updateCategory", this.getUpdateCategory());
@@ -64,8 +64,8 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
      * @param value Value to set for the updateCategory property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdateCategory(@javax.annotation.Nullable final UpdateCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setUpdateCategory(@jakarta.annotation.Nullable final UpdateCategory value) {
         this.updateCategory = value;
     }
 }

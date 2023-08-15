@@ -68,7 +68,7 @@ public class ImpactedResource extends Entity implements Parsable {
      * Instantiates a new impactedResource and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ImpactedResource() {
         super();
     }
@@ -77,8 +77,8 @@ public class ImpactedResource extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a impactedResource
      */
-    @javax.annotation.Nonnull
-    public static ImpactedResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ImpactedResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ImpactedResource();
     }
@@ -86,7 +86,7 @@ public class ImpactedResource extends Entity implements Parsable {
      * Gets the addedDateTime property value. The date and time when the impactedResource object was initially associated with the recommendation.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getAddedDateTime() {
         return this.addedDateTime;
     }
@@ -94,7 +94,7 @@ public class ImpactedResource extends Entity implements Parsable {
      * Gets the additionalDetails property value. Additional information unique to the impactedResource to help contextualize the recommendation.
      * @return a keyValue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getAdditionalDetails() {
         return this.additionalDetails;
     }
@@ -102,7 +102,7 @@ public class ImpactedResource extends Entity implements Parsable {
      * Gets the apiUrl property value. The URL link to the corresponding Azure AD resource.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getApiUrl() {
         return this.apiUrl;
     }
@@ -110,7 +110,7 @@ public class ImpactedResource extends Entity implements Parsable {
      * Gets the displayName property value. Friendly name of the Azure AD resource.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -118,7 +118,7 @@ public class ImpactedResource extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("addedDateTime", (n) -> { this.setAddedDateTime(n.getOffsetDateTimeValue()); });
@@ -141,7 +141,7 @@ public class ImpactedResource extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. Name of the user or service that last updated the status.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -149,7 +149,7 @@ public class ImpactedResource extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time when the status was last updated.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -157,7 +157,7 @@ public class ImpactedResource extends Entity implements Parsable {
      * Gets the owner property value. The user responsible for maintaining the resource.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOwner() {
         return this.owner;
     }
@@ -165,7 +165,7 @@ public class ImpactedResource extends Entity implements Parsable {
      * Gets the portalUrl property value. The URL link to the corresponding Azure AD portal page of the resource.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPortalUrl() {
         return this.portalUrl;
     }
@@ -173,7 +173,7 @@ public class ImpactedResource extends Entity implements Parsable {
      * Gets the postponeUntilDateTime property value. The future date and time when the status of a postponed impactedResource will be active again.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getPostponeUntilDateTime() {
         return this.postponeUntilDateTime;
     }
@@ -181,7 +181,7 @@ public class ImpactedResource extends Entity implements Parsable {
      * Gets the rank property value. Indicates the importance of the resource. A resource with a rank equal to 1 is of the highest importance.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRank() {
         return this.rank;
     }
@@ -189,7 +189,7 @@ public class ImpactedResource extends Entity implements Parsable {
      * Gets the recommendationId property value. The unique identifier of the recommendation that the resource is associated with.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRecommendationId() {
         return this.recommendationId;
     }
@@ -197,7 +197,7 @@ public class ImpactedResource extends Entity implements Parsable {
      * Gets the resourceType property value. Indicates the type of Azure AD resource. Examples include user, application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceType() {
         return this.resourceType;
     }
@@ -205,7 +205,7 @@ public class ImpactedResource extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a recommendationStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RecommendationStatus getStatus() {
         return this.status;
     }
@@ -213,7 +213,7 @@ public class ImpactedResource extends Entity implements Parsable {
      * Gets the subjectId property value. The related unique identifier, depending on the resourceType. For example, this property is set to the applicationId if the resourceType is an application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubjectId() {
         return this.subjectId;
     }
@@ -222,8 +222,8 @@ public class ImpactedResource extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("addedDateTime", this.getAddedDateTime());
@@ -246,8 +246,8 @@ public class ImpactedResource extends Entity implements Parsable {
      * @param value Value to set for the addedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setAddedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.addedDateTime = value;
     }
     /**
@@ -255,8 +255,8 @@ public class ImpactedResource extends Entity implements Parsable {
      * @param value Value to set for the additionalDetails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalDetails(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalDetails(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
         this.additionalDetails = value;
     }
     /**
@@ -264,8 +264,8 @@ public class ImpactedResource extends Entity implements Parsable {
      * @param value Value to set for the apiUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApiUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setApiUrl(@jakarta.annotation.Nullable final String value) {
         this.apiUrl = value;
     }
     /**
@@ -273,8 +273,8 @@ public class ImpactedResource extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -282,8 +282,8 @@ public class ImpactedResource extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final String value) {
         this.lastModifiedBy = value;
     }
     /**
@@ -291,8 +291,8 @@ public class ImpactedResource extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final String value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -300,8 +300,8 @@ public class ImpactedResource extends Entity implements Parsable {
      * @param value Value to set for the owner property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOwner(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOwner(@jakarta.annotation.Nullable final String value) {
         this.owner = value;
     }
     /**
@@ -309,8 +309,8 @@ public class ImpactedResource extends Entity implements Parsable {
      * @param value Value to set for the portalUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPortalUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPortalUrl(@jakarta.annotation.Nullable final String value) {
         this.portalUrl = value;
     }
     /**
@@ -318,8 +318,8 @@ public class ImpactedResource extends Entity implements Parsable {
      * @param value Value to set for the postponeUntilDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPostponeUntilDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setPostponeUntilDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.postponeUntilDateTime = value;
     }
     /**
@@ -327,8 +327,8 @@ public class ImpactedResource extends Entity implements Parsable {
      * @param value Value to set for the rank property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRank(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setRank(@jakarta.annotation.Nullable final Integer value) {
         this.rank = value;
     }
     /**
@@ -336,8 +336,8 @@ public class ImpactedResource extends Entity implements Parsable {
      * @param value Value to set for the recommendationId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecommendationId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRecommendationId(@jakarta.annotation.Nullable final String value) {
         this.recommendationId = value;
     }
     /**
@@ -345,8 +345,8 @@ public class ImpactedResource extends Entity implements Parsable {
      * @param value Value to set for the resourceType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceType(@jakarta.annotation.Nullable final String value) {
         this.resourceType = value;
     }
     /**
@@ -354,8 +354,8 @@ public class ImpactedResource extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final RecommendationStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final RecommendationStatus value) {
         this.status = value;
     }
     /**
@@ -363,8 +363,8 @@ public class ImpactedResource extends Entity implements Parsable {
      * @param value Value to set for the subjectId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubjectId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSubjectId(@jakarta.annotation.Nullable final String value) {
         this.subjectId = value;
     }
 }

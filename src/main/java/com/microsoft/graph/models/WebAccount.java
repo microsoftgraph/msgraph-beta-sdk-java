@@ -35,7 +35,7 @@ public class WebAccount extends ItemFacet implements Parsable {
      * Instantiates a new webAccount and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WebAccount() {
         super();
         this.setOdataType("#microsoft.graph.webAccount");
@@ -45,8 +45,8 @@ public class WebAccount extends ItemFacet implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a webAccount
      */
-    @javax.annotation.Nonnull
-    public static WebAccount createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WebAccount createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WebAccount();
     }
@@ -54,7 +54,7 @@ public class WebAccount extends ItemFacet implements Parsable {
      * Gets the description property value. Contains the description the user has provided for the account on the service being referenced.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -62,7 +62,7 @@ public class WebAccount extends ItemFacet implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -77,7 +77,7 @@ public class WebAccount extends ItemFacet implements Parsable {
      * Gets the service property value. The service property
      * @return a serviceInformation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServiceInformation getService() {
         return this.service;
     }
@@ -85,7 +85,7 @@ public class WebAccount extends ItemFacet implements Parsable {
      * Gets the statusMessage property value. Contains a status message from the cloud service if provided or synchronized.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStatusMessage() {
         return this.statusMessage;
     }
@@ -93,7 +93,7 @@ public class WebAccount extends ItemFacet implements Parsable {
      * Gets the thumbnailUrl property value. The thumbnailUrl property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
         return this.thumbnailUrl;
     }
@@ -101,7 +101,7 @@ public class WebAccount extends ItemFacet implements Parsable {
      * Gets the userId property value. The user name  displayed for the webaccount.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -109,7 +109,7 @@ public class WebAccount extends ItemFacet implements Parsable {
      * Gets the webUrl property value. Contains a link to the user's profile on the cloud service if one exists.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebUrl() {
         return this.webUrl;
     }
@@ -118,8 +118,8 @@ public class WebAccount extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -134,8 +134,8 @@ public class WebAccount extends ItemFacet implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -143,8 +143,8 @@ public class WebAccount extends ItemFacet implements Parsable {
      * @param value Value to set for the service property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setService(@javax.annotation.Nullable final ServiceInformation value) {
+    @jakarta.annotation.Nonnull
+    public void setService(@jakarta.annotation.Nullable final ServiceInformation value) {
         this.service = value;
     }
     /**
@@ -152,8 +152,8 @@ public class WebAccount extends ItemFacet implements Parsable {
      * @param value Value to set for the statusMessage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatusMessage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStatusMessage(@jakarta.annotation.Nullable final String value) {
         this.statusMessage = value;
     }
     /**
@@ -161,8 +161,8 @@ public class WebAccount extends ItemFacet implements Parsable {
      * @param value Value to set for the thumbnailUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThumbnailUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setThumbnailUrl(@jakarta.annotation.Nullable final String value) {
         this.thumbnailUrl = value;
     }
     /**
@@ -170,8 +170,8 @@ public class WebAccount extends ItemFacet implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
@@ -179,8 +179,8 @@ public class WebAccount extends ItemFacet implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }
 }

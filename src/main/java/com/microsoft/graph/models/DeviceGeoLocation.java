@@ -33,10 +33,6 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      */
     private OffsetDateTime lastCollectedDateTime;
     /**
-     * Time at which location was recorded, relative to UTC
-     */
-    private OffsetDateTime lastCollectedDateTimeUtc;
-    /**
      * Latitude coordinate of the device's location
      */
     private Double latitude;
@@ -60,7 +56,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * Instantiates a new deviceGeoLocation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceGeoLocation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -69,8 +65,8 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceGeoLocation
      */
-    @javax.annotation.Nonnull
-    public static DeviceGeoLocation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceGeoLocation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceGeoLocation();
     }
@@ -78,7 +74,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -86,7 +82,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * Gets the altitude property value. Altitude, given in meters above sea level
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getAltitude() {
         return this.altitude;
     }
@@ -94,14 +90,13 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("altitude", (n) -> { this.setAltitude(n.getDoubleValue()); });
         deserializerMap.put("heading", (n) -> { this.setHeading(n.getDoubleValue()); });
         deserializerMap.put("horizontalAccuracy", (n) -> { this.setHorizontalAccuracy(n.getDoubleValue()); });
         deserializerMap.put("lastCollectedDateTime", (n) -> { this.setLastCollectedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("lastCollectedDateTimeUtc", (n) -> { this.setLastCollectedDateTimeUtc(n.getOffsetDateTimeValue()); });
         deserializerMap.put("latitude", (n) -> { this.setLatitude(n.getDoubleValue()); });
         deserializerMap.put("longitude", (n) -> { this.setLongitude(n.getDoubleValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -113,7 +108,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * Gets the heading property value. Heading in degrees from true north
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getHeading() {
         return this.heading;
     }
@@ -121,7 +116,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * Gets the horizontalAccuracy property value. Accuracy of longitude and latitude in meters
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getHorizontalAccuracy() {
         return this.horizontalAccuracy;
     }
@@ -129,23 +124,15 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * Gets the lastCollectedDateTime property value. Time at which location was recorded, relative to UTC
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastCollectedDateTime() {
         return this.lastCollectedDateTime;
-    }
-    /**
-     * Gets the lastCollectedDateTimeUtc property value. Time at which location was recorded, relative to UTC
-     * @return a OffsetDateTime
-     */
-    @javax.annotation.Nullable
-    public OffsetDateTime getLastCollectedDateTimeUtc() {
-        return this.lastCollectedDateTimeUtc;
     }
     /**
      * Gets the latitude property value. Latitude coordinate of the device's location
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getLatitude() {
         return this.latitude;
     }
@@ -153,7 +140,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * Gets the longitude property value. Longitude coordinate of the device's location
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getLongitude() {
         return this.longitude;
     }
@@ -161,7 +148,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -169,7 +156,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * Gets the speed property value. Speed the device is traveling in meters per second
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getSpeed() {
         return this.speed;
     }
@@ -177,7 +164,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * Gets the verticalAccuracy property value. Accuracy of altitude in meters
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getVerticalAccuracy() {
         return this.verticalAccuracy;
     }
@@ -186,14 +173,13 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeDoubleValue("altitude", this.getAltitude());
         writer.writeDoubleValue("heading", this.getHeading());
         writer.writeDoubleValue("horizontalAccuracy", this.getHorizontalAccuracy());
         writer.writeOffsetDateTimeValue("lastCollectedDateTime", this.getLastCollectedDateTime());
-        writer.writeOffsetDateTimeValue("lastCollectedDateTimeUtc", this.getLastCollectedDateTimeUtc());
         writer.writeDoubleValue("latitude", this.getLatitude());
         writer.writeDoubleValue("longitude", this.getLongitude());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -203,11 +189,11 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -215,8 +201,8 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the altitude property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAltitude(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setAltitude(@jakarta.annotation.Nullable final Double value) {
         this.altitude = value;
     }
     /**
@@ -224,8 +210,8 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the heading property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHeading(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setHeading(@jakarta.annotation.Nullable final Double value) {
         this.heading = value;
     }
     /**
@@ -233,8 +219,8 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the horizontalAccuracy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHorizontalAccuracy(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setHorizontalAccuracy(@jakarta.annotation.Nullable final Double value) {
         this.horizontalAccuracy = value;
     }
     /**
@@ -242,26 +228,17 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastCollectedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastCollectedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastCollectedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastCollectedDateTime = value;
-    }
-    /**
-     * Sets the lastCollectedDateTimeUtc property value. Time at which location was recorded, relative to UTC
-     * @param value Value to set for the lastCollectedDateTimeUtc property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setLastCollectedDateTimeUtc(@javax.annotation.Nullable final OffsetDateTime value) {
-        this.lastCollectedDateTimeUtc = value;
     }
     /**
      * Sets the latitude property value. Latitude coordinate of the device's location
      * @param value Value to set for the latitude property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLatitude(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setLatitude(@jakarta.annotation.Nullable final Double value) {
         this.latitude = value;
     }
     /**
@@ -269,17 +246,17 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the longitude property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLongitude(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setLongitude(@jakarta.annotation.Nullable final Double value) {
         this.longitude = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -287,8 +264,8 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the speed property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSpeed(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setSpeed(@jakarta.annotation.Nullable final Double value) {
         this.speed = value;
     }
     /**
@@ -296,8 +273,8 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the verticalAccuracy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVerticalAccuracy(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setVerticalAccuracy(@jakarta.annotation.Nullable final Double value) {
         this.verticalAccuracy = value;
     }
 }

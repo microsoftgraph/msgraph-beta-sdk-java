@@ -53,7 +53,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * Instantiates a new threatSubmission and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ThreatSubmission() {
         super();
     }
@@ -62,8 +62,8 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a threatSubmission
      */
-    @javax.annotation.Nonnull
-    public static ThreatSubmission createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ThreatSubmission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -84,7 +84,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * Gets the adminReview property value. Specifies the admin review property which constitutes of who reviewed the user submission, when and what was it identified as.
      * @return a submissionAdminReview
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubmissionAdminReview getAdminReview() {
         return this.adminReview;
     }
@@ -92,7 +92,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * Gets the category property value. The category property
      * @return a submissionCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubmissionCategory getCategory() {
         return this.category;
     }
@@ -100,7 +100,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * Gets the clientSource property value. Specifies the source of the submission. The possible values are: microsoft,  other and unkownFutureValue.
      * @return a submissionClientSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubmissionClientSource getClientSource() {
         return this.clientSource;
     }
@@ -108,7 +108,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * Gets the contentType property value. Specifies the type of content being submitted. The possible values are: email, url, file, app and unkownFutureValue.
      * @return a submissionContentType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubmissionContentType getContentType() {
         return this.contentType;
     }
@@ -116,7 +116,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * Gets the createdBy property value. Specifies who submitted the email as a threat. Supports $filter = createdBy/email eq 'value'.
      * @return a submissionUserIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubmissionUserIdentity getCreatedBy() {
         return this.createdBy;
     }
@@ -124,7 +124,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * Gets the createdDateTime property value. Specifies when the threat submission was created. Supports $filter = createdDateTime ge 2022-01-01T00:00:00Z and createdDateTime lt 2022-01-02T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -132,7 +132,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("adminReview", (n) -> { this.setAdminReview(n.getObjectValue(SubmissionAdminReview::createFromDiscriminatorValue)); });
@@ -151,7 +151,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * Gets the result property value. Specifies the result of the analysis performed by Microsoft.
      * @return a submissionResult
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubmissionResult getResult() {
         return this.result;
     }
@@ -159,7 +159,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * Gets the source property value. Specifies the role of the submitter. Supports $filter = source eq 'value'. The possible values are: administrator,  user and unkownFutureValue.
      * @return a submissionSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubmissionSource getSource() {
         return this.source;
     }
@@ -167,7 +167,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * Gets the status property value. Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq 'value'. The possible values are: notStarted, running, succeeded, failed, skipped and unkownFutureValue.
      * @return a longRunningOperationStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LongRunningOperationStatus getStatus() {
         return this.status;
     }
@@ -175,7 +175,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * Gets the tenantId property value. Indicates the tenant id of the submitter. Not required when created using a POST operation. It is extracted from the token of the post API call.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -184,8 +184,8 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("adminReview", this.getAdminReview());
@@ -204,8 +204,8 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the adminReview property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdminReview(@javax.annotation.Nullable final SubmissionAdminReview value) {
+    @jakarta.annotation.Nonnull
+    public void setAdminReview(@jakarta.annotation.Nullable final SubmissionAdminReview value) {
         this.adminReview = value;
     }
     /**
@@ -213,8 +213,8 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory(@javax.annotation.Nullable final SubmissionCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setCategory(@jakarta.annotation.Nullable final SubmissionCategory value) {
         this.category = value;
     }
     /**
@@ -222,8 +222,8 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the clientSource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientSource(@javax.annotation.Nullable final SubmissionClientSource value) {
+    @jakarta.annotation.Nonnull
+    public void setClientSource(@jakarta.annotation.Nullable final SubmissionClientSource value) {
         this.clientSource = value;
     }
     /**
@@ -231,8 +231,8 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the contentType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentType(@javax.annotation.Nullable final SubmissionContentType value) {
+    @jakarta.annotation.Nonnull
+    public void setContentType(@jakarta.annotation.Nullable final SubmissionContentType value) {
         this.contentType = value;
     }
     /**
@@ -240,8 +240,8 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final SubmissionUserIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final SubmissionUserIdentity value) {
         this.createdBy = value;
     }
     /**
@@ -249,8 +249,8 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -258,8 +258,8 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the result property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResult(@javax.annotation.Nullable final SubmissionResult value) {
+    @jakarta.annotation.Nonnull
+    public void setResult(@jakarta.annotation.Nullable final SubmissionResult value) {
         this.result = value;
     }
     /**
@@ -267,8 +267,8 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the source property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSource(@javax.annotation.Nullable final SubmissionSource value) {
+    @jakarta.annotation.Nonnull
+    public void setSource(@jakarta.annotation.Nullable final SubmissionSource value) {
         this.source = value;
     }
     /**
@@ -276,8 +276,8 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final LongRunningOperationStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final LongRunningOperationStatus value) {
         this.status = value;
     }
     /**
@@ -285,8 +285,8 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
 }

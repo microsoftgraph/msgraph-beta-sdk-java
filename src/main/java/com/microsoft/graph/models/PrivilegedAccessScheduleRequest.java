@@ -31,7 +31,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      * Instantiates a new privilegedAccessScheduleRequest and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrivilegedAccessScheduleRequest() {
         super();
         this.setOdataType("#microsoft.graph.privilegedAccessScheduleRequest");
@@ -41,8 +41,8 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a privilegedAccessScheduleRequest
      */
-    @javax.annotation.Nonnull
-    public static PrivilegedAccessScheduleRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrivilegedAccessScheduleRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -58,7 +58,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      * Gets the action property value. Represents the type of operation on the group membership or ownership assignment request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew. adminAssign: For administrators to assign group membership or ownership to principals.adminRemove: For administrators to remove principals from group membership or ownership. adminUpdate: For administrators to change existing group membership or ownership assignments.adminExtend: For administrators to extend expiring assignments.adminRenew: For administrators to renew expired assignments.selfActivate: For principals to activate their assignments.selfDeactivate: For principals to deactivate their active assignments.
      * @return a scheduleRequestActions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ScheduleRequestActions getAction() {
         return this.action;
     }
@@ -66,7 +66,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(ScheduleRequestActions.class)); });
@@ -80,7 +80,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      * Gets the isValidationOnly property value. Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsValidationOnly() {
         return this.isValidationOnly;
     }
@@ -88,7 +88,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      * Gets the justification property value. A message provided by users and administrators when create they create the privilegedAccessGroupAssignmentScheduleRequest object.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getJustification() {
         return this.justification;
     }
@@ -96,7 +96,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      * Gets the scheduleInfo property value. The period of the group membership or ownership assignment. Recurring schedules are currently unsupported.
      * @return a requestSchedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RequestSchedule getScheduleInfo() {
         return this.scheduleInfo;
     }
@@ -104,7 +104,7 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      * Gets the ticketInfo property value. Ticket details linked to the group membership or ownership assignment request including details of the ticket number and ticket system.
      * @return a ticketInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TicketInfo getTicketInfo() {
         return this.ticketInfo;
     }
@@ -113,8 +113,8 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("action", this.getAction());
@@ -128,8 +128,8 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      * @param value Value to set for the action property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAction(@javax.annotation.Nullable final ScheduleRequestActions value) {
+    @jakarta.annotation.Nonnull
+    public void setAction(@jakarta.annotation.Nullable final ScheduleRequestActions value) {
         this.action = value;
     }
     /**
@@ -137,8 +137,8 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      * @param value Value to set for the isValidationOnly property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsValidationOnly(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsValidationOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.isValidationOnly = value;
     }
     /**
@@ -146,8 +146,8 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      * @param value Value to set for the justification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJustification(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setJustification(@jakarta.annotation.Nullable final String value) {
         this.justification = value;
     }
     /**
@@ -155,8 +155,8 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      * @param value Value to set for the scheduleInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScheduleInfo(@javax.annotation.Nullable final RequestSchedule value) {
+    @jakarta.annotation.Nonnull
+    public void setScheduleInfo(@jakarta.annotation.Nullable final RequestSchedule value) {
         this.scheduleInfo = value;
     }
     /**
@@ -164,8 +164,8 @@ public class PrivilegedAccessScheduleRequest extends Request implements Parsable
      * @param value Value to set for the ticketInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTicketInfo(@javax.annotation.Nullable final TicketInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setTicketInfo(@jakarta.annotation.Nullable final TicketInfo value) {
         this.ticketInfo = value;
     }
 }

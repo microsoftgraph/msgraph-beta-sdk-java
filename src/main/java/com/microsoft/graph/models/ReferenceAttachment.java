@@ -35,7 +35,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * Instantiates a new referenceAttachment and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ReferenceAttachment() {
         super();
         this.setOdataType("#microsoft.graph.referenceAttachment");
@@ -45,8 +45,8 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a referenceAttachment
      */
-    @javax.annotation.Nonnull
-    public static ReferenceAttachment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ReferenceAttachment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ReferenceAttachment();
     }
@@ -54,7 +54,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isFolder", (n) -> { this.setIsFolder(n.getBooleanValue()); });
@@ -69,7 +69,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * Gets the isFolder property value. Specifies whether the attachment is a link to a folder. Must set this to true if sourceUrl is a link to a folder. Optional.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsFolder() {
         return this.isFolder;
     }
@@ -77,7 +77,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * Gets the permission property value. Specifies the permissions granted for the attachment by the type of provider in providerType. Possible values are: other, view, edit, anonymousView, anonymousEdit, organizationView, organizationEdit. Optional.
      * @return a referenceAttachmentPermission
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ReferenceAttachmentPermission getPermission() {
         return this.permission;
     }
@@ -85,7 +85,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * Gets the previewUrl property value. Applies to only a reference attachment of an image - URL to get a preview image. Use thumbnailUrl and previewUrl only when sourceUrl identifies an image file. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPreviewUrl() {
         return this.previewUrl;
     }
@@ -93,7 +93,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * Gets the providerType property value. The type of provider that supports an attachment of this contentType. Possible values are: other, oneDriveBusiness, oneDriveConsumer, dropbox. Optional.
      * @return a referenceAttachmentProvider
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ReferenceAttachmentProvider getProviderType() {
         return this.providerType;
     }
@@ -101,7 +101,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * Gets the sourceUrl property value. URL to get the attachment content. If this is a URL to a folder, then for the folder to be displayed correctly in Outlook or Outlook on the web, set isFolder to true. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSourceUrl() {
         return this.sourceUrl;
     }
@@ -109,7 +109,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * Gets the thumbnailUrl property value. Applies to only a reference attachment of an image - URL to get a thumbnail image. Use thumbnailUrl and previewUrl only when sourceUrl identifies an image file. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
         return this.thumbnailUrl;
     }
@@ -118,8 +118,8 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("isFolder", this.getIsFolder());
@@ -134,8 +134,8 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * @param value Value to set for the isFolder property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsFolder(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsFolder(@jakarta.annotation.Nullable final Boolean value) {
         this.isFolder = value;
     }
     /**
@@ -143,8 +143,8 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * @param value Value to set for the permission property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPermission(@javax.annotation.Nullable final ReferenceAttachmentPermission value) {
+    @jakarta.annotation.Nonnull
+    public void setPermission(@jakarta.annotation.Nullable final ReferenceAttachmentPermission value) {
         this.permission = value;
     }
     /**
@@ -152,8 +152,8 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * @param value Value to set for the previewUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreviewUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPreviewUrl(@jakarta.annotation.Nullable final String value) {
         this.previewUrl = value;
     }
     /**
@@ -161,8 +161,8 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * @param value Value to set for the providerType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProviderType(@javax.annotation.Nullable final ReferenceAttachmentProvider value) {
+    @jakarta.annotation.Nonnull
+    public void setProviderType(@jakarta.annotation.Nullable final ReferenceAttachmentProvider value) {
         this.providerType = value;
     }
     /**
@@ -170,8 +170,8 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * @param value Value to set for the sourceUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourceUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSourceUrl(@jakarta.annotation.Nullable final String value) {
         this.sourceUrl = value;
     }
     /**
@@ -179,8 +179,8 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * @param value Value to set for the thumbnailUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThumbnailUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setThumbnailUrl(@jakarta.annotation.Nullable final String value) {
         this.thumbnailUrl = value;
     }
 }

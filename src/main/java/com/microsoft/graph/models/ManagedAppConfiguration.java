@@ -22,7 +22,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
      * Instantiates a new managedAppConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedAppConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.managedAppConfiguration");
@@ -32,8 +32,8 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedAppConfiguration
      */
-    @javax.annotation.Nonnull
-    public static ManagedAppConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -48,7 +48,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
      * Gets the customSettings property value. A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service
      * @return a keyValuePair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomSettings() {
         return this.customSettings;
     }
@@ -56,7 +56,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("customSettings", (n) -> { this.setCustomSettings(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
@@ -67,7 +67,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
      * Gets the settings property value. List of settings contained in this App Configuration policy
      * @return a deviceManagementConfigurationSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSetting> getSettings() {
         return this.settings;
     }
@@ -76,8 +76,8 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("customSettings", this.getCustomSettings());
@@ -88,8 +88,8 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
      * @param value Value to set for the customSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomSettings(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomSettings(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this.customSettings = value;
     }
     /**
@@ -97,8 +97,8 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
      * @param value Value to set for the settings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettings(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSetting> value) {
+    @jakarta.annotation.Nonnull
+    public void setSettings(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationSetting> value) {
         this.settings = value;
     }
 }

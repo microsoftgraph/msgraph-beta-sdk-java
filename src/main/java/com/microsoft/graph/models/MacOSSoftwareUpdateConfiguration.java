@@ -50,7 +50,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * Instantiates a new macOSSoftwareUpdateConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSSoftwareUpdateConfiguration");
@@ -60,8 +60,8 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a macOSSoftwareUpdateConfiguration
      */
-    @javax.annotation.Nonnull
-    public static MacOSSoftwareUpdateConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MacOSSoftwareUpdateConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MacOSSoftwareUpdateConfiguration();
     }
@@ -69,7 +69,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * Gets the allOtherUpdateBehavior property value. Update behavior options for macOS software updates.
      * @return a macOSSoftwareUpdateBehavior
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateBehavior getAllOtherUpdateBehavior() {
         return this.allOtherUpdateBehavior;
     }
@@ -77,7 +77,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * Gets the configDataUpdateBehavior property value. Update behavior options for macOS software updates.
      * @return a macOSSoftwareUpdateBehavior
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateBehavior getConfigDataUpdateBehavior() {
         return this.configDataUpdateBehavior;
     }
@@ -85,7 +85,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * Gets the criticalUpdateBehavior property value. Update behavior options for macOS software updates.
      * @return a macOSSoftwareUpdateBehavior
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateBehavior getCriticalUpdateBehavior() {
         return this.criticalUpdateBehavior;
     }
@@ -93,7 +93,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * Gets the customUpdateTimeWindows property value. Custom Time windows when updates will be allowed or blocked. This collection can contain a maximum of 20 elements.
      * @return a customUpdateTimeWindow
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CustomUpdateTimeWindow> getCustomUpdateTimeWindows() {
         return this.customUpdateTimeWindows;
     }
@@ -101,7 +101,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allOtherUpdateBehavior", (n) -> { this.setAllOtherUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
@@ -119,7 +119,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * Gets the firmwareUpdateBehavior property value. Update behavior options for macOS software updates.
      * @return a macOSSoftwareUpdateBehavior
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateBehavior getFirmwareUpdateBehavior() {
         return this.firmwareUpdateBehavior;
     }
@@ -127,7 +127,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * Gets the maxUserDeferralsCount property value. The maximum number of times the system allows the user to postpone an update before its installed. Supported values: 0 - 366. Valid values 0 to 365
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaxUserDeferralsCount() {
         return this.maxUserDeferralsCount;
     }
@@ -135,7 +135,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * Gets the priority property value. The scheduling priority for downloading and preparing the requested update. Default: Low. Possible values: Null, Low, High. Possible values are: low, high, unknownFutureValue.
      * @return a macOSPriority
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSPriority getPriority() {
         return this.priority;
     }
@@ -143,7 +143,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * Gets the updateScheduleType property value. Updatescheduletypefor macOS software updates.
      * @return a macOSSoftwareUpdateScheduleType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateScheduleType getUpdateScheduleType() {
         return this.updateScheduleType;
     }
@@ -151,7 +151,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * Gets the updateTimeWindowUtcOffsetInMinutes property value. Minutes indicating UTC offset for each update time window
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getUpdateTimeWindowUtcOffsetInMinutes() {
         return this.updateTimeWindowUtcOffsetInMinutes;
     }
@@ -160,8 +160,8 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("allOtherUpdateBehavior", this.getAllOtherUpdateBehavior());
@@ -179,8 +179,8 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the allOtherUpdateBehavior property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllOtherUpdateBehavior(@javax.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
+    @jakarta.annotation.Nonnull
+    public void setAllOtherUpdateBehavior(@jakarta.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
         this.allOtherUpdateBehavior = value;
     }
     /**
@@ -188,8 +188,8 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the configDataUpdateBehavior property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigDataUpdateBehavior(@javax.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
+    @jakarta.annotation.Nonnull
+    public void setConfigDataUpdateBehavior(@jakarta.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
         this.configDataUpdateBehavior = value;
     }
     /**
@@ -197,8 +197,8 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the criticalUpdateBehavior property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCriticalUpdateBehavior(@javax.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
+    @jakarta.annotation.Nonnull
+    public void setCriticalUpdateBehavior(@jakarta.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
         this.criticalUpdateBehavior = value;
     }
     /**
@@ -206,8 +206,8 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the customUpdateTimeWindows property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomUpdateTimeWindows(@javax.annotation.Nullable final java.util.List<CustomUpdateTimeWindow> value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomUpdateTimeWindows(@jakarta.annotation.Nullable final java.util.List<CustomUpdateTimeWindow> value) {
         this.customUpdateTimeWindows = value;
     }
     /**
@@ -215,8 +215,8 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the firmwareUpdateBehavior property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirmwareUpdateBehavior(@javax.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
+    @jakarta.annotation.Nonnull
+    public void setFirmwareUpdateBehavior(@jakarta.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
         this.firmwareUpdateBehavior = value;
     }
     /**
@@ -224,8 +224,8 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the maxUserDeferralsCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaxUserDeferralsCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMaxUserDeferralsCount(@jakarta.annotation.Nullable final Integer value) {
         this.maxUserDeferralsCount = value;
     }
     /**
@@ -233,8 +233,8 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the priority property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPriority(@javax.annotation.Nullable final MacOSPriority value) {
+    @jakarta.annotation.Nonnull
+    public void setPriority(@jakarta.annotation.Nullable final MacOSPriority value) {
         this.priority = value;
     }
     /**
@@ -242,8 +242,8 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the updateScheduleType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdateScheduleType(@javax.annotation.Nullable final MacOSSoftwareUpdateScheduleType value) {
+    @jakarta.annotation.Nonnull
+    public void setUpdateScheduleType(@jakarta.annotation.Nullable final MacOSSoftwareUpdateScheduleType value) {
         this.updateScheduleType = value;
     }
     /**
@@ -251,8 +251,8 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the updateTimeWindowUtcOffsetInMinutes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdateTimeWindowUtcOffsetInMinutes(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setUpdateTimeWindowUtcOffsetInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.updateTimeWindowUtcOffsetInMinutes = value;
     }
 }

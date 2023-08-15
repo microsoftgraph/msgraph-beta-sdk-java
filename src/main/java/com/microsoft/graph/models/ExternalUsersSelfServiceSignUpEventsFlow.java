@@ -27,7 +27,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
      * Instantiates a new externalUsersSelfServiceSignUpEventsFlow and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExternalUsersSelfServiceSignUpEventsFlow() {
         super();
         this.setOdataType("#microsoft.graph.externalUsersSelfServiceSignUpEventsFlow");
@@ -37,8 +37,8 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a externalUsersSelfServiceSignUpEventsFlow
      */
-    @javax.annotation.Nonnull
-    public static ExternalUsersSelfServiceSignUpEventsFlow createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ExternalUsersSelfServiceSignUpEventsFlow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ExternalUsersSelfServiceSignUpEventsFlow();
     }
@@ -46,7 +46,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("onAttributeCollection", (n) -> { this.setOnAttributeCollection(n.getObjectValue(OnAttributeCollectionHandler::createFromDiscriminatorValue)); });
@@ -59,7 +59,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
      * Gets the onAttributeCollection property value. The configuration for what to invoke when attributes are ready to be collected from the user.
      * @return a onAttributeCollectionHandler
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnAttributeCollectionHandler getOnAttributeCollection() {
         return this.onAttributeCollection;
     }
@@ -67,7 +67,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
      * Gets the onAuthenticationMethodLoadStart property value. Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
      * @return a onAuthenticationMethodLoadStartHandler
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnAuthenticationMethodLoadStartHandler getOnAuthenticationMethodLoadStart() {
         return this.onAuthenticationMethodLoadStart;
     }
@@ -75,7 +75,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
      * Gets the onInteractiveAuthFlowStart property value. Required. The configuration for what to invoke when an authentication flow is ready to be initiated.
      * @return a onInteractiveAuthFlowStartHandler
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnInteractiveAuthFlowStartHandler getOnInteractiveAuthFlowStart() {
         return this.onInteractiveAuthFlowStart;
     }
@@ -83,7 +83,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
      * Gets the onUserCreateStart property value. The configuration for what to invoke during user creation.
      * @return a onUserCreateStartHandler
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnUserCreateStartHandler getOnUserCreateStart() {
         return this.onUserCreateStart;
     }
@@ -92,8 +92,8 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("onAttributeCollection", this.getOnAttributeCollection());
@@ -106,8 +106,8 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
      * @param value Value to set for the onAttributeCollection property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnAttributeCollection(@javax.annotation.Nullable final OnAttributeCollectionHandler value) {
+    @jakarta.annotation.Nonnull
+    public void setOnAttributeCollection(@jakarta.annotation.Nullable final OnAttributeCollectionHandler value) {
         this.onAttributeCollection = value;
     }
     /**
@@ -115,8 +115,8 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
      * @param value Value to set for the onAuthenticationMethodLoadStart property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnAuthenticationMethodLoadStart(@javax.annotation.Nullable final OnAuthenticationMethodLoadStartHandler value) {
+    @jakarta.annotation.Nonnull
+    public void setOnAuthenticationMethodLoadStart(@jakarta.annotation.Nullable final OnAuthenticationMethodLoadStartHandler value) {
         this.onAuthenticationMethodLoadStart = value;
     }
     /**
@@ -124,8 +124,8 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
      * @param value Value to set for the onInteractiveAuthFlowStart property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnInteractiveAuthFlowStart(@javax.annotation.Nullable final OnInteractiveAuthFlowStartHandler value) {
+    @jakarta.annotation.Nonnull
+    public void setOnInteractiveAuthFlowStart(@jakarta.annotation.Nullable final OnInteractiveAuthFlowStartHandler value) {
         this.onInteractiveAuthFlowStart = value;
     }
     /**
@@ -133,8 +133,8 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
      * @param value Value to set for the onUserCreateStart property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnUserCreateStart(@javax.annotation.Nullable final OnUserCreateStartHandler value) {
+    @jakarta.annotation.Nonnull
+    public void setOnUserCreateStart(@jakarta.annotation.Nullable final OnUserCreateStartHandler value) {
         this.onUserCreateStart = value;
     }
 }

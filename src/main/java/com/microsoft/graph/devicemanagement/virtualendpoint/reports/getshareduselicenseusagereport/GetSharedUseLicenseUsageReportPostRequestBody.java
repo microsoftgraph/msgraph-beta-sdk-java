@@ -49,7 +49,7 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * Instantiates a new getSharedUseLicenseUsageReportPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GetSharedUseLicenseUsageReportPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -58,8 +58,8 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a getSharedUseLicenseUsageReportPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static GetSharedUseLicenseUsageReportPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GetSharedUseLicenseUsageReportPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GetSharedUseLicenseUsageReportPostRequestBody();
     }
@@ -67,7 +67,7 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -75,7 +75,7 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("filter", (n) -> { this.setFilter(n.getStringValue()); });
@@ -92,7 +92,7 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * Gets the filter property value. The filter property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFilter() {
         return this.filter;
     }
@@ -100,7 +100,7 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * Gets the groupBy property value. The groupBy property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getGroupBy() {
         return this.groupBy;
     }
@@ -108,7 +108,7 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * Gets the orderBy property value. The orderBy property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getOrderBy() {
         return this.orderBy;
     }
@@ -116,7 +116,7 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * Gets the reportName property value. The reportName property
      * @return a cloudPcReportName
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcReportName getReportName() {
         return this.reportName;
     }
@@ -124,7 +124,7 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * Gets the search property value. The search property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSearch() {
         return this.search;
     }
@@ -132,7 +132,7 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * Gets the select property value. The select property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSelect() {
         return this.select;
     }
@@ -140,7 +140,7 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * Gets the skip property value. The skip property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSkip() {
         return this.skip;
     }
@@ -148,7 +148,7 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * Gets the top property value. The top property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTop() {
         return this.top;
     }
@@ -157,8 +157,8 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("filter", this.getFilter());
         writer.writeCollectionOfPrimitiveValues("groupBy", this.getGroupBy());
@@ -172,11 +172,11 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -184,8 +184,8 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * @param value Value to set for the filter property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFilter(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFilter(@jakarta.annotation.Nullable final String value) {
         this.filter = value;
     }
     /**
@@ -193,8 +193,8 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * @param value Value to set for the groupBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupBy(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setGroupBy(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.groupBy = value;
     }
     /**
@@ -202,8 +202,8 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * @param value Value to set for the orderBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrderBy(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setOrderBy(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.orderBy = value;
     }
     /**
@@ -211,8 +211,8 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * @param value Value to set for the reportName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReportName(@javax.annotation.Nullable final CloudPcReportName value) {
+    @jakarta.annotation.Nonnull
+    public void setReportName(@jakarta.annotation.Nullable final CloudPcReportName value) {
         this.reportName = value;
     }
     /**
@@ -220,8 +220,8 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * @param value Value to set for the search property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSearch(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSearch(@jakarta.annotation.Nullable final String value) {
         this.search = value;
     }
     /**
@@ -229,8 +229,8 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * @param value Value to set for the select property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSelect(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSelect(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.select = value;
     }
     /**
@@ -238,8 +238,8 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * @param value Value to set for the skip property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSkip(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSkip(@jakarta.annotation.Nullable final Integer value) {
         this.skip = value;
     }
     /**
@@ -247,8 +247,8 @@ public class GetSharedUseLicenseUsageReportPostRequestBody implements Additional
      * @param value Value to set for the top property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTop(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTop(@jakarta.annotation.Nullable final Integer value) {
         this.top = value;
     }
 }

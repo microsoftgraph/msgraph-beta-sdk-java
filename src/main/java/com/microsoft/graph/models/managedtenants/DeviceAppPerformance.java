@@ -77,7 +77,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * Instantiates a new deviceAppPerformance and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceAppPerformance() {
         super();
     }
@@ -86,8 +86,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceAppPerformance
      */
-    @javax.annotation.Nonnull
-    public static DeviceAppPerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceAppPerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceAppPerformance();
     }
@@ -95,7 +95,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * Gets the appFriendlyName property value. The appFriendlyName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppFriendlyName() {
         return this.appFriendlyName;
     }
@@ -103,7 +103,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * Gets the appName property value. The appName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppName() {
         return this.appName;
     }
@@ -111,7 +111,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * Gets the appPublisher property value. The appPublisher property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppPublisher() {
         return this.appPublisher;
     }
@@ -119,7 +119,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * Gets the appVersion property value. The appVersion property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppVersion() {
         return this.appVersion;
     }
@@ -127,7 +127,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * Gets the deviceId property value. The deviceId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -135,7 +135,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * Gets the deviceManufacturer property value. The deviceManufacturer property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceManufacturer() {
         return this.deviceManufacturer;
     }
@@ -143,7 +143,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * Gets the deviceModel property value. The deviceModel property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceModel() {
         return this.deviceModel;
     }
@@ -151,7 +151,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * Gets the deviceName property value. The deviceName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -159,7 +159,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appFriendlyName", (n) -> { this.setAppFriendlyName(n.getStringValue()); });
@@ -184,7 +184,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * Gets the healthStatus property value. The healthStatus property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHealthStatus() {
         return this.healthStatus;
     }
@@ -192,7 +192,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * Gets the isLatestUsedVersion property value. The isLatestUsedVersion property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getIsLatestUsedVersion() {
         return this.isLatestUsedVersion;
     }
@@ -200,7 +200,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * Gets the isMostUsedVersion property value. The isMostUsedVersion property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getIsMostUsedVersion() {
         return this.isMostUsedVersion;
     }
@@ -208,7 +208,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
         return this.lastUpdatedDateTime;
     }
@@ -216,7 +216,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * Gets the tenantDisplayName property value. The tenantDisplayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
         return this.tenantDisplayName;
     }
@@ -224,7 +224,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * Gets the tenantId property value. The tenantId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -232,7 +232,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * Gets the totalAppCrashCount property value. The totalAppCrashCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalAppCrashCount() {
         return this.totalAppCrashCount;
     }
@@ -240,7 +240,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * Gets the totalAppFreezeCount property value. The totalAppFreezeCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalAppFreezeCount() {
         return this.totalAppFreezeCount;
     }
@@ -249,8 +249,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appFriendlyName", this.getAppFriendlyName());
@@ -275,8 +275,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param value Value to set for the appFriendlyName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppFriendlyName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppFriendlyName(@jakarta.annotation.Nullable final String value) {
         this.appFriendlyName = value;
     }
     /**
@@ -284,8 +284,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param value Value to set for the appName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppName(@jakarta.annotation.Nullable final String value) {
         this.appName = value;
     }
     /**
@@ -293,8 +293,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param value Value to set for the appPublisher property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppPublisher(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppPublisher(@jakarta.annotation.Nullable final String value) {
         this.appPublisher = value;
     }
     /**
@@ -302,8 +302,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param value Value to set for the appVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppVersion(@jakarta.annotation.Nullable final String value) {
         this.appVersion = value;
     }
     /**
@@ -311,8 +311,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param value Value to set for the deviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
@@ -320,8 +320,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param value Value to set for the deviceManufacturer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceManufacturer(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceManufacturer(@jakarta.annotation.Nullable final String value) {
         this.deviceManufacturer = value;
     }
     /**
@@ -329,8 +329,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param value Value to set for the deviceModel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceModel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
         this.deviceModel = value;
     }
     /**
@@ -338,8 +338,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param value Value to set for the deviceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
@@ -347,8 +347,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHealthStatus(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setHealthStatus(@jakarta.annotation.Nullable final String value) {
         this.healthStatus = value;
     }
     /**
@@ -356,8 +356,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param value Value to set for the isLatestUsedVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsLatestUsedVersion(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setIsLatestUsedVersion(@jakarta.annotation.Nullable final Integer value) {
         this.isLatestUsedVersion = value;
     }
     /**
@@ -365,8 +365,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param value Value to set for the isMostUsedVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsMostUsedVersion(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setIsMostUsedVersion(@jakarta.annotation.Nullable final Integer value) {
         this.isMostUsedVersion = value;
     }
     /**
@@ -374,8 +374,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
@@ -383,8 +383,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantDisplayName(@jakarta.annotation.Nullable final String value) {
         this.tenantDisplayName = value;
     }
     /**
@@ -392,8 +392,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
@@ -401,8 +401,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param value Value to set for the totalAppCrashCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalAppCrashCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalAppCrashCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalAppCrashCount = value;
     }
     /**
@@ -410,8 +410,8 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      * @param value Value to set for the totalAppFreezeCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalAppFreezeCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalAppFreezeCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalAppFreezeCount = value;
     }
 }

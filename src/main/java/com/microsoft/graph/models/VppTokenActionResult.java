@@ -40,7 +40,7 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
      * Instantiates a new vppTokenActionResult and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VppTokenActionResult() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +49,8 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a vppTokenActionResult
      */
-    @javax.annotation.Nonnull
-    public static VppTokenActionResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static VppTokenActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -65,7 +65,7 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
      * Gets the actionName property value. Action name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActionName() {
         return this.actionName;
     }
@@ -73,7 +73,7 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
      * Gets the actionState property value. The actionState property
      * @return a actionState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ActionState getActionState() {
         return this.actionState;
     }
@@ -81,7 +81,7 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -89,7 +89,7 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("actionName", (n) -> { this.setActionName(n.getStringValue()); });
@@ -103,7 +103,7 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
      * Gets the lastUpdatedDateTime property value. Time the action state was last updated
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
         return this.lastUpdatedDateTime;
     }
@@ -111,7 +111,7 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -119,7 +119,7 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
      * Gets the startDateTime property value. Time the action was initiated
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this.startDateTime;
     }
@@ -128,8 +128,8 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("actionName", this.getActionName());
         writer.writeEnumValue("actionState", this.getActionState());
@@ -143,8 +143,8 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the actionName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActionName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setActionName(@jakarta.annotation.Nullable final String value) {
         this.actionName = value;
     }
     /**
@@ -152,17 +152,17 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the actionState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActionState(@javax.annotation.Nullable final ActionState value) {
+    @jakarta.annotation.Nonnull
+    public void setActionState(@jakarta.annotation.Nullable final ActionState value) {
         this.actionState = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -170,17 +170,17 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -188,8 +188,8 @@ public class VppTokenActionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
 }

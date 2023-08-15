@@ -48,7 +48,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * Instantiates a new certificateConnectorSetting and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CertificateConnectorSetting() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -57,8 +57,8 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a certificateConnectorSetting
      */
-    @javax.annotation.Nonnull
-    public static CertificateConnectorSetting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CertificateConnectorSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CertificateConnectorSetting();
     }
@@ -66,7 +66,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -74,7 +74,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * Gets the certExpiryTime property value. Certificate expire time
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCertExpiryTime() {
         return this.certExpiryTime;
     }
@@ -82,7 +82,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * Gets the connectorVersion property value. Version of certificate connector
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConnectorVersion() {
         return this.connectorVersion;
     }
@@ -90,7 +90,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * Gets the enrollmentError property value. Certificate connector enrollment error
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEnrollmentError() {
         return this.enrollmentError;
     }
@@ -98,7 +98,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("certExpiryTime", (n) -> { this.setCertExpiryTime(n.getOffsetDateTimeValue()); });
@@ -114,7 +114,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * Gets the lastConnectorConnectionTime property value. Last time certificate connector connected
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastConnectorConnectionTime() {
         return this.lastConnectorConnectionTime;
     }
@@ -122,7 +122,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * Gets the lastUploadVersion property value. Version of last uploaded certificate connector
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getLastUploadVersion() {
         return this.lastUploadVersion;
     }
@@ -130,7 +130,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -138,7 +138,7 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * Gets the status property value. Certificate connector status
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getStatus() {
         return this.status;
     }
@@ -147,8 +147,8 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("certExpiryTime", this.getCertExpiryTime());
         writer.writeStringValue("connectorVersion", this.getConnectorVersion());
@@ -161,11 +161,11 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -173,8 +173,8 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * @param value Value to set for the certExpiryTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertExpiryTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCertExpiryTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.certExpiryTime = value;
     }
     /**
@@ -182,8 +182,8 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * @param value Value to set for the connectorVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectorVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectorVersion(@jakarta.annotation.Nullable final String value) {
         this.connectorVersion = value;
     }
     /**
@@ -191,8 +191,8 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * @param value Value to set for the enrollmentError property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentError(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEnrollmentError(@jakarta.annotation.Nullable final String value) {
         this.enrollmentError = value;
     }
     /**
@@ -200,8 +200,8 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * @param value Value to set for the lastConnectorConnectionTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastConnectorConnectionTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastConnectorConnectionTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastConnectorConnectionTime = value;
     }
     /**
@@ -209,17 +209,17 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * @param value Value to set for the lastUploadVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastUploadVersion(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setLastUploadVersion(@jakarta.annotation.Nullable final Long value) {
         this.lastUploadVersion = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -227,8 +227,8 @@ public class CertificateConnectorSetting implements AdditionalDataHolder, Parsab
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final Integer value) {
         this.status = value;
     }
 }

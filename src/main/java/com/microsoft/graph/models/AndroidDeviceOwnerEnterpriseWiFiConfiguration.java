@@ -50,7 +50,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * Instantiates a new androidDeviceOwnerEnterpriseWiFiConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidDeviceOwnerEnterpriseWiFiConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerEnterpriseWiFiConfiguration");
@@ -60,8 +60,8 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidDeviceOwnerEnterpriseWiFiConfiguration
      */
-    @javax.annotation.Nonnull
-    public static AndroidDeviceOwnerEnterpriseWiFiConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidDeviceOwnerEnterpriseWiFiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidDeviceOwnerEnterpriseWiFiConfiguration();
     }
@@ -69,7 +69,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * Gets the authenticationMethod property value. Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
      * @return a wiFiAuthenticationMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WiFiAuthenticationMethod getAuthenticationMethod() {
         return this.authenticationMethod;
     }
@@ -77,7 +77,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * Gets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
      * @return a deviceManagementDerivedCredentialSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings getDerivedCredentialSettings() {
         return this.derivedCredentialSettings;
     }
@@ -85,7 +85,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * Gets the eapType property value. Extensible Authentication Protocol (EAP) Configuration Types.
      * @return a androidEapType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidEapType getEapType() {
         return this.eapType;
     }
@@ -93,7 +93,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod.class)); });
@@ -111,7 +111,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * Gets the identityCertificateForClientAuthentication property value. Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). This is the certificate presented by client to the Wi-Fi endpoint. The authentication server sitting behind the Wi-Fi endpoint must accept this certificate to successfully establish a Wi-Fi connection.
      * @return a androidDeviceOwnerCertificateProfileBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidDeviceOwnerCertificateProfileBase getIdentityCertificateForClientAuthentication() {
         return this.identityCertificateForClientAuthentication;
     }
@@ -119,7 +119,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * Gets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @return a nonEapAuthenticationMethodForEapTtlsType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public NonEapAuthenticationMethodForEapTtlsType getInnerAuthenticationProtocolForEapTtls() {
         return this.innerAuthenticationProtocolForEapTtls;
     }
@@ -127,7 +127,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * Gets the innerAuthenticationProtocolForPeap property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password. Possible values are: none, microsoftChapVersionTwo.
      * @return a nonEapAuthenticationMethodForPeap
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public NonEapAuthenticationMethodForPeap getInnerAuthenticationProtocolForPeap() {
         return this.innerAuthenticationProtocolForPeap;
     }
@@ -135,7 +135,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * Gets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS or PEAP. The String provided here is used to mask the username of individual users when they attempt to connect to Wi-Fi network.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOuterIdentityPrivacyTemporaryValue() {
         return this.outerIdentityPrivacyTemporaryValue;
     }
@@ -143,7 +143,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * Gets the rootCertificateForServerValidation property value. Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt.
      * @return a androidDeviceOwnerTrustedRootCertificate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidDeviceOwnerTrustedRootCertificate getRootCertificateForServerValidation() {
         return this.rootCertificateForServerValidation;
     }
@@ -151,7 +151,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * Gets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTrustedServerCertificateNames() {
         return this.trustedServerCertificateNames;
     }
@@ -160,8 +160,8 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("authenticationMethod", this.getAuthenticationMethod());
@@ -179,8 +179,8 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationMethod(@javax.annotation.Nullable final WiFiAuthenticationMethod value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationMethod(@jakarta.annotation.Nullable final WiFiAuthenticationMethod value) {
         this.authenticationMethod = value;
     }
     /**
@@ -188,8 +188,8 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * @param value Value to set for the derivedCredentialSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDerivedCredentialSettings(@javax.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setDerivedCredentialSettings(@jakarta.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
         this.derivedCredentialSettings = value;
     }
     /**
@@ -197,8 +197,8 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * @param value Value to set for the eapType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEapType(@javax.annotation.Nullable final AndroidEapType value) {
+    @jakarta.annotation.Nonnull
+    public void setEapType(@jakarta.annotation.Nullable final AndroidEapType value) {
         this.eapType = value;
     }
     /**
@@ -206,8 +206,8 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * @param value Value to set for the identityCertificateForClientAuthentication property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityCertificateForClientAuthentication(@javax.annotation.Nullable final AndroidDeviceOwnerCertificateProfileBase value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentityCertificateForClientAuthentication(@jakarta.annotation.Nullable final AndroidDeviceOwnerCertificateProfileBase value) {
         this.identityCertificateForClientAuthentication = value;
     }
     /**
@@ -215,8 +215,8 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * @param value Value to set for the innerAuthenticationProtocolForEapTtls property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInnerAuthenticationProtocolForEapTtls(@javax.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
+    @jakarta.annotation.Nonnull
+    public void setInnerAuthenticationProtocolForEapTtls(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
         this.innerAuthenticationProtocolForEapTtls = value;
     }
     /**
@@ -224,8 +224,8 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * @param value Value to set for the innerAuthenticationProtocolForPeap property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInnerAuthenticationProtocolForPeap(@javax.annotation.Nullable final NonEapAuthenticationMethodForPeap value) {
+    @jakarta.annotation.Nonnull
+    public void setInnerAuthenticationProtocolForPeap(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForPeap value) {
         this.innerAuthenticationProtocolForPeap = value;
     }
     /**
@@ -233,8 +233,8 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * @param value Value to set for the outerIdentityPrivacyTemporaryValue property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOuterIdentityPrivacyTemporaryValue(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOuterIdentityPrivacyTemporaryValue(@jakarta.annotation.Nullable final String value) {
         this.outerIdentityPrivacyTemporaryValue = value;
     }
     /**
@@ -242,8 +242,8 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * @param value Value to set for the rootCertificateForServerValidation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRootCertificateForServerValidation(@javax.annotation.Nullable final AndroidDeviceOwnerTrustedRootCertificate value) {
+    @jakarta.annotation.Nonnull
+    public void setRootCertificateForServerValidation(@jakarta.annotation.Nullable final AndroidDeviceOwnerTrustedRootCertificate value) {
         this.rootCertificateForServerValidation = value;
     }
     /**
@@ -251,8 +251,8 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * @param value Value to set for the trustedServerCertificateNames property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrustedServerCertificateNames(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setTrustedServerCertificateNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.trustedServerCertificateNames = value;
     }
 }

@@ -33,7 +33,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * Instantiates a new hybridAgentUpdaterConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public HybridAgentUpdaterConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +42,8 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a hybridAgentUpdaterConfiguration
      */
-    @javax.annotation.Nonnull
-    public static HybridAgentUpdaterConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static HybridAgentUpdaterConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new HybridAgentUpdaterConfiguration();
     }
@@ -51,7 +51,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -59,7 +59,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * Gets the allowUpdateConfigurationOverride property value. Indicates if updater configuration will be skipped and the agent will receive an update when the next version of the agent is available.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowUpdateConfigurationOverride() {
         return this.allowUpdateConfigurationOverride;
     }
@@ -67,7 +67,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * Gets the deferUpdateDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getDeferUpdateDateTime() {
         return this.deferUpdateDateTime;
     }
@@ -75,7 +75,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("allowUpdateConfigurationOverride", (n) -> { this.setAllowUpdateConfigurationOverride(n.getBooleanValue()); });
@@ -88,7 +88,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -96,7 +96,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * Gets the updateWindow property value. The updateWindow property
      * @return a updateWindow
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UpdateWindow getUpdateWindow() {
         return this.updateWindow;
     }
@@ -105,8 +105,8 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowUpdateConfigurationOverride", this.getAllowUpdateConfigurationOverride());
         writer.writeOffsetDateTimeValue("deferUpdateDateTime", this.getDeferUpdateDateTime());
@@ -116,11 +116,11 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -128,8 +128,8 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * @param value Value to set for the allowUpdateConfigurationOverride property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowUpdateConfigurationOverride(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowUpdateConfigurationOverride(@jakarta.annotation.Nullable final Boolean value) {
         this.allowUpdateConfigurationOverride = value;
     }
     /**
@@ -137,17 +137,17 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * @param value Value to set for the deferUpdateDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeferUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setDeferUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.deferUpdateDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -155,8 +155,8 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * @param value Value to set for the updateWindow property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdateWindow(@javax.annotation.Nullable final UpdateWindow value) {
+    @jakarta.annotation.Nonnull
+    public void setUpdateWindow(@jakarta.annotation.Nullable final UpdateWindow value) {
         this.updateWindow = value;
     }
 }

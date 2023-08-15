@@ -31,7 +31,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * Instantiates a new deviceManagementDomainJoinConnector and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementDomainJoinConnector() {
         super();
     }
@@ -40,8 +40,8 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementDomainJoinConnector
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementDomainJoinConnector createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementDomainJoinConnector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementDomainJoinConnector();
     }
@@ -49,7 +49,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * Gets the displayName property value. The connector display name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -57,7 +57,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -70,7 +70,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * Gets the lastConnectionDateTime property value. Last time connector contacted Intune.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastConnectionDateTime() {
         return this.lastConnectionDateTime;
     }
@@ -78,7 +78,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * Gets the state property value. The ODJ request states.
      * @return a deviceManagementDomainJoinConnectorState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementDomainJoinConnectorState getState() {
         return this.state;
     }
@@ -86,7 +86,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * Gets the version property value. The version of the connector.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersion() {
         return this.version;
     }
@@ -95,8 +95,8 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -109,8 +109,8 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -118,8 +118,8 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * @param value Value to set for the lastConnectionDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastConnectionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastConnectionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastConnectionDateTime = value;
     }
     /**
@@ -127,8 +127,8 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final DeviceManagementDomainJoinConnectorState value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final DeviceManagementDomainJoinConnectorState value) {
         this.state = value;
     }
     /**
@@ -136,8 +136,8 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * @param value Value to set for the version property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }
 }

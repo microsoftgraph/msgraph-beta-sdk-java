@@ -45,7 +45,7 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * Instantiates a new managedTenantEmailNotification and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedTenantEmailNotification() {
         super();
     }
@@ -54,8 +54,8 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedTenantEmailNotification
      */
-    @javax.annotation.Nonnull
-    public static ManagedTenantEmailNotification createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedTenantEmailNotification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagedTenantEmailNotification();
     }
@@ -63,7 +63,7 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * Gets the alert property value. The alert property
      * @return a managedTenantAlert
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedTenantAlert getAlert() {
         return this.alert;
     }
@@ -71,7 +71,7 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * Gets the createdByUserId property value. The createdByUserId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
         return this.createdByUserId;
     }
@@ -79,7 +79,7 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * Gets the createdDateTime property value. The createdDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -87,7 +87,7 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * Gets the emailAddresses property value. The emailAddresses property
      * @return a email
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Email> getEmailAddresses() {
         return this.emailAddresses;
     }
@@ -95,7 +95,7 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * Gets the emailBody property value. The emailBody property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmailBody() {
         return this.emailBody;
     }
@@ -103,7 +103,7 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alert", (n) -> { this.setAlert(n.getObjectValue(ManagedTenantAlert::createFromDiscriminatorValue)); });
@@ -120,7 +120,7 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * Gets the lastActionByUserId property value. The lastActionByUserId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
         return this.lastActionByUserId;
     }
@@ -128,7 +128,7 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * Gets the lastActionDateTime property value. The lastActionDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
         return this.lastActionDateTime;
     }
@@ -136,7 +136,7 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * Gets the subject property value. The subject property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubject() {
         return this.subject;
     }
@@ -145,8 +145,8 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("alert", this.getAlert());
@@ -163,8 +163,8 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * @param value Value to set for the alert property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlert(@javax.annotation.Nullable final ManagedTenantAlert value) {
+    @jakarta.annotation.Nonnull
+    public void setAlert(@jakarta.annotation.Nullable final ManagedTenantAlert value) {
         this.alert = value;
     }
     /**
@@ -172,8 +172,8 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * @param value Value to set for the createdByUserId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedByUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedByUserId(@jakarta.annotation.Nullable final String value) {
         this.createdByUserId = value;
     }
     /**
@@ -181,8 +181,8 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -190,8 +190,8 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * @param value Value to set for the emailAddresses property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailAddresses(@javax.annotation.Nullable final java.util.List<Email> value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailAddresses(@jakarta.annotation.Nullable final java.util.List<Email> value) {
         this.emailAddresses = value;
     }
     /**
@@ -199,8 +199,8 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * @param value Value to set for the emailBody property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailBody(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailBody(@jakarta.annotation.Nullable final String value) {
         this.emailBody = value;
     }
     /**
@@ -208,8 +208,8 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * @param value Value to set for the lastActionByUserId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActionByUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLastActionByUserId(@jakarta.annotation.Nullable final String value) {
         this.lastActionByUserId = value;
     }
     /**
@@ -217,8 +217,8 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * @param value Value to set for the lastActionDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastActionDateTime = value;
     }
     /**
@@ -226,8 +226,8 @@ public class ManagedTenantEmailNotification extends Entity implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
 }

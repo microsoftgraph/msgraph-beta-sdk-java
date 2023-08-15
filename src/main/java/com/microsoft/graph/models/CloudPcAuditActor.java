@@ -64,7 +64,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * Instantiates a new cloudPcAuditActor and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcAuditActor() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -73,8 +73,8 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudPcAuditActor
      */
-    @javax.annotation.Nonnull
-    public static CloudPcAuditActor createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudPcAuditActor createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudPcAuditActor();
     }
@@ -82,7 +82,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -90,7 +90,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * Gets the applicationDisplayName property value. Name of the application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getApplicationDisplayName() {
         return this.applicationDisplayName;
     }
@@ -98,7 +98,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * Gets the applicationId property value. Azure AD application ID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getApplicationId() {
         return this.applicationId;
     }
@@ -106,7 +106,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("applicationDisplayName", (n) -> { this.setApplicationDisplayName(n.getStringValue()); });
@@ -127,7 +127,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * Gets the ipAddress property value. IP address.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIpAddress() {
         return this.ipAddress;
     }
@@ -135,7 +135,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -143,7 +143,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * Gets the remoteTenantId property value. The delegated partner tenant ID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRemoteTenantId() {
         return this.remoteTenantId;
     }
@@ -151,7 +151,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * Gets the remoteUserId property value. The delegated partner user ID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRemoteUserId() {
         return this.remoteUserId;
     }
@@ -159,7 +159,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * Gets the servicePrincipalName property value. Service Principal Name (SPN).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getServicePrincipalName() {
         return this.servicePrincipalName;
     }
@@ -167,7 +167,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * Gets the type property value. The type property
      * @return a cloudPcAuditActorType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcAuditActorType getType() {
         return this.type;
     }
@@ -175,7 +175,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * Gets the userId property value. Azure AD user ID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -183,7 +183,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * Gets the userPermissions property value. List of user permissions and application permissions when the audit event was performed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getUserPermissions() {
         return this.userPermissions;
     }
@@ -191,7 +191,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * Gets the userPrincipalName property value. User Principal Name (UPN).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
@@ -199,7 +199,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * Gets the userRoleScopeTags property value. List of role scope tags.
      * @return a cloudPcUserRoleScopeTagInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPcUserRoleScopeTagInfo> getUserRoleScopeTags() {
         return this.userRoleScopeTags;
     }
@@ -208,8 +208,8 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("applicationDisplayName", this.getApplicationDisplayName());
         writer.writeStringValue("applicationId", this.getApplicationId());
@@ -227,11 +227,11 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -239,8 +239,8 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the applicationDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicationDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicationDisplayName(@jakarta.annotation.Nullable final String value) {
         this.applicationDisplayName = value;
     }
     /**
@@ -248,8 +248,8 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the applicationId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicationId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicationId(@jakarta.annotation.Nullable final String value) {
         this.applicationId = value;
     }
     /**
@@ -257,17 +257,17 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIpAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIpAddress(@jakarta.annotation.Nullable final String value) {
         this.ipAddress = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -275,8 +275,8 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the remoteTenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemoteTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRemoteTenantId(@jakarta.annotation.Nullable final String value) {
         this.remoteTenantId = value;
     }
     /**
@@ -284,8 +284,8 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the remoteUserId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemoteUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRemoteUserId(@jakarta.annotation.Nullable final String value) {
         this.remoteUserId = value;
     }
     /**
@@ -293,8 +293,8 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the servicePrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServicePrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setServicePrincipalName(@jakarta.annotation.Nullable final String value) {
         this.servicePrincipalName = value;
     }
     /**
@@ -302,8 +302,8 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final CloudPcAuditActorType value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final CloudPcAuditActorType value) {
         this.type = value;
     }
     /**
@@ -311,8 +311,8 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
@@ -320,8 +320,8 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userPermissions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPermissions(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setUserPermissions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.userPermissions = value;
     }
     /**
@@ -329,8 +329,8 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
     /**
@@ -338,8 +338,8 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userRoleScopeTags property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserRoleScopeTags(@javax.annotation.Nullable final java.util.List<CloudPcUserRoleScopeTagInfo> value) {
+    @jakarta.annotation.Nonnull
+    public void setUserRoleScopeTags(@jakarta.annotation.Nullable final java.util.List<CloudPcUserRoleScopeTagInfo> value) {
         this.userRoleScopeTags = value;
     }
 }

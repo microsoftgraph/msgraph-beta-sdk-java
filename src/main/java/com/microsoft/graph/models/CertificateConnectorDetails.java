@@ -35,7 +35,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * Instantiates a new certificateConnectorDetails and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CertificateConnectorDetails() {
         super();
     }
@@ -44,8 +44,8 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a certificateConnectorDetails
      */
-    @javax.annotation.Nonnull
-    public static CertificateConnectorDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CertificateConnectorDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CertificateConnectorDetails();
     }
@@ -53,7 +53,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * Gets the connectorName property value. Connector name (set during enrollment).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConnectorName() {
         return this.connectorName;
     }
@@ -61,7 +61,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * Gets the connectorVersion property value. Version of the connector installed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConnectorVersion() {
         return this.connectorVersion;
     }
@@ -69,7 +69,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * Gets the enrollmentDateTime property value. Date/time when this connector was enrolled.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEnrollmentDateTime() {
         return this.enrollmentDateTime;
     }
@@ -77,7 +77,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("connectorName", (n) -> { this.setConnectorName(n.getStringValue()); });
@@ -91,7 +91,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * Gets the lastCheckinDateTime property value. Date/time when this connector last connected to the service.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastCheckinDateTime() {
         return this.lastCheckinDateTime;
     }
@@ -99,7 +99,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * Gets the machineName property value. Name of the machine hosting this connector service.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMachineName() {
         return this.machineName;
     }
@@ -108,8 +108,8 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("connectorName", this.getConnectorName());
@@ -123,8 +123,8 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * @param value Value to set for the connectorName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectorName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectorName(@jakarta.annotation.Nullable final String value) {
         this.connectorName = value;
     }
     /**
@@ -132,8 +132,8 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * @param value Value to set for the connectorVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectorVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectorVersion(@jakarta.annotation.Nullable final String value) {
         this.connectorVersion = value;
     }
     /**
@@ -141,8 +141,8 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * @param value Value to set for the enrollmentDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setEnrollmentDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.enrollmentDateTime = value;
     }
     /**
@@ -150,8 +150,8 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * @param value Value to set for the lastCheckinDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastCheckinDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastCheckinDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastCheckinDateTime = value;
     }
     /**
@@ -159,8 +159,8 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * @param value Value to set for the machineName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMachineName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMachineName(@jakarta.annotation.Nullable final String value) {
         this.machineName = value;
     }
 }

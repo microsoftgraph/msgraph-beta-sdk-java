@@ -33,7 +33,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * Instantiates a new membershipRuleProcessingStatus and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MembershipRuleProcessingStatus() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +42,8 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a membershipRuleProcessingStatus
      */
-    @javax.annotation.Nonnull
-    public static MembershipRuleProcessingStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MembershipRuleProcessingStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MembershipRuleProcessingStatus();
     }
@@ -51,7 +51,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -59,7 +59,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * Gets the errorMessage property value. Detailed error message if dynamic group processing ran into an error.  Optional. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getErrorMessage() {
         return this.errorMessage;
     }
@@ -67,7 +67,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("errorMessage", (n) -> { this.setErrorMessage(n.getStringValue()); });
@@ -80,7 +80,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * Gets the lastMembershipUpdated property value. Most recent date and time when membership of a dynamic group was updated.  Optional. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastMembershipUpdated() {
         return this.lastMembershipUpdated;
     }
@@ -88,7 +88,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -96,7 +96,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * Gets the status property value. Current status of a dynamic group processing. Possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.  Required. Read-only.
      * @return a MembershipRuleProcessingStatusDetails
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MembershipRuleProcessingStatusDetails getStatus() {
         return this.status;
     }
@@ -105,8 +105,8 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("errorMessage", this.getErrorMessage());
         writer.writeOffsetDateTimeValue("lastMembershipUpdated", this.getLastMembershipUpdated());
@@ -116,11 +116,11 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -128,8 +128,8 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the errorMessage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorMessage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setErrorMessage(@jakarta.annotation.Nullable final String value) {
         this.errorMessage = value;
     }
     /**
@@ -137,17 +137,17 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the lastMembershipUpdated property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastMembershipUpdated(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastMembershipUpdated(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastMembershipUpdated = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -155,8 +155,8 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final MembershipRuleProcessingStatusDetails value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final MembershipRuleProcessingStatusDetails value) {
         this.status = value;
     }
 }

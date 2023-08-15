@@ -16,15 +16,16 @@ public enum CloudPcStatus implements ValuedEnum {
     PendingProvision("pendingProvision"),
     UnknownFutureValue("unknownFutureValue"),
     MovingRegion("movingRegion"),
-    ResizePendingLicense("resizePendingLicense");
+    ResizePendingLicense("resizePendingLicense"),
+    UpdatingSingleSignOn("updatingSingleSignOn");
     public final String value;
     CloudPcStatus(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static CloudPcStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static CloudPcStatus forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notProvisioned": return NotProvisioned;
@@ -40,6 +41,7 @@ public enum CloudPcStatus implements ValuedEnum {
             case "unknownFutureValue": return UnknownFutureValue;
             case "movingRegion": return MovingRegion;
             case "resizePendingLicense": return ResizePendingLicense;
+            case "updatingSingleSignOn": return UpdatingSingleSignOn;
             default: return null;
         }
     }

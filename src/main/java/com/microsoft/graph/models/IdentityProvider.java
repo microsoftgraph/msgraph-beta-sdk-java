@@ -12,7 +12,7 @@ public class IdentityProvider extends Entity implements Parsable {
      */
     private String clientId;
     /**
-     * The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return ****. This is a required field. Required. Not nullable.
+     * The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return . This is a required field. Required. Not nullable.
      */
     private String clientSecret;
     /**
@@ -27,7 +27,7 @@ public class IdentityProvider extends Entity implements Parsable {
      * Instantiates a new identityProvider and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentityProvider() {
         super();
     }
@@ -36,8 +36,8 @@ public class IdentityProvider extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a identityProvider
      */
-    @javax.annotation.Nonnull
-    public static IdentityProvider createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IdentityProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -52,15 +52,15 @@ public class IdentityProvider extends Entity implements Parsable {
      * Gets the clientId property value. The client ID for the application obtained when registering the application with the identity provider. This is a required field.  Required. Not nullable.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClientId() {
         return this.clientId;
     }
     /**
-     * Gets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return ****. This is a required field. Required. Not nullable.
+     * Gets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return . This is a required field. Required. Not nullable.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClientSecret() {
         return this.clientSecret;
     }
@@ -68,7 +68,7 @@ public class IdentityProvider extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("clientId", (n) -> { this.setClientId(n.getStringValue()); });
@@ -81,7 +81,7 @@ public class IdentityProvider extends Entity implements Parsable {
      * Gets the name property value. The display name of the identity provider. Not nullable.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -89,7 +89,7 @@ public class IdentityProvider extends Entity implements Parsable {
      * Gets the type property value. The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo,QQ, WeChat, OpenIDConnect. Not nullable.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getType() {
         return this.type;
     }
@@ -98,8 +98,8 @@ public class IdentityProvider extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("clientId", this.getClientId());
@@ -112,17 +112,17 @@ public class IdentityProvider extends Entity implements Parsable {
      * @param value Value to set for the clientId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setClientId(@jakarta.annotation.Nullable final String value) {
         this.clientId = value;
     }
     /**
-     * Sets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return ****. This is a required field. Required. Not nullable.
+     * Sets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return . This is a required field. Required. Not nullable.
      * @param value Value to set for the clientSecret property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientSecret(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setClientSecret(@jakarta.annotation.Nullable final String value) {
         this.clientSecret = value;
     }
     /**
@@ -130,8 +130,8 @@ public class IdentityProvider extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -139,8 +139,8 @@ public class IdentityProvider extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
 }

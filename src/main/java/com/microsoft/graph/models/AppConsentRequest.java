@@ -31,7 +31,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      * Instantiates a new appConsentRequest and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AppConsentRequest() {
         super();
     }
@@ -40,8 +40,8 @@ public class AppConsentRequest extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a appConsentRequest
      */
-    @javax.annotation.Nonnull
-    public static AppConsentRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AppConsentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AppConsentRequest();
     }
@@ -49,7 +49,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      * Gets the appDisplayName property value. The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppDisplayName() {
         return this.appDisplayName;
     }
@@ -57,7 +57,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      * Gets the appId property value. The identifier of the application. Required. Supports $filter (eq only) and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppId() {
         return this.appId;
     }
@@ -65,7 +65,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      * Gets the consentType property value. The consent type of the request. Possible values are: StaticandDynamic. These represent static and dynamic permissions, respectively, requested in the consent workflow. Supports $filter (eq only) and $orderby. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConsentType() {
         return this.consentType;
     }
@@ -73,7 +73,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appDisplayName", (n) -> { this.setAppDisplayName(n.getStringValue()); });
@@ -87,7 +87,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      * Gets the pendingScopes property value. A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required.
      * @return a appConsentRequestScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AppConsentRequestScope> getPendingScopes() {
         return this.pendingScopes;
     }
@@ -95,7 +95,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      * Gets the userConsentRequests property value. A list of pending user consent requests. Supports $filter (eq).
      * @return a userConsentRequest
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UserConsentRequest> getUserConsentRequests() {
         return this.userConsentRequests;
     }
@@ -104,8 +104,8 @@ public class AppConsentRequest extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appDisplayName", this.getAppDisplayName());
@@ -119,8 +119,8 @@ public class AppConsentRequest extends Entity implements Parsable {
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.appDisplayName = value;
     }
     /**
@@ -128,8 +128,8 @@ public class AppConsentRequest extends Entity implements Parsable {
      * @param value Value to set for the appId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }
     /**
@@ -137,8 +137,8 @@ public class AppConsentRequest extends Entity implements Parsable {
      * @param value Value to set for the consentType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConsentType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setConsentType(@jakarta.annotation.Nullable final String value) {
         this.consentType = value;
     }
     /**
@@ -146,8 +146,8 @@ public class AppConsentRequest extends Entity implements Parsable {
      * @param value Value to set for the pendingScopes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPendingScopes(@javax.annotation.Nullable final java.util.List<AppConsentRequestScope> value) {
+    @jakarta.annotation.Nonnull
+    public void setPendingScopes(@jakarta.annotation.Nullable final java.util.List<AppConsentRequestScope> value) {
         this.pendingScopes = value;
     }
     /**
@@ -155,8 +155,8 @@ public class AppConsentRequest extends Entity implements Parsable {
      * @param value Value to set for the userConsentRequests property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserConsentRequests(@javax.annotation.Nullable final java.util.List<UserConsentRequest> value) {
+    @jakarta.annotation.Nonnull
+    public void setUserConsentRequests(@jakarta.annotation.Nullable final java.util.List<UserConsentRequest> value) {
         this.userConsentRequests = value;
     }
 }

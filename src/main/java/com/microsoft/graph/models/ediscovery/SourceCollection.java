@@ -66,7 +66,7 @@ public class SourceCollection extends Entity implements Parsable {
      * Instantiates a new sourceCollection and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SourceCollection() {
         super();
     }
@@ -75,8 +75,8 @@ public class SourceCollection extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a sourceCollection
      */
-    @javax.annotation.Nonnull
-    public static SourceCollection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SourceCollection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SourceCollection();
     }
@@ -84,7 +84,7 @@ public class SourceCollection extends Entity implements Parsable {
      * Gets the additionalSources property value. Adds an additional source to the sourceCollection.
      * @return a dataSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DataSource> getAdditionalSources() {
         return this.additionalSources;
     }
@@ -92,7 +92,7 @@ public class SourceCollection extends Entity implements Parsable {
      * Gets the addToReviewSetOperation property value. Adds the results of the sourceCollection to the specified reviewSet.
      * @return a addToReviewSetOperation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AddToReviewSetOperation getAddToReviewSetOperation() {
         return this.addToReviewSetOperation;
     }
@@ -100,7 +100,7 @@ public class SourceCollection extends Entity implements Parsable {
      * Gets the contentQuery property value. The query string in KQL (Keyword Query Language) query. For details, see Keyword queries and search conditions for Content Search and eDiscovery. You can refine searches by using fields paired with values; for example, subject:'Quarterly Financials' AND Date>=06/01/2016 AND Date<=07/01/2016.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContentQuery() {
         return this.contentQuery;
     }
@@ -108,7 +108,7 @@ public class SourceCollection extends Entity implements Parsable {
      * Gets the createdBy property value. The user who created the sourceCollection.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -116,7 +116,7 @@ public class SourceCollection extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time the sourceCollection was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -124,7 +124,7 @@ public class SourceCollection extends Entity implements Parsable {
      * Gets the custodianSources property value. Custodian sources that are included in the sourceCollection.
      * @return a dataSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DataSource> getCustodianSources() {
         return this.custodianSources;
     }
@@ -132,7 +132,7 @@ public class SourceCollection extends Entity implements Parsable {
      * Gets the dataSourceScopes property value. When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
      * @return a dataSourceScopes
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DataSourceScopes getDataSourceScopes() {
         return this.dataSourceScopes;
     }
@@ -140,7 +140,7 @@ public class SourceCollection extends Entity implements Parsable {
      * Gets the description property value. The description of the sourceCollection.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -148,7 +148,7 @@ public class SourceCollection extends Entity implements Parsable {
      * Gets the displayName property value. The display name of the sourceCollection.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -156,7 +156,7 @@ public class SourceCollection extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("additionalSources", (n) -> { this.setAdditionalSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
@@ -178,7 +178,7 @@ public class SourceCollection extends Entity implements Parsable {
      * Gets the lastEstimateStatisticsOperation property value. The last estimate operation associated with the sourceCollection.
      * @return a estimateStatisticsOperation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EstimateStatisticsOperation getLastEstimateStatisticsOperation() {
         return this.lastEstimateStatisticsOperation;
     }
@@ -186,7 +186,7 @@ public class SourceCollection extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. The last user who modified the sourceCollection.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -194,7 +194,7 @@ public class SourceCollection extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The last date and time the sourceCollection was modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -202,7 +202,7 @@ public class SourceCollection extends Entity implements Parsable {
      * Gets the noncustodialSources property value. noncustodialDataSource sources that are included in the sourceCollection
      * @return a noncustodialDataSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<NoncustodialDataSource> getNoncustodialSources() {
         return this.noncustodialSources;
     }
@@ -211,8 +211,8 @@ public class SourceCollection extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("additionalSources", this.getAdditionalSources());
@@ -234,8 +234,8 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the additionalSources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalSources(@javax.annotation.Nullable final java.util.List<DataSource> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalSources(@jakarta.annotation.Nullable final java.util.List<DataSource> value) {
         this.additionalSources = value;
     }
     /**
@@ -243,8 +243,8 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the addToReviewSetOperation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddToReviewSetOperation(@javax.annotation.Nullable final AddToReviewSetOperation value) {
+    @jakarta.annotation.Nonnull
+    public void setAddToReviewSetOperation(@jakarta.annotation.Nullable final AddToReviewSetOperation value) {
         this.addToReviewSetOperation = value;
     }
     /**
@@ -252,8 +252,8 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the contentQuery property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentQuery(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContentQuery(@jakarta.annotation.Nullable final String value) {
         this.contentQuery = value;
     }
     /**
@@ -261,8 +261,8 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
@@ -270,8 +270,8 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -279,8 +279,8 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the custodianSources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustodianSources(@javax.annotation.Nullable final java.util.List<DataSource> value) {
+    @jakarta.annotation.Nonnull
+    public void setCustodianSources(@jakarta.annotation.Nullable final java.util.List<DataSource> value) {
         this.custodianSources = value;
     }
     /**
@@ -288,8 +288,8 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the dataSourceScopes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDataSourceScopes(@javax.annotation.Nullable final DataSourceScopes value) {
+    @jakarta.annotation.Nonnull
+    public void setDataSourceScopes(@jakarta.annotation.Nullable final DataSourceScopes value) {
         this.dataSourceScopes = value;
     }
     /**
@@ -297,8 +297,8 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -306,8 +306,8 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -315,8 +315,8 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the lastEstimateStatisticsOperation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastEstimateStatisticsOperation(@javax.annotation.Nullable final EstimateStatisticsOperation value) {
+    @jakarta.annotation.Nonnull
+    public void setLastEstimateStatisticsOperation(@jakarta.annotation.Nullable final EstimateStatisticsOperation value) {
         this.lastEstimateStatisticsOperation = value;
     }
     /**
@@ -324,8 +324,8 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
@@ -333,8 +333,8 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -342,8 +342,8 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the noncustodialSources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNoncustodialSources(@javax.annotation.Nullable final java.util.List<NoncustodialDataSource> value) {
+    @jakarta.annotation.Nonnull
+    public void setNoncustodialSources(@jakarta.annotation.Nullable final java.util.List<NoncustodialDataSource> value) {
         this.noncustodialSources = value;
     }
 }

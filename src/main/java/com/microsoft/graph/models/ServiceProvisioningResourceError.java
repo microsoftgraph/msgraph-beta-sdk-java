@@ -15,7 +15,7 @@ public class ServiceProvisioningResourceError extends ServiceProvisioningError i
      * Instantiates a new serviceProvisioningResourceError and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServiceProvisioningResourceError() {
         super();
         this.setOdataType("#microsoft.graph.serviceProvisioningResourceError");
@@ -25,8 +25,8 @@ public class ServiceProvisioningResourceError extends ServiceProvisioningError i
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a serviceProvisioningResourceError
      */
-    @javax.annotation.Nonnull
-    public static ServiceProvisioningResourceError createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ServiceProvisioningResourceError createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ServiceProvisioningResourceError();
     }
@@ -34,7 +34,7 @@ public class ServiceProvisioningResourceError extends ServiceProvisioningError i
      * Gets the errors property value. The errors property
      * @return a serviceProvisioningResourceErrorDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ServiceProvisioningResourceErrorDetail> getErrors() {
         return this.errors;
     }
@@ -42,7 +42,7 @@ public class ServiceProvisioningResourceError extends ServiceProvisioningError i
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("errors", (n) -> { this.setErrors(n.getCollectionOfObjectValues(ServiceProvisioningResourceErrorDetail::createFromDiscriminatorValue)); });
@@ -53,8 +53,8 @@ public class ServiceProvisioningResourceError extends ServiceProvisioningError i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("errors", this.getErrors());
@@ -64,8 +64,8 @@ public class ServiceProvisioningResourceError extends ServiceProvisioningError i
      * @param value Value to set for the errors property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrors(@javax.annotation.Nullable final java.util.List<ServiceProvisioningResourceErrorDetail> value) {
+    @jakarta.annotation.Nonnull
+    public void setErrors(@jakarta.annotation.Nullable final java.util.List<ServiceProvisioningResourceErrorDetail> value) {
         this.errors = value;
     }
 }

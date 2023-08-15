@@ -28,7 +28,7 @@ public class Policy extends Entity implements Parsable {
      * Instantiates a new policy and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Policy() {
         super();
     }
@@ -37,8 +37,8 @@ public class Policy extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a policy
      */
-    @javax.annotation.Nonnull
-    public static Policy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Policy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -53,7 +53,7 @@ public class Policy extends Entity implements Parsable {
      * Gets the description property value. Description.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -61,7 +61,7 @@ public class Policy extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -74,7 +74,7 @@ public class Policy extends Entity implements Parsable {
      * Gets the name property value. Policy name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -82,7 +82,7 @@ public class Policy extends Entity implements Parsable {
      * Gets the policyRules property value. Represents the definition of the policy ruleset that makes up the core definition of a policy.
      * @return a policyRule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PolicyRule> getPolicyRules() {
         return this.policyRules;
     }
@@ -90,7 +90,7 @@ public class Policy extends Entity implements Parsable {
      * Gets the version property value. Version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersion() {
         return this.version;
     }
@@ -99,8 +99,8 @@ public class Policy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -113,8 +113,8 @@ public class Policy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -122,8 +122,8 @@ public class Policy extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -131,8 +131,8 @@ public class Policy extends Entity implements Parsable {
      * @param value Value to set for the policyRules property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyRules(@javax.annotation.Nullable final java.util.List<PolicyRule> value) {
+    @jakarta.annotation.Nonnull
+    public void setPolicyRules(@jakarta.annotation.Nullable final java.util.List<PolicyRule> value) {
         this.policyRules = value;
     }
     /**
@@ -140,8 +140,8 @@ public class Policy extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }
 }

@@ -34,15 +34,17 @@ public enum DeviceManagementConfigurationTemplateFamily implements ValuedEnum {
     /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue"),
     /** Template Family for device configuration scripts */
-    DeviceConfigurationScripts("deviceConfigurationScripts");
+    DeviceConfigurationScripts("deviceConfigurationScripts"),
+    /** Template Family for device configuration policies */
+    DeviceConfigurationPolicies("deviceConfigurationPolicies");
     public final String value;
     DeviceManagementConfigurationTemplateFamily(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementConfigurationTemplateFamily forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementConfigurationTemplateFamily forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;
@@ -59,6 +61,7 @@ public enum DeviceManagementConfigurationTemplateFamily implements ValuedEnum {
             case "baseline": return Baseline;
             case "unknownFutureValue": return UnknownFutureValue;
             case "deviceConfigurationScripts": return DeviceConfigurationScripts;
+            case "deviceConfigurationPolicies": return DeviceConfigurationPolicies;
             default: return null;
         }
     }

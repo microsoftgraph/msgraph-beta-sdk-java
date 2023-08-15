@@ -40,7 +40,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      * Instantiates a new servicePrincipalLockConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServicePrincipalLockConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +49,8 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a servicePrincipalLockConfiguration
      */
-    @javax.annotation.Nonnull
-    public static ServicePrincipalLockConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ServicePrincipalLockConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ServicePrincipalLockConfiguration();
     }
@@ -58,7 +58,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +66,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      * Gets the allProperties property value. Enables locking all sensitive properties. The sensitive properties are keyCredentials, passwordCredentials, and tokenEncryptionKeyId.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllProperties() {
         return this.allProperties;
     }
@@ -74,7 +74,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      * Gets the credentialsWithUsageSign property value. Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Sign.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCredentialsWithUsageSign() {
         return this.credentialsWithUsageSign;
     }
@@ -82,7 +82,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      * Gets the credentialsWithUsageVerify property value. Locks the keyCredentials and passwordCredentials properties for modification where credential usage type is Verify. This locks OAuth service principals.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCredentialsWithUsageVerify() {
         return this.credentialsWithUsageVerify;
     }
@@ -90,7 +90,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("allProperties", (n) -> { this.setAllProperties(n.getBooleanValue()); });
@@ -105,7 +105,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      * Gets the isEnabled property value. Enables or disables service principal lock configuration. To allow the sensitive properties to be updated, update this property to false to disable the lock on the service principal.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
@@ -113,7 +113,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -121,7 +121,7 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      * Gets the tokenEncryptionKeyId property value. Locks the tokenEncryptionKeyId property for modification on the service principal.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getTokenEncryptionKeyId() {
         return this.tokenEncryptionKeyId;
     }
@@ -130,8 +130,8 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allProperties", this.getAllProperties());
         writer.writeBooleanValue("credentialsWithUsageSign", this.getCredentialsWithUsageSign());
@@ -143,11 +143,11 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -155,8 +155,8 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      * @param value Value to set for the allProperties property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllProperties(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllProperties(@jakarta.annotation.Nullable final Boolean value) {
         this.allProperties = value;
     }
     /**
@@ -164,8 +164,8 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      * @param value Value to set for the credentialsWithUsageSign property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCredentialsWithUsageSign(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setCredentialsWithUsageSign(@jakarta.annotation.Nullable final Boolean value) {
         this.credentialsWithUsageSign = value;
     }
     /**
@@ -173,8 +173,8 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      * @param value Value to set for the credentialsWithUsageVerify property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCredentialsWithUsageVerify(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setCredentialsWithUsageVerify(@jakarta.annotation.Nullable final Boolean value) {
         this.credentialsWithUsageVerify = value;
     }
     /**
@@ -182,17 +182,17 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -200,8 +200,8 @@ public class ServicePrincipalLockConfiguration implements AdditionalDataHolder, 
      * @param value Value to set for the tokenEncryptionKeyId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTokenEncryptionKeyId(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setTokenEncryptionKeyId(@jakarta.annotation.Nullable final Boolean value) {
         this.tokenEncryptionKeyId = value;
     }
 }

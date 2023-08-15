@@ -48,7 +48,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * Instantiates a new managedDeviceComplianceTrend and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedDeviceComplianceTrend() {
         super();
     }
@@ -57,8 +57,8 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedDeviceComplianceTrend
      */
-    @javax.annotation.Nonnull
-    public static ManagedDeviceComplianceTrend createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedDeviceComplianceTrend createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagedDeviceComplianceTrend();
     }
@@ -66,7 +66,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * Gets the compliantDeviceCount property value. The number of devices with a compliant status. Required. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCompliantDeviceCount() {
         return this.compliantDeviceCount;
     }
@@ -74,7 +74,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * Gets the configManagerDeviceCount property value. The number of devices manged by Configuration Manager. Required. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getConfigManagerDeviceCount() {
         return this.configManagerDeviceCount;
     }
@@ -82,7 +82,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * Gets the countDateTime property value. The date and time compliance snapshot was performed. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCountDateTime() {
         return this.countDateTime;
     }
@@ -90,7 +90,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * Gets the errorDeviceCount property value. The number of devices with an error status. Required. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
         return this.errorDeviceCount;
     }
@@ -98,7 +98,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("compliantDeviceCount", (n) -> { this.setCompliantDeviceCount(n.getIntegerValue()); });
@@ -116,7 +116,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * Gets the inGracePeriodDeviceCount property value. The number of devices that are in a grace period status. Required. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getInGracePeriodDeviceCount() {
         return this.inGracePeriodDeviceCount;
     }
@@ -124,7 +124,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * Gets the noncompliantDeviceCount property value. The number of devices that are in a non-compliant status. Required. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNoncompliantDeviceCount() {
         return this.noncompliantDeviceCount;
     }
@@ -132,7 +132,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
         return this.tenantDisplayName;
     }
@@ -140,7 +140,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -148,7 +148,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * Gets the unknownDeviceCount property value. The number of devices in an unknown status. Required. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {
         return this.unknownDeviceCount;
     }
@@ -157,8 +157,8 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("compliantDeviceCount", this.getCompliantDeviceCount());
@@ -176,8 +176,8 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the compliantDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.compliantDeviceCount = value;
     }
     /**
@@ -185,8 +185,8 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the configManagerDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigManagerDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setConfigManagerDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.configManagerDeviceCount = value;
     }
     /**
@@ -194,8 +194,8 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the countDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountDateTime(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCountDateTime(@jakarta.annotation.Nullable final String value) {
         this.countDateTime = value;
     }
     /**
@@ -203,8 +203,8 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the errorDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setErrorDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.errorDeviceCount = value;
     }
     /**
@@ -212,8 +212,8 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the inGracePeriodDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInGracePeriodDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setInGracePeriodDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.inGracePeriodDeviceCount = value;
     }
     /**
@@ -221,8 +221,8 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the noncompliantDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNoncompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNoncompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.noncompliantDeviceCount = value;
     }
     /**
@@ -230,8 +230,8 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantDisplayName(@jakarta.annotation.Nullable final String value) {
         this.tenantDisplayName = value;
     }
     /**
@@ -239,8 +239,8 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
@@ -248,8 +248,8 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the unknownDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnknownDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setUnknownDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.unknownDeviceCount = value;
     }
 }

@@ -29,7 +29,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
      * Instantiates a new setScheduledRetireStatePostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SetScheduledRetireStatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -38,8 +38,8 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a setScheduledRetireStatePostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static SetScheduledRetireStatePostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SetScheduledRetireStatePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SetScheduledRetireStatePostRequestBody();
     }
@@ -47,7 +47,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -55,7 +55,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("managedDeviceIds", (n) -> { this.setManagedDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -67,7 +67,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
      * Gets the managedDeviceIds property value. The managedDeviceIds property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getManagedDeviceIds() {
         return this.managedDeviceIds;
     }
@@ -75,7 +75,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
      * Gets the scopedToAllDevices property value. The scopedToAllDevices property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getScopedToAllDevices() {
         return this.scopedToAllDevices;
     }
@@ -83,7 +83,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
      * Gets the state property value. Cancel or confirm scheduled retire 
      * @return a scheduledRetireState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ScheduledRetireState getState() {
         return this.state;
     }
@@ -92,8 +92,8 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("managedDeviceIds", this.getManagedDeviceIds());
         writer.writeBooleanValue("scopedToAllDevices", this.getScopedToAllDevices());
@@ -102,11 +102,11 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -114,8 +114,8 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the managedDeviceIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedDeviceIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.managedDeviceIds = value;
     }
     /**
@@ -123,8 +123,8 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the scopedToAllDevices property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScopedToAllDevices(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setScopedToAllDevices(@jakarta.annotation.Nullable final Boolean value) {
         this.scopedToAllDevices = value;
     }
     /**
@@ -132,8 +132,8 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final ScheduledRetireState value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final ScheduledRetireState value) {
         this.state = value;
     }
 }

@@ -51,7 +51,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * Instantiates a new ediscoveryExportOperation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EdiscoveryExportOperation() {
         super();
     }
@@ -60,8 +60,8 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a ediscoveryExportOperation
      */
-    @javax.annotation.Nonnull
-    public static EdiscoveryExportOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EdiscoveryExportOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EdiscoveryExportOperation();
     }
@@ -69,7 +69,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * Gets the azureBlobContainer property value. The azureBlobContainer property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureBlobContainer() {
         return this.azureBlobContainer;
     }
@@ -77,7 +77,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * Gets the azureBlobToken property value. The azureBlobToken property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureBlobToken() {
         return this.azureBlobToken;
     }
@@ -85,7 +85,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * Gets the description property value. The description provided for the export.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -93,7 +93,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * Gets the exportFileMetadata property value. The exportFileMetadata property
      * @return a exportFileMetadata
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ExportFileMetadata> getExportFileMetadata() {
         return this.exportFileMetadata;
     }
@@ -101,7 +101,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * Gets the exportOptions property value. The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags. The fileInfo member is deprecated and will stop returning data on April 30th, 2023. Going forward, the summary and load file are always included.
      * @return a exportOptions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExportOptions getExportOptions() {
         return this.exportOptions;
     }
@@ -109,7 +109,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * Gets the exportStructure property value. The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
      * @return a exportFileStructure
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExportFileStructure getExportStructure() {
         return this.exportStructure;
     }
@@ -117,7 +117,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("azureBlobContainer", (n) -> { this.setAzureBlobContainer(n.getStringValue()); });
@@ -136,7 +136,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * Gets the outputFolderId property value. The outputFolderId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOutputFolderId() {
         return this.outputFolderId;
     }
@@ -144,7 +144,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * Gets the outputName property value. The name provided for the export.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOutputName() {
         return this.outputName;
     }
@@ -152,7 +152,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * Gets the reviewSet property value. Review set from where documents are exported.
      * @return a ediscoveryReviewSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EdiscoveryReviewSet getReviewSet() {
         return this.reviewSet;
     }
@@ -160,7 +160,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * Gets the reviewSetQuery property value. The review set query which is used to filter the documents for export.
      * @return a ediscoveryReviewSetQuery
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EdiscoveryReviewSetQuery getReviewSetQuery() {
         return this.reviewSetQuery;
     }
@@ -169,8 +169,8 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("azureBlobContainer", this.getAzureBlobContainer());
@@ -189,8 +189,8 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * @param value Value to set for the azureBlobContainer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureBlobContainer(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAzureBlobContainer(@jakarta.annotation.Nullable final String value) {
         this.azureBlobContainer = value;
     }
     /**
@@ -198,8 +198,8 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * @param value Value to set for the azureBlobToken property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureBlobToken(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAzureBlobToken(@jakarta.annotation.Nullable final String value) {
         this.azureBlobToken = value;
     }
     /**
@@ -207,8 +207,8 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -216,8 +216,8 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * @param value Value to set for the exportFileMetadata property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExportFileMetadata(@javax.annotation.Nullable final java.util.List<ExportFileMetadata> value) {
+    @jakarta.annotation.Nonnull
+    public void setExportFileMetadata(@jakarta.annotation.Nullable final java.util.List<ExportFileMetadata> value) {
         this.exportFileMetadata = value;
     }
     /**
@@ -225,8 +225,8 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * @param value Value to set for the exportOptions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExportOptions(@javax.annotation.Nullable final ExportOptions value) {
+    @jakarta.annotation.Nonnull
+    public void setExportOptions(@jakarta.annotation.Nullable final ExportOptions value) {
         this.exportOptions = value;
     }
     /**
@@ -234,8 +234,8 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * @param value Value to set for the exportStructure property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExportStructure(@javax.annotation.Nullable final ExportFileStructure value) {
+    @jakarta.annotation.Nonnull
+    public void setExportStructure(@jakarta.annotation.Nullable final ExportFileStructure value) {
         this.exportStructure = value;
     }
     /**
@@ -243,8 +243,8 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * @param value Value to set for the outputFolderId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOutputFolderId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOutputFolderId(@jakarta.annotation.Nullable final String value) {
         this.outputFolderId = value;
     }
     /**
@@ -252,8 +252,8 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * @param value Value to set for the outputName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOutputName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOutputName(@jakarta.annotation.Nullable final String value) {
         this.outputName = value;
     }
     /**
@@ -261,8 +261,8 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * @param value Value to set for the reviewSet property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewSet(@javax.annotation.Nullable final EdiscoveryReviewSet value) {
+    @jakarta.annotation.Nonnull
+    public void setReviewSet(@jakarta.annotation.Nullable final EdiscoveryReviewSet value) {
         this.reviewSet = value;
     }
     /**
@@ -270,8 +270,8 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      * @param value Value to set for the reviewSetQuery property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewSetQuery(@javax.annotation.Nullable final EdiscoveryReviewSetQuery value) {
+    @jakarta.annotation.Nonnull
+    public void setReviewSetQuery(@jakarta.annotation.Nullable final EdiscoveryReviewSetQuery value) {
         this.reviewSetQuery = value;
     }
 }

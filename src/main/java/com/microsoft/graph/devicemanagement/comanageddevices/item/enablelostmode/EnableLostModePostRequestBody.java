@@ -28,7 +28,7 @@ public class EnableLostModePostRequestBody implements AdditionalDataHolder, Pars
      * Instantiates a new enableLostModePostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EnableLostModePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class EnableLostModePostRequestBody implements AdditionalDataHolder, Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a enableLostModePostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static EnableLostModePostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EnableLostModePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EnableLostModePostRequestBody();
     }
@@ -46,7 +46,7 @@ public class EnableLostModePostRequestBody implements AdditionalDataHolder, Pars
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class EnableLostModePostRequestBody implements AdditionalDataHolder, Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("footer", (n) -> { this.setFooter(n.getStringValue()); });
@@ -66,7 +66,7 @@ public class EnableLostModePostRequestBody implements AdditionalDataHolder, Pars
      * Gets the footer property value. The footer property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFooter() {
         return this.footer;
     }
@@ -74,7 +74,7 @@ public class EnableLostModePostRequestBody implements AdditionalDataHolder, Pars
      * Gets the message property value. The message property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMessage() {
         return this.message;
     }
@@ -82,7 +82,7 @@ public class EnableLostModePostRequestBody implements AdditionalDataHolder, Pars
      * Gets the phoneNumber property value. The phoneNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
@@ -91,8 +91,8 @@ public class EnableLostModePostRequestBody implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("footer", this.getFooter());
         writer.writeStringValue("message", this.getMessage());
@@ -101,11 +101,11 @@ public class EnableLostModePostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -113,8 +113,8 @@ public class EnableLostModePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the footer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFooter(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFooter(@jakarta.annotation.Nullable final String value) {
         this.footer = value;
     }
     /**
@@ -122,8 +122,8 @@ public class EnableLostModePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the message property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMessage(@jakarta.annotation.Nullable final String value) {
         this.message = value;
     }
     /**
@@ -131,8 +131,8 @@ public class EnableLostModePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the phoneNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhoneNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPhoneNumber(@jakarta.annotation.Nullable final String value) {
         this.phoneNumber = value;
     }
 }

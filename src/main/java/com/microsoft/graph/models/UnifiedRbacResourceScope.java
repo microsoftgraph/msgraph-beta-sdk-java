@@ -23,7 +23,7 @@ public class UnifiedRbacResourceScope extends Entity implements Parsable {
      * Instantiates a new unifiedRbacResourceScope and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UnifiedRbacResourceScope() {
         super();
     }
@@ -32,8 +32,8 @@ public class UnifiedRbacResourceScope extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a unifiedRbacResourceScope
      */
-    @javax.annotation.Nonnull
-    public static UnifiedRbacResourceScope createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UnifiedRbacResourceScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UnifiedRbacResourceScope();
     }
@@ -41,7 +41,7 @@ public class UnifiedRbacResourceScope extends Entity implements Parsable {
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -49,7 +49,7 @@ public class UnifiedRbacResourceScope extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -61,7 +61,7 @@ public class UnifiedRbacResourceScope extends Entity implements Parsable {
      * Gets the scope property value. The scope property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getScope() {
         return this.scope;
     }
@@ -69,7 +69,7 @@ public class UnifiedRbacResourceScope extends Entity implements Parsable {
      * Gets the type property value. The type property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getType() {
         return this.type;
     }
@@ -78,8 +78,8 @@ public class UnifiedRbacResourceScope extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -91,8 +91,8 @@ public class UnifiedRbacResourceScope extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -100,8 +100,8 @@ public class UnifiedRbacResourceScope extends Entity implements Parsable {
      * @param value Value to set for the scope property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScope(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setScope(@jakarta.annotation.Nullable final String value) {
         this.scope = value;
     }
     /**
@@ -109,8 +109,8 @@ public class UnifiedRbacResourceScope extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
 }

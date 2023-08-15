@@ -35,7 +35,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      * Instantiates a new connectorGroup and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConnectorGroup() {
         super();
     }
@@ -44,8 +44,8 @@ public class ConnectorGroup extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a connectorGroup
      */
-    @javax.annotation.Nonnull
-    public static ConnectorGroup createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ConnectorGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ConnectorGroup();
     }
@@ -53,7 +53,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      * Gets the applications property value. The applications property
      * @return a application
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Application> getApplications() {
         return this.applications;
     }
@@ -61,7 +61,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      * Gets the connectorGroupType property value. The connectorGroupType property
      * @return a connectorGroupType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConnectorGroupType getConnectorGroupType() {
         return this.connectorGroupType;
     }
@@ -69,7 +69,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applications", (n) -> { this.setApplications(n.getCollectionOfObjectValues(Application::createFromDiscriminatorValue)); });
@@ -84,7 +84,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      * Gets the isDefault property value. Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
         return this.isDefault;
     }
@@ -92,7 +92,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      * Gets the members property value. The members property
      * @return a connector
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Connector> getMembers() {
         return this.members;
     }
@@ -100,7 +100,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      * Gets the name property value. The name associated with the connectorGroup.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -108,7 +108,7 @@ public class ConnectorGroup extends Entity implements Parsable {
      * Gets the region property value. The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The possible values are: nam (for North America), eur (for Europe), aus (for Australia), asia (for Asia), ind (for India), and unknownFutureValue.
      * @return a connectorGroupRegion
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConnectorGroupRegion getRegion() {
         return this.region;
     }
@@ -117,8 +117,8 @@ public class ConnectorGroup extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("applications", this.getApplications());
@@ -133,8 +133,8 @@ public class ConnectorGroup extends Entity implements Parsable {
      * @param value Value to set for the applications property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplications(@javax.annotation.Nullable final java.util.List<Application> value) {
+    @jakarta.annotation.Nonnull
+    public void setApplications(@jakarta.annotation.Nullable final java.util.List<Application> value) {
         this.applications = value;
     }
     /**
@@ -142,8 +142,8 @@ public class ConnectorGroup extends Entity implements Parsable {
      * @param value Value to set for the connectorGroupType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectorGroupType(@javax.annotation.Nullable final ConnectorGroupType value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectorGroupType(@jakarta.annotation.Nullable final ConnectorGroupType value) {
         this.connectorGroupType = value;
     }
     /**
@@ -151,8 +151,8 @@ public class ConnectorGroup extends Entity implements Parsable {
      * @param value Value to set for the isDefault property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefault = value;
     }
     /**
@@ -160,8 +160,8 @@ public class ConnectorGroup extends Entity implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMembers(@javax.annotation.Nullable final java.util.List<Connector> value) {
+    @jakarta.annotation.Nonnull
+    public void setMembers(@jakarta.annotation.Nullable final java.util.List<Connector> value) {
         this.members = value;
     }
     /**
@@ -169,8 +169,8 @@ public class ConnectorGroup extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -178,8 +178,8 @@ public class ConnectorGroup extends Entity implements Parsable {
      * @param value Value to set for the region property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegion(@javax.annotation.Nullable final ConnectorGroupRegion value) {
+    @jakarta.annotation.Nonnull
+    public void setRegion(@jakarta.annotation.Nullable final ConnectorGroupRegion value) {
         this.region = value;
     }
 }

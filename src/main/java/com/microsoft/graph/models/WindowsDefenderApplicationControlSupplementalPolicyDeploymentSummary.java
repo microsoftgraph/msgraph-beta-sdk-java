@@ -22,7 +22,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      * Instantiates a new windowsDefenderApplicationControlSupplementalPolicyDeploymentSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary() {
         super();
     }
@@ -31,8 +31,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsDefenderApplicationControlSupplementalPolicyDeploymentSummary
      */
-    @javax.annotation.Nonnull
-    public static WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary();
     }
@@ -40,7 +40,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      * Gets the deployedDeviceCount property value. Number of Devices that have successfully deployed this WindowsDefenderApplicationControl supplemental policy.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDeployedDeviceCount() {
         return this.deployedDeviceCount;
     }
@@ -48,7 +48,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      * Gets the failedDeviceCount property value. Number of Devices that have failed to deploy this WindowsDefenderApplicationControl supplemental policy.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFailedDeviceCount() {
         return this.failedDeviceCount;
     }
@@ -56,7 +56,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deployedDeviceCount", (n) -> { this.setDeployedDeviceCount(n.getIntegerValue()); });
@@ -68,8 +68,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("deployedDeviceCount", this.getDeployedDeviceCount());
@@ -80,8 +80,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      * @param value Value to set for the deployedDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeployedDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setDeployedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.deployedDeviceCount = value;
     }
     /**
@@ -89,8 +89,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      * @param value Value to set for the failedDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setFailedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedDeviceCount = value;
     }
 }

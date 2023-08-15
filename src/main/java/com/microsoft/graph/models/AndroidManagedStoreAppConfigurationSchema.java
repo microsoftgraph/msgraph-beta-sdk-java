@@ -26,7 +26,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * Instantiates a new androidManagedStoreAppConfigurationSchema and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidManagedStoreAppConfigurationSchema() {
         super();
     }
@@ -35,8 +35,8 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidManagedStoreAppConfigurationSchema
      */
-    @javax.annotation.Nonnull
-    public static AndroidManagedStoreAppConfigurationSchema createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidManagedStoreAppConfigurationSchema createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidManagedStoreAppConfigurationSchema();
     }
@@ -44,7 +44,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * Gets the exampleJson property value. UTF8 encoded byte array containing example JSON string conforming to this schema that demonstrates how to set the configuration for this app
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getExampleJson() {
         return this.exampleJson;
     }
@@ -52,7 +52,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("exampleJson", (n) -> { this.setExampleJson(n.getByteArrayValue()); });
@@ -64,7 +64,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * Gets the nestedSchemaItems property value. Collection of items each representing a named configuration option in the schema. It contains a flat list of all configuration.
      * @return a androidManagedStoreAppConfigurationSchemaItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AndroidManagedStoreAppConfigurationSchemaItem> getNestedSchemaItems() {
         return this.nestedSchemaItems;
     }
@@ -72,7 +72,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * Gets the schemaItems property value. Collection of items each representing a named configuration option in the schema. It only contains the root-level configuration.
      * @return a androidManagedStoreAppConfigurationSchemaItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AndroidManagedStoreAppConfigurationSchemaItem> getSchemaItems() {
         return this.schemaItems;
     }
@@ -81,8 +81,8 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeByteArrayValue("exampleJson", this.getExampleJson());
@@ -94,8 +94,8 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * @param value Value to set for the exampleJson property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExampleJson(@javax.annotation.Nullable final byte[] value) {
+    @jakarta.annotation.Nonnull
+    public void setExampleJson(@jakarta.annotation.Nullable final byte[] value) {
         this.exampleJson = value;
     }
     /**
@@ -103,8 +103,8 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * @param value Value to set for the nestedSchemaItems property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNestedSchemaItems(@javax.annotation.Nullable final java.util.List<AndroidManagedStoreAppConfigurationSchemaItem> value) {
+    @jakarta.annotation.Nonnull
+    public void setNestedSchemaItems(@jakarta.annotation.Nullable final java.util.List<AndroidManagedStoreAppConfigurationSchemaItem> value) {
         this.nestedSchemaItems = value;
     }
     /**
@@ -112,8 +112,8 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * @param value Value to set for the schemaItems property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchemaItems(@javax.annotation.Nullable final java.util.List<AndroidManagedStoreAppConfigurationSchemaItem> value) {
+    @jakarta.annotation.Nonnull
+    public void setSchemaItems(@jakarta.annotation.Nullable final java.util.List<AndroidManagedStoreAppConfigurationSchemaItem> value) {
         this.schemaItems = value;
     }
 }

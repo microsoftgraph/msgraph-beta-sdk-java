@@ -39,7 +39,7 @@ public class DataSharingConsent extends Entity implements Parsable {
      * Instantiates a new dataSharingConsent and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DataSharingConsent() {
         super();
     }
@@ -48,8 +48,8 @@ public class DataSharingConsent extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a dataSharingConsent
      */
-    @javax.annotation.Nonnull
-    public static DataSharingConsent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DataSharingConsent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DataSharingConsent();
     }
@@ -57,7 +57,7 @@ public class DataSharingConsent extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("grantDateTime", (n) -> { this.setGrantDateTime(n.getOffsetDateTimeValue()); });
@@ -72,7 +72,7 @@ public class DataSharingConsent extends Entity implements Parsable {
      * Gets the grantDateTime property value. The time consent was granted for this account
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getGrantDateTime() {
         return this.grantDateTime;
     }
@@ -80,7 +80,7 @@ public class DataSharingConsent extends Entity implements Parsable {
      * Gets the granted property value. The granted state for the data sharing consent
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getGranted() {
         return this.granted;
     }
@@ -88,7 +88,7 @@ public class DataSharingConsent extends Entity implements Parsable {
      * Gets the grantedByUpn property value. The Upn of the user that granted consent for this account
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getGrantedByUpn() {
         return this.grantedByUpn;
     }
@@ -96,7 +96,7 @@ public class DataSharingConsent extends Entity implements Parsable {
      * Gets the grantedByUserId property value. The UserId of the user that granted consent for this account
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getGrantedByUserId() {
         return this.grantedByUserId;
     }
@@ -104,7 +104,7 @@ public class DataSharingConsent extends Entity implements Parsable {
      * Gets the serviceDisplayName property value. The display name of the service work flow
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getServiceDisplayName() {
         return this.serviceDisplayName;
     }
@@ -112,7 +112,7 @@ public class DataSharingConsent extends Entity implements Parsable {
      * Gets the termsUrl property value. The TermsUrl for the data sharing consent
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTermsUrl() {
         return this.termsUrl;
     }
@@ -121,8 +121,8 @@ public class DataSharingConsent extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("grantDateTime", this.getGrantDateTime());
@@ -137,8 +137,8 @@ public class DataSharingConsent extends Entity implements Parsable {
      * @param value Value to set for the grantDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGrantDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setGrantDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.grantDateTime = value;
     }
     /**
@@ -146,8 +146,8 @@ public class DataSharingConsent extends Entity implements Parsable {
      * @param value Value to set for the granted property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGranted(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setGranted(@jakarta.annotation.Nullable final Boolean value) {
         this.granted = value;
     }
     /**
@@ -155,8 +155,8 @@ public class DataSharingConsent extends Entity implements Parsable {
      * @param value Value to set for the grantedByUpn property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGrantedByUpn(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setGrantedByUpn(@jakarta.annotation.Nullable final String value) {
         this.grantedByUpn = value;
     }
     /**
@@ -164,8 +164,8 @@ public class DataSharingConsent extends Entity implements Parsable {
      * @param value Value to set for the grantedByUserId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGrantedByUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setGrantedByUserId(@jakarta.annotation.Nullable final String value) {
         this.grantedByUserId = value;
     }
     /**
@@ -173,8 +173,8 @@ public class DataSharingConsent extends Entity implements Parsable {
      * @param value Value to set for the serviceDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServiceDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setServiceDisplayName(@jakarta.annotation.Nullable final String value) {
         this.serviceDisplayName = value;
     }
     /**
@@ -182,8 +182,8 @@ public class DataSharingConsent extends Entity implements Parsable {
      * @param value Value to set for the termsUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTermsUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTermsUrl(@jakarta.annotation.Nullable final String value) {
         this.termsUrl = value;
     }
 }

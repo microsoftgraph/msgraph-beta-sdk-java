@@ -36,7 +36,7 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
      * Instantiates a new cloudPcBulkRemoteActionResult and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcBulkRemoteActionResult() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudPcBulkRemoteActionResult
      */
-    @javax.annotation.Nonnull
-    public static CloudPcBulkRemoteActionResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudPcBulkRemoteActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudPcBulkRemoteActionResult();
     }
@@ -54,7 +54,7 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
      * Gets the failedDeviceIds property value. A list of all the Intune managed device IDs that completed the bulk action with a failure.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getFailedDeviceIds() {
         return this.failedDeviceIds;
     }
@@ -70,7 +70,7 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("failedDeviceIds", (n) -> { this.setFailedDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -84,7 +84,7 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
      * Gets the notFoundDeviceIds property value. A list of all the Intune managed device IDs that were not found when the bulk action was attempted.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getNotFoundDeviceIds() {
         return this.notFoundDeviceIds;
     }
@@ -92,7 +92,7 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
      * Gets the notSupportedDeviceIds property value. A list of all the Intune managed device IDs that were identified as unsupported for the bulk action.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getNotSupportedDeviceIds() {
         return this.notSupportedDeviceIds;
     }
@@ -100,7 +100,7 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -108,7 +108,7 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
      * Gets the successfulDeviceIds property value. A list of all the Intune managed device IDs that completed the bulk action successfully.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSuccessfulDeviceIds() {
         return this.successfulDeviceIds;
     }
@@ -117,8 +117,8 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("failedDeviceIds", this.getFailedDeviceIds());
         writer.writeCollectionOfPrimitiveValues("notFoundDeviceIds", this.getNotFoundDeviceIds());
@@ -129,11 +129,11 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
      * @param value Value to set for the failedDeviceIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedDeviceIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setFailedDeviceIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.failedDeviceIds = value;
     }
     /**
@@ -150,8 +150,8 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
      * @param value Value to set for the notFoundDeviceIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotFoundDeviceIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setNotFoundDeviceIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.notFoundDeviceIds = value;
     }
     /**
@@ -159,17 +159,17 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
      * @param value Value to set for the notSupportedDeviceIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotSupportedDeviceIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setNotSupportedDeviceIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.notSupportedDeviceIds = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -177,8 +177,8 @@ public class CloudPcBulkRemoteActionResult implements AdditionalDataHolder, Pars
      * @param value Value to set for the successfulDeviceIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuccessfulDeviceIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSuccessfulDeviceIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.successfulDeviceIds = value;
     }
 }

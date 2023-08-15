@@ -12,10 +12,10 @@ public enum ContinuousAccessEvaluationMode implements ValuedEnum {
     ContinuousAccessEvaluationMode(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ContinuousAccessEvaluationMode forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ContinuousAccessEvaluationMode forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "strictEnforcement": return StrictEnforcement;

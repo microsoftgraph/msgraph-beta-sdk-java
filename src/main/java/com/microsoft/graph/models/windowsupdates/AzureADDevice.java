@@ -19,7 +19,7 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
      * Instantiates a new azureADDevice and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AzureADDevice() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.azureADDevice");
@@ -29,8 +29,8 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a azureADDevice
      */
-    @javax.annotation.Nonnull
-    public static AzureADDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AzureADDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AzureADDevice();
     }
@@ -38,7 +38,7 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
      * Gets the enrollments property value. Specifies areas of the service in which the device is enrolled. Read-only. Returned by default.
      * @return a updatableAssetEnrollment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UpdatableAssetEnrollment> getEnrollments() {
         return this.enrollments;
     }
@@ -46,7 +46,7 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
      * Gets the errors property value. Specifies any errors that prevent the device from being enrolled in update management or receving deployed content. Read-only. Returned by default.
      * @return a updatableAssetError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UpdatableAssetError> getErrors() {
         return this.errors;
     }
@@ -54,7 +54,7 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("enrollments", (n) -> { this.setEnrollments(n.getCollectionOfObjectValues(UpdatableAssetEnrollment::createFromDiscriminatorValue)); });
@@ -66,8 +66,8 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("enrollments", this.getEnrollments());
@@ -78,8 +78,8 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
      * @param value Value to set for the enrollments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollments(@javax.annotation.Nullable final java.util.List<UpdatableAssetEnrollment> value) {
+    @jakarta.annotation.Nonnull
+    public void setEnrollments(@jakarta.annotation.Nullable final java.util.List<UpdatableAssetEnrollment> value) {
         this.enrollments = value;
     }
     /**
@@ -87,8 +87,8 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
      * @param value Value to set for the errors property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrors(@javax.annotation.Nullable final java.util.List<UpdatableAssetError> value) {
+    @jakarta.annotation.Nonnull
+    public void setErrors(@jakarta.annotation.Nullable final java.util.List<UpdatableAssetError> value) {
         this.errors = value;
     }
 }

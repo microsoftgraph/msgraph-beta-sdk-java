@@ -59,7 +59,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * Instantiates a new vpnOnDemandRule and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VpnOnDemandRule() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -68,8 +68,8 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a vpnOnDemandRule
      */
-    @javax.annotation.Nonnull
-    public static VpnOnDemandRule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static VpnOnDemandRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new VpnOnDemandRule();
     }
@@ -77,7 +77,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * Gets the action property value. VPN On-Demand Rule Connection Action.
      * @return a vpnOnDemandRuleConnectionAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VpnOnDemandRuleConnectionAction getAction() {
         return this.action;
     }
@@ -85,7 +85,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -93,7 +93,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * Gets the dnsSearchDomains property value. DNS Search Domains.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getDnsSearchDomains() {
         return this.dnsSearchDomains;
     }
@@ -101,7 +101,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * Gets the dnsServerAddressMatch property value. DNS Search Server Address.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getDnsServerAddressMatch() {
         return this.dnsServerAddressMatch;
     }
@@ -109,7 +109,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * Gets the domainAction property value. VPN On-Demand Rule Connection Domain Action.
      * @return a vpnOnDemandRuleConnectionDomainAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VpnOnDemandRuleConnectionDomainAction getDomainAction() {
         return this.domainAction;
     }
@@ -117,7 +117,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * Gets the domains property value. Domains (Only applicable when Action is evaluate connection).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getDomains() {
         return this.domains;
     }
@@ -125,7 +125,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(VpnOnDemandRuleConnectionAction.class)); });
@@ -144,7 +144,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * Gets the interfaceTypeMatch property value. VPN On-Demand Rule Connection network interface type.
      * @return a vpnOnDemandRuleInterfaceTypeMatch
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VpnOnDemandRuleInterfaceTypeMatch getInterfaceTypeMatch() {
         return this.interfaceTypeMatch;
     }
@@ -152,7 +152,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -160,7 +160,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * Gets the probeRequiredUrl property value. Probe Required Url (Only applicable when Action is evaluate connection and DomainAction is connect if needed).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProbeRequiredUrl() {
         return this.probeRequiredUrl;
     }
@@ -168,7 +168,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * Gets the probeUrl property value. A URL to probe. If this URL is successfully fetched (returning a 200 HTTP status code) without redirection, this rule matches.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProbeUrl() {
         return this.probeUrl;
     }
@@ -176,7 +176,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * Gets the ssids property value. Network Service Set Identifiers (SSIDs).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSsids() {
         return this.ssids;
     }
@@ -185,8 +185,8 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("action", this.getAction());
         writer.writeCollectionOfPrimitiveValues("dnsSearchDomains", this.getDnsSearchDomains());
@@ -205,17 +205,17 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the action property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAction(@javax.annotation.Nullable final VpnOnDemandRuleConnectionAction value) {
+    @jakarta.annotation.Nonnull
+    public void setAction(@jakarta.annotation.Nullable final VpnOnDemandRuleConnectionAction value) {
         this.action = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -223,8 +223,8 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the dnsSearchDomains property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDnsSearchDomains(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setDnsSearchDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.dnsSearchDomains = value;
     }
     /**
@@ -232,8 +232,8 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the dnsServerAddressMatch property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDnsServerAddressMatch(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setDnsServerAddressMatch(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.dnsServerAddressMatch = value;
     }
     /**
@@ -241,8 +241,8 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the domainAction property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDomainAction(@javax.annotation.Nullable final VpnOnDemandRuleConnectionDomainAction value) {
+    @jakarta.annotation.Nonnull
+    public void setDomainAction(@jakarta.annotation.Nullable final VpnOnDemandRuleConnectionDomainAction value) {
         this.domainAction = value;
     }
     /**
@@ -250,8 +250,8 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the domains property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDomains(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.domains = value;
     }
     /**
@@ -259,17 +259,17 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the interfaceTypeMatch property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInterfaceTypeMatch(@javax.annotation.Nullable final VpnOnDemandRuleInterfaceTypeMatch value) {
+    @jakarta.annotation.Nonnull
+    public void setInterfaceTypeMatch(@jakarta.annotation.Nullable final VpnOnDemandRuleInterfaceTypeMatch value) {
         this.interfaceTypeMatch = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -277,8 +277,8 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the probeRequiredUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProbeRequiredUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProbeRequiredUrl(@jakarta.annotation.Nullable final String value) {
         this.probeRequiredUrl = value;
     }
     /**
@@ -286,8 +286,8 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the probeUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProbeUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProbeUrl(@jakarta.annotation.Nullable final String value) {
         this.probeUrl = value;
     }
     /**
@@ -295,8 +295,8 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ssids property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSsids(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSsids(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.ssids = value;
     }
 }

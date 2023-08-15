@@ -98,7 +98,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Instantiates a new depMacOSEnrollmentProfile and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DepMacOSEnrollmentProfile() {
         super();
         this.setOdataType("#microsoft.graph.depMacOSEnrollmentProfile");
@@ -108,8 +108,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a depMacOSEnrollmentProfile
      */
-    @javax.annotation.Nonnull
-    public static DepMacOSEnrollmentProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DepMacOSEnrollmentProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DepMacOSEnrollmentProfile();
     }
@@ -117,7 +117,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the accessibilityScreenDisabled property value. Indicates if Accessibility screen is disabled
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAccessibilityScreenDisabled() {
         return this.accessibilityScreenDisabled;
     }
@@ -125,7 +125,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the adminAccountFullName property value. Indicates what the full name for the admin account is
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAdminAccountFullName() {
         return this.adminAccountFullName;
     }
@@ -133,7 +133,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the adminAccountPassword property value. Indicates what the password for the admin account is
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAdminAccountPassword() {
         return this.adminAccountPassword;
     }
@@ -141,7 +141,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the adminAccountUserName property value. Indicates what the user name for the admin account is
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAdminAccountUserName() {
         return this.adminAccountUserName;
     }
@@ -149,7 +149,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the autoAdvanceSetupEnabled property value. Indicates if Setup Assistant will automatically advance through its screen
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAutoAdvanceSetupEnabled() {
         return this.autoAdvanceSetupEnabled;
     }
@@ -157,7 +157,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the autoUnlockWithWatchDisabled property value. Indicates if UnlockWithWatch screen is disabled
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAutoUnlockWithWatchDisabled() {
         return this.autoUnlockWithWatchDisabled;
     }
@@ -165,7 +165,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the chooseYourLockScreenDisabled property value. Indicates if iCloud Documents and Desktop screen is disabled
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getChooseYourLockScreenDisabled() {
         return this.chooseYourLockScreenDisabled;
     }
@@ -173,7 +173,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the dontAutoPopulatePrimaryAccountInfo property value. Indicates whether Setup Assistant will auto populate the primary account information
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDontAutoPopulatePrimaryAccountInfo() {
         return this.dontAutoPopulatePrimaryAccountInfo;
     }
@@ -181,7 +181,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the enableRestrictEditing property value. Indicates whether the user will enable blockediting
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableRestrictEditing() {
         return this.enableRestrictEditing;
     }
@@ -189,7 +189,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessibilityScreenDisabled", (n) -> { this.setAccessibilityScreenDisabled(n.getBooleanValue()); });
@@ -219,7 +219,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the fileVaultDisabled property value. Indicates if file vault is disabled
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getFileVaultDisabled() {
         return this.fileVaultDisabled;
     }
@@ -227,7 +227,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the hideAdminAccount property value. Indicates whether the admin account should be hidded or not
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHideAdminAccount() {
         return this.hideAdminAccount;
     }
@@ -235,7 +235,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the iCloudDiagnosticsDisabled property value. Indicates if iCloud Analytics screen is disabled
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getICloudDiagnosticsDisabled() {
         return this.iCloudDiagnosticsDisabled;
     }
@@ -243,7 +243,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the iCloudStorageDisabled property value. Indicates if iCloud Documents and Desktop screen is disabled
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getICloudStorageDisabled() {
         return this.iCloudStorageDisabled;
     }
@@ -251,7 +251,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the passCodeDisabled property value. Indicates if Passcode setup pane is disabled
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPassCodeDisabled() {
         return this.passCodeDisabled;
     }
@@ -259,7 +259,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the primaryAccountFullName property value. Indicates what the full name for the primary account is
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrimaryAccountFullName() {
         return this.primaryAccountFullName;
     }
@@ -267,7 +267,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the primaryAccountUserName property value. Indicates what the account name for the primary account is
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrimaryAccountUserName() {
         return this.primaryAccountUserName;
     }
@@ -275,7 +275,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the registrationDisabled property value. Indicates if registration is disabled
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRegistrationDisabled() {
         return this.registrationDisabled;
     }
@@ -283,7 +283,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the requestRequiresNetworkTether property value. Indicates if the device is network-tethered to run the command
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequestRequiresNetworkTether() {
         return this.requestRequiresNetworkTether;
     }
@@ -291,7 +291,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the setPrimarySetupAccountAsRegularUser property value. Indicates whether Setup Assistant will set the account as a regular user
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSetPrimarySetupAccountAsRegularUser() {
         return this.setPrimarySetupAccountAsRegularUser;
     }
@@ -299,7 +299,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the skipPrimarySetupAccountCreation property value. Indicates whether Setup Assistant will skip the user interface for primary account setup
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSkipPrimarySetupAccountCreation() {
         return this.skipPrimarySetupAccountCreation;
     }
@@ -307,7 +307,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Gets the zoomDisabled property value. Indicates if zoom setup pane is disabled
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getZoomDisabled() {
         return this.zoomDisabled;
     }
@@ -316,8 +316,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("accessibilityScreenDisabled", this.getAccessibilityScreenDisabled());
@@ -347,8 +347,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the accessibilityScreenDisabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessibilityScreenDisabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessibilityScreenDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.accessibilityScreenDisabled = value;
     }
     /**
@@ -356,8 +356,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the adminAccountFullName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdminAccountFullName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAdminAccountFullName(@jakarta.annotation.Nullable final String value) {
         this.adminAccountFullName = value;
     }
     /**
@@ -365,8 +365,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the adminAccountPassword property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdminAccountPassword(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAdminAccountPassword(@jakarta.annotation.Nullable final String value) {
         this.adminAccountPassword = value;
     }
     /**
@@ -374,8 +374,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the adminAccountUserName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdminAccountUserName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAdminAccountUserName(@jakarta.annotation.Nullable final String value) {
         this.adminAccountUserName = value;
     }
     /**
@@ -383,8 +383,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the autoAdvanceSetupEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAutoAdvanceSetupEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAutoAdvanceSetupEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.autoAdvanceSetupEnabled = value;
     }
     /**
@@ -392,8 +392,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the autoUnlockWithWatchDisabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAutoUnlockWithWatchDisabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAutoUnlockWithWatchDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.autoUnlockWithWatchDisabled = value;
     }
     /**
@@ -401,8 +401,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the chooseYourLockScreenDisabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChooseYourLockScreenDisabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setChooseYourLockScreenDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.chooseYourLockScreenDisabled = value;
     }
     /**
@@ -410,8 +410,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the dontAutoPopulatePrimaryAccountInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDontAutoPopulatePrimaryAccountInfo(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDontAutoPopulatePrimaryAccountInfo(@jakarta.annotation.Nullable final Boolean value) {
         this.dontAutoPopulatePrimaryAccountInfo = value;
     }
     /**
@@ -419,8 +419,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the enableRestrictEditing property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableRestrictEditing(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnableRestrictEditing(@jakarta.annotation.Nullable final Boolean value) {
         this.enableRestrictEditing = value;
     }
     /**
@@ -428,8 +428,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the fileVaultDisabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileVaultDisabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setFileVaultDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.fileVaultDisabled = value;
     }
     /**
@@ -437,8 +437,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the hideAdminAccount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHideAdminAccount(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setHideAdminAccount(@jakarta.annotation.Nullable final Boolean value) {
         this.hideAdminAccount = value;
     }
     /**
@@ -446,8 +446,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the iCloudDiagnosticsDisabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setICloudDiagnosticsDisabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setICloudDiagnosticsDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.iCloudDiagnosticsDisabled = value;
     }
     /**
@@ -455,8 +455,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the iCloudStorageDisabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setICloudStorageDisabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setICloudStorageDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.iCloudStorageDisabled = value;
     }
     /**
@@ -464,8 +464,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the passCodeDisabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPassCodeDisabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPassCodeDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.passCodeDisabled = value;
     }
     /**
@@ -473,8 +473,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the primaryAccountFullName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrimaryAccountFullName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrimaryAccountFullName(@jakarta.annotation.Nullable final String value) {
         this.primaryAccountFullName = value;
     }
     /**
@@ -482,8 +482,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the primaryAccountUserName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrimaryAccountUserName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrimaryAccountUserName(@jakarta.annotation.Nullable final String value) {
         this.primaryAccountUserName = value;
     }
     /**
@@ -491,8 +491,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the registrationDisabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegistrationDisabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRegistrationDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.registrationDisabled = value;
     }
     /**
@@ -500,8 +500,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the requestRequiresNetworkTether property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestRequiresNetworkTether(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRequestRequiresNetworkTether(@jakarta.annotation.Nullable final Boolean value) {
         this.requestRequiresNetworkTether = value;
     }
     /**
@@ -509,8 +509,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the setPrimarySetupAccountAsRegularUser property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSetPrimarySetupAccountAsRegularUser(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSetPrimarySetupAccountAsRegularUser(@jakarta.annotation.Nullable final Boolean value) {
         this.setPrimarySetupAccountAsRegularUser = value;
     }
     /**
@@ -518,8 +518,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the skipPrimarySetupAccountCreation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSkipPrimarySetupAccountCreation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSkipPrimarySetupAccountCreation(@jakarta.annotation.Nullable final Boolean value) {
         this.skipPrimarySetupAccountCreation = value;
     }
     /**
@@ -527,8 +527,8 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the zoomDisabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setZoomDisabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setZoomDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.zoomDisabled = value;
     }
 }

@@ -63,7 +63,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * Instantiates a new deviceHealthScriptDeviceState and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceHealthScriptDeviceState() {
         super();
     }
@@ -72,8 +72,8 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceHealthScriptDeviceState
      */
-    @javax.annotation.Nonnull
-    public static DeviceHealthScriptDeviceState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceHealthScriptDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceHealthScriptDeviceState();
     }
@@ -81,7 +81,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * Gets the assignmentFilterIds property value. A list of the assignment filter ids used for health script applicability evaluation
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAssignmentFilterIds() {
         return this.assignmentFilterIds;
     }
@@ -89,7 +89,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * Gets the detectionState property value. Indicates the type of execution status of the device management script.
      * @return a runState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RunState getDetectionState() {
         return this.detectionState;
     }
@@ -97,7 +97,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * Gets the expectedStateUpdateDateTime property value. The next timestamp of when the device health script is expected to execute
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpectedStateUpdateDateTime() {
         return this.expectedStateUpdateDateTime;
     }
@@ -105,7 +105,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignmentFilterIds", (n) -> { this.setAssignmentFilterIds(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -126,7 +126,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * Gets the lastStateUpdateDateTime property value. The last timestamp of when the device health script executed
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastStateUpdateDateTime() {
         return this.lastStateUpdateDateTime;
     }
@@ -134,7 +134,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * Gets the lastSyncDateTime property value. The last time that Intune Managment Extension synced with Intune
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
         return this.lastSyncDateTime;
     }
@@ -142,7 +142,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * Gets the managedDevice property value. The managed device on which the device health script executed
      * @return a managedDevice
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedDevice getManagedDevice() {
         return this.managedDevice;
     }
@@ -150,7 +150,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * Gets the postRemediationDetectionScriptError property value. Error from the detection script after remediation
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPostRemediationDetectionScriptError() {
         return this.postRemediationDetectionScriptError;
     }
@@ -158,7 +158,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * Gets the postRemediationDetectionScriptOutput property value. Detection script output after remediation
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPostRemediationDetectionScriptOutput() {
         return this.postRemediationDetectionScriptOutput;
     }
@@ -166,7 +166,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * Gets the preRemediationDetectionScriptError property value. Error from the detection script before remediation
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPreRemediationDetectionScriptError() {
         return this.preRemediationDetectionScriptError;
     }
@@ -174,7 +174,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * Gets the preRemediationDetectionScriptOutput property value. Output of the detection script before remediation
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPreRemediationDetectionScriptOutput() {
         return this.preRemediationDetectionScriptOutput;
     }
@@ -182,7 +182,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * Gets the remediationScriptError property value. Error output of the remediation script
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRemediationScriptError() {
         return this.remediationScriptError;
     }
@@ -190,7 +190,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * Gets the remediationState property value. Indicates the type of execution status of the device management script.
      * @return a remediationState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RemediationState getRemediationState() {
         return this.remediationState;
     }
@@ -199,8 +199,8 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("assignmentFilterIds", this.getAssignmentFilterIds());
@@ -221,8 +221,8 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * @param value Value to set for the assignmentFilterIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentFilterIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignmentFilterIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.assignmentFilterIds = value;
     }
     /**
@@ -230,8 +230,8 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * @param value Value to set for the detectionState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetectionState(@javax.annotation.Nullable final RunState value) {
+    @jakarta.annotation.Nonnull
+    public void setDetectionState(@jakarta.annotation.Nullable final RunState value) {
         this.detectionState = value;
     }
     /**
@@ -239,8 +239,8 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * @param value Value to set for the expectedStateUpdateDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpectedStateUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setExpectedStateUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expectedStateUpdateDateTime = value;
     }
     /**
@@ -248,8 +248,8 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * @param value Value to set for the lastStateUpdateDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastStateUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastStateUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastStateUpdateDateTime = value;
     }
     /**
@@ -257,8 +257,8 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSyncDateTime = value;
     }
     /**
@@ -266,8 +266,8 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * @param value Value to set for the managedDevice property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDevice(@javax.annotation.Nullable final ManagedDevice value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedDevice(@jakarta.annotation.Nullable final ManagedDevice value) {
         this.managedDevice = value;
     }
     /**
@@ -275,8 +275,8 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * @param value Value to set for the postRemediationDetectionScriptError property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPostRemediationDetectionScriptError(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPostRemediationDetectionScriptError(@jakarta.annotation.Nullable final String value) {
         this.postRemediationDetectionScriptError = value;
     }
     /**
@@ -284,8 +284,8 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * @param value Value to set for the postRemediationDetectionScriptOutput property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPostRemediationDetectionScriptOutput(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPostRemediationDetectionScriptOutput(@jakarta.annotation.Nullable final String value) {
         this.postRemediationDetectionScriptOutput = value;
     }
     /**
@@ -293,8 +293,8 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * @param value Value to set for the preRemediationDetectionScriptError property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreRemediationDetectionScriptError(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPreRemediationDetectionScriptError(@jakarta.annotation.Nullable final String value) {
         this.preRemediationDetectionScriptError = value;
     }
     /**
@@ -302,8 +302,8 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * @param value Value to set for the preRemediationDetectionScriptOutput property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreRemediationDetectionScriptOutput(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPreRemediationDetectionScriptOutput(@jakarta.annotation.Nullable final String value) {
         this.preRemediationDetectionScriptOutput = value;
     }
     /**
@@ -311,8 +311,8 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * @param value Value to set for the remediationScriptError property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemediationScriptError(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRemediationScriptError(@jakarta.annotation.Nullable final String value) {
         this.remediationScriptError = value;
     }
     /**
@@ -320,8 +320,8 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      * @param value Value to set for the remediationState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemediationState(@javax.annotation.Nullable final RemediationState value) {
+    @jakarta.annotation.Nonnull
+    public void setRemediationState(@jakarta.annotation.Nullable final RemediationState value) {
         this.remediationState = value;
     }
 }

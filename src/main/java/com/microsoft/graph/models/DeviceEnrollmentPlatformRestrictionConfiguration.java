@@ -22,7 +22,7 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
      * Instantiates a new deviceEnrollmentPlatformRestrictionConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceEnrollmentPlatformRestrictionConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.deviceEnrollmentPlatformRestrictionConfiguration");
@@ -32,8 +32,8 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceEnrollmentPlatformRestrictionConfiguration
      */
-    @javax.annotation.Nonnull
-    public static DeviceEnrollmentPlatformRestrictionConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceEnrollmentPlatformRestrictionConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceEnrollmentPlatformRestrictionConfiguration();
     }
@@ -41,7 +41,7 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("platformRestriction", (n) -> { this.setPlatformRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
@@ -52,7 +52,7 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
      * Gets the platformRestriction property value. Restrictions based on platform, platform operating system version, and device ownership
      * @return a deviceEnrollmentPlatformRestriction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction getPlatformRestriction() {
         return this.platformRestriction;
     }
@@ -60,7 +60,7 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
      * Gets the platformType property value. This enum indicates the platform type for which the enrollment restriction applies.
      * @return a enrollmentRestrictionPlatformType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EnrollmentRestrictionPlatformType getPlatformType() {
         return this.platformType;
     }
@@ -69,8 +69,8 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("platformRestriction", this.getPlatformRestriction());
@@ -81,8 +81,8 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
      * @param value Value to set for the platformRestriction property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatformRestriction(@javax.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
+    @jakarta.annotation.Nonnull
+    public void setPlatformRestriction(@jakarta.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
         this.platformRestriction = value;
     }
     /**
@@ -90,8 +90,8 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
      * @param value Value to set for the platformType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatformType(@javax.annotation.Nullable final EnrollmentRestrictionPlatformType value) {
+    @jakarta.annotation.Nonnull
+    public void setPlatformType(@jakarta.annotation.Nullable final EnrollmentRestrictionPlatformType value) {
         this.platformType = value;
     }
 }

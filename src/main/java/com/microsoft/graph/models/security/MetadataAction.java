@@ -19,7 +19,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
      * Instantiates a new metadataAction and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MetadataAction() {
         super();
         this.setOdataType("#microsoft.graph.security.metadataAction");
@@ -29,8 +29,8 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a metadataAction
      */
-    @javax.annotation.Nonnull
-    public static MetadataAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MetadataAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MetadataAction();
     }
@@ -38,7 +38,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("metadataToAdd", (n) -> { this.setMetadataToAdd(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
@@ -49,7 +49,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
      * Gets the metadataToAdd property value. A collection of key-value pairs that should be added to the file.
      * @return a keyValuePair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getMetadataToAdd() {
         return this.metadataToAdd;
     }
@@ -57,7 +57,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
      * Gets the metadataToRemove property value. A collection of strings that indicate which keys to remove from the file metadata.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getMetadataToRemove() {
         return this.metadataToRemove;
     }
@@ -66,8 +66,8 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("metadataToAdd", this.getMetadataToAdd());
@@ -78,8 +78,8 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
      * @param value Value to set for the metadataToAdd property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMetadataToAdd(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
+    @jakarta.annotation.Nonnull
+    public void setMetadataToAdd(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this.metadataToAdd = value;
     }
     /**
@@ -87,8 +87,8 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
      * @param value Value to set for the metadataToRemove property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMetadataToRemove(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setMetadataToRemove(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.metadataToRemove = value;
     }
 }

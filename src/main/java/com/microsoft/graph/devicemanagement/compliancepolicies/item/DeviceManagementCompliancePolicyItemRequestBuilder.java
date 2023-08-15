@@ -28,35 +28,35 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
     /**
      * Provides operations to call the assign method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AssignRequestBuilder assign() {
         return new AssignRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.deviceManagementCompliancePolicy entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the scheduledActionsForRule property of the microsoft.graph.deviceManagementCompliancePolicy entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ScheduledActionsForRuleRequestBuilder scheduledActionsForRule() {
         return new ScheduledActionsForRuleRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the setScheduledActions method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SetScheduledActionsRequestBuilder setScheduledActions() {
         return new SetScheduledActionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.deviceManagementCompliancePolicy entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SettingsRequestBuilder settings() {
         return new SettingsRequestBuilder(pathParameters, requestAdapter);
     }
@@ -66,8 +66,8 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public DeviceManagementCompliancePolicyItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementCompliancePolicyItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/compliancePolicies/{deviceManagementCompliancePolicy%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -76,15 +76,15 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public DeviceManagementCompliancePolicyItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementCompliancePolicyItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/compliancePolicies/{deviceManagementCompliancePolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property compliancePolicies for deviceManagement
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -103,8 +103,8 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -121,7 +121,7 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
      * List of all compliance policies
      * @return a CompletableFuture of deviceManagementCompliancePolicy
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicy> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -140,8 +140,8 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagementCompliancePolicy
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicy> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -159,8 +159,8 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
      * @param body The request body
      * @return a CompletableFuture of deviceManagementCompliancePolicy
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicy> patch(@javax.annotation.Nonnull final DeviceManagementCompliancePolicy body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicy> patch(@jakarta.annotation.Nonnull final DeviceManagementCompliancePolicy body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -179,8 +179,8 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceManagementCompliancePolicy
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicy> patch(@javax.annotation.Nonnull final DeviceManagementCompliancePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicy> patch(@jakarta.annotation.Nonnull final DeviceManagementCompliancePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -198,7 +198,7 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
      * Delete navigation property compliancePolicies for deviceManagement
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -207,8 +207,8 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -225,7 +225,7 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
      * List of all compliance policies
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -234,8 +234,8 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -255,8 +255,8 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final DeviceManagementCompliancePolicy body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementCompliancePolicy body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -265,8 +265,8 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final DeviceManagementCompliancePolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementCompliancePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -295,13 +295,13 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -311,7 +311,7 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

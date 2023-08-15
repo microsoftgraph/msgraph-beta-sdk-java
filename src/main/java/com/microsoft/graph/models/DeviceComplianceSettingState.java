@@ -63,7 +63,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * Instantiates a new deviceComplianceSettingState and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceComplianceSettingState() {
         super();
     }
@@ -72,8 +72,8 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceComplianceSettingState
      */
-    @javax.annotation.Nonnull
-    public static DeviceComplianceSettingState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceComplianceSettingState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceComplianceSettingState();
     }
@@ -81,7 +81,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * Gets the complianceGracePeriodExpirationDateTime property value. The DateTime when device compliance grace period expires
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getComplianceGracePeriodExpirationDateTime() {
         return this.complianceGracePeriodExpirationDateTime;
     }
@@ -89,7 +89,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * Gets the deviceId property value. The Device Id that is being reported
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -97,7 +97,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * Gets the deviceModel property value. The device model that is being reported
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceModel() {
         return this.deviceModel;
     }
@@ -105,7 +105,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * Gets the deviceName property value. The Device Name that is being reported
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -113,7 +113,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("complianceGracePeriodExpirationDateTime", (n) -> { this.setComplianceGracePeriodExpirationDateTime(n.getOffsetDateTimeValue()); });
@@ -134,7 +134,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * Gets the platformType property value. Device type.
      * @return a deviceType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceType getPlatformType() {
         return this.platformType;
     }
@@ -142,7 +142,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * Gets the setting property value. The setting class name and property name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSetting() {
         return this.setting;
     }
@@ -150,7 +150,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * Gets the settingName property value. The Setting Name that is being reported
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingName() {
         return this.settingName;
     }
@@ -158,7 +158,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * Gets the state property value. The state property
      * @return a complianceStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
         return this.state;
     }
@@ -166,7 +166,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * Gets the userEmail property value. The User email address that is being reported
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserEmail() {
         return this.userEmail;
     }
@@ -174,7 +174,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * Gets the userId property value. The user Id that is being reported
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -182,7 +182,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * Gets the userName property value. The User Name that is being reported
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserName() {
         return this.userName;
     }
@@ -190,7 +190,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * Gets the userPrincipalName property value. The User PrincipalName that is being reported
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
@@ -199,8 +199,8 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("complianceGracePeriodExpirationDateTime", this.getComplianceGracePeriodExpirationDateTime());
@@ -221,8 +221,8 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * @param value Value to set for the complianceGracePeriodExpirationDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComplianceGracePeriodExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setComplianceGracePeriodExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.complianceGracePeriodExpirationDateTime = value;
     }
     /**
@@ -230,8 +230,8 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * @param value Value to set for the deviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
@@ -239,8 +239,8 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * @param value Value to set for the deviceModel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceModel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
         this.deviceModel = value;
     }
     /**
@@ -248,8 +248,8 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * @param value Value to set for the deviceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
@@ -257,8 +257,8 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * @param value Value to set for the platformType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatformType(@javax.annotation.Nullable final DeviceType value) {
+    @jakarta.annotation.Nonnull
+    public void setPlatformType(@jakarta.annotation.Nullable final DeviceType value) {
         this.platformType = value;
     }
     /**
@@ -266,8 +266,8 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * @param value Value to set for the setting property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSetting(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSetting(@jakarta.annotation.Nullable final String value) {
         this.setting = value;
     }
     /**
@@ -275,8 +275,8 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * @param value Value to set for the settingName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSettingName(@jakarta.annotation.Nullable final String value) {
         this.settingName = value;
     }
     /**
@@ -284,8 +284,8 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final ComplianceStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final ComplianceStatus value) {
         this.state = value;
     }
     /**
@@ -293,8 +293,8 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * @param value Value to set for the userEmail property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserEmail(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserEmail(@jakarta.annotation.Nullable final String value) {
         this.userEmail = value;
     }
     /**
@@ -302,8 +302,8 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
@@ -311,8 +311,8 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * @param value Value to set for the userName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
     /**
@@ -320,8 +320,8 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

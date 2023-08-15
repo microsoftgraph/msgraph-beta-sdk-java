@@ -56,7 +56,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * Instantiates a new governanceRoleSetting and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceRoleSetting() {
         super();
     }
@@ -65,8 +65,8 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a governanceRoleSetting
      */
-    @javax.annotation.Nonnull
-    public static GovernanceRoleSetting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GovernanceRoleSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GovernanceRoleSetting();
     }
@@ -74,7 +74,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * Gets the adminEligibleSettings property value. The rule settings that are evaluated when an administrator tries to add an eligible role assignment.
      * @return a governanceRuleSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GovernanceRuleSetting> getAdminEligibleSettings() {
         return this.adminEligibleSettings;
     }
@@ -82,7 +82,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * Gets the adminMemberSettings property value. The rule settings that are evaluated when an administrator tries to add a direct member role assignment.
      * @return a governanceRuleSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GovernanceRuleSetting> getAdminMemberSettings() {
         return this.adminMemberSettings;
     }
@@ -90,7 +90,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("adminEligibleSettings", (n) -> { this.setAdminEligibleSettings(n.getCollectionOfObjectValues(GovernanceRuleSetting::createFromDiscriminatorValue)); });
@@ -110,7 +110,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * Gets the isDefault property value. Read-only. Indicate if the roleSetting is a default roleSetting
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
         return this.isDefault;
     }
@@ -118,7 +118,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * Gets the lastUpdatedBy property value. Read-only. The display name of the administrator who last updated the roleSetting.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLastUpdatedBy() {
         return this.lastUpdatedBy;
     }
@@ -126,7 +126,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * Gets the lastUpdatedDateTime property value. Read-only. The time when the role setting was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
         return this.lastUpdatedDateTime;
     }
@@ -134,7 +134,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * Gets the resource property value. Read-only. The associated resource for this role setting.
      * @return a governanceResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceResource getResource() {
         return this.resource;
     }
@@ -142,7 +142,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * Gets the resourceId property value. Required. The id of the resource that the role setting is associated with.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceId() {
         return this.resourceId;
     }
@@ -150,7 +150,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * Gets the roleDefinition property value. Read-only. The role definition that is enforced with this role setting.
      * @return a governanceRoleDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceRoleDefinition getRoleDefinition() {
         return this.roleDefinition;
     }
@@ -158,7 +158,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * Gets the roleDefinitionId property value. Required. The id of the role definition that the role setting is associated with.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
@@ -166,7 +166,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * Gets the userEligibleSettings property value. The rule settings that are evaluated when a user tries to add an eligible role assignment. The setting is not supported for now.
      * @return a governanceRuleSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GovernanceRuleSetting> getUserEligibleSettings() {
         return this.userEligibleSettings;
     }
@@ -174,7 +174,7 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * Gets the userMemberSettings property value. The rule settings that are evaluated when a user tries to activate his role assignment.
      * @return a governanceRuleSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GovernanceRuleSetting> getUserMemberSettings() {
         return this.userMemberSettings;
     }
@@ -183,8 +183,8 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("adminEligibleSettings", this.getAdminEligibleSettings());
@@ -204,8 +204,8 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the adminEligibleSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdminEligibleSettings(@javax.annotation.Nullable final java.util.List<GovernanceRuleSetting> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdminEligibleSettings(@jakarta.annotation.Nullable final java.util.List<GovernanceRuleSetting> value) {
         this.adminEligibleSettings = value;
     }
     /**
@@ -213,8 +213,8 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the adminMemberSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdminMemberSettings(@javax.annotation.Nullable final java.util.List<GovernanceRuleSetting> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdminMemberSettings(@jakarta.annotation.Nullable final java.util.List<GovernanceRuleSetting> value) {
         this.adminMemberSettings = value;
     }
     /**
@@ -222,8 +222,8 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the isDefault property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefault = value;
     }
     /**
@@ -231,8 +231,8 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the lastUpdatedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastUpdatedBy(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLastUpdatedBy(@jakarta.annotation.Nullable final String value) {
         this.lastUpdatedBy = value;
     }
     /**
@@ -240,8 +240,8 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
@@ -249,8 +249,8 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResource(@javax.annotation.Nullable final GovernanceResource value) {
+    @jakarta.annotation.Nonnull
+    public void setResource(@jakarta.annotation.Nullable final GovernanceResource value) {
         this.resource = value;
     }
     /**
@@ -258,8 +258,8 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the resourceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceId(@jakarta.annotation.Nullable final String value) {
         this.resourceId = value;
     }
     /**
@@ -267,8 +267,8 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the roleDefinition property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinition(@javax.annotation.Nullable final GovernanceRoleDefinition value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDefinition(@jakarta.annotation.Nullable final GovernanceRoleDefinition value) {
         this.roleDefinition = value;
     }
     /**
@@ -276,8 +276,8 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.roleDefinitionId = value;
     }
     /**
@@ -285,8 +285,8 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the userEligibleSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserEligibleSettings(@javax.annotation.Nullable final java.util.List<GovernanceRuleSetting> value) {
+    @jakarta.annotation.Nonnull
+    public void setUserEligibleSettings(@jakarta.annotation.Nullable final java.util.List<GovernanceRuleSetting> value) {
         this.userEligibleSettings = value;
     }
     /**
@@ -294,8 +294,8 @@ public class GovernanceRoleSetting extends Entity implements Parsable {
      * @param value Value to set for the userMemberSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserMemberSettings(@javax.annotation.Nullable final java.util.List<GovernanceRuleSetting> value) {
+    @jakarta.annotation.Nonnull
+    public void setUserMemberSettings(@jakarta.annotation.Nullable final java.util.List<GovernanceRuleSetting> value) {
         this.userMemberSettings = value;
     }
 }

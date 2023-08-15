@@ -19,7 +19,7 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
      * Instantiates a new cloudPcManagementGroupAssignmentTarget and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcManagementGroupAssignmentTarget() {
         super();
         this.setOdataType("#microsoft.graph.cloudPcManagementGroupAssignmentTarget");
@@ -29,8 +29,8 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudPcManagementGroupAssignmentTarget
      */
-    @javax.annotation.Nonnull
-    public static CloudPcManagementGroupAssignmentTarget createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudPcManagementGroupAssignmentTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudPcManagementGroupAssignmentTarget();
     }
@@ -38,7 +38,7 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("groupId", (n) -> { this.setGroupId(n.getStringValue()); });
@@ -49,7 +49,7 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
      * Gets the groupId property value. The ID of the target group for the assignment.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getGroupId() {
         return this.groupId;
     }
@@ -57,7 +57,7 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
      * Gets the servicePlanId property value. The unique identifier for the service plan that indicates which size of the Cloud PC to provision for the user. Use a null value, when the provisioningType is dedicated.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getServicePlanId() {
         return this.servicePlanId;
     }
@@ -66,8 +66,8 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("groupId", this.getGroupId());
@@ -78,8 +78,8 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
      * @param value Value to set for the groupId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setGroupId(@jakarta.annotation.Nullable final String value) {
         this.groupId = value;
     }
     /**
@@ -87,8 +87,8 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
      * @param value Value to set for the servicePlanId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServicePlanId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setServicePlanId(@jakarta.annotation.Nullable final String value) {
         this.servicePlanId = value;
     }
 }

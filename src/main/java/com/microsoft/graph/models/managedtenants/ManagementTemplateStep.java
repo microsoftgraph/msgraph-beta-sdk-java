@@ -62,7 +62,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * Instantiates a new managementTemplateStep and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagementTemplateStep() {
         super();
     }
@@ -71,8 +71,8 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managementTemplateStep
      */
-    @javax.annotation.Nonnull
-    public static ManagementTemplateStep createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagementTemplateStep createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagementTemplateStep();
     }
@@ -80,7 +80,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * Gets the acceptedVersion property value. The acceptedVersion property
      * @return a managementTemplateStepVersion
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagementTemplateStepVersion getAcceptedVersion() {
         return this.acceptedVersion;
     }
@@ -88,7 +88,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * Gets the category property value. The category property
      * @return a managementCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagementCategory getCategory() {
         return this.category;
     }
@@ -96,7 +96,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * Gets the createdByUserId property value. The createdByUserId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
         return this.createdByUserId;
     }
@@ -104,7 +104,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * Gets the createdDateTime property value. The createdDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -112,7 +112,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * Gets the description property value. The description property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -120,7 +120,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -128,7 +128,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("acceptedVersion", (n) -> { this.setAcceptedVersion(n.getObjectValue(ManagementTemplateStepVersion::createFromDiscriminatorValue)); });
@@ -149,7 +149,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * Gets the lastActionByUserId property value. The lastActionByUserId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
         return this.lastActionByUserId;
     }
@@ -157,7 +157,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * Gets the lastActionDateTime property value. The lastActionDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
         return this.lastActionDateTime;
     }
@@ -165,7 +165,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * Gets the managementTemplate property value. The managementTemplate property
      * @return a managementTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagementTemplate getManagementTemplate() {
         return this.managementTemplate;
     }
@@ -173,7 +173,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * Gets the portalLink property value. The portalLink property
      * @return a actionUrl
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ActionUrl getPortalLink() {
         return this.portalLink;
     }
@@ -181,7 +181,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * Gets the priority property value. The priority property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPriority() {
         return this.priority;
     }
@@ -189,7 +189,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * Gets the versions property value. The versions property
      * @return a managementTemplateStepVersion
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateStepVersion> getVersions() {
         return this.versions;
     }
@@ -198,8 +198,8 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("acceptedVersion", this.getAcceptedVersion());
@@ -220,8 +220,8 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the acceptedVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAcceptedVersion(@javax.annotation.Nullable final ManagementTemplateStepVersion value) {
+    @jakarta.annotation.Nonnull
+    public void setAcceptedVersion(@jakarta.annotation.Nullable final ManagementTemplateStepVersion value) {
         this.acceptedVersion = value;
     }
     /**
@@ -229,8 +229,8 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory(@javax.annotation.Nullable final ManagementCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setCategory(@jakarta.annotation.Nullable final ManagementCategory value) {
         this.category = value;
     }
     /**
@@ -238,8 +238,8 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the createdByUserId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedByUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedByUserId(@jakarta.annotation.Nullable final String value) {
         this.createdByUserId = value;
     }
     /**
@@ -247,8 +247,8 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -256,8 +256,8 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -265,8 +265,8 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -274,8 +274,8 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the lastActionByUserId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActionByUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLastActionByUserId(@jakarta.annotation.Nullable final String value) {
         this.lastActionByUserId = value;
     }
     /**
@@ -283,8 +283,8 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the lastActionDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastActionDateTime = value;
     }
     /**
@@ -292,8 +292,8 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the managementTemplate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplate(@javax.annotation.Nullable final ManagementTemplate value) {
+    @jakarta.annotation.Nonnull
+    public void setManagementTemplate(@jakarta.annotation.Nullable final ManagementTemplate value) {
         this.managementTemplate = value;
     }
     /**
@@ -301,8 +301,8 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the portalLink property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPortalLink(@javax.annotation.Nullable final ActionUrl value) {
+    @jakarta.annotation.Nonnull
+    public void setPortalLink(@jakarta.annotation.Nullable final ActionUrl value) {
         this.portalLink = value;
     }
     /**
@@ -310,8 +310,8 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPriority(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.priority = value;
     }
     /**
@@ -319,8 +319,8 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the versions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersions(@javax.annotation.Nullable final java.util.List<ManagementTemplateStepVersion> value) {
+    @jakarta.annotation.Nonnull
+    public void setVersions(@jakarta.annotation.Nullable final java.util.List<ManagementTemplateStepVersion> value) {
         this.versions = value;
     }
 }

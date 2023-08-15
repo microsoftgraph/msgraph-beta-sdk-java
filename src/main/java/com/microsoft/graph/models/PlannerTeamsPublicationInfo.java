@@ -13,6 +13,10 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
      * The identifier of the publication. Read-only.
      */
     private String publicationId;
@@ -32,7 +36,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      * Instantiates a new plannerTeamsPublicationInfo and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerTeamsPublicationInfo() {
         super();
         this.setOdataType("#microsoft.graph.plannerTeamsPublicationInfo");
@@ -42,8 +46,8 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a plannerTeamsPublicationInfo
      */
-    @javax.annotation.Nonnull
-    public static PlannerTeamsPublicationInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PlannerTeamsPublicationInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PlannerTeamsPublicationInfo();
     }
@@ -51,10 +55,11 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("publicationId", (n) -> { this.setPublicationId(n.getStringValue()); });
         deserializerMap.put("publishedToPlanId", (n) -> { this.setPublishedToPlanId(n.getStringValue()); });
         deserializerMap.put("publishingTeamId", (n) -> { this.setPublishingTeamId(n.getStringValue()); });
@@ -65,15 +70,23 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      * Gets the lastModifiedDateTime property value. The date and time when this task was last modified by the publication process. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @jakarta.annotation.Nullable
+    public String getOdataType() {
+        return this.odataType;
     }
     /**
      * Gets the publicationId property value. The identifier of the publication. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPublicationId() {
         return this.publicationId;
     }
@@ -81,7 +94,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      * Gets the publishedToPlanId property value. The identifier of the plannerPlan this task was originally placed in. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPublishedToPlanId() {
         return this.publishedToPlanId;
     }
@@ -89,7 +102,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      * Gets the publishingTeamId property value. The identifier of the team that initiated the publication process. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPublishingTeamId() {
         return this.publishingTeamId;
     }
@@ -97,7 +110,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      * Gets the publishingTeamName property value. The display name of the team that initiated the publication process. This display name is for reference only, and might not represent the most up-to-date name of the team. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPublishingTeamName() {
         return this.publishingTeamName;
     }
@@ -106,11 +119,12 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("publicationId", this.getPublicationId());
         writer.writeStringValue("publishedToPlanId", this.getPublishedToPlanId());
         writer.writeStringValue("publishingTeamId", this.getPublishingTeamId());
@@ -121,17 +135,26 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the @odata.type property.
+     * @return a void
+     */
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
+        this.odataType = value;
     }
     /**
      * Sets the publicationId property value. The identifier of the publication. Read-only.
      * @param value Value to set for the publicationId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublicationId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPublicationId(@jakarta.annotation.Nullable final String value) {
         this.publicationId = value;
     }
     /**
@@ -139,8 +162,8 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      * @param value Value to set for the publishedToPlanId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublishedToPlanId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPublishedToPlanId(@jakarta.annotation.Nullable final String value) {
         this.publishedToPlanId = value;
     }
     /**
@@ -148,8 +171,8 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      * @param value Value to set for the publishingTeamId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublishingTeamId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPublishingTeamId(@jakarta.annotation.Nullable final String value) {
         this.publishingTeamId = value;
     }
     /**
@@ -157,8 +180,8 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      * @param value Value to set for the publishingTeamName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublishingTeamName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPublishingTeamName(@jakarta.annotation.Nullable final String value) {
         this.publishingTeamName = value;
     }
 }

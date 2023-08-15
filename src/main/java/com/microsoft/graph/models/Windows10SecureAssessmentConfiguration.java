@@ -46,7 +46,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * Instantiates a new windows10SecureAssessmentConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Windows10SecureAssessmentConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10SecureAssessmentConfiguration");
@@ -56,8 +56,8 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windows10SecureAssessmentConfiguration
      */
-    @javax.annotation.Nonnull
-    public static Windows10SecureAssessmentConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Windows10SecureAssessmentConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Windows10SecureAssessmentConfiguration();
     }
@@ -65,7 +65,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * Gets the allowPrinting property value. Indicates whether or not to allow the app from printing during the test.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowPrinting() {
         return this.allowPrinting;
     }
@@ -73,7 +73,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * Gets the allowScreenCapture property value. Indicates whether or not to allow screen capture capability during a test.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowScreenCapture() {
         return this.allowScreenCapture;
     }
@@ -81,7 +81,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * Gets the allowTextSuggestion property value. Indicates whether or not to allow text suggestions during the test.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowTextSuggestion() {
         return this.allowTextSuggestion;
     }
@@ -89,7 +89,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * Gets the assessmentAppUserModelId property value. Specifies the application user model ID of the assessment app launched when a user signs in to a secure assessment with a local guest account. Important notice: this property must be set with localGuestAccountName in order to make the local guest account sign-in experience work properly for secure assessments.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssessmentAppUserModelId() {
         return this.assessmentAppUserModelId;
     }
@@ -97,7 +97,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * Gets the configurationAccount property value. The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConfigurationAccount() {
         return this.configurationAccount;
     }
@@ -105,7 +105,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * Gets the configurationAccountType property value. Type of accounts that are allowed for Windows10SecureAssessment ConfigurationAccount.
      * @return a secureAssessmentAccountType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SecureAssessmentAccountType getConfigurationAccountType() {
         return this.configurationAccountType;
     }
@@ -113,7 +113,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowPrinting", (n) -> { this.setAllowPrinting(n.getBooleanValue()); });
@@ -130,7 +130,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * Gets the launchUri property value. Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLaunchUri() {
         return this.launchUri;
     }
@@ -138,7 +138,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * Gets the localGuestAccountName property value. Specifies the display text for the local guest account shown on the sign-in screen. Typically is the name of an assessment. When the user clicks the local guest account on the sign-in screen, an assessment app is launched with a specified assessment URL. Secure assessments can only be configured with local guest account sign-in on devices running Windows 10, version 1903 or later. Important notice: this property must be set with assessmentAppUserModelID in order to make the local guest account sign-in experience work properly for secure assessments.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLocalGuestAccountName() {
         return this.localGuestAccountName;
     }
@@ -147,8 +147,8 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("allowPrinting", this.getAllowPrinting());
@@ -165,8 +165,8 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param value Value to set for the allowPrinting property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowPrinting(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowPrinting(@jakarta.annotation.Nullable final Boolean value) {
         this.allowPrinting = value;
     }
     /**
@@ -174,8 +174,8 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param value Value to set for the allowScreenCapture property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowScreenCapture(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowScreenCapture(@jakarta.annotation.Nullable final Boolean value) {
         this.allowScreenCapture = value;
     }
     /**
@@ -183,8 +183,8 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param value Value to set for the allowTextSuggestion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowTextSuggestion(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowTextSuggestion(@jakarta.annotation.Nullable final Boolean value) {
         this.allowTextSuggestion = value;
     }
     /**
@@ -192,8 +192,8 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param value Value to set for the assessmentAppUserModelId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssessmentAppUserModelId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssessmentAppUserModelId(@jakarta.annotation.Nullable final String value) {
         this.assessmentAppUserModelId = value;
     }
     /**
@@ -201,8 +201,8 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param value Value to set for the configurationAccount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigurationAccount(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setConfigurationAccount(@jakarta.annotation.Nullable final String value) {
         this.configurationAccount = value;
     }
     /**
@@ -210,8 +210,8 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param value Value to set for the configurationAccountType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigurationAccountType(@javax.annotation.Nullable final SecureAssessmentAccountType value) {
+    @jakarta.annotation.Nonnull
+    public void setConfigurationAccountType(@jakarta.annotation.Nullable final SecureAssessmentAccountType value) {
         this.configurationAccountType = value;
     }
     /**
@@ -219,8 +219,8 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param value Value to set for the launchUri property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLaunchUri(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLaunchUri(@jakarta.annotation.Nullable final String value) {
         this.launchUri = value;
     }
     /**
@@ -228,8 +228,8 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param value Value to set for the localGuestAccountName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocalGuestAccountName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLocalGuestAccountName(@jakarta.annotation.Nullable final String value) {
         this.localGuestAccountName = value;
     }
 }

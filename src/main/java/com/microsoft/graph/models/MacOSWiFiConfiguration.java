@@ -54,7 +54,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * Instantiates a new macOSWiFiConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSWiFiConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSWiFiConfiguration");
@@ -64,8 +64,8 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a macOSWiFiConfiguration
      */
-    @javax.annotation.Nonnull
-    public static MacOSWiFiConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MacOSWiFiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -80,7 +80,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * Gets the connectAutomatically property value. Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getConnectAutomatically() {
         return this.connectAutomatically;
     }
@@ -88,7 +88,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * Gets the connectWhenNetworkNameIsHidden property value. Connect when the network is not broadcasting its name (SSID). When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getConnectWhenNetworkNameIsHidden() {
         return this.connectWhenNetworkNameIsHidden;
     }
@@ -96,7 +96,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("connectAutomatically", (n) -> { this.setConnectAutomatically(n.getBooleanValue()); });
@@ -115,7 +115,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * Gets the networkName property value. Network Name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNetworkName() {
         return this.networkName;
     }
@@ -123,7 +123,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * Gets the preSharedKey property value. This is the pre-shared key for WPA Personal Wi-Fi network.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPreSharedKey() {
         return this.preSharedKey;
     }
@@ -131,7 +131,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * Gets the proxyAutomaticConfigurationUrl property value. URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProxyAutomaticConfigurationUrl() {
         return this.proxyAutomaticConfigurationUrl;
     }
@@ -139,7 +139,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * Gets the proxyManualAddress property value. IP Address or DNS hostname of the proxy server when manual configuration is selected.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProxyManualAddress() {
         return this.proxyManualAddress;
     }
@@ -147,7 +147,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * Gets the proxyManualPort property value. Port of the proxy server when manual configuration is selected.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getProxyManualPort() {
         return this.proxyManualPort;
     }
@@ -155,7 +155,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * Gets the proxySettings property value. Wi-Fi Proxy Settings.
      * @return a wiFiProxySetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WiFiProxySetting getProxySettings() {
         return this.proxySettings;
     }
@@ -163,7 +163,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * Gets the ssid property value. This is the name of the Wi-Fi network that is broadcast to all devices.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSsid() {
         return this.ssid;
     }
@@ -171,7 +171,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * Gets the wiFiSecurityType property value. Wi-Fi Security Types.
      * @return a wiFiSecurityType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WiFiSecurityType getWiFiSecurityType() {
         return this.wiFiSecurityType;
     }
@@ -180,8 +180,8 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("connectAutomatically", this.getConnectAutomatically());
@@ -200,8 +200,8 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the connectAutomatically property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectAutomatically(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectAutomatically(@jakarta.annotation.Nullable final Boolean value) {
         this.connectAutomatically = value;
     }
     /**
@@ -209,8 +209,8 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the connectWhenNetworkNameIsHidden property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectWhenNetworkNameIsHidden(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectWhenNetworkNameIsHidden(@jakarta.annotation.Nullable final Boolean value) {
         this.connectWhenNetworkNameIsHidden = value;
     }
     /**
@@ -218,8 +218,8 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the networkName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkName(@jakarta.annotation.Nullable final String value) {
         this.networkName = value;
     }
     /**
@@ -227,8 +227,8 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the preSharedKey property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreSharedKey(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPreSharedKey(@jakarta.annotation.Nullable final String value) {
         this.preSharedKey = value;
     }
     /**
@@ -236,8 +236,8 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the proxyAutomaticConfigurationUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProxyAutomaticConfigurationUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProxyAutomaticConfigurationUrl(@jakarta.annotation.Nullable final String value) {
         this.proxyAutomaticConfigurationUrl = value;
     }
     /**
@@ -245,8 +245,8 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the proxyManualAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProxyManualAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProxyManualAddress(@jakarta.annotation.Nullable final String value) {
         this.proxyManualAddress = value;
     }
     /**
@@ -254,8 +254,8 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the proxyManualPort property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProxyManualPort(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setProxyManualPort(@jakarta.annotation.Nullable final Integer value) {
         this.proxyManualPort = value;
     }
     /**
@@ -263,8 +263,8 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the proxySettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProxySettings(@javax.annotation.Nullable final WiFiProxySetting value) {
+    @jakarta.annotation.Nonnull
+    public void setProxySettings(@jakarta.annotation.Nullable final WiFiProxySetting value) {
         this.proxySettings = value;
     }
     /**
@@ -272,8 +272,8 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the ssid property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSsid(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSsid(@jakarta.annotation.Nullable final String value) {
         this.ssid = value;
     }
     /**
@@ -281,8 +281,8 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the wiFiSecurityType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWiFiSecurityType(@javax.annotation.Nullable final WiFiSecurityType value) {
+    @jakarta.annotation.Nonnull
+    public void setWiFiSecurityType(@jakarta.annotation.Nullable final WiFiSecurityType value) {
         this.wiFiSecurityType = value;
     }
 }

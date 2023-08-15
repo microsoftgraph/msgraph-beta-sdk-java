@@ -22,7 +22,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
      * Instantiates a new deviceManagementSettingProfileConstraint and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementSettingProfileConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingProfileConstraint");
@@ -32,8 +32,8 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementSettingProfileConstraint
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementSettingProfileConstraint createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementSettingProfileConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementSettingProfileConstraint();
     }
@@ -41,7 +41,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("source", (n) -> { this.setSource(n.getStringValue()); });
@@ -52,7 +52,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
      * Gets the source property value. The source of the entity
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSource() {
         return this.source;
     }
@@ -60,7 +60,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
      * Gets the types property value. A collection of types this entity carries
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTypes() {
         return this.types;
     }
@@ -69,8 +69,8 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("source", this.getSource());
@@ -81,8 +81,8 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
      * @param value Value to set for the source property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSource(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSource(@jakarta.annotation.Nullable final String value) {
         this.source = value;
     }
     /**
@@ -90,8 +90,8 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
      * @param value Value to set for the types property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTypes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.types = value;
     }
 }

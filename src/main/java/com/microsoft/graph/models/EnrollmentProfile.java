@@ -38,7 +38,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * Instantiates a new enrollmentProfile and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EnrollmentProfile() {
         super();
     }
@@ -47,8 +47,8 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a enrollmentProfile
      */
-    @javax.annotation.Nonnull
-    public static EnrollmentProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EnrollmentProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -66,7 +66,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * Gets the configurationEndpointUrl property value. Configuration endpoint url to use for Enrollment
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConfigurationEndpointUrl() {
         return this.configurationEndpointUrl;
     }
@@ -74,7 +74,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * Gets the description property value. Description of the profile
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -82,7 +82,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * Gets the displayName property value. Name of the profile
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -90,7 +90,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * Gets the enableAuthenticationViaCompanyPortal property value. Indicates to authenticate with Apple Setup Assistant instead of Company Portal.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableAuthenticationViaCompanyPortal() {
         return this.enableAuthenticationViaCompanyPortal;
     }
@@ -98,7 +98,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("configurationEndpointUrl", (n) -> { this.setConfigurationEndpointUrl(n.getStringValue()); });
@@ -113,7 +113,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * Gets the requireCompanyPortalOnSetupAssistantEnrolledDevices property value. Indicates that Company Portal is required on setup assistant enrolled devices
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequireCompanyPortalOnSetupAssistantEnrolledDevices() {
         return this.requireCompanyPortalOnSetupAssistantEnrolledDevices;
     }
@@ -121,7 +121,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * Gets the requiresUserAuthentication property value. Indicates if the profile requires user authentication
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequiresUserAuthentication() {
         return this.requiresUserAuthentication;
     }
@@ -130,8 +130,8 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("configurationEndpointUrl", this.getConfigurationEndpointUrl());
@@ -146,8 +146,8 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * @param value Value to set for the configurationEndpointUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigurationEndpointUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setConfigurationEndpointUrl(@jakarta.annotation.Nullable final String value) {
         this.configurationEndpointUrl = value;
     }
     /**
@@ -155,8 +155,8 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -164,8 +164,8 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -173,8 +173,8 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * @param value Value to set for the enableAuthenticationViaCompanyPortal property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableAuthenticationViaCompanyPortal(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnableAuthenticationViaCompanyPortal(@jakarta.annotation.Nullable final Boolean value) {
         this.enableAuthenticationViaCompanyPortal = value;
     }
     /**
@@ -182,8 +182,8 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * @param value Value to set for the requireCompanyPortalOnSetupAssistantEnrolledDevices property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequireCompanyPortalOnSetupAssistantEnrolledDevices(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRequireCompanyPortalOnSetupAssistantEnrolledDevices(@jakarta.annotation.Nullable final Boolean value) {
         this.requireCompanyPortalOnSetupAssistantEnrolledDevices = value;
     }
     /**
@@ -191,8 +191,8 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * @param value Value to set for the requiresUserAuthentication property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequiresUserAuthentication(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRequiresUserAuthentication(@jakarta.annotation.Nullable final Boolean value) {
         this.requiresUserAuthentication = value;
     }
 }

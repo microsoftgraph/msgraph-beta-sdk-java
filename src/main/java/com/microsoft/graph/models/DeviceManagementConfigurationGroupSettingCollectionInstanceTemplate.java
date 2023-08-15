@@ -22,7 +22,7 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
      * Instantiates a new deviceManagementConfigurationGroupSettingCollectionInstanceTemplate and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstanceTemplate");
@@ -32,8 +32,8 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationGroupSettingCollectionInstanceTemplate
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate();
     }
@@ -41,7 +41,7 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
      * Gets the allowUnmanagedValues property value. Linked policy may append values which are not present in the template.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowUnmanagedValues() {
         return this.allowUnmanagedValues;
     }
@@ -49,7 +49,7 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowUnmanagedValues", (n) -> { this.setAllowUnmanagedValues(n.getBooleanValue()); });
@@ -60,7 +60,7 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
      * Gets the groupSettingCollectionValueTemplate property value. Group Setting Collection Value Template
      * @return a deviceManagementConfigurationGroupSettingValueTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationGroupSettingValueTemplate> getGroupSettingCollectionValueTemplate() {
         return this.groupSettingCollectionValueTemplate;
     }
@@ -69,8 +69,8 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("allowUnmanagedValues", this.getAllowUnmanagedValues());
@@ -81,8 +81,8 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
      * @param value Value to set for the allowUnmanagedValues property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowUnmanagedValues(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowUnmanagedValues(@jakarta.annotation.Nullable final Boolean value) {
         this.allowUnmanagedValues = value;
     }
     /**
@@ -90,8 +90,8 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
      * @param value Value to set for the groupSettingCollectionValueTemplate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupSettingCollectionValueTemplate(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationGroupSettingValueTemplate> value) {
+    @jakarta.annotation.Nonnull
+    public void setGroupSettingCollectionValueTemplate(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationGroupSettingValueTemplate> value) {
         this.groupSettingCollectionValueTemplate = value;
     }
 }

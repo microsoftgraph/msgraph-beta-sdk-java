@@ -13,10 +13,10 @@ public enum AzureADDeviceRegistrationErrorReason implements ValuedEnum {
     AzureADDeviceRegistrationErrorReason(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AzureADDeviceRegistrationErrorReason forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AzureADDeviceRegistrationErrorReason forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "invalidGlobalDeviceId": return InvalidGlobalDeviceId;

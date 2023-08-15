@@ -31,7 +31,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * Instantiates a new groupPolicyOperation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GroupPolicyOperation() {
         super();
     }
@@ -40,8 +40,8 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a groupPolicyOperation
      */
-    @javax.annotation.Nonnull
-    public static GroupPolicyOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GroupPolicyOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GroupPolicyOperation();
     }
@@ -49,7 +49,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -62,7 +62,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -70,7 +70,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * Gets the operationStatus property value. Type of Group Policy operation status.
      * @return a groupPolicyOperationStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GroupPolicyOperationStatus getOperationStatus() {
         return this.operationStatus;
     }
@@ -78,7 +78,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * Gets the operationType property value. Type of Group Policy operation.
      * @return a groupPolicyOperationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GroupPolicyOperationType getOperationType() {
         return this.operationType;
     }
@@ -86,7 +86,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * Gets the statusDetails property value. The group policy operation status detail.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStatusDetails() {
         return this.statusDetails;
     }
@@ -95,8 +95,8 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
@@ -109,8 +109,8 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -118,8 +118,8 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the operationStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperationStatus(@javax.annotation.Nullable final GroupPolicyOperationStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setOperationStatus(@jakarta.annotation.Nullable final GroupPolicyOperationStatus value) {
         this.operationStatus = value;
     }
     /**
@@ -127,8 +127,8 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the operationType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperationType(@javax.annotation.Nullable final GroupPolicyOperationType value) {
+    @jakarta.annotation.Nonnull
+    public void setOperationType(@jakarta.annotation.Nullable final GroupPolicyOperationType value) {
         this.operationType = value;
     }
     /**
@@ -136,8 +136,8 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      * @param value Value to set for the statusDetails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatusDetails(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStatusDetails(@jakarta.annotation.Nullable final String value) {
         this.statusDetails = value;
     }
 }

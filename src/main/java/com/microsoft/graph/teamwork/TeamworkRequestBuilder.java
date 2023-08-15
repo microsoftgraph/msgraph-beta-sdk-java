@@ -30,49 +30,49 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the deletedChats property of the microsoft.graph.teamwork entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DeletedChatsRequestBuilder deletedChats() {
         return new DeletedChatsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the deletedTeams property of the microsoft.graph.teamwork entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DeletedTeamsRequestBuilder deletedTeams() {
         return new DeletedTeamsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the devices property of the microsoft.graph.teamwork entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DevicesRequestBuilder devices() {
         return new DevicesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the sendActivityNotificationToRecipients method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SendActivityNotificationToRecipientsRequestBuilder sendActivityNotificationToRecipients() {
         return new SendActivityNotificationToRecipientsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the teamsAppSettings property of the microsoft.graph.teamwork entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TeamsAppSettingsRequestBuilder teamsAppSettings() {
         return new TeamsAppSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the teamTemplates property of the microsoft.graph.teamwork entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TeamTemplatesRequestBuilder teamTemplates() {
         return new TeamTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the workforceIntegrations property of the microsoft.graph.teamwork entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public WorkforceIntegrationsRequestBuilder workforceIntegrations() {
         return new WorkforceIntegrationsRequestBuilder(pathParameters, requestAdapter);
     }
@@ -82,8 +82,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public TeamworkRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public TeamworkRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/teamwork{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -92,15 +92,15 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public TeamworkRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public TeamworkRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/teamwork{?%24select,%24expand}", rawUrl);
     }
     /**
      * Get teamwork
      * @return a CompletableFuture of teamwork
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Teamwork> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -119,8 +119,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamwork
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Teamwork> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Teamwork> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -138,8 +138,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a CompletableFuture of teamwork
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Teamwork> patch(@javax.annotation.Nonnull final Teamwork body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Teamwork> patch(@jakarta.annotation.Nonnull final Teamwork body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -158,8 +158,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamwork
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Teamwork> patch(@javax.annotation.Nonnull final Teamwork body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Teamwork> patch(@jakarta.annotation.Nonnull final Teamwork body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -177,7 +177,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
      * Get teamwork
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -186,8 +186,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -207,8 +207,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final Teamwork body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Teamwork body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -217,8 +217,8 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final Teamwork body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Teamwork body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -242,13 +242,13 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -258,7 +258,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

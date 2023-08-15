@@ -18,7 +18,7 @@ public class DeliveryOptimizationGroupIdSourceOptions extends DeliveryOptimizati
      * Instantiates a new deliveryOptimizationGroupIdSourceOptions and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeliveryOptimizationGroupIdSourceOptions() {
         super();
         this.setOdataType("#microsoft.graph.deliveryOptimizationGroupIdSourceOptions");
@@ -28,8 +28,8 @@ public class DeliveryOptimizationGroupIdSourceOptions extends DeliveryOptimizati
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deliveryOptimizationGroupIdSourceOptions
      */
-    @javax.annotation.Nonnull
-    public static DeliveryOptimizationGroupIdSourceOptions createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeliveryOptimizationGroupIdSourceOptions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeliveryOptimizationGroupIdSourceOptions();
     }
@@ -37,7 +37,7 @@ public class DeliveryOptimizationGroupIdSourceOptions extends DeliveryOptimizati
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("groupIdSourceOption", (n) -> { this.setGroupIdSourceOption(n.getEnumValue(DeliveryOptimizationGroupIdOptionsType.class)); });
@@ -47,7 +47,7 @@ public class DeliveryOptimizationGroupIdSourceOptions extends DeliveryOptimizati
      * Gets the groupIdSourceOption property value. Possible values for the DeliveryOptimizationGroupIdOptionsType setting.
      * @return a deliveryOptimizationGroupIdOptionsType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeliveryOptimizationGroupIdOptionsType getGroupIdSourceOption() {
         return this.groupIdSourceOption;
     }
@@ -56,8 +56,8 @@ public class DeliveryOptimizationGroupIdSourceOptions extends DeliveryOptimizati
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("groupIdSourceOption", this.getGroupIdSourceOption());
@@ -67,8 +67,8 @@ public class DeliveryOptimizationGroupIdSourceOptions extends DeliveryOptimizati
      * @param value Value to set for the groupIdSourceOption property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupIdSourceOption(@javax.annotation.Nullable final DeliveryOptimizationGroupIdOptionsType value) {
+    @jakarta.annotation.Nonnull
+    public void setGroupIdSourceOption(@jakarta.annotation.Nullable final DeliveryOptimizationGroupIdOptionsType value) {
         this.groupIdSourceOption = value;
     }
 }

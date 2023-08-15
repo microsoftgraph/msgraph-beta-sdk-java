@@ -20,7 +20,7 @@ public class Monitoring extends Entity implements Parsable {
      * Instantiates a new monitoring and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Monitoring() {
         super();
     }
@@ -29,8 +29,8 @@ public class Monitoring extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a monitoring
      */
-    @javax.annotation.Nonnull
-    public static Monitoring createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Monitoring createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Monitoring();
     }
@@ -38,7 +38,7 @@ public class Monitoring extends Entity implements Parsable {
      * Gets the alertRecords property value. The collection of records of alert events.
      * @return a alertRecord
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AlertRecord> getAlertRecords() {
         return this.alertRecords;
     }
@@ -46,7 +46,7 @@ public class Monitoring extends Entity implements Parsable {
      * Gets the alertRules property value. The collection of alert rules.
      * @return a alertRule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AlertRule> getAlertRules() {
         return this.alertRules;
     }
@@ -54,7 +54,7 @@ public class Monitoring extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alertRecords", (n) -> { this.setAlertRecords(n.getCollectionOfObjectValues(AlertRecord::createFromDiscriminatorValue)); });
@@ -66,8 +66,8 @@ public class Monitoring extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("alertRecords", this.getAlertRecords());
@@ -78,8 +78,8 @@ public class Monitoring extends Entity implements Parsable {
      * @param value Value to set for the alertRecords property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlertRecords(@javax.annotation.Nullable final java.util.List<AlertRecord> value) {
+    @jakarta.annotation.Nonnull
+    public void setAlertRecords(@jakarta.annotation.Nullable final java.util.List<AlertRecord> value) {
         this.alertRecords = value;
     }
     /**
@@ -87,8 +87,8 @@ public class Monitoring extends Entity implements Parsable {
      * @param value Value to set for the alertRules property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlertRules(@javax.annotation.Nullable final java.util.List<AlertRule> value) {
+    @jakarta.annotation.Nonnull
+    public void setAlertRules(@jakarta.annotation.Nullable final java.util.List<AlertRule> value) {
         this.alertRules = value;
     }
 }

@@ -9,11 +9,11 @@ import java.util.Map;
 import java.util.Objects;
 public class DirectoryAudit extends Entity implements Parsable {
     /**
-     * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Supports $filter (eq, ge, le) and $orderby.
      */
     private OffsetDateTime activityDateTime;
     /**
-     * Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure Ad activity list.
+     * Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure AD audit log categories and activities. Supports $filter (eq, startswith).
      */
     private String activityDisplayName;
     /**
@@ -21,11 +21,11 @@ public class DirectoryAudit extends Entity implements Parsable {
      */
     private java.util.List<KeyValue> additionalDetails;
     /**
-     * Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
+     * Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Azure AD audit log categories and activities.
      */
     private String category;
     /**
-     * Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services.
+     * Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services. Supports $filter (eq).
      */
     private String correlationId;
     /**
@@ -33,7 +33,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      */
     private AuditActivityInitiator initiatedBy;
     /**
-     * Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management.
+     * Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management. Supports $filter (eq).
      */
     private String loggedByService;
     /**
@@ -49,7 +49,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      */
     private String resultReason;
     /**
-     * Information about the resource that changed due to the activity.
+     * Information about the resource that changed due to the activity. Supports $filter (eq) for id and displayName; and $filter (startswith) for displayName.
      */
     private java.util.List<TargetResource> targetResources;
     /**
@@ -60,7 +60,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * Instantiates a new directoryAudit and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DirectoryAudit() {
         super();
     }
@@ -69,24 +69,24 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a directoryAudit
      */
-    @javax.annotation.Nonnull
-    public static DirectoryAudit createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DirectoryAudit createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DirectoryAudit();
     }
     /**
-     * Gets the activityDateTime property value. Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the activityDateTime property value. Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Supports $filter (eq, ge, le) and $orderby.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
         return this.activityDateTime;
     }
     /**
-     * Gets the activityDisplayName property value. Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure Ad activity list.
+     * Gets the activityDisplayName property value. Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure AD audit log categories and activities. Supports $filter (eq, startswith).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActivityDisplayName() {
         return this.activityDisplayName;
     }
@@ -94,23 +94,23 @@ public class DirectoryAudit extends Entity implements Parsable {
      * Gets the additionalDetails property value. Indicates additional details on the activity.
      * @return a keyValue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getAdditionalDetails() {
         return this.additionalDetails;
     }
     /**
-     * Gets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
+     * Gets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Azure AD audit log categories and activities.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory() {
         return this.category;
     }
     /**
-     * Gets the correlationId property value. Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services.
+     * Gets the correlationId property value. Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services. Supports $filter (eq).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCorrelationId() {
         return this.correlationId;
     }
@@ -118,7 +118,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activityDateTime", (n) -> { this.setActivityDateTime(n.getOffsetDateTimeValue()); });
@@ -139,15 +139,15 @@ public class DirectoryAudit extends Entity implements Parsable {
      * Gets the initiatedBy property value. The initiatedBy property
      * @return a auditActivityInitiator
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuditActivityInitiator getInitiatedBy() {
         return this.initiatedBy;
     }
     /**
-     * Gets the loggedByService property value. Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management.
+     * Gets the loggedByService property value. Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management. Supports $filter (eq).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLoggedByService() {
         return this.loggedByService;
     }
@@ -155,7 +155,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * Gets the operationType property value. Indicates the type of operation that was performed. The possible values include but are not limited to the following: Add, Assign, Update, Unassign, and Delete.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOperationType() {
         return this.operationType;
     }
@@ -163,7 +163,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * Gets the result property value. Indicates the result of the activity. Possible values are: success, failure, timeout, unknownFutureValue.
      * @return a operationResult
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OperationResult getResult() {
         return this.result;
     }
@@ -171,15 +171,15 @@ public class DirectoryAudit extends Entity implements Parsable {
      * Gets the resultReason property value. Indicates the reason for failure if the result is failure or timeout.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResultReason() {
         return this.resultReason;
     }
     /**
-     * Gets the targetResources property value. Information about the resource that changed due to the activity.
+     * Gets the targetResources property value. Information about the resource that changed due to the activity. Supports $filter (eq) for id and displayName; and $filter (startswith) for displayName.
      * @return a targetResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TargetResource> getTargetResources() {
         return this.targetResources;
     }
@@ -187,7 +187,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * Gets the userAgent property value. Type of user agent used by a user in the activity.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserAgent() {
         return this.userAgent;
     }
@@ -196,8 +196,8 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("activityDateTime", this.getActivityDateTime());
@@ -214,21 +214,21 @@ public class DirectoryAudit extends Entity implements Parsable {
         writer.writeStringValue("userAgent", this.getUserAgent());
     }
     /**
-     * Sets the activityDateTime property value. Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the activityDateTime property value. Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Supports $filter (eq, ge, le) and $orderby.
      * @param value Value to set for the activityDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.activityDateTime = value;
     }
     /**
-     * Sets the activityDisplayName property value. Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure Ad activity list.
+     * Sets the activityDisplayName property value. Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure AD audit log categories and activities. Supports $filter (eq, startswith).
      * @param value Value to set for the activityDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setActivityDisplayName(@jakarta.annotation.Nullable final String value) {
         this.activityDisplayName = value;
     }
     /**
@@ -236,26 +236,26 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the additionalDetails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalDetails(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalDetails(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
         this.additionalDetails = value;
     }
     /**
-     * Sets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
+     * Sets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Azure AD audit log categories and activities.
      * @param value Value to set for the category property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCategory(@jakarta.annotation.Nullable final String value) {
         this.category = value;
     }
     /**
-     * Sets the correlationId property value. Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services.
+     * Sets the correlationId property value. Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services. Supports $filter (eq).
      * @param value Value to set for the correlationId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCorrelationId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
         this.correlationId = value;
     }
     /**
@@ -263,17 +263,17 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the initiatedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitiatedBy(@javax.annotation.Nullable final AuditActivityInitiator value) {
+    @jakarta.annotation.Nonnull
+    public void setInitiatedBy(@jakarta.annotation.Nullable final AuditActivityInitiator value) {
         this.initiatedBy = value;
     }
     /**
-     * Sets the loggedByService property value. Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management.
+     * Sets the loggedByService property value. Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management. Supports $filter (eq).
      * @param value Value to set for the loggedByService property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLoggedByService(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLoggedByService(@jakarta.annotation.Nullable final String value) {
         this.loggedByService = value;
     }
     /**
@@ -281,8 +281,8 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the operationType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperationType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOperationType(@jakarta.annotation.Nullable final String value) {
         this.operationType = value;
     }
     /**
@@ -290,8 +290,8 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the result property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResult(@javax.annotation.Nullable final OperationResult value) {
+    @jakarta.annotation.Nonnull
+    public void setResult(@jakarta.annotation.Nullable final OperationResult value) {
         this.result = value;
     }
     /**
@@ -299,17 +299,17 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the resultReason property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResultReason(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResultReason(@jakarta.annotation.Nullable final String value) {
         this.resultReason = value;
     }
     /**
-     * Sets the targetResources property value. Information about the resource that changed due to the activity.
+     * Sets the targetResources property value. Information about the resource that changed due to the activity. Supports $filter (eq) for id and displayName; and $filter (startswith) for displayName.
      * @param value Value to set for the targetResources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetResources(@javax.annotation.Nullable final java.util.List<TargetResource> value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetResources(@jakarta.annotation.Nullable final java.util.List<TargetResource> value) {
         this.targetResources = value;
     }
     /**
@@ -317,8 +317,8 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the userAgent property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserAgent(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserAgent(@jakarta.annotation.Nullable final String value) {
         this.userAgent = value;
     }
 }

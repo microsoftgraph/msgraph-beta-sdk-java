@@ -29,7 +29,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * Instantiates a new conditionalAccessPolicyCoverage and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConditionalAccessPolicyCoverage() {
         super();
     }
@@ -38,8 +38,8 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a conditionalAccessPolicyCoverage
      */
-    @javax.annotation.Nonnull
-    public static ConditionalAccessPolicyCoverage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ConditionalAccessPolicyCoverage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ConditionalAccessPolicyCoverage();
     }
@@ -47,7 +47,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * Gets the conditionalAccessPolicyState property value. The state for the conditional access policy. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConditionalAccessPolicyState() {
         return this.conditionalAccessPolicyState;
     }
@@ -55,7 +55,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("conditionalAccessPolicyState", (n) -> { this.setConditionalAccessPolicyState(n.getStringValue()); });
@@ -68,7 +68,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * Gets the latestPolicyModifiedDateTime property value. The date and time the conditional access policy was last modified. Required. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLatestPolicyModifiedDateTime() {
         return this.latestPolicyModifiedDateTime;
     }
@@ -76,7 +76,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * Gets the requiresDeviceCompliance property value. A flag indicating whether the conditional access policy requires device compliance. Required. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequiresDeviceCompliance() {
         return this.requiresDeviceCompliance;
     }
@@ -84,7 +84,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
         return this.tenantDisplayName;
     }
@@ -93,8 +93,8 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("conditionalAccessPolicyState", this.getConditionalAccessPolicyState());
@@ -107,8 +107,8 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * @param value Value to set for the conditionalAccessPolicyState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConditionalAccessPolicyState(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setConditionalAccessPolicyState(@jakarta.annotation.Nullable final String value) {
         this.conditionalAccessPolicyState = value;
     }
     /**
@@ -116,8 +116,8 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * @param value Value to set for the latestPolicyModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLatestPolicyModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLatestPolicyModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.latestPolicyModifiedDateTime = value;
     }
     /**
@@ -125,8 +125,8 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * @param value Value to set for the requiresDeviceCompliance property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequiresDeviceCompliance(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRequiresDeviceCompliance(@jakarta.annotation.Nullable final Boolean value) {
         this.requiresDeviceCompliance = value;
     }
     /**
@@ -134,8 +134,8 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantDisplayName(@jakarta.annotation.Nullable final String value) {
         this.tenantDisplayName = value;
     }
 }

@@ -19,7 +19,7 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
      * Instantiates a new machineLearningDetectedSensitiveContent and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MachineLearningDetectedSensitiveContent() {
         super();
     }
@@ -28,8 +28,8 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a machineLearningDetectedSensitiveContent
      */
-    @javax.annotation.Nonnull
-    public static MachineLearningDetectedSensitiveContent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MachineLearningDetectedSensitiveContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MachineLearningDetectedSensitiveContent();
     }
@@ -37,7 +37,7 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("matchTolerance", (n) -> { this.setMatchTolerance(n.getEnumValue(MlClassificationMatchTolerance.class)); });
@@ -48,7 +48,7 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
      * Gets the matchTolerance property value. The matchTolerance property
      * @return a mlClassificationMatchTolerance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MlClassificationMatchTolerance getMatchTolerance() {
         return this.matchTolerance;
     }
@@ -56,7 +56,7 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
      * Gets the modelVersion property value. The modelVersion property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getModelVersion() {
         return this.modelVersion;
     }
@@ -65,8 +65,8 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("matchTolerance", this.getMatchTolerance());
@@ -77,8 +77,8 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
      * @param value Value to set for the matchTolerance property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMatchTolerance(@javax.annotation.Nullable final MlClassificationMatchTolerance value) {
+    @jakarta.annotation.Nonnull
+    public void setMatchTolerance(@jakarta.annotation.Nullable final MlClassificationMatchTolerance value) {
         this.matchTolerance = value;
     }
     /**
@@ -86,8 +86,8 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
      * @param value Value to set for the modelVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModelVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setModelVersion(@jakarta.annotation.Nullable final String value) {
         this.modelVersion = value;
     }
 }

@@ -13,7 +13,7 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Contains the name of the field that a value is associated with.
+     * Key.
      */
     private String key;
     /**
@@ -21,14 +21,14 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Contains the corresponding value for the specified key.
+     * Value.
      */
     private String value;
     /**
      * Instantiates a new keyValue and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public KeyValue() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a keyValue
      */
-    @javax.annotation.Nonnull
-    public static KeyValue createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static KeyValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new KeyValue();
     }
@@ -46,7 +46,7 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("key", (n) -> { this.setKey(n.getStringValue()); });
@@ -63,10 +63,10 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the key property value. Contains the name of the field that a value is associated with.
+     * Gets the key property value. Key.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getKey() {
         return this.key;
     }
@@ -74,15 +74,15 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the value property value. Contains the corresponding value for the specified key.
+     * Gets the value property value. Value.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getValue() {
         return this.value;
     }
@@ -91,8 +91,8 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("key", this.getKey());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -101,38 +101,38 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the key property value. Contains the name of the field that a value is associated with.
+     * Sets the key property value. Key.
      * @param value Value to set for the key property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKey(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setKey(@jakarta.annotation.Nullable final String value) {
         this.key = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
-     * Sets the value property value. Contains the corresponding value for the specified key.
+     * Sets the value property value. Value.
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }
 }

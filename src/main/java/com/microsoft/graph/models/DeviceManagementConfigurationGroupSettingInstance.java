@@ -18,7 +18,7 @@ public class DeviceManagementConfigurationGroupSettingInstance extends DeviceMan
      * Instantiates a new deviceManagementConfigurationGroupSettingInstance and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationGroupSettingInstance() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationGroupSettingInstance");
@@ -28,8 +28,8 @@ public class DeviceManagementConfigurationGroupSettingInstance extends DeviceMan
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationGroupSettingInstance
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationGroupSettingInstance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationGroupSettingInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationGroupSettingInstance();
     }
@@ -37,7 +37,7 @@ public class DeviceManagementConfigurationGroupSettingInstance extends DeviceMan
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("groupSettingValue", (n) -> { this.setGroupSettingValue(n.getObjectValue(DeviceManagementConfigurationGroupSettingValue::createFromDiscriminatorValue)); });
@@ -47,7 +47,7 @@ public class DeviceManagementConfigurationGroupSettingInstance extends DeviceMan
      * Gets the groupSettingValue property value. The groupSettingValue property
      * @return a deviceManagementConfigurationGroupSettingValue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationGroupSettingValue getGroupSettingValue() {
         return this.groupSettingValue;
     }
@@ -56,8 +56,8 @@ public class DeviceManagementConfigurationGroupSettingInstance extends DeviceMan
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("groupSettingValue", this.getGroupSettingValue());
@@ -67,8 +67,8 @@ public class DeviceManagementConfigurationGroupSettingInstance extends DeviceMan
      * @param value Value to set for the groupSettingValue property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupSettingValue(@javax.annotation.Nullable final DeviceManagementConfigurationGroupSettingValue value) {
+    @jakarta.annotation.Nonnull
+    public void setGroupSettingValue(@jakarta.annotation.Nullable final DeviceManagementConfigurationGroupSettingValue value) {
         this.groupSettingValue = value;
     }
 }

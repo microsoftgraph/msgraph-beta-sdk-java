@@ -22,7 +22,7 @@ public class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilt
      * Instantiates a new iosWebContentFilterSpecificWebsitesAccess and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosWebContentFilterSpecificWebsitesAccess() {
         super();
         this.setOdataType("#microsoft.graph.iosWebContentFilterSpecificWebsitesAccess");
@@ -32,8 +32,8 @@ public class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilt
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a iosWebContentFilterSpecificWebsitesAccess
      */
-    @javax.annotation.Nonnull
-    public static IosWebContentFilterSpecificWebsitesAccess createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IosWebContentFilterSpecificWebsitesAccess createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IosWebContentFilterSpecificWebsitesAccess();
     }
@@ -41,7 +41,7 @@ public class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilt
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("specificWebsitesOnly", (n) -> { this.setSpecificWebsitesOnly(n.getCollectionOfObjectValues(IosBookmark::createFromDiscriminatorValue)); });
@@ -52,7 +52,7 @@ public class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilt
      * Gets the specificWebsitesOnly property value. URL bookmarks which will be installed into built-in browser and user is only allowed to access websites through bookmarks. This collection can contain a maximum of 500 elements.
      * @return a iosBookmark
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IosBookmark> getSpecificWebsitesOnly() {
         return this.specificWebsitesOnly;
     }
@@ -60,7 +60,7 @@ public class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilt
      * Gets the websiteList property value. URL bookmarks which will be installed into built-in browser and user is only allowed to access websites through bookmarks. This collection can contain a maximum of 500 elements.
      * @return a iosBookmark
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IosBookmark> getWebsiteList() {
         return this.websiteList;
     }
@@ -69,8 +69,8 @@ public class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilt
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("specificWebsitesOnly", this.getSpecificWebsitesOnly());
@@ -81,8 +81,8 @@ public class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilt
      * @param value Value to set for the specificWebsitesOnly property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSpecificWebsitesOnly(@javax.annotation.Nullable final java.util.List<IosBookmark> value) {
+    @jakarta.annotation.Nonnull
+    public void setSpecificWebsitesOnly(@jakarta.annotation.Nullable final java.util.List<IosBookmark> value) {
         this.specificWebsitesOnly = value;
     }
     /**
@@ -90,8 +90,8 @@ public class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilt
      * @param value Value to set for the websiteList property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebsiteList(@javax.annotation.Nullable final java.util.List<IosBookmark> value) {
+    @jakarta.annotation.Nonnull
+    public void setWebsiteList(@jakarta.annotation.Nullable final java.util.List<IosBookmark> value) {
         this.websiteList = value;
     }
 }

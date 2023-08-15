@@ -26,7 +26,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
      * Instantiates a new windowsHealthMonitoringConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsHealthMonitoringConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsHealthMonitoringConfiguration");
@@ -36,8 +36,8 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsHealthMonitoringConfiguration
      */
-    @javax.annotation.Nonnull
-    public static WindowsHealthMonitoringConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsHealthMonitoringConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsHealthMonitoringConfiguration();
     }
@@ -45,7 +45,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
      * Gets the allowDeviceHealthMonitoring property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getAllowDeviceHealthMonitoring() {
         return this.allowDeviceHealthMonitoring;
     }
@@ -53,7 +53,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
      * Gets the configDeviceHealthMonitoringCustomScope property value. Specifies custom set of events collected from the device where health monitoring is enabled
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConfigDeviceHealthMonitoringCustomScope() {
         return this.configDeviceHealthMonitoringCustomScope;
     }
@@ -61,7 +61,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
      * Gets the configDeviceHealthMonitoringScope property value. Device health monitoring scope
      * @return a windowsHealthMonitoringScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsHealthMonitoringScope getConfigDeviceHealthMonitoringScope() {
         return this.configDeviceHealthMonitoringScope;
     }
@@ -69,7 +69,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowDeviceHealthMonitoring", (n) -> { this.setAllowDeviceHealthMonitoring(n.getEnumValue(Enablement.class)); });
@@ -82,8 +82,8 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("allowDeviceHealthMonitoring", this.getAllowDeviceHealthMonitoring());
@@ -95,8 +95,8 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
      * @param value Value to set for the allowDeviceHealthMonitoring property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowDeviceHealthMonitoring(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowDeviceHealthMonitoring(@jakarta.annotation.Nullable final Enablement value) {
         this.allowDeviceHealthMonitoring = value;
     }
     /**
@@ -104,8 +104,8 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
      * @param value Value to set for the configDeviceHealthMonitoringCustomScope property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigDeviceHealthMonitoringCustomScope(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setConfigDeviceHealthMonitoringCustomScope(@jakarta.annotation.Nullable final String value) {
         this.configDeviceHealthMonitoringCustomScope = value;
     }
     /**
@@ -113,8 +113,8 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
      * @param value Value to set for the configDeviceHealthMonitoringScope property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigDeviceHealthMonitoringScope(@javax.annotation.Nullable final WindowsHealthMonitoringScope value) {
+    @jakarta.annotation.Nonnull
+    public void setConfigDeviceHealthMonitoringScope(@jakarta.annotation.Nullable final WindowsHealthMonitoringScope value) {
         this.configDeviceHealthMonitoringScope = value;
     }
 }

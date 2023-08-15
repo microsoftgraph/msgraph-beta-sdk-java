@@ -34,7 +34,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * Instantiates a new deviceManagementIntentUserStateSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementIntentUserStateSummary() {
         super();
     }
@@ -43,8 +43,8 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementIntentUserStateSummary
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementIntentUserStateSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementIntentUserStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementIntentUserStateSummary();
     }
@@ -52,7 +52,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * Gets the conflictCount property value. Number of users in conflict
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getConflictCount() {
         return this.conflictCount;
     }
@@ -60,7 +60,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * Gets the errorCount property value. Number of error users
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getErrorCount() {
         return this.errorCount;
     }
@@ -68,7 +68,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * Gets the failedCount property value. Number of failed users
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFailedCount() {
         return this.failedCount;
     }
@@ -76,7 +76,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("conflictCount", (n) -> { this.setConflictCount(n.getIntegerValue()); });
@@ -90,7 +90,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * Gets the notApplicableCount property value. Number of not applicable users
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
         return this.notApplicableCount;
     }
@@ -98,7 +98,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * Gets the successCount property value. Number of succeeded users
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSuccessCount() {
         return this.successCount;
     }
@@ -107,8 +107,8 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("conflictCount", this.getConflictCount());
@@ -122,8 +122,8 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * @param value Value to set for the conflictCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConflictCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setConflictCount(@jakarta.annotation.Nullable final Integer value) {
         this.conflictCount = value;
     }
     /**
@@ -131,8 +131,8 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * @param value Value to set for the errorCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setErrorCount(@jakarta.annotation.Nullable final Integer value) {
         this.errorCount = value;
     }
     /**
@@ -140,8 +140,8 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * @param value Value to set for the failedCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setFailedCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedCount = value;
     }
     /**
@@ -149,8 +149,8 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * @param value Value to set for the notApplicableCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotApplicableCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNotApplicableCount(@jakarta.annotation.Nullable final Integer value) {
         this.notApplicableCount = value;
     }
     /**
@@ -158,8 +158,8 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * @param value Value to set for the successCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuccessCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSuccessCount(@jakarta.annotation.Nullable final Integer value) {
         this.successCount = value;
     }
 }

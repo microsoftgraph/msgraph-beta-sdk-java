@@ -113,7 +113,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Instantiates a new directRoutingLogRow and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DirectRoutingLogRow() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -122,8 +122,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a directRoutingLogRow
      */
-    @javax.annotation.Nonnull
-    public static DirectRoutingLogRow createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DirectRoutingLogRow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DirectRoutingLogRow();
     }
@@ -131,7 +131,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -139,7 +139,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the calleeNumber property value. Number of the user or bot who received the call (E.164 format, but may include additional data).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCalleeNumber() {
         return this.calleeNumber;
     }
@@ -147,7 +147,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the callEndSubReason property value. In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCallEndSubReason() {
         return this.callEndSubReason;
     }
@@ -155,7 +155,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the callerNumber property value. Number of the user or bot who made the call (E.164 format, but may include additional data).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCallerNumber() {
         return this.callerNumber;
     }
@@ -163,7 +163,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the callType property value. Call type and direction.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCallType() {
         return this.callType;
     }
@@ -171,7 +171,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the correlationId property value. Identifier (GUID) for the call that you can use when calling Microsoft Support.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCorrelationId() {
         return this.correlationId;
     }
@@ -179,7 +179,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the duration property value. Duration of the call in seconds.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDuration() {
         return this.duration;
     }
@@ -187,7 +187,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the endDateTime property value. Only exists for successful (fully established) calls. Time when call ended.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
         return this.endDateTime;
     }
@@ -195,7 +195,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the failureDateTime property value. Only exists for failed (not fully established) calls.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getFailureDateTime() {
         return this.failureDateTime;
     }
@@ -203,7 +203,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(24);
         deserializerMap.put("calleeNumber", (n) -> { this.setCalleeNumber(n.getStringValue()); });
@@ -236,7 +236,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the finalSipCode property value. The code with which the call ended (RFC 3261).
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFinalSipCode() {
         return this.finalSipCode;
     }
@@ -244,7 +244,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the finalSipCodePhrase property value. Description of the SIP code and Microsoft subcode.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFinalSipCodePhrase() {
         return this.finalSipCodePhrase;
     }
@@ -252,7 +252,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the id property value. Unique call identifier (GUID).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -260,7 +260,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the inviteDateTime property value. When the initial invite was sent.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getInviteDateTime() {
         return this.inviteDateTime;
     }
@@ -268,7 +268,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the mediaBypassEnabled property value. Indicates if the trunk was enabled for media bypass or not.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getMediaBypassEnabled() {
         return this.mediaBypassEnabled;
     }
@@ -276,7 +276,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the mediaPathLocation property value. The data center used for media path in non-bypass call.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMediaPathLocation() {
         return this.mediaPathLocation;
     }
@@ -284,7 +284,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -292,7 +292,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the otherPartyCountryCode property value. Country code of the caller in case of an incoming call, or callee in case of an outgoing call. For details, see ISO 3166-1 alpha-2.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOtherPartyCountryCode() {
         return this.otherPartyCountryCode;
     }
@@ -300,7 +300,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the signalingLocation property value. The data center used for signaling for both bypass and non-bypass calls.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSignalingLocation() {
         return this.signalingLocation;
     }
@@ -308,7 +308,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to invite or failure time.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this.startDateTime;
     }
@@ -316,7 +316,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the successfulCall property value. Success or attempt.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSuccessfulCall() {
         return this.successfulCall;
     }
@@ -324,7 +324,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the trunkFullyQualifiedDomainName property value. Fully qualified domain name of the session border controller.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTrunkFullyQualifiedDomainName() {
         return this.trunkFullyQualifiedDomainName;
     }
@@ -332,7 +332,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the userCountryCode property value. Country code of the user. For details, see ISO 3166-1 alpha-2.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserCountryCode() {
         return this.userCountryCode;
     }
@@ -340,7 +340,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the userDisplayName property value. Display name of the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserDisplayName() {
         return this.userDisplayName;
     }
@@ -348,7 +348,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -356,7 +356,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * Gets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
@@ -365,8 +365,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("calleeNumber", this.getCalleeNumber());
         writer.writeIntegerValue("callEndSubReason", this.getCallEndSubReason());
@@ -396,11 +396,11 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -408,8 +408,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the calleeNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCalleeNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCalleeNumber(@jakarta.annotation.Nullable final String value) {
         this.calleeNumber = value;
     }
     /**
@@ -417,8 +417,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the callEndSubReason property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallEndSubReason(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setCallEndSubReason(@jakarta.annotation.Nullable final Integer value) {
         this.callEndSubReason = value;
     }
     /**
@@ -426,8 +426,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the callerNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallerNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCallerNumber(@jakarta.annotation.Nullable final String value) {
         this.callerNumber = value;
     }
     /**
@@ -435,8 +435,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the callType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCallType(@jakarta.annotation.Nullable final String value) {
         this.callType = value;
     }
     /**
@@ -444,8 +444,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the correlationId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCorrelationId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
         this.correlationId = value;
     }
     /**
@@ -453,8 +453,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the duration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDuration(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setDuration(@jakarta.annotation.Nullable final Integer value) {
         this.duration = value;
     }
     /**
@@ -462,8 +462,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
@@ -471,8 +471,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the failureDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailureDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setFailureDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.failureDateTime = value;
     }
     /**
@@ -480,8 +480,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the finalSipCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFinalSipCode(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setFinalSipCode(@jakarta.annotation.Nullable final Integer value) {
         this.finalSipCode = value;
     }
     /**
@@ -489,8 +489,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the finalSipCodePhrase property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFinalSipCodePhrase(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFinalSipCodePhrase(@jakarta.annotation.Nullable final String value) {
         this.finalSipCodePhrase = value;
     }
     /**
@@ -498,8 +498,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
@@ -507,8 +507,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the inviteDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInviteDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setInviteDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.inviteDateTime = value;
     }
     /**
@@ -516,8 +516,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mediaBypassEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaBypassEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaBypassEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.mediaBypassEnabled = value;
     }
     /**
@@ -525,17 +525,17 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mediaPathLocation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaPathLocation(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaPathLocation(@jakarta.annotation.Nullable final String value) {
         this.mediaPathLocation = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -543,8 +543,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the otherPartyCountryCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOtherPartyCountryCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOtherPartyCountryCode(@jakarta.annotation.Nullable final String value) {
         this.otherPartyCountryCode = value;
     }
     /**
@@ -552,8 +552,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the signalingLocation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSignalingLocation(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSignalingLocation(@jakarta.annotation.Nullable final String value) {
         this.signalingLocation = value;
     }
     /**
@@ -561,8 +561,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
@@ -570,8 +570,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the successfulCall property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuccessfulCall(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSuccessfulCall(@jakarta.annotation.Nullable final Boolean value) {
         this.successfulCall = value;
     }
     /**
@@ -579,8 +579,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the trunkFullyQualifiedDomainName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrunkFullyQualifiedDomainName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTrunkFullyQualifiedDomainName(@jakarta.annotation.Nullable final String value) {
         this.trunkFullyQualifiedDomainName = value;
     }
     /**
@@ -588,8 +588,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userCountryCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserCountryCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserCountryCode(@jakarta.annotation.Nullable final String value) {
         this.userCountryCode = value;
     }
     /**
@@ -597,8 +597,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
@@ -606,8 +606,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
@@ -615,8 +615,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

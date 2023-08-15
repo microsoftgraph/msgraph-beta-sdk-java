@@ -76,7 +76,7 @@ public class Chat extends Entity implements Parsable {
      * Instantiates a new chat and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Chat() {
         super();
     }
@@ -85,8 +85,8 @@ public class Chat extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a chat
      */
-    @javax.annotation.Nonnull
-    public static Chat createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Chat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Chat();
     }
@@ -94,7 +94,7 @@ public class Chat extends Entity implements Parsable {
      * Gets the chatType property value. The chatType property
      * @return a chatType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatType getChatType() {
         return this.chatType;
     }
@@ -102,7 +102,7 @@ public class Chat extends Entity implements Parsable {
      * Gets the createdDateTime property value. Date and time at which the chat was created. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -110,7 +110,7 @@ public class Chat extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("chatType", (n) -> { this.setChatType(n.getEnumValue(ChatType.class)); });
@@ -135,7 +135,7 @@ public class Chat extends Entity implements Parsable {
      * Gets the installedApps property value. A collection of all the apps in the chat. Nullable.
      * @return a teamsAppInstallation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TeamsAppInstallation> getInstalledApps() {
         return this.installedApps;
     }
@@ -143,7 +143,7 @@ public class Chat extends Entity implements Parsable {
      * Gets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
      * @return a chatMessageInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatMessageInfo getLastMessagePreview() {
         return this.lastMessagePreview;
     }
@@ -151,7 +151,7 @@ public class Chat extends Entity implements Parsable {
      * Gets the lastUpdatedDateTime property value. Date and time at which the chat was renamed or list of members were last changed. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
         return this.lastUpdatedDateTime;
     }
@@ -159,7 +159,7 @@ public class Chat extends Entity implements Parsable {
      * Gets the members property value. A collection of all the members in the chat. Nullable.
      * @return a conversationMember
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ConversationMember> getMembers() {
         return this.members;
     }
@@ -167,7 +167,7 @@ public class Chat extends Entity implements Parsable {
      * Gets the messages property value. A collection of all the messages in the chat. Nullable.
      * @return a chatMessage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ChatMessage> getMessages() {
         return this.messages;
     }
@@ -175,7 +175,7 @@ public class Chat extends Entity implements Parsable {
      * Gets the onlineMeetingInfo property value. Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
      * @return a teamworkOnlineMeetingInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkOnlineMeetingInfo getOnlineMeetingInfo() {
         return this.onlineMeetingInfo;
     }
@@ -183,7 +183,7 @@ public class Chat extends Entity implements Parsable {
      * Gets the operations property value. A collection of all the Teams async operations that ran or are running on the chat. Nullable.
      * @return a teamsAsyncOperation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TeamsAsyncOperation> getOperations() {
         return this.operations;
     }
@@ -191,7 +191,7 @@ public class Chat extends Entity implements Parsable {
      * Gets the permissionGrants property value. A collection of permissions granted to apps for the chat.
      * @return a resourceSpecificPermissionGrant
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ResourceSpecificPermissionGrant> getPermissionGrants() {
         return this.permissionGrants;
     }
@@ -199,7 +199,7 @@ public class Chat extends Entity implements Parsable {
      * Gets the pinnedMessages property value. A collection of all the pinned messages in the chat. Nullable.
      * @return a pinnedChatMessageInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PinnedChatMessageInfo> getPinnedMessages() {
         return this.pinnedMessages;
     }
@@ -207,7 +207,7 @@ public class Chat extends Entity implements Parsable {
      * Gets the tabs property value. A collection of all the tabs in the chat. Nullable.
      * @return a teamsTab
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TeamsTab> getTabs() {
         return this.tabs;
     }
@@ -215,7 +215,7 @@ public class Chat extends Entity implements Parsable {
      * Gets the tenantId property value. The identifier of the tenant in which the chat was created. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -223,7 +223,7 @@ public class Chat extends Entity implements Parsable {
      * Gets the topic property value. (Optional) Subject or topic for the chat. Only available for group chats.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTopic() {
         return this.topic;
     }
@@ -231,7 +231,7 @@ public class Chat extends Entity implements Parsable {
      * Gets the viewpoint property value. Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
      * @return a chatViewpoint
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatViewpoint getViewpoint() {
         return this.viewpoint;
     }
@@ -239,7 +239,7 @@ public class Chat extends Entity implements Parsable {
      * Gets the webUrl property value. The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebUrl() {
         return this.webUrl;
     }
@@ -248,8 +248,8 @@ public class Chat extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("chatType", this.getChatType());
@@ -274,8 +274,8 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the chatType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChatType(@javax.annotation.Nullable final ChatType value) {
+    @jakarta.annotation.Nonnull
+    public void setChatType(@jakarta.annotation.Nullable final ChatType value) {
         this.chatType = value;
     }
     /**
@@ -283,8 +283,8 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -292,8 +292,8 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the installedApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstalledApps(@javax.annotation.Nullable final java.util.List<TeamsAppInstallation> value) {
+    @jakarta.annotation.Nonnull
+    public void setInstalledApps(@jakarta.annotation.Nullable final java.util.List<TeamsAppInstallation> value) {
         this.installedApps = value;
     }
     /**
@@ -301,8 +301,8 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the lastMessagePreview property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastMessagePreview(@javax.annotation.Nullable final ChatMessageInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setLastMessagePreview(@jakarta.annotation.Nullable final ChatMessageInfo value) {
         this.lastMessagePreview = value;
     }
     /**
@@ -310,8 +310,8 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
@@ -319,8 +319,8 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMembers(@javax.annotation.Nullable final java.util.List<ConversationMember> value) {
+    @jakarta.annotation.Nonnull
+    public void setMembers(@jakarta.annotation.Nullable final java.util.List<ConversationMember> value) {
         this.members = value;
     }
     /**
@@ -328,8 +328,8 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the messages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessages(@javax.annotation.Nullable final java.util.List<ChatMessage> value) {
+    @jakarta.annotation.Nonnull
+    public void setMessages(@jakarta.annotation.Nullable final java.util.List<ChatMessage> value) {
         this.messages = value;
     }
     /**
@@ -337,8 +337,8 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the onlineMeetingInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnlineMeetingInfo(@javax.annotation.Nullable final TeamworkOnlineMeetingInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setOnlineMeetingInfo(@jakarta.annotation.Nullable final TeamworkOnlineMeetingInfo value) {
         this.onlineMeetingInfo = value;
     }
     /**
@@ -346,8 +346,8 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperations(@javax.annotation.Nullable final java.util.List<TeamsAsyncOperation> value) {
+    @jakarta.annotation.Nonnull
+    public void setOperations(@jakarta.annotation.Nullable final java.util.List<TeamsAsyncOperation> value) {
         this.operations = value;
     }
     /**
@@ -355,8 +355,8 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the permissionGrants property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPermissionGrants(@javax.annotation.Nullable final java.util.List<ResourceSpecificPermissionGrant> value) {
+    @jakarta.annotation.Nonnull
+    public void setPermissionGrants(@jakarta.annotation.Nullable final java.util.List<ResourceSpecificPermissionGrant> value) {
         this.permissionGrants = value;
     }
     /**
@@ -364,8 +364,8 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the pinnedMessages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPinnedMessages(@javax.annotation.Nullable final java.util.List<PinnedChatMessageInfo> value) {
+    @jakarta.annotation.Nonnull
+    public void setPinnedMessages(@jakarta.annotation.Nullable final java.util.List<PinnedChatMessageInfo> value) {
         this.pinnedMessages = value;
     }
     /**
@@ -373,8 +373,8 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the tabs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTabs(@javax.annotation.Nullable final java.util.List<TeamsTab> value) {
+    @jakarta.annotation.Nonnull
+    public void setTabs(@jakarta.annotation.Nullable final java.util.List<TeamsTab> value) {
         this.tabs = value;
     }
     /**
@@ -382,8 +382,8 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
@@ -391,8 +391,8 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the topic property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTopic(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTopic(@jakarta.annotation.Nullable final String value) {
         this.topic = value;
     }
     /**
@@ -400,8 +400,8 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the viewpoint property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setViewpoint(@javax.annotation.Nullable final ChatViewpoint value) {
+    @jakarta.annotation.Nonnull
+    public void setViewpoint(@jakarta.annotation.Nullable final ChatViewpoint value) {
         this.viewpoint = value;
     }
     /**
@@ -409,8 +409,8 @@ public class Chat extends Entity implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }
 }

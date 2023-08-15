@@ -43,7 +43,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      * Instantiates a new vppTokenLicenseSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VppTokenLicenseSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -52,8 +52,8 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a vppTokenLicenseSummary
      */
-    @javax.annotation.Nonnull
-    public static VppTokenLicenseSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static VppTokenLicenseSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new VppTokenLicenseSummary();
     }
@@ -61,7 +61,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -69,7 +69,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      * Gets the appleId property value. The Apple Id associated with the given Apple Volume Purchase Program Token.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppleId() {
         return this.appleId;
     }
@@ -77,7 +77,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      * Gets the availableLicenseCount property value. The number of VPP licenses available.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getAvailableLicenseCount() {
         return this.availableLicenseCount;
     }
@@ -85,7 +85,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("appleId", (n) -> { this.setAppleId(n.getStringValue()); });
@@ -100,7 +100,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -108,7 +108,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      * Gets the organizationName property value. The organization associated with the Apple Volume Purchase Program Token.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOrganizationName() {
         return this.organizationName;
     }
@@ -116,7 +116,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      * Gets the usedLicenseCount property value. The number of VPP licenses in use.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getUsedLicenseCount() {
         return this.usedLicenseCount;
     }
@@ -124,7 +124,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      * Gets the vppTokenId property value. Identifier of the VPP token.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVppTokenId() {
         return this.vppTokenId;
     }
@@ -133,8 +133,8 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appleId", this.getAppleId());
         writer.writeIntegerValue("availableLicenseCount", this.getAvailableLicenseCount());
@@ -146,11 +146,11 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -158,8 +158,8 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the appleId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppleId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppleId(@jakarta.annotation.Nullable final String value) {
         this.appleId = value;
     }
     /**
@@ -167,17 +167,17 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the availableLicenseCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAvailableLicenseCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setAvailableLicenseCount(@jakarta.annotation.Nullable final Integer value) {
         this.availableLicenseCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -185,8 +185,8 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the organizationName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrganizationName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOrganizationName(@jakarta.annotation.Nullable final String value) {
         this.organizationName = value;
     }
     /**
@@ -194,8 +194,8 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the usedLicenseCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUsedLicenseCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setUsedLicenseCount(@jakarta.annotation.Nullable final Integer value) {
         this.usedLicenseCount = value;
     }
     /**
@@ -203,8 +203,8 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the vppTokenId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVppTokenId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVppTokenId(@jakarta.annotation.Nullable final String value) {
         this.vppTokenId = value;
     }
 }

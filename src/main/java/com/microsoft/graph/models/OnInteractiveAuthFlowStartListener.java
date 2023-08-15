@@ -15,7 +15,7 @@ public class OnInteractiveAuthFlowStartListener extends AuthenticationEventListe
      * Instantiates a new onInteractiveAuthFlowStartListener and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnInteractiveAuthFlowStartListener() {
         super();
         this.setOdataType("#microsoft.graph.onInteractiveAuthFlowStartListener");
@@ -25,8 +25,8 @@ public class OnInteractiveAuthFlowStartListener extends AuthenticationEventListe
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a onInteractiveAuthFlowStartListener
      */
-    @javax.annotation.Nonnull
-    public static OnInteractiveAuthFlowStartListener createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OnInteractiveAuthFlowStartListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OnInteractiveAuthFlowStartListener();
     }
@@ -34,7 +34,7 @@ public class OnInteractiveAuthFlowStartListener extends AuthenticationEventListe
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("handler", (n) -> { this.setHandler(n.getObjectValue(OnInteractiveAuthFlowStartHandler::createFromDiscriminatorValue)); });
@@ -44,7 +44,7 @@ public class OnInteractiveAuthFlowStartListener extends AuthenticationEventListe
      * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
      * @return a onInteractiveAuthFlowStartHandler
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnInteractiveAuthFlowStartHandler getHandler() {
         return this.handler;
     }
@@ -53,8 +53,8 @@ public class OnInteractiveAuthFlowStartListener extends AuthenticationEventListe
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("handler", this.getHandler());
@@ -64,8 +64,8 @@ public class OnInteractiveAuthFlowStartListener extends AuthenticationEventListe
      * @param value Value to set for the handler property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHandler(@javax.annotation.Nullable final OnInteractiveAuthFlowStartHandler value) {
+    @jakarta.annotation.Nonnull
+    public void setHandler(@jakarta.annotation.Nullable final OnInteractiveAuthFlowStartHandler value) {
         this.handler = value;
     }
 }

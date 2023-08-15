@@ -75,7 +75,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * Instantiates a new companyInformation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CompanyInformation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -84,8 +84,8 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a companyInformation
      */
-    @javax.annotation.Nonnull
-    public static CompanyInformation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CompanyInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CompanyInformation();
     }
@@ -93,7 +93,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -101,7 +101,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * Gets the address property value. The address property
      * @return a postalAddressType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PostalAddressType getAddress() {
         return this.address;
     }
@@ -109,7 +109,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * Gets the currencyCode property value. The currencyCode property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCurrencyCode() {
         return this.currencyCode;
     }
@@ -117,7 +117,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * Gets the currentFiscalYearStartDate property value. The currentFiscalYearStartDate property
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getCurrentFiscalYearStartDate() {
         return this.currentFiscalYearStartDate;
     }
@@ -125,7 +125,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -133,7 +133,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * Gets the email property value. The email property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmail() {
         return this.email;
     }
@@ -141,7 +141,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * Gets the faxNumber property value. The faxNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFaxNumber() {
         return this.faxNumber;
     }
@@ -149,7 +149,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(14);
         deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
@@ -172,7 +172,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * Gets the id property value. The id property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getId() {
         return this.id;
     }
@@ -180,7 +180,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * Gets the industry property value. The industry property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIndustry() {
         return this.industry;
     }
@@ -188,7 +188,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -196,7 +196,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -204,7 +204,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * Gets the phoneNumber property value. The phoneNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
@@ -212,7 +212,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * Gets the picture property value. The picture property
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getPicture() {
         return this.picture;
     }
@@ -220,7 +220,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * Gets the taxRegistrationNumber property value. The taxRegistrationNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTaxRegistrationNumber() {
         return this.taxRegistrationNumber;
     }
@@ -228,7 +228,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * Gets the website property value. The website property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebsite() {
         return this.website;
     }
@@ -237,8 +237,8 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("address", this.getAddress());
         writer.writeStringValue("currencyCode", this.getCurrencyCode());
@@ -258,11 +258,11 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -270,8 +270,8 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the address property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddress(@javax.annotation.Nullable final PostalAddressType value) {
+    @jakarta.annotation.Nonnull
+    public void setAddress(@jakarta.annotation.Nullable final PostalAddressType value) {
         this.address = value;
     }
     /**
@@ -279,8 +279,8 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the currencyCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrencyCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCurrencyCode(@jakarta.annotation.Nullable final String value) {
         this.currencyCode = value;
     }
     /**
@@ -288,8 +288,8 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the currentFiscalYearStartDate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrentFiscalYearStartDate(@javax.annotation.Nullable final LocalDate value) {
+    @jakarta.annotation.Nonnull
+    public void setCurrentFiscalYearStartDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.currentFiscalYearStartDate = value;
     }
     /**
@@ -297,8 +297,8 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -306,8 +306,8 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmail(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
@@ -315,8 +315,8 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the faxNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFaxNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFaxNumber(@jakarta.annotation.Nullable final String value) {
         this.faxNumber = value;
     }
     /**
@@ -324,8 +324,8 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final UUID value) {
         this.id = value;
     }
     /**
@@ -333,8 +333,8 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the industry property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIndustry(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIndustry(@jakarta.annotation.Nullable final String value) {
         this.industry = value;
     }
     /**
@@ -342,17 +342,17 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -360,8 +360,8 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the phoneNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhoneNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPhoneNumber(@jakarta.annotation.Nullable final String value) {
         this.phoneNumber = value;
     }
     /**
@@ -369,8 +369,8 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the picture property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPicture(@javax.annotation.Nullable final byte[] value) {
+    @jakarta.annotation.Nonnull
+    public void setPicture(@jakarta.annotation.Nullable final byte[] value) {
         this.picture = value;
     }
     /**
@@ -378,8 +378,8 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the taxRegistrationNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTaxRegistrationNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTaxRegistrationNumber(@jakarta.annotation.Nullable final String value) {
         this.taxRegistrationNumber = value;
     }
     /**
@@ -387,8 +387,8 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the website property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebsite(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setWebsite(@jakarta.annotation.Nullable final String value) {
         this.website = value;
     }
 }

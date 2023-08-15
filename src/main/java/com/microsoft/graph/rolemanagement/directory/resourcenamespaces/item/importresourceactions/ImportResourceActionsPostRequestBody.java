@@ -28,7 +28,7 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
      * Instantiates a new importResourceActionsPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ImportResourceActionsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a importResourceActionsPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static ImportResourceActionsPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ImportResourceActionsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ImportResourceActionsPostRequestBody();
     }
@@ -46,7 +46,7 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("format", (n) -> { this.setFormat(n.getStringValue()); });
@@ -66,7 +66,7 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
      * Gets the format property value. The format property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFormat() {
         return this.format;
     }
@@ -74,7 +74,7 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
      * Gets the overwriteResourceNamespace property value. The overwriteResourceNamespace property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getOverwriteResourceNamespace() {
         return this.overwriteResourceNamespace;
     }
@@ -82,7 +82,7 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
      * Gets the value property value. The value property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getValue() {
         return this.value;
     }
@@ -91,8 +91,8 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("format", this.getFormat());
         writer.writeBooleanValue("overwriteResourceNamespace", this.getOverwriteResourceNamespace());
@@ -101,11 +101,11 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -113,8 +113,8 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the format property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFormat(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFormat(@jakarta.annotation.Nullable final String value) {
         this.format = value;
     }
     /**
@@ -122,8 +122,8 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the overwriteResourceNamespace property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOverwriteResourceNamespace(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setOverwriteResourceNamespace(@jakarta.annotation.Nullable final Boolean value) {
         this.overwriteResourceNamespace = value;
     }
     /**
@@ -131,8 +131,8 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }
 }

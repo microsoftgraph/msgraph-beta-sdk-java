@@ -29,8 +29,8 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public WithIdWithPolicyIdWithDeviceIdRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter, @javax.annotation.Nullable final String deviceId, @javax.annotation.Nullable final String id, @javax.annotation.Nullable final String policyId) {
+    @jakarta.annotation.Nullable
+    public WithIdWithPolicyIdWithDeviceIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String deviceId, @jakarta.annotation.Nullable final String id, @jakarta.annotation.Nullable final String policyId) {
         super(requestAdapter, "{+baseurl}/deviceManagement/comanagedDevices/{managedDevice%2Did}/deviceHealthScriptStates/id='{id}',policyId='{policyId}',deviceId='{deviceId}'{?%24select,%24expand}", pathParameters);
         this.pathParameters.put("deviceId", deviceId);
         this.pathParameters.put("id", id);
@@ -42,15 +42,15 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public WithIdWithPolicyIdWithDeviceIdRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public WithIdWithPolicyIdWithDeviceIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/comanagedDevices/{managedDevice%2Did}/deviceHealthScriptStates/id='{id}',policyId='{policyId}',deviceId='{deviceId}'{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property deviceHealthScriptStates for deviceManagement
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -69,8 +69,8 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -87,7 +87,7 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
      * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
      * @return a CompletableFuture of deviceHealthScriptPolicyState
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthScriptPolicyState> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -106,8 +106,8 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceHealthScriptPolicyState
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceHealthScriptPolicyState> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceHealthScriptPolicyState> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -125,8 +125,8 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
      * @param body Contains properties for policy run state of the device health script.
      * @return a CompletableFuture of deviceHealthScriptPolicyState
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceHealthScriptPolicyState> patch(@javax.annotation.Nonnull final DeviceHealthScriptPolicyState body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceHealthScriptPolicyState> patch(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -145,8 +145,8 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceHealthScriptPolicyState
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceHealthScriptPolicyState> patch(@javax.annotation.Nonnull final DeviceHealthScriptPolicyState body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceHealthScriptPolicyState> patch(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -164,7 +164,7 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
      * Delete navigation property deviceHealthScriptStates for deviceManagement
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -173,8 +173,8 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -191,7 +191,7 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
      * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -200,8 +200,8 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -221,8 +221,8 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
      * @param body Contains properties for policy run state of the device health script.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final DeviceHealthScriptPolicyState body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -231,8 +231,8 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final DeviceHealthScriptPolicyState body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -261,13 +261,13 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -277,7 +277,7 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

@@ -40,7 +40,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, Parsable 
      * Instantiates a new cloudPcBulkActionSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcBulkActionSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +49,8 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudPcBulkActionSummary
      */
-    @javax.annotation.Nonnull
-    public static CloudPcBulkActionSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudPcBulkActionSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudPcBulkActionSummary();
     }
@@ -58,7 +58,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, Parsable 
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +66,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, Parsable 
      * Gets the failedCount property value. The failedCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFailedCount() {
         return this.failedCount;
     }
@@ -74,7 +74,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("failedCount", (n) -> { this.setFailedCount(n.getIntegerValue()); });
@@ -89,7 +89,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, Parsable 
      * Gets the inProgressCount property value. The inProgressCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getInProgressCount() {
         return this.inProgressCount;
     }
@@ -97,7 +97,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, Parsable 
      * Gets the notSupportedCount property value. The notSupportedCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNotSupportedCount() {
         return this.notSupportedCount;
     }
@@ -105,7 +105,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, Parsable 
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -113,7 +113,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, Parsable 
      * Gets the pendingCount property value. The pendingCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPendingCount() {
         return this.pendingCount;
     }
@@ -121,7 +121,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, Parsable 
      * Gets the successfulCount property value. The successfulCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSuccessfulCount() {
         return this.successfulCount;
     }
@@ -130,8 +130,8 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("failedCount", this.getFailedCount());
         writer.writeIntegerValue("inProgressCount", this.getInProgressCount());
@@ -143,11 +143,11 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, Parsable 
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -155,8 +155,8 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the failedCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setFailedCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedCount = value;
     }
     /**
@@ -164,8 +164,8 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the inProgressCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInProgressCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setInProgressCount(@jakarta.annotation.Nullable final Integer value) {
         this.inProgressCount = value;
     }
     /**
@@ -173,17 +173,17 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the notSupportedCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotSupportedCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNotSupportedCount(@jakarta.annotation.Nullable final Integer value) {
         this.notSupportedCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -191,8 +191,8 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the pendingCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPendingCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPendingCount(@jakarta.annotation.Nullable final Integer value) {
         this.pendingCount = value;
     }
     /**
@@ -200,8 +200,8 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the successfulCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuccessfulCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSuccessfulCount(@jakarta.annotation.Nullable final Integer value) {
         this.successfulCount = value;
     }
 }

@@ -79,7 +79,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * Instantiates a new depOnboardingSetting and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DepOnboardingSetting() {
         super();
     }
@@ -88,8 +88,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a depOnboardingSetting
      */
-    @javax.annotation.Nonnull
-    public static DepOnboardingSetting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DepOnboardingSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DepOnboardingSetting();
     }
@@ -97,7 +97,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * Gets the appleIdentifier property value. The Apple ID used to obtain the current token.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppleIdentifier() {
         return this.appleIdentifier;
     }
@@ -105,7 +105,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * Gets the dataSharingConsentGranted property value. Consent granted for data sharing with Apple Dep Service
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDataSharingConsentGranted() {
         return this.dataSharingConsentGranted;
     }
@@ -113,7 +113,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * Gets the defaultIosEnrollmentProfile property value. Default iOS Enrollment Profile
      * @return a depIOSEnrollmentProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DepIOSEnrollmentProfile getDefaultIosEnrollmentProfile() {
         return this.defaultIosEnrollmentProfile;
     }
@@ -121,7 +121,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * Gets the defaultMacOsEnrollmentProfile property value. Default MacOs Enrollment Profile
      * @return a depMacOSEnrollmentProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DepMacOSEnrollmentProfile getDefaultMacOsEnrollmentProfile() {
         return this.defaultMacOsEnrollmentProfile;
     }
@@ -129,7 +129,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * Gets the enrollmentProfiles property value. The enrollment profiles.
      * @return a enrollmentProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EnrollmentProfile> getEnrollmentProfiles() {
         return this.enrollmentProfiles;
     }
@@ -137,7 +137,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appleIdentifier", (n) -> { this.setAppleIdentifier(n.getStringValue()); });
@@ -162,7 +162,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * Gets the importedAppleDeviceIdentities property value. The imported Apple device identities.
      * @return a importedAppleDeviceIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ImportedAppleDeviceIdentity> getImportedAppleDeviceIdentities() {
         return this.importedAppleDeviceIdentities;
     }
@@ -170,7 +170,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. When the service was onboarded.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -178,7 +178,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * Gets the lastSuccessfulSyncDateTime property value. When the service last syned with Intune
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSuccessfulSyncDateTime() {
         return this.lastSuccessfulSyncDateTime;
     }
@@ -186,7 +186,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * Gets the lastSyncErrorCode property value. Error code reported by Apple during last dep sync.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getLastSyncErrorCode() {
         return this.lastSyncErrorCode;
     }
@@ -194,7 +194,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * Gets the lastSyncTriggeredDateTime property value. When Intune last requested a sync.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncTriggeredDateTime() {
         return this.lastSyncTriggeredDateTime;
     }
@@ -202,7 +202,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
         return this.roleScopeTagIds;
     }
@@ -210,7 +210,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * Gets the shareTokenWithSchoolDataSyncService property value. Whether or not the Dep token sharing is enabled with the School Data Sync service.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShareTokenWithSchoolDataSyncService() {
         return this.shareTokenWithSchoolDataSyncService;
     }
@@ -218,7 +218,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * Gets the syncedDeviceCount property value. Gets synced device count
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSyncedDeviceCount() {
         return this.syncedDeviceCount;
     }
@@ -226,7 +226,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * Gets the tokenExpirationDateTime property value. When the token will expire.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getTokenExpirationDateTime() {
         return this.tokenExpirationDateTime;
     }
@@ -234,7 +234,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * Gets the tokenName property value. Friendly Name for Dep Token
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTokenName() {
         return this.tokenName;
     }
@@ -242,7 +242,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * Gets the tokenType property value. The tokenType property
      * @return a depTokenType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DepTokenType getTokenType() {
         return this.tokenType;
     }
@@ -251,8 +251,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appleIdentifier", this.getAppleIdentifier());
@@ -277,8 +277,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param value Value to set for the appleIdentifier property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppleIdentifier(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppleIdentifier(@jakarta.annotation.Nullable final String value) {
         this.appleIdentifier = value;
     }
     /**
@@ -286,8 +286,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param value Value to set for the dataSharingConsentGranted property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDataSharingConsentGranted(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDataSharingConsentGranted(@jakarta.annotation.Nullable final Boolean value) {
         this.dataSharingConsentGranted = value;
     }
     /**
@@ -295,8 +295,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param value Value to set for the defaultIosEnrollmentProfile property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultIosEnrollmentProfile(@javax.annotation.Nullable final DepIOSEnrollmentProfile value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaultIosEnrollmentProfile(@jakarta.annotation.Nullable final DepIOSEnrollmentProfile value) {
         this.defaultIosEnrollmentProfile = value;
     }
     /**
@@ -304,8 +304,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param value Value to set for the defaultMacOsEnrollmentProfile property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultMacOsEnrollmentProfile(@javax.annotation.Nullable final DepMacOSEnrollmentProfile value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaultMacOsEnrollmentProfile(@jakarta.annotation.Nullable final DepMacOSEnrollmentProfile value) {
         this.defaultMacOsEnrollmentProfile = value;
     }
     /**
@@ -313,8 +313,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param value Value to set for the enrollmentProfiles property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentProfiles(@javax.annotation.Nullable final java.util.List<EnrollmentProfile> value) {
+    @jakarta.annotation.Nonnull
+    public void setEnrollmentProfiles(@jakarta.annotation.Nullable final java.util.List<EnrollmentProfile> value) {
         this.enrollmentProfiles = value;
     }
     /**
@@ -322,8 +322,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param value Value to set for the importedAppleDeviceIdentities property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImportedAppleDeviceIdentities(@javax.annotation.Nullable final java.util.List<ImportedAppleDeviceIdentity> value) {
+    @jakarta.annotation.Nonnull
+    public void setImportedAppleDeviceIdentities(@jakarta.annotation.Nullable final java.util.List<ImportedAppleDeviceIdentity> value) {
         this.importedAppleDeviceIdentities = value;
     }
     /**
@@ -331,8 +331,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -340,8 +340,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param value Value to set for the lastSuccessfulSyncDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSuccessfulSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastSuccessfulSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSuccessfulSyncDateTime = value;
     }
     /**
@@ -349,8 +349,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param value Value to set for the lastSyncErrorCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSyncErrorCode(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setLastSyncErrorCode(@jakarta.annotation.Nullable final Integer value) {
         this.lastSyncErrorCode = value;
     }
     /**
@@ -358,8 +358,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param value Value to set for the lastSyncTriggeredDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSyncTriggeredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastSyncTriggeredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSyncTriggeredDateTime = value;
     }
     /**
@@ -367,8 +367,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTagIds = value;
     }
     /**
@@ -376,8 +376,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param value Value to set for the shareTokenWithSchoolDataSyncService property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShareTokenWithSchoolDataSyncService(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShareTokenWithSchoolDataSyncService(@jakarta.annotation.Nullable final Boolean value) {
         this.shareTokenWithSchoolDataSyncService = value;
     }
     /**
@@ -385,8 +385,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param value Value to set for the syncedDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSyncedDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSyncedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.syncedDeviceCount = value;
     }
     /**
@@ -394,8 +394,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param value Value to set for the tokenExpirationDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTokenExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setTokenExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.tokenExpirationDateTime = value;
     }
     /**
@@ -403,8 +403,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param value Value to set for the tokenName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTokenName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTokenName(@jakarta.annotation.Nullable final String value) {
         this.tokenName = value;
     }
     /**
@@ -412,8 +412,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      * @param value Value to set for the tokenType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTokenType(@javax.annotation.Nullable final DepTokenType value) {
+    @jakarta.annotation.Nonnull
+    public void setTokenType(@jakarta.annotation.Nullable final DepTokenType value) {
         this.tokenType = value;
     }
 }

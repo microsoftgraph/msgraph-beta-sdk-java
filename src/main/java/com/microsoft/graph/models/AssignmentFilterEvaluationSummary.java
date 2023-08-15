@@ -56,7 +56,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * Instantiates a new assignmentFilterEvaluationSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AssignmentFilterEvaluationSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -65,8 +65,8 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a assignmentFilterEvaluationSummary
      */
-    @javax.annotation.Nonnull
-    public static AssignmentFilterEvaluationSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AssignmentFilterEvaluationSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AssignmentFilterEvaluationSummary();
     }
@@ -74,7 +74,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -82,7 +82,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * Gets the assignmentFilterDisplayName property value. The admin defined name for assignment filter.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssignmentFilterDisplayName() {
         return this.assignmentFilterDisplayName;
     }
@@ -90,7 +90,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * Gets the assignmentFilterId property value. Unique identifier for the assignment filter object
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssignmentFilterId() {
         return this.assignmentFilterId;
     }
@@ -98,7 +98,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * Gets the assignmentFilterLastModifiedDateTime property value. The time the assignment filter was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getAssignmentFilterLastModifiedDateTime() {
         return this.assignmentFilterLastModifiedDateTime;
     }
@@ -106,7 +106,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * Gets the assignmentFilterPlatform property value. Supported platform types.
      * @return a devicePlatformType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DevicePlatformType getAssignmentFilterPlatform() {
         return this.assignmentFilterPlatform;
     }
@@ -114,7 +114,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * Gets the assignmentFilterType property value. Represents type of the assignment filter.
      * @return a deviceAndAppManagementAssignmentFilterType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentFilterType getAssignmentFilterType() {
         return this.assignmentFilterType;
     }
@@ -122,7 +122,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * Gets the assignmentFilterTypeAndEvaluationResults property value. A collection of filter types and their corresponding evaluation results.
      * @return a assignmentFilterTypeAndEvaluationResult
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AssignmentFilterTypeAndEvaluationResult> getAssignmentFilterTypeAndEvaluationResults() {
         return this.assignmentFilterTypeAndEvaluationResults;
     }
@@ -130,7 +130,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * Gets the evaluationDateTime property value. The time assignment filter was evaluated.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEvaluationDateTime() {
         return this.evaluationDateTime;
     }
@@ -138,7 +138,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * Gets the evaluationResult property value. Supported evaluation results for filter.
      * @return a assignmentFilterEvaluationResult
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AssignmentFilterEvaluationResult getEvaluationResult() {
         return this.evaluationResult;
     }
@@ -146,7 +146,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("assignmentFilterDisplayName", (n) -> { this.setAssignmentFilterDisplayName(n.getStringValue()); });
@@ -164,7 +164,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -173,8 +173,8 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("assignmentFilterDisplayName", this.getAssignmentFilterDisplayName());
         writer.writeStringValue("assignmentFilterId", this.getAssignmentFilterId());
@@ -189,11 +189,11 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -201,8 +201,8 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the assignmentFilterDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentFilterDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignmentFilterDisplayName(@jakarta.annotation.Nullable final String value) {
         this.assignmentFilterDisplayName = value;
     }
     /**
@@ -210,8 +210,8 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the assignmentFilterId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentFilterId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignmentFilterId(@jakarta.annotation.Nullable final String value) {
         this.assignmentFilterId = value;
     }
     /**
@@ -219,8 +219,8 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the assignmentFilterLastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentFilterLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignmentFilterLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.assignmentFilterLastModifiedDateTime = value;
     }
     /**
@@ -228,8 +228,8 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the assignmentFilterPlatform property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentFilterPlatform(@javax.annotation.Nullable final DevicePlatformType value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignmentFilterPlatform(@jakarta.annotation.Nullable final DevicePlatformType value) {
         this.assignmentFilterPlatform = value;
     }
     /**
@@ -237,8 +237,8 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the assignmentFilterType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentFilterType(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentFilterType value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignmentFilterType(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentFilterType value) {
         this.assignmentFilterType = value;
     }
     /**
@@ -246,8 +246,8 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the assignmentFilterTypeAndEvaluationResults property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentFilterTypeAndEvaluationResults(@javax.annotation.Nullable final java.util.List<AssignmentFilterTypeAndEvaluationResult> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignmentFilterTypeAndEvaluationResults(@jakarta.annotation.Nullable final java.util.List<AssignmentFilterTypeAndEvaluationResult> value) {
         this.assignmentFilterTypeAndEvaluationResults = value;
     }
     /**
@@ -255,8 +255,8 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the evaluationDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEvaluationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setEvaluationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.evaluationDateTime = value;
     }
     /**
@@ -264,17 +264,17 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the evaluationResult property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEvaluationResult(@javax.annotation.Nullable final AssignmentFilterEvaluationResult value) {
+    @jakarta.annotation.Nonnull
+    public void setEvaluationResult(@jakarta.annotation.Nullable final AssignmentFilterEvaluationResult value) {
         this.evaluationResult = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

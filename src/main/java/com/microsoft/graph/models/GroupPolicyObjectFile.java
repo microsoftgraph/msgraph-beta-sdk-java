@@ -40,7 +40,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * Instantiates a new groupPolicyObjectFile and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GroupPolicyObjectFile() {
         super();
     }
@@ -49,8 +49,8 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a groupPolicyObjectFile
      */
-    @javax.annotation.Nonnull
-    public static GroupPolicyObjectFile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GroupPolicyObjectFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GroupPolicyObjectFile();
     }
@@ -58,7 +58,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * Gets the content property value. The Group Policy Object file content.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContent() {
         return this.content;
     }
@@ -66,7 +66,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time at which the GroupPolicy was first uploaded.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -74,7 +74,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
@@ -89,7 +89,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * Gets the groupPolicyObjectId property value. The Group Policy Object GUID from GPO Xml content
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getGroupPolicyObjectId() {
         return this.groupPolicyObjectId;
     }
@@ -97,7 +97,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time at which the GroupPolicyObjectFile was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -105,7 +105,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * Gets the ouDistinguishedName property value. The distinguished name of the OU.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOuDistinguishedName() {
         return this.ouDistinguishedName;
     }
@@ -113,7 +113,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * Gets the roleScopeTagIds property value. The list of scope tags for the configuration.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
         return this.roleScopeTagIds;
     }
@@ -122,8 +122,8 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("content", this.getContent());
@@ -138,8 +138,8 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContent(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContent(@jakarta.annotation.Nullable final String value) {
         this.content = value;
     }
     /**
@@ -147,8 +147,8 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -156,8 +156,8 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param value Value to set for the groupPolicyObjectId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupPolicyObjectId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setGroupPolicyObjectId(@jakarta.annotation.Nullable final UUID value) {
         this.groupPolicyObjectId = value;
     }
     /**
@@ -165,8 +165,8 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -174,8 +174,8 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param value Value to set for the ouDistinguishedName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOuDistinguishedName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOuDistinguishedName(@jakarta.annotation.Nullable final String value) {
         this.ouDistinguishedName = value;
     }
     /**
@@ -183,8 +183,8 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTagIds = value;
     }
 }

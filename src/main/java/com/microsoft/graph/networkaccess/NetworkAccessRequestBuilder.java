@@ -31,56 +31,56 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the connectivity property of the microsoft.graph.networkaccess.networkAccessRoot entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ConnectivityRequestBuilder connectivity() {
         return new ConnectivityRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the forwardingPolicies property of the microsoft.graph.networkaccess.networkAccessRoot entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ForwardingPoliciesRequestBuilder forwardingPolicies() {
         return new ForwardingPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the forwardingProfiles property of the microsoft.graph.networkaccess.networkAccessRoot entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ForwardingProfilesRequestBuilder forwardingProfiles() {
         return new ForwardingProfilesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the logs property of the microsoft.graph.networkaccess.networkAccessRoot entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public LogsRequestBuilder logs() {
         return new LogsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the onboard method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public MicrosoftGraphNetworkaccessOnboardRequestBuilder microsoftGraphNetworkaccessOnboard() {
         return new MicrosoftGraphNetworkaccessOnboardRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the reports property of the microsoft.graph.networkaccess.networkAccessRoot entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ReportsRequestBuilder reports() {
         return new ReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.networkaccess.networkAccessRoot entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SettingsRequestBuilder settings() {
         return new SettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tenantStatus property of the microsoft.graph.networkaccess.networkAccessRoot entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TenantStatusRequestBuilder tenantStatus() {
         return new TenantStatusRequestBuilder(pathParameters, requestAdapter);
     }
@@ -90,8 +90,8 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public NetworkAccessRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public NetworkAccessRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/networkAccess{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -100,15 +100,15 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public NetworkAccessRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public NetworkAccessRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/networkAccess{?%24select,%24expand}", rawUrl);
     }
     /**
      * Get networkAccess
      * @return a CompletableFuture of networkAccessRoot
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NetworkAccessRoot> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -127,8 +127,8 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of networkAccessRoot
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<NetworkAccessRoot> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<NetworkAccessRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -146,8 +146,8 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a CompletableFuture of networkAccessRoot
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<NetworkAccessRoot> patch(@javax.annotation.Nonnull final NetworkAccessRoot body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<NetworkAccessRoot> patch(@jakarta.annotation.Nonnull final NetworkAccessRoot body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -166,8 +166,8 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of networkAccessRoot
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<NetworkAccessRoot> patch(@javax.annotation.Nonnull final NetworkAccessRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<NetworkAccessRoot> patch(@jakarta.annotation.Nonnull final NetworkAccessRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -185,7 +185,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
      * Get networkAccess
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -194,8 +194,8 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -215,8 +215,8 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final NetworkAccessRoot body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final NetworkAccessRoot body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -225,8 +225,8 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final NetworkAccessRoot body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final NetworkAccessRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -250,13 +250,13 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -266,7 +266,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

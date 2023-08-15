@@ -172,7 +172,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Instantiates a new salesQuote and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SalesQuote() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -181,8 +181,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a salesQuote
      */
-    @javax.annotation.Nonnull
-    public static SalesQuote createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SalesQuote createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SalesQuote();
     }
@@ -190,7 +190,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the acceptedDate property value. The acceptedDate property
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getAcceptedDate() {
         return this.acceptedDate;
     }
@@ -198,7 +198,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -206,7 +206,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the billingPostalAddress property value. The billingPostalAddress property
      * @return a postalAddressType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PostalAddressType getBillingPostalAddress() {
         return this.billingPostalAddress;
     }
@@ -214,7 +214,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the billToCustomerId property value. The billToCustomerId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getBillToCustomerId() {
         return this.billToCustomerId;
     }
@@ -222,7 +222,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the billToCustomerNumber property value. The billToCustomerNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBillToCustomerNumber() {
         return this.billToCustomerNumber;
     }
@@ -230,7 +230,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the billToName property value. The billToName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBillToName() {
         return this.billToName;
     }
@@ -238,7 +238,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the currency property value. The currency property
      * @return a currency
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Currency getCurrency() {
         return this.currency;
     }
@@ -246,7 +246,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the currencyCode property value. The currencyCode property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCurrencyCode() {
         return this.currencyCode;
     }
@@ -254,7 +254,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the currencyId property value. The currencyId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getCurrencyId() {
         return this.currencyId;
     }
@@ -262,7 +262,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the customer property value. The customer property
      * @return a customer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Customer getCustomer() {
         return this.customer;
     }
@@ -270,7 +270,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the customerId property value. The customerId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getCustomerId() {
         return this.customerId;
     }
@@ -278,7 +278,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the customerName property value. The customerName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomerName() {
         return this.customerName;
     }
@@ -286,7 +286,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the customerNumber property value. The customerNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomerNumber() {
         return this.customerNumber;
     }
@@ -294,7 +294,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the discountAmount property value. The discountAmount property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getDiscountAmount() {
         return this.discountAmount;
     }
@@ -302,7 +302,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the documentDate property value. The documentDate property
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getDocumentDate() {
         return this.documentDate;
     }
@@ -310,7 +310,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the dueDate property value. The dueDate property
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getDueDate() {
         return this.dueDate;
     }
@@ -318,7 +318,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the email property value. The email property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmail() {
         return this.email;
     }
@@ -326,7 +326,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the externalDocumentNumber property value. The externalDocumentNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalDocumentNumber() {
         return this.externalDocumentNumber;
     }
@@ -334,7 +334,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(38);
         deserializerMap.put("acceptedDate", (n) -> { this.setAcceptedDate(n.getLocalDateValue()); });
@@ -381,7 +381,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the id property value. The id property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getId() {
         return this.id;
     }
@@ -389,7 +389,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -397,7 +397,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the number property value. The number property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNumber() {
         return this.number;
     }
@@ -405,7 +405,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -413,7 +413,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the paymentTerm property value. The paymentTerm property
      * @return a paymentTerm
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PaymentTerm getPaymentTerm() {
         return this.paymentTerm;
     }
@@ -421,7 +421,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the paymentTermsId property value. The paymentTermsId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getPaymentTermsId() {
         return this.paymentTermsId;
     }
@@ -429,7 +429,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the phoneNumber property value. The phoneNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
@@ -437,7 +437,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the salesperson property value. The salesperson property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSalesperson() {
         return this.salesperson;
     }
@@ -445,7 +445,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the salesQuoteLines property value. The salesQuoteLines property
      * @return a salesQuoteLine
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SalesQuoteLine> getSalesQuoteLines() {
         return this.salesQuoteLines;
     }
@@ -453,7 +453,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the sellingPostalAddress property value. The sellingPostalAddress property
      * @return a postalAddressType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PostalAddressType getSellingPostalAddress() {
         return this.sellingPostalAddress;
     }
@@ -461,7 +461,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the sentDate property value. The sentDate property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getSentDate() {
         return this.sentDate;
     }
@@ -469,7 +469,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the shipmentMethod property value. The shipmentMethod property
      * @return a shipmentMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ShipmentMethod getShipmentMethod() {
         return this.shipmentMethod;
     }
@@ -477,7 +477,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the shipmentMethodId property value. The shipmentMethodId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getShipmentMethodId() {
         return this.shipmentMethodId;
     }
@@ -485,7 +485,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the shippingPostalAddress property value. The shippingPostalAddress property
      * @return a postalAddressType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PostalAddressType getShippingPostalAddress() {
         return this.shippingPostalAddress;
     }
@@ -493,7 +493,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the shipToContact property value. The shipToContact property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getShipToContact() {
         return this.shipToContact;
     }
@@ -501,7 +501,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the shipToName property value. The shipToName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getShipToName() {
         return this.shipToName;
     }
@@ -509,7 +509,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the status property value. The status property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStatus() {
         return this.status;
     }
@@ -517,7 +517,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the totalAmountExcludingTax property value. The totalAmountExcludingTax property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getTotalAmountExcludingTax() {
         return this.totalAmountExcludingTax;
     }
@@ -525,7 +525,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the totalAmountIncludingTax property value. The totalAmountIncludingTax property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getTotalAmountIncludingTax() {
         return this.totalAmountIncludingTax;
     }
@@ -533,7 +533,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the totalTaxAmount property value. The totalTaxAmount property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getTotalTaxAmount() {
         return this.totalTaxAmount;
     }
@@ -541,7 +541,7 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * Gets the validUntilDate property value. The validUntilDate property
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getValidUntilDate() {
         return this.validUntilDate;
     }
@@ -550,8 +550,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLocalDateValue("acceptedDate", this.getAcceptedDate());
         writer.writeObjectValue("billingPostalAddress", this.getBillingPostalAddress());
@@ -598,17 +598,17 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the acceptedDate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAcceptedDate(@javax.annotation.Nullable final LocalDate value) {
+    @jakarta.annotation.Nonnull
+    public void setAcceptedDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.acceptedDate = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -616,8 +616,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the billingPostalAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBillingPostalAddress(@javax.annotation.Nullable final PostalAddressType value) {
+    @jakarta.annotation.Nonnull
+    public void setBillingPostalAddress(@jakarta.annotation.Nullable final PostalAddressType value) {
         this.billingPostalAddress = value;
     }
     /**
@@ -625,8 +625,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the billToCustomerId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBillToCustomerId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setBillToCustomerId(@jakarta.annotation.Nullable final UUID value) {
         this.billToCustomerId = value;
     }
     /**
@@ -634,8 +634,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the billToCustomerNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBillToCustomerNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setBillToCustomerNumber(@jakarta.annotation.Nullable final String value) {
         this.billToCustomerNumber = value;
     }
     /**
@@ -643,8 +643,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the billToName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBillToName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setBillToName(@jakarta.annotation.Nullable final String value) {
         this.billToName = value;
     }
     /**
@@ -652,8 +652,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the currency property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrency(@javax.annotation.Nullable final Currency value) {
+    @jakarta.annotation.Nonnull
+    public void setCurrency(@jakarta.annotation.Nullable final Currency value) {
         this.currency = value;
     }
     /**
@@ -661,8 +661,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the currencyCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrencyCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCurrencyCode(@jakarta.annotation.Nullable final String value) {
         this.currencyCode = value;
     }
     /**
@@ -670,8 +670,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the currencyId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrencyId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setCurrencyId(@jakarta.annotation.Nullable final UUID value) {
         this.currencyId = value;
     }
     /**
@@ -679,8 +679,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the customer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomer(@javax.annotation.Nullable final Customer value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomer(@jakarta.annotation.Nullable final Customer value) {
         this.customer = value;
     }
     /**
@@ -688,8 +688,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the customerId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomerId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomerId(@jakarta.annotation.Nullable final UUID value) {
         this.customerId = value;
     }
     /**
@@ -697,8 +697,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the customerName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomerName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomerName(@jakarta.annotation.Nullable final String value) {
         this.customerName = value;
     }
     /**
@@ -706,8 +706,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the customerNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomerNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomerNumber(@jakarta.annotation.Nullable final String value) {
         this.customerNumber = value;
     }
     /**
@@ -715,8 +715,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the discountAmount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDiscountAmount(@javax.annotation.Nullable final BigDecimal value) {
+    @jakarta.annotation.Nonnull
+    public void setDiscountAmount(@jakarta.annotation.Nullable final BigDecimal value) {
         this.discountAmount = value;
     }
     /**
@@ -724,8 +724,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the documentDate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDocumentDate(@javax.annotation.Nullable final LocalDate value) {
+    @jakarta.annotation.Nonnull
+    public void setDocumentDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.documentDate = value;
     }
     /**
@@ -733,8 +733,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the dueDate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDueDate(@javax.annotation.Nullable final LocalDate value) {
+    @jakarta.annotation.Nonnull
+    public void setDueDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.dueDate = value;
     }
     /**
@@ -742,8 +742,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmail(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
@@ -751,8 +751,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the externalDocumentNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalDocumentNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalDocumentNumber(@jakarta.annotation.Nullable final String value) {
         this.externalDocumentNumber = value;
     }
     /**
@@ -760,8 +760,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final UUID value) {
         this.id = value;
     }
     /**
@@ -769,8 +769,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -778,17 +778,17 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the number property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNumber(@jakarta.annotation.Nullable final String value) {
         this.number = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -796,8 +796,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the paymentTerm property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPaymentTerm(@javax.annotation.Nullable final PaymentTerm value) {
+    @jakarta.annotation.Nonnull
+    public void setPaymentTerm(@jakarta.annotation.Nullable final PaymentTerm value) {
         this.paymentTerm = value;
     }
     /**
@@ -805,8 +805,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the paymentTermsId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPaymentTermsId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setPaymentTermsId(@jakarta.annotation.Nullable final UUID value) {
         this.paymentTermsId = value;
     }
     /**
@@ -814,8 +814,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the phoneNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhoneNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPhoneNumber(@jakarta.annotation.Nullable final String value) {
         this.phoneNumber = value;
     }
     /**
@@ -823,8 +823,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the salesperson property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSalesperson(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSalesperson(@jakarta.annotation.Nullable final String value) {
         this.salesperson = value;
     }
     /**
@@ -832,8 +832,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the salesQuoteLines property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSalesQuoteLines(@javax.annotation.Nullable final java.util.List<SalesQuoteLine> value) {
+    @jakarta.annotation.Nonnull
+    public void setSalesQuoteLines(@jakarta.annotation.Nullable final java.util.List<SalesQuoteLine> value) {
         this.salesQuoteLines = value;
     }
     /**
@@ -841,8 +841,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sellingPostalAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSellingPostalAddress(@javax.annotation.Nullable final PostalAddressType value) {
+    @jakarta.annotation.Nonnull
+    public void setSellingPostalAddress(@jakarta.annotation.Nullable final PostalAddressType value) {
         this.sellingPostalAddress = value;
     }
     /**
@@ -850,8 +850,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sentDate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSentDate(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setSentDate(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.sentDate = value;
     }
     /**
@@ -859,8 +859,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the shipmentMethod property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShipmentMethod(@javax.annotation.Nullable final ShipmentMethod value) {
+    @jakarta.annotation.Nonnull
+    public void setShipmentMethod(@jakarta.annotation.Nullable final ShipmentMethod value) {
         this.shipmentMethod = value;
     }
     /**
@@ -868,8 +868,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the shipmentMethodId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShipmentMethodId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setShipmentMethodId(@jakarta.annotation.Nullable final UUID value) {
         this.shipmentMethodId = value;
     }
     /**
@@ -877,8 +877,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the shippingPostalAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShippingPostalAddress(@javax.annotation.Nullable final PostalAddressType value) {
+    @jakarta.annotation.Nonnull
+    public void setShippingPostalAddress(@jakarta.annotation.Nullable final PostalAddressType value) {
         this.shippingPostalAddress = value;
     }
     /**
@@ -886,8 +886,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the shipToContact property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShipToContact(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setShipToContact(@jakarta.annotation.Nullable final String value) {
         this.shipToContact = value;
     }
     /**
@@ -895,8 +895,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the shipToName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShipToName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setShipToName(@jakarta.annotation.Nullable final String value) {
         this.shipToName = value;
     }
     /**
@@ -904,8 +904,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final String value) {
         this.status = value;
     }
     /**
@@ -913,8 +913,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the totalAmountExcludingTax property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalAmountExcludingTax(@javax.annotation.Nullable final BigDecimal value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalAmountExcludingTax(@jakarta.annotation.Nullable final BigDecimal value) {
         this.totalAmountExcludingTax = value;
     }
     /**
@@ -922,8 +922,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the totalAmountIncludingTax property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalAmountIncludingTax(@javax.annotation.Nullable final BigDecimal value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalAmountIncludingTax(@jakarta.annotation.Nullable final BigDecimal value) {
         this.totalAmountIncludingTax = value;
     }
     /**
@@ -931,8 +931,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the totalTaxAmount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalTaxAmount(@javax.annotation.Nullable final BigDecimal value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalTaxAmount(@jakarta.annotation.Nullable final BigDecimal value) {
         this.totalTaxAmount = value;
     }
     /**
@@ -940,8 +940,8 @@ public class SalesQuote implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the validUntilDate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValidUntilDate(@javax.annotation.Nullable final LocalDate value) {
+    @jakarta.annotation.Nonnull
+    public void setValidUntilDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.validUntilDate = value;
     }
 }

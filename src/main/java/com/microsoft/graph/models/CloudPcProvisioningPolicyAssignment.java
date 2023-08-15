@@ -19,7 +19,7 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
      * Instantiates a new cloudPcProvisioningPolicyAssignment and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcProvisioningPolicyAssignment() {
         super();
     }
@@ -28,8 +28,8 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudPcProvisioningPolicyAssignment
      */
-    @javax.annotation.Nonnull
-    public static CloudPcProvisioningPolicyAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudPcProvisioningPolicyAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudPcProvisioningPolicyAssignment();
     }
@@ -37,7 +37,7 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
      * Gets the assignedUsers property value. The assignment targeted users for the provisioning policy. This list of users is computed based on assignments, licenses, group memberships, and policies. This property is read-only. Supports$expand.
      * @return a user
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<User> getAssignedUsers() {
         return this.assignedUsers;
     }
@@ -45,7 +45,7 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignedUsers", (n) -> { this.setAssignedUsers(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
@@ -56,7 +56,7 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
      * Gets the target property value. The assignment target for the provisioning policy. Currently, the only target supported for this policy is a user group. For details, see cloudPcManagementGroupAssignmentTarget.
      * @return a cloudPcManagementAssignmentTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcManagementAssignmentTarget getTarget() {
         return this.target;
     }
@@ -65,8 +65,8 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignedUsers", this.getAssignedUsers());
@@ -77,8 +77,8 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
      * @param value Value to set for the assignedUsers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignedUsers(@javax.annotation.Nullable final java.util.List<User> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignedUsers(@jakarta.annotation.Nullable final java.util.List<User> value) {
         this.assignedUsers = value;
     }
     /**
@@ -86,8 +86,8 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
      * @param value Value to set for the target property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTarget(@javax.annotation.Nullable final CloudPcManagementAssignmentTarget value) {
+    @jakarta.annotation.Nonnull
+    public void setTarget(@jakarta.annotation.Nullable final CloudPcManagementAssignmentTarget value) {
         this.target = value;
     }
 }

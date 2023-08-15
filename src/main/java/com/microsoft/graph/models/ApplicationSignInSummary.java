@@ -27,7 +27,7 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * Instantiates a new applicationSignInSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ApplicationSignInSummary() {
         super();
     }
@@ -36,8 +36,8 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a applicationSignInSummary
      */
-    @javax.annotation.Nonnull
-    public static ApplicationSignInSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ApplicationSignInSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ApplicationSignInSummary();
     }
@@ -45,7 +45,7 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * Gets the appDisplayName property value. Name of the application that the user signed into.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppDisplayName() {
         return this.appDisplayName;
     }
@@ -53,7 +53,7 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * Gets the failedSignInCount property value. Count of failed sign-ins made by the application.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getFailedSignInCount() {
         return this.failedSignInCount;
     }
@@ -61,7 +61,7 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appDisplayName", (n) -> { this.setAppDisplayName(n.getStringValue()); });
@@ -74,7 +74,7 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * Gets the successfulSignInCount property value. Count of successful sign-ins made by the application.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getSuccessfulSignInCount() {
         return this.successfulSignInCount;
     }
@@ -82,7 +82,7 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * Gets the successPercentage property value. Percentage of successful sign-ins made by the application.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getSuccessPercentage() {
         return this.successPercentage;
     }
@@ -91,8 +91,8 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appDisplayName", this.getAppDisplayName());
@@ -105,8 +105,8 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.appDisplayName = value;
     }
     /**
@@ -114,8 +114,8 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * @param value Value to set for the failedSignInCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedSignInCount(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setFailedSignInCount(@jakarta.annotation.Nullable final Long value) {
         this.failedSignInCount = value;
     }
     /**
@@ -123,8 +123,8 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * @param value Value to set for the successfulSignInCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuccessfulSignInCount(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setSuccessfulSignInCount(@jakarta.annotation.Nullable final Long value) {
         this.successfulSignInCount = value;
     }
     /**
@@ -132,8 +132,8 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * @param value Value to set for the successPercentage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuccessPercentage(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setSuccessPercentage(@jakarta.annotation.Nullable final Double value) {
         this.successPercentage = value;
     }
 }

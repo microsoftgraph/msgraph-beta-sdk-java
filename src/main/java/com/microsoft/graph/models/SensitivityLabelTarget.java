@@ -7,23 +7,23 @@ public enum SensitivityLabelTarget implements ValuedEnum {
     Email("email"),
     Site("site"),
     UnifiedGroup("unifiedGroup"),
-    UnknownFutureValue("unknownFutureValue"),
-    Teamwork("teamwork");
+    Teamwork("teamwork"),
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     SensitivityLabelTarget(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static SensitivityLabelTarget forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static SensitivityLabelTarget forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "email": return Email;
             case "site": return Site;
             case "unifiedGroup": return UnifiedGroup;
-            case "unknownFutureValue": return UnknownFutureValue;
             case "teamwork": return Teamwork;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

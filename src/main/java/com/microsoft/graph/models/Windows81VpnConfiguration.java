@@ -34,7 +34,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * Instantiates a new windows81VpnConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Windows81VpnConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows81VpnConfiguration");
@@ -44,8 +44,8 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windows81VpnConfiguration
      */
-    @javax.annotation.Nonnull
-    public static Windows81VpnConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Windows81VpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -60,7 +60,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the applyOnlyToWindows81 property value. Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getApplyOnlyToWindows81() {
         return this.applyOnlyToWindows81;
     }
@@ -68,7 +68,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the connectionType property value. Windows VPN connection type.
      * @return a windowsVpnConnectionType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsVpnConnectionType getConnectionType() {
         return this.connectionType;
     }
@@ -76,7 +76,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the enableSplitTunneling property value. Enable split tunneling for the VPN.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableSplitTunneling() {
         return this.enableSplitTunneling;
     }
@@ -84,7 +84,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applyOnlyToWindows81", (n) -> { this.setApplyOnlyToWindows81(n.getBooleanValue()); });
@@ -98,7 +98,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the loginGroupOrDomain property value. Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLoginGroupOrDomain() {
         return this.loginGroupOrDomain;
     }
@@ -106,7 +106,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the proxyServer property value. Proxy Server.
      * @return a windows81VpnProxyServer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Windows81VpnProxyServer getProxyServer() {
         return this.proxyServer;
     }
@@ -115,8 +115,8 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("connectionType", this.getConnectionType());
@@ -129,8 +129,8 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the applyOnlyToWindows81 property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplyOnlyToWindows81(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setApplyOnlyToWindows81(@jakarta.annotation.Nullable final Boolean value) {
         this.applyOnlyToWindows81 = value;
     }
     /**
@@ -138,8 +138,8 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the connectionType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectionType(@javax.annotation.Nullable final WindowsVpnConnectionType value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectionType(@jakarta.annotation.Nullable final WindowsVpnConnectionType value) {
         this.connectionType = value;
     }
     /**
@@ -147,8 +147,8 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the enableSplitTunneling property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableSplitTunneling(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnableSplitTunneling(@jakarta.annotation.Nullable final Boolean value) {
         this.enableSplitTunneling = value;
     }
     /**
@@ -156,8 +156,8 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the loginGroupOrDomain property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLoginGroupOrDomain(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLoginGroupOrDomain(@jakarta.annotation.Nullable final String value) {
         this.loginGroupOrDomain = value;
     }
     /**
@@ -165,8 +165,8 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the proxyServer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProxyServer(@javax.annotation.Nullable final Windows81VpnProxyServer value) {
+    @jakarta.annotation.Nonnull
+    public void setProxyServer(@jakarta.annotation.Nullable final Windows81VpnProxyServer value) {
         this.proxyServer = value;
     }
 }

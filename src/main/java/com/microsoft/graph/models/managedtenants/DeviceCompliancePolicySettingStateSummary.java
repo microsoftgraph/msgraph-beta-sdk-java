@@ -65,7 +65,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * Instantiates a new deviceCompliancePolicySettingStateSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceCompliancePolicySettingStateSummary() {
         super();
     }
@@ -74,8 +74,8 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceCompliancePolicySettingStateSummary
      */
-    @javax.annotation.Nonnull
-    public static DeviceCompliancePolicySettingStateSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceCompliancePolicySettingStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceCompliancePolicySettingStateSummary();
     }
@@ -83,7 +83,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * Gets the conflictDeviceCount property value. The number of devices in a conflict state. Optional. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getConflictDeviceCount() {
         return this.conflictDeviceCount;
     }
@@ -91,7 +91,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * Gets the errorDeviceCount property value. The number of devices in an error state. Optional. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
         return this.errorDeviceCount;
     }
@@ -99,7 +99,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * Gets the failedDeviceCount property value. The number of devices in a failed state. Optional. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFailedDeviceCount() {
         return this.failedDeviceCount;
     }
@@ -107,7 +107,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("conflictDeviceCount", (n) -> { this.setConflictDeviceCount(n.getIntegerValue()); });
@@ -129,7 +129,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * Gets the intuneAccountId property value. The identifer for the Microsoft Intune account. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIntuneAccountId() {
         return this.intuneAccountId;
     }
@@ -137,7 +137,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * Gets the intuneSettingId property value. The identifier for the Intune setting. Optional. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIntuneSettingId() {
         return this.intuneSettingId;
     }
@@ -145,7 +145,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * Gets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastRefreshedDateTime() {
         return this.lastRefreshedDateTime;
     }
@@ -153,7 +153,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * Gets the notApplicableDeviceCount property value. The number of devices in a not applicable state. Optional. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNotApplicableDeviceCount() {
         return this.notApplicableDeviceCount;
     }
@@ -161,7 +161,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * Gets the pendingDeviceCount property value. The number of devices in a pending state. Optional. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPendingDeviceCount() {
         return this.pendingDeviceCount;
     }
@@ -169,7 +169,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * Gets the policyType property value. The type for the device compliance policy. Optional. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPolicyType() {
         return this.policyType;
     }
@@ -177,7 +177,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * Gets the settingName property value. The name for the setting within the device compliance policy. Optional. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingName() {
         return this.settingName;
     }
@@ -185,7 +185,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * Gets the succeededDeviceCount property value. The number of devices in a succeeded state. Optional. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSucceededDeviceCount() {
         return this.succeededDeviceCount;
     }
@@ -193,7 +193,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
         return this.tenantDisplayName;
     }
@@ -201,7 +201,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -210,8 +210,8 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("conflictDeviceCount", this.getConflictDeviceCount());
@@ -233,8 +233,8 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the conflictDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConflictDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setConflictDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.conflictDeviceCount = value;
     }
     /**
@@ -242,8 +242,8 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the errorDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setErrorDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.errorDeviceCount = value;
     }
     /**
@@ -251,8 +251,8 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the failedDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setFailedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedDeviceCount = value;
     }
     /**
@@ -260,8 +260,8 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the intuneAccountId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIntuneAccountId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIntuneAccountId(@jakarta.annotation.Nullable final String value) {
         this.intuneAccountId = value;
     }
     /**
@@ -269,8 +269,8 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the intuneSettingId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIntuneSettingId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIntuneSettingId(@jakarta.annotation.Nullable final String value) {
         this.intuneSettingId = value;
     }
     /**
@@ -278,8 +278,8 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the lastRefreshedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastRefreshedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastRefreshedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastRefreshedDateTime = value;
     }
     /**
@@ -287,8 +287,8 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the notApplicableDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotApplicableDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setNotApplicableDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.notApplicableDeviceCount = value;
     }
     /**
@@ -296,8 +296,8 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the pendingDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPendingDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPendingDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.pendingDeviceCount = value;
     }
     /**
@@ -305,8 +305,8 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the policyType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPolicyType(@jakarta.annotation.Nullable final String value) {
         this.policyType = value;
     }
     /**
@@ -314,8 +314,8 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the settingName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSettingName(@jakarta.annotation.Nullable final String value) {
         this.settingName = value;
     }
     /**
@@ -323,8 +323,8 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the succeededDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSucceededDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSucceededDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.succeededDeviceCount = value;
     }
     /**
@@ -332,8 +332,8 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantDisplayName(@jakarta.annotation.Nullable final String value) {
         this.tenantDisplayName = value;
     }
     /**
@@ -341,8 +341,8 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
 }

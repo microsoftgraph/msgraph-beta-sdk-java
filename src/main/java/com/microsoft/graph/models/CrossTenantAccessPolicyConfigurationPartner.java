@@ -41,6 +41,10 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     private CrossTenantAccessPolicyInboundTrust inboundTrust;
     /**
+     * The isInMultiTenantOrganization property
+     */
+    private Boolean isInMultiTenantOrganization;
+    /**
      * Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
      */
     private Boolean isServiceProvider;
@@ -60,7 +64,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * Instantiates a new crossTenantAccessPolicyConfigurationPartner and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationPartner() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -69,8 +73,8 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a crossTenantAccessPolicyConfigurationPartner
      */
-    @javax.annotation.Nonnull
-    public static CrossTenantAccessPolicyConfigurationPartner createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CrossTenantAccessPolicyConfigurationPartner createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CrossTenantAccessPolicyConfigurationPartner();
     }
@@ -78,7 +82,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -86,7 +90,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * Gets the automaticUserConsentSettings property value. Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
      * @return a inboundOutboundPolicyConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InboundOutboundPolicyConfiguration getAutomaticUserConsentSettings() {
         return this.automaticUserConsentSettings;
     }
@@ -94,7 +98,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * Gets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
      * @return a crossTenantAccessPolicyB2BSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bCollaborationInbound() {
         return this.b2bCollaborationInbound;
     }
@@ -102,7 +106,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * Gets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
      * @return a crossTenantAccessPolicyB2BSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bCollaborationOutbound() {
         return this.b2bCollaborationOutbound;
     }
@@ -110,7 +114,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * Gets the b2bDirectConnectInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect.
      * @return a crossTenantAccessPolicyB2BSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bDirectConnectInbound() {
         return this.b2bDirectConnectInbound;
     }
@@ -118,7 +122,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * Gets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
      * @return a crossTenantAccessPolicyB2BSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bDirectConnectOutbound() {
         return this.b2bDirectConnectOutbound;
     }
@@ -126,9 +130,9 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("automaticUserConsentSettings", (n) -> { this.setAutomaticUserConsentSettings(n.getObjectValue(InboundOutboundPolicyConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationInbound", (n) -> { this.setB2bCollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationOutbound", (n) -> { this.setB2bCollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
@@ -136,6 +140,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         deserializerMap.put("b2bDirectConnectOutbound", (n) -> { this.setB2bDirectConnectOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("identitySynchronization", (n) -> { this.setIdentitySynchronization(n.getObjectValue(CrossTenantIdentitySyncPolicyPartner::createFromDiscriminatorValue)); });
         deserializerMap.put("inboundTrust", (n) -> { this.setInboundTrust(n.getObjectValue(CrossTenantAccessPolicyInboundTrust::createFromDiscriminatorValue)); });
+        deserializerMap.put("isInMultiTenantOrganization", (n) -> { this.setIsInMultiTenantOrganization(n.getBooleanValue()); });
         deserializerMap.put("isServiceProvider", (n) -> { this.setIsServiceProvider(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
@@ -146,7 +151,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * Gets the identitySynchronization property value. Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multi-tenant organization by automating the creation, update, and deletion of users from one tenant to another.
      * @return a crossTenantIdentitySyncPolicyPartner
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CrossTenantIdentitySyncPolicyPartner getIdentitySynchronization() {
         return this.identitySynchronization;
     }
@@ -154,15 +159,23 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * Gets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
      * @return a crossTenantAccessPolicyInboundTrust
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyInboundTrust getInboundTrust() {
         return this.inboundTrust;
+    }
+    /**
+     * Gets the isInMultiTenantOrganization property value. The isInMultiTenantOrganization property
+     * @return a boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsInMultiTenantOrganization() {
+        return this.isInMultiTenantOrganization;
     }
     /**
      * Gets the isServiceProvider property value. Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsServiceProvider() {
         return this.isServiceProvider;
     }
@@ -170,7 +183,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -178,7 +191,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * Gets the tenantId property value. The tenant identifier for the partner Azure AD organization. Read-only. Key.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -186,7 +199,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * Gets the tenantRestrictions property value. Defines the partner-specific tenant restrictions configuration for your organization users accessing a partner organization using partner supplied idenities on your network or devices.
      * @return a crossTenantAccessPolicyTenantRestrictions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyTenantRestrictions getTenantRestrictions() {
         return this.tenantRestrictions;
     }
@@ -195,8 +208,8 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("automaticUserConsentSettings", this.getAutomaticUserConsentSettings());
         writer.writeObjectValue("b2bCollaborationInbound", this.getB2bCollaborationInbound());
@@ -205,6 +218,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         writer.writeObjectValue("b2bDirectConnectOutbound", this.getB2bDirectConnectOutbound());
         writer.writeObjectValue("identitySynchronization", this.getIdentitySynchronization());
         writer.writeObjectValue("inboundTrust", this.getInboundTrust());
+        writer.writeBooleanValue("isInMultiTenantOrganization", this.getIsInMultiTenantOrganization());
         writer.writeBooleanValue("isServiceProvider", this.getIsServiceProvider());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("tenantId", this.getTenantId());
@@ -213,11 +227,11 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -225,8 +239,8 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * @param value Value to set for the automaticUserConsentSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAutomaticUserConsentSettings(@javax.annotation.Nullable final InboundOutboundPolicyConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setAutomaticUserConsentSettings(@jakarta.annotation.Nullable final InboundOutboundPolicyConfiguration value) {
         this.automaticUserConsentSettings = value;
     }
     /**
@@ -234,8 +248,8 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * @param value Value to set for the b2bCollaborationInbound property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setB2bCollaborationInbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
+    @jakarta.annotation.Nonnull
+    public void setB2bCollaborationInbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bCollaborationInbound = value;
     }
     /**
@@ -243,8 +257,8 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * @param value Value to set for the b2bCollaborationOutbound property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setB2bCollaborationOutbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
+    @jakarta.annotation.Nonnull
+    public void setB2bCollaborationOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bCollaborationOutbound = value;
     }
     /**
@@ -252,8 +266,8 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * @param value Value to set for the b2bDirectConnectInbound property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setB2bDirectConnectInbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
+    @jakarta.annotation.Nonnull
+    public void setB2bDirectConnectInbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bDirectConnectInbound = value;
     }
     /**
@@ -261,8 +275,8 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * @param value Value to set for the b2bDirectConnectOutbound property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setB2bDirectConnectOutbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
+    @jakarta.annotation.Nonnull
+    public void setB2bDirectConnectOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bDirectConnectOutbound = value;
     }
     /**
@@ -270,8 +284,8 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * @param value Value to set for the identitySynchronization property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentitySynchronization(@javax.annotation.Nullable final CrossTenantIdentitySyncPolicyPartner value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentitySynchronization(@jakarta.annotation.Nullable final CrossTenantIdentitySyncPolicyPartner value) {
         this.identitySynchronization = value;
     }
     /**
@@ -279,26 +293,35 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * @param value Value to set for the inboundTrust property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInboundTrust(@javax.annotation.Nullable final CrossTenantAccessPolicyInboundTrust value) {
+    @jakarta.annotation.Nonnull
+    public void setInboundTrust(@jakarta.annotation.Nullable final CrossTenantAccessPolicyInboundTrust value) {
         this.inboundTrust = value;
+    }
+    /**
+     * Sets the isInMultiTenantOrganization property value. The isInMultiTenantOrganization property
+     * @param value Value to set for the isInMultiTenantOrganization property.
+     * @return a void
+     */
+    @jakarta.annotation.Nonnull
+    public void setIsInMultiTenantOrganization(@jakarta.annotation.Nullable final Boolean value) {
+        this.isInMultiTenantOrganization = value;
     }
     /**
      * Sets the isServiceProvider property value. Identifies whether the partner-specific configuration is a Cloud Service Provider for your organization.
      * @param value Value to set for the isServiceProvider property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsServiceProvider(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsServiceProvider(@jakarta.annotation.Nullable final Boolean value) {
         this.isServiceProvider = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -306,8 +329,8 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
@@ -315,8 +338,8 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      * @param value Value to set for the tenantRestrictions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantRestrictions(@javax.annotation.Nullable final CrossTenantAccessPolicyTenantRestrictions value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantRestrictions(@jakarta.annotation.Nullable final CrossTenantAccessPolicyTenantRestrictions value) {
         this.tenantRestrictions = value;
     }
 }

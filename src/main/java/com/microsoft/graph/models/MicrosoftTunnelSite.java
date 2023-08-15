@@ -63,7 +63,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * Instantiates a new microsoftTunnelSite and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MicrosoftTunnelSite() {
         super();
     }
@@ -72,8 +72,8 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a microsoftTunnelSite
      */
-    @javax.annotation.Nonnull
-    public static MicrosoftTunnelSite createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MicrosoftTunnelSite createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MicrosoftTunnelSite();
     }
@@ -81,7 +81,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * Gets the description property value. The site's description (optional)
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -89,7 +89,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * Gets the displayName property value. The display name for the site. This property is required when a site is created.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -97,7 +97,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -118,7 +118,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * Gets the internalNetworkProbeUrl property value. The site's Internal Network Access Probe URL
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInternalNetworkProbeUrl() {
         return this.internalNetworkProbeUrl;
     }
@@ -126,7 +126,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * Gets the microsoftTunnelConfiguration property value. The MicrosoftTunnelConfiguration that has been applied to this MicrosoftTunnelSite
      * @return a microsoftTunnelConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MicrosoftTunnelConfiguration getMicrosoftTunnelConfiguration() {
         return this.microsoftTunnelConfiguration;
     }
@@ -134,7 +134,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * Gets the microsoftTunnelServers property value. A list of MicrosoftTunnelServers that are registered to this MicrosoftTunnelSite
      * @return a microsoftTunnelServer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MicrosoftTunnelServer> getMicrosoftTunnelServers() {
         return this.microsoftTunnelServers;
     }
@@ -142,7 +142,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * Gets the publicAddress property value. The site's public domain name or IP address
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPublicAddress() {
         return this.publicAddress;
     }
@@ -150,7 +150,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
         return this.roleScopeTagIds;
     }
@@ -158,7 +158,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * Gets the upgradeAutomatically property value. The site's automatic upgrade setting. True for automatic upgrades, false for manual control
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getUpgradeAutomatically() {
         return this.upgradeAutomatically;
     }
@@ -166,7 +166,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * Gets the upgradeAvailable property value. The site provides the state of when an upgrade is available
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getUpgradeAvailable() {
         return this.upgradeAvailable;
     }
@@ -174,7 +174,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * Gets the upgradeWindowEndTime property value. The site's upgrade window end time of day
      * @return a LocalTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalTime getUpgradeWindowEndTime() {
         return this.upgradeWindowEndTime;
     }
@@ -182,7 +182,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * Gets the upgradeWindowStartTime property value. The site's upgrade window start time of day
      * @return a LocalTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalTime getUpgradeWindowStartTime() {
         return this.upgradeWindowStartTime;
     }
@@ -190,7 +190,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * Gets the upgradeWindowUtcOffsetInMinutes property value. The site's timezone represented as a minute offset from UTC
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getUpgradeWindowUtcOffsetInMinutes() {
         return this.upgradeWindowUtcOffsetInMinutes;
     }
@@ -199,8 +199,8 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -221,8 +221,8 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -230,8 +230,8 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -239,8 +239,8 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the internalNetworkProbeUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInternalNetworkProbeUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setInternalNetworkProbeUrl(@jakarta.annotation.Nullable final String value) {
         this.internalNetworkProbeUrl = value;
     }
     /**
@@ -248,8 +248,8 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the microsoftTunnelConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMicrosoftTunnelConfiguration(@javax.annotation.Nullable final MicrosoftTunnelConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setMicrosoftTunnelConfiguration(@jakarta.annotation.Nullable final MicrosoftTunnelConfiguration value) {
         this.microsoftTunnelConfiguration = value;
     }
     /**
@@ -257,8 +257,8 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the microsoftTunnelServers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMicrosoftTunnelServers(@javax.annotation.Nullable final java.util.List<MicrosoftTunnelServer> value) {
+    @jakarta.annotation.Nonnull
+    public void setMicrosoftTunnelServers(@jakarta.annotation.Nullable final java.util.List<MicrosoftTunnelServer> value) {
         this.microsoftTunnelServers = value;
     }
     /**
@@ -266,8 +266,8 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the publicAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublicAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPublicAddress(@jakarta.annotation.Nullable final String value) {
         this.publicAddress = value;
     }
     /**
@@ -275,8 +275,8 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTagIds = value;
     }
     /**
@@ -284,8 +284,8 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the upgradeAutomatically property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpgradeAutomatically(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setUpgradeAutomatically(@jakarta.annotation.Nullable final Boolean value) {
         this.upgradeAutomatically = value;
     }
     /**
@@ -293,8 +293,8 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the upgradeAvailable property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpgradeAvailable(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setUpgradeAvailable(@jakarta.annotation.Nullable final Boolean value) {
         this.upgradeAvailable = value;
     }
     /**
@@ -302,8 +302,8 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the upgradeWindowEndTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpgradeWindowEndTime(@javax.annotation.Nullable final LocalTime value) {
+    @jakarta.annotation.Nonnull
+    public void setUpgradeWindowEndTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.upgradeWindowEndTime = value;
     }
     /**
@@ -311,8 +311,8 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the upgradeWindowStartTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpgradeWindowStartTime(@javax.annotation.Nullable final LocalTime value) {
+    @jakarta.annotation.Nonnull
+    public void setUpgradeWindowStartTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.upgradeWindowStartTime = value;
     }
     /**
@@ -320,8 +320,8 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the upgradeWindowUtcOffsetInMinutes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpgradeWindowUtcOffsetInMinutes(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setUpgradeWindowUtcOffsetInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.upgradeWindowUtcOffsetInMinutes = value;
     }
 }

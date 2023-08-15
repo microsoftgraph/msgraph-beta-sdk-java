@@ -43,7 +43,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * Instantiates a new iosSingleSignOnSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosSingleSignOnSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -52,8 +52,8 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a iosSingleSignOnSettings
      */
-    @javax.annotation.Nonnull
-    public static IosSingleSignOnSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IosSingleSignOnSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IosSingleSignOnSettings();
     }
@@ -61,7 +61,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -69,7 +69,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * Gets the allowedAppsList property value. List of app identifiers that are allowed to use this login. If this field is omitted, the login applies to all applications on the device. This collection can contain a maximum of 500 elements.
      * @return a appListItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getAllowedAppsList() {
         return this.allowedAppsList;
     }
@@ -77,7 +77,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * Gets the allowedUrls property value. List of HTTP URLs that must be matched in order to use this login. With iOS 9.0 or later, a wildcard characters may be used.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedUrls() {
         return this.allowedUrls;
     }
@@ -85,7 +85,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. The display name of login settings shown on the receiving device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -93,7 +93,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("allowedAppsList", (n) -> { this.setAllowedAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
@@ -108,7 +108,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * Gets the kerberosPrincipalName property value. A Kerberos principal name. If not provided, the user is prompted for one during profile installation.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getKerberosPrincipalName() {
         return this.kerberosPrincipalName;
     }
@@ -116,7 +116,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * Gets the kerberosRealm property value. A Kerberos realm name. Case sensitive.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getKerberosRealm() {
         return this.kerberosRealm;
     }
@@ -124,7 +124,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -133,8 +133,8 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("allowedAppsList", this.getAllowedAppsList());
         writer.writeCollectionOfPrimitiveValues("allowedUrls", this.getAllowedUrls());
@@ -146,11 +146,11 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -158,8 +158,8 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowedAppsList property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowedAppsList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowedAppsList(@jakarta.annotation.Nullable final java.util.List<AppListItem> value) {
         this.allowedAppsList = value;
     }
     /**
@@ -167,8 +167,8 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowedUrls property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowedUrls(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowedUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.allowedUrls = value;
     }
     /**
@@ -176,8 +176,8 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -185,8 +185,8 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the kerberosPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKerberosPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setKerberosPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.kerberosPrincipalName = value;
     }
     /**
@@ -194,17 +194,17 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the kerberosRealm property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKerberosRealm(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setKerberosRealm(@jakarta.annotation.Nullable final String value) {
         this.kerberosRealm = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

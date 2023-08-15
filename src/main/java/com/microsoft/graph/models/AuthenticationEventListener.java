@@ -23,7 +23,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * Instantiates a new authenticationEventListener and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationEventListener() {
         super();
     }
@@ -32,8 +32,8 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a authenticationEventListener
      */
-    @javax.annotation.Nonnull
-    public static AuthenticationEventListener createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AuthenticationEventListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -52,7 +52,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * Gets the authenticationEventsFlowId property value. The identifier of the authenticationEventsFlow object.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAuthenticationEventsFlowId() {
         return this.authenticationEventsFlowId;
     }
@@ -60,7 +60,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * Gets the conditions property value. The conditions on which this authenticationEventListener should trigger.
      * @return a authenticationConditions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationConditions getConditions() {
         return this.conditions;
     }
@@ -68,7 +68,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationEventsFlowId", (n) -> { this.setAuthenticationEventsFlowId(n.getStringValue()); });
@@ -80,7 +80,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * Gets the priority property value. The priority of this handler. Between 0 (lower priority) and 1000 (higher priority).
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPriority() {
         return this.priority;
     }
@@ -89,8 +89,8 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("authenticationEventsFlowId", this.getAuthenticationEventsFlowId());
@@ -102,8 +102,8 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * @param value Value to set for the authenticationEventsFlowId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationEventsFlowId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationEventsFlowId(@jakarta.annotation.Nullable final String value) {
         this.authenticationEventsFlowId = value;
     }
     /**
@@ -111,8 +111,8 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * @param value Value to set for the conditions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConditions(@javax.annotation.Nullable final AuthenticationConditions value) {
+    @jakarta.annotation.Nonnull
+    public void setConditions(@jakarta.annotation.Nullable final AuthenticationConditions value) {
         this.conditions = value;
     }
     /**
@@ -120,8 +120,8 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPriority(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.priority = value;
     }
 }

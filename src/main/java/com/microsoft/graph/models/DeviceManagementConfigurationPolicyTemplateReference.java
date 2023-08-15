@@ -39,7 +39,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * Instantiates a new deviceManagementConfigurationPolicyTemplateReference and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationPolicyTemplateReference() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -48,8 +48,8 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationPolicyTemplateReference
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationPolicyTemplateReference createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationPolicyTemplateReference createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationPolicyTemplateReference();
     }
@@ -57,7 +57,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -65,7 +65,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -79,7 +79,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -87,7 +87,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * Gets the templateDisplayName property value. Template Display Name of the referenced template. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTemplateDisplayName() {
         return this.templateDisplayName;
     }
@@ -95,7 +95,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * Gets the templateDisplayVersion property value. Template Display Version of the referenced Template. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTemplateDisplayVersion() {
         return this.templateDisplayVersion;
     }
@@ -103,7 +103,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * Gets the templateFamily property value. Describes the TemplateFamily for the Template entity
      * @return a deviceManagementConfigurationTemplateFamily
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationTemplateFamily getTemplateFamily() {
         return this.templateFamily;
     }
@@ -111,7 +111,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * Gets the templateId property value. Template id
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTemplateId() {
         return this.templateId;
     }
@@ -120,8 +120,8 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("templateFamily", this.getTemplateFamily());
@@ -130,20 +130,20 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -151,8 +151,8 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * @param value Value to set for the templateDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTemplateDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTemplateDisplayName(@jakarta.annotation.Nullable final String value) {
         this.templateDisplayName = value;
     }
     /**
@@ -160,8 +160,8 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * @param value Value to set for the templateDisplayVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTemplateDisplayVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTemplateDisplayVersion(@jakarta.annotation.Nullable final String value) {
         this.templateDisplayVersion = value;
     }
     /**
@@ -169,8 +169,8 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * @param value Value to set for the templateFamily property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTemplateFamily(@javax.annotation.Nullable final DeviceManagementConfigurationTemplateFamily value) {
+    @jakarta.annotation.Nonnull
+    public void setTemplateFamily(@jakarta.annotation.Nullable final DeviceManagementConfigurationTemplateFamily value) {
         this.templateFamily = value;
     }
     /**
@@ -178,8 +178,8 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * @param value Value to set for the templateId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTemplateId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTemplateId(@jakarta.annotation.Nullable final String value) {
         this.templateId = value;
     }
 }

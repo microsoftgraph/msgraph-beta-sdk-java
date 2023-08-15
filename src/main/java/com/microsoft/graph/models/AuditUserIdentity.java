@@ -19,7 +19,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
      * Instantiates a new auditUserIdentity and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuditUserIdentity() {
         super();
         this.setOdataType("#microsoft.graph.auditUserIdentity");
@@ -29,8 +29,8 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a auditUserIdentity
      */
-    @javax.annotation.Nonnull
-    public static AuditUserIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AuditUserIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AuditUserIdentity();
     }
@@ -38,7 +38,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("homeTenantId", (n) -> { this.setHomeTenantId(n.getStringValue()); });
@@ -49,7 +49,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
      * Gets the homeTenantId property value. For user sign ins, the identifier of the tenant that the user is a member of.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHomeTenantId() {
         return this.homeTenantId;
     }
@@ -57,7 +57,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
      * Gets the homeTenantName property value. For user sign ins, the name of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHomeTenantName() {
         return this.homeTenantName;
     }
@@ -66,8 +66,8 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("homeTenantId", this.getHomeTenantId());
@@ -78,8 +78,8 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
      * @param value Value to set for the homeTenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHomeTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setHomeTenantId(@jakarta.annotation.Nullable final String value) {
         this.homeTenantId = value;
     }
     /**
@@ -87,8 +87,8 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
      * @param value Value to set for the homeTenantName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHomeTenantName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setHomeTenantName(@jakarta.annotation.Nullable final String value) {
         this.homeTenantName = value;
     }
 }

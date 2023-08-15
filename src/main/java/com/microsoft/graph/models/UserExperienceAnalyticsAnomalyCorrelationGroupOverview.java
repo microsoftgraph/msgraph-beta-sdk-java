@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * Instantiates a new userExperienceAnalyticsAnomalyCorrelationGroupOverview and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAnomalyCorrelationGroupOverview() {
         super();
     }
@@ -63,8 +63,8 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsAnomalyCorrelationGroupOverview
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsAnomalyCorrelationGroupOverview createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsAnomalyCorrelationGroupOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsAnomalyCorrelationGroupOverview();
     }
@@ -72,7 +72,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * Gets the anomalyCorrelationGroupCount property value. Indicates the number of correlation groups in the anomaly. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getAnomalyCorrelationGroupCount() {
         return this.anomalyCorrelationGroupCount;
     }
@@ -80,7 +80,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * Gets the anomalyId property value. The unique identifier of the anomaly. Anomaly details such as name and type can be found in the UserExperienceAnalyticsAnomalySeverityOverview entity.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAnomalyId() {
         return this.anomalyId;
     }
@@ -88,7 +88,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * Gets the correlationGroupAnomalousDeviceCount property value. Indicates the total number of devices affected by the anomaly in the correlation group. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCorrelationGroupAnomalousDeviceCount() {
         return this.correlationGroupAnomalousDeviceCount;
     }
@@ -96,7 +96,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * Gets the correlationGroupAtRiskDeviceCount property value. Indicates the total number of devices at risk in the correlation group. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCorrelationGroupAtRiskDeviceCount() {
         return this.correlationGroupAtRiskDeviceCount;
     }
@@ -104,7 +104,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * Gets the correlationGroupDeviceCount property value. Indicates the total number of devices in a correlation group. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCorrelationGroupDeviceCount() {
         return this.correlationGroupDeviceCount;
     }
@@ -112,7 +112,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * Gets the correlationGroupFeatures property value. Describes the features of a device that are shared between all devices in a correlation group.
      * @return a userExperienceAnalyticsAnomalyCorrelationGroupFeature
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAnomalyCorrelationGroupFeature> getCorrelationGroupFeatures() {
         return this.correlationGroupFeatures;
     }
@@ -120,7 +120,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * Gets the correlationGroupId property value. The unique identifier for the correlation group which will uniquely identify one of the correlation group within an anomaly. The correlation Id can be mapped to the correlation group name by concatinating the correlation group features. Example of correlation group name which is the indicative of concatenated features names are  for names, Contoso manufacture 4.4.1 and Windows 11.22621.1485.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCorrelationGroupId() {
         return this.correlationGroupId;
     }
@@ -128,7 +128,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * Gets the correlationGroupPrevalence property value. Indicates the level of prevalence of the correlation group features in the anomaly. Possible values are: high, medium or low
      * @return a userExperienceAnalyticsAnomalyCorrelationGroupPrevalence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence getCorrelationGroupPrevalence() {
         return this.correlationGroupPrevalence;
     }
@@ -136,7 +136,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * Gets the correlationGroupPrevalencePercentage property value. The percentage of the devices in the correlation group that are anomalous. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getCorrelationGroupPrevalencePercentage() {
         return this.correlationGroupPrevalencePercentage;
     }
@@ -144,7 +144,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("anomalyCorrelationGroupCount", (n) -> { this.setAnomalyCorrelationGroupCount(n.getIntegerValue()); });
@@ -163,7 +163,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * Gets the totalDeviceCount property value. Indicates the total number of devices in the tenant. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalDeviceCount() {
         return this.totalDeviceCount;
     }
@@ -172,8 +172,8 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("anomalyCorrelationGroupCount", this.getAnomalyCorrelationGroupCount());
@@ -192,8 +192,8 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * @param value Value to set for the anomalyCorrelationGroupCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnomalyCorrelationGroupCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setAnomalyCorrelationGroupCount(@jakarta.annotation.Nullable final Integer value) {
         this.anomalyCorrelationGroupCount = value;
     }
     /**
@@ -201,8 +201,8 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * @param value Value to set for the anomalyId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnomalyId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAnomalyId(@jakarta.annotation.Nullable final String value) {
         this.anomalyId = value;
     }
     /**
@@ -210,8 +210,8 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * @param value Value to set for the correlationGroupAnomalousDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCorrelationGroupAnomalousDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setCorrelationGroupAnomalousDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.correlationGroupAnomalousDeviceCount = value;
     }
     /**
@@ -219,8 +219,8 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * @param value Value to set for the correlationGroupAtRiskDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCorrelationGroupAtRiskDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setCorrelationGroupAtRiskDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.correlationGroupAtRiskDeviceCount = value;
     }
     /**
@@ -228,8 +228,8 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * @param value Value to set for the correlationGroupDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCorrelationGroupDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setCorrelationGroupDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.correlationGroupDeviceCount = value;
     }
     /**
@@ -237,8 +237,8 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * @param value Value to set for the correlationGroupFeatures property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCorrelationGroupFeatures(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAnomalyCorrelationGroupFeature> value) {
+    @jakarta.annotation.Nonnull
+    public void setCorrelationGroupFeatures(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsAnomalyCorrelationGroupFeature> value) {
         this.correlationGroupFeatures = value;
     }
     /**
@@ -246,8 +246,8 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * @param value Value to set for the correlationGroupId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCorrelationGroupId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCorrelationGroupId(@jakarta.annotation.Nullable final String value) {
         this.correlationGroupId = value;
     }
     /**
@@ -255,8 +255,8 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * @param value Value to set for the correlationGroupPrevalence property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCorrelationGroupPrevalence(@javax.annotation.Nullable final UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence value) {
+    @jakarta.annotation.Nonnull
+    public void setCorrelationGroupPrevalence(@jakarta.annotation.Nullable final UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence value) {
         this.correlationGroupPrevalence = value;
     }
     /**
@@ -264,8 +264,8 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * @param value Value to set for the correlationGroupPrevalencePercentage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCorrelationGroupPrevalencePercentage(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setCorrelationGroupPrevalencePercentage(@jakarta.annotation.Nullable final Double value) {
         this.correlationGroupPrevalencePercentage = value;
     }
     /**
@@ -273,8 +273,8 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
      * @param value Value to set for the totalDeviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalDeviceCount = value;
     }
 }

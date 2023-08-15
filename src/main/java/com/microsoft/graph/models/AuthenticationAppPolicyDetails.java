@@ -36,7 +36,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Par
      * Instantiates a new authenticationAppPolicyDetails and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationAppPolicyDetails() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a authenticationAppPolicyDetails
      */
-    @javax.annotation.Nonnull
-    public static AuthenticationAppPolicyDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AuthenticationAppPolicyDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AuthenticationAppPolicyDetails();
     }
@@ -54,7 +54,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Par
      * Gets the adminConfiguration property value. The admin configuration of the policy on the user's authentication app. For a policy that does not impact the success/failure of the authentication, the evaluation defaults to notApplicable. The possible values are: notApplicable, enabled, disabled, unknownFutureValue.
      * @return a authenticationAppAdminConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationAppAdminConfiguration getAdminConfiguration() {
         return this.adminConfiguration;
     }
@@ -70,7 +70,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Par
      * Gets the authenticationEvaluation property value. Evaluates the success/failure of the authentication based on the admin configuration of the policy on the user's client authentication app. The possible values are: success, failure, unknownFutureValue.
      * @return a authenticationAppEvaluation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationAppEvaluation getAuthenticationEvaluation() {
         return this.authenticationEvaluation;
     }
@@ -78,7 +78,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("adminConfiguration", (n) -> { this.setAdminConfiguration(n.getEnumValue(AuthenticationAppAdminConfiguration.class)); });
@@ -92,7 +92,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Par
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -100,7 +100,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Par
      * Gets the policyName property value. The name of the policy enforced on the user's authentication app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPolicyName() {
         return this.policyName;
     }
@@ -108,7 +108,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Par
      * Gets the status property value. Refers to whether the policy executed as expected on the user's client authentication app. The possible values are: unknown, appLockOutOfDate, appLockEnabled, appLockDisabled, appContextOutOfDate, appContextShown, appContextNotShown, locationContextOutOfDate, locationContextShown, locationContextNotShown, numberMatchOutOfDate, numberMatchCorrectNumberEntered, numberMatchIncorrectNumberEntered, numberMatchDeny, tamperResistantHardwareOutOfDate, tamperResistantHardwareUsed, tamperResistantHardwareNotUsed, unknownFutureValue.
      * @return a authenticationAppPolicyStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationAppPolicyStatus getStatus() {
         return this.status;
     }
@@ -117,8 +117,8 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("adminConfiguration", this.getAdminConfiguration());
         writer.writeEnumValue("authenticationEvaluation", this.getAuthenticationEvaluation());
@@ -129,11 +129,11 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Par
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Par
      * @param value Value to set for the adminConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdminConfiguration(@javax.annotation.Nullable final AuthenticationAppAdminConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setAdminConfiguration(@jakarta.annotation.Nullable final AuthenticationAppAdminConfiguration value) {
         this.adminConfiguration = value;
     }
     /**
@@ -150,17 +150,17 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Par
      * @param value Value to set for the authenticationEvaluation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationEvaluation(@javax.annotation.Nullable final AuthenticationAppEvaluation value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationEvaluation(@jakarta.annotation.Nullable final AuthenticationAppEvaluation value) {
         this.authenticationEvaluation = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -168,8 +168,8 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Par
      * @param value Value to set for the policyName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPolicyName(@jakarta.annotation.Nullable final String value) {
         this.policyName = value;
     }
     /**
@@ -177,8 +177,8 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Par
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final AuthenticationAppPolicyStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final AuthenticationAppPolicyStatus value) {
         this.status = value;
     }
 }

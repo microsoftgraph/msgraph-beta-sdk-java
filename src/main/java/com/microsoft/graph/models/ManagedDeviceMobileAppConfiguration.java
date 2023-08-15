@@ -63,7 +63,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * Instantiates a new managedDeviceMobileAppConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfiguration() {
         super();
     }
@@ -72,8 +72,8 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedDeviceMobileAppConfiguration
      */
-    @javax.annotation.Nonnull
-    public static ManagedDeviceMobileAppConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedDeviceMobileAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -90,7 +90,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * Gets the assignments property value. The list of group assignemenets for app configration.
      * @return a managedDeviceMobileAppConfigurationAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationAssignment> getAssignments() {
         return this.assignments;
     }
@@ -98,7 +98,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * Gets the createdDateTime property value. DateTime the object was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -106,7 +106,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * Gets the description property value. Admin provided description of the Device Configuration.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -114,7 +114,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * Gets the deviceStatuses property value. List of ManagedDeviceMobileAppConfigurationDeviceStatus.
      * @return a managedDeviceMobileAppConfigurationDeviceStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> getDeviceStatuses() {
         return this.deviceStatuses;
     }
@@ -122,7 +122,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * Gets the deviceStatusSummary property value. App configuration device status summary.
      * @return a managedDeviceMobileAppConfigurationDeviceSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationDeviceSummary getDeviceStatusSummary() {
         return this.deviceStatusSummary;
     }
@@ -130,7 +130,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * Gets the displayName property value. Admin provided name of the device configuration.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -138,7 +138,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfigurationAssignment::createFromDiscriminatorValue)); });
@@ -159,7 +159,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -167,7 +167,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * Gets the roleScopeTagIds property value. List of Scope Tags for this App configuration entity.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
         return this.roleScopeTagIds;
     }
@@ -175,7 +175,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * Gets the targetedMobileApps property value. the associated app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTargetedMobileApps() {
         return this.targetedMobileApps;
     }
@@ -183,7 +183,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * Gets the userStatuses property value. List of ManagedDeviceMobileAppConfigurationUserStatus.
      * @return a managedDeviceMobileAppConfigurationUserStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> getUserStatuses() {
         return this.userStatuses;
     }
@@ -191,7 +191,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * Gets the userStatusSummary property value. App configuration user status summary.
      * @return a managedDeviceMobileAppConfigurationUserSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationUserSummary getUserStatusSummary() {
         return this.userStatusSummary;
     }
@@ -199,7 +199,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * Gets the version property value. Version of the device configuration.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getVersion() {
         return this.version;
     }
@@ -208,8 +208,8 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
@@ -230,8 +230,8 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * @param value Value to set for the assignments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignments(@javax.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> value) {
         this.assignments = value;
     }
     /**
@@ -239,8 +239,8 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -248,8 +248,8 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -257,8 +257,8 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * @param value Value to set for the deviceStatuses property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceStatuses(@javax.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceStatuses(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> value) {
         this.deviceStatuses = value;
     }
     /**
@@ -266,8 +266,8 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * @param value Value to set for the deviceStatusSummary property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceStatusSummary(@javax.annotation.Nullable final ManagedDeviceMobileAppConfigurationDeviceSummary value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceStatusSummary(@jakarta.annotation.Nullable final ManagedDeviceMobileAppConfigurationDeviceSummary value) {
         this.deviceStatusSummary = value;
     }
     /**
@@ -275,8 +275,8 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -284,8 +284,8 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -293,8 +293,8 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTagIds = value;
     }
     /**
@@ -302,8 +302,8 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * @param value Value to set for the targetedMobileApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetedMobileApps(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetedMobileApps(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.targetedMobileApps = value;
     }
     /**
@@ -311,8 +311,8 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * @param value Value to set for the userStatuses property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserStatuses(@javax.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> value) {
+    @jakarta.annotation.Nonnull
+    public void setUserStatuses(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> value) {
         this.userStatuses = value;
     }
     /**
@@ -320,8 +320,8 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * @param value Value to set for the userStatusSummary property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserStatusSummary(@javax.annotation.Nullable final ManagedDeviceMobileAppConfigurationUserSummary value) {
+    @jakarta.annotation.Nonnull
+    public void setUserStatusSummary(@jakarta.annotation.Nullable final ManagedDeviceMobileAppConfigurationUserSummary value) {
         this.userStatusSummary = value;
     }
     /**
@@ -329,8 +329,8 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      * @param value Value to set for the version property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setVersion(@jakarta.annotation.Nullable final Integer value) {
         this.version = value;
     }
 }

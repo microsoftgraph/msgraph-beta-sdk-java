@@ -37,7 +37,7 @@ public class Tenant extends Entity implements Parsable {
      * Instantiates a new tenant and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Tenant() {
         super();
     }
@@ -46,8 +46,8 @@ public class Tenant extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a tenant
      */
-    @javax.annotation.Nonnull
-    public static Tenant createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Tenant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Tenant();
     }
@@ -55,7 +55,7 @@ public class Tenant extends Entity implements Parsable {
      * Gets the contract property value. The relationship details for the tenant with the managing entity.
      * @return a tenantContract
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TenantContract getContract() {
         return this.contract;
     }
@@ -63,7 +63,7 @@ public class Tenant extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time the tenant was created in the multi-tenant management platform. Optional. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -71,7 +71,7 @@ public class Tenant extends Entity implements Parsable {
      * Gets the displayName property value. The display name for the tenant. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -79,7 +79,7 @@ public class Tenant extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contract", (n) -> { this.setContract(n.getObjectValue(TenantContract::createFromDiscriminatorValue)); });
@@ -94,7 +94,7 @@ public class Tenant extends Entity implements Parsable {
      * Gets the lastUpdatedDateTime property value. The date and time the tenant was last updated within the multi-tenant management platform. Optional. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
         return this.lastUpdatedDateTime;
     }
@@ -102,7 +102,7 @@ public class Tenant extends Entity implements Parsable {
      * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -110,7 +110,7 @@ public class Tenant extends Entity implements Parsable {
      * Gets the tenantStatusInformation property value. The onboarding status information for the tenant. Optional. Read-only.
      * @return a tenantStatusInformation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TenantStatusInformation getTenantStatusInformation() {
         return this.tenantStatusInformation;
     }
@@ -119,8 +119,8 @@ public class Tenant extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("contract", this.getContract());
@@ -135,8 +135,8 @@ public class Tenant extends Entity implements Parsable {
      * @param value Value to set for the contract property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContract(@javax.annotation.Nullable final TenantContract value) {
+    @jakarta.annotation.Nonnull
+    public void setContract(@jakarta.annotation.Nullable final TenantContract value) {
         this.contract = value;
     }
     /**
@@ -144,8 +144,8 @@ public class Tenant extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -153,8 +153,8 @@ public class Tenant extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -162,8 +162,8 @@ public class Tenant extends Entity implements Parsable {
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
@@ -171,8 +171,8 @@ public class Tenant extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
@@ -180,8 +180,8 @@ public class Tenant extends Entity implements Parsable {
      * @param value Value to set for the tenantStatusInformation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantStatusInformation(@javax.annotation.Nullable final TenantStatusInformation value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantStatusInformation(@jakarta.annotation.Nullable final TenantStatusInformation value) {
         this.tenantStatusInformation = value;
     }
 }

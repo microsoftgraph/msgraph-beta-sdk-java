@@ -28,7 +28,7 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
      * Instantiates a new educationSynchronizationLicenseAssignment and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSynchronizationLicenseAssignment() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationSynchronizationLicenseAssignment
      */
-    @javax.annotation.Nonnull
-    public static EducationSynchronizationLicenseAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationSynchronizationLicenseAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationSynchronizationLicenseAssignment();
     }
@@ -46,7 +46,7 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
      * Gets the appliesTo property value. The user role type to assign to license. Possible values are: student, teacher, faculty.
      * @return a educationUserRole
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationUserRole getAppliesTo() {
         return this.appliesTo;
     }
@@ -62,7 +62,7 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getEnumValue(EducationUserRole.class)); });
@@ -74,7 +74,7 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -82,7 +82,7 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
      * Gets the skuIds property value. Represents the SKU identifiers of the licenses to assign.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSkuIds() {
         return this.skuIds;
     }
@@ -91,8 +91,8 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("appliesTo", this.getAppliesTo());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -101,11 +101,11 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -113,17 +113,17 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
      * @param value Value to set for the appliesTo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppliesTo(@javax.annotation.Nullable final EducationUserRole value) {
+    @jakarta.annotation.Nonnull
+    public void setAppliesTo(@jakarta.annotation.Nullable final EducationUserRole value) {
         this.appliesTo = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -131,8 +131,8 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
      * @param value Value to set for the skuIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSkuIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSkuIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.skuIds = value;
     }
 }

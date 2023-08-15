@@ -28,7 +28,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * Instantiates a new tenantCustomizedInformation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TenantCustomizedInformation() {
         super();
     }
@@ -37,8 +37,8 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a tenantCustomizedInformation
      */
-    @javax.annotation.Nonnull
-    public static TenantCustomizedInformation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TenantCustomizedInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TenantCustomizedInformation();
     }
@@ -46,7 +46,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * Gets the contacts property value. The collection of contacts for the managed tenant. Optional.
      * @return a tenantContactInformation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TenantContactInformation> getContacts() {
         return this.contacts;
     }
@@ -54,7 +54,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * Gets the displayName property value. The display name for the managed tenant. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -62,7 +62,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contacts", (n) -> { this.setContacts(n.getCollectionOfObjectValues(TenantContactInformation::createFromDiscriminatorValue)); });
@@ -75,7 +75,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -83,7 +83,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * Gets the website property value. The website for the managed tenant. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebsite() {
         return this.website;
     }
@@ -92,8 +92,8 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("contacts", this.getContacts());
@@ -106,8 +106,8 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * @param value Value to set for the contacts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContacts(@javax.annotation.Nullable final java.util.List<TenantContactInformation> value) {
+    @jakarta.annotation.Nonnull
+    public void setContacts(@jakarta.annotation.Nullable final java.util.List<TenantContactInformation> value) {
         this.contacts = value;
     }
     /**
@@ -115,8 +115,8 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -124,8 +124,8 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
@@ -133,8 +133,8 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      * @param value Value to set for the website property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebsite(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setWebsite(@jakarta.annotation.Nullable final String value) {
         this.website = value;
     }
 }

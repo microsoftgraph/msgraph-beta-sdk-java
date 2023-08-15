@@ -25,14 +25,14 @@ public class GroupPolicyDefinitionValueItemRequestBuilder extends BaseRequestBui
     /**
      * Provides operations to manage the definition property of the microsoft.graph.groupPolicyDefinitionValue entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DefinitionRequestBuilder definition() {
         return new DefinitionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the presentationValues property of the microsoft.graph.groupPolicyDefinitionValue entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public PresentationValuesRequestBuilder presentationValues() {
         return new PresentationValuesRequestBuilder(pathParameters, requestAdapter);
     }
@@ -42,8 +42,8 @@ public class GroupPolicyDefinitionValueItemRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public GroupPolicyDefinitionValueItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public GroupPolicyDefinitionValueItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/groupPolicyConfigurations/{groupPolicyConfiguration%2Did}/definitionValues/{groupPolicyDefinitionValue%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -52,15 +52,15 @@ public class GroupPolicyDefinitionValueItemRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public GroupPolicyDefinitionValueItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public GroupPolicyDefinitionValueItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/groupPolicyConfigurations/{groupPolicyConfiguration%2Did}/definitionValues/{groupPolicyDefinitionValue%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property definitionValues for deviceManagement
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -79,8 +79,8 @@ public class GroupPolicyDefinitionValueItemRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -97,7 +97,7 @@ public class GroupPolicyDefinitionValueItemRequestBuilder extends BaseRequestBui
      * The list of enabled or disabled group policy definition values for the configuration.
      * @return a CompletableFuture of groupPolicyDefinitionValue
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinitionValue> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -116,8 +116,8 @@ public class GroupPolicyDefinitionValueItemRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of groupPolicyDefinitionValue
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupPolicyDefinitionValue> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<GroupPolicyDefinitionValue> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -135,8 +135,8 @@ public class GroupPolicyDefinitionValueItemRequestBuilder extends BaseRequestBui
      * @param body The request body
      * @return a CompletableFuture of groupPolicyDefinitionValue
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupPolicyDefinitionValue> patch(@javax.annotation.Nonnull final GroupPolicyDefinitionValue body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<GroupPolicyDefinitionValue> patch(@jakarta.annotation.Nonnull final GroupPolicyDefinitionValue body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -155,8 +155,8 @@ public class GroupPolicyDefinitionValueItemRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of groupPolicyDefinitionValue
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupPolicyDefinitionValue> patch(@javax.annotation.Nonnull final GroupPolicyDefinitionValue body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<GroupPolicyDefinitionValue> patch(@jakarta.annotation.Nonnull final GroupPolicyDefinitionValue body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -174,7 +174,7 @@ public class GroupPolicyDefinitionValueItemRequestBuilder extends BaseRequestBui
      * Delete navigation property definitionValues for deviceManagement
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -183,8 +183,8 @@ public class GroupPolicyDefinitionValueItemRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -201,7 +201,7 @@ public class GroupPolicyDefinitionValueItemRequestBuilder extends BaseRequestBui
      * The list of enabled or disabled group policy definition values for the configuration.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -210,8 +210,8 @@ public class GroupPolicyDefinitionValueItemRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -231,8 +231,8 @@ public class GroupPolicyDefinitionValueItemRequestBuilder extends BaseRequestBui
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final GroupPolicyDefinitionValue body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final GroupPolicyDefinitionValue body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -241,8 +241,8 @@ public class GroupPolicyDefinitionValueItemRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final GroupPolicyDefinitionValue body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final GroupPolicyDefinitionValue body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -271,13 +271,13 @@ public class GroupPolicyDefinitionValueItemRequestBuilder extends BaseRequestBui
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -287,7 +287,7 @@ public class GroupPolicyDefinitionValueItemRequestBuilder extends BaseRequestBui
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

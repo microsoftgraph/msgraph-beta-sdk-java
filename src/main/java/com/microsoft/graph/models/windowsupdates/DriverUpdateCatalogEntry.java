@@ -40,7 +40,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * Instantiates a new driverUpdateCatalogEntry and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DriverUpdateCatalogEntry() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.driverUpdateCatalogEntry");
@@ -50,8 +50,8 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a driverUpdateCatalogEntry
      */
-    @javax.annotation.Nonnull
-    public static DriverUpdateCatalogEntry createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DriverUpdateCatalogEntry createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DriverUpdateCatalogEntry();
     }
@@ -59,7 +59,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * Gets the description property value. The description of the content.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -67,7 +67,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * Gets the driverClass property value. The classification of the driver.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDriverClass() {
         return this.driverClass;
     }
@@ -75,7 +75,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -91,7 +91,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * Gets the manufacturer property value. The manufacturer of the driver.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManufacturer() {
         return this.manufacturer;
     }
@@ -99,7 +99,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * Gets the provider property value. The provider of the driver.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProvider() {
         return this.provider;
     }
@@ -107,7 +107,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * Gets the setupInformationFile property value. The setup information file of the driver.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSetupInformationFile() {
         return this.setupInformationFile;
     }
@@ -115,7 +115,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * Gets the version property value. The unique version of the content.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersion() {
         return this.version;
     }
@@ -123,7 +123,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * Gets the versionDateTime property value. The date and time when a new version of content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getVersionDateTime() {
         return this.versionDateTime;
     }
@@ -132,8 +132,8 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -149,8 +149,8 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -158,8 +158,8 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * @param value Value to set for the driverClass property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDriverClass(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDriverClass(@jakarta.annotation.Nullable final String value) {
         this.driverClass = value;
     }
     /**
@@ -167,8 +167,8 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManufacturer(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
@@ -176,8 +176,8 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * @param value Value to set for the provider property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProvider(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProvider(@jakarta.annotation.Nullable final String value) {
         this.provider = value;
     }
     /**
@@ -185,8 +185,8 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * @param value Value to set for the setupInformationFile property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSetupInformationFile(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSetupInformationFile(@jakarta.annotation.Nullable final String value) {
         this.setupInformationFile = value;
     }
     /**
@@ -194,8 +194,8 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * @param value Value to set for the version property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }
     /**
@@ -203,8 +203,8 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
      * @param value Value to set for the versionDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setVersionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.versionDateTime = value;
     }
 }

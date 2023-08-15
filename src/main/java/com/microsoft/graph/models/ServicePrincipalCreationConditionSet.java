@@ -31,7 +31,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * Instantiates a new servicePrincipalCreationConditionSet and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServicePrincipalCreationConditionSet() {
         super();
     }
@@ -40,8 +40,8 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a servicePrincipalCreationConditionSet
      */
-    @javax.annotation.Nonnull
-    public static ServicePrincipalCreationConditionSet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ServicePrincipalCreationConditionSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ServicePrincipalCreationConditionSet();
     }
@@ -49,7 +49,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * Gets the applicationIds property value. The applicationIds property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getApplicationIds() {
         return this.applicationIds;
     }
@@ -57,7 +57,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * Gets the applicationPublisherIds property value. The applicationPublisherIds property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getApplicationPublisherIds() {
         return this.applicationPublisherIds;
     }
@@ -65,7 +65,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * Gets the applicationsFromVerifiedPublisherOnly property value. The applicationsFromVerifiedPublisherOnly property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getApplicationsFromVerifiedPublisherOnly() {
         return this.applicationsFromVerifiedPublisherOnly;
     }
@@ -73,7 +73,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * Gets the applicationTenantIds property value. The applicationTenantIds property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getApplicationTenantIds() {
         return this.applicationTenantIds;
     }
@@ -81,7 +81,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * Gets the certifiedApplicationsOnly property value. The certifiedApplicationsOnly property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCertifiedApplicationsOnly() {
         return this.certifiedApplicationsOnly;
     }
@@ -89,7 +89,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicationIds", (n) -> { this.setApplicationIds(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -104,8 +104,8 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("applicationIds", this.getApplicationIds());
@@ -119,8 +119,8 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * @param value Value to set for the applicationIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicationIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicationIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.applicationIds = value;
     }
     /**
@@ -128,8 +128,8 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * @param value Value to set for the applicationPublisherIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicationPublisherIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicationPublisherIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.applicationPublisherIds = value;
     }
     /**
@@ -137,8 +137,8 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * @param value Value to set for the applicationsFromVerifiedPublisherOnly property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicationsFromVerifiedPublisherOnly(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicationsFromVerifiedPublisherOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.applicationsFromVerifiedPublisherOnly = value;
     }
     /**
@@ -146,8 +146,8 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * @param value Value to set for the applicationTenantIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicationTenantIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicationTenantIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.applicationTenantIds = value;
     }
     /**
@@ -155,8 +155,8 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * @param value Value to set for the certifiedApplicationsOnly property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertifiedApplicationsOnly(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setCertifiedApplicationsOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.certifiedApplicationsOnly = value;
     }
 }

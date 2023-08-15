@@ -26,6 +26,10 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      */
     private ManagedTenant managedTenants;
     /**
+     * The multiTenantOrganization property
+     */
+    private MultiTenantOrganization multiTenantOrganization;
+    /**
      * The OdataType property
      */
     private String odataType;
@@ -33,7 +37,7 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      * Instantiates a new tenantRelationship and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TenantRelationship() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +46,8 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a tenantRelationship
      */
-    @javax.annotation.Nonnull
-    public static TenantRelationship createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TenantRelationship createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TenantRelationship();
     }
@@ -51,7 +55,7 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -59,7 +63,7 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      * Gets the delegatedAdminCustomers property value. The customer who has a delegated admin relationship with a Microsoft partner.
      * @return a delegatedAdminCustomer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminCustomer> getDelegatedAdminCustomers() {
         return this.delegatedAdminCustomers;
     }
@@ -67,7 +71,7 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      * Gets the delegatedAdminRelationships property value. The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
      * @return a delegatedAdminRelationship
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminRelationship> getDelegatedAdminRelationships() {
         return this.delegatedAdminRelationships;
     }
@@ -75,12 +79,13 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("delegatedAdminCustomers", (n) -> { this.setDelegatedAdminCustomers(n.getCollectionOfObjectValues(DelegatedAdminCustomer::createFromDiscriminatorValue)); });
         deserializerMap.put("delegatedAdminRelationships", (n) -> { this.setDelegatedAdminRelationships(n.getCollectionOfObjectValues(DelegatedAdminRelationship::createFromDiscriminatorValue)); });
         deserializerMap.put("managedTenants", (n) -> { this.setManagedTenants(n.getObjectValue(ManagedTenant::createFromDiscriminatorValue)); });
+        deserializerMap.put("multiTenantOrganization", (n) -> { this.setMultiTenantOrganization(n.getObjectValue(MultiTenantOrganization::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -88,15 +93,23 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      * Gets the managedTenants property value. The operations available to interact with the multi-tenant management platform.
      * @return a managedTenant
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedTenant getManagedTenants() {
         return this.managedTenants;
+    }
+    /**
+     * Gets the multiTenantOrganization property value. The multiTenantOrganization property
+     * @return a multiTenantOrganization
+     */
+    @jakarta.annotation.Nullable
+    public MultiTenantOrganization getMultiTenantOrganization() {
+        return this.multiTenantOrganization;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -105,22 +118,23 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("delegatedAdminCustomers", this.getDelegatedAdminCustomers());
         writer.writeCollectionOfObjectValues("delegatedAdminRelationships", this.getDelegatedAdminRelationships());
         writer.writeObjectValue("managedTenants", this.getManagedTenants());
+        writer.writeObjectValue("multiTenantOrganization", this.getMultiTenantOrganization());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -128,8 +142,8 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the delegatedAdminCustomers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDelegatedAdminCustomers(@javax.annotation.Nullable final java.util.List<DelegatedAdminCustomer> value) {
+    @jakarta.annotation.Nonnull
+    public void setDelegatedAdminCustomers(@jakarta.annotation.Nullable final java.util.List<DelegatedAdminCustomer> value) {
         this.delegatedAdminCustomers = value;
     }
     /**
@@ -137,8 +151,8 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the delegatedAdminRelationships property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDelegatedAdminRelationships(@javax.annotation.Nullable final java.util.List<DelegatedAdminRelationship> value) {
+    @jakarta.annotation.Nonnull
+    public void setDelegatedAdminRelationships(@jakarta.annotation.Nullable final java.util.List<DelegatedAdminRelationship> value) {
         this.delegatedAdminRelationships = value;
     }
     /**
@@ -146,17 +160,26 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the managedTenants property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedTenants(@javax.annotation.Nullable final ManagedTenant value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedTenants(@jakarta.annotation.Nullable final ManagedTenant value) {
         this.managedTenants = value;
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * Sets the multiTenantOrganization property value. The multiTenantOrganization property
+     * @param value Value to set for the multiTenantOrganization property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMultiTenantOrganization(@jakarta.annotation.Nullable final MultiTenantOrganization value) {
+        this.multiTenantOrganization = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the @odata.type property.
+     * @return a void
+     */
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

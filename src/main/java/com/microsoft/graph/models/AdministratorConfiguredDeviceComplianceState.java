@@ -15,10 +15,10 @@ public enum AdministratorConfiguredDeviceComplianceState implements ValuedEnum {
     AdministratorConfiguredDeviceComplianceState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AdministratorConfiguredDeviceComplianceState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AdministratorConfiguredDeviceComplianceState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "basedOnDeviceCompliancePolicy": return BasedOnDeviceCompliancePolicy;

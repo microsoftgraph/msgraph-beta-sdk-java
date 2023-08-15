@@ -15,7 +15,7 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
      * Instantiates a new educationIdentityCreationConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationIdentityCreationConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.educationIdentityCreationConfiguration");
@@ -25,8 +25,8 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationIdentityCreationConfiguration
      */
-    @javax.annotation.Nonnull
-    public static EducationIdentityCreationConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationIdentityCreationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationIdentityCreationConfiguration();
     }
@@ -34,7 +34,7 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("userDomains", (n) -> { this.setUserDomains(n.getCollectionOfObjectValues(EducationIdentityDomain::createFromDiscriminatorValue)); });
@@ -44,7 +44,7 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
      * Gets the userDomains property value. The userDomains property
      * @return a educationIdentityDomain
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationIdentityDomain> getUserDomains() {
         return this.userDomains;
     }
@@ -53,8 +53,8 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("userDomains", this.getUserDomains());
@@ -64,8 +64,8 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
      * @param value Value to set for the userDomains property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserDomains(@javax.annotation.Nullable final java.util.List<EducationIdentityDomain> value) {
+    @jakarta.annotation.Nonnull
+    public void setUserDomains(@jakarta.annotation.Nullable final java.util.List<EducationIdentityDomain> value) {
         this.userDomains = value;
     }
 }

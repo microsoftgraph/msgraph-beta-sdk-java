@@ -79,7 +79,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Instantiates a new cloudPcOnPremisesConnection and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnection() {
         super();
     }
@@ -88,8 +88,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudPcOnPremisesConnection
      */
-    @javax.annotation.Nonnull
-    public static CloudPcOnPremisesConnection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudPcOnPremisesConnection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudPcOnPremisesConnection();
     }
@@ -97,7 +97,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Gets the adDomainName property value. The fully qualified domain name (FQDN) of the Active Directory domain you want to join. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAdDomainName() {
         return this.adDomainName;
     }
@@ -105,7 +105,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Gets the adDomainPassword property value. The password associated with adDomainUsername.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAdDomainPassword() {
         return this.adDomainPassword;
     }
@@ -113,7 +113,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Gets the adDomainUsername property value. The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAdDomainUsername() {
         return this.adDomainUsername;
     }
@@ -121,7 +121,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Gets the alternateResourceUrl property value. The interface URL of the partner service's resource that links to this Azure network connection. Returned only on $select.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAlternateResourceUrl() {
         return this.alternateResourceUrl;
     }
@@ -129,7 +129,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Gets the displayName property value. The display name for the Azure network connection.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -137,7 +137,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("adDomainName", (n) -> { this.setAdDomainName(n.getStringValue()); });
@@ -163,7 +163,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Gets the healthCheckStatus property value. The healthCheckStatus property
      * @return a cloudPcOnPremisesConnectionStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnectionStatus getHealthCheckStatus() {
         return this.healthCheckStatus;
     }
@@ -171,7 +171,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Gets the healthCheckStatusDetails property value. The details of the connection's health checks and the corresponding results. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
      * @return a cloudPcOnPremisesConnectionStatusDetails
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnectionStatusDetails getHealthCheckStatusDetails() {
         return this.healthCheckStatusDetails;
     }
@@ -179,7 +179,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Gets the inUse property value. When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getInUse() {
         return this.inUse;
     }
@@ -187,7 +187,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Gets the managedBy property value. The managedBy property
      * @return a cloudPcManagementService
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcManagementService getManagedBy() {
         return this.managedBy;
     }
@@ -195,7 +195,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Gets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU thats configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOrganizationalUnit() {
         return this.organizationalUnit;
     }
@@ -203,7 +203,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Gets the resourceGroupId property value. The ID of the target resource group. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceGroupId() {
         return this.resourceGroupId;
     }
@@ -211,7 +211,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Gets the subnetId property value. The ID of the target subnet. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkId}/subnets/{subnetName}.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubnetId() {
         return this.subnetId;
     }
@@ -219,7 +219,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Gets the subscriptionId property value. The ID of the target Azure subscription thats associated with your tenant.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
@@ -227,7 +227,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Gets the subscriptionName property value. The name of the target Azure subscription. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubscriptionName() {
         return this.subscriptionName;
     }
@@ -235,7 +235,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Gets the type property value. Specifies how the provisioned Cloud PC will be joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
      * @return a cloudPcOnPremisesConnectionType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnectionType getType() {
         return this.type;
     }
@@ -243,7 +243,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Gets the virtualNetworkId property value. The ID of the target virtual network. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVirtualNetworkId() {
         return this.virtualNetworkId;
     }
@@ -251,7 +251,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Gets the virtualNetworkLocation property value. Indicates resource location of the virtual target network. Read-only, computed value.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVirtualNetworkLocation() {
         return this.virtualNetworkLocation;
     }
@@ -260,8 +260,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("adDomainName", this.getAdDomainName());
@@ -287,8 +287,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the adDomainName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdDomainName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAdDomainName(@jakarta.annotation.Nullable final String value) {
         this.adDomainName = value;
     }
     /**
@@ -296,8 +296,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the adDomainPassword property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdDomainPassword(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAdDomainPassword(@jakarta.annotation.Nullable final String value) {
         this.adDomainPassword = value;
     }
     /**
@@ -305,8 +305,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the adDomainUsername property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdDomainUsername(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAdDomainUsername(@jakarta.annotation.Nullable final String value) {
         this.adDomainUsername = value;
     }
     /**
@@ -314,8 +314,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the alternateResourceUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlternateResourceUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAlternateResourceUrl(@jakarta.annotation.Nullable final String value) {
         this.alternateResourceUrl = value;
     }
     /**
@@ -323,8 +323,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -332,8 +332,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the healthCheckStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHealthCheckStatus(@javax.annotation.Nullable final CloudPcOnPremisesConnectionStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setHealthCheckStatus(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionStatus value) {
         this.healthCheckStatus = value;
     }
     /**
@@ -341,8 +341,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the healthCheckStatusDetails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHealthCheckStatusDetails(@javax.annotation.Nullable final CloudPcOnPremisesConnectionStatusDetails value) {
+    @jakarta.annotation.Nonnull
+    public void setHealthCheckStatusDetails(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionStatusDetails value) {
         this.healthCheckStatusDetails = value;
     }
     /**
@@ -350,8 +350,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the inUse property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInUse(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setInUse(@jakarta.annotation.Nullable final Boolean value) {
         this.inUse = value;
     }
     /**
@@ -359,8 +359,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the managedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedBy(@javax.annotation.Nullable final CloudPcManagementService value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedBy(@jakarta.annotation.Nullable final CloudPcManagementService value) {
         this.managedBy = value;
     }
     /**
@@ -368,8 +368,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the organizationalUnit property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrganizationalUnit(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOrganizationalUnit(@jakarta.annotation.Nullable final String value) {
         this.organizationalUnit = value;
     }
     /**
@@ -377,8 +377,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the resourceGroupId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceGroupId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceGroupId(@jakarta.annotation.Nullable final String value) {
         this.resourceGroupId = value;
     }
     /**
@@ -386,8 +386,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the subnetId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubnetId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSubnetId(@jakarta.annotation.Nullable final String value) {
         this.subnetId = value;
     }
     /**
@@ -395,8 +395,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the subscriptionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubscriptionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSubscriptionId(@jakarta.annotation.Nullable final String value) {
         this.subscriptionId = value;
     }
     /**
@@ -404,8 +404,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the subscriptionName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubscriptionName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSubscriptionName(@jakarta.annotation.Nullable final String value) {
         this.subscriptionName = value;
     }
     /**
@@ -413,8 +413,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final CloudPcOnPremisesConnectionType value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionType value) {
         this.type = value;
     }
     /**
@@ -422,8 +422,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the virtualNetworkId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVirtualNetworkId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVirtualNetworkId(@jakarta.annotation.Nullable final String value) {
         this.virtualNetworkId = value;
     }
     /**
@@ -431,8 +431,8 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the virtualNetworkLocation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVirtualNetworkLocation(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVirtualNetworkLocation(@jakarta.annotation.Nullable final String value) {
         this.virtualNetworkLocation = value;
     }
 }

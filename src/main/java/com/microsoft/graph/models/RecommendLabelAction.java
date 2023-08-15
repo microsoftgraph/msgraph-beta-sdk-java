@@ -28,7 +28,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * Instantiates a new recommendLabelAction and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RecommendLabelAction() {
         super();
         this.setOdataType("#microsoft.graph.recommendLabelAction");
@@ -38,8 +38,8 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a recommendLabelAction
      */
-    @javax.annotation.Nonnull
-    public static RecommendLabelAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RecommendLabelAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RecommendLabelAction();
     }
@@ -47,7 +47,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * Gets the actions property value. Actions to take if the label is accepted by the user.
      * @return a informationProtectionAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<InformationProtectionAction> getActions() {
         return this.actions;
     }
@@ -55,7 +55,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * Gets the actionSource property value. The actionSource property
      * @return a actionSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ActionSource getActionSource() {
         return this.actionSource;
     }
@@ -63,7 +63,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("actions", (n) -> { this.setActions(n.getCollectionOfObjectValues(InformationProtectionAction::createFromDiscriminatorValue)); });
@@ -76,7 +76,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * Gets the label property value. The label that is being recommended.
      * @return a labelDetails
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LabelDetails getLabel() {
         return this.label;
     }
@@ -84,7 +84,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * Gets the responsibleSensitiveTypeIds property value. The sensitive information type GUIDs that caused the recommendation to be given.
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UUID> getResponsibleSensitiveTypeIds() {
         return this.responsibleSensitiveTypeIds;
     }
@@ -93,8 +93,8 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("actions", this.getActions());
@@ -107,8 +107,8 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * @param value Value to set for the actions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActions(@javax.annotation.Nullable final java.util.List<InformationProtectionAction> value) {
+    @jakarta.annotation.Nonnull
+    public void setActions(@jakarta.annotation.Nullable final java.util.List<InformationProtectionAction> value) {
         this.actions = value;
     }
     /**
@@ -116,8 +116,8 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * @param value Value to set for the actionSource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActionSource(@javax.annotation.Nullable final ActionSource value) {
+    @jakarta.annotation.Nonnull
+    public void setActionSource(@jakarta.annotation.Nullable final ActionSource value) {
         this.actionSource = value;
     }
     /**
@@ -125,8 +125,8 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * @param value Value to set for the label property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabel(@javax.annotation.Nullable final LabelDetails value) {
+    @jakarta.annotation.Nonnull
+    public void setLabel(@jakarta.annotation.Nullable final LabelDetails value) {
         this.label = value;
     }
     /**
@@ -134,8 +134,8 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * @param value Value to set for the responsibleSensitiveTypeIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResponsibleSensitiveTypeIds(@javax.annotation.Nullable final java.util.List<UUID> value) {
+    @jakarta.annotation.Nonnull
+    public void setResponsibleSensitiveTypeIds(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
         this.responsibleSensitiveTypeIds = value;
     }
 }

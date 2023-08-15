@@ -32,7 +32,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * Instantiates a new office365GroupsActivityGroupCounts and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Office365GroupsActivityGroupCounts() {
         super();
     }
@@ -41,8 +41,8 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a office365GroupsActivityGroupCounts
      */
-    @javax.annotation.Nonnull
-    public static Office365GroupsActivityGroupCounts createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Office365GroupsActivityGroupCounts createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Office365GroupsActivityGroupCounts();
     }
@@ -50,7 +50,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * Gets the active property value. The number of active groups. A group is considered active if any of the following occurred: group mailbox received email; user viewed, edited, shared, or synced files in SharePoint document library; user viewed SharePoint pages; user posted, read, or liked messages in Yammer groups.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getActive() {
         return this.active;
     }
@@ -58,7 +58,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("active", (n) -> { this.setActive(n.getLongValue()); });
@@ -72,7 +72,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * Gets the reportDate property value. The date on which a number of groups were active.
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getReportDate() {
         return this.reportDate;
     }
@@ -80,7 +80,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * Gets the reportPeriod property value. The number of days the report covers.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getReportPeriod() {
         return this.reportPeriod;
     }
@@ -88,7 +88,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * Gets the reportRefreshDate property value. The latest date of the content.
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getReportRefreshDate() {
         return this.reportRefreshDate;
     }
@@ -96,7 +96,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * Gets the total property value. The total number of groups.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getTotal() {
         return this.total;
     }
@@ -105,8 +105,8 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeLongValue("active", this.getActive());
@@ -120,8 +120,8 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * @param value Value to set for the active property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActive(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setActive(@jakarta.annotation.Nullable final Long value) {
         this.active = value;
     }
     /**
@@ -129,8 +129,8 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * @param value Value to set for the reportDate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReportDate(@javax.annotation.Nullable final LocalDate value) {
+    @jakarta.annotation.Nonnull
+    public void setReportDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.reportDate = value;
     }
     /**
@@ -138,8 +138,8 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * @param value Value to set for the reportPeriod property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReportPeriod(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setReportPeriod(@jakarta.annotation.Nullable final String value) {
         this.reportPeriod = value;
     }
     /**
@@ -147,8 +147,8 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * @param value Value to set for the reportRefreshDate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReportRefreshDate(@javax.annotation.Nullable final LocalDate value) {
+    @jakarta.annotation.Nonnull
+    public void setReportRefreshDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.reportRefreshDate = value;
     }
     /**
@@ -156,8 +156,8 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * @param value Value to set for the total property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotal(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setTotal(@jakarta.annotation.Nullable final Long value) {
         this.total = value;
     }
 }

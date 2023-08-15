@@ -30,7 +30,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      * Instantiates a new markChatUnreadForUserPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MarkChatUnreadForUserPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -39,8 +39,8 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a markChatUnreadForUserPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static MarkChatUnreadForUserPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MarkChatUnreadForUserPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MarkChatUnreadForUserPostRequestBody();
     }
@@ -48,7 +48,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -56,7 +56,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("lastMessageReadDateTime", (n) -> { this.setLastMessageReadDateTime(n.getOffsetDateTimeValue()); });
@@ -68,7 +68,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      * Gets the lastMessageReadDateTime property value. The lastMessageReadDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastMessageReadDateTime() {
         return this.lastMessageReadDateTime;
     }
@@ -76,7 +76,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      * Gets the tenantId property value. The tenantId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -84,7 +84,7 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      * Gets the user property value. The user property
      * @return a teamworkUserIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkUserIdentity getUser() {
         return this.user;
     }
@@ -93,8 +93,8 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastMessageReadDateTime", this.getLastMessageReadDateTime());
         writer.writeStringValue("tenantId", this.getTenantId());
@@ -103,11 +103,11 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -115,8 +115,8 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the lastMessageReadDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastMessageReadDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastMessageReadDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastMessageReadDateTime = value;
     }
     /**
@@ -124,8 +124,8 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the tenantId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
@@ -133,8 +133,8 @@ public class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the user property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUser(@javax.annotation.Nullable final TeamworkUserIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setUser(@jakarta.annotation.Nullable final TeamworkUserIdentity value) {
         this.user = value;
     }
 }

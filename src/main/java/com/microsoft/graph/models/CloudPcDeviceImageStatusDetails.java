@@ -9,15 +9,19 @@ public enum CloudPcDeviceImageStatusDetails implements ValuedEnum {
     OsVersionNotSupported("osVersionNotSupported"),
     SourceImageInvalid("sourceImageInvalid"),
     SourceImageNotGeneralized("sourceImageNotGeneralized"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    VmAlreadyAzureAdjoined("vmAlreadyAzureAdjoined"),
+    PaidSourceImageNotSupport("paidSourceImageNotSupport"),
+    SourceImageNotSupportCustomizeVMName("sourceImageNotSupportCustomizeVMName"),
+    SourceImageSizeExceedsLimitation("sourceImageSizeExceedsLimitation");
     public final String value;
     CloudPcDeviceImageStatusDetails(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static CloudPcDeviceImageStatusDetails forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static CloudPcDeviceImageStatusDetails forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "internalServerError": return InternalServerError;
@@ -26,6 +30,10 @@ public enum CloudPcDeviceImageStatusDetails implements ValuedEnum {
             case "sourceImageInvalid": return SourceImageInvalid;
             case "sourceImageNotGeneralized": return SourceImageNotGeneralized;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "vmAlreadyAzureAdjoined": return VmAlreadyAzureAdjoined;
+            case "paidSourceImageNotSupport": return PaidSourceImageNotSupport;
+            case "sourceImageNotSupportCustomizeVMName": return SourceImageNotSupportCustomizeVMName;
+            case "sourceImageSizeExceedsLimitation": return SourceImageSizeExceedsLimitation;
             default: return null;
         }
     }

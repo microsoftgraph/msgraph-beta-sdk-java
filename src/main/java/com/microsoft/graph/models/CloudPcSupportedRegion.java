@@ -27,7 +27,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      * Instantiates a new cloudPcSupportedRegion and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcSupportedRegion() {
         super();
     }
@@ -36,8 +36,8 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudPcSupportedRegion
      */
-    @javax.annotation.Nonnull
-    public static CloudPcSupportedRegion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudPcSupportedRegion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudPcSupportedRegion();
     }
@@ -45,7 +45,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      * Gets the displayName property value. The name for the supported region. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -53,7 +53,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -66,7 +66,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      * Gets the regionGroup property value. The regionGroup property
      * @return a cloudPcRegionGroup
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcRegionGroup getRegionGroup() {
         return this.regionGroup;
     }
@@ -74,7 +74,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      * Gets the regionStatus property value. The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
      * @return a cloudPcSupportedRegionStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcSupportedRegionStatus getRegionStatus() {
         return this.regionStatus;
     }
@@ -82,7 +82,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      * Gets the supportedSolution property value. The supportedSolution property
      * @return a cloudPcManagementService
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcManagementService getSupportedSolution() {
         return this.supportedSolution;
     }
@@ -91,8 +91,8 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -105,8 +105,8 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -114,8 +114,8 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      * @param value Value to set for the regionGroup property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegionGroup(@javax.annotation.Nullable final CloudPcRegionGroup value) {
+    @jakarta.annotation.Nonnull
+    public void setRegionGroup(@jakarta.annotation.Nullable final CloudPcRegionGroup value) {
         this.regionGroup = value;
     }
     /**
@@ -123,8 +123,8 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      * @param value Value to set for the regionStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegionStatus(@javax.annotation.Nullable final CloudPcSupportedRegionStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setRegionStatus(@jakarta.annotation.Nullable final CloudPcSupportedRegionStatus value) {
         this.regionStatus = value;
     }
     /**
@@ -132,8 +132,8 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      * @param value Value to set for the supportedSolution property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedSolution(@javax.annotation.Nullable final CloudPcManagementService value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedSolution(@jakarta.annotation.Nullable final CloudPcManagementService value) {
         this.supportedSolution = value;
     }
 }

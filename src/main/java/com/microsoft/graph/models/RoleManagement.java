@@ -44,7 +44,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * Instantiates a new roleManagement and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RoleManagement() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +53,8 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a roleManagement
      */
-    @javax.annotation.Nonnull
-    public static RoleManagement createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RoleManagement createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RoleManagement();
     }
@@ -62,7 +62,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +70,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * Gets the cloudPC property value. The cloudPC property
      * @return a rbacApplicationMultiple
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RbacApplicationMultiple getCloudPC() {
         return this.cloudPC;
     }
@@ -78,7 +78,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * Gets the deviceManagement property value. The RbacApplication for Device Management
      * @return a rbacApplicationMultiple
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RbacApplicationMultiple getDeviceManagement() {
         return this.deviceManagement;
     }
@@ -86,7 +86,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * Gets the directory property value. The directory property
      * @return a rbacApplication
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RbacApplication getDirectory() {
         return this.directory;
     }
@@ -94,7 +94,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * Gets the enterpriseApps property value. The enterpriseApps property
      * @return a rbacApplication
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<RbacApplication> getEnterpriseApps() {
         return this.enterpriseApps;
     }
@@ -102,7 +102,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * Gets the entitlementManagement property value. The RbacApplication for Entitlement Management
      * @return a rbacApplication
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RbacApplication getEntitlementManagement() {
         return this.entitlementManagement;
     }
@@ -110,7 +110,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * Gets the exchange property value. The exchange property
      * @return a unifiedRbacApplication
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UnifiedRbacApplication getExchange() {
         return this.exchange;
     }
@@ -118,7 +118,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("cloudPC", (n) -> { this.setCloudPC(n.getObjectValue(RbacApplicationMultiple::createFromDiscriminatorValue)); });
@@ -134,7 +134,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -143,8 +143,8 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("cloudPC", this.getCloudPC());
         writer.writeObjectValue("deviceManagement", this.getDeviceManagement());
@@ -157,11 +157,11 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -169,8 +169,8 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the cloudPC property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudPC(@javax.annotation.Nullable final RbacApplicationMultiple value) {
+    @jakarta.annotation.Nonnull
+    public void setCloudPC(@jakarta.annotation.Nullable final RbacApplicationMultiple value) {
         this.cloudPC = value;
     }
     /**
@@ -178,8 +178,8 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceManagement property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceManagement(@javax.annotation.Nullable final RbacApplicationMultiple value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceManagement(@jakarta.annotation.Nullable final RbacApplicationMultiple value) {
         this.deviceManagement = value;
     }
     /**
@@ -187,8 +187,8 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the directory property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDirectory(@javax.annotation.Nullable final RbacApplication value) {
+    @jakarta.annotation.Nonnull
+    public void setDirectory(@jakarta.annotation.Nullable final RbacApplication value) {
         this.directory = value;
     }
     /**
@@ -196,8 +196,8 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the enterpriseApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnterpriseApps(@javax.annotation.Nullable final java.util.List<RbacApplication> value) {
+    @jakarta.annotation.Nonnull
+    public void setEnterpriseApps(@jakarta.annotation.Nullable final java.util.List<RbacApplication> value) {
         this.enterpriseApps = value;
     }
     /**
@@ -205,8 +205,8 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the entitlementManagement property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEntitlementManagement(@javax.annotation.Nullable final RbacApplication value) {
+    @jakarta.annotation.Nonnull
+    public void setEntitlementManagement(@jakarta.annotation.Nullable final RbacApplication value) {
         this.entitlementManagement = value;
     }
     /**
@@ -214,17 +214,17 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the exchange property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExchange(@javax.annotation.Nullable final UnifiedRbacApplication value) {
+    @jakarta.annotation.Nonnull
+    public void setExchange(@jakarta.annotation.Nullable final UnifiedRbacApplication value) {
         this.exchange = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

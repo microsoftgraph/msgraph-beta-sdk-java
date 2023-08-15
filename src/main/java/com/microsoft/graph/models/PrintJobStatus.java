@@ -48,7 +48,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * Instantiates a new printJobStatus and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrintJobStatus() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -57,8 +57,8 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a printJobStatus
      */
-    @javax.annotation.Nonnull
-    public static PrintJobStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrintJobStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PrintJobStatus();
     }
@@ -66,7 +66,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * Gets the acquiredByPrinter property value. The acquiredByPrinter property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAcquiredByPrinter() {
         return this.acquiredByPrinter;
     }
@@ -74,7 +74,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -82,7 +82,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * Gets the description property value. A human-readable description of the print job's current processing state. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -90,7 +90,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * Gets the details property value. Additional details for print job state. Valid values are described in the following table. Read-only.
      * @return a printJobStateDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintJobStateDetail> getDetails() {
         return this.details;
     }
@@ -98,7 +98,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("acquiredByPrinter", (n) -> { this.setAcquiredByPrinter(n.getBooleanValue()); });
@@ -115,7 +115,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * Gets the isAcquiredByPrinter property value. True if the job was acknowledged by a printer; false otherwise. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAcquiredByPrinter() {
         return this.isAcquiredByPrinter;
     }
@@ -123,7 +123,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -131,7 +131,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * Gets the processingState property value. The processingState property
      * @return a printJobProcessingState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrintJobProcessingState getProcessingState() {
         return this.processingState;
     }
@@ -139,7 +139,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * Gets the processingStateDescription property value. The processingStateDescription property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProcessingStateDescription() {
         return this.processingStateDescription;
     }
@@ -147,7 +147,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * Gets the state property value. The state property
      * @return a printJobProcessingState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrintJobProcessingState getState() {
         return this.state;
     }
@@ -156,8 +156,8 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("acquiredByPrinter", this.getAcquiredByPrinter());
         writer.writeStringValue("description", this.getDescription());
@@ -174,17 +174,17 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the acquiredByPrinter property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAcquiredByPrinter(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAcquiredByPrinter(@jakarta.annotation.Nullable final Boolean value) {
         this.acquiredByPrinter = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -192,8 +192,8 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -201,8 +201,8 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the details property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetails(@javax.annotation.Nullable final java.util.List<PrintJobStateDetail> value) {
+    @jakarta.annotation.Nonnull
+    public void setDetails(@jakarta.annotation.Nullable final java.util.List<PrintJobStateDetail> value) {
         this.details = value;
     }
     /**
@@ -210,17 +210,17 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isAcquiredByPrinter property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAcquiredByPrinter(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsAcquiredByPrinter(@jakarta.annotation.Nullable final Boolean value) {
         this.isAcquiredByPrinter = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -228,8 +228,8 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the processingState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProcessingState(@javax.annotation.Nullable final PrintJobProcessingState value) {
+    @jakarta.annotation.Nonnull
+    public void setProcessingState(@jakarta.annotation.Nullable final PrintJobProcessingState value) {
         this.processingState = value;
     }
     /**
@@ -237,8 +237,8 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the processingStateDescription property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProcessingStateDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProcessingStateDescription(@jakarta.annotation.Nullable final String value) {
         this.processingStateDescription = value;
     }
     /**
@@ -246,8 +246,8 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final PrintJobProcessingState value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final PrintJobProcessingState value) {
         this.state = value;
     }
 }

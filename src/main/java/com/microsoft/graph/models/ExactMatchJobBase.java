@@ -32,7 +32,7 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      * Instantiates a new exactMatchJobBase and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExactMatchJobBase() {
         super();
     }
@@ -41,8 +41,8 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a exactMatchJobBase
      */
-    @javax.annotation.Nonnull
-    public static ExactMatchJobBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ExactMatchJobBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -59,7 +59,7 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      * Gets the completionDateTime property value. The completionDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCompletionDateTime() {
         return this.completionDateTime;
     }
@@ -67,7 +67,7 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      * Gets the creationDateTime property value. The creationDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
         return this.creationDateTime;
     }
@@ -75,7 +75,7 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      * Gets the error property value. The error property
      * @return a classificationError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ClassificationError getError() {
         return this.error;
     }
@@ -83,7 +83,7 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("completionDateTime", (n) -> { this.setCompletionDateTime(n.getOffsetDateTimeValue()); });
@@ -97,7 +97,7 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
         return this.lastUpdatedDateTime;
     }
@@ -105,7 +105,7 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      * Gets the startDateTime property value. The startDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this.startDateTime;
     }
@@ -114,8 +114,8 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("completionDateTime", this.getCompletionDateTime());
@@ -129,8 +129,8 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      * @param value Value to set for the completionDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completionDateTime = value;
     }
     /**
@@ -138,8 +138,8 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      * @param value Value to set for the creationDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.creationDateTime = value;
     }
     /**
@@ -147,8 +147,8 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      * @param value Value to set for the error property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setError(@javax.annotation.Nullable final ClassificationError value) {
+    @jakarta.annotation.Nonnull
+    public void setError(@jakarta.annotation.Nullable final ClassificationError value) {
         this.error = value;
     }
     /**
@@ -156,8 +156,8 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
@@ -165,8 +165,8 @@ public class ExactMatchJobBase extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
 }

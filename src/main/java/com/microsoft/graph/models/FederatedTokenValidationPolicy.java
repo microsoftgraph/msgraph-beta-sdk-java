@@ -15,7 +15,7 @@ public class FederatedTokenValidationPolicy extends DirectoryObject implements P
      * Instantiates a new federatedTokenValidationPolicy and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FederatedTokenValidationPolicy() {
         super();
         this.setOdataType("#microsoft.graph.federatedTokenValidationPolicy");
@@ -25,8 +25,8 @@ public class FederatedTokenValidationPolicy extends DirectoryObject implements P
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a federatedTokenValidationPolicy
      */
-    @javax.annotation.Nonnull
-    public static FederatedTokenValidationPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static FederatedTokenValidationPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new FederatedTokenValidationPolicy();
     }
@@ -34,7 +34,7 @@ public class FederatedTokenValidationPolicy extends DirectoryObject implements P
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("validatingDomains", (n) -> { this.setValidatingDomains(n.getObjectValue(ValidatingDomains::createFromDiscriminatorValue)); });
@@ -44,7 +44,7 @@ public class FederatedTokenValidationPolicy extends DirectoryObject implements P
      * Gets the validatingDomains property value. The validatingDomains property
      * @return a validatingDomains
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ValidatingDomains getValidatingDomains() {
         return this.validatingDomains;
     }
@@ -53,8 +53,8 @@ public class FederatedTokenValidationPolicy extends DirectoryObject implements P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("validatingDomains", this.getValidatingDomains());
@@ -64,8 +64,8 @@ public class FederatedTokenValidationPolicy extends DirectoryObject implements P
      * @param value Value to set for the validatingDomains property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValidatingDomains(@javax.annotation.Nullable final ValidatingDomains value) {
+    @jakarta.annotation.Nonnull
+    public void setValidatingDomains(@jakarta.annotation.Nullable final ValidatingDomains value) {
         this.validatingDomains = value;
     }
 }

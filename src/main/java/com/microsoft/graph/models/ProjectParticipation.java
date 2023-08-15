@@ -43,7 +43,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * Instantiates a new projectParticipation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ProjectParticipation() {
         super();
         this.setOdataType("#microsoft.graph.projectParticipation");
@@ -53,8 +53,8 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a projectParticipation
      */
-    @javax.annotation.Nonnull
-    public static ProjectParticipation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ProjectParticipation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ProjectParticipation();
     }
@@ -62,7 +62,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * Gets the categories property value. Contains categories a user has associated with the project (for example, digital transformation, oil rig).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
         return this.categories;
     }
@@ -70,7 +70,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * Gets the client property value. Contains detailed information about the client the project was for.
      * @return a companyDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CompanyDetail getClient() {
         return this.client;
     }
@@ -78,7 +78,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * Gets the collaborationTags property value. Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getCollaborationTags() {
         return this.collaborationTags;
     }
@@ -86,7 +86,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * Gets the colleagues property value. Lists people that also worked on the project.
      * @return a relatedPerson
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<RelatedPerson> getColleagues() {
         return this.colleagues;
     }
@@ -94,7 +94,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * Gets the detail property value. Contains detail about the user's role on the project.
      * @return a positionDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PositionDetail getDetail() {
         return this.detail;
     }
@@ -102,7 +102,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * Gets the displayName property value. Contains a friendly name for the project.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -110,7 +110,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -127,7 +127,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * Gets the sponsors property value. The Person or people who sponsored the project.
      * @return a relatedPerson
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<RelatedPerson> getSponsors() {
         return this.sponsors;
     }
@@ -135,7 +135,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * Gets the thumbnailUrl property value. The thumbnailUrl property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
         return this.thumbnailUrl;
     }
@@ -144,8 +144,8 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("categories", this.getCategories());
@@ -162,8 +162,8 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.categories = value;
     }
     /**
@@ -171,8 +171,8 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * @param value Value to set for the client property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClient(@javax.annotation.Nullable final CompanyDetail value) {
+    @jakarta.annotation.Nonnull
+    public void setClient(@jakarta.annotation.Nullable final CompanyDetail value) {
         this.client = value;
     }
     /**
@@ -180,8 +180,8 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * @param value Value to set for the collaborationTags property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCollaborationTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setCollaborationTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.collaborationTags = value;
     }
     /**
@@ -189,8 +189,8 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * @param value Value to set for the colleagues property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setColleagues(@javax.annotation.Nullable final java.util.List<RelatedPerson> value) {
+    @jakarta.annotation.Nonnull
+    public void setColleagues(@jakarta.annotation.Nullable final java.util.List<RelatedPerson> value) {
         this.colleagues = value;
     }
     /**
@@ -198,8 +198,8 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * @param value Value to set for the detail property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetail(@javax.annotation.Nullable final PositionDetail value) {
+    @jakarta.annotation.Nonnull
+    public void setDetail(@jakarta.annotation.Nullable final PositionDetail value) {
         this.detail = value;
     }
     /**
@@ -207,8 +207,8 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -216,8 +216,8 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * @param value Value to set for the sponsors property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSponsors(@javax.annotation.Nullable final java.util.List<RelatedPerson> value) {
+    @jakarta.annotation.Nonnull
+    public void setSponsors(@jakarta.annotation.Nullable final java.util.List<RelatedPerson> value) {
         this.sponsors = value;
     }
     /**
@@ -225,8 +225,8 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * @param value Value to set for the thumbnailUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThumbnailUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setThumbnailUrl(@jakarta.annotation.Nullable final String value) {
         this.thumbnailUrl = value;
     }
 }

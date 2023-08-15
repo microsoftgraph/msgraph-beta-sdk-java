@@ -67,7 +67,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * Instantiates a new userExperienceAnalyticsAnomaly and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAnomaly() {
         super();
     }
@@ -76,8 +76,8 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsAnomaly
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsAnomaly createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsAnomaly createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsAnomaly();
     }
@@ -85,7 +85,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * Gets the anomalyFirstOccurrenceDateTime property value. Indicates the first occurrence date and time for the anomaly.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getAnomalyFirstOccurrenceDateTime() {
         return this.anomalyFirstOccurrenceDateTime;
     }
@@ -93,7 +93,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * Gets the anomalyId property value. The unique identifier of the anomaly.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAnomalyId() {
         return this.anomalyId;
     }
@@ -101,7 +101,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * Gets the anomalyLatestOccurrenceDateTime property value. Indicates the latest occurrence date and time for the anomaly.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getAnomalyLatestOccurrenceDateTime() {
         return this.anomalyLatestOccurrenceDateTime;
     }
@@ -109,7 +109,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * Gets the anomalyName property value. The name of the anomaly.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAnomalyName() {
         return this.anomalyName;
     }
@@ -117,7 +117,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * Gets the anomalyType property value. Indicates the category of the anomaly. Eg: anomaly type can be device, application, stop error, driver or other.
      * @return a userExperienceAnalyticsAnomalyType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAnomalyType getAnomalyType() {
         return this.anomalyType;
     }
@@ -125,7 +125,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * Gets the assetName property value. The name of the application or module that caused the anomaly.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssetName() {
         return this.assetName;
     }
@@ -133,7 +133,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * Gets the assetPublisher property value. The publisher of the application or module that caused the anomaly.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssetPublisher() {
         return this.assetPublisher;
     }
@@ -141,7 +141,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * Gets the assetVersion property value. The version of the application or module that caused the anomaly.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssetVersion() {
         return this.assetVersion;
     }
@@ -149,7 +149,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * Gets the detectionModelId property value. The unique identifier of the anomaly detection model.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDetectionModelId() {
         return this.detectionModelId;
     }
@@ -157,7 +157,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * Gets the deviceImpactedCount property value. The number of devices impacted by the anomaly. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDeviceImpactedCount() {
         return this.deviceImpactedCount;
     }
@@ -165,7 +165,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("anomalyFirstOccurrenceDateTime", (n) -> { this.setAnomalyFirstOccurrenceDateTime(n.getOffsetDateTimeValue()); });
@@ -187,7 +187,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * Gets the issueId property value. The unique identifier of the anomaly detection model.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIssueId() {
         return this.issueId;
     }
@@ -195,7 +195,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * Gets the severity property value. Indicates the severity of the anomaly. Eg: anomaly severity can be high, medium, low, informational or other.
      * @return a userExperienceAnalyticsAnomalySeverity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAnomalySeverity getSeverity() {
         return this.severity;
     }
@@ -203,7 +203,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * Gets the state property value. Indicates the state of the anomaly. Eg: anomaly severity can be new, active, disabled, removed or other.
      * @return a userExperienceAnalyticsAnomalyState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAnomalyState getState() {
         return this.state;
     }
@@ -212,8 +212,8 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("anomalyFirstOccurrenceDateTime", this.getAnomalyFirstOccurrenceDateTime());
@@ -235,8 +235,8 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * @param value Value to set for the anomalyFirstOccurrenceDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnomalyFirstOccurrenceDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setAnomalyFirstOccurrenceDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.anomalyFirstOccurrenceDateTime = value;
     }
     /**
@@ -244,8 +244,8 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * @param value Value to set for the anomalyId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnomalyId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAnomalyId(@jakarta.annotation.Nullable final String value) {
         this.anomalyId = value;
     }
     /**
@@ -253,8 +253,8 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * @param value Value to set for the anomalyLatestOccurrenceDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnomalyLatestOccurrenceDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setAnomalyLatestOccurrenceDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.anomalyLatestOccurrenceDateTime = value;
     }
     /**
@@ -262,8 +262,8 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * @param value Value to set for the anomalyName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnomalyName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAnomalyName(@jakarta.annotation.Nullable final String value) {
         this.anomalyName = value;
     }
     /**
@@ -271,8 +271,8 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * @param value Value to set for the anomalyType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnomalyType(@javax.annotation.Nullable final UserExperienceAnalyticsAnomalyType value) {
+    @jakarta.annotation.Nonnull
+    public void setAnomalyType(@jakarta.annotation.Nullable final UserExperienceAnalyticsAnomalyType value) {
         this.anomalyType = value;
     }
     /**
@@ -280,8 +280,8 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * @param value Value to set for the assetName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssetName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssetName(@jakarta.annotation.Nullable final String value) {
         this.assetName = value;
     }
     /**
@@ -289,8 +289,8 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * @param value Value to set for the assetPublisher property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssetPublisher(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssetPublisher(@jakarta.annotation.Nullable final String value) {
         this.assetPublisher = value;
     }
     /**
@@ -298,8 +298,8 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * @param value Value to set for the assetVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssetVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssetVersion(@jakarta.annotation.Nullable final String value) {
         this.assetVersion = value;
     }
     /**
@@ -307,8 +307,8 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * @param value Value to set for the detectionModelId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetectionModelId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDetectionModelId(@jakarta.annotation.Nullable final String value) {
         this.detectionModelId = value;
     }
     /**
@@ -316,8 +316,8 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * @param value Value to set for the deviceImpactedCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceImpactedCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceImpactedCount(@jakarta.annotation.Nullable final Integer value) {
         this.deviceImpactedCount = value;
     }
     /**
@@ -325,8 +325,8 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * @param value Value to set for the issueId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIssueId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIssueId(@jakarta.annotation.Nullable final String value) {
         this.issueId = value;
     }
     /**
@@ -334,8 +334,8 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * @param value Value to set for the severity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSeverity(@javax.annotation.Nullable final UserExperienceAnalyticsAnomalySeverity value) {
+    @jakarta.annotation.Nonnull
+    public void setSeverity(@jakarta.annotation.Nullable final UserExperienceAnalyticsAnomalySeverity value) {
         this.severity = value;
     }
     /**
@@ -343,8 +343,8 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final UserExperienceAnalyticsAnomalyState value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final UserExperienceAnalyticsAnomalyState value) {
         this.state = value;
     }
 }

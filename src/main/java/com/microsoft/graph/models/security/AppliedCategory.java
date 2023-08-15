@@ -15,7 +15,7 @@ public class AppliedCategory extends FilePlanDescriptorBase implements Parsable 
      * Instantiates a new appliedCategory and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AppliedCategory() {
         super();
     }
@@ -24,8 +24,8 @@ public class AppliedCategory extends FilePlanDescriptorBase implements Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a appliedCategory
      */
-    @javax.annotation.Nonnull
-    public static AppliedCategory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AppliedCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AppliedCategory();
     }
@@ -33,7 +33,7 @@ public class AppliedCategory extends FilePlanDescriptorBase implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("subCategory", (n) -> { this.setSubCategory(n.getObjectValue(SubCategory::createFromDiscriminatorValue)); });
@@ -43,7 +43,7 @@ public class AppliedCategory extends FilePlanDescriptorBase implements Parsable 
      * Gets the subCategory property value. Represents the file plan descriptor for a subcategory under a specific category, which has been assigned to a particular retention label.
      * @return a subCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubCategory getSubCategory() {
         return this.subCategory;
     }
@@ -52,8 +52,8 @@ public class AppliedCategory extends FilePlanDescriptorBase implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("subCategory", this.getSubCategory());
@@ -63,8 +63,8 @@ public class AppliedCategory extends FilePlanDescriptorBase implements Parsable 
      * @param value Value to set for the subCategory property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubCategory(@javax.annotation.Nullable final SubCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setSubCategory(@jakarta.annotation.Nullable final SubCategory value) {
         this.subCategory = value;
     }
 }

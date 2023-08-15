@@ -53,7 +53,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new recordPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RecordPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -62,8 +62,8 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a recordPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static RecordPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RecordPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RecordPostRequestBody();
     }
@@ -71,7 +71,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -79,7 +79,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the bargeInAllowed property value. The bargeInAllowed property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBargeInAllowed() {
         return this.bargeInAllowed;
     }
@@ -87,7 +87,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the clientContext property value. The clientContext property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClientContext() {
         return this.clientContext;
     }
@@ -95,7 +95,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("bargeInAllowed", (n) -> { this.setBargeInAllowed(n.getBooleanValue()); });
@@ -113,7 +113,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the initialSilenceTimeoutInSeconds property value. The initialSilenceTimeoutInSeconds property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getInitialSilenceTimeoutInSeconds() {
         return this.initialSilenceTimeoutInSeconds;
     }
@@ -121,7 +121,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the maxRecordDurationInSeconds property value. The maxRecordDurationInSeconds property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaxRecordDurationInSeconds() {
         return this.maxRecordDurationInSeconds;
     }
@@ -129,7 +129,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the maxSilenceTimeoutInSeconds property value. The maxSilenceTimeoutInSeconds property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaxSilenceTimeoutInSeconds() {
         return this.maxSilenceTimeoutInSeconds;
     }
@@ -137,7 +137,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the playBeep property value. The playBeep property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPlayBeep() {
         return this.playBeep;
     }
@@ -145,7 +145,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the prompts property value. The prompts property
      * @return a prompt
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Prompt> getPrompts() {
         return this.prompts;
     }
@@ -153,7 +153,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the stopTones property value. The stopTones property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getStopTones() {
         return this.stopTones;
     }
@@ -161,7 +161,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the streamWhileRecording property value. The streamWhileRecording property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getStreamWhileRecording() {
         return this.streamWhileRecording;
     }
@@ -170,8 +170,8 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("bargeInAllowed", this.getBargeInAllowed());
         writer.writeStringValue("clientContext", this.getClientContext());
@@ -186,11 +186,11 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -198,8 +198,8 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the bargeInAllowed property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBargeInAllowed(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setBargeInAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.bargeInAllowed = value;
     }
     /**
@@ -207,8 +207,8 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the clientContext property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientContext(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setClientContext(@jakarta.annotation.Nullable final String value) {
         this.clientContext = value;
     }
     /**
@@ -216,8 +216,8 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the initialSilenceTimeoutInSeconds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitialSilenceTimeoutInSeconds(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setInitialSilenceTimeoutInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.initialSilenceTimeoutInSeconds = value;
     }
     /**
@@ -225,8 +225,8 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the maxRecordDurationInSeconds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaxRecordDurationInSeconds(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMaxRecordDurationInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.maxRecordDurationInSeconds = value;
     }
     /**
@@ -234,8 +234,8 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the maxSilenceTimeoutInSeconds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaxSilenceTimeoutInSeconds(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMaxSilenceTimeoutInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.maxSilenceTimeoutInSeconds = value;
     }
     /**
@@ -243,8 +243,8 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the playBeep property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlayBeep(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPlayBeep(@jakarta.annotation.Nullable final Boolean value) {
         this.playBeep = value;
     }
     /**
@@ -252,8 +252,8 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the prompts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrompts(@javax.annotation.Nullable final java.util.List<Prompt> value) {
+    @jakarta.annotation.Nonnull
+    public void setPrompts(@jakarta.annotation.Nullable final java.util.List<Prompt> value) {
         this.prompts = value;
     }
     /**
@@ -261,8 +261,8 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the stopTones property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStopTones(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setStopTones(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.stopTones = value;
     }
     /**
@@ -270,8 +270,8 @@ public class RecordPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the streamWhileRecording property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStreamWhileRecording(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setStreamWhileRecording(@jakarta.annotation.Nullable final Boolean value) {
         this.streamWhileRecording = value;
     }
 }

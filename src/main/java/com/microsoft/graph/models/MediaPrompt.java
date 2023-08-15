@@ -19,7 +19,7 @@ public class MediaPrompt extends Prompt implements Parsable {
      * Instantiates a new mediaPrompt and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaPrompt() {
         super();
         this.setOdataType("#microsoft.graph.mediaPrompt");
@@ -29,8 +29,8 @@ public class MediaPrompt extends Prompt implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a mediaPrompt
      */
-    @javax.annotation.Nonnull
-    public static MediaPrompt createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MediaPrompt createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MediaPrompt();
     }
@@ -38,7 +38,7 @@ public class MediaPrompt extends Prompt implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("loop", (n) -> { this.setLoop(n.getIntegerValue()); });
@@ -49,7 +49,7 @@ public class MediaPrompt extends Prompt implements Parsable {
      * Gets the loop property value. The loop property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getLoop() {
         return this.loop;
     }
@@ -57,7 +57,7 @@ public class MediaPrompt extends Prompt implements Parsable {
      * Gets the mediaInfo property value. The mediaInfo property
      * @return a mediaInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaInfo getMediaInfo() {
         return this.mediaInfo;
     }
@@ -66,8 +66,8 @@ public class MediaPrompt extends Prompt implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("loop", this.getLoop());
@@ -78,8 +78,8 @@ public class MediaPrompt extends Prompt implements Parsable {
      * @param value Value to set for the loop property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLoop(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setLoop(@jakarta.annotation.Nullable final Integer value) {
         this.loop = value;
     }
     /**
@@ -87,8 +87,8 @@ public class MediaPrompt extends Prompt implements Parsable {
      * @param value Value to set for the mediaInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaInfo(@javax.annotation.Nullable final MediaInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaInfo(@jakarta.annotation.Nullable final MediaInfo value) {
         this.mediaInfo = value;
     }
 }

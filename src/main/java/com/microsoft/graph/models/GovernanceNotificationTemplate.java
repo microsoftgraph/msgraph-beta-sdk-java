@@ -40,7 +40,7 @@ public class GovernanceNotificationTemplate implements AdditionalDataHolder, Par
      * Instantiates a new governanceNotificationTemplate and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceNotificationTemplate() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +49,8 @@ public class GovernanceNotificationTemplate implements AdditionalDataHolder, Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a governanceNotificationTemplate
      */
-    @javax.annotation.Nonnull
-    public static GovernanceNotificationTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GovernanceNotificationTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GovernanceNotificationTemplate();
     }
@@ -58,7 +58,7 @@ public class GovernanceNotificationTemplate implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +66,7 @@ public class GovernanceNotificationTemplate implements AdditionalDataHolder, Par
      * Gets the culture property value. The culture property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCulture() {
         return this.culture;
     }
@@ -74,7 +74,7 @@ public class GovernanceNotificationTemplate implements AdditionalDataHolder, Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("culture", (n) -> { this.setCulture(n.getStringValue()); });
@@ -89,7 +89,7 @@ public class GovernanceNotificationTemplate implements AdditionalDataHolder, Par
      * Gets the id property value. The id property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -97,7 +97,7 @@ public class GovernanceNotificationTemplate implements AdditionalDataHolder, Par
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -105,7 +105,7 @@ public class GovernanceNotificationTemplate implements AdditionalDataHolder, Par
      * Gets the source property value. The source property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSource() {
         return this.source;
     }
@@ -113,7 +113,7 @@ public class GovernanceNotificationTemplate implements AdditionalDataHolder, Par
      * Gets the type property value. The type property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getType() {
         return this.type;
     }
@@ -121,7 +121,7 @@ public class GovernanceNotificationTemplate implements AdditionalDataHolder, Par
      * Gets the version property value. The version property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersion() {
         return this.version;
     }
@@ -130,8 +130,8 @@ public class GovernanceNotificationTemplate implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("culture", this.getCulture());
         writer.writeStringValue("id", this.getId());
@@ -143,11 +143,11 @@ public class GovernanceNotificationTemplate implements AdditionalDataHolder, Par
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -155,8 +155,8 @@ public class GovernanceNotificationTemplate implements AdditionalDataHolder, Par
      * @param value Value to set for the culture property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCulture(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCulture(@jakarta.annotation.Nullable final String value) {
         this.culture = value;
     }
     /**
@@ -164,17 +164,17 @@ public class GovernanceNotificationTemplate implements AdditionalDataHolder, Par
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -182,8 +182,8 @@ public class GovernanceNotificationTemplate implements AdditionalDataHolder, Par
      * @param value Value to set for the source property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSource(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSource(@jakarta.annotation.Nullable final String value) {
         this.source = value;
     }
     /**
@@ -191,8 +191,8 @@ public class GovernanceNotificationTemplate implements AdditionalDataHolder, Par
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
     /**
@@ -200,8 +200,8 @@ public class GovernanceNotificationTemplate implements AdditionalDataHolder, Par
      * @param value Value to set for the version property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }
 }

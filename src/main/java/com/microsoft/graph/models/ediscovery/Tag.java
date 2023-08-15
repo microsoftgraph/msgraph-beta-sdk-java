@@ -42,7 +42,7 @@ public class Tag extends Entity implements Parsable {
      * Instantiates a new tag and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Tag() {
         super();
     }
@@ -51,8 +51,8 @@ public class Tag extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a tag
      */
-    @javax.annotation.Nonnull
-    public static Tag createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Tag createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Tag();
     }
@@ -60,7 +60,7 @@ public class Tag extends Entity implements Parsable {
      * Gets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
      * @return a childSelectability
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChildSelectability getChildSelectability() {
         return this.childSelectability;
     }
@@ -68,7 +68,7 @@ public class Tag extends Entity implements Parsable {
      * Gets the childTags property value. Returns the tags that are a child of a tag.
      * @return a tag
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Tag> getChildTags() {
         return this.childTags;
     }
@@ -76,7 +76,7 @@ public class Tag extends Entity implements Parsable {
      * Gets the createdBy property value. The user who created the tag.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -84,7 +84,7 @@ public class Tag extends Entity implements Parsable {
      * Gets the description property value. The description for the tag.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -92,7 +92,7 @@ public class Tag extends Entity implements Parsable {
      * Gets the displayName property value. Display name of the tag.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -100,7 +100,7 @@ public class Tag extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("childSelectability", (n) -> { this.setChildSelectability(n.getEnumValue(ChildSelectability.class)); });
@@ -116,7 +116,7 @@ public class Tag extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time the tag was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -124,7 +124,7 @@ public class Tag extends Entity implements Parsable {
      * Gets the parent property value. Returns the parent tag of the specified tag.
      * @return a tag
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Tag getParent() {
         return this.parent;
     }
@@ -133,8 +133,8 @@ public class Tag extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("childSelectability", this.getChildSelectability());
@@ -150,8 +150,8 @@ public class Tag extends Entity implements Parsable {
      * @param value Value to set for the childSelectability property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChildSelectability(@javax.annotation.Nullable final ChildSelectability value) {
+    @jakarta.annotation.Nonnull
+    public void setChildSelectability(@jakarta.annotation.Nullable final ChildSelectability value) {
         this.childSelectability = value;
     }
     /**
@@ -159,8 +159,8 @@ public class Tag extends Entity implements Parsable {
      * @param value Value to set for the childTags property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChildTags(@javax.annotation.Nullable final java.util.List<Tag> value) {
+    @jakarta.annotation.Nonnull
+    public void setChildTags(@jakarta.annotation.Nullable final java.util.List<Tag> value) {
         this.childTags = value;
     }
     /**
@@ -168,8 +168,8 @@ public class Tag extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
@@ -177,8 +177,8 @@ public class Tag extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -186,8 +186,8 @@ public class Tag extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -195,8 +195,8 @@ public class Tag extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -204,8 +204,8 @@ public class Tag extends Entity implements Parsable {
      * @param value Value to set for the parent property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParent(@javax.annotation.Nullable final Tag value) {
+    @jakarta.annotation.Nonnull
+    public void setParent(@jakarta.annotation.Nullable final Tag value) {
         this.parent = value;
     }
 }

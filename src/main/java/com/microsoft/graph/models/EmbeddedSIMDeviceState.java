@@ -47,7 +47,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * Instantiates a new embeddedSIMDeviceState and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmbeddedSIMDeviceState() {
         super();
     }
@@ -56,8 +56,8 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a embeddedSIMDeviceState
      */
-    @javax.annotation.Nonnull
-    public static EmbeddedSIMDeviceState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EmbeddedSIMDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EmbeddedSIMDeviceState();
     }
@@ -65,7 +65,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * Gets the createdDateTime property value. The time the embedded SIM device status was created. Generated service side.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -73,7 +73,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * Gets the deviceName property value. Device name to which the subscription was provisioned e.g. DESKTOP-JOE
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -81,7 +81,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -98,7 +98,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * Gets the lastSyncDateTime property value. The time the embedded SIM device last checked in. Updated service side.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
         return this.lastSyncDateTime;
     }
@@ -106,7 +106,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * Gets the modifiedDateTime property value. The time the embedded SIM device status was last modified. Updated service side.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
         return this.modifiedDateTime;
     }
@@ -114,7 +114,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * Gets the state property value. Describes the various states for an embedded SIM activation code.
      * @return a embeddedSIMDeviceStateValue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmbeddedSIMDeviceStateValue getState() {
         return this.state;
     }
@@ -122,7 +122,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * Gets the stateDetails property value. String description of the provisioning state.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStateDetails() {
         return this.stateDetails;
     }
@@ -130,7 +130,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * Gets the universalIntegratedCircuitCardIdentifier property value. The Universal Integrated Circuit Card Identifier (UICCID) identifying the hardware onto which a profile is to be deployed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUniversalIntegratedCircuitCardIdentifier() {
         return this.universalIntegratedCircuitCardIdentifier;
     }
@@ -138,7 +138,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * Gets the userName property value. Username which the subscription was provisioned to e.g. joe@contoso.com
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserName() {
         return this.userName;
     }
@@ -147,8 +147,8 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -165,8 +165,8 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -174,8 +174,8 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the deviceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
@@ -183,8 +183,8 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSyncDateTime = value;
     }
     /**
@@ -192,8 +192,8 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.modifiedDateTime = value;
     }
     /**
@@ -201,8 +201,8 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final EmbeddedSIMDeviceStateValue value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final EmbeddedSIMDeviceStateValue value) {
         this.state = value;
     }
     /**
@@ -210,8 +210,8 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the stateDetails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStateDetails(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStateDetails(@jakarta.annotation.Nullable final String value) {
         this.stateDetails = value;
     }
     /**
@@ -219,8 +219,8 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the universalIntegratedCircuitCardIdentifier property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUniversalIntegratedCircuitCardIdentifier(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUniversalIntegratedCircuitCardIdentifier(@jakarta.annotation.Nullable final String value) {
         this.universalIntegratedCircuitCardIdentifier = value;
     }
     /**
@@ -228,8 +228,8 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the userName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
 }

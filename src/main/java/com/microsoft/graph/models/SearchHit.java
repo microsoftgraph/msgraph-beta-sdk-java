@@ -64,7 +64,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * Instantiates a new searchHit and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SearchHit() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -73,8 +73,8 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a searchHit
      */
-    @javax.annotation.Nonnull
-    public static SearchHit createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SearchHit createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SearchHit();
     }
@@ -82,7 +82,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -90,7 +90,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * Gets the contentSource property value. The name of the content source that the externalItem is part of.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContentSource() {
         return this.contentSource;
     }
@@ -98,28 +98,28 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
-        deserializerMap.put("_summary", (n) -> { this.setsummary(n.getStringValue()); });
+        deserializerMap.put("_summary", (n) -> { this.setSummary(n.getStringValue()); });
         deserializerMap.put("contentSource", (n) -> { this.setContentSource(n.getStringValue()); });
         deserializerMap.put("hitId", (n) -> { this.setHitId(n.getStringValue()); });
-        deserializerMap.put("_id", (n) -> { this.setid(n.getStringValue()); });
+        deserializerMap.put("_id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("isCollapsed", (n) -> { this.setIsCollapsed(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("rank", (n) -> { this.setRank(n.getIntegerValue()); });
         deserializerMap.put("resource", (n) -> { this.setResource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
         deserializerMap.put("resultTemplateId", (n) -> { this.setResultTemplateId(n.getStringValue()); });
-        deserializerMap.put("_score", (n) -> { this.setscore(n.getIntegerValue()); });
-        deserializerMap.put("_source", (n) -> { this.setsource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
-        deserializerMap.put("summary", (n) -> { this.setsummary(n.getStringValue()); });
+        deserializerMap.put("_score", (n) -> { this.setScore(n.getIntegerValue()); });
+        deserializerMap.put("_source", (n) -> { this.setSource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
+        deserializerMap.put("summary", (n) -> { this.setSummary(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the hitId property value. The internal identifier for the item. The format of the identifier varies based on the entity type. For details, see hitId format.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHitId() {
         return this.hitId;
     }
@@ -127,15 +127,15 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * Gets the _id property value. The _id property
      * @return a string
      */
-    @javax.annotation.Nullable
-    public String getid() {
+    @jakarta.annotation.Nullable
+    public String getId() {
         return this.id;
     }
     /**
      * Gets the isCollapsed property value. Indicates whether the current result is collapses when the collapseProperties property in the searchRequest is used.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsCollapsed() {
         return this.isCollapsed;
     }
@@ -143,7 +143,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -151,7 +151,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * Gets the rank property value. The rank or the order of the result.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRank() {
         return this.rank;
     }
@@ -159,7 +159,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * Gets the resource property value. The resource property
      * @return a entity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Entity getResource() {
         return this.resource;
     }
@@ -167,7 +167,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * Gets the resultTemplateId property value. ID of the result template for rendering the search result. This ID must map to a display layout in the resultTemplates dictionary, included in the searchresponse as well.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResultTemplateId() {
         return this.resultTemplateId;
     }
@@ -175,55 +175,55 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * Gets the _score property value. The _score property
      * @return a integer
      */
-    @javax.annotation.Nullable
-    public Integer getscore() {
+    @jakarta.annotation.Nullable
+    public Integer getScore() {
         return this.score;
     }
     /**
      * Gets the _source property value. The _source property
      * @return a entity
      */
-    @javax.annotation.Nullable
-    public Entity getsource() {
+    @jakarta.annotation.Nullable
+    public Entity getSource() {
         return this.source;
     }
     /**
-     * Gets the summary property value. A summary of the result, if a summary is available.
+     * Gets the _summary property value. The _summary property
      * @return a string
      */
-    @javax.annotation.Nullable
-    public String getsummary() {
-        return this.summary;
+    @jakarta.annotation.Nullable
+    public String getSummary() {
+        return this._summary;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("contentSource", this.getContentSource());
         writer.writeStringValue("hitId", this.getHitId());
-        writer.writeStringValue("_id", this.getid());
+        writer.writeStringValue("_id", this.getId());
         writer.writeBooleanValue("isCollapsed", this.getIsCollapsed());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("rank", this.getRank());
         writer.writeObjectValue("resource", this.getResource());
         writer.writeStringValue("resultTemplateId", this.getResultTemplateId());
-        writer.writeIntegerValue("_score", this.getscore());
-        writer.writeObjectValue("_source", this.getsource());
-        writer.writeStringValue("summary", this.getsummary());
-        writer.writeStringValue("_summary", this.getsummary());
+        writer.writeIntegerValue("_score", this.getScore());
+        writer.writeObjectValue("_source", this.getSource());
+        writer.writeStringValue("summary", this.getSummary());
+        writer.writeStringValue("_summary", this.getSummary());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -231,8 +231,8 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contentSource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentSource(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContentSource(@jakarta.annotation.Nullable final String value) {
         this.contentSource = value;
     }
     /**
@@ -240,17 +240,17 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the hitId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHitId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setHitId(@jakarta.annotation.Nullable final String value) {
         this.hitId = value;
     }
     /**
      * Sets the _id property value. The _id property
-     * @param value Value to set for the id property.
+     * @param value Value to set for the _id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setid(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
@@ -258,17 +258,17 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isCollapsed property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsCollapsed(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsCollapsed(@jakarta.annotation.Nullable final Boolean value) {
         this.isCollapsed = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -276,8 +276,8 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the rank property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRank(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setRank(@jakarta.annotation.Nullable final Integer value) {
         this.rank = value;
     }
     /**
@@ -285,8 +285,8 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResource(@javax.annotation.Nullable final Entity value) {
+    @jakarta.annotation.Nonnull
+    public void setResource(@jakarta.annotation.Nullable final Entity value) {
         this.resource = value;
     }
     /**
@@ -294,35 +294,35 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the resultTemplateId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResultTemplateId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResultTemplateId(@jakarta.annotation.Nullable final String value) {
         this.resultTemplateId = value;
     }
     /**
      * Sets the _score property value. The _score property
-     * @param value Value to set for the score property.
+     * @param value Value to set for the _score property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setscore(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setScore(@jakarta.annotation.Nullable final Integer value) {
         this.score = value;
     }
     /**
      * Sets the _source property value. The _source property
-     * @param value Value to set for the source property.
+     * @param value Value to set for the _source property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setsource(@javax.annotation.Nullable final Entity value) {
+    @jakarta.annotation.Nonnull
+    public void setSource(@jakarta.annotation.Nullable final Entity value) {
         this.source = value;
     }
     /**
-     * Sets the summary property value. A summary of the result, if a summary is available.
-     * @param value Value to set for the summary property.
+     * Sets the _summary property value. The _summary property
+     * @param value Value to set for the _summary property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setsummary(@javax.annotation.Nullable final String value) {
-        this.summary = value;
+    @jakarta.annotation.Nonnull
+    public void setSummary(@jakarta.annotation.Nullable final String value) {
+        this._summary = value;
     }
 }

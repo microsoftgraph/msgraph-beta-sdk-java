@@ -55,7 +55,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * Instantiates a new configurationManagerClientEnabledFeatures and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConfigurationManagerClientEnabledFeatures() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,8 +64,8 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a configurationManagerClientEnabledFeatures
      */
-    @javax.annotation.Nonnull
-    public static ConfigurationManagerClientEnabledFeatures createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ConfigurationManagerClientEnabledFeatures createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ConfigurationManagerClientEnabledFeatures();
     }
@@ -73,7 +73,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -81,7 +81,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * Gets the compliancePolicy property value. Whether compliance policy is managed by Intune
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCompliancePolicy() {
         return this.compliancePolicy;
     }
@@ -89,7 +89,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * Gets the deviceConfiguration property value. Whether device configuration is managed by Intune
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDeviceConfiguration() {
         return this.deviceConfiguration;
     }
@@ -97,7 +97,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * Gets the endpointProtection property value. Whether Endpoint Protection is managed by Intune
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEndpointProtection() {
         return this.endpointProtection;
     }
@@ -105,7 +105,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("compliancePolicy", (n) -> { this.setCompliancePolicy(n.getBooleanValue()); });
@@ -123,7 +123,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * Gets the inventory property value. Whether inventory is managed by Intune
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getInventory() {
         return this.inventory;
     }
@@ -131,7 +131,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * Gets the modernApps property value. Whether modern application is managed by Intune
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getModernApps() {
         return this.modernApps;
     }
@@ -139,7 +139,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -147,7 +147,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * Gets the officeApps property value. Whether Office application is managed by Intune
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getOfficeApps() {
         return this.officeApps;
     }
@@ -155,7 +155,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * Gets the resourceAccess property value. Whether resource access is managed by Intune
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getResourceAccess() {
         return this.resourceAccess;
     }
@@ -163,7 +163,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * Gets the windowsUpdateForBusiness property value. Whether Windows Update for Business is managed by Intune
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getWindowsUpdateForBusiness() {
         return this.windowsUpdateForBusiness;
     }
@@ -172,8 +172,8 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("compliancePolicy", this.getCompliancePolicy());
         writer.writeBooleanValue("deviceConfiguration", this.getDeviceConfiguration());
@@ -188,11 +188,11 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -200,8 +200,8 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the compliancePolicy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompliancePolicy(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setCompliancePolicy(@jakarta.annotation.Nullable final Boolean value) {
         this.compliancePolicy = value;
     }
     /**
@@ -209,8 +209,8 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the deviceConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceConfiguration(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceConfiguration(@jakarta.annotation.Nullable final Boolean value) {
         this.deviceConfiguration = value;
     }
     /**
@@ -218,8 +218,8 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the endpointProtection property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndpointProtection(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEndpointProtection(@jakarta.annotation.Nullable final Boolean value) {
         this.endpointProtection = value;
     }
     /**
@@ -227,8 +227,8 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the inventory property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInventory(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setInventory(@jakarta.annotation.Nullable final Boolean value) {
         this.inventory = value;
     }
     /**
@@ -236,17 +236,17 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the modernApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModernApps(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setModernApps(@jakarta.annotation.Nullable final Boolean value) {
         this.modernApps = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -254,8 +254,8 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the officeApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOfficeApps(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setOfficeApps(@jakarta.annotation.Nullable final Boolean value) {
         this.officeApps = value;
     }
     /**
@@ -263,8 +263,8 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the resourceAccess property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceAccess(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.resourceAccess = value;
     }
     /**
@@ -272,8 +272,8 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the windowsUpdateForBusiness property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindowsUpdateForBusiness(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setWindowsUpdateForBusiness(@jakarta.annotation.Nullable final Boolean value) {
         this.windowsUpdateForBusiness = value;
     }
 }

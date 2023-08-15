@@ -28,7 +28,7 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
      * Instantiates a new bufferEncryptionResult and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BufferEncryptionResult() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a bufferEncryptionResult
      */
-    @javax.annotation.Nonnull
-    public static BufferEncryptionResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BufferEncryptionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BufferEncryptionResult();
     }
@@ -46,7 +46,7 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
      * Gets the encryptedBuffer property value. The encryptedBuffer property
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getEncryptedBuffer() {
         return this.encryptedBuffer;
     }
@@ -62,7 +62,7 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("encryptedBuffer", (n) -> { this.setEncryptedBuffer(n.getByteArrayValue()); });
@@ -74,7 +74,7 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -82,7 +82,7 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
      * Gets the publishingLicense property value. The publishingLicense property
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getPublishingLicense() {
         return this.publishingLicense;
     }
@@ -91,8 +91,8 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("encryptedBuffer", this.getEncryptedBuffer());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -101,11 +101,11 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -113,17 +113,17 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the encryptedBuffer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEncryptedBuffer(@javax.annotation.Nullable final byte[] value) {
+    @jakarta.annotation.Nonnull
+    public void setEncryptedBuffer(@jakarta.annotation.Nullable final byte[] value) {
         this.encryptedBuffer = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -131,8 +131,8 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the publishingLicense property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublishingLicense(@javax.annotation.Nullable final byte[] value) {
+    @jakarta.annotation.Nonnull
+    public void setPublishingLicense(@jakarta.annotation.Nullable final byte[] value) {
         this.publishingLicense = value;
     }
 }

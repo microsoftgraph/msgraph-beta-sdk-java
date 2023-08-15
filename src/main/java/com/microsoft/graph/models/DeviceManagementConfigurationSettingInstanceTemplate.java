@@ -35,7 +35,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
      * Instantiates a new deviceManagementConfigurationSettingInstanceTemplate and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingInstanceTemplate() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -44,8 +44,8 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationSettingInstanceTemplate
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationSettingInstanceTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationSettingInstanceTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -65,7 +65,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -73,7 +73,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("isRequired", (n) -> { this.setIsRequired(n.getBooleanValue()); });
@@ -86,7 +86,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
      * Gets the isRequired property value. Indicates if a policy must specify this setting.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
         return this.isRequired;
     }
@@ -94,7 +94,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -102,7 +102,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
      * Gets the settingDefinitionId property value. Setting Definition Id
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingDefinitionId() {
         return this.settingDefinitionId;
     }
@@ -110,7 +110,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
      * Gets the settingInstanceTemplateId property value. Setting Instance Template Id
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingInstanceTemplateId() {
         return this.settingInstanceTemplateId;
     }
@@ -119,8 +119,8 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isRequired", this.getIsRequired());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -130,11 +130,11 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -142,17 +142,17 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
      * @param value Value to set for the isRequired property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRequired(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isRequired = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -160,8 +160,8 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
      * @param value Value to set for the settingDefinitionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingDefinitionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSettingDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.settingDefinitionId = value;
     }
     /**
@@ -169,8 +169,8 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
      * @param value Value to set for the settingInstanceTemplateId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingInstanceTemplateId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSettingInstanceTemplateId(@jakarta.annotation.Nullable final String value) {
         this.settingInstanceTemplateId = value;
     }
 }

@@ -10,8 +10,8 @@ import com.microsoft.graph.solutions.virtualevents.events.item.sessions.item.mee
 import com.microsoft.graph.solutions.virtualevents.events.item.sessions.item.recording.RecordingRequestBuilder;
 import com.microsoft.graph.solutions.virtualevents.events.item.sessions.item.recordings.RecordingsRequestBuilder;
 import com.microsoft.graph.solutions.virtualevents.events.item.sessions.item.registration.RegistrationRequestBuilder;
+import com.microsoft.graph.solutions.virtualevents.events.item.sessions.item.registrations.RegistrationsRequestBuilder;
 import com.microsoft.graph.solutions.virtualevents.events.item.sessions.item.transcripts.TranscriptsRequestBuilder;
-import com.microsoft.graph.solutions.virtualevents.events.item.sessions.item.virtualappointment.VirtualAppointmentRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -33,72 +33,72 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the media for the solutionsRoot entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AlternativeRecordingRequestBuilder alternativeRecording() {
         return new AlternativeRecordingRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeeting entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AttendanceReportsRequestBuilder attendanceReports() {
         return new AttendanceReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the media for the solutionsRoot entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AttendeeReportRequestBuilder attendeeReport() {
         return new AttendeeReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the media for the solutionsRoot entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public BroadcastRecordingRequestBuilder broadcastRecording() {
         return new BroadcastRecordingRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the meetingAttendanceReport property of the microsoft.graph.onlineMeeting entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public MeetingAttendanceReportRequestBuilder meetingAttendanceReport() {
         return new MeetingAttendanceReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the media for the solutionsRoot entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RecordingRequestBuilder recording() {
         return new RecordingRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the recordings property of the microsoft.graph.onlineMeeting entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RecordingsRequestBuilder recordings() {
         return new RecordingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the registration property of the microsoft.graph.onlineMeeting entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RegistrationRequestBuilder registration() {
         return new RegistrationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the transcripts property of the microsoft.graph.onlineMeeting entity.
+     * Provides operations to manage the registrations property of the microsoft.graph.virtualEventSession entity.
      */
-    @javax.annotation.Nonnull
-    public TranscriptsRequestBuilder transcripts() {
-        return new TranscriptsRequestBuilder(pathParameters, requestAdapter);
+    @jakarta.annotation.Nonnull
+    public RegistrationsRequestBuilder registrations() {
+        return new RegistrationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the virtualAppointment property of the microsoft.graph.onlineMeeting entity.
+     * Provides operations to manage the transcripts property of the microsoft.graph.onlineMeeting entity.
      */
-    @javax.annotation.Nonnull
-    public VirtualAppointmentRequestBuilder virtualAppointment() {
-        return new VirtualAppointmentRequestBuilder(pathParameters, requestAdapter);
+    @jakarta.annotation.Nonnull
+    public TranscriptsRequestBuilder transcripts() {
+        return new TranscriptsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new VirtualEventSessionItemRequestBuilder and sets the default values.
@@ -106,8 +106,8 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public VirtualEventSessionItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public VirtualEventSessionItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events/{virtualEvent%2Did}/sessions/{virtualEventSession%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -116,15 +116,15 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public VirtualEventSessionItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public VirtualEventSessionItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events/{virtualEvent%2Did}/sessions/{virtualEventSession%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property sessions for solutions
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -143,8 +143,8 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -158,11 +158,10 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties and relationships of a virtualEventSession object.
+     * Sessions of the virtual event.
      * @return a CompletableFuture of virtualEventSession
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualeventsession-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventSession> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -177,13 +176,12 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Read the properties and relationships of a virtualEventSession object.
+     * Sessions of the virtual event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of virtualEventSession
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualeventsession-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<VirtualEventSession> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<VirtualEventSession> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -201,8 +199,8 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a CompletableFuture of virtualEventSession
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<VirtualEventSession> patch(@javax.annotation.Nonnull final VirtualEventSession body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<VirtualEventSession> patch(@jakarta.annotation.Nonnull final VirtualEventSession body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -221,8 +219,8 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of virtualEventSession
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<VirtualEventSession> patch(@javax.annotation.Nonnull final VirtualEventSession body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<VirtualEventSession> patch(@jakarta.annotation.Nonnull final VirtualEventSession body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -240,7 +238,7 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property sessions for solutions
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -249,8 +247,8 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -264,20 +262,20 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a virtualEventSession object.
+     * Sessions of the virtual event.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a virtualEventSession object.
+     * Sessions of the virtual event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -297,8 +295,8 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final VirtualEventSession body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final VirtualEventSession body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -307,8 +305,8 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final VirtualEventSession body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final VirtualEventSession body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -330,20 +328,20 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a virtualEventSession object.
+     * Sessions of the virtual event.
      */
     public class GetQueryParameters {
         /**
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -353,7 +351,7 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

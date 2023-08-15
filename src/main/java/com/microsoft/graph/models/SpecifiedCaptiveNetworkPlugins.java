@@ -27,7 +27,7 @@ public class SpecifiedCaptiveNetworkPlugins implements AdditionalDataHolder, Par
      * Instantiates a new specifiedCaptiveNetworkPlugins and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SpecifiedCaptiveNetworkPlugins() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -36,8 +36,8 @@ public class SpecifiedCaptiveNetworkPlugins implements AdditionalDataHolder, Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a specifiedCaptiveNetworkPlugins
      */
-    @javax.annotation.Nonnull
-    public static SpecifiedCaptiveNetworkPlugins createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SpecifiedCaptiveNetworkPlugins createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SpecifiedCaptiveNetworkPlugins();
     }
@@ -45,7 +45,7 @@ public class SpecifiedCaptiveNetworkPlugins implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -53,7 +53,7 @@ public class SpecifiedCaptiveNetworkPlugins implements AdditionalDataHolder, Par
      * Gets the allowedBundleIdentifiers property value. Address of the IKEv2 server. Must be a FQDN, UserFQDN, network address, or ASN1DN
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedBundleIdentifiers() {
         return this.allowedBundleIdentifiers;
     }
@@ -61,7 +61,7 @@ public class SpecifiedCaptiveNetworkPlugins implements AdditionalDataHolder, Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("allowedBundleIdentifiers", (n) -> { this.setAllowedBundleIdentifiers(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -72,7 +72,7 @@ public class SpecifiedCaptiveNetworkPlugins implements AdditionalDataHolder, Par
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -81,8 +81,8 @@ public class SpecifiedCaptiveNetworkPlugins implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("allowedBundleIdentifiers", this.getAllowedBundleIdentifiers());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -90,11 +90,11 @@ public class SpecifiedCaptiveNetworkPlugins implements AdditionalDataHolder, Par
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -102,17 +102,17 @@ public class SpecifiedCaptiveNetworkPlugins implements AdditionalDataHolder, Par
      * @param value Value to set for the allowedBundleIdentifiers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowedBundleIdentifiers(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowedBundleIdentifiers(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.allowedBundleIdentifiers = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

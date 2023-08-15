@@ -22,7 +22,7 @@ public class AndroidForWorkTrustedRootCertificate extends DeviceConfiguration im
      * Instantiates a new androidForWorkTrustedRootCertificate and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidForWorkTrustedRootCertificate() {
         super();
         this.setOdataType("#microsoft.graph.androidForWorkTrustedRootCertificate");
@@ -32,8 +32,8 @@ public class AndroidForWorkTrustedRootCertificate extends DeviceConfiguration im
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidForWorkTrustedRootCertificate
      */
-    @javax.annotation.Nonnull
-    public static AndroidForWorkTrustedRootCertificate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidForWorkTrustedRootCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidForWorkTrustedRootCertificate();
     }
@@ -41,7 +41,7 @@ public class AndroidForWorkTrustedRootCertificate extends DeviceConfiguration im
      * Gets the certFileName property value. File name to display in UI.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCertFileName() {
         return this.certFileName;
     }
@@ -49,7 +49,7 @@ public class AndroidForWorkTrustedRootCertificate extends DeviceConfiguration im
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("certFileName", (n) -> { this.setCertFileName(n.getStringValue()); });
@@ -60,7 +60,7 @@ public class AndroidForWorkTrustedRootCertificate extends DeviceConfiguration im
      * Gets the trustedRootCertificate property value. Trusted Root Certificate
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getTrustedRootCertificate() {
         return this.trustedRootCertificate;
     }
@@ -69,8 +69,8 @@ public class AndroidForWorkTrustedRootCertificate extends DeviceConfiguration im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("certFileName", this.getCertFileName());
@@ -81,8 +81,8 @@ public class AndroidForWorkTrustedRootCertificate extends DeviceConfiguration im
      * @param value Value to set for the certFileName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertFileName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCertFileName(@jakarta.annotation.Nullable final String value) {
         this.certFileName = value;
     }
     /**
@@ -90,8 +90,8 @@ public class AndroidForWorkTrustedRootCertificate extends DeviceConfiguration im
      * @param value Value to set for the trustedRootCertificate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrustedRootCertificate(@javax.annotation.Nullable final byte[] value) {
+    @jakarta.annotation.Nonnull
+    public void setTrustedRootCertificate(@jakarta.annotation.Nullable final byte[] value) {
         this.trustedRootCertificate = value;
     }
 }

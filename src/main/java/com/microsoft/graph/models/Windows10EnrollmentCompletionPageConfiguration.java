@@ -62,7 +62,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * Instantiates a new windows10EnrollmentCompletionPageConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Windows10EnrollmentCompletionPageConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10EnrollmentCompletionPageConfiguration");
@@ -72,8 +72,8 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windows10EnrollmentCompletionPageConfiguration
      */
-    @javax.annotation.Nonnull
-    public static Windows10EnrollmentCompletionPageConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Windows10EnrollmentCompletionPageConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Windows10EnrollmentCompletionPageConfiguration();
     }
@@ -81,7 +81,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * Gets the allowDeviceResetOnInstallFailure property value. Allow or block device reset on installation failure
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowDeviceResetOnInstallFailure() {
         return this.allowDeviceResetOnInstallFailure;
     }
@@ -89,7 +89,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * Gets the allowDeviceUseOnInstallFailure property value. Allow the user to continue using the device on installation failure
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowDeviceUseOnInstallFailure() {
         return this.allowDeviceUseOnInstallFailure;
     }
@@ -97,7 +97,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * Gets the allowLogCollectionOnInstallFailure property value. Allow or block log collection on installation failure
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowLogCollectionOnInstallFailure() {
         return this.allowLogCollectionOnInstallFailure;
     }
@@ -105,7 +105,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * Gets the allowNonBlockingAppInstallation property value. Install all required apps as non blocking apps during white glove
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowNonBlockingAppInstallation() {
         return this.allowNonBlockingAppInstallation;
     }
@@ -113,7 +113,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * Gets the blockDeviceSetupRetryByUser property value. Allow the user to retry the setup on installation failure
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBlockDeviceSetupRetryByUser() {
         return this.blockDeviceSetupRetryByUser;
     }
@@ -121,7 +121,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * Gets the customErrorMessage property value. Set custom error message to show upon installation failure
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomErrorMessage() {
         return this.customErrorMessage;
     }
@@ -129,7 +129,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * Gets the disableUserStatusTrackingAfterFirstUser property value. Only show installation progress for first user post enrollment
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDisableUserStatusTrackingAfterFirstUser() {
         return this.disableUserStatusTrackingAfterFirstUser;
     }
@@ -137,7 +137,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowDeviceResetOnInstallFailure", (n) -> { this.setAllowDeviceResetOnInstallFailure(n.getBooleanValue()); });
@@ -158,7 +158,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * Gets the installProgressTimeoutInMinutes property value. Set installation progress timeout in minutes
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getInstallProgressTimeoutInMinutes() {
         return this.installProgressTimeoutInMinutes;
     }
@@ -166,7 +166,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * Gets the installQualityUpdates property value. Allows quality updates installation during OOBE
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getInstallQualityUpdates() {
         return this.installQualityUpdates;
     }
@@ -174,7 +174,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * Gets the selectedMobileAppIds property value. Selected applications to track the installation status
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSelectedMobileAppIds() {
         return this.selectedMobileAppIds;
     }
@@ -182,7 +182,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * Gets the showInstallationProgress property value. Show or hide installation progress to user
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowInstallationProgress() {
         return this.showInstallationProgress;
     }
@@ -190,7 +190,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * Gets the trackInstallProgressForAutopilotOnly property value. Only show installation progress for Autopilot enrollment scenarios
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getTrackInstallProgressForAutopilotOnly() {
         return this.trackInstallProgressForAutopilotOnly;
     }
@@ -199,8 +199,8 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("allowDeviceResetOnInstallFailure", this.getAllowDeviceResetOnInstallFailure());
@@ -221,8 +221,8 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the allowDeviceResetOnInstallFailure property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowDeviceResetOnInstallFailure(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowDeviceResetOnInstallFailure(@jakarta.annotation.Nullable final Boolean value) {
         this.allowDeviceResetOnInstallFailure = value;
     }
     /**
@@ -230,8 +230,8 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the allowDeviceUseOnInstallFailure property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowDeviceUseOnInstallFailure(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowDeviceUseOnInstallFailure(@jakarta.annotation.Nullable final Boolean value) {
         this.allowDeviceUseOnInstallFailure = value;
     }
     /**
@@ -239,8 +239,8 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the allowLogCollectionOnInstallFailure property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowLogCollectionOnInstallFailure(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowLogCollectionOnInstallFailure(@jakarta.annotation.Nullable final Boolean value) {
         this.allowLogCollectionOnInstallFailure = value;
     }
     /**
@@ -248,8 +248,8 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the allowNonBlockingAppInstallation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowNonBlockingAppInstallation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowNonBlockingAppInstallation(@jakarta.annotation.Nullable final Boolean value) {
         this.allowNonBlockingAppInstallation = value;
     }
     /**
@@ -257,8 +257,8 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the blockDeviceSetupRetryByUser property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBlockDeviceSetupRetryByUser(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setBlockDeviceSetupRetryByUser(@jakarta.annotation.Nullable final Boolean value) {
         this.blockDeviceSetupRetryByUser = value;
     }
     /**
@@ -266,8 +266,8 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the customErrorMessage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomErrorMessage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomErrorMessage(@jakarta.annotation.Nullable final String value) {
         this.customErrorMessage = value;
     }
     /**
@@ -275,8 +275,8 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the disableUserStatusTrackingAfterFirstUser property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisableUserStatusTrackingAfterFirstUser(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDisableUserStatusTrackingAfterFirstUser(@jakarta.annotation.Nullable final Boolean value) {
         this.disableUserStatusTrackingAfterFirstUser = value;
     }
     /**
@@ -284,8 +284,8 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the installProgressTimeoutInMinutes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstallProgressTimeoutInMinutes(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setInstallProgressTimeoutInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.installProgressTimeoutInMinutes = value;
     }
     /**
@@ -293,8 +293,8 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the installQualityUpdates property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstallQualityUpdates(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setInstallQualityUpdates(@jakarta.annotation.Nullable final Boolean value) {
         this.installQualityUpdates = value;
     }
     /**
@@ -302,8 +302,8 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the selectedMobileAppIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSelectedMobileAppIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSelectedMobileAppIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.selectedMobileAppIds = value;
     }
     /**
@@ -311,8 +311,8 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the showInstallationProgress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowInstallationProgress(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setShowInstallationProgress(@jakarta.annotation.Nullable final Boolean value) {
         this.showInstallationProgress = value;
     }
     /**
@@ -320,8 +320,8 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the trackInstallProgressForAutopilotOnly property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrackInstallProgressForAutopilotOnly(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setTrackInstallProgressForAutopilotOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.trackInstallProgressForAutopilotOnly = value;
     }
 }

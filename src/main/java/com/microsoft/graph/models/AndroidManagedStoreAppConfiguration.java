@@ -38,7 +38,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * Instantiates a new androidManagedStoreAppConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidManagedStoreAppConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidManagedStoreAppConfiguration");
@@ -48,8 +48,8 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidManagedStoreAppConfiguration
      */
-    @javax.annotation.Nonnull
-    public static AndroidManagedStoreAppConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidManagedStoreAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidManagedStoreAppConfiguration();
     }
@@ -57,7 +57,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * Gets the appSupportsOemConfig property value. Whether or not this AppConfig is an OEMConfig policy.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAppSupportsOemConfig() {
         return this.appSupportsOemConfig;
     }
@@ -65,7 +65,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * Gets the connectedAppsEnabled property value. Setting to specify whether to allow ConnectedApps experience for this app.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getConnectedAppsEnabled() {
         return this.connectedAppsEnabled;
     }
@@ -73,7 +73,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appSupportsOemConfig", (n) -> { this.setAppSupportsOemConfig(n.getBooleanValue()); });
@@ -88,7 +88,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * Gets the packageId property value. Android Enterprise app configuration package id.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPackageId() {
         return this.packageId;
     }
@@ -96,7 +96,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * Gets the payloadJson property value. Android Enterprise app configuration JSON payload.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPayloadJson() {
         return this.payloadJson;
     }
@@ -104,7 +104,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * Gets the permissionActions property value. List of Android app permissions and corresponding permission actions.
      * @return a androidPermissionAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AndroidPermissionAction> getPermissionActions() {
         return this.permissionActions;
     }
@@ -112,7 +112,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * Gets the profileApplicability property value. Android profile applicability
      * @return a androidProfileApplicability
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidProfileApplicability getProfileApplicability() {
         return this.profileApplicability;
     }
@@ -121,8 +121,8 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("appSupportsOemConfig", this.getAppSupportsOemConfig());
@@ -137,8 +137,8 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * @param value Value to set for the appSupportsOemConfig property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppSupportsOemConfig(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAppSupportsOemConfig(@jakarta.annotation.Nullable final Boolean value) {
         this.appSupportsOemConfig = value;
     }
     /**
@@ -146,8 +146,8 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * @param value Value to set for the connectedAppsEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectedAppsEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectedAppsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.connectedAppsEnabled = value;
     }
     /**
@@ -155,8 +155,8 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * @param value Value to set for the packageId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPackageId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPackageId(@jakarta.annotation.Nullable final String value) {
         this.packageId = value;
     }
     /**
@@ -164,8 +164,8 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * @param value Value to set for the payloadJson property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPayloadJson(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPayloadJson(@jakarta.annotation.Nullable final String value) {
         this.payloadJson = value;
     }
     /**
@@ -173,8 +173,8 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * @param value Value to set for the permissionActions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPermissionActions(@javax.annotation.Nullable final java.util.List<AndroidPermissionAction> value) {
+    @jakarta.annotation.Nonnull
+    public void setPermissionActions(@jakarta.annotation.Nullable final java.util.List<AndroidPermissionAction> value) {
         this.permissionActions = value;
     }
     /**
@@ -182,8 +182,8 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * @param value Value to set for the profileApplicability property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProfileApplicability(@javax.annotation.Nullable final AndroidProfileApplicability value) {
+    @jakarta.annotation.Nonnull
+    public void setProfileApplicability(@jakarta.annotation.Nullable final AndroidProfileApplicability value) {
         this.profileApplicability = value;
     }
 }

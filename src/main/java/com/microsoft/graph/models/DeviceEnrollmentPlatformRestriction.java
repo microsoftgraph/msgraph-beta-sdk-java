@@ -47,7 +47,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * Instantiates a new deviceEnrollmentPlatformRestriction and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -56,8 +56,8 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceEnrollmentPlatformRestriction
      */
-    @javax.annotation.Nonnull
-    public static DeviceEnrollmentPlatformRestriction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceEnrollmentPlatformRestriction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceEnrollmentPlatformRestriction();
     }
@@ -65,7 +65,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -73,7 +73,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * Gets the blockedManufacturers property value. Collection of blocked Manufacturers.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getBlockedManufacturers() {
         return this.blockedManufacturers;
     }
@@ -81,7 +81,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * Gets the blockedSkus property value. Collection of blocked Skus.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getBlockedSkus() {
         return this.blockedSkus;
     }
@@ -89,7 +89,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("blockedManufacturers", (n) -> { this.setBlockedManufacturers(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -105,7 +105,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -113,7 +113,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * Gets the osMaximumVersion property value. Max OS version supported
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
         return this.osMaximumVersion;
     }
@@ -121,7 +121,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * Gets the osMinimumVersion property value. Min OS version supported
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
         return this.osMinimumVersion;
     }
@@ -129,7 +129,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * Gets the personalDeviceEnrollmentBlocked property value. Block personally owned devices from enrolling
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPersonalDeviceEnrollmentBlocked() {
         return this.personalDeviceEnrollmentBlocked;
     }
@@ -137,7 +137,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * Gets the platformBlocked property value. Block the platform from enrolling
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPlatformBlocked() {
         return this.platformBlocked;
     }
@@ -146,8 +146,8 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("blockedManufacturers", this.getBlockedManufacturers());
         writer.writeCollectionOfPrimitiveValues("blockedSkus", this.getBlockedSkus());
@@ -160,11 +160,11 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -172,8 +172,8 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the blockedManufacturers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBlockedManufacturers(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setBlockedManufacturers(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.blockedManufacturers = value;
     }
     /**
@@ -181,17 +181,17 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the blockedSkus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBlockedSkus(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setBlockedSkus(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.blockedSkus = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -199,8 +199,8 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the osMaximumVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsMaximumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMaximumVersion = value;
     }
     /**
@@ -208,8 +208,8 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the osMinimumVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsMinimumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMinimumVersion = value;
     }
     /**
@@ -217,8 +217,8 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the personalDeviceEnrollmentBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPersonalDeviceEnrollmentBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPersonalDeviceEnrollmentBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.personalDeviceEnrollmentBlocked = value;
     }
     /**
@@ -226,8 +226,8 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the platformBlocked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatformBlocked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPlatformBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.platformBlocked = value;
     }
 }

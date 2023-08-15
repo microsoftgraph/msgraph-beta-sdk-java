@@ -39,7 +39,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
      * Instantiates a new userExperienceAnalyticsDeviceScopeSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsDeviceScopeSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -48,8 +48,8 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsDeviceScopeSummary
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsDeviceScopeSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsDeviceScopeSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsDeviceScopeSummary();
     }
@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -65,7 +65,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
      * Gets the completedDeviceScopeIds property value. A collection of the user experience analytics device scope Unique Identifiers that are enabled and finished recalculating the report metric.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getCompletedDeviceScopeIds() {
         return this.completedDeviceScopeIds;
     }
@@ -73,7 +73,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("completedDeviceScopeIds", (n) -> { this.setCompletedDeviceScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -87,7 +87,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
      * Gets the insufficientDataDeviceScopeIds property value. A collection of user experience analytics device scope Unique Identitfiers that are enabled but there is insufficient data to calculate results.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getInsufficientDataDeviceScopeIds() {
         return this.insufficientDataDeviceScopeIds;
     }
@@ -95,7 +95,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -103,7 +103,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
      * Gets the totalDeviceScopes property value. The total number of user experience analytics device scopes. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalDeviceScopes() {
         return this.totalDeviceScopes;
     }
@@ -111,7 +111,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
      * Gets the totalDeviceScopesEnabled property value. The total number of user experience analytics device scopes that are enabled. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalDeviceScopesEnabled() {
         return this.totalDeviceScopesEnabled;
     }
@@ -120,8 +120,8 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("completedDeviceScopeIds", this.getCompletedDeviceScopeIds());
         writer.writeCollectionOfPrimitiveValues("insufficientDataDeviceScopeIds", this.getInsufficientDataDeviceScopeIds());
@@ -132,11 +132,11 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -144,8 +144,8 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
      * @param value Value to set for the completedDeviceScopeIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedDeviceScopeIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletedDeviceScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.completedDeviceScopeIds = value;
     }
     /**
@@ -153,17 +153,17 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
      * @param value Value to set for the insufficientDataDeviceScopeIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInsufficientDataDeviceScopeIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setInsufficientDataDeviceScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.insufficientDataDeviceScopeIds = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -171,8 +171,8 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
      * @param value Value to set for the totalDeviceScopes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalDeviceScopes(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalDeviceScopes(@jakarta.annotation.Nullable final Integer value) {
         this.totalDeviceScopes = value;
     }
     /**
@@ -180,8 +180,8 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
      * @param value Value to set for the totalDeviceScopesEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalDeviceScopesEnabled(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalDeviceScopesEnabled(@jakarta.annotation.Nullable final Integer value) {
         this.totalDeviceScopesEnabled = value;
     }
 }

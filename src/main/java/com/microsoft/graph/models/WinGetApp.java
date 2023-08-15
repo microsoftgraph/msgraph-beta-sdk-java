@@ -26,7 +26,7 @@ public class WinGetApp extends MobileApp implements Parsable {
      * Instantiates a new winGetApp and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WinGetApp() {
         super();
         this.setOdataType("#microsoft.graph.winGetApp");
@@ -36,8 +36,8 @@ public class WinGetApp extends MobileApp implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a winGetApp
      */
-    @javax.annotation.Nonnull
-    public static WinGetApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WinGetApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WinGetApp();
     }
@@ -45,7 +45,7 @@ public class WinGetApp extends MobileApp implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("installExperience", (n) -> { this.setInstallExperience(n.getObjectValue(WinGetAppInstallExperience::createFromDiscriminatorValue)); });
@@ -57,7 +57,7 @@ public class WinGetApp extends MobileApp implements Parsable {
      * Gets the installExperience property value. The install experience settings associated with this application, which are used to ensure the desired install experiences on the target device are taken into account. This includes the account type (System or User) that actions should be run as on target devices. Required at creation time.
      * @return a winGetAppInstallExperience
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WinGetAppInstallExperience getInstallExperience() {
         return this.installExperience;
     }
@@ -65,7 +65,7 @@ public class WinGetApp extends MobileApp implements Parsable {
      * Gets the manifestHash property value. Hash of package metadata properties used to validate that the application matches the metadata in the source repository.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManifestHash() {
         return this.manifestHash;
     }
@@ -73,7 +73,7 @@ public class WinGetApp extends MobileApp implements Parsable {
      * Gets the packageIdentifier property value. The PackageIdentifier from the WinGet source repository REST API. This also maps to the Id when using the WinGet client command line application. Required at creation time, cannot be modified on existing objects.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPackageIdentifier() {
         return this.packageIdentifier;
     }
@@ -82,8 +82,8 @@ public class WinGetApp extends MobileApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("installExperience", this.getInstallExperience());
@@ -95,8 +95,8 @@ public class WinGetApp extends MobileApp implements Parsable {
      * @param value Value to set for the installExperience property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstallExperience(@javax.annotation.Nullable final WinGetAppInstallExperience value) {
+    @jakarta.annotation.Nonnull
+    public void setInstallExperience(@jakarta.annotation.Nullable final WinGetAppInstallExperience value) {
         this.installExperience = value;
     }
     /**
@@ -104,8 +104,8 @@ public class WinGetApp extends MobileApp implements Parsable {
      * @param value Value to set for the manifestHash property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManifestHash(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManifestHash(@jakarta.annotation.Nullable final String value) {
         this.manifestHash = value;
     }
     /**
@@ -113,8 +113,8 @@ public class WinGetApp extends MobileApp implements Parsable {
      * @param value Value to set for the packageIdentifier property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPackageIdentifier(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPackageIdentifier(@jakarta.annotation.Nullable final String value) {
         this.packageIdentifier = value;
     }
 }

@@ -22,7 +22,7 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
      * Instantiates a new deviceManagementConfigurationSetting and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSetting() {
         super();
     }
@@ -31,8 +31,8 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationSetting
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationSetting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationSetting();
     }
@@ -40,7 +40,7 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("settingDefinitions", (n) -> { this.setSettingDefinitions(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDefinition::createFromDiscriminatorValue)); });
@@ -51,7 +51,7 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
      * Gets the settingDefinitions property value. List of related Setting Definitions. This property is read-only.
      * @return a deviceManagementConfigurationSettingDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingDefinition> getSettingDefinitions() {
         return this.settingDefinitions;
     }
@@ -59,7 +59,7 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
      * Gets the settingInstance property value. Setting instance within policy
      * @return a deviceManagementConfigurationSettingInstance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingInstance getSettingInstance() {
         return this.settingInstance;
     }
@@ -68,8 +68,8 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("settingDefinitions", this.getSettingDefinitions());
@@ -80,8 +80,8 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
      * @param value Value to set for the settingDefinitions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingDefinitions(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDefinition> value) {
+    @jakarta.annotation.Nonnull
+    public void setSettingDefinitions(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDefinition> value) {
         this.settingDefinitions = value;
     }
     /**
@@ -89,8 +89,8 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
      * @param value Value to set for the settingInstance property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingInstance(@javax.annotation.Nullable final DeviceManagementConfigurationSettingInstance value) {
+    @jakarta.annotation.Nonnull
+    public void setSettingInstance(@jakarta.annotation.Nullable final DeviceManagementConfigurationSettingInstance value) {
         this.settingInstance = value;
     }
 }

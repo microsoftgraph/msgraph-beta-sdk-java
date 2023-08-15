@@ -52,7 +52,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * Instantiates a new parentLabelDetails and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ParentLabelDetails() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -61,8 +61,8 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a parentLabelDetails
      */
-    @javax.annotation.Nonnull
-    public static ParentLabelDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ParentLabelDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -77,7 +77,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -85,7 +85,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * Gets the color property value. The color that the user interface should display for the label, if configured.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getColor() {
         return this.color;
     }
@@ -93,7 +93,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * Gets the description property value. The admin-defined description for the label.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -101,7 +101,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("color", (n) -> { this.setColor(n.getStringValue()); });
@@ -119,7 +119,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * Gets the id property value. The label ID is a globally unique identifier (GUID).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -127,7 +127,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * Gets the isActive property value. Indicates whether the label is active or not. Active labels should be hidden or disabled in user interfaces.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsActive() {
         return this.isActive;
     }
@@ -135,7 +135,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * Gets the name property value. The plaintext name of the label.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -143,7 +143,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -151,7 +151,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * Gets the parent property value. The parent property
      * @return a parentLabelDetails
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ParentLabelDetails getParent() {
         return this.parent;
     }
@@ -159,7 +159,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * Gets the sensitivity property value. The sensitivity value of the label, where lower is less sensitive.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSensitivity() {
         return this.sensitivity;
     }
@@ -167,7 +167,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * Gets the tooltip property value. The tooltip that should be displayed for the label in a user interface.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTooltip() {
         return this.tooltip;
     }
@@ -176,8 +176,8 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("color", this.getColor());
         writer.writeStringValue("description", this.getDescription());
@@ -192,11 +192,11 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -204,8 +204,8 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the color property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setColor(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setColor(@jakarta.annotation.Nullable final String value) {
         this.color = value;
     }
     /**
@@ -213,8 +213,8 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -222,8 +222,8 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
@@ -231,8 +231,8 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isActive property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsActive(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
         this.isActive = value;
     }
     /**
@@ -240,17 +240,17 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -258,8 +258,8 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the parent property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParent(@javax.annotation.Nullable final ParentLabelDetails value) {
+    @jakarta.annotation.Nonnull
+    public void setParent(@jakarta.annotation.Nullable final ParentLabelDetails value) {
         this.parent = value;
     }
     /**
@@ -267,8 +267,8 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sensitivity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSensitivity(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSensitivity(@jakarta.annotation.Nullable final Integer value) {
         this.sensitivity = value;
     }
     /**
@@ -276,8 +276,8 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tooltip property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTooltip(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTooltip(@jakarta.annotation.Nullable final String value) {
         this.tooltip = value;
     }
 }

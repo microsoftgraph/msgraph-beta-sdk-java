@@ -34,7 +34,7 @@ public class ResourceOperation extends Entity implements Parsable {
      * Instantiates a new resourceOperation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResourceOperation() {
         super();
     }
@@ -43,8 +43,8 @@ public class ResourceOperation extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a resourceOperation
      */
-    @javax.annotation.Nonnull
-    public static ResourceOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ResourceOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ResourceOperation();
     }
@@ -52,7 +52,7 @@ public class ResourceOperation extends Entity implements Parsable {
      * Gets the actionName property value. Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActionName() {
         return this.actionName;
     }
@@ -60,7 +60,7 @@ public class ResourceOperation extends Entity implements Parsable {
      * Gets the description property value. Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -68,7 +68,7 @@ public class ResourceOperation extends Entity implements Parsable {
      * Gets the enabledForScopeValidation property value. Determines whether the Permission is validated for Scopes defined per Role Assignment. This property is read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnabledForScopeValidation() {
         return this.enabledForScopeValidation;
     }
@@ -76,7 +76,7 @@ public class ResourceOperation extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("actionName", (n) -> { this.setActionName(n.getStringValue()); });
@@ -90,7 +90,7 @@ public class ResourceOperation extends Entity implements Parsable {
      * Gets the resource property value. Resource category to which this Operation belongs. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResource() {
         return this.resource;
     }
@@ -98,7 +98,7 @@ public class ResourceOperation extends Entity implements Parsable {
      * Gets the resourceName property value. Name of the Resource this operation is performed on.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceName() {
         return this.resourceName;
     }
@@ -107,8 +107,8 @@ public class ResourceOperation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("actionName", this.getActionName());
@@ -120,8 +120,8 @@ public class ResourceOperation extends Entity implements Parsable {
      * @param value Value to set for the actionName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActionName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setActionName(@jakarta.annotation.Nullable final String value) {
         this.actionName = value;
     }
     /**
@@ -129,8 +129,8 @@ public class ResourceOperation extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -138,8 +138,8 @@ public class ResourceOperation extends Entity implements Parsable {
      * @param value Value to set for the enabledForScopeValidation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnabledForScopeValidation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnabledForScopeValidation(@jakarta.annotation.Nullable final Boolean value) {
         this.enabledForScopeValidation = value;
     }
     /**
@@ -147,8 +147,8 @@ public class ResourceOperation extends Entity implements Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResource(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResource(@jakarta.annotation.Nullable final String value) {
         this.resource = value;
     }
     /**
@@ -156,8 +156,8 @@ public class ResourceOperation extends Entity implements Parsable {
      * @param value Value to set for the resourceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceName(@jakarta.annotation.Nullable final String value) {
         this.resourceName = value;
     }
 }

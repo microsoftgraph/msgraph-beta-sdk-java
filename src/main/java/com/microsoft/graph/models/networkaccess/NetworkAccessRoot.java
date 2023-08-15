@@ -40,7 +40,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * Instantiates a new networkAccessRoot and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public NetworkAccessRoot() {
         super();
     }
@@ -49,8 +49,8 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a networkAccessRoot
      */
-    @javax.annotation.Nonnull
-    public static NetworkAccessRoot createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static NetworkAccessRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new NetworkAccessRoot();
     }
@@ -58,7 +58,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * Gets the connectivity property value. Connectivity represents all the connectivity components in Global Secure Access.
      * @return a connectivity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Connectivity getConnectivity() {
         return this.connectivity;
     }
@@ -66,7 +66,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("connectivity", (n) -> { this.setConnectivity(n.getObjectValue(Connectivity::createFromDiscriminatorValue)); });
@@ -82,7 +82,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * Gets the forwardingPolicies property value. A forwarding policy defines the specific traffic that is routed through the Gloval Secure Access Service. It is then added to a forwarding profile.
      * @return a forwardingPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ForwardingPolicy> getForwardingPolicies() {
         return this.forwardingPolicies;
     }
@@ -90,7 +90,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * Gets the forwardingProfiles property value. A forwarding profile determines which types of traffic are routed through the Global Secure Access services and which ones are skipped. The handling of specific traffic is determined by the forwarding policies that are added to the forwarding profile.
      * @return a forwardingProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ForwardingProfile> getForwardingProfiles() {
         return this.forwardingProfiles;
     }
@@ -98,7 +98,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * Gets the logs property value. Represnts network connections that are routed through Global Secure Access.
      * @return a logs
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Logs getLogs() {
         return this.logs;
     }
@@ -106,7 +106,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * Gets the reports property value. Represents the status of the Global Secure Access services for the tenant.
      * @return a reports
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Reports getReports() {
         return this.reports;
     }
@@ -114,7 +114,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * Gets the settings property value. Global Secure Access settings.
      * @return a settings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Settings getSettings() {
         return this.settings;
     }
@@ -122,7 +122,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * Gets the tenantStatus property value. Represents the status of the Global Secure Access services for the tenant.
      * @return a tenantStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TenantStatus getTenantStatus() {
         return this.tenantStatus;
     }
@@ -131,8 +131,8 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("connectivity", this.getConnectivity());
@@ -148,8 +148,8 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * @param value Value to set for the connectivity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectivity(@javax.annotation.Nullable final Connectivity value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectivity(@jakarta.annotation.Nullable final Connectivity value) {
         this.connectivity = value;
     }
     /**
@@ -157,8 +157,8 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * @param value Value to set for the forwardingPolicies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setForwardingPolicies(@javax.annotation.Nullable final java.util.List<ForwardingPolicy> value) {
+    @jakarta.annotation.Nonnull
+    public void setForwardingPolicies(@jakarta.annotation.Nullable final java.util.List<ForwardingPolicy> value) {
         this.forwardingPolicies = value;
     }
     /**
@@ -166,8 +166,8 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * @param value Value to set for the forwardingProfiles property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setForwardingProfiles(@javax.annotation.Nullable final java.util.List<ForwardingProfile> value) {
+    @jakarta.annotation.Nonnull
+    public void setForwardingProfiles(@jakarta.annotation.Nullable final java.util.List<ForwardingProfile> value) {
         this.forwardingProfiles = value;
     }
     /**
@@ -175,8 +175,8 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * @param value Value to set for the logs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLogs(@javax.annotation.Nullable final Logs value) {
+    @jakarta.annotation.Nonnull
+    public void setLogs(@jakarta.annotation.Nullable final Logs value) {
         this.logs = value;
     }
     /**
@@ -184,8 +184,8 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * @param value Value to set for the reports property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReports(@javax.annotation.Nullable final Reports value) {
+    @jakarta.annotation.Nonnull
+    public void setReports(@jakarta.annotation.Nullable final Reports value) {
         this.reports = value;
     }
     /**
@@ -193,8 +193,8 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettings(@javax.annotation.Nullable final Settings value) {
+    @jakarta.annotation.Nonnull
+    public void setSettings(@jakarta.annotation.Nullable final Settings value) {
         this.settings = value;
     }
     /**
@@ -202,8 +202,8 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * @param value Value to set for the tenantStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantStatus(@javax.annotation.Nullable final TenantStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantStatus(@jakarta.annotation.Nullable final TenantStatus value) {
         this.tenantStatus = value;
     }
 }

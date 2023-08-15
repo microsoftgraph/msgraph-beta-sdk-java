@@ -29,7 +29,7 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new clockInPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ClockInPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -38,8 +38,8 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a clockInPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static ClockInPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ClockInPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ClockInPostRequestBody();
     }
@@ -47,7 +47,7 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -55,7 +55,7 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the atApprovedLocation property value. The atApprovedLocation property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAtApprovedLocation() {
         return this.atApprovedLocation;
     }
@@ -63,7 +63,7 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("atApprovedLocation", (n) -> { this.setAtApprovedLocation(n.getBooleanValue()); });
@@ -75,7 +75,7 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the notes property value. The notes property
      * @return a itemBody
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemBody getNotes() {
         return this.notes;
     }
@@ -83,7 +83,7 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the onBehalfOfUserId property value. The onBehalfOfUserId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOnBehalfOfUserId() {
         return this.onBehalfOfUserId;
     }
@@ -92,8 +92,8 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("atApprovedLocation", this.getAtApprovedLocation());
         writer.writeObjectValue("notes", this.getNotes());
@@ -102,11 +102,11 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -114,8 +114,8 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the atApprovedLocation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAtApprovedLocation(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAtApprovedLocation(@jakarta.annotation.Nullable final Boolean value) {
         this.atApprovedLocation = value;
     }
     /**
@@ -123,8 +123,8 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotes(@javax.annotation.Nullable final ItemBody value) {
+    @jakarta.annotation.Nonnull
+    public void setNotes(@jakarta.annotation.Nullable final ItemBody value) {
         this.notes = value;
     }
     /**
@@ -132,8 +132,8 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the onBehalfOfUserId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnBehalfOfUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOnBehalfOfUserId(@jakarta.annotation.Nullable final String value) {
         this.onBehalfOfUserId = value;
     }
 }

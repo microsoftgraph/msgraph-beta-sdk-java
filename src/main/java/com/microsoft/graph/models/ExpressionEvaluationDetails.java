@@ -36,7 +36,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * Instantiates a new expressionEvaluationDetails and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExpressionEvaluationDetails() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a expressionEvaluationDetails
      */
-    @javax.annotation.Nonnull
-    public static ExpressionEvaluationDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ExpressionEvaluationDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ExpressionEvaluationDetails();
     }
@@ -54,7 +54,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * Gets the expression property value. Represents expression which has been evaluated.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExpression() {
         return this.expression;
     }
@@ -70,7 +70,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * Gets the expressionEvaluationDetails property value. Represents the details of the evaluation of the expression.
      * @return a expressionEvaluationDetails
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ExpressionEvaluationDetails> getExpressionEvaluationDetails() {
         return this.expressionEvaluationDetails;
     }
@@ -78,7 +78,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * Gets the expressionResult property value. Represents the value of the result of the current expression.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getExpressionResult() {
         return this.expressionResult;
     }
@@ -86,7 +86,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("expression", (n) -> { this.setExpression(n.getStringValue()); });
@@ -100,7 +100,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -108,7 +108,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * Gets the propertyToEvaluate property value. Defines the name of the property and the value of that property.
      * @return a propertyToEvaluate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PropertyToEvaluate getPropertyToEvaluate() {
         return this.propertyToEvaluate;
     }
@@ -117,8 +117,8 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("expression", this.getExpression());
         writer.writeCollectionOfObjectValues("expressionEvaluationDetails", this.getExpressionEvaluationDetails());
@@ -129,11 +129,11 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * @param value Value to set for the expression property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpression(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExpression(@jakarta.annotation.Nullable final String value) {
         this.expression = value;
     }
     /**
@@ -150,8 +150,8 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * @param value Value to set for the expressionEvaluationDetails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpressionEvaluationDetails(@javax.annotation.Nullable final java.util.List<ExpressionEvaluationDetails> value) {
+    @jakarta.annotation.Nonnull
+    public void setExpressionEvaluationDetails(@jakarta.annotation.Nullable final java.util.List<ExpressionEvaluationDetails> value) {
         this.expressionEvaluationDetails = value;
     }
     /**
@@ -159,17 +159,17 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * @param value Value to set for the expressionResult property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpressionResult(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setExpressionResult(@jakarta.annotation.Nullable final Boolean value) {
         this.expressionResult = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -177,8 +177,8 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * @param value Value to set for the propertyToEvaluate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPropertyToEvaluate(@javax.annotation.Nullable final PropertyToEvaluate value) {
+    @jakarta.annotation.Nonnull
+    public void setPropertyToEvaluate(@jakarta.annotation.Nullable final PropertyToEvaluate value) {
         this.propertyToEvaluate = value;
     }
 }

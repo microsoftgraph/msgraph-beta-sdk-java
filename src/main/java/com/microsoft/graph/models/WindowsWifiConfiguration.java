@@ -66,7 +66,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Instantiates a new windowsWifiConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsWifiConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsWifiConfiguration");
@@ -76,8 +76,8 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsWifiConfiguration
      */
-    @javax.annotation.Nonnull
-    public static WindowsWifiConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsWifiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -92,7 +92,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Gets the connectAutomatically property value. Specify whether the wifi connection should connect automatically when in range.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getConnectAutomatically() {
         return this.connectAutomatically;
     }
@@ -100,7 +100,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Gets the connectToPreferredNetwork property value. Specify whether the wifi connection should connect to more preferred networks when already connected to this one.  Requires ConnectAutomatically to be true.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getConnectToPreferredNetwork() {
         return this.connectToPreferredNetwork;
     }
@@ -108,7 +108,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Gets the connectWhenNetworkNameIsHidden property value. Specify whether the wifi connection should connect automatically even when the SSID is not broadcasting.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getConnectWhenNetworkNameIsHidden() {
         return this.connectWhenNetworkNameIsHidden;
     }
@@ -116,7 +116,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("connectAutomatically", (n) -> { this.setConnectAutomatically(n.getBooleanValue()); });
@@ -138,7 +138,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Gets the forceFIPSCompliance property value. Specify whether to force FIPS compliance.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getForceFIPSCompliance() {
         return this.forceFIPSCompliance;
     }
@@ -146,7 +146,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Gets the meteredConnectionLimit property value. Specify the metered connection limit type for the wifi connection. Possible values are: unrestricted, fixed, variable.
      * @return a meteredConnectionLimitType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MeteredConnectionLimitType getMeteredConnectionLimit() {
         return this.meteredConnectionLimit;
     }
@@ -154,7 +154,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Gets the networkName property value. Specify the network configuration name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNetworkName() {
         return this.networkName;
     }
@@ -162,7 +162,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Gets the preSharedKey property value. This is the pre-shared key for WPA Personal Wi-Fi network.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPreSharedKey() {
         return this.preSharedKey;
     }
@@ -170,7 +170,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Gets the proxyAutomaticConfigurationUrl property value. Specify the URL for the proxy server configuration script.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProxyAutomaticConfigurationUrl() {
         return this.proxyAutomaticConfigurationUrl;
     }
@@ -178,7 +178,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Gets the proxyManualAddress property value. Specify the IP address for the proxy server.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProxyManualAddress() {
         return this.proxyManualAddress;
     }
@@ -186,7 +186,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Gets the proxyManualPort property value. Specify the port for the proxy server.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getProxyManualPort() {
         return this.proxyManualPort;
     }
@@ -194,7 +194,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Gets the proxySetting property value. Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic.
      * @return a wiFiProxySetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WiFiProxySetting getProxySetting() {
         return this.proxySetting;
     }
@@ -202,7 +202,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Gets the ssid property value. Specify the SSID of the wifi connection.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSsid() {
         return this.ssid;
     }
@@ -210,7 +210,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Gets the wifiSecurityType property value. Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
      * @return a wiFiSecurityType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WiFiSecurityType getWifiSecurityType() {
         return this.wifiSecurityType;
     }
@@ -219,8 +219,8 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("connectAutomatically", this.getConnectAutomatically());
@@ -242,8 +242,8 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the connectAutomatically property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectAutomatically(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectAutomatically(@jakarta.annotation.Nullable final Boolean value) {
         this.connectAutomatically = value;
     }
     /**
@@ -251,8 +251,8 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the connectToPreferredNetwork property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectToPreferredNetwork(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectToPreferredNetwork(@jakarta.annotation.Nullable final Boolean value) {
         this.connectToPreferredNetwork = value;
     }
     /**
@@ -260,8 +260,8 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the connectWhenNetworkNameIsHidden property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectWhenNetworkNameIsHidden(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectWhenNetworkNameIsHidden(@jakarta.annotation.Nullable final Boolean value) {
         this.connectWhenNetworkNameIsHidden = value;
     }
     /**
@@ -269,8 +269,8 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the forceFIPSCompliance property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setForceFIPSCompliance(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setForceFIPSCompliance(@jakarta.annotation.Nullable final Boolean value) {
         this.forceFIPSCompliance = value;
     }
     /**
@@ -278,8 +278,8 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the meteredConnectionLimit property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMeteredConnectionLimit(@javax.annotation.Nullable final MeteredConnectionLimitType value) {
+    @jakarta.annotation.Nonnull
+    public void setMeteredConnectionLimit(@jakarta.annotation.Nullable final MeteredConnectionLimitType value) {
         this.meteredConnectionLimit = value;
     }
     /**
@@ -287,8 +287,8 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the networkName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkName(@jakarta.annotation.Nullable final String value) {
         this.networkName = value;
     }
     /**
@@ -296,8 +296,8 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the preSharedKey property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreSharedKey(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPreSharedKey(@jakarta.annotation.Nullable final String value) {
         this.preSharedKey = value;
     }
     /**
@@ -305,8 +305,8 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the proxyAutomaticConfigurationUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProxyAutomaticConfigurationUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProxyAutomaticConfigurationUrl(@jakarta.annotation.Nullable final String value) {
         this.proxyAutomaticConfigurationUrl = value;
     }
     /**
@@ -314,8 +314,8 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the proxyManualAddress property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProxyManualAddress(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProxyManualAddress(@jakarta.annotation.Nullable final String value) {
         this.proxyManualAddress = value;
     }
     /**
@@ -323,8 +323,8 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the proxyManualPort property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProxyManualPort(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setProxyManualPort(@jakarta.annotation.Nullable final Integer value) {
         this.proxyManualPort = value;
     }
     /**
@@ -332,8 +332,8 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the proxySetting property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProxySetting(@javax.annotation.Nullable final WiFiProxySetting value) {
+    @jakarta.annotation.Nonnull
+    public void setProxySetting(@jakarta.annotation.Nullable final WiFiProxySetting value) {
         this.proxySetting = value;
     }
     /**
@@ -341,8 +341,8 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the ssid property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSsid(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSsid(@jakarta.annotation.Nullable final String value) {
         this.ssid = value;
     }
     /**
@@ -350,8 +350,8 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the wifiSecurityType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWifiSecurityType(@javax.annotation.Nullable final WiFiSecurityType value) {
+    @jakarta.annotation.Nonnull
+    public void setWifiSecurityType(@jakarta.annotation.Nullable final WiFiSecurityType value) {
         this.wifiSecurityType = value;
     }
 }

@@ -36,7 +36,7 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      * Instantiates a new channelSummary and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChannelSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a channelSummary
      */
-    @javax.annotation.Nonnull
-    public static ChannelSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ChannelSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ChannelSummary();
     }
@@ -54,7 +54,7 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("guestsCount", (n) -> { this.setGuestsCount(n.getIntegerValue()); });
@@ -76,7 +76,7 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      * Gets the guestsCount property value. Count of guests in a channel.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getGuestsCount() {
         return this.guestsCount;
     }
@@ -84,7 +84,7 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      * Gets the hasMembersFromOtherTenants property value. Indicates whether external members are included on the channel.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHasMembersFromOtherTenants() {
         return this.hasMembersFromOtherTenants;
     }
@@ -92,7 +92,7 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      * Gets the membersCount property value. Count of members in a channel.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMembersCount() {
         return this.membersCount;
     }
@@ -100,7 +100,7 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -108,7 +108,7 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      * Gets the ownersCount property value. Count of owners in a channel.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getOwnersCount() {
         return this.ownersCount;
     }
@@ -117,8 +117,8 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("guestsCount", this.getGuestsCount());
         writer.writeBooleanValue("hasMembersFromOtherTenants", this.getHasMembersFromOtherTenants());
@@ -129,11 +129,11 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the guestsCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGuestsCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setGuestsCount(@jakarta.annotation.Nullable final Integer value) {
         this.guestsCount = value;
     }
     /**
@@ -150,8 +150,8 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the hasMembersFromOtherTenants property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHasMembersFromOtherTenants(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setHasMembersFromOtherTenants(@jakarta.annotation.Nullable final Boolean value) {
         this.hasMembersFromOtherTenants = value;
     }
     /**
@@ -159,17 +159,17 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the membersCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMembersCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setMembersCount(@jakarta.annotation.Nullable final Integer value) {
         this.membersCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -177,8 +177,8 @@ public class ChannelSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ownersCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOwnersCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setOwnersCount(@jakarta.annotation.Nullable final Integer value) {
         this.ownersCount = value;
     }
 }

@@ -38,7 +38,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      * Instantiates a new iosiPadOSWebClip and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosiPadOSWebClip() {
         super();
         this.setOdataType("#microsoft.graph.iosiPadOSWebClip");
@@ -48,8 +48,8 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a iosiPadOSWebClip
      */
-    @javax.annotation.Nonnull
-    public static IosiPadOSWebClip createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IosiPadOSWebClip createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IosiPadOSWebClip();
     }
@@ -57,7 +57,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      * Gets the appUrl property value. Indicates iOS/iPadOS web clip app URL. Example: 'https://www.contoso.com'
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppUrl() {
         return this.appUrl;
     }
@@ -65,7 +65,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appUrl", (n) -> { this.setAppUrl(n.getStringValue()); });
@@ -80,7 +80,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      * Gets the fullScreenEnabled property value. Whether or not to open the web clip as a full-screen web app. Defaults to false. If TRUE, opens the web clip as a full-screen web app. If FALSE, the web clip opens inside of another app, such as Safari or the app specified with targetApplicationBundleIdentifier.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getFullScreenEnabled() {
         return this.fullScreenEnabled;
     }
@@ -88,7 +88,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      * Gets the ignoreManifestScope property value. Whether or not a full screen web clip can navigate to an external web site without showing the Safari UI. Defaults to false. If FALSE, the Safari UI appears when navigating away. If TRUE, the Safari UI will not be shown.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIgnoreManifestScope() {
         return this.ignoreManifestScope;
     }
@@ -96,7 +96,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      * Gets the preComposedIconEnabled property value. Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding 'shine' to the icon. If FALSE, SpringBoard can add 'shine'.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPreComposedIconEnabled() {
         return this.preComposedIconEnabled;
     }
@@ -104,7 +104,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      * Gets the targetApplicationBundleIdentifier property value. Specifies the application bundle identifier which opens the URL. Available in iOS 14 and later.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTargetApplicationBundleIdentifier() {
         return this.targetApplicationBundleIdentifier;
     }
@@ -112,7 +112,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      * Gets the useManagedBrowser property value. Whether or not to use managed browser. When TRUE, the app will be required to be opened in Microsoft Edge. When FALSE, the app will not be required to be opened in Microsoft Edge. By default, this property is set to FALSE.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getUseManagedBrowser() {
         return this.useManagedBrowser;
     }
@@ -121,8 +121,8 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appUrl", this.getAppUrl());
@@ -137,8 +137,8 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      * @param value Value to set for the appUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppUrl(@jakarta.annotation.Nullable final String value) {
         this.appUrl = value;
     }
     /**
@@ -146,8 +146,8 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      * @param value Value to set for the fullScreenEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFullScreenEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setFullScreenEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.fullScreenEnabled = value;
     }
     /**
@@ -155,8 +155,8 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      * @param value Value to set for the ignoreManifestScope property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIgnoreManifestScope(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIgnoreManifestScope(@jakarta.annotation.Nullable final Boolean value) {
         this.ignoreManifestScope = value;
     }
     /**
@@ -164,8 +164,8 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      * @param value Value to set for the preComposedIconEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreComposedIconEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setPreComposedIconEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.preComposedIconEnabled = value;
     }
     /**
@@ -173,8 +173,8 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      * @param value Value to set for the targetApplicationBundleIdentifier property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetApplicationBundleIdentifier(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetApplicationBundleIdentifier(@jakarta.annotation.Nullable final String value) {
         this.targetApplicationBundleIdentifier = value;
     }
     /**
@@ -182,8 +182,8 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      * @param value Value to set for the useManagedBrowser property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUseManagedBrowser(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setUseManagedBrowser(@jakarta.annotation.Nullable final Boolean value) {
         this.useManagedBrowser = value;
     }
 }

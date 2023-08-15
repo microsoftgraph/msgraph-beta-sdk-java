@@ -43,7 +43,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * Instantiates a new attackSimulationRoot and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AttackSimulationRoot() {
         super();
     }
@@ -52,8 +52,8 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a attackSimulationRoot
      */
-    @javax.annotation.Nonnull
-    public static AttackSimulationRoot createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AttackSimulationRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AttackSimulationRoot();
     }
@@ -61,7 +61,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * Gets the endUserNotifications property value. The endUserNotifications property
      * @return a endUserNotification
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EndUserNotification> getEndUserNotifications() {
         return this.endUserNotifications;
     }
@@ -69,7 +69,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("endUserNotifications", (n) -> { this.setEndUserNotifications(n.getCollectionOfObjectValues(EndUserNotification::createFromDiscriminatorValue)); });
@@ -86,7 +86,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * Gets the landingPages property value. The landingPages property
      * @return a landingPage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<LandingPage> getLandingPages() {
         return this.landingPages;
     }
@@ -94,7 +94,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * Gets the loginPages property value. The loginPages property
      * @return a loginPage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<LoginPage> getLoginPages() {
         return this.loginPages;
     }
@@ -102,7 +102,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * Gets the operations property value. Represents an attack simulation training operation.
      * @return a attackSimulationOperation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AttackSimulationOperation> getOperations() {
         return this.operations;
     }
@@ -110,7 +110,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * Gets the payloads property value. Represents an attack simulation training campaign payload in a tenant.
      * @return a payload
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Payload> getPayloads() {
         return this.payloads;
     }
@@ -118,7 +118,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * Gets the simulationAutomations property value. Represents simulation automation created to run on a tenant.
      * @return a simulationAutomation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SimulationAutomation> getSimulationAutomations() {
         return this.simulationAutomations;
     }
@@ -126,7 +126,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * Gets the simulations property value. Represents an attack simulation training campaign in a tenant.
      * @return a simulation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Simulation> getSimulations() {
         return this.simulations;
     }
@@ -134,7 +134,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * Gets the trainings property value. The trainings property
      * @return a training
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Training> getTrainings() {
         return this.trainings;
     }
@@ -143,8 +143,8 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("endUserNotifications", this.getEndUserNotifications());
@@ -161,8 +161,8 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * @param value Value to set for the endUserNotifications property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndUserNotifications(@javax.annotation.Nullable final java.util.List<EndUserNotification> value) {
+    @jakarta.annotation.Nonnull
+    public void setEndUserNotifications(@jakarta.annotation.Nullable final java.util.List<EndUserNotification> value) {
         this.endUserNotifications = value;
     }
     /**
@@ -170,8 +170,8 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * @param value Value to set for the landingPages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLandingPages(@javax.annotation.Nullable final java.util.List<LandingPage> value) {
+    @jakarta.annotation.Nonnull
+    public void setLandingPages(@jakarta.annotation.Nullable final java.util.List<LandingPage> value) {
         this.landingPages = value;
     }
     /**
@@ -179,8 +179,8 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * @param value Value to set for the loginPages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLoginPages(@javax.annotation.Nullable final java.util.List<LoginPage> value) {
+    @jakarta.annotation.Nonnull
+    public void setLoginPages(@jakarta.annotation.Nullable final java.util.List<LoginPage> value) {
         this.loginPages = value;
     }
     /**
@@ -188,8 +188,8 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperations(@javax.annotation.Nullable final java.util.List<AttackSimulationOperation> value) {
+    @jakarta.annotation.Nonnull
+    public void setOperations(@jakarta.annotation.Nullable final java.util.List<AttackSimulationOperation> value) {
         this.operations = value;
     }
     /**
@@ -197,8 +197,8 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * @param value Value to set for the payloads property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPayloads(@javax.annotation.Nullable final java.util.List<Payload> value) {
+    @jakarta.annotation.Nonnull
+    public void setPayloads(@jakarta.annotation.Nullable final java.util.List<Payload> value) {
         this.payloads = value;
     }
     /**
@@ -206,8 +206,8 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * @param value Value to set for the simulationAutomations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSimulationAutomations(@javax.annotation.Nullable final java.util.List<SimulationAutomation> value) {
+    @jakarta.annotation.Nonnull
+    public void setSimulationAutomations(@jakarta.annotation.Nullable final java.util.List<SimulationAutomation> value) {
         this.simulationAutomations = value;
     }
     /**
@@ -215,8 +215,8 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * @param value Value to set for the simulations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSimulations(@javax.annotation.Nullable final java.util.List<Simulation> value) {
+    @jakarta.annotation.Nonnull
+    public void setSimulations(@jakarta.annotation.Nullable final java.util.List<Simulation> value) {
         this.simulations = value;
     }
     /**
@@ -224,8 +224,8 @@ public class AttackSimulationRoot extends Entity implements Parsable {
      * @param value Value to set for the trainings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrainings(@javax.annotation.Nullable final java.util.List<Training> value) {
+    @jakarta.annotation.Nonnull
+    public void setTrainings(@jakarta.annotation.Nullable final java.util.List<Training> value) {
         this.trainings = value;
     }
 }

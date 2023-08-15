@@ -19,7 +19,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends Unifi
      * Instantiates a new tooManyGlobalAdminsAssignedToTenantAlertConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TooManyGlobalAdminsAssignedToTenantAlertConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.tooManyGlobalAdminsAssignedToTenantAlertConfiguration");
@@ -29,8 +29,8 @@ public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends Unifi
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a tooManyGlobalAdminsAssignedToTenantAlertConfiguration
      */
-    @javax.annotation.Nonnull
-    public static TooManyGlobalAdminsAssignedToTenantAlertConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TooManyGlobalAdminsAssignedToTenantAlertConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TooManyGlobalAdminsAssignedToTenantAlertConfiguration();
     }
@@ -38,7 +38,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends Unifi
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("globalAdminCountThreshold", (n) -> { this.setGlobalAdminCountThreshold(n.getIntegerValue()); });
@@ -49,7 +49,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends Unifi
      * Gets the globalAdminCountThreshold property value. The threshold for the number of accounts assigned the Global Administrator role in the tenant. Triggers an alert if the number of global administrators in the tenant reaches or crosses this threshold value.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getGlobalAdminCountThreshold() {
         return this.globalAdminCountThreshold;
     }
@@ -57,7 +57,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends Unifi
      * Gets the percentageOfGlobalAdminsOutOfRolesThreshold property value. Threshold of the percentage of global administrators out of all the role assignments in the tenant. Triggers an alert if the percentage in the tenant reaches or crosses this threshold value.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPercentageOfGlobalAdminsOutOfRolesThreshold() {
         return this.percentageOfGlobalAdminsOutOfRolesThreshold;
     }
@@ -66,8 +66,8 @@ public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends Unifi
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("globalAdminCountThreshold", this.getGlobalAdminCountThreshold());
@@ -78,8 +78,8 @@ public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends Unifi
      * @param value Value to set for the globalAdminCountThreshold property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGlobalAdminCountThreshold(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setGlobalAdminCountThreshold(@jakarta.annotation.Nullable final Integer value) {
         this.globalAdminCountThreshold = value;
     }
     /**
@@ -87,8 +87,8 @@ public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends Unifi
      * @param value Value to set for the percentageOfGlobalAdminsOutOfRolesThreshold property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPercentageOfGlobalAdminsOutOfRolesThreshold(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPercentageOfGlobalAdminsOutOfRolesThreshold(@jakarta.annotation.Nullable final Integer value) {
         this.percentageOfGlobalAdminsOutOfRolesThreshold = value;
     }
 }

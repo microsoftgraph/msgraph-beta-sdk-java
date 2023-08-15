@@ -18,7 +18,7 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
      * Instantiates a new iosDerivedCredentialAuthenticationConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosDerivedCredentialAuthenticationConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosDerivedCredentialAuthenticationConfiguration");
@@ -28,8 +28,8 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a iosDerivedCredentialAuthenticationConfiguration
      */
-    @javax.annotation.Nonnull
-    public static IosDerivedCredentialAuthenticationConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IosDerivedCredentialAuthenticationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IosDerivedCredentialAuthenticationConfiguration();
     }
@@ -37,7 +37,7 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
      * Gets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
      * @return a deviceManagementDerivedCredentialSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings getDerivedCredentialSettings() {
         return this.derivedCredentialSettings;
     }
@@ -45,7 +45,7 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("derivedCredentialSettings", (n) -> { this.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
@@ -56,8 +56,8 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("derivedCredentialSettings", this.getDerivedCredentialSettings());
@@ -67,8 +67,8 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
      * @param value Value to set for the derivedCredentialSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDerivedCredentialSettings(@javax.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setDerivedCredentialSettings(@jakarta.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
         this.derivedCredentialSettings = value;
     }
 }

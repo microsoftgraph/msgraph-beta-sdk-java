@@ -88,7 +88,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Instantiates a new customerPayment and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CustomerPayment() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -97,8 +97,8 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a customerPayment
      */
-    @javax.annotation.Nonnull
-    public static CustomerPayment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CustomerPayment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CustomerPayment();
     }
@@ -106,7 +106,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -114,7 +114,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the amount property value. The amount property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getAmount() {
         return this.amount;
     }
@@ -122,7 +122,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the appliesToInvoiceId property value. The appliesToInvoiceId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getAppliesToInvoiceId() {
         return this.appliesToInvoiceId;
     }
@@ -130,7 +130,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the appliesToInvoiceNumber property value. The appliesToInvoiceNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppliesToInvoiceNumber() {
         return this.appliesToInvoiceNumber;
     }
@@ -138,7 +138,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the comment property value. The comment property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getComment() {
         return this.comment;
     }
@@ -146,7 +146,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the contactId property value. The contactId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContactId() {
         return this.contactId;
     }
@@ -154,7 +154,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the customer property value. The customer property
      * @return a customer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Customer getCustomer() {
         return this.customer;
     }
@@ -162,7 +162,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the customerId property value. The customerId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getCustomerId() {
         return this.customerId;
     }
@@ -170,7 +170,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the customerNumber property value. The customerNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomerNumber() {
         return this.customerNumber;
     }
@@ -178,7 +178,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the description property value. The description property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -186,7 +186,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the documentNumber property value. The documentNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDocumentNumber() {
         return this.documentNumber;
     }
@@ -194,7 +194,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the externalDocumentNumber property value. The externalDocumentNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalDocumentNumber() {
         return this.externalDocumentNumber;
     }
@@ -202,7 +202,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(17);
         deserializerMap.put("amount", (n) -> { this.setAmount(n.getBigDecimalValue()); });
@@ -228,7 +228,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the id property value. The id property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getId() {
         return this.id;
     }
@@ -236,7 +236,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the journalDisplayName property value. The journalDisplayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getJournalDisplayName() {
         return this.journalDisplayName;
     }
@@ -244,7 +244,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -252,7 +252,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the lineNumber property value. The lineNumber property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getLineNumber() {
         return this.lineNumber;
     }
@@ -260,7 +260,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -268,7 +268,7 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * Gets the postingDate property value. The postingDate property
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getPostingDate() {
         return this.postingDate;
     }
@@ -277,8 +277,8 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBigDecimalValue("amount", this.getAmount());
         writer.writeUUIDValue("appliesToInvoiceId", this.getAppliesToInvoiceId());
@@ -301,11 +301,11 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -313,8 +313,8 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the amount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAmount(@javax.annotation.Nullable final BigDecimal value) {
+    @jakarta.annotation.Nonnull
+    public void setAmount(@jakarta.annotation.Nullable final BigDecimal value) {
         this.amount = value;
     }
     /**
@@ -322,8 +322,8 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the appliesToInvoiceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppliesToInvoiceId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setAppliesToInvoiceId(@jakarta.annotation.Nullable final UUID value) {
         this.appliesToInvoiceId = value;
     }
     /**
@@ -331,8 +331,8 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the appliesToInvoiceNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppliesToInvoiceNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppliesToInvoiceNumber(@jakarta.annotation.Nullable final String value) {
         this.appliesToInvoiceNumber = value;
     }
     /**
@@ -340,8 +340,8 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the comment property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComment(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setComment(@jakarta.annotation.Nullable final String value) {
         this.comment = value;
     }
     /**
@@ -349,8 +349,8 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contactId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContactId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContactId(@jakarta.annotation.Nullable final String value) {
         this.contactId = value;
     }
     /**
@@ -358,8 +358,8 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the customer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomer(@javax.annotation.Nullable final Customer value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomer(@jakarta.annotation.Nullable final Customer value) {
         this.customer = value;
     }
     /**
@@ -367,8 +367,8 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the customerId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomerId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomerId(@jakarta.annotation.Nullable final UUID value) {
         this.customerId = value;
     }
     /**
@@ -376,8 +376,8 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the customerNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomerNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomerNumber(@jakarta.annotation.Nullable final String value) {
         this.customerNumber = value;
     }
     /**
@@ -385,8 +385,8 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -394,8 +394,8 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the documentNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDocumentNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDocumentNumber(@jakarta.annotation.Nullable final String value) {
         this.documentNumber = value;
     }
     /**
@@ -403,8 +403,8 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the externalDocumentNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalDocumentNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalDocumentNumber(@jakarta.annotation.Nullable final String value) {
         this.externalDocumentNumber = value;
     }
     /**
@@ -412,8 +412,8 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final UUID value) {
         this.id = value;
     }
     /**
@@ -421,8 +421,8 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the journalDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJournalDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setJournalDisplayName(@jakarta.annotation.Nullable final String value) {
         this.journalDisplayName = value;
     }
     /**
@@ -430,8 +430,8 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -439,17 +439,17 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lineNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLineNumber(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setLineNumber(@jakarta.annotation.Nullable final Integer value) {
         this.lineNumber = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -457,8 +457,8 @@ public class CustomerPayment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the postingDate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPostingDate(@javax.annotation.Nullable final LocalDate value) {
+    @jakarta.annotation.Nonnull
+    public void setPostingDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.postingDate = value;
     }
 }

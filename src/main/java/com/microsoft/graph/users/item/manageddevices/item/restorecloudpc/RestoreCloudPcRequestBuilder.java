@@ -24,8 +24,8 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public RestoreCloudPcRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public RestoreCloudPcRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}/restoreCloudPc", pathParameters);
     }
     /**
@@ -34,18 +34,21 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public RestoreCloudPcRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public RestoreCloudPcRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}/restoreCloudPc", rawUrl);
     }
     /**
      * Restore a Cloud PC device to a previous state with an Intune managed device ID.
      * @param body The request body
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/manageddevice-restorecloudpc?view=graph-rest-1.0">Find more info here</a>
+     * @deprecated
+     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc on 2023-07-17 and will be removed 2023-09-30
+     * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-restorecloudpc?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final RestoreCloudPcPostRequestBody body) {
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public java.util.concurrent.CompletableFuture<Void> post(@jakarta.annotation.Nonnull final RestoreCloudPcPostRequestBody body) {
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -63,10 +66,13 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/manageddevice-restorecloudpc?view=graph-rest-1.0">Find more info here</a>
+     * @deprecated
+     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc on 2023-07-17 and will be removed 2023-09-30
+     * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-restorecloudpc?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final RestoreCloudPcPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public java.util.concurrent.CompletableFuture<Void> post(@jakarta.annotation.Nonnull final RestoreCloudPcPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -84,9 +90,12 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * Restore a Cloud PC device to a previous state with an Intune managed device ID.
      * @param body The request body
      * @return a RequestInformation
+     * @deprecated
+     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc on 2023-07-17 and will be removed 2023-09-30
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final RestoreCloudPcPostRequestBody body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RestoreCloudPcPostRequestBody body) throws URISyntaxException {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -94,9 +103,12 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc on 2023-07-17 and will be removed 2023-09-30
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final RestoreCloudPcPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RestoreCloudPcPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;

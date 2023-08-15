@@ -15,7 +15,7 @@ public class BusinessScenarioGroupTarget extends BusinessScenarioTaskTargetBase 
      * Instantiates a new businessScenarioGroupTarget and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BusinessScenarioGroupTarget() {
         super();
         this.setOdataType("#microsoft.graph.businessScenarioGroupTarget");
@@ -25,8 +25,8 @@ public class BusinessScenarioGroupTarget extends BusinessScenarioTaskTargetBase 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a businessScenarioGroupTarget
      */
-    @javax.annotation.Nonnull
-    public static BusinessScenarioGroupTarget createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BusinessScenarioGroupTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BusinessScenarioGroupTarget();
     }
@@ -34,7 +34,7 @@ public class BusinessScenarioGroupTarget extends BusinessScenarioTaskTargetBase 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("groupId", (n) -> { this.setGroupId(n.getStringValue()); });
@@ -44,7 +44,7 @@ public class BusinessScenarioGroupTarget extends BusinessScenarioTaskTargetBase 
      * Gets the groupId property value. The unique identifier for the group.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getGroupId() {
         return this.groupId;
     }
@@ -53,8 +53,8 @@ public class BusinessScenarioGroupTarget extends BusinessScenarioTaskTargetBase 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("groupId", this.getGroupId());
@@ -64,8 +64,8 @@ public class BusinessScenarioGroupTarget extends BusinessScenarioTaskTargetBase 
      * @param value Value to set for the groupId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setGroupId(@jakarta.annotation.Nullable final String value) {
         this.groupId = value;
     }
 }

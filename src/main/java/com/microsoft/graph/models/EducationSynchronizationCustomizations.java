@@ -35,7 +35,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
      * Instantiates a new educationSynchronizationCustomizations and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSynchronizationCustomizations() {
         super();
         this.setOdataType("#microsoft.graph.educationSynchronizationCustomizations");
@@ -45,8 +45,8 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationSynchronizationCustomizations
      */
-    @javax.annotation.Nonnull
-    public static EducationSynchronizationCustomizations createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationSynchronizationCustomizations createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationSynchronizationCustomizations();
     }
@@ -54,7 +54,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("school", (n) -> { this.setSchool(n.getObjectValue(EducationSynchronizationCustomization::createFromDiscriminatorValue)); });
@@ -69,7 +69,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
      * Gets the school property value. Customizations for School entities.
      * @return a educationSynchronizationCustomization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getSchool() {
         return this.school;
     }
@@ -77,7 +77,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
      * Gets the section property value. Customizations for Section entities.
      * @return a educationSynchronizationCustomization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getSection() {
         return this.section;
     }
@@ -85,7 +85,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
      * Gets the student property value. Customizations for Student entities.
      * @return a educationSynchronizationCustomization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getStudent() {
         return this.student;
     }
@@ -93,7 +93,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
      * Gets the studentEnrollment property value. Customizations for Student Enrollments.
      * @return a educationSynchronizationCustomization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getStudentEnrollment() {
         return this.studentEnrollment;
     }
@@ -101,7 +101,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
      * Gets the teacher property value. Customizations for Teacher entities.
      * @return a educationSynchronizationCustomization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getTeacher() {
         return this.teacher;
     }
@@ -109,7 +109,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
      * Gets the teacherRoster property value. Customizations for Teacher Rosters.
      * @return a educationSynchronizationCustomization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getTeacherRoster() {
         return this.teacherRoster;
     }
@@ -118,8 +118,8 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("school", this.getSchool());
@@ -134,8 +134,8 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
      * @param value Value to set for the school property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchool(@javax.annotation.Nullable final EducationSynchronizationCustomization value) {
+    @jakarta.annotation.Nonnull
+    public void setSchool(@jakarta.annotation.Nullable final EducationSynchronizationCustomization value) {
         this.school = value;
     }
     /**
@@ -143,8 +143,8 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
      * @param value Value to set for the section property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSection(@javax.annotation.Nullable final EducationSynchronizationCustomization value) {
+    @jakarta.annotation.Nonnull
+    public void setSection(@jakarta.annotation.Nullable final EducationSynchronizationCustomization value) {
         this.section = value;
     }
     /**
@@ -152,8 +152,8 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
      * @param value Value to set for the student property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStudent(@javax.annotation.Nullable final EducationSynchronizationCustomization value) {
+    @jakarta.annotation.Nonnull
+    public void setStudent(@jakarta.annotation.Nullable final EducationSynchronizationCustomization value) {
         this.student = value;
     }
     /**
@@ -161,8 +161,8 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
      * @param value Value to set for the studentEnrollment property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStudentEnrollment(@javax.annotation.Nullable final EducationSynchronizationCustomization value) {
+    @jakarta.annotation.Nonnull
+    public void setStudentEnrollment(@jakarta.annotation.Nullable final EducationSynchronizationCustomization value) {
         this.studentEnrollment = value;
     }
     /**
@@ -170,8 +170,8 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
      * @param value Value to set for the teacher property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTeacher(@javax.annotation.Nullable final EducationSynchronizationCustomization value) {
+    @jakarta.annotation.Nonnull
+    public void setTeacher(@jakarta.annotation.Nullable final EducationSynchronizationCustomization value) {
         this.teacher = value;
     }
     /**
@@ -179,8 +179,8 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
      * @param value Value to set for the teacherRoster property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTeacherRoster(@javax.annotation.Nullable final EducationSynchronizationCustomization value) {
+    @jakarta.annotation.Nonnull
+    public void setTeacherRoster(@jakarta.annotation.Nullable final EducationSynchronizationCustomization value) {
         this.teacherRoster = value;
     }
 }

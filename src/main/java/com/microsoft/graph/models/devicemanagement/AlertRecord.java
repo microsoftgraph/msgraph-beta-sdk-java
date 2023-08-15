@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 public class AlertRecord extends Entity implements Parsable {
     /**
-     * The impact of the alert event. Consists of a number followed by the aggregation type. For example, 6 affectedCloudPcCount means that 6 Cloud PCs are affected. 12 affectedCloudPcPercentage means 12% of Cloud PCs are affected.
+     * The impact of the alert event. Consists of a list of key-value pair and a number followed by the aggregation type. For example, 6 affectedCloudPcCount means that 6 Cloud PCs are affected. 12 affectedCloudPcPercentage means 12% of Cloud PCs are affected. The list of key-value pair indicates the details of the alert impact.
      */
     private AlertImpact alertImpact;
     /**
@@ -18,7 +18,7 @@ public class AlertRecord extends Entity implements Parsable {
      */
     private String alertRuleId;
     /**
-     * The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue.
+     * The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
      */
     private AlertRuleTemplate alertRuleTemplate;
     /**
@@ -49,7 +49,7 @@ public class AlertRecord extends Entity implements Parsable {
      * Instantiates a new alertRecord and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AlertRecord() {
         super();
     }
@@ -58,16 +58,16 @@ public class AlertRecord extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a alertRecord
      */
-    @javax.annotation.Nonnull
-    public static AlertRecord createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AlertRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AlertRecord();
     }
     /**
-     * Gets the alertImpact property value. The impact of the alert event. Consists of a number followed by the aggregation type. For example, 6 affectedCloudPcCount means that 6 Cloud PCs are affected. 12 affectedCloudPcPercentage means 12% of Cloud PCs are affected.
+     * Gets the alertImpact property value. The impact of the alert event. Consists of a list of key-value pair and a number followed by the aggregation type. For example, 6 affectedCloudPcCount means that 6 Cloud PCs are affected. 12 affectedCloudPcPercentage means 12% of Cloud PCs are affected. The list of key-value pair indicates the details of the alert impact.
      * @return a alertImpact
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AlertImpact getAlertImpact() {
         return this.alertImpact;
     }
@@ -75,15 +75,15 @@ public class AlertRecord extends Entity implements Parsable {
      * Gets the alertRuleId property value. The corresponding ID of the alert rule.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAlertRuleId() {
         return this.alertRuleId;
     }
     /**
-     * Gets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue.
+     * Gets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
      * @return a alertRuleTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AlertRuleTemplate getAlertRuleTemplate() {
         return this.alertRuleTemplate;
     }
@@ -91,7 +91,7 @@ public class AlertRecord extends Entity implements Parsable {
      * Gets the detectedDateTime property value. The date and time when the alert event was detected. The Timestamp type represents date and time information using ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getDetectedDateTime() {
         return this.detectedDateTime;
     }
@@ -99,7 +99,7 @@ public class AlertRecord extends Entity implements Parsable {
      * Gets the displayName property value. The display name of the alert record.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -107,7 +107,7 @@ public class AlertRecord extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alertImpact", (n) -> { this.setAlertImpact(n.getObjectValue(AlertImpact::createFromDiscriminatorValue)); });
@@ -125,7 +125,7 @@ public class AlertRecord extends Entity implements Parsable {
      * Gets the lastUpdatedDateTime property value. The date and time when the alert record was last updated. The Timestamp type represents date and time information using ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
         return this.lastUpdatedDateTime;
     }
@@ -133,7 +133,7 @@ public class AlertRecord extends Entity implements Parsable {
      * Gets the resolvedDateTime property value. The date and time when the alert event was resolved. The Timestamp type represents date and time information using ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getResolvedDateTime() {
         return this.resolvedDateTime;
     }
@@ -141,7 +141,7 @@ public class AlertRecord extends Entity implements Parsable {
      * Gets the severity property value. The severity of the alert event. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
      * @return a ruleSeverityType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RuleSeverityType getSeverity() {
         return this.severity;
     }
@@ -149,7 +149,7 @@ public class AlertRecord extends Entity implements Parsable {
      * Gets the status property value. The status of the alert record. The possible values are: active, resolved, unknownFutureValue.
      * @return a alertStatusType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AlertStatusType getStatus() {
         return this.status;
     }
@@ -158,8 +158,8 @@ public class AlertRecord extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("alertImpact", this.getAlertImpact());
@@ -173,12 +173,12 @@ public class AlertRecord extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the alertImpact property value. The impact of the alert event. Consists of a number followed by the aggregation type. For example, 6 affectedCloudPcCount means that 6 Cloud PCs are affected. 12 affectedCloudPcPercentage means 12% of Cloud PCs are affected.
+     * Sets the alertImpact property value. The impact of the alert event. Consists of a list of key-value pair and a number followed by the aggregation type. For example, 6 affectedCloudPcCount means that 6 Cloud PCs are affected. 12 affectedCloudPcPercentage means 12% of Cloud PCs are affected. The list of key-value pair indicates the details of the alert impact.
      * @param value Value to set for the alertImpact property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlertImpact(@javax.annotation.Nullable final AlertImpact value) {
+    @jakarta.annotation.Nonnull
+    public void setAlertImpact(@jakarta.annotation.Nullable final AlertImpact value) {
         this.alertImpact = value;
     }
     /**
@@ -186,17 +186,17 @@ public class AlertRecord extends Entity implements Parsable {
      * @param value Value to set for the alertRuleId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlertRuleId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAlertRuleId(@jakarta.annotation.Nullable final String value) {
         this.alertRuleId = value;
     }
     /**
-     * Sets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue.
+     * Sets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
      * @param value Value to set for the alertRuleTemplate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlertRuleTemplate(@javax.annotation.Nullable final AlertRuleTemplate value) {
+    @jakarta.annotation.Nonnull
+    public void setAlertRuleTemplate(@jakarta.annotation.Nullable final AlertRuleTemplate value) {
         this.alertRuleTemplate = value;
     }
     /**
@@ -204,8 +204,8 @@ public class AlertRecord extends Entity implements Parsable {
      * @param value Value to set for the detectedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetectedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setDetectedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.detectedDateTime = value;
     }
     /**
@@ -213,8 +213,8 @@ public class AlertRecord extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -222,8 +222,8 @@ public class AlertRecord extends Entity implements Parsable {
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
@@ -231,8 +231,8 @@ public class AlertRecord extends Entity implements Parsable {
      * @param value Value to set for the resolvedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResolvedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setResolvedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.resolvedDateTime = value;
     }
     /**
@@ -240,8 +240,8 @@ public class AlertRecord extends Entity implements Parsable {
      * @param value Value to set for the severity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSeverity(@javax.annotation.Nullable final RuleSeverityType value) {
+    @jakarta.annotation.Nonnull
+    public void setSeverity(@jakarta.annotation.Nullable final RuleSeverityType value) {
         this.severity = value;
     }
     /**
@@ -249,8 +249,8 @@ public class AlertRecord extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final AlertStatusType value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final AlertStatusType value) {
         this.status = value;
     }
 }

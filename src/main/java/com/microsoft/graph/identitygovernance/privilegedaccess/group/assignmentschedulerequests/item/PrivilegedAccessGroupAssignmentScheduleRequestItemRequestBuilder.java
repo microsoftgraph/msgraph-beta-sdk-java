@@ -28,35 +28,35 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
     /**
      * Provides operations to manage the activatedUsing property of the microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ActivatedUsingRequestBuilder activatedUsing() {
         return new ActivatedUsingRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the cancel method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CancelRequestBuilder cancel() {
         return new CancelRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the group property of the microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public GroupRequestBuilder group() {
         return new GroupRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the principal property of the microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public PrincipalRequestBuilder principal() {
         return new PrincipalRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the targetSchedule property of the microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TargetScheduleRequestBuilder targetSchedule() {
         return new TargetScheduleRequestBuilder(pathParameters, requestAdapter);
     }
@@ -66,8 +66,8 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance/privilegedAccess/group/assignmentScheduleRequests/{privilegedAccessGroupAssignmentScheduleRequest%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
@@ -76,15 +76,15 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identityGovernance/privilegedAccess/group/assignmentScheduleRequests/{privilegedAccessGroupAssignmentScheduleRequest%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property assignmentScheduleRequests for identityGovernance
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(null);
@@ -103,8 +103,8 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -120,9 +120,9 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
     /**
      * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object.
      * @return a CompletableFuture of privilegedAccessGroupAssignmentScheduleRequest
-     * @see <a href="https://docs.microsoft.com/graph/api/privilegedaccessgroupassignmentschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupassignmentschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupAssignmentScheduleRequest> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -140,10 +140,10 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of privilegedAccessGroupAssignmentScheduleRequest
-     * @see <a href="https://docs.microsoft.com/graph/api/privilegedaccessgroupassignmentschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupassignmentschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupAssignmentScheduleRequest> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupAssignmentScheduleRequest> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -161,8 +161,8 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * @param body The request body
      * @return a CompletableFuture of privilegedAccessGroupAssignmentScheduleRequest
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupAssignmentScheduleRequest> patch(@javax.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleRequest body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupAssignmentScheduleRequest> patch(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleRequest body) {
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -181,8 +181,8 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of privilegedAccessGroupAssignmentScheduleRequest
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupAssignmentScheduleRequest> patch(@javax.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleRequest body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupAssignmentScheduleRequest> patch(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -200,7 +200,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * Delete navigation property assignmentScheduleRequests for identityGovernance
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
         return toDeleteRequestInformation(null);
     }
@@ -209,8 +209,8 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -227,7 +227,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -236,8 +236,8 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -257,8 +257,8 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleRequest body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleRequest body) throws URISyntaxException {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -267,8 +267,8 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleRequest body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -297,13 +297,13 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -313,7 +313,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

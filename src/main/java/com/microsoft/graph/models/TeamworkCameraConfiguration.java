@@ -32,7 +32,7 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Parsab
      * Instantiates a new teamworkCameraConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkCameraConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +41,8 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teamworkCameraConfiguration
      */
-    @javax.annotation.Nonnull
-    public static TeamworkCameraConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeamworkCameraConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeamworkCameraConfiguration();
     }
@@ -50,7 +50,7 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +58,7 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Parsab
      * Gets the cameras property value. The cameras property
      * @return a teamworkPeripheral
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TeamworkPeripheral> getCameras() {
         return this.cameras;
     }
@@ -66,7 +66,7 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Parsab
      * Gets the contentCameraConfiguration property value. The configuration for the content camera.
      * @return a teamworkContentCameraConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkContentCameraConfiguration getContentCameraConfiguration() {
         return this.contentCameraConfiguration;
     }
@@ -74,7 +74,7 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Parsab
      * Gets the defaultContentCamera property value. The defaultContentCamera property
      * @return a teamworkPeripheral
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkPeripheral getDefaultContentCamera() {
         return this.defaultContentCamera;
     }
@@ -82,7 +82,7 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("cameras", (n) -> { this.setCameras(n.getCollectionOfObjectValues(TeamworkPeripheral::createFromDiscriminatorValue)); });
@@ -95,7 +95,7 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Parsab
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -104,8 +104,8 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("cameras", this.getCameras());
         writer.writeObjectValue("contentCameraConfiguration", this.getContentCameraConfiguration());
@@ -115,11 +115,11 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -127,8 +127,8 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the cameras property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCameras(@javax.annotation.Nullable final java.util.List<TeamworkPeripheral> value) {
+    @jakarta.annotation.Nonnull
+    public void setCameras(@jakarta.annotation.Nullable final java.util.List<TeamworkPeripheral> value) {
         this.cameras = value;
     }
     /**
@@ -136,8 +136,8 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the contentCameraConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentCameraConfiguration(@javax.annotation.Nullable final TeamworkContentCameraConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setContentCameraConfiguration(@jakarta.annotation.Nullable final TeamworkContentCameraConfiguration value) {
         this.contentCameraConfiguration = value;
     }
     /**
@@ -145,17 +145,17 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the defaultContentCamera property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultContentCamera(@javax.annotation.Nullable final TeamworkPeripheral value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaultContentCamera(@jakarta.annotation.Nullable final TeamworkPeripheral value) {
         this.defaultContentCamera = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

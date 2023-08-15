@@ -18,7 +18,7 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
      * Instantiates a new deviceManagementSettingFileConstraint and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementSettingFileConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingFileConstraint");
@@ -28,8 +28,8 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementSettingFileConstraint
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementSettingFileConstraint createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementSettingFileConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementSettingFileConstraint();
     }
@@ -37,7 +37,7 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("supportedExtensions", (n) -> { this.setSupportedExtensions(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -47,7 +47,7 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
      * Gets the supportedExtensions property value. Acceptable file extensions to upload for this setting
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedExtensions() {
         return this.supportedExtensions;
     }
@@ -56,8 +56,8 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("supportedExtensions", this.getSupportedExtensions());
@@ -67,8 +67,8 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
      * @param value Value to set for the supportedExtensions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedExtensions(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedExtensions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.supportedExtensions = value;
     }
 }

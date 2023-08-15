@@ -27,24 +27,24 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
     /**
      * Provides operations to count the resources in the collection.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the validateAuthenticationConfiguration method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ValidateAuthenticationConfigurationRequestBuilder validateAuthenticationConfiguration() {
         return new ValidateAuthenticationConfigurationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the customAuthenticationExtensions property of the microsoft.graph.identityContainer entity.
-     * @param customAuthenticationExtensionId Unique identifier of the item
+     * @param customAuthenticationExtensionId The unique identifier of customAuthenticationExtension
      * @return a CustomAuthenticationExtensionItemRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public CustomAuthenticationExtensionItemRequestBuilder byCustomAuthenticationExtensionId(@javax.annotation.Nonnull final String customAuthenticationExtensionId) {
+    @jakarta.annotation.Nonnull
+    public CustomAuthenticationExtensionItemRequestBuilder byCustomAuthenticationExtensionId(@jakarta.annotation.Nonnull final String customAuthenticationExtensionId) {
         Objects.requireNonNull(customAuthenticationExtensionId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("customAuthenticationExtension%2Did", customAuthenticationExtensionId);
@@ -56,8 +56,8 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public CustomAuthenticationExtensionsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public CustomAuthenticationExtensionsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identity/customAuthenticationExtensions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
@@ -66,16 +66,16 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
-    @javax.annotation.Nullable
-    public CustomAuthenticationExtensionsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    @jakarta.annotation.Nullable
+    public CustomAuthenticationExtensionsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/identity/customAuthenticationExtensions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
      * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
      * @return a CompletableFuture of customAuthenticationExtensionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAuthenticationExtensionCollectionResponse> get() {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(null);
@@ -93,10 +93,10 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
      * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customAuthenticationExtensionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CustomAuthenticationExtensionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<CustomAuthenticationExtensionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -110,13 +110,13 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the **onTokenIssuanceStartCustomExtension** object type is supported.
+     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
      * @param body The request body
      * @return a CompletableFuture of customAuthenticationExtension
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CustomAuthenticationExtension> post(@javax.annotation.Nonnull final CustomAuthenticationExtension body) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<CustomAuthenticationExtension> post(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body) {
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -130,14 +130,14 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the **onTokenIssuanceStartCustomExtension** object type is supported.
+     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customAuthenticationExtension
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CustomAuthenticationExtension> post(@javax.annotation.Nonnull final CustomAuthenticationExtension body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<CustomAuthenticationExtension> post(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -155,7 +155,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
      * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() throws URISyntaxException {
         return toGetRequestInformation(null);
     }
@@ -164,8 +164,8 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -181,22 +181,22 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the **onTokenIssuanceStartCustomExtension** object type is supported.
+     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final CustomAuthenticationExtension body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body) throws URISyntaxException {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the **onTokenIssuanceStartCustomExtension** object type is supported.
+     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final CustomAuthenticationExtension body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -220,49 +220,49 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
          * Include count of items
          */
         @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Boolean count;
         /**
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Filter items by property values
          */
         @QueryParameter(name = "%24filter")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String filter;
         /**
          * Order items by property values
          */
         @QueryParameter(name = "%24orderby")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] orderby;
         /**
          * Search items by search phrases
          */
         @QueryParameter(name = "%24search")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String search;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
         /**
          * Skip the first n items
          */
         @QueryParameter(name = "%24skip")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer skip;
         /**
          * Show only the first n items
          */
         @QueryParameter(name = "%24top")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer top;
     }
     /**
@@ -272,7 +272,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

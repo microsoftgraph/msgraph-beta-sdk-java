@@ -42,7 +42,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * Instantiates a new androidForWorkEasEmailProfileBase and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidForWorkEasEmailProfileBase() {
         super();
         this.setOdataType("#microsoft.graph.androidForWorkEasEmailProfileBase");
@@ -52,8 +52,8 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidForWorkEasEmailProfileBase
      */
-    @javax.annotation.Nonnull
-    public static AndroidForWorkEasEmailProfileBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidForWorkEasEmailProfileBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -69,7 +69,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * Gets the authenticationMethod property value. Exchange Active Sync authentication method.
      * @return a easAuthenticationMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EasAuthenticationMethod getAuthenticationMethod() {
         return this.authenticationMethod;
     }
@@ -77,7 +77,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * Gets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @return a emailSyncDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailSyncDuration getDurationOfEmailToSync() {
         return this.durationOfEmailToSync;
     }
@@ -85,7 +85,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * Gets the emailAddressSource property value. Possible values for username source or email source.
      * @return a userEmailSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserEmailSource getEmailAddressSource() {
         return this.emailAddressSource;
     }
@@ -93,7 +93,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(EasAuthenticationMethod.class)); });
@@ -109,7 +109,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * Gets the hostName property value. Exchange location (URL) that the mail app connects to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHostName() {
         return this.hostName;
     }
@@ -117,7 +117,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * Gets the identityCertificate property value. Identity certificate.
      * @return a androidForWorkCertificateProfileBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidForWorkCertificateProfileBase getIdentityCertificate() {
         return this.identityCertificate;
     }
@@ -125,7 +125,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * Gets the requireSsl property value. Indicates whether or not to use SSL.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequireSsl() {
         return this.requireSsl;
     }
@@ -133,7 +133,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * Gets the usernameSource property value. Android username source.
      * @return a androidUsernameSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidUsernameSource getUsernameSource() {
         return this.usernameSource;
     }
@@ -142,8 +142,8 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("authenticationMethod", this.getAuthenticationMethod());
@@ -159,8 +159,8 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationMethod(@javax.annotation.Nullable final EasAuthenticationMethod value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationMethod(@jakarta.annotation.Nullable final EasAuthenticationMethod value) {
         this.authenticationMethod = value;
     }
     /**
@@ -168,8 +168,8 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * @param value Value to set for the durationOfEmailToSync property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDurationOfEmailToSync(@javax.annotation.Nullable final EmailSyncDuration value) {
+    @jakarta.annotation.Nonnull
+    public void setDurationOfEmailToSync(@jakarta.annotation.Nullable final EmailSyncDuration value) {
         this.durationOfEmailToSync = value;
     }
     /**
@@ -177,8 +177,8 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * @param value Value to set for the emailAddressSource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailAddressSource(@javax.annotation.Nullable final UserEmailSource value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailAddressSource(@jakarta.annotation.Nullable final UserEmailSource value) {
         this.emailAddressSource = value;
     }
     /**
@@ -186,8 +186,8 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * @param value Value to set for the hostName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHostName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setHostName(@jakarta.annotation.Nullable final String value) {
         this.hostName = value;
     }
     /**
@@ -195,8 +195,8 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * @param value Value to set for the identityCertificate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityCertificate(@javax.annotation.Nullable final AndroidForWorkCertificateProfileBase value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentityCertificate(@jakarta.annotation.Nullable final AndroidForWorkCertificateProfileBase value) {
         this.identityCertificate = value;
     }
     /**
@@ -204,8 +204,8 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * @param value Value to set for the requireSsl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequireSsl(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRequireSsl(@jakarta.annotation.Nullable final Boolean value) {
         this.requireSsl = value;
     }
     /**
@@ -213,8 +213,8 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
      * @param value Value to set for the usernameSource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUsernameSource(@javax.annotation.Nullable final AndroidUsernameSource value) {
+    @jakarta.annotation.Nonnull
+    public void setUsernameSource(@jakarta.annotation.Nullable final AndroidUsernameSource value) {
         this.usernameSource = value;
     }
 }

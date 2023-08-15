@@ -18,7 +18,7 @@ public class DeviceManagementTemplateInsightsDefinition extends Entity implement
      * Instantiates a new deviceManagementTemplateInsightsDefinition and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementTemplateInsightsDefinition() {
         super();
     }
@@ -27,8 +27,8 @@ public class DeviceManagementTemplateInsightsDefinition extends Entity implement
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementTemplateInsightsDefinition
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementTemplateInsightsDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementTemplateInsightsDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementTemplateInsightsDefinition();
     }
@@ -36,7 +36,7 @@ public class DeviceManagementTemplateInsightsDefinition extends Entity implement
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("settingInsights", (n) -> { this.setSettingInsights(n.getCollectionOfObjectValues(DeviceManagementSettingInsightsDefinition::createFromDiscriminatorValue)); });
@@ -46,7 +46,7 @@ public class DeviceManagementTemplateInsightsDefinition extends Entity implement
      * Gets the settingInsights property value. Setting insights in a template
      * @return a deviceManagementSettingInsightsDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingInsightsDefinition> getSettingInsights() {
         return this.settingInsights;
     }
@@ -55,8 +55,8 @@ public class DeviceManagementTemplateInsightsDefinition extends Entity implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("settingInsights", this.getSettingInsights());
@@ -66,8 +66,8 @@ public class DeviceManagementTemplateInsightsDefinition extends Entity implement
      * @param value Value to set for the settingInsights property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingInsights(@javax.annotation.Nullable final java.util.List<DeviceManagementSettingInsightsDefinition> value) {
+    @jakarta.annotation.Nonnull
+    public void setSettingInsights(@jakarta.annotation.Nullable final java.util.List<DeviceManagementSettingInsightsDefinition> value) {
         this.settingInsights = value;
     }
 }

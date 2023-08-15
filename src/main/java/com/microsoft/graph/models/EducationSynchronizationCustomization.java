@@ -37,7 +37,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * Instantiates a new educationSynchronizationCustomization and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,8 +46,8 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationSynchronizationCustomization
      */
-    @javax.annotation.Nonnull
-    public static EducationSynchronizationCustomization createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationSynchronizationCustomization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationSynchronizationCustomization();
     }
@@ -55,7 +55,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -63,7 +63,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * Gets the allowDisplayNameUpdate property value. Indicates whether the display name of the resource can be overwritten by the sync.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowDisplayNameUpdate() {
         return this.allowDisplayNameUpdate;
     }
@@ -71,7 +71,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("allowDisplayNameUpdate", (n) -> { this.setAllowDisplayNameUpdate(n.getBooleanValue()); });
@@ -85,7 +85,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * Gets the isSyncDeferred property value. Indicates whether synchronization of the parent entity is deferred to a later date.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSyncDeferred() {
         return this.isSyncDeferred;
     }
@@ -93,7 +93,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -101,7 +101,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * Gets the optionalPropertiesToSync property value. The collection of property names to sync. If set to null, all properties will be synchronized. Does not apply to Student Enrollments or Teacher Rosters
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getOptionalPropertiesToSync() {
         return this.optionalPropertiesToSync;
     }
@@ -109,7 +109,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * Gets the synchronizationStartDate property value. The date that the synchronization should start. This value should be set to a future date. If set to null, the resource will be synchronized when the profile setup completes. Only applies to Student Enrollments
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getSynchronizationStartDate() {
         return this.synchronizationStartDate;
     }
@@ -118,8 +118,8 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowDisplayNameUpdate", this.getAllowDisplayNameUpdate());
         writer.writeBooleanValue("isSyncDeferred", this.getIsSyncDeferred());
@@ -130,11 +130,11 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -142,8 +142,8 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * @param value Value to set for the allowDisplayNameUpdate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowDisplayNameUpdate(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowDisplayNameUpdate(@jakarta.annotation.Nullable final Boolean value) {
         this.allowDisplayNameUpdate = value;
     }
     /**
@@ -151,17 +151,17 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * @param value Value to set for the isSyncDeferred property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSyncDeferred(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsSyncDeferred(@jakarta.annotation.Nullable final Boolean value) {
         this.isSyncDeferred = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -169,8 +169,8 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * @param value Value to set for the optionalPropertiesToSync property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOptionalPropertiesToSync(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setOptionalPropertiesToSync(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.optionalPropertiesToSync = value;
     }
     /**
@@ -178,8 +178,8 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * @param value Value to set for the synchronizationStartDate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSynchronizationStartDate(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setSynchronizationStartDate(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.synchronizationStartDate = value;
     }
 }

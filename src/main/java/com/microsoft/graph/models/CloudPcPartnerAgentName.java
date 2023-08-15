@@ -5,19 +5,21 @@ import java.util.Objects;
 
 public enum CloudPcPartnerAgentName implements ValuedEnum {
     Citrix("citrix"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    VMware("vMware");
     public final String value;
     CloudPcPartnerAgentName(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static CloudPcPartnerAgentName forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static CloudPcPartnerAgentName forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "citrix": return Citrix;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "vMware": return VMware;
             default: return null;
         }
     }

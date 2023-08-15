@@ -94,7 +94,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Instantiates a new smsLogRow and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SmsLogRow() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -103,8 +103,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a smsLogRow
      */
-    @javax.annotation.Nonnull
-    public static SmsLogRow createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SmsLogRow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SmsLogRow();
     }
@@ -112,7 +112,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -120,7 +120,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the callCharge property value. Amount of money or cost of the SMS that is charged.
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getCallCharge() {
         return this.callCharge;
     }
@@ -128,7 +128,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the currency property value. Currency used to calculate the cost of the call. For details, see ISO 4217.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCurrency() {
         return this.currency;
     }
@@ -136,7 +136,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the destinationContext property value. Indicates whether the SMS was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDestinationContext() {
         return this.destinationContext;
     }
@@ -144,7 +144,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the destinationName property value. Country or region of a phone number that received the SMS.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDestinationName() {
         return this.destinationName;
     }
@@ -152,7 +152,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the destinationNumber property value. Partially obfuscated phone number that received the SMS. For details, see E.164.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDestinationNumber() {
         return this.destinationNumber;
     }
@@ -160,7 +160,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(19);
         deserializerMap.put("callCharge", (n) -> { this.setCallCharge(n.getBigDecimalValue()); });
@@ -188,7 +188,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the id property value. Unique identifier (GUID) for the SMS.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -196,7 +196,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the licenseCapability property value. The license used for the SMS.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLicenseCapability() {
         return this.licenseCapability;
     }
@@ -204,7 +204,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -212,7 +212,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the otherPartyCountryCode property value. For an outbound SMS, the country code of the receiver; otherwise (inbound SMS) the country code of the sender. For details, see ISO 3166-1 alpha-2.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOtherPartyCountryCode() {
         return this.otherPartyCountryCode;
     }
@@ -220,7 +220,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the sentDateTime property value. The date and time when the SMS was sent.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getSentDateTime() {
         return this.sentDateTime;
     }
@@ -228,7 +228,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the smsId property value. SMS identifier. Not guaranteed to be unique.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSmsId() {
         return this.smsId;
     }
@@ -236,7 +236,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the smsType property value. Type of SMS such as outbound or inbound.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSmsType() {
         return this.smsType;
     }
@@ -244,7 +244,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the smsUnits property value. Number of SMS units sent/received.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSmsUnits() {
         return this.smsUnits;
     }
@@ -252,7 +252,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the sourceNumber property value. Partially obfuscated phone number that sent the SMS. For details, see E.164.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSourceNumber() {
         return this.sourceNumber;
     }
@@ -260,7 +260,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the tenantCountryCode property value. Country code of the tenant. For details, see ISO 3166-1 alpha-2.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantCountryCode() {
         return this.tenantCountryCode;
     }
@@ -268,7 +268,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the userCountryCode property value. Country code of the user. For details, see ISO 3166-1 alpha-2.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserCountryCode() {
         return this.userCountryCode;
     }
@@ -276,7 +276,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the userDisplayName property value. Display name of the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserDisplayName() {
         return this.userDisplayName;
     }
@@ -284,7 +284,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -292,7 +292,7 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * Gets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
@@ -301,8 +301,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBigDecimalValue("callCharge", this.getCallCharge());
         writer.writeStringValue("currency", this.getCurrency());
@@ -327,11 +327,11 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -339,8 +339,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the callCharge property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallCharge(@javax.annotation.Nullable final BigDecimal value) {
+    @jakarta.annotation.Nonnull
+    public void setCallCharge(@jakarta.annotation.Nullable final BigDecimal value) {
         this.callCharge = value;
     }
     /**
@@ -348,8 +348,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the currency property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrency(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCurrency(@jakarta.annotation.Nullable final String value) {
         this.currency = value;
     }
     /**
@@ -357,8 +357,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the destinationContext property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDestinationContext(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDestinationContext(@jakarta.annotation.Nullable final String value) {
         this.destinationContext = value;
     }
     /**
@@ -366,8 +366,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the destinationName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDestinationName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDestinationName(@jakarta.annotation.Nullable final String value) {
         this.destinationName = value;
     }
     /**
@@ -375,8 +375,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the destinationNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDestinationNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDestinationNumber(@jakarta.annotation.Nullable final String value) {
         this.destinationNumber = value;
     }
     /**
@@ -384,8 +384,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
@@ -393,17 +393,17 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the licenseCapability property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLicenseCapability(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLicenseCapability(@jakarta.annotation.Nullable final String value) {
         this.licenseCapability = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -411,8 +411,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the otherPartyCountryCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOtherPartyCountryCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOtherPartyCountryCode(@jakarta.annotation.Nullable final String value) {
         this.otherPartyCountryCode = value;
     }
     /**
@@ -420,8 +420,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sentDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSentDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setSentDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.sentDateTime = value;
     }
     /**
@@ -429,8 +429,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the smsId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSmsId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSmsId(@jakarta.annotation.Nullable final String value) {
         this.smsId = value;
     }
     /**
@@ -438,8 +438,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the smsType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSmsType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSmsType(@jakarta.annotation.Nullable final String value) {
         this.smsType = value;
     }
     /**
@@ -447,8 +447,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the smsUnits property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSmsUnits(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setSmsUnits(@jakarta.annotation.Nullable final Integer value) {
         this.smsUnits = value;
     }
     /**
@@ -456,8 +456,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sourceNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourceNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSourceNumber(@jakarta.annotation.Nullable final String value) {
         this.sourceNumber = value;
     }
     /**
@@ -465,8 +465,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tenantCountryCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantCountryCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTenantCountryCode(@jakarta.annotation.Nullable final String value) {
         this.tenantCountryCode = value;
     }
     /**
@@ -474,8 +474,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userCountryCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserCountryCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserCountryCode(@jakarta.annotation.Nullable final String value) {
         this.userCountryCode = value;
     }
     /**
@@ -483,8 +483,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
@@ -492,8 +492,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
@@ -501,8 +501,8 @@ public class SmsLogRow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

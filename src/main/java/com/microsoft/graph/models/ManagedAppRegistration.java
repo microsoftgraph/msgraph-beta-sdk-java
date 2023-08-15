@@ -91,7 +91,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Instantiates a new managedAppRegistration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedAppRegistration() {
         super();
     }
@@ -100,8 +100,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedAppRegistration
      */
-    @javax.annotation.Nonnull
-    public static ManagedAppRegistration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedAppRegistration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -117,7 +117,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the appIdentifier property value. The app package Identifier
      * @return a mobileAppIdentifier
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MobileAppIdentifier getAppIdentifier() {
         return this.appIdentifier;
     }
@@ -125,7 +125,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the applicationVersion property value. App version
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getApplicationVersion() {
         return this.applicationVersion;
     }
@@ -133,7 +133,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the appliedPolicies property value. Zero or more policys already applied on the registered app when it last synchronized with managment service.
      * @return a managedAppPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedAppPolicy> getAppliedPolicies() {
         return this.appliedPolicies;
     }
@@ -141,7 +141,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the azureADDeviceId property value. The Azure Active Directory Device identifier of the host device. Value could be empty even when the host device is Azure Active Directory registered.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureADDeviceId() {
         return this.azureADDeviceId;
     }
@@ -149,7 +149,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the createdDateTime property value. Date and time of creation
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -157,7 +157,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the deviceManufacturer property value. The device manufacturer for the current app registration
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceManufacturer() {
         return this.deviceManufacturer;
     }
@@ -165,7 +165,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the deviceModel property value. The device model for the current app registration
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceModel() {
         return this.deviceModel;
     }
@@ -173,7 +173,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the deviceName property value. Host device name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -181,7 +181,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the deviceTag property value. App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceTag() {
         return this.deviceTag;
     }
@@ -189,7 +189,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the deviceType property value. Host device type
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceType() {
         return this.deviceType;
     }
@@ -197,7 +197,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appIdentifier", (n) -> { this.setAppIdentifier(n.getObjectValue(MobileAppIdentifier::createFromDiscriminatorValue)); });
@@ -225,7 +225,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the flaggedReasons property value. Zero or more reasons an app registration is flagged. E.g. app running on rooted device
      * @return a managedAppFlaggedReason
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedAppFlaggedReason> getFlaggedReasons() {
         return this.flaggedReasons;
     }
@@ -233,7 +233,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the intendedPolicies property value. Zero or more policies admin intended for the app as of now.
      * @return a managedAppPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedAppPolicy> getIntendedPolicies() {
         return this.intendedPolicies;
     }
@@ -241,7 +241,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the lastSyncDateTime property value. Date and time of last the app synced with management service.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
         return this.lastSyncDateTime;
     }
@@ -249,7 +249,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the managedDeviceId property value. The Managed Device identifier of the host device. Value could be empty even when the host device is managed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
         return this.managedDeviceId;
     }
@@ -257,7 +257,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the managementSdkVersion property value. App management SDK version
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagementSdkVersion() {
         return this.managementSdkVersion;
     }
@@ -265,7 +265,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the operations property value. Zero or more long running operations triggered on the app registration.
      * @return a managedAppOperation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedAppOperation> getOperations() {
         return this.operations;
     }
@@ -273,7 +273,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the platformVersion property value. Operating System version
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPlatformVersion() {
         return this.platformVersion;
     }
@@ -281,7 +281,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the userId property value. The user Id to who this app registration belongs.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -289,7 +289,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * Gets the version property value. Version of the entity.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersion() {
         return this.version;
     }
@@ -298,8 +298,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("appIdentifier", this.getAppIdentifier());
@@ -327,8 +327,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the appIdentifier property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppIdentifier(@javax.annotation.Nullable final MobileAppIdentifier value) {
+    @jakarta.annotation.Nonnull
+    public void setAppIdentifier(@jakarta.annotation.Nullable final MobileAppIdentifier value) {
         this.appIdentifier = value;
     }
     /**
@@ -336,8 +336,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the applicationVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicationVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicationVersion(@jakarta.annotation.Nullable final String value) {
         this.applicationVersion = value;
     }
     /**
@@ -345,8 +345,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the appliedPolicies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppliedPolicies(@javax.annotation.Nullable final java.util.List<ManagedAppPolicy> value) {
+    @jakarta.annotation.Nonnull
+    public void setAppliedPolicies(@jakarta.annotation.Nullable final java.util.List<ManagedAppPolicy> value) {
         this.appliedPolicies = value;
     }
     /**
@@ -354,8 +354,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the azureADDeviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureADDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAzureADDeviceId(@jakarta.annotation.Nullable final String value) {
         this.azureADDeviceId = value;
     }
     /**
@@ -363,8 +363,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -372,8 +372,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the deviceManufacturer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceManufacturer(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceManufacturer(@jakarta.annotation.Nullable final String value) {
         this.deviceManufacturer = value;
     }
     /**
@@ -381,8 +381,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the deviceModel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceModel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
         this.deviceModel = value;
     }
     /**
@@ -390,8 +390,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the deviceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
@@ -399,8 +399,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the deviceTag property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceTag(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceTag(@jakarta.annotation.Nullable final String value) {
         this.deviceTag = value;
     }
     /**
@@ -408,8 +408,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the deviceType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceType(@jakarta.annotation.Nullable final String value) {
         this.deviceType = value;
     }
     /**
@@ -417,8 +417,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the flaggedReasons property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFlaggedReasons(@javax.annotation.Nullable final java.util.List<ManagedAppFlaggedReason> value) {
+    @jakarta.annotation.Nonnull
+    public void setFlaggedReasons(@jakarta.annotation.Nullable final java.util.List<ManagedAppFlaggedReason> value) {
         this.flaggedReasons = value;
     }
     /**
@@ -426,8 +426,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the intendedPolicies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIntendedPolicies(@javax.annotation.Nullable final java.util.List<ManagedAppPolicy> value) {
+    @jakarta.annotation.Nonnull
+    public void setIntendedPolicies(@jakarta.annotation.Nullable final java.util.List<ManagedAppPolicy> value) {
         this.intendedPolicies = value;
     }
     /**
@@ -435,8 +435,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSyncDateTime = value;
     }
     /**
@@ -444,8 +444,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedDeviceId(@jakarta.annotation.Nullable final String value) {
         this.managedDeviceId = value;
     }
     /**
@@ -453,8 +453,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the managementSdkVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementSdkVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManagementSdkVersion(@jakarta.annotation.Nullable final String value) {
         this.managementSdkVersion = value;
     }
     /**
@@ -462,8 +462,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperations(@javax.annotation.Nullable final java.util.List<ManagedAppOperation> value) {
+    @jakarta.annotation.Nonnull
+    public void setOperations(@jakarta.annotation.Nullable final java.util.List<ManagedAppOperation> value) {
         this.operations = value;
     }
     /**
@@ -471,8 +471,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the platformVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatformVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPlatformVersion(@jakarta.annotation.Nullable final String value) {
         this.platformVersion = value;
     }
     /**
@@ -480,8 +480,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
@@ -489,8 +489,8 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }
 }

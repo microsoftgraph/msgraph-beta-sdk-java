@@ -16,7 +16,7 @@ public class ManagedDeviceComplianceCollectionResponse extends BaseCollectionPag
      * Instantiates a new managedDeviceComplianceCollectionResponse and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedDeviceComplianceCollectionResponse() {
         super();
     }
@@ -25,8 +25,8 @@ public class ManagedDeviceComplianceCollectionResponse extends BaseCollectionPag
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedDeviceComplianceCollectionResponse
      */
-    @javax.annotation.Nonnull
-    public static ManagedDeviceComplianceCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedDeviceComplianceCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagedDeviceComplianceCollectionResponse();
     }
@@ -34,7 +34,7 @@ public class ManagedDeviceComplianceCollectionResponse extends BaseCollectionPag
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(ManagedDeviceCompliance::createFromDiscriminatorValue)); });
@@ -44,7 +44,7 @@ public class ManagedDeviceComplianceCollectionResponse extends BaseCollectionPag
      * Gets the value property value. The value property
      * @return a managedDeviceCompliance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCompliance> getValue() {
         return this.value;
     }
@@ -53,8 +53,8 @@ public class ManagedDeviceComplianceCollectionResponse extends BaseCollectionPag
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("value", this.getValue());
@@ -64,8 +64,8 @@ public class ManagedDeviceComplianceCollectionResponse extends BaseCollectionPag
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final java.util.List<ManagedDeviceCompliance> value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceCompliance> value) {
         this.value = value;
     }
 }

@@ -22,7 +22,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplat
      * Instantiates a new deviceManagementConfigurationChoiceSettingCollectionInstanceTemplate and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionInstanceTemplate");
@@ -32,8 +32,8 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplat
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationChoiceSettingCollectionInstanceTemplate
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplate();
     }
@@ -41,7 +41,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplat
      * Gets the allowUnmanagedValues property value. Linked policy may append values which are not present in the template.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowUnmanagedValues() {
         return this.allowUnmanagedValues;
     }
@@ -49,7 +49,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplat
      * Gets the choiceSettingCollectionValueTemplate property value. Choice Setting Collection Value Template
      * @return a deviceManagementConfigurationChoiceSettingValueTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationChoiceSettingValueTemplate> getChoiceSettingCollectionValueTemplate() {
         return this.choiceSettingCollectionValueTemplate;
     }
@@ -57,7 +57,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplat
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowUnmanagedValues", (n) -> { this.setAllowUnmanagedValues(n.getBooleanValue()); });
@@ -69,8 +69,8 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplat
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("allowUnmanagedValues", this.getAllowUnmanagedValues());
@@ -81,8 +81,8 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplat
      * @param value Value to set for the allowUnmanagedValues property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowUnmanagedValues(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowUnmanagedValues(@jakarta.annotation.Nullable final Boolean value) {
         this.allowUnmanagedValues = value;
     }
     /**
@@ -90,8 +90,8 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplat
      * @param value Value to set for the choiceSettingCollectionValueTemplate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChoiceSettingCollectionValueTemplate(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationChoiceSettingValueTemplate> value) {
+    @jakarta.annotation.Nonnull
+    public void setChoiceSettingCollectionValueTemplate(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationChoiceSettingValueTemplate> value) {
         this.choiceSettingCollectionValueTemplate = value;
     }
 }

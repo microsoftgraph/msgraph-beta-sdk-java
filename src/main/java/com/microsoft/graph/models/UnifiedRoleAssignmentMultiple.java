@@ -55,7 +55,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * Instantiates a new unifiedRoleAssignmentMultiple and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UnifiedRoleAssignmentMultiple() {
         super();
     }
@@ -64,8 +64,8 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a unifiedRoleAssignmentMultiple
      */
-    @javax.annotation.Nonnull
-    public static UnifiedRoleAssignmentMultiple createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UnifiedRoleAssignmentMultiple createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UnifiedRoleAssignmentMultiple();
     }
@@ -73,7 +73,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * Gets the appScopeIds property value. Ids of the app specific scopes when the assignment scopes are app specific. The scopes of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAppScopeIds() {
         return this.appScopeIds;
     }
@@ -81,7 +81,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * Gets the appScopes property value. Read-only collection with details of the app specific scopes when the assignment scopes are app specific. Containment entity. Read-only.
      * @return a appScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AppScope> getAppScopes() {
         return this.appScopes;
     }
@@ -89,7 +89,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * Gets the condition property value. The condition property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCondition() {
         return this.condition;
     }
@@ -97,7 +97,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * Gets the description property value. Description of the role assignment.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -105,7 +105,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * Gets the directoryScopeIds property value. Ids of the directory objects representing the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getDirectoryScopeIds() {
         return this.directoryScopeIds;
     }
@@ -113,7 +113,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * Gets the directoryScopes property value. Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getDirectoryScopes() {
         return this.directoryScopes;
     }
@@ -121,7 +121,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * Gets the displayName property value. Name of the role assignment. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -129,7 +129,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appScopeIds", (n) -> { this.setAppScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -149,7 +149,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * Gets the principalIds property value. Identifiers of the principals to which the assignment is granted.  Supports $filter (any operator only).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getPrincipalIds() {
         return this.principalIds;
     }
@@ -157,7 +157,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * Gets the principals property value. Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getPrincipals() {
         return this.principals;
     }
@@ -165,7 +165,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * Gets the roleDefinition property value. Specifies the roleDefinition that the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment.  Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.
      * @return a unifiedRoleDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UnifiedRoleDefinition getRoleDefinition() {
         return this.roleDefinition;
     }
@@ -173,7 +173,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * Gets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition the assignment is for.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
@@ -182,8 +182,8 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("appScopeIds", this.getAppScopeIds());
@@ -203,8 +203,8 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the appScopeIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppScopeIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setAppScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.appScopeIds = value;
     }
     /**
@@ -212,8 +212,8 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the appScopes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppScopes(@javax.annotation.Nullable final java.util.List<AppScope> value) {
+    @jakarta.annotation.Nonnull
+    public void setAppScopes(@jakarta.annotation.Nullable final java.util.List<AppScope> value) {
         this.appScopes = value;
     }
     /**
@@ -221,8 +221,8 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the condition property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCondition(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCondition(@jakarta.annotation.Nullable final String value) {
         this.condition = value;
     }
     /**
@@ -230,8 +230,8 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -239,8 +239,8 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the directoryScopeIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDirectoryScopeIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setDirectoryScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.directoryScopeIds = value;
     }
     /**
@@ -248,8 +248,8 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the directoryScopes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDirectoryScopes(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
+    @jakarta.annotation.Nonnull
+    public void setDirectoryScopes(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.directoryScopes = value;
     }
     /**
@@ -257,8 +257,8 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -266,8 +266,8 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the principalIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipalIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setPrincipalIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.principalIds = value;
     }
     /**
@@ -275,8 +275,8 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the principals property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipals(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
+    @jakarta.annotation.Nonnull
+    public void setPrincipals(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.principals = value;
     }
     /**
@@ -284,8 +284,8 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the roleDefinition property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinition(@javax.annotation.Nullable final UnifiedRoleDefinition value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDefinition(@jakarta.annotation.Nullable final UnifiedRoleDefinition value) {
         this.roleDefinition = value;
     }
     /**
@@ -293,8 +293,8 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.roleDefinitionId = value;
     }
 }

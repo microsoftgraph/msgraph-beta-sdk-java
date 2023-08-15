@@ -98,7 +98,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Instantiates a new windows10DeviceFirmwareConfigurationInterface and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Windows10DeviceFirmwareConfigurationInterface() {
         super();
         this.setOdataType("#microsoft.graph.windows10DeviceFirmwareConfigurationInterface");
@@ -108,8 +108,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windows10DeviceFirmwareConfigurationInterface
      */
-    @javax.annotation.Nonnull
-    public static Windows10DeviceFirmwareConfigurationInterface createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Windows10DeviceFirmwareConfigurationInterface createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Windows10DeviceFirmwareConfigurationInterface();
     }
@@ -117,7 +117,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the bluetooth property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getBluetooth() {
         return this.bluetooth;
     }
@@ -125,7 +125,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the bootFromBuiltInNetworkAdapters property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getBootFromBuiltInNetworkAdapters() {
         return this.bootFromBuiltInNetworkAdapters;
     }
@@ -133,7 +133,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the bootFromExternalMedia property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getBootFromExternalMedia() {
         return this.bootFromExternalMedia;
     }
@@ -141,7 +141,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the cameras property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getCameras() {
         return this.cameras;
     }
@@ -149,7 +149,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the changeUefiSettingsPermission property value. Defines the permission level granted to users to enable them change Uefi settings
      * @return a changeUefiSettingsPermission
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChangeUefiSettingsPermission getChangeUefiSettingsPermission() {
         return this.changeUefiSettingsPermission;
     }
@@ -157,7 +157,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("bluetooth", (n) -> { this.setBluetooth(n.getEnumValue(Enablement.class)); });
@@ -187,7 +187,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the frontCamera property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getFrontCamera() {
         return this.frontCamera;
     }
@@ -195,7 +195,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the infraredCamera property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getInfraredCamera() {
         return this.infraredCamera;
     }
@@ -203,7 +203,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the microphone property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getMicrophone() {
         return this.microphone;
     }
@@ -211,7 +211,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the microphonesAndSpeakers property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getMicrophonesAndSpeakers() {
         return this.microphonesAndSpeakers;
     }
@@ -219,7 +219,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the nearFieldCommunication property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getNearFieldCommunication() {
         return this.nearFieldCommunication;
     }
@@ -227,7 +227,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the radios property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getRadios() {
         return this.radios;
     }
@@ -235,7 +235,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the rearCamera property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getRearCamera() {
         return this.rearCamera;
     }
@@ -243,7 +243,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the sdCard property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getSdCard() {
         return this.sdCard;
     }
@@ -251,7 +251,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the simultaneousMultiThreading property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getSimultaneousMultiThreading() {
         return this.simultaneousMultiThreading;
     }
@@ -259,7 +259,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the usbTypeAPort property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getUsbTypeAPort() {
         return this.usbTypeAPort;
     }
@@ -267,7 +267,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the virtualizationOfCpuAndIO property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getVirtualizationOfCpuAndIO() {
         return this.virtualizationOfCpuAndIO;
     }
@@ -275,7 +275,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the wakeOnLAN property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getWakeOnLAN() {
         return this.wakeOnLAN;
     }
@@ -283,7 +283,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the wakeOnPower property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getWakeOnPower() {
         return this.wakeOnPower;
     }
@@ -291,7 +291,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the wiFi property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getWiFi() {
         return this.wiFi;
     }
@@ -299,7 +299,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the windowsPlatformBinaryTable property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getWindowsPlatformBinaryTable() {
         return this.windowsPlatformBinaryTable;
     }
@@ -307,7 +307,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * Gets the wirelessWideAreaNetwork property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getWirelessWideAreaNetwork() {
         return this.wirelessWideAreaNetwork;
     }
@@ -316,8 +316,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("bluetooth", this.getBluetooth());
@@ -347,8 +347,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the bluetooth property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBluetooth(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setBluetooth(@jakarta.annotation.Nullable final Enablement value) {
         this.bluetooth = value;
     }
     /**
@@ -356,8 +356,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the bootFromBuiltInNetworkAdapters property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBootFromBuiltInNetworkAdapters(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setBootFromBuiltInNetworkAdapters(@jakarta.annotation.Nullable final Enablement value) {
         this.bootFromBuiltInNetworkAdapters = value;
     }
     /**
@@ -365,8 +365,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the bootFromExternalMedia property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBootFromExternalMedia(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setBootFromExternalMedia(@jakarta.annotation.Nullable final Enablement value) {
         this.bootFromExternalMedia = value;
     }
     /**
@@ -374,8 +374,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the cameras property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCameras(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setCameras(@jakarta.annotation.Nullable final Enablement value) {
         this.cameras = value;
     }
     /**
@@ -383,8 +383,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the changeUefiSettingsPermission property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChangeUefiSettingsPermission(@javax.annotation.Nullable final ChangeUefiSettingsPermission value) {
+    @jakarta.annotation.Nonnull
+    public void setChangeUefiSettingsPermission(@jakarta.annotation.Nullable final ChangeUefiSettingsPermission value) {
         this.changeUefiSettingsPermission = value;
     }
     /**
@@ -392,8 +392,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the frontCamera property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFrontCamera(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setFrontCamera(@jakarta.annotation.Nullable final Enablement value) {
         this.frontCamera = value;
     }
     /**
@@ -401,8 +401,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the infraredCamera property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInfraredCamera(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setInfraredCamera(@jakarta.annotation.Nullable final Enablement value) {
         this.infraredCamera = value;
     }
     /**
@@ -410,8 +410,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the microphone property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMicrophone(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setMicrophone(@jakarta.annotation.Nullable final Enablement value) {
         this.microphone = value;
     }
     /**
@@ -419,8 +419,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the microphonesAndSpeakers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMicrophonesAndSpeakers(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setMicrophonesAndSpeakers(@jakarta.annotation.Nullable final Enablement value) {
         this.microphonesAndSpeakers = value;
     }
     /**
@@ -428,8 +428,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the nearFieldCommunication property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNearFieldCommunication(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setNearFieldCommunication(@jakarta.annotation.Nullable final Enablement value) {
         this.nearFieldCommunication = value;
     }
     /**
@@ -437,8 +437,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the radios property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRadios(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setRadios(@jakarta.annotation.Nullable final Enablement value) {
         this.radios = value;
     }
     /**
@@ -446,8 +446,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the rearCamera property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRearCamera(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setRearCamera(@jakarta.annotation.Nullable final Enablement value) {
         this.rearCamera = value;
     }
     /**
@@ -455,8 +455,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the sdCard property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSdCard(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setSdCard(@jakarta.annotation.Nullable final Enablement value) {
         this.sdCard = value;
     }
     /**
@@ -464,8 +464,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the simultaneousMultiThreading property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSimultaneousMultiThreading(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setSimultaneousMultiThreading(@jakarta.annotation.Nullable final Enablement value) {
         this.simultaneousMultiThreading = value;
     }
     /**
@@ -473,8 +473,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the usbTypeAPort property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUsbTypeAPort(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setUsbTypeAPort(@jakarta.annotation.Nullable final Enablement value) {
         this.usbTypeAPort = value;
     }
     /**
@@ -482,8 +482,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the virtualizationOfCpuAndIO property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVirtualizationOfCpuAndIO(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setVirtualizationOfCpuAndIO(@jakarta.annotation.Nullable final Enablement value) {
         this.virtualizationOfCpuAndIO = value;
     }
     /**
@@ -491,8 +491,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the wakeOnLAN property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWakeOnLAN(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setWakeOnLAN(@jakarta.annotation.Nullable final Enablement value) {
         this.wakeOnLAN = value;
     }
     /**
@@ -500,8 +500,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the wakeOnPower property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWakeOnPower(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setWakeOnPower(@jakarta.annotation.Nullable final Enablement value) {
         this.wakeOnPower = value;
     }
     /**
@@ -509,8 +509,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the wiFi property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWiFi(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setWiFi(@jakarta.annotation.Nullable final Enablement value) {
         this.wiFi = value;
     }
     /**
@@ -518,8 +518,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the windowsPlatformBinaryTable property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindowsPlatformBinaryTable(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setWindowsPlatformBinaryTable(@jakarta.annotation.Nullable final Enablement value) {
         this.windowsPlatformBinaryTable = value;
     }
     /**
@@ -527,8 +527,8 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
      * @param value Value to set for the wirelessWideAreaNetwork property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWirelessWideAreaNetwork(@javax.annotation.Nullable final Enablement value) {
+    @jakarta.annotation.Nonnull
+    public void setWirelessWideAreaNetwork(@jakarta.annotation.Nullable final Enablement value) {
         this.wirelessWideAreaNetwork = value;
     }
 }

@@ -19,7 +19,7 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
      * Instantiates a new roleMembershipGovernanceCriteria and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RoleMembershipGovernanceCriteria() {
         super();
         this.setOdataType("#microsoft.graph.roleMembershipGovernanceCriteria");
@@ -29,8 +29,8 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a roleMembershipGovernanceCriteria
      */
-    @javax.annotation.Nonnull
-    public static RoleMembershipGovernanceCriteria createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RoleMembershipGovernanceCriteria createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RoleMembershipGovernanceCriteria();
     }
@@ -38,7 +38,7 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("roleId", (n) -> { this.setRoleId(n.getStringValue()); });
@@ -49,7 +49,7 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
      * Gets the roleId property value. The roleId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleId() {
         return this.roleId;
     }
@@ -57,7 +57,7 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
      * Gets the roleTemplateId property value. The roleTemplateId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleTemplateId() {
         return this.roleTemplateId;
     }
@@ -66,8 +66,8 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("roleId", this.getRoleId());
@@ -78,8 +78,8 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
      * @param value Value to set for the roleId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleId(@jakarta.annotation.Nullable final String value) {
         this.roleId = value;
     }
     /**
@@ -87,8 +87,8 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
      * @param value Value to set for the roleTemplateId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleTemplateId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleTemplateId(@jakarta.annotation.Nullable final String value) {
         this.roleTemplateId = value;
     }
 }

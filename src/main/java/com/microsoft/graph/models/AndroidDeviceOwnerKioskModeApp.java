@@ -22,7 +22,7 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
      * Instantiates a new androidDeviceOwnerKioskModeApp and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidDeviceOwnerKioskModeApp() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerKioskModeApp");
@@ -32,8 +32,8 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidDeviceOwnerKioskModeApp
      */
-    @javax.annotation.Nonnull
-    public static AndroidDeviceOwnerKioskModeApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidDeviceOwnerKioskModeApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidDeviceOwnerKioskModeApp();
     }
@@ -41,7 +41,7 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
      * Gets the className property value. Class name of application
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClassName() {
         return this.className;
     }
@@ -49,7 +49,7 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("className", (n) -> { this.setClassName(n.getStringValue()); });
@@ -60,7 +60,7 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
      * Gets the package property value. Package name of application
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPackage() {
         return this.packageEscaped;
     }
@@ -69,8 +69,8 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("className", this.getClassName());
@@ -81,8 +81,8 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
      * @param value Value to set for the className property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClassName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setClassName(@jakarta.annotation.Nullable final String value) {
         this.className = value;
     }
     /**
@@ -90,8 +90,8 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
      * @param value Value to set for the package property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPackage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPackage(@jakarta.annotation.Nullable final String value) {
         this.packageEscaped = value;
     }
 }

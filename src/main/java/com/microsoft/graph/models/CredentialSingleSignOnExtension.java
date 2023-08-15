@@ -34,7 +34,7 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
      * Instantiates a new credentialSingleSignOnExtension and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CredentialSingleSignOnExtension() {
         super();
         this.setOdataType("#microsoft.graph.credentialSingleSignOnExtension");
@@ -44,8 +44,8 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a credentialSingleSignOnExtension
      */
-    @javax.annotation.Nonnull
-    public static CredentialSingleSignOnExtension createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CredentialSingleSignOnExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CredentialSingleSignOnExtension();
     }
@@ -53,7 +53,7 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
      * Gets the configurations property value. Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
      * @return a keyTypedValuePair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyTypedValuePair> getConfigurations() {
         return this.configurations;
     }
@@ -61,7 +61,7 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
      * Gets the domains property value. Gets or sets a list of hosts or domain names for which the app extension performs SSO.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getDomains() {
         return this.domains;
     }
@@ -69,7 +69,7 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
      * Gets the extensionIdentifier property value. Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExtensionIdentifier() {
         return this.extensionIdentifier;
     }
@@ -77,7 +77,7 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("configurations", (n) -> { this.setConfigurations(n.getCollectionOfObjectValues(KeyTypedValuePair::createFromDiscriminatorValue)); });
@@ -91,7 +91,7 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
      * Gets the realm property value. Gets or sets the case-sensitive realm name for this profile.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRealm() {
         return this.realm;
     }
@@ -99,7 +99,7 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
      * Gets the teamIdentifier property value. Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTeamIdentifier() {
         return this.teamIdentifier;
     }
@@ -108,8 +108,8 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("configurations", this.getConfigurations());
@@ -123,8 +123,8 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
      * @param value Value to set for the configurations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigurations(@javax.annotation.Nullable final java.util.List<KeyTypedValuePair> value) {
+    @jakarta.annotation.Nonnull
+    public void setConfigurations(@jakarta.annotation.Nullable final java.util.List<KeyTypedValuePair> value) {
         this.configurations = value;
     }
     /**
@@ -132,8 +132,8 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
      * @param value Value to set for the domains property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDomains(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.domains = value;
     }
     /**
@@ -141,8 +141,8 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
      * @param value Value to set for the extensionIdentifier property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExtensionIdentifier(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExtensionIdentifier(@jakarta.annotation.Nullable final String value) {
         this.extensionIdentifier = value;
     }
     /**
@@ -150,8 +150,8 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
      * @param value Value to set for the realm property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRealm(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRealm(@jakarta.annotation.Nullable final String value) {
         this.realm = value;
     }
     /**
@@ -159,8 +159,8 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
      * @param value Value to set for the teamIdentifier property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTeamIdentifier(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTeamIdentifier(@jakarta.annotation.Nullable final String value) {
         this.teamIdentifier = value;
     }
 }

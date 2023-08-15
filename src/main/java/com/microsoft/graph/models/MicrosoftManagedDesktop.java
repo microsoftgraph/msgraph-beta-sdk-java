@@ -28,7 +28,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
      * Instantiates a new microsoftManagedDesktop and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MicrosoftManagedDesktop() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a microsoftManagedDesktop
      */
-    @javax.annotation.Nonnull
-    public static MicrosoftManagedDesktop createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MicrosoftManagedDesktop createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MicrosoftManagedDesktop();
     }
@@ -46,7 +46,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -66,7 +66,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -74,7 +74,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
      * Gets the profile property value. The name of the Microsoft Managed Desktop profile that the Windows 365 Cloud PC is associated with.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProfile() {
         return this.profile;
     }
@@ -82,7 +82,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
      * Gets the type property value. Indicates whether the provisioning policy enables Microsoft Managed Desktop. It indicates the type of plan under which the device is managed if the provisioning policy is enabled. Possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue.
      * @return a microsoftManagedDesktopType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MicrosoftManagedDesktopType getType() {
         return this.type;
     }
@@ -91,8 +91,8 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("profile", this.getProfile());
@@ -101,20 +101,20 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -122,8 +122,8 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the profile property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProfile(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProfile(@jakarta.annotation.Nullable final String value) {
         this.profile = value;
     }
     /**
@@ -131,8 +131,8 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final MicrosoftManagedDesktopType value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final MicrosoftManagedDesktopType value) {
         this.type = value;
     }
 }

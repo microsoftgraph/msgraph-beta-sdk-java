@@ -43,7 +43,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * Instantiates a new inboundActivityResults and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InboundActivityResults() {
         super();
         this.setOdataType("#microsoft.graph.industryData.inboundActivityResults");
@@ -53,8 +53,8 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a inboundActivityResults
      */
-    @javax.annotation.Nonnull
-    public static InboundActivityResults createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static InboundActivityResults createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new InboundActivityResults();
     }
@@ -62,7 +62,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * Gets the errors property value. Number of errors encountered while processing the inbound flow.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getErrors() {
         return this.errors;
     }
@@ -70,7 +70,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("errors", (n) -> { this.setErrors(n.getIntegerValue()); });
@@ -87,7 +87,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * Gets the groups property value. Counts of active and inactive groups processed by the inbound flow.
      * @return a industryDataRunEntityCountMetric
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IndustryDataRunEntityCountMetric getGroups() {
         return this.groups;
     }
@@ -95,7 +95,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * Gets the matchedPeopleByRole property value. Number of people matched to an Azure Active Directory user, by role.
      * @return a industryDataRunRoleCountMetric
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IndustryDataRunRoleCountMetric> getMatchedPeopleByRole() {
         return this.matchedPeopleByRole;
     }
@@ -103,7 +103,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * Gets the memberships property value. Counts of active and inactive memberships processed by the inbound flow.
      * @return a industryDataRunEntityCountMetric
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IndustryDataRunEntityCountMetric getMemberships() {
         return this.memberships;
     }
@@ -111,7 +111,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * Gets the organizations property value. Counts of active and inactive organizations processed by the inbound flow.
      * @return a industryDataRunEntityCountMetric
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IndustryDataRunEntityCountMetric getOrganizations() {
         return this.organizations;
     }
@@ -119,7 +119,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * Gets the people property value. Counts of active and inactive people processed by the inbound flow.
      * @return a industryDataRunEntityCountMetric
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IndustryDataRunEntityCountMetric getPeople() {
         return this.people;
     }
@@ -127,7 +127,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * Gets the unmatchedPeopleByRole property value. Number of people not matched to an Azure Active Directory user, by role.
      * @return a industryDataRunRoleCountMetric
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IndustryDataRunRoleCountMetric> getUnmatchedPeopleByRole() {
         return this.unmatchedPeopleByRole;
     }
@@ -135,7 +135,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * Gets the warnings property value. Number of warnings encountered while processing the inbound flow.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getWarnings() {
         return this.warnings;
     }
@@ -144,8 +144,8 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
     }
@@ -154,8 +154,8 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * @param value Value to set for the errors property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrors(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setErrors(@jakarta.annotation.Nullable final Integer value) {
         this.errors = value;
     }
     /**
@@ -163,8 +163,8 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * @param value Value to set for the groups property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroups(@javax.annotation.Nullable final IndustryDataRunEntityCountMetric value) {
+    @jakarta.annotation.Nonnull
+    public void setGroups(@jakarta.annotation.Nullable final IndustryDataRunEntityCountMetric value) {
         this.groups = value;
     }
     /**
@@ -172,8 +172,8 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * @param value Value to set for the matchedPeopleByRole property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMatchedPeopleByRole(@javax.annotation.Nullable final java.util.List<IndustryDataRunRoleCountMetric> value) {
+    @jakarta.annotation.Nonnull
+    public void setMatchedPeopleByRole(@jakarta.annotation.Nullable final java.util.List<IndustryDataRunRoleCountMetric> value) {
         this.matchedPeopleByRole = value;
     }
     /**
@@ -181,8 +181,8 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * @param value Value to set for the memberships property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMemberships(@javax.annotation.Nullable final IndustryDataRunEntityCountMetric value) {
+    @jakarta.annotation.Nonnull
+    public void setMemberships(@jakarta.annotation.Nullable final IndustryDataRunEntityCountMetric value) {
         this.memberships = value;
     }
     /**
@@ -190,8 +190,8 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * @param value Value to set for the organizations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrganizations(@javax.annotation.Nullable final IndustryDataRunEntityCountMetric value) {
+    @jakarta.annotation.Nonnull
+    public void setOrganizations(@jakarta.annotation.Nullable final IndustryDataRunEntityCountMetric value) {
         this.organizations = value;
     }
     /**
@@ -199,8 +199,8 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * @param value Value to set for the people property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPeople(@javax.annotation.Nullable final IndustryDataRunEntityCountMetric value) {
+    @jakarta.annotation.Nonnull
+    public void setPeople(@jakarta.annotation.Nullable final IndustryDataRunEntityCountMetric value) {
         this.people = value;
     }
     /**
@@ -208,8 +208,8 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * @param value Value to set for the unmatchedPeopleByRole property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnmatchedPeopleByRole(@javax.annotation.Nullable final java.util.List<IndustryDataRunRoleCountMetric> value) {
+    @jakarta.annotation.Nonnull
+    public void setUnmatchedPeopleByRole(@jakarta.annotation.Nullable final java.util.List<IndustryDataRunRoleCountMetric> value) {
         this.unmatchedPeopleByRole = value;
     }
     /**
@@ -217,8 +217,8 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      * @param value Value to set for the warnings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWarnings(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setWarnings(@jakarta.annotation.Nullable final Integer value) {
         this.warnings = value;
     }
 }

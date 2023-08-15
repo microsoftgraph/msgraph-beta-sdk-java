@@ -35,7 +35,7 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
      * Instantiates a new deviceManagementIntentUserState and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementIntentUserState() {
         super();
     }
@@ -44,8 +44,8 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementIntentUserState
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementIntentUserState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementIntentUserState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementIntentUserState();
     }
@@ -53,7 +53,7 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
      * Gets the deviceCount property value. Count of Devices that belongs to a user for an intent
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDeviceCount() {
         return this.deviceCount;
     }
@@ -61,7 +61,7 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getIntegerValue()); });
@@ -75,7 +75,7 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
      * Gets the lastReportedDateTime property value. Last modified date time of an intent report
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
         return this.lastReportedDateTime;
     }
@@ -83,7 +83,7 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
      * Gets the state property value. The state property
      * @return a complianceStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
         return this.state;
     }
@@ -91,7 +91,7 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
      * Gets the userName property value. The user name that is being reported on a device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserName() {
         return this.userName;
     }
@@ -99,7 +99,7 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
      * Gets the userPrincipalName property value. The user principal name that is being reported on a device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
@@ -108,8 +108,8 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("deviceCount", this.getDeviceCount());
@@ -123,8 +123,8 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
      * @param value Value to set for the deviceCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.deviceCount = value;
     }
     /**
@@ -132,8 +132,8 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
      * @param value Value to set for the lastReportedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastReportedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastReportedDateTime = value;
     }
     /**
@@ -141,8 +141,8 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final ComplianceStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final ComplianceStatus value) {
         this.state = value;
     }
     /**
@@ -150,8 +150,8 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
      * @param value Value to set for the userName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
     /**
@@ -159,8 +159,8 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

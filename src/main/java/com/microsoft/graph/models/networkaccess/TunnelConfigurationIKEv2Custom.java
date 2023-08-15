@@ -39,7 +39,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * Instantiates a new tunnelConfigurationIKEv2Custom and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TunnelConfigurationIKEv2Custom() {
         super();
         this.setOdataType("#microsoft.graph.networkaccess.tunnelConfigurationIKEv2Custom");
@@ -49,8 +49,8 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a tunnelConfigurationIKEv2Custom
      */
-    @javax.annotation.Nonnull
-    public static TunnelConfigurationIKEv2Custom createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TunnelConfigurationIKEv2Custom createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TunnelConfigurationIKEv2Custom();
     }
@@ -58,7 +58,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * Gets the dhGroup property value. The dhGroup property
      * @return a dhGroup
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DhGroup getDhGroup() {
         return this.dhGroup;
     }
@@ -66,7 +66,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("dhGroup", (n) -> { this.setDhGroup(n.getEnumValue(DhGroup.class)); });
@@ -82,7 +82,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * Gets the ikeEncryption property value. The ikeEncryption property
      * @return a ikeEncryption
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IkeEncryption getIkeEncryption() {
         return this.ikeEncryption;
     }
@@ -90,7 +90,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * Gets the ikeIntegrity property value. The ikeIntegrity property
      * @return a ikeIntegrity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IkeIntegrity getIkeIntegrity() {
         return this.ikeIntegrity;
     }
@@ -98,7 +98,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * Gets the ipSecEncryption property value. The ipSecEncryption property
      * @return a ipSecEncryption
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IpSecEncryption getIpSecEncryption() {
         return this.ipSecEncryption;
     }
@@ -106,7 +106,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * Gets the ipSecIntegrity property value. The ipSecIntegrity property
      * @return a ipSecIntegrity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IpSecIntegrity getIpSecIntegrity() {
         return this.ipSecIntegrity;
     }
@@ -114,7 +114,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * Gets the pfsGroup property value. The pfsGroup property
      * @return a pfsGroup
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PfsGroup getPfsGroup() {
         return this.pfsGroup;
     }
@@ -122,7 +122,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * Gets the saLifeTimeSeconds property value. a standard specifiying Security Association lifetime with recommended values from an RFC standard.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getSaLifeTimeSeconds() {
         return this.saLifeTimeSeconds;
     }
@@ -131,8 +131,8 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("dhGroup", this.getDhGroup());
@@ -148,8 +148,8 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * @param value Value to set for the dhGroup property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDhGroup(@javax.annotation.Nullable final DhGroup value) {
+    @jakarta.annotation.Nonnull
+    public void setDhGroup(@jakarta.annotation.Nullable final DhGroup value) {
         this.dhGroup = value;
     }
     /**
@@ -157,8 +157,8 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * @param value Value to set for the ikeEncryption property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIkeEncryption(@javax.annotation.Nullable final IkeEncryption value) {
+    @jakarta.annotation.Nonnull
+    public void setIkeEncryption(@jakarta.annotation.Nullable final IkeEncryption value) {
         this.ikeEncryption = value;
     }
     /**
@@ -166,8 +166,8 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * @param value Value to set for the ikeIntegrity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIkeIntegrity(@javax.annotation.Nullable final IkeIntegrity value) {
+    @jakarta.annotation.Nonnull
+    public void setIkeIntegrity(@jakarta.annotation.Nullable final IkeIntegrity value) {
         this.ikeIntegrity = value;
     }
     /**
@@ -175,8 +175,8 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * @param value Value to set for the ipSecEncryption property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIpSecEncryption(@javax.annotation.Nullable final IpSecEncryption value) {
+    @jakarta.annotation.Nonnull
+    public void setIpSecEncryption(@jakarta.annotation.Nullable final IpSecEncryption value) {
         this.ipSecEncryption = value;
     }
     /**
@@ -184,8 +184,8 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * @param value Value to set for the ipSecIntegrity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIpSecIntegrity(@javax.annotation.Nullable final IpSecIntegrity value) {
+    @jakarta.annotation.Nonnull
+    public void setIpSecIntegrity(@jakarta.annotation.Nullable final IpSecIntegrity value) {
         this.ipSecIntegrity = value;
     }
     /**
@@ -193,8 +193,8 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * @param value Value to set for the pfsGroup property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPfsGroup(@javax.annotation.Nullable final PfsGroup value) {
+    @jakarta.annotation.Nonnull
+    public void setPfsGroup(@jakarta.annotation.Nullable final PfsGroup value) {
         this.pfsGroup = value;
     }
     /**
@@ -202,8 +202,8 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      * @param value Value to set for the saLifeTimeSeconds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSaLifeTimeSeconds(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setSaLifeTimeSeconds(@jakarta.annotation.Nullable final Long value) {
         this.saLifeTimeSeconds = value;
     }
 }

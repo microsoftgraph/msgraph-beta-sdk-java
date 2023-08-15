@@ -56,7 +56,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * Instantiates a new accessPackageResourceEnvironment and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageResourceEnvironment() {
         super();
     }
@@ -65,8 +65,8 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageResourceEnvironment
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageResourceEnvironment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageResourceEnvironment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackageResourceEnvironment();
     }
@@ -74,7 +74,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * Gets the accessPackageResources property value. Read-only. Required.
      * @return a accessPackageResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResource> getAccessPackageResources() {
         return this.accessPackageResources;
     }
@@ -82,7 +82,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * Gets the connectionInfo property value. Connection information of an environment used to connect to a resource.
      * @return a connectionInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConnectionInfo getConnectionInfo() {
         return this.connectionInfo;
     }
@@ -90,7 +90,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * Gets the createdBy property value. The display name of the user that created this object.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCreatedBy() {
         return this.createdBy;
     }
@@ -98,7 +98,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * Gets the createdDateTime property value. The date and time that this object was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -106,7 +106,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * Gets the description property value. The description of this object.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -114,7 +114,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * Gets the displayName property value. The display name of this object.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -122,7 +122,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackageResources", (n) -> { this.setAccessPackageResources(n.getCollectionOfObjectValues(AccessPackageResource::createFromDiscriminatorValue)); });
@@ -142,7 +142,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * Gets the isDefaultEnvironment property value. Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDefaultEnvironment() {
         return this.isDefaultEnvironment;
     }
@@ -150,7 +150,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * Gets the modifiedBy property value. The display name of the entity that last modified this object.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getModifiedBy() {
         return this.modifiedBy;
     }
@@ -158,7 +158,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * Gets the modifiedDateTime property value. The date and time that this object was last modified. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
         return this.modifiedDateTime;
     }
@@ -166,7 +166,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * Gets the originId property value. The unique identifier of this environment in the origin system.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOriginId() {
         return this.originId;
     }
@@ -174,7 +174,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * Gets the originSystem property value. The type of the resource in the origin system, that is, SharePointOnline. Requires $filter (eq).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOriginSystem() {
         return this.originSystem;
     }
@@ -183,8 +183,8 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("accessPackageResources", this.getAccessPackageResources());
@@ -204,8 +204,8 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the accessPackageResources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageResources(@javax.annotation.Nullable final java.util.List<AccessPackageResource> value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessPackageResources(@jakarta.annotation.Nullable final java.util.List<AccessPackageResource> value) {
         this.accessPackageResources = value;
     }
     /**
@@ -213,8 +213,8 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the connectionInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectionInfo(@javax.annotation.Nullable final ConnectionInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectionInfo(@jakarta.annotation.Nullable final ConnectionInfo value) {
         this.connectionInfo = value;
     }
     /**
@@ -222,8 +222,8 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final String value) {
         this.createdBy = value;
     }
     /**
@@ -231,8 +231,8 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -240,8 +240,8 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -249,8 +249,8 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -258,8 +258,8 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the isDefaultEnvironment property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDefaultEnvironment(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsDefaultEnvironment(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefaultEnvironment = value;
     }
     /**
@@ -267,8 +267,8 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the modifiedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModifiedBy(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setModifiedBy(@jakarta.annotation.Nullable final String value) {
         this.modifiedBy = value;
     }
     /**
@@ -276,8 +276,8 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.modifiedDateTime = value;
     }
     /**
@@ -285,8 +285,8 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the originId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOriginId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOriginId(@jakarta.annotation.Nullable final String value) {
         this.originId = value;
     }
     /**
@@ -294,8 +294,8 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the originSystem property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOriginSystem(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOriginSystem(@jakarta.annotation.Nullable final String value) {
         this.originSystem = value;
     }
 }

@@ -181,7 +181,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Instantiates a new company and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Company() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -190,8 +190,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a company
      */
-    @javax.annotation.Nonnull
-    public static Company createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Company createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Company();
     }
@@ -199,7 +199,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the accounts property value. The accounts property
      * @return a account
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Account> getAccounts() {
         return this.accounts;
     }
@@ -207,7 +207,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -215,7 +215,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the agedAccountsPayable property value. The agedAccountsPayable property
      * @return a agedAccountsPayable
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AgedAccountsPayable> getAgedAccountsPayable() {
         return this.agedAccountsPayable;
     }
@@ -223,7 +223,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the agedAccountsReceivable property value. The agedAccountsReceivable property
      * @return a agedAccountsReceivable
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AgedAccountsReceivable> getAgedAccountsReceivable() {
         return this.agedAccountsReceivable;
     }
@@ -231,7 +231,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the businessProfileId property value. The businessProfileId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBusinessProfileId() {
         return this.businessProfileId;
     }
@@ -239,7 +239,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the companyInformation property value. The companyInformation property
      * @return a companyInformation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CompanyInformation> getCompanyInformation() {
         return this.companyInformation;
     }
@@ -247,7 +247,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the countriesRegions property value. The countriesRegions property
      * @return a countryRegion
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CountryRegion> getCountriesRegions() {
         return this.countriesRegions;
     }
@@ -255,7 +255,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the currencies property value. The currencies property
      * @return a currency
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Currency> getCurrencies() {
         return this.currencies;
     }
@@ -263,7 +263,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the customerPaymentJournals property value. The customerPaymentJournals property
      * @return a customerPaymentJournal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CustomerPaymentJournal> getCustomerPaymentJournals() {
         return this.customerPaymentJournals;
     }
@@ -271,7 +271,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the customerPayments property value. The customerPayments property
      * @return a customerPayment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CustomerPayment> getCustomerPayments() {
         return this.customerPayments;
     }
@@ -279,7 +279,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the customers property value. The customers property
      * @return a customer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Customer> getCustomers() {
         return this.customers;
     }
@@ -287,7 +287,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the dimensions property value. The dimensions property
      * @return a dimension
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Dimension> getDimensions() {
         return this.dimensions;
     }
@@ -295,7 +295,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the dimensionValues property value. The dimensionValues property
      * @return a dimensionValue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DimensionValue> getDimensionValues() {
         return this.dimensionValues;
     }
@@ -303,7 +303,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -311,7 +311,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the employees property value. The employees property
      * @return a employee
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Employee> getEmployees() {
         return this.employees;
     }
@@ -319,7 +319,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(41);
         deserializerMap.put("accounts", (n) -> { this.setAccounts(n.getCollectionOfObjectValues(Account::createFromDiscriminatorValue)); });
@@ -369,7 +369,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the generalLedgerEntries property value. The generalLedgerEntries property
      * @return a generalLedgerEntry
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GeneralLedgerEntry> getGeneralLedgerEntries() {
         return this.generalLedgerEntries;
     }
@@ -377,7 +377,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the id property value. The id property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getId() {
         return this.id;
     }
@@ -385,7 +385,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the itemCategories property value. The itemCategories property
      * @return a itemCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ItemCategory> getItemCategories() {
         return this.itemCategories;
     }
@@ -393,7 +393,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the items property value. The items property
      * @return a item
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Item> getItems() {
         return this.items;
     }
@@ -401,7 +401,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the journalLines property value. The journalLines property
      * @return a journalLine
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<JournalLine> getJournalLines() {
         return this.journalLines;
     }
@@ -409,7 +409,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the journals property value. The journals property
      * @return a journal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Journal> getJournals() {
         return this.journals;
     }
@@ -417,7 +417,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the name property value. The name property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -425,7 +425,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -433,7 +433,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the paymentMethods property value. The paymentMethods property
      * @return a paymentMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PaymentMethod> getPaymentMethods() {
         return this.paymentMethods;
     }
@@ -441,7 +441,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the paymentTerms property value. The paymentTerms property
      * @return a paymentTerm
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PaymentTerm> getPaymentTerms() {
         return this.paymentTerms;
     }
@@ -449,7 +449,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the picture property value. The picture property
      * @return a picture
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Picture> getPicture() {
         return this.picture;
     }
@@ -457,7 +457,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the purchaseInvoiceLines property value. The purchaseInvoiceLines property
      * @return a purchaseInvoiceLine
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PurchaseInvoiceLine> getPurchaseInvoiceLines() {
         return this.purchaseInvoiceLines;
     }
@@ -465,7 +465,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the purchaseInvoices property value. The purchaseInvoices property
      * @return a purchaseInvoice
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PurchaseInvoice> getPurchaseInvoices() {
         return this.purchaseInvoices;
     }
@@ -473,7 +473,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the salesCreditMemoLines property value. The salesCreditMemoLines property
      * @return a salesCreditMemoLine
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SalesCreditMemoLine> getSalesCreditMemoLines() {
         return this.salesCreditMemoLines;
     }
@@ -481,7 +481,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the salesCreditMemos property value. The salesCreditMemos property
      * @return a salesCreditMemo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SalesCreditMemo> getSalesCreditMemos() {
         return this.salesCreditMemos;
     }
@@ -489,7 +489,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the salesInvoiceLines property value. The salesInvoiceLines property
      * @return a salesInvoiceLine
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SalesInvoiceLine> getSalesInvoiceLines() {
         return this.salesInvoiceLines;
     }
@@ -497,7 +497,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the salesInvoices property value. The salesInvoices property
      * @return a salesInvoice
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SalesInvoice> getSalesInvoices() {
         return this.salesInvoices;
     }
@@ -505,7 +505,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the salesOrderLines property value. The salesOrderLines property
      * @return a salesOrderLine
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SalesOrderLine> getSalesOrderLines() {
         return this.salesOrderLines;
     }
@@ -513,7 +513,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the salesOrders property value. The salesOrders property
      * @return a salesOrder
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SalesOrder> getSalesOrders() {
         return this.salesOrders;
     }
@@ -521,7 +521,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the salesQuoteLines property value. The salesQuoteLines property
      * @return a salesQuoteLine
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SalesQuoteLine> getSalesQuoteLines() {
         return this.salesQuoteLines;
     }
@@ -529,7 +529,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the salesQuotes property value. The salesQuotes property
      * @return a salesQuote
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SalesQuote> getSalesQuotes() {
         return this.salesQuotes;
     }
@@ -537,7 +537,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the shipmentMethods property value. The shipmentMethods property
      * @return a shipmentMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ShipmentMethod> getShipmentMethods() {
         return this.shipmentMethods;
     }
@@ -545,7 +545,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the systemVersion property value. The systemVersion property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSystemVersion() {
         return this.systemVersion;
     }
@@ -553,7 +553,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the taxAreas property value. The taxAreas property
      * @return a taxArea
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TaxArea> getTaxAreas() {
         return this.taxAreas;
     }
@@ -561,7 +561,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the taxGroups property value. The taxGroups property
      * @return a taxGroup
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TaxGroup> getTaxGroups() {
         return this.taxGroups;
     }
@@ -569,7 +569,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the unitsOfMeasure property value. The unitsOfMeasure property
      * @return a unitOfMeasure
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnitOfMeasure> getUnitsOfMeasure() {
         return this.unitsOfMeasure;
     }
@@ -577,7 +577,7 @@ public class Company implements AdditionalDataHolder, Parsable {
      * Gets the vendors property value. The vendors property
      * @return a vendor
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Vendor> getVendors() {
         return this.vendors;
     }
@@ -586,8 +586,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("accounts", this.getAccounts());
         writer.writeCollectionOfObjectValues("agedAccountsPayable", this.getAgedAccountsPayable());
@@ -637,17 +637,17 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accounts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccounts(@javax.annotation.Nullable final java.util.List<Account> value) {
+    @jakarta.annotation.Nonnull
+    public void setAccounts(@jakarta.annotation.Nullable final java.util.List<Account> value) {
         this.accounts = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -655,8 +655,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the agedAccountsPayable property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAgedAccountsPayable(@javax.annotation.Nullable final java.util.List<AgedAccountsPayable> value) {
+    @jakarta.annotation.Nonnull
+    public void setAgedAccountsPayable(@jakarta.annotation.Nullable final java.util.List<AgedAccountsPayable> value) {
         this.agedAccountsPayable = value;
     }
     /**
@@ -664,8 +664,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the agedAccountsReceivable property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAgedAccountsReceivable(@javax.annotation.Nullable final java.util.List<AgedAccountsReceivable> value) {
+    @jakarta.annotation.Nonnull
+    public void setAgedAccountsReceivable(@jakarta.annotation.Nullable final java.util.List<AgedAccountsReceivable> value) {
         this.agedAccountsReceivable = value;
     }
     /**
@@ -673,8 +673,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the businessProfileId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBusinessProfileId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setBusinessProfileId(@jakarta.annotation.Nullable final String value) {
         this.businessProfileId = value;
     }
     /**
@@ -682,8 +682,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the companyInformation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompanyInformation(@javax.annotation.Nullable final java.util.List<CompanyInformation> value) {
+    @jakarta.annotation.Nonnull
+    public void setCompanyInformation(@jakarta.annotation.Nullable final java.util.List<CompanyInformation> value) {
         this.companyInformation = value;
     }
     /**
@@ -691,8 +691,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the countriesRegions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountriesRegions(@javax.annotation.Nullable final java.util.List<CountryRegion> value) {
+    @jakarta.annotation.Nonnull
+    public void setCountriesRegions(@jakarta.annotation.Nullable final java.util.List<CountryRegion> value) {
         this.countriesRegions = value;
     }
     /**
@@ -700,8 +700,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the currencies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrencies(@javax.annotation.Nullable final java.util.List<Currency> value) {
+    @jakarta.annotation.Nonnull
+    public void setCurrencies(@jakarta.annotation.Nullable final java.util.List<Currency> value) {
         this.currencies = value;
     }
     /**
@@ -709,8 +709,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the customerPaymentJournals property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomerPaymentJournals(@javax.annotation.Nullable final java.util.List<CustomerPaymentJournal> value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomerPaymentJournals(@jakarta.annotation.Nullable final java.util.List<CustomerPaymentJournal> value) {
         this.customerPaymentJournals = value;
     }
     /**
@@ -718,8 +718,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the customerPayments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomerPayments(@javax.annotation.Nullable final java.util.List<CustomerPayment> value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomerPayments(@jakarta.annotation.Nullable final java.util.List<CustomerPayment> value) {
         this.customerPayments = value;
     }
     /**
@@ -727,8 +727,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the customers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomers(@javax.annotation.Nullable final java.util.List<Customer> value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomers(@jakarta.annotation.Nullable final java.util.List<Customer> value) {
         this.customers = value;
     }
     /**
@@ -736,8 +736,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the dimensions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDimensions(@javax.annotation.Nullable final java.util.List<Dimension> value) {
+    @jakarta.annotation.Nonnull
+    public void setDimensions(@jakarta.annotation.Nullable final java.util.List<Dimension> value) {
         this.dimensions = value;
     }
     /**
@@ -745,8 +745,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the dimensionValues property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDimensionValues(@javax.annotation.Nullable final java.util.List<DimensionValue> value) {
+    @jakarta.annotation.Nonnull
+    public void setDimensionValues(@jakarta.annotation.Nullable final java.util.List<DimensionValue> value) {
         this.dimensionValues = value;
     }
     /**
@@ -754,8 +754,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -763,8 +763,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the employees property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmployees(@javax.annotation.Nullable final java.util.List<Employee> value) {
+    @jakarta.annotation.Nonnull
+    public void setEmployees(@jakarta.annotation.Nullable final java.util.List<Employee> value) {
         this.employees = value;
     }
     /**
@@ -772,8 +772,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the generalLedgerEntries property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGeneralLedgerEntries(@javax.annotation.Nullable final java.util.List<GeneralLedgerEntry> value) {
+    @jakarta.annotation.Nonnull
+    public void setGeneralLedgerEntries(@jakarta.annotation.Nullable final java.util.List<GeneralLedgerEntry> value) {
         this.generalLedgerEntries = value;
     }
     /**
@@ -781,8 +781,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final UUID value) {
         this.id = value;
     }
     /**
@@ -790,8 +790,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the itemCategories property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setItemCategories(@javax.annotation.Nullable final java.util.List<ItemCategory> value) {
+    @jakarta.annotation.Nonnull
+    public void setItemCategories(@jakarta.annotation.Nullable final java.util.List<ItemCategory> value) {
         this.itemCategories = value;
     }
     /**
@@ -799,8 +799,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the items property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setItems(@javax.annotation.Nullable final java.util.List<Item> value) {
+    @jakarta.annotation.Nonnull
+    public void setItems(@jakarta.annotation.Nullable final java.util.List<Item> value) {
         this.items = value;
     }
     /**
@@ -808,8 +808,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the journalLines property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJournalLines(@javax.annotation.Nullable final java.util.List<JournalLine> value) {
+    @jakarta.annotation.Nonnull
+    public void setJournalLines(@jakarta.annotation.Nullable final java.util.List<JournalLine> value) {
         this.journalLines = value;
     }
     /**
@@ -817,8 +817,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the journals property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJournals(@javax.annotation.Nullable final java.util.List<Journal> value) {
+    @jakarta.annotation.Nonnull
+    public void setJournals(@jakarta.annotation.Nullable final java.util.List<Journal> value) {
         this.journals = value;
     }
     /**
@@ -826,17 +826,17 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -844,8 +844,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the paymentMethods property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPaymentMethods(@javax.annotation.Nullable final java.util.List<PaymentMethod> value) {
+    @jakarta.annotation.Nonnull
+    public void setPaymentMethods(@jakarta.annotation.Nullable final java.util.List<PaymentMethod> value) {
         this.paymentMethods = value;
     }
     /**
@@ -853,8 +853,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the paymentTerms property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPaymentTerms(@javax.annotation.Nullable final java.util.List<PaymentTerm> value) {
+    @jakarta.annotation.Nonnull
+    public void setPaymentTerms(@jakarta.annotation.Nullable final java.util.List<PaymentTerm> value) {
         this.paymentTerms = value;
     }
     /**
@@ -862,8 +862,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the picture property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPicture(@javax.annotation.Nullable final java.util.List<Picture> value) {
+    @jakarta.annotation.Nonnull
+    public void setPicture(@jakarta.annotation.Nullable final java.util.List<Picture> value) {
         this.picture = value;
     }
     /**
@@ -871,8 +871,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the purchaseInvoiceLines property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPurchaseInvoiceLines(@javax.annotation.Nullable final java.util.List<PurchaseInvoiceLine> value) {
+    @jakarta.annotation.Nonnull
+    public void setPurchaseInvoiceLines(@jakarta.annotation.Nullable final java.util.List<PurchaseInvoiceLine> value) {
         this.purchaseInvoiceLines = value;
     }
     /**
@@ -880,8 +880,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the purchaseInvoices property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPurchaseInvoices(@javax.annotation.Nullable final java.util.List<PurchaseInvoice> value) {
+    @jakarta.annotation.Nonnull
+    public void setPurchaseInvoices(@jakarta.annotation.Nullable final java.util.List<PurchaseInvoice> value) {
         this.purchaseInvoices = value;
     }
     /**
@@ -889,8 +889,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the salesCreditMemoLines property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSalesCreditMemoLines(@javax.annotation.Nullable final java.util.List<SalesCreditMemoLine> value) {
+    @jakarta.annotation.Nonnull
+    public void setSalesCreditMemoLines(@jakarta.annotation.Nullable final java.util.List<SalesCreditMemoLine> value) {
         this.salesCreditMemoLines = value;
     }
     /**
@@ -898,8 +898,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the salesCreditMemos property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSalesCreditMemos(@javax.annotation.Nullable final java.util.List<SalesCreditMemo> value) {
+    @jakarta.annotation.Nonnull
+    public void setSalesCreditMemos(@jakarta.annotation.Nullable final java.util.List<SalesCreditMemo> value) {
         this.salesCreditMemos = value;
     }
     /**
@@ -907,8 +907,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the salesInvoiceLines property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSalesInvoiceLines(@javax.annotation.Nullable final java.util.List<SalesInvoiceLine> value) {
+    @jakarta.annotation.Nonnull
+    public void setSalesInvoiceLines(@jakarta.annotation.Nullable final java.util.List<SalesInvoiceLine> value) {
         this.salesInvoiceLines = value;
     }
     /**
@@ -916,8 +916,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the salesInvoices property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSalesInvoices(@javax.annotation.Nullable final java.util.List<SalesInvoice> value) {
+    @jakarta.annotation.Nonnull
+    public void setSalesInvoices(@jakarta.annotation.Nullable final java.util.List<SalesInvoice> value) {
         this.salesInvoices = value;
     }
     /**
@@ -925,8 +925,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the salesOrderLines property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSalesOrderLines(@javax.annotation.Nullable final java.util.List<SalesOrderLine> value) {
+    @jakarta.annotation.Nonnull
+    public void setSalesOrderLines(@jakarta.annotation.Nullable final java.util.List<SalesOrderLine> value) {
         this.salesOrderLines = value;
     }
     /**
@@ -934,8 +934,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the salesOrders property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSalesOrders(@javax.annotation.Nullable final java.util.List<SalesOrder> value) {
+    @jakarta.annotation.Nonnull
+    public void setSalesOrders(@jakarta.annotation.Nullable final java.util.List<SalesOrder> value) {
         this.salesOrders = value;
     }
     /**
@@ -943,8 +943,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the salesQuoteLines property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSalesQuoteLines(@javax.annotation.Nullable final java.util.List<SalesQuoteLine> value) {
+    @jakarta.annotation.Nonnull
+    public void setSalesQuoteLines(@jakarta.annotation.Nullable final java.util.List<SalesQuoteLine> value) {
         this.salesQuoteLines = value;
     }
     /**
@@ -952,8 +952,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the salesQuotes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSalesQuotes(@javax.annotation.Nullable final java.util.List<SalesQuote> value) {
+    @jakarta.annotation.Nonnull
+    public void setSalesQuotes(@jakarta.annotation.Nullable final java.util.List<SalesQuote> value) {
         this.salesQuotes = value;
     }
     /**
@@ -961,8 +961,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the shipmentMethods property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShipmentMethods(@javax.annotation.Nullable final java.util.List<ShipmentMethod> value) {
+    @jakarta.annotation.Nonnull
+    public void setShipmentMethods(@jakarta.annotation.Nullable final java.util.List<ShipmentMethod> value) {
         this.shipmentMethods = value;
     }
     /**
@@ -970,8 +970,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the systemVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSystemVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSystemVersion(@jakarta.annotation.Nullable final String value) {
         this.systemVersion = value;
     }
     /**
@@ -979,8 +979,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the taxAreas property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTaxAreas(@javax.annotation.Nullable final java.util.List<TaxArea> value) {
+    @jakarta.annotation.Nonnull
+    public void setTaxAreas(@jakarta.annotation.Nullable final java.util.List<TaxArea> value) {
         this.taxAreas = value;
     }
     /**
@@ -988,8 +988,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the taxGroups property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTaxGroups(@javax.annotation.Nullable final java.util.List<TaxGroup> value) {
+    @jakarta.annotation.Nonnull
+    public void setTaxGroups(@jakarta.annotation.Nullable final java.util.List<TaxGroup> value) {
         this.taxGroups = value;
     }
     /**
@@ -997,8 +997,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the unitsOfMeasure property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnitsOfMeasure(@javax.annotation.Nullable final java.util.List<UnitOfMeasure> value) {
+    @jakarta.annotation.Nonnull
+    public void setUnitsOfMeasure(@jakarta.annotation.Nullable final java.util.List<UnitOfMeasure> value) {
         this.unitsOfMeasure = value;
     }
     /**
@@ -1006,8 +1006,8 @@ public class Company implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the vendors property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVendors(@javax.annotation.Nullable final java.util.List<Vendor> value) {
+    @jakarta.annotation.Nonnull
+    public void setVendors(@jakarta.annotation.Nullable final java.util.List<Vendor> value) {
         this.vendors = value;
     }
 }

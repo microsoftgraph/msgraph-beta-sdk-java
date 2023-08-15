@@ -15,7 +15,7 @@ public class ProgramResource extends Identity implements Parsable {
      * Instantiates a new programResource and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ProgramResource() {
         super();
         this.setOdataType("#microsoft.graph.programResource");
@@ -25,8 +25,8 @@ public class ProgramResource extends Identity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a programResource
      */
-    @javax.annotation.Nonnull
-    public static ProgramResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ProgramResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ProgramResource();
     }
@@ -34,7 +34,7 @@ public class ProgramResource extends Identity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
@@ -44,7 +44,7 @@ public class ProgramResource extends Identity implements Parsable {
      * Gets the type property value. Type of the resource, indicating whether it is a group or an app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getType() {
         return this.type;
     }
@@ -53,8 +53,8 @@ public class ProgramResource extends Identity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("type", this.getType());
@@ -64,8 +64,8 @@ public class ProgramResource extends Identity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
 }

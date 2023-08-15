@@ -23,7 +23,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
      * Instantiates a new recordOperation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RecordOperation() {
         super();
     }
@@ -32,8 +32,8 @@ public class RecordOperation extends CommsOperation implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a recordOperation
      */
-    @javax.annotation.Nonnull
-    public static RecordOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RecordOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RecordOperation();
     }
@@ -41,7 +41,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
      * Gets the completionReason property value. Possible values are: operationCanceled, stopToneDetected, maxRecordDurationReached, initialSilenceTimeout, maxSilenceTimeout, playPromptFailed, playBeepFailed, mediaReceiveTimeout, unspecifiedError, none.
      * @return a recordCompletionReason
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RecordCompletionReason getCompletionReason() {
         return this.completionReason;
     }
@@ -49,7 +49,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("completionReason", (n) -> { this.setCompletionReason(n.getEnumValue(RecordCompletionReason.class)); });
@@ -61,7 +61,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
      * Gets the recordingAccessToken property value. The access token required to retrieve the recording.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRecordingAccessToken() {
         return this.recordingAccessToken;
     }
@@ -69,7 +69,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
      * Gets the recordingLocation property value. The location where the recording is located.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRecordingLocation() {
         return this.recordingLocation;
     }
@@ -78,8 +78,8 @@ public class RecordOperation extends CommsOperation implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("completionReason", this.getCompletionReason());
@@ -91,8 +91,8 @@ public class RecordOperation extends CommsOperation implements Parsable {
      * @param value Value to set for the completionReason property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletionReason(@javax.annotation.Nullable final RecordCompletionReason value) {
+    @jakarta.annotation.Nonnull
+    public void setCompletionReason(@jakarta.annotation.Nullable final RecordCompletionReason value) {
         this.completionReason = value;
     }
     /**
@@ -100,8 +100,8 @@ public class RecordOperation extends CommsOperation implements Parsable {
      * @param value Value to set for the recordingAccessToken property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecordingAccessToken(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRecordingAccessToken(@jakarta.annotation.Nullable final String value) {
         this.recordingAccessToken = value;
     }
     /**
@@ -109,8 +109,8 @@ public class RecordOperation extends CommsOperation implements Parsable {
      * @param value Value to set for the recordingLocation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecordingLocation(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRecordingLocation(@jakarta.annotation.Nullable final String value) {
         this.recordingLocation = value;
     }
 }

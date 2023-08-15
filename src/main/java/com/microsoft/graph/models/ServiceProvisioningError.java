@@ -33,7 +33,7 @@ public class ServiceProvisioningError implements AdditionalDataHolder, Parsable 
      * Instantiates a new serviceProvisioningError and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServiceProvisioningError() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +42,8 @@ public class ServiceProvisioningError implements AdditionalDataHolder, Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a serviceProvisioningError
      */
-    @javax.annotation.Nonnull
-    public static ServiceProvisioningError createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ServiceProvisioningError createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -59,7 +59,7 @@ public class ServiceProvisioningError implements AdditionalDataHolder, Parsable 
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -67,7 +67,7 @@ public class ServiceProvisioningError implements AdditionalDataHolder, Parsable 
      * Gets the createdDateTime property value. The date and time at which the error occurred.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -75,7 +75,7 @@ public class ServiceProvisioningError implements AdditionalDataHolder, Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -88,7 +88,7 @@ public class ServiceProvisioningError implements AdditionalDataHolder, Parsable 
      * Gets the isResolved property value. Indicates whether the Error has been attended to.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsResolved() {
         return this.isResolved;
     }
@@ -96,7 +96,7 @@ public class ServiceProvisioningError implements AdditionalDataHolder, Parsable 
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -104,7 +104,7 @@ public class ServiceProvisioningError implements AdditionalDataHolder, Parsable 
      * Gets the serviceInstance property value. Qualified service instance (e.g., 'SharePoint/Dublin') that published the service error information.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getServiceInstance() {
         return this.serviceInstance;
     }
@@ -113,8 +113,8 @@ public class ServiceProvisioningError implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeBooleanValue("isResolved", this.getIsResolved());
@@ -124,11 +124,11 @@ public class ServiceProvisioningError implements AdditionalDataHolder, Parsable 
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -136,8 +136,8 @@ public class ServiceProvisioningError implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -145,17 +145,17 @@ public class ServiceProvisioningError implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the isResolved property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsResolved(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsResolved(@jakarta.annotation.Nullable final Boolean value) {
         this.isResolved = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -163,8 +163,8 @@ public class ServiceProvisioningError implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the serviceInstance property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServiceInstance(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setServiceInstance(@jakarta.annotation.Nullable final String value) {
         this.serviceInstance = value;
     }
 }

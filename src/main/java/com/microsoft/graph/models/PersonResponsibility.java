@@ -31,7 +31,7 @@ public class PersonResponsibility extends ItemFacet implements Parsable {
      * Instantiates a new personResponsibility and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PersonResponsibility() {
         super();
         this.setOdataType("#microsoft.graph.personResponsibility");
@@ -41,8 +41,8 @@ public class PersonResponsibility extends ItemFacet implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a personResponsibility
      */
-    @javax.annotation.Nonnull
-    public static PersonResponsibility createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PersonResponsibility createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PersonResponsibility();
     }
@@ -50,7 +50,7 @@ public class PersonResponsibility extends ItemFacet implements Parsable {
      * Gets the collaborationTags property value. Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getCollaborationTags() {
         return this.collaborationTags;
     }
@@ -58,7 +58,7 @@ public class PersonResponsibility extends ItemFacet implements Parsable {
      * Gets the description property value. Description of the responsibility.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -66,7 +66,7 @@ public class PersonResponsibility extends ItemFacet implements Parsable {
      * Gets the displayName property value. Contains a friendly name for the responsibility.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -74,7 +74,7 @@ public class PersonResponsibility extends ItemFacet implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("collaborationTags", (n) -> { this.setCollaborationTags(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -88,7 +88,7 @@ public class PersonResponsibility extends ItemFacet implements Parsable {
      * Gets the thumbnailUrl property value. The thumbnailUrl property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
         return this.thumbnailUrl;
     }
@@ -96,7 +96,7 @@ public class PersonResponsibility extends ItemFacet implements Parsable {
      * Gets the webUrl property value. Contains a link to a web page or resource about the responsibility.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebUrl() {
         return this.webUrl;
     }
@@ -105,8 +105,8 @@ public class PersonResponsibility extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("collaborationTags", this.getCollaborationTags());
@@ -120,8 +120,8 @@ public class PersonResponsibility extends ItemFacet implements Parsable {
      * @param value Value to set for the collaborationTags property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCollaborationTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setCollaborationTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.collaborationTags = value;
     }
     /**
@@ -129,8 +129,8 @@ public class PersonResponsibility extends ItemFacet implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -138,8 +138,8 @@ public class PersonResponsibility extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -147,8 +147,8 @@ public class PersonResponsibility extends ItemFacet implements Parsable {
      * @param value Value to set for the thumbnailUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThumbnailUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setThumbnailUrl(@jakarta.annotation.Nullable final String value) {
         this.thumbnailUrl = value;
     }
     /**
@@ -156,8 +156,8 @@ public class PersonResponsibility extends ItemFacet implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }
 }

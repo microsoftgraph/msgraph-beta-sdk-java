@@ -66,7 +66,7 @@ public class LegalHold extends Entity implements Parsable {
      * Instantiates a new legalHold and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LegalHold() {
         super();
     }
@@ -75,8 +75,8 @@ public class LegalHold extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a legalHold
      */
-    @javax.annotation.Nonnull
-    public static LegalHold createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static LegalHold createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new LegalHold();
     }
@@ -84,7 +84,7 @@ public class LegalHold extends Entity implements Parsable {
      * Gets the contentQuery property value. KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContentQuery() {
         return this.contentQuery;
     }
@@ -92,7 +92,7 @@ public class LegalHold extends Entity implements Parsable {
      * Gets the createdBy property value. The user who created the legal hold.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -100,7 +100,7 @@ public class LegalHold extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time the legal hold was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -108,7 +108,7 @@ public class LegalHold extends Entity implements Parsable {
      * Gets the description property value. The legal hold description.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -116,7 +116,7 @@ public class LegalHold extends Entity implements Parsable {
      * Gets the displayName property value. The display name of the legal hold.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -124,7 +124,7 @@ public class LegalHold extends Entity implements Parsable {
      * Gets the errors property value. Lists any errors that happened while placing the hold.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getErrors() {
         return this.errors;
     }
@@ -132,7 +132,7 @@ public class LegalHold extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contentQuery", (n) -> { this.setContentQuery(n.getStringValue()); });
@@ -154,7 +154,7 @@ public class LegalHold extends Entity implements Parsable {
      * Gets the isEnabled property value. Indicates whether the hold is enabled and actively holding content.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
@@ -162,7 +162,7 @@ public class LegalHold extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. the user who last modified the legal hold.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -170,7 +170,7 @@ public class LegalHold extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time the legal hold was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -178,7 +178,7 @@ public class LegalHold extends Entity implements Parsable {
      * Gets the siteSources property value. Data source entity for SharePoint sites associated with the legal hold.
      * @return a siteSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SiteSource> getSiteSources() {
         return this.siteSources;
     }
@@ -186,7 +186,7 @@ public class LegalHold extends Entity implements Parsable {
      * Gets the status property value. The status of the legal hold. Possible values are: Pending, Error, Success, UnknownFutureValue.
      * @return a legalHoldStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LegalHoldStatus getStatus() {
         return this.status;
     }
@@ -194,7 +194,7 @@ public class LegalHold extends Entity implements Parsable {
      * Gets the unifiedGroupSources property value. The unifiedGroupSources property
      * @return a unifiedGroupSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedGroupSource> getUnifiedGroupSources() {
         return this.unifiedGroupSources;
     }
@@ -202,7 +202,7 @@ public class LegalHold extends Entity implements Parsable {
      * Gets the userSources property value. Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site.
      * @return a userSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UserSource> getUserSources() {
         return this.userSources;
     }
@@ -211,8 +211,8 @@ public class LegalHold extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("contentQuery", this.getContentQuery());
@@ -234,8 +234,8 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the contentQuery property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentQuery(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContentQuery(@jakarta.annotation.Nullable final String value) {
         this.contentQuery = value;
     }
     /**
@@ -243,8 +243,8 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
@@ -252,8 +252,8 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -261,8 +261,8 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -270,8 +270,8 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -279,8 +279,8 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the errors property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrors(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setErrors(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.errors = value;
     }
     /**
@@ -288,8 +288,8 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
@@ -297,8 +297,8 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
@@ -306,8 +306,8 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -315,8 +315,8 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the siteSources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSiteSources(@javax.annotation.Nullable final java.util.List<SiteSource> value) {
+    @jakarta.annotation.Nonnull
+    public void setSiteSources(@jakarta.annotation.Nullable final java.util.List<SiteSource> value) {
         this.siteSources = value;
     }
     /**
@@ -324,8 +324,8 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final LegalHoldStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final LegalHoldStatus value) {
         this.status = value;
     }
     /**
@@ -333,8 +333,8 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the unifiedGroupSources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnifiedGroupSources(@javax.annotation.Nullable final java.util.List<UnifiedGroupSource> value) {
+    @jakarta.annotation.Nonnull
+    public void setUnifiedGroupSources(@jakarta.annotation.Nullable final java.util.List<UnifiedGroupSource> value) {
         this.unifiedGroupSources = value;
     }
     /**
@@ -342,8 +342,8 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the userSources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserSources(@javax.annotation.Nullable final java.util.List<UserSource> value) {
+    @jakarta.annotation.Nonnull
+    public void setUserSources(@jakarta.annotation.Nullable final java.util.List<UserSource> value) {
         this.userSources = value;
     }
 }

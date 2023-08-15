@@ -47,7 +47,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * Instantiates a new managedDeviceMobileAppConfigurationDeviceStatus and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationDeviceStatus() {
         super();
     }
@@ -56,8 +56,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedDeviceMobileAppConfigurationDeviceStatus
      */
-    @javax.annotation.Nonnull
-    public static ManagedDeviceMobileAppConfigurationDeviceStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedDeviceMobileAppConfigurationDeviceStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagedDeviceMobileAppConfigurationDeviceStatus();
     }
@@ -65,7 +65,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * Gets the complianceGracePeriodExpirationDateTime property value. The DateTime when device compliance grace period expires
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getComplianceGracePeriodExpirationDateTime() {
         return this.complianceGracePeriodExpirationDateTime;
     }
@@ -73,7 +73,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * Gets the deviceDisplayName property value. Device name of the DevicePolicyStatus.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
         return this.deviceDisplayName;
     }
@@ -81,7 +81,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * Gets the deviceModel property value. The device model that is being reported
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceModel() {
         return this.deviceModel;
     }
@@ -89,7 +89,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("complianceGracePeriodExpirationDateTime", (n) -> { this.setComplianceGracePeriodExpirationDateTime(n.getOffsetDateTimeValue()); });
@@ -106,7 +106,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * Gets the lastReportedDateTime property value. Last modified date time of the policy report.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
         return this.lastReportedDateTime;
     }
@@ -114,7 +114,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * Gets the platform property value. Platform of the device that is being reported
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPlatform() {
         return this.platform;
     }
@@ -122,7 +122,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * Gets the status property value. The status property
      * @return a complianceStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ComplianceStatus getStatus() {
         return this.status;
     }
@@ -130,7 +130,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * Gets the userName property value. The User Name that is being reported
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserName() {
         return this.userName;
     }
@@ -138,7 +138,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * Gets the userPrincipalName property value. UserPrincipalName.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
@@ -147,8 +147,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("complianceGracePeriodExpirationDateTime", this.getComplianceGracePeriodExpirationDateTime());
@@ -165,8 +165,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * @param value Value to set for the complianceGracePeriodExpirationDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComplianceGracePeriodExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setComplianceGracePeriodExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.complianceGracePeriodExpirationDateTime = value;
     }
     /**
@@ -174,8 +174,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * @param value Value to set for the deviceDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
         this.deviceDisplayName = value;
     }
     /**
@@ -183,8 +183,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * @param value Value to set for the deviceModel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceModel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
         this.deviceModel = value;
     }
     /**
@@ -192,8 +192,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * @param value Value to set for the lastReportedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastReportedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastReportedDateTime = value;
     }
     /**
@@ -201,8 +201,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * @param value Value to set for the platform property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatform(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setPlatform(@jakarta.annotation.Nullable final Integer value) {
         this.platform = value;
     }
     /**
@@ -210,8 +210,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final ComplianceStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final ComplianceStatus value) {
         this.status = value;
     }
     /**
@@ -219,8 +219,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * @param value Value to set for the userName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
     /**
@@ -228,8 +228,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

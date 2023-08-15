@@ -40,7 +40,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * Instantiates a new redundantAssignmentAlertIncident and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RedundantAssignmentAlertIncident() {
         super();
         this.setOdataType("#microsoft.graph.redundantAssignmentAlertIncident");
@@ -50,8 +50,8 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a redundantAssignmentAlertIncident
      */
-    @javax.annotation.Nonnull
-    public static RedundantAssignmentAlertIncident createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RedundantAssignmentAlertIncident createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RedundantAssignmentAlertIncident();
     }
@@ -59,7 +59,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * Gets the assigneeDisplayName property value. Display name of the subject that the incident applies to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssigneeDisplayName() {
         return this.assigneeDisplayName;
     }
@@ -67,7 +67,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * Gets the assigneeId property value. The identifier of the subject that the incident applies to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssigneeId() {
         return this.assigneeId;
     }
@@ -75,7 +75,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * Gets the assigneeUserPrincipalName property value. User principal name of the subject that the incident applies to. Applies to user principals only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssigneeUserPrincipalName() {
         return this.assigneeUserPrincipalName;
     }
@@ -83,7 +83,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assigneeDisplayName", (n) -> { this.setAssigneeDisplayName(n.getStringValue()); });
@@ -99,7 +99,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * Gets the lastActivationDateTime property value. Date and time of the last activation of the eligible assignment.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastActivationDateTime() {
         return this.lastActivationDateTime;
     }
@@ -107,7 +107,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * Gets the roleDefinitionId property value. The identifier for the directory role definition that's in scope of this incident.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
@@ -115,7 +115,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * Gets the roleDisplayName property value. The display name for the directory role.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleDisplayName() {
         return this.roleDisplayName;
     }
@@ -123,7 +123,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * Gets the roleTemplateId property value. The globally unique identifier for the directory role.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleTemplateId() {
         return this.roleTemplateId;
     }
@@ -132,8 +132,8 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("assigneeDisplayName", this.getAssigneeDisplayName());
@@ -149,8 +149,8 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * @param value Value to set for the assigneeDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssigneeDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssigneeDisplayName(@jakarta.annotation.Nullable final String value) {
         this.assigneeDisplayName = value;
     }
     /**
@@ -158,8 +158,8 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * @param value Value to set for the assigneeId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssigneeId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssigneeId(@jakarta.annotation.Nullable final String value) {
         this.assigneeId = value;
     }
     /**
@@ -167,8 +167,8 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * @param value Value to set for the assigneeUserPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssigneeUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAssigneeUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.assigneeUserPrincipalName = value;
     }
     /**
@@ -176,8 +176,8 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * @param value Value to set for the lastActivationDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActivationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastActivationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastActivationDateTime = value;
     }
     /**
@@ -185,8 +185,8 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.roleDefinitionId = value;
     }
     /**
@@ -194,8 +194,8 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * @param value Value to set for the roleDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDisplayName(@jakarta.annotation.Nullable final String value) {
         this.roleDisplayName = value;
     }
     /**
@@ -203,8 +203,8 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
      * @param value Value to set for the roleTemplateId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleTemplateId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleTemplateId(@jakarta.annotation.Nullable final String value) {
         this.roleTemplateId = value;
     }
 }

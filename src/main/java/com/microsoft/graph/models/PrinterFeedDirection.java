@@ -10,10 +10,10 @@ public enum PrinterFeedDirection implements ValuedEnum {
     PrinterFeedDirection(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static PrinterFeedDirection forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static PrinterFeedDirection forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "longEdgeFirst": return LongEdgeFirst;

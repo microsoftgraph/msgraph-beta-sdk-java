@@ -36,7 +36,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * Instantiates a new educationIdentityMatchingOptions and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationIdentityMatchingOptions() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationIdentityMatchingOptions
      */
-    @javax.annotation.Nonnull
-    public static EducationIdentityMatchingOptions createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationIdentityMatchingOptions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationIdentityMatchingOptions();
     }
@@ -54,7 +54,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * Gets the appliesTo property value. The appliesTo property
      * @return a educationUserRole
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationUserRole getAppliesTo() {
         return this.appliesTo;
     }
@@ -70,7 +70,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getEnumValue(EducationUserRole.class)); });
@@ -84,7 +84,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -92,7 +92,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * Gets the sourcePropertyName property value. The name of the source property, which should be a field name in the source data. This property is case-sensitive.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSourcePropertyName() {
         return this.sourcePropertyName;
     }
@@ -100,7 +100,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * Gets the targetDomain property value. The domain to suffix with the source property to match on the target. If provided as null, the source property will be used to match with the target property.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTargetDomain() {
         return this.targetDomain;
     }
@@ -108,7 +108,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * Gets the targetPropertyName property value. The name of the target property, which should be a valid property in Azure AD. This property is case-sensitive.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTargetPropertyName() {
         return this.targetPropertyName;
     }
@@ -117,8 +117,8 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("appliesTo", this.getAppliesTo());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -129,11 +129,11 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,17 +141,17 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * @param value Value to set for the appliesTo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppliesTo(@javax.annotation.Nullable final EducationUserRole value) {
+    @jakarta.annotation.Nonnull
+    public void setAppliesTo(@jakarta.annotation.Nullable final EducationUserRole value) {
         this.appliesTo = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -159,8 +159,8 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * @param value Value to set for the sourcePropertyName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourcePropertyName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSourcePropertyName(@jakarta.annotation.Nullable final String value) {
         this.sourcePropertyName = value;
     }
     /**
@@ -168,8 +168,8 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * @param value Value to set for the targetDomain property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetDomain(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetDomain(@jakarta.annotation.Nullable final String value) {
         this.targetDomain = value;
     }
     /**
@@ -177,8 +177,8 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * @param value Value to set for the targetPropertyName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetPropertyName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetPropertyName(@jakarta.annotation.Nullable final String value) {
         this.targetPropertyName = value;
     }
 }

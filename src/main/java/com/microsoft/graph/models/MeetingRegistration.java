@@ -44,7 +44,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * Instantiates a new meetingRegistration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MeetingRegistration() {
         super();
         this.setOdataType("#microsoft.graph.meetingRegistration");
@@ -54,8 +54,8 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a meetingRegistration
      */
-    @javax.annotation.Nonnull
-    public static MeetingRegistration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MeetingRegistration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MeetingRegistration();
     }
@@ -63,7 +63,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * Gets the customQuestions property value. Custom registration questions.
      * @return a meetingRegistrationQuestion
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MeetingRegistrationQuestion> getCustomQuestions() {
         return this.customQuestions;
     }
@@ -71,7 +71,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * Gets the description property value. The description of the meeting.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -79,7 +79,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * Gets the endDateTime property value. The meeting end time in UTC.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
         return this.endDateTime;
     }
@@ -87,7 +87,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("customQuestions", (n) -> { this.setCustomQuestions(n.getCollectionOfObjectValues(MeetingRegistrationQuestion::createFromDiscriminatorValue)); });
@@ -104,7 +104,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * Gets the registrationPageViewCount property value. The number of times the registration page has been visited. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRegistrationPageViewCount() {
         return this.registrationPageViewCount;
     }
@@ -112,7 +112,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * Gets the registrationPageWebUrl property value. The URL of the registration page. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRegistrationPageWebUrl() {
         return this.registrationPageWebUrl;
     }
@@ -120,7 +120,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * Gets the speakers property value. The meeting speaker's information.
      * @return a meetingSpeaker
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MeetingSpeaker> getSpeakers() {
         return this.speakers;
     }
@@ -128,7 +128,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * Gets the startDateTime property value. The meeting start time in UTC.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this.startDateTime;
     }
@@ -136,7 +136,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * Gets the subject property value. The subject of the meeting.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubject() {
         return this.subject;
     }
@@ -145,8 +145,8 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("customQuestions", this.getCustomQuestions());
@@ -163,8 +163,8 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param value Value to set for the customQuestions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomQuestions(@javax.annotation.Nullable final java.util.List<MeetingRegistrationQuestion> value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomQuestions(@jakarta.annotation.Nullable final java.util.List<MeetingRegistrationQuestion> value) {
         this.customQuestions = value;
     }
     /**
@@ -172,8 +172,8 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -181,8 +181,8 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
@@ -190,8 +190,8 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param value Value to set for the registrationPageViewCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegistrationPageViewCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setRegistrationPageViewCount(@jakarta.annotation.Nullable final Integer value) {
         this.registrationPageViewCount = value;
     }
     /**
@@ -199,8 +199,8 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param value Value to set for the registrationPageWebUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegistrationPageWebUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRegistrationPageWebUrl(@jakarta.annotation.Nullable final String value) {
         this.registrationPageWebUrl = value;
     }
     /**
@@ -208,8 +208,8 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param value Value to set for the speakers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSpeakers(@javax.annotation.Nullable final java.util.List<MeetingSpeaker> value) {
+    @jakarta.annotation.Nonnull
+    public void setSpeakers(@jakarta.annotation.Nullable final java.util.List<MeetingSpeaker> value) {
         this.speakers = value;
     }
     /**
@@ -217,8 +217,8 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
@@ -226,8 +226,8 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
      * @param value Value to set for the subject property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
 }

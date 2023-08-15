@@ -26,7 +26,7 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
      * Instantiates a new mobileAppDependency and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MobileAppDependency() {
         super();
         this.setOdataType("#microsoft.graph.mobileAppDependency");
@@ -36,8 +36,8 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a mobileAppDependency
      */
-    @javax.annotation.Nonnull
-    public static MobileAppDependency createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MobileAppDependency createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MobileAppDependency();
     }
@@ -45,7 +45,7 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
      * Gets the dependencyType property value. Indicates the dependency type associated with a relationship between two mobile apps.
      * @return a mobileAppDependencyType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MobileAppDependencyType getDependencyType() {
         return this.dependencyType;
     }
@@ -53,7 +53,7 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
      * Gets the dependentAppCount property value. The total number of apps that directly or indirectly depend on the parent app.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDependentAppCount() {
         return this.dependentAppCount;
     }
@@ -61,7 +61,7 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
      * Gets the dependsOnAppCount property value. The total number of apps the child app directly or indirectly depends on.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDependsOnAppCount() {
         return this.dependsOnAppCount;
     }
@@ -69,7 +69,7 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("dependencyType", (n) -> { this.setDependencyType(n.getEnumValue(MobileAppDependencyType.class)); });
@@ -82,8 +82,8 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("dependencyType", this.getDependencyType());
@@ -95,8 +95,8 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
      * @param value Value to set for the dependencyType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDependencyType(@javax.annotation.Nullable final MobileAppDependencyType value) {
+    @jakarta.annotation.Nonnull
+    public void setDependencyType(@jakarta.annotation.Nullable final MobileAppDependencyType value) {
         this.dependencyType = value;
     }
     /**
@@ -104,8 +104,8 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
      * @param value Value to set for the dependentAppCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDependentAppCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setDependentAppCount(@jakarta.annotation.Nullable final Integer value) {
         this.dependentAppCount = value;
     }
     /**
@@ -113,8 +113,8 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
      * @param value Value to set for the dependsOnAppCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDependsOnAppCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setDependsOnAppCount(@jakarta.annotation.Nullable final Integer value) {
         this.dependsOnAppCount = value;
     }
 }

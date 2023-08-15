@@ -56,7 +56,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * Instantiates a new appCredentialSignInActivity and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AppCredentialSignInActivity() {
         super();
     }
@@ -65,8 +65,8 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a appCredentialSignInActivity
      */
-    @javax.annotation.Nonnull
-    public static AppCredentialSignInActivity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AppCredentialSignInActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AppCredentialSignInActivity();
     }
@@ -74,7 +74,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * Gets the appId property value. The globally unique appId (also called client ID on the Azure portal) of the credential application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppId() {
         return this.appId;
     }
@@ -82,7 +82,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * Gets the appObjectId property value. The ID of the credential application instance.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppObjectId() {
         return this.appObjectId;
     }
@@ -90,7 +90,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time when the credential was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -98,7 +98,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * Gets the credentialOrigin property value. The credentialOrigin property
      * @return a applicationKeyOrigin
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ApplicationKeyOrigin getCredentialOrigin() {
         return this.credentialOrigin;
     }
@@ -106,7 +106,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * Gets the expirationDateTime property value. The date and time when the credential is set to expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
         return this.expirationDateTime;
     }
@@ -114,7 +114,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
@@ -134,7 +134,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * Gets the keyId property value. The key ID of the credential.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getKeyId() {
         return this.keyId;
     }
@@ -142,7 +142,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * Gets the keyType property value. Specifies the key type. The possible values are: clientSecret, certificate, unknownFutureValue.
      * @return a applicationKeyType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ApplicationKeyType getKeyType() {
         return this.keyType;
     }
@@ -150,7 +150,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * Gets the keyUsage property value. Specifies what the key was used for. The possible values are: sign, verify, unknownFutureValue.
      * @return a applicationKeyUsage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ApplicationKeyUsage getKeyUsage() {
         return this.keyUsage;
     }
@@ -158,7 +158,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * Gets the resourceId property value. The ID of the accessed resource.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceId() {
         return this.resourceId;
     }
@@ -166,7 +166,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * Gets the servicePrincipalObjectId property value. The ID of the service principal.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getServicePrincipalObjectId() {
         return this.servicePrincipalObjectId;
     }
@@ -174,7 +174,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * Gets the signInActivity property value. The signInActivity property
      * @return a signInActivity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SignInActivity getSignInActivity() {
         return this.signInActivity;
     }
@@ -183,8 +183,8 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appId", this.getAppId());
@@ -204,8 +204,8 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * @param value Value to set for the appId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }
     /**
@@ -213,8 +213,8 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * @param value Value to set for the appObjectId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppObjectId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppObjectId(@jakarta.annotation.Nullable final String value) {
         this.appObjectId = value;
     }
     /**
@@ -222,8 +222,8 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -231,8 +231,8 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * @param value Value to set for the credentialOrigin property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCredentialOrigin(@javax.annotation.Nullable final ApplicationKeyOrigin value) {
+    @jakarta.annotation.Nonnull
+    public void setCredentialOrigin(@jakarta.annotation.Nullable final ApplicationKeyOrigin value) {
         this.credentialOrigin = value;
     }
     /**
@@ -240,8 +240,8 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
@@ -249,8 +249,8 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * @param value Value to set for the keyId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKeyId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setKeyId(@jakarta.annotation.Nullable final String value) {
         this.keyId = value;
     }
     /**
@@ -258,8 +258,8 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * @param value Value to set for the keyType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKeyType(@javax.annotation.Nullable final ApplicationKeyType value) {
+    @jakarta.annotation.Nonnull
+    public void setKeyType(@jakarta.annotation.Nullable final ApplicationKeyType value) {
         this.keyType = value;
     }
     /**
@@ -267,8 +267,8 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * @param value Value to set for the keyUsage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKeyUsage(@javax.annotation.Nullable final ApplicationKeyUsage value) {
+    @jakarta.annotation.Nonnull
+    public void setKeyUsage(@jakarta.annotation.Nullable final ApplicationKeyUsage value) {
         this.keyUsage = value;
     }
     /**
@@ -276,8 +276,8 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * @param value Value to set for the resourceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceId(@jakarta.annotation.Nullable final String value) {
         this.resourceId = value;
     }
     /**
@@ -285,8 +285,8 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * @param value Value to set for the servicePrincipalObjectId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServicePrincipalObjectId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setServicePrincipalObjectId(@jakarta.annotation.Nullable final String value) {
         this.servicePrincipalObjectId = value;
     }
     /**
@@ -294,8 +294,8 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * @param value Value to set for the signInActivity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSignInActivity(@javax.annotation.Nullable final SignInActivity value) {
+    @jakarta.annotation.Nonnull
+    public void setSignInActivity(@jakarta.annotation.Nullable final SignInActivity value) {
         this.signInActivity = value;
     }
 }

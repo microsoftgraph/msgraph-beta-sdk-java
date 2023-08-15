@@ -48,7 +48,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * Instantiates a new workloadAction and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkloadAction() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -57,8 +57,8 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workloadAction
      */
-    @javax.annotation.Nonnull
-    public static WorkloadAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WorkloadAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WorkloadAction();
     }
@@ -66,7 +66,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * Gets the actionId property value. The unique identifier for the workload action. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActionId() {
         return this.actionId;
     }
@@ -74,7 +74,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -82,7 +82,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * Gets the category property value. The category for the workload action. Possible values are: automated, manual, unknownFutureValue. Optional. Read-only.
      * @return a workloadActionCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkloadActionCategory getCategory() {
         return this.category;
     }
@@ -90,7 +90,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * Gets the description property value. The description for the workload action. Optional. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -98,7 +98,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. The display name for the workload action. Optional. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -106,7 +106,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("actionId", (n) -> { this.setActionId(n.getStringValue()); });
@@ -123,7 +123,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * Gets the licenses property value. The licenses property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getLicenses() {
         return this.licenses;
     }
@@ -131,7 +131,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -139,7 +139,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * Gets the service property value. The service associated with workload action. Optional. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getService() {
         return this.service;
     }
@@ -147,7 +147,7 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * Gets the settings property value. The collection of settings associated with the workload action. Optional. Read-only.
      * @return a setting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Setting> getSettings() {
         return this.settings;
     }
@@ -156,8 +156,8 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("actionId", this.getActionId());
         writer.writeEnumValue("category", this.getCategory());
@@ -174,17 +174,17 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the actionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setActionId(@jakarta.annotation.Nullable final String value) {
         this.actionId = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -192,8 +192,8 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory(@javax.annotation.Nullable final WorkloadActionCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setCategory(@jakarta.annotation.Nullable final WorkloadActionCategory value) {
         this.category = value;
     }
     /**
@@ -201,8 +201,8 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -210,8 +210,8 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -219,17 +219,17 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the licenses property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLicenses(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setLicenses(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.licenses = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -237,8 +237,8 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the service property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setService(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setService(@jakarta.annotation.Nullable final String value) {
         this.service = value;
     }
     /**
@@ -246,8 +246,8 @@ public class WorkloadAction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettings(@javax.annotation.Nullable final java.util.List<Setting> value) {
+    @jakarta.annotation.Nonnull
+    public void setSettings(@jakarta.annotation.Nullable final java.util.List<Setting> value) {
         this.settings = value;
     }
 }

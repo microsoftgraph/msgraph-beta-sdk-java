@@ -31,7 +31,7 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
      * Instantiates a new deviceManagementExchangeAccessRule and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementExchangeAccessRule() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -40,8 +40,8 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementExchangeAccessRule
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementExchangeAccessRule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementExchangeAccessRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementExchangeAccessRule();
     }
@@ -49,7 +49,7 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
      * Gets the accessLevel property value. Access Level in Exchange.
      * @return a deviceManagementExchangeAccessLevel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementExchangeAccessLevel getAccessLevel() {
         return this.accessLevel;
     }
@@ -57,7 +57,7 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -65,7 +65,7 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
      * Gets the deviceClass property value. Device Class which will be impacted by this rule.
      * @return a deviceManagementExchangeDeviceClass
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementExchangeDeviceClass getDeviceClass() {
         return this.deviceClass;
     }
@@ -73,7 +73,7 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("accessLevel", (n) -> { this.setAccessLevel(n.getEnumValue(DeviceManagementExchangeAccessLevel.class)); });
@@ -85,7 +85,7 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -94,8 +94,8 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("accessLevel", this.getAccessLevel());
         writer.writeObjectValue("deviceClass", this.getDeviceClass());
@@ -107,17 +107,17 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
      * @param value Value to set for the accessLevel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessLevel(@javax.annotation.Nullable final DeviceManagementExchangeAccessLevel value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessLevel(@jakarta.annotation.Nullable final DeviceManagementExchangeAccessLevel value) {
         this.accessLevel = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -125,17 +125,17 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
      * @param value Value to set for the deviceClass property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceClass(@javax.annotation.Nullable final DeviceManagementExchangeDeviceClass value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceClass(@jakarta.annotation.Nullable final DeviceManagementExchangeDeviceClass value) {
         this.deviceClass = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

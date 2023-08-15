@@ -24,7 +24,7 @@ public class MediaSource implements AdditionalDataHolder, Parsable {
      * Instantiates a new mediaSource and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaSource() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -33,8 +33,8 @@ public class MediaSource implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a mediaSource
      */
-    @javax.annotation.Nonnull
-    public static MediaSource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MediaSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MediaSource();
     }
@@ -42,7 +42,7 @@ public class MediaSource implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -50,7 +50,7 @@ public class MediaSource implements AdditionalDataHolder, Parsable {
      * Gets the contentCategory property value. Enumeration value that indicates the media content category.
      * @return a mediaSourceContentCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaSourceContentCategory getContentCategory() {
         return this.contentCategory;
     }
@@ -58,7 +58,7 @@ public class MediaSource implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("contentCategory", (n) -> { this.setContentCategory(n.getEnumValue(MediaSourceContentCategory.class)); });
@@ -69,7 +69,7 @@ public class MediaSource implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -78,8 +78,8 @@ public class MediaSource implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("contentCategory", this.getContentCategory());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -87,11 +87,11 @@ public class MediaSource implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -99,17 +99,17 @@ public class MediaSource implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contentCategory property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentCategory(@javax.annotation.Nullable final MediaSourceContentCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setContentCategory(@jakarta.annotation.Nullable final MediaSourceContentCategory value) {
         this.contentCategory = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

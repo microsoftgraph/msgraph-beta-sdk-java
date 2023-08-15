@@ -19,7 +19,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      * Instantiates a new chatMessageMentionedIdentitySet and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatMessageMentionedIdentitySet() {
         super();
         this.setOdataType("#microsoft.graph.chatMessageMentionedIdentitySet");
@@ -29,8 +29,8 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a chatMessageMentionedIdentitySet
      */
-    @javax.annotation.Nonnull
-    public static ChatMessageMentionedIdentitySet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ChatMessageMentionedIdentitySet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ChatMessageMentionedIdentitySet();
     }
@@ -38,7 +38,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      * Gets the conversation property value. If present, represents a conversation (for example, team or channel) @mentioned in a message.
      * @return a teamworkConversationIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkConversationIdentity getConversation() {
         return this.conversation;
     }
@@ -46,7 +46,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("conversation", (n) -> { this.setConversation(n.getObjectValue(TeamworkConversationIdentity::createFromDiscriminatorValue)); });
@@ -57,7 +57,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      * Gets the tag property value. If present, represents a tag @mentioned in a team message.
      * @return a teamworkTagIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkTagIdentity getTag() {
         return this.tag;
     }
@@ -66,8 +66,8 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("conversation", this.getConversation());
@@ -78,8 +78,8 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      * @param value Value to set for the conversation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConversation(@javax.annotation.Nullable final TeamworkConversationIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setConversation(@jakarta.annotation.Nullable final TeamworkConversationIdentity value) {
         this.conversation = value;
     }
     /**
@@ -87,8 +87,8 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
      * @param value Value to set for the tag property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTag(@javax.annotation.Nullable final TeamworkTagIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setTag(@jakarta.annotation.Nullable final TeamworkTagIdentity value) {
         this.tag = value;
     }
 }

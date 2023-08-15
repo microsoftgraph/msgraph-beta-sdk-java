@@ -30,10 +30,10 @@ public enum IosUpdatesInstallStatus implements ValuedEnum {
     IosUpdatesInstallStatus(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static IosUpdatesInstallStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static IosUpdatesInstallStatus forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "updateScanFailed": return UpdateScanFailed;

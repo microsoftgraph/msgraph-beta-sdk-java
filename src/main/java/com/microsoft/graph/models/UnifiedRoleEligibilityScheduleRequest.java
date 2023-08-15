@@ -71,7 +71,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Instantiates a new unifiedRoleEligibilityScheduleRequest and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleRequest() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleEligibilityScheduleRequest");
@@ -81,8 +81,8 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a unifiedRoleEligibilityScheduleRequest
      */
-    @javax.annotation.Nonnull
-    public static UnifiedRoleEligibilityScheduleRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UnifiedRoleEligibilityScheduleRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UnifiedRoleEligibilityScheduleRequest();
     }
@@ -90,7 +90,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Gets the action property value. Represents the type of operation on the role eligibility request. The possible values are: AdminAssign: For administrators to assign eligible roles to principals.AdminRemove: For administrators to remove eligible roles from principals. AdminUpdate: For administrators to change existing role eligibilities.AdminExtend: For administrators to extend expiring role eligibilities.AdminRenew: For administrators to renew expired eligibilities.UserAdd: For users to activate their eligible assignments.UserRemove: For users to deactivate their active eligible assignments.UserExtend: For users to request to extend their expiring eligible assignments.UserRenew: For users to request to renew their expired eligible assignments.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAction() {
         return this.action;
     }
@@ -98,7 +98,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Gets the appScope property value. Read-only property with details of the app-specific scope when the role eligibility is scoped to an app. Nullable. Supports $expand.
      * @return a appScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AppScope getAppScope() {
         return this.appScope;
     }
@@ -106,7 +106,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Gets the appScopeId property value. Identifier of the app-specific scope when the role eligibility is scoped to an app. The scope of a role eligibility determines the set of resources for which the principal is eligible to access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units. Supports $filter (eq, ne, and on null values).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppScopeId() {
         return this.appScopeId;
     }
@@ -114,7 +114,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Gets the directoryScope property value. The directory object that is the scope of the role eligibility. Read-only. Supports $expand.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DirectoryObject getDirectoryScope() {
         return this.directoryScope;
     }
@@ -122,7 +122,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Gets the directoryScopeId property value. Identifier of the directory object representing the scope of the role eligibility. The scope of a role eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only. Supports $filter (eq, ne, and on null values).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDirectoryScopeId() {
         return this.directoryScopeId;
     }
@@ -130,7 +130,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("action", (n) -> { this.setAction(n.getStringValue()); });
@@ -154,7 +154,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Gets the isValidationOnly property value. Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsValidationOnly() {
         return this.isValidationOnly;
     }
@@ -162,7 +162,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Gets the justification property value. A message provided by users and administrators when create they create the unifiedRoleEligibilityScheduleRequest object.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getJustification() {
         return this.justification;
     }
@@ -170,7 +170,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Gets the principal property value. The principal that's getting a role eligibility through the request. Supports $expand.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DirectoryObject getPrincipal() {
         return this.principal;
     }
@@ -178,7 +178,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Gets the principalId property value. Identifier of the principal that has been granted the role eligibility. Can be a user or a role-assignable group. You can grant only active assignments service principals. Supports $filter (eq, ne).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrincipalId() {
         return this.principalId;
     }
@@ -186,7 +186,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Gets the roleDefinition property value. Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
      * @return a unifiedRoleDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UnifiedRoleDefinition getRoleDefinition() {
         return this.roleDefinition;
     }
@@ -194,7 +194,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Gets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition object that is being assigned to the principal. Supports $filter (eq, ne).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
@@ -202,7 +202,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Gets the scheduleInfo property value. The period of the role eligibility. Recurring schedules are currently unsupported.
      * @return a requestSchedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RequestSchedule getScheduleInfo() {
         return this.scheduleInfo;
     }
@@ -210,7 +210,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Gets the targetSchedule property value. The schedule for a role eligibility that is referenced through the targetScheduleId property. Supports $expand.
      * @return a unifiedRoleEligibilitySchedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UnifiedRoleEligibilitySchedule getTargetSchedule() {
         return this.targetSchedule;
     }
@@ -218,7 +218,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Gets the targetScheduleId property value. Identifier of the schedule object that's linked to the eligibility request. Supports $filter (eq, ne).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTargetScheduleId() {
         return this.targetScheduleId;
     }
@@ -226,7 +226,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * Gets the ticketInfo property value. Ticket details linked to the role eligibility request including details of the ticket number and ticket system. Optional.
      * @return a ticketInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TicketInfo getTicketInfo() {
         return this.ticketInfo;
     }
@@ -235,8 +235,8 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("action", this.getAction());
@@ -260,8 +260,8 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the action property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAction(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAction(@jakarta.annotation.Nullable final String value) {
         this.action = value;
     }
     /**
@@ -269,8 +269,8 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the appScope property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppScope(@javax.annotation.Nullable final AppScope value) {
+    @jakarta.annotation.Nonnull
+    public void setAppScope(@jakarta.annotation.Nullable final AppScope value) {
         this.appScope = value;
     }
     /**
@@ -278,8 +278,8 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the appScopeId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppScopeId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAppScopeId(@jakarta.annotation.Nullable final String value) {
         this.appScopeId = value;
     }
     /**
@@ -287,8 +287,8 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the directoryScope property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDirectoryScope(@javax.annotation.Nullable final DirectoryObject value) {
+    @jakarta.annotation.Nonnull
+    public void setDirectoryScope(@jakarta.annotation.Nullable final DirectoryObject value) {
         this.directoryScope = value;
     }
     /**
@@ -296,8 +296,8 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the directoryScopeId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDirectoryScopeId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDirectoryScopeId(@jakarta.annotation.Nullable final String value) {
         this.directoryScopeId = value;
     }
     /**
@@ -305,8 +305,8 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the isValidationOnly property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsValidationOnly(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsValidationOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.isValidationOnly = value;
     }
     /**
@@ -314,8 +314,8 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the justification property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJustification(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setJustification(@jakarta.annotation.Nullable final String value) {
         this.justification = value;
     }
     /**
@@ -323,8 +323,8 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the principal property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipal(@javax.annotation.Nullable final DirectoryObject value) {
+    @jakarta.annotation.Nonnull
+    public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {
         this.principal = value;
     }
     /**
@@ -332,8 +332,8 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the principalId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipalId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
         this.principalId = value;
     }
     /**
@@ -341,8 +341,8 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the roleDefinition property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinition(@javax.annotation.Nullable final UnifiedRoleDefinition value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDefinition(@jakarta.annotation.Nullable final UnifiedRoleDefinition value) {
         this.roleDefinition = value;
     }
     /**
@@ -350,8 +350,8 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.roleDefinitionId = value;
     }
     /**
@@ -359,8 +359,8 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the scheduleInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScheduleInfo(@javax.annotation.Nullable final RequestSchedule value) {
+    @jakarta.annotation.Nonnull
+    public void setScheduleInfo(@jakarta.annotation.Nullable final RequestSchedule value) {
         this.scheduleInfo = value;
     }
     /**
@@ -368,8 +368,8 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the targetSchedule property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetSchedule(@javax.annotation.Nullable final UnifiedRoleEligibilitySchedule value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetSchedule(@jakarta.annotation.Nullable final UnifiedRoleEligibilitySchedule value) {
         this.targetSchedule = value;
     }
     /**
@@ -377,8 +377,8 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the targetScheduleId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetScheduleId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetScheduleId(@jakarta.annotation.Nullable final String value) {
         this.targetScheduleId = value;
     }
     /**
@@ -386,8 +386,8 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
      * @param value Value to set for the ticketInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTicketInfo(@javax.annotation.Nullable final TicketInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setTicketInfo(@jakarta.annotation.Nullable final TicketInfo value) {
         this.ticketInfo = value;
     }
 }

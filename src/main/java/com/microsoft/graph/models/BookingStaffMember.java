@@ -46,7 +46,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * Instantiates a new bookingStaffMember and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BookingStaffMember() {
         super();
     }
@@ -55,8 +55,8 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a bookingStaffMember
      */
-    @javax.annotation.Nonnull
-    public static BookingStaffMember createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BookingStaffMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BookingStaffMember();
     }
@@ -64,7 +64,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * Gets the availabilityIsAffectedByPersonalCalendar property value. True means that if the staff member is a Microsoft 365 user, the Bookings API would verify the staff member's availability in their personal calendar in Microsoft 365, before making a booking.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAvailabilityIsAffectedByPersonalCalendar() {
         return this.availabilityIsAffectedByPersonalCalendar;
     }
@@ -72,7 +72,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * Gets the colorIndex property value. Identifies a color to represent the staff member. The color corresponds to the color palette in the Staff details page in the Bookings app.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getColorIndex() {
         return this.colorIndex;
     }
@@ -80,7 +80,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("availabilityIsAffectedByPersonalCalendar", (n) -> { this.setAvailabilityIsAffectedByPersonalCalendar(n.getBooleanValue()); });
@@ -97,7 +97,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * Gets the isEmailNotificationEnabled property value. True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsEmailNotificationEnabled() {
         return this.isEmailNotificationEnabled;
     }
@@ -105,7 +105,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * Gets the membershipStatus property value. The membershipStatus property
      * @return a bookingStaffMembershipStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BookingStaffMembershipStatus getMembershipStatus() {
         return this.membershipStatus;
     }
@@ -113,7 +113,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * Gets the role property value. The role property
      * @return a bookingStaffRole
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BookingStaffRole getRole() {
         return this.role;
     }
@@ -121,7 +121,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * Gets the timeZone property value. The time zone of the staff member. For a list of possible values, see dateTimeTimeZone.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTimeZone() {
         return this.timeZone;
     }
@@ -129,7 +129,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * Gets the useBusinessHours property value. True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getUseBusinessHours() {
         return this.useBusinessHours;
     }
@@ -137,7 +137,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * Gets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
      * @return a bookingWorkHours
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<BookingWorkHours> getWorkingHours() {
         return this.workingHours;
     }
@@ -146,8 +146,8 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("availabilityIsAffectedByPersonalCalendar", this.getAvailabilityIsAffectedByPersonalCalendar());
@@ -164,8 +164,8 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * @param value Value to set for the availabilityIsAffectedByPersonalCalendar property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAvailabilityIsAffectedByPersonalCalendar(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAvailabilityIsAffectedByPersonalCalendar(@jakarta.annotation.Nullable final Boolean value) {
         this.availabilityIsAffectedByPersonalCalendar = value;
     }
     /**
@@ -173,8 +173,8 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * @param value Value to set for the colorIndex property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setColorIndex(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setColorIndex(@jakarta.annotation.Nullable final Integer value) {
         this.colorIndex = value;
     }
     /**
@@ -182,8 +182,8 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * @param value Value to set for the isEmailNotificationEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsEmailNotificationEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsEmailNotificationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEmailNotificationEnabled = value;
     }
     /**
@@ -191,8 +191,8 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * @param value Value to set for the membershipStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMembershipStatus(@javax.annotation.Nullable final BookingStaffMembershipStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setMembershipStatus(@jakarta.annotation.Nullable final BookingStaffMembershipStatus value) {
         this.membershipStatus = value;
     }
     /**
@@ -200,8 +200,8 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * @param value Value to set for the role property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRole(@javax.annotation.Nullable final BookingStaffRole value) {
+    @jakarta.annotation.Nonnull
+    public void setRole(@jakarta.annotation.Nullable final BookingStaffRole value) {
         this.role = value;
     }
     /**
@@ -209,8 +209,8 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * @param value Value to set for the timeZone property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTimeZone(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTimeZone(@jakarta.annotation.Nullable final String value) {
         this.timeZone = value;
     }
     /**
@@ -218,8 +218,8 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * @param value Value to set for the useBusinessHours property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUseBusinessHours(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setUseBusinessHours(@jakarta.annotation.Nullable final Boolean value) {
         this.useBusinessHours = value;
     }
     /**
@@ -227,8 +227,8 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      * @param value Value to set for the workingHours property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkingHours(@javax.annotation.Nullable final java.util.List<BookingWorkHours> value) {
+    @jakarta.annotation.Nonnull
+    public void setWorkingHours(@jakarta.annotation.Nullable final java.util.List<BookingWorkHours> value) {
         this.workingHours = value;
     }
 }

@@ -25,7 +25,7 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Par
      * Instantiates a new moveDevicesToOUPostRequestBody and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MoveDevicesToOUPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -34,8 +34,8 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a moveDevicesToOUPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static MoveDevicesToOUPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MoveDevicesToOUPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MoveDevicesToOUPostRequestBody();
     }
@@ -43,7 +43,7 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -51,7 +51,7 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Par
      * Gets the deviceIds property value. The deviceIds property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UUID> getDeviceIds() {
         return this.deviceIds;
     }
@@ -59,7 +59,7 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("deviceIds", (n) -> { this.setDeviceIds(n.getCollectionOfPrimitiveValues(UUID.class)); });
@@ -70,7 +70,7 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Par
      * Gets the organizationalUnitPath property value. The organizationalUnitPath property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOrganizationalUnitPath() {
         return this.organizationalUnitPath;
     }
@@ -79,8 +79,8 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("deviceIds", this.getDeviceIds());
         writer.writeStringValue("organizationalUnitPath", this.getOrganizationalUnitPath());
@@ -88,11 +88,11 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Par
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -100,8 +100,8 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the deviceIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceIds(@javax.annotation.Nullable final java.util.List<UUID> value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceIds(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
         this.deviceIds = value;
     }
     /**
@@ -109,8 +109,8 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the organizationalUnitPath property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrganizationalUnitPath(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOrganizationalUnitPath(@jakarta.annotation.Nullable final String value) {
         this.organizationalUnitPath = value;
     }
 }

@@ -26,7 +26,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      * Instantiates a new deviceComanagementAuthorityConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceComanagementAuthorityConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.deviceComanagementAuthorityConfiguration");
@@ -36,8 +36,8 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceComanagementAuthorityConfiguration
      */
-    @javax.annotation.Nonnull
-    public static DeviceComanagementAuthorityConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceComanagementAuthorityConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceComanagementAuthorityConfiguration();
     }
@@ -45,7 +45,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      * Gets the configurationManagerAgentCommandLineArgument property value. CoManagement Authority configuration ConfigurationManagerAgentCommandLineArgument
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConfigurationManagerAgentCommandLineArgument() {
         return this.configurationManagerAgentCommandLineArgument;
     }
@@ -53,7 +53,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("configurationManagerAgentCommandLineArgument", (n) -> { this.setConfigurationManagerAgentCommandLineArgument(n.getStringValue()); });
@@ -65,7 +65,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      * Gets the installConfigurationManagerAgent property value. CoManagement Authority configuration InstallConfigurationManagerAgent
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getInstallConfigurationManagerAgent() {
         return this.installConfigurationManagerAgent;
     }
@@ -73,7 +73,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      * Gets the managedDeviceAuthority property value. CoManagement Authority configuration ManagedDeviceAuthority
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getManagedDeviceAuthority() {
         return this.managedDeviceAuthority;
     }
@@ -82,8 +82,8 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("configurationManagerAgentCommandLineArgument", this.getConfigurationManagerAgentCommandLineArgument());
@@ -95,8 +95,8 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      * @param value Value to set for the configurationManagerAgentCommandLineArgument property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigurationManagerAgentCommandLineArgument(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setConfigurationManagerAgentCommandLineArgument(@jakarta.annotation.Nullable final String value) {
         this.configurationManagerAgentCommandLineArgument = value;
     }
     /**
@@ -104,8 +104,8 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      * @param value Value to set for the installConfigurationManagerAgent property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstallConfigurationManagerAgent(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setInstallConfigurationManagerAgent(@jakarta.annotation.Nullable final Boolean value) {
         this.installConfigurationManagerAgent = value;
     }
     /**
@@ -113,8 +113,8 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      * @param value Value to set for the managedDeviceAuthority property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceAuthority(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedDeviceAuthority(@jakarta.annotation.Nullable final Integer value) {
         this.managedDeviceAuthority = value;
     }
 }

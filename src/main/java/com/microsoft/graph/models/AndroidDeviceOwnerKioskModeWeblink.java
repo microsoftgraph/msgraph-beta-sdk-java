@@ -22,7 +22,7 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
      * Instantiates a new androidDeviceOwnerKioskModeWeblink and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidDeviceOwnerKioskModeWeblink() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerKioskModeWeblink");
@@ -32,8 +32,8 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidDeviceOwnerKioskModeWeblink
      */
-    @javax.annotation.Nonnull
-    public static AndroidDeviceOwnerKioskModeWeblink createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidDeviceOwnerKioskModeWeblink createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidDeviceOwnerKioskModeWeblink();
     }
@@ -41,7 +41,7 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("label", (n) -> { this.setLabel(n.getStringValue()); });
@@ -52,7 +52,7 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
      * Gets the label property value. Display name for weblink
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLabel() {
         return this.label;
     }
@@ -60,7 +60,7 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
      * Gets the link property value. Link for weblink
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLink() {
         return this.link;
     }
@@ -69,8 +69,8 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("label", this.getLabel());
@@ -81,8 +81,8 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
      * @param value Value to set for the label property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLabel(@jakarta.annotation.Nullable final String value) {
         this.label = value;
     }
     /**
@@ -90,8 +90,8 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
      * @param value Value to set for the link property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLink(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLink(@jakarta.annotation.Nullable final String value) {
         this.link = value;
     }
 }

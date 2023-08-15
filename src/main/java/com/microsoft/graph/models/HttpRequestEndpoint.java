@@ -15,7 +15,7 @@ public class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration im
      * Instantiates a new httpRequestEndpoint and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public HttpRequestEndpoint() {
         super();
         this.setOdataType("#microsoft.graph.httpRequestEndpoint");
@@ -25,8 +25,8 @@ public class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration im
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a httpRequestEndpoint
      */
-    @javax.annotation.Nonnull
-    public static HttpRequestEndpoint createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static HttpRequestEndpoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new HttpRequestEndpoint();
     }
@@ -34,7 +34,7 @@ public class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration im
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("targetUrl", (n) -> { this.setTargetUrl(n.getStringValue()); });
@@ -44,7 +44,7 @@ public class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration im
      * Gets the targetUrl property value. The HTTP endpoint that a custom extension calls.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTargetUrl() {
         return this.targetUrl;
     }
@@ -53,8 +53,8 @@ public class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("targetUrl", this.getTargetUrl());
@@ -64,8 +64,8 @@ public class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration im
      * @param value Value to set for the targetUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetUrl(@jakarta.annotation.Nullable final String value) {
         this.targetUrl = value;
     }
 }

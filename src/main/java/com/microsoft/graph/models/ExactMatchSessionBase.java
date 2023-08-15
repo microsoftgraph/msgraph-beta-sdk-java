@@ -44,7 +44,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * Instantiates a new exactMatchSessionBase and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExactMatchSessionBase() {
         super();
         this.setOdataType("#microsoft.graph.exactMatchSessionBase");
@@ -54,8 +54,8 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a exactMatchSessionBase
      */
-    @javax.annotation.Nonnull
-    public static ExactMatchSessionBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ExactMatchSessionBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -70,7 +70,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * Gets the dataStoreId property value. The dataStoreId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDataStoreId() {
         return this.dataStoreId;
     }
@@ -78,7 +78,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("dataStoreId", (n) -> { this.setDataStoreId(n.getStringValue()); });
@@ -95,7 +95,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * Gets the processingCompletionDateTime property value. The processingCompletionDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getProcessingCompletionDateTime() {
         return this.processingCompletionDateTime;
     }
@@ -103,7 +103,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * Gets the remainingBlockCount property value. The remainingBlockCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRemainingBlockCount() {
         return this.remainingBlockCount;
     }
@@ -111,7 +111,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * Gets the remainingJobCount property value. The remainingJobCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRemainingJobCount() {
         return this.remainingJobCount;
     }
@@ -119,7 +119,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * Gets the state property value. The state property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getState() {
         return this.state;
     }
@@ -127,7 +127,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * Gets the totalBlockCount property value. The totalBlockCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalBlockCount() {
         return this.totalBlockCount;
     }
@@ -135,7 +135,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * Gets the totalJobCount property value. The totalJobCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalJobCount() {
         return this.totalJobCount;
     }
@@ -143,7 +143,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * Gets the uploadCompletionDateTime property value. The uploadCompletionDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getUploadCompletionDateTime() {
         return this.uploadCompletionDateTime;
     }
@@ -152,8 +152,8 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("dataStoreId", this.getDataStoreId());
@@ -170,8 +170,8 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param value Value to set for the dataStoreId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDataStoreId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDataStoreId(@jakarta.annotation.Nullable final String value) {
         this.dataStoreId = value;
     }
     /**
@@ -179,8 +179,8 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param value Value to set for the processingCompletionDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProcessingCompletionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setProcessingCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.processingCompletionDateTime = value;
     }
     /**
@@ -188,8 +188,8 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param value Value to set for the remainingBlockCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemainingBlockCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setRemainingBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.remainingBlockCount = value;
     }
     /**
@@ -197,8 +197,8 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param value Value to set for the remainingJobCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemainingJobCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setRemainingJobCount(@jakarta.annotation.Nullable final Integer value) {
         this.remainingJobCount = value;
     }
     /**
@@ -206,8 +206,8 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final String value) {
         this.state = value;
     }
     /**
@@ -215,8 +215,8 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param value Value to set for the totalBlockCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalBlockCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalBlockCount = value;
     }
     /**
@@ -224,8 +224,8 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param value Value to set for the totalJobCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalJobCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalJobCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalJobCount = value;
     }
     /**
@@ -233,8 +233,8 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param value Value to set for the uploadCompletionDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUploadCompletionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setUploadCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.uploadCompletionDateTime = value;
     }
 }

@@ -56,7 +56,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * Instantiates a new educationalActivityDetail and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationalActivityDetail() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -65,8 +65,8 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationalActivityDetail
      */
-    @javax.annotation.Nonnull
-    public static EducationalActivityDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationalActivityDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationalActivityDetail();
     }
@@ -74,7 +74,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * Gets the abbreviation property value. Shortened name of the degree or program (example: PhD, MBA)
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAbbreviation() {
         return this.abbreviation;
     }
@@ -82,7 +82,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * Gets the activities property value. Extracurricular activities undertaken alongside the program.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getActivities() {
         return this.activities;
     }
@@ -90,7 +90,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -98,7 +98,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * Gets the awards property value. Any awards or honors associated with the program.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAwards() {
         return this.awards;
     }
@@ -106,7 +106,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * Gets the description property value. Short description of the program provided by the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -114,7 +114,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * Gets the displayName property value. Long-form name of the program that the user has provided.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -122,7 +122,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("abbreviation", (n) -> { this.setAbbreviation(n.getStringValue()); });
@@ -141,7 +141,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * Gets the fieldsOfStudy property value. Majors and minors associated with the program. (if applicable)
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getFieldsOfStudy() {
         return this.fieldsOfStudy;
     }
@@ -149,7 +149,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * Gets the grade property value. The final grade, class, GPA or score.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getGrade() {
         return this.grade;
     }
@@ -157,7 +157,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * Gets the notes property value. Additional notes the user has provided.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNotes() {
         return this.notes;
     }
@@ -165,7 +165,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -173,7 +173,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * Gets the webUrl property value. Link to the degree or program page.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebUrl() {
         return this.webUrl;
     }
@@ -182,8 +182,8 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("abbreviation", this.getAbbreviation());
         writer.writeCollectionOfPrimitiveValues("activities", this.getActivities());
@@ -202,8 +202,8 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the abbreviation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAbbreviation(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAbbreviation(@jakarta.annotation.Nullable final String value) {
         this.abbreviation = value;
     }
     /**
@@ -211,17 +211,17 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the activities property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivities(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setActivities(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.activities = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -229,8 +229,8 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the awards property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAwards(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setAwards(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.awards = value;
     }
     /**
@@ -238,8 +238,8 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -247,8 +247,8 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -256,8 +256,8 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the fieldsOfStudy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFieldsOfStudy(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setFieldsOfStudy(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.fieldsOfStudy = value;
     }
     /**
@@ -265,8 +265,8 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the grade property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGrade(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setGrade(@jakarta.annotation.Nullable final String value) {
         this.grade = value;
     }
     /**
@@ -274,17 +274,17 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the notes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotes(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNotes(@jakarta.annotation.Nullable final String value) {
         this.notes = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -292,8 +292,8 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the webUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }
 }

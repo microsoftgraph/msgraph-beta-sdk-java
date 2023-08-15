@@ -31,7 +31,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      * Instantiates a new onPremisesAgentGroup and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnPremisesAgentGroup() {
         super();
     }
@@ -40,8 +40,8 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a onPremisesAgentGroup
      */
-    @javax.annotation.Nonnull
-    public static OnPremisesAgentGroup createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OnPremisesAgentGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OnPremisesAgentGroup();
     }
@@ -49,7 +49,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      * Gets the agents property value. List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
      * @return a onPremisesAgent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OnPremisesAgent> getAgents() {
         return this.agents;
     }
@@ -57,7 +57,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      * Gets the displayName property value. Display name of the onPremisesAgentGroup.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -65,7 +65,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("agents", (n) -> { this.setAgents(n.getCollectionOfObjectValues(OnPremisesAgent::createFromDiscriminatorValue)); });
@@ -79,7 +79,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      * Gets the isDefault property value. Indicates if the onPremisesAgentGroup is the default agent group. Only a single agent group can be the default onPremisesAgentGroup and is set by the system.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
         return this.isDefault;
     }
@@ -87,7 +87,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      * Gets the publishedResources property value. List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
      * @return a publishedResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PublishedResource> getPublishedResources() {
         return this.publishedResources;
     }
@@ -95,7 +95,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      * Gets the publishingType property value. The publishingType property
      * @return a onPremisesPublishingType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnPremisesPublishingType getPublishingType() {
         return this.publishingType;
     }
@@ -104,8 +104,8 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("agents", this.getAgents());
@@ -119,8 +119,8 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      * @param value Value to set for the agents property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAgents(@javax.annotation.Nullable final java.util.List<OnPremisesAgent> value) {
+    @jakarta.annotation.Nonnull
+    public void setAgents(@jakarta.annotation.Nullable final java.util.List<OnPremisesAgent> value) {
         this.agents = value;
     }
     /**
@@ -128,8 +128,8 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -137,8 +137,8 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      * @param value Value to set for the isDefault property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefault = value;
     }
     /**
@@ -146,8 +146,8 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      * @param value Value to set for the publishedResources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublishedResources(@javax.annotation.Nullable final java.util.List<PublishedResource> value) {
+    @jakarta.annotation.Nonnull
+    public void setPublishedResources(@jakarta.annotation.Nullable final java.util.List<PublishedResource> value) {
         this.publishedResources = value;
     }
     /**
@@ -155,8 +155,8 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      * @param value Value to set for the publishingType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublishingType(@javax.annotation.Nullable final OnPremisesPublishingType value) {
+    @jakarta.annotation.Nonnull
+    public void setPublishingType(@jakarta.annotation.Nullable final OnPremisesPublishingType value) {
         this.publishingType = value;
     }
 }

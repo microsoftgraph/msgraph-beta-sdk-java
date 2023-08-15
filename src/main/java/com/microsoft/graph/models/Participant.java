@@ -55,7 +55,7 @@ public class Participant extends Entity implements Parsable {
      * Instantiates a new participant and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Participant() {
         super();
     }
@@ -64,8 +64,8 @@ public class Participant extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a participant
      */
-    @javax.annotation.Nonnull
-    public static Participant createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Participant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Participant();
     }
@@ -73,7 +73,7 @@ public class Participant extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("info", (n) -> { this.setInfo(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
@@ -93,7 +93,7 @@ public class Participant extends Entity implements Parsable {
      * Gets the info property value. The info property
      * @return a participantInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ParticipantInfo getInfo() {
         return this.info;
     }
@@ -101,7 +101,7 @@ public class Participant extends Entity implements Parsable {
      * Gets the isIdentityAnonymized property value. The isIdentityAnonymized property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsIdentityAnonymized() {
         return this.isIdentityAnonymized;
     }
@@ -109,7 +109,7 @@ public class Participant extends Entity implements Parsable {
      * Gets the isInLobby property value. true if the participant is in lobby.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsInLobby() {
         return this.isInLobby;
     }
@@ -117,7 +117,7 @@ public class Participant extends Entity implements Parsable {
      * Gets the isMuted property value. true if the participant is muted (client or server muted).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsMuted() {
         return this.isMuted;
     }
@@ -125,7 +125,7 @@ public class Participant extends Entity implements Parsable {
      * Gets the mediaStreams property value. The list of media streams.
      * @return a mediaStream
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MediaStream> getMediaStreams() {
         return this.mediaStreams;
     }
@@ -133,7 +133,7 @@ public class Participant extends Entity implements Parsable {
      * Gets the metadata property value. A blob of data provided by the participant in the roster.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMetadata() {
         return this.metadata;
     }
@@ -141,7 +141,7 @@ public class Participant extends Entity implements Parsable {
      * Gets the preferredDisplayName property value. The preferredDisplayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPreferredDisplayName() {
         return this.preferredDisplayName;
     }
@@ -149,7 +149,7 @@ public class Participant extends Entity implements Parsable {
      * Gets the recordingInfo property value. Information on whether the participant has recording capability.
      * @return a recordingInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RecordingInfo getRecordingInfo() {
         return this.recordingInfo;
     }
@@ -157,7 +157,7 @@ public class Participant extends Entity implements Parsable {
      * Gets the removedState property value. Indicates the reason why the participant was removed from the roster.
      * @return a removedState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RemovedState getRemovedState() {
         return this.removedState;
     }
@@ -165,7 +165,7 @@ public class Participant extends Entity implements Parsable {
      * Gets the restrictedExperience property value. Indicates the reason or reasons why media content from this participant is restricted.
      * @return a onlineMeetingRestricted
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnlineMeetingRestricted getRestrictedExperience() {
         return this.restrictedExperience;
     }
@@ -173,7 +173,7 @@ public class Participant extends Entity implements Parsable {
      * Gets the rosterSequenceNumber property value. Indicates the roster sequence number the participant was last updated in.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getRosterSequenceNumber() {
         return this.rosterSequenceNumber;
     }
@@ -182,8 +182,8 @@ public class Participant extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("info", this.getInfo());
@@ -203,8 +203,8 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the info property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInfo(@javax.annotation.Nullable final ParticipantInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setInfo(@jakarta.annotation.Nullable final ParticipantInfo value) {
         this.info = value;
     }
     /**
@@ -212,8 +212,8 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the isIdentityAnonymized property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsIdentityAnonymized(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsIdentityAnonymized(@jakarta.annotation.Nullable final Boolean value) {
         this.isIdentityAnonymized = value;
     }
     /**
@@ -221,8 +221,8 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the isInLobby property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsInLobby(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsInLobby(@jakarta.annotation.Nullable final Boolean value) {
         this.isInLobby = value;
     }
     /**
@@ -230,8 +230,8 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the isMuted property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsMuted(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsMuted(@jakarta.annotation.Nullable final Boolean value) {
         this.isMuted = value;
     }
     /**
@@ -239,8 +239,8 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the mediaStreams property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaStreams(@javax.annotation.Nullable final java.util.List<MediaStream> value) {
+    @jakarta.annotation.Nonnull
+    public void setMediaStreams(@jakarta.annotation.Nullable final java.util.List<MediaStream> value) {
         this.mediaStreams = value;
     }
     /**
@@ -248,8 +248,8 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the metadata property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMetadata(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMetadata(@jakarta.annotation.Nullable final String value) {
         this.metadata = value;
     }
     /**
@@ -257,8 +257,8 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the preferredDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreferredDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPreferredDisplayName(@jakarta.annotation.Nullable final String value) {
         this.preferredDisplayName = value;
     }
     /**
@@ -266,8 +266,8 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the recordingInfo property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecordingInfo(@javax.annotation.Nullable final RecordingInfo value) {
+    @jakarta.annotation.Nonnull
+    public void setRecordingInfo(@jakarta.annotation.Nullable final RecordingInfo value) {
         this.recordingInfo = value;
     }
     /**
@@ -275,8 +275,8 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the removedState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemovedState(@javax.annotation.Nullable final RemovedState value) {
+    @jakarta.annotation.Nonnull
+    public void setRemovedState(@jakarta.annotation.Nullable final RemovedState value) {
         this.removedState = value;
     }
     /**
@@ -284,8 +284,8 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the restrictedExperience property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRestrictedExperience(@javax.annotation.Nullable final OnlineMeetingRestricted value) {
+    @jakarta.annotation.Nonnull
+    public void setRestrictedExperience(@jakarta.annotation.Nullable final OnlineMeetingRestricted value) {
         this.restrictedExperience = value;
     }
     /**
@@ -293,8 +293,8 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the rosterSequenceNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRosterSequenceNumber(@javax.annotation.Nullable final Long value) {
+    @jakarta.annotation.Nonnull
+    public void setRosterSequenceNumber(@jakarta.annotation.Nullable final Long value) {
         this.rosterSequenceNumber = value;
     }
 }

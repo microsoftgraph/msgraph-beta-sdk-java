@@ -56,7 +56,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * Instantiates a new governanceResource and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceResource() {
         super();
     }
@@ -65,8 +65,8 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a governanceResource
      */
-    @javax.annotation.Nonnull
-    public static GovernanceResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GovernanceResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GovernanceResource();
     }
@@ -74,7 +74,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * Gets the displayName property value. The display name of the resource.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -82,7 +82,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * Gets the externalId property value. The external id of the resource, representing its original id in the external system. For example, a subscription resource's external id can be '/subscriptions/c14ae696-5e0c-4e5d-88cc-bef6637737ac'.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalId() {
         return this.externalId;
     }
@@ -90,7 +90,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -110,7 +110,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * Gets the parent property value. Read-only. The parent resource. for pimforazurerbac scenario, it can represent the subscription the resource belongs to.
      * @return a governanceResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceResource getParent() {
         return this.parent;
     }
@@ -118,7 +118,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * Gets the registeredDateTime property value. Represents the date time when the resource is registered in PIM.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRegisteredDateTime() {
         return this.registeredDateTime;
     }
@@ -126,7 +126,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * Gets the registeredRoot property value. The externalId of the resource's root scope that is registered in PIM. The root scope can be the parent, grandparent, or higher ancestor resources.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRegisteredRoot() {
         return this.registeredRoot;
     }
@@ -134,7 +134,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * Gets the roleAssignmentRequests property value. The collection of role assignment requests for the resource.
      * @return a governanceRoleAssignmentRequest
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleAssignmentRequest> getRoleAssignmentRequests() {
         return this.roleAssignmentRequests;
     }
@@ -142,7 +142,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * Gets the roleAssignments property value. The collection of role assignments for the resource.
      * @return a governanceRoleAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleAssignment> getRoleAssignments() {
         return this.roleAssignments;
     }
@@ -150,7 +150,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * Gets the roleDefinitions property value. The collection of role defintions for the resource.
      * @return a governanceRoleDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleDefinition> getRoleDefinitions() {
         return this.roleDefinitions;
     }
@@ -158,7 +158,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * Gets the roleSettings property value. The collection of role settings for the resource.
      * @return a governanceRoleSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleSetting> getRoleSettings() {
         return this.roleSettings;
     }
@@ -166,7 +166,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * Gets the status property value. The status of a given resource. For example, it could represent whether the resource is locked or not (values: Active/Locked). Note: This property may be extended in the future to support more scenarios.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStatus() {
         return this.status;
     }
@@ -174,7 +174,7 @@ public class GovernanceResource extends Entity implements Parsable {
      * Gets the type property value. Required. Resource type. For example, for Azure resources, the type could be 'Subscription', 'ResourceGroup', 'Microsoft.Sql/server', etc.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getType() {
         return this.type;
     }
@@ -183,8 +183,8 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -204,8 +204,8 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -213,8 +213,8 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the externalId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }
     /**
@@ -222,8 +222,8 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the parent property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParent(@javax.annotation.Nullable final GovernanceResource value) {
+    @jakarta.annotation.Nonnull
+    public void setParent(@jakarta.annotation.Nullable final GovernanceResource value) {
         this.parent = value;
     }
     /**
@@ -231,8 +231,8 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the registeredDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegisteredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setRegisteredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.registeredDateTime = value;
     }
     /**
@@ -240,8 +240,8 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the registeredRoot property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegisteredRoot(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRegisteredRoot(@jakarta.annotation.Nullable final String value) {
         this.registeredRoot = value;
     }
     /**
@@ -249,8 +249,8 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the roleAssignmentRequests property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleAssignmentRequests(@javax.annotation.Nullable final java.util.List<GovernanceRoleAssignmentRequest> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleAssignmentRequests(@jakarta.annotation.Nullable final java.util.List<GovernanceRoleAssignmentRequest> value) {
         this.roleAssignmentRequests = value;
     }
     /**
@@ -258,8 +258,8 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the roleAssignments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleAssignments(@javax.annotation.Nullable final java.util.List<GovernanceRoleAssignment> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleAssignments(@jakarta.annotation.Nullable final java.util.List<GovernanceRoleAssignment> value) {
         this.roleAssignments = value;
     }
     /**
@@ -267,8 +267,8 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the roleDefinitions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinitions(@javax.annotation.Nullable final java.util.List<GovernanceRoleDefinition> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDefinitions(@jakarta.annotation.Nullable final java.util.List<GovernanceRoleDefinition> value) {
         this.roleDefinitions = value;
     }
     /**
@@ -276,8 +276,8 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the roleSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleSettings(@javax.annotation.Nullable final java.util.List<GovernanceRoleSetting> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleSettings(@jakarta.annotation.Nullable final java.util.List<GovernanceRoleSetting> value) {
         this.roleSettings = value;
     }
     /**
@@ -285,8 +285,8 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final String value) {
         this.status = value;
     }
     /**
@@ -294,8 +294,8 @@ public class GovernanceResource extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
 }

@@ -19,7 +19,7 @@ public class HorizontalSectionColumn extends Entity implements Parsable {
      * Instantiates a new horizontalSectionColumn and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public HorizontalSectionColumn() {
         super();
     }
@@ -28,8 +28,8 @@ public class HorizontalSectionColumn extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a horizontalSectionColumn
      */
-    @javax.annotation.Nonnull
-    public static HorizontalSectionColumn createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static HorizontalSectionColumn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new HorizontalSectionColumn();
     }
@@ -37,7 +37,7 @@ public class HorizontalSectionColumn extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("webparts", (n) -> { this.setWebparts(n.getCollectionOfObjectValues(WebPart::createFromDiscriminatorValue)); });
@@ -48,7 +48,7 @@ public class HorizontalSectionColumn extends Entity implements Parsable {
      * Gets the webparts property value. The collection of WebParts in this column.
      * @return a webPart
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WebPart> getWebparts() {
         return this.webparts;
     }
@@ -56,7 +56,7 @@ public class HorizontalSectionColumn extends Entity implements Parsable {
      * Gets the width property value. Width of the column. A horizontal section is divided into 12 grids. A column should have a value of 1-12 to represent its range spans. For example, there can be two columns both have a width of 6 in a section.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getWidth() {
         return this.width;
     }
@@ -65,8 +65,8 @@ public class HorizontalSectionColumn extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("webparts", this.getWebparts());
@@ -77,8 +77,8 @@ public class HorizontalSectionColumn extends Entity implements Parsable {
      * @param value Value to set for the webparts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebparts(@javax.annotation.Nullable final java.util.List<WebPart> value) {
+    @jakarta.annotation.Nonnull
+    public void setWebparts(@jakarta.annotation.Nullable final java.util.List<WebPart> value) {
         this.webparts = value;
     }
     /**
@@ -86,8 +86,8 @@ public class HorizontalSectionColumn extends Entity implements Parsable {
      * @param value Value to set for the width property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWidth(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setWidth(@jakarta.annotation.Nullable final Integer value) {
         this.width = value;
     }
 }

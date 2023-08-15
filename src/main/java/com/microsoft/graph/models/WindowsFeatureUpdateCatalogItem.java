@@ -18,7 +18,7 @@ public class WindowsFeatureUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * Instantiates a new windowsFeatureUpdateCatalogItem and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsFeatureUpdateCatalogItem() {
         super();
         this.setOdataType("#microsoft.graph.windowsFeatureUpdateCatalogItem");
@@ -28,8 +28,8 @@ public class WindowsFeatureUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsFeatureUpdateCatalogItem
      */
-    @javax.annotation.Nonnull
-    public static WindowsFeatureUpdateCatalogItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsFeatureUpdateCatalogItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsFeatureUpdateCatalogItem();
     }
@@ -37,7 +37,7 @@ public class WindowsFeatureUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
@@ -47,7 +47,7 @@ public class WindowsFeatureUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * Gets the version property value. The feature update version
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersion() {
         return this.version;
     }
@@ -56,8 +56,8 @@ public class WindowsFeatureUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("version", this.getVersion());
@@ -67,8 +67,8 @@ public class WindowsFeatureUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * @param value Value to set for the version property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }
 }

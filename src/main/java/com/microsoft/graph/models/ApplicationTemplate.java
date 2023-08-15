@@ -51,7 +51,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * Instantiates a new applicationTemplate and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ApplicationTemplate() {
         super();
     }
@@ -60,8 +60,8 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a applicationTemplate
      */
-    @javax.annotation.Nonnull
-    public static ApplicationTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ApplicationTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ApplicationTemplate();
     }
@@ -69,7 +69,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * Gets the categories property value. The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer, Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design & hosting.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
         return this.categories;
     }
@@ -77,7 +77,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * Gets the description property value. A description of the application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -85,7 +85,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * Gets the displayName property value. The name of the application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -93,7 +93,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -112,7 +112,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * Gets the homePageUrl property value. The home page URL of the application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHomePageUrl() {
         return this.homePageUrl;
     }
@@ -120,7 +120,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * Gets the informationalUrls property value. The informationalUrls property
      * @return a informationalUrls
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InformationalUrls getInformationalUrls() {
         return this.informationalUrls;
     }
@@ -128,7 +128,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * Gets the logoUrl property value. The URL to get the logo for this application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLogoUrl() {
         return this.logoUrl;
     }
@@ -136,7 +136,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * Gets the publisher property value. The name of the publisher for this application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPublisher() {
         return this.publisher;
     }
@@ -144,7 +144,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * Gets the supportedClaimConfiguration property value. The supportedClaimConfiguration property
      * @return a supportedClaimConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SupportedClaimConfiguration getSupportedClaimConfiguration() {
         return this.supportedClaimConfiguration;
     }
@@ -152,7 +152,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * Gets the supportedProvisioningTypes property value. The list of provisioning modes supported by this application. The only valid value is sync.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedProvisioningTypes() {
         return this.supportedProvisioningTypes;
     }
@@ -160,7 +160,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * Gets the supportedSingleSignOnModes property value. The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedSingleSignOnModes() {
         return this.supportedSingleSignOnModes;
     }
@@ -169,8 +169,8 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("categories", this.getCategories());
@@ -189,8 +189,8 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.categories = value;
     }
     /**
@@ -198,8 +198,8 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -207,8 +207,8 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -216,8 +216,8 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the homePageUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHomePageUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setHomePageUrl(@jakarta.annotation.Nullable final String value) {
         this.homePageUrl = value;
     }
     /**
@@ -225,8 +225,8 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the informationalUrls property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInformationalUrls(@javax.annotation.Nullable final InformationalUrls value) {
+    @jakarta.annotation.Nonnull
+    public void setInformationalUrls(@jakarta.annotation.Nullable final InformationalUrls value) {
         this.informationalUrls = value;
     }
     /**
@@ -234,8 +234,8 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the logoUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLogoUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLogoUrl(@jakarta.annotation.Nullable final String value) {
         this.logoUrl = value;
     }
     /**
@@ -243,8 +243,8 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the publisher property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublisher(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.publisher = value;
     }
     /**
@@ -252,8 +252,8 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the supportedClaimConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedClaimConfiguration(@javax.annotation.Nullable final SupportedClaimConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedClaimConfiguration(@jakarta.annotation.Nullable final SupportedClaimConfiguration value) {
         this.supportedClaimConfiguration = value;
     }
     /**
@@ -261,8 +261,8 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the supportedProvisioningTypes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedProvisioningTypes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedProvisioningTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.supportedProvisioningTypes = value;
     }
     /**
@@ -270,8 +270,8 @@ public class ApplicationTemplate extends Entity implements Parsable {
      * @param value Value to set for the supportedSingleSignOnModes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedSingleSignOnModes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedSingleSignOnModes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.supportedSingleSignOnModes = value;
     }
 }

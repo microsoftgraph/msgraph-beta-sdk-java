@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Contains properties and inherited properties for Windows Universal AppX Line Of Business apps.
+ * Contains properties and inherited properties for Windows Universal AppX Line Of Business apps. Inherits from `mobileLobApp`.
  */
 public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
     /**
@@ -15,7 +15,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
      */
     private WindowsArchitecture applicableArchitectures;
     /**
-     * Contains properties for Windows device type.
+     * Contains properties for Windows device type. Multiple values can be selected. Default value is `none`.
      */
     private WindowsDeviceType applicableDeviceTypes;
     /**
@@ -23,23 +23,23 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
      */
     private java.util.List<MobileContainedApp> committedContainedApps;
     /**
-     * The Identity Name.
+     * The Identity Name of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'Contoso.DemoApp'.
      */
     private String identityName;
     /**
-     * The Identity Publisher Hash.
+     * The Identity Publisher Hash of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'AB82CD0XYZ'.
      */
     private String identityPublisherHash;
     /**
-     * The Identity Resource Identifier.
+     * The Identity Resource Identifier of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'TestResourceId'.
      */
     private String identityResourceIdentifier;
     /**
-     * The identity version.
+     * The Identity Version of the app, parsed from the appx file when it is uploaded through the Intune MEM console.  For example: '1.0.0.0'.
      */
     private String identityVersion;
     /**
-     * Whether or not the app is a bundle.
+     * Whether or not the app is a bundle. If TRUE, app is a bundle; if FALSE, app is not a bundle.
      */
     private Boolean isBundle;
     /**
@@ -50,7 +50,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
      * Instantiates a new windowsUniversalAppX and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsUniversalAppX() {
         super();
         this.setOdataType("#microsoft.graph.windowsUniversalAppX");
@@ -60,8 +60,8 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsUniversalAppX
      */
-    @javax.annotation.Nonnull
-    public static WindowsUniversalAppX createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsUniversalAppX createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsUniversalAppX();
     }
@@ -69,15 +69,15 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
      * Gets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @return a windowsArchitecture
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsArchitecture getApplicableArchitectures() {
         return this.applicableArchitectures;
     }
     /**
-     * Gets the applicableDeviceTypes property value. Contains properties for Windows device type.
+     * Gets the applicableDeviceTypes property value. Contains properties for Windows device type. Multiple values can be selected. Default value is `none`.
      * @return a windowsDeviceType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsDeviceType getApplicableDeviceTypes() {
         return this.applicableDeviceTypes;
     }
@@ -85,7 +85,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
      * Gets the committedContainedApps property value. The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
      * @return a mobileContainedApp
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MobileContainedApp> getCommittedContainedApps() {
         return this.committedContainedApps;
     }
@@ -93,7 +93,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumValue(WindowsArchitecture.class)); });
@@ -108,42 +108,42 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identityName property value. The Identity Name.
+     * Gets the identityName property value. The Identity Name of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'Contoso.DemoApp'.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIdentityName() {
         return this.identityName;
     }
     /**
-     * Gets the identityPublisherHash property value. The Identity Publisher Hash.
+     * Gets the identityPublisherHash property value. The Identity Publisher Hash of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'AB82CD0XYZ'.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIdentityPublisherHash() {
         return this.identityPublisherHash;
     }
     /**
-     * Gets the identityResourceIdentifier property value. The Identity Resource Identifier.
+     * Gets the identityResourceIdentifier property value. The Identity Resource Identifier of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'TestResourceId'.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIdentityResourceIdentifier() {
         return this.identityResourceIdentifier;
     }
     /**
-     * Gets the identityVersion property value. The identity version.
+     * Gets the identityVersion property value. The Identity Version of the app, parsed from the appx file when it is uploaded through the Intune MEM console.  For example: '1.0.0.0'.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIdentityVersion() {
         return this.identityVersion;
     }
     /**
-     * Gets the isBundle property value. Whether or not the app is a bundle.
+     * Gets the isBundle property value. Whether or not the app is a bundle. If TRUE, app is a bundle; if FALSE, app is not a bundle.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsBundle() {
         return this.isBundle;
     }
@@ -151,7 +151,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
      * Gets the minimumSupportedOperatingSystem property value. The minimum operating system required for a Windows mobile app.
      * @return a windowsMinimumOperatingSystem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
         return this.minimumSupportedOperatingSystem;
     }
@@ -160,8 +160,8 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("applicableArchitectures", this.getApplicableArchitectures());
@@ -179,17 +179,17 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
      * @param value Value to set for the applicableArchitectures property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicableArchitectures(@javax.annotation.Nullable final WindowsArchitecture value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicableArchitectures(@jakarta.annotation.Nullable final WindowsArchitecture value) {
         this.applicableArchitectures = value;
     }
     /**
-     * Sets the applicableDeviceTypes property value. Contains properties for Windows device type.
+     * Sets the applicableDeviceTypes property value. Contains properties for Windows device type. Multiple values can be selected. Default value is `none`.
      * @param value Value to set for the applicableDeviceTypes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicableDeviceTypes(@javax.annotation.Nullable final WindowsDeviceType value) {
+    @jakarta.annotation.Nonnull
+    public void setApplicableDeviceTypes(@jakarta.annotation.Nullable final WindowsDeviceType value) {
         this.applicableDeviceTypes = value;
     }
     /**
@@ -197,53 +197,53 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
      * @param value Value to set for the committedContainedApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCommittedContainedApps(@javax.annotation.Nullable final java.util.List<MobileContainedApp> value) {
+    @jakarta.annotation.Nonnull
+    public void setCommittedContainedApps(@jakarta.annotation.Nullable final java.util.List<MobileContainedApp> value) {
         this.committedContainedApps = value;
     }
     /**
-     * Sets the identityName property value. The Identity Name.
+     * Sets the identityName property value. The Identity Name of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'Contoso.DemoApp'.
      * @param value Value to set for the identityName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentityName(@jakarta.annotation.Nullable final String value) {
         this.identityName = value;
     }
     /**
-     * Sets the identityPublisherHash property value. The Identity Publisher Hash.
+     * Sets the identityPublisherHash property value. The Identity Publisher Hash of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'AB82CD0XYZ'.
      * @param value Value to set for the identityPublisherHash property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityPublisherHash(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentityPublisherHash(@jakarta.annotation.Nullable final String value) {
         this.identityPublisherHash = value;
     }
     /**
-     * Sets the identityResourceIdentifier property value. The Identity Resource Identifier.
+     * Sets the identityResourceIdentifier property value. The Identity Resource Identifier of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'TestResourceId'.
      * @param value Value to set for the identityResourceIdentifier property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityResourceIdentifier(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentityResourceIdentifier(@jakarta.annotation.Nullable final String value) {
         this.identityResourceIdentifier = value;
     }
     /**
-     * Sets the identityVersion property value. The identity version.
+     * Sets the identityVersion property value. The Identity Version of the app, parsed from the appx file when it is uploaded through the Intune MEM console.  For example: '1.0.0.0'.
      * @param value Value to set for the identityVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentityVersion(@jakarta.annotation.Nullable final String value) {
         this.identityVersion = value;
     }
     /**
-     * Sets the isBundle property value. Whether or not the app is a bundle.
+     * Sets the isBundle property value. Whether or not the app is a bundle. If TRUE, app is a bundle; if FALSE, app is not a bundle.
      * @param value Value to set for the isBundle property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsBundle(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsBundle(@jakarta.annotation.Nullable final Boolean value) {
         this.isBundle = value;
     }
     /**
@@ -251,8 +251,8 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final WindowsMinimumOperatingSystem value) {
+    @jakarta.annotation.Nonnull
+    public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final WindowsMinimumOperatingSystem value) {
         this.minimumSupportedOperatingSystem = value;
     }
 }

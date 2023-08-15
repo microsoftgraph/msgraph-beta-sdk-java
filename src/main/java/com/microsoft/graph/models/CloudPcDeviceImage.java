@@ -53,7 +53,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * Instantiates a new cloudPcDeviceImage and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcDeviceImage() {
         super();
     }
@@ -62,8 +62,8 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudPcDeviceImage
      */
-    @javax.annotation.Nonnull
-    public static CloudPcDeviceImage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudPcDeviceImage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudPcDeviceImage();
     }
@@ -71,7 +71,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * Gets the displayName property value. The display name of the image.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -79,7 +79,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * Gets the expirationDate property value. The date the image became unavailable.
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getExpirationDate() {
         return this.expirationDate;
     }
@@ -87,7 +87,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -106,7 +106,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The data and time that the image was last modified. The time is shown in ISO 8601 format and  Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -114,7 +114,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * Gets the operatingSystem property value. The operating system of the image. For example, Windows 10 Enterprise.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOperatingSystem() {
         return this.operatingSystem;
     }
@@ -122,7 +122,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * Gets the osBuildNumber property value. The OS build version of the image. For example, 1909.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsBuildNumber() {
         return this.osBuildNumber;
     }
@@ -130,7 +130,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * Gets the osStatus property value. The OS status of this image. Possible values are: supported, supportedWithWarning, unknownFutureValue.
      * @return a cloudPcDeviceImageOsStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcDeviceImageOsStatus getOsStatus() {
         return this.osStatus;
     }
@@ -138,7 +138,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * Gets the sourceImageResourceId property value. The ID of the source image resource on Azure. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSourceImageResourceId() {
         return this.sourceImageResourceId;
     }
@@ -146,7 +146,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * Gets the status property value. The status of the image on Cloud PC. Possible values are: pending, ready, failed.
      * @return a cloudPcDeviceImageStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcDeviceImageStatus getStatus() {
         return this.status;
     }
@@ -154,7 +154,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * Gets the statusDetails property value. The details of the status of the image that indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, and sourceImageNotGeneralized.
      * @return a cloudPcDeviceImageStatusDetails
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcDeviceImageStatusDetails getStatusDetails() {
         return this.statusDetails;
     }
@@ -162,7 +162,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * Gets the version property value. The image version. For example, 0.0.1 and 1.5.13.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersion() {
         return this.version;
     }
@@ -171,8 +171,8 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -191,8 +191,8 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -200,8 +200,8 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * @param value Value to set for the expirationDate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDate(@javax.annotation.Nullable final LocalDate value) {
+    @jakarta.annotation.Nonnull
+    public void setExpirationDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.expirationDate = value;
     }
     /**
@@ -209,8 +209,8 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -218,8 +218,8 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * @param value Value to set for the operatingSystem property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperatingSystem(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.operatingSystem = value;
     }
     /**
@@ -227,8 +227,8 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * @param value Value to set for the osBuildNumber property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsBuildNumber(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOsBuildNumber(@jakarta.annotation.Nullable final String value) {
         this.osBuildNumber = value;
     }
     /**
@@ -236,8 +236,8 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * @param value Value to set for the osStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsStatus(@javax.annotation.Nullable final CloudPcDeviceImageOsStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setOsStatus(@jakarta.annotation.Nullable final CloudPcDeviceImageOsStatus value) {
         this.osStatus = value;
     }
     /**
@@ -245,8 +245,8 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * @param value Value to set for the sourceImageResourceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourceImageResourceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSourceImageResourceId(@jakarta.annotation.Nullable final String value) {
         this.sourceImageResourceId = value;
     }
     /**
@@ -254,8 +254,8 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final CloudPcDeviceImageStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final CloudPcDeviceImageStatus value) {
         this.status = value;
     }
     /**
@@ -263,8 +263,8 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * @param value Value to set for the statusDetails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatusDetails(@javax.annotation.Nullable final CloudPcDeviceImageStatusDetails value) {
+    @jakarta.annotation.Nonnull
+    public void setStatusDetails(@jakarta.annotation.Nullable final CloudPcDeviceImageStatusDetails value) {
         this.statusDetails = value;
     }
     /**
@@ -272,8 +272,8 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }
 }

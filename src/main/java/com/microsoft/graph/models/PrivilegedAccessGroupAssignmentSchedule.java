@@ -43,7 +43,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * Instantiates a new privilegedAccessGroupAssignmentSchedule and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrivilegedAccessGroupAssignmentSchedule() {
         super();
         this.setOdataType("#microsoft.graph.privilegedAccessGroupAssignmentSchedule");
@@ -53,8 +53,8 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a privilegedAccessGroupAssignmentSchedule
      */
-    @javax.annotation.Nonnull
-    public static PrivilegedAccessGroupAssignmentSchedule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrivilegedAccessGroupAssignmentSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PrivilegedAccessGroupAssignmentSchedule();
     }
@@ -62,7 +62,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * Gets the accessId property value. The identifier of the membership or ownership assignment to the group that is governed by PIM. Required. The possible values are: owner, member, unknownFutureValue.
      * @return a privilegedAccessGroupRelationships
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrivilegedAccessGroupRelationships getAccessId() {
         return this.accessId;
     }
@@ -70,7 +70,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * Gets the activatedUsing property value. When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it is null. Supports $expand.
      * @return a privilegedAccessGroupEligibilitySchedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrivilegedAccessGroupEligibilitySchedule getActivatedUsing() {
         return this.activatedUsing;
     }
@@ -78,7 +78,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * Gets the assignmentType property value. Indicates whether the membership or ownership assignment for the principal is granted through activation or direct assignment. Required. The possible values are: assigned, activated, unknownFutureValue.
      * @return a privilegedAccessGroupAssignmentType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrivilegedAccessGroupAssignmentType getAssignmentType() {
         return this.assignmentType;
     }
@@ -86,7 +86,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessId", (n) -> { this.setAccessId(n.getEnumValue(PrivilegedAccessGroupRelationships.class)); });
@@ -103,7 +103,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * Gets the group property value. References the group that is the scope of the membership or ownership assignment through PIM for groups. Supports $expand.
      * @return a group
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Group getGroup() {
         return this.group;
     }
@@ -111,7 +111,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * Gets the groupId property value. The identifier of the group representing the scope of the membership or ownership assignment through PIM for groups. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getGroupId() {
         return this.groupId;
     }
@@ -119,7 +119,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * Gets the memberType property value. Indicates whether the assignment is derived from a direct group assignment or through a transitive assignment. The possible values are: direct, group, unknownFutureValue.
      * @return a privilegedAccessGroupMemberType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrivilegedAccessGroupMemberType getMemberType() {
         return this.memberType;
     }
@@ -127,7 +127,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * Gets the principal property value. References the principal that's in the scope of this membership or ownership assignment request to the group that's governed by PIM. Supports $expand.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DirectoryObject getPrincipal() {
         return this.principal;
     }
@@ -135,7 +135,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * Gets the principalId property value. The identifier of the principal whose membership or ownership assignment is granted through PIM for groups. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrincipalId() {
         return this.principalId;
     }
@@ -144,8 +144,8 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("accessId", this.getAccessId());
@@ -162,8 +162,8 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * @param value Value to set for the accessId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessId(@javax.annotation.Nullable final PrivilegedAccessGroupRelationships value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessId(@jakarta.annotation.Nullable final PrivilegedAccessGroupRelationships value) {
         this.accessId = value;
     }
     /**
@@ -171,8 +171,8 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * @param value Value to set for the activatedUsing property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivatedUsing(@javax.annotation.Nullable final PrivilegedAccessGroupEligibilitySchedule value) {
+    @jakarta.annotation.Nonnull
+    public void setActivatedUsing(@jakarta.annotation.Nullable final PrivilegedAccessGroupEligibilitySchedule value) {
         this.activatedUsing = value;
     }
     /**
@@ -180,8 +180,8 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * @param value Value to set for the assignmentType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentType(@javax.annotation.Nullable final PrivilegedAccessGroupAssignmentType value) {
+    @jakarta.annotation.Nonnull
+    public void setAssignmentType(@jakarta.annotation.Nullable final PrivilegedAccessGroupAssignmentType value) {
         this.assignmentType = value;
     }
     /**
@@ -189,8 +189,8 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * @param value Value to set for the group property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroup(@javax.annotation.Nullable final Group value) {
+    @jakarta.annotation.Nonnull
+    public void setGroup(@jakarta.annotation.Nullable final Group value) {
         this.group = value;
     }
     /**
@@ -198,8 +198,8 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * @param value Value to set for the groupId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setGroupId(@jakarta.annotation.Nullable final String value) {
         this.groupId = value;
     }
     /**
@@ -207,8 +207,8 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * @param value Value to set for the memberType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMemberType(@javax.annotation.Nullable final PrivilegedAccessGroupMemberType value) {
+    @jakarta.annotation.Nonnull
+    public void setMemberType(@jakarta.annotation.Nullable final PrivilegedAccessGroupMemberType value) {
         this.memberType = value;
     }
     /**
@@ -216,8 +216,8 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * @param value Value to set for the principal property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipal(@javax.annotation.Nullable final DirectoryObject value) {
+    @jakarta.annotation.Nonnull
+    public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {
         this.principal = value;
     }
     /**
@@ -225,8 +225,8 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      * @param value Value to set for the principalId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipalId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
         this.principalId = value;
     }
 }

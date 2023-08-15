@@ -100,7 +100,7 @@ public class Payload extends Entity implements Parsable {
      * Instantiates a new payload and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Payload() {
         super();
     }
@@ -109,8 +109,8 @@ public class Payload extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a payload
      */
-    @javax.annotation.Nonnull
-    public static Payload createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Payload createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Payload();
     }
@@ -118,7 +118,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the brand property value. The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
      * @return a payloadBrand
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PayloadBrand getBrand() {
         return this.brand;
     }
@@ -126,7 +126,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the complexity property value. The complexity of a payload.Possible values are: unknown, low, medium, high, unknownFutureValue
      * @return a payloadComplexity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PayloadComplexity getComplexity() {
         return this.complexity;
     }
@@ -134,7 +134,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the createdBy property value. Identity of the user who created the attack simulation and training campaign payload.
      * @return a emailIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
         return this.createdBy;
     }
@@ -142,7 +142,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the createdDateTime property value. Date and time when the attack simulation and training campaign payload.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -150,7 +150,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the description property value. Description of the attack simulation and training campaign payload.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -158,7 +158,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the detail property value. Additional details about the payload.
      * @return a payloadDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PayloadDetail getDetail() {
         return this.detail;
     }
@@ -166,7 +166,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the displayName property value. Display name of the attack simulation and training campaign payload. Supports $filter and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -174,7 +174,7 @@ public class Payload extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("brand", (n) -> { this.setBrand(n.getEnumValue(PayloadBrand.class)); });
@@ -205,7 +205,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the industry property value. Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
      * @return a payloadIndustry
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PayloadIndustry getIndustry() {
         return this.industry;
     }
@@ -213,7 +213,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the isAutomated property value. Indicates whether the attack simulation and training campaign payload was created from an automation flow. Supports $filter and $orderby.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAutomated() {
         return this.isAutomated;
     }
@@ -221,7 +221,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the isControversial property value. Indicates whether the payload is controversial.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsControversial() {
         return this.isControversial;
     }
@@ -229,7 +229,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the isCurrentEvent property value. Indicates whether the payload is from any recent event.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsCurrentEvent() {
         return this.isCurrentEvent;
     }
@@ -237,7 +237,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the language property value. Payload language.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLanguage() {
         return this.language;
     }
@@ -245,7 +245,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation and training campaign payload.
      * @return a emailIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -253,7 +253,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. Date and time when the attack simulation and training campaign payload was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -261,7 +261,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the payloadTags property value. Free text tags for a payload.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getPayloadTags() {
         return this.payloadTags;
     }
@@ -269,7 +269,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the platform property value. The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @return a payloadDeliveryPlatform
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PayloadDeliveryPlatform getPlatform() {
         return this.platform;
     }
@@ -277,7 +277,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the predictedCompromiseRate property value. Predicted probability for a payload to phish a targeted user.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getPredictedCompromiseRate() {
         return this.predictedCompromiseRate;
     }
@@ -285,7 +285,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
      * @return a simulationAttackType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SimulationAttackType getSimulationAttackType() {
         return this.simulationAttackType;
     }
@@ -293,7 +293,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the source property value. The source property
      * @return a simulationContentSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SimulationContentSource getSource() {
         return this.source;
     }
@@ -301,7 +301,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the status property value. Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue. Inherited from simulation.
      * @return a simulationContentStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SimulationContentStatus getStatus() {
         return this.status;
     }
@@ -309,7 +309,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
      * @return a simulationAttackTechnique
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SimulationAttackTechnique getTechnique() {
         return this.technique;
     }
@@ -317,7 +317,7 @@ public class Payload extends Entity implements Parsable {
      * Gets the theme property value. The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
      * @return a payloadTheme
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PayloadTheme getTheme() {
         return this.theme;
     }
@@ -326,8 +326,8 @@ public class Payload extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("brand", this.getBrand());
@@ -358,8 +358,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the brand property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrand(@javax.annotation.Nullable final PayloadBrand value) {
+    @jakarta.annotation.Nonnull
+    public void setBrand(@jakarta.annotation.Nullable final PayloadBrand value) {
         this.brand = value;
     }
     /**
@@ -367,8 +367,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the complexity property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComplexity(@javax.annotation.Nullable final PayloadComplexity value) {
+    @jakarta.annotation.Nonnull
+    public void setComplexity(@jakarta.annotation.Nullable final PayloadComplexity value) {
         this.complexity = value;
     }
     /**
@@ -376,8 +376,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final EmailIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.createdBy = value;
     }
     /**
@@ -385,8 +385,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -394,8 +394,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -403,8 +403,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the detail property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetail(@javax.annotation.Nullable final PayloadDetail value) {
+    @jakarta.annotation.Nonnull
+    public void setDetail(@jakarta.annotation.Nullable final PayloadDetail value) {
         this.detail = value;
     }
     /**
@@ -412,8 +412,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -421,8 +421,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the industry property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIndustry(@javax.annotation.Nullable final PayloadIndustry value) {
+    @jakarta.annotation.Nonnull
+    public void setIndustry(@jakarta.annotation.Nullable final PayloadIndustry value) {
         this.industry = value;
     }
     /**
@@ -430,8 +430,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the isAutomated property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAutomated(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsAutomated(@jakarta.annotation.Nullable final Boolean value) {
         this.isAutomated = value;
     }
     /**
@@ -439,8 +439,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the isControversial property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsControversial(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsControversial(@jakarta.annotation.Nullable final Boolean value) {
         this.isControversial = value;
     }
     /**
@@ -448,8 +448,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the isCurrentEvent property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsCurrentEvent(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsCurrentEvent(@jakarta.annotation.Nullable final Boolean value) {
         this.isCurrentEvent = value;
     }
     /**
@@ -457,8 +457,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the language property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLanguage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLanguage(@jakarta.annotation.Nullable final String value) {
         this.language = value;
     }
     /**
@@ -466,8 +466,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final EmailIdentity value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.lastModifiedBy = value;
     }
     /**
@@ -475,8 +475,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -484,8 +484,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the payloadTags property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPayloadTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setPayloadTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.payloadTags = value;
     }
     /**
@@ -493,8 +493,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the platform property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatform(@javax.annotation.Nullable final PayloadDeliveryPlatform value) {
+    @jakarta.annotation.Nonnull
+    public void setPlatform(@jakarta.annotation.Nullable final PayloadDeliveryPlatform value) {
         this.platform = value;
     }
     /**
@@ -502,8 +502,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the predictedCompromiseRate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPredictedCompromiseRate(@javax.annotation.Nullable final Double value) {
+    @jakarta.annotation.Nonnull
+    public void setPredictedCompromiseRate(@jakarta.annotation.Nullable final Double value) {
         this.predictedCompromiseRate = value;
     }
     /**
@@ -511,8 +511,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the simulationAttackType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSimulationAttackType(@javax.annotation.Nullable final SimulationAttackType value) {
+    @jakarta.annotation.Nonnull
+    public void setSimulationAttackType(@jakarta.annotation.Nullable final SimulationAttackType value) {
         this.simulationAttackType = value;
     }
     /**
@@ -520,8 +520,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the source property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSource(@javax.annotation.Nullable final SimulationContentSource value) {
+    @jakarta.annotation.Nonnull
+    public void setSource(@jakarta.annotation.Nullable final SimulationContentSource value) {
         this.source = value;
     }
     /**
@@ -529,8 +529,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final SimulationContentStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final SimulationContentStatus value) {
         this.status = value;
     }
     /**
@@ -538,8 +538,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the technique property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTechnique(@javax.annotation.Nullable final SimulationAttackTechnique value) {
+    @jakarta.annotation.Nonnull
+    public void setTechnique(@jakarta.annotation.Nullable final SimulationAttackTechnique value) {
         this.technique = value;
     }
     /**
@@ -547,8 +547,8 @@ public class Payload extends Entity implements Parsable {
      * @param value Value to set for the theme property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTheme(@javax.annotation.Nullable final PayloadTheme value) {
+    @jakarta.annotation.Nonnull
+    public void setTheme(@jakarta.annotation.Nullable final PayloadTheme value) {
         this.theme = value;
     }
 }

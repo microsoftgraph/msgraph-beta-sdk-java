@@ -47,7 +47,7 @@ public class PolicySetItem extends Entity implements Parsable {
      * Instantiates a new policySetItem and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PolicySetItem() {
         super();
     }
@@ -56,8 +56,8 @@ public class PolicySetItem extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a policySetItem
      */
-    @javax.annotation.Nonnull
-    public static PolicySetItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PolicySetItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -84,7 +84,7 @@ public class PolicySetItem extends Entity implements Parsable {
      * Gets the createdDateTime property value. Creation time of the PolicySetItem.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -92,7 +92,7 @@ public class PolicySetItem extends Entity implements Parsable {
      * Gets the displayName property value. DisplayName of the PolicySetItem.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -100,7 +100,7 @@ public class PolicySetItem extends Entity implements Parsable {
      * Gets the errorCode property value. The errorCode property
      * @return a errorCode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ErrorCode getErrorCode() {
         return this.errorCode;
     }
@@ -108,7 +108,7 @@ public class PolicySetItem extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -125,7 +125,7 @@ public class PolicySetItem extends Entity implements Parsable {
      * Gets the guidedDeploymentTags property value. Tags of the guided deployment
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getGuidedDeploymentTags() {
         return this.guidedDeploymentTags;
     }
@@ -133,7 +133,7 @@ public class PolicySetItem extends Entity implements Parsable {
      * Gets the itemType property value. policySetType of the PolicySetItem.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getItemType() {
         return this.itemType;
     }
@@ -141,7 +141,7 @@ public class PolicySetItem extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. Last modified time of the PolicySetItem.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -149,7 +149,7 @@ public class PolicySetItem extends Entity implements Parsable {
      * Gets the payloadId property value. PayloadId of the PolicySetItem.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPayloadId() {
         return this.payloadId;
     }
@@ -157,7 +157,7 @@ public class PolicySetItem extends Entity implements Parsable {
      * Gets the status property value. The enum to specify the status of PolicySet.
      * @return a policySetStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PolicySetStatus getStatus() {
         return this.status;
     }
@@ -166,8 +166,8 @@ public class PolicySetItem extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -184,8 +184,8 @@ public class PolicySetItem extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -193,8 +193,8 @@ public class PolicySetItem extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -202,8 +202,8 @@ public class PolicySetItem extends Entity implements Parsable {
      * @param value Value to set for the errorCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorCode(@javax.annotation.Nullable final ErrorCode value) {
+    @jakarta.annotation.Nonnull
+    public void setErrorCode(@jakarta.annotation.Nullable final ErrorCode value) {
         this.errorCode = value;
     }
     /**
@@ -211,8 +211,8 @@ public class PolicySetItem extends Entity implements Parsable {
      * @param value Value to set for the guidedDeploymentTags property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGuidedDeploymentTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setGuidedDeploymentTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.guidedDeploymentTags = value;
     }
     /**
@@ -220,8 +220,8 @@ public class PolicySetItem extends Entity implements Parsable {
      * @param value Value to set for the itemType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setItemType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setItemType(@jakarta.annotation.Nullable final String value) {
         this.itemType = value;
     }
     /**
@@ -229,8 +229,8 @@ public class PolicySetItem extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -238,8 +238,8 @@ public class PolicySetItem extends Entity implements Parsable {
      * @param value Value to set for the payloadId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPayloadId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPayloadId(@jakarta.annotation.Nullable final String value) {
         this.payloadId = value;
     }
     /**
@@ -247,8 +247,8 @@ public class PolicySetItem extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final PolicySetStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setStatus(@jakarta.annotation.Nullable final PolicySetStatus value) {
         this.status = value;
     }
 }

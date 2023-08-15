@@ -20,7 +20,7 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
      * Instantiates a new privilegedAccessScheduleInstance and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrivilegedAccessScheduleInstance() {
         super();
     }
@@ -29,8 +29,8 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a privilegedAccessScheduleInstance
      */
-    @javax.annotation.Nonnull
-    public static PrivilegedAccessScheduleInstance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrivilegedAccessScheduleInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -46,7 +46,7 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
      * Gets the endDateTime property value. When the schedule instance ends. Required.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
         return this.endDateTime;
     }
@@ -54,7 +54,7 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
@@ -65,7 +65,7 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
      * Gets the startDateTime property value. When this instance starts. Required.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this.startDateTime;
     }
@@ -74,8 +74,8 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
@@ -86,8 +86,8 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
@@ -95,8 +95,8 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
 }

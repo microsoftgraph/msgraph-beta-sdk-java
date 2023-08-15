@@ -51,7 +51,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * Instantiates a new deviceManagementReusablePolicySetting and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementReusablePolicySetting() {
         super();
     }
@@ -60,8 +60,8 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementReusablePolicySetting
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementReusablePolicySetting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementReusablePolicySetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementReusablePolicySetting();
     }
@@ -69,7 +69,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * Gets the createdDateTime property value. reusable setting creation date and time. This property is read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -77,7 +77,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * Gets the description property value. reusable setting description supplied by user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -85,7 +85,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * Gets the displayName property value. reusable setting display name supplied by user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -93,7 +93,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -111,7 +111,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * Gets the lastModifiedDateTime property value. date and time when reusable setting was last modified. This property is read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -119,7 +119,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * Gets the referencingConfigurationPolicies property value. configuration policies referencing the current reusable setting. This property is read-only.
      * @return a deviceManagementConfigurationPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationPolicy> getReferencingConfigurationPolicies() {
         return this.referencingConfigurationPolicies;
     }
@@ -127,7 +127,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * Gets the referencingConfigurationPolicyCount property value. count of configuration policies referencing the current reusable setting. Valid values 0 to 2147483647. This property is read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getReferencingConfigurationPolicyCount() {
         return this.referencingConfigurationPolicyCount;
     }
@@ -135,7 +135,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * Gets the settingDefinitionId property value. setting definition id associated with this reusable setting.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingDefinitionId() {
         return this.settingDefinitionId;
     }
@@ -143,7 +143,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * Gets the settingInstance property value. reusable setting configuration instance
      * @return a deviceManagementConfigurationSettingInstance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingInstance getSettingInstance() {
         return this.settingInstance;
     }
@@ -151,7 +151,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * Gets the version property value. version number for reusable setting. Valid values 0 to 2147483647. This property is read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getVersion() {
         return this.version;
     }
@@ -160,8 +160,8 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -175,8 +175,8 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -184,8 +184,8 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -193,8 +193,8 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -202,8 +202,8 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -211,8 +211,8 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * @param value Value to set for the referencingConfigurationPolicies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReferencingConfigurationPolicies(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationPolicy> value) {
+    @jakarta.annotation.Nonnull
+    public void setReferencingConfigurationPolicies(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationPolicy> value) {
         this.referencingConfigurationPolicies = value;
     }
     /**
@@ -220,8 +220,8 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * @param value Value to set for the referencingConfigurationPolicyCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReferencingConfigurationPolicyCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setReferencingConfigurationPolicyCount(@jakarta.annotation.Nullable final Integer value) {
         this.referencingConfigurationPolicyCount = value;
     }
     /**
@@ -229,8 +229,8 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * @param value Value to set for the settingDefinitionId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingDefinitionId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSettingDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.settingDefinitionId = value;
     }
     /**
@@ -238,8 +238,8 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * @param value Value to set for the settingInstance property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingInstance(@javax.annotation.Nullable final DeviceManagementConfigurationSettingInstance value) {
+    @jakarta.annotation.Nonnull
+    public void setSettingInstance(@jakarta.annotation.Nullable final DeviceManagementConfigurationSettingInstance value) {
         this.settingInstance = value;
     }
     /**
@@ -247,8 +247,8 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      * @param value Value to set for the version property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setVersion(@jakarta.annotation.Nullable final Integer value) {
         this.version = value;
     }
 }

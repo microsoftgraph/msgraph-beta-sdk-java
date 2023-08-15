@@ -63,7 +63,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * Instantiates a new androidManagedStoreAccountEnterpriseSettings and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidManagedStoreAccountEnterpriseSettings() {
         super();
     }
@@ -72,8 +72,8 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidManagedStoreAccountEnterpriseSettings
      */
-    @javax.annotation.Nonnull
-    public static AndroidManagedStoreAccountEnterpriseSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidManagedStoreAccountEnterpriseSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidManagedStoreAccountEnterpriseSettings();
     }
@@ -81,7 +81,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * Gets the androidDeviceOwnerFullyManagedEnrollmentEnabled property value. Company codes for AndroidManagedStoreAccountEnterpriseSettings
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAndroidDeviceOwnerFullyManagedEnrollmentEnabled() {
         return this.androidDeviceOwnerFullyManagedEnrollmentEnabled;
     }
@@ -89,7 +89,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * Gets the bindStatus property value. Bind status of the tenant with the Google EMM API
      * @return a androidManagedStoreAccountBindStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidManagedStoreAccountBindStatus getBindStatus() {
         return this.bindStatus;
     }
@@ -97,7 +97,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * Gets the companyCodes property value. Company codes for AndroidManagedStoreAccountEnterpriseSettings
      * @return a androidEnrollmentCompanyCode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AndroidEnrollmentCompanyCode> getCompanyCodes() {
         return this.companyCodes;
     }
@@ -105,7 +105,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * Gets the deviceOwnerManagementEnabled property value. Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDeviceOwnerManagementEnabled() {
         return this.deviceOwnerManagementEnabled;
     }
@@ -113,7 +113,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * Gets the enrollmentTarget property value. Android for Work device management targeting type for the account
      * @return a androidManagedStoreAccountEnrollmentTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidManagedStoreAccountEnrollmentTarget getEnrollmentTarget() {
         return this.enrollmentTarget;
     }
@@ -121,7 +121,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("androidDeviceOwnerFullyManagedEnrollmentEnabled", (n) -> { this.setAndroidDeviceOwnerFullyManagedEnrollmentEnabled(n.getBooleanValue()); });
@@ -142,7 +142,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * Gets the lastAppSyncDateTime property value. Last completion time for app sync
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastAppSyncDateTime() {
         return this.lastAppSyncDateTime;
     }
@@ -150,7 +150,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * Gets the lastAppSyncStatus property value. Sync status of the tenant with the Google EMM API
      * @return a androidManagedStoreAccountAppSyncStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidManagedStoreAccountAppSyncStatus getLastAppSyncStatus() {
         return this.lastAppSyncStatus;
     }
@@ -158,7 +158,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * Gets the lastModifiedDateTime property value. Last modification time for Android enterprise settings
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -166,7 +166,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * Gets the managedGooglePlayInitialScopeTagIds property value. Initial scope tags for MGP apps
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getManagedGooglePlayInitialScopeTagIds() {
         return this.managedGooglePlayInitialScopeTagIds;
     }
@@ -174,7 +174,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * Gets the ownerOrganizationName property value. Organization name used when onboarding Android Enterprise
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOwnerOrganizationName() {
         return this.ownerOrganizationName;
     }
@@ -182,7 +182,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * Gets the ownerUserPrincipalName property value. Owner UPN that created the enterprise
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOwnerUserPrincipalName() {
         return this.ownerUserPrincipalName;
     }
@@ -190,7 +190,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * Gets the targetGroupIds property value. Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTargetGroupIds() {
         return this.targetGroupIds;
     }
@@ -199,8 +199,8 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("androidDeviceOwnerFullyManagedEnrollmentEnabled", this.getAndroidDeviceOwnerFullyManagedEnrollmentEnabled());
@@ -221,8 +221,8 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * @param value Value to set for the androidDeviceOwnerFullyManagedEnrollmentEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAndroidDeviceOwnerFullyManagedEnrollmentEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAndroidDeviceOwnerFullyManagedEnrollmentEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.androidDeviceOwnerFullyManagedEnrollmentEnabled = value;
     }
     /**
@@ -230,8 +230,8 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * @param value Value to set for the bindStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBindStatus(@javax.annotation.Nullable final AndroidManagedStoreAccountBindStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setBindStatus(@jakarta.annotation.Nullable final AndroidManagedStoreAccountBindStatus value) {
         this.bindStatus = value;
     }
     /**
@@ -239,8 +239,8 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * @param value Value to set for the companyCodes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompanyCodes(@javax.annotation.Nullable final java.util.List<AndroidEnrollmentCompanyCode> value) {
+    @jakarta.annotation.Nonnull
+    public void setCompanyCodes(@jakarta.annotation.Nullable final java.util.List<AndroidEnrollmentCompanyCode> value) {
         this.companyCodes = value;
     }
     /**
@@ -248,8 +248,8 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * @param value Value to set for the deviceOwnerManagementEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceOwnerManagementEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceOwnerManagementEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.deviceOwnerManagementEnabled = value;
     }
     /**
@@ -257,8 +257,8 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * @param value Value to set for the enrollmentTarget property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentTarget(@javax.annotation.Nullable final AndroidManagedStoreAccountEnrollmentTarget value) {
+    @jakarta.annotation.Nonnull
+    public void setEnrollmentTarget(@jakarta.annotation.Nullable final AndroidManagedStoreAccountEnrollmentTarget value) {
         this.enrollmentTarget = value;
     }
     /**
@@ -266,8 +266,8 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * @param value Value to set for the lastAppSyncDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastAppSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastAppSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastAppSyncDateTime = value;
     }
     /**
@@ -275,8 +275,8 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * @param value Value to set for the lastAppSyncStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastAppSyncStatus(@javax.annotation.Nullable final AndroidManagedStoreAccountAppSyncStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setLastAppSyncStatus(@jakarta.annotation.Nullable final AndroidManagedStoreAccountAppSyncStatus value) {
         this.lastAppSyncStatus = value;
     }
     /**
@@ -284,8 +284,8 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
@@ -293,8 +293,8 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * @param value Value to set for the managedGooglePlayInitialScopeTagIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedGooglePlayInitialScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedGooglePlayInitialScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.managedGooglePlayInitialScopeTagIds = value;
     }
     /**
@@ -302,8 +302,8 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * @param value Value to set for the ownerOrganizationName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOwnerOrganizationName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOwnerOrganizationName(@jakarta.annotation.Nullable final String value) {
         this.ownerOrganizationName = value;
     }
     /**
@@ -311,8 +311,8 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * @param value Value to set for the ownerUserPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOwnerUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOwnerUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.ownerUserPrincipalName = value;
     }
     /**
@@ -320,8 +320,8 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      * @param value Value to set for the targetGroupIds property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetGroupIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetGroupIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.targetGroupIds = value;
     }
 }

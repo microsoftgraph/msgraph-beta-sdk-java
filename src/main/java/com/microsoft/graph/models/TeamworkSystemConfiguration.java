@@ -1,10 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     /**
      * The device lock timeout in seconds.
      */
-    private Period deviceLockTimeout;
+    private PeriodAndDuration deviceLockTimeout;
     /**
      * True if the device lock is enabled.
      */
@@ -69,7 +69,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * Instantiates a new teamworkSystemConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkSystemConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -78,8 +78,8 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teamworkSystemConfiguration
      */
-    @javax.annotation.Nonnull
-    public static TeamworkSystemConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeamworkSystemConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeamworkSystemConfiguration();
     }
@@ -87,7 +87,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -95,7 +95,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * Gets the dateTimeConfiguration property value. The date and time configurations for a device.
      * @return a teamworkDateTimeConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkDateTimeConfiguration getDateTimeConfiguration() {
         return this.dateTimeConfiguration;
     }
@@ -103,28 +103,28 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * Gets the defaultPassword property value. The default password for the device. Write-Only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDefaultPassword() {
         return this.defaultPassword;
     }
     /**
      * Gets the deviceLockTimeout property value. The device lock timeout in seconds.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
-    public Period getDeviceLockTimeout() {
+    @jakarta.annotation.Nullable
+    public PeriodAndDuration getDeviceLockTimeout() {
         return this.deviceLockTimeout;
     }
     /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
         deserializerMap.put("dateTimeConfiguration", (n) -> { this.setDateTimeConfiguration(n.getObjectValue(TeamworkDateTimeConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("defaultPassword", (n) -> { this.setDefaultPassword(n.getStringValue()); });
-        deserializerMap.put("deviceLockTimeout", (n) -> { this.setDeviceLockTimeout(n.getPeriodValue()); });
+        deserializerMap.put("deviceLockTimeout", (n) -> { this.setDeviceLockTimeout(n.getPeriodAndDurationValue()); });
         deserializerMap.put("isDeviceLockEnabled", (n) -> { this.setIsDeviceLockEnabled(n.getBooleanValue()); });
         deserializerMap.put("isLoggingEnabled", (n) -> { this.setIsLoggingEnabled(n.getBooleanValue()); });
         deserializerMap.put("isPowerSavingEnabled", (n) -> { this.setIsPowerSavingEnabled(n.getBooleanValue()); });
@@ -141,7 +141,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * Gets the isDeviceLockEnabled property value. True if the device lock is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDeviceLockEnabled() {
         return this.isDeviceLockEnabled;
     }
@@ -149,7 +149,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * Gets the isLoggingEnabled property value. True if logging is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsLoggingEnabled() {
         return this.isLoggingEnabled;
     }
@@ -157,7 +157,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * Gets the isPowerSavingEnabled property value. True if power saving is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsPowerSavingEnabled() {
         return this.isPowerSavingEnabled;
     }
@@ -165,7 +165,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * Gets the isScreenCaptureEnabled property value. True if screen capture is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsScreenCaptureEnabled() {
         return this.isScreenCaptureEnabled;
     }
@@ -173,7 +173,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * Gets the isSilentModeEnabled property value. True if silent mode is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSilentModeEnabled() {
         return this.isSilentModeEnabled;
     }
@@ -181,7 +181,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * Gets the language property value. The language option for the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLanguage() {
         return this.language;
     }
@@ -189,7 +189,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * Gets the lockPin property value. The pin that unlocks the device. Write-Only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLockPin() {
         return this.lockPin;
     }
@@ -197,7 +197,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * Gets the loggingLevel property value. The logging level for the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLoggingLevel() {
         return this.loggingLevel;
     }
@@ -205,7 +205,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * Gets the networkConfiguration property value. The network configuration for the device.
      * @return a teamworkNetworkConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkNetworkConfiguration getNetworkConfiguration() {
         return this.networkConfiguration;
     }
@@ -213,7 +213,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -222,12 +222,12 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("dateTimeConfiguration", this.getDateTimeConfiguration());
         writer.writeStringValue("defaultPassword", this.getDefaultPassword());
-        writer.writePeriodValue("deviceLockTimeout", this.getDeviceLockTimeout());
+        writer.writePeriodAndDurationValue("deviceLockTimeout", this.getDeviceLockTimeout());
         writer.writeBooleanValue("isDeviceLockEnabled", this.getIsDeviceLockEnabled());
         writer.writeBooleanValue("isLoggingEnabled", this.getIsLoggingEnabled());
         writer.writeBooleanValue("isPowerSavingEnabled", this.getIsPowerSavingEnabled());
@@ -242,11 +242,11 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -254,8 +254,8 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the dateTimeConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDateTimeConfiguration(@javax.annotation.Nullable final TeamworkDateTimeConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setDateTimeConfiguration(@jakarta.annotation.Nullable final TeamworkDateTimeConfiguration value) {
         this.dateTimeConfiguration = value;
     }
     /**
@@ -263,8 +263,8 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the defaultPassword property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultPassword(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaultPassword(@jakarta.annotation.Nullable final String value) {
         this.defaultPassword = value;
     }
     /**
@@ -272,8 +272,8 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the deviceLockTimeout property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceLockTimeout(@javax.annotation.Nullable final Period value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceLockTimeout(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.deviceLockTimeout = value;
     }
     /**
@@ -281,8 +281,8 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the isDeviceLockEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDeviceLockEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsDeviceLockEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isDeviceLockEnabled = value;
     }
     /**
@@ -290,8 +290,8 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the isLoggingEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsLoggingEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsLoggingEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isLoggingEnabled = value;
     }
     /**
@@ -299,8 +299,8 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the isPowerSavingEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsPowerSavingEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsPowerSavingEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isPowerSavingEnabled = value;
     }
     /**
@@ -308,8 +308,8 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the isScreenCaptureEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsScreenCaptureEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsScreenCaptureEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isScreenCaptureEnabled = value;
     }
     /**
@@ -317,8 +317,8 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the isSilentModeEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSilentModeEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsSilentModeEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isSilentModeEnabled = value;
     }
     /**
@@ -326,8 +326,8 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the language property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLanguage(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLanguage(@jakarta.annotation.Nullable final String value) {
         this.language = value;
     }
     /**
@@ -335,8 +335,8 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the lockPin property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLockPin(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLockPin(@jakarta.annotation.Nullable final String value) {
         this.lockPin = value;
     }
     /**
@@ -344,8 +344,8 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the loggingLevel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLoggingLevel(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLoggingLevel(@jakarta.annotation.Nullable final String value) {
         this.loggingLevel = value;
     }
     /**
@@ -353,17 +353,17 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      * @param value Value to set for the networkConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkConfiguration(@javax.annotation.Nullable final TeamworkNetworkConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setNetworkConfiguration(@jakarta.annotation.Nullable final TeamworkNetworkConfiguration value) {
         this.networkConfiguration = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

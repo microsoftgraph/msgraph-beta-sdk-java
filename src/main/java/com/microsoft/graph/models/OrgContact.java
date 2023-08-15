@@ -92,7 +92,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Instantiates a new orgContact and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OrgContact() {
         super();
         this.setOdataType("#microsoft.graph.orgContact");
@@ -102,8 +102,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a orgContact
      */
-    @javax.annotation.Nonnull
-    public static OrgContact createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OrgContact createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OrgContact();
     }
@@ -111,7 +111,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the addresses property value. Postal addresses for this organizational contact. For now a contact can only have one physical address.
      * @return a physicalOfficeAddress
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PhysicalOfficeAddress> getAddresses() {
         return this.addresses;
     }
@@ -119,7 +119,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the companyName property value. Name of the company that this organizational contact belong to. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCompanyName() {
         return this.companyName;
     }
@@ -127,7 +127,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the department property value. The name for the department in which the contact works. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDepartment() {
         return this.department;
     }
@@ -135,7 +135,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the directReports property value. The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getDirectReports() {
         return this.directReports;
     }
@@ -143,7 +143,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the displayName property value. Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderBy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -151,7 +151,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("addresses", (n) -> { this.setAddresses(n.getCollectionOfObjectValues(PhysicalOfficeAddress::createFromDiscriminatorValue)); });
@@ -180,7 +180,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the givenName property value. First name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getGivenName() {
         return this.givenName;
     }
@@ -188,7 +188,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the jobTitle property value. Job title for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getJobTitle() {
         return this.jobTitle;
     }
@@ -196,7 +196,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the mail property value. The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMail() {
         return this.mail;
     }
@@ -204,7 +204,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the mailNickname property value. Email alias (portion of email address pre-pending the @ symbol) for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMailNickname() {
         return this.mailNickname;
     }
@@ -212,7 +212,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the manager property value. The user or contact that is this contact's manager. Read-only. Supports $expand and $filter (eq) by id.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DirectoryObject getManager() {
         return this.manager;
     }
@@ -220,7 +220,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the memberOf property value. Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getMemberOf() {
         return this.memberOf;
     }
@@ -228,7 +228,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the onPremisesLastSyncDateTime property value. Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, not, ge, le, in).
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getOnPremisesLastSyncDateTime() {
         return this.onPremisesLastSyncDateTime;
     }
@@ -236,7 +236,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the onPremisesProvisioningErrors property value. List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, not for category and propertyCausingError), /$count eq 0, /$count ne 0.
      * @return a onPremisesProvisioningError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OnPremisesProvisioningError> getOnPremisesProvisioningErrors() {
         return this.onPremisesProvisioningErrors;
     }
@@ -244,7 +244,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).  Supports $filter (eq, ne, not, in, and eq for null values).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getOnPremisesSyncEnabled() {
         return this.onPremisesSyncEnabled;
     }
@@ -252,7 +252,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the phones property value. List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection. Supports $filter (eq, ne, not, in).
      * @return a phone
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Phone> getPhones() {
         return this.phones;
     }
@@ -260,7 +260,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the proxyAddresses property value. For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getProxyAddresses() {
         return this.proxyAddresses;
     }
@@ -268,7 +268,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the serviceProvisioningErrors property value. Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from an orgContact object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      * @return a serviceProvisioningError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ServiceProvisioningError> getServiceProvisioningErrors() {
         return this.serviceProvisioningErrors;
     }
@@ -276,7 +276,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the surname property value. Last name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values)
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSurname() {
         return this.surname;
     }
@@ -284,7 +284,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the transitiveMemberOf property value. The transitiveMemberOf property
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getTransitiveMemberOf() {
         return this.transitiveMemberOf;
     }
@@ -292,7 +292,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * Gets the transitiveReports property value. The transitive reports for a contact. Read-only.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getTransitiveReports() {
         return this.transitiveReports;
     }
@@ -301,8 +301,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("addresses", this.getAddresses());
@@ -331,8 +331,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the addresses property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddresses(@javax.annotation.Nullable final java.util.List<PhysicalOfficeAddress> value) {
+    @jakarta.annotation.Nonnull
+    public void setAddresses(@jakarta.annotation.Nullable final java.util.List<PhysicalOfficeAddress> value) {
         this.addresses = value;
     }
     /**
@@ -340,8 +340,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the companyName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompanyName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCompanyName(@jakarta.annotation.Nullable final String value) {
         this.companyName = value;
     }
     /**
@@ -349,8 +349,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the department property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDepartment(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDepartment(@jakarta.annotation.Nullable final String value) {
         this.department = value;
     }
     /**
@@ -358,8 +358,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the directReports property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDirectReports(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
+    @jakarta.annotation.Nonnull
+    public void setDirectReports(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.directReports = value;
     }
     /**
@@ -367,8 +367,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -376,8 +376,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the givenName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGivenName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setGivenName(@jakarta.annotation.Nullable final String value) {
         this.givenName = value;
     }
     /**
@@ -385,8 +385,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the jobTitle property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJobTitle(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setJobTitle(@jakarta.annotation.Nullable final String value) {
         this.jobTitle = value;
     }
     /**
@@ -394,8 +394,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the mail property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMail(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMail(@jakarta.annotation.Nullable final String value) {
         this.mail = value;
     }
     /**
@@ -403,8 +403,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the mailNickname property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMailNickname(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMailNickname(@jakarta.annotation.Nullable final String value) {
         this.mailNickname = value;
     }
     /**
@@ -412,8 +412,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the manager property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManager(@javax.annotation.Nullable final DirectoryObject value) {
+    @jakarta.annotation.Nonnull
+    public void setManager(@jakarta.annotation.Nullable final DirectoryObject value) {
         this.manager = value;
     }
     /**
@@ -421,8 +421,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the memberOf property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
+    @jakarta.annotation.Nonnull
+    public void setMemberOf(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.memberOf = value;
     }
     /**
@@ -430,8 +430,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesLastSyncDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnPremisesLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setOnPremisesLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.onPremisesLastSyncDateTime = value;
     }
     /**
@@ -439,8 +439,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesProvisioningErrors property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnPremisesProvisioningErrors(@javax.annotation.Nullable final java.util.List<OnPremisesProvisioningError> value) {
+    @jakarta.annotation.Nonnull
+    public void setOnPremisesProvisioningErrors(@jakarta.annotation.Nullable final java.util.List<OnPremisesProvisioningError> value) {
         this.onPremisesProvisioningErrors = value;
     }
     /**
@@ -448,8 +448,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesSyncEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnPremisesSyncEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setOnPremisesSyncEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.onPremisesSyncEnabled = value;
     }
     /**
@@ -457,8 +457,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the phones property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhones(@javax.annotation.Nullable final java.util.List<Phone> value) {
+    @jakarta.annotation.Nonnull
+    public void setPhones(@jakarta.annotation.Nullable final java.util.List<Phone> value) {
         this.phones = value;
     }
     /**
@@ -466,8 +466,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the proxyAddresses property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProxyAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setProxyAddresses(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.proxyAddresses = value;
     }
     /**
@@ -475,8 +475,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the serviceProvisioningErrors property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServiceProvisioningErrors(@javax.annotation.Nullable final java.util.List<ServiceProvisioningError> value) {
+    @jakarta.annotation.Nonnull
+    public void setServiceProvisioningErrors(@jakarta.annotation.Nullable final java.util.List<ServiceProvisioningError> value) {
         this.serviceProvisioningErrors = value;
     }
     /**
@@ -484,8 +484,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the surname property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSurname(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSurname(@jakarta.annotation.Nullable final String value) {
         this.surname = value;
     }
     /**
@@ -493,8 +493,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the transitiveMemberOf property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTransitiveMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
+    @jakarta.annotation.Nonnull
+    public void setTransitiveMemberOf(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.transitiveMemberOf = value;
     }
     /**
@@ -502,8 +502,8 @@ public class OrgContact extends DirectoryObject implements Parsable {
      * @param value Value to set for the transitiveReports property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTransitiveReports(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
+    @jakarta.annotation.Nonnull
+    public void setTransitiveReports(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.transitiveReports = value;
     }
 }

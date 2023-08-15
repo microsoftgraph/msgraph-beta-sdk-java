@@ -43,7 +43,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * Instantiates a new deviceManagementTroubleshootingErrorDetails and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementTroubleshootingErrorDetails() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -52,8 +52,8 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementTroubleshootingErrorDetails
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementTroubleshootingErrorDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementTroubleshootingErrorDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementTroubleshootingErrorDetails();
     }
@@ -61,7 +61,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -69,7 +69,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * Gets the context property value. Not yet documented
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContext() {
         return this.context;
     }
@@ -77,7 +77,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * Gets the failure property value. Not yet documented
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFailure() {
         return this.failure;
     }
@@ -85,7 +85,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * Gets the failureDetails property value. The detailed description of what went wrong.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFailureDetails() {
         return this.failureDetails;
     }
@@ -93,7 +93,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("context", (n) -> { this.setContext(n.getStringValue()); });
@@ -108,7 +108,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -116,7 +116,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * Gets the remediation property value. The detailed description of how to remediate this issue.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRemediation() {
         return this.remediation;
     }
@@ -124,7 +124,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * Gets the resources property value. Links to helpful documentation about this failure.
      * @return a deviceManagementTroubleshootingErrorResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementTroubleshootingErrorResource> getResources() {
         return this.resources;
     }
@@ -133,8 +133,8 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("context", this.getContext());
         writer.writeStringValue("failure", this.getFailure());
@@ -146,11 +146,11 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -158,8 +158,8 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * @param value Value to set for the context property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContext(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setContext(@jakarta.annotation.Nullable final String value) {
         this.context = value;
     }
     /**
@@ -167,8 +167,8 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * @param value Value to set for the failure property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailure(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFailure(@jakarta.annotation.Nullable final String value) {
         this.failure = value;
     }
     /**
@@ -176,17 +176,17 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * @param value Value to set for the failureDetails property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailureDetails(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFailureDetails(@jakarta.annotation.Nullable final String value) {
         this.failureDetails = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -194,8 +194,8 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * @param value Value to set for the remediation property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemediation(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setRemediation(@jakarta.annotation.Nullable final String value) {
         this.remediation = value;
     }
     /**
@@ -203,8 +203,8 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * @param value Value to set for the resources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResources(@javax.annotation.Nullable final java.util.List<DeviceManagementTroubleshootingErrorResource> value) {
+    @jakarta.annotation.Nonnull
+    public void setResources(@jakarta.annotation.Nullable final java.util.List<DeviceManagementTroubleshootingErrorResource> value) {
         this.resources = value;
     }
 }

@@ -26,7 +26,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      * Instantiates a new deviceConfigurationGroupAssignment and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceConfigurationGroupAssignment() {
         super();
     }
@@ -35,8 +35,8 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceConfigurationGroupAssignment
      */
-    @javax.annotation.Nonnull
-    public static DeviceConfigurationGroupAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceConfigurationGroupAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceConfigurationGroupAssignment();
     }
@@ -44,7 +44,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      * Gets the deviceConfiguration property value. The navigation link to the Device Configuration being targeted.
      * @return a deviceConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceConfiguration getDeviceConfiguration() {
         return this.deviceConfiguration;
     }
@@ -52,7 +52,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      * Gets the excludeGroup property value. Indicates if this group is should be excluded. Defaults that the group should be included
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getExcludeGroup() {
         return this.excludeGroup;
     }
@@ -60,7 +60,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceConfiguration", (n) -> { this.setDeviceConfiguration(n.getObjectValue(DeviceConfiguration::createFromDiscriminatorValue)); });
@@ -72,7 +72,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      * Gets the targetGroupId property value. The Id of the AAD group we are targeting the device configuration to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTargetGroupId() {
         return this.targetGroupId;
     }
@@ -81,8 +81,8 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("deviceConfiguration", this.getDeviceConfiguration());
@@ -94,8 +94,8 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      * @param value Value to set for the deviceConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceConfiguration(@javax.annotation.Nullable final DeviceConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceConfiguration(@jakarta.annotation.Nullable final DeviceConfiguration value) {
         this.deviceConfiguration = value;
     }
     /**
@@ -103,8 +103,8 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      * @param value Value to set for the excludeGroup property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExcludeGroup(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setExcludeGroup(@jakarta.annotation.Nullable final Boolean value) {
         this.excludeGroup = value;
     }
     /**
@@ -112,8 +112,8 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      * @param value Value to set for the targetGroupId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetGroupId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTargetGroupId(@jakarta.annotation.Nullable final String value) {
         this.targetGroupId = value;
     }
 }

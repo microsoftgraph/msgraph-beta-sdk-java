@@ -30,7 +30,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
      * Instantiates a new windowsManagementApp and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsManagementApp() {
         super();
     }
@@ -39,8 +39,8 @@ public class WindowsManagementApp extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsManagementApp
      */
-    @javax.annotation.Nonnull
-    public static WindowsManagementApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsManagementApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsManagementApp();
     }
@@ -48,7 +48,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
      * Gets the availableVersion property value. Windows management app available version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAvailableVersion() {
         return this.availableVersion;
     }
@@ -56,7 +56,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("availableVersion", (n) -> { this.setAvailableVersion(n.getStringValue()); });
@@ -69,7 +69,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
      * Gets the healthStates property value. The list of health states for installed Windows management app.
      * @return a windowsManagementAppHealthState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WindowsManagementAppHealthState> getHealthStates() {
         return this.healthStates;
     }
@@ -77,7 +77,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
      * Gets the managedInstaller property value. ManagedInstallerStatus
      * @return a managedInstallerStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedInstallerStatus getManagedInstaller() {
         return this.managedInstaller;
     }
@@ -85,7 +85,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
      * Gets the managedInstallerConfiguredDateTime property value. Managed Installer Configured Date Time
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagedInstallerConfiguredDateTime() {
         return this.managedInstallerConfiguredDateTime;
     }
@@ -94,8 +94,8 @@ public class WindowsManagementApp extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("availableVersion", this.getAvailableVersion());
@@ -108,8 +108,8 @@ public class WindowsManagementApp extends Entity implements Parsable {
      * @param value Value to set for the availableVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAvailableVersion(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAvailableVersion(@jakarta.annotation.Nullable final String value) {
         this.availableVersion = value;
     }
     /**
@@ -117,8 +117,8 @@ public class WindowsManagementApp extends Entity implements Parsable {
      * @param value Value to set for the healthStates property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHealthStates(@javax.annotation.Nullable final java.util.List<WindowsManagementAppHealthState> value) {
+    @jakarta.annotation.Nonnull
+    public void setHealthStates(@jakarta.annotation.Nullable final java.util.List<WindowsManagementAppHealthState> value) {
         this.healthStates = value;
     }
     /**
@@ -126,8 +126,8 @@ public class WindowsManagementApp extends Entity implements Parsable {
      * @param value Value to set for the managedInstaller property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedInstaller(@javax.annotation.Nullable final ManagedInstallerStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedInstaller(@jakarta.annotation.Nullable final ManagedInstallerStatus value) {
         this.managedInstaller = value;
     }
     /**
@@ -135,8 +135,8 @@ public class WindowsManagementApp extends Entity implements Parsable {
      * @param value Value to set for the managedInstallerConfiguredDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedInstallerConfiguredDateTime(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedInstallerConfiguredDateTime(@jakarta.annotation.Nullable final String value) {
         this.managedInstallerConfiguredDateTime = value;
     }
 }

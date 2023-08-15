@@ -76,7 +76,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Instantiates a new userRegistrationDetails and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserRegistrationDetails() {
         super();
     }
@@ -85,8 +85,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userRegistrationDetails
      */
-    @javax.annotation.Nonnull
-    public static UserRegistrationDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserRegistrationDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserRegistrationDetails();
     }
@@ -94,7 +94,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Gets the defaultMfaMethod property value. The method the user or admin selected as default for performing multi-factor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue.
      * @return a defaultMfaMethodType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DefaultMfaMethodType getDefaultMfaMethod() {
         return this.defaultMfaMethod;
     }
@@ -102,7 +102,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("defaultMfaMethod", (n) -> { this.setDefaultMfaMethod(n.getEnumValue(DefaultMfaMethodType.class)); });
@@ -127,7 +127,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Gets the isAdmin property value. Indicates whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAdmin() {
         return this.isAdmin;
     }
@@ -135,7 +135,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Gets the isMfaCapable property value. Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsMfaCapable() {
         return this.isMfaCapable;
     }
@@ -143,7 +143,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Gets the isMfaRegistered property value. Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy. Supports $filter (eq).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsMfaRegistered() {
         return this.isMfaRegistered;
     }
@@ -151,7 +151,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Gets the isPasswordlessCapable property value. Indicates whether the user has registered a passwordless strong authentication method (including FIDO2, Windows Hello for Business, and Microsoft Authenticator (Passwordless)) that is allowed by the authentication methods policy. Supports $filter (eq).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsPasswordlessCapable() {
         return this.isPasswordlessCapable;
     }
@@ -159,7 +159,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Gets the isSsprCapable property value. Indicates whether the user has registered the required number of authentication methods for self-service password reset and the user is allowed to perform self-service password reset by policy. Supports $filter (eq).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSsprCapable() {
         return this.isSsprCapable;
     }
@@ -167,7 +167,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Gets the isSsprEnabled property value. Indicates whether the user is allowed to perform self-service password reset by policy. The user may not necessarily have registered the required number of authentication methods for self-service password reset. Supports $filter (eq).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSsprEnabled() {
         return this.isSsprEnabled;
     }
@@ -175,7 +175,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Gets the isSsprRegistered property value. Indicates whether the user has registered the required number of authentication methods for self-service password reset. The user may not necessarily be allowed to perform self-service password reset by policy. Supports $filter (eq).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSsprRegistered() {
         return this.isSsprRegistered;
     }
@@ -183,7 +183,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Gets the isSystemPreferredAuthenticationMethodEnabled property value. Indicates whether system preferred authentication method is enabled. If enabled, the system dynamically determines the most secure authentication method among the methods registered by the user. Supports $filter (eq).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSystemPreferredAuthenticationMethodEnabled() {
         return this.isSystemPreferredAuthenticationMethodEnabled;
     }
@@ -191,7 +191,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Gets the lastUpdatedDateTime property value. The date and time (UTC) when the record was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
         return this.lastUpdatedDateTime;
     }
@@ -199,7 +199,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Gets the methodsRegistered property value. Collection of authentication methods registered, such as mobilePhone, email, fido2. Supports $filter (any with eq).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getMethodsRegistered() {
         return this.methodsRegistered;
     }
@@ -207,7 +207,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Gets the systemPreferredAuthenticationMethods property value. Collection of authentication methods that the system determined to be the most secure authentication methods among the registered methods for second factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. Supports $filter (any with eq).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSystemPreferredAuthenticationMethods() {
         return this.systemPreferredAuthenticationMethods;
     }
@@ -215,7 +215,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Gets the userDisplayName property value. The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserDisplayName() {
         return this.userDisplayName;
     }
@@ -223,7 +223,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Gets the userPreferredMethodForSecondaryAuthentication property value. The method the user selected as the default second-factor for performing multi-factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue.
      * @return a userDefaultAuthenticationMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserDefaultAuthenticationMethod getUserPreferredMethodForSecondaryAuthentication() {
         return this.userPreferredMethodForSecondaryAuthentication;
     }
@@ -231,7 +231,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Gets the userPrincipalName property value. The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
@@ -239,7 +239,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Gets the userType property value. Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
      * @return a signInUserType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SignInUserType getUserType() {
         return this.userType;
     }
@@ -248,8 +248,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("defaultMfaMethod", this.getDefaultMfaMethod());
@@ -274,8 +274,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the defaultMfaMethod property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultMfaMethod(@javax.annotation.Nullable final DefaultMfaMethodType value) {
+    @jakarta.annotation.Nonnull
+    public void setDefaultMfaMethod(@jakarta.annotation.Nullable final DefaultMfaMethodType value) {
         this.defaultMfaMethod = value;
     }
     /**
@@ -283,8 +283,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the isAdmin property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAdmin(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsAdmin(@jakarta.annotation.Nullable final Boolean value) {
         this.isAdmin = value;
     }
     /**
@@ -292,8 +292,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the isMfaCapable property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsMfaCapable(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsMfaCapable(@jakarta.annotation.Nullable final Boolean value) {
         this.isMfaCapable = value;
     }
     /**
@@ -301,8 +301,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the isMfaRegistered property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsMfaRegistered(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsMfaRegistered(@jakarta.annotation.Nullable final Boolean value) {
         this.isMfaRegistered = value;
     }
     /**
@@ -310,8 +310,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the isPasswordlessCapable property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsPasswordlessCapable(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsPasswordlessCapable(@jakarta.annotation.Nullable final Boolean value) {
         this.isPasswordlessCapable = value;
     }
     /**
@@ -319,8 +319,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the isSsprCapable property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSsprCapable(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsSsprCapable(@jakarta.annotation.Nullable final Boolean value) {
         this.isSsprCapable = value;
     }
     /**
@@ -328,8 +328,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the isSsprEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSsprEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsSsprEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isSsprEnabled = value;
     }
     /**
@@ -337,8 +337,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the isSsprRegistered property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSsprRegistered(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsSsprRegistered(@jakarta.annotation.Nullable final Boolean value) {
         this.isSsprRegistered = value;
     }
     /**
@@ -346,8 +346,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the isSystemPreferredAuthenticationMethodEnabled property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSystemPreferredAuthenticationMethodEnabled(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsSystemPreferredAuthenticationMethodEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isSystemPreferredAuthenticationMethodEnabled = value;
     }
     /**
@@ -355,8 +355,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
@@ -364,8 +364,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the methodsRegistered property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMethodsRegistered(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setMethodsRegistered(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.methodsRegistered = value;
     }
     /**
@@ -373,8 +373,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the systemPreferredAuthenticationMethods property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSystemPreferredAuthenticationMethods(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setSystemPreferredAuthenticationMethods(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.systemPreferredAuthenticationMethods = value;
     }
     /**
@@ -382,8 +382,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
@@ -391,8 +391,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the userPreferredMethodForSecondaryAuthentication property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPreferredMethodForSecondaryAuthentication(@javax.annotation.Nullable final UserDefaultAuthenticationMethod value) {
+    @jakarta.annotation.Nonnull
+    public void setUserPreferredMethodForSecondaryAuthentication(@jakarta.annotation.Nullable final UserDefaultAuthenticationMethod value) {
         this.userPreferredMethodForSecondaryAuthentication = value;
     }
     /**
@@ -400,8 +400,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
     /**
@@ -409,8 +409,8 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the userType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserType(@javax.annotation.Nullable final SignInUserType value) {
+    @jakarta.annotation.Nonnull
+    public void setUserType(@jakarta.annotation.Nullable final SignInUserType value) {
         this.userType = value;
     }
 }

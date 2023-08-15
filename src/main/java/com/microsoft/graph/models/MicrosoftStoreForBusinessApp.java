@@ -42,7 +42,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * Instantiates a new microsoftStoreForBusinessApp and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MicrosoftStoreForBusinessApp() {
         super();
         this.setOdataType("#microsoft.graph.microsoftStoreForBusinessApp");
@@ -52,8 +52,8 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a microsoftStoreForBusinessApp
      */
-    @javax.annotation.Nonnull
-    public static MicrosoftStoreForBusinessApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MicrosoftStoreForBusinessApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MicrosoftStoreForBusinessApp();
     }
@@ -61,7 +61,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * Gets the containedApps property value. The collection of contained apps in a mobileApp acting as a package.
      * @return a mobileContainedApp
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MobileContainedApp> getContainedApps() {
         return this.containedApps;
     }
@@ -69,7 +69,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("containedApps", (n) -> { this.setContainedApps(n.getCollectionOfObjectValues(MobileContainedApp::createFromDiscriminatorValue)); });
@@ -85,7 +85,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * Gets the licenseType property value. The licenseType property
      * @return a microsoftStoreForBusinessLicenseType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MicrosoftStoreForBusinessLicenseType getLicenseType() {
         return this.licenseType;
     }
@@ -93,7 +93,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * Gets the licensingType property value. The supported License Type.
      * @return a vppLicensingType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VppLicensingType getLicensingType() {
         return this.licensingType;
     }
@@ -101,7 +101,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * Gets the packageIdentityName property value. The app package identifier
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPackageIdentityName() {
         return this.packageIdentityName;
     }
@@ -109,7 +109,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * Gets the productKey property value. The app product key
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProductKey() {
         return this.productKey;
     }
@@ -117,7 +117,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * Gets the totalLicenseCount property value. The total number of Microsoft Store for Business licenses.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalLicenseCount() {
         return this.totalLicenseCount;
     }
@@ -125,7 +125,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * Gets the usedLicenseCount property value. The number of Microsoft Store for Business licenses in use.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getUsedLicenseCount() {
         return this.usedLicenseCount;
     }
@@ -134,8 +134,8 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("containedApps", this.getContainedApps());
@@ -151,8 +151,8 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * @param value Value to set for the containedApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContainedApps(@javax.annotation.Nullable final java.util.List<MobileContainedApp> value) {
+    @jakarta.annotation.Nonnull
+    public void setContainedApps(@jakarta.annotation.Nullable final java.util.List<MobileContainedApp> value) {
         this.containedApps = value;
     }
     /**
@@ -160,8 +160,8 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * @param value Value to set for the licenseType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLicenseType(@javax.annotation.Nullable final MicrosoftStoreForBusinessLicenseType value) {
+    @jakarta.annotation.Nonnull
+    public void setLicenseType(@jakarta.annotation.Nullable final MicrosoftStoreForBusinessLicenseType value) {
         this.licenseType = value;
     }
     /**
@@ -169,8 +169,8 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * @param value Value to set for the licensingType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLicensingType(@javax.annotation.Nullable final VppLicensingType value) {
+    @jakarta.annotation.Nonnull
+    public void setLicensingType(@jakarta.annotation.Nullable final VppLicensingType value) {
         this.licensingType = value;
     }
     /**
@@ -178,8 +178,8 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * @param value Value to set for the packageIdentityName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPackageIdentityName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setPackageIdentityName(@jakarta.annotation.Nullable final String value) {
         this.packageIdentityName = value;
     }
     /**
@@ -187,8 +187,8 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * @param value Value to set for the productKey property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProductKey(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setProductKey(@jakarta.annotation.Nullable final String value) {
         this.productKey = value;
     }
     /**
@@ -196,8 +196,8 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * @param value Value to set for the totalLicenseCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalLicenseCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setTotalLicenseCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalLicenseCount = value;
     }
     /**
@@ -205,8 +205,8 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
      * @param value Value to set for the usedLicenseCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUsedLicenseCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setUsedLicenseCount(@jakarta.annotation.Nullable final Integer value) {
         this.usedLicenseCount = value;
     }
 }

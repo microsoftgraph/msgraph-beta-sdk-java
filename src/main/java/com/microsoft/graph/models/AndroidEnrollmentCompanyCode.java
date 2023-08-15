@@ -35,7 +35,7 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * Instantiates a new androidEnrollmentCompanyCode and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidEnrollmentCompanyCode() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -44,8 +44,8 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidEnrollmentCompanyCode
      */
-    @javax.annotation.Nonnull
-    public static AndroidEnrollmentCompanyCode createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidEnrollmentCompanyCode createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidEnrollmentCompanyCode();
     }
@@ -53,7 +53,7 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -61,7 +61,7 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * Gets the enrollmentToken property value. Enrollment Token used by the User to enroll their device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEnrollmentToken() {
         return this.enrollmentToken;
     }
@@ -69,7 +69,7 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("enrollmentToken", (n) -> { this.setEnrollmentToken(n.getStringValue()); });
@@ -82,7 +82,7 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -90,7 +90,7 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * Gets the qrCodeContent property value. String used to generate a QR code for the token.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getQrCodeContent() {
         return this.qrCodeContent;
     }
@@ -98,7 +98,7 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * Gets the qrCodeImage property value. Generated QR code for the token.
      * @return a mimeContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MimeContent getQrCodeImage() {
         return this.qrCodeImage;
     }
@@ -107,8 +107,8 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("enrollmentToken", this.getEnrollmentToken());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -118,11 +118,11 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -130,17 +130,17 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * @param value Value to set for the enrollmentToken property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentToken(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setEnrollmentToken(@jakarta.annotation.Nullable final String value) {
         this.enrollmentToken = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -148,8 +148,8 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * @param value Value to set for the qrCodeContent property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQrCodeContent(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setQrCodeContent(@jakarta.annotation.Nullable final String value) {
         this.qrCodeContent = value;
     }
     /**
@@ -157,8 +157,8 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * @param value Value to set for the qrCodeImage property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQrCodeImage(@javax.annotation.Nullable final MimeContent value) {
+    @jakarta.annotation.Nonnull
+    public void setQrCodeImage(@jakarta.annotation.Nullable final MimeContent value) {
         this.qrCodeImage = value;
     }
 }

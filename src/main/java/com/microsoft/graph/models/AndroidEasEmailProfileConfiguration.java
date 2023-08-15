@@ -82,7 +82,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Instantiates a new androidEasEmailProfileConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidEasEmailProfileConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidEasEmailProfileConfiguration");
@@ -92,8 +92,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidEasEmailProfileConfiguration
      */
-    @javax.annotation.Nonnull
-    public static AndroidEasEmailProfileConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidEasEmailProfileConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidEasEmailProfileConfiguration();
     }
@@ -101,7 +101,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Gets the accountName property value. Exchange ActiveSync account name, displayed to users as name of EAS (this) profile.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAccountName() {
         return this.accountName;
     }
@@ -109,7 +109,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Gets the authenticationMethod property value. Exchange Active Sync authentication method.
      * @return a easAuthenticationMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EasAuthenticationMethod getAuthenticationMethod() {
         return this.authenticationMethod;
     }
@@ -117,7 +117,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Gets the customDomainName property value. Custom domain name value used while generating an email profile before installing on the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomDomainName() {
         return this.customDomainName;
     }
@@ -125,7 +125,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Gets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @return a emailSyncDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailSyncDuration getDurationOfEmailToSync() {
         return this.durationOfEmailToSync;
     }
@@ -133,7 +133,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Gets the emailAddressSource property value. Possible values for username source or email source.
      * @return a userEmailSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserEmailSource getEmailAddressSource() {
         return this.emailAddressSource;
     }
@@ -141,7 +141,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Gets the emailSyncSchedule property value. Possible values for email sync schedule.
      * @return a emailSyncSchedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailSyncSchedule getEmailSyncSchedule() {
         return this.emailSyncSchedule;
     }
@@ -149,7 +149,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
@@ -175,7 +175,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Gets the hostName property value. Exchange location (URL) that the native mail app connects to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHostName() {
         return this.hostName;
     }
@@ -183,7 +183,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Gets the identityCertificate property value. Identity certificate.
      * @return a androidCertificateProfileBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidCertificateProfileBase getIdentityCertificate() {
         return this.identityCertificate;
     }
@@ -191,7 +191,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Gets the requireSmime property value. Indicates whether or not to use S/MIME certificate.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequireSmime() {
         return this.requireSmime;
     }
@@ -199,7 +199,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Gets the requireSsl property value. Indicates whether or not to use SSL.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequireSsl() {
         return this.requireSsl;
     }
@@ -207,7 +207,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Gets the smimeSigningCertificate property value. S/MIME signing certificate.
      * @return a androidCertificateProfileBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidCertificateProfileBase getSmimeSigningCertificate() {
         return this.smimeSigningCertificate;
     }
@@ -215,7 +215,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Gets the syncCalendar property value. Toggles syncing the calendar. If set to false calendar is turned off on the device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSyncCalendar() {
         return this.syncCalendar;
     }
@@ -223,7 +223,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Gets the syncContacts property value. Toggles syncing contacts. If set to false contacts are turned off on the device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSyncContacts() {
         return this.syncContacts;
     }
@@ -231,7 +231,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Gets the syncNotes property value. Toggles syncing notes. If set to false notes are turned off on the device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSyncNotes() {
         return this.syncNotes;
     }
@@ -239,7 +239,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Gets the syncTasks property value. Toggles syncing tasks. If set to false tasks are turned off on the device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSyncTasks() {
         return this.syncTasks;
     }
@@ -247,7 +247,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Gets the userDomainNameSource property value. UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
      * @return a domainNameSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DomainNameSource getUserDomainNameSource() {
         return this.userDomainNameSource;
     }
@@ -255,7 +255,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Gets the usernameSource property value. Android username source.
      * @return a androidUsernameSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidUsernameSource getUsernameSource() {
         return this.usernameSource;
     }
@@ -264,8 +264,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("accountName", this.getAccountName());
@@ -291,8 +291,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the accountName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccountName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAccountName(@jakarta.annotation.Nullable final String value) {
         this.accountName = value;
     }
     /**
@@ -300,8 +300,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationMethod(@javax.annotation.Nullable final EasAuthenticationMethod value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationMethod(@jakarta.annotation.Nullable final EasAuthenticationMethod value) {
         this.authenticationMethod = value;
     }
     /**
@@ -309,8 +309,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the customDomainName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomDomainName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setCustomDomainName(@jakarta.annotation.Nullable final String value) {
         this.customDomainName = value;
     }
     /**
@@ -318,8 +318,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the durationOfEmailToSync property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDurationOfEmailToSync(@javax.annotation.Nullable final EmailSyncDuration value) {
+    @jakarta.annotation.Nonnull
+    public void setDurationOfEmailToSync(@jakarta.annotation.Nullable final EmailSyncDuration value) {
         this.durationOfEmailToSync = value;
     }
     /**
@@ -327,8 +327,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the emailAddressSource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailAddressSource(@javax.annotation.Nullable final UserEmailSource value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailAddressSource(@jakarta.annotation.Nullable final UserEmailSource value) {
         this.emailAddressSource = value;
     }
     /**
@@ -336,8 +336,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the emailSyncSchedule property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailSyncSchedule(@javax.annotation.Nullable final EmailSyncSchedule value) {
+    @jakarta.annotation.Nonnull
+    public void setEmailSyncSchedule(@jakarta.annotation.Nullable final EmailSyncSchedule value) {
         this.emailSyncSchedule = value;
     }
     /**
@@ -345,8 +345,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the hostName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHostName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setHostName(@jakarta.annotation.Nullable final String value) {
         this.hostName = value;
     }
     /**
@@ -354,8 +354,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the identityCertificate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityCertificate(@javax.annotation.Nullable final AndroidCertificateProfileBase value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentityCertificate(@jakarta.annotation.Nullable final AndroidCertificateProfileBase value) {
         this.identityCertificate = value;
     }
     /**
@@ -363,8 +363,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the requireSmime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequireSmime(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRequireSmime(@jakarta.annotation.Nullable final Boolean value) {
         this.requireSmime = value;
     }
     /**
@@ -372,8 +372,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the requireSsl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequireSsl(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRequireSsl(@jakarta.annotation.Nullable final Boolean value) {
         this.requireSsl = value;
     }
     /**
@@ -381,8 +381,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the smimeSigningCertificate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSmimeSigningCertificate(@javax.annotation.Nullable final AndroidCertificateProfileBase value) {
+    @jakarta.annotation.Nonnull
+    public void setSmimeSigningCertificate(@jakarta.annotation.Nullable final AndroidCertificateProfileBase value) {
         this.smimeSigningCertificate = value;
     }
     /**
@@ -390,8 +390,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the syncCalendar property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSyncCalendar(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSyncCalendar(@jakarta.annotation.Nullable final Boolean value) {
         this.syncCalendar = value;
     }
     /**
@@ -399,8 +399,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the syncContacts property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSyncContacts(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSyncContacts(@jakarta.annotation.Nullable final Boolean value) {
         this.syncContacts = value;
     }
     /**
@@ -408,8 +408,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the syncNotes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSyncNotes(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSyncNotes(@jakarta.annotation.Nullable final Boolean value) {
         this.syncNotes = value;
     }
     /**
@@ -417,8 +417,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the syncTasks property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSyncTasks(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setSyncTasks(@jakarta.annotation.Nullable final Boolean value) {
         this.syncTasks = value;
     }
     /**
@@ -426,8 +426,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the userDomainNameSource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserDomainNameSource(@javax.annotation.Nullable final DomainNameSource value) {
+    @jakarta.annotation.Nonnull
+    public void setUserDomainNameSource(@jakarta.annotation.Nullable final DomainNameSource value) {
         this.userDomainNameSource = value;
     }
     /**
@@ -435,8 +435,8 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the usernameSource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUsernameSource(@javax.annotation.Nullable final AndroidUsernameSource value) {
+    @jakarta.annotation.Nonnull
+    public void setUsernameSource(@jakarta.annotation.Nullable final AndroidUsernameSource value) {
         this.usernameSource = value;
     }
 }

@@ -35,7 +35,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
      * Instantiates a new governanceRoleDefinition and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceRoleDefinition() {
         super();
     }
@@ -44,8 +44,8 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a governanceRoleDefinition
      */
-    @javax.annotation.Nonnull
-    public static GovernanceRoleDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GovernanceRoleDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GovernanceRoleDefinition();
     }
@@ -53,7 +53,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
      * Gets the displayName property value. The display name of the role definition.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -61,7 +61,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
      * Gets the externalId property value. The external id of the role definition.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalId() {
         return this.externalId;
     }
@@ -69,7 +69,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -84,7 +84,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
      * Gets the resource property value. Read-only. The associated resource for the role definition.
      * @return a governanceResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceResource getResource() {
         return this.resource;
     }
@@ -92,7 +92,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
      * Gets the resourceId property value. Required. The id of the resource associated with the role definition.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceId() {
         return this.resourceId;
     }
@@ -100,7 +100,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
      * Gets the roleSetting property value. The associated role setting for the role definition.
      * @return a governanceRoleSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceRoleSetting getRoleSetting() {
         return this.roleSetting;
     }
@@ -108,7 +108,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
      * Gets the templateId property value. The templateId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTemplateId() {
         return this.templateId;
     }
@@ -117,8 +117,8 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -133,8 +133,8 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -142,8 +142,8 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the externalId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }
     /**
@@ -151,8 +151,8 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResource(@javax.annotation.Nullable final GovernanceResource value) {
+    @jakarta.annotation.Nonnull
+    public void setResource(@jakarta.annotation.Nullable final GovernanceResource value) {
         this.resource = value;
     }
     /**
@@ -160,8 +160,8 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the resourceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setResourceId(@jakarta.annotation.Nullable final String value) {
         this.resourceId = value;
     }
     /**
@@ -169,8 +169,8 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the roleSetting property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleSetting(@javax.annotation.Nullable final GovernanceRoleSetting value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleSetting(@jakarta.annotation.Nullable final GovernanceRoleSetting value) {
         this.roleSetting = value;
     }
     /**
@@ -178,8 +178,8 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the templateId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTemplateId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setTemplateId(@jakarta.annotation.Nullable final String value) {
         this.templateId = value;
     }
 }

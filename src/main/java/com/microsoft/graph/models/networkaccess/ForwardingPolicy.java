@@ -15,7 +15,7 @@ public class ForwardingPolicy extends Policy implements Parsable {
      * Instantiates a new forwardingPolicy and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ForwardingPolicy() {
         super();
         this.setOdataType("#microsoft.graph.networkaccess.forwardingPolicy");
@@ -25,8 +25,8 @@ public class ForwardingPolicy extends Policy implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a forwardingPolicy
      */
-    @javax.annotation.Nonnull
-    public static ForwardingPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ForwardingPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ForwardingPolicy();
     }
@@ -34,7 +34,7 @@ public class ForwardingPolicy extends Policy implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("trafficForwardingType", (n) -> { this.setTrafficForwardingType(n.getEnumValue(TrafficForwardingType.class)); });
@@ -44,7 +44,7 @@ public class ForwardingPolicy extends Policy implements Parsable {
      * Gets the trafficForwardingType property value. The trafficForwardingType property
      * @return a trafficForwardingType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TrafficForwardingType getTrafficForwardingType() {
         return this.trafficForwardingType;
     }
@@ -53,8 +53,8 @@ public class ForwardingPolicy extends Policy implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("trafficForwardingType", this.getTrafficForwardingType());
@@ -64,8 +64,8 @@ public class ForwardingPolicy extends Policy implements Parsable {
      * @param value Value to set for the trafficForwardingType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrafficForwardingType(@javax.annotation.Nullable final TrafficForwardingType value) {
+    @jakarta.annotation.Nonnull
+    public void setTrafficForwardingType(@jakarta.annotation.Nullable final TrafficForwardingType value) {
         this.trafficForwardingType = value;
     }
 }

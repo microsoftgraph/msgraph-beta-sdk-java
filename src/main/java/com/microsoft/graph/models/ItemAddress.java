@@ -23,7 +23,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
      * Instantiates a new itemAddress and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemAddress() {
         super();
         this.setOdataType("#microsoft.graph.itemAddress");
@@ -33,8 +33,8 @@ public class ItemAddress extends ItemFacet implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a itemAddress
      */
-    @javax.annotation.Nonnull
-    public static ItemAddress createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ItemAddress createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ItemAddress();
     }
@@ -42,7 +42,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
      * Gets the detail property value. The detail property
      * @return a physicalAddress
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PhysicalAddress getDetail() {
         return this.detail;
     }
@@ -50,7 +50,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
      * Gets the displayName property value. Friendly name the user has assigned to this address.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -58,7 +58,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("detail", (n) -> { this.setDetail(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
@@ -70,7 +70,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
      * Gets the geoCoordinates property value. The geocoordinates of the address.
      * @return a geoCoordinates
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GeoCoordinates getGeoCoordinates() {
         return this.geoCoordinates;
     }
@@ -79,8 +79,8 @@ public class ItemAddress extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("detail", this.getDetail());
@@ -92,8 +92,8 @@ public class ItemAddress extends ItemFacet implements Parsable {
      * @param value Value to set for the detail property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetail(@javax.annotation.Nullable final PhysicalAddress value) {
+    @jakarta.annotation.Nonnull
+    public void setDetail(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.detail = value;
     }
     /**
@@ -101,8 +101,8 @@ public class ItemAddress extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -110,8 +110,8 @@ public class ItemAddress extends ItemFacet implements Parsable {
      * @param value Value to set for the geoCoordinates property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGeoCoordinates(@javax.annotation.Nullable final GeoCoordinates value) {
+    @jakarta.annotation.Nonnull
+    public void setGeoCoordinates(@jakarta.annotation.Nullable final GeoCoordinates value) {
         this.geoCoordinates = value;
     }
 }

@@ -28,7 +28,7 @@ public class ContentCustomization implements AdditionalDataHolder, Parsable {
      * Instantiates a new contentCustomization and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ContentCustomization() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +37,8 @@ public class ContentCustomization implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a contentCustomization
      */
-    @javax.annotation.Nonnull
-    public static ContentCustomization createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ContentCustomization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ContentCustomization();
     }
@@ -46,7 +46,7 @@ public class ContentCustomization implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +54,7 @@ public class ContentCustomization implements AdditionalDataHolder, Parsable {
      * Gets the attributeCollection property value. Represents the content options of External Identities to be customized throughout the authentication flow for a tenant.
      * @return a keyValue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getAttributeCollection() {
         return this.attributeCollection;
     }
@@ -62,7 +62,7 @@ public class ContentCustomization implements AdditionalDataHolder, Parsable {
      * Gets the attributeCollectionRelativeUrl property value. A relative URL for the content options of External Identities to be customized throughout the authentication flow for a tenant.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAttributeCollectionRelativeUrl() {
         return this.attributeCollectionRelativeUrl;
     }
@@ -70,7 +70,7 @@ public class ContentCustomization implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("attributeCollection", (n) -> { this.setAttributeCollection(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
@@ -82,7 +82,7 @@ public class ContentCustomization implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -91,8 +91,8 @@ public class ContentCustomization implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("attributeCollection", this.getAttributeCollection());
         writer.writeStringValue("attributeCollectionRelativeUrl", this.getAttributeCollectionRelativeUrl());
@@ -101,11 +101,11 @@ public class ContentCustomization implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -113,8 +113,8 @@ public class ContentCustomization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the attributeCollection property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttributeCollection(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
+    @jakarta.annotation.Nonnull
+    public void setAttributeCollection(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
         this.attributeCollection = value;
     }
     /**
@@ -122,17 +122,17 @@ public class ContentCustomization implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the attributeCollectionRelativeUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttributeCollectionRelativeUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAttributeCollectionRelativeUrl(@jakarta.annotation.Nullable final String value) {
         this.attributeCollectionRelativeUrl = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

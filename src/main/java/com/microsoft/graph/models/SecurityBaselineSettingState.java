@@ -46,7 +46,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * Instantiates a new securityBaselineSettingState and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SecurityBaselineSettingState() {
         super();
     }
@@ -55,8 +55,8 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a securityBaselineSettingState
      */
-    @javax.annotation.Nonnull
-    public static SecurityBaselineSettingState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SecurityBaselineSettingState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SecurityBaselineSettingState();
     }
@@ -64,7 +64,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * Gets the contributingPolicies property value. The policies that contribute to this setting instance
      * @return a securityBaselineContributingPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SecurityBaselineContributingPolicy> getContributingPolicies() {
         return this.contributingPolicies;
     }
@@ -72,7 +72,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * Gets the errorCode property value. The error code if the setting is in error state
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getErrorCode() {
         return this.errorCode;
     }
@@ -80,7 +80,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contributingPolicies", (n) -> { this.setContributingPolicies(n.getCollectionOfObjectValues(SecurityBaselineContributingPolicy::createFromDiscriminatorValue)); });
@@ -97,7 +97,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * Gets the settingCategoryId property value. The setting category id which this setting belongs to
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingCategoryId() {
         return this.settingCategoryId;
     }
@@ -105,7 +105,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * Gets the settingCategoryName property value. The setting category name which this setting belongs to
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingCategoryName() {
         return this.settingCategoryName;
     }
@@ -113,7 +113,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * Gets the settingId property value. The setting id guid
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingId() {
         return this.settingId;
     }
@@ -121,7 +121,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * Gets the settingName property value. The setting name that is being reported
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingName() {
         return this.settingName;
     }
@@ -129,7 +129,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * Gets the sourcePolicies property value. The policies that contribute to this setting instance
      * @return a settingSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SettingSource> getSourcePolicies() {
         return this.sourcePolicies;
     }
@@ -137,7 +137,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * Gets the state property value. Security Baseline Compliance State
      * @return a securityBaselineComplianceState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SecurityBaselineComplianceState getState() {
         return this.state;
     }
@@ -146,8 +146,8 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("contributingPolicies", this.getContributingPolicies());
@@ -164,8 +164,8 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param value Value to set for the contributingPolicies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContributingPolicies(@javax.annotation.Nullable final java.util.List<SecurityBaselineContributingPolicy> value) {
+    @jakarta.annotation.Nonnull
+    public void setContributingPolicies(@jakarta.annotation.Nullable final java.util.List<SecurityBaselineContributingPolicy> value) {
         this.contributingPolicies = value;
     }
     /**
@@ -173,8 +173,8 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param value Value to set for the errorCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setErrorCode(@jakarta.annotation.Nullable final String value) {
         this.errorCode = value;
     }
     /**
@@ -182,8 +182,8 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param value Value to set for the settingCategoryId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingCategoryId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSettingCategoryId(@jakarta.annotation.Nullable final String value) {
         this.settingCategoryId = value;
     }
     /**
@@ -191,8 +191,8 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param value Value to set for the settingCategoryName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingCategoryName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSettingCategoryName(@jakarta.annotation.Nullable final String value) {
         this.settingCategoryName = value;
     }
     /**
@@ -200,8 +200,8 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param value Value to set for the settingId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSettingId(@jakarta.annotation.Nullable final String value) {
         this.settingId = value;
     }
     /**
@@ -209,8 +209,8 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param value Value to set for the settingName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSettingName(@jakarta.annotation.Nullable final String value) {
         this.settingName = value;
     }
     /**
@@ -218,8 +218,8 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param value Value to set for the sourcePolicies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourcePolicies(@javax.annotation.Nullable final java.util.List<SettingSource> value) {
+    @jakarta.annotation.Nonnull
+    public void setSourcePolicies(@jakarta.annotation.Nullable final java.util.List<SettingSource> value) {
         this.sourcePolicies = value;
     }
     /**
@@ -227,8 +227,8 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final SecurityBaselineComplianceState value) {
+    @jakarta.annotation.Nonnull
+    public void setState(@jakarta.annotation.Nullable final SecurityBaselineComplianceState value) {
         this.state = value;
     }
 }

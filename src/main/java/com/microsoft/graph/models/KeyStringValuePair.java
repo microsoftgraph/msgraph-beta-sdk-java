@@ -18,7 +18,7 @@ public class KeyStringValuePair extends KeyTypedValuePair implements Parsable {
      * Instantiates a new keyStringValuePair and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public KeyStringValuePair() {
         super();
         this.setOdataType("#microsoft.graph.keyStringValuePair");
@@ -28,8 +28,8 @@ public class KeyStringValuePair extends KeyTypedValuePair implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a keyStringValuePair
      */
-    @javax.annotation.Nonnull
-    public static KeyStringValuePair createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static KeyStringValuePair createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new KeyStringValuePair();
     }
@@ -37,7 +37,7 @@ public class KeyStringValuePair extends KeyTypedValuePair implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
@@ -47,7 +47,7 @@ public class KeyStringValuePair extends KeyTypedValuePair implements Parsable {
      * Gets the value property value. The string value of the key-value pair.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getValue() {
         return this.value;
     }
@@ -56,8 +56,8 @@ public class KeyStringValuePair extends KeyTypedValuePair implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("value", this.getValue());
@@ -67,8 +67,8 @@ public class KeyStringValuePair extends KeyTypedValuePair implements Parsable {
      * @param value Value to set for the value property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }
 }

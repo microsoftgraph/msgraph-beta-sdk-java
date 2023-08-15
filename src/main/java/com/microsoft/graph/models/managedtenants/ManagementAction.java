@@ -36,7 +36,7 @@ public class ManagementAction extends Entity implements Parsable {
      * Instantiates a new managementAction and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagementAction() {
         super();
     }
@@ -45,8 +45,8 @@ public class ManagementAction extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managementAction
      */
-    @javax.annotation.Nonnull
-    public static ManagementAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagementAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagementAction();
     }
@@ -54,7 +54,7 @@ public class ManagementAction extends Entity implements Parsable {
      * Gets the category property value. The category property
      * @return a managementCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagementCategory getCategory() {
         return this.category;
     }
@@ -62,7 +62,7 @@ public class ManagementAction extends Entity implements Parsable {
      * Gets the description property value. The description for the management action. Optional. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -70,7 +70,7 @@ public class ManagementAction extends Entity implements Parsable {
      * Gets the displayName property value. The display name for the management action. Optional. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -78,7 +78,7 @@ public class ManagementAction extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(ManagementCategory.class)); });
@@ -93,7 +93,7 @@ public class ManagementAction extends Entity implements Parsable {
      * Gets the referenceTemplateId property value. The reference for the management template used to generate the management action. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getReferenceTemplateId() {
         return this.referenceTemplateId;
     }
@@ -101,7 +101,7 @@ public class ManagementAction extends Entity implements Parsable {
      * Gets the referenceTemplateVersion property value. The referenceTemplateVersion property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getReferenceTemplateVersion() {
         return this.referenceTemplateVersion;
     }
@@ -109,7 +109,7 @@ public class ManagementAction extends Entity implements Parsable {
      * Gets the workloadActions property value. The collection of workload actions associated with the management action. Required. Read-only.
      * @return a workloadAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WorkloadAction> getWorkloadActions() {
         return this.workloadActions;
     }
@@ -118,8 +118,8 @@ public class ManagementAction extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("category", this.getCategory());
@@ -134,8 +134,8 @@ public class ManagementAction extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory(@javax.annotation.Nullable final ManagementCategory value) {
+    @jakarta.annotation.Nonnull
+    public void setCategory(@jakarta.annotation.Nullable final ManagementCategory value) {
         this.category = value;
     }
     /**
@@ -143,8 +143,8 @@ public class ManagementAction extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
@@ -152,8 +152,8 @@ public class ManagementAction extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -161,8 +161,8 @@ public class ManagementAction extends Entity implements Parsable {
      * @param value Value to set for the referenceTemplateId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReferenceTemplateId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setReferenceTemplateId(@jakarta.annotation.Nullable final String value) {
         this.referenceTemplateId = value;
     }
     /**
@@ -170,8 +170,8 @@ public class ManagementAction extends Entity implements Parsable {
      * @param value Value to set for the referenceTemplateVersion property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReferenceTemplateVersion(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setReferenceTemplateVersion(@jakarta.annotation.Nullable final Integer value) {
         this.referenceTemplateVersion = value;
     }
     /**
@@ -179,8 +179,8 @@ public class ManagementAction extends Entity implements Parsable {
      * @param value Value to set for the workloadActions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkloadActions(@javax.annotation.Nullable final java.util.List<WorkloadAction> value) {
+    @jakarta.annotation.Nonnull
+    public void setWorkloadActions(@jakarta.annotation.Nullable final java.util.List<WorkloadAction> value) {
         this.workloadActions = value;
     }
 }

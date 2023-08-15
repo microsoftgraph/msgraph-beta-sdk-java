@@ -50,7 +50,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * Instantiates a new restrictedAppsViolation and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RestrictedAppsViolation() {
         super();
     }
@@ -59,8 +59,8 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a restrictedAppsViolation
      */
-    @javax.annotation.Nonnull
-    public static RestrictedAppsViolation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RestrictedAppsViolation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RestrictedAppsViolation();
     }
@@ -68,7 +68,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * Gets the deviceConfigurationId property value. Device configuration profile unique identifier, must be Guid
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceConfigurationId() {
         return this.deviceConfigurationId;
     }
@@ -76,7 +76,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * Gets the deviceConfigurationName property value. Device configuration profile name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceConfigurationName() {
         return this.deviceConfigurationName;
     }
@@ -84,7 +84,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * Gets the deviceName property value. Device name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -92,7 +92,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceConfigurationId", (n) -> { this.setDeviceConfigurationId(n.getStringValue()); });
@@ -110,7 +110,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * Gets the managedDeviceId property value. Managed device unique identifier, must be Guid
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
         return this.managedDeviceId;
     }
@@ -118,7 +118,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * Gets the platformType property value. Supported platform types for policies.
      * @return a policyPlatformType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PolicyPlatformType getPlatformType() {
         return this.platformType;
     }
@@ -126,7 +126,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * Gets the restrictedApps property value. List of violated restricted apps
      * @return a managedDeviceReportedApp
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceReportedApp> getRestrictedApps() {
         return this.restrictedApps;
     }
@@ -134,7 +134,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * Gets the restrictedAppsState property value. Restricted apps state
      * @return a restrictedAppsState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RestrictedAppsState getRestrictedAppsState() {
         return this.restrictedAppsState;
     }
@@ -142,7 +142,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * Gets the userId property value. User unique identifier, must be Guid
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -150,7 +150,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * Gets the userName property value. User name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserName() {
         return this.userName;
     }
@@ -159,8 +159,8 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("deviceConfigurationId", this.getDeviceConfigurationId());
@@ -178,8 +178,8 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * @param value Value to set for the deviceConfigurationId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceConfigurationId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceConfigurationId(@jakarta.annotation.Nullable final String value) {
         this.deviceConfigurationId = value;
     }
     /**
@@ -187,8 +187,8 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * @param value Value to set for the deviceConfigurationName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceConfigurationName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceConfigurationName(@jakarta.annotation.Nullable final String value) {
         this.deviceConfigurationName = value;
     }
     /**
@@ -196,8 +196,8 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * @param value Value to set for the deviceName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
@@ -205,8 +205,8 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setManagedDeviceId(@jakarta.annotation.Nullable final String value) {
         this.managedDeviceId = value;
     }
     /**
@@ -214,8 +214,8 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * @param value Value to set for the platformType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatformType(@javax.annotation.Nullable final PolicyPlatformType value) {
+    @jakarta.annotation.Nonnull
+    public void setPlatformType(@jakarta.annotation.Nullable final PolicyPlatformType value) {
         this.platformType = value;
     }
     /**
@@ -223,8 +223,8 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * @param value Value to set for the restrictedApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRestrictedApps(@javax.annotation.Nullable final java.util.List<ManagedDeviceReportedApp> value) {
+    @jakarta.annotation.Nonnull
+    public void setRestrictedApps(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceReportedApp> value) {
         this.restrictedApps = value;
     }
     /**
@@ -232,8 +232,8 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * @param value Value to set for the restrictedAppsState property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRestrictedAppsState(@javax.annotation.Nullable final RestrictedAppsState value) {
+    @jakarta.annotation.Nonnull
+    public void setRestrictedAppsState(@jakarta.annotation.Nullable final RestrictedAppsState value) {
         this.restrictedAppsState = value;
     }
     /**
@@ -241,8 +241,8 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
@@ -250,8 +250,8 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      * @param value Value to set for the userName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
 }

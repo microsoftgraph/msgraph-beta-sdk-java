@@ -67,7 +67,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * Instantiates a new entitlementManagement and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EntitlementManagement() {
         super();
     }
@@ -76,8 +76,8 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a entitlementManagement
      */
-    @javax.annotation.Nonnull
-    public static EntitlementManagement createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EntitlementManagement createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EntitlementManagement();
     }
@@ -85,7 +85,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * Gets the accessPackageAssignmentApprovals property value. The accessPackageAssignmentApprovals property
      * @return a approval
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Approval> getAccessPackageAssignmentApprovals() {
         return this.accessPackageAssignmentApprovals;
     }
@@ -93,7 +93,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * Gets the accessPackageAssignmentPolicies property value. Represents the policy that governs which subjects can request or be assigned an access package via an access package assignment.
      * @return a accessPackageAssignmentPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentPolicy> getAccessPackageAssignmentPolicies() {
         return this.accessPackageAssignmentPolicies;
     }
@@ -101,7 +101,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * Gets the accessPackageAssignmentRequests property value. Represents access package assignment requests created by or on behalf of a user.
      * @return a accessPackageAssignmentRequest
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentRequest> getAccessPackageAssignmentRequests() {
         return this.accessPackageAssignmentRequests;
     }
@@ -109,7 +109,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * Gets the accessPackageAssignmentResourceRoles property value. Represents the resource-specific role which a subject has been assigned through an access package assignment.
      * @return a accessPackageAssignmentResourceRole
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentResourceRole> getAccessPackageAssignmentResourceRoles() {
         return this.accessPackageAssignmentResourceRoles;
     }
@@ -117,7 +117,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * Gets the accessPackageAssignments property value. The assignment of an access package to a subject for a period of time.
      * @return a accessPackageAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignment> getAccessPackageAssignments() {
         return this.accessPackageAssignments;
     }
@@ -125,7 +125,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * Gets the accessPackageCatalogs property value. A container of access packages.
      * @return a accessPackageCatalog
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageCatalog> getAccessPackageCatalogs() {
         return this.accessPackageCatalogs;
     }
@@ -133,7 +133,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * Gets the accessPackageResourceEnvironments property value. A reference to the geolocation environment in which a resource is located.
      * @return a accessPackageResourceEnvironment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceEnvironment> getAccessPackageResourceEnvironments() {
         return this.accessPackageResourceEnvironments;
     }
@@ -141,7 +141,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * Gets the accessPackageResourceRequests property value. Represents a request to add or remove a resource to or from a catalog respectively.
      * @return a accessPackageResourceRequest
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceRequest> getAccessPackageResourceRequests() {
         return this.accessPackageResourceRequests;
     }
@@ -149,7 +149,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * Gets the accessPackageResourceRoleScopes property value. A reference to both a scope within a resource, and a role in that resource for that scope.
      * @return a accessPackageResourceRoleScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceRoleScope> getAccessPackageResourceRoleScopes() {
         return this.accessPackageResourceRoleScopes;
     }
@@ -157,7 +157,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * Gets the accessPackageResources property value. A reference to a resource associated with an access package catalog.
      * @return a accessPackageResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResource> getAccessPackageResources() {
         return this.accessPackageResources;
     }
@@ -165,7 +165,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * Gets the accessPackages property value. Represents access package objects.
      * @return a accessPackage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackage> getAccessPackages() {
         return this.accessPackages;
     }
@@ -173,7 +173,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * Gets the connectedOrganizations property value. Represents references to a directory or domain of another organization whose users can request access.
      * @return a connectedOrganization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ConnectedOrganization> getConnectedOrganizations() {
         return this.connectedOrganizations;
     }
@@ -181,7 +181,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackageAssignmentApprovals", (n) -> { this.setAccessPackageAssignmentApprovals(n.getCollectionOfObjectValues(Approval::createFromDiscriminatorValue)); });
@@ -204,7 +204,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * Gets the settings property value. Represents the settings that control the behavior of Azure AD entitlement management.
      * @return a entitlementManagementSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EntitlementManagementSettings getSettings() {
         return this.settings;
     }
@@ -212,7 +212,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * Gets the subjects property value. Represents the subjects within entitlement management.
      * @return a accessPackageSubject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageSubject> getSubjects() {
         return this.subjects;
     }
@@ -221,8 +221,8 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("accessPackageAssignmentApprovals", this.getAccessPackageAssignmentApprovals());
@@ -245,8 +245,8 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageAssignmentApprovals property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageAssignmentApprovals(@javax.annotation.Nullable final java.util.List<Approval> value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessPackageAssignmentApprovals(@jakarta.annotation.Nullable final java.util.List<Approval> value) {
         this.accessPackageAssignmentApprovals = value;
     }
     /**
@@ -254,8 +254,8 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageAssignmentPolicies property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageAssignmentPolicies(@javax.annotation.Nullable final java.util.List<AccessPackageAssignmentPolicy> value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessPackageAssignmentPolicies(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignmentPolicy> value) {
         this.accessPackageAssignmentPolicies = value;
     }
     /**
@@ -263,8 +263,8 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageAssignmentRequests property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageAssignmentRequests(@javax.annotation.Nullable final java.util.List<AccessPackageAssignmentRequest> value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessPackageAssignmentRequests(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignmentRequest> value) {
         this.accessPackageAssignmentRequests = value;
     }
     /**
@@ -272,8 +272,8 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageAssignmentResourceRoles property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageAssignmentResourceRoles(@javax.annotation.Nullable final java.util.List<AccessPackageAssignmentResourceRole> value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessPackageAssignmentResourceRoles(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignmentResourceRole> value) {
         this.accessPackageAssignmentResourceRoles = value;
     }
     /**
@@ -281,8 +281,8 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageAssignments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageAssignments(@javax.annotation.Nullable final java.util.List<AccessPackageAssignment> value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessPackageAssignments(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignment> value) {
         this.accessPackageAssignments = value;
     }
     /**
@@ -290,8 +290,8 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageCatalogs property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageCatalogs(@javax.annotation.Nullable final java.util.List<AccessPackageCatalog> value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessPackageCatalogs(@jakarta.annotation.Nullable final java.util.List<AccessPackageCatalog> value) {
         this.accessPackageCatalogs = value;
     }
     /**
@@ -299,8 +299,8 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResourceEnvironments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageResourceEnvironments(@javax.annotation.Nullable final java.util.List<AccessPackageResourceEnvironment> value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessPackageResourceEnvironments(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceEnvironment> value) {
         this.accessPackageResourceEnvironments = value;
     }
     /**
@@ -308,8 +308,8 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResourceRequests property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageResourceRequests(@javax.annotation.Nullable final java.util.List<AccessPackageResourceRequest> value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessPackageResourceRequests(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceRequest> value) {
         this.accessPackageResourceRequests = value;
     }
     /**
@@ -317,8 +317,8 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResourceRoleScopes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageResourceRoleScopes(@javax.annotation.Nullable final java.util.List<AccessPackageResourceRoleScope> value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessPackageResourceRoleScopes(@jakarta.annotation.Nullable final java.util.List<AccessPackageResourceRoleScope> value) {
         this.accessPackageResourceRoleScopes = value;
     }
     /**
@@ -326,8 +326,8 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageResources(@javax.annotation.Nullable final java.util.List<AccessPackageResource> value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessPackageResources(@jakarta.annotation.Nullable final java.util.List<AccessPackageResource> value) {
         this.accessPackageResources = value;
     }
     /**
@@ -335,8 +335,8 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackages property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackages(@javax.annotation.Nullable final java.util.List<AccessPackage> value) {
+    @jakarta.annotation.Nonnull
+    public void setAccessPackages(@jakarta.annotation.Nullable final java.util.List<AccessPackage> value) {
         this.accessPackages = value;
     }
     /**
@@ -344,8 +344,8 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the connectedOrganizations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectedOrganizations(@javax.annotation.Nullable final java.util.List<ConnectedOrganization> value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectedOrganizations(@jakarta.annotation.Nullable final java.util.List<ConnectedOrganization> value) {
         this.connectedOrganizations = value;
     }
     /**
@@ -353,8 +353,8 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettings(@javax.annotation.Nullable final EntitlementManagementSettings value) {
+    @jakarta.annotation.Nonnull
+    public void setSettings(@jakarta.annotation.Nullable final EntitlementManagementSettings value) {
         this.settings = value;
     }
     /**
@@ -362,8 +362,8 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the subjects property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubjects(@javax.annotation.Nullable final java.util.List<AccessPackageSubject> value) {
+    @jakarta.annotation.Nonnull
+    public void setSubjects(@jakarta.annotation.Nullable final java.util.List<AccessPackageSubject> value) {
         this.subjects = value;
     }
 }

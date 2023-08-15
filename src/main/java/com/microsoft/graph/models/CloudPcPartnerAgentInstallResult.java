@@ -36,7 +36,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      * Instantiates a new cloudPcPartnerAgentInstallResult and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcPartnerAgentInstallResult() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +45,8 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudPcPartnerAgentInstallResult
      */
-    @javax.annotation.Nonnull
-    public static CloudPcPartnerAgentInstallResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudPcPartnerAgentInstallResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudPcPartnerAgentInstallResult();
     }
@@ -54,7 +54,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +62,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("installStatus", (n) -> { this.setInstallStatus(n.getEnumValue(CloudPcPartnerAgentInstallStatus.class)); });
@@ -76,7 +76,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      * Gets the installStatus property value. The status of a partner agent installation. Possible values are: installed, installFailed, installing, uninstalling, uninstallFailed and licensed. Read-Only.
      * @return a cloudPcPartnerAgentInstallStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcPartnerAgentInstallStatus getInstallStatus() {
         return this.installStatus;
     }
@@ -84,7 +84,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      * Gets the isThirdPartyPartner property value. Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent.  When 'FALSE', the agent is a Microsoft agent or is not known.  The default value is 'FALSE'.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsThirdPartyPartner() {
         return this.isThirdPartyPartner;
     }
@@ -92,7 +92,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -100,7 +100,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      * Gets the partnerAgentName property value. Indicates the name of a partner agent and includes first-party and third-party. Currently, Citrix is the only third-party value. Read-Only.
      * @return a cloudPcPartnerAgentName
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcPartnerAgentName getPartnerAgentName() {
         return this.partnerAgentName;
     }
@@ -108,7 +108,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      * Gets the retriable property value. Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent. When 'FALSE', the agent is a Microsoft agent or is not known. The default value is 'FALSE'.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRetriable() {
         return this.retriable;
     }
@@ -117,8 +117,8 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("installStatus", this.getInstallStatus());
         writer.writeBooleanValue("isThirdPartyPartner", this.getIsThirdPartyPartner());
@@ -129,11 +129,11 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -141,8 +141,8 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      * @param value Value to set for the installStatus property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstallStatus(@javax.annotation.Nullable final CloudPcPartnerAgentInstallStatus value) {
+    @jakarta.annotation.Nonnull
+    public void setInstallStatus(@jakarta.annotation.Nullable final CloudPcPartnerAgentInstallStatus value) {
         this.installStatus = value;
     }
     /**
@@ -150,17 +150,17 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      * @param value Value to set for the isThirdPartyPartner property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsThirdPartyPartner(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsThirdPartyPartner(@jakarta.annotation.Nullable final Boolean value) {
         this.isThirdPartyPartner = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
@@ -168,8 +168,8 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      * @param value Value to set for the partnerAgentName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPartnerAgentName(@javax.annotation.Nullable final CloudPcPartnerAgentName value) {
+    @jakarta.annotation.Nonnull
+    public void setPartnerAgentName(@jakarta.annotation.Nullable final CloudPcPartnerAgentName value) {
         this.partnerAgentName = value;
     }
     /**
@@ -177,8 +177,8 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      * @param value Value to set for the retriable property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRetriable(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRetriable(@jakarta.annotation.Nullable final Boolean value) {
         this.retriable = value;
     }
 }

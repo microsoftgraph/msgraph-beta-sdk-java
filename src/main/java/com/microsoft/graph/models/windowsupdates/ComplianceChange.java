@@ -29,7 +29,7 @@ public class ComplianceChange extends Entity implements Parsable {
      * Instantiates a new complianceChange and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ComplianceChange() {
         super();
     }
@@ -38,8 +38,8 @@ public class ComplianceChange extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a complianceChange
      */
-    @javax.annotation.Nonnull
-    public static ComplianceChange createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ComplianceChange createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -54,7 +54,7 @@ public class ComplianceChange extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time when a compliance change was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -62,7 +62,7 @@ public class ComplianceChange extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -75,7 +75,7 @@ public class ComplianceChange extends Entity implements Parsable {
      * Gets the isRevoked property value. True indicates that a compliance change is revoked, preventing further application. Revoking a compliance change is a final action.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRevoked() {
         return this.isRevoked;
     }
@@ -83,7 +83,7 @@ public class ComplianceChange extends Entity implements Parsable {
      * Gets the revokedDateTime property value. The date and time when the compliance change was revoked.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRevokedDateTime() {
         return this.revokedDateTime;
     }
@@ -91,7 +91,7 @@ public class ComplianceChange extends Entity implements Parsable {
      * Gets the updatePolicy property value. The policy this compliance change is a member of.
      * @return a updatePolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UpdatePolicy getUpdatePolicy() {
         return this.updatePolicy;
     }
@@ -100,8 +100,8 @@ public class ComplianceChange extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -114,8 +114,8 @@ public class ComplianceChange extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
@@ -123,8 +123,8 @@ public class ComplianceChange extends Entity implements Parsable {
      * @param value Value to set for the isRevoked property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRevoked(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsRevoked(@jakarta.annotation.Nullable final Boolean value) {
         this.isRevoked = value;
     }
     /**
@@ -132,8 +132,8 @@ public class ComplianceChange extends Entity implements Parsable {
      * @param value Value to set for the revokedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRevokedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setRevokedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.revokedDateTime = value;
     }
     /**
@@ -141,8 +141,8 @@ public class ComplianceChange extends Entity implements Parsable {
      * @param value Value to set for the updatePolicy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdatePolicy(@javax.annotation.Nullable final UpdatePolicy value) {
+    @jakarta.annotation.Nonnull
+    public void setUpdatePolicy(@jakarta.annotation.Nullable final UpdatePolicy value) {
         this.updatePolicy = value;
     }
 }

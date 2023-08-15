@@ -114,7 +114,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Instantiates a new windows10VpnConfiguration and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Windows10VpnConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10VpnConfiguration");
@@ -124,8 +124,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windows10VpnConfiguration
      */
-    @javax.annotation.Nonnull
-    public static Windows10VpnConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Windows10VpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Windows10VpnConfiguration();
     }
@@ -133,7 +133,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the associatedApps property value. Associated Apps. This collection can contain a maximum of 10000 elements.
      * @return a windows10AssociatedApps
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Windows10AssociatedApps> getAssociatedApps() {
         return this.associatedApps;
     }
@@ -141,7 +141,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the authenticationMethod property value. Windows 10 VPN connection types.
      * @return a windows10VpnAuthenticationMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Windows10VpnAuthenticationMethod getAuthenticationMethod() {
         return this.authenticationMethod;
     }
@@ -149,7 +149,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the connectionType property value. VPN connection types.
      * @return a windows10VpnConnectionType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Windows10VpnConnectionType getConnectionType() {
         return this.connectionType;
     }
@@ -157,7 +157,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the cryptographySuite property value. Cryptography Suite security settings for IKEv2 VPN in Windows10 and above
      * @return a cryptographySuite
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CryptographySuite getCryptographySuite() {
         return this.cryptographySuite;
     }
@@ -165,7 +165,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the dnsRules property value. DNS rules. This collection can contain a maximum of 1000 elements.
      * @return a vpnDnsRule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<VpnDnsRule> getDnsRules() {
         return this.dnsRules;
     }
@@ -173,7 +173,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the dnsSuffixes property value. Specify DNS suffixes to add to the DNS search list to properly route short names.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getDnsSuffixes() {
         return this.dnsSuffixes;
     }
@@ -181,7 +181,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the eapXml property value. Extensible Authentication Protocol (EAP) XML. (UTF8 encoded byte array)
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getEapXml() {
         return this.eapXml;
     }
@@ -189,7 +189,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the enableAlwaysOn property value. Enable Always On mode.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableAlwaysOn() {
         return this.enableAlwaysOn;
     }
@@ -197,7 +197,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the enableConditionalAccess property value. Enable conditional access.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableConditionalAccess() {
         return this.enableConditionalAccess;
     }
@@ -205,7 +205,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the enableDeviceTunnel property value. Enable device tunnel.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableDeviceTunnel() {
         return this.enableDeviceTunnel;
     }
@@ -213,7 +213,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the enableDnsRegistration property value. Enable IP address registration with internal DNS.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableDnsRegistration() {
         return this.enableDnsRegistration;
     }
@@ -221,7 +221,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the enableSingleSignOnWithAlternateCertificate property value. Enable single sign-on (SSO) with alternate certificate.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableSingleSignOnWithAlternateCertificate() {
         return this.enableSingleSignOnWithAlternateCertificate;
     }
@@ -229,7 +229,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the enableSplitTunneling property value. Enable split tunneling.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableSplitTunneling() {
         return this.enableSplitTunneling;
     }
@@ -237,7 +237,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("associatedApps", (n) -> { this.setAssociatedApps(n.getCollectionOfObjectValues(Windows10AssociatedApps::createFromDiscriminatorValue)); });
@@ -271,7 +271,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
      * @return a windowsCertificateProfileBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsCertificateProfileBase getIdentityCertificate() {
         return this.identityCertificate;
     }
@@ -279,7 +279,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the microsoftTunnelSiteId property value. ID of the Microsoft Tunnel site associated with the VPN profile.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMicrosoftTunnelSiteId() {
         return this.microsoftTunnelSiteId;
     }
@@ -287,7 +287,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the onlyAssociatedAppsCanUseConnection property value. Only associated Apps can use connection (per-app VPN).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getOnlyAssociatedAppsCanUseConnection() {
         return this.onlyAssociatedAppsCanUseConnection;
     }
@@ -295,7 +295,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the profileTarget property value. Profile target type. Possible values are: user, device, autoPilotDevice.
      * @return a windows10VpnProfileTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Windows10VpnProfileTarget getProfileTarget() {
         return this.profileTarget;
     }
@@ -303,7 +303,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the proxyServer property value. Proxy Server.
      * @return a windows10VpnProxyServer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Windows10VpnProxyServer getProxyServer() {
         return this.proxyServer;
     }
@@ -311,7 +311,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the rememberUserCredentials property value. Remember user credentials.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRememberUserCredentials() {
         return this.rememberUserCredentials;
     }
@@ -319,7 +319,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the routes property value. Routes (optional for third-party providers). This collection can contain a maximum of 1000 elements.
      * @return a vpnRoute
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<VpnRoute> getRoutes() {
         return this.routes;
     }
@@ -327,7 +327,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the singleSignOnEku property value. Single sign-on Extended Key Usage (EKU).
      * @return a extendedKeyUsage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExtendedKeyUsage getSingleSignOnEku() {
         return this.singleSignOnEku;
     }
@@ -335,7 +335,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the singleSignOnIssuerHash property value. Single sign-on issuer hash.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSingleSignOnIssuerHash() {
         return this.singleSignOnIssuerHash;
     }
@@ -343,7 +343,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the trafficRules property value. Traffic rules. This collection can contain a maximum of 1000 elements.
      * @return a vpnTrafficRule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<VpnTrafficRule> getTrafficRules() {
         return this.trafficRules;
     }
@@ -351,7 +351,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the trustedNetworkDomains property value. Trusted Network Domains
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTrustedNetworkDomains() {
         return this.trustedNetworkDomains;
     }
@@ -359,7 +359,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Gets the windowsInformationProtectionDomain property value. Windows Information Protection (WIP) domain to associate with this connection.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWindowsInformationProtectionDomain() {
         return this.windowsInformationProtectionDomain;
     }
@@ -368,8 +368,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("associatedApps", this.getAssociatedApps());
@@ -403,8 +403,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the associatedApps property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssociatedApps(@javax.annotation.Nullable final java.util.List<Windows10AssociatedApps> value) {
+    @jakarta.annotation.Nonnull
+    public void setAssociatedApps(@jakarta.annotation.Nullable final java.util.List<Windows10AssociatedApps> value) {
         this.associatedApps = value;
     }
     /**
@@ -412,8 +412,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationMethod(@javax.annotation.Nullable final Windows10VpnAuthenticationMethod value) {
+    @jakarta.annotation.Nonnull
+    public void setAuthenticationMethod(@jakarta.annotation.Nullable final Windows10VpnAuthenticationMethod value) {
         this.authenticationMethod = value;
     }
     /**
@@ -421,8 +421,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the connectionType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectionType(@javax.annotation.Nullable final Windows10VpnConnectionType value) {
+    @jakarta.annotation.Nonnull
+    public void setConnectionType(@jakarta.annotation.Nullable final Windows10VpnConnectionType value) {
         this.connectionType = value;
     }
     /**
@@ -430,8 +430,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the cryptographySuite property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCryptographySuite(@javax.annotation.Nullable final CryptographySuite value) {
+    @jakarta.annotation.Nonnull
+    public void setCryptographySuite(@jakarta.annotation.Nullable final CryptographySuite value) {
         this.cryptographySuite = value;
     }
     /**
@@ -439,8 +439,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the dnsRules property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDnsRules(@javax.annotation.Nullable final java.util.List<VpnDnsRule> value) {
+    @jakarta.annotation.Nonnull
+    public void setDnsRules(@jakarta.annotation.Nullable final java.util.List<VpnDnsRule> value) {
         this.dnsRules = value;
     }
     /**
@@ -448,8 +448,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the dnsSuffixes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDnsSuffixes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setDnsSuffixes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.dnsSuffixes = value;
     }
     /**
@@ -457,8 +457,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the eapXml property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEapXml(@javax.annotation.Nullable final byte[] value) {
+    @jakarta.annotation.Nonnull
+    public void setEapXml(@jakarta.annotation.Nullable final byte[] value) {
         this.eapXml = value;
     }
     /**
@@ -466,8 +466,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the enableAlwaysOn property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableAlwaysOn(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnableAlwaysOn(@jakarta.annotation.Nullable final Boolean value) {
         this.enableAlwaysOn = value;
     }
     /**
@@ -475,8 +475,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the enableConditionalAccess property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableConditionalAccess(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnableConditionalAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.enableConditionalAccess = value;
     }
     /**
@@ -484,8 +484,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the enableDeviceTunnel property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableDeviceTunnel(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnableDeviceTunnel(@jakarta.annotation.Nullable final Boolean value) {
         this.enableDeviceTunnel = value;
     }
     /**
@@ -493,8 +493,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the enableDnsRegistration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableDnsRegistration(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnableDnsRegistration(@jakarta.annotation.Nullable final Boolean value) {
         this.enableDnsRegistration = value;
     }
     /**
@@ -502,8 +502,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the enableSingleSignOnWithAlternateCertificate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableSingleSignOnWithAlternateCertificate(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnableSingleSignOnWithAlternateCertificate(@jakarta.annotation.Nullable final Boolean value) {
         this.enableSingleSignOnWithAlternateCertificate = value;
     }
     /**
@@ -511,8 +511,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the enableSplitTunneling property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableSplitTunneling(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setEnableSplitTunneling(@jakarta.annotation.Nullable final Boolean value) {
         this.enableSplitTunneling = value;
     }
     /**
@@ -520,8 +520,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the identityCertificate property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityCertificate(@javax.annotation.Nullable final WindowsCertificateProfileBase value) {
+    @jakarta.annotation.Nonnull
+    public void setIdentityCertificate(@jakarta.annotation.Nullable final WindowsCertificateProfileBase value) {
         this.identityCertificate = value;
     }
     /**
@@ -529,8 +529,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the microsoftTunnelSiteId property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMicrosoftTunnelSiteId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setMicrosoftTunnelSiteId(@jakarta.annotation.Nullable final String value) {
         this.microsoftTunnelSiteId = value;
     }
     /**
@@ -538,8 +538,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the onlyAssociatedAppsCanUseConnection property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnlyAssociatedAppsCanUseConnection(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setOnlyAssociatedAppsCanUseConnection(@jakarta.annotation.Nullable final Boolean value) {
         this.onlyAssociatedAppsCanUseConnection = value;
     }
     /**
@@ -547,8 +547,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the profileTarget property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProfileTarget(@javax.annotation.Nullable final Windows10VpnProfileTarget value) {
+    @jakarta.annotation.Nonnull
+    public void setProfileTarget(@jakarta.annotation.Nullable final Windows10VpnProfileTarget value) {
         this.profileTarget = value;
     }
     /**
@@ -556,8 +556,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the proxyServer property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProxyServer(@javax.annotation.Nullable final Windows10VpnProxyServer value) {
+    @jakarta.annotation.Nonnull
+    public void setProxyServer(@jakarta.annotation.Nullable final Windows10VpnProxyServer value) {
         this.proxyServer = value;
     }
     /**
@@ -565,8 +565,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the rememberUserCredentials property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRememberUserCredentials(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setRememberUserCredentials(@jakarta.annotation.Nullable final Boolean value) {
         this.rememberUserCredentials = value;
     }
     /**
@@ -574,8 +574,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the routes property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoutes(@javax.annotation.Nullable final java.util.List<VpnRoute> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoutes(@jakarta.annotation.Nullable final java.util.List<VpnRoute> value) {
         this.routes = value;
     }
     /**
@@ -583,8 +583,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the singleSignOnEku property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSingleSignOnEku(@javax.annotation.Nullable final ExtendedKeyUsage value) {
+    @jakarta.annotation.Nonnull
+    public void setSingleSignOnEku(@jakarta.annotation.Nullable final ExtendedKeyUsage value) {
         this.singleSignOnEku = value;
     }
     /**
@@ -592,8 +592,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the singleSignOnIssuerHash property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSingleSignOnIssuerHash(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setSingleSignOnIssuerHash(@jakarta.annotation.Nullable final String value) {
         this.singleSignOnIssuerHash = value;
     }
     /**
@@ -601,8 +601,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the trafficRules property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrafficRules(@javax.annotation.Nullable final java.util.List<VpnTrafficRule> value) {
+    @jakarta.annotation.Nonnull
+    public void setTrafficRules(@jakarta.annotation.Nullable final java.util.List<VpnTrafficRule> value) {
         this.trafficRules = value;
     }
     /**
@@ -610,8 +610,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the trustedNetworkDomains property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrustedNetworkDomains(@javax.annotation.Nullable final java.util.List<String> value) {
+    @jakarta.annotation.Nonnull
+    public void setTrustedNetworkDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.trustedNetworkDomains = value;
     }
     /**
@@ -619,8 +619,8 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * @param value Value to set for the windowsInformationProtectionDomain property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindowsInformationProtectionDomain(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setWindowsInformationProtectionDomain(@jakarta.annotation.Nullable final String value) {
         this.windowsInformationProtectionDomain = value;
     }
 }

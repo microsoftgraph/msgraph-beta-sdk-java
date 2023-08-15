@@ -22,7 +22,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAut
      * Instantiates a new activeDirectoryWindowsAutopilotDeploymentProfile and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ActiveDirectoryWindowsAutopilotDeploymentProfile() {
         super();
         this.setOdataType("#microsoft.graph.activeDirectoryWindowsAutopilotDeploymentProfile");
@@ -32,8 +32,8 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAut
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a activeDirectoryWindowsAutopilotDeploymentProfile
      */
-    @javax.annotation.Nonnull
-    public static ActiveDirectoryWindowsAutopilotDeploymentProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ActiveDirectoryWindowsAutopilotDeploymentProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ActiveDirectoryWindowsAutopilotDeploymentProfile();
     }
@@ -41,7 +41,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAut
      * Gets the domainJoinConfiguration property value. Configuration to join Active Directory domain
      * @return a windowsDomainJoinConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsDomainJoinConfiguration getDomainJoinConfiguration() {
         return this.domainJoinConfiguration;
     }
@@ -49,7 +49,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAut
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("domainJoinConfiguration", (n) -> { this.setDomainJoinConfiguration(n.getObjectValue(WindowsDomainJoinConfiguration::createFromDiscriminatorValue)); });
@@ -60,7 +60,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAut
      * Gets the hybridAzureADJoinSkipConnectivityCheck property value. The Autopilot Hybrid Azure AD join flow will continue even if it does not establish domain controller connectivity during OOBE.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHybridAzureADJoinSkipConnectivityCheck() {
         return this.hybridAzureADJoinSkipConnectivityCheck;
     }
@@ -69,8 +69,8 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAut
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("domainJoinConfiguration", this.getDomainJoinConfiguration());
@@ -81,8 +81,8 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAut
      * @param value Value to set for the domainJoinConfiguration property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDomainJoinConfiguration(@javax.annotation.Nullable final WindowsDomainJoinConfiguration value) {
+    @jakarta.annotation.Nonnull
+    public void setDomainJoinConfiguration(@jakarta.annotation.Nullable final WindowsDomainJoinConfiguration value) {
         this.domainJoinConfiguration = value;
     }
     /**
@@ -90,8 +90,8 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAut
      * @param value Value to set for the hybridAzureADJoinSkipConnectivityCheck property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHybridAzureADJoinSkipConnectivityCheck(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setHybridAzureADJoinSkipConnectivityCheck(@jakarta.annotation.Nullable final Boolean value) {
         this.hybridAzureADJoinSkipConnectivityCheck = value;
     }
 }

@@ -32,7 +32,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * Instantiates a new outlookTaskGroup and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OutlookTaskGroup() {
         super();
     }
@@ -41,8 +41,8 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a outlookTaskGroup
      */
-    @javax.annotation.Nonnull
-    public static OutlookTaskGroup createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OutlookTaskGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OutlookTaskGroup();
     }
@@ -50,7 +50,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * Gets the changeKey property value. The version of the task group.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getChangeKey() {
         return this.changeKey;
     }
@@ -58,7 +58,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("changeKey", (n) -> { this.setChangeKey(n.getStringValue()); });
@@ -72,7 +72,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * Gets the groupKey property value. The unique GUID identifier for the task group.
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getGroupKey() {
         return this.groupKey;
     }
@@ -80,7 +80,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * Gets the isDefaultGroup property value. True if the task group is the default task group.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDefaultGroup() {
         return this.isDefaultGroup;
     }
@@ -88,7 +88,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * Gets the name property value. The name of the task group.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -96,7 +96,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * Gets the taskFolders property value. The collection of task folders in the task group. Read-only. Nullable.
      * @return a outlookTaskFolder
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OutlookTaskFolder> getTaskFolders() {
         return this.taskFolders;
     }
@@ -105,8 +105,8 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("changeKey", this.getChangeKey());
@@ -120,8 +120,8 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * @param value Value to set for the changeKey property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChangeKey(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setChangeKey(@jakarta.annotation.Nullable final String value) {
         this.changeKey = value;
     }
     /**
@@ -129,8 +129,8 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * @param value Value to set for the groupKey property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupKey(@javax.annotation.Nullable final UUID value) {
+    @jakarta.annotation.Nonnull
+    public void setGroupKey(@jakarta.annotation.Nullable final UUID value) {
         this.groupKey = value;
     }
     /**
@@ -138,8 +138,8 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * @param value Value to set for the isDefaultGroup property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDefaultGroup(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setIsDefaultGroup(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefaultGroup = value;
     }
     /**
@@ -147,8 +147,8 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
@@ -156,8 +156,8 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * @param value Value to set for the taskFolders property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTaskFolders(@javax.annotation.Nullable final java.util.List<OutlookTaskFolder> value) {
+    @jakarta.annotation.Nonnull
+    public void setTaskFolders(@jakarta.annotation.Nullable final java.util.List<OutlookTaskFolder> value) {
         this.taskFolders = value;
     }
 }

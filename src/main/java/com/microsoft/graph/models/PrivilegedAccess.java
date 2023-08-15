@@ -35,7 +35,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * Instantiates a new privilegedAccess and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrivilegedAccess() {
         super();
     }
@@ -44,8 +44,8 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a privilegedAccess
      */
-    @javax.annotation.Nonnull
-    public static PrivilegedAccess createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrivilegedAccess createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PrivilegedAccess();
     }
@@ -53,7 +53,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * Gets the displayName property value. The display name of the provider managed by PIM.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -61,7 +61,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -76,7 +76,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * Gets the resources property value. A collection of resources for the provider.
      * @return a governanceResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GovernanceResource> getResources() {
         return this.resources;
     }
@@ -84,7 +84,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * Gets the roleAssignmentRequests property value. A collection of role assignment requests for the provider.
      * @return a governanceRoleAssignmentRequest
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleAssignmentRequest> getRoleAssignmentRequests() {
         return this.roleAssignmentRequests;
     }
@@ -92,7 +92,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * Gets the roleAssignments property value. A collection of role assignments for the provider.
      * @return a governanceRoleAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleAssignment> getRoleAssignments() {
         return this.roleAssignments;
     }
@@ -100,7 +100,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * Gets the roleDefinitions property value. A collection of role defintions for the provider.
      * @return a governanceRoleDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleDefinition> getRoleDefinitions() {
         return this.roleDefinitions;
     }
@@ -108,7 +108,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * Gets the roleSettings property value. A collection of role settings for the provider.
      * @return a governanceRoleSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleSetting> getRoleSettings() {
         return this.roleSettings;
     }
@@ -117,8 +117,8 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -133,8 +133,8 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -142,8 +142,8 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * @param value Value to set for the resources property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResources(@javax.annotation.Nullable final java.util.List<GovernanceResource> value) {
+    @jakarta.annotation.Nonnull
+    public void setResources(@jakarta.annotation.Nullable final java.util.List<GovernanceResource> value) {
         this.resources = value;
     }
     /**
@@ -151,8 +151,8 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * @param value Value to set for the roleAssignmentRequests property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleAssignmentRequests(@javax.annotation.Nullable final java.util.List<GovernanceRoleAssignmentRequest> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleAssignmentRequests(@jakarta.annotation.Nullable final java.util.List<GovernanceRoleAssignmentRequest> value) {
         this.roleAssignmentRequests = value;
     }
     /**
@@ -160,8 +160,8 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * @param value Value to set for the roleAssignments property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleAssignments(@javax.annotation.Nullable final java.util.List<GovernanceRoleAssignment> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleAssignments(@jakarta.annotation.Nullable final java.util.List<GovernanceRoleAssignment> value) {
         this.roleAssignments = value;
     }
     /**
@@ -169,8 +169,8 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * @param value Value to set for the roleDefinitions property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinitions(@javax.annotation.Nullable final java.util.List<GovernanceRoleDefinition> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleDefinitions(@jakarta.annotation.Nullable final java.util.List<GovernanceRoleDefinition> value) {
         this.roleDefinitions = value;
     }
     /**
@@ -178,8 +178,8 @@ public class PrivilegedAccess extends Entity implements Parsable {
      * @param value Value to set for the roleSettings property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleSettings(@javax.annotation.Nullable final java.util.List<GovernanceRoleSetting> value) {
+    @jakarta.annotation.Nonnull
+    public void setRoleSettings(@jakarta.annotation.Nullable final java.util.List<GovernanceRoleSetting> value) {
         this.roleSettings = value;
     }
 }

@@ -44,7 +44,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * Instantiates a new groupPolicyUploadedLanguageFile and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GroupPolicyUploadedLanguageFile() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +53,8 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a groupPolicyUploadedLanguageFile
      */
-    @javax.annotation.Nonnull
-    public static GroupPolicyUploadedLanguageFile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GroupPolicyUploadedLanguageFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GroupPolicyUploadedLanguageFile();
     }
@@ -62,7 +62,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +70,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * Gets the content property value. The contents of the uploaded ADML file.
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getContent() {
         return this.content;
     }
@@ -78,7 +78,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
@@ -93,7 +93,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * Gets the fileName property value. The file name of the uploaded ADML file.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFileName() {
         return this.fileName;
     }
@@ -101,7 +101,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * Gets the id property value. Key of the entity.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -109,7 +109,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * Gets the languageCode property value. The language code of the uploaded ADML file.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLanguageCode() {
         return this.languageCode;
     }
@@ -117,7 +117,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -125,7 +125,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -134,8 +134,8 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("content", this.getContent());
         writer.writeStringValue("fileName", this.getFileName());
@@ -147,11 +147,11 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    @jakarta.annotation.Nonnull
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
@@ -159,8 +159,8 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * @param value Value to set for the content property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContent(@javax.annotation.Nullable final byte[] value) {
+    @jakarta.annotation.Nonnull
+    public void setContent(@jakarta.annotation.Nullable final byte[] value) {
         this.content = value;
     }
     /**
@@ -168,8 +168,8 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * @param value Value to set for the fileName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setFileName(@jakarta.annotation.Nullable final String value) {
         this.fileName = value;
     }
     /**
@@ -177,8 +177,8 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * @param value Value to set for the id property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
@@ -186,8 +186,8 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * @param value Value to set for the languageCode property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLanguageCode(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setLanguageCode(@jakarta.annotation.Nullable final String value) {
         this.languageCode = value;
     }
     /**
@@ -195,17 +195,17 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    @jakarta.annotation.Nonnull
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

@@ -43,7 +43,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * Instantiates a new cloudPcServicePlan and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcServicePlan() {
         super();
     }
@@ -52,8 +52,8 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudPcServicePlan
      */
-    @javax.annotation.Nonnull
-    public static CloudPcServicePlan createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudPcServicePlan createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudPcServicePlan();
     }
@@ -61,7 +61,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * Gets the displayName property value. The name for the service plan. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -69,7 +69,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -86,7 +86,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * Gets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs. By default, the license type is dedicated. Possible values are: dedicated, shared, unknownFutureValue.
      * @return a cloudPcProvisioningType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcProvisioningType getProvisioningType() {
         return this.provisioningType;
     }
@@ -94,7 +94,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * Gets the ramInGB property value. The size of the RAM in GB. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRamInGB() {
         return this.ramInGB;
     }
@@ -102,7 +102,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * Gets the storageInGB property value. The size of the OS Disk in GB. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getStorageInGB() {
         return this.storageInGB;
     }
@@ -110,7 +110,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * Gets the supportedSolution property value. The supportedSolution property
      * @return a cloudPcManagementService
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcManagementService getSupportedSolution() {
         return this.supportedSolution;
     }
@@ -118,7 +118,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * Gets the type property value. The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
      * @return a cloudPcServicePlanType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcServicePlanType getType() {
         return this.type;
     }
@@ -126,7 +126,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * Gets the userProfileInGB property value. The size of the user profile disk in GB. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getUserProfileInGB() {
         return this.userProfileInGB;
     }
@@ -134,7 +134,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * Gets the vCpuCount property value. The number of vCPUs. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getVCpuCount() {
         return this.vCpuCount;
     }
@@ -143,8 +143,8 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -161,8 +161,8 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
@@ -170,8 +170,8 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * @param value Value to set for the provisioningType property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProvisioningType(@javax.annotation.Nullable final CloudPcProvisioningType value) {
+    @jakarta.annotation.Nonnull
+    public void setProvisioningType(@jakarta.annotation.Nullable final CloudPcProvisioningType value) {
         this.provisioningType = value;
     }
     /**
@@ -179,8 +179,8 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * @param value Value to set for the ramInGB property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRamInGB(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setRamInGB(@jakarta.annotation.Nullable final Integer value) {
         this.ramInGB = value;
     }
     /**
@@ -188,8 +188,8 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * @param value Value to set for the storageInGB property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStorageInGB(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setStorageInGB(@jakarta.annotation.Nullable final Integer value) {
         this.storageInGB = value;
     }
     /**
@@ -197,8 +197,8 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * @param value Value to set for the supportedSolution property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedSolution(@javax.annotation.Nullable final CloudPcManagementService value) {
+    @jakarta.annotation.Nonnull
+    public void setSupportedSolution(@jakarta.annotation.Nullable final CloudPcManagementService value) {
         this.supportedSolution = value;
     }
     /**
@@ -206,8 +206,8 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final CloudPcServicePlanType value) {
+    @jakarta.annotation.Nonnull
+    public void setType(@jakarta.annotation.Nullable final CloudPcServicePlanType value) {
         this.type = value;
     }
     /**
@@ -215,8 +215,8 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * @param value Value to set for the userProfileInGB property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserProfileInGB(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setUserProfileInGB(@jakarta.annotation.Nullable final Integer value) {
         this.userProfileInGB = value;
     }
     /**
@@ -224,8 +224,8 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * @param value Value to set for the vCpuCount property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVCpuCount(@javax.annotation.Nullable final Integer value) {
+    @jakarta.annotation.Nonnull
+    public void setVCpuCount(@jakarta.annotation.Nullable final Integer value) {
         this.vCpuCount = value;
     }
 }

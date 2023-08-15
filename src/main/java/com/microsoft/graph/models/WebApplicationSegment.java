@@ -27,7 +27,7 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
      * Instantiates a new webApplicationSegment and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WebApplicationSegment() {
         super();
         this.setOdataType("#microsoft.graph.webApplicationSegment");
@@ -37,8 +37,8 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a webApplicationSegment
      */
-    @javax.annotation.Nonnull
-    public static WebApplicationSegment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WebApplicationSegment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WebApplicationSegment();
     }
@@ -46,7 +46,7 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
      * Gets the alternateUrl property value. If you're configuring a traffic manager in front of multiple App Proxy application segments, this property contains the user-friendly URL that will point to the traffic manager.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAlternateUrl() {
         return this.alternateUrl;
     }
@@ -54,7 +54,7 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
      * Gets the corsConfigurations property value. A collection of CORS Rule definitions for a particular application segment.
      * @return a CorsConfigurationV2
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CorsConfigurationV2> getCorsConfigurations() {
         return this.corsConfigurations;
     }
@@ -62,7 +62,7 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
      * Gets the externalUrl property value. The published external URL for the application segment; for example, https://intranet.contoso.com/.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalUrl() {
         return this.externalUrl;
     }
@@ -70,7 +70,7 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alternateUrl", (n) -> { this.setAlternateUrl(n.getStringValue()); });
@@ -83,7 +83,7 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
      * Gets the internalUrl property value. The internal URL of the application segment; for example, https://intranet/.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInternalUrl() {
         return this.internalUrl;
     }
@@ -92,8 +92,8 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("alternateUrl", this.getAlternateUrl());
@@ -106,8 +106,8 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
      * @param value Value to set for the alternateUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlternateUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setAlternateUrl(@jakarta.annotation.Nullable final String value) {
         this.alternateUrl = value;
     }
     /**
@@ -115,8 +115,8 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
      * @param value Value to set for the corsConfigurations property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCorsConfigurations(@javax.annotation.Nullable final java.util.List<CorsConfigurationV2> value) {
+    @jakarta.annotation.Nonnull
+    public void setCorsConfigurations(@jakarta.annotation.Nullable final java.util.List<CorsConfigurationV2> value) {
         this.corsConfigurations = value;
     }
     /**
@@ -124,8 +124,8 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
      * @param value Value to set for the externalUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setExternalUrl(@jakarta.annotation.Nullable final String value) {
         this.externalUrl = value;
     }
     /**
@@ -133,8 +133,8 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
      * @param value Value to set for the internalUrl property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInternalUrl(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setInternalUrl(@jakarta.annotation.Nullable final String value) {
         this.internalUrl = value;
     }
 }

@@ -18,10 +18,10 @@ public enum AndroidDeviceOwnerEnrollmentMode implements ValuedEnum {
     AndroidDeviceOwnerEnrollmentMode(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidDeviceOwnerEnrollmentMode forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidDeviceOwnerEnrollmentMode forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "corporateOwnedDedicatedDevice": return CorporateOwnedDedicatedDevice;

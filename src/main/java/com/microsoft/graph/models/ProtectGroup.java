@@ -23,7 +23,7 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
      * Instantiates a new protectGroup and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ProtectGroup() {
         super();
         this.setOdataType("#microsoft.graph.protectGroup");
@@ -33,8 +33,8 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a protectGroup
      */
-    @javax.annotation.Nonnull
-    public static ProtectGroup createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ProtectGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ProtectGroup();
     }
@@ -42,7 +42,7 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
      * Gets the allowEmailFromGuestUsers property value. The allowEmailFromGuestUsers property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowEmailFromGuestUsers() {
         return this.allowEmailFromGuestUsers;
     }
@@ -50,7 +50,7 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
      * Gets the allowGuestUsers property value. The allowGuestUsers property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowGuestUsers() {
         return this.allowGuestUsers;
     }
@@ -58,7 +58,7 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowEmailFromGuestUsers", (n) -> { this.setAllowEmailFromGuestUsers(n.getBooleanValue()); });
@@ -70,7 +70,7 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
      * Gets the privacy property value. The privacy property
      * @return a groupPrivacy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GroupPrivacy getPrivacy() {
         return this.privacy;
     }
@@ -79,8 +79,8 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("allowEmailFromGuestUsers", this.getAllowEmailFromGuestUsers());
@@ -92,8 +92,8 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
      * @param value Value to set for the allowEmailFromGuestUsers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowEmailFromGuestUsers(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowEmailFromGuestUsers(@jakarta.annotation.Nullable final Boolean value) {
         this.allowEmailFromGuestUsers = value;
     }
     /**
@@ -101,8 +101,8 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
      * @param value Value to set for the allowGuestUsers property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowGuestUsers(@javax.annotation.Nullable final Boolean value) {
+    @jakarta.annotation.Nonnull
+    public void setAllowGuestUsers(@jakarta.annotation.Nullable final Boolean value) {
         this.allowGuestUsers = value;
     }
     /**
@@ -110,8 +110,8 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
      * @param value Value to set for the privacy property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrivacy(@javax.annotation.Nullable final GroupPrivacy value) {
+    @jakarta.annotation.Nonnull
+    public void setPrivacy(@jakarta.annotation.Nullable final GroupPrivacy value) {
         this.privacy = value;
     }
 }

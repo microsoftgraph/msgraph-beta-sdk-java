@@ -18,7 +18,7 @@ public class DeviceManagementConfigurationReferenceSettingValue extends DeviceMa
      * Instantiates a new deviceManagementConfigurationReferenceSettingValue and sets the default values.
      * @return a void
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationReferenceSettingValue() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationReferenceSettingValue");
@@ -28,8 +28,8 @@ public class DeviceManagementConfigurationReferenceSettingValue extends DeviceMa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationReferenceSettingValue
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationReferenceSettingValue createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationReferenceSettingValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationReferenceSettingValue();
     }
@@ -37,7 +37,7 @@ public class DeviceManagementConfigurationReferenceSettingValue extends DeviceMa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("note", (n) -> { this.setNote(n.getStringValue()); });
@@ -47,7 +47,7 @@ public class DeviceManagementConfigurationReferenceSettingValue extends DeviceMa
      * Gets the note property value. A note that admin can use to put some contextual information
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNote() {
         return this.note;
     }
@@ -56,8 +56,8 @@ public class DeviceManagementConfigurationReferenceSettingValue extends DeviceMa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    @jakarta.annotation.Nonnull
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("note", this.getNote());
@@ -67,8 +67,8 @@ public class DeviceManagementConfigurationReferenceSettingValue extends DeviceMa
      * @param value Value to set for the note property.
      * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNote(@javax.annotation.Nullable final String value) {
+    @jakarta.annotation.Nonnull
+    public void setNote(@jakarta.annotation.Nullable final String value) {
         this.note = value;
     }
 }
