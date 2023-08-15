@@ -44,6 +44,10 @@ public enum CloudPcReportName
     */
     REMOTE_CONNECTION_QUALITY_REPORTS,
     /**
+    * inaccessible Cloud Pc Reports
+    */
+    INACCESSIBLE_CLOUD_PC_REPORTS,
+    /**
     * For CloudPcReportName values that were not expected from the service
     */
     UNEXPECTED_VALUE

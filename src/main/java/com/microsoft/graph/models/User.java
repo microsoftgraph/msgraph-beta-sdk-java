@@ -166,7 +166,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Cloud Realtime Communication Info.
-     * 
+     * Microsoft realtime communication information related to the user.  Supports $filter (eq, ne,not).
      */
     @SerializedName(value = "cloudRealtimeCommunicationInfo", alternate = {"CloudRealtimeCommunicationInfo"})
     @Expose
@@ -535,7 +535,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sip Info.
-     * 
+     * Contains all on-premises Session Initiation Protocol (SIP) information related to the user. Read-only.
      */
     @SerializedName(value = "onPremisesSipInfo", alternate = {"OnPremisesSipInfo"})
     @Expose
@@ -1387,7 +1387,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Permission Grants.
-     * 
+     * List all resource-specific permission grants of a user.
      */
     @SerializedName(value = "permissionGrants", alternate = {"PermissionGrants"})
     @Expose

@@ -41,7 +41,7 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Profile Card Properties.
-     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization.
+     * 
      */
     @SerializedName(value = "profileCardProperties", alternate = {"ProfileCardProperties"})
     @Expose

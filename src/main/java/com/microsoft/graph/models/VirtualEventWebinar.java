@@ -11,8 +11,9 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MeetingAudience;
 import com.microsoft.graph.models.CommunicationsUserIdentity;
-import com.microsoft.graph.models.VirtualEventRegistration;
+import com.microsoft.graph.models.VirtualEventRegistrationConfiguration;
 import com.microsoft.graph.models.VirtualEvent;
+import com.microsoft.graph.requests.VirtualEventRegistrationCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -48,13 +49,22 @@ public class VirtualEventWebinar extends VirtualEvent implements IJsonBackedObje
     public java.util.List<CommunicationsUserIdentity> coOrganizers;
 
     /**
-     * The Registration.
-     * Registration configuration of the webinar.
+     * The Registration Configuration.
+     * 
      */
-    @SerializedName(value = "registration", alternate = {"Registration"})
+    @SerializedName(value = "registrationConfiguration", alternate = {"RegistrationConfiguration"})
     @Expose
 	@Nullable
-    public VirtualEventRegistration registration;
+    public VirtualEventRegistrationConfiguration registrationConfiguration;
+
+    /**
+     * The Registrations.
+     * 
+     */
+    @SerializedName(value = "registrations", alternate = {"Registrations"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.VirtualEventRegistrationCollectionPage registrations;
 
 
     /**
@@ -65,5 +75,9 @@ public class VirtualEventWebinar extends VirtualEvent implements IJsonBackedObje
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("registrations")) {
+            registrations = serializer.deserializeObject(json.get("registrations"), com.microsoft.graph.requests.VirtualEventRegistrationCollectionPage.class);
+        }
     }
 }

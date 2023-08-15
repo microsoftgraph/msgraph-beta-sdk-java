@@ -58,16 +58,6 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder<OnlineMeetin
     }
 
 
-
-    /**
-     * Gets the request builder for VirtualAppointment
-     *
-     * @return the VirtualAppointmentRequestBuilder instance
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.VirtualAppointmentRequestBuilder virtualAppointment() {
-        return new com.microsoft.graph.requests.VirtualAppointmentRequestBuilder(getRequestUrlWithAdditionalSegment("virtualAppointment"), getClient(), null);
-    }
     /**
      *  Gets a request builder for the MeetingAttendanceReport collection
      *
