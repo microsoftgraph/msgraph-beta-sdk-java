@@ -73,7 +73,7 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
     /**
      * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC.
      * @return a CompletableFuture of cloudPcDeviceImageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-deviceimages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-deviceimages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcDeviceImageCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
      * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcDeviceImageCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-deviceimages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-deviceimages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcDeviceImageCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -113,7 +113,7 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
      * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs.
      * @param body The request body
      * @return a CompletableFuture of cloudPcDeviceImage
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-post-deviceimages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-deviceimages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcDeviceImage> post(@javax.annotation.Nonnull final CloudPcDeviceImage body) {
@@ -134,7 +134,7 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcDeviceImage
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-post-deviceimages?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-deviceimages?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcDeviceImage> post(@javax.annotation.Nonnull final CloudPcDeviceImage body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

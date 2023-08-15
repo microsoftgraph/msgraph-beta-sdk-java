@@ -18,6 +18,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the salesCreditMemos property of the microsoft.graph.company entity.
  */
@@ -35,7 +36,7 @@ public class SalesCreditMemosRequestBuilder extends BaseRequestBuilder {
      * @return a SalesCreditMemoItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public SalesCreditMemoItemRequestBuilder bySalesCreditMemoId(@javax.annotation.Nonnull final String salesCreditMemoId) {
+    public SalesCreditMemoItemRequestBuilder bySalesCreditMemoId(@javax.annotation.Nonnull final UUID salesCreditMemoId) {
         Objects.requireNonNull(salesCreditMemoId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("salesCreditMemo%2Did", salesCreditMemoId);

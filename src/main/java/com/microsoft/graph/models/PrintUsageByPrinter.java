@@ -12,6 +12,10 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
      */
     private String printerId;
     /**
+     * The name of the printer represented by these statistics.
+     */
+    private String printerName;
+    /**
      * Instantiates a new printUsageByPrinter and sets the default values.
      * @return a void
      */
@@ -37,6 +41,7 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("printerId", (n) -> { this.setPrinterId(n.getStringValue()); });
+        deserializerMap.put("printerName", (n) -> { this.setPrinterName(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -48,6 +53,14 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
         return this.printerId;
     }
     /**
+     * Gets the printerName property value. The name of the printer represented by these statistics.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getPrinterName() {
+        return this.printerName;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -57,6 +70,7 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("printerId", this.getPrinterId());
+        writer.writeStringValue("printerName", this.getPrinterName());
     }
     /**
      * Sets the printerId property value. The printerId property
@@ -66,5 +80,14 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
     @javax.annotation.Nonnull
     public void setPrinterId(@javax.annotation.Nullable final String value) {
         this.printerId = value;
+    }
+    /**
+     * Sets the printerName property value. The name of the printer represented by these statistics.
+     * @param value Value to set for the printerName property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPrinterName(@javax.annotation.Nullable final String value) {
+        this.printerName = value;
     }
 }

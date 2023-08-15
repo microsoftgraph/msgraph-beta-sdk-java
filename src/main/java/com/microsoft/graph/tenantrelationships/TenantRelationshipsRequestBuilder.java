@@ -7,6 +7,7 @@ import com.microsoft.graph.tenantrelationships.delegatedadminrelationships.Deleg
 import com.microsoft.graph.tenantrelationships.findtenantinformationbydomainnamewithdomainname.FindTenantInformationByDomainNameWithDomainNameRequestBuilder;
 import com.microsoft.graph.tenantrelationships.findtenantinformationbytenantidwithtenantid.FindTenantInformationByTenantIdWithTenantIdRequestBuilder;
 import com.microsoft.graph.tenantrelationships.managedtenants.ManagedTenantsRequestBuilder;
+import com.microsoft.graph.tenantrelationships.multitenantorganization.MultiTenantOrganizationRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -45,6 +46,13 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
     @javax.annotation.Nonnull
     public ManagedTenantsRequestBuilder managedTenants() {
         return new ManagedTenantsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the multiTenantOrganization property of the microsoft.graph.tenantRelationship entity.
+     */
+    @javax.annotation.Nonnull
+    public MultiTenantOrganizationRequestBuilder multiTenantOrganization() {
+        return new MultiTenantOrganizationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new TenantRelationshipsRequestBuilder and sets the default values.

@@ -65,7 +65,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of tabs in the specified channel within a team. 
      * @return a CompletableFuture of teamsTabCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/channel-list-tabs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-list-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTabCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
      * Retrieve the list of tabs in the specified channel within a team. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamsTabCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/channel-list-tabs?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/channel-list-tabs?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTabCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

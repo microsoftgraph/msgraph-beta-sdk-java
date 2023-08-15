@@ -51,7 +51,7 @@ public class RootRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the metadata for a driveItem in a drive by file system path or ID.
      * @return a CompletableFuture of driveItem
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> get() {
@@ -71,7 +71,7 @@ public class RootRequestBuilder extends BaseRequestBuilder {
      * Retrieve the metadata for a driveItem in a drive by file system path or ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of driveItem
-     * @see <a href="https://docs.microsoft.com/graph/api/driveitem-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DriveItem> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

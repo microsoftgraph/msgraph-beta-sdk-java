@@ -44,7 +44,7 @@ public class EvaluateClassificationResultsRequestBuilder extends BaseRequestBuil
      * @return a CompletableFuture of evaluateClassificationResultsResponse
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
-     * @see <a href="https://docs.microsoft.com/graph/api/informationprotectionlabel-evaluateclassificationresults?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionlabel-evaluateclassificationresults?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -68,7 +68,7 @@ public class EvaluateClassificationResultsRequestBuilder extends BaseRequestBuil
      * @return a CompletableFuture of evaluateClassificationResultsResponse
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
-     * @see <a href="https://docs.microsoft.com/graph/api/informationprotectionlabel-evaluateclassificationresults?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionlabel-evaluateclassificationresults?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated

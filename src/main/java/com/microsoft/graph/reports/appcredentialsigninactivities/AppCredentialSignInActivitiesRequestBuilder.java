@@ -65,7 +65,7 @@ public class AppCredentialSignInActivitiesRequestBuilder extends BaseRequestBuil
     /**
      * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials.
      * @return a CompletableFuture of appCredentialSignInActivityCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/reportroot-list-appcredentialsigninactivities?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-appcredentialsigninactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppCredentialSignInActivityCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class AppCredentialSignInActivitiesRequestBuilder extends BaseRequestBuil
      * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of appCredentialSignInActivityCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/reportroot-list-appcredentialsigninactivities?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-appcredentialsigninactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppCredentialSignInActivityCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

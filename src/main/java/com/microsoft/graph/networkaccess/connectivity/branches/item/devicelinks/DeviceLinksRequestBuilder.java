@@ -65,7 +65,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of device links associated with a specific branch.
      * @return a CompletableFuture of deviceLinkCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-branchsite-list-devicelinks?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-list-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceLinkCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of device links associated with a specific branch.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceLinkCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-branchsite-list-devicelinks?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-list-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceLinkCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
      * Create a branch site with associated device links.
      * @param body The request body
      * @return a CompletableFuture of deviceLink
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-branchsite-post-devicelinks?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-post-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceLink> post(@javax.annotation.Nonnull final DeviceLink body) {
@@ -126,7 +126,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceLink
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-branchsite-post-devicelinks?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-post-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceLink> post(@javax.annotation.Nonnull final DeviceLink body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

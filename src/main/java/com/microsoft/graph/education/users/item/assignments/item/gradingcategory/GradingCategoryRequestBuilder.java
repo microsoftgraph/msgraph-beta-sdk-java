@@ -43,7 +43,7 @@ public class GradingCategoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Remove a gradingCategory from an educationAssignment. Only teachers can perform this operation.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-delete-gradingcategory?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-delete-gradingcategory?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class GradingCategoryRequestBuilder extends BaseRequestBuilder {
      * Remove a gradingCategory from an educationAssignment. Only teachers can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/educationassignment-delete-gradingcategory?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-delete-gradingcategory?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {

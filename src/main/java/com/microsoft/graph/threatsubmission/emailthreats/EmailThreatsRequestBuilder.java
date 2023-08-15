@@ -65,7 +65,7 @@ public class EmailThreatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the emailThreatSubmission objects and their properties.
      * @return a CompletableFuture of emailThreatSubmissionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-emailthreatsubmission-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-emailthreatsubmission-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailThreatSubmissionCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class EmailThreatsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the emailThreatSubmission objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of emailThreatSubmissionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-emailthreatsubmission-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-emailthreatsubmission-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailThreatSubmissionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class EmailThreatsRequestBuilder extends BaseRequestBuilder {
      * Create a new emailThreatSubmission object.
      * @param body The request body
      * @return a CompletableFuture of emailThreatSubmission
-     * @see <a href="https://docs.microsoft.com/graph/api/security-emailthreatsubmission-post-emailthreats?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-emailthreatsubmission-post-emailthreats?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailThreatSubmission> post(@javax.annotation.Nonnull final EmailThreatSubmission body) {
@@ -126,7 +126,7 @@ public class EmailThreatsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of emailThreatSubmission
-     * @see <a href="https://docs.microsoft.com/graph/api/security-emailthreatsubmission-post-emailthreats?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-emailthreatsubmission-post-emailthreats?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailThreatSubmission> post(@javax.annotation.Nonnull final EmailThreatSubmission body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

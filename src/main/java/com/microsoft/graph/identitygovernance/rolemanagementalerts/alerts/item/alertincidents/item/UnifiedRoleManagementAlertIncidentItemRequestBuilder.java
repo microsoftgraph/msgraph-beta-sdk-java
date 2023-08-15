@@ -88,7 +88,7 @@ public class UnifiedRoleManagementAlertIncidentItemRequestBuilder extends BaseRe
     /**
      * Read the properties and relationships of an alert incident. The alert incident can be one of the following types that are derived from the unifiedRoleManagementAlertIncident object:
      * @return a CompletableFuture of unifiedRoleManagementAlertIncident
-     * @see <a href="https://docs.microsoft.com/graph/api/unifiedrolemanagementalertincident-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementalertincident-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlertIncident> get() {
@@ -108,7 +108,7 @@ public class UnifiedRoleManagementAlertIncidentItemRequestBuilder extends BaseRe
      * Read the properties and relationships of an alert incident. The alert incident can be one of the following types that are derived from the unifiedRoleManagementAlertIncident object:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleManagementAlertIncident
-     * @see <a href="https://docs.microsoft.com/graph/api/unifiedrolemanagementalertincident-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementalertincident-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlertIncident> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

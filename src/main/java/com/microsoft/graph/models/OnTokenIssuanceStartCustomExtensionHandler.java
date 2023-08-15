@@ -8,6 +8,10 @@ import java.util.Map;
 import java.util.Objects;
 public class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceStartHandler implements Parsable {
     /**
+     * The configuration property
+     */
+    private CustomExtensionOverwriteConfiguration configuration;
+    /**
      * The customExtension property
      */
     private OnTokenIssuanceStartCustomExtension customExtension;
@@ -31,6 +35,14 @@ public class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceS
         return new OnTokenIssuanceStartCustomExtensionHandler();
     }
     /**
+     * Gets the configuration property value. The configuration property
+     * @return a customExtensionOverwriteConfiguration
+     */
+    @javax.annotation.Nullable
+    public CustomExtensionOverwriteConfiguration getConfiguration() {
+        return this.configuration;
+    }
+    /**
      * Gets the customExtension property value. The customExtension property
      * @return a onTokenIssuanceStartCustomExtension
      */
@@ -45,6 +57,7 @@ public class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceS
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("configuration", (n) -> { this.setConfiguration(n.getObjectValue(CustomExtensionOverwriteConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("customExtension", (n) -> { this.setCustomExtension(n.getObjectValue(OnTokenIssuanceStartCustomExtension::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -57,7 +70,17 @@ public class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceS
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("configuration", this.getConfiguration());
         writer.writeObjectValue("customExtension", this.getCustomExtension());
+    }
+    /**
+     * Sets the configuration property value. The configuration property
+     * @param value Value to set for the configuration property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setConfiguration(@javax.annotation.Nullable final CustomExtensionOverwriteConfiguration value) {
+        this.configuration = value;
     }
     /**
      * Sets the customExtension property value. The customExtension property

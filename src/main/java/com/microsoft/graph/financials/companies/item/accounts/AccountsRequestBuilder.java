@@ -18,6 +18,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the accounts property of the microsoft.graph.company entity.
  */
@@ -35,7 +36,7 @@ public class AccountsRequestBuilder extends BaseRequestBuilder {
      * @return a AccountItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public AccountItemRequestBuilder byAccountId(@javax.annotation.Nonnull final String accountId) {
+    public AccountItemRequestBuilder byAccountId(@javax.annotation.Nonnull final UUID accountId) {
         Objects.requireNonNull(accountId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("account%2Did", accountId);

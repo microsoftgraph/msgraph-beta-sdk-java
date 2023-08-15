@@ -32,6 +32,10 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     private java.util.List<CloudPcExternalPartnerSetting> externalPartnerSettings;
     /**
+     * The frontLineServicePlans property
+     */
+    private java.util.List<CloudPcFrontLineServicePlan> frontLineServicePlans;
+    /**
      * The gallery image resource on Cloud PC.
      */
     private java.util.List<CloudPcGalleryImage> galleryImages;
@@ -150,6 +154,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         deserializerMap.put("crossCloudGovernmentOrganizationMapping", (n) -> { this.setCrossCloudGovernmentOrganizationMapping(n.getObjectValue(CloudPcCrossCloudGovernmentOrganizationMapping::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceImages", (n) -> { this.setDeviceImages(n.getCollectionOfObjectValues(CloudPcDeviceImage::createFromDiscriminatorValue)); });
         deserializerMap.put("externalPartnerSettings", (n) -> { this.setExternalPartnerSettings(n.getCollectionOfObjectValues(CloudPcExternalPartnerSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("frontLineServicePlans", (n) -> { this.setFrontLineServicePlans(n.getCollectionOfObjectValues(CloudPcFrontLineServicePlan::createFromDiscriminatorValue)); });
         deserializerMap.put("galleryImages", (n) -> { this.setGalleryImages(n.getCollectionOfObjectValues(CloudPcGalleryImage::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesConnections", (n) -> { this.setOnPremisesConnections(n.getCollectionOfObjectValues(CloudPcOnPremisesConnection::createFromDiscriminatorValue)); });
         deserializerMap.put("organizationSettings", (n) -> { this.setOrganizationSettings(n.getObjectValue(CloudPcOrganizationSettings::createFromDiscriminatorValue)); });
@@ -161,6 +166,14 @@ public class VirtualEndpoint extends Entity implements Parsable {
         deserializerMap.put("supportedRegions", (n) -> { this.setSupportedRegions(n.getCollectionOfObjectValues(CloudPcSupportedRegion::createFromDiscriminatorValue)); });
         deserializerMap.put("userSettings", (n) -> { this.setUserSettings(n.getCollectionOfObjectValues(CloudPcUserSetting::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the frontLineServicePlans property value. The frontLineServicePlans property
+     * @return a cloudPcFrontLineServicePlan
+     */
+    @javax.annotation.Nullable
+    public java.util.List<CloudPcFrontLineServicePlan> getFrontLineServicePlans() {
+        return this.frontLineServicePlans;
     }
     /**
      * Gets the galleryImages property value. The gallery image resource on Cloud PC.
@@ -257,6 +270,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         writer.writeObjectValue("crossCloudGovernmentOrganizationMapping", this.getCrossCloudGovernmentOrganizationMapping());
         writer.writeCollectionOfObjectValues("deviceImages", this.getDeviceImages());
         writer.writeCollectionOfObjectValues("externalPartnerSettings", this.getExternalPartnerSettings());
+        writer.writeCollectionOfObjectValues("frontLineServicePlans", this.getFrontLineServicePlans());
         writer.writeCollectionOfObjectValues("galleryImages", this.getGalleryImages());
         writer.writeCollectionOfObjectValues("onPremisesConnections", this.getOnPremisesConnections());
         writer.writeObjectValue("organizationSettings", this.getOrganizationSettings());
@@ -321,6 +335,15 @@ public class VirtualEndpoint extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setExternalPartnerSettings(@javax.annotation.Nullable final java.util.List<CloudPcExternalPartnerSetting> value) {
         this.externalPartnerSettings = value;
+    }
+    /**
+     * Sets the frontLineServicePlans property value. The frontLineServicePlans property
+     * @param value Value to set for the frontLineServicePlans property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setFrontLineServicePlans(@javax.annotation.Nullable final java.util.List<CloudPcFrontLineServicePlan> value) {
+        this.frontLineServicePlans = value;
     }
     /**
      * Sets the galleryImages property value. The gallery image resource on Cloud PC.

@@ -18,6 +18,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the generalLedgerEntries property of the microsoft.graph.company entity.
  */
@@ -35,7 +36,7 @@ public class GeneralLedgerEntriesRequestBuilder extends BaseRequestBuilder {
      * @return a GeneralLedgerEntryItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public GeneralLedgerEntryItemRequestBuilder byGeneralLedgerEntryId(@javax.annotation.Nonnull final String generalLedgerEntryId) {
+    public GeneralLedgerEntryItemRequestBuilder byGeneralLedgerEntryId(@javax.annotation.Nonnull final UUID generalLedgerEntryId) {
         Objects.requireNonNull(generalLedgerEntryId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("generalLedgerEntry%2Did", generalLedgerEntryId);

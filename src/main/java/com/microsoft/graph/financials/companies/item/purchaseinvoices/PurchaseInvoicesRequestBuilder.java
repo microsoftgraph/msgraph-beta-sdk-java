@@ -18,6 +18,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the purchaseInvoices property of the microsoft.graph.company entity.
  */
@@ -35,7 +36,7 @@ public class PurchaseInvoicesRequestBuilder extends BaseRequestBuilder {
      * @return a PurchaseInvoiceItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public PurchaseInvoiceItemRequestBuilder byPurchaseInvoiceId(@javax.annotation.Nonnull final String purchaseInvoiceId) {
+    public PurchaseInvoiceItemRequestBuilder byPurchaseInvoiceId(@javax.annotation.Nonnull final UUID purchaseInvoiceId) {
         Objects.requireNonNull(purchaseInvoiceId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("purchaseInvoice%2Did", purchaseInvoiceId);

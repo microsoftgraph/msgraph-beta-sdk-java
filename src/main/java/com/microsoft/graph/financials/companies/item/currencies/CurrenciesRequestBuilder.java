@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the currencies property of the microsoft.graph.company entity.
  */
@@ -36,7 +37,7 @@ public class CurrenciesRequestBuilder extends BaseRequestBuilder {
      * @return a CurrencyItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public CurrencyItemRequestBuilder byCurrencyId(@javax.annotation.Nonnull final String currencyId) {
+    public CurrencyItemRequestBuilder byCurrencyId(@javax.annotation.Nonnull final UUID currencyId) {
         Objects.requireNonNull(currencyId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("currency%2Did", currencyId);

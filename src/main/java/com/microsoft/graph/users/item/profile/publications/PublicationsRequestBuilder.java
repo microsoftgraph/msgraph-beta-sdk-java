@@ -65,7 +65,7 @@ public class PublicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of itemPublication objects from a user's profile.
      * @return a CompletableFuture of itemPublicationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-publications?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-publications?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemPublicationCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class PublicationsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of itemPublication objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of itemPublicationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-list-publications?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-publications?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemPublicationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class PublicationsRequestBuilder extends BaseRequestBuilder {
      * Create a new itemPublication object in a user's profile.
      * @param body The request body
      * @return a CompletableFuture of itemPublication
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-publications?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-publications?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemPublication> post(@javax.annotation.Nonnull final ItemPublication body) {
@@ -126,7 +126,7 @@ public class PublicationsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of itemPublication
-     * @see <a href="https://docs.microsoft.com/graph/api/profile-post-publications?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-publications?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemPublication> post(@javax.annotation.Nonnull final ItemPublication body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

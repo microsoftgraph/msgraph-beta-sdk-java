@@ -9,11 +9,11 @@ import java.util.Map;
 import java.util.Objects;
 public class DirectoryAudit extends Entity implements Parsable {
     /**
-     * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Supports $filter (eq, ge, le) and $orderby.
      */
     private OffsetDateTime activityDateTime;
     /**
-     * Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure Ad activity list.
+     * Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure AD audit log categories and activities. Supports $filter (eq, startswith).
      */
     private String activityDisplayName;
     /**
@@ -21,11 +21,11 @@ public class DirectoryAudit extends Entity implements Parsable {
      */
     private java.util.List<KeyValue> additionalDetails;
     /**
-     * Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
+     * Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Azure AD audit log categories and activities.
      */
     private String category;
     /**
-     * Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services.
+     * Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services. Supports $filter (eq).
      */
     private String correlationId;
     /**
@@ -33,7 +33,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      */
     private AuditActivityInitiator initiatedBy;
     /**
-     * Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management.
+     * Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management. Supports $filter (eq).
      */
     private String loggedByService;
     /**
@@ -49,7 +49,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      */
     private String resultReason;
     /**
-     * Information about the resource that changed due to the activity.
+     * Information about the resource that changed due to the activity. Supports $filter (eq) for id and displayName; and $filter (startswith) for displayName.
      */
     private java.util.List<TargetResource> targetResources;
     /**
@@ -75,7 +75,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         return new DirectoryAudit();
     }
     /**
-     * Gets the activityDateTime property value. Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the activityDateTime property value. Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Supports $filter (eq, ge, le) and $orderby.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -83,7 +83,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         return this.activityDateTime;
     }
     /**
-     * Gets the activityDisplayName property value. Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure Ad activity list.
+     * Gets the activityDisplayName property value. Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure AD audit log categories and activities. Supports $filter (eq, startswith).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         return this.additionalDetails;
     }
     /**
-     * Gets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
+     * Gets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Azure AD audit log categories and activities.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -107,7 +107,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         return this.category;
     }
     /**
-     * Gets the correlationId property value. Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services.
+     * Gets the correlationId property value. Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services. Supports $filter (eq).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -144,7 +144,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         return this.initiatedBy;
     }
     /**
-     * Gets the loggedByService property value. Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management.
+     * Gets the loggedByService property value. Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management. Supports $filter (eq).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -176,7 +176,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         return this.resultReason;
     }
     /**
-     * Gets the targetResources property value. Information about the resource that changed due to the activity.
+     * Gets the targetResources property value. Information about the resource that changed due to the activity. Supports $filter (eq) for id and displayName; and $filter (startswith) for displayName.
      * @return a targetResource
      */
     @javax.annotation.Nullable
@@ -214,7 +214,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         writer.writeStringValue("userAgent", this.getUserAgent());
     }
     /**
-     * Sets the activityDateTime property value. Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the activityDateTime property value. Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Supports $filter (eq, ge, le) and $orderby.
      * @param value Value to set for the activityDateTime property.
      * @return a void
      */
@@ -223,7 +223,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         this.activityDateTime = value;
     }
     /**
-     * Sets the activityDisplayName property value. Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure Ad activity list.
+     * Sets the activityDisplayName property value. Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure AD audit log categories and activities. Supports $filter (eq, startswith).
      * @param value Value to set for the activityDisplayName property.
      * @return a void
      */
@@ -241,7 +241,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         this.additionalDetails = value;
     }
     /**
-     * Sets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
+     * Sets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Azure AD audit log categories and activities.
      * @param value Value to set for the category property.
      * @return a void
      */
@@ -250,7 +250,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         this.category = value;
     }
     /**
-     * Sets the correlationId property value. Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services.
+     * Sets the correlationId property value. Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services. Supports $filter (eq).
      * @param value Value to set for the correlationId property.
      * @return a void
      */
@@ -268,7 +268,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         this.initiatedBy = value;
     }
     /**
-     * Sets the loggedByService property value. Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management.
+     * Sets the loggedByService property value. Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management. Supports $filter (eq).
      * @param value Value to set for the loggedByService property.
      * @return a void
      */
@@ -304,7 +304,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         this.resultReason = value;
     }
     /**
-     * Sets the targetResources property value. Information about the resource that changed due to the activity.
+     * Sets the targetResources property value. Information about the resource that changed due to the activity. Supports $filter (eq) for id and displayName; and $filter (startswith) for displayName.
      * @param value Value to set for the targetResources property.
      * @return a void
      */

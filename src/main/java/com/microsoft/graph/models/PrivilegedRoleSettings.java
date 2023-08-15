@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     /**
      * The elevationDuration property
      */
-    private Period elevationDuration;
+    private PeriodAndDuration elevationDuration;
     /**
      * The isMfaOnElevationConfigurable property
      */
@@ -31,7 +31,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     /**
      * The maxElavationDuration property
      */
-    private Period maxElavationDuration;
+    private PeriodAndDuration maxElavationDuration;
     /**
      * The mfaOnElevation property
      */
@@ -39,7 +39,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     /**
      * The minElevationDuration property
      */
-    private Period minElevationDuration;
+    private PeriodAndDuration minElevationDuration;
     /**
      * The notificationToUserOnElevation property
      */
@@ -84,10 +84,10 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     }
     /**
      * Gets the elevationDuration property value. The elevationDuration property
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getElevationDuration() {
+    public PeriodAndDuration getElevationDuration() {
         return this.elevationDuration;
     }
     /**
@@ -99,12 +99,12 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("approvalOnElevation", (n) -> { this.setApprovalOnElevation(n.getBooleanValue()); });
         deserializerMap.put("approverIds", (n) -> { this.setApproverIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("elevationDuration", (n) -> { this.setElevationDuration(n.getPeriodValue()); });
+        deserializerMap.put("elevationDuration", (n) -> { this.setElevationDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("isMfaOnElevationConfigurable", (n) -> { this.setIsMfaOnElevationConfigurable(n.getBooleanValue()); });
         deserializerMap.put("lastGlobalAdmin", (n) -> { this.setLastGlobalAdmin(n.getBooleanValue()); });
-        deserializerMap.put("maxElavationDuration", (n) -> { this.setMaxElavationDuration(n.getPeriodValue()); });
+        deserializerMap.put("maxElavationDuration", (n) -> { this.setMaxElavationDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("mfaOnElevation", (n) -> { this.setMfaOnElevation(n.getBooleanValue()); });
-        deserializerMap.put("minElevationDuration", (n) -> { this.setMinElevationDuration(n.getPeriodValue()); });
+        deserializerMap.put("minElevationDuration", (n) -> { this.setMinElevationDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("notificationToUserOnElevation", (n) -> { this.setNotificationToUserOnElevation(n.getBooleanValue()); });
         deserializerMap.put("ticketingInfoOnElevation", (n) -> { this.setTicketingInfoOnElevation(n.getBooleanValue()); });
         return deserializerMap;
@@ -127,10 +127,10 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     }
     /**
      * Gets the maxElavationDuration property value. The maxElavationDuration property
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getMaxElavationDuration() {
+    public PeriodAndDuration getMaxElavationDuration() {
         return this.maxElavationDuration;
     }
     /**
@@ -143,10 +143,10 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     }
     /**
      * Gets the minElevationDuration property value. The minElevationDuration property
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getMinElevationDuration() {
+    public PeriodAndDuration getMinElevationDuration() {
         return this.minElevationDuration;
     }
     /**
@@ -176,12 +176,12 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeBooleanValue("approvalOnElevation", this.getApprovalOnElevation());
         writer.writeCollectionOfPrimitiveValues("approverIds", this.getApproverIds());
-        writer.writePeriodValue("elevationDuration", this.getElevationDuration());
+        writer.writePeriodAndDurationValue("elevationDuration", this.getElevationDuration());
         writer.writeBooleanValue("isMfaOnElevationConfigurable", this.getIsMfaOnElevationConfigurable());
         writer.writeBooleanValue("lastGlobalAdmin", this.getLastGlobalAdmin());
-        writer.writePeriodValue("maxElavationDuration", this.getMaxElavationDuration());
+        writer.writePeriodAndDurationValue("maxElavationDuration", this.getMaxElavationDuration());
         writer.writeBooleanValue("mfaOnElevation", this.getMfaOnElevation());
-        writer.writePeriodValue("minElevationDuration", this.getMinElevationDuration());
+        writer.writePeriodAndDurationValue("minElevationDuration", this.getMinElevationDuration());
         writer.writeBooleanValue("notificationToUserOnElevation", this.getNotificationToUserOnElevation());
         writer.writeBooleanValue("ticketingInfoOnElevation", this.getTicketingInfoOnElevation());
     }
@@ -209,7 +209,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setElevationDuration(@javax.annotation.Nullable final Period value) {
+    public void setElevationDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.elevationDuration = value;
     }
     /**
@@ -236,7 +236,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setMaxElavationDuration(@javax.annotation.Nullable final Period value) {
+    public void setMaxElavationDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.maxElavationDuration = value;
     }
     /**
@@ -254,7 +254,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setMinElevationDuration(@javax.annotation.Nullable final Period value) {
+    public void setMinElevationDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.minElevationDuration = value;
     }
     /**

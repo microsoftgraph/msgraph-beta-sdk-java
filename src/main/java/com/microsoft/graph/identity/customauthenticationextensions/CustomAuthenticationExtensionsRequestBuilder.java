@@ -73,7 +73,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
     /**
      * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
      * @return a CompletableFuture of customAuthenticationExtensionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAuthenticationExtensionCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
      * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customAuthenticationExtensionCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAuthenticationExtensionCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -110,10 +110,10 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the **onTokenIssuanceStartCustomExtension** object type is supported.
+     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
      * @param body The request body
      * @return a CompletableFuture of customAuthenticationExtension
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAuthenticationExtension> post(@javax.annotation.Nonnull final CustomAuthenticationExtension body) {
@@ -130,11 +130,11 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         }
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the **onTokenIssuanceStartCustomExtension** object type is supported.
+     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customAuthenticationExtension
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAuthenticationExtension> post(@javax.annotation.Nonnull final CustomAuthenticationExtension body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -181,7 +181,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the **onTokenIssuanceStartCustomExtension** object type is supported.
+     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -190,7 +190,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the **onTokenIssuanceStartCustomExtension** object type is supported.
+     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

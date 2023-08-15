@@ -79,7 +79,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
     /**
      * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
      * @return a CompletableFuture of authenticationStrengthPolicyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthroot-list-policies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicyCollectionResponse> get() {
@@ -99,7 +99,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
      * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationStrengthPolicyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthroot-list-policies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,7 +119,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
      * Create a new custom authenticationStrengthPolicy object.
      * @param body The request body
      * @return a CompletableFuture of authenticationStrengthPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthroot-post-policies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-post-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicy> post(@javax.annotation.Nonnull final AuthenticationStrengthPolicy body) {
@@ -140,7 +140,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationStrengthPolicy
-     * @see <a href="https://docs.microsoft.com/graph/api/authenticationstrengthroot-post-policies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-post-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationStrengthPolicy> post(@javax.annotation.Nonnull final AuthenticationStrengthPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -65,7 +65,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
     /**
      * In the Azure AD access reviews feature, list all the program objects.
      * @return a CompletableFuture of programCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/program-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/program-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
      * In the Azure AD access reviews feature, list all the program objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of programCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/program-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/program-list?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
      * In the Azure AD access reviews feature, create a new program object.
      * @param body The request body
      * @return a CompletableFuture of program
-     * @see <a href="https://docs.microsoft.com/graph/api/program-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/program-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Program> post(@javax.annotation.Nonnull final Program body) {
@@ -126,7 +126,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of program
-     * @see <a href="https://docs.microsoft.com/graph/api/program-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/program-create?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Program> post(@javax.annotation.Nonnull final Program body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

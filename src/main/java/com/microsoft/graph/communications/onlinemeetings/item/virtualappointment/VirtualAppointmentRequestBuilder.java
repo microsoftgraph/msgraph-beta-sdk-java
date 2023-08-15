@@ -45,7 +45,7 @@ public class VirtualAppointmentRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of void
      * @deprecated
      * The Virtual appointment resource is deprecated and will stop returning data on May 31, 2023. Existing apps that use this feature should be updated to the new getVirtualAppointmentJoinWebUrl API. as of 2023-04/VirtualAppointment on 2023-04-04 and will be removed 2023-05-31
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualappointment-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualappointment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -68,7 +68,7 @@ public class VirtualAppointmentRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of void
      * @deprecated
      * The Virtual appointment resource is deprecated and will stop returning data on May 31, 2023. Existing apps that use this feature should be updated to the new getVirtualAppointmentJoinWebUrl API. as of 2023-04/VirtualAppointment on 2023-04-04 and will be removed 2023-05-31
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualappointment-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualappointment-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -90,7 +90,7 @@ public class VirtualAppointmentRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of virtualAppointment
      * @deprecated
      * The Virtual appointment resource is deprecated and will stop returning data on May 31, 2023. Existing apps that use this feature should be updated to the new getVirtualAppointmentJoinWebUrl API. as of 2023-04/VirtualAppointment on 2023-04-04 and will be removed 2023-05-31
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualappointment-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualappointment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -113,7 +113,7 @@ public class VirtualAppointmentRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of virtualAppointment
      * @deprecated
      * The Virtual appointment resource is deprecated and will stop returning data on May 31, 2023. Existing apps that use this feature should be updated to the new getVirtualAppointmentJoinWebUrl API. as of 2023-04/VirtualAppointment on 2023-04-04 and will be removed 2023-05-31
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualappointment-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualappointment-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -136,7 +136,7 @@ public class VirtualAppointmentRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of virtualAppointment
      * @deprecated
      * The Virtual appointment resource is deprecated and will stop returning data on May 31, 2023. Existing apps that use this feature should be updated to the new getVirtualAppointmentJoinWebUrl API. as of 2023-04/VirtualAppointment on 2023-04-04 and will be removed 2023-05-31
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualappointment-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualappointment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -160,7 +160,7 @@ public class VirtualAppointmentRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of virtualAppointment
      * @deprecated
      * The Virtual appointment resource is deprecated and will stop returning data on May 31, 2023. Existing apps that use this feature should be updated to the new getVirtualAppointmentJoinWebUrl API. as of 2023-04/VirtualAppointment on 2023-04-04 and will be removed 2023-05-31
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualappointment-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualappointment-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated

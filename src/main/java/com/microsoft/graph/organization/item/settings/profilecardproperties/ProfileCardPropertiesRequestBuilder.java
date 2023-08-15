@@ -63,9 +63,9 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/settings/profileCardProperties{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a collection of profileCardProperty resources of an organization. Each resource is identified by its **directoryPropertyName** property.
+     * Get a collection of profileCardProperty resources of an organization. Each resource is identified by its directoryPropertyName property.
      * @return a CompletableFuture of profileCardPropertyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationsettings-list-profilecardproperties?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/organizationsettings-list-profilecardproperties?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProfileCardPropertyCollectionResponse> get() {
@@ -82,10 +82,10 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a collection of profileCardProperty resources of an organization. Each resource is identified by its **directoryPropertyName** property.
+     * Get a collection of profileCardProperty resources of an organization. Each resource is identified by its directoryPropertyName property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of profileCardPropertyCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationsettings-list-profilecardproperties?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/organizationsettings-list-profilecardproperties?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProfileCardPropertyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +102,10 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new profileCardProperty for an organization. The new property is identified by its **directoryPropertyName** property. For more information on adding properties to the profile card for an organization, see customize the profile card.
+     * Create a new profileCardProperty for an organization. The new property is identified by its directoryPropertyName property. For more information on adding properties to the profile card for an organization, see customize the profile card.
      * @param body The request body
      * @return a CompletableFuture of profileCardProperty
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationsettings-post-profilecardproperties?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/organizationsettings-post-profilecardproperties?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProfileCardProperty> post(@javax.annotation.Nonnull final ProfileCardProperty body) {
@@ -122,11 +122,11 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new profileCardProperty for an organization. The new property is identified by its **directoryPropertyName** property. For more information on adding properties to the profile card for an organization, see customize the profile card.
+     * Create a new profileCardProperty for an organization. The new property is identified by its directoryPropertyName property. For more information on adding properties to the profile card for an organization, see customize the profile card.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of profileCardProperty
-     * @see <a href="https://docs.microsoft.com/graph/api/organizationsettings-post-profilecardproperties?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/organizationsettings-post-profilecardproperties?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProfileCardProperty> post(@javax.annotation.Nonnull final ProfileCardProperty body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -144,7 +144,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Get a collection of profileCardProperty resources of an organization. Each resource is identified by its **directoryPropertyName** property.
+     * Get a collection of profileCardProperty resources of an organization. Each resource is identified by its directoryPropertyName property.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -152,7 +152,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a collection of profileCardProperty resources of an organization. Each resource is identified by its **directoryPropertyName** property.
+     * Get a collection of profileCardProperty resources of an organization. Each resource is identified by its directoryPropertyName property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,7 +173,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new profileCardProperty for an organization. The new property is identified by its **directoryPropertyName** property. For more information on adding properties to the profile card for an organization, see customize the profile card.
+     * Create a new profileCardProperty for an organization. The new property is identified by its directoryPropertyName property. For more information on adding properties to the profile card for an organization, see customize the profile card.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +182,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new profileCardProperty for an organization. The new property is identified by its **directoryPropertyName** property. For more information on adding properties to the profile card for an organization, see customize the profile card.
+     * Create a new profileCardProperty for an organization. The new property is identified by its directoryPropertyName property. For more information on adding properties to the profile card for an organization, see customize the profile card.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,7 +205,7 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a collection of profileCardProperty resources of an organization. Each resource is identified by its **directoryPropertyName** property.
+     * Get a collection of profileCardProperty resources of an organization. Each resource is identified by its directoryPropertyName property.
      */
     public class GetQueryParameters {
         /**

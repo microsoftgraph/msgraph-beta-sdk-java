@@ -73,7 +73,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of user objects. These user objects will include education-specific properties.
      * @return a CompletableFuture of educationUserCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationroot-list-users?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationroot-list-users?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUserCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of user objects. These user objects will include education-specific properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationUserCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationroot-list-users?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationroot-list-users?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUserCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -113,7 +113,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
      * Create a new user.
      * @param body The request body
      * @return a CompletableFuture of educationUser
-     * @see <a href="https://docs.microsoft.com/graph/api/educationroot-post-users?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationroot-post-users?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> post(@javax.annotation.Nonnull final EducationUser body) {
@@ -134,7 +134,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationUser
-     * @see <a href="https://docs.microsoft.com/graph/api/educationroot-post-users?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationroot-post-users?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> post(@javax.annotation.Nonnull final EducationUser body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

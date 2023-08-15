@@ -65,7 +65,7 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
     /**
      * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
      * @return a CompletableFuture of authenticationEventListenerCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-list-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationEventListenerCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
      * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationEventListenerCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-list-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationEventListenerCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +102,10 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from **authenticationEventListener**.
+     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
      * @param body The request body
      * @return a CompletableFuture of authenticationEventListener
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-post-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationEventListener> post(@javax.annotation.Nonnull final AuthenticationEventListener body) {
@@ -122,11 +122,11 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         }
     }
     /**
-     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from **authenticationEventListener**.
+     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationEventListener
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-post-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationEventListener> post(@javax.annotation.Nonnull final AuthenticationEventListener body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -173,7 +173,7 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from **authenticationEventListener**.
+     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +182,7 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from **authenticationEventListener**.
+     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

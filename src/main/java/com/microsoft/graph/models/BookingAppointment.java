@@ -1,9 +1,9 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -54,7 +54,7 @@ public class BookingAppointment extends Entity implements Parsable {
     /**
      * The length of the appointment, denoted in ISO8601 format.
      */
-    private Period duration;
+    private PeriodAndDuration duration;
     /**
      * The end property
      */
@@ -106,11 +106,11 @@ public class BookingAppointment extends Entity implements Parsable {
     /**
      * The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.
      */
-    private Period postBuffer;
+    private PeriodAndDuration postBuffer;
     /**
      * The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.
      */
-    private Period preBuffer;
+    private PeriodAndDuration preBuffer;
     /**
      * The regular price for an appointment for the specified bookingService.
      */
@@ -255,10 +255,10 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the duration property value. The length of the appointment, denoted in ISO8601 format.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getDuration() {
+    public PeriodAndDuration getDuration() {
         return this.duration;
     }
     /**
@@ -286,7 +286,7 @@ public class BookingAppointment extends Entity implements Parsable {
         deserializerMap.put("customerPhone", (n) -> { this.setCustomerPhone(n.getStringValue()); });
         deserializerMap.put("customers", (n) -> { this.setCustomers(n.getCollectionOfObjectValues(BookingCustomerInformationBase::createFromDiscriminatorValue)); });
         deserializerMap.put("customerTimeZone", (n) -> { this.setCustomerTimeZone(n.getStringValue()); });
-        deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodValue()); });
+        deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("end", (n) -> { this.setEnd(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("filledAttendeesCount", (n) -> { this.setFilledAttendeesCount(n.getIntegerValue()); });
         deserializerMap.put("invoiceAmount", (n) -> { this.setInvoiceAmount(n.getDoubleValue()); });
@@ -299,8 +299,8 @@ public class BookingAppointment extends Entity implements Parsable {
         deserializerMap.put("maximumAttendeesCount", (n) -> { this.setMaximumAttendeesCount(n.getIntegerValue()); });
         deserializerMap.put("onlineMeetingUrl", (n) -> { this.setOnlineMeetingUrl(n.getStringValue()); });
         deserializerMap.put("optOutOfCustomerEmail", (n) -> { this.setOptOutOfCustomerEmail(n.getBooleanValue()); });
-        deserializerMap.put("postBuffer", (n) -> { this.setPostBuffer(n.getPeriodValue()); });
-        deserializerMap.put("preBuffer", (n) -> { this.setPreBuffer(n.getPeriodValue()); });
+        deserializerMap.put("postBuffer", (n) -> { this.setPostBuffer(n.getPeriodAndDurationValue()); });
+        deserializerMap.put("preBuffer", (n) -> { this.setPreBuffer(n.getPeriodAndDurationValue()); });
         deserializerMap.put("price", (n) -> { this.setPrice(n.getDoubleValue()); });
         deserializerMap.put("priceType", (n) -> { this.setPriceType(n.getEnumValue(BookingPriceType.class)); });
         deserializerMap.put("reminders", (n) -> { this.setReminders(n.getCollectionOfObjectValues(BookingReminder::createFromDiscriminatorValue)); });
@@ -404,18 +404,18 @@ public class BookingAppointment extends Entity implements Parsable {
     }
     /**
      * Gets the postBuffer property value. The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getPostBuffer() {
+    public PeriodAndDuration getPostBuffer() {
         return this.postBuffer;
     }
     /**
      * Gets the preBuffer property value. The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getPreBuffer() {
+    public PeriodAndDuration getPreBuffer() {
         return this.preBuffer;
     }
     /**
@@ -536,8 +536,8 @@ public class BookingAppointment extends Entity implements Parsable {
         writer.writeIntegerValue("maximumAttendeesCount", this.getMaximumAttendeesCount());
         writer.writeStringValue("onlineMeetingUrl", this.getOnlineMeetingUrl());
         writer.writeBooleanValue("optOutOfCustomerEmail", this.getOptOutOfCustomerEmail());
-        writer.writePeriodValue("postBuffer", this.getPostBuffer());
-        writer.writePeriodValue("preBuffer", this.getPreBuffer());
+        writer.writePeriodAndDurationValue("postBuffer", this.getPostBuffer());
+        writer.writePeriodAndDurationValue("preBuffer", this.getPreBuffer());
         writer.writeDoubleValue("price", this.getPrice());
         writer.writeEnumValue("priceType", this.getPriceType());
         writer.writeCollectionOfObjectValues("reminders", this.getReminders());
@@ -646,7 +646,7 @@ public class BookingAppointment extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setDuration(@javax.annotation.Nullable final Period value) {
+    public void setDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.duration = value;
     }
     /**
@@ -763,7 +763,7 @@ public class BookingAppointment extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setPostBuffer(@javax.annotation.Nullable final Period value) {
+    public void setPostBuffer(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.postBuffer = value;
     }
     /**
@@ -772,7 +772,7 @@ public class BookingAppointment extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setPreBuffer(@javax.annotation.Nullable final Period value) {
+    public void setPreBuffer(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.preBuffer = value;
     }
     /**

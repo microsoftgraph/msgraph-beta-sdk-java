@@ -7,8 +7,8 @@ public enum SensitivityLabelTarget implements ValuedEnum {
     Email("email"),
     Site("site"),
     UnifiedGroup("unifiedGroup"),
-    UnknownFutureValue("unknownFutureValue"),
-    Teamwork("teamwork");
+    Teamwork("teamwork"),
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     SensitivityLabelTarget(final String value) {
         this.value = value;
@@ -22,8 +22,8 @@ public enum SensitivityLabelTarget implements ValuedEnum {
             case "email": return Email;
             case "site": return Site;
             case "unifiedGroup": return UnifiedGroup;
-            case "unknownFutureValue": return UnknownFutureValue;
             case "teamwork": return Teamwork;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

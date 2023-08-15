@@ -80,7 +80,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the conditional access settings, which include the preservation of the original source IP address in network traffic for accurate identification and tracking, as well as the establishment of scalable network connectivity through the Global Secure Access services.
      * @return a CompletableFuture of conditionalAccessSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-conditionalaccesssettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-conditionalaccesssettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessSettings> get() {
@@ -100,7 +100,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
      * Retrieve the conditional access settings, which include the preservation of the original source IP address in network traffic for accurate identification and tracking, as well as the establishment of scalable network connectivity through the Global Secure Access services.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conditionalAccessSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-conditionalaccesssettings-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-conditionalaccesssettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessSettings> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
      * Update the conditional access settings to include the preservation of the original source IP address in network traffic for accurate identification and tracking, as well as the establishment of scalable network connectivity through the Global Secure Access services.
      * @param body The request body
      * @return a CompletableFuture of conditionalAccessSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-conditionalaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-conditionalaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessSettings> patch(@javax.annotation.Nonnull final ConditionalAccessSettings body) {
@@ -141,7 +141,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of conditionalAccessSettings
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-conditionalaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-conditionalaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessSettings> patch(@javax.annotation.Nonnull final ConditionalAccessSettings body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

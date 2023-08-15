@@ -80,7 +80,7 @@ public class TeamsAsyncOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the specified Teams async operation that ran or is running on a specific resource.
      * @return a CompletableFuture of teamsAsyncOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/teamsasyncoperation-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsasyncoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> get() {
@@ -100,7 +100,7 @@ public class TeamsAsyncOperationItemRequestBuilder extends BaseRequestBuilder {
      * Get the specified Teams async operation that ran or is running on a specific resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamsAsyncOperation
-     * @see <a href="https://docs.microsoft.com/graph/api/teamsasyncoperation-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsasyncoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

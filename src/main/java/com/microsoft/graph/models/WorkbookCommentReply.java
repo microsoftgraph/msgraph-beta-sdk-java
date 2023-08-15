@@ -16,6 +16,10 @@ public class WorkbookCommentReply extends Entity implements Parsable {
      */
     private String contentType;
     /**
+     * The task property
+     */
+    private WorkbookDocumentTask task;
+    /**
      * Instantiates a new workbookCommentReply and sets the default values.
      * @return a void
      */
@@ -58,7 +62,16 @@ public class WorkbookCommentReply extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getStringValue()); });
+        deserializerMap.put("task", (n) -> { this.setTask(n.getObjectValue(WorkbookDocumentTask::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the task property value. The task property
+     * @return a workbookDocumentTask
+     */
+    @javax.annotation.Nullable
+    public WorkbookDocumentTask getTask() {
+        return this.task;
     }
     /**
      * Serializes information the current object
@@ -71,6 +84,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("content", this.getContent());
         writer.writeStringValue("contentType", this.getContentType());
+        writer.writeObjectValue("task", this.getTask());
     }
     /**
      * Sets the content property value. The content of replied comment.
@@ -89,5 +103,14 @@ public class WorkbookCommentReply extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setContentType(@javax.annotation.Nullable final String value) {
         this.contentType = value;
+    }
+    /**
+     * Sets the task property value. The task property
+     * @param value Value to set for the task property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setTask(@javax.annotation.Nullable final WorkbookDocumentTask value) {
+        this.task = value;
     }
 }

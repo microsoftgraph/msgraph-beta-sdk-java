@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 public class OAuth2PermissionGrant extends Entity implements Parsable {
     /**
-     * The id of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
+     * The object id (not appId) of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
      */
     private String clientId;
     /**
@@ -55,7 +55,7 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
         return new OAuth2PermissionGrant();
     }
     /**
-     * Gets the clientId property value. The id of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
+     * Gets the clientId property value. The object id (not appId) of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -144,7 +144,7 @@ public class OAuth2PermissionGrant extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("startTime", this.getStartTime());
     }
     /**
-     * Sets the clientId property value. The id of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
+     * Sets the clientId property value. The object id (not appId) of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
      * @param value Value to set for the clientId property.
      * @return a void
      */

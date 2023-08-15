@@ -65,7 +65,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of trustFrameworkKeySets.
      * @return a CompletableFuture of trustFrameworkKeySetCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/trustframework-list-keysets?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframework-list-keysets?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkKeySetCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of trustFrameworkKeySets.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of trustFrameworkKeySetCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/trustframework-list-keysets?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframework-list-keysets?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkKeySetCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +102,10 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new trustFrameworkKeySet. The ID of the **trustFrameworkKeySet** is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header.
+     * Create a new trustFrameworkKeySet. The ID of the trustFrameworkKeySet is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header.
      * @param body The request body
      * @return a CompletableFuture of trustFrameworkKeySet
-     * @see <a href="https://docs.microsoft.com/graph/api/trustframework-post-keysets?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframework-post-keysets?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkKeySet> post(@javax.annotation.Nonnull final TrustFrameworkKeySet body) {
@@ -122,11 +122,11 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new trustFrameworkKeySet. The ID of the **trustFrameworkKeySet** is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header.
+     * Create a new trustFrameworkKeySet. The ID of the trustFrameworkKeySet is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of trustFrameworkKeySet
-     * @see <a href="https://docs.microsoft.com/graph/api/trustframework-post-keysets?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframework-post-keysets?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkKeySet> post(@javax.annotation.Nonnull final TrustFrameworkKeySet body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -173,7 +173,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new trustFrameworkKeySet. The ID of the **trustFrameworkKeySet** is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header.
+     * Create a new trustFrameworkKeySet. The ID of the trustFrameworkKeySet is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +182,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new trustFrameworkKeySet. The ID of the **trustFrameworkKeySet** is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header.
+     * Create a new trustFrameworkKeySet. The ID of the trustFrameworkKeySet is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

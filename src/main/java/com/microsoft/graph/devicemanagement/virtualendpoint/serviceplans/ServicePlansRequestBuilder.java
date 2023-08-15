@@ -65,7 +65,7 @@ public class ServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * List the currently available service plans that an organization can purchase for their Cloud PCs. For examples of currently available service plans, see Windows 365 compare plans and pricing. Currently, Microsoft Graph API is available for Windows 365 Enterprise.
      * @return a CompletableFuture of cloudPcServicePlanCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-serviceplans?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-serviceplans?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcServicePlanCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ServicePlansRequestBuilder extends BaseRequestBuilder {
      * List the currently available service plans that an organization can purchase for their Cloud PCs. For examples of currently available service plans, see Windows 365 compare plans and pricing. Currently, Microsoft Graph API is available for Windows 365 Enterprise.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of cloudPcServicePlanCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/virtualendpoint-list-serviceplans?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-serviceplans?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcServicePlanCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

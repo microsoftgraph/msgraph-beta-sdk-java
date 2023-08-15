@@ -19,10 +19,6 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
      */
     private Long medianImpactInMs;
     /**
-     * The median impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
-     */
-    private Long medianImpactInMs2;
-    /**
      * The name of the startup process. Examples: outlook, excel. Supports: $select, $OrderBy. Read-only.
      */
     private String processName;
@@ -38,10 +34,6 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
      * The total impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
      */
     private Long totalImpactInMs;
-    /**
-     * The total impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
-     */
-    private Long totalImpactInMs2;
     /**
      * Instantiates a new userExperienceAnalyticsDeviceStartupProcessPerformance and sets the default values.
      * @return a void
@@ -77,12 +69,10 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getLongValue()); });
         deserializerMap.put("medianImpactInMs", (n) -> { this.setMedianImpactInMs(n.getLongValue()); });
-        deserializerMap.put("medianImpactInMs2", (n) -> { this.setMedianImpactInMs2(n.getLongValue()); });
         deserializerMap.put("processName", (n) -> { this.setProcessName(n.getStringValue()); });
         deserializerMap.put("productName", (n) -> { this.setProductName(n.getStringValue()); });
         deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
         deserializerMap.put("totalImpactInMs", (n) -> { this.setTotalImpactInMs(n.getLongValue()); });
-        deserializerMap.put("totalImpactInMs2", (n) -> { this.setTotalImpactInMs2(n.getLongValue()); });
         return deserializerMap;
     }
     /**
@@ -92,14 +82,6 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     @javax.annotation.Nullable
     public Long getMedianImpactInMs() {
         return this.medianImpactInMs;
-    }
-    /**
-     * Gets the medianImpactInMs2 property value. The median impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
-     * @return a int64
-     */
-    @javax.annotation.Nullable
-    public Long getMedianImpactInMs2() {
-        return this.medianImpactInMs2;
     }
     /**
      * Gets the processName property value. The name of the startup process. Examples: outlook, excel. Supports: $select, $OrderBy. Read-only.
@@ -134,14 +116,6 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
         return this.totalImpactInMs;
     }
     /**
-     * Gets the totalImpactInMs2 property value. The total impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
-     * @return a int64
-     */
-    @javax.annotation.Nullable
-    public Long getTotalImpactInMs2() {
-        return this.totalImpactInMs2;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -152,12 +126,10 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
         super.serialize(writer);
         writer.writeLongValue("deviceCount", this.getDeviceCount());
         writer.writeLongValue("medianImpactInMs", this.getMedianImpactInMs());
-        writer.writeLongValue("medianImpactInMs2", this.getMedianImpactInMs2());
         writer.writeStringValue("processName", this.getProcessName());
         writer.writeStringValue("productName", this.getProductName());
         writer.writeStringValue("publisher", this.getPublisher());
         writer.writeLongValue("totalImpactInMs", this.getTotalImpactInMs());
-        writer.writeLongValue("totalImpactInMs2", this.getTotalImpactInMs2());
     }
     /**
      * Sets the deviceCount property value. The count of devices which initiated this process on startup. Supports: $filter, $select, $OrderBy. Read-only.
@@ -176,15 +148,6 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     @javax.annotation.Nonnull
     public void setMedianImpactInMs(@javax.annotation.Nullable final Long value) {
         this.medianImpactInMs = value;
-    }
-    /**
-     * Sets the medianImpactInMs2 property value. The median impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
-     * @param value Value to set for the medianImpactInMs2 property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setMedianImpactInMs2(@javax.annotation.Nullable final Long value) {
-        this.medianImpactInMs2 = value;
     }
     /**
      * Sets the processName property value. The name of the startup process. Examples: outlook, excel. Supports: $select, $OrderBy. Read-only.
@@ -221,14 +184,5 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     @javax.annotation.Nonnull
     public void setTotalImpactInMs(@javax.annotation.Nullable final Long value) {
         this.totalImpactInMs = value;
-    }
-    /**
-     * Sets the totalImpactInMs2 property value. The total impact of startup process on device boot time in milliseconds. Supports: $filter, $select, $OrderBy. Read-only.
-     * @param value Value to set for the totalImpactInMs2 property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setTotalImpactInMs2(@javax.annotation.Nullable final Long value) {
-        this.totalImpactInMs2 = value;
     }
 }

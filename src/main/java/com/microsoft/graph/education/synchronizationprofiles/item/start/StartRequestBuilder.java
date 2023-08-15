@@ -41,7 +41,7 @@ public class StartRequestBuilder extends BaseRequestBuilder {
     /**
      * Verify the files uploaded to a specific school data synchronization profile in the tenant. If the verification is successful, synchronization will start on the profile. Otherwise, the response will contain errors and warnings. If the response contains errors, the synchronization will not start. If the response contains only warnings, synchronization will start.
      * @return a CompletableFuture of startResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationsynchronizationprofile-start?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-start?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StartResponse> post() {
@@ -61,7 +61,7 @@ public class StartRequestBuilder extends BaseRequestBuilder {
      * Verify the files uploaded to a specific school data synchronization profile in the tenant. If the verification is successful, synchronization will start on the profile. Otherwise, the response will contain errors and warnings. If the response contains errors, the synchronization will not start. If the response contains only warnings, synchronization will start.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of startResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationsynchronizationprofile-start?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-start?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<StartResponse> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

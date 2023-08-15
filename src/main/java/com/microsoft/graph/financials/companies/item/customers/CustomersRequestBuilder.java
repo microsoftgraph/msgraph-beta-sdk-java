@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the customers property of the microsoft.graph.company entity.
  */
@@ -36,7 +37,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
      * @return a CustomerItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public CustomerItemRequestBuilder byCustomerId(@javax.annotation.Nonnull final String customerId) {
+    public CustomerItemRequestBuilder byCustomerId(@javax.annotation.Nonnull final UUID customerId) {
         Objects.requireNonNull(customerId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("customer%2Did", customerId);

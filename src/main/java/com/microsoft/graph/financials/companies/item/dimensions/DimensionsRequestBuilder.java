@@ -18,6 +18,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the dimensions property of the microsoft.graph.company entity.
  */
@@ -35,7 +36,7 @@ public class DimensionsRequestBuilder extends BaseRequestBuilder {
      * @return a DimensionItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public DimensionItemRequestBuilder byDimensionId(@javax.annotation.Nonnull final String dimensionId) {
+    public DimensionItemRequestBuilder byDimensionId(@javax.annotation.Nonnull final UUID dimensionId) {
         Objects.requireNonNull(dimensionId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("dimension%2Did", dimensionId);

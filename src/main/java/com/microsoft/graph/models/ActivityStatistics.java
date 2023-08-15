@@ -1,10 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalDate;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public class ActivityStatistics extends Entity implements Parsable {
     /**
      * Total hours spent on the activity. The value is represented in ISO 8601 format for durations.
      */
-    private Period duration;
+    private PeriodAndDuration duration;
     /**
      * Date when the activity ended, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-03' that follows the YYYY-MM-DD format.
      */
@@ -68,10 +68,10 @@ public class ActivityStatistics extends Entity implements Parsable {
     }
     /**
      * Gets the duration property value. Total hours spent on the activity. The value is represented in ISO 8601 format for durations.
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getDuration() {
+    public PeriodAndDuration getDuration() {
         return this.duration;
     }
     /**
@@ -90,7 +90,7 @@ public class ActivityStatistics extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activity", (n) -> { this.setActivity(n.getEnumValue(AnalyticsActivityType.class)); });
-        deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodValue()); });
+        deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("endDate", (n) -> { this.setEndDate(n.getLocalDateValue()); });
         deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getLocalDateValue()); });
         deserializerMap.put("timeZoneUsed", (n) -> { this.setTimeZoneUsed(n.getStringValue()); });
@@ -122,7 +122,7 @@ public class ActivityStatistics extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("activity", this.getActivity());
-        writer.writePeriodValue("duration", this.getDuration());
+        writer.writePeriodAndDurationValue("duration", this.getDuration());
         writer.writeLocalDateValue("endDate", this.getEndDate());
         writer.writeLocalDateValue("startDate", this.getStartDate());
         writer.writeStringValue("timeZoneUsed", this.getTimeZoneUsed());
@@ -142,7 +142,7 @@ public class ActivityStatistics extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setDuration(@javax.annotation.Nullable final Period value) {
+    public void setDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.duration = value;
     }
     /**

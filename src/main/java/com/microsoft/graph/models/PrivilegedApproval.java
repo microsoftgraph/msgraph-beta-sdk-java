@@ -1,10 +1,10 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.time.Period;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -12,7 +12,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     /**
      * The approvalDuration property
      */
-    private Period approvalDuration;
+    private PeriodAndDuration approvalDuration;
     /**
      * The approvalState property
      */
@@ -73,10 +73,10 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the approvalDuration property value. The approvalDuration property
-     * @return a Period
+     * @return a PeriodAndDuration
      */
     @javax.annotation.Nullable
-    public Period getApprovalDuration() {
+    public PeriodAndDuration getApprovalDuration() {
         return this.approvalDuration;
     }
     /**
@@ -118,7 +118,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("approvalDuration", (n) -> { this.setApprovalDuration(n.getPeriodValue()); });
+        deserializerMap.put("approvalDuration", (n) -> { this.setApprovalDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("approvalState", (n) -> { this.setApprovalState(n.getEnumValue(ApprovalState.class)); });
         deserializerMap.put("approvalType", (n) -> { this.setApprovalType(n.getStringValue()); });
         deserializerMap.put("approverReason", (n) -> { this.setApproverReason(n.getStringValue()); });
@@ -188,7 +188,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writePeriodValue("approvalDuration", this.getApprovalDuration());
+        writer.writePeriodAndDurationValue("approvalDuration", this.getApprovalDuration());
         writer.writeEnumValue("approvalState", this.getApprovalState());
         writer.writeStringValue("approvalType", this.getApprovalType());
         writer.writeStringValue("approverReason", this.getApproverReason());
@@ -206,7 +206,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      * @return a void
      */
     @javax.annotation.Nonnull
-    public void setApprovalDuration(@javax.annotation.Nullable final Period value) {
+    public void setApprovalDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
         this.approvalDuration = value;
     }
     /**

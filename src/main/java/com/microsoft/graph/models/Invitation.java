@@ -24,6 +24,10 @@ public class Invitation extends Entity implements Parsable {
      */
     private InvitedUserMessageInfo invitedUserMessageInfo;
     /**
+     * The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
+     */
+    private java.util.List<DirectoryObject> invitedUserSponsors;
+    /**
      * The userType of the user being invited. By default, this is Guest. You can invite as Member if you're are company administrator. The default is false.
      */
     private String invitedUserType;
@@ -76,6 +80,7 @@ public class Invitation extends Entity implements Parsable {
         deserializerMap.put("invitedUserDisplayName", (n) -> { this.setInvitedUserDisplayName(n.getStringValue()); });
         deserializerMap.put("invitedUserEmailAddress", (n) -> { this.setInvitedUserEmailAddress(n.getStringValue()); });
         deserializerMap.put("invitedUserMessageInfo", (n) -> { this.setInvitedUserMessageInfo(n.getObjectValue(InvitedUserMessageInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("invitedUserSponsors", (n) -> { this.setInvitedUserSponsors(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("invitedUserType", (n) -> { this.setInvitedUserType(n.getStringValue()); });
         deserializerMap.put("inviteRedeemUrl", (n) -> { this.setInviteRedeemUrl(n.getStringValue()); });
         deserializerMap.put("inviteRedirectUrl", (n) -> { this.setInviteRedirectUrl(n.getStringValue()); });
@@ -115,6 +120,14 @@ public class Invitation extends Entity implements Parsable {
     @javax.annotation.Nullable
     public InvitedUserMessageInfo getInvitedUserMessageInfo() {
         return this.invitedUserMessageInfo;
+    }
+    /**
+     * Gets the invitedUserSponsors property value. The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
+     * @return a directoryObject
+     */
+    @javax.annotation.Nullable
+    public java.util.List<DirectoryObject> getInvitedUserSponsors() {
+        return this.invitedUserSponsors;
     }
     /**
      * Gets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you're are company administrator. The default is false.
@@ -177,6 +190,7 @@ public class Invitation extends Entity implements Parsable {
         writer.writeStringValue("invitedUserDisplayName", this.getInvitedUserDisplayName());
         writer.writeStringValue("invitedUserEmailAddress", this.getInvitedUserEmailAddress());
         writer.writeObjectValue("invitedUserMessageInfo", this.getInvitedUserMessageInfo());
+        writer.writeCollectionOfObjectValues("invitedUserSponsors", this.getInvitedUserSponsors());
         writer.writeStringValue("invitedUserType", this.getInvitedUserType());
         writer.writeStringValue("inviteRedeemUrl", this.getInviteRedeemUrl());
         writer.writeStringValue("inviteRedirectUrl", this.getInviteRedirectUrl());
@@ -219,6 +233,15 @@ public class Invitation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public void setInvitedUserMessageInfo(@javax.annotation.Nullable final InvitedUserMessageInfo value) {
         this.invitedUserMessageInfo = value;
+    }
+    /**
+     * Sets the invitedUserSponsors property value. The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
+     * @param value Value to set for the invitedUserSponsors property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setInvitedUserSponsors(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
+        this.invitedUserSponsors = value;
     }
     /**
      * Sets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you're are company administrator. The default is false.

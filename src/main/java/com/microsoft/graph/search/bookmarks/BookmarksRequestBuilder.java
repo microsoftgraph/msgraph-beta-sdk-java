@@ -65,7 +65,7 @@ public class BookmarksRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of bookmark objects and their properties.
      * @return a CompletableFuture of bookmarkCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/search-searchentity-list-bookmarks?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/search-searchentity-list-bookmarks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookmarkCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class BookmarksRequestBuilder extends BaseRequestBuilder {
      * Get a list of bookmark objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookmarkCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/search-searchentity-list-bookmarks?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/search-searchentity-list-bookmarks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BookmarkCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class BookmarksRequestBuilder extends BaseRequestBuilder {
      * Create a new bookmark object.
      * @param body The request body
      * @return a CompletableFuture of bookmark
-     * @see <a href="https://docs.microsoft.com/graph/api/search-searchentity-post-bookmarks?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/search-searchentity-post-bookmarks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Bookmark> post(@javax.annotation.Nonnull final Bookmark body) {
@@ -126,7 +126,7 @@ public class BookmarksRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of bookmark
-     * @see <a href="https://docs.microsoft.com/graph/api/search-searchentity-post-bookmarks?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/search-searchentity-post-bookmarks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Bookmark> post(@javax.annotation.Nonnull final Bookmark body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

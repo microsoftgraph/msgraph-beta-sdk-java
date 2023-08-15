@@ -27,6 +27,10 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
      */
     private String packageId;
     /**
+     * Specifies which platform(s) can be targeted for a given Android LOB application or Managed Android LOB application.
+     */
+    private AndroidTargetedPlatforms targetedPlatforms;
+    /**
      * The version code of Android Line of Business (LoB) app.
      */
     private String versionCode;
@@ -64,6 +68,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
         deserializerMap.put("identityVersion", (n) -> { this.setIdentityVersion(n.getStringValue()); });
         deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { this.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
         deserializerMap.put("packageId", (n) -> { this.setPackageId(n.getStringValue()); });
+        deserializerMap.put("targetedPlatforms", (n) -> { this.setTargetedPlatforms(n.getEnumValue(AndroidTargetedPlatforms.class)); });
         deserializerMap.put("versionCode", (n) -> { this.setVersionCode(n.getStringValue()); });
         deserializerMap.put("versionName", (n) -> { this.setVersionName(n.getStringValue()); });
         return deserializerMap;
@@ -101,6 +106,14 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
         return this.packageId;
     }
     /**
+     * Gets the targetedPlatforms property value. Specifies which platform(s) can be targeted for a given Android LOB application or Managed Android LOB application.
+     * @return a androidTargetedPlatforms
+     */
+    @javax.annotation.Nullable
+    public AndroidTargetedPlatforms getTargetedPlatforms() {
+        return this.targetedPlatforms;
+    }
+    /**
      * Gets the versionCode property value. The version code of Android Line of Business (LoB) app.
      * @return a string
      */
@@ -129,6 +142,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
         writer.writeStringValue("identityVersion", this.getIdentityVersion());
         writer.writeObjectValue("minimumSupportedOperatingSystem", this.getMinimumSupportedOperatingSystem());
         writer.writeStringValue("packageId", this.getPackageId());
+        writer.writeEnumValue("targetedPlatforms", this.getTargetedPlatforms());
         writer.writeStringValue("versionCode", this.getVersionCode());
         writer.writeStringValue("versionName", this.getVersionName());
     }
@@ -167,6 +181,15 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     @javax.annotation.Nonnull
     public void setPackageId(@javax.annotation.Nullable final String value) {
         this.packageId = value;
+    }
+    /**
+     * Sets the targetedPlatforms property value. Specifies which platform(s) can be targeted for a given Android LOB application or Managed Android LOB application.
+     * @param value Value to set for the targetedPlatforms property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setTargetedPlatforms(@javax.annotation.Nullable final AndroidTargetedPlatforms value) {
+        this.targetedPlatforms = value;
     }
     /**
      * Sets the versionCode property value. The version code of Android Line of Business (LoB) app.

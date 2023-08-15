@@ -102,6 +102,10 @@ public class User extends DirectoryObject implements Parsable {
      */
     private java.util.List<CloudPC> cloudPCs;
     /**
+     * The cloudRealtimeCommunicationInfo property
+     */
+    private CloudRealtimeCommunicationInfo cloudRealtimeCommunicationInfo;
+    /**
      * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length is 64 characters.Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      */
     private String companyName;
@@ -406,6 +410,10 @@ public class User extends DirectoryObject implements Parsable {
      */
     private String onPremisesSecurityIdentifier;
     /**
+     * The onPremisesSipInfo property
+     */
+    private OnPremisesSipInfo onPremisesSipInfo;
+    /**
      * true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Azure Active Directory (Azure AD). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
      */
     private Boolean onPremisesSyncEnabled;
@@ -554,7 +562,7 @@ public class User extends DirectoryObject implements Parsable {
      */
     private java.util.List<String> skills;
     /**
-     * The sponsors property
+     * The users and groups that are responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      */
     private java.util.List<DirectoryObject> sponsors;
     /**
@@ -807,6 +815,14 @@ public class User extends DirectoryObject implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<CloudPC> getCloudPCs() {
         return this.cloudPCs;
+    }
+    /**
+     * Gets the cloudRealtimeCommunicationInfo property value. The cloudRealtimeCommunicationInfo property
+     * @return a cloudRealtimeCommunicationInfo
+     */
+    @javax.annotation.Nullable
+    public CloudRealtimeCommunicationInfo getCloudRealtimeCommunicationInfo() {
+        return this.cloudRealtimeCommunicationInfo;
     }
     /**
      * Gets the companyName property value. The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length is 64 characters.Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
@@ -1078,6 +1094,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("chats", (n) -> { this.setChats(n.getCollectionOfObjectValues(Chat::createFromDiscriminatorValue)); });
         deserializerMap.put("city", (n) -> { this.setCity(n.getStringValue()); });
         deserializerMap.put("cloudPCs", (n) -> { this.setCloudPCs(n.getCollectionOfObjectValues(CloudPC::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudRealtimeCommunicationInfo", (n) -> { this.setCloudRealtimeCommunicationInfo(n.getObjectValue(CloudRealtimeCommunicationInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("companyName", (n) -> { this.setCompanyName(n.getStringValue()); });
         deserializerMap.put("consentProvidedForMinor", (n) -> { this.setConsentProvidedForMinor(n.getStringValue()); });
         deserializerMap.put("contactFolders", (n) -> { this.setContactFolders(n.getCollectionOfObjectValues(ContactFolder::createFromDiscriminatorValue)); });
@@ -1154,6 +1171,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("onPremisesProvisioningErrors", (n) -> { this.setOnPremisesProvisioningErrors(n.getCollectionOfObjectValues(OnPremisesProvisioningError::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesSamAccountName", (n) -> { this.setOnPremisesSamAccountName(n.getStringValue()); });
         deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { this.setOnPremisesSecurityIdentifier(n.getStringValue()); });
+        deserializerMap.put("onPremisesSipInfo", (n) -> { this.setOnPremisesSipInfo(n.getObjectValue(OnPremisesSipInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesSyncEnabled", (n) -> { this.setOnPremisesSyncEnabled(n.getBooleanValue()); });
         deserializerMap.put("onPremisesUserPrincipalName", (n) -> { this.setOnPremisesUserPrincipalName(n.getStringValue()); });
         deserializerMap.put("otherMails", (n) -> { this.setOtherMails(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -1575,6 +1593,14 @@ public class User extends DirectoryObject implements Parsable {
         return this.onPremisesSecurityIdentifier;
     }
     /**
+     * Gets the onPremisesSipInfo property value. The onPremisesSipInfo property
+     * @return a onPremisesSipInfo
+     */
+    @javax.annotation.Nullable
+    public OnPremisesSipInfo getOnPremisesSipInfo() {
+        return this.onPremisesSipInfo;
+    }
+    /**
      * Gets the onPremisesSyncEnabled property value. true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Azure Active Directory (Azure AD). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
      * @return a boolean
      */
@@ -1871,7 +1897,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.skills;
     }
     /**
-     * Gets the sponsors property value. The sponsors property
+     * Gets the sponsors property value. The users and groups that are responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -2006,6 +2032,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("chats", this.getChats());
         writer.writeStringValue("city", this.getCity());
         writer.writeCollectionOfObjectValues("cloudPCs", this.getCloudPCs());
+        writer.writeObjectValue("cloudRealtimeCommunicationInfo", this.getCloudRealtimeCommunicationInfo());
         writer.writeStringValue("companyName", this.getCompanyName());
         writer.writeStringValue("consentProvidedForMinor", this.getConsentProvidedForMinor());
         writer.writeCollectionOfObjectValues("contactFolders", this.getContactFolders());
@@ -2082,6 +2109,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("onPremisesProvisioningErrors", this.getOnPremisesProvisioningErrors());
         writer.writeStringValue("onPremisesSamAccountName", this.getOnPremisesSamAccountName());
         writer.writeStringValue("onPremisesSecurityIdentifier", this.getOnPremisesSecurityIdentifier());
+        writer.writeObjectValue("onPremisesSipInfo", this.getOnPremisesSipInfo());
         writer.writeBooleanValue("onPremisesSyncEnabled", this.getOnPremisesSyncEnabled());
         writer.writeStringValue("onPremisesUserPrincipalName", this.getOnPremisesUserPrincipalName());
         writer.writeCollectionOfPrimitiveValues("otherMails", this.getOtherMails());
@@ -2339,6 +2367,15 @@ public class User extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public void setCloudPCs(@javax.annotation.Nullable final java.util.List<CloudPC> value) {
         this.cloudPCs = value;
+    }
+    /**
+     * Sets the cloudRealtimeCommunicationInfo property value. The cloudRealtimeCommunicationInfo property
+     * @param value Value to set for the cloudRealtimeCommunicationInfo property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCloudRealtimeCommunicationInfo(@javax.annotation.Nullable final CloudRealtimeCommunicationInfo value) {
+        this.cloudRealtimeCommunicationInfo = value;
     }
     /**
      * Sets the companyName property value. The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length is 64 characters.Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
@@ -3025,6 +3062,15 @@ public class User extends DirectoryObject implements Parsable {
         this.onPremisesSecurityIdentifier = value;
     }
     /**
+     * Sets the onPremisesSipInfo property value. The onPremisesSipInfo property
+     * @param value Value to set for the onPremisesSipInfo property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setOnPremisesSipInfo(@javax.annotation.Nullable final OnPremisesSipInfo value) {
+        this.onPremisesSipInfo = value;
+    }
+    /**
      * Sets the onPremisesSyncEnabled property value. true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise the user isn't being synced and can be managed in Azure Active Directory (Azure AD). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
      * @param value Value to set for the onPremisesSyncEnabled property.
      * @return a void
@@ -3358,7 +3404,7 @@ public class User extends DirectoryObject implements Parsable {
         this.skills = value;
     }
     /**
-     * Sets the sponsors property value. The sponsors property
+     * Sets the sponsors property value. The users and groups that are responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      * @param value Value to set for the sponsors property.
      * @return a void
      */

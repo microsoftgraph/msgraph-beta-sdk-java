@@ -1,5 +1,6 @@
 package com.microsoft.graph.drives.item.items.item.workbook.comments.item.replies.item;
 
+import com.microsoft.graph.drives.item.items.item.workbook.comments.item.replies.item.task.TaskRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.WorkbookCommentReply;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +21,13 @@ import java.util.Objects;
  * Provides operations to manage the replies property of the microsoft.graph.workbookComment entity.
  */
 public class WorkbookCommentReplyItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the task property of the microsoft.graph.workbookCommentReply entity.
+     */
+    @javax.annotation.Nonnull
+    public TaskRequestBuilder task() {
+        return new TaskRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new WorkbookCommentReplyItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

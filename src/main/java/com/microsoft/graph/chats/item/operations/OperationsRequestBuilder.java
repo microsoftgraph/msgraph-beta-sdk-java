@@ -65,7 +65,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * List all Teams async operations that ran or are running on the specified chat.
      * @return a CompletableFuture of teamsAsyncOperationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-list-operations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAsyncOperationCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
      * List all Teams async operations that ran or are running on the specified chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of teamsAsyncOperationCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/chat-list-operations?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAsyncOperationCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

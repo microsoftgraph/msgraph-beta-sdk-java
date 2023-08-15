@@ -33,10 +33,6 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      */
     private OffsetDateTime lastCollectedDateTime;
     /**
-     * Time at which location was recorded, relative to UTC
-     */
-    private OffsetDateTime lastCollectedDateTimeUtc;
-    /**
      * Latitude coordinate of the device's location
      */
     private Double latitude;
@@ -96,12 +92,11 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("altitude", (n) -> { this.setAltitude(n.getDoubleValue()); });
         deserializerMap.put("heading", (n) -> { this.setHeading(n.getDoubleValue()); });
         deserializerMap.put("horizontalAccuracy", (n) -> { this.setHorizontalAccuracy(n.getDoubleValue()); });
         deserializerMap.put("lastCollectedDateTime", (n) -> { this.setLastCollectedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("lastCollectedDateTimeUtc", (n) -> { this.setLastCollectedDateTimeUtc(n.getOffsetDateTimeValue()); });
         deserializerMap.put("latitude", (n) -> { this.setLatitude(n.getDoubleValue()); });
         deserializerMap.put("longitude", (n) -> { this.setLongitude(n.getDoubleValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -132,14 +127,6 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public OffsetDateTime getLastCollectedDateTime() {
         return this.lastCollectedDateTime;
-    }
-    /**
-     * Gets the lastCollectedDateTimeUtc property value. Time at which location was recorded, relative to UTC
-     * @return a OffsetDateTime
-     */
-    @javax.annotation.Nullable
-    public OffsetDateTime getLastCollectedDateTimeUtc() {
-        return this.lastCollectedDateTimeUtc;
     }
     /**
      * Gets the latitude property value. Latitude coordinate of the device's location
@@ -193,7 +180,6 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
         writer.writeDoubleValue("heading", this.getHeading());
         writer.writeDoubleValue("horizontalAccuracy", this.getHorizontalAccuracy());
         writer.writeOffsetDateTimeValue("lastCollectedDateTime", this.getLastCollectedDateTime());
-        writer.writeOffsetDateTimeValue("lastCollectedDateTimeUtc", this.getLastCollectedDateTimeUtc());
         writer.writeDoubleValue("latitude", this.getLatitude());
         writer.writeDoubleValue("longitude", this.getLongitude());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -203,7 +189,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -247,15 +233,6 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
         this.lastCollectedDateTime = value;
     }
     /**
-     * Sets the lastCollectedDateTimeUtc property value. Time at which location was recorded, relative to UTC
-     * @param value Value to set for the lastCollectedDateTimeUtc property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setLastCollectedDateTimeUtc(@javax.annotation.Nullable final OffsetDateTime value) {
-        this.lastCollectedDateTimeUtc = value;
-    }
-    /**
      * Sets the latitude property value. Latitude coordinate of the device's location
      * @param value Value to set for the latitude property.
      * @return a void
@@ -275,7 +252,7 @@ public class DeviceGeoLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

@@ -65,7 +65,7 @@ public class StepsRequestBuilder extends BaseRequestBuilder {
     /**
      * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios:
      * @return a CompletableFuture of approvalStepCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/approval-list-steps?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/approval-list-steps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalStepCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class StepsRequestBuilder extends BaseRequestBuilder {
      * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of approvalStepCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/approval-list-steps?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/approval-list-steps?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalStepCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

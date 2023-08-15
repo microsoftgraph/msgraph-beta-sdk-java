@@ -65,7 +65,7 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the retentionLabel objects and their properties.
      * @return a CompletableFuture of retentionLabelCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-list-retentionlabel?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-retentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionLabelCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the retentionLabel objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of retentionLabelCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-list-retentionlabel?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-retentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionLabelCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,10 +102,10 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new retentionLabel object. To create a disposition review stage, include the **actionAfterRetentionPeriod** property in the request body with one of the possible values specified.
+     * Create a new retentionLabel object. To create a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param body The request body
      * @return a CompletableFuture of retentionLabel
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-post-retentionlabel?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-post-retentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionLabel> post(@javax.annotation.Nonnull final RetentionLabel body) {
@@ -122,11 +122,11 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
         }
     }
     /**
-     * Create a new retentionLabel object. To create a disposition review stage, include the **actionAfterRetentionPeriod** property in the request body with one of the possible values specified.
+     * Create a new retentionLabel object. To create a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of retentionLabel
-     * @see <a href="https://docs.microsoft.com/graph/api/security-labelsroot-post-retentionlabel?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-post-retentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionLabel> post(@javax.annotation.Nonnull final RetentionLabel body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -173,7 +173,7 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new retentionLabel object. To create a disposition review stage, include the **actionAfterRetentionPeriod** property in the request body with one of the possible values specified.
+     * Create a new retentionLabel object. To create a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -182,7 +182,7 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new retentionLabel object. To create a disposition review stage, include the **actionAfterRetentionPeriod** property in the request body with one of the possible values specified.
+     * Create a new retentionLabel object. To create a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

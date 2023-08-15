@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the countriesRegions property of the microsoft.graph.company entity.
  */
@@ -36,7 +37,7 @@ public class CountriesRegionsRequestBuilder extends BaseRequestBuilder {
      * @return a CountryRegionItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public CountryRegionItemRequestBuilder byCountryRegionId(@javax.annotation.Nonnull final String countryRegionId) {
+    public CountryRegionItemRequestBuilder byCountryRegionId(@javax.annotation.Nonnull final UUID countryRegionId) {
         Objects.requireNonNull(countryRegionId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("countryRegion%2Did", countryRegionId);

@@ -21,7 +21,7 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
      */
     private String alertDefinitionId;
     /**
-     * Represents the incidents of this alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
+     * Represents the incidents of this type of alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
      */
     private java.util.List<UnifiedRoleManagementAlertIncident> alertIncidents;
     /**
@@ -91,7 +91,7 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
         return this.alertDefinitionId;
     }
     /**
-     * Gets the alertIncidents property value. Represents the incidents of this alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
+     * Gets the alertIncidents property value. Represents the incidents of this type of alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
      * @return a unifiedRoleManagementAlertIncident
      */
     @javax.annotation.Nullable
@@ -213,7 +213,7 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
         this.alertDefinitionId = value;
     }
     /**
-     * Sets the alertIncidents property value. Represents the incidents of this alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
+     * Sets the alertIncidents property value. Represents the incidents of this type of alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
      * @param value Value to set for the alertIncidents property.
      * @return a void
      */

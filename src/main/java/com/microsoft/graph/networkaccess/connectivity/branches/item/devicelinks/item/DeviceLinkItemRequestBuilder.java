@@ -43,7 +43,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Removes the link between the branch and the CPE device, effectively removing the connection and associated configuration between them.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-branchsite-delete-devicelinks?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-delete-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
      * Removes the link between the branch and the CPE device, effectively removing the connection and associated configuration between them.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-branchsite-delete-devicelinks?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-delete-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the device link associated with a specific branch.
      * @return a CompletableFuture of deviceLink
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-devicelink-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-devicelink-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceLink> get() {
@@ -102,7 +102,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the device link associated with a specific branch.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceLink
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-devicelink-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-devicelink-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceLink> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
      * Update the device link associated with a specific branch.
      * @param body The request body
      * @return a CompletableFuture of deviceLink
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-devicelink-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-devicelink-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceLink> patch(@javax.annotation.Nonnull final DeviceLink body) {
@@ -143,7 +143,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceLink
-     * @see <a href="https://docs.microsoft.com/graph/api/networkaccess-devicelink-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-devicelink-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceLink> patch(@javax.annotation.Nonnull final DeviceLink body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

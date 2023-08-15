@@ -80,7 +80,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties of an approvalStep object.
      * @return a CompletableFuture of approvalStep
-     * @see <a href="https://docs.microsoft.com/graph/api/approvalstep-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/approvalstep-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalStep> get() {
@@ -100,7 +100,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties of an approvalStep object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of approvalStep
-     * @see <a href="https://docs.microsoft.com/graph/api/approvalstep-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/approvalstep-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalStep> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
      * Apply approve or deny decision on an approvalStep object.
      * @param body The request body
      * @return a CompletableFuture of approvalStep
-     * @see <a href="https://docs.microsoft.com/graph/api/approvalstep-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/approvalstep-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalStep> patch(@javax.annotation.Nonnull final ApprovalStep body) {
@@ -141,7 +141,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of approvalStep
-     * @see <a href="https://docs.microsoft.com/graph/api/approvalstep-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/approvalstep-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalStep> patch(@javax.annotation.Nonnull final ApprovalStep body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -51,7 +51,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
     /**
      * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
      * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
     /**
      * Retrieve a user's single Microsoft Authenticator Passwordless Phone Sign-in method object.
      * @return a CompletableFuture of passwordlessMicrosoftAuthenticatorAuthenticationMethod
-     * @see <a href="https://docs.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> get() {
@@ -110,7 +110,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
      * Retrieve a user's single Microsoft Authenticator Passwordless Phone Sign-in method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of passwordlessMicrosoftAuthenticatorAuthenticationMethod
-     * @see <a href="https://docs.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -19,6 +19,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the employees property of the microsoft.graph.company entity.
  */
@@ -36,7 +37,7 @@ public class EmployeesRequestBuilder extends BaseRequestBuilder {
      * @return a EmployeeItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public EmployeeItemRequestBuilder byEmployeeId(@javax.annotation.Nonnull final String employeeId) {
+    public EmployeeItemRequestBuilder byEmployeeId(@javax.annotation.Nonnull final UUID employeeId) {
         Objects.requireNonNull(employeeId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("employee%2Did", employeeId);

@@ -65,7 +65,7 @@ public class ErrorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the errors generated during validation and/or during a sync of a specific school data synchronization profile in the tenant.
      * @return a CompletableFuture of educationSynchronizationErrorCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationsynchronizationerrors-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationerrors-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSynchronizationErrorCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ErrorsRequestBuilder extends BaseRequestBuilder {
      * Get the errors generated during validation and/or during a sync of a specific school data synchronization profile in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationSynchronizationErrorCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/educationsynchronizationerrors-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationerrors-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSynchronizationErrorCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

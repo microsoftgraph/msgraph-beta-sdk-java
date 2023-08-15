@@ -80,7 +80,7 @@ public class TodoRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a adminTodo object.
      * @return a CompletableFuture of adminTodo
-     * @see <a href="https://docs.microsoft.com/graph/api/admintodo-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/admintodo-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminTodo> get() {
@@ -100,7 +100,7 @@ public class TodoRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a adminTodo object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of adminTodo
-     * @see <a href="https://docs.microsoft.com/graph/api/admintodo-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/admintodo-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminTodo> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +120,7 @@ public class TodoRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a adminTodo object.
      * @param body The request body
      * @return a CompletableFuture of adminTodo
-     * @see <a href="https://docs.microsoft.com/graph/api/admintodo-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/admintodo-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminTodo> patch(@javax.annotation.Nonnull final AdminTodo body) {
@@ -141,7 +141,7 @@ public class TodoRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of adminTodo
-     * @see <a href="https://docs.microsoft.com/graph/api/admintodo-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/admintodo-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminTodo> patch(@javax.annotation.Nonnull final AdminTodo body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

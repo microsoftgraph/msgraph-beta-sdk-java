@@ -65,7 +65,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the complianceChange objects and their properties.
      * @return a CompletableFuture of complianceChangeCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/windowsupdates-updatepolicy-list-compliancechanges?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-list-compliancechanges?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComplianceChangeCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
      * Get a list of the complianceChange objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of complianceChangeCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/windowsupdates-updatepolicy-list-compliancechanges?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-list-compliancechanges?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComplianceChangeCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
      * Create a new contentApproval object.
      * @param body The request body
      * @return a CompletableFuture of complianceChange
-     * @see <a href="https://docs.microsoft.com/graph/api/windowsupdates-updatepolicy-post-compliancechanges-contentapproval?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-post-compliancechanges-contentapproval?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComplianceChange> post(@javax.annotation.Nonnull final ComplianceChange body) {
@@ -126,7 +126,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of complianceChange
-     * @see <a href="https://docs.microsoft.com/graph/api/windowsupdates-updatepolicy-post-compliancechanges-contentapproval?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-post-compliancechanges-contentapproval?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComplianceChange> post(@javax.annotation.Nonnull final ComplianceChange body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

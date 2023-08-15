@@ -43,7 +43,7 @@ public class PersonNameItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a personName object from a user's profile.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/personname-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/personname-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class PersonNameItemRequestBuilder extends BaseRequestBuilder {
      * Delete a personName object from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/personname-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/personname-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class PersonNameItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a personName object in a user's profile.
      * @return a CompletableFuture of personName
-     * @see <a href="https://docs.microsoft.com/graph/api/personname-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/personname-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonName> get() {
@@ -102,7 +102,7 @@ public class PersonNameItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a personName object in a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of personName
-     * @see <a href="https://docs.microsoft.com/graph/api/personname-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/personname-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonName> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class PersonNameItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a personName object in a user's profile.
      * @param body The request body
      * @return a CompletableFuture of personName
-     * @see <a href="https://docs.microsoft.com/graph/api/personname-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/personname-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonName> patch(@javax.annotation.Nonnull final PersonName body) {
@@ -143,7 +143,7 @@ public class PersonNameItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of personName
-     * @see <a href="https://docs.microsoft.com/graph/api/personname-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/personname-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PersonName> patch(@javax.annotation.Nonnull final PersonName body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

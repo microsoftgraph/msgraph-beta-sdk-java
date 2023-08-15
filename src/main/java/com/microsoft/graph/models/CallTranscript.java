@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 public class CallTranscript extends Entity implements Parsable {
     /**
-     * A field that represents the content of the transcript. Read-only.
+     * The content of the transcript. Read-only.
      */
     private byte[] content;
     /**
@@ -17,7 +17,7 @@ public class CallTranscript extends Entity implements Parsable {
      */
     private OffsetDateTime createdDateTime;
     /**
-     * A field that represents the time-aligned metadata of the utterances in the transcript. Read-only.
+     * The time-aligned metadata of the utterances in the transcript. Read-only.
      */
     private byte[] metadataContent;
     /**
@@ -39,7 +39,7 @@ public class CallTranscript extends Entity implements Parsable {
         return new CallTranscript();
     }
     /**
-     * Gets the content property value. A field that represents the content of the transcript. Read-only.
+     * Gets the content property value. The content of the transcript. Read-only.
      * @return a base64url
      */
     @javax.annotation.Nullable
@@ -67,7 +67,7 @@ public class CallTranscript extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the metadataContent property value. A field that represents the time-aligned metadata of the utterances in the transcript. Read-only.
+     * Gets the metadataContent property value. The time-aligned metadata of the utterances in the transcript. Read-only.
      * @return a base64url
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class CallTranscript extends Entity implements Parsable {
         writer.writeByteArrayValue("metadataContent", this.getMetadataContent());
     }
     /**
-     * Sets the content property value. A field that represents the content of the transcript. Read-only.
+     * Sets the content property value. The content of the transcript. Read-only.
      * @param value Value to set for the content property.
      * @return a void
      */
@@ -106,7 +106,7 @@ public class CallTranscript extends Entity implements Parsable {
         this.createdDateTime = value;
     }
     /**
-     * Sets the metadataContent property value. A field that represents the time-aligned metadata of the utterances in the transcript. Read-only.
+     * Sets the metadataContent property value. The time-aligned metadata of the utterances in the transcript. Read-only.
      * @param value Value to set for the metadataContent property.
      * @return a void
      */

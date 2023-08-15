@@ -13,6 +13,10 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
+     * The OdataType property
+     */
+    private String odataType;
+    /**
      * The identifier of the publication. Read-only.
      */
     private String publicationId;
@@ -55,6 +59,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("publicationId", (n) -> { this.setPublicationId(n.getStringValue()); });
         deserializerMap.put("publishedToPlanId", (n) -> { this.setPublishedToPlanId(n.getStringValue()); });
         deserializerMap.put("publishingTeamId", (n) -> { this.setPublishingTeamId(n.getStringValue()); });
@@ -68,6 +73,14 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this.odataType;
     }
     /**
      * Gets the publicationId property value. The identifier of the publication. Read-only.
@@ -111,6 +124,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("publicationId", this.getPublicationId());
         writer.writeStringValue("publishedToPlanId", this.getPublishedToPlanId());
         writer.writeStringValue("publishingTeamId", this.getPublishingTeamId());
@@ -124,6 +138,15 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the @odata.type property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this.odataType = value;
     }
     /**
      * Sets the publicationId property value. The identifier of the publication. Read-only.

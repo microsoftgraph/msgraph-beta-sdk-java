@@ -151,12 +151,9 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
         writer.writeStringValue("filter", this.getFilter());
-        writer.writeOffsetDateTimeValue("lastRefreshDateTime", this.getLastRefreshDateTime());
         writer.writeStringValue("metadata", this.getMetadata());
         writer.writeCollectionOfPrimitiveValues("orderBy", this.getOrderBy());
-        writer.writeStringValue("reportName", this.getReportName());
         writer.writeCollectionOfPrimitiveValues("select", this.getSelect());
         writer.writeEnumValue("status", this.getStatus());
     }

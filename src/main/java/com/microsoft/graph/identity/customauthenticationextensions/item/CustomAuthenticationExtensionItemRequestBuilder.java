@@ -51,7 +51,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
     /**
      * Delete a customAuthenticationExtension object.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/customauthenticationextension-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -71,7 +71,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
      * Delete a customAuthenticationExtension object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/customauthenticationextension-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -88,9 +88,9 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Read the properties and relationships of a customAuthenticationExtension object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object.
      * @return a CompletableFuture of customAuthenticationExtension
-     * @see <a href="https://docs.microsoft.com/graph/api/customauthenticationextension-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventlistener-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAuthenticationExtension> get() {
@@ -107,10 +107,10 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         }
     }
     /**
-     * Read the properties and relationships of a customAuthenticationExtension object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customAuthenticationExtension
-     * @see <a href="https://docs.microsoft.com/graph/api/customauthenticationextension-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventlistener-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAuthenticationExtension> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -194,7 +194,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a customAuthenticationExtension object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -202,7 +202,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a customAuthenticationExtension object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -260,7 +260,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a customAuthenticationExtension object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object.
      */
     public class GetQueryParameters {
         /**

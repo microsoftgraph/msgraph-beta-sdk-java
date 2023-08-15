@@ -65,7 +65,7 @@ public class B2cUserFlowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of b2cIdentityUserFlow objects.
      * @return a CompletableFuture of b2cIdentityUserFlowCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-list-b2cuserflows?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-b2cuserflows?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2cIdentityUserFlowCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class B2cUserFlowsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of b2cIdentityUserFlow objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of b2cIdentityUserFlowCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-list-b2cuserflows?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-b2cuserflows?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2cIdentityUserFlowCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class B2cUserFlowsRequestBuilder extends BaseRequestBuilder {
      * Create a new b2cIdentityUserFlow object.
      * @param body The request body
      * @return a CompletableFuture of b2cIdentityUserFlow
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-post-b2cuserflows?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-b2cuserflows?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2cIdentityUserFlow> post(@javax.annotation.Nonnull final B2cIdentityUserFlow body) {
@@ -126,7 +126,7 @@ public class B2cUserFlowsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of b2cIdentityUserFlow
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-post-b2cuserflows?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-b2cuserflows?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<B2cIdentityUserFlow> post(@javax.annotation.Nonnull final B2cIdentityUserFlow body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

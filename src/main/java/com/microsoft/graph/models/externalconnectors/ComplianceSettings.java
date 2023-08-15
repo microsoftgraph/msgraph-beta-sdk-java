@@ -13,7 +13,7 @@ public class ComplianceSettings implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Enables the developer to define the appearance of the content and configure conditions that dictate when the template should be displayed. Maximum of two eDiscovery result templates per connection.
+     * The eDiscoveryResultTemplates property
      */
     private java.util.List<DisplayTemplate> eDiscoveryResultTemplates;
     /**
@@ -47,7 +47,7 @@ public class ComplianceSettings implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the eDiscoveryResultTemplates property value. Enables the developer to define the appearance of the content and configure conditions that dictate when the template should be displayed. Maximum of two eDiscovery result templates per connection.
+     * Gets the eDiscoveryResultTemplates property value. The eDiscoveryResultTemplates property
      * @return a displayTemplate
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class ComplianceSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ComplianceSettings implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the eDiscoveryResultTemplates property value. Enables the developer to define the appearance of the content and configure conditions that dictate when the template should be displayed. Maximum of two eDiscovery result templates per connection.
+     * Sets the eDiscoveryResultTemplates property value. The eDiscoveryResultTemplates property
      * @param value Value to set for the eDiscoveryResultTemplates property.
      * @return a void
      */
@@ -105,7 +105,7 @@ public class ComplianceSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull

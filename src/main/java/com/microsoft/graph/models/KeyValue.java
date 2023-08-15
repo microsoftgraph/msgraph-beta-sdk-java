@@ -13,7 +13,7 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Contains the name of the field that a value is associated with.
+     * Key.
      */
     private String key;
     /**
@@ -21,7 +21,7 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Contains the corresponding value for the specified key.
+     * Value.
      */
     private String value;
     /**
@@ -63,7 +63,7 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the key property value. Contains the name of the field that a value is associated with.
+     * Gets the key property value. Key.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -79,7 +79,7 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the value property value. Contains the corresponding value for the specified key.
+     * Gets the value property value. Value.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
+     * @param value Value to set for the additionalData property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -109,7 +109,7 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the key property value. Contains the name of the field that a value is associated with.
+     * Sets the key property value. Key.
      * @param value Value to set for the key property.
      * @return a void
      */
@@ -119,7 +119,7 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
     }
     /**
      * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the OdataType property.
+     * @param value Value to set for the @odata.type property.
      * @return a void
      */
     @javax.annotation.Nonnull
@@ -127,7 +127,7 @@ public class KeyValue implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the value property value. Contains the corresponding value for the specified key.
+     * Sets the value property value. Value.
      * @param value Value to set for the value property.
      * @return a void
      */

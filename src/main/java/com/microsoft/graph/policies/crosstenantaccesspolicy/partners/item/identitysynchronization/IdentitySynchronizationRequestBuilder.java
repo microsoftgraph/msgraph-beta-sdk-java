@@ -45,7 +45,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of void
      * @deprecated
      *  as of 2022-04/PrivatePreview:CrossTenantSyncPolicy on 2022-03-24 and will be removed 2023-06-06
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -68,7 +68,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of void
      * @deprecated
      *  as of 2022-04/PrivatePreview:CrossTenantSyncPolicy on 2022-03-24 and will be removed 2023-06-06
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -90,7 +90,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
      * @deprecated
      *  as of 2022-04/PrivatePreview:CrossTenantSyncPolicy on 2022-03-24 and will be removed 2023-06-06
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -113,7 +113,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
      * @deprecated
      *  as of 2022-04/PrivatePreview:CrossTenantSyncPolicy on 2022-03-24 and will be removed 2023-06-06
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -136,7 +136,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
      * @deprecated
      *  as of 2022-04/PrivatePreview:CrossTenantSyncPolicy on 2022-03-24 and will be removed 2023-06-06
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-put-identitysynchronization?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-put-identitysynchronization?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated
@@ -160,7 +160,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
      * @deprecated
      *  as of 2022-04/PrivatePreview:CrossTenantSyncPolicy on 2022-03-24 and will be removed 2023-06-06
-     * @see <a href="https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-put-identitysynchronization?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-put-identitysynchronization?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     @Deprecated

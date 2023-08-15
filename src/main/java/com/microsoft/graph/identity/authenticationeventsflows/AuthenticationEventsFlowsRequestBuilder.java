@@ -65,7 +65,7 @@ public class AuthenticationEventsFlowsRequestBuilder extends BaseRequestBuilder 
     /**
      * Get a collection of authentication events policies that are derived from authenticationEventsFlow. Only the externalUsersSelfServiceSignupEventsFlow object type is returned.
      * @return a CompletableFuture of authenticationEventsFlowCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-list-authenticationeventsflows?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-authenticationeventsflows?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationEventsFlowCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class AuthenticationEventsFlowsRequestBuilder extends BaseRequestBuilder 
      * Get a collection of authentication events policies that are derived from authenticationEventsFlow. Only the externalUsersSelfServiceSignupEventsFlow object type is returned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationEventsFlowCollectionResponse
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-list-authenticationeventsflows?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-authenticationeventsflows?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationEventsFlowCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class AuthenticationEventsFlowsRequestBuilder extends BaseRequestBuilder 
      * Create a new authenticationEventsFlow object that is of the type specified in the request body. You can create only an externalUsersSelfServiceSignupEventsFlow object type.
      * @param body The request body
      * @return a CompletableFuture of authenticationEventsFlow
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-post-authenticationeventsflows?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-authenticationeventsflows?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationEventsFlow> post(@javax.annotation.Nonnull final AuthenticationEventsFlow body) {
@@ -126,7 +126,7 @@ public class AuthenticationEventsFlowsRequestBuilder extends BaseRequestBuilder 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of authenticationEventsFlow
-     * @see <a href="https://docs.microsoft.com/graph/api/identitycontainer-post-authenticationeventsflows?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-authenticationeventsflows?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationEventsFlow> post(@javax.annotation.Nonnull final AuthenticationEventsFlow body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

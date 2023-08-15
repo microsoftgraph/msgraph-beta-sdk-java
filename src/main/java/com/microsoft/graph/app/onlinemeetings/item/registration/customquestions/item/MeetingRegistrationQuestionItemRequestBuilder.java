@@ -43,7 +43,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
     /**
      * Delete a custom registration question from a meetingRegistration object on behalf of the organizer.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistrationquestion-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistrationquestion-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -63,7 +63,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * Delete a custom registration question from a meetingRegistration object on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistrationquestion-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistrationquestion-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
     /**
      * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      * @return a CompletableFuture of meetingRegistrationQuestion
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistrationquestion-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistrationquestion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistrationQuestion> get() {
@@ -102,7 +102,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of meetingRegistrationQuestion
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistrationquestion-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistrationquestion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistrationQuestion> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * Update a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      * @param body The request body
      * @return a CompletableFuture of meetingRegistrationQuestion
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistrationquestion-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistrationquestion-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistrationQuestion> patch(@javax.annotation.Nonnull final MeetingRegistrationQuestion body) {
@@ -143,7 +143,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of meetingRegistrationQuestion
-     * @see <a href="https://docs.microsoft.com/graph/api/meetingregistrationquestion-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistrationquestion-update?view=graph-rest-1.0">Find more info here</a>
      */
     @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistrationQuestion> patch(@javax.annotation.Nonnull final MeetingRegistrationQuestion body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
