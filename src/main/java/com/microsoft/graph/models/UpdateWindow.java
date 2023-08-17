@@ -27,9 +27,7 @@ public class UpdateWindow implements AdditionalDataHolder, Parsable {
     private LocalTime updateWindowStartTime;
     /**
      * Instantiates a new updateWindow and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UpdateWindow() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -38,8 +36,8 @@ public class UpdateWindow implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a updateWindow
      */
-    @javax.annotation.Nonnull
-    public static UpdateWindow createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UpdateWindow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UpdateWindow();
     }
@@ -47,7 +45,7 @@ public class UpdateWindow implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -55,7 +53,7 @@ public class UpdateWindow implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -67,7 +65,7 @@ public class UpdateWindow implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -75,7 +73,7 @@ public class UpdateWindow implements AdditionalDataHolder, Parsable {
      * Gets the updateWindowEndTime property value. End of a time window during which agents can receive updates
      * @return a LocalTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalTime getUpdateWindowEndTime() {
         return this.updateWindowEndTime;
     }
@@ -83,17 +81,15 @@ public class UpdateWindow implements AdditionalDataHolder, Parsable {
      * Gets the updateWindowStartTime property value. Start of a time window during which agents can receive updates
      * @return a LocalTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalTime getUpdateWindowStartTime() {
         return this.updateWindowStartTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLocalTimeValue("updateWindowEndTime", this.getUpdateWindowEndTime());
@@ -103,37 +99,29 @@ public class UpdateWindow implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the updateWindowEndTime property value. End of a time window during which agents can receive updates
      * @param value Value to set for the updateWindowEndTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdateWindowEndTime(@javax.annotation.Nullable final LocalTime value) {
+    public void setUpdateWindowEndTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.updateWindowEndTime = value;
     }
     /**
      * Sets the updateWindowStartTime property value. Start of a time window during which agents can receive updates
      * @param value Value to set for the updateWindowStartTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdateWindowStartTime(@javax.annotation.Nullable final LocalTime value) {
+    public void setUpdateWindowStartTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.updateWindowStartTime = value;
     }
 }

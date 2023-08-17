@@ -58,9 +58,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     private String toolTip;
     /**
      * Instantiates a new matchingLabel and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MatchingLabel() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -69,8 +67,8 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a matchingLabel
      */
-    @javax.annotation.Nonnull
-    public static MatchingLabel createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MatchingLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MatchingLabel();
     }
@@ -78,7 +76,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -86,7 +84,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * Gets the applicationMode property value. The applicationMode property
      * @return a applicationMode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ApplicationMode getApplicationMode() {
         return this.applicationMode;
     }
@@ -94,7 +92,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * Gets the description property value. The description property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -102,7 +100,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -110,7 +108,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("applicationMode", (n) -> { this.setApplicationMode(n.getEnumValue(ApplicationMode.class)); });
@@ -130,7 +128,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * Gets the id property value. The id property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -138,7 +136,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * Gets the isEndpointProtectionEnabled property value. The isEndpointProtectionEnabled property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsEndpointProtectionEnabled() {
         return this.isEndpointProtectionEnabled;
     }
@@ -146,7 +144,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * Gets the labelActions property value. The labelActions property
      * @return a labelActionBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<LabelActionBase> getLabelActions() {
         return this.labelActions;
     }
@@ -154,7 +152,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * Gets the name property value. The name property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -162,7 +160,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -170,7 +168,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * Gets the policyTip property value. The policyTip property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPolicyTip() {
         return this.policyTip;
     }
@@ -178,7 +176,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * Gets the priority property value. The priority property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPriority() {
         return this.priority;
     }
@@ -186,17 +184,15 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * Gets the toolTip property value. The toolTip property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getToolTip() {
         return this.toolTip;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("applicationMode", this.getApplicationMode());
         writer.writeStringValue("description", this.getDescription());
@@ -214,109 +210,85 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the applicationMode property value. The applicationMode property
      * @param value Value to set for the applicationMode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicationMode(@javax.annotation.Nullable final ApplicationMode value) {
+    public void setApplicationMode(@jakarta.annotation.Nullable final ApplicationMode value) {
         this.applicationMode = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the isEndpointProtectionEnabled property value. The isEndpointProtectionEnabled property
      * @param value Value to set for the isEndpointProtectionEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsEndpointProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsEndpointProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEndpointProtectionEnabled = value;
     }
     /**
      * Sets the labelActions property value. The labelActions property
      * @param value Value to set for the labelActions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabelActions(@javax.annotation.Nullable final java.util.List<LabelActionBase> value) {
+    public void setLabelActions(@jakarta.annotation.Nullable final java.util.List<LabelActionBase> value) {
         this.labelActions = value;
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the policyTip property value. The policyTip property
      * @param value Value to set for the policyTip property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyTip(@javax.annotation.Nullable final String value) {
+    public void setPolicyTip(@jakarta.annotation.Nullable final String value) {
         this.policyTip = value;
     }
     /**
      * Sets the priority property value. The priority property
      * @param value Value to set for the priority property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPriority(@javax.annotation.Nullable final Integer value) {
+    public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.priority = value;
     }
     /**
      * Sets the toolTip property value. The toolTip property
      * @param value Value to set for the toolTip property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setToolTip(@javax.annotation.Nullable final String value) {
+    public void setToolTip(@jakarta.annotation.Nullable final String value) {
         this.toolTip = value;
     }
 }

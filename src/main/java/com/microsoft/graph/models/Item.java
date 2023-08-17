@@ -93,9 +93,7 @@ public class Item implements AdditionalDataHolder, Parsable {
     private BigDecimal unitPrice;
     /**
      * Instantiates a new item and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Item() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -104,8 +102,8 @@ public class Item implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a item
      */
-    @javax.annotation.Nonnull
-    public static Item createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Item createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Item();
     }
@@ -113,7 +111,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -121,7 +119,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the baseUnitOfMeasureId property value. The baseUnitOfMeasureId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getBaseUnitOfMeasureId() {
         return this.baseUnitOfMeasureId;
     }
@@ -129,7 +127,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the blocked property value. The blocked property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBlocked() {
         return this.blocked;
     }
@@ -137,7 +135,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -145,7 +143,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(19);
         deserializerMap.put("baseUnitOfMeasureId", (n) -> { this.setBaseUnitOfMeasureId(n.getUUIDValue()); });
@@ -173,7 +171,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the gtin property value. The gtin property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getGtin() {
         return this.gtin;
     }
@@ -181,7 +179,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the id property value. The id property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getId() {
         return this.id;
     }
@@ -189,7 +187,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the inventory property value. The inventory property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getInventory() {
         return this.inventory;
     }
@@ -197,7 +195,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the itemCategory property value. The itemCategory property
      * @return a itemCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemCategory getItemCategory() {
         return this.itemCategory;
     }
@@ -205,7 +203,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the itemCategoryCode property value. The itemCategoryCode property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getItemCategoryCode() {
         return this.itemCategoryCode;
     }
@@ -213,7 +211,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the itemCategoryId property value. The itemCategoryId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getItemCategoryId() {
         return this.itemCategoryId;
     }
@@ -221,7 +219,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -229,7 +227,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the number property value. The number property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNumber() {
         return this.number;
     }
@@ -237,7 +235,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -245,7 +243,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the picture property value. The picture property
      * @return a picture
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Picture> getPicture() {
         return this.picture;
     }
@@ -253,7 +251,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the priceIncludesTax property value. The priceIncludesTax property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPriceIncludesTax() {
         return this.priceIncludesTax;
     }
@@ -261,7 +259,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the taxGroupCode property value. The taxGroupCode property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTaxGroupCode() {
         return this.taxGroupCode;
     }
@@ -269,7 +267,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the taxGroupId property value. The taxGroupId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getTaxGroupId() {
         return this.taxGroupId;
     }
@@ -277,7 +275,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the type property value. The type property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getType() {
         return this.type;
     }
@@ -285,7 +283,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the unitCost property value. The unitCost property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getUnitCost() {
         return this.unitCost;
     }
@@ -293,17 +291,15 @@ public class Item implements AdditionalDataHolder, Parsable {
      * Gets the unitPrice property value. The unitPrice property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getUnitPrice() {
         return this.unitPrice;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeUUIDValue("baseUnitOfMeasureId", this.getBaseUnitOfMeasureId());
         writer.writeBooleanValue("blocked", this.getBlocked());
@@ -329,181 +325,141 @@ public class Item implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the baseUnitOfMeasureId property value. The baseUnitOfMeasureId property
      * @param value Value to set for the baseUnitOfMeasureId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBaseUnitOfMeasureId(@javax.annotation.Nullable final UUID value) {
+    public void setBaseUnitOfMeasureId(@jakarta.annotation.Nullable final UUID value) {
         this.baseUnitOfMeasureId = value;
     }
     /**
      * Sets the blocked property value. The blocked property
      * @param value Value to set for the blocked property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBlocked(@javax.annotation.Nullable final Boolean value) {
+    public void setBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.blocked = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the gtin property value. The gtin property
      * @param value Value to set for the gtin property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGtin(@javax.annotation.Nullable final String value) {
+    public void setGtin(@jakarta.annotation.Nullable final String value) {
         this.gtin = value;
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final UUID value) {
+    public void setId(@jakarta.annotation.Nullable final UUID value) {
         this.id = value;
     }
     /**
      * Sets the inventory property value. The inventory property
      * @param value Value to set for the inventory property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInventory(@javax.annotation.Nullable final BigDecimal value) {
+    public void setInventory(@jakarta.annotation.Nullable final BigDecimal value) {
         this.inventory = value;
     }
     /**
      * Sets the itemCategory property value. The itemCategory property
      * @param value Value to set for the itemCategory property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setItemCategory(@javax.annotation.Nullable final ItemCategory value) {
+    public void setItemCategory(@jakarta.annotation.Nullable final ItemCategory value) {
         this.itemCategory = value;
     }
     /**
      * Sets the itemCategoryCode property value. The itemCategoryCode property
      * @param value Value to set for the itemCategoryCode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setItemCategoryCode(@javax.annotation.Nullable final String value) {
+    public void setItemCategoryCode(@jakarta.annotation.Nullable final String value) {
         this.itemCategoryCode = value;
     }
     /**
      * Sets the itemCategoryId property value. The itemCategoryId property
      * @param value Value to set for the itemCategoryId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setItemCategoryId(@javax.annotation.Nullable final UUID value) {
+    public void setItemCategoryId(@jakarta.annotation.Nullable final UUID value) {
         this.itemCategoryId = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNumber(@javax.annotation.Nullable final String value) {
+    public void setNumber(@jakarta.annotation.Nullable final String value) {
         this.number = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the picture property value. The picture property
      * @param value Value to set for the picture property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPicture(@javax.annotation.Nullable final java.util.List<Picture> value) {
+    public void setPicture(@jakarta.annotation.Nullable final java.util.List<Picture> value) {
         this.picture = value;
     }
     /**
      * Sets the priceIncludesTax property value. The priceIncludesTax property
      * @param value Value to set for the priceIncludesTax property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPriceIncludesTax(@javax.annotation.Nullable final Boolean value) {
+    public void setPriceIncludesTax(@jakarta.annotation.Nullable final Boolean value) {
         this.priceIncludesTax = value;
     }
     /**
      * Sets the taxGroupCode property value. The taxGroupCode property
      * @param value Value to set for the taxGroupCode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTaxGroupCode(@javax.annotation.Nullable final String value) {
+    public void setTaxGroupCode(@jakarta.annotation.Nullable final String value) {
         this.taxGroupCode = value;
     }
     /**
      * Sets the taxGroupId property value. The taxGroupId property
      * @param value Value to set for the taxGroupId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTaxGroupId(@javax.annotation.Nullable final UUID value) {
+    public void setTaxGroupId(@jakarta.annotation.Nullable final UUID value) {
         this.taxGroupId = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final String value) {
+    public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
     /**
      * Sets the unitCost property value. The unitCost property
      * @param value Value to set for the unitCost property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnitCost(@javax.annotation.Nullable final BigDecimal value) {
+    public void setUnitCost(@jakarta.annotation.Nullable final BigDecimal value) {
         this.unitCost = value;
     }
     /**
      * Sets the unitPrice property value. The unitPrice property
      * @param value Value to set for the unitPrice property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnitPrice(@javax.annotation.Nullable final BigDecimal value) {
+    public void setUnitPrice(@jakarta.annotation.Nullable final BigDecimal value) {
         this.unitPrice = value;
     }
 }

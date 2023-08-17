@@ -25,9 +25,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
     private String url;
     /**
      * Instantiates a new logicAppTriggerEndpointConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public LogicAppTriggerEndpointConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.logicAppTriggerEndpointConfiguration");
@@ -37,8 +35,8 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a logicAppTriggerEndpointConfiguration
      */
-    @javax.annotation.Nonnull
-    public static LogicAppTriggerEndpointConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static LogicAppTriggerEndpointConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new LogicAppTriggerEndpointConfiguration();
     }
@@ -46,7 +44,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("logicAppWorkflowName", (n) -> { this.setLogicAppWorkflowName(n.getStringValue()); });
@@ -59,7 +57,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
      * Gets the logicAppWorkflowName property value. The name of the logic app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLogicAppWorkflowName() {
         return this.logicAppWorkflowName;
     }
@@ -67,7 +65,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
      * Gets the resourceGroupName property value. The Azure resource group name for the logic app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceGroupName() {
         return this.resourceGroupName;
     }
@@ -75,7 +73,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
      * Gets the subscriptionId property value. Identifier of the Azure subscription for the logic app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
@@ -83,17 +81,15 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
      * Gets the url property value. The URL to the logic app endpoint that will be triggered. Only required for app-only token scenarios where app is creating a customCalloutExtension without a signed-in user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUrl() {
         return this.url;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("logicAppWorkflowName", this.getLogicAppWorkflowName());
@@ -104,37 +100,29 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
     /**
      * Sets the logicAppWorkflowName property value. The name of the logic app.
      * @param value Value to set for the logicAppWorkflowName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLogicAppWorkflowName(@javax.annotation.Nullable final String value) {
+    public void setLogicAppWorkflowName(@jakarta.annotation.Nullable final String value) {
         this.logicAppWorkflowName = value;
     }
     /**
      * Sets the resourceGroupName property value. The Azure resource group name for the logic app.
      * @param value Value to set for the resourceGroupName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceGroupName(@javax.annotation.Nullable final String value) {
+    public void setResourceGroupName(@jakarta.annotation.Nullable final String value) {
         this.resourceGroupName = value;
     }
     /**
      * Sets the subscriptionId property value. Identifier of the Azure subscription for the logic app.
      * @param value Value to set for the subscriptionId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubscriptionId(@javax.annotation.Nullable final String value) {
+    public void setSubscriptionId(@jakarta.annotation.Nullable final String value) {
         this.subscriptionId = value;
     }
     /**
      * Sets the url property value. The URL to the logic app endpoint that will be triggered. Only required for app-only token scenarios where app is creating a customCalloutExtension without a signed-in user.
      * @param value Value to set for the url property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUrl(@javax.annotation.Nullable final String value) {
+    public void setUrl(@jakarta.annotation.Nullable final String value) {
         this.url = value;
     }
 }

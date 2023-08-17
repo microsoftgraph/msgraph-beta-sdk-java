@@ -30,9 +30,7 @@ public class NotificationChannel implements AdditionalDataHolder, Parsable {
     private java.util.List<String> receivers;
     /**
      * Instantiates a new notificationChannel and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public NotificationChannel() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +39,8 @@ public class NotificationChannel implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a notificationChannel
      */
-    @javax.annotation.Nonnull
-    public static NotificationChannel createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static NotificationChannel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new NotificationChannel();
     }
@@ -50,7 +48,7 @@ public class NotificationChannel implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +56,7 @@ public class NotificationChannel implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("notificationChannelType", (n) -> { this.setNotificationChannelType(n.getEnumValue(NotificationChannelType.class)); });
@@ -71,7 +69,7 @@ public class NotificationChannel implements AdditionalDataHolder, Parsable {
      * Gets the notificationChannelType property value. The type of the notification channel. The possible values are: portal, email, phoneCall, sms, unknownFutureValue.
      * @return a notificationChannelType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public NotificationChannelType getNotificationChannelType() {
         return this.notificationChannelType;
     }
@@ -79,7 +77,7 @@ public class NotificationChannel implements AdditionalDataHolder, Parsable {
      * Gets the notificationReceivers property value. Information about the notification receivers, such as locale and contact information. For example, en-us for locale and serena.davis@contoso.com for contact information.
      * @return a notificationReceiver
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<NotificationReceiver> getNotificationReceivers() {
         return this.notificationReceivers;
     }
@@ -87,7 +85,7 @@ public class NotificationChannel implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -95,17 +93,15 @@ public class NotificationChannel implements AdditionalDataHolder, Parsable {
      * Gets the receivers property value. The contact information about the notification receivers, such as email addresses. For portal notifications, receivers can be left blank. For email notifications, receivers consists of email addresses such as serena.davis@contoso.com.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getReceivers() {
         return this.receivers;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("notificationChannelType", this.getNotificationChannelType());
         writer.writeCollectionOfObjectValues("notificationReceivers", this.getNotificationReceivers());
@@ -116,46 +112,36 @@ public class NotificationChannel implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the notificationChannelType property value. The type of the notification channel. The possible values are: portal, email, phoneCall, sms, unknownFutureValue.
      * @param value Value to set for the notificationChannelType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotificationChannelType(@javax.annotation.Nullable final NotificationChannelType value) {
+    public void setNotificationChannelType(@jakarta.annotation.Nullable final NotificationChannelType value) {
         this.notificationChannelType = value;
     }
     /**
      * Sets the notificationReceivers property value. Information about the notification receivers, such as locale and contact information. For example, en-us for locale and serena.davis@contoso.com for contact information.
      * @param value Value to set for the notificationReceivers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotificationReceivers(@javax.annotation.Nullable final java.util.List<NotificationReceiver> value) {
+    public void setNotificationReceivers(@jakarta.annotation.Nullable final java.util.List<NotificationReceiver> value) {
         this.notificationReceivers = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the receivers property value. The contact information about the notification receivers, such as email addresses. For portal notifications, receivers can be left blank. For email notifications, receivers consists of email addresses such as serena.davis@contoso.com.
      * @param value Value to set for the receivers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReceivers(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setReceivers(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.receivers = value;
     }
 }

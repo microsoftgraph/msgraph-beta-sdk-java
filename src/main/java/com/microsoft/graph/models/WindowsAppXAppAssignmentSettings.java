@@ -16,9 +16,7 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
     private Boolean useDeviceContext;
     /**
      * Instantiates a new windowsAppXAppAssignmentSettings and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsAppXAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.windowsAppXAppAssignmentSettings");
@@ -28,8 +26,8 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsAppXAppAssignmentSettings
      */
-    @javax.annotation.Nonnull
-    public static WindowsAppXAppAssignmentSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsAppXAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsAppXAppAssignmentSettings();
     }
@@ -37,7 +35,7 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("useDeviceContext", (n) -> { this.setUseDeviceContext(n.getBooleanValue()); });
@@ -47,17 +45,15 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
      * Gets the useDeviceContext property value. Whether or not to use device execution context for Windows AppX mobile app.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getUseDeviceContext() {
         return this.useDeviceContext;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("useDeviceContext", this.getUseDeviceContext());
@@ -65,10 +61,8 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
     /**
      * Sets the useDeviceContext property value. Whether or not to use device execution context for Windows AppX mobile app.
      * @param value Value to set for the useDeviceContext property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUseDeviceContext(@javax.annotation.Nullable final Boolean value) {
+    public void setUseDeviceContext(@jakarta.annotation.Nullable final Boolean value) {
         this.useDeviceContext = value;
     }
 }

@@ -129,9 +129,7 @@ public class Call extends Entity implements Parsable {
     private CallTranscriptionInfo transcription;
     /**
      * Instantiates a new call and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Call() {
         super();
     }
@@ -140,8 +138,8 @@ public class Call extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a call
      */
-    @javax.annotation.Nonnull
-    public static Call createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Call createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Call();
     }
@@ -149,7 +147,7 @@ public class Call extends Entity implements Parsable {
      * Gets the activeModalities property value. The list of active modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data. Read-only.
      * @return a modality
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Modality> getActiveModalities() {
         return this.activeModalities;
     }
@@ -157,7 +155,7 @@ public class Call extends Entity implements Parsable {
      * Gets the answeredBy property value. The participant that answered the call. Read-only.
      * @return a participantInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ParticipantInfo getAnsweredBy() {
         return this.answeredBy;
     }
@@ -165,7 +163,7 @@ public class Call extends Entity implements Parsable {
      * Gets the audioRoutingGroups property value. The audioRoutingGroups property
      * @return a audioRoutingGroup
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AudioRoutingGroup> getAudioRoutingGroups() {
         return this.audioRoutingGroups;
     }
@@ -173,7 +171,7 @@ public class Call extends Entity implements Parsable {
      * Gets the callbackUri property value. The callback URL on which callbacks will be delivered. Must be https.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCallbackUri() {
         return this.callbackUri;
     }
@@ -181,7 +179,7 @@ public class Call extends Entity implements Parsable {
      * Gets the callChainId property value. A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCallChainId() {
         return this.callChainId;
     }
@@ -189,7 +187,7 @@ public class Call extends Entity implements Parsable {
      * Gets the callOptions property value. Contains the optional features for the call.
      * @return a callOptions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CallOptions getCallOptions() {
         return this.callOptions;
     }
@@ -197,7 +195,7 @@ public class Call extends Entity implements Parsable {
      * Gets the callRoutes property value. The routing information on how the call was retargeted. Read-only.
      * @return a callRoute
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CallRoute> getCallRoutes() {
         return this.callRoutes;
     }
@@ -205,7 +203,7 @@ public class Call extends Entity implements Parsable {
      * Gets the chatInfo property value. The chat information. Required information for meeting scenarios.
      * @return a chatInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatInfo getChatInfo() {
         return this.chatInfo;
     }
@@ -213,7 +211,7 @@ public class Call extends Entity implements Parsable {
      * Gets the contentSharingSessions property value. The contentSharingSessions property
      * @return a contentSharingSession
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ContentSharingSession> getContentSharingSessions() {
         return this.contentSharingSessions;
     }
@@ -221,7 +219,7 @@ public class Call extends Entity implements Parsable {
      * Gets the direction property value. The direction of the call. The possible value are incoming or outgoing. Read-only.
      * @return a callDirection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CallDirection getDirection() {
         return this.direction;
     }
@@ -229,7 +227,7 @@ public class Call extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeModalities", (n) -> { this.setActiveModalities(n.getCollectionOfEnumValues(Modality.class)); });
@@ -268,7 +266,7 @@ public class Call extends Entity implements Parsable {
      * Gets the incomingContext property value. The context associated with an incoming call. Read-only. Server generated.
      * @return a incomingContext
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IncomingContext getIncomingContext() {
         return this.incomingContext;
     }
@@ -276,7 +274,7 @@ public class Call extends Entity implements Parsable {
      * Gets the mediaConfig property value. The media configuration. Required information for creating peer to peer calls or joining meetings.
      * @return a mediaConfig
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MediaConfig getMediaConfig() {
         return this.mediaConfig;
     }
@@ -284,7 +282,7 @@ public class Call extends Entity implements Parsable {
      * Gets the mediaState property value. Read-only. The call media state.
      * @return a callMediaState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CallMediaState getMediaState() {
         return this.mediaState;
     }
@@ -292,7 +290,7 @@ public class Call extends Entity implements Parsable {
      * Gets the meetingCapability property value. Contains the capabilities of a meeting. Read-only.
      * @return a meetingCapability
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MeetingCapability getMeetingCapability() {
         return this.meetingCapability;
     }
@@ -300,7 +298,7 @@ public class Call extends Entity implements Parsable {
      * Gets the meetingInfo property value. The meeting information. Required information for meeting scenarios.
      * @return a meetingInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MeetingInfo getMeetingInfo() {
         return this.meetingInfo;
     }
@@ -308,7 +306,7 @@ public class Call extends Entity implements Parsable {
      * Gets the myParticipantId property value. The myParticipantId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMyParticipantId() {
         return this.myParticipantId;
     }
@@ -316,7 +314,7 @@ public class Call extends Entity implements Parsable {
      * Gets the operations property value. The operations property
      * @return a commsOperation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CommsOperation> getOperations() {
         return this.operations;
     }
@@ -324,7 +322,7 @@ public class Call extends Entity implements Parsable {
      * Gets the participants property value. The participants property
      * @return a participant
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Participant> getParticipants() {
         return this.participants;
     }
@@ -332,7 +330,7 @@ public class Call extends Entity implements Parsable {
      * Gets the requestedModalities property value. The requestedModalities property
      * @return a modality
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Modality> getRequestedModalities() {
         return this.requestedModalities;
     }
@@ -340,7 +338,7 @@ public class Call extends Entity implements Parsable {
      * Gets the resultInfo property value. The resultInfo property
      * @return a resultInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResultInfo getResultInfo() {
         return this.resultInfo;
     }
@@ -348,7 +346,7 @@ public class Call extends Entity implements Parsable {
      * Gets the ringingTimeoutInSeconds property value. The ringingTimeoutInSeconds property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRingingTimeoutInSeconds() {
         return this.ringingTimeoutInSeconds;
     }
@@ -356,7 +354,7 @@ public class Call extends Entity implements Parsable {
      * Gets the routingPolicies property value. The routingPolicies property
      * @return a routingPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<RoutingPolicy> getRoutingPolicies() {
         return this.routingPolicies;
     }
@@ -364,7 +362,7 @@ public class Call extends Entity implements Parsable {
      * Gets the source property value. The source property
      * @return a participantInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ParticipantInfo getSource() {
         return this.source;
     }
@@ -372,7 +370,7 @@ public class Call extends Entity implements Parsable {
      * Gets the state property value. The state property
      * @return a callState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CallState getState() {
         return this.state;
     }
@@ -380,7 +378,7 @@ public class Call extends Entity implements Parsable {
      * Gets the subject property value. The subject property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubject() {
         return this.subject;
     }
@@ -388,7 +386,7 @@ public class Call extends Entity implements Parsable {
      * Gets the targets property value. The targets property
      * @return a invitationParticipantInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<InvitationParticipantInfo> getTargets() {
         return this.targets;
     }
@@ -396,7 +394,7 @@ public class Call extends Entity implements Parsable {
      * Gets the tenantId property value. The tenantId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -404,7 +402,7 @@ public class Call extends Entity implements Parsable {
      * Gets the terminationReason property value. The terminationReason property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTerminationReason() {
         return this.terminationReason;
     }
@@ -412,7 +410,7 @@ public class Call extends Entity implements Parsable {
      * Gets the toneInfo property value. The toneInfo property
      * @return a toneInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ToneInfo getToneInfo() {
         return this.toneInfo;
     }
@@ -420,17 +418,15 @@ public class Call extends Entity implements Parsable {
      * Gets the transcription property value. The transcription information for the call. Read-only.
      * @return a callTranscriptionInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CallTranscriptionInfo getTranscription() {
         return this.transcription;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfEnumValues("activeModalities", this.getActiveModalities());
@@ -467,271 +463,211 @@ public class Call extends Entity implements Parsable {
     /**
      * Sets the activeModalities property value. The list of active modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data. Read-only.
      * @param value Value to set for the activeModalities property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActiveModalities(@javax.annotation.Nullable final java.util.List<Modality> value) {
+    public void setActiveModalities(@jakarta.annotation.Nullable final java.util.List<Modality> value) {
         this.activeModalities = value;
     }
     /**
      * Sets the answeredBy property value. The participant that answered the call. Read-only.
      * @param value Value to set for the answeredBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnsweredBy(@javax.annotation.Nullable final ParticipantInfo value) {
+    public void setAnsweredBy(@jakarta.annotation.Nullable final ParticipantInfo value) {
         this.answeredBy = value;
     }
     /**
      * Sets the audioRoutingGroups property value. The audioRoutingGroups property
      * @param value Value to set for the audioRoutingGroups property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAudioRoutingGroups(@javax.annotation.Nullable final java.util.List<AudioRoutingGroup> value) {
+    public void setAudioRoutingGroups(@jakarta.annotation.Nullable final java.util.List<AudioRoutingGroup> value) {
         this.audioRoutingGroups = value;
     }
     /**
      * Sets the callbackUri property value. The callback URL on which callbacks will be delivered. Must be https.
      * @param value Value to set for the callbackUri property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallbackUri(@javax.annotation.Nullable final String value) {
+    public void setCallbackUri(@jakarta.annotation.Nullable final String value) {
         this.callbackUri = value;
     }
     /**
      * Sets the callChainId property value. A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
      * @param value Value to set for the callChainId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallChainId(@javax.annotation.Nullable final String value) {
+    public void setCallChainId(@jakarta.annotation.Nullable final String value) {
         this.callChainId = value;
     }
     /**
      * Sets the callOptions property value. Contains the optional features for the call.
      * @param value Value to set for the callOptions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallOptions(@javax.annotation.Nullable final CallOptions value) {
+    public void setCallOptions(@jakarta.annotation.Nullable final CallOptions value) {
         this.callOptions = value;
     }
     /**
      * Sets the callRoutes property value. The routing information on how the call was retargeted. Read-only.
      * @param value Value to set for the callRoutes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallRoutes(@javax.annotation.Nullable final java.util.List<CallRoute> value) {
+    public void setCallRoutes(@jakarta.annotation.Nullable final java.util.List<CallRoute> value) {
         this.callRoutes = value;
     }
     /**
      * Sets the chatInfo property value. The chat information. Required information for meeting scenarios.
      * @param value Value to set for the chatInfo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChatInfo(@javax.annotation.Nullable final ChatInfo value) {
+    public void setChatInfo(@jakarta.annotation.Nullable final ChatInfo value) {
         this.chatInfo = value;
     }
     /**
      * Sets the contentSharingSessions property value. The contentSharingSessions property
      * @param value Value to set for the contentSharingSessions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentSharingSessions(@javax.annotation.Nullable final java.util.List<ContentSharingSession> value) {
+    public void setContentSharingSessions(@jakarta.annotation.Nullable final java.util.List<ContentSharingSession> value) {
         this.contentSharingSessions = value;
     }
     /**
      * Sets the direction property value. The direction of the call. The possible value are incoming or outgoing. Read-only.
      * @param value Value to set for the direction property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDirection(@javax.annotation.Nullable final CallDirection value) {
+    public void setDirection(@jakarta.annotation.Nullable final CallDirection value) {
         this.direction = value;
     }
     /**
      * Sets the incomingContext property value. The context associated with an incoming call. Read-only. Server generated.
      * @param value Value to set for the incomingContext property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncomingContext(@javax.annotation.Nullable final IncomingContext value) {
+    public void setIncomingContext(@jakarta.annotation.Nullable final IncomingContext value) {
         this.incomingContext = value;
     }
     /**
      * Sets the mediaConfig property value. The media configuration. Required information for creating peer to peer calls or joining meetings.
      * @param value Value to set for the mediaConfig property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaConfig(@javax.annotation.Nullable final MediaConfig value) {
+    public void setMediaConfig(@jakarta.annotation.Nullable final MediaConfig value) {
         this.mediaConfig = value;
     }
     /**
      * Sets the mediaState property value. Read-only. The call media state.
      * @param value Value to set for the mediaState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaState(@javax.annotation.Nullable final CallMediaState value) {
+    public void setMediaState(@jakarta.annotation.Nullable final CallMediaState value) {
         this.mediaState = value;
     }
     /**
      * Sets the meetingCapability property value. Contains the capabilities of a meeting. Read-only.
      * @param value Value to set for the meetingCapability property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMeetingCapability(@javax.annotation.Nullable final MeetingCapability value) {
+    public void setMeetingCapability(@jakarta.annotation.Nullable final MeetingCapability value) {
         this.meetingCapability = value;
     }
     /**
      * Sets the meetingInfo property value. The meeting information. Required information for meeting scenarios.
      * @param value Value to set for the meetingInfo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMeetingInfo(@javax.annotation.Nullable final MeetingInfo value) {
+    public void setMeetingInfo(@jakarta.annotation.Nullable final MeetingInfo value) {
         this.meetingInfo = value;
     }
     /**
      * Sets the myParticipantId property value. The myParticipantId property
      * @param value Value to set for the myParticipantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMyParticipantId(@javax.annotation.Nullable final String value) {
+    public void setMyParticipantId(@jakarta.annotation.Nullable final String value) {
         this.myParticipantId = value;
     }
     /**
      * Sets the operations property value. The operations property
      * @param value Value to set for the operations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperations(@javax.annotation.Nullable final java.util.List<CommsOperation> value) {
+    public void setOperations(@jakarta.annotation.Nullable final java.util.List<CommsOperation> value) {
         this.operations = value;
     }
     /**
      * Sets the participants property value. The participants property
      * @param value Value to set for the participants property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParticipants(@javax.annotation.Nullable final java.util.List<Participant> value) {
+    public void setParticipants(@jakarta.annotation.Nullable final java.util.List<Participant> value) {
         this.participants = value;
     }
     /**
      * Sets the requestedModalities property value. The requestedModalities property
      * @param value Value to set for the requestedModalities property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestedModalities(@javax.annotation.Nullable final java.util.List<Modality> value) {
+    public void setRequestedModalities(@jakarta.annotation.Nullable final java.util.List<Modality> value) {
         this.requestedModalities = value;
     }
     /**
      * Sets the resultInfo property value. The resultInfo property
      * @param value Value to set for the resultInfo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResultInfo(@javax.annotation.Nullable final ResultInfo value) {
+    public void setResultInfo(@jakarta.annotation.Nullable final ResultInfo value) {
         this.resultInfo = value;
     }
     /**
      * Sets the ringingTimeoutInSeconds property value. The ringingTimeoutInSeconds property
      * @param value Value to set for the ringingTimeoutInSeconds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRingingTimeoutInSeconds(@javax.annotation.Nullable final Integer value) {
+    public void setRingingTimeoutInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.ringingTimeoutInSeconds = value;
     }
     /**
      * Sets the routingPolicies property value. The routingPolicies property
      * @param value Value to set for the routingPolicies property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoutingPolicies(@javax.annotation.Nullable final java.util.List<RoutingPolicy> value) {
+    public void setRoutingPolicies(@jakarta.annotation.Nullable final java.util.List<RoutingPolicy> value) {
         this.routingPolicies = value;
     }
     /**
      * Sets the source property value. The source property
      * @param value Value to set for the source property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSource(@javax.annotation.Nullable final ParticipantInfo value) {
+    public void setSource(@jakarta.annotation.Nullable final ParticipantInfo value) {
         this.source = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final CallState value) {
+    public void setState(@jakarta.annotation.Nullable final CallState value) {
         this.state = value;
     }
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final String value) {
+    public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
     /**
      * Sets the targets property value. The targets property
      * @param value Value to set for the targets property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargets(@javax.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
+    public void setTargets(@jakarta.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
         this.targets = value;
     }
     /**
      * Sets the tenantId property value. The tenantId property
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
      * Sets the terminationReason property value. The terminationReason property
      * @param value Value to set for the terminationReason property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTerminationReason(@javax.annotation.Nullable final String value) {
+    public void setTerminationReason(@jakarta.annotation.Nullable final String value) {
         this.terminationReason = value;
     }
     /**
      * Sets the toneInfo property value. The toneInfo property
      * @param value Value to set for the toneInfo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setToneInfo(@javax.annotation.Nullable final ToneInfo value) {
+    public void setToneInfo(@jakarta.annotation.Nullable final ToneInfo value) {
         this.toneInfo = value;
     }
     /**
      * Sets the transcription property value. The transcription information for the call. Read-only.
      * @param value Value to set for the transcription property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTranscription(@javax.annotation.Nullable final CallTranscriptionInfo value) {
+    public void setTranscription(@jakarta.annotation.Nullable final CallTranscriptionInfo value) {
         this.transcription = value;
     }
 }

@@ -49,9 +49,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
     private String userId;
     /**
      * Instantiates a new macOSSoftwareUpdateCategorySummary and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MacOSSoftwareUpdateCategorySummary() {
         super();
     }
@@ -60,8 +58,8 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a macOSSoftwareUpdateCategorySummary
      */
-    @javax.annotation.Nonnull
-    public static MacOSSoftwareUpdateCategorySummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MacOSSoftwareUpdateCategorySummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MacOSSoftwareUpdateCategorySummary();
     }
@@ -69,7 +67,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * Gets the deviceId property value. The device ID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -77,7 +75,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * Gets the displayName property value. The name of the report
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -85,7 +83,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * Gets the failedUpdateCount property value. Number of failed updates on the device
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFailedUpdateCount() {
         return this.failedUpdateCount;
     }
@@ -93,7 +91,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
@@ -111,7 +109,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * Gets the lastUpdatedDateTime property value. Last date time the report for this device was updated.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
         return this.lastUpdatedDateTime;
     }
@@ -119,7 +117,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * Gets the successfulUpdateCount property value. Number of successful updates on the device
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSuccessfulUpdateCount() {
         return this.successfulUpdateCount;
     }
@@ -127,7 +125,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * Gets the totalUpdateCount property value. Number of total updates on the device
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalUpdateCount() {
         return this.totalUpdateCount;
     }
@@ -135,7 +133,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * Gets the updateCategory property value. MacOS Software Update Category
      * @return a macOSSoftwareUpdateCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateCategory getUpdateCategory() {
         return this.updateCategory;
     }
@@ -143,7 +141,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * Gets the updateStateSummaries property value. Summary of the update states.
      * @return a macOSSoftwareUpdateStateSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MacOSSoftwareUpdateStateSummary> getUpdateStateSummaries() {
         return this.updateStateSummaries;
     }
@@ -151,17 +149,15 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * Gets the userId property value. The user ID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("deviceId", this.getDeviceId());
@@ -177,82 +173,64 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
     /**
      * Sets the deviceId property value. The device ID.
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the displayName property value. The name of the report
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the failedUpdateCount property value. Number of failed updates on the device
      * @param value Value to set for the failedUpdateCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedUpdateCount(@javax.annotation.Nullable final Integer value) {
+    public void setFailedUpdateCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedUpdateCount = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. Last date time the report for this device was updated.
      * @param value Value to set for the lastUpdatedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the successfulUpdateCount property value. Number of successful updates on the device
      * @param value Value to set for the successfulUpdateCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuccessfulUpdateCount(@javax.annotation.Nullable final Integer value) {
+    public void setSuccessfulUpdateCount(@jakarta.annotation.Nullable final Integer value) {
         this.successfulUpdateCount = value;
     }
     /**
      * Sets the totalUpdateCount property value. Number of total updates on the device
      * @param value Value to set for the totalUpdateCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalUpdateCount(@javax.annotation.Nullable final Integer value) {
+    public void setTotalUpdateCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalUpdateCount = value;
     }
     /**
      * Sets the updateCategory property value. MacOS Software Update Category
      * @param value Value to set for the updateCategory property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdateCategory(@javax.annotation.Nullable final MacOSSoftwareUpdateCategory value) {
+    public void setUpdateCategory(@jakarta.annotation.Nullable final MacOSSoftwareUpdateCategory value) {
         this.updateCategory = value;
     }
     /**
      * Sets the updateStateSummaries property value. Summary of the update states.
      * @param value Value to set for the updateStateSummaries property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdateStateSummaries(@javax.annotation.Nullable final java.util.List<MacOSSoftwareUpdateStateSummary> value) {
+    public void setUpdateStateSummaries(@jakarta.annotation.Nullable final java.util.List<MacOSSoftwareUpdateStateSummary> value) {
         this.updateStateSummaries = value;
     }
     /**
      * Sets the userId property value. The user ID.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
 }

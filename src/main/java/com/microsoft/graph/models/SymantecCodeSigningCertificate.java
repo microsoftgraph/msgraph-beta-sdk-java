@@ -46,9 +46,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     private OffsetDateTime uploadDateTime;
     /**
      * Instantiates a new symantecCodeSigningCertificate and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SymantecCodeSigningCertificate() {
         super();
     }
@@ -57,8 +55,8 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a symantecCodeSigningCertificate
      */
-    @javax.annotation.Nonnull
-    public static SymantecCodeSigningCertificate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SymantecCodeSigningCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SymantecCodeSigningCertificate();
     }
@@ -66,7 +64,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * Gets the content property value. The Windows Symantec Code-Signing Certificate in the raw data format.
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getContent() {
         return this.content;
     }
@@ -74,7 +72,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * Gets the expirationDateTime property value. The Cert Expiration Date.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
         return this.expirationDateTime;
     }
@@ -82,7 +80,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
@@ -100,7 +98,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * Gets the issuer property value. The Issuer value for the cert.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIssuer() {
         return this.issuer;
     }
@@ -108,7 +106,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * Gets the issuerName property value. The Issuer Name for the cert.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIssuerName() {
         return this.issuerName;
     }
@@ -116,7 +114,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * Gets the password property value. The Password required for .pfx file.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPassword() {
         return this.password;
     }
@@ -124,7 +122,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a certificateStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CertificateStatus getStatus() {
         return this.status;
     }
@@ -132,7 +130,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * Gets the subject property value. The Subject value for the cert.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubject() {
         return this.subject;
     }
@@ -140,7 +138,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * Gets the subjectName property value. The Subject Name for the cert.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubjectName() {
         return this.subjectName;
     }
@@ -148,17 +146,15 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * Gets the uploadDateTime property value. The Type of the CodeSigning Cert as Symantec Cert.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getUploadDateTime() {
         return this.uploadDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeByteArrayValue("content", this.getContent());
@@ -174,82 +170,64 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     /**
      * Sets the content property value. The Windows Symantec Code-Signing Certificate in the raw data format.
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContent(@javax.annotation.Nullable final byte[] value) {
+    public void setContent(@jakarta.annotation.Nullable final byte[] value) {
         this.content = value;
     }
     /**
      * Sets the expirationDateTime property value. The Cert Expiration Date.
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the issuer property value. The Issuer value for the cert.
      * @param value Value to set for the issuer property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIssuer(@javax.annotation.Nullable final String value) {
+    public void setIssuer(@jakarta.annotation.Nullable final String value) {
         this.issuer = value;
     }
     /**
      * Sets the issuerName property value. The Issuer Name for the cert.
      * @param value Value to set for the issuerName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIssuerName(@javax.annotation.Nullable final String value) {
+    public void setIssuerName(@jakarta.annotation.Nullable final String value) {
         this.issuerName = value;
     }
     /**
      * Sets the password property value. The Password required for .pfx file.
      * @param value Value to set for the password property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPassword(@javax.annotation.Nullable final String value) {
+    public void setPassword(@jakarta.annotation.Nullable final String value) {
         this.password = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final CertificateStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final CertificateStatus value) {
         this.status = value;
     }
     /**
      * Sets the subject property value. The Subject value for the cert.
      * @param value Value to set for the subject property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final String value) {
+    public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
     /**
      * Sets the subjectName property value. The Subject Name for the cert.
      * @param value Value to set for the subjectName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubjectName(@javax.annotation.Nullable final String value) {
+    public void setSubjectName(@jakarta.annotation.Nullable final String value) {
         this.subjectName = value;
     }
     /**
      * Sets the uploadDateTime property value. The Type of the CodeSigning Cert as Symantec Cert.
      * @param value Value to set for the uploadDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUploadDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setUploadDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.uploadDateTime = value;
     }
 }

@@ -93,9 +93,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     private String version;
     /**
      * Instantiates a new deviceHealthScript and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceHealthScript() {
         super();
     }
@@ -104,8 +102,8 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceHealthScript
      */
-    @javax.annotation.Nonnull
-    public static DeviceHealthScript createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceHealthScript createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceHealthScript();
     }
@@ -113,7 +111,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the assignments property value. The list of group assignments for the device health script
      * @return a deviceHealthScriptAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceHealthScriptAssignment> getAssignments() {
         return this.assignments;
     }
@@ -121,7 +119,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the createdDateTime property value. The timestamp of when the device health script was created. This property is read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -129,7 +127,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the description property value. Description of the device health script
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -137,7 +135,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the detectionScriptContent property value. The entire content of the detection powershell script
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getDetectionScriptContent() {
         return this.detectionScriptContent;
     }
@@ -145,7 +143,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the detectionScriptParameters property value. List of ComplexType DetectionScriptParameters objects.
      * @return a deviceHealthScriptParameter
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceHealthScriptParameter> getDetectionScriptParameters() {
         return this.detectionScriptParameters;
     }
@@ -153,7 +151,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the deviceHealthScriptType property value. Indicates the type of device script.
      * @return a deviceHealthScriptType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceHealthScriptType getDeviceHealthScriptType() {
         return this.deviceHealthScriptType;
     }
@@ -161,7 +159,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the deviceRunStates property value. List of run states for the device health script across all devices
      * @return a deviceHealthScriptDeviceState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceHealthScriptDeviceState> getDeviceRunStates() {
         return this.deviceRunStates;
     }
@@ -169,7 +167,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the displayName property value. Name of the device health script
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -177,7 +175,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the enforceSignatureCheck property value. Indicate whether the script signature needs be checked
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnforceSignatureCheck() {
         return this.enforceSignatureCheck;
     }
@@ -185,7 +183,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(DeviceHealthScriptAssignment::createFromDiscriminatorValue)); });
@@ -214,7 +212,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the highestAvailableVersion property value. Highest available version for a Microsoft Proprietary script
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHighestAvailableVersion() {
         return this.highestAvailableVersion;
     }
@@ -222,7 +220,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the isGlobalScript property value. Determines if this is Microsoft Proprietary Script. Proprietary scripts are read-only
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsGlobalScript() {
         return this.isGlobalScript;
     }
@@ -230,7 +228,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The timestamp of when the device health script was modified. This property is read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -238,7 +236,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the publisher property value. Name of the device health script publisher
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPublisher() {
         return this.publisher;
     }
@@ -246,7 +244,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the remediationScriptContent property value. The entire content of the remediation powershell script
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getRemediationScriptContent() {
         return this.remediationScriptContent;
     }
@@ -254,7 +252,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the remediationScriptParameters property value. List of ComplexType RemediationScriptParameters objects.
      * @return a deviceHealthScriptParameter
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceHealthScriptParameter> getRemediationScriptParameters() {
         return this.remediationScriptParameters;
     }
@@ -262,7 +260,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the roleScopeTagIds property value. List of Scope Tag IDs for the device health script
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
         return this.roleScopeTagIds;
     }
@@ -270,7 +268,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the runAs32Bit property value. Indicate whether PowerShell script(s) should run as 32-bit
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRunAs32Bit() {
         return this.runAs32Bit;
     }
@@ -278,7 +276,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @return a runAsAccountType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RunAsAccountType getRunAsAccount() {
         return this.runAsAccount;
     }
@@ -286,7 +284,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the runSummary property value. High level run summary for device health script.
      * @return a deviceHealthScriptRunSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceHealthScriptRunSummary getRunSummary() {
         return this.runSummary;
     }
@@ -294,17 +292,15 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * Gets the version property value. Version of the device health script
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersion() {
         return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
@@ -329,181 +325,141 @@ public class DeviceHealthScript extends Entity implements Parsable {
     /**
      * Sets the assignments property value. The list of group assignments for the device health script
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignments(@javax.annotation.Nullable final java.util.List<DeviceHealthScriptAssignment> value) {
+    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceHealthScriptAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the createdDateTime property value. The timestamp of when the device health script was created. This property is read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Description of the device health script
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the detectionScriptContent property value. The entire content of the detection powershell script
      * @param value Value to set for the detectionScriptContent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetectionScriptContent(@javax.annotation.Nullable final byte[] value) {
+    public void setDetectionScriptContent(@jakarta.annotation.Nullable final byte[] value) {
         this.detectionScriptContent = value;
     }
     /**
      * Sets the detectionScriptParameters property value. List of ComplexType DetectionScriptParameters objects.
      * @param value Value to set for the detectionScriptParameters property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetectionScriptParameters(@javax.annotation.Nullable final java.util.List<DeviceHealthScriptParameter> value) {
+    public void setDetectionScriptParameters(@jakarta.annotation.Nullable final java.util.List<DeviceHealthScriptParameter> value) {
         this.detectionScriptParameters = value;
     }
     /**
      * Sets the deviceHealthScriptType property value. Indicates the type of device script.
      * @param value Value to set for the deviceHealthScriptType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceHealthScriptType(@javax.annotation.Nullable final DeviceHealthScriptType value) {
+    public void setDeviceHealthScriptType(@jakarta.annotation.Nullable final DeviceHealthScriptType value) {
         this.deviceHealthScriptType = value;
     }
     /**
      * Sets the deviceRunStates property value. List of run states for the device health script across all devices
      * @param value Value to set for the deviceRunStates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceRunStates(@javax.annotation.Nullable final java.util.List<DeviceHealthScriptDeviceState> value) {
+    public void setDeviceRunStates(@jakarta.annotation.Nullable final java.util.List<DeviceHealthScriptDeviceState> value) {
         this.deviceRunStates = value;
     }
     /**
      * Sets the displayName property value. Name of the device health script
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the enforceSignatureCheck property value. Indicate whether the script signature needs be checked
      * @param value Value to set for the enforceSignatureCheck property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnforceSignatureCheck(@javax.annotation.Nullable final Boolean value) {
+    public void setEnforceSignatureCheck(@jakarta.annotation.Nullable final Boolean value) {
         this.enforceSignatureCheck = value;
     }
     /**
      * Sets the highestAvailableVersion property value. Highest available version for a Microsoft Proprietary script
      * @param value Value to set for the highestAvailableVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHighestAvailableVersion(@javax.annotation.Nullable final String value) {
+    public void setHighestAvailableVersion(@jakarta.annotation.Nullable final String value) {
         this.highestAvailableVersion = value;
     }
     /**
      * Sets the isGlobalScript property value. Determines if this is Microsoft Proprietary Script. Proprietary scripts are read-only
      * @param value Value to set for the isGlobalScript property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsGlobalScript(@javax.annotation.Nullable final Boolean value) {
+    public void setIsGlobalScript(@jakarta.annotation.Nullable final Boolean value) {
         this.isGlobalScript = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The timestamp of when the device health script was modified. This property is read-only.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the publisher property value. Name of the device health script publisher
      * @param value Value to set for the publisher property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublisher(@javax.annotation.Nullable final String value) {
+    public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.publisher = value;
     }
     /**
      * Sets the remediationScriptContent property value. The entire content of the remediation powershell script
      * @param value Value to set for the remediationScriptContent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemediationScriptContent(@javax.annotation.Nullable final byte[] value) {
+    public void setRemediationScriptContent(@jakarta.annotation.Nullable final byte[] value) {
         this.remediationScriptContent = value;
     }
     /**
      * Sets the remediationScriptParameters property value. List of ComplexType RemediationScriptParameters objects.
      * @param value Value to set for the remediationScriptParameters property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemediationScriptParameters(@javax.annotation.Nullable final java.util.List<DeviceHealthScriptParameter> value) {
+    public void setRemediationScriptParameters(@jakarta.annotation.Nullable final java.util.List<DeviceHealthScriptParameter> value) {
         this.remediationScriptParameters = value;
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tag IDs for the device health script
      * @param value Value to set for the roleScopeTagIds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTagIds = value;
     }
     /**
      * Sets the runAs32Bit property value. Indicate whether PowerShell script(s) should run as 32-bit
      * @param value Value to set for the runAs32Bit property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRunAs32Bit(@javax.annotation.Nullable final Boolean value) {
+    public void setRunAs32Bit(@jakarta.annotation.Nullable final Boolean value) {
         this.runAs32Bit = value;
     }
     /**
      * Sets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @param value Value to set for the runAsAccount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRunAsAccount(@javax.annotation.Nullable final RunAsAccountType value) {
+    public void setRunAsAccount(@jakarta.annotation.Nullable final RunAsAccountType value) {
         this.runAsAccount = value;
     }
     /**
      * Sets the runSummary property value. High level run summary for device health script.
      * @param value Value to set for the runSummary property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRunSummary(@javax.annotation.Nullable final DeviceHealthScriptRunSummary value) {
+    public void setRunSummary(@jakarta.annotation.Nullable final DeviceHealthScriptRunSummary value) {
         this.runSummary = value;
     }
     /**
      * Sets the version property value. Version of the device health script
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final String value) {
+    public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }
 }

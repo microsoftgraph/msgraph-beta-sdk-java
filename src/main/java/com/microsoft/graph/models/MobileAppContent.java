@@ -20,9 +20,7 @@ public class MobileAppContent extends Entity implements Parsable {
     private java.util.List<MobileAppContentFile> files;
     /**
      * Instantiates a new mobileAppContent and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MobileAppContent() {
         super();
     }
@@ -31,8 +29,8 @@ public class MobileAppContent extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a mobileAppContent
      */
-    @javax.annotation.Nonnull
-    public static MobileAppContent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MobileAppContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MobileAppContent();
     }
@@ -40,7 +38,7 @@ public class MobileAppContent extends Entity implements Parsable {
      * Gets the containedApps property value. The collection of contained apps in a MobileLobApp acting as a package.
      * @return a mobileContainedApp
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MobileContainedApp> getContainedApps() {
         return this.containedApps;
     }
@@ -48,7 +46,7 @@ public class MobileAppContent extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("containedApps", (n) -> { this.setContainedApps(n.getCollectionOfObjectValues(MobileContainedApp::createFromDiscriminatorValue)); });
@@ -59,17 +57,15 @@ public class MobileAppContent extends Entity implements Parsable {
      * Gets the files property value. The list of files for this app content version.
      * @return a mobileAppContentFile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MobileAppContentFile> getFiles() {
         return this.files;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("containedApps", this.getContainedApps());
@@ -78,19 +74,15 @@ public class MobileAppContent extends Entity implements Parsable {
     /**
      * Sets the containedApps property value. The collection of contained apps in a MobileLobApp acting as a package.
      * @param value Value to set for the containedApps property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContainedApps(@javax.annotation.Nullable final java.util.List<MobileContainedApp> value) {
+    public void setContainedApps(@jakarta.annotation.Nullable final java.util.List<MobileContainedApp> value) {
         this.containedApps = value;
     }
     /**
      * Sets the files property value. The list of files for this app content version.
      * @param value Value to set for the files property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFiles(@javax.annotation.Nullable final java.util.List<MobileAppContentFile> value) {
+    public void setFiles(@jakarta.annotation.Nullable final java.util.List<MobileAppContentFile> value) {
         this.files = value;
     }
 }

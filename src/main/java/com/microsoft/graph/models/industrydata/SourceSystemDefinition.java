@@ -22,9 +22,7 @@ public class SourceSystemDefinition extends Entity implements Parsable {
     private String vendor;
     /**
      * Instantiates a new sourceSystemDefinition and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SourceSystemDefinition() {
         super();
     }
@@ -33,8 +31,8 @@ public class SourceSystemDefinition extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a sourceSystemDefinition
      */
-    @javax.annotation.Nonnull
-    public static SourceSystemDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SourceSystemDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SourceSystemDefinition();
     }
@@ -42,7 +40,7 @@ public class SourceSystemDefinition extends Entity implements Parsable {
      * Gets the displayName property value. The name of the source system. Maximum supported length is 100 characters.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -50,7 +48,7 @@ public class SourceSystemDefinition extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -62,7 +60,7 @@ public class SourceSystemDefinition extends Entity implements Parsable {
      * Gets the userMatchingSettings property value. A collection of user matching settings by roleGroup.
      * @return a userMatchingSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UserMatchingSetting> getUserMatchingSettings() {
         return this.userMatchingSettings;
     }
@@ -70,17 +68,15 @@ public class SourceSystemDefinition extends Entity implements Parsable {
      * Gets the vendor property value. The name of the vendor who supplies the source system. Maximum supported length is 100 characters.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVendor() {
         return this.vendor;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -90,28 +86,22 @@ public class SourceSystemDefinition extends Entity implements Parsable {
     /**
      * Sets the displayName property value. The name of the source system. Maximum supported length is 100 characters.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the userMatchingSettings property value. A collection of user matching settings by roleGroup.
      * @param value Value to set for the userMatchingSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserMatchingSettings(@javax.annotation.Nullable final java.util.List<UserMatchingSetting> value) {
+    public void setUserMatchingSettings(@jakarta.annotation.Nullable final java.util.List<UserMatchingSetting> value) {
         this.userMatchingSettings = value;
     }
     /**
      * Sets the vendor property value. The name of the vendor who supplies the source system. Maximum supported length is 100 characters.
      * @param value Value to set for the vendor property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVendor(@javax.annotation.Nullable final String value) {
+    public void setVendor(@jakarta.annotation.Nullable final String value) {
         this.vendor = value;
     }
 }

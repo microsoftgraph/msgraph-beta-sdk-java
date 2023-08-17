@@ -25,9 +25,7 @@ public class EducationOrganization extends Entity implements Parsable {
     private String externalSourceDetail;
     /**
      * Instantiates a new educationOrganization and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EducationOrganization() {
         super();
     }
@@ -36,8 +34,8 @@ public class EducationOrganization extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationOrganization
      */
-    @javax.annotation.Nonnull
-    public static EducationOrganization createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationOrganization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -52,7 +50,7 @@ public class EducationOrganization extends Entity implements Parsable {
      * Gets the description property value. Organization description.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -60,7 +58,7 @@ public class EducationOrganization extends Entity implements Parsable {
      * Gets the displayName property value. Organization display name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -68,7 +66,7 @@ public class EducationOrganization extends Entity implements Parsable {
      * Gets the externalSource property value. Where this user was created from. Possible values are: sis, lms, or manual.
      * @return a educationExternalSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationExternalSource getExternalSource() {
         return this.externalSource;
     }
@@ -76,7 +74,7 @@ public class EducationOrganization extends Entity implements Parsable {
      * Gets the externalSourceDetail property value. The externalSourceDetail property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalSourceDetail() {
         return this.externalSourceDetail;
     }
@@ -84,7 +82,7 @@ public class EducationOrganization extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -96,10 +94,8 @@ public class EducationOrganization extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -110,37 +106,29 @@ public class EducationOrganization extends Entity implements Parsable {
     /**
      * Sets the description property value. Organization description.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Organization display name.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the externalSource property value. Where this user was created from. Possible values are: sis, lms, or manual.
      * @param value Value to set for the externalSource property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalSource(@javax.annotation.Nullable final EducationExternalSource value) {
+    public void setExternalSource(@jakarta.annotation.Nullable final EducationExternalSource value) {
         this.externalSource = value;
     }
     /**
      * Sets the externalSourceDetail property value. The externalSourceDetail property
      * @param value Value to set for the externalSourceDetail property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalSourceDetail(@javax.annotation.Nullable final String value) {
+    public void setExternalSourceDetail(@jakarta.annotation.Nullable final String value) {
         this.externalSourceDetail = value;
     }
 }

@@ -13,9 +13,7 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new printUsageByUser and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PrintUsageByUser() {
         super();
     }
@@ -24,8 +22,8 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a printUsageByUser
      */
-    @javax.annotation.Nonnull
-    public static PrintUsageByUser createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrintUsageByUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PrintUsageByUser();
     }
@@ -33,7 +31,7 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
@@ -43,17 +41,15 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
      * Gets the userPrincipalName property value. The UPN of the user represented by these statistics.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
@@ -61,10 +57,8 @@ public class PrintUsageByUser extends PrintUsage implements Parsable {
     /**
      * Sets the userPrincipalName property value. The UPN of the user represented by these statistics.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

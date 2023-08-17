@@ -29,9 +29,7 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
     private String url;
     /**
      * Instantiates a new blobEvidence and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public BlobEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.blobEvidence");
@@ -41,8 +39,8 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a blobEvidence
      */
-    @javax.annotation.Nonnull
-    public static BlobEvidence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BlobEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BlobEvidence();
     }
@@ -50,7 +48,7 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
      * Gets the blobContainer property value. The container which the blob belongs to.
      * @return a blobContainerEvidence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BlobContainerEvidence getBlobContainer() {
         return this.blobContainer;
     }
@@ -58,7 +56,7 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
      * Gets the etag property value. The Etag associated with this blob.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEtag() {
         return this.etag;
     }
@@ -66,7 +64,7 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("blobContainer", (n) -> { this.setBlobContainer(n.getObjectValue(BlobContainerEvidence::createFromDiscriminatorValue)); });
@@ -80,7 +78,7 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
      * Gets the fileHashes property value. The file hashes associated with this blob.
      * @return a fileHash
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<FileHash> getFileHashes() {
         return this.fileHashes;
     }
@@ -88,7 +86,7 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
      * Gets the name property value. The name of the blob.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -96,17 +94,15 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
      * Gets the url property value. The full URL representation of the blob.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUrl() {
         return this.url;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("blobContainer", this.getBlobContainer());
@@ -118,46 +114,36 @@ public class BlobEvidence extends AlertEvidence implements Parsable {
     /**
      * Sets the blobContainer property value. The container which the blob belongs to.
      * @param value Value to set for the blobContainer property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBlobContainer(@javax.annotation.Nullable final BlobContainerEvidence value) {
+    public void setBlobContainer(@jakarta.annotation.Nullable final BlobContainerEvidence value) {
         this.blobContainer = value;
     }
     /**
      * Sets the etag property value. The Etag associated with this blob.
      * @param value Value to set for the etag property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEtag(@javax.annotation.Nullable final String value) {
+    public void setEtag(@jakarta.annotation.Nullable final String value) {
         this.etag = value;
     }
     /**
      * Sets the fileHashes property value. The file hashes associated with this blob.
      * @param value Value to set for the fileHashes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileHashes(@javax.annotation.Nullable final java.util.List<FileHash> value) {
+    public void setFileHashes(@jakarta.annotation.Nullable final java.util.List<FileHash> value) {
         this.fileHashes = value;
     }
     /**
      * Sets the name property value. The name of the blob.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the url property value. The full URL representation of the blob.
      * @param value Value to set for the url property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUrl(@javax.annotation.Nullable final String value) {
+    public void setUrl(@jakarta.annotation.Nullable final String value) {
         this.url = value;
     }
 }

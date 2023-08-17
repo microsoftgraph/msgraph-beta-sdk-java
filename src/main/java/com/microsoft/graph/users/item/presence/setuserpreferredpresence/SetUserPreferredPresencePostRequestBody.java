@@ -27,9 +27,7 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
     private PeriodAndDuration expirationDuration;
     /**
      * Instantiates a new setUserPreferredPresencePostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SetUserPreferredPresencePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -38,8 +36,8 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a setUserPreferredPresencePostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static SetUserPreferredPresencePostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SetUserPreferredPresencePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SetUserPreferredPresencePostRequestBody();
     }
@@ -47,7 +45,7 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
      * Gets the activity property value. The activity property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActivity() {
         return this.activity;
     }
@@ -55,7 +53,7 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -63,7 +61,7 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
      * Gets the availability property value. The availability property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAvailability() {
         return this.availability;
     }
@@ -71,7 +69,7 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
      * Gets the expirationDuration property value. The expirationDuration property
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getExpirationDuration() {
         return this.expirationDuration;
     }
@@ -79,7 +77,7 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("activity", (n) -> { this.setActivity(n.getStringValue()); });
@@ -90,10 +88,8 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("activity", this.getActivity());
         writer.writeStringValue("availability", this.getAvailability());
@@ -103,37 +99,29 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
     /**
      * Sets the activity property value. The activity property
      * @param value Value to set for the activity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivity(@javax.annotation.Nullable final String value) {
+    public void setActivity(@jakarta.annotation.Nullable final String value) {
         this.activity = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the availability property value. The availability property
      * @param value Value to set for the availability property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAvailability(@javax.annotation.Nullable final String value) {
+    public void setAvailability(@jakarta.annotation.Nullable final String value) {
         this.availability = value;
     }
     /**
      * Sets the expirationDuration property value. The expirationDuration property
      * @param value Value to set for the expirationDuration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
+    public void setExpirationDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.expirationDuration = value;
     }
 }

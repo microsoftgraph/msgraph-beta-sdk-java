@@ -18,9 +18,7 @@ public class CallRecording extends Entity implements Parsable {
     private OffsetDateTime createdDateTime;
     /**
      * Instantiates a new callRecording and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CallRecording() {
         super();
     }
@@ -29,8 +27,8 @@ public class CallRecording extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a callRecording
      */
-    @javax.annotation.Nonnull
-    public static CallRecording createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CallRecording createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CallRecording();
     }
@@ -38,7 +36,7 @@ public class CallRecording extends Entity implements Parsable {
      * Gets the content property value. The content of the recording. Read-only.
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getContent() {
         return this.content;
     }
@@ -46,7 +44,7 @@ public class CallRecording extends Entity implements Parsable {
      * Gets the createdDateTime property value. Date and time at which the recording was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -54,7 +52,7 @@ public class CallRecording extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
@@ -64,10 +62,8 @@ public class CallRecording extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeByteArrayValue("content", this.getContent());
@@ -76,19 +72,15 @@ public class CallRecording extends Entity implements Parsable {
     /**
      * Sets the content property value. The content of the recording. Read-only.
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContent(@javax.annotation.Nullable final byte[] value) {
+    public void setContent(@jakarta.annotation.Nullable final byte[] value) {
         this.content = value;
     }
     /**
      * Sets the createdDateTime property value. Date and time at which the recording was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
 }

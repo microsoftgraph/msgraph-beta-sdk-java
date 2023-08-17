@@ -21,9 +21,7 @@ public class MessageRecipient extends Entity implements Parsable {
     private String recipientEmail;
     /**
      * Instantiates a new messageRecipient and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MessageRecipient() {
         super();
     }
@@ -32,8 +30,8 @@ public class MessageRecipient extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a messageRecipient
      */
-    @javax.annotation.Nonnull
-    public static MessageRecipient createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MessageRecipient createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MessageRecipient();
     }
@@ -41,7 +39,7 @@ public class MessageRecipient extends Entity implements Parsable {
      * Gets the deliveryStatus property value. The deliveryStatus property
      * @return a messageStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MessageStatus getDeliveryStatus() {
         return this.deliveryStatus;
     }
@@ -49,7 +47,7 @@ public class MessageRecipient extends Entity implements Parsable {
      * Gets the events property value. The events property
      * @return a messageEvent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MessageEvent> getEvents() {
         return this.events;
     }
@@ -57,7 +55,7 @@ public class MessageRecipient extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deliveryStatus", (n) -> { this.setDeliveryStatus(n.getEnumValue(MessageStatus.class)); });
@@ -69,17 +67,15 @@ public class MessageRecipient extends Entity implements Parsable {
      * Gets the recipientEmail property value. The recipientEmail property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRecipientEmail() {
         return this.recipientEmail;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("deliveryStatus", this.getDeliveryStatus());
@@ -89,28 +85,22 @@ public class MessageRecipient extends Entity implements Parsable {
     /**
      * Sets the deliveryStatus property value. The deliveryStatus property
      * @param value Value to set for the deliveryStatus property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeliveryStatus(@javax.annotation.Nullable final MessageStatus value) {
+    public void setDeliveryStatus(@jakarta.annotation.Nullable final MessageStatus value) {
         this.deliveryStatus = value;
     }
     /**
      * Sets the events property value. The events property
      * @param value Value to set for the events property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEvents(@javax.annotation.Nullable final java.util.List<MessageEvent> value) {
+    public void setEvents(@jakarta.annotation.Nullable final java.util.List<MessageEvent> value) {
         this.events = value;
     }
     /**
      * Sets the recipientEmail property value. The recipientEmail property
      * @param value Value to set for the recipientEmail property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecipientEmail(@javax.annotation.Nullable final String value) {
+    public void setRecipientEmail(@jakarta.annotation.Nullable final String value) {
         this.recipientEmail = value;
     }
 }

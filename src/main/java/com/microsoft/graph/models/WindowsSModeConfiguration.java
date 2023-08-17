@@ -17,10 +17,10 @@ public enum WindowsSModeConfiguration implements ValuedEnum {
     WindowsSModeConfiguration(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsSModeConfiguration forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsSModeConfiguration forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "noRestriction": return NoRestriction;

@@ -11,10 +11,10 @@ public enum EmailEntityIdentifier implements ValuedEnum {
     EmailEntityIdentifier(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static EmailEntityIdentifier forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static EmailEntityIdentifier forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "networkMessageId": return NetworkMessageId;

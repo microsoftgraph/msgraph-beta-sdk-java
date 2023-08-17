@@ -13,9 +13,7 @@ public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     private String version;
     /**
      * Instantiates a new featureUpdateCatalogEntry and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public FeatureUpdateCatalogEntry() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.featureUpdateCatalogEntry");
@@ -25,8 +23,8 @@ public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a featureUpdateCatalogEntry
      */
-    @javax.annotation.Nonnull
-    public static FeatureUpdateCatalogEntry createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static FeatureUpdateCatalogEntry createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new FeatureUpdateCatalogEntry();
     }
@@ -34,7 +32,7 @@ public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
@@ -44,17 +42,15 @@ public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      * Gets the version property value. The version of the feature update. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersion() {
         return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("version", this.getVersion());
@@ -62,10 +58,8 @@ public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     /**
      * Sets the version property value. The version of the feature update. Read-only.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final String value) {
+    public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }
 }

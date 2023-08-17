@@ -54,9 +54,7 @@ public class Permission extends Entity implements Parsable {
     private String shareId;
     /**
      * Instantiates a new permission and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Permission() {
         super();
     }
@@ -65,8 +63,8 @@ public class Permission extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a permission
      */
-    @javax.annotation.Nonnull
-    public static Permission createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Permission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Permission();
     }
@@ -74,7 +72,7 @@ public class Permission extends Entity implements Parsable {
      * Gets the expirationDateTime property value. A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
         return this.expirationDateTime;
     }
@@ -82,7 +80,7 @@ public class Permission extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
@@ -102,7 +100,7 @@ public class Permission extends Entity implements Parsable {
      * Gets the grantedTo property value. The grantedTo property
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getGrantedTo() {
         return this.grantedTo;
     }
@@ -110,7 +108,7 @@ public class Permission extends Entity implements Parsable {
      * Gets the grantedToIdentities property value. The grantedToIdentities property
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IdentitySet> getGrantedToIdentities() {
         return this.grantedToIdentities;
     }
@@ -118,7 +116,7 @@ public class Permission extends Entity implements Parsable {
      * Gets the grantedToIdentitiesV2 property value. For link type permissions, the details of the users to whom permission was granted. Read-only.
      * @return a sharePointIdentitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SharePointIdentitySet> getGrantedToIdentitiesV2() {
         return this.grantedToIdentitiesV2;
     }
@@ -126,7 +124,7 @@ public class Permission extends Entity implements Parsable {
      * Gets the grantedToV2 property value. For user type permissions, the details of the users and applications for this permission. Read-only.
      * @return a sharePointIdentitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SharePointIdentitySet getGrantedToV2() {
         return this.grantedToV2;
     }
@@ -134,7 +132,7 @@ public class Permission extends Entity implements Parsable {
      * Gets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHasPassword() {
         return this.hasPassword;
     }
@@ -142,7 +140,7 @@ public class Permission extends Entity implements Parsable {
      * Gets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
      * @return a itemReference
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemReference getInheritedFrom() {
         return this.inheritedFrom;
     }
@@ -150,7 +148,7 @@ public class Permission extends Entity implements Parsable {
      * Gets the invitation property value. Details of any associated sharing invitation for this permission. Read-only.
      * @return a sharingInvitation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SharingInvitation getInvitation() {
         return this.invitation;
     }
@@ -158,7 +156,7 @@ public class Permission extends Entity implements Parsable {
      * Gets the link property value. Provides the link details of the current permission, if it is a link type permissions. Read-only.
      * @return a sharingLink
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SharingLink getLink() {
         return this.link;
     }
@@ -166,7 +164,7 @@ public class Permission extends Entity implements Parsable {
      * Gets the roles property value. The type of permission, for example, read. See below for the full list of roles. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoles() {
         return this.roles;
     }
@@ -174,17 +172,15 @@ public class Permission extends Entity implements Parsable {
      * Gets the shareId property value. A unique token that can be used to access this shared item via the [shares API][]. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getShareId() {
         return this.shareId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
@@ -202,100 +198,78 @@ public class Permission extends Entity implements Parsable {
     /**
      * Sets the expirationDateTime property value. A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the grantedTo property value. The grantedTo property
      * @param value Value to set for the grantedTo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGrantedTo(@javax.annotation.Nullable final IdentitySet value) {
+    public void setGrantedTo(@jakarta.annotation.Nullable final IdentitySet value) {
         this.grantedTo = value;
     }
     /**
      * Sets the grantedToIdentities property value. The grantedToIdentities property
      * @param value Value to set for the grantedToIdentities property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGrantedToIdentities(@javax.annotation.Nullable final java.util.List<IdentitySet> value) {
+    public void setGrantedToIdentities(@jakarta.annotation.Nullable final java.util.List<IdentitySet> value) {
         this.grantedToIdentities = value;
     }
     /**
      * Sets the grantedToIdentitiesV2 property value. For link type permissions, the details of the users to whom permission was granted. Read-only.
      * @param value Value to set for the grantedToIdentitiesV2 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGrantedToIdentitiesV2(@javax.annotation.Nullable final java.util.List<SharePointIdentitySet> value) {
+    public void setGrantedToIdentitiesV2(@jakarta.annotation.Nullable final java.util.List<SharePointIdentitySet> value) {
         this.grantedToIdentitiesV2 = value;
     }
     /**
      * Sets the grantedToV2 property value. For user type permissions, the details of the users and applications for this permission. Read-only.
      * @param value Value to set for the grantedToV2 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGrantedToV2(@javax.annotation.Nullable final SharePointIdentitySet value) {
+    public void setGrantedToV2(@jakarta.annotation.Nullable final SharePointIdentitySet value) {
         this.grantedToV2 = value;
     }
     /**
      * Sets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only.
      * @param value Value to set for the hasPassword property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHasPassword(@javax.annotation.Nullable final Boolean value) {
+    public void setHasPassword(@jakarta.annotation.Nullable final Boolean value) {
         this.hasPassword = value;
     }
     /**
      * Sets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
      * @param value Value to set for the inheritedFrom property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInheritedFrom(@javax.annotation.Nullable final ItemReference value) {
+    public void setInheritedFrom(@jakarta.annotation.Nullable final ItemReference value) {
         this.inheritedFrom = value;
     }
     /**
      * Sets the invitation property value. Details of any associated sharing invitation for this permission. Read-only.
      * @param value Value to set for the invitation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInvitation(@javax.annotation.Nullable final SharingInvitation value) {
+    public void setInvitation(@jakarta.annotation.Nullable final SharingInvitation value) {
         this.invitation = value;
     }
     /**
      * Sets the link property value. Provides the link details of the current permission, if it is a link type permissions. Read-only.
      * @param value Value to set for the link property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLink(@javax.annotation.Nullable final SharingLink value) {
+    public void setLink(@jakarta.annotation.Nullable final SharingLink value) {
         this.link = value;
     }
     /**
      * Sets the roles property value. The type of permission, for example, read. See below for the full list of roles. Read-only.
      * @param value Value to set for the roles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoles(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roles = value;
     }
     /**
      * Sets the shareId property value. A unique token that can be used to access this shared item via the [shares API][]. Read-only.
      * @param value Value to set for the shareId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShareId(@javax.annotation.Nullable final String value) {
+    public void setShareId(@jakarta.annotation.Nullable final String value) {
         this.shareId = value;
     }
 }

@@ -16,9 +16,7 @@ public class GroupPolicyPresentationValueText extends GroupPolicyPresentationVal
     private String value;
     /**
      * Instantiates a new groupPolicyPresentationValueText and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public GroupPolicyPresentationValueText() {
         super();
     }
@@ -27,8 +25,8 @@ public class GroupPolicyPresentationValueText extends GroupPolicyPresentationVal
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a groupPolicyPresentationValueText
      */
-    @javax.annotation.Nonnull
-    public static GroupPolicyPresentationValueText createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GroupPolicyPresentationValueText createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GroupPolicyPresentationValueText();
     }
@@ -36,7 +34,7 @@ public class GroupPolicyPresentationValueText extends GroupPolicyPresentationVal
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
@@ -46,17 +44,15 @@ public class GroupPolicyPresentationValueText extends GroupPolicyPresentationVal
      * Gets the value property value. A string value for the associated presentation.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getValue() {
         return this.value;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("value", this.getValue());
@@ -64,10 +60,8 @@ public class GroupPolicyPresentationValueText extends GroupPolicyPresentationVal
     /**
      * Sets the value property value. A string value for the associated presentation.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final String value) {
+    public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }
 }

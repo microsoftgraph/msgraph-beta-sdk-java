@@ -154,9 +154,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
     private BigDecimal totalTaxAmount;
     /**
      * Instantiates a new salesCreditMemo and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SalesCreditMemo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -165,8 +163,8 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a salesCreditMemo
      */
-    @javax.annotation.Nonnull
-    public static SalesCreditMemo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SalesCreditMemo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SalesCreditMemo();
     }
@@ -174,7 +172,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -182,7 +180,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the billingPostalAddress property value. The billingPostalAddress property
      * @return a postalAddressType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PostalAddressType getBillingPostalAddress() {
         return this.billingPostalAddress;
     }
@@ -190,7 +188,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the billToCustomerId property value. The billToCustomerId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getBillToCustomerId() {
         return this.billToCustomerId;
     }
@@ -198,7 +196,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the billToCustomerNumber property value. The billToCustomerNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBillToCustomerNumber() {
         return this.billToCustomerNumber;
     }
@@ -206,7 +204,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the billToName property value. The billToName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBillToName() {
         return this.billToName;
     }
@@ -214,7 +212,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the creditMemoDate property value. The creditMemoDate property
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getCreditMemoDate() {
         return this.creditMemoDate;
     }
@@ -222,7 +220,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the currency property value. The currency property
      * @return a currency
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Currency getCurrency() {
         return this.currency;
     }
@@ -230,7 +228,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the currencyCode property value. The currencyCode property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCurrencyCode() {
         return this.currencyCode;
     }
@@ -238,7 +236,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the currencyId property value. The currencyId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getCurrencyId() {
         return this.currencyId;
     }
@@ -246,7 +244,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the customer property value. The customer property
      * @return a customer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Customer getCustomer() {
         return this.customer;
     }
@@ -254,7 +252,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the customerId property value. The customerId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getCustomerId() {
         return this.customerId;
     }
@@ -262,7 +260,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the customerName property value. The customerName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomerName() {
         return this.customerName;
     }
@@ -270,7 +268,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the customerNumber property value. The customerNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomerNumber() {
         return this.customerNumber;
     }
@@ -278,7 +276,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the discountAmount property value. The discountAmount property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getDiscountAmount() {
         return this.discountAmount;
     }
@@ -286,7 +284,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the discountAppliedBeforeTax property value. The discountAppliedBeforeTax property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDiscountAppliedBeforeTax() {
         return this.discountAppliedBeforeTax;
     }
@@ -294,7 +292,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the dueDate property value. The dueDate property
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getDueDate() {
         return this.dueDate;
     }
@@ -302,7 +300,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the email property value. The email property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmail() {
         return this.email;
     }
@@ -310,7 +308,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the externalDocumentNumber property value. The externalDocumentNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalDocumentNumber() {
         return this.externalDocumentNumber;
     }
@@ -318,7 +316,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(34);
         deserializerMap.put("billingPostalAddress", (n) -> { this.setBillingPostalAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
@@ -361,7 +359,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the id property value. The id property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getId() {
         return this.id;
     }
@@ -369,7 +367,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the invoiceId property value. The invoiceId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getInvoiceId() {
         return this.invoiceId;
     }
@@ -377,7 +375,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the invoiceNumber property value. The invoiceNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInvoiceNumber() {
         return this.invoiceNumber;
     }
@@ -385,7 +383,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -393,7 +391,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the number property value. The number property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNumber() {
         return this.number;
     }
@@ -401,7 +399,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -409,7 +407,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the paymentTerm property value. The paymentTerm property
      * @return a paymentTerm
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PaymentTerm getPaymentTerm() {
         return this.paymentTerm;
     }
@@ -417,7 +415,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the paymentTermsId property value. The paymentTermsId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getPaymentTermsId() {
         return this.paymentTermsId;
     }
@@ -425,7 +423,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the phoneNumber property value. The phoneNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
@@ -433,7 +431,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the pricesIncludeTax property value. The pricesIncludeTax property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPricesIncludeTax() {
         return this.pricesIncludeTax;
     }
@@ -441,7 +439,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the salesCreditMemoLines property value. The salesCreditMemoLines property
      * @return a salesCreditMemoLine
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SalesCreditMemoLine> getSalesCreditMemoLines() {
         return this.salesCreditMemoLines;
     }
@@ -449,7 +447,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the salesperson property value. The salesperson property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSalesperson() {
         return this.salesperson;
     }
@@ -457,7 +455,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the sellingPostalAddress property value. The sellingPostalAddress property
      * @return a postalAddressType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PostalAddressType getSellingPostalAddress() {
         return this.sellingPostalAddress;
     }
@@ -465,7 +463,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the status property value. The status property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStatus() {
         return this.status;
     }
@@ -473,7 +471,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the totalAmountExcludingTax property value. The totalAmountExcludingTax property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getTotalAmountExcludingTax() {
         return this.totalAmountExcludingTax;
     }
@@ -481,7 +479,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the totalAmountIncludingTax property value. The totalAmountIncludingTax property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getTotalAmountIncludingTax() {
         return this.totalAmountIncludingTax;
     }
@@ -489,17 +487,15 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
      * Gets the totalTaxAmount property value. The totalTaxAmount property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getTotalTaxAmount() {
         return this.totalTaxAmount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("billingPostalAddress", this.getBillingPostalAddress());
         writer.writeUUIDValue("billToCustomerId", this.getBillToCustomerId());
@@ -540,316 +536,246 @@ public class SalesCreditMemo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the billingPostalAddress property value. The billingPostalAddress property
      * @param value Value to set for the billingPostalAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBillingPostalAddress(@javax.annotation.Nullable final PostalAddressType value) {
+    public void setBillingPostalAddress(@jakarta.annotation.Nullable final PostalAddressType value) {
         this.billingPostalAddress = value;
     }
     /**
      * Sets the billToCustomerId property value. The billToCustomerId property
      * @param value Value to set for the billToCustomerId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBillToCustomerId(@javax.annotation.Nullable final UUID value) {
+    public void setBillToCustomerId(@jakarta.annotation.Nullable final UUID value) {
         this.billToCustomerId = value;
     }
     /**
      * Sets the billToCustomerNumber property value. The billToCustomerNumber property
      * @param value Value to set for the billToCustomerNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBillToCustomerNumber(@javax.annotation.Nullable final String value) {
+    public void setBillToCustomerNumber(@jakarta.annotation.Nullable final String value) {
         this.billToCustomerNumber = value;
     }
     /**
      * Sets the billToName property value. The billToName property
      * @param value Value to set for the billToName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBillToName(@javax.annotation.Nullable final String value) {
+    public void setBillToName(@jakarta.annotation.Nullable final String value) {
         this.billToName = value;
     }
     /**
      * Sets the creditMemoDate property value. The creditMemoDate property
      * @param value Value to set for the creditMemoDate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreditMemoDate(@javax.annotation.Nullable final LocalDate value) {
+    public void setCreditMemoDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.creditMemoDate = value;
     }
     /**
      * Sets the currency property value. The currency property
      * @param value Value to set for the currency property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrency(@javax.annotation.Nullable final Currency value) {
+    public void setCurrency(@jakarta.annotation.Nullable final Currency value) {
         this.currency = value;
     }
     /**
      * Sets the currencyCode property value. The currencyCode property
      * @param value Value to set for the currencyCode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrencyCode(@javax.annotation.Nullable final String value) {
+    public void setCurrencyCode(@jakarta.annotation.Nullable final String value) {
         this.currencyCode = value;
     }
     /**
      * Sets the currencyId property value. The currencyId property
      * @param value Value to set for the currencyId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrencyId(@javax.annotation.Nullable final UUID value) {
+    public void setCurrencyId(@jakarta.annotation.Nullable final UUID value) {
         this.currencyId = value;
     }
     /**
      * Sets the customer property value. The customer property
      * @param value Value to set for the customer property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomer(@javax.annotation.Nullable final Customer value) {
+    public void setCustomer(@jakarta.annotation.Nullable final Customer value) {
         this.customer = value;
     }
     /**
      * Sets the customerId property value. The customerId property
      * @param value Value to set for the customerId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomerId(@javax.annotation.Nullable final UUID value) {
+    public void setCustomerId(@jakarta.annotation.Nullable final UUID value) {
         this.customerId = value;
     }
     /**
      * Sets the customerName property value. The customerName property
      * @param value Value to set for the customerName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomerName(@javax.annotation.Nullable final String value) {
+    public void setCustomerName(@jakarta.annotation.Nullable final String value) {
         this.customerName = value;
     }
     /**
      * Sets the customerNumber property value. The customerNumber property
      * @param value Value to set for the customerNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomerNumber(@javax.annotation.Nullable final String value) {
+    public void setCustomerNumber(@jakarta.annotation.Nullable final String value) {
         this.customerNumber = value;
     }
     /**
      * Sets the discountAmount property value. The discountAmount property
      * @param value Value to set for the discountAmount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDiscountAmount(@javax.annotation.Nullable final BigDecimal value) {
+    public void setDiscountAmount(@jakarta.annotation.Nullable final BigDecimal value) {
         this.discountAmount = value;
     }
     /**
      * Sets the discountAppliedBeforeTax property value. The discountAppliedBeforeTax property
      * @param value Value to set for the discountAppliedBeforeTax property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDiscountAppliedBeforeTax(@javax.annotation.Nullable final Boolean value) {
+    public void setDiscountAppliedBeforeTax(@jakarta.annotation.Nullable final Boolean value) {
         this.discountAppliedBeforeTax = value;
     }
     /**
      * Sets the dueDate property value. The dueDate property
      * @param value Value to set for the dueDate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDueDate(@javax.annotation.Nullable final LocalDate value) {
+    public void setDueDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.dueDate = value;
     }
     /**
      * Sets the email property value. The email property
      * @param value Value to set for the email property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmail(@javax.annotation.Nullable final String value) {
+    public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
      * Sets the externalDocumentNumber property value. The externalDocumentNumber property
      * @param value Value to set for the externalDocumentNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalDocumentNumber(@javax.annotation.Nullable final String value) {
+    public void setExternalDocumentNumber(@jakarta.annotation.Nullable final String value) {
         this.externalDocumentNumber = value;
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final UUID value) {
+    public void setId(@jakarta.annotation.Nullable final UUID value) {
         this.id = value;
     }
     /**
      * Sets the invoiceId property value. The invoiceId property
      * @param value Value to set for the invoiceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInvoiceId(@javax.annotation.Nullable final UUID value) {
+    public void setInvoiceId(@jakarta.annotation.Nullable final UUID value) {
         this.invoiceId = value;
     }
     /**
      * Sets the invoiceNumber property value. The invoiceNumber property
      * @param value Value to set for the invoiceNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInvoiceNumber(@javax.annotation.Nullable final String value) {
+    public void setInvoiceNumber(@jakarta.annotation.Nullable final String value) {
         this.invoiceNumber = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNumber(@javax.annotation.Nullable final String value) {
+    public void setNumber(@jakarta.annotation.Nullable final String value) {
         this.number = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the paymentTerm property value. The paymentTerm property
      * @param value Value to set for the paymentTerm property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPaymentTerm(@javax.annotation.Nullable final PaymentTerm value) {
+    public void setPaymentTerm(@jakarta.annotation.Nullable final PaymentTerm value) {
         this.paymentTerm = value;
     }
     /**
      * Sets the paymentTermsId property value. The paymentTermsId property
      * @param value Value to set for the paymentTermsId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPaymentTermsId(@javax.annotation.Nullable final UUID value) {
+    public void setPaymentTermsId(@jakarta.annotation.Nullable final UUID value) {
         this.paymentTermsId = value;
     }
     /**
      * Sets the phoneNumber property value. The phoneNumber property
      * @param value Value to set for the phoneNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhoneNumber(@javax.annotation.Nullable final String value) {
+    public void setPhoneNumber(@jakarta.annotation.Nullable final String value) {
         this.phoneNumber = value;
     }
     /**
      * Sets the pricesIncludeTax property value. The pricesIncludeTax property
      * @param value Value to set for the pricesIncludeTax property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPricesIncludeTax(@javax.annotation.Nullable final Boolean value) {
+    public void setPricesIncludeTax(@jakarta.annotation.Nullable final Boolean value) {
         this.pricesIncludeTax = value;
     }
     /**
      * Sets the salesCreditMemoLines property value. The salesCreditMemoLines property
      * @param value Value to set for the salesCreditMemoLines property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSalesCreditMemoLines(@javax.annotation.Nullable final java.util.List<SalesCreditMemoLine> value) {
+    public void setSalesCreditMemoLines(@jakarta.annotation.Nullable final java.util.List<SalesCreditMemoLine> value) {
         this.salesCreditMemoLines = value;
     }
     /**
      * Sets the salesperson property value. The salesperson property
      * @param value Value to set for the salesperson property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSalesperson(@javax.annotation.Nullable final String value) {
+    public void setSalesperson(@jakarta.annotation.Nullable final String value) {
         this.salesperson = value;
     }
     /**
      * Sets the sellingPostalAddress property value. The sellingPostalAddress property
      * @param value Value to set for the sellingPostalAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSellingPostalAddress(@javax.annotation.Nullable final PostalAddressType value) {
+    public void setSellingPostalAddress(@jakarta.annotation.Nullable final PostalAddressType value) {
         this.sellingPostalAddress = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final String value) {
+    public void setStatus(@jakarta.annotation.Nullable final String value) {
         this.status = value;
     }
     /**
      * Sets the totalAmountExcludingTax property value. The totalAmountExcludingTax property
      * @param value Value to set for the totalAmountExcludingTax property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalAmountExcludingTax(@javax.annotation.Nullable final BigDecimal value) {
+    public void setTotalAmountExcludingTax(@jakarta.annotation.Nullable final BigDecimal value) {
         this.totalAmountExcludingTax = value;
     }
     /**
      * Sets the totalAmountIncludingTax property value. The totalAmountIncludingTax property
      * @param value Value to set for the totalAmountIncludingTax property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalAmountIncludingTax(@javax.annotation.Nullable final BigDecimal value) {
+    public void setTotalAmountIncludingTax(@jakarta.annotation.Nullable final BigDecimal value) {
         this.totalAmountIncludingTax = value;
     }
     /**
      * Sets the totalTaxAmount property value. The totalTaxAmount property
      * @param value Value to set for the totalTaxAmount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalTaxAmount(@javax.annotation.Nullable final BigDecimal value) {
+    public void setTotalTaxAmount(@jakarta.annotation.Nullable final BigDecimal value) {
         this.totalTaxAmount = value;
     }
 }

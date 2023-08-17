@@ -25,9 +25,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
     private String subject;
     /**
      * Instantiates a new emailPayloadDetail and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EmailPayloadDetail() {
         super();
         this.setOdataType("#microsoft.graph.emailPayloadDetail");
@@ -37,8 +35,8 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a emailPayloadDetail
      */
-    @javax.annotation.Nonnull
-    public static EmailPayloadDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EmailPayloadDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EmailPayloadDetail();
     }
@@ -46,7 +44,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("fromEmail", (n) -> { this.setFromEmail(n.getStringValue()); });
@@ -59,7 +57,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
      * Gets the fromEmail property value. Email address of the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFromEmail() {
         return this.fromEmail;
     }
@@ -67,7 +65,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
      * Gets the fromName property value. Display name of the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFromName() {
         return this.fromName;
     }
@@ -75,7 +73,7 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
      * Gets the isExternalSender property value. Indicates whether the sender is not from the user's organization.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsExternalSender() {
         return this.isExternalSender;
     }
@@ -83,17 +81,15 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
      * Gets the subject property value. The subject of the email address sent to the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubject() {
         return this.subject;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("fromEmail", this.getFromEmail());
@@ -104,37 +100,29 @@ public class EmailPayloadDetail extends PayloadDetail implements Parsable {
     /**
      * Sets the fromEmail property value. Email address of the user.
      * @param value Value to set for the fromEmail property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFromEmail(@javax.annotation.Nullable final String value) {
+    public void setFromEmail(@jakarta.annotation.Nullable final String value) {
         this.fromEmail = value;
     }
     /**
      * Sets the fromName property value. Display name of the user.
      * @param value Value to set for the fromName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFromName(@javax.annotation.Nullable final String value) {
+    public void setFromName(@jakarta.annotation.Nullable final String value) {
         this.fromName = value;
     }
     /**
      * Sets the isExternalSender property value. Indicates whether the sender is not from the user's organization.
      * @param value Value to set for the isExternalSender property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsExternalSender(@javax.annotation.Nullable final Boolean value) {
+    public void setIsExternalSender(@jakarta.annotation.Nullable final Boolean value) {
         this.isExternalSender = value;
     }
     /**
      * Sets the subject property value. The subject of the email address sent to the user.
      * @param value Value to set for the subject property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final String value) {
+    public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
 }

@@ -30,9 +30,7 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Pa
     private String odataType;
     /**
      * Instantiates a new evaluateDynamicMembershipResult and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EvaluateDynamicMembershipResult() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +39,8 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a evaluateDynamicMembershipResult
      */
-    @javax.annotation.Nonnull
-    public static EvaluateDynamicMembershipResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EvaluateDynamicMembershipResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EvaluateDynamicMembershipResult();
     }
@@ -50,7 +48,7 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Pa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +56,7 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("membershipRule", (n) -> { this.setMembershipRule(n.getStringValue()); });
@@ -71,7 +69,7 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Pa
      * Gets the membershipRule property value. If a group ID is provided, the value is the membership rule for the group. If a group ID is not provided, the value is the membership rule that was provided as a parameter. For more information, see Dynamic membership rules for groups in Azure Active Directory.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMembershipRule() {
         return this.membershipRule;
     }
@@ -79,7 +77,7 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Pa
      * Gets the membershipRuleEvaluationDetails property value. Provides a detailed anaylsis of the membership evaluation result.
      * @return a expressionEvaluationDetails
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExpressionEvaluationDetails getMembershipRuleEvaluationDetails() {
         return this.membershipRuleEvaluationDetails;
     }
@@ -87,7 +85,7 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Pa
      * Gets the membershipRuleEvaluationResult property value. The value is true if the user or device is a member of the group. The value can also be true if a membership rule was provided and the user or device passes the rule evaluation; otherwise false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getMembershipRuleEvaluationResult() {
         return this.membershipRuleEvaluationResult;
     }
@@ -95,17 +93,15 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Pa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("membershipRule", this.getMembershipRule());
         writer.writeObjectValue("membershipRuleEvaluationDetails", this.getMembershipRuleEvaluationDetails());
@@ -116,46 +112,36 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Pa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the membershipRule property value. If a group ID is provided, the value is the membership rule for the group. If a group ID is not provided, the value is the membership rule that was provided as a parameter. For more information, see Dynamic membership rules for groups in Azure Active Directory.
      * @param value Value to set for the membershipRule property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMembershipRule(@javax.annotation.Nullable final String value) {
+    public void setMembershipRule(@jakarta.annotation.Nullable final String value) {
         this.membershipRule = value;
     }
     /**
      * Sets the membershipRuleEvaluationDetails property value. Provides a detailed anaylsis of the membership evaluation result.
      * @param value Value to set for the membershipRuleEvaluationDetails property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMembershipRuleEvaluationDetails(@javax.annotation.Nullable final ExpressionEvaluationDetails value) {
+    public void setMembershipRuleEvaluationDetails(@jakarta.annotation.Nullable final ExpressionEvaluationDetails value) {
         this.membershipRuleEvaluationDetails = value;
     }
     /**
      * Sets the membershipRuleEvaluationResult property value. The value is true if the user or device is a member of the group. The value can also be true if a membership rule was provided and the user or device passes the rule evaluation; otherwise false.
      * @param value Value to set for the membershipRuleEvaluationResult property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMembershipRuleEvaluationResult(@javax.annotation.Nullable final Boolean value) {
+    public void setMembershipRuleEvaluationResult(@jakarta.annotation.Nullable final Boolean value) {
         this.membershipRuleEvaluationResult = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

@@ -29,9 +29,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     private String recommendedAction;
     /**
      * Instantiates a new statusDetails and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public StatusDetails() {
         super();
         this.setOdataType("#microsoft.graph.statusDetails");
@@ -41,8 +39,8 @@ public class StatusDetails extends StatusBase implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a statusDetails
      */
-    @javax.annotation.Nonnull
-    public static StatusDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static StatusDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new StatusDetails();
     }
@@ -50,7 +48,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * Gets the additionalDetails property value. Additional details in case of error.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAdditionalDetails() {
         return this.additionalDetails;
     }
@@ -58,7 +56,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * Gets the errorCategory property value. Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
      * @return a provisioningStatusErrorCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ProvisioningStatusErrorCategory getErrorCategory() {
         return this.errorCategory;
     }
@@ -66,7 +64,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * Gets the errorCode property value. Unique error code if any occurred. Learn more
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getErrorCode() {
         return this.errorCode;
     }
@@ -74,7 +72,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("additionalDetails", (n) -> { this.setAdditionalDetails(n.getStringValue()); });
@@ -88,7 +86,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * Gets the reason property value. Summarizes the status and describes why the status happened.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getReason() {
         return this.reason;
     }
@@ -96,17 +94,15 @@ public class StatusDetails extends StatusBase implements Parsable {
      * Gets the recommendedAction property value. Provides the resolution for the corresponding error.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRecommendedAction() {
         return this.recommendedAction;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("additionalDetails", this.getAdditionalDetails());
@@ -118,46 +114,36 @@ public class StatusDetails extends StatusBase implements Parsable {
     /**
      * Sets the additionalDetails property value. Additional details in case of error.
      * @param value Value to set for the additionalDetails property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalDetails(@javax.annotation.Nullable final String value) {
+    public void setAdditionalDetails(@jakarta.annotation.Nullable final String value) {
         this.additionalDetails = value;
     }
     /**
      * Sets the errorCategory property value. Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
      * @param value Value to set for the errorCategory property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorCategory(@javax.annotation.Nullable final ProvisioningStatusErrorCategory value) {
+    public void setErrorCategory(@jakarta.annotation.Nullable final ProvisioningStatusErrorCategory value) {
         this.errorCategory = value;
     }
     /**
      * Sets the errorCode property value. Unique error code if any occurred. Learn more
      * @param value Value to set for the errorCode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorCode(@javax.annotation.Nullable final String value) {
+    public void setErrorCode(@jakarta.annotation.Nullable final String value) {
         this.errorCode = value;
     }
     /**
      * Sets the reason property value. Summarizes the status and describes why the status happened.
      * @param value Value to set for the reason property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReason(@javax.annotation.Nullable final String value) {
+    public void setReason(@jakarta.annotation.Nullable final String value) {
         this.reason = value;
     }
     /**
      * Sets the recommendedAction property value. Provides the resolution for the corresponding error.
      * @param value Value to set for the recommendedAction property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecommendedAction(@javax.annotation.Nullable final String value) {
+    public void setRecommendedAction(@jakarta.annotation.Nullable final String value) {
         this.recommendedAction = value;
     }
 }

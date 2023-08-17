@@ -36,9 +36,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
     private Integer unknownCount;
     /**
      * Instantiates a new securityBaselineStateSummary and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SecurityBaselineStateSummary() {
         super();
     }
@@ -47,8 +45,8 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a securityBaselineStateSummary
      */
-    @javax.annotation.Nonnull
-    public static SecurityBaselineStateSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SecurityBaselineStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -63,7 +61,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      * Gets the conflictCount property value. Number of conflict devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getConflictCount() {
         return this.conflictCount;
     }
@@ -71,7 +69,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      * Gets the errorCount property value. Number of error devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getErrorCount() {
         return this.errorCount;
     }
@@ -79,7 +77,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("conflictCount", (n) -> { this.setConflictCount(n.getIntegerValue()); });
@@ -94,7 +92,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      * Gets the notApplicableCount property value. Number of not applicable devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
         return this.notApplicableCount;
     }
@@ -102,7 +100,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      * Gets the notSecureCount property value. Number of not secure devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNotSecureCount() {
         return this.notSecureCount;
     }
@@ -110,7 +108,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      * Gets the secureCount property value. Number of secure devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSecureCount() {
         return this.secureCount;
     }
@@ -118,17 +116,15 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      * Gets the unknownCount property value. Number of unknown devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getUnknownCount() {
         return this.unknownCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("conflictCount", this.getConflictCount());
@@ -141,55 +137,43 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
     /**
      * Sets the conflictCount property value. Number of conflict devices
      * @param value Value to set for the conflictCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConflictCount(@javax.annotation.Nullable final Integer value) {
+    public void setConflictCount(@jakarta.annotation.Nullable final Integer value) {
         this.conflictCount = value;
     }
     /**
      * Sets the errorCount property value. Number of error devices
      * @param value Value to set for the errorCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorCount(@javax.annotation.Nullable final Integer value) {
+    public void setErrorCount(@jakarta.annotation.Nullable final Integer value) {
         this.errorCount = value;
     }
     /**
      * Sets the notApplicableCount property value. Number of not applicable devices
      * @param value Value to set for the notApplicableCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotApplicableCount(@javax.annotation.Nullable final Integer value) {
+    public void setNotApplicableCount(@jakarta.annotation.Nullable final Integer value) {
         this.notApplicableCount = value;
     }
     /**
      * Sets the notSecureCount property value. Number of not secure devices
      * @param value Value to set for the notSecureCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotSecureCount(@javax.annotation.Nullable final Integer value) {
+    public void setNotSecureCount(@jakarta.annotation.Nullable final Integer value) {
         this.notSecureCount = value;
     }
     /**
      * Sets the secureCount property value. Number of secure devices
      * @param value Value to set for the secureCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecureCount(@javax.annotation.Nullable final Integer value) {
+    public void setSecureCount(@jakarta.annotation.Nullable final Integer value) {
         this.secureCount = value;
     }
     /**
      * Sets the unknownCount property value. Number of unknown devices
      * @param value Value to set for the unknownCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnknownCount(@javax.annotation.Nullable final Integer value) {
+    public void setUnknownCount(@jakarta.annotation.Nullable final Integer value) {
         this.unknownCount = value;
     }
 }

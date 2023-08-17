@@ -13,9 +13,7 @@ public class AuthenticationEventsPolicy extends Entity implements Parsable {
     private java.util.List<AuthenticationListener> onSignupStart;
     /**
      * Instantiates a new authenticationEventsPolicy and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AuthenticationEventsPolicy() {
         super();
     }
@@ -24,8 +22,8 @@ public class AuthenticationEventsPolicy extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a authenticationEventsPolicy
      */
-    @javax.annotation.Nonnull
-    public static AuthenticationEventsPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AuthenticationEventsPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AuthenticationEventsPolicy();
     }
@@ -33,7 +31,7 @@ public class AuthenticationEventsPolicy extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("onSignupStart", (n) -> { this.setOnSignupStart(n.getCollectionOfObjectValues(AuthenticationListener::createFromDiscriminatorValue)); });
@@ -43,17 +41,15 @@ public class AuthenticationEventsPolicy extends Entity implements Parsable {
      * Gets the onSignupStart property value. A list of applicable actions to be taken on sign-up.
      * @return a authenticationListener
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AuthenticationListener> getOnSignupStart() {
         return this.onSignupStart;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("onSignupStart", this.getOnSignupStart());
@@ -61,10 +57,8 @@ public class AuthenticationEventsPolicy extends Entity implements Parsable {
     /**
      * Sets the onSignupStart property value. A list of applicable actions to be taken on sign-up.
      * @param value Value to set for the onSignupStart property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnSignupStart(@javax.annotation.Nullable final java.util.List<AuthenticationListener> value) {
+    public void setOnSignupStart(@jakarta.annotation.Nullable final java.util.List<AuthenticationListener> value) {
         this.onSignupStart = value;
     }
 }

@@ -29,9 +29,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
     private LobbyBypassSettings lobbyBypassSettings;
     /**
      * Instantiates a new protectOnlineMeetingAction and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ProtectOnlineMeetingAction() {
         super();
         this.setOdataType("#microsoft.graph.protectOnlineMeetingAction");
@@ -41,8 +39,8 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a protectOnlineMeetingAction
      */
-    @javax.annotation.Nonnull
-    public static ProtectOnlineMeetingAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ProtectOnlineMeetingAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ProtectOnlineMeetingAction();
     }
@@ -50,7 +48,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      * Gets the allowedForwarders property value. The allowedForwarders property
      * @return a onlineMeetingForwarders
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnlineMeetingForwarders getAllowedForwarders() {
         return this.allowedForwarders;
     }
@@ -58,7 +56,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      * Gets the allowedPresenters property value. The allowedPresenters property
      * @return a onlineMeetingPresenters
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnlineMeetingPresenters getAllowedPresenters() {
         return this.allowedPresenters;
     }
@@ -66,7 +64,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowedForwarders", (n) -> { this.setAllowedForwarders(n.getEnumValue(OnlineMeetingForwarders.class)); });
@@ -80,7 +78,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      * Gets the isCopyToClipboardEnabled property value. The isCopyToClipboardEnabled property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsCopyToClipboardEnabled() {
         return this.isCopyToClipboardEnabled;
     }
@@ -88,7 +86,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      * Gets the isLobbyEnabled property value. The isLobbyEnabled property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsLobbyEnabled() {
         return this.isLobbyEnabled;
     }
@@ -96,17 +94,15 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      * Gets the lobbyBypassSettings property value. The lobbyBypassSettings property
      * @return a lobbyBypassSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LobbyBypassSettings getLobbyBypassSettings() {
         return this.lobbyBypassSettings;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("allowedForwarders", this.getAllowedForwarders());
@@ -118,46 +114,36 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
     /**
      * Sets the allowedForwarders property value. The allowedForwarders property
      * @param value Value to set for the allowedForwarders property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowedForwarders(@javax.annotation.Nullable final OnlineMeetingForwarders value) {
+    public void setAllowedForwarders(@jakarta.annotation.Nullable final OnlineMeetingForwarders value) {
         this.allowedForwarders = value;
     }
     /**
      * Sets the allowedPresenters property value. The allowedPresenters property
      * @param value Value to set for the allowedPresenters property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowedPresenters(@javax.annotation.Nullable final OnlineMeetingPresenters value) {
+    public void setAllowedPresenters(@jakarta.annotation.Nullable final OnlineMeetingPresenters value) {
         this.allowedPresenters = value;
     }
     /**
      * Sets the isCopyToClipboardEnabled property value. The isCopyToClipboardEnabled property
      * @param value Value to set for the isCopyToClipboardEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsCopyToClipboardEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsCopyToClipboardEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isCopyToClipboardEnabled = value;
     }
     /**
      * Sets the isLobbyEnabled property value. The isLobbyEnabled property
      * @param value Value to set for the isLobbyEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsLobbyEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsLobbyEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isLobbyEnabled = value;
     }
     /**
      * Sets the lobbyBypassSettings property value. The lobbyBypassSettings property
      * @param value Value to set for the lobbyBypassSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLobbyBypassSettings(@javax.annotation.Nullable final LobbyBypassSettings value) {
+    public void setLobbyBypassSettings(@jakarta.annotation.Nullable final LobbyBypassSettings value) {
         this.lobbyBypassSettings = value;
     }
 }

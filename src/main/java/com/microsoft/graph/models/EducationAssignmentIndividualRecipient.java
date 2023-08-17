@@ -13,9 +13,7 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
     private java.util.List<String> recipients;
     /**
      * Instantiates a new educationAssignmentIndividualRecipient and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EducationAssignmentIndividualRecipient() {
         super();
         this.setOdataType("#microsoft.graph.educationAssignmentIndividualRecipient");
@@ -25,8 +23,8 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationAssignmentIndividualRecipient
      */
-    @javax.annotation.Nonnull
-    public static EducationAssignmentIndividualRecipient createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationAssignmentIndividualRecipient createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationAssignmentIndividualRecipient();
     }
@@ -34,7 +32,7 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("recipients", (n) -> { this.setRecipients(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -44,17 +42,15 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
      * Gets the recipients property value. A collection of ids of the recipients.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRecipients() {
         return this.recipients;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("recipients", this.getRecipients());
@@ -62,10 +58,8 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
     /**
      * Sets the recipients property value. A collection of ids of the recipients.
      * @param value Value to set for the recipients property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecipients(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRecipients(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.recipients = value;
     }
 }

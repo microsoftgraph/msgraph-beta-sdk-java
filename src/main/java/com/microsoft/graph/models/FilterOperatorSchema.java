@@ -21,9 +21,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
     private java.util.List<AttributeType> supportedAttributeTypes;
     /**
      * Instantiates a new filterOperatorSchema and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public FilterOperatorSchema() {
         super();
     }
@@ -32,8 +30,8 @@ public class FilterOperatorSchema extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a filterOperatorSchema
      */
-    @javax.annotation.Nonnull
-    public static FilterOperatorSchema createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static FilterOperatorSchema createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new FilterOperatorSchema();
     }
@@ -41,7 +39,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
      * Gets the arity property value. The arity property
      * @return a scopeOperatorType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ScopeOperatorType getArity() {
         return this.arity;
     }
@@ -49,7 +47,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("arity", (n) -> { this.setArity(n.getEnumValue(ScopeOperatorType.class)); });
@@ -61,7 +59,7 @@ public class FilterOperatorSchema extends Entity implements Parsable {
      * Gets the multivaluedComparisonType property value. The multivaluedComparisonType property
      * @return a scopeOperatorMultiValuedComparisonType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ScopeOperatorMultiValuedComparisonType getMultivaluedComparisonType() {
         return this.multivaluedComparisonType;
     }
@@ -69,17 +67,15 @@ public class FilterOperatorSchema extends Entity implements Parsable {
      * Gets the supportedAttributeTypes property value. Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
      * @return a attributeType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AttributeType> getSupportedAttributeTypes() {
         return this.supportedAttributeTypes;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("arity", this.getArity());
@@ -89,28 +85,22 @@ public class FilterOperatorSchema extends Entity implements Parsable {
     /**
      * Sets the arity property value. The arity property
      * @param value Value to set for the arity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setArity(@javax.annotation.Nullable final ScopeOperatorType value) {
+    public void setArity(@jakarta.annotation.Nullable final ScopeOperatorType value) {
         this.arity = value;
     }
     /**
      * Sets the multivaluedComparisonType property value. The multivaluedComparisonType property
      * @param value Value to set for the multivaluedComparisonType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMultivaluedComparisonType(@javax.annotation.Nullable final ScopeOperatorMultiValuedComparisonType value) {
+    public void setMultivaluedComparisonType(@jakarta.annotation.Nullable final ScopeOperatorMultiValuedComparisonType value) {
         this.multivaluedComparisonType = value;
     }
     /**
      * Sets the supportedAttributeTypes property value. Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
      * @param value Value to set for the supportedAttributeTypes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedAttributeTypes(@javax.annotation.Nullable final java.util.List<AttributeType> value) {
+    public void setSupportedAttributeTypes(@jakarta.annotation.Nullable final java.util.List<AttributeType> value) {
         this.supportedAttributeTypes = value;
     }
 }

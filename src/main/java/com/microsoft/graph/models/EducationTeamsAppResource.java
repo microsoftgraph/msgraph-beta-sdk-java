@@ -25,9 +25,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     private String webUrl;
     /**
      * Instantiates a new educationTeamsAppResource and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EducationTeamsAppResource() {
         super();
         this.setOdataType("#microsoft.graph.educationTeamsAppResource");
@@ -37,8 +35,8 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationTeamsAppResource
      */
-    @javax.annotation.Nonnull
-    public static EducationTeamsAppResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationTeamsAppResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationTeamsAppResource();
     }
@@ -46,7 +44,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
      * Gets the appIconWebUrl property value. URL that points to the icon of the app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppIconWebUrl() {
         return this.appIconWebUrl;
     }
@@ -54,7 +52,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
      * Gets the appId property value. Teams app ID of the application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppId() {
         return this.appId;
     }
@@ -62,7 +60,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appIconWebUrl", (n) -> { this.setAppIconWebUrl(n.getStringValue()); });
@@ -75,7 +73,7 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
      * Gets the teamsEmbeddedContentUrl property value. URL for the app resource that will be opened by Teams.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTeamsEmbeddedContentUrl() {
         return this.teamsEmbeddedContentUrl;
     }
@@ -83,17 +81,15 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
      * Gets the webUrl property value. URL for the app resource that can be opened in the browser.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebUrl() {
         return this.webUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appIconWebUrl", this.getAppIconWebUrl());
@@ -104,37 +100,29 @@ public class EducationTeamsAppResource extends EducationResource implements Pars
     /**
      * Sets the appIconWebUrl property value. URL that points to the icon of the app.
      * @param value Value to set for the appIconWebUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppIconWebUrl(@javax.annotation.Nullable final String value) {
+    public void setAppIconWebUrl(@jakarta.annotation.Nullable final String value) {
         this.appIconWebUrl = value;
     }
     /**
      * Sets the appId property value. Teams app ID of the application.
      * @param value Value to set for the appId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppId(@javax.annotation.Nullable final String value) {
+    public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }
     /**
      * Sets the teamsEmbeddedContentUrl property value. URL for the app resource that will be opened by Teams.
      * @param value Value to set for the teamsEmbeddedContentUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTeamsEmbeddedContentUrl(@javax.annotation.Nullable final String value) {
+    public void setTeamsEmbeddedContentUrl(@jakarta.annotation.Nullable final String value) {
         this.teamsEmbeddedContentUrl = value;
     }
     /**
      * Sets the webUrl property value. URL for the app resource that can be opened in the browser.
      * @param value Value to set for the webUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebUrl(@javax.annotation.Nullable final String value) {
+    public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }
 }

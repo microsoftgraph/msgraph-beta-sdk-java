@@ -31,9 +31,7 @@ public class UpdatePolicy extends Entity implements Parsable {
     private DeploymentSettings deploymentSettings;
     /**
      * Instantiates a new updatePolicy and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UpdatePolicy() {
         super();
     }
@@ -42,8 +40,8 @@ public class UpdatePolicy extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a updatePolicy
      */
-    @javax.annotation.Nonnull
-    public static UpdatePolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UpdatePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UpdatePolicy();
     }
@@ -51,7 +49,7 @@ public class UpdatePolicy extends Entity implements Parsable {
      * Gets the audience property value. Specifies the audience to target.
      * @return a deploymentAudience
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeploymentAudience getAudience() {
         return this.audience;
     }
@@ -59,7 +57,7 @@ public class UpdatePolicy extends Entity implements Parsable {
      * Gets the complianceChangeRules property value. Rules for governing the automatic creation of compliance changes.
      * @return a complianceChangeRule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ComplianceChangeRule> getComplianceChangeRules() {
         return this.complianceChangeRules;
     }
@@ -67,7 +65,7 @@ public class UpdatePolicy extends Entity implements Parsable {
      * Gets the complianceChanges property value. Compliance changes like content approvals which result in the automatic creation of deployments using the audience and deploymentSettings of the policy.
      * @return a complianceChange
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ComplianceChange> getComplianceChanges() {
         return this.complianceChanges;
     }
@@ -75,7 +73,7 @@ public class UpdatePolicy extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time when the update policy was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -83,7 +81,7 @@ public class UpdatePolicy extends Entity implements Parsable {
      * Gets the deploymentSettings property value. Settings for governing how to deploy content.
      * @return a deploymentSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeploymentSettings getDeploymentSettings() {
         return this.deploymentSettings;
     }
@@ -91,7 +89,7 @@ public class UpdatePolicy extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("audience", (n) -> { this.setAudience(n.getObjectValue(DeploymentAudience::createFromDiscriminatorValue)); });
@@ -104,10 +102,8 @@ public class UpdatePolicy extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("audience", this.getAudience());
@@ -119,46 +115,36 @@ public class UpdatePolicy extends Entity implements Parsable {
     /**
      * Sets the audience property value. Specifies the audience to target.
      * @param value Value to set for the audience property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAudience(@javax.annotation.Nullable final DeploymentAudience value) {
+    public void setAudience(@jakarta.annotation.Nullable final DeploymentAudience value) {
         this.audience = value;
     }
     /**
      * Sets the complianceChangeRules property value. Rules for governing the automatic creation of compliance changes.
      * @param value Value to set for the complianceChangeRules property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComplianceChangeRules(@javax.annotation.Nullable final java.util.List<ComplianceChangeRule> value) {
+    public void setComplianceChangeRules(@jakarta.annotation.Nullable final java.util.List<ComplianceChangeRule> value) {
         this.complianceChangeRules = value;
     }
     /**
      * Sets the complianceChanges property value. Compliance changes like content approvals which result in the automatic creation of deployments using the audience and deploymentSettings of the policy.
      * @param value Value to set for the complianceChanges property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComplianceChanges(@javax.annotation.Nullable final java.util.List<ComplianceChange> value) {
+    public void setComplianceChanges(@jakarta.annotation.Nullable final java.util.List<ComplianceChange> value) {
         this.complianceChanges = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when the update policy was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the deploymentSettings property value. Settings for governing how to deploy content.
      * @param value Value to set for the deploymentSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeploymentSettings(@javax.annotation.Nullable final DeploymentSettings value) {
+    public void setDeploymentSettings(@jakarta.annotation.Nullable final DeploymentSettings value) {
         this.deploymentSettings = value;
     }
 }

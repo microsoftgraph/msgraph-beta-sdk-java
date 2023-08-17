@@ -11,7 +11,7 @@ import java.util.Objects;
  */
 public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity implements Parsable {
     /**
-     * Estimated battery age. Unit in days. Valid values -2147483648 to 2147483647
+     * Estimated battery age. Unit in days. Valid values 0 to 2147483647
      */
     private Integer batteryAgeInDays;
     /**
@@ -19,7 +19,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      */
     private Integer deviceBatteryCount;
     /**
-     * A weighted average of a devices maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
+     * A weighted average of a devices maximum capacity score and runtime estimate score. Values range from 0-100. Valid values 0 to 2147483647
      */
     private Integer deviceBatteryHealthScore;
     /**
@@ -31,7 +31,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      */
     private String deviceName;
     /**
-     * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values -2147483648 to 2147483647
+     * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values 0 to 2147483647
      */
     private Integer estimatedRuntimeInMinutes;
     /**
@@ -47,7 +47,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      */
     private String manufacturer;
     /**
-     * Ratio of current capacity and design capacity of the battery with the lowest capacity. Unit in percentage and values range from 0-100. Valid values -2147483648 to 2147483647
+     * Ratio of current capacity and design capacity of the battery with the lowest capacity. Unit in percentage and values range from 0-100. Valid values 0 to 2147483647
      */
     private Integer maxCapacityPercentage;
     /**
@@ -56,9 +56,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     private String model;
     /**
      * Instantiates a new userExperienceAnalyticsBatteryHealthDevicePerformance and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UserExperienceAnalyticsBatteryHealthDevicePerformance() {
         super();
     }
@@ -67,16 +65,16 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsBatteryHealthDevicePerformance
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsBatteryHealthDevicePerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsBatteryHealthDevicePerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsBatteryHealthDevicePerformance();
     }
     /**
-     * Gets the batteryAgeInDays property value. Estimated battery age. Unit in days. Valid values -2147483648 to 2147483647
+     * Gets the batteryAgeInDays property value. Estimated battery age. Unit in days. Valid values 0 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getBatteryAgeInDays() {
         return this.batteryAgeInDays;
     }
@@ -84,15 +82,15 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * Gets the deviceBatteryCount property value. Number of batteries in a user device. Valid values 1 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDeviceBatteryCount() {
         return this.deviceBatteryCount;
     }
     /**
-     * Gets the deviceBatteryHealthScore property value. A weighted average of a devices maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
+     * Gets the deviceBatteryHealthScore property value. A weighted average of a devices maximum capacity score and runtime estimate score. Values range from 0-100. Valid values 0 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDeviceBatteryHealthScore() {
         return this.deviceBatteryHealthScore;
     }
@@ -100,7 +98,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * Gets the deviceId property value. The unique identifier of the device, Intune DeviceID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -108,15 +106,15 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * Gets the deviceName property value. Device friendly name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
     /**
-     * Gets the estimatedRuntimeInMinutes property value. The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values -2147483648 to 2147483647
+     * Gets the estimatedRuntimeInMinutes property value. The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values 0 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getEstimatedRuntimeInMinutes() {
         return this.estimatedRuntimeInMinutes;
     }
@@ -124,7 +122,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("batteryAgeInDays", (n) -> { this.setBatteryAgeInDays(n.getIntegerValue()); });
@@ -144,7 +142,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * Gets the fullBatteryDrainCount property value. Number of times the battery has been discharged an amount that equals 100% of its capacity, but not necessarily by discharging it from 100% to 0%. Valid values 0 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFullBatteryDrainCount() {
         return this.fullBatteryDrainCount;
     }
@@ -152,7 +150,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * Gets the healthStatus property value. The healthStatus property
      * @return a userExperienceAnalyticsHealthState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
         return this.healthStatus;
     }
@@ -160,15 +158,15 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * Gets the manufacturer property value. The manufacturer name of the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManufacturer() {
         return this.manufacturer;
     }
     /**
-     * Gets the maxCapacityPercentage property value. Ratio of current capacity and design capacity of the battery with the lowest capacity. Unit in percentage and values range from 0-100. Valid values -2147483648 to 2147483647
+     * Gets the maxCapacityPercentage property value. Ratio of current capacity and design capacity of the battery with the lowest capacity. Unit in percentage and values range from 0-100. Valid values 0 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaxCapacityPercentage() {
         return this.maxCapacityPercentage;
     }
@@ -176,17 +174,15 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * Gets the model property value. The model name of the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getModel() {
         return this.model;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("batteryAgeInDays", this.getBatteryAgeInDays());
@@ -202,102 +198,80 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
         writer.writeStringValue("model", this.getModel());
     }
     /**
-     * Sets the batteryAgeInDays property value. Estimated battery age. Unit in days. Valid values -2147483648 to 2147483647
+     * Sets the batteryAgeInDays property value. Estimated battery age. Unit in days. Valid values 0 to 2147483647
      * @param value Value to set for the batteryAgeInDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBatteryAgeInDays(@javax.annotation.Nullable final Integer value) {
+    public void setBatteryAgeInDays(@jakarta.annotation.Nullable final Integer value) {
         this.batteryAgeInDays = value;
     }
     /**
      * Sets the deviceBatteryCount property value. Number of batteries in a user device. Valid values 1 to 2147483647
      * @param value Value to set for the deviceBatteryCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceBatteryCount(@javax.annotation.Nullable final Integer value) {
+    public void setDeviceBatteryCount(@jakarta.annotation.Nullable final Integer value) {
         this.deviceBatteryCount = value;
     }
     /**
-     * Sets the deviceBatteryHealthScore property value. A weighted average of a devices maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
+     * Sets the deviceBatteryHealthScore property value. A weighted average of a devices maximum capacity score and runtime estimate score. Values range from 0-100. Valid values 0 to 2147483647
      * @param value Value to set for the deviceBatteryHealthScore property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceBatteryHealthScore(@javax.annotation.Nullable final Integer value) {
+    public void setDeviceBatteryHealthScore(@jakarta.annotation.Nullable final Integer value) {
         this.deviceBatteryHealthScore = value;
     }
     /**
      * Sets the deviceId property value. The unique identifier of the device, Intune DeviceID.
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the deviceName property value. Device friendly name.
      * @param value Value to set for the deviceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
-     * Sets the estimatedRuntimeInMinutes property value. The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values -2147483648 to 2147483647
+     * Sets the estimatedRuntimeInMinutes property value. The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values 0 to 2147483647
      * @param value Value to set for the estimatedRuntimeInMinutes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEstimatedRuntimeInMinutes(@javax.annotation.Nullable final Integer value) {
+    public void setEstimatedRuntimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.estimatedRuntimeInMinutes = value;
     }
     /**
      * Sets the fullBatteryDrainCount property value. Number of times the battery has been discharged an amount that equals 100% of its capacity, but not necessarily by discharging it from 100% to 0%. Valid values 0 to 2147483647
      * @param value Value to set for the fullBatteryDrainCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFullBatteryDrainCount(@javax.annotation.Nullable final Integer value) {
+    public void setFullBatteryDrainCount(@jakarta.annotation.Nullable final Integer value) {
         this.fullBatteryDrainCount = value;
     }
     /**
      * Sets the healthStatus property value. The healthStatus property
      * @param value Value to set for the healthStatus property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHealthStatus(@javax.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
+    public void setHealthStatus(@jakarta.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
         this.healthStatus = value;
     }
     /**
      * Sets the manufacturer property value. The manufacturer name of the device.
      * @param value Value to set for the manufacturer property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManufacturer(@javax.annotation.Nullable final String value) {
+    public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
-     * Sets the maxCapacityPercentage property value. Ratio of current capacity and design capacity of the battery with the lowest capacity. Unit in percentage and values range from 0-100. Valid values -2147483648 to 2147483647
+     * Sets the maxCapacityPercentage property value. Ratio of current capacity and design capacity of the battery with the lowest capacity. Unit in percentage and values range from 0-100. Valid values 0 to 2147483647
      * @param value Value to set for the maxCapacityPercentage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaxCapacityPercentage(@javax.annotation.Nullable final Integer value) {
+    public void setMaxCapacityPercentage(@jakarta.annotation.Nullable final Integer value) {
         this.maxCapacityPercentage = value;
     }
     /**
      * Sets the model property value. The model name of the device.
      * @param value Value to set for the model property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModel(@javax.annotation.Nullable final String value) {
+    public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
 }

@@ -52,9 +52,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
     private java.util.List<String> trustedServerCertificateNames;
     /**
      * Instantiates a new macOSWiredNetworkConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MacOSWiredNetworkConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSWiredNetworkConfiguration");
@@ -64,8 +62,8 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a macOSWiredNetworkConfiguration
      */
-    @javax.annotation.Nonnull
-    public static MacOSWiredNetworkConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MacOSWiredNetworkConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MacOSWiredNetworkConfiguration();
     }
@@ -73,7 +71,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * Gets the authenticationMethod property value. Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
      * @return a wiFiAuthenticationMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WiFiAuthenticationMethod getAuthenticationMethod() {
         return this.authenticationMethod;
     }
@@ -81,7 +79,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * Gets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
      * @return a eapFastConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EapFastConfiguration getEapFastConfiguration() {
         return this.eapFastConfiguration;
     }
@@ -89,7 +87,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * Gets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
      * @return a eapType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EapType getEapType() {
         return this.eapType;
     }
@@ -97,7 +95,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * Gets the enableOuterIdentityPrivacy property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this wired network using their real username is displayed as 'anonymous'.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEnableOuterIdentityPrivacy() {
         return this.enableOuterIdentityPrivacy;
     }
@@ -105,7 +103,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod.class)); });
@@ -124,7 +122,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * Gets the identityCertificateForClientAuthentication property value. Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
      * @return a macOSCertificateProfileBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSCertificateProfileBase getIdentityCertificateForClientAuthentication() {
         return this.identityCertificateForClientAuthentication;
     }
@@ -132,7 +130,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * Gets the networkInterface property value. Apple network interface type.
      * @return a wiredNetworkInterface
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WiredNetworkInterface getNetworkInterface() {
         return this.networkInterface;
     }
@@ -140,7 +138,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * Gets the networkName property value. Network Name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNetworkName() {
         return this.networkName;
     }
@@ -148,7 +146,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * Gets the nonEapAuthenticationMethodForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @return a nonEapAuthenticationMethodForEapTtlsType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public NonEapAuthenticationMethodForEapTtlsType getNonEapAuthenticationMethodForEapTtls() {
         return this.nonEapAuthenticationMethodForEapTtls;
     }
@@ -156,7 +154,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * Gets the rootCertificateForServerValidation property value. Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP.
      * @return a macOSTrustedRootCertificate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSTrustedRootCertificate getRootCertificateForServerValidation() {
         return this.rootCertificateForServerValidation;
     }
@@ -164,17 +162,15 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      * Gets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this wired network.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTrustedServerCertificateNames() {
         return this.trustedServerCertificateNames;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("authenticationMethod", this.getAuthenticationMethod());
@@ -191,91 +187,71 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
     /**
      * Sets the authenticationMethod property value. Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
      * @param value Value to set for the authenticationMethod property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationMethod(@javax.annotation.Nullable final WiFiAuthenticationMethod value) {
+    public void setAuthenticationMethod(@jakarta.annotation.Nullable final WiFiAuthenticationMethod value) {
         this.authenticationMethod = value;
     }
     /**
      * Sets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
      * @param value Value to set for the eapFastConfiguration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEapFastConfiguration(@javax.annotation.Nullable final EapFastConfiguration value) {
+    public void setEapFastConfiguration(@jakarta.annotation.Nullable final EapFastConfiguration value) {
         this.eapFastConfiguration = value;
     }
     /**
      * Sets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
      * @param value Value to set for the eapType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEapType(@javax.annotation.Nullable final EapType value) {
+    public void setEapType(@jakarta.annotation.Nullable final EapType value) {
         this.eapType = value;
     }
     /**
      * Sets the enableOuterIdentityPrivacy property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this wired network using their real username is displayed as 'anonymous'.
      * @param value Value to set for the enableOuterIdentityPrivacy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableOuterIdentityPrivacy(@javax.annotation.Nullable final String value) {
+    public void setEnableOuterIdentityPrivacy(@jakarta.annotation.Nullable final String value) {
         this.enableOuterIdentityPrivacy = value;
     }
     /**
      * Sets the identityCertificateForClientAuthentication property value. Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
      * @param value Value to set for the identityCertificateForClientAuthentication property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityCertificateForClientAuthentication(@javax.annotation.Nullable final MacOSCertificateProfileBase value) {
+    public void setIdentityCertificateForClientAuthentication(@jakarta.annotation.Nullable final MacOSCertificateProfileBase value) {
         this.identityCertificateForClientAuthentication = value;
     }
     /**
      * Sets the networkInterface property value. Apple network interface type.
      * @param value Value to set for the networkInterface property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkInterface(@javax.annotation.Nullable final WiredNetworkInterface value) {
+    public void setNetworkInterface(@jakarta.annotation.Nullable final WiredNetworkInterface value) {
         this.networkInterface = value;
     }
     /**
      * Sets the networkName property value. Network Name
      * @param value Value to set for the networkName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkName(@javax.annotation.Nullable final String value) {
+    public void setNetworkName(@jakarta.annotation.Nullable final String value) {
         this.networkName = value;
     }
     /**
      * Sets the nonEapAuthenticationMethodForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @param value Value to set for the nonEapAuthenticationMethodForEapTtls property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNonEapAuthenticationMethodForEapTtls(@javax.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
+    public void setNonEapAuthenticationMethodForEapTtls(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
         this.nonEapAuthenticationMethodForEapTtls = value;
     }
     /**
      * Sets the rootCertificateForServerValidation property value. Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP.
      * @param value Value to set for the rootCertificateForServerValidation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRootCertificateForServerValidation(@javax.annotation.Nullable final MacOSTrustedRootCertificate value) {
+    public void setRootCertificateForServerValidation(@jakarta.annotation.Nullable final MacOSTrustedRootCertificate value) {
         this.rootCertificateForServerValidation = value;
     }
     /**
      * Sets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users devices when they connect to this wired network.
      * @param value Value to set for the trustedServerCertificateNames property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrustedServerCertificateNames(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setTrustedServerCertificateNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.trustedServerCertificateNames = value;
     }
 }

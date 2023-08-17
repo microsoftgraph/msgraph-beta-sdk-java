@@ -21,9 +21,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
     private EdiscoveryReviewTag parent;
     /**
      * Instantiates a new ediscoveryReviewTag and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EdiscoveryReviewTag() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoveryReviewTag");
@@ -33,8 +31,8 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a ediscoveryReviewTag
      */
-    @javax.annotation.Nonnull
-    public static EdiscoveryReviewTag createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EdiscoveryReviewTag createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EdiscoveryReviewTag();
     }
@@ -42,7 +40,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      * Gets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
      * @return a childSelectability
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChildSelectability getChildSelectability() {
         return this.childSelectability;
     }
@@ -50,7 +48,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      * Gets the childTags property value. Returns the tags that are a child of a tag.
      * @return a ediscoveryReviewTag
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryReviewTag> getChildTags() {
         return this.childTags;
     }
@@ -58,7 +56,7 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("childSelectability", (n) -> { this.setChildSelectability(n.getEnumValue(ChildSelectability.class)); });
@@ -70,17 +68,15 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
      * Gets the parent property value. Returns the parent tag of the specified tag.
      * @return a ediscoveryReviewTag
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EdiscoveryReviewTag getParent() {
         return this.parent;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("childSelectability", this.getChildSelectability());
@@ -90,28 +86,22 @@ public class EdiscoveryReviewTag extends Tag implements Parsable {
     /**
      * Sets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
      * @param value Value to set for the childSelectability property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChildSelectability(@javax.annotation.Nullable final ChildSelectability value) {
+    public void setChildSelectability(@jakarta.annotation.Nullable final ChildSelectability value) {
         this.childSelectability = value;
     }
     /**
      * Sets the childTags property value. Returns the tags that are a child of a tag.
      * @param value Value to set for the childTags property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChildTags(@javax.annotation.Nullable final java.util.List<EdiscoveryReviewTag> value) {
+    public void setChildTags(@jakarta.annotation.Nullable final java.util.List<EdiscoveryReviewTag> value) {
         this.childTags = value;
     }
     /**
      * Sets the parent property value. Returns the parent tag of the specified tag.
      * @param value Value to set for the parent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParent(@javax.annotation.Nullable final EdiscoveryReviewTag value) {
+    public void setParent(@jakarta.annotation.Nullable final EdiscoveryReviewTag value) {
         this.parent = value;
     }
 }

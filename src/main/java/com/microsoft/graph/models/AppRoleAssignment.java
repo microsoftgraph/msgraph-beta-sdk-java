@@ -39,9 +39,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
     private UUID resourceId;
     /**
      * Instantiates a new appRoleAssignment and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AppRoleAssignment() {
         super();
     }
@@ -50,8 +48,8 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a appRoleAssignment
      */
-    @javax.annotation.Nonnull
-    public static AppRoleAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AppRoleAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AppRoleAssignment();
     }
@@ -59,7 +57,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * Gets the appRoleId property value. The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getAppRoleId() {
         return this.appRoleId;
     }
@@ -67,7 +65,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * Gets the creationTimestamp property value. The time when the app role assignment was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreationTimestamp() {
         return this.creationTimestamp;
     }
@@ -75,7 +73,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appRoleId", (n) -> { this.setAppRoleId(n.getUUIDValue()); });
@@ -91,7 +89,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * Gets the principalDisplayName property value. The display name of the user, group, or service principal that was granted the app role assignment. Read-only. Supports $filter (eq and startswith).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrincipalDisplayName() {
         return this.principalDisplayName;
     }
@@ -99,7 +97,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * Gets the principalId property value. The unique identifier (id) for the user, security group, or service principal being granted the app role. Security groups with dynamic memberships are supported. Required on create.
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getPrincipalId() {
         return this.principalId;
     }
@@ -107,7 +105,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * Gets the principalType property value. The type of the assigned principal. This can either be User, Group, or ServicePrincipal. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrincipalType() {
         return this.principalType;
     }
@@ -115,7 +113,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * Gets the resourceDisplayName property value. The display name of the resource app's service principal to which the assignment is made.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceDisplayName() {
         return this.resourceDisplayName;
     }
@@ -123,17 +121,15 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * Gets the resourceId property value. The unique identifier (id) for the resource service principal for which the assignment is made. Required on create. Supports $filter (eq only).
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getResourceId() {
         return this.resourceId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeUUIDValue("appRoleId", this.getAppRoleId());
@@ -147,64 +143,50 @@ public class AppRoleAssignment extends Entity implements Parsable {
     /**
      * Sets the appRoleId property value. The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
      * @param value Value to set for the appRoleId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppRoleId(@javax.annotation.Nullable final UUID value) {
+    public void setAppRoleId(@jakarta.annotation.Nullable final UUID value) {
         this.appRoleId = value;
     }
     /**
      * Sets the creationTimestamp property value. The time when the app role assignment was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the creationTimestamp property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreationTimestamp(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreationTimestamp(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.creationTimestamp = value;
     }
     /**
      * Sets the principalDisplayName property value. The display name of the user, group, or service principal that was granted the app role assignment. Read-only. Supports $filter (eq and startswith).
      * @param value Value to set for the principalDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipalDisplayName(@javax.annotation.Nullable final String value) {
+    public void setPrincipalDisplayName(@jakarta.annotation.Nullable final String value) {
         this.principalDisplayName = value;
     }
     /**
      * Sets the principalId property value. The unique identifier (id) for the user, security group, or service principal being granted the app role. Security groups with dynamic memberships are supported. Required on create.
      * @param value Value to set for the principalId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipalId(@javax.annotation.Nullable final UUID value) {
+    public void setPrincipalId(@jakarta.annotation.Nullable final UUID value) {
         this.principalId = value;
     }
     /**
      * Sets the principalType property value. The type of the assigned principal. This can either be User, Group, or ServicePrincipal. Read-only.
      * @param value Value to set for the principalType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipalType(@javax.annotation.Nullable final String value) {
+    public void setPrincipalType(@jakarta.annotation.Nullable final String value) {
         this.principalType = value;
     }
     /**
      * Sets the resourceDisplayName property value. The display name of the resource app's service principal to which the assignment is made.
      * @param value Value to set for the resourceDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceDisplayName(@javax.annotation.Nullable final String value) {
+    public void setResourceDisplayName(@jakarta.annotation.Nullable final String value) {
         this.resourceDisplayName = value;
     }
     /**
      * Sets the resourceId property value. The unique identifier (id) for the resource service principal for which the assignment is made. Required on create. Supports $filter (eq only).
      * @param value Value to set for the resourceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceId(@javax.annotation.Nullable final UUID value) {
+    public void setResourceId(@jakarta.annotation.Nullable final UUID value) {
         this.resourceId = value;
     }
 }

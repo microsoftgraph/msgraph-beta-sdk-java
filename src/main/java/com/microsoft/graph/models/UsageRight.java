@@ -21,9 +21,7 @@ public class UsageRight extends Entity implements Parsable {
     private UsageRightState state;
     /**
      * Instantiates a new usageRight and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UsageRight() {
         super();
     }
@@ -32,8 +30,8 @@ public class UsageRight extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a usageRight
      */
-    @javax.annotation.Nonnull
-    public static UsageRight createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UsageRight createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UsageRight();
     }
@@ -41,7 +39,7 @@ public class UsageRight extends Entity implements Parsable {
      * Gets the catalogId property value. Product id corresponding to the usage right.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCatalogId() {
         return this.catalogId;
     }
@@ -49,7 +47,7 @@ public class UsageRight extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("catalogId", (n) -> { this.setCatalogId(n.getStringValue()); });
@@ -61,7 +59,7 @@ public class UsageRight extends Entity implements Parsable {
      * Gets the serviceIdentifier property value. Identifier of the service corresponding to the usage right.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getServiceIdentifier() {
         return this.serviceIdentifier;
     }
@@ -69,17 +67,15 @@ public class UsageRight extends Entity implements Parsable {
      * Gets the state property value. The state property
      * @return a usageRightState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UsageRightState getState() {
         return this.state;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("catalogId", this.getCatalogId());
@@ -89,28 +85,22 @@ public class UsageRight extends Entity implements Parsable {
     /**
      * Sets the catalogId property value. Product id corresponding to the usage right.
      * @param value Value to set for the catalogId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCatalogId(@javax.annotation.Nullable final String value) {
+    public void setCatalogId(@jakarta.annotation.Nullable final String value) {
         this.catalogId = value;
     }
     /**
      * Sets the serviceIdentifier property value. Identifier of the service corresponding to the usage right.
      * @param value Value to set for the serviceIdentifier property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServiceIdentifier(@javax.annotation.Nullable final String value) {
+    public void setServiceIdentifier(@jakarta.annotation.Nullable final String value) {
         this.serviceIdentifier = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final UsageRightState value) {
+    public void setState(@jakarta.annotation.Nullable final UsageRightState value) {
         this.state = value;
     }
 }

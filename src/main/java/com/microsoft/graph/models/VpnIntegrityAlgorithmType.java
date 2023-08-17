@@ -23,10 +23,10 @@ public enum VpnIntegrityAlgorithmType implements ValuedEnum {
     VpnIntegrityAlgorithmType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static VpnIntegrityAlgorithmType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static VpnIntegrityAlgorithmType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "sha2_256": return Sha2_256;

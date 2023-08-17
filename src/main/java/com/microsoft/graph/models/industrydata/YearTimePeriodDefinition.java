@@ -27,9 +27,7 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
     private YearReferenceValue year;
     /**
      * Instantiates a new yearTimePeriodDefinition and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public YearTimePeriodDefinition() {
         super();
     }
@@ -38,8 +36,8 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a yearTimePeriodDefinition
      */
-    @javax.annotation.Nonnull
-    public static YearTimePeriodDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static YearTimePeriodDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new YearTimePeriodDefinition();
     }
@@ -47,7 +45,7 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
      * Gets the displayName property value. The name of the year. Maximum supported length is 100 characters.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -55,7 +53,7 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
      * Gets the endDate property value. The last day of the year using ISO 8601 format for date.
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getEndDate() {
         return this.endDate;
     }
@@ -63,7 +61,7 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -76,7 +74,7 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
      * Gets the startDate property value. The first day of the year using ISO 8601 format for date.
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getStartDate() {
         return this.startDate;
     }
@@ -84,17 +82,15 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
      * Gets the year property value. The year property
      * @return a yearReferenceValue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public YearReferenceValue getYear() {
         return this.year;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -105,37 +101,29 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
     /**
      * Sets the displayName property value. The name of the year. Maximum supported length is 100 characters.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the endDate property value. The last day of the year using ISO 8601 format for date.
      * @param value Value to set for the endDate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndDate(@javax.annotation.Nullable final LocalDate value) {
+    public void setEndDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.endDate = value;
     }
     /**
      * Sets the startDate property value. The first day of the year using ISO 8601 format for date.
      * @param value Value to set for the startDate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDate(@javax.annotation.Nullable final LocalDate value) {
+    public void setStartDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.startDate = value;
     }
     /**
      * Sets the year property value. The year property
      * @param value Value to set for the year property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setYear(@javax.annotation.Nullable final YearReferenceValue value) {
+    public void setYear(@jakarta.annotation.Nullable final YearReferenceValue value) {
         this.year = value;
     }
 }

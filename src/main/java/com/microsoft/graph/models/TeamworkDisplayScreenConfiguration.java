@@ -39,9 +39,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     private PeriodAndDuration screensaverTimeout;
     /**
      * Instantiates a new teamworkDisplayScreenConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TeamworkDisplayScreenConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -50,8 +48,8 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teamworkDisplayScreenConfiguration
      */
-    @javax.annotation.Nonnull
-    public static TeamworkDisplayScreenConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeamworkDisplayScreenConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeamworkDisplayScreenConfiguration();
     }
@@ -59,7 +57,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -67,7 +65,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * Gets the backlightBrightness property value. The brightness level on the device (0-100). Not applicable for Microsoft Teams Rooms devices.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getBacklightBrightness() {
         return this.backlightBrightness;
     }
@@ -75,7 +73,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * Gets the backlightTimeout property value. Timeout for backlight (30-3600 secs). Not applicable for Teams Rooms devices.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getBacklightTimeout() {
         return this.backlightTimeout;
     }
@@ -83,7 +81,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("backlightBrightness", (n) -> { this.setBacklightBrightness(n.getIntegerValue()); });
@@ -98,7 +96,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * Gets the isHighContrastEnabled property value. True if high contrast mode is enabled. Not applicable for Teams Rooms devices.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsHighContrastEnabled() {
         return this.isHighContrastEnabled;
     }
@@ -106,7 +104,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * Gets the isScreensaverEnabled property value. True if screensaver is enabled. Not applicable for Teams Rooms devices.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsScreensaverEnabled() {
         return this.isScreensaverEnabled;
     }
@@ -114,7 +112,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -122,17 +120,15 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      * Gets the screensaverTimeout property value. Screensaver timeout from 30 to 3600 secs. Not applicable for Teams Rooms devices.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getScreensaverTimeout() {
         return this.screensaverTimeout;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("backlightBrightness", this.getBacklightBrightness());
         writer.writePeriodAndDurationValue("backlightTimeout", this.getBacklightTimeout());
@@ -145,64 +141,50 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the backlightBrightness property value. The brightness level on the device (0-100). Not applicable for Microsoft Teams Rooms devices.
      * @param value Value to set for the backlightBrightness property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBacklightBrightness(@javax.annotation.Nullable final Integer value) {
+    public void setBacklightBrightness(@jakarta.annotation.Nullable final Integer value) {
         this.backlightBrightness = value;
     }
     /**
      * Sets the backlightTimeout property value. Timeout for backlight (30-3600 secs). Not applicable for Teams Rooms devices.
      * @param value Value to set for the backlightTimeout property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBacklightTimeout(@javax.annotation.Nullable final PeriodAndDuration value) {
+    public void setBacklightTimeout(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.backlightTimeout = value;
     }
     /**
      * Sets the isHighContrastEnabled property value. True if high contrast mode is enabled. Not applicable for Teams Rooms devices.
      * @param value Value to set for the isHighContrastEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsHighContrastEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsHighContrastEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isHighContrastEnabled = value;
     }
     /**
      * Sets the isScreensaverEnabled property value. True if screensaver is enabled. Not applicable for Teams Rooms devices.
      * @param value Value to set for the isScreensaverEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsScreensaverEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsScreensaverEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isScreensaverEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the screensaverTimeout property value. Screensaver timeout from 30 to 3600 secs. Not applicable for Teams Rooms devices.
      * @param value Value to set for the screensaverTimeout property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScreensaverTimeout(@javax.annotation.Nullable final PeriodAndDuration value) {
+    public void setScreensaverTimeout(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.screensaverTimeout = value;
     }
 }

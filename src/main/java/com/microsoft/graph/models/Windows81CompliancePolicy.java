@@ -56,9 +56,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
     private Boolean storageRequireEncryption;
     /**
      * Instantiates a new windows81CompliancePolicy and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Windows81CompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.windows81CompliancePolicy");
@@ -68,8 +66,8 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windows81CompliancePolicy
      */
-    @javax.annotation.Nonnull
-    public static Windows81CompliancePolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Windows81CompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Windows81CompliancePolicy();
     }
@@ -77,7 +75,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("osMaximumVersion", (n) -> { this.setOsMaximumVersion(n.getStringValue()); });
@@ -97,7 +95,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * Gets the osMaximumVersion property value. Maximum Windows 8.1 version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
         return this.osMaximumVersion;
     }
@@ -105,7 +103,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * Gets the osMinimumVersion property value. Minimum Windows 8.1 version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
         return this.osMinimumVersion;
     }
@@ -113,7 +111,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * Gets the passwordBlockSimple property value. Indicates whether or not to block simple password.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
         return this.passwordBlockSimple;
     }
@@ -121,7 +119,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * Gets the passwordExpirationDays property value. Password expiration in days.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
         return this.passwordExpirationDays;
     }
@@ -129,7 +127,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * Gets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
         return this.passwordMinimumCharacterSetCount;
     }
@@ -137,7 +135,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * Gets the passwordMinimumLength property value. The minimum password length.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
         return this.passwordMinimumLength;
     }
@@ -145,7 +143,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
         return this.passwordMinutesOfInactivityBeforeLock;
     }
@@ -153,7 +151,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * Gets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of. Valid values 0 to 24
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
         return this.passwordPreviousPasswordBlockCount;
     }
@@ -161,7 +159,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * Gets the passwordRequired property value. Require a password to unlock Windows device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
         return this.passwordRequired;
     }
@@ -169,7 +167,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return a requiredPasswordType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
         return this.passwordRequiredType;
     }
@@ -177,17 +175,15 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * Gets the storageRequireEncryption property value. Indicates whether or not to require encryption on a windows 8.1 device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
         return this.storageRequireEncryption;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("osMaximumVersion", this.getOsMaximumVersion());
@@ -205,100 +201,78 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
     /**
      * Sets the osMaximumVersion property value. Maximum Windows 8.1 version.
      * @param value Value to set for the osMaximumVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
+    public void setOsMaximumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMaximumVersion = value;
     }
     /**
      * Sets the osMinimumVersion property value. Minimum Windows 8.1 version.
      * @param value Value to set for the osMinimumVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
+    public void setOsMinimumVersion(@jakarta.annotation.Nullable final String value) {
         this.osMinimumVersion = value;
     }
     /**
      * Sets the passwordBlockSimple property value. Indicates whether or not to block simple password.
      * @param value Value to set for the passwordBlockSimple property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordBlockSimple(@javax.annotation.Nullable final Boolean value) {
+    public void setPasswordBlockSimple(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordBlockSimple = value;
     }
     /**
      * Sets the passwordExpirationDays property value. Password expiration in days.
      * @param value Value to set for the passwordExpirationDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
+    public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
         this.passwordExpirationDays = value;
     }
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
+    public void setPasswordMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumCharacterSetCount = value;
     }
     /**
      * Sets the passwordMinimumLength property value. The minimum password length.
      * @param value Value to set for the passwordMinimumLength property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
+    public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumLength = value;
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
+    public void setPasswordMinutesOfInactivityBeforeLock(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinutesOfInactivityBeforeLock = value;
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of. Valid values 0 to 24
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
+    public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordPreviousPasswordBlockCount = value;
     }
     /**
      * Sets the passwordRequired property value. Require a password to unlock Windows device.
      * @param value Value to set for the passwordRequired property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
+    public void setPasswordRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordRequired = value;
     }
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
+    public void setPasswordRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
         this.passwordRequiredType = value;
     }
     /**
      * Sets the storageRequireEncryption property value. Indicates whether or not to require encryption on a windows 8.1 device.
      * @param value Value to set for the storageRequireEncryption property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStorageRequireEncryption(@javax.annotation.Nullable final Boolean value) {
+    public void setStorageRequireEncryption(@jakarta.annotation.Nullable final Boolean value) {
         this.storageRequireEncryption = value;
     }
 }

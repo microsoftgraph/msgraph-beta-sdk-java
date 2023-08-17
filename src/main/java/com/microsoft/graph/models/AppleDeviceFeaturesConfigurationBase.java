@@ -16,9 +16,7 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
     private java.util.List<AirPrintDestination> airPrintDestinations;
     /**
      * Instantiates a new appleDeviceFeaturesConfigurationBase and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AppleDeviceFeaturesConfigurationBase() {
         super();
         this.setOdataType("#microsoft.graph.appleDeviceFeaturesConfigurationBase");
@@ -28,8 +26,8 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a appleDeviceFeaturesConfigurationBase
      */
-    @javax.annotation.Nonnull
-    public static AppleDeviceFeaturesConfigurationBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AppleDeviceFeaturesConfigurationBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -45,7 +43,7 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
      * Gets the airPrintDestinations property value. An array of AirPrint printers that should always be shown. This collection can contain a maximum of 500 elements.
      * @return a airPrintDestination
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AirPrintDestination> getAirPrintDestinations() {
         return this.airPrintDestinations;
     }
@@ -53,7 +51,7 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("airPrintDestinations", (n) -> { this.setAirPrintDestinations(n.getCollectionOfObjectValues(AirPrintDestination::createFromDiscriminatorValue)); });
@@ -62,10 +60,8 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("airPrintDestinations", this.getAirPrintDestinations());
@@ -73,10 +69,8 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
     /**
      * Sets the airPrintDestinations property value. An array of AirPrint printers that should always be shown. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the airPrintDestinations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAirPrintDestinations(@javax.annotation.Nullable final java.util.List<AirPrintDestination> value) {
+    public void setAirPrintDestinations(@jakarta.annotation.Nullable final java.util.List<AirPrintDestination> value) {
         this.airPrintDestinations = value;
     }
 }

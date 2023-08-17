@@ -106,9 +106,7 @@ public class Simulation extends Entity implements Parsable {
     private TrainingSetting trainingSetting;
     /**
      * Instantiates a new simulation and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Simulation() {
         super();
     }
@@ -117,8 +115,8 @@ public class Simulation extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a simulation
      */
-    @javax.annotation.Nonnull
-    public static Simulation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Simulation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Simulation();
     }
@@ -126,7 +124,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
      * @return a simulationAttackTechnique
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SimulationAttackTechnique getAttackTechnique() {
         return this.attackTechnique;
     }
@@ -134,7 +132,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the attackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
      * @return a simulationAttackType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SimulationAttackType getAttackType() {
         return this.attackType;
     }
@@ -142,7 +140,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the automationId property value. Unique identifier for the attack simulation automation.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAutomationId() {
         return this.automationId;
     }
@@ -150,7 +148,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the completionDateTime property value. Date and time of completion of the attack simulation and training campaign. Supports $filter and $orderby.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCompletionDateTime() {
         return this.completionDateTime;
     }
@@ -158,7 +156,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the createdBy property value. Identity of the user who created the attack simulation and training campaign.
      * @return a emailIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
         return this.createdBy;
     }
@@ -166,7 +164,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the createdDateTime property value. Date and time of creation of the attack simulation and training campaign.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -174,7 +172,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the description property value. Description of the attack simulation and training campaign.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -182,7 +180,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the displayName property value. Display name of the attack simulation and training campaign. Supports $filter and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -190,7 +188,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the durationInDays property value. Simulation duration in days.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDurationInDays() {
         return this.durationInDays;
     }
@@ -198,7 +196,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the endUserNotificationSetting property value. The endUserNotificationSetting property
      * @return a endUserNotificationSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EndUserNotificationSetting getEndUserNotificationSetting() {
         return this.endUserNotificationSetting;
     }
@@ -206,7 +204,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the excludedAccountTarget property value. Users excluded from the simulation.
      * @return a accountTargetContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccountTargetContent getExcludedAccountTarget() {
         return this.excludedAccountTarget;
     }
@@ -214,7 +212,7 @@ public class Simulation extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("attackTechnique", (n) -> { this.setAttackTechnique(n.getEnumValue(SimulationAttackTechnique.class)); });
@@ -247,7 +245,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the includedAccountTarget property value. Users targeted in the simulation.
      * @return a accountTargetContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccountTargetContent getIncludedAccountTarget() {
         return this.includedAccountTarget;
     }
@@ -255,7 +253,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the isAutomated property value. Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAutomated() {
         return this.isAutomated;
     }
@@ -263,7 +261,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the landingPage property value. The landingPage property
      * @return a landingPage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LandingPage getLandingPage() {
         return this.landingPage;
     }
@@ -271,7 +269,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation and training campaign.
      * @return a emailIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -279,7 +277,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. Date and time of the most recent modification of the attack simulation and training campaign.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -287,7 +285,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the launchDateTime property value. Date and time of the launch/start of the attack simulation and training campaign. Supports $filter and $orderby.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLaunchDateTime() {
         return this.launchDateTime;
     }
@@ -295,7 +293,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the loginPage property value. The loginPage property
      * @return a loginPage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LoginPage getLoginPage() {
         return this.loginPage;
     }
@@ -303,7 +301,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the oAuthConsentAppDetail property value. The oAuthConsentAppDetail property
      * @return a oAuthConsentAppDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OAuthConsentAppDetail getOAuthConsentAppDetail() {
         return this.oAuthConsentAppDetail;
     }
@@ -311,7 +309,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the payload property value. The payload associated with a simulation during its creation.
      * @return a payload
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Payload getPayload() {
         return this.payload;
     }
@@ -319,7 +317,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @return a payloadDeliveryPlatform
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PayloadDeliveryPlatform getPayloadDeliveryPlatform() {
         return this.payloadDeliveryPlatform;
     }
@@ -327,7 +325,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the report property value. Report of the attack simulation and training campaign.
      * @return a simulationReport
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SimulationReport getReport() {
         return this.report;
     }
@@ -335,7 +333,7 @@ public class Simulation extends Entity implements Parsable {
      * Gets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
      * @return a simulationStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SimulationStatus getStatus() {
         return this.status;
     }
@@ -343,17 +341,15 @@ public class Simulation extends Entity implements Parsable {
      * Gets the trainingSetting property value. The trainingSetting property
      * @return a trainingSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TrainingSetting getTrainingSetting() {
         return this.trainingSetting;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("attackTechnique", this.getAttackTechnique());
@@ -384,217 +380,169 @@ public class Simulation extends Entity implements Parsable {
     /**
      * Sets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
      * @param value Value to set for the attackTechnique property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttackTechnique(@javax.annotation.Nullable final SimulationAttackTechnique value) {
+    public void setAttackTechnique(@jakarta.annotation.Nullable final SimulationAttackTechnique value) {
         this.attackTechnique = value;
     }
     /**
      * Sets the attackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
      * @param value Value to set for the attackType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttackType(@javax.annotation.Nullable final SimulationAttackType value) {
+    public void setAttackType(@jakarta.annotation.Nullable final SimulationAttackType value) {
         this.attackType = value;
     }
     /**
      * Sets the automationId property value. Unique identifier for the attack simulation automation.
      * @param value Value to set for the automationId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAutomationId(@javax.annotation.Nullable final String value) {
+    public void setAutomationId(@jakarta.annotation.Nullable final String value) {
         this.automationId = value;
     }
     /**
      * Sets the completionDateTime property value. Date and time of completion of the attack simulation and training campaign. Supports $filter and $orderby.
      * @param value Value to set for the completionDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completionDateTime = value;
     }
     /**
      * Sets the createdBy property value. Identity of the user who created the attack simulation and training campaign.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final EmailIdentity value) {
+    public void setCreatedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. Date and time of creation of the attack simulation and training campaign.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Description of the attack simulation and training campaign.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Display name of the attack simulation and training campaign. Supports $filter and $orderby.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the durationInDays property value. Simulation duration in days.
      * @param value Value to set for the durationInDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDurationInDays(@javax.annotation.Nullable final Integer value) {
+    public void setDurationInDays(@jakarta.annotation.Nullable final Integer value) {
         this.durationInDays = value;
     }
     /**
      * Sets the endUserNotificationSetting property value. The endUserNotificationSetting property
      * @param value Value to set for the endUserNotificationSetting property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndUserNotificationSetting(@javax.annotation.Nullable final EndUserNotificationSetting value) {
+    public void setEndUserNotificationSetting(@jakarta.annotation.Nullable final EndUserNotificationSetting value) {
         this.endUserNotificationSetting = value;
     }
     /**
      * Sets the excludedAccountTarget property value. Users excluded from the simulation.
      * @param value Value to set for the excludedAccountTarget property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExcludedAccountTarget(@javax.annotation.Nullable final AccountTargetContent value) {
+    public void setExcludedAccountTarget(@jakarta.annotation.Nullable final AccountTargetContent value) {
         this.excludedAccountTarget = value;
     }
     /**
      * Sets the includedAccountTarget property value. Users targeted in the simulation.
      * @param value Value to set for the includedAccountTarget property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncludedAccountTarget(@javax.annotation.Nullable final AccountTargetContent value) {
+    public void setIncludedAccountTarget(@jakarta.annotation.Nullable final AccountTargetContent value) {
         this.includedAccountTarget = value;
     }
     /**
      * Sets the isAutomated property value. Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
      * @param value Value to set for the isAutomated property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAutomated(@javax.annotation.Nullable final Boolean value) {
+    public void setIsAutomated(@jakarta.annotation.Nullable final Boolean value) {
         this.isAutomated = value;
     }
     /**
      * Sets the landingPage property value. The landingPage property
      * @param value Value to set for the landingPage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLandingPage(@javax.annotation.Nullable final LandingPage value) {
+    public void setLandingPage(@jakarta.annotation.Nullable final LandingPage value) {
         this.landingPage = value;
     }
     /**
      * Sets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation and training campaign.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final EmailIdentity value) {
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Date and time of the most recent modification of the attack simulation and training campaign.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the launchDateTime property value. Date and time of the launch/start of the attack simulation and training campaign. Supports $filter and $orderby.
      * @param value Value to set for the launchDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLaunchDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLaunchDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.launchDateTime = value;
     }
     /**
      * Sets the loginPage property value. The loginPage property
      * @param value Value to set for the loginPage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLoginPage(@javax.annotation.Nullable final LoginPage value) {
+    public void setLoginPage(@jakarta.annotation.Nullable final LoginPage value) {
         this.loginPage = value;
     }
     /**
      * Sets the oAuthConsentAppDetail property value. The oAuthConsentAppDetail property
      * @param value Value to set for the oAuthConsentAppDetail property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOAuthConsentAppDetail(@javax.annotation.Nullable final OAuthConsentAppDetail value) {
+    public void setOAuthConsentAppDetail(@jakarta.annotation.Nullable final OAuthConsentAppDetail value) {
         this.oAuthConsentAppDetail = value;
     }
     /**
      * Sets the payload property value. The payload associated with a simulation during its creation.
      * @param value Value to set for the payload property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPayload(@javax.annotation.Nullable final Payload value) {
+    public void setPayload(@jakarta.annotation.Nullable final Payload value) {
         this.payload = value;
     }
     /**
      * Sets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @param value Value to set for the payloadDeliveryPlatform property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPayloadDeliveryPlatform(@javax.annotation.Nullable final PayloadDeliveryPlatform value) {
+    public void setPayloadDeliveryPlatform(@jakarta.annotation.Nullable final PayloadDeliveryPlatform value) {
         this.payloadDeliveryPlatform = value;
     }
     /**
      * Sets the report property value. Report of the attack simulation and training campaign.
      * @param value Value to set for the report property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReport(@javax.annotation.Nullable final SimulationReport value) {
+    public void setReport(@jakarta.annotation.Nullable final SimulationReport value) {
         this.report = value;
     }
     /**
      * Sets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final SimulationStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final SimulationStatus value) {
         this.status = value;
     }
     /**
      * Sets the trainingSetting property value. The trainingSetting property
      * @param value Value to set for the trainingSetting property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrainingSetting(@javax.annotation.Nullable final TrainingSetting value) {
+    public void setTrainingSetting(@jakarta.annotation.Nullable final TrainingSetting value) {
         this.trainingSetting = value;
     }
 }

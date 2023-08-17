@@ -385,9 +385,7 @@ public class ManagedDevice extends Entity implements Parsable {
     private Integer windowsRemediatedMalwareCount;
     /**
      * Instantiates a new managedDevice and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ManagedDevice() {
         super();
     }
@@ -396,8 +394,8 @@ public class ManagedDevice extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedDevice
      */
-    @javax.annotation.Nonnull
-    public static ManagedDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -412,7 +410,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the aadRegistered property value. Whether the device is Azure Active Directory registered. This property is read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAadRegistered() {
         return this.aadRegistered;
     }
@@ -420,7 +418,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the activationLockBypassCode property value. The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActivationLockBypassCode() {
         return this.activationLockBypassCode;
     }
@@ -428,7 +426,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the androidSecurityPatchLevel property value. Android security patch level. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAndroidSecurityPatchLevel() {
         return this.androidSecurityPatchLevel;
     }
@@ -436,7 +434,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the assignmentFilterEvaluationStatusDetails property value. Managed device mobile app configuration states for this device.
      * @return a assignmentFilterEvaluationStatusDetails
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AssignmentFilterEvaluationStatusDetails> getAssignmentFilterEvaluationStatusDetails() {
         return this.assignmentFilterEvaluationStatusDetails;
     }
@@ -444,7 +442,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the autopilotEnrolled property value. Reports if the managed device is enrolled via auto-pilot. This property is read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAutopilotEnrolled() {
         return this.autopilotEnrolled;
     }
@@ -452,7 +450,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the azureActiveDirectoryDeviceId property value. The unique identifier for the Azure Active Directory device. Read only. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureActiveDirectoryDeviceId() {
         return this.azureActiveDirectoryDeviceId;
     }
@@ -460,7 +458,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the azureADDeviceId property value. The unique identifier for the Azure Active Directory device. Read only. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureADDeviceId() {
         return this.azureADDeviceId;
     }
@@ -468,7 +466,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the azureADRegistered property value. Whether the device is Azure Active Directory registered. This property is read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAzureADRegistered() {
         return this.azureADRegistered;
     }
@@ -476,7 +474,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the bootstrapTokenEscrowed property value. Reports if the managed device has an escrowed Bootstrap Token. This is only for macOS devices. To get, include BootstrapTokenEscrowed in the select clause and query with a device id. If FALSE, no bootstrap token is escrowed. If TRUE, the device has escrowed a bootstrap token with Intune. This property is read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBootstrapTokenEscrowed() {
         return this.bootstrapTokenEscrowed;
     }
@@ -484,7 +482,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the chassisType property value. Chassis type.
      * @return a chassisType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChassisType getChassisType() {
         return this.chassisType;
     }
@@ -492,7 +490,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the chromeOSDeviceInfo property value. List of properties of the ChromeOS Device. Default is an empty list. To retrieve actual values GET call needs to be made, with device id and included in select parameter.
      * @return a chromeOSDeviceProperty
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ChromeOSDeviceProperty> getChromeOSDeviceInfo() {
         return this.chromeOSDeviceInfo;
     }
@@ -500,7 +498,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the cloudPcRemoteActionResults property value. The cloudPcRemoteActionResults property
      * @return a cloudPcRemoteActionResult
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPcRemoteActionResult> getCloudPcRemoteActionResults() {
         return this.cloudPcRemoteActionResults;
     }
@@ -508,7 +506,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the complianceGracePeriodExpirationDateTime property value. The DateTime when device compliance grace period expires. This property is read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getComplianceGracePeriodExpirationDateTime() {
         return this.complianceGracePeriodExpirationDateTime;
     }
@@ -516,7 +514,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the complianceState property value. Compliance state.
      * @return a complianceState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ComplianceState getComplianceState() {
         return this.complianceState;
     }
@@ -524,7 +522,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the configurationManagerClientEnabledFeatures property value. ConfigrMgr client enabled features. This property is read-only.
      * @return a configurationManagerClientEnabledFeatures
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConfigurationManagerClientEnabledFeatures getConfigurationManagerClientEnabledFeatures() {
         return this.configurationManagerClientEnabledFeatures;
     }
@@ -532,7 +530,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the configurationManagerClientHealthState property value. Configuration manager client health state, valid only for devices managed by MDM/ConfigMgr Agent
      * @return a configurationManagerClientHealthState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConfigurationManagerClientHealthState getConfigurationManagerClientHealthState() {
         return this.configurationManagerClientHealthState;
     }
@@ -540,7 +538,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the configurationManagerClientInformation property value. Configuration manager client information, valid only for devices managed, duel-managed or tri-managed by ConfigMgr Agent
      * @return a configurationManagerClientInformation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConfigurationManagerClientInformation getConfigurationManagerClientInformation() {
         return this.configurationManagerClientInformation;
     }
@@ -548,7 +546,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the detectedApps property value. All applications currently installed on the device
      * @return a detectedApp
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DetectedApp> getDetectedApps() {
         return this.detectedApps;
     }
@@ -556,7 +554,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the deviceActionResults property value. List of ComplexType deviceActionResult objects. This property is read-only.
      * @return a deviceActionResult
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceActionResult> getDeviceActionResults() {
         return this.deviceActionResults;
     }
@@ -564,7 +562,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the deviceCategory property value. Device category
      * @return a deviceCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceCategory getDeviceCategory() {
         return this.deviceCategory;
     }
@@ -572,7 +570,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the deviceCategoryDisplayName property value. Device category display name. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceCategoryDisplayName() {
         return this.deviceCategoryDisplayName;
     }
@@ -580,7 +578,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the deviceCompliancePolicyStates property value. Device compliance policy states for this device.
      * @return a deviceCompliancePolicyState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceCompliancePolicyState> getDeviceCompliancePolicyStates() {
         return this.deviceCompliancePolicyStates;
     }
@@ -588,7 +586,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the deviceConfigurationStates property value. Device configuration states for this device.
      * @return a deviceConfigurationState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationState> getDeviceConfigurationStates() {
         return this.deviceConfigurationStates;
     }
@@ -596,7 +594,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the deviceEnrollmentType property value. Possible ways of adding a mobile device to management.
      * @return a deviceEnrollmentType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceEnrollmentType getDeviceEnrollmentType() {
         return this.deviceEnrollmentType;
     }
@@ -604,7 +602,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the deviceFirmwareConfigurationInterfaceManaged property value. Indicates whether the device is DFCI managed. When TRUE the device is DFCI managed. When FALSE, the device is not DFCI managed. The default value is FALSE.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDeviceFirmwareConfigurationInterfaceManaged() {
         return this.deviceFirmwareConfigurationInterfaceManaged;
     }
@@ -612,7 +610,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the deviceHealthAttestationState property value. The device health attestation state. This property is read-only.
      * @return a deviceHealthAttestationState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceHealthAttestationState getDeviceHealthAttestationState() {
         return this.deviceHealthAttestationState;
     }
@@ -620,7 +618,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the deviceHealthScriptStates property value. Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
      * @return a deviceHealthScriptPolicyState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceHealthScriptPolicyState> getDeviceHealthScriptStates() {
         return this.deviceHealthScriptStates;
     }
@@ -628,7 +626,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the deviceName property value. Name of the device. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -636,7 +634,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the deviceRegistrationState property value. Device registration status.
      * @return a deviceRegistrationState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceRegistrationState getDeviceRegistrationState() {
         return this.deviceRegistrationState;
     }
@@ -644,7 +642,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the deviceType property value. Device type.
      * @return a deviceType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceType getDeviceType() {
         return this.deviceType;
     }
@@ -652,7 +650,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the easActivated property value. Whether the device is Exchange ActiveSync activated. This property is read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEasActivated() {
         return this.easActivated;
     }
@@ -660,7 +658,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the easActivationDateTime property value. Exchange ActivationSync activation time of the device. This property is read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEasActivationDateTime() {
         return this.easActivationDateTime;
     }
@@ -668,7 +666,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the easDeviceId property value. Exchange ActiveSync Id of the device. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEasDeviceId() {
         return this.easDeviceId;
     }
@@ -676,7 +674,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the emailAddress property value. Email(s) for the user associated with the device. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmailAddress() {
         return this.emailAddress;
     }
@@ -684,7 +682,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the enrolledDateTime property value. Enrollment time of the device. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEnrolledDateTime() {
         return this.enrolledDateTime;
     }
@@ -692,7 +690,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the enrollmentProfileName property value. Name of the enrollment profile assigned to the device. Default value is empty string, indicating no enrollment profile was assgined. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEnrollmentProfileName() {
         return this.enrollmentProfileName;
     }
@@ -700,7 +698,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the ethernetMacAddress property value. Indicates Ethernet MAC Address of the device. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEthernetMacAddress() {
         return this.ethernetMacAddress;
     }
@@ -708,7 +706,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the exchangeAccessState property value. Device Exchange Access State.
      * @return a deviceManagementExchangeAccessState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementExchangeAccessState getExchangeAccessState() {
         return this.exchangeAccessState;
     }
@@ -716,7 +714,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the exchangeAccessStateReason property value. Device Exchange Access State Reason.
      * @return a deviceManagementExchangeAccessStateReason
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementExchangeAccessStateReason getExchangeAccessStateReason() {
         return this.exchangeAccessStateReason;
     }
@@ -724,7 +722,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the exchangeLastSuccessfulSyncDateTime property value. Last time the device contacted Exchange. This property is read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExchangeLastSuccessfulSyncDateTime() {
         return this.exchangeLastSuccessfulSyncDateTime;
     }
@@ -732,7 +730,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("aadRegistered", (n) -> { this.setAadRegistered(n.getBooleanValue()); });
@@ -834,7 +832,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the freeStorageSpaceInBytes property value. Free Storage in Bytes. Default value is 0. Read-only. This property is read-only.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getFreeStorageSpaceInBytes() {
         return this.freeStorageSpaceInBytes;
     }
@@ -842,7 +840,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the hardwareInformation property value. The hardward details for the device. Includes information such as storage space, manufacturer, serial number, etc. By default most property of this type are set to null/0/false and enum defaults for associated types. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return a hardwareInformation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public HardwareInformation getHardwareInformation() {
         return this.hardwareInformation;
     }
@@ -850,7 +848,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIccid() {
         return this.iccid;
     }
@@ -858,7 +856,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the imei property value. IMEI. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getImei() {
         return this.imei;
     }
@@ -866,7 +864,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the isEncrypted property value. Device encryption status. This property is read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsEncrypted() {
         return this.isEncrypted;
     }
@@ -874,7 +872,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the isSupervised property value. Device supervised status. This property is read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSupervised() {
         return this.isSupervised;
     }
@@ -882,7 +880,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the jailBroken property value. Whether the device is jail broken or rooted. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getJailBroken() {
         return this.jailBroken;
     }
@@ -890,7 +888,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the joinType property value. Device enrollment join type.
      * @return a joinType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public JoinType getJoinType() {
         return this.joinType;
     }
@@ -898,7 +896,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
         return this.lastSyncDateTime;
     }
@@ -906,7 +904,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the logCollectionRequests property value. List of log collection requests
      * @return a deviceLogCollectionResponse
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceLogCollectionResponse> getLogCollectionRequests() {
         return this.logCollectionRequests;
     }
@@ -914,7 +912,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the lostModeState property value. State of lost mode, indicating if lost mode is enabled or disabled
      * @return a lostModeState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LostModeState getLostModeState() {
         return this.lostModeState;
     }
@@ -922,7 +920,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the managedDeviceMobileAppConfigurationStates property value. Managed device mobile app configuration states for this device.
      * @return a managedDeviceMobileAppConfigurationState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationState> getManagedDeviceMobileAppConfigurationStates() {
         return this.managedDeviceMobileAppConfigurationStates;
     }
@@ -930,7 +928,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the managedDeviceName property value. Automatically generated name to identify a device. Can be overwritten to a user friendly name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagedDeviceName() {
         return this.managedDeviceName;
     }
@@ -938,7 +936,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the managedDeviceOwnerType property value. Owner type of device.
      * @return a managedDeviceOwnerType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedDeviceOwnerType getManagedDeviceOwnerType() {
         return this.managedDeviceOwnerType;
     }
@@ -946,7 +944,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the managementAgent property value. Management agent type.
      * @return a managementAgentType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagementAgentType getManagementAgent() {
         return this.managementAgent;
     }
@@ -954,7 +952,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the managementCertificateExpirationDate property value. Reports device management certificate expiration date. This property is read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getManagementCertificateExpirationDate() {
         return this.managementCertificateExpirationDate;
     }
@@ -962,7 +960,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the managementFeatures property value. Device management features.
      * @return a managedDeviceManagementFeatures
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedDeviceManagementFeatures getManagementFeatures() {
         return this.managementFeatures;
     }
@@ -970,7 +968,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the managementState property value. Management state of device in Microsoft Intune.
      * @return a managementState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagementState getManagementState() {
         return this.managementState;
     }
@@ -978,7 +976,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the manufacturer property value. Manufacturer of the device. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManufacturer() {
         return this.manufacturer;
     }
@@ -986,7 +984,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the meid property value. MEID. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMeid() {
         return this.meid;
     }
@@ -994,7 +992,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the model property value. Model of the device. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getModel() {
         return this.model;
     }
@@ -1002,7 +1000,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the notes property value. Notes on the device created by IT Admin. Default is null. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNotes() {
         return this.notes;
     }
@@ -1010,7 +1008,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the operatingSystem property value. Operating system of the device. Windows, iOS, etc. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOperatingSystem() {
         return this.operatingSystem;
     }
@@ -1018,7 +1016,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the osVersion property value. Operating system version of the device. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsVersion() {
         return this.osVersion;
     }
@@ -1026,7 +1024,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the ownerType property value. Owner type of device.
      * @return a ownerType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OwnerType getOwnerType() {
         return this.ownerType;
     }
@@ -1034,7 +1032,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the partnerReportedThreatState property value. Available health states for the Device Health API
      * @return a managedDevicePartnerReportedHealthState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedDevicePartnerReportedHealthState getPartnerReportedThreatState() {
         return this.partnerReportedThreatState;
     }
@@ -1042,7 +1040,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the phoneNumber property value. Phone number of the device. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
@@ -1050,7 +1048,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the physicalMemoryInBytes property value. Total Memory in Bytes. Default is 0. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. Read-only. This property is read-only.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getPhysicalMemoryInBytes() {
         return this.physicalMemoryInBytes;
     }
@@ -1058,7 +1056,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the preferMdmOverGroupPolicyAppliedDateTime property value. Reports the DateTime the preferMdmOverGroupPolicy setting was set.  When set, the Intune MDM settings will override Group Policy settings if there is a conflict. Read Only. This property is read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getPreferMdmOverGroupPolicyAppliedDateTime() {
         return this.preferMdmOverGroupPolicyAppliedDateTime;
     }
@@ -1066,7 +1064,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the processorArchitecture property value. Processor architecture
      * @return a managedDeviceArchitecture
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedDeviceArchitecture getProcessorArchitecture() {
         return this.processorArchitecture;
     }
@@ -1074,7 +1072,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the remoteAssistanceSessionErrorDetails property value. An error string that identifies issues when creating Remote Assistance session objects. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRemoteAssistanceSessionErrorDetails() {
         return this.remoteAssistanceSessionErrorDetails;
     }
@@ -1082,7 +1080,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the remoteAssistanceSessionUrl property value. Url that allows a Remote Assistance session to be established with the device. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRemoteAssistanceSessionUrl() {
         return this.remoteAssistanceSessionUrl;
     }
@@ -1090,7 +1088,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the requireUserEnrollmentApproval property value. Reports if the managed iOS device is user approval enrollment. This property is read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequireUserEnrollmentApproval() {
         return this.requireUserEnrollmentApproval;
     }
@@ -1098,7 +1096,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the retireAfterDateTime property value. Indicates the time after when a device will be auto retired because of scheduled action. This property is read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRetireAfterDateTime() {
         return this.retireAfterDateTime;
     }
@@ -1106,7 +1104,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the roleScopeTagIds property value. List of Scope Tag IDs for this Device instance.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
         return this.roleScopeTagIds;
     }
@@ -1114,7 +1112,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the securityBaselineStates property value. Security baseline states for this device.
      * @return a securityBaselineState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SecurityBaselineState> getSecurityBaselineStates() {
         return this.securityBaselineStates;
     }
@@ -1122,7 +1120,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the securityPatchLevel property value. This indicates the security patch level of the operating system. These special updates contain important security fixes. For iOS/MacOS they are in (a) format. For android its in 2017-08-07 format. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSecurityPatchLevel() {
         return this.securityPatchLevel;
     }
@@ -1130,7 +1128,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the serialNumber property value. SerialNumber. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSerialNumber() {
         return this.serialNumber;
     }
@@ -1138,7 +1136,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the skuFamily property value. Device sku family
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSkuFamily() {
         return this.skuFamily;
     }
@@ -1146,7 +1144,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the skuNumber property value. Device sku number, see also: https://learn.microsoft.com/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSkuNumber() {
         return this.skuNumber;
     }
@@ -1154,7 +1152,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the specificationVersion property value. Specification version. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSpecificationVersion() {
         return this.specificationVersion;
     }
@@ -1162,7 +1160,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the subscriberCarrier property value. Subscriber Carrier. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubscriberCarrier() {
         return this.subscriberCarrier;
     }
@@ -1170,7 +1168,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the totalStorageSpaceInBytes property value. Total Storage in Bytes. This property is read-only.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getTotalStorageSpaceInBytes() {
         return this.totalStorageSpaceInBytes;
     }
@@ -1178,7 +1176,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the udid property value. Unique Device Identifier for iOS and macOS devices. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUdid() {
         return this.udid;
     }
@@ -1186,7 +1184,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the userDisplayName property value. User display name. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserDisplayName() {
         return this.userDisplayName;
     }
@@ -1194,7 +1192,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the userId property value. Unique Identifier for the user associated with the device. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -1202,7 +1200,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the userPrincipalName property value. Device user principal name. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
@@ -1210,7 +1208,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the users property value. The primary users associated with the managed device.
      * @return a user
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<User> getUsers() {
         return this.users;
     }
@@ -1218,7 +1216,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the usersLoggedOn property value. Indicates the last logged on users of a device. This property is read-only.
      * @return a loggedOnUser
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<LoggedOnUser> getUsersLoggedOn() {
         return this.usersLoggedOn;
     }
@@ -1226,7 +1224,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the wiFiMacAddress property value. Wi-Fi MAC. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWiFiMacAddress() {
         return this.wiFiMacAddress;
     }
@@ -1234,7 +1232,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the windowsActiveMalwareCount property value. Count of active malware for this windows device. Default is 0. To retrieve actual values GET call needs to be made, with device id and included in select parameter. This property is read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getWindowsActiveMalwareCount() {
         return this.windowsActiveMalwareCount;
     }
@@ -1242,7 +1240,7 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the windowsProtectionState property value. The device protection status. This property is read-only.
      * @return a windowsProtectionState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsProtectionState getWindowsProtectionState() {
         return this.windowsProtectionState;
     }
@@ -1250,17 +1248,15 @@ public class ManagedDevice extends Entity implements Parsable {
      * Gets the windowsRemediatedMalwareCount property value. Count of remediated malware for this windows device. Default is 0. To retrieve actual values GET call needs to be made, with device id and included in select parameter. This property is read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getWindowsRemediatedMalwareCount() {
         return this.windowsRemediatedMalwareCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignmentFilterEvaluationStatusDetails", this.getAssignmentFilterEvaluationStatusDetails());
@@ -1303,838 +1299,652 @@ public class ManagedDevice extends Entity implements Parsable {
     /**
      * Sets the aadRegistered property value. Whether the device is Azure Active Directory registered. This property is read-only.
      * @param value Value to set for the aadRegistered property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAadRegistered(@javax.annotation.Nullable final Boolean value) {
+    public void setAadRegistered(@jakarta.annotation.Nullable final Boolean value) {
         this.aadRegistered = value;
     }
     /**
      * Sets the activationLockBypassCode property value. The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param value Value to set for the activationLockBypassCode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivationLockBypassCode(@javax.annotation.Nullable final String value) {
+    public void setActivationLockBypassCode(@jakarta.annotation.Nullable final String value) {
         this.activationLockBypassCode = value;
     }
     /**
      * Sets the androidSecurityPatchLevel property value. Android security patch level. This property is read-only.
      * @param value Value to set for the androidSecurityPatchLevel property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAndroidSecurityPatchLevel(@javax.annotation.Nullable final String value) {
+    public void setAndroidSecurityPatchLevel(@jakarta.annotation.Nullable final String value) {
         this.androidSecurityPatchLevel = value;
     }
     /**
      * Sets the assignmentFilterEvaluationStatusDetails property value. Managed device mobile app configuration states for this device.
      * @param value Value to set for the assignmentFilterEvaluationStatusDetails property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentFilterEvaluationStatusDetails(@javax.annotation.Nullable final java.util.List<AssignmentFilterEvaluationStatusDetails> value) {
+    public void setAssignmentFilterEvaluationStatusDetails(@jakarta.annotation.Nullable final java.util.List<AssignmentFilterEvaluationStatusDetails> value) {
         this.assignmentFilterEvaluationStatusDetails = value;
     }
     /**
      * Sets the autopilotEnrolled property value. Reports if the managed device is enrolled via auto-pilot. This property is read-only.
      * @param value Value to set for the autopilotEnrolled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAutopilotEnrolled(@javax.annotation.Nullable final Boolean value) {
+    public void setAutopilotEnrolled(@jakarta.annotation.Nullable final Boolean value) {
         this.autopilotEnrolled = value;
     }
     /**
      * Sets the azureActiveDirectoryDeviceId property value. The unique identifier for the Azure Active Directory device. Read only. This property is read-only.
      * @param value Value to set for the azureActiveDirectoryDeviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureActiveDirectoryDeviceId(@javax.annotation.Nullable final String value) {
+    public void setAzureActiveDirectoryDeviceId(@jakarta.annotation.Nullable final String value) {
         this.azureActiveDirectoryDeviceId = value;
     }
     /**
      * Sets the azureADDeviceId property value. The unique identifier for the Azure Active Directory device. Read only. This property is read-only.
      * @param value Value to set for the azureADDeviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureADDeviceId(@javax.annotation.Nullable final String value) {
+    public void setAzureADDeviceId(@jakarta.annotation.Nullable final String value) {
         this.azureADDeviceId = value;
     }
     /**
      * Sets the azureADRegistered property value. Whether the device is Azure Active Directory registered. This property is read-only.
      * @param value Value to set for the azureADRegistered property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureADRegistered(@javax.annotation.Nullable final Boolean value) {
+    public void setAzureADRegistered(@jakarta.annotation.Nullable final Boolean value) {
         this.azureADRegistered = value;
     }
     /**
      * Sets the bootstrapTokenEscrowed property value. Reports if the managed device has an escrowed Bootstrap Token. This is only for macOS devices. To get, include BootstrapTokenEscrowed in the select clause and query with a device id. If FALSE, no bootstrap token is escrowed. If TRUE, the device has escrowed a bootstrap token with Intune. This property is read-only.
      * @param value Value to set for the bootstrapTokenEscrowed property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBootstrapTokenEscrowed(@javax.annotation.Nullable final Boolean value) {
+    public void setBootstrapTokenEscrowed(@jakarta.annotation.Nullable final Boolean value) {
         this.bootstrapTokenEscrowed = value;
     }
     /**
      * Sets the chassisType property value. Chassis type.
      * @param value Value to set for the chassisType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChassisType(@javax.annotation.Nullable final ChassisType value) {
+    public void setChassisType(@jakarta.annotation.Nullable final ChassisType value) {
         this.chassisType = value;
     }
     /**
      * Sets the chromeOSDeviceInfo property value. List of properties of the ChromeOS Device. Default is an empty list. To retrieve actual values GET call needs to be made, with device id and included in select parameter.
      * @param value Value to set for the chromeOSDeviceInfo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChromeOSDeviceInfo(@javax.annotation.Nullable final java.util.List<ChromeOSDeviceProperty> value) {
+    public void setChromeOSDeviceInfo(@jakarta.annotation.Nullable final java.util.List<ChromeOSDeviceProperty> value) {
         this.chromeOSDeviceInfo = value;
     }
     /**
      * Sets the cloudPcRemoteActionResults property value. The cloudPcRemoteActionResults property
      * @param value Value to set for the cloudPcRemoteActionResults property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudPcRemoteActionResults(@javax.annotation.Nullable final java.util.List<CloudPcRemoteActionResult> value) {
+    public void setCloudPcRemoteActionResults(@jakarta.annotation.Nullable final java.util.List<CloudPcRemoteActionResult> value) {
         this.cloudPcRemoteActionResults = value;
     }
     /**
      * Sets the complianceGracePeriodExpirationDateTime property value. The DateTime when device compliance grace period expires. This property is read-only.
      * @param value Value to set for the complianceGracePeriodExpirationDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComplianceGracePeriodExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setComplianceGracePeriodExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.complianceGracePeriodExpirationDateTime = value;
     }
     /**
      * Sets the complianceState property value. Compliance state.
      * @param value Value to set for the complianceState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComplianceState(@javax.annotation.Nullable final ComplianceState value) {
+    public void setComplianceState(@jakarta.annotation.Nullable final ComplianceState value) {
         this.complianceState = value;
     }
     /**
      * Sets the configurationManagerClientEnabledFeatures property value. ConfigrMgr client enabled features. This property is read-only.
      * @param value Value to set for the configurationManagerClientEnabledFeatures property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigurationManagerClientEnabledFeatures(@javax.annotation.Nullable final ConfigurationManagerClientEnabledFeatures value) {
+    public void setConfigurationManagerClientEnabledFeatures(@jakarta.annotation.Nullable final ConfigurationManagerClientEnabledFeatures value) {
         this.configurationManagerClientEnabledFeatures = value;
     }
     /**
      * Sets the configurationManagerClientHealthState property value. Configuration manager client health state, valid only for devices managed by MDM/ConfigMgr Agent
      * @param value Value to set for the configurationManagerClientHealthState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigurationManagerClientHealthState(@javax.annotation.Nullable final ConfigurationManagerClientHealthState value) {
+    public void setConfigurationManagerClientHealthState(@jakarta.annotation.Nullable final ConfigurationManagerClientHealthState value) {
         this.configurationManagerClientHealthState = value;
     }
     /**
      * Sets the configurationManagerClientInformation property value. Configuration manager client information, valid only for devices managed, duel-managed or tri-managed by ConfigMgr Agent
      * @param value Value to set for the configurationManagerClientInformation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigurationManagerClientInformation(@javax.annotation.Nullable final ConfigurationManagerClientInformation value) {
+    public void setConfigurationManagerClientInformation(@jakarta.annotation.Nullable final ConfigurationManagerClientInformation value) {
         this.configurationManagerClientInformation = value;
     }
     /**
      * Sets the detectedApps property value. All applications currently installed on the device
      * @param value Value to set for the detectedApps property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetectedApps(@javax.annotation.Nullable final java.util.List<DetectedApp> value) {
+    public void setDetectedApps(@jakarta.annotation.Nullable final java.util.List<DetectedApp> value) {
         this.detectedApps = value;
     }
     /**
      * Sets the deviceActionResults property value. List of ComplexType deviceActionResult objects. This property is read-only.
      * @param value Value to set for the deviceActionResults property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceActionResults(@javax.annotation.Nullable final java.util.List<DeviceActionResult> value) {
+    public void setDeviceActionResults(@jakarta.annotation.Nullable final java.util.List<DeviceActionResult> value) {
         this.deviceActionResults = value;
     }
     /**
      * Sets the deviceCategory property value. Device category
      * @param value Value to set for the deviceCategory property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceCategory(@javax.annotation.Nullable final DeviceCategory value) {
+    public void setDeviceCategory(@jakarta.annotation.Nullable final DeviceCategory value) {
         this.deviceCategory = value;
     }
     /**
      * Sets the deviceCategoryDisplayName property value. Device category display name. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      * @param value Value to set for the deviceCategoryDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceCategoryDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDeviceCategoryDisplayName(@jakarta.annotation.Nullable final String value) {
         this.deviceCategoryDisplayName = value;
     }
     /**
      * Sets the deviceCompliancePolicyStates property value. Device compliance policy states for this device.
      * @param value Value to set for the deviceCompliancePolicyStates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceCompliancePolicyStates(@javax.annotation.Nullable final java.util.List<DeviceCompliancePolicyState> value) {
+    public void setDeviceCompliancePolicyStates(@jakarta.annotation.Nullable final java.util.List<DeviceCompliancePolicyState> value) {
         this.deviceCompliancePolicyStates = value;
     }
     /**
      * Sets the deviceConfigurationStates property value. Device configuration states for this device.
      * @param value Value to set for the deviceConfigurationStates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceConfigurationStates(@javax.annotation.Nullable final java.util.List<DeviceConfigurationState> value) {
+    public void setDeviceConfigurationStates(@jakarta.annotation.Nullable final java.util.List<DeviceConfigurationState> value) {
         this.deviceConfigurationStates = value;
     }
     /**
      * Sets the deviceEnrollmentType property value. Possible ways of adding a mobile device to management.
      * @param value Value to set for the deviceEnrollmentType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceEnrollmentType(@javax.annotation.Nullable final DeviceEnrollmentType value) {
+    public void setDeviceEnrollmentType(@jakarta.annotation.Nullable final DeviceEnrollmentType value) {
         this.deviceEnrollmentType = value;
     }
     /**
      * Sets the deviceFirmwareConfigurationInterfaceManaged property value. Indicates whether the device is DFCI managed. When TRUE the device is DFCI managed. When FALSE, the device is not DFCI managed. The default value is FALSE.
      * @param value Value to set for the deviceFirmwareConfigurationInterfaceManaged property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceFirmwareConfigurationInterfaceManaged(@javax.annotation.Nullable final Boolean value) {
+    public void setDeviceFirmwareConfigurationInterfaceManaged(@jakarta.annotation.Nullable final Boolean value) {
         this.deviceFirmwareConfigurationInterfaceManaged = value;
     }
     /**
      * Sets the deviceHealthAttestationState property value. The device health attestation state. This property is read-only.
      * @param value Value to set for the deviceHealthAttestationState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceHealthAttestationState(@javax.annotation.Nullable final DeviceHealthAttestationState value) {
+    public void setDeviceHealthAttestationState(@jakarta.annotation.Nullable final DeviceHealthAttestationState value) {
         this.deviceHealthAttestationState = value;
     }
     /**
      * Sets the deviceHealthScriptStates property value. Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
      * @param value Value to set for the deviceHealthScriptStates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceHealthScriptStates(@javax.annotation.Nullable final java.util.List<DeviceHealthScriptPolicyState> value) {
+    public void setDeviceHealthScriptStates(@jakarta.annotation.Nullable final java.util.List<DeviceHealthScriptPolicyState> value) {
         this.deviceHealthScriptStates = value;
     }
     /**
      * Sets the deviceName property value. Name of the device. This property is read-only.
      * @param value Value to set for the deviceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
      * Sets the deviceRegistrationState property value. Device registration status.
      * @param value Value to set for the deviceRegistrationState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceRegistrationState(@javax.annotation.Nullable final DeviceRegistrationState value) {
+    public void setDeviceRegistrationState(@jakarta.annotation.Nullable final DeviceRegistrationState value) {
         this.deviceRegistrationState = value;
     }
     /**
      * Sets the deviceType property value. Device type.
      * @param value Value to set for the deviceType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceType(@javax.annotation.Nullable final DeviceType value) {
+    public void setDeviceType(@jakarta.annotation.Nullable final DeviceType value) {
         this.deviceType = value;
     }
     /**
      * Sets the easActivated property value. Whether the device is Exchange ActiveSync activated. This property is read-only.
      * @param value Value to set for the easActivated property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEasActivated(@javax.annotation.Nullable final Boolean value) {
+    public void setEasActivated(@jakarta.annotation.Nullable final Boolean value) {
         this.easActivated = value;
     }
     /**
      * Sets the easActivationDateTime property value. Exchange ActivationSync activation time of the device. This property is read-only.
      * @param value Value to set for the easActivationDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEasActivationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setEasActivationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.easActivationDateTime = value;
     }
     /**
      * Sets the easDeviceId property value. Exchange ActiveSync Id of the device. This property is read-only.
      * @param value Value to set for the easDeviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEasDeviceId(@javax.annotation.Nullable final String value) {
+    public void setEasDeviceId(@jakarta.annotation.Nullable final String value) {
         this.easDeviceId = value;
     }
     /**
      * Sets the emailAddress property value. Email(s) for the user associated with the device. This property is read-only.
      * @param value Value to set for the emailAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailAddress(@javax.annotation.Nullable final String value) {
+    public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.emailAddress = value;
     }
     /**
      * Sets the enrolledDateTime property value. Enrollment time of the device. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      * @param value Value to set for the enrolledDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrolledDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setEnrolledDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.enrolledDateTime = value;
     }
     /**
      * Sets the enrollmentProfileName property value. Name of the enrollment profile assigned to the device. Default value is empty string, indicating no enrollment profile was assgined. This property is read-only.
      * @param value Value to set for the enrollmentProfileName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentProfileName(@javax.annotation.Nullable final String value) {
+    public void setEnrollmentProfileName(@jakarta.annotation.Nullable final String value) {
         this.enrollmentProfileName = value;
     }
     /**
      * Sets the ethernetMacAddress property value. Indicates Ethernet MAC Address of the device. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param value Value to set for the ethernetMacAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEthernetMacAddress(@javax.annotation.Nullable final String value) {
+    public void setEthernetMacAddress(@jakarta.annotation.Nullable final String value) {
         this.ethernetMacAddress = value;
     }
     /**
      * Sets the exchangeAccessState property value. Device Exchange Access State.
      * @param value Value to set for the exchangeAccessState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExchangeAccessState(@javax.annotation.Nullable final DeviceManagementExchangeAccessState value) {
+    public void setExchangeAccessState(@jakarta.annotation.Nullable final DeviceManagementExchangeAccessState value) {
         this.exchangeAccessState = value;
     }
     /**
      * Sets the exchangeAccessStateReason property value. Device Exchange Access State Reason.
      * @param value Value to set for the exchangeAccessStateReason property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExchangeAccessStateReason(@javax.annotation.Nullable final DeviceManagementExchangeAccessStateReason value) {
+    public void setExchangeAccessStateReason(@jakarta.annotation.Nullable final DeviceManagementExchangeAccessStateReason value) {
         this.exchangeAccessStateReason = value;
     }
     /**
      * Sets the exchangeLastSuccessfulSyncDateTime property value. Last time the device contacted Exchange. This property is read-only.
      * @param value Value to set for the exchangeLastSuccessfulSyncDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExchangeLastSuccessfulSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setExchangeLastSuccessfulSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.exchangeLastSuccessfulSyncDateTime = value;
     }
     /**
      * Sets the freeStorageSpaceInBytes property value. Free Storage in Bytes. Default value is 0. Read-only. This property is read-only.
      * @param value Value to set for the freeStorageSpaceInBytes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFreeStorageSpaceInBytes(@javax.annotation.Nullable final Long value) {
+    public void setFreeStorageSpaceInBytes(@jakarta.annotation.Nullable final Long value) {
         this.freeStorageSpaceInBytes = value;
     }
     /**
      * Sets the hardwareInformation property value. The hardward details for the device. Includes information such as storage space, manufacturer, serial number, etc. By default most property of this type are set to null/0/false and enum defaults for associated types. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param value Value to set for the hardwareInformation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHardwareInformation(@javax.annotation.Nullable final HardwareInformation value) {
+    public void setHardwareInformation(@jakarta.annotation.Nullable final HardwareInformation value) {
         this.hardwareInformation = value;
     }
     /**
      * Sets the iccid property value. Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param value Value to set for the iccid property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIccid(@javax.annotation.Nullable final String value) {
+    public void setIccid(@jakarta.annotation.Nullable final String value) {
         this.iccid = value;
     }
     /**
      * Sets the imei property value. IMEI. This property is read-only.
      * @param value Value to set for the imei property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImei(@javax.annotation.Nullable final String value) {
+    public void setImei(@jakarta.annotation.Nullable final String value) {
         this.imei = value;
     }
     /**
      * Sets the isEncrypted property value. Device encryption status. This property is read-only.
      * @param value Value to set for the isEncrypted property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsEncrypted(@javax.annotation.Nullable final Boolean value) {
+    public void setIsEncrypted(@jakarta.annotation.Nullable final Boolean value) {
         this.isEncrypted = value;
     }
     /**
      * Sets the isSupervised property value. Device supervised status. This property is read-only.
      * @param value Value to set for the isSupervised property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSupervised(@javax.annotation.Nullable final Boolean value) {
+    public void setIsSupervised(@jakarta.annotation.Nullable final Boolean value) {
         this.isSupervised = value;
     }
     /**
      * Sets the jailBroken property value. Whether the device is jail broken or rooted. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      * @param value Value to set for the jailBroken property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJailBroken(@javax.annotation.Nullable final String value) {
+    public void setJailBroken(@jakarta.annotation.Nullable final String value) {
         this.jailBroken = value;
     }
     /**
      * Sets the joinType property value. Device enrollment join type.
      * @param value Value to set for the joinType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJoinType(@javax.annotation.Nullable final JoinType value) {
+    public void setJoinType(@jakarta.annotation.Nullable final JoinType value) {
         this.joinType = value;
     }
     /**
      * Sets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Intune. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      * @param value Value to set for the lastSyncDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSyncDateTime = value;
     }
     /**
      * Sets the logCollectionRequests property value. List of log collection requests
      * @param value Value to set for the logCollectionRequests property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLogCollectionRequests(@javax.annotation.Nullable final java.util.List<DeviceLogCollectionResponse> value) {
+    public void setLogCollectionRequests(@jakarta.annotation.Nullable final java.util.List<DeviceLogCollectionResponse> value) {
         this.logCollectionRequests = value;
     }
     /**
      * Sets the lostModeState property value. State of lost mode, indicating if lost mode is enabled or disabled
      * @param value Value to set for the lostModeState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLostModeState(@javax.annotation.Nullable final LostModeState value) {
+    public void setLostModeState(@jakarta.annotation.Nullable final LostModeState value) {
         this.lostModeState = value;
     }
     /**
      * Sets the managedDeviceMobileAppConfigurationStates property value. Managed device mobile app configuration states for this device.
      * @param value Value to set for the managedDeviceMobileAppConfigurationStates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceMobileAppConfigurationStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationState> value) {
+    public void setManagedDeviceMobileAppConfigurationStates(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceMobileAppConfigurationState> value) {
         this.managedDeviceMobileAppConfigurationStates = value;
     }
     /**
      * Sets the managedDeviceName property value. Automatically generated name to identify a device. Can be overwritten to a user friendly name.
      * @param value Value to set for the managedDeviceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceName(@javax.annotation.Nullable final String value) {
+    public void setManagedDeviceName(@jakarta.annotation.Nullable final String value) {
         this.managedDeviceName = value;
     }
     /**
      * Sets the managedDeviceOwnerType property value. Owner type of device.
      * @param value Value to set for the managedDeviceOwnerType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceOwnerType(@javax.annotation.Nullable final ManagedDeviceOwnerType value) {
+    public void setManagedDeviceOwnerType(@jakarta.annotation.Nullable final ManagedDeviceOwnerType value) {
         this.managedDeviceOwnerType = value;
     }
     /**
      * Sets the managementAgent property value. Management agent type.
      * @param value Value to set for the managementAgent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementAgent(@javax.annotation.Nullable final ManagementAgentType value) {
+    public void setManagementAgent(@jakarta.annotation.Nullable final ManagementAgentType value) {
         this.managementAgent = value;
     }
     /**
      * Sets the managementCertificateExpirationDate property value. Reports device management certificate expiration date. This property is read-only.
      * @param value Value to set for the managementCertificateExpirationDate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementCertificateExpirationDate(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setManagementCertificateExpirationDate(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.managementCertificateExpirationDate = value;
     }
     /**
      * Sets the managementFeatures property value. Device management features.
      * @param value Value to set for the managementFeatures property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementFeatures(@javax.annotation.Nullable final ManagedDeviceManagementFeatures value) {
+    public void setManagementFeatures(@jakarta.annotation.Nullable final ManagedDeviceManagementFeatures value) {
         this.managementFeatures = value;
     }
     /**
      * Sets the managementState property value. Management state of device in Microsoft Intune.
      * @param value Value to set for the managementState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementState(@javax.annotation.Nullable final ManagementState value) {
+    public void setManagementState(@jakarta.annotation.Nullable final ManagementState value) {
         this.managementState = value;
     }
     /**
      * Sets the manufacturer property value. Manufacturer of the device. This property is read-only.
      * @param value Value to set for the manufacturer property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManufacturer(@javax.annotation.Nullable final String value) {
+    public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
      * Sets the meid property value. MEID. This property is read-only.
      * @param value Value to set for the meid property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMeid(@javax.annotation.Nullable final String value) {
+    public void setMeid(@jakarta.annotation.Nullable final String value) {
         this.meid = value;
     }
     /**
      * Sets the model property value. Model of the device. This property is read-only.
      * @param value Value to set for the model property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModel(@javax.annotation.Nullable final String value) {
+    public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
      * Sets the notes property value. Notes on the device created by IT Admin. Default is null. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported.
      * @param value Value to set for the notes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotes(@javax.annotation.Nullable final String value) {
+    public void setNotes(@jakarta.annotation.Nullable final String value) {
         this.notes = value;
     }
     /**
      * Sets the operatingSystem property value. Operating system of the device. Windows, iOS, etc. This property is read-only.
      * @param value Value to set for the operatingSystem property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperatingSystem(@javax.annotation.Nullable final String value) {
+    public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.operatingSystem = value;
     }
     /**
      * Sets the osVersion property value. Operating system version of the device. This property is read-only.
      * @param value Value to set for the osVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsVersion(@javax.annotation.Nullable final String value) {
+    public void setOsVersion(@jakarta.annotation.Nullable final String value) {
         this.osVersion = value;
     }
     /**
      * Sets the ownerType property value. Owner type of device.
      * @param value Value to set for the ownerType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOwnerType(@javax.annotation.Nullable final OwnerType value) {
+    public void setOwnerType(@jakarta.annotation.Nullable final OwnerType value) {
         this.ownerType = value;
     }
     /**
      * Sets the partnerReportedThreatState property value. Available health states for the Device Health API
      * @param value Value to set for the partnerReportedThreatState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPartnerReportedThreatState(@javax.annotation.Nullable final ManagedDevicePartnerReportedHealthState value) {
+    public void setPartnerReportedThreatState(@jakarta.annotation.Nullable final ManagedDevicePartnerReportedHealthState value) {
         this.partnerReportedThreatState = value;
     }
     /**
      * Sets the phoneNumber property value. Phone number of the device. This property is read-only.
      * @param value Value to set for the phoneNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhoneNumber(@javax.annotation.Nullable final String value) {
+    public void setPhoneNumber(@jakarta.annotation.Nullable final String value) {
         this.phoneNumber = value;
     }
     /**
      * Sets the physicalMemoryInBytes property value. Total Memory in Bytes. Default is 0. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. Read-only. This property is read-only.
      * @param value Value to set for the physicalMemoryInBytes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhysicalMemoryInBytes(@javax.annotation.Nullable final Long value) {
+    public void setPhysicalMemoryInBytes(@jakarta.annotation.Nullable final Long value) {
         this.physicalMemoryInBytes = value;
     }
     /**
      * Sets the preferMdmOverGroupPolicyAppliedDateTime property value. Reports the DateTime the preferMdmOverGroupPolicy setting was set.  When set, the Intune MDM settings will override Group Policy settings if there is a conflict. Read Only. This property is read-only.
      * @param value Value to set for the preferMdmOverGroupPolicyAppliedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreferMdmOverGroupPolicyAppliedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setPreferMdmOverGroupPolicyAppliedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.preferMdmOverGroupPolicyAppliedDateTime = value;
     }
     /**
      * Sets the processorArchitecture property value. Processor architecture
      * @param value Value to set for the processorArchitecture property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProcessorArchitecture(@javax.annotation.Nullable final ManagedDeviceArchitecture value) {
+    public void setProcessorArchitecture(@jakarta.annotation.Nullable final ManagedDeviceArchitecture value) {
         this.processorArchitecture = value;
     }
     /**
      * Sets the remoteAssistanceSessionErrorDetails property value. An error string that identifies issues when creating Remote Assistance session objects. This property is read-only.
      * @param value Value to set for the remoteAssistanceSessionErrorDetails property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemoteAssistanceSessionErrorDetails(@javax.annotation.Nullable final String value) {
+    public void setRemoteAssistanceSessionErrorDetails(@jakarta.annotation.Nullable final String value) {
         this.remoteAssistanceSessionErrorDetails = value;
     }
     /**
      * Sets the remoteAssistanceSessionUrl property value. Url that allows a Remote Assistance session to be established with the device. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. This property is read-only.
      * @param value Value to set for the remoteAssistanceSessionUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemoteAssistanceSessionUrl(@javax.annotation.Nullable final String value) {
+    public void setRemoteAssistanceSessionUrl(@jakarta.annotation.Nullable final String value) {
         this.remoteAssistanceSessionUrl = value;
     }
     /**
      * Sets the requireUserEnrollmentApproval property value. Reports if the managed iOS device is user approval enrollment. This property is read-only.
      * @param value Value to set for the requireUserEnrollmentApproval property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequireUserEnrollmentApproval(@javax.annotation.Nullable final Boolean value) {
+    public void setRequireUserEnrollmentApproval(@jakarta.annotation.Nullable final Boolean value) {
         this.requireUserEnrollmentApproval = value;
     }
     /**
      * Sets the retireAfterDateTime property value. Indicates the time after when a device will be auto retired because of scheduled action. This property is read-only.
      * @param value Value to set for the retireAfterDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRetireAfterDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setRetireAfterDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.retireAfterDateTime = value;
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tag IDs for this Device instance.
      * @param value Value to set for the roleScopeTagIds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTagIds = value;
     }
     /**
      * Sets the securityBaselineStates property value. Security baseline states for this device.
      * @param value Value to set for the securityBaselineStates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityBaselineStates(@javax.annotation.Nullable final java.util.List<SecurityBaselineState> value) {
+    public void setSecurityBaselineStates(@jakarta.annotation.Nullable final java.util.List<SecurityBaselineState> value) {
         this.securityBaselineStates = value;
     }
     /**
      * Sets the securityPatchLevel property value. This indicates the security patch level of the operating system. These special updates contain important security fixes. For iOS/MacOS they are in (a) format. For android its in 2017-08-07 format. This property is read-only.
      * @param value Value to set for the securityPatchLevel property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityPatchLevel(@javax.annotation.Nullable final String value) {
+    public void setSecurityPatchLevel(@jakarta.annotation.Nullable final String value) {
         this.securityPatchLevel = value;
     }
     /**
      * Sets the serialNumber property value. SerialNumber. This property is read-only.
      * @param value Value to set for the serialNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSerialNumber(@javax.annotation.Nullable final String value) {
+    public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
         this.serialNumber = value;
     }
     /**
      * Sets the skuFamily property value. Device sku family
      * @param value Value to set for the skuFamily property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSkuFamily(@javax.annotation.Nullable final String value) {
+    public void setSkuFamily(@jakarta.annotation.Nullable final String value) {
         this.skuFamily = value;
     }
     /**
      * Sets the skuNumber property value. Device sku number, see also: https://learn.microsoft.com/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
      * @param value Value to set for the skuNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSkuNumber(@javax.annotation.Nullable final Integer value) {
+    public void setSkuNumber(@jakarta.annotation.Nullable final Integer value) {
         this.skuNumber = value;
     }
     /**
      * Sets the specificationVersion property value. Specification version. This property is read-only.
      * @param value Value to set for the specificationVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSpecificationVersion(@javax.annotation.Nullable final String value) {
+    public void setSpecificationVersion(@jakarta.annotation.Nullable final String value) {
         this.specificationVersion = value;
     }
     /**
      * Sets the subscriberCarrier property value. Subscriber Carrier. This property is read-only.
      * @param value Value to set for the subscriberCarrier property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubscriberCarrier(@javax.annotation.Nullable final String value) {
+    public void setSubscriberCarrier(@jakarta.annotation.Nullable final String value) {
         this.subscriberCarrier = value;
     }
     /**
      * Sets the totalStorageSpaceInBytes property value. Total Storage in Bytes. This property is read-only.
      * @param value Value to set for the totalStorageSpaceInBytes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalStorageSpaceInBytes(@javax.annotation.Nullable final Long value) {
+    public void setTotalStorageSpaceInBytes(@jakarta.annotation.Nullable final Long value) {
         this.totalStorageSpaceInBytes = value;
     }
     /**
      * Sets the udid property value. Unique Device Identifier for iOS and macOS devices. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @param value Value to set for the udid property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUdid(@javax.annotation.Nullable final String value) {
+    public void setUdid(@jakarta.annotation.Nullable final String value) {
         this.udid = value;
     }
     /**
      * Sets the userDisplayName property value. User display name. This property is read-only.
      * @param value Value to set for the userDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserDisplayName(@javax.annotation.Nullable final String value) {
+    public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
      * Sets the userId property value. Unique Identifier for the user associated with the device. This property is read-only.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
      * Sets the userPrincipalName property value. Device user principal name. This property is read-only.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
     /**
      * Sets the users property value. The primary users associated with the managed device.
      * @param value Value to set for the users property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUsers(@javax.annotation.Nullable final java.util.List<User> value) {
+    public void setUsers(@jakarta.annotation.Nullable final java.util.List<User> value) {
         this.users = value;
     }
     /**
      * Sets the usersLoggedOn property value. Indicates the last logged on users of a device. This property is read-only.
      * @param value Value to set for the usersLoggedOn property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUsersLoggedOn(@javax.annotation.Nullable final java.util.List<LoggedOnUser> value) {
+    public void setUsersLoggedOn(@jakarta.annotation.Nullable final java.util.List<LoggedOnUser> value) {
         this.usersLoggedOn = value;
     }
     /**
      * Sets the wiFiMacAddress property value. Wi-Fi MAC. This property is read-only.
      * @param value Value to set for the wiFiMacAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWiFiMacAddress(@javax.annotation.Nullable final String value) {
+    public void setWiFiMacAddress(@jakarta.annotation.Nullable final String value) {
         this.wiFiMacAddress = value;
     }
     /**
      * Sets the windowsActiveMalwareCount property value. Count of active malware for this windows device. Default is 0. To retrieve actual values GET call needs to be made, with device id and included in select parameter. This property is read-only.
      * @param value Value to set for the windowsActiveMalwareCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindowsActiveMalwareCount(@javax.annotation.Nullable final Integer value) {
+    public void setWindowsActiveMalwareCount(@jakarta.annotation.Nullable final Integer value) {
         this.windowsActiveMalwareCount = value;
     }
     /**
      * Sets the windowsProtectionState property value. The device protection status. This property is read-only.
      * @param value Value to set for the windowsProtectionState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindowsProtectionState(@javax.annotation.Nullable final WindowsProtectionState value) {
+    public void setWindowsProtectionState(@jakarta.annotation.Nullable final WindowsProtectionState value) {
         this.windowsProtectionState = value;
     }
     /**
      * Sets the windowsRemediatedMalwareCount property value. Count of remediated malware for this windows device. Default is 0. To retrieve actual values GET call needs to be made, with device id and included in select parameter. This property is read-only.
      * @param value Value to set for the windowsRemediatedMalwareCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindowsRemediatedMalwareCount(@javax.annotation.Nullable final Integer value) {
+    public void setWindowsRemediatedMalwareCount(@jakarta.annotation.Nullable final Integer value) {
         this.windowsRemediatedMalwareCount = value;
     }
 }

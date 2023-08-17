@@ -35,9 +35,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
     private OffsetDateTime sharedDateTime;
     /**
      * Instantiates a new shared and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Shared() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,8 +44,8 @@ public class Shared implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a shared
      */
-    @javax.annotation.Nonnull
-    public static Shared createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Shared createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Shared();
     }
@@ -55,7 +53,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -63,7 +61,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -77,7 +75,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -85,7 +83,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      * Gets the owner property value. The identity of the owner of the shared item. Read-only.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getOwner() {
         return this.owner;
     }
@@ -93,7 +91,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      * Gets the scope property value. Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getScope() {
         return this.scope;
     }
@@ -101,7 +99,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      * Gets the sharedBy property value. The identity of the user who shared the item. Read-only.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getSharedBy() {
         return this.sharedBy;
     }
@@ -109,17 +107,15 @@ public class Shared implements AdditionalDataHolder, Parsable {
      * Gets the sharedDateTime property value. The UTC date and time when the item was shared. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getSharedDateTime() {
         return this.sharedDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("owner", this.getOwner());
@@ -131,55 +127,43 @@ public class Shared implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the owner property value. The identity of the owner of the shared item. Read-only.
      * @param value Value to set for the owner property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOwner(@javax.annotation.Nullable final IdentitySet value) {
+    public void setOwner(@jakarta.annotation.Nullable final IdentitySet value) {
         this.owner = value;
     }
     /**
      * Sets the scope property value. Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
      * @param value Value to set for the scope property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScope(@javax.annotation.Nullable final String value) {
+    public void setScope(@jakarta.annotation.Nullable final String value) {
         this.scope = value;
     }
     /**
      * Sets the sharedBy property value. The identity of the user who shared the item. Read-only.
      * @param value Value to set for the sharedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharedBy(@javax.annotation.Nullable final IdentitySet value) {
+    public void setSharedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.sharedBy = value;
     }
     /**
      * Sets the sharedDateTime property value. The UTC date and time when the item was shared. Read-only.
      * @param value Value to set for the sharedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setSharedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.sharedDateTime = value;
     }
 }

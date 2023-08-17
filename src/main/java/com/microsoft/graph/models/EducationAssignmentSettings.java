@@ -17,9 +17,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
     private Boolean submissionAnimationDisabled;
     /**
      * Instantiates a new educationAssignmentSettings and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EducationAssignmentSettings() {
         super();
     }
@@ -28,8 +26,8 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationAssignmentSettings
      */
-    @javax.annotation.Nonnull
-    public static EducationAssignmentSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationAssignmentSettings();
     }
@@ -37,7 +35,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("gradingCategories", (n) -> { this.setGradingCategories(n.getCollectionOfObjectValues(EducationGradingCategory::createFromDiscriminatorValue)); });
@@ -48,7 +46,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
      * Gets the gradingCategories property value. The gradingCategories property
      * @return a educationGradingCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationGradingCategory> getGradingCategories() {
         return this.gradingCategories;
     }
@@ -56,17 +54,15 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
      * Gets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation will be shown. If true, the animation will not be shown. The default value is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSubmissionAnimationDisabled() {
         return this.submissionAnimationDisabled;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("gradingCategories", this.getGradingCategories());
@@ -75,19 +71,15 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
     /**
      * Sets the gradingCategories property value. The gradingCategories property
      * @param value Value to set for the gradingCategories property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGradingCategories(@javax.annotation.Nullable final java.util.List<EducationGradingCategory> value) {
+    public void setGradingCategories(@jakarta.annotation.Nullable final java.util.List<EducationGradingCategory> value) {
         this.gradingCategories = value;
     }
     /**
      * Sets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation will be shown. If true, the animation will not be shown. The default value is false.
      * @param value Value to set for the submissionAnimationDisabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubmissionAnimationDisabled(@javax.annotation.Nullable final Boolean value) {
+    public void setSubmissionAnimationDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.submissionAnimationDisabled = value;
     }
 }

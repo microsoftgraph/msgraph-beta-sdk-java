@@ -39,9 +39,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
     private OffsetDateTime updatedDateTime;
     /**
      * Instantiates a new secureScoreControlStateUpdate and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SecureScoreControlStateUpdate() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -50,8 +48,8 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a secureScoreControlStateUpdate
      */
-    @javax.annotation.Nonnull
-    public static SecureScoreControlStateUpdate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SecureScoreControlStateUpdate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SecureScoreControlStateUpdate();
     }
@@ -59,7 +57,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -67,7 +65,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      * Gets the assignedTo property value. The assignedTo property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssignedTo() {
         return this.assignedTo;
     }
@@ -75,7 +73,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      * Gets the comment property value. The comment property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getComment() {
         return this.comment;
     }
@@ -83,7 +81,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getStringValue()); });
@@ -98,7 +96,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -106,7 +104,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      * Gets the state property value. The state property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getState() {
         return this.state;
     }
@@ -114,7 +112,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      * Gets the updatedBy property value. The updatedBy property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUpdatedBy() {
         return this.updatedBy;
     }
@@ -122,17 +120,15 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
      * Gets the updatedDateTime property value. The updatedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getUpdatedDateTime() {
         return this.updatedDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("assignedTo", this.getAssignedTo());
         writer.writeStringValue("comment", this.getComment());
@@ -145,64 +141,50 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the assignedTo property value. The assignedTo property
      * @param value Value to set for the assignedTo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignedTo(@javax.annotation.Nullable final String value) {
+    public void setAssignedTo(@jakarta.annotation.Nullable final String value) {
         this.assignedTo = value;
     }
     /**
      * Sets the comment property value. The comment property
      * @param value Value to set for the comment property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComment(@javax.annotation.Nullable final String value) {
+    public void setComment(@jakarta.annotation.Nullable final String value) {
         this.comment = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final String value) {
+    public void setState(@jakarta.annotation.Nullable final String value) {
         this.state = value;
     }
     /**
      * Sets the updatedBy property value. The updatedBy property
      * @param value Value to set for the updatedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdatedBy(@javax.annotation.Nullable final String value) {
+    public void setUpdatedBy(@jakarta.annotation.Nullable final String value) {
         this.updatedBy = value;
     }
     /**
      * Sets the updatedDateTime property value. The updatedDateTime property
      * @param value Value to set for the updatedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.updatedDateTime = value;
     }
 }

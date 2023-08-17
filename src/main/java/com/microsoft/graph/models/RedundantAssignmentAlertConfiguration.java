@@ -14,9 +14,7 @@ public class RedundantAssignmentAlertConfiguration extends UnifiedRoleManagement
     private PeriodAndDuration duration;
     /**
      * Instantiates a new redundantAssignmentAlertConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public RedundantAssignmentAlertConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.redundantAssignmentAlertConfiguration");
@@ -26,8 +24,8 @@ public class RedundantAssignmentAlertConfiguration extends UnifiedRoleManagement
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a redundantAssignmentAlertConfiguration
      */
-    @javax.annotation.Nonnull
-    public static RedundantAssignmentAlertConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RedundantAssignmentAlertConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RedundantAssignmentAlertConfiguration();
     }
@@ -35,7 +33,7 @@ public class RedundantAssignmentAlertConfiguration extends UnifiedRoleManagement
      * Gets the duration property value. The number of days without activation to look back on from current timestamp.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getDuration() {
         return this.duration;
     }
@@ -43,7 +41,7 @@ public class RedundantAssignmentAlertConfiguration extends UnifiedRoleManagement
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodAndDurationValue()); });
@@ -52,10 +50,8 @@ public class RedundantAssignmentAlertConfiguration extends UnifiedRoleManagement
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writePeriodAndDurationValue("duration", this.getDuration());
@@ -63,10 +59,8 @@ public class RedundantAssignmentAlertConfiguration extends UnifiedRoleManagement
     /**
      * Sets the duration property value. The number of days without activation to look back on from current timestamp.
      * @param value Value to set for the duration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
+    public void setDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.duration = value;
     }
 }

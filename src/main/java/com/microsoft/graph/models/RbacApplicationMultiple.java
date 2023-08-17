@@ -21,9 +21,7 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
     private java.util.List<UnifiedRoleDefinition> roleDefinitions;
     /**
      * Instantiates a new rbacApplicationMultiple and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public RbacApplicationMultiple() {
         super();
     }
@@ -32,8 +30,8 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a rbacApplicationMultiple
      */
-    @javax.annotation.Nonnull
-    public static RbacApplicationMultiple createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RbacApplicationMultiple createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RbacApplicationMultiple();
     }
@@ -41,7 +39,7 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("resourceNamespaces", (n) -> { this.setResourceNamespaces(n.getCollectionOfObjectValues(UnifiedRbacResourceNamespace::createFromDiscriminatorValue)); });
@@ -53,7 +51,7 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
      * Gets the resourceNamespaces property value. The resourceNamespaces property
      * @return a unifiedRbacResourceNamespace
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedRbacResourceNamespace> getResourceNamespaces() {
         return this.resourceNamespaces;
     }
@@ -61,7 +59,7 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
      * Gets the roleAssignments property value. The roleAssignments property
      * @return a unifiedRoleAssignmentMultiple
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignmentMultiple> getRoleAssignments() {
         return this.roleAssignments;
     }
@@ -69,17 +67,15 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
      * Gets the roleDefinitions property value. The roleDefinitions property
      * @return a unifiedRoleDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleDefinition> getRoleDefinitions() {
         return this.roleDefinitions;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("resourceNamespaces", this.getResourceNamespaces());
@@ -89,28 +85,22 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
     /**
      * Sets the resourceNamespaces property value. The resourceNamespaces property
      * @param value Value to set for the resourceNamespaces property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceNamespaces(@javax.annotation.Nullable final java.util.List<UnifiedRbacResourceNamespace> value) {
+    public void setResourceNamespaces(@jakarta.annotation.Nullable final java.util.List<UnifiedRbacResourceNamespace> value) {
         this.resourceNamespaces = value;
     }
     /**
      * Sets the roleAssignments property value. The roleAssignments property
      * @param value Value to set for the roleAssignments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleAssignments(@javax.annotation.Nullable final java.util.List<UnifiedRoleAssignmentMultiple> value) {
+    public void setRoleAssignments(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleAssignmentMultiple> value) {
         this.roleAssignments = value;
     }
     /**
      * Sets the roleDefinitions property value. The roleDefinitions property
      * @param value Value to set for the roleDefinitions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinitions(@javax.annotation.Nullable final java.util.List<UnifiedRoleDefinition> value) {
+    public void setRoleDefinitions(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleDefinition> value) {
         this.roleDefinitions = value;
     }
 }

@@ -21,9 +21,7 @@ public class PlannerPlanConfigurationLocalization extends Entity implements Pars
     private String planTitle;
     /**
      * Instantiates a new plannerPlanConfigurationLocalization and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PlannerPlanConfigurationLocalization() {
         super();
     }
@@ -32,8 +30,8 @@ public class PlannerPlanConfigurationLocalization extends Entity implements Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a plannerPlanConfigurationLocalization
      */
-    @javax.annotation.Nonnull
-    public static PlannerPlanConfigurationLocalization createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PlannerPlanConfigurationLocalization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PlannerPlanConfigurationLocalization();
     }
@@ -41,7 +39,7 @@ public class PlannerPlanConfigurationLocalization extends Entity implements Pars
      * Gets the buckets property value. Localized names for configured buckets in the plan configuration.
      * @return a plannerPlanConfigurationBucketLocalization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PlannerPlanConfigurationBucketLocalization> getBuckets() {
         return this.buckets;
     }
@@ -49,7 +47,7 @@ public class PlannerPlanConfigurationLocalization extends Entity implements Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("buckets", (n) -> { this.setBuckets(n.getCollectionOfObjectValues(PlannerPlanConfigurationBucketLocalization::createFromDiscriminatorValue)); });
@@ -61,7 +59,7 @@ public class PlannerPlanConfigurationLocalization extends Entity implements Pars
      * Gets the languageTag property value. The language code associated with the localized names in this object.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLanguageTag() {
         return this.languageTag;
     }
@@ -69,17 +67,15 @@ public class PlannerPlanConfigurationLocalization extends Entity implements Pars
      * Gets the planTitle property value. Localized title of the plan.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPlanTitle() {
         return this.planTitle;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("buckets", this.getBuckets());
@@ -89,28 +85,22 @@ public class PlannerPlanConfigurationLocalization extends Entity implements Pars
     /**
      * Sets the buckets property value. Localized names for configured buckets in the plan configuration.
      * @param value Value to set for the buckets property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBuckets(@javax.annotation.Nullable final java.util.List<PlannerPlanConfigurationBucketLocalization> value) {
+    public void setBuckets(@jakarta.annotation.Nullable final java.util.List<PlannerPlanConfigurationBucketLocalization> value) {
         this.buckets = value;
     }
     /**
      * Sets the languageTag property value. The language code associated with the localized names in this object.
      * @param value Value to set for the languageTag property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLanguageTag(@javax.annotation.Nullable final String value) {
+    public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
         this.languageTag = value;
     }
     /**
      * Sets the planTitle property value. Localized title of the plan.
      * @param value Value to set for the planTitle property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlanTitle(@javax.annotation.Nullable final String value) {
+    public void setPlanTitle(@jakarta.annotation.Nullable final String value) {
         this.planTitle = value;
     }
 }

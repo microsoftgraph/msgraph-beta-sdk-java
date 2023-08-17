@@ -16,9 +16,7 @@ public class DeviceHealthScriptStringParameter extends DeviceHealthScriptParamet
     private String defaultValue;
     /**
      * Instantiates a new deviceHealthScriptStringParameter and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceHealthScriptStringParameter() {
         super();
         this.setOdataType("#microsoft.graph.deviceHealthScriptStringParameter");
@@ -28,8 +26,8 @@ public class DeviceHealthScriptStringParameter extends DeviceHealthScriptParamet
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceHealthScriptStringParameter
      */
-    @javax.annotation.Nonnull
-    public static DeviceHealthScriptStringParameter createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceHealthScriptStringParameter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceHealthScriptStringParameter();
     }
@@ -37,7 +35,7 @@ public class DeviceHealthScriptStringParameter extends DeviceHealthScriptParamet
      * Gets the defaultValue property value. The default value of string param
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDefaultValue() {
         return this.defaultValue;
     }
@@ -45,7 +43,7 @@ public class DeviceHealthScriptStringParameter extends DeviceHealthScriptParamet
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getStringValue()); });
@@ -54,10 +52,8 @@ public class DeviceHealthScriptStringParameter extends DeviceHealthScriptParamet
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("defaultValue", this.getDefaultValue());
@@ -65,10 +61,8 @@ public class DeviceHealthScriptStringParameter extends DeviceHealthScriptParamet
     /**
      * Sets the defaultValue property value. The default value of string param
      * @param value Value to set for the defaultValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultValue(@javax.annotation.Nullable final String value) {
+    public void setDefaultValue(@jakarta.annotation.Nullable final String value) {
         this.defaultValue = value;
     }
 }

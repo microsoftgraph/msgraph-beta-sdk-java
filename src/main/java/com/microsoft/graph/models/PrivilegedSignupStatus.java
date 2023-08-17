@@ -17,9 +17,7 @@ public class PrivilegedSignupStatus extends Entity implements Parsable {
     private SetupStatus status;
     /**
      * Instantiates a new privilegedSignupStatus and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PrivilegedSignupStatus() {
         super();
     }
@@ -28,8 +26,8 @@ public class PrivilegedSignupStatus extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a privilegedSignupStatus
      */
-    @javax.annotation.Nonnull
-    public static PrivilegedSignupStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrivilegedSignupStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PrivilegedSignupStatus();
     }
@@ -37,7 +35,7 @@ public class PrivilegedSignupStatus extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isRegistered", (n) -> { this.setIsRegistered(n.getBooleanValue()); });
@@ -48,7 +46,7 @@ public class PrivilegedSignupStatus extends Entity implements Parsable {
      * Gets the isRegistered property value. The isRegistered property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRegistered() {
         return this.isRegistered;
     }
@@ -56,17 +54,15 @@ public class PrivilegedSignupStatus extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a setupStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SetupStatus getStatus() {
         return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("isRegistered", this.getIsRegistered());
@@ -75,19 +71,15 @@ public class PrivilegedSignupStatus extends Entity implements Parsable {
     /**
      * Sets the isRegistered property value. The isRegistered property
      * @param value Value to set for the isRegistered property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRegistered(@javax.annotation.Nullable final Boolean value) {
+    public void setIsRegistered(@jakarta.annotation.Nullable final Boolean value) {
         this.isRegistered = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final SetupStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final SetupStatus value) {
         this.status = value;
     }
 }

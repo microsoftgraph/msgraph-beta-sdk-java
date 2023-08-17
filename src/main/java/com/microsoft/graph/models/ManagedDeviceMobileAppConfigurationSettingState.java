@@ -73,9 +73,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
     private String userPrincipalName;
     /**
      * Instantiates a new managedDeviceMobileAppConfigurationSettingState and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ManagedDeviceMobileAppConfigurationSettingState() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -84,8 +82,8 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedDeviceMobileAppConfigurationSettingState
      */
-    @javax.annotation.Nonnull
-    public static ManagedDeviceMobileAppConfigurationSettingState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedDeviceMobileAppConfigurationSettingState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagedDeviceMobileAppConfigurationSettingState();
     }
@@ -93,7 +91,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -101,7 +99,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * Gets the currentValue property value. Current value of setting on device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCurrentValue() {
         return this.currentValue;
     }
@@ -109,7 +107,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * Gets the errorCode property value. Error code for the setting
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getErrorCode() {
         return this.errorCode;
     }
@@ -117,7 +115,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * Gets the errorDescription property value. Error description
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getErrorDescription() {
         return this.errorDescription;
     }
@@ -125,7 +123,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(14);
         deserializerMap.put("currentValue", (n) -> { this.setCurrentValue(n.getStringValue()); });
@@ -148,7 +146,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * Gets the instanceDisplayName property value. Name of setting instance that is being reported.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInstanceDisplayName() {
         return this.instanceDisplayName;
     }
@@ -156,7 +154,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -164,7 +162,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * Gets the setting property value. The setting that is being reported
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSetting() {
         return this.setting;
     }
@@ -172,7 +170,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * Gets the settingInstanceId property value. SettingInstanceId
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingInstanceId() {
         return this.settingInstanceId;
     }
@@ -180,7 +178,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * Gets the settingName property value. Localized/user friendly setting name that is being reported
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingName() {
         return this.settingName;
     }
@@ -188,7 +186,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * Gets the sources property value. Contributing policies
      * @return a settingSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SettingSource> getSources() {
         return this.sources;
     }
@@ -196,7 +194,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * Gets the state property value. The state property
      * @return a complianceStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
         return this.state;
     }
@@ -204,7 +202,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * Gets the userEmail property value. UserEmail
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserEmail() {
         return this.userEmail;
     }
@@ -212,7 +210,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * Gets the userId property value. UserId
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -220,7 +218,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * Gets the userName property value. UserName
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserName() {
         return this.userName;
     }
@@ -228,17 +226,15 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
      * Gets the userPrincipalName property value. UserPrincipalName.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("currentValue", this.getCurrentValue());
         writer.writeLongValue("errorCode", this.getErrorCode());
@@ -259,136 +255,106 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements Addition
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the currentValue property value. Current value of setting on device
      * @param value Value to set for the currentValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrentValue(@javax.annotation.Nullable final String value) {
+    public void setCurrentValue(@jakarta.annotation.Nullable final String value) {
         this.currentValue = value;
     }
     /**
      * Sets the errorCode property value. Error code for the setting
      * @param value Value to set for the errorCode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorCode(@javax.annotation.Nullable final Long value) {
+    public void setErrorCode(@jakarta.annotation.Nullable final Long value) {
         this.errorCode = value;
     }
     /**
      * Sets the errorDescription property value. Error description
      * @param value Value to set for the errorDescription property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorDescription(@javax.annotation.Nullable final String value) {
+    public void setErrorDescription(@jakarta.annotation.Nullable final String value) {
         this.errorDescription = value;
     }
     /**
      * Sets the instanceDisplayName property value. Name of setting instance that is being reported.
      * @param value Value to set for the instanceDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstanceDisplayName(@javax.annotation.Nullable final String value) {
+    public void setInstanceDisplayName(@jakarta.annotation.Nullable final String value) {
         this.instanceDisplayName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the setting property value. The setting that is being reported
      * @param value Value to set for the setting property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSetting(@javax.annotation.Nullable final String value) {
+    public void setSetting(@jakarta.annotation.Nullable final String value) {
         this.setting = value;
     }
     /**
      * Sets the settingInstanceId property value. SettingInstanceId
      * @param value Value to set for the settingInstanceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingInstanceId(@javax.annotation.Nullable final String value) {
+    public void setSettingInstanceId(@jakarta.annotation.Nullable final String value) {
         this.settingInstanceId = value;
     }
     /**
      * Sets the settingName property value. Localized/user friendly setting name that is being reported
      * @param value Value to set for the settingName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingName(@javax.annotation.Nullable final String value) {
+    public void setSettingName(@jakarta.annotation.Nullable final String value) {
         this.settingName = value;
     }
     /**
      * Sets the sources property value. Contributing policies
      * @param value Value to set for the sources property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSources(@javax.annotation.Nullable final java.util.List<SettingSource> value) {
+    public void setSources(@jakarta.annotation.Nullable final java.util.List<SettingSource> value) {
         this.sources = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final ComplianceStatus value) {
+    public void setState(@jakarta.annotation.Nullable final ComplianceStatus value) {
         this.state = value;
     }
     /**
      * Sets the userEmail property value. UserEmail
      * @param value Value to set for the userEmail property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserEmail(@javax.annotation.Nullable final String value) {
+    public void setUserEmail(@jakarta.annotation.Nullable final String value) {
         this.userEmail = value;
     }
     /**
      * Sets the userId property value. UserId
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
      * Sets the userName property value. UserName
      * @param value Value to set for the userName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserName(@javax.annotation.Nullable final String value) {
+    public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
     /**
      * Sets the userPrincipalName property value. UserPrincipalName.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

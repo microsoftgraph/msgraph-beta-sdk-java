@@ -23,10 +23,10 @@ public enum PrivilegeManagementElevationType implements ValuedEnum {
     PrivilegeManagementElevationType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static PrivilegeManagementElevationType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static PrivilegeManagementElevationType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "undetermined": return Undetermined;

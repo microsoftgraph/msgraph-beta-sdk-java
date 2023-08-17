@@ -31,9 +31,7 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
     private GovernanceSchedule schedule;
     /**
      * Instantiates a new updateRequestPostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UpdateRequestPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +40,8 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a updateRequestPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static UpdateRequestPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UpdateRequestPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UpdateRequestPostRequestBody();
     }
@@ -51,7 +49,7 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -59,7 +57,7 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      * Gets the assignmentState property value. The assignmentState property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssignmentState() {
         return this.assignmentState;
     }
@@ -67,7 +65,7 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      * Gets the decision property value. The decision property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDecision() {
         return this.decision;
     }
@@ -75,7 +73,7 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("assignmentState", (n) -> { this.setAssignmentState(n.getStringValue()); });
@@ -88,7 +86,7 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      * Gets the reason property value. The reason property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getReason() {
         return this.reason;
     }
@@ -96,17 +94,15 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      * Gets the schedule property value. The schedule property
      * @return a governanceSchedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceSchedule getSchedule() {
         return this.schedule;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("assignmentState", this.getAssignmentState());
         writer.writeStringValue("decision", this.getDecision());
@@ -117,46 +113,36 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the assignmentState property value. The assignmentState property
      * @param value Value to set for the assignmentState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentState(@javax.annotation.Nullable final String value) {
+    public void setAssignmentState(@jakarta.annotation.Nullable final String value) {
         this.assignmentState = value;
     }
     /**
      * Sets the decision property value. The decision property
      * @param value Value to set for the decision property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDecision(@javax.annotation.Nullable final String value) {
+    public void setDecision(@jakarta.annotation.Nullable final String value) {
         this.decision = value;
     }
     /**
      * Sets the reason property value. The reason property
      * @param value Value to set for the reason property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReason(@javax.annotation.Nullable final String value) {
+    public void setReason(@jakarta.annotation.Nullable final String value) {
         this.reason = value;
     }
     /**
      * Sets the schedule property value. The schedule property
      * @param value Value to set for the schedule property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchedule(@javax.annotation.Nullable final GovernanceSchedule value) {
+    public void setSchedule(@jakarta.annotation.Nullable final GovernanceSchedule value) {
         this.schedule = value;
     }
 }

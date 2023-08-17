@@ -58,9 +58,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
     private TitleAreaTextAlignmentType textAlignment;
     /**
      * Instantiates a new titleArea and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TitleArea() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -69,8 +67,8 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a titleArea
      */
-    @javax.annotation.Nonnull
-    public static TitleArea createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TitleArea createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TitleArea();
     }
@@ -78,7 +76,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -86,7 +84,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
      * Gets the alternativeText property value. Alternative text on the title area.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAlternativeText() {
         return this.alternativeText;
     }
@@ -94,7 +92,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
      * Gets the enableGradientEffect property value. Indicates whether the title area has a gradient effect enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableGradientEffect() {
         return this.enableGradientEffect;
     }
@@ -102,7 +100,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("alternativeText", (n) -> { this.setAlternativeText(n.getStringValue()); });
@@ -122,7 +120,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
      * Gets the imageWebUrl property value. URL of the image in the title area.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getImageWebUrl() {
         return this.imageWebUrl;
     }
@@ -130,7 +128,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
      * Gets the layout property value. Enumeration value that indicates the layout of the title area. The possible values are: imageAndTitle, plain, colorBlock, overlap, unknownFutureValue.
      * @return a titleAreaLayoutType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TitleAreaLayoutType getLayout() {
         return this.layout;
     }
@@ -138,7 +136,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -146,7 +144,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
      * Gets the serverProcessedContent property value. Contains collections of data that can be processed by server side services like search index and link fixup.
      * @return a serverProcessedContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServerProcessedContent getServerProcessedContent() {
         return this.serverProcessedContent;
     }
@@ -154,7 +152,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
      * Gets the showAuthor property value. Indicates whether the author should be shown in title area.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowAuthor() {
         return this.showAuthor;
     }
@@ -162,7 +160,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
      * Gets the showPublishedDate property value. Indicates whether the published date should be shown in title area.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowPublishedDate() {
         return this.showPublishedDate;
     }
@@ -170,7 +168,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
      * Gets the showTextBlockAboveTitle property value. Indicates whether the text block above title should be shown in title area.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowTextBlockAboveTitle() {
         return this.showTextBlockAboveTitle;
     }
@@ -178,7 +176,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
      * Gets the textAboveTitle property value. The text above title line.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTextAboveTitle() {
         return this.textAboveTitle;
     }
@@ -186,17 +184,15 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
      * Gets the textAlignment property value. Enumeration value that indicates the text alignment of the title area. The possible values are: left, center, unknownFutureValue.
      * @return a titleAreaTextAlignmentType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TitleAreaTextAlignmentType getTextAlignment() {
         return this.textAlignment;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("alternativeText", this.getAlternativeText());
         writer.writeBooleanValue("enableGradientEffect", this.getEnableGradientEffect());
@@ -214,109 +210,85 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the alternativeText property value. Alternative text on the title area.
      * @param value Value to set for the alternativeText property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlternativeText(@javax.annotation.Nullable final String value) {
+    public void setAlternativeText(@jakarta.annotation.Nullable final String value) {
         this.alternativeText = value;
     }
     /**
      * Sets the enableGradientEffect property value. Indicates whether the title area has a gradient effect enabled.
      * @param value Value to set for the enableGradientEffect property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableGradientEffect(@javax.annotation.Nullable final Boolean value) {
+    public void setEnableGradientEffect(@jakarta.annotation.Nullable final Boolean value) {
         this.enableGradientEffect = value;
     }
     /**
      * Sets the imageWebUrl property value. URL of the image in the title area.
      * @param value Value to set for the imageWebUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImageWebUrl(@javax.annotation.Nullable final String value) {
+    public void setImageWebUrl(@jakarta.annotation.Nullable final String value) {
         this.imageWebUrl = value;
     }
     /**
      * Sets the layout property value. Enumeration value that indicates the layout of the title area. The possible values are: imageAndTitle, plain, colorBlock, overlap, unknownFutureValue.
      * @param value Value to set for the layout property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLayout(@javax.annotation.Nullable final TitleAreaLayoutType value) {
+    public void setLayout(@jakarta.annotation.Nullable final TitleAreaLayoutType value) {
         this.layout = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the serverProcessedContent property value. Contains collections of data that can be processed by server side services like search index and link fixup.
      * @param value Value to set for the serverProcessedContent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServerProcessedContent(@javax.annotation.Nullable final ServerProcessedContent value) {
+    public void setServerProcessedContent(@jakarta.annotation.Nullable final ServerProcessedContent value) {
         this.serverProcessedContent = value;
     }
     /**
      * Sets the showAuthor property value. Indicates whether the author should be shown in title area.
      * @param value Value to set for the showAuthor property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowAuthor(@javax.annotation.Nullable final Boolean value) {
+    public void setShowAuthor(@jakarta.annotation.Nullable final Boolean value) {
         this.showAuthor = value;
     }
     /**
      * Sets the showPublishedDate property value. Indicates whether the published date should be shown in title area.
      * @param value Value to set for the showPublishedDate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowPublishedDate(@javax.annotation.Nullable final Boolean value) {
+    public void setShowPublishedDate(@jakarta.annotation.Nullable final Boolean value) {
         this.showPublishedDate = value;
     }
     /**
      * Sets the showTextBlockAboveTitle property value. Indicates whether the text block above title should be shown in title area.
      * @param value Value to set for the showTextBlockAboveTitle property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowTextBlockAboveTitle(@javax.annotation.Nullable final Boolean value) {
+    public void setShowTextBlockAboveTitle(@jakarta.annotation.Nullable final Boolean value) {
         this.showTextBlockAboveTitle = value;
     }
     /**
      * Sets the textAboveTitle property value. The text above title line.
      * @param value Value to set for the textAboveTitle property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTextAboveTitle(@javax.annotation.Nullable final String value) {
+    public void setTextAboveTitle(@jakarta.annotation.Nullable final String value) {
         this.textAboveTitle = value;
     }
     /**
      * Sets the textAlignment property value. Enumeration value that indicates the text alignment of the title area. The possible values are: left, center, unknownFutureValue.
      * @param value Value to set for the textAlignment property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTextAlignment(@javax.annotation.Nullable final TitleAreaTextAlignmentType value) {
+    public void setTextAlignment(@jakarta.annotation.Nullable final TitleAreaTextAlignmentType value) {
         this.textAlignment = value;
     }
 }

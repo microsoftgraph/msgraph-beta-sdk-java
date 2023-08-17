@@ -41,9 +41,7 @@ public class SitePage extends BaseSitePage implements Parsable {
     private java.util.List<WebPart> webParts;
     /**
      * Instantiates a new sitePage and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SitePage() {
         super();
     }
@@ -52,8 +50,8 @@ public class SitePage extends BaseSitePage implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a sitePage
      */
-    @javax.annotation.Nonnull
-    public static SitePage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SitePage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SitePage();
     }
@@ -61,7 +59,7 @@ public class SitePage extends BaseSitePage implements Parsable {
      * Gets the canvasLayout property value. Indicates the layout of the content in a given SharePoint page, including horizontal sections and vertical sections.
      * @return a canvasLayout
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CanvasLayout getCanvasLayout() {
         return this.canvasLayout;
     }
@@ -69,7 +67,7 @@ public class SitePage extends BaseSitePage implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("canvasLayout", (n) -> { this.setCanvasLayout(n.getObjectValue(CanvasLayout::createFromDiscriminatorValue)); });
@@ -86,7 +84,7 @@ public class SitePage extends BaseSitePage implements Parsable {
      * Gets the promotionKind property value. Indicates the promotion kind of the sitePage. The possible values are: microsoftReserved, page, newsPost, unknownFutureValue.
      * @return a pagePromotionType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PagePromotionType getPromotionKind() {
         return this.promotionKind;
     }
@@ -94,7 +92,7 @@ public class SitePage extends BaseSitePage implements Parsable {
      * Gets the reactions property value. Reactions information for the page.
      * @return a reactionsFacet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ReactionsFacet getReactions() {
         return this.reactions;
     }
@@ -102,7 +100,7 @@ public class SitePage extends BaseSitePage implements Parsable {
      * Gets the showComments property value. Determines whether or not to show comments at the bottom of the page.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowComments() {
         return this.showComments;
     }
@@ -110,7 +108,7 @@ public class SitePage extends BaseSitePage implements Parsable {
      * Gets the showRecommendedPages property value. Determines whether or not to show recommended pages at the bottom of the page.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowRecommendedPages() {
         return this.showRecommendedPages;
     }
@@ -118,7 +116,7 @@ public class SitePage extends BaseSitePage implements Parsable {
      * Gets the thumbnailWebUrl property value. Url of the sitePage's thumbnail image
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getThumbnailWebUrl() {
         return this.thumbnailWebUrl;
     }
@@ -126,7 +124,7 @@ public class SitePage extends BaseSitePage implements Parsable {
      * Gets the titleArea property value. Title area on the SharePoint page.
      * @return a titleArea
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TitleArea getTitleArea() {
         return this.titleArea;
     }
@@ -134,17 +132,15 @@ public class SitePage extends BaseSitePage implements Parsable {
      * Gets the webParts property value. Collection of webparts on the SharePoint page.
      * @return a webPart
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WebPart> getWebParts() {
         return this.webParts;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("canvasLayout", this.getCanvasLayout());
@@ -159,73 +155,57 @@ public class SitePage extends BaseSitePage implements Parsable {
     /**
      * Sets the canvasLayout property value. Indicates the layout of the content in a given SharePoint page, including horizontal sections and vertical sections.
      * @param value Value to set for the canvasLayout property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCanvasLayout(@javax.annotation.Nullable final CanvasLayout value) {
+    public void setCanvasLayout(@jakarta.annotation.Nullable final CanvasLayout value) {
         this.canvasLayout = value;
     }
     /**
      * Sets the promotionKind property value. Indicates the promotion kind of the sitePage. The possible values are: microsoftReserved, page, newsPost, unknownFutureValue.
      * @param value Value to set for the promotionKind property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPromotionKind(@javax.annotation.Nullable final PagePromotionType value) {
+    public void setPromotionKind(@jakarta.annotation.Nullable final PagePromotionType value) {
         this.promotionKind = value;
     }
     /**
      * Sets the reactions property value. Reactions information for the page.
      * @param value Value to set for the reactions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReactions(@javax.annotation.Nullable final ReactionsFacet value) {
+    public void setReactions(@jakarta.annotation.Nullable final ReactionsFacet value) {
         this.reactions = value;
     }
     /**
      * Sets the showComments property value. Determines whether or not to show comments at the bottom of the page.
      * @param value Value to set for the showComments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowComments(@javax.annotation.Nullable final Boolean value) {
+    public void setShowComments(@jakarta.annotation.Nullable final Boolean value) {
         this.showComments = value;
     }
     /**
      * Sets the showRecommendedPages property value. Determines whether or not to show recommended pages at the bottom of the page.
      * @param value Value to set for the showRecommendedPages property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowRecommendedPages(@javax.annotation.Nullable final Boolean value) {
+    public void setShowRecommendedPages(@jakarta.annotation.Nullable final Boolean value) {
         this.showRecommendedPages = value;
     }
     /**
      * Sets the thumbnailWebUrl property value. Url of the sitePage's thumbnail image
      * @param value Value to set for the thumbnailWebUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThumbnailWebUrl(@javax.annotation.Nullable final String value) {
+    public void setThumbnailWebUrl(@jakarta.annotation.Nullable final String value) {
         this.thumbnailWebUrl = value;
     }
     /**
      * Sets the titleArea property value. Title area on the SharePoint page.
      * @param value Value to set for the titleArea property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTitleArea(@javax.annotation.Nullable final TitleArea value) {
+    public void setTitleArea(@jakarta.annotation.Nullable final TitleArea value) {
         this.titleArea = value;
     }
     /**
      * Sets the webParts property value. Collection of webparts on the SharePoint page.
      * @param value Value to set for the webParts property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebParts(@javax.annotation.Nullable final java.util.List<WebPart> value) {
+    public void setWebParts(@jakarta.annotation.Nullable final java.util.List<WebPart> value) {
         this.webParts = value;
     }
 }

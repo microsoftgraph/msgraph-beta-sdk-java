@@ -25,9 +25,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
     private Double averageOutboundFrameRate;
     /**
      * Instantiates a new teleconferenceDeviceVideoQuality and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TeleconferenceDeviceVideoQuality() {
         super();
         this.setOdataType("#microsoft.graph.teleconferenceDeviceVideoQuality");
@@ -37,8 +35,8 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teleconferenceDeviceVideoQuality
      */
-    @javax.annotation.Nonnull
-    public static TeleconferenceDeviceVideoQuality createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeleconferenceDeviceVideoQuality createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -53,7 +51,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      * Gets the averageInboundBitRate property value. The average inbound stream video bit rate per second.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getAverageInboundBitRate() {
         return this.averageInboundBitRate;
     }
@@ -61,7 +59,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      * Gets the averageInboundFrameRate property value. The average inbound stream video frame rate per second.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getAverageInboundFrameRate() {
         return this.averageInboundFrameRate;
     }
@@ -69,7 +67,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      * Gets the averageOutboundBitRate property value. The average outbound stream video bit rate per second.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getAverageOutboundBitRate() {
         return this.averageOutboundBitRate;
     }
@@ -77,7 +75,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      * Gets the averageOutboundFrameRate property value. The average outbound stream video frame rate per second.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getAverageOutboundFrameRate() {
         return this.averageOutboundFrameRate;
     }
@@ -85,7 +83,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("averageInboundBitRate", (n) -> { this.setAverageInboundBitRate(n.getDoubleValue()); });
@@ -97,10 +95,8 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeDoubleValue("averageInboundBitRate", this.getAverageInboundBitRate());
@@ -111,37 +107,29 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
     /**
      * Sets the averageInboundBitRate property value. The average inbound stream video bit rate per second.
      * @param value Value to set for the averageInboundBitRate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAverageInboundBitRate(@javax.annotation.Nullable final Double value) {
+    public void setAverageInboundBitRate(@jakarta.annotation.Nullable final Double value) {
         this.averageInboundBitRate = value;
     }
     /**
      * Sets the averageInboundFrameRate property value. The average inbound stream video frame rate per second.
      * @param value Value to set for the averageInboundFrameRate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAverageInboundFrameRate(@javax.annotation.Nullable final Double value) {
+    public void setAverageInboundFrameRate(@jakarta.annotation.Nullable final Double value) {
         this.averageInboundFrameRate = value;
     }
     /**
      * Sets the averageOutboundBitRate property value. The average outbound stream video bit rate per second.
      * @param value Value to set for the averageOutboundBitRate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAverageOutboundBitRate(@javax.annotation.Nullable final Double value) {
+    public void setAverageOutboundBitRate(@jakarta.annotation.Nullable final Double value) {
         this.averageOutboundBitRate = value;
     }
     /**
      * Sets the averageOutboundFrameRate property value. The average outbound stream video frame rate per second.
      * @param value Value to set for the averageOutboundFrameRate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAverageOutboundFrameRate(@javax.annotation.Nullable final Double value) {
+    public void setAverageOutboundFrameRate(@jakarta.annotation.Nullable final Double value) {
         this.averageOutboundFrameRate = value;
     }
 }

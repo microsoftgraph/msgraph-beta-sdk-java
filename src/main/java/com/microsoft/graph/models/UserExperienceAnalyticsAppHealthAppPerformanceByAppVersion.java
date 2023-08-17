@@ -40,9 +40,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
     private Integer meanTimeToFailureInMinutes;
     /**
      * Instantiates a new userExperienceAnalyticsAppHealthAppPerformanceByAppVersion and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion() {
         super();
     }
@@ -51,8 +49,8 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersion
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion();
     }
@@ -60,7 +58,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
      * Gets the appCrashCount property value. The number of crashes for the application. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getAppCrashCount() {
         return this.appCrashCount;
     }
@@ -68,7 +66,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
      * Gets the appDisplayName property value. The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppDisplayName() {
         return this.appDisplayName;
     }
@@ -76,7 +74,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
      * Gets the appName property value. The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppName() {
         return this.appName;
     }
@@ -84,7 +82,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
      * Gets the appPublisher property value. The publisher of the application. Supports: $select, $OrderBy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppPublisher() {
         return this.appPublisher;
     }
@@ -92,7 +90,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
      * Gets the appUsageDuration property value. The total usage time of the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getAppUsageDuration() {
         return this.appUsageDuration;
     }
@@ -100,7 +98,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
      * Gets the appVersion property value. The version of the application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppVersion() {
         return this.appVersion;
     }
@@ -108,7 +106,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appCrashCount", (n) -> { this.setAppCrashCount(n.getIntegerValue()); });
@@ -124,17 +122,15 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
      * Gets the meanTimeToFailureInMinutes property value. The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMeanTimeToFailureInMinutes() {
         return this.meanTimeToFailureInMinutes;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("appCrashCount", this.getAppCrashCount());
@@ -148,64 +144,50 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
     /**
      * Sets the appCrashCount property value. The number of crashes for the application. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the appCrashCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppCrashCount(@javax.annotation.Nullable final Integer value) {
+    public void setAppCrashCount(@jakarta.annotation.Nullable final Integer value) {
         this.appCrashCount = value;
     }
     /**
      * Sets the appDisplayName property value. The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppDisplayName(@javax.annotation.Nullable final String value) {
+    public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.appDisplayName = value;
     }
     /**
      * Sets the appName property value. The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppName(@javax.annotation.Nullable final String value) {
+    public void setAppName(@jakarta.annotation.Nullable final String value) {
         this.appName = value;
     }
     /**
      * Sets the appPublisher property value. The publisher of the application. Supports: $select, $OrderBy. Read-only.
      * @param value Value to set for the appPublisher property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppPublisher(@javax.annotation.Nullable final String value) {
+    public void setAppPublisher(@jakarta.annotation.Nullable final String value) {
         this.appPublisher = value;
     }
     /**
      * Sets the appUsageDuration property value. The total usage time of the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the appUsageDuration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppUsageDuration(@javax.annotation.Nullable final Integer value) {
+    public void setAppUsageDuration(@jakarta.annotation.Nullable final Integer value) {
         this.appUsageDuration = value;
     }
     /**
      * Sets the appVersion property value. The version of the application.
      * @param value Value to set for the appVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppVersion(@javax.annotation.Nullable final String value) {
+    public void setAppVersion(@jakarta.annotation.Nullable final String value) {
         this.appVersion = value;
     }
     /**
      * Sets the meanTimeToFailureInMinutes property value. The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
      * @param value Value to set for the meanTimeToFailureInMinutes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMeanTimeToFailureInMinutes(@javax.annotation.Nullable final Integer value) {
+    public void setMeanTimeToFailureInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.meanTimeToFailureInMinutes = value;
     }
 }

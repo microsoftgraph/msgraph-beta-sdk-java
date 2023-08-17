@@ -24,9 +24,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
     private Win32LobAppRuleOperator productVersionOperator;
     /**
      * Instantiates a new win32LobAppProductCodeRule and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Win32LobAppProductCodeRule() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppProductCodeRule");
@@ -36,8 +34,8 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a win32LobAppProductCodeRule
      */
-    @javax.annotation.Nonnull
-    public static Win32LobAppProductCodeRule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Win32LobAppProductCodeRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Win32LobAppProductCodeRule();
     }
@@ -45,7 +43,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("productCode", (n) -> { this.setProductCode(n.getStringValue()); });
@@ -57,7 +55,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      * Gets the productCode property value. The product code of the app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProductCode() {
         return this.productCode;
     }
@@ -65,7 +63,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      * Gets the productVersion property value. The product version comparison value.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProductVersion() {
         return this.productVersion;
     }
@@ -73,17 +71,15 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
      * Gets the productVersionOperator property value. Contains properties for detection operator.
      * @return a win32LobAppRuleOperator
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Win32LobAppRuleOperator getProductVersionOperator() {
         return this.productVersionOperator;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("productCode", this.getProductCode());
@@ -93,28 +89,22 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements Parsa
     /**
      * Sets the productCode property value. The product code of the app.
      * @param value Value to set for the productCode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProductCode(@javax.annotation.Nullable final String value) {
+    public void setProductCode(@jakarta.annotation.Nullable final String value) {
         this.productCode = value;
     }
     /**
      * Sets the productVersion property value. The product version comparison value.
      * @param value Value to set for the productVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProductVersion(@javax.annotation.Nullable final String value) {
+    public void setProductVersion(@jakarta.annotation.Nullable final String value) {
         this.productVersion = value;
     }
     /**
      * Sets the productVersionOperator property value. Contains properties for detection operator.
      * @param value Value to set for the productVersionOperator property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProductVersionOperator(@javax.annotation.Nullable final Win32LobAppRuleOperator value) {
+    public void setProductVersionOperator(@jakarta.annotation.Nullable final Win32LobAppRuleOperator value) {
         this.productVersionOperator = value;
     }
 }

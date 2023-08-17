@@ -46,9 +46,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     private String userTimezone;
     /**
      * Instantiates a new activityHistoryItem and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ActivityHistoryItem() {
         super();
     }
@@ -57,8 +55,8 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a activityHistoryItem
      */
-    @javax.annotation.Nonnull
-    public static ActivityHistoryItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ActivityHistoryItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ActivityHistoryItem();
     }
@@ -66,7 +64,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * Gets the activeDurationSeconds property value. The activeDurationSeconds property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getActiveDurationSeconds() {
         return this.activeDurationSeconds;
     }
@@ -74,7 +72,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * Gets the activity property value. The activity property
      * @return a userActivity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserActivity getActivity() {
         return this.activity;
     }
@@ -82,7 +80,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * Gets the createdDateTime property value. The createdDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -90,7 +88,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * Gets the expirationDateTime property value. The expirationDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
         return this.expirationDateTime;
     }
@@ -98,7 +96,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeDurationSeconds", (n) -> { this.setActiveDurationSeconds(n.getIntegerValue()); });
@@ -116,7 +114,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * Gets the lastActiveDateTime property value. The lastActiveDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastActiveDateTime() {
         return this.lastActiveDateTime;
     }
@@ -124,7 +122,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -132,7 +130,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * Gets the startedDateTime property value. The startedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {
         return this.startedDateTime;
     }
@@ -140,7 +138,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a status
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Status getStatus() {
         return this.status;
     }
@@ -148,17 +146,15 @@ public class ActivityHistoryItem extends Entity implements Parsable {
      * Gets the userTimezone property value. The userTimezone property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserTimezone() {
         return this.userTimezone;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("activeDurationSeconds", this.getActiveDurationSeconds());
@@ -174,82 +170,64 @@ public class ActivityHistoryItem extends Entity implements Parsable {
     /**
      * Sets the activeDurationSeconds property value. The activeDurationSeconds property
      * @param value Value to set for the activeDurationSeconds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActiveDurationSeconds(@javax.annotation.Nullable final Integer value) {
+    public void setActiveDurationSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.activeDurationSeconds = value;
     }
     /**
      * Sets the activity property value. The activity property
      * @param value Value to set for the activity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivity(@javax.annotation.Nullable final UserActivity value) {
+    public void setActivity(@jakarta.annotation.Nullable final UserActivity value) {
         this.activity = value;
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the expirationDateTime property value. The expirationDateTime property
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the lastActiveDateTime property value. The lastActiveDateTime property
      * @param value Value to set for the lastActiveDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActiveDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastActiveDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastActiveDateTime = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the startedDateTime property value. The startedDateTime property
      * @param value Value to set for the startedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startedDateTime = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final Status value) {
+    public void setStatus(@jakarta.annotation.Nullable final Status value) {
         this.status = value;
     }
     /**
      * Sets the userTimezone property value. The userTimezone property
      * @param value Value to set for the userTimezone property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserTimezone(@javax.annotation.Nullable final String value) {
+    public void setUserTimezone(@jakarta.annotation.Nullable final String value) {
         this.userTimezone = value;
     }
 }

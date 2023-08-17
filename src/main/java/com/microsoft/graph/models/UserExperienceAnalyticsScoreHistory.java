@@ -17,9 +17,7 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
     private OffsetDateTime startupDateTime;
     /**
      * Instantiates a new userExperienceAnalyticsScoreHistory and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UserExperienceAnalyticsScoreHistory() {
         super();
     }
@@ -28,8 +26,8 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsScoreHistory
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsScoreHistory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsScoreHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsScoreHistory();
     }
@@ -37,7 +35,7 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("startupDateTime", (n) -> { this.setStartupDateTime(n.getOffsetDateTimeValue()); });
@@ -47,17 +45,15 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
      * Gets the startupDateTime property value. The device startup date time. The value cannot be modified and is automatically populated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartupDateTime() {
         return this.startupDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("startupDateTime", this.getStartupDateTime());
@@ -65,10 +61,8 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
     /**
      * Sets the startupDateTime property value. The device startup date time. The value cannot be modified and is automatically populated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
      * @param value Value to set for the startupDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartupDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setStartupDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startupDateTime = value;
     }
 }

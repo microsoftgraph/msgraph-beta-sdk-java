@@ -32,9 +32,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
     private byte[] notificationContent;
     /**
      * Instantiates a new deviceManagementExchangeOnPremisesPolicy and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementExchangeOnPremisesPolicy() {
         super();
     }
@@ -43,8 +41,8 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementExchangeOnPremisesPolicy
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementExchangeOnPremisesPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementExchangeOnPremisesPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementExchangeOnPremisesPolicy();
     }
@@ -52,7 +50,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * Gets the accessRules property value. The list of device access rules in Exchange. The access rules apply globally to the entire Exchange organization
      * @return a deviceManagementExchangeAccessRule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementExchangeAccessRule> getAccessRules() {
         return this.accessRules;
     }
@@ -60,7 +58,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * Gets the conditionalAccessSettings property value. The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
      * @return a onPremisesConditionalAccessSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnPremisesConditionalAccessSettings getConditionalAccessSettings() {
         return this.conditionalAccessSettings;
     }
@@ -68,7 +66,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * Gets the defaultAccessLevel property value. Access Level in Exchange.
      * @return a deviceManagementExchangeAccessLevel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementExchangeAccessLevel getDefaultAccessLevel() {
         return this.defaultAccessLevel;
     }
@@ -76,7 +74,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessRules", (n) -> { this.setAccessRules(n.getCollectionOfObjectValues(DeviceManagementExchangeAccessRule::createFromDiscriminatorValue)); });
@@ -90,7 +88,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * Gets the knownDeviceClasses property value. The list of device classes known to Exchange
      * @return a deviceManagementExchangeDeviceClass
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementExchangeDeviceClass> getKnownDeviceClasses() {
         return this.knownDeviceClasses;
     }
@@ -98,17 +96,15 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
      * Gets the notificationContent property value. Notification text that will be sent to users quarantined by this policy. This is UTF8 encoded byte array HTML.
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getNotificationContent() {
         return this.notificationContent;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("accessRules", this.getAccessRules());
@@ -120,46 +116,36 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
     /**
      * Sets the accessRules property value. The list of device access rules in Exchange. The access rules apply globally to the entire Exchange organization
      * @param value Value to set for the accessRules property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessRules(@javax.annotation.Nullable final java.util.List<DeviceManagementExchangeAccessRule> value) {
+    public void setAccessRules(@jakarta.annotation.Nullable final java.util.List<DeviceManagementExchangeAccessRule> value) {
         this.accessRules = value;
     }
     /**
      * Sets the conditionalAccessSettings property value. The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
      * @param value Value to set for the conditionalAccessSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConditionalAccessSettings(@javax.annotation.Nullable final OnPremisesConditionalAccessSettings value) {
+    public void setConditionalAccessSettings(@jakarta.annotation.Nullable final OnPremisesConditionalAccessSettings value) {
         this.conditionalAccessSettings = value;
     }
     /**
      * Sets the defaultAccessLevel property value. Access Level in Exchange.
      * @param value Value to set for the defaultAccessLevel property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultAccessLevel(@javax.annotation.Nullable final DeviceManagementExchangeAccessLevel value) {
+    public void setDefaultAccessLevel(@jakarta.annotation.Nullable final DeviceManagementExchangeAccessLevel value) {
         this.defaultAccessLevel = value;
     }
     /**
      * Sets the knownDeviceClasses property value. The list of device classes known to Exchange
      * @param value Value to set for the knownDeviceClasses property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKnownDeviceClasses(@javax.annotation.Nullable final java.util.List<DeviceManagementExchangeDeviceClass> value) {
+    public void setKnownDeviceClasses(@jakarta.annotation.Nullable final java.util.List<DeviceManagementExchangeDeviceClass> value) {
         this.knownDeviceClasses = value;
     }
     /**
      * Sets the notificationContent property value. Notification text that will be sent to users quarantined by this policy. This is UTF8 encoded byte array HTML.
      * @param value Value to set for the notificationContent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotificationContent(@javax.annotation.Nullable final byte[] value) {
+    public void setNotificationContent(@jakarta.annotation.Nullable final byte[] value) {
         this.notificationContent = value;
     }
 }

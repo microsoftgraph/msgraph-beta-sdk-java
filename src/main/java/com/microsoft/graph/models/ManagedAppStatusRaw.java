@@ -16,9 +16,7 @@ public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
     private Json content;
     /**
      * Instantiates a new managedAppStatusRaw and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ManagedAppStatusRaw() {
         super();
         this.setOdataType("#microsoft.graph.managedAppStatusRaw");
@@ -28,8 +26,8 @@ public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedAppStatusRaw
      */
-    @javax.annotation.Nonnull
-    public static ManagedAppStatusRaw createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedAppStatusRaw createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagedAppStatusRaw();
     }
@@ -37,7 +35,7 @@ public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
      * Gets the content property value. Status report content.
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getContent() {
         return this.content;
     }
@@ -45,7 +43,7 @@ public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -54,10 +52,8 @@ public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("content", this.getContent());
@@ -65,10 +61,8 @@ public class ManagedAppStatusRaw extends ManagedAppStatus implements Parsable {
     /**
      * Sets the content property value. Status report content.
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContent(@javax.annotation.Nullable final Json value) {
+    public void setContent(@jakarta.annotation.Nullable final Json value) {
         this.content = value;
     }
 }

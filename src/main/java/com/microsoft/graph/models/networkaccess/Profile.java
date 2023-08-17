@@ -35,9 +35,7 @@ public class Profile extends Entity implements Parsable {
     private String version;
     /**
      * Instantiates a new profile and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Profile() {
         super();
     }
@@ -46,8 +44,8 @@ public class Profile extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a profile
      */
-    @javax.annotation.Nonnull
-    public static Profile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Profile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -62,7 +60,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the description property value. Description.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -70,7 +68,7 @@ public class Profile extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -85,7 +83,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. Profile last modified time.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -93,7 +91,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the name property value. Profile name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -101,7 +99,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the policies property value. Traffic forwarding policies associated with this profile.
      * @return a policyLink
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PolicyLink> getPolicies() {
         return this.policies;
     }
@@ -109,7 +107,7 @@ public class Profile extends Entity implements Parsable {
      * Gets the state property value. The state property
      * @return a status
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Status getState() {
         return this.state;
     }
@@ -117,17 +115,15 @@ public class Profile extends Entity implements Parsable {
      * Gets the version property value. Profile version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersion() {
         return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -140,55 +136,43 @@ public class Profile extends Entity implements Parsable {
     /**
      * Sets the description property value. Description.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Profile last modified time.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the name property value. Profile name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the policies property value. Traffic forwarding policies associated with this profile.
      * @param value Value to set for the policies property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicies(@javax.annotation.Nullable final java.util.List<PolicyLink> value) {
+    public void setPolicies(@jakarta.annotation.Nullable final java.util.List<PolicyLink> value) {
         this.policies = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final Status value) {
+    public void setState(@jakarta.annotation.Nullable final Status value) {
         this.state = value;
     }
     /**
      * Sets the version property value. Profile version.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final String value) {
+    public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }
 }

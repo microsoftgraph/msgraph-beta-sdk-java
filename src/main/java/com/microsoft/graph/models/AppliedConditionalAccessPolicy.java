@@ -62,9 +62,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
     private java.util.List<String> sessionControlsNotSatisfied;
     /**
      * Instantiates a new appliedConditionalAccessPolicy and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AppliedConditionalAccessPolicy() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -73,8 +71,8 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a appliedConditionalAccessPolicy
      */
-    @javax.annotation.Nonnull
-    public static AppliedConditionalAccessPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AppliedConditionalAccessPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AppliedConditionalAccessPolicy();
     }
@@ -82,7 +80,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -90,7 +88,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the authenticationStrength property value. The custom authentication strength enforced in a Conditional Access policy.
      * @return a authenticationStrength
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationStrength getAuthenticationStrength() {
         return this.authenticationStrength;
     }
@@ -98,7 +96,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the conditionsNotSatisfied property value. Refers to the conditional access policy conditions that are not satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client,ipAddressSeenByAzureAD,ipAddressSeenByResourceProvider,unknownFutureValue,servicePrincipals,servicePrincipalRisk. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals,servicePrincipalRisk.
      * @return a conditionalAccessConditions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessConditions> getConditionsNotSatisfied() {
         return this.conditionsNotSatisfied;
     }
@@ -106,7 +104,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the conditionsSatisfied property value. Refers to the conditional access policy conditions that are satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client,ipAddressSeenByAzureAD,ipAddressSeenByResourceProvider,unknownFutureValue,servicePrincipals,servicePrincipalRisk. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals,servicePrincipalRisk.
      * @return a conditionalAccessConditions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessConditions> getConditionsSatisfied() {
         return this.conditionsSatisfied;
     }
@@ -114,7 +112,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the displayName property value. Name of the conditional access policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -122,7 +120,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor authentication').
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getEnforcedGrantControls() {
         return this.enforcedGrantControls;
     }
@@ -130,7 +128,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the enforcedSessionControls property value. Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getEnforcedSessionControls() {
         return this.enforcedSessionControls;
     }
@@ -138,7 +136,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the excludeRulesSatisfied property value. List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{'devicePlatform' : 'DevicePlatform'}] means the policy didnt apply, because the DevicePlatform condition was a match.
      * @return a conditionalAccessRuleSatisfied
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessRuleSatisfied> getExcludeRulesSatisfied() {
         return this.excludeRulesSatisfied;
     }
@@ -146,7 +144,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("authenticationStrength", (n) -> { this.setAuthenticationStrength(n.getObjectValue(AuthenticationStrength::createFromDiscriminatorValue)); });
@@ -167,7 +165,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the id property value. Identifier of the conditional access policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -175,7 +173,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the includeRulesSatisfied property value. List of key-value pairs containing each matched include condition in the conditional access policy. Example: [{ 'application' : 'AllApps'}, {'users': 'Group'}], meaning Application condition was a match because AllApps are included and Users condition was a match because the user was part of the included Group rule.
      * @return a conditionalAccessRuleSatisfied
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessRuleSatisfied> getIncludeRulesSatisfied() {
         return this.includeRulesSatisfied;
     }
@@ -183,7 +181,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -191,7 +189,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
      * @return a appliedConditionalAccessPolicyResult
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AppliedConditionalAccessPolicyResult getResult() {
         return this.result;
     }
@@ -199,17 +197,15 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Gets the sessionControlsNotSatisfied property value. Refers to the session controls that a sign-in activity did not satisfy. (Example: Application enforced Restrictions).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSessionControlsNotSatisfied() {
         return this.sessionControlsNotSatisfied;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("authenticationStrength", this.getAuthenticationStrength());
         writer.writeCollectionOfEnumValues("conditionsNotSatisfied", this.getConditionsNotSatisfied());
@@ -228,118 +224,92 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the authenticationStrength property value. The custom authentication strength enforced in a Conditional Access policy.
      * @param value Value to set for the authenticationStrength property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationStrength(@javax.annotation.Nullable final AuthenticationStrength value) {
+    public void setAuthenticationStrength(@jakarta.annotation.Nullable final AuthenticationStrength value) {
         this.authenticationStrength = value;
     }
     /**
      * Sets the conditionsNotSatisfied property value. Refers to the conditional access policy conditions that are not satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client,ipAddressSeenByAzureAD,ipAddressSeenByResourceProvider,unknownFutureValue,servicePrincipals,servicePrincipalRisk. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals,servicePrincipalRisk.
      * @param value Value to set for the conditionsNotSatisfied property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConditionsNotSatisfied(@javax.annotation.Nullable final java.util.List<ConditionalAccessConditions> value) {
+    public void setConditionsNotSatisfied(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessConditions> value) {
         this.conditionsNotSatisfied = value;
     }
     /**
      * Sets the conditionsSatisfied property value. Refers to the conditional access policy conditions that are satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client,ipAddressSeenByAzureAD,ipAddressSeenByResourceProvider,unknownFutureValue,servicePrincipals,servicePrincipalRisk. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals,servicePrincipalRisk.
      * @param value Value to set for the conditionsSatisfied property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConditionsSatisfied(@javax.annotation.Nullable final java.util.List<ConditionalAccessConditions> value) {
+    public void setConditionsSatisfied(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessConditions> value) {
         this.conditionsSatisfied = value;
     }
     /**
      * Sets the displayName property value. Name of the conditional access policy.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor authentication').
      * @param value Value to set for the enforcedGrantControls property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnforcedGrantControls(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setEnforcedGrantControls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.enforcedGrantControls = value;
     }
     /**
      * Sets the enforcedSessionControls property value. Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
      * @param value Value to set for the enforcedSessionControls property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnforcedSessionControls(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setEnforcedSessionControls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.enforcedSessionControls = value;
     }
     /**
      * Sets the excludeRulesSatisfied property value. List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{'devicePlatform' : 'DevicePlatform'}] means the policy didnt apply, because the DevicePlatform condition was a match.
      * @param value Value to set for the excludeRulesSatisfied property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExcludeRulesSatisfied(@javax.annotation.Nullable final java.util.List<ConditionalAccessRuleSatisfied> value) {
+    public void setExcludeRulesSatisfied(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessRuleSatisfied> value) {
         this.excludeRulesSatisfied = value;
     }
     /**
      * Sets the id property value. Identifier of the conditional access policy.
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the includeRulesSatisfied property value. List of key-value pairs containing each matched include condition in the conditional access policy. Example: [{ 'application' : 'AllApps'}, {'users': 'Group'}], meaning Application condition was a match because AllApps are included and Users condition was a match because the user was part of the included Group rule.
      * @param value Value to set for the includeRulesSatisfied property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncludeRulesSatisfied(@javax.annotation.Nullable final java.util.List<ConditionalAccessRuleSatisfied> value) {
+    public void setIncludeRulesSatisfied(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessRuleSatisfied> value) {
         this.includeRulesSatisfied = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (Policy isn't applied because policy conditions were not met),notEnabled (This is due to the policy in disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
      * @param value Value to set for the result property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResult(@javax.annotation.Nullable final AppliedConditionalAccessPolicyResult value) {
+    public void setResult(@jakarta.annotation.Nullable final AppliedConditionalAccessPolicyResult value) {
         this.result = value;
     }
     /**
      * Sets the sessionControlsNotSatisfied property value. Refers to the session controls that a sign-in activity did not satisfy. (Example: Application enforced Restrictions).
      * @param value Value to set for the sessionControlsNotSatisfied property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSessionControlsNotSatisfied(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setSessionControlsNotSatisfied(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.sessionControlsNotSatisfied = value;
     }
 }

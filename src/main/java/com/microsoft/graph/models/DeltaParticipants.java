@@ -17,9 +17,7 @@ public class DeltaParticipants extends Entity implements Parsable {
     private Long sequenceNumber;
     /**
      * Instantiates a new deltaParticipants and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeltaParticipants() {
         super();
     }
@@ -28,8 +26,8 @@ public class DeltaParticipants extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deltaParticipants
      */
-    @javax.annotation.Nonnull
-    public static DeltaParticipants createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeltaParticipants createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeltaParticipants();
     }
@@ -37,7 +35,7 @@ public class DeltaParticipants extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("participants", (n) -> { this.setParticipants(n.getCollectionOfObjectValues(Participant::createFromDiscriminatorValue)); });
@@ -48,7 +46,7 @@ public class DeltaParticipants extends Entity implements Parsable {
      * Gets the participants property value. The participants property
      * @return a participant
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Participant> getParticipants() {
         return this.participants;
     }
@@ -56,17 +54,15 @@ public class DeltaParticipants extends Entity implements Parsable {
      * Gets the sequenceNumber property value. The sequence number for the roster update that is used to identify the notification order.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getSequenceNumber() {
         return this.sequenceNumber;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("participants", this.getParticipants());
@@ -75,19 +71,15 @@ public class DeltaParticipants extends Entity implements Parsable {
     /**
      * Sets the participants property value. The participants property
      * @param value Value to set for the participants property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParticipants(@javax.annotation.Nullable final java.util.List<Participant> value) {
+    public void setParticipants(@jakarta.annotation.Nullable final java.util.List<Participant> value) {
         this.participants = value;
     }
     /**
      * Sets the sequenceNumber property value. The sequence number for the roster update that is used to identify the notification order.
      * @param value Value to set for the sequenceNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSequenceNumber(@javax.annotation.Nullable final Long value) {
+    public void setSequenceNumber(@jakarta.annotation.Nullable final Long value) {
         this.sequenceNumber = value;
     }
 }

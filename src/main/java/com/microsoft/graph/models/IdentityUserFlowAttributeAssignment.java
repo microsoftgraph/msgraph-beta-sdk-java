@@ -33,9 +33,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
     private IdentityUserFlowAttributeInputType userInputType;
     /**
      * Instantiates a new identityUserFlowAttributeAssignment and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public IdentityUserFlowAttributeAssignment() {
         super();
     }
@@ -44,8 +42,8 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a identityUserFlowAttributeAssignment
      */
-    @javax.annotation.Nonnull
-    public static IdentityUserFlowAttributeAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IdentityUserFlowAttributeAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IdentityUserFlowAttributeAssignment();
     }
@@ -53,7 +51,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      * Gets the displayName property value. The display name of the identityUserFlowAttribute within a user flow.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -61,7 +59,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -76,7 +74,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      * Gets the isOptional property value. Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsOptional() {
         return this.isOptional;
     }
@@ -84,7 +82,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      * Gets the requiresVerification property value. Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequiresVerification() {
         return this.requiresVerification;
     }
@@ -92,7 +90,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      * Gets the userAttribute property value. The user attribute that you want to add to your user flow.
      * @return a identityUserFlowAttribute
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentityUserFlowAttribute getUserAttribute() {
         return this.userAttribute;
     }
@@ -100,7 +98,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      * Gets the userAttributeValues property value. The input options for the user flow attribute. Only applicable when the userInputType is radioSingleSelect, dropdownSingleSelect, or checkboxMultiSelect.
      * @return a userAttributeValuesItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UserAttributeValuesItem> getUserAttributeValues() {
         return this.userAttributeValues;
     }
@@ -108,17 +106,15 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
      * Gets the userInputType property value. The userInputType property
      * @return a identityUserFlowAttributeInputType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentityUserFlowAttributeInputType getUserInputType() {
         return this.userInputType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -131,55 +127,43 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
     /**
      * Sets the displayName property value. The display name of the identityUserFlowAttribute within a user flow.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the isOptional property value. Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
      * @param value Value to set for the isOptional property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsOptional(@javax.annotation.Nullable final Boolean value) {
+    public void setIsOptional(@jakarta.annotation.Nullable final Boolean value) {
         this.isOptional = value;
     }
     /**
      * Sets the requiresVerification property value. Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address.
      * @param value Value to set for the requiresVerification property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequiresVerification(@javax.annotation.Nullable final Boolean value) {
+    public void setRequiresVerification(@jakarta.annotation.Nullable final Boolean value) {
         this.requiresVerification = value;
     }
     /**
      * Sets the userAttribute property value. The user attribute that you want to add to your user flow.
      * @param value Value to set for the userAttribute property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserAttribute(@javax.annotation.Nullable final IdentityUserFlowAttribute value) {
+    public void setUserAttribute(@jakarta.annotation.Nullable final IdentityUserFlowAttribute value) {
         this.userAttribute = value;
     }
     /**
      * Sets the userAttributeValues property value. The input options for the user flow attribute. Only applicable when the userInputType is radioSingleSelect, dropdownSingleSelect, or checkboxMultiSelect.
      * @param value Value to set for the userAttributeValues property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserAttributeValues(@javax.annotation.Nullable final java.util.List<UserAttributeValuesItem> value) {
+    public void setUserAttributeValues(@jakarta.annotation.Nullable final java.util.List<UserAttributeValuesItem> value) {
         this.userAttributeValues = value;
     }
     /**
      * Sets the userInputType property value. The userInputType property
      * @param value Value to set for the userInputType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserInputType(@javax.annotation.Nullable final IdentityUserFlowAttributeInputType value) {
+    public void setUserInputType(@jakarta.annotation.Nullable final IdentityUserFlowAttributeInputType value) {
         this.userInputType = value;
     }
 }

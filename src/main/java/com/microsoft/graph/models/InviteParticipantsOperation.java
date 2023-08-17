@@ -13,9 +13,7 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
     private java.util.List<InvitationParticipantInfo> participants;
     /**
      * Instantiates a new inviteParticipantsOperation and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public InviteParticipantsOperation() {
         super();
     }
@@ -24,8 +22,8 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a inviteParticipantsOperation
      */
-    @javax.annotation.Nonnull
-    public static InviteParticipantsOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static InviteParticipantsOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new InviteParticipantsOperation();
     }
@@ -33,7 +31,7 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("participants", (n) -> { this.setParticipants(n.getCollectionOfObjectValues(InvitationParticipantInfo::createFromDiscriminatorValue)); });
@@ -43,17 +41,15 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
      * Gets the participants property value. The participants to invite.
      * @return a invitationParticipantInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<InvitationParticipantInfo> getParticipants() {
         return this.participants;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("participants", this.getParticipants());
@@ -61,10 +57,8 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
     /**
      * Sets the participants property value. The participants to invite.
      * @param value Value to set for the participants property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParticipants(@javax.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
+    public void setParticipants(@jakarta.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
         this.participants = value;
     }
 }

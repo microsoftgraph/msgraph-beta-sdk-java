@@ -40,9 +40,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
     private SubjectNameFormat subjectNameFormat;
     /**
      * Instantiates a new androidDeviceOwnerCertificateProfileBase and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AndroidDeviceOwnerCertificateProfileBase() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerCertificateProfileBase");
@@ -52,8 +50,8 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidDeviceOwnerCertificateProfileBase
      */
-    @javax.annotation.Nonnull
-    public static AndroidDeviceOwnerCertificateProfileBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidDeviceOwnerCertificateProfileBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -70,7 +68,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @return a certificateValidityPeriodScale
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CertificateValidityPeriodScale getCertificateValidityPeriodScale() {
         return this.certificateValidityPeriodScale;
     }
@@ -78,7 +76,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * Gets the certificateValidityPeriodValue property value. Value for the Certificate Validity Period.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCertificateValidityPeriodValue() {
         return this.certificateValidityPeriodValue;
     }
@@ -86,7 +84,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * Gets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      * @return a extendedKeyUsage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ExtendedKeyUsage> getExtendedKeyUsages() {
         return this.extendedKeyUsages;
     }
@@ -94,7 +92,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("certificateValidityPeriodScale", (n) -> { this.setCertificateValidityPeriodScale(n.getEnumValue(CertificateValidityPeriodScale.class)); });
@@ -110,7 +108,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * Gets the renewalThresholdPercentage property value. Certificate renewal threshold percentage. Valid values 1 to 99
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRenewalThresholdPercentage() {
         return this.renewalThresholdPercentage;
     }
@@ -118,7 +116,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * Gets the rootCertificate property value. Trusted Root Certificate.
      * @return a androidDeviceOwnerTrustedRootCertificate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidDeviceOwnerTrustedRootCertificate getRootCertificate() {
         return this.rootCertificate;
     }
@@ -126,7 +124,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * Gets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      * @return a subjectAlternativeNameType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectAlternativeNameType getSubjectAlternativeNameType() {
         return this.subjectAlternativeNameType;
     }
@@ -134,17 +132,15 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * Gets the subjectNameFormat property value. Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
      * @return a subjectNameFormat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectNameFormat getSubjectNameFormat() {
         return this.subjectNameFormat;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("certificateValidityPeriodScale", this.getCertificateValidityPeriodScale());
@@ -158,64 +154,50 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
     /**
      * Sets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @param value Value to set for the certificateValidityPeriodScale property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateValidityPeriodScale(@javax.annotation.Nullable final CertificateValidityPeriodScale value) {
+    public void setCertificateValidityPeriodScale(@jakarta.annotation.Nullable final CertificateValidityPeriodScale value) {
         this.certificateValidityPeriodScale = value;
     }
     /**
      * Sets the certificateValidityPeriodValue property value. Value for the Certificate Validity Period.
      * @param value Value to set for the certificateValidityPeriodValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateValidityPeriodValue(@javax.annotation.Nullable final Integer value) {
+    public void setCertificateValidityPeriodValue(@jakarta.annotation.Nullable final Integer value) {
         this.certificateValidityPeriodValue = value;
     }
     /**
      * Sets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the extendedKeyUsages property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExtendedKeyUsages(@javax.annotation.Nullable final java.util.List<ExtendedKeyUsage> value) {
+    public void setExtendedKeyUsages(@jakarta.annotation.Nullable final java.util.List<ExtendedKeyUsage> value) {
         this.extendedKeyUsages = value;
     }
     /**
      * Sets the renewalThresholdPercentage property value. Certificate renewal threshold percentage. Valid values 1 to 99
      * @param value Value to set for the renewalThresholdPercentage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRenewalThresholdPercentage(@javax.annotation.Nullable final Integer value) {
+    public void setRenewalThresholdPercentage(@jakarta.annotation.Nullable final Integer value) {
         this.renewalThresholdPercentage = value;
     }
     /**
      * Sets the rootCertificate property value. Trusted Root Certificate.
      * @param value Value to set for the rootCertificate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRootCertificate(@javax.annotation.Nullable final AndroidDeviceOwnerTrustedRootCertificate value) {
+    public void setRootCertificate(@jakarta.annotation.Nullable final AndroidDeviceOwnerTrustedRootCertificate value) {
         this.rootCertificate = value;
     }
     /**
      * Sets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      * @param value Value to set for the subjectAlternativeNameType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubjectAlternativeNameType(@javax.annotation.Nullable final SubjectAlternativeNameType value) {
+    public void setSubjectAlternativeNameType(@jakarta.annotation.Nullable final SubjectAlternativeNameType value) {
         this.subjectAlternativeNameType = value;
     }
     /**
      * Sets the subjectNameFormat property value. Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
      * @param value Value to set for the subjectNameFormat property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubjectNameFormat(@javax.annotation.Nullable final SubjectNameFormat value) {
+    public void setSubjectNameFormat(@jakarta.annotation.Nullable final SubjectNameFormat value) {
         this.subjectNameFormat = value;
     }
 }

@@ -13,9 +13,7 @@ public class IntuneBrandingProfileAssignmentCollectionResponse extends BaseColle
     private java.util.List<IntuneBrandingProfileAssignment> value;
     /**
      * Instantiates a new intuneBrandingProfileAssignmentCollectionResponse and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public IntuneBrandingProfileAssignmentCollectionResponse() {
         super();
     }
@@ -24,8 +22,8 @@ public class IntuneBrandingProfileAssignmentCollectionResponse extends BaseColle
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a intuneBrandingProfileAssignmentCollectionResponse
      */
-    @javax.annotation.Nonnull
-    public static IntuneBrandingProfileAssignmentCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IntuneBrandingProfileAssignmentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IntuneBrandingProfileAssignmentCollectionResponse();
     }
@@ -33,7 +31,7 @@ public class IntuneBrandingProfileAssignmentCollectionResponse extends BaseColle
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(IntuneBrandingProfileAssignment::createFromDiscriminatorValue)); });
@@ -43,17 +41,15 @@ public class IntuneBrandingProfileAssignmentCollectionResponse extends BaseColle
      * Gets the value property value. The value property
      * @return a intuneBrandingProfileAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IntuneBrandingProfileAssignment> getValue() {
         return this.value;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("value", this.getValue());
@@ -61,10 +57,8 @@ public class IntuneBrandingProfileAssignmentCollectionResponse extends BaseColle
     /**
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final java.util.List<IntuneBrandingProfileAssignment> value) {
+    public void setValue(@jakarta.annotation.Nullable final java.util.List<IntuneBrandingProfileAssignment> value) {
         this.value = value;
     }
 }

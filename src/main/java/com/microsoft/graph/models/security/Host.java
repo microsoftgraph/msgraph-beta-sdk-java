@@ -66,9 +66,7 @@ public class Host extends Artifact implements Parsable {
     private WhoisRecord whois;
     /**
      * Instantiates a new host and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Host() {
         super();
         this.setOdataType("#microsoft.graph.security.host");
@@ -78,8 +76,8 @@ public class Host extends Artifact implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a host
      */
-    @javax.annotation.Nonnull
-    public static Host createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Host createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -95,7 +93,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
      * @return a hostPair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<HostPair> getChildHostPairs() {
         return this.childHostPairs;
     }
@@ -103,7 +101,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the components property value. The hostComponents that are associated with this host.
      * @return a hostComponent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<HostComponent> getComponents() {
         return this.components;
     }
@@ -111,7 +109,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the cookies property value. The hostCookies that are associated with this host.
      * @return a hostCookie
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<HostCookie> getCookies() {
         return this.cookies;
     }
@@ -119,7 +117,7 @@ public class Host extends Artifact implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("childHostPairs", (n) -> { this.setChildHostPairs(n.getCollectionOfObjectValues(HostPair::createFromDiscriminatorValue)); });
@@ -142,7 +140,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the firstSeenDateTime property value. The first date and time when this host was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
         return this.firstSeenDateTime;
     }
@@ -150,7 +148,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the hostPairs property value. The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
      * @return a hostPair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<HostPair> getHostPairs() {
         return this.hostPairs;
     }
@@ -158,7 +156,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the lastSeenDateTime property value. The most recent date and time when this host was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
         return this.lastSeenDateTime;
     }
@@ -166,7 +164,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the parentHostPairs property value. The hostPairs that are associated with a host, where that host is the childHost and has an incoming pairing with a parentHost.
      * @return a hostPair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<HostPair> getParentHostPairs() {
         return this.parentHostPairs;
     }
@@ -174,7 +172,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the passiveDns property value. Passive DNS retrieval about this host.
      * @return a passiveDnsRecord
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PassiveDnsRecord> getPassiveDns() {
         return this.passiveDns;
     }
@@ -182,7 +180,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the passiveDnsReverse property value. Reverse passive DNS retrieval about this host.
      * @return a passiveDnsRecord
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PassiveDnsRecord> getPassiveDnsReverse() {
         return this.passiveDnsReverse;
     }
@@ -190,7 +188,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the reputation property value. Represents a calculated reputation of this host.
      * @return a hostReputation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public HostReputation getReputation() {
         return this.reputation;
     }
@@ -198,7 +196,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the sslCertificates property value. The sslCertificates property
      * @return a hostSslCertificate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<HostSslCertificate> getSslCertificates() {
         return this.sslCertificates;
     }
@@ -206,7 +204,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the subdomains property value. The subdomains that are associated with this host.
      * @return a subdomain
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Subdomain> getSubdomains() {
         return this.subdomains;
     }
@@ -214,7 +212,7 @@ public class Host extends Artifact implements Parsable {
      * Gets the trackers property value. The hostTrackers that are associated with this host.
      * @return a hostTracker
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<HostTracker> getTrackers() {
         return this.trackers;
     }
@@ -222,17 +220,15 @@ public class Host extends Artifact implements Parsable {
      * Gets the whois property value. The whois property
      * @return a whoisRecord
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WhoisRecord getWhois() {
         return this.whois;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("childHostPairs", this.getChildHostPairs());
@@ -253,127 +249,99 @@ public class Host extends Artifact implements Parsable {
     /**
      * Sets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
      * @param value Value to set for the childHostPairs property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChildHostPairs(@javax.annotation.Nullable final java.util.List<HostPair> value) {
+    public void setChildHostPairs(@jakarta.annotation.Nullable final java.util.List<HostPair> value) {
         this.childHostPairs = value;
     }
     /**
      * Sets the components property value. The hostComponents that are associated with this host.
      * @param value Value to set for the components property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComponents(@javax.annotation.Nullable final java.util.List<HostComponent> value) {
+    public void setComponents(@jakarta.annotation.Nullable final java.util.List<HostComponent> value) {
         this.components = value;
     }
     /**
      * Sets the cookies property value. The hostCookies that are associated with this host.
      * @param value Value to set for the cookies property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCookies(@javax.annotation.Nullable final java.util.List<HostCookie> value) {
+    public void setCookies(@jakarta.annotation.Nullable final java.util.List<HostCookie> value) {
         this.cookies = value;
     }
     /**
      * Sets the firstSeenDateTime property value. The first date and time when this host was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstSeenDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstSeenDateTime = value;
     }
     /**
      * Sets the hostPairs property value. The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
      * @param value Value to set for the hostPairs property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHostPairs(@javax.annotation.Nullable final java.util.List<HostPair> value) {
+    public void setHostPairs(@jakarta.annotation.Nullable final java.util.List<HostPair> value) {
         this.hostPairs = value;
     }
     /**
      * Sets the lastSeenDateTime property value. The most recent date and time when this host was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSeenDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSeenDateTime = value;
     }
     /**
      * Sets the parentHostPairs property value. The hostPairs that are associated with a host, where that host is the childHost and has an incoming pairing with a parentHost.
      * @param value Value to set for the parentHostPairs property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParentHostPairs(@javax.annotation.Nullable final java.util.List<HostPair> value) {
+    public void setParentHostPairs(@jakarta.annotation.Nullable final java.util.List<HostPair> value) {
         this.parentHostPairs = value;
     }
     /**
      * Sets the passiveDns property value. Passive DNS retrieval about this host.
      * @param value Value to set for the passiveDns property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPassiveDns(@javax.annotation.Nullable final java.util.List<PassiveDnsRecord> value) {
+    public void setPassiveDns(@jakarta.annotation.Nullable final java.util.List<PassiveDnsRecord> value) {
         this.passiveDns = value;
     }
     /**
      * Sets the passiveDnsReverse property value. Reverse passive DNS retrieval about this host.
      * @param value Value to set for the passiveDnsReverse property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPassiveDnsReverse(@javax.annotation.Nullable final java.util.List<PassiveDnsRecord> value) {
+    public void setPassiveDnsReverse(@jakarta.annotation.Nullable final java.util.List<PassiveDnsRecord> value) {
         this.passiveDnsReverse = value;
     }
     /**
      * Sets the reputation property value. Represents a calculated reputation of this host.
      * @param value Value to set for the reputation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReputation(@javax.annotation.Nullable final HostReputation value) {
+    public void setReputation(@jakarta.annotation.Nullable final HostReputation value) {
         this.reputation = value;
     }
     /**
      * Sets the sslCertificates property value. The sslCertificates property
      * @param value Value to set for the sslCertificates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSslCertificates(@javax.annotation.Nullable final java.util.List<HostSslCertificate> value) {
+    public void setSslCertificates(@jakarta.annotation.Nullable final java.util.List<HostSslCertificate> value) {
         this.sslCertificates = value;
     }
     /**
      * Sets the subdomains property value. The subdomains that are associated with this host.
      * @param value Value to set for the subdomains property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubdomains(@javax.annotation.Nullable final java.util.List<Subdomain> value) {
+    public void setSubdomains(@jakarta.annotation.Nullable final java.util.List<Subdomain> value) {
         this.subdomains = value;
     }
     /**
      * Sets the trackers property value. The hostTrackers that are associated with this host.
      * @param value Value to set for the trackers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrackers(@javax.annotation.Nullable final java.util.List<HostTracker> value) {
+    public void setTrackers(@jakarta.annotation.Nullable final java.util.List<HostTracker> value) {
         this.trackers = value;
     }
     /**
      * Sets the whois property value. The whois property
      * @param value Value to set for the whois property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWhois(@javax.annotation.Nullable final WhoisRecord value) {
+    public void setWhois(@jakarta.annotation.Nullable final WhoisRecord value) {
         this.whois = value;
     }
 }

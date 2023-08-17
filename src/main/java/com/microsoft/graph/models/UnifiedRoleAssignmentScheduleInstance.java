@@ -38,9 +38,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new unifiedRoleAssignmentScheduleInstance and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UnifiedRoleAssignmentScheduleInstance() {
         super();
     }
@@ -49,8 +47,8 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a unifiedRoleAssignmentScheduleInstance
      */
-    @javax.annotation.Nonnull
-    public static UnifiedRoleAssignmentScheduleInstance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UnifiedRoleAssignmentScheduleInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UnifiedRoleAssignmentScheduleInstance();
     }
@@ -58,7 +56,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * Gets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
      * @return a unifiedRoleEligibilityScheduleInstance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleInstance getActivatedUsing() {
         return this.activatedUsing;
     }
@@ -66,7 +64,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * Gets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssignmentType() {
         return this.assignmentType;
     }
@@ -74,7 +72,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * Gets the endDateTime property value. The end date of the schedule instance.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
         return this.endDateTime;
     }
@@ -82,7 +80,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activatedUsing", (n) -> { this.setActivatedUsing(n.getObjectValue(UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue)); });
@@ -98,7 +96,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * Gets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMemberType() {
         return this.memberType;
     }
@@ -106,7 +104,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * Gets the roleAssignmentOriginId property value. The identifier of the role assignment in Azure AD.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleAssignmentOriginId() {
         return this.roleAssignmentOriginId;
     }
@@ -114,7 +112,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * Gets the roleAssignmentScheduleId property value. The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleAssignmentScheduleId() {
         return this.roleAssignmentScheduleId;
     }
@@ -122,17 +120,15 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
      * Gets the startDateTime property value. When this instance starts.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this.startDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("activatedUsing", this.getActivatedUsing());
@@ -146,64 +142,50 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
     /**
      * Sets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
      * @param value Value to set for the activatedUsing property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivatedUsing(@javax.annotation.Nullable final UnifiedRoleEligibilityScheduleInstance value) {
+    public void setActivatedUsing(@jakarta.annotation.Nullable final UnifiedRoleEligibilityScheduleInstance value) {
         this.activatedUsing = value;
     }
     /**
      * Sets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
      * @param value Value to set for the assignmentType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentType(@javax.annotation.Nullable final String value) {
+    public void setAssignmentType(@jakarta.annotation.Nullable final String value) {
         this.assignmentType = value;
     }
     /**
      * Sets the endDateTime property value. The end date of the schedule instance.
      * @param value Value to set for the endDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
      * Sets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
      * @param value Value to set for the memberType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMemberType(@javax.annotation.Nullable final String value) {
+    public void setMemberType(@jakarta.annotation.Nullable final String value) {
         this.memberType = value;
     }
     /**
      * Sets the roleAssignmentOriginId property value. The identifier of the role assignment in Azure AD.
      * @param value Value to set for the roleAssignmentOriginId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleAssignmentOriginId(@javax.annotation.Nullable final String value) {
+    public void setRoleAssignmentOriginId(@jakarta.annotation.Nullable final String value) {
         this.roleAssignmentOriginId = value;
     }
     /**
      * Sets the roleAssignmentScheduleId property value. The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created.
      * @param value Value to set for the roleAssignmentScheduleId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleAssignmentScheduleId(@javax.annotation.Nullable final String value) {
+    public void setRoleAssignmentScheduleId(@jakarta.annotation.Nullable final String value) {
         this.roleAssignmentScheduleId = value;
     }
     /**
      * Sets the startDateTime property value. When this instance starts.
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
 }

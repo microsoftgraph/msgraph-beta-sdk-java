@@ -22,9 +22,7 @@ public class UploadDepTokenPostRequestBody implements AdditionalDataHolder, Pars
     private String depToken;
     /**
      * Instantiates a new uploadDepTokenPostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UploadDepTokenPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -33,8 +31,8 @@ public class UploadDepTokenPostRequestBody implements AdditionalDataHolder, Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a uploadDepTokenPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static UploadDepTokenPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UploadDepTokenPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UploadDepTokenPostRequestBody();
     }
@@ -42,7 +40,7 @@ public class UploadDepTokenPostRequestBody implements AdditionalDataHolder, Pars
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -50,7 +48,7 @@ public class UploadDepTokenPostRequestBody implements AdditionalDataHolder, Pars
      * Gets the appleId property value. The appleId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppleId() {
         return this.appleId;
     }
@@ -58,7 +56,7 @@ public class UploadDepTokenPostRequestBody implements AdditionalDataHolder, Pars
      * Gets the depToken property value. The depToken property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDepToken() {
         return this.depToken;
     }
@@ -66,7 +64,7 @@ public class UploadDepTokenPostRequestBody implements AdditionalDataHolder, Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("appleId", (n) -> { this.setAppleId(n.getStringValue()); });
@@ -76,10 +74,8 @@ public class UploadDepTokenPostRequestBody implements AdditionalDataHolder, Pars
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appleId", this.getAppleId());
         writer.writeStringValue("depToken", this.getDepToken());
@@ -88,28 +84,22 @@ public class UploadDepTokenPostRequestBody implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the appleId property value. The appleId property
      * @param value Value to set for the appleId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppleId(@javax.annotation.Nullable final String value) {
+    public void setAppleId(@jakarta.annotation.Nullable final String value) {
         this.appleId = value;
     }
     /**
      * Sets the depToken property value. The depToken property
      * @param value Value to set for the depToken property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDepToken(@javax.annotation.Nullable final String value) {
+    public void setDepToken(@jakarta.annotation.Nullable final String value) {
         this.depToken = value;
     }
 }

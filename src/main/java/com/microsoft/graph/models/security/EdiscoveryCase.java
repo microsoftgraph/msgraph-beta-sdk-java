@@ -55,9 +55,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     private java.util.List<EdiscoveryReviewTag> tags;
     /**
      * Instantiates a new ediscoveryCase and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EdiscoveryCase() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoveryCase");
@@ -67,8 +65,8 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a ediscoveryCase
      */
-    @javax.annotation.Nonnull
-    public static EdiscoveryCase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EdiscoveryCase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EdiscoveryCase();
     }
@@ -76,7 +74,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      * Gets the closedBy property value. The user who closed the case.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getClosedBy() {
         return this.closedBy;
     }
@@ -84,7 +82,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      * Gets the closedDateTime property value. The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getClosedDateTime() {
         return this.closedDateTime;
     }
@@ -92,7 +90,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      * Gets the custodians property value. Returns a list of case ediscoveryCustodian objects for this case.
      * @return a ediscoveryCustodian
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryCustodian> getCustodians() {
         return this.custodians;
     }
@@ -100,7 +98,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      * Gets the externalId property value. The external case number for customer reference.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalId() {
         return this.externalId;
     }
@@ -108,7 +106,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("closedBy", (n) -> { this.setClosedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -128,7 +126,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      * Gets the legalHolds property value. Returns a list of case eDiscoveryHoldPolicy objects for this case.
      * @return a ediscoveryHoldPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryHoldPolicy> getLegalHolds() {
         return this.legalHolds;
     }
@@ -136,7 +134,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      * Gets the noncustodialDataSources property value. Returns a list of case ediscoveryNoncustodialDataSource objects for this case.
      * @return a ediscoveryNoncustodialDataSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryNoncustodialDataSource> getNoncustodialDataSources() {
         return this.noncustodialDataSources;
     }
@@ -144,7 +142,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      * Gets the operations property value. Returns a list of case caseOperation objects for this case.
      * @return a caseOperation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CaseOperation> getOperations() {
         return this.operations;
     }
@@ -152,7 +150,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      * Gets the reviewSets property value. Returns a list of eDiscoveryReviewSet objects in the case.
      * @return a ediscoveryReviewSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryReviewSet> getReviewSets() {
         return this.reviewSets;
     }
@@ -160,7 +158,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      * Gets the searches property value. Returns a list of eDiscoverySearch objects associated with this case.
      * @return a ediscoverySearch
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EdiscoverySearch> getSearches() {
         return this.searches;
     }
@@ -168,7 +166,7 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      * Gets the settings property value. Returns a list of eDIscoverySettings objects in the case.
      * @return a ediscoveryCaseSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EdiscoveryCaseSettings getSettings() {
         return this.settings;
     }
@@ -176,17 +174,15 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
      * Gets the tags property value. Returns a list of ediscoveryReviewTag objects associated to this case.
      * @return a ediscoveryReviewTag
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryReviewTag> getTags() {
         return this.tags;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("closedBy", this.getClosedBy());
@@ -204,100 +200,78 @@ public class EdiscoveryCase extends CaseEscaped implements Parsable {
     /**
      * Sets the closedBy property value. The user who closed the case.
      * @param value Value to set for the closedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClosedBy(@javax.annotation.Nullable final IdentitySet value) {
+    public void setClosedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.closedBy = value;
     }
     /**
      * Sets the closedDateTime property value. The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the closedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClosedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setClosedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.closedDateTime = value;
     }
     /**
      * Sets the custodians property value. Returns a list of case ediscoveryCustodian objects for this case.
      * @param value Value to set for the custodians property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustodians(@javax.annotation.Nullable final java.util.List<EdiscoveryCustodian> value) {
+    public void setCustodians(@jakarta.annotation.Nullable final java.util.List<EdiscoveryCustodian> value) {
         this.custodians = value;
     }
     /**
      * Sets the externalId property value. The external case number for customer reference.
      * @param value Value to set for the externalId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalId(@javax.annotation.Nullable final String value) {
+    public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }
     /**
      * Sets the legalHolds property value. Returns a list of case eDiscoveryHoldPolicy objects for this case.
      * @param value Value to set for the legalHolds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLegalHolds(@javax.annotation.Nullable final java.util.List<EdiscoveryHoldPolicy> value) {
+    public void setLegalHolds(@jakarta.annotation.Nullable final java.util.List<EdiscoveryHoldPolicy> value) {
         this.legalHolds = value;
     }
     /**
      * Sets the noncustodialDataSources property value. Returns a list of case ediscoveryNoncustodialDataSource objects for this case.
      * @param value Value to set for the noncustodialDataSources property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNoncustodialDataSources(@javax.annotation.Nullable final java.util.List<EdiscoveryNoncustodialDataSource> value) {
+    public void setNoncustodialDataSources(@jakarta.annotation.Nullable final java.util.List<EdiscoveryNoncustodialDataSource> value) {
         this.noncustodialDataSources = value;
     }
     /**
      * Sets the operations property value. Returns a list of case caseOperation objects for this case.
      * @param value Value to set for the operations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperations(@javax.annotation.Nullable final java.util.List<CaseOperation> value) {
+    public void setOperations(@jakarta.annotation.Nullable final java.util.List<CaseOperation> value) {
         this.operations = value;
     }
     /**
      * Sets the reviewSets property value. Returns a list of eDiscoveryReviewSet objects in the case.
      * @param value Value to set for the reviewSets property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewSets(@javax.annotation.Nullable final java.util.List<EdiscoveryReviewSet> value) {
+    public void setReviewSets(@jakarta.annotation.Nullable final java.util.List<EdiscoveryReviewSet> value) {
         this.reviewSets = value;
     }
     /**
      * Sets the searches property value. Returns a list of eDiscoverySearch objects associated with this case.
      * @param value Value to set for the searches property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSearches(@javax.annotation.Nullable final java.util.List<EdiscoverySearch> value) {
+    public void setSearches(@jakarta.annotation.Nullable final java.util.List<EdiscoverySearch> value) {
         this.searches = value;
     }
     /**
      * Sets the settings property value. Returns a list of eDIscoverySettings objects in the case.
      * @param value Value to set for the settings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettings(@javax.annotation.Nullable final EdiscoveryCaseSettings value) {
+    public void setSettings(@jakarta.annotation.Nullable final EdiscoveryCaseSettings value) {
         this.settings = value;
     }
     /**
      * Sets the tags property value. Returns a list of ediscoveryReviewTag objects associated to this case.
      * @param value Value to set for the tags property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTags(@javax.annotation.Nullable final java.util.List<EdiscoveryReviewTag> value) {
+    public void setTags(@jakarta.annotation.Nullable final java.util.List<EdiscoveryReviewTag> value) {
         this.tags = value;
     }
 }

@@ -69,9 +69,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
     private String version;
     /**
      * Instantiates a new deviceComplianceScript and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceComplianceScript() {
         super();
     }
@@ -80,8 +78,8 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceComplianceScript
      */
-    @javax.annotation.Nonnull
-    public static DeviceComplianceScript createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceComplianceScript createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceComplianceScript();
     }
@@ -89,7 +87,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      * Gets the assignments property value. The list of group assignments for the device compliance script
      * @return a deviceHealthScriptAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceHealthScriptAssignment> getAssignments() {
         return this.assignments;
     }
@@ -97,7 +95,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      * Gets the createdDateTime property value. The timestamp of when the device compliance script was created. This property is read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -105,7 +103,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      * Gets the description property value. Description of the device compliance script
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -113,7 +111,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      * Gets the detectionScriptContent property value. The entire content of the detection powershell script
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getDetectionScriptContent() {
         return this.detectionScriptContent;
     }
@@ -121,7 +119,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      * Gets the deviceRunStates property value. List of run states for the device compliance script across all devices
      * @return a deviceComplianceScriptDeviceState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceScriptDeviceState> getDeviceRunStates() {
         return this.deviceRunStates;
     }
@@ -129,7 +127,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      * Gets the displayName property value. Name of the device compliance script
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -137,7 +135,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      * Gets the enforceSignatureCheck property value. Indicate whether the script signature needs be checked
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnforceSignatureCheck() {
         return this.enforceSignatureCheck;
     }
@@ -145,7 +143,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(DeviceHealthScriptAssignment::createFromDiscriminatorValue)); });
@@ -168,7 +166,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The timestamp of when the device compliance script was modified. This property is read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -176,7 +174,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      * Gets the publisher property value. Name of the device compliance script publisher
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPublisher() {
         return this.publisher;
     }
@@ -184,7 +182,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      * Gets the roleScopeTagIds property value. List of Scope Tag IDs for the device compliance script
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
         return this.roleScopeTagIds;
     }
@@ -192,7 +190,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      * Gets the runAs32Bit property value. Indicate whether PowerShell script(s) should run as 32-bit
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRunAs32Bit() {
         return this.runAs32Bit;
     }
@@ -200,7 +198,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @return a runAsAccountType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RunAsAccountType getRunAsAccount() {
         return this.runAsAccount;
     }
@@ -208,7 +206,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      * Gets the runSummary property value. High level run summary for device compliance script.
      * @return a deviceComplianceScriptRunSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceComplianceScriptRunSummary getRunSummary() {
         return this.runSummary;
     }
@@ -216,17 +214,15 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      * Gets the version property value. Version of the device compliance script
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersion() {
         return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
@@ -245,127 +241,99 @@ public class DeviceComplianceScript extends Entity implements Parsable {
     /**
      * Sets the assignments property value. The list of group assignments for the device compliance script
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignments(@javax.annotation.Nullable final java.util.List<DeviceHealthScriptAssignment> value) {
+    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceHealthScriptAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the createdDateTime property value. The timestamp of when the device compliance script was created. This property is read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Description of the device compliance script
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the detectionScriptContent property value. The entire content of the detection powershell script
      * @param value Value to set for the detectionScriptContent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetectionScriptContent(@javax.annotation.Nullable final byte[] value) {
+    public void setDetectionScriptContent(@jakarta.annotation.Nullable final byte[] value) {
         this.detectionScriptContent = value;
     }
     /**
      * Sets the deviceRunStates property value. List of run states for the device compliance script across all devices
      * @param value Value to set for the deviceRunStates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceRunStates(@javax.annotation.Nullable final java.util.List<DeviceComplianceScriptDeviceState> value) {
+    public void setDeviceRunStates(@jakarta.annotation.Nullable final java.util.List<DeviceComplianceScriptDeviceState> value) {
         this.deviceRunStates = value;
     }
     /**
      * Sets the displayName property value. Name of the device compliance script
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the enforceSignatureCheck property value. Indicate whether the script signature needs be checked
      * @param value Value to set for the enforceSignatureCheck property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnforceSignatureCheck(@javax.annotation.Nullable final Boolean value) {
+    public void setEnforceSignatureCheck(@jakarta.annotation.Nullable final Boolean value) {
         this.enforceSignatureCheck = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The timestamp of when the device compliance script was modified. This property is read-only.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the publisher property value. Name of the device compliance script publisher
      * @param value Value to set for the publisher property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublisher(@javax.annotation.Nullable final String value) {
+    public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.publisher = value;
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tag IDs for the device compliance script
      * @param value Value to set for the roleScopeTagIds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTagIds = value;
     }
     /**
      * Sets the runAs32Bit property value. Indicate whether PowerShell script(s) should run as 32-bit
      * @param value Value to set for the runAs32Bit property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRunAs32Bit(@javax.annotation.Nullable final Boolean value) {
+    public void setRunAs32Bit(@jakarta.annotation.Nullable final Boolean value) {
         this.runAs32Bit = value;
     }
     /**
      * Sets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @param value Value to set for the runAsAccount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRunAsAccount(@javax.annotation.Nullable final RunAsAccountType value) {
+    public void setRunAsAccount(@jakarta.annotation.Nullable final RunAsAccountType value) {
         this.runAsAccount = value;
     }
     /**
      * Sets the runSummary property value. High level run summary for device compliance script.
      * @param value Value to set for the runSummary property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRunSummary(@javax.annotation.Nullable final DeviceComplianceScriptRunSummary value) {
+    public void setRunSummary(@jakarta.annotation.Nullable final DeviceComplianceScriptRunSummary value) {
         this.runSummary = value;
     }
     /**
      * Sets the version property value. Version of the device compliance script
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final String value) {
+    public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }
 }

@@ -30,9 +30,7 @@ public class ItemRetentionLabel extends Entity implements Parsable {
     private RetentionLabelSettings retentionSettings;
     /**
      * Instantiates a new itemRetentionLabel and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ItemRetentionLabel() {
         super();
     }
@@ -41,8 +39,8 @@ public class ItemRetentionLabel extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a itemRetentionLabel
      */
-    @javax.annotation.Nonnull
-    public static ItemRetentionLabel createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ItemRetentionLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ItemRetentionLabel();
     }
@@ -50,7 +48,7 @@ public class ItemRetentionLabel extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isLabelAppliedExplicitly", (n) -> { this.setIsLabelAppliedExplicitly(n.getBooleanValue()); });
@@ -64,7 +62,7 @@ public class ItemRetentionLabel extends Entity implements Parsable {
      * Gets the isLabelAppliedExplicitly property value. The isLabelAppliedExplicitly property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsLabelAppliedExplicitly() {
         return this.isLabelAppliedExplicitly;
     }
@@ -72,7 +70,7 @@ public class ItemRetentionLabel extends Entity implements Parsable {
      * Gets the labelAppliedBy property value. The labelAppliedBy property
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLabelAppliedBy() {
         return this.labelAppliedBy;
     }
@@ -80,7 +78,7 @@ public class ItemRetentionLabel extends Entity implements Parsable {
      * Gets the labelAppliedDateTime property value. The labelAppliedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLabelAppliedDateTime() {
         return this.labelAppliedDateTime;
     }
@@ -88,7 +86,7 @@ public class ItemRetentionLabel extends Entity implements Parsable {
      * Gets the name property value. The name property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -96,17 +94,15 @@ public class ItemRetentionLabel extends Entity implements Parsable {
      * Gets the retentionSettings property value. The retentionSettings property
      * @return a retentionLabelSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RetentionLabelSettings getRetentionSettings() {
         return this.retentionSettings;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("isLabelAppliedExplicitly", this.getIsLabelAppliedExplicitly());
@@ -118,46 +114,36 @@ public class ItemRetentionLabel extends Entity implements Parsable {
     /**
      * Sets the isLabelAppliedExplicitly property value. The isLabelAppliedExplicitly property
      * @param value Value to set for the isLabelAppliedExplicitly property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsLabelAppliedExplicitly(@javax.annotation.Nullable final Boolean value) {
+    public void setIsLabelAppliedExplicitly(@jakarta.annotation.Nullable final Boolean value) {
         this.isLabelAppliedExplicitly = value;
     }
     /**
      * Sets the labelAppliedBy property value. The labelAppliedBy property
      * @param value Value to set for the labelAppliedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabelAppliedBy(@javax.annotation.Nullable final IdentitySet value) {
+    public void setLabelAppliedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.labelAppliedBy = value;
     }
     /**
      * Sets the labelAppliedDateTime property value. The labelAppliedDateTime property
      * @param value Value to set for the labelAppliedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabelAppliedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLabelAppliedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.labelAppliedDateTime = value;
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the retentionSettings property value. The retentionSettings property
      * @param value Value to set for the retentionSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRetentionSettings(@javax.annotation.Nullable final RetentionLabelSettings value) {
+    public void setRetentionSettings(@jakarta.annotation.Nullable final RetentionLabelSettings value) {
         this.retentionSettings = value;
     }
 }

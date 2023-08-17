@@ -18,9 +18,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
     private SourceType includedSources;
     /**
      * Instantiates a new unifiedGroupSource and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UnifiedGroupSource() {
         super();
         this.setOdataType("#microsoft.graph.ediscovery.unifiedGroupSource");
@@ -30,8 +28,8 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a unifiedGroupSource
      */
-    @javax.annotation.Nonnull
-    public static UnifiedGroupSource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UnifiedGroupSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UnifiedGroupSource();
     }
@@ -39,7 +37,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("group", (n) -> { this.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
@@ -50,7 +48,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
      * Gets the group property value. The group property
      * @return a group
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Group getGroup() {
         return this.group;
     }
@@ -58,17 +56,15 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
      * Gets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
      * @return a sourceType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SourceType getIncludedSources() {
         return this.includedSources;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("group", this.getGroup());
@@ -77,19 +73,15 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
     /**
      * Sets the group property value. The group property
      * @param value Value to set for the group property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroup(@javax.annotation.Nullable final Group value) {
+    public void setGroup(@jakarta.annotation.Nullable final Group value) {
         this.group = value;
     }
     /**
      * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
      * @param value Value to set for the includedSources property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncludedSources(@javax.annotation.Nullable final SourceType value) {
+    public void setIncludedSources(@jakarta.annotation.Nullable final SourceType value) {
         this.includedSources = value;
     }
 }

@@ -50,9 +50,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
     private Long yammer;
     /**
      * Instantiates a new office365ActiveUserCounts and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Office365ActiveUserCounts() {
         super();
     }
@@ -61,8 +59,8 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a office365ActiveUserCounts
      */
-    @javax.annotation.Nonnull
-    public static Office365ActiveUserCounts createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Office365ActiveUserCounts createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Office365ActiveUserCounts();
     }
@@ -70,7 +68,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * Gets the exchange property value. The number of active users in Exchange. Any user who can read and send email is considered an active user.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getExchange() {
         return this.exchange;
     }
@@ -78,7 +76,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("exchange", (n) -> { this.setExchange(n.getLongValue()); });
@@ -97,7 +95,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * Gets the office365 property value. The number of active users in Microsoft 365. This number includes all the active users in Exchange, OneDrive, SharePoint, Skype For Business, Yammer, and Microsoft Teams. You can find the definition of active user for each product in the respective property description.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getOffice365() {
         return this.office365;
     }
@@ -105,7 +103,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * Gets the oneDrive property value. The number of active users in OneDrive. Any user who viewed or edited files, shared files internally or externally, or synced files is considered an active user.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getOneDrive() {
         return this.oneDrive;
     }
@@ -113,7 +111,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * Gets the reportDate property value. The date on which a number of users were active.
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getReportDate() {
         return this.reportDate;
     }
@@ -121,7 +119,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * Gets the reportPeriod property value. The number of days the report covers.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getReportPeriod() {
         return this.reportPeriod;
     }
@@ -129,7 +127,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * Gets the reportRefreshDate property value. The latest date of the content.
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getReportRefreshDate() {
         return this.reportRefreshDate;
     }
@@ -137,7 +135,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * Gets the sharePoint property value. The number of active users in SharePoint. Any user who viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages is considered an active user.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getSharePoint() {
         return this.sharePoint;
     }
@@ -145,7 +143,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * Gets the skypeForBusiness property value. The number of active users in Skype For Business. Any user who organized or participated in conferences, or joined peer-to-peer sessions is considered an active user.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getSkypeForBusiness() {
         return this.skypeForBusiness;
     }
@@ -153,7 +151,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * Gets the teams property value. The number of active users in Microsoft Teams. Any user who posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls is considered an active user.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getTeams() {
         return this.teams;
     }
@@ -161,17 +159,15 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * Gets the yammer property value. The number of active users in Yammer. Any user who can post, read, or like messages is considered an active user.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getYammer() {
         return this.yammer;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeLongValue("exchange", this.getExchange());
@@ -188,91 +184,71 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
     /**
      * Sets the exchange property value. The number of active users in Exchange. Any user who can read and send email is considered an active user.
      * @param value Value to set for the exchange property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExchange(@javax.annotation.Nullable final Long value) {
+    public void setExchange(@jakarta.annotation.Nullable final Long value) {
         this.exchange = value;
     }
     /**
      * Sets the office365 property value. The number of active users in Microsoft 365. This number includes all the active users in Exchange, OneDrive, SharePoint, Skype For Business, Yammer, and Microsoft Teams. You can find the definition of active user for each product in the respective property description.
      * @param value Value to set for the office365 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOffice365(@javax.annotation.Nullable final Long value) {
+    public void setOffice365(@jakarta.annotation.Nullable final Long value) {
         this.office365 = value;
     }
     /**
      * Sets the oneDrive property value. The number of active users in OneDrive. Any user who viewed or edited files, shared files internally or externally, or synced files is considered an active user.
      * @param value Value to set for the oneDrive property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOneDrive(@javax.annotation.Nullable final Long value) {
+    public void setOneDrive(@jakarta.annotation.Nullable final Long value) {
         this.oneDrive = value;
     }
     /**
      * Sets the reportDate property value. The date on which a number of users were active.
      * @param value Value to set for the reportDate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReportDate(@javax.annotation.Nullable final LocalDate value) {
+    public void setReportDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.reportDate = value;
     }
     /**
      * Sets the reportPeriod property value. The number of days the report covers.
      * @param value Value to set for the reportPeriod property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReportPeriod(@javax.annotation.Nullable final String value) {
+    public void setReportPeriod(@jakarta.annotation.Nullable final String value) {
         this.reportPeriod = value;
     }
     /**
      * Sets the reportRefreshDate property value. The latest date of the content.
      * @param value Value to set for the reportRefreshDate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReportRefreshDate(@javax.annotation.Nullable final LocalDate value) {
+    public void setReportRefreshDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.reportRefreshDate = value;
     }
     /**
      * Sets the sharePoint property value. The number of active users in SharePoint. Any user who viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages is considered an active user.
      * @param value Value to set for the sharePoint property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharePoint(@javax.annotation.Nullable final Long value) {
+    public void setSharePoint(@jakarta.annotation.Nullable final Long value) {
         this.sharePoint = value;
     }
     /**
      * Sets the skypeForBusiness property value. The number of active users in Skype For Business. Any user who organized or participated in conferences, or joined peer-to-peer sessions is considered an active user.
      * @param value Value to set for the skypeForBusiness property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSkypeForBusiness(@javax.annotation.Nullable final Long value) {
+    public void setSkypeForBusiness(@jakarta.annotation.Nullable final Long value) {
         this.skypeForBusiness = value;
     }
     /**
      * Sets the teams property value. The number of active users in Microsoft Teams. Any user who posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls is considered an active user.
      * @param value Value to set for the teams property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTeams(@javax.annotation.Nullable final Long value) {
+    public void setTeams(@jakarta.annotation.Nullable final Long value) {
         this.teams = value;
     }
     /**
      * Sets the yammer property value. The number of active users in Yammer. Any user who can post, read, or like messages is considered an active user.
      * @param value Value to set for the yammer property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setYammer(@javax.annotation.Nullable final Long value) {
+    public void setYammer(@jakarta.annotation.Nullable final Long value) {
         this.yammer = value;
     }
 }

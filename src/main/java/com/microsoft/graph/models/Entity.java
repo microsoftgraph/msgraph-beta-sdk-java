@@ -7,13 +7,12 @@ import com.microsoft.graph.models.devicemanagement.AlertRecord;
 import com.microsoft.graph.models.devicemanagement.AlertRule;
 import com.microsoft.graph.models.devicemanagement.Monitoring;
 import com.microsoft.graph.models.ediscovery.AddToReviewSetOperation;
-import com.microsoft.graph.models.ediscovery.CaseEscaped;
 import com.microsoft.graph.models.ediscovery.CaseExportOperation;
 import com.microsoft.graph.models.ediscovery.CaseHoldOperation;
 import com.microsoft.graph.models.ediscovery.CaseIndexOperation;
+import com.microsoft.graph.models.ediscovery.CaseOperation;
 import com.microsoft.graph.models.ediscovery.CaseSettings;
 import com.microsoft.graph.models.ediscovery.Custodian;
-import com.microsoft.graph.models.ediscovery.DataSource;
 import com.microsoft.graph.models.ediscovery.Ediscoveryroot;
 import com.microsoft.graph.models.ediscovery.EstimateStatisticsOperation;
 import com.microsoft.graph.models.ediscovery.LegalHold;
@@ -24,7 +23,6 @@ import com.microsoft.graph.models.ediscovery.ReviewSetQuery;
 import com.microsoft.graph.models.ediscovery.SiteSource;
 import com.microsoft.graph.models.ediscovery.SourceCollection;
 import com.microsoft.graph.models.ediscovery.TagOperation;
-import com.microsoft.graph.models.ediscovery.UnifiedGroupSource;
 import com.microsoft.graph.models.ediscovery.UserSource;
 import com.microsoft.graph.models.externalconnectors.ConnectionOperation;
 import com.microsoft.graph.models.externalconnectors.ConnectionQuota;
@@ -104,6 +102,7 @@ import com.microsoft.graph.models.networkaccess.BranchSite;
 import com.microsoft.graph.models.networkaccess.ConditionalAccessPolicy;
 import com.microsoft.graph.models.networkaccess.ConditionalAccessSettings;
 import com.microsoft.graph.models.networkaccess.Connectivity;
+import com.microsoft.graph.models.networkaccess.ConnectivityConfigurationLink;
 import com.microsoft.graph.models.networkaccess.CrossTenantAccessSettings;
 import com.microsoft.graph.models.networkaccess.DeviceLink;
 import com.microsoft.graph.models.networkaccess.EnrichedAuditLogs;
@@ -132,11 +131,12 @@ import com.microsoft.graph.models.security.Article;
 import com.microsoft.graph.models.security.ArticleIndicator;
 import com.microsoft.graph.models.security.Artifact;
 import com.microsoft.graph.models.security.AuthorityTemplate;
-import com.microsoft.graph.models.security.CaseOperation;
+import com.microsoft.graph.models.security.CaseEscaped;
 import com.microsoft.graph.models.security.CasesRoot;
 import com.microsoft.graph.models.security.CategoryTemplate;
 import com.microsoft.graph.models.security.CitationTemplate;
 import com.microsoft.graph.models.security.DataSet;
+import com.microsoft.graph.models.security.DataSource;
 import com.microsoft.graph.models.security.DataSourceContainer;
 import com.microsoft.graph.models.security.DepartmentTemplate;
 import com.microsoft.graph.models.security.DetectionRule;
@@ -204,9 +204,12 @@ import com.microsoft.graph.models.security.ThreatSubmissionRoot;
 import com.microsoft.graph.models.security.TriggersRoot;
 import com.microsoft.graph.models.security.TriggerTypesRoot;
 import com.microsoft.graph.models.security.UnclassifiedArtifact;
+import com.microsoft.graph.models.security.UnifiedGroupSource;
 import com.microsoft.graph.models.security.UrlThreatSubmission;
 import com.microsoft.graph.models.security.Vulnerability;
 import com.microsoft.graph.models.security.VulnerabilityComponent;
+import com.microsoft.graph.models.security.WhoisBaseRecord;
+import com.microsoft.graph.models.security.WhoisHistoryRecord;
 import com.microsoft.graph.models.security.WhoisRecord;
 import com.microsoft.graph.models.termstore.Group;
 import com.microsoft.graph.models.termstore.Relation;
@@ -251,9 +254,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new entity and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Entity() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -262,8 +263,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a entity
      */
-    @javax.annotation.Nonnull
-    public static Entity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Entity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -292,8 +293,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
      * @param discriminatorValue Discriminator value from the payload
      * @return a entity
      */
-    @javax.annotation.Nonnull
-    private static Entity createFromDiscriminatorValue_0(@javax.annotation.Nonnull final String discriminatorValue) {
+    @jakarta.annotation.Nonnull
+    private static Entity createFromDiscriminatorValue_0(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
             case "#microsoft.graph.aadUserConversationMember": return new AadUserConversationMember();
             case "#microsoft.graph.accessPackage": return new AccessPackage();
@@ -548,6 +549,11 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.cloudPcBulkAction": return new CloudPcBulkAction();
             case "#microsoft.graph.cloudPcBulkPowerOff": return new CloudPcBulkPowerOff();
             case "#microsoft.graph.cloudPcBulkPowerOn": return new CloudPcBulkPowerOn();
+            case "#microsoft.graph.cloudPcBulkReprovision": return new CloudPcBulkReprovision();
+            case "#microsoft.graph.cloudPcBulkResize": return new CloudPcBulkResize();
+            case "#microsoft.graph.cloudPcBulkRestart": return new CloudPcBulkRestart();
+            case "#microsoft.graph.cloudPcBulkRestore": return new CloudPcBulkRestore();
+            case "#microsoft.graph.cloudPcBulkTroubleshoot": return new CloudPcBulkTroubleshoot();
             case "#microsoft.graph.cloudPCConnectivityIssue": return new CloudPCConnectivityIssue();
             case "#microsoft.graph.cloudPcCrossCloudGovernmentOrganizationMapping": return new CloudPcCrossCloudGovernmentOrganizationMapping();
             case "#microsoft.graph.cloudPcDeviceImage": return new CloudPcDeviceImage();
@@ -790,11 +796,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.ediscovery.dataSource": return new DataSource();
             case "#microsoft.graph.ediscovery.dataSourceContainer": return new DataSourceContainer();
             case "#microsoft.graph.ediscovery.ediscoveryroot": return new Ediscoveryroot();
-            case "#microsoft.graph.ediscovery.estimateStatisticsOperation": return new EstimateStatisticsOperation();
-            case "#microsoft.graph.ediscovery.legalHold": return new LegalHold();
-            case "#microsoft.graph.ediscovery.noncustodialDataSource": return new NoncustodialDataSource();
-            case "#microsoft.graph.ediscovery.purgeDataOperation": return new PurgeDataOperation();
-            case "#microsoft.graph.ediscovery.reviewSet": return new ReviewSet();
         }
         return null;
     }
@@ -803,9 +804,14 @@ public class Entity implements AdditionalDataHolder, Parsable {
      * @param discriminatorValue Discriminator value from the payload
      * @return a entity
      */
-    @javax.annotation.Nonnull
-    private static Entity createFromDiscriminatorValue_1(@javax.annotation.Nonnull final String discriminatorValue) {
+    @jakarta.annotation.Nonnull
+    private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.ediscovery.estimateStatisticsOperation": return new EstimateStatisticsOperation();
+            case "#microsoft.graph.ediscovery.legalHold": return new LegalHold();
+            case "#microsoft.graph.ediscovery.noncustodialDataSource": return new NoncustodialDataSource();
+            case "#microsoft.graph.ediscovery.purgeDataOperation": return new PurgeDataOperation();
+            case "#microsoft.graph.ediscovery.reviewSet": return new ReviewSet();
             case "#microsoft.graph.ediscovery.reviewSetQuery": return new ReviewSetQuery();
             case "#microsoft.graph.ediscovery.siteSource": return new SiteSource();
             case "#microsoft.graph.ediscovery.sourceCollection": return new SourceCollection();
@@ -1235,6 +1241,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.networkaccess.conditionalAccessPolicy": return new ConditionalAccessPolicy();
             case "#microsoft.graph.networkaccess.conditionalAccessSettings": return new ConditionalAccessSettings();
             case "#microsoft.graph.networkaccess.connectivity": return new Connectivity();
+            case "#microsoft.graph.networkaccess.connectivityConfigurationLink": return new ConnectivityConfigurationLink();
             case "#microsoft.graph.networkaccess.crossTenantAccessSettings": return new CrossTenantAccessSettings();
             case "#microsoft.graph.networkaccess.deviceLink": return new DeviceLink();
             case "#microsoft.graph.networkaccess.enrichedAuditLogs": return new EnrichedAuditLogs();
@@ -1300,12 +1307,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.operation": return new Operation();
             case "#microsoft.graph.organization": return new Organization();
             case "#microsoft.graph.organizationalBranding": return new OrganizationalBranding();
-            case "#microsoft.graph.organizationalBrandingLocalization": return new OrganizationalBrandingLocalization();
-            case "#microsoft.graph.organizationalBrandingProperties": return new OrganizationalBrandingProperties();
-            case "#microsoft.graph.organizationSettings": return new OrganizationSettings();
-            case "#microsoft.graph.orgContact": return new OrgContact();
-            case "#microsoft.graph.outlookCategory": return new OutlookCategory();
-            case "#microsoft.graph.outlookItem": return new OutlookItem();
         }
         return null;
     }
@@ -1314,9 +1315,15 @@ public class Entity implements AdditionalDataHolder, Parsable {
      * @param discriminatorValue Discriminator value from the payload
      * @return a entity
      */
-    @javax.annotation.Nonnull
-    private static Entity createFromDiscriminatorValue_2(@javax.annotation.Nonnull final String discriminatorValue) {
+    @jakarta.annotation.Nonnull
+    private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.organizationalBrandingLocalization": return new OrganizationalBrandingLocalization();
+            case "#microsoft.graph.organizationalBrandingProperties": return new OrganizationalBrandingProperties();
+            case "#microsoft.graph.organizationSettings": return new OrganizationSettings();
+            case "#microsoft.graph.orgContact": return new OrgContact();
+            case "#microsoft.graph.outlookCategory": return new OutlookCategory();
+            case "#microsoft.graph.outlookItem": return new OutlookItem();
             case "#microsoft.graph.outlookTask": return new OutlookTask();
             case "#microsoft.graph.outlookTaskFolder": return new OutlookTaskFolder();
             case "#microsoft.graph.outlookTaskGroup": return new OutlookTaskGroup();
@@ -1560,6 +1567,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.security.userSource": return new UserSource();
             case "#microsoft.graph.security.vulnerability": return new Vulnerability();
             case "#microsoft.graph.security.vulnerabilityComponent": return new VulnerabilityComponent();
+            case "#microsoft.graph.security.whoisBaseRecord": return new WhoisBaseRecord();
+            case "#microsoft.graph.security.whoisHistoryRecord": return new WhoisHistoryRecord();
             case "#microsoft.graph.security.whoisRecord": return new WhoisRecord();
             case "#microsoft.graph.securityAction": return new SecurityAction();
             case "#microsoft.graph.securityBaselineCategoryStateSummary": return new SecurityBaselineCategoryStateSummary();
@@ -1800,23 +1809,15 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.userSignInInsight": return new UserSignInInsight();
             case "#microsoft.graph.userTeamwork": return new UserTeamwork();
             case "#microsoft.graph.verticalSection": return new VerticalSection();
-            case "#microsoft.graph.virtualAppointment": return new VirtualAppointment();
             case "#microsoft.graph.virtualEndpoint": return new VirtualEndpoint();
             case "#microsoft.graph.virtualEvent": return new VirtualEvent();
             case "#microsoft.graph.virtualEventPresenter": return new VirtualEventPresenter();
-            case "#microsoft.graph.virtualEventRegistrant": return new VirtualEventRegistrant();
             case "#microsoft.graph.virtualEventRegistration": return new VirtualEventRegistration();
+            case "#microsoft.graph.virtualEventRegistrationConfiguration": return new VirtualEventRegistrationConfiguration();
             case "#microsoft.graph.virtualEventRegistrationQuestion": return new VirtualEventRegistrationQuestion();
             case "#microsoft.graph.virtualEventSession": return new VirtualEventSession();
             case "#microsoft.graph.virtualEventsRoot": return new VirtualEventsRoot();
             case "#microsoft.graph.virtualEventWebinar": return new VirtualEventWebinar();
-            case "#microsoft.graph.voiceAuthenticationMethodConfiguration": return new VoiceAuthenticationMethodConfiguration();
-            case "#microsoft.graph.voiceAuthenticationMethodTarget": return new VoiceAuthenticationMethodTarget();
-            case "#microsoft.graph.vpnConfiguration": return new VpnConfiguration();
-            case "#microsoft.graph.vppToken": return new VppToken();
-            case "#microsoft.graph.vulnerableManagedDevice": return new VulnerableManagedDevice();
-            case "#microsoft.graph.webAccount": return new WebAccount();
-            case "#microsoft.graph.webApp": return new WebApp();
         }
         return null;
     }
@@ -1825,9 +1826,17 @@ public class Entity implements AdditionalDataHolder, Parsable {
      * @param discriminatorValue Discriminator value from the payload
      * @return a entity
      */
-    @javax.annotation.Nonnull
-    private static Entity createFromDiscriminatorValue_3(@javax.annotation.Nonnull final String discriminatorValue) {
+    @jakarta.annotation.Nonnull
+    private static Entity createFromDiscriminatorValue_3(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.virtualEventWebinarRegistrationConfiguration": return new VirtualEventWebinarRegistrationConfiguration();
+            case "#microsoft.graph.voiceAuthenticationMethodConfiguration": return new VoiceAuthenticationMethodConfiguration();
+            case "#microsoft.graph.voiceAuthenticationMethodTarget": return new VoiceAuthenticationMethodTarget();
+            case "#microsoft.graph.vpnConfiguration": return new VpnConfiguration();
+            case "#microsoft.graph.vppToken": return new VppToken();
+            case "#microsoft.graph.vulnerableManagedDevice": return new VulnerableManagedDevice();
+            case "#microsoft.graph.webAccount": return new WebAccount();
+            case "#microsoft.graph.webApp": return new WebApp();
             case "#microsoft.graph.webApplicationSegment": return new WebApplicationSegment();
             case "#microsoft.graph.webPart": return new WebPart();
             case "#microsoft.graph.win32LobApp": return new Win32LobApp();
@@ -2010,7 +2019,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -2018,7 +2027,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
@@ -2029,7 +2038,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      * Gets the id property value. The unique identifier for an entity. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -2037,17 +2046,15 @@ public class Entity implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -2056,28 +2063,22 @@ public class Entity implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the id property value. The unique identifier for an entity. Read-only.
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

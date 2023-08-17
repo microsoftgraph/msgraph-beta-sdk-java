@@ -13,9 +13,7 @@ public class AdminReportSettings extends Entity implements Parsable {
     private Boolean displayConcealedNames;
     /**
      * Instantiates a new adminReportSettings and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AdminReportSettings() {
         super();
     }
@@ -24,8 +22,8 @@ public class AdminReportSettings extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a adminReportSettings
      */
-    @javax.annotation.Nonnull
-    public static AdminReportSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AdminReportSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AdminReportSettings();
     }
@@ -33,7 +31,7 @@ public class AdminReportSettings extends Entity implements Parsable {
      * Gets the displayConcealedNames property value. If set to true, all reports will conceal user information such as usernames, groups, and sites. If false, all reports will show identifiable information. This property represents a setting in the Microsoft 365 admin center. Required.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDisplayConcealedNames() {
         return this.displayConcealedNames;
     }
@@ -41,7 +39,7 @@ public class AdminReportSettings extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayConcealedNames", (n) -> { this.setDisplayConcealedNames(n.getBooleanValue()); });
@@ -50,10 +48,8 @@ public class AdminReportSettings extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("displayConcealedNames", this.getDisplayConcealedNames());
@@ -61,10 +57,8 @@ public class AdminReportSettings extends Entity implements Parsable {
     /**
      * Sets the displayConcealedNames property value. If set to true, all reports will conceal user information such as usernames, groups, and sites. If false, all reports will show identifiable information. This property represents a setting in the Microsoft 365 admin center. Required.
      * @param value Value to set for the displayConcealedNames property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayConcealedNames(@javax.annotation.Nullable final Boolean value) {
+    public void setDisplayConcealedNames(@jakarta.annotation.Nullable final Boolean value) {
         this.displayConcealedNames = value;
     }
 }

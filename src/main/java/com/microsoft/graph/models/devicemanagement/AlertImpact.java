@@ -31,9 +31,7 @@ public class AlertImpact implements AdditionalDataHolder, Parsable {
     private Integer value;
     /**
      * Instantiates a new alertImpact and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AlertImpact() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +40,8 @@ public class AlertImpact implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a alertImpact
      */
-    @javax.annotation.Nonnull
-    public static AlertImpact createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AlertImpact createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AlertImpact();
     }
@@ -51,7 +49,7 @@ public class AlertImpact implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -59,7 +57,7 @@ public class AlertImpact implements AdditionalDataHolder, Parsable {
      * Gets the aggregationType property value. The aggregation type of the impact. The possible values are: count, percentage, affectedCloudPcCount, affectedCloudPcPercentage, unknownFutureValue.
      * @return a aggregationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AggregationType getAggregationType() {
         return this.aggregationType;
     }
@@ -67,7 +65,7 @@ public class AlertImpact implements AdditionalDataHolder, Parsable {
      * Gets the alertImpactDetails property value. The detail information of the impact. For example, if the Frontline Cloud PCs near concurrency limit alert is triggered, the details contain the impacted Frontline license SKU name, such as Windows 365 Frontline 2 vCPU/8GB/128GB, and the corresponding impacted value.
      * @return a keyValuePair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getAlertImpactDetails() {
         return this.alertImpactDetails;
     }
@@ -75,7 +73,7 @@ public class AlertImpact implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("aggregationType", (n) -> { this.setAggregationType(n.getEnumValue(AggregationType.class)); });
@@ -88,7 +86,7 @@ public class AlertImpact implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -96,17 +94,15 @@ public class AlertImpact implements AdditionalDataHolder, Parsable {
      * Gets the value property value. The number value of the impact. For the aggregation types of count and affectedCloudPcCount, the value indicates the number of affected instances. For example, 6 affectedCloudPcCount means that 6 Cloud PCs are affected. For the aggregation types of percentage and affectedCloudPcPercentage, the value indicates the percent of affected instances. For example, 12 affectedCloudPcPercentage means that 12% of Cloud PCs are affected.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getValue() {
         return this.value;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("aggregationType", this.getAggregationType());
         writer.writeCollectionOfObjectValues("alertImpactDetails", this.getAlertImpactDetails());
@@ -117,46 +113,36 @@ public class AlertImpact implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the aggregationType property value. The aggregation type of the impact. The possible values are: count, percentage, affectedCloudPcCount, affectedCloudPcPercentage, unknownFutureValue.
      * @param value Value to set for the aggregationType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAggregationType(@javax.annotation.Nullable final AggregationType value) {
+    public void setAggregationType(@jakarta.annotation.Nullable final AggregationType value) {
         this.aggregationType = value;
     }
     /**
      * Sets the alertImpactDetails property value. The detail information of the impact. For example, if the Frontline Cloud PCs near concurrency limit alert is triggered, the details contain the impacted Frontline license SKU name, such as Windows 365 Frontline 2 vCPU/8GB/128GB, and the corresponding impacted value.
      * @param value Value to set for the alertImpactDetails property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlertImpactDetails(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
+    public void setAlertImpactDetails(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this.alertImpactDetails = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the value property value. The number value of the impact. For the aggregation types of count and affectedCloudPcCount, the value indicates the number of affected instances. For example, 6 affectedCloudPcCount means that 6 Cloud PCs are affected. For the aggregation types of percentage and affectedCloudPcPercentage, the value indicates the percent of affected instances. For example, 12 affectedCloudPcPercentage means that 12% of Cloud PCs are affected.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final Integer value) {
+    public void setValue(@jakarta.annotation.Nullable final Integer value) {
         this.value = value;
     }
 }

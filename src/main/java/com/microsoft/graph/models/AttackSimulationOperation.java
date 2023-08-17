@@ -21,9 +21,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
     private AttackSimulationOperationType type;
     /**
      * Instantiates a new attackSimulationOperation and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AttackSimulationOperation() {
         super();
     }
@@ -32,8 +30,8 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a attackSimulationOperation
      */
-    @javax.annotation.Nonnull
-    public static AttackSimulationOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AttackSimulationOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AttackSimulationOperation();
     }
@@ -41,7 +39,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("percentageCompleted", (n) -> { this.setPercentageCompleted(n.getIntegerValue()); });
@@ -53,7 +51,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
      * Gets the percentageCompleted property value. Percentage of completion of the respective operation.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPercentageCompleted() {
         return this.percentageCompleted;
     }
@@ -61,7 +59,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
      * Gets the tenantId property value. Tenant identifier.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -69,17 +67,15 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
      * Gets the type property value. The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
      * @return a attackSimulationOperationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AttackSimulationOperationType getType() {
         return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("percentageCompleted", this.getPercentageCompleted());
@@ -89,28 +85,22 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
     /**
      * Sets the percentageCompleted property value. Percentage of completion of the respective operation.
      * @param value Value to set for the percentageCompleted property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPercentageCompleted(@javax.annotation.Nullable final Integer value) {
+    public void setPercentageCompleted(@jakarta.annotation.Nullable final Integer value) {
         this.percentageCompleted = value;
     }
     /**
      * Sets the tenantId property value. Tenant identifier.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
      * Sets the type property value. The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final AttackSimulationOperationType value) {
+    public void setType(@jakarta.annotation.Nullable final AttackSimulationOperationType value) {
         this.type = value;
     }
 }

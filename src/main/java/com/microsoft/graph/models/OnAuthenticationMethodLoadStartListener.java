@@ -13,9 +13,7 @@ public class OnAuthenticationMethodLoadStartListener extends AuthenticationEvent
     private OnAuthenticationMethodLoadStartHandler handler;
     /**
      * Instantiates a new onAuthenticationMethodLoadStartListener and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public OnAuthenticationMethodLoadStartListener() {
         super();
         this.setOdataType("#microsoft.graph.onAuthenticationMethodLoadStartListener");
@@ -25,8 +23,8 @@ public class OnAuthenticationMethodLoadStartListener extends AuthenticationEvent
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a onAuthenticationMethodLoadStartListener
      */
-    @javax.annotation.Nonnull
-    public static OnAuthenticationMethodLoadStartListener createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OnAuthenticationMethodLoadStartListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OnAuthenticationMethodLoadStartListener();
     }
@@ -34,7 +32,7 @@ public class OnAuthenticationMethodLoadStartListener extends AuthenticationEvent
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("handler", (n) -> { this.setHandler(n.getObjectValue(OnAuthenticationMethodLoadStartHandler::createFromDiscriminatorValue)); });
@@ -44,17 +42,15 @@ public class OnAuthenticationMethodLoadStartListener extends AuthenticationEvent
      * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
      * @return a onAuthenticationMethodLoadStartHandler
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnAuthenticationMethodLoadStartHandler getHandler() {
         return this.handler;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("handler", this.getHandler());
@@ -62,10 +58,8 @@ public class OnAuthenticationMethodLoadStartListener extends AuthenticationEvent
     /**
      * Sets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
      * @param value Value to set for the handler property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHandler(@javax.annotation.Nullable final OnAuthenticationMethodLoadStartHandler value) {
+    public void setHandler(@jakarta.annotation.Nullable final OnAuthenticationMethodLoadStartHandler value) {
         this.handler = value;
     }
 }

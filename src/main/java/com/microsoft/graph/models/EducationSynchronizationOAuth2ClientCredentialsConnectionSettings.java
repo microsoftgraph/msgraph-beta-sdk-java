@@ -17,9 +17,7 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
     private String tokenUrl;
     /**
      * Instantiates a new educationSynchronizationOAuth2ClientCredentialsConnectionSettings and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EducationSynchronizationOAuth2ClientCredentialsConnectionSettings() {
         super();
         this.setOdataType("#microsoft.graph.educationSynchronizationOAuth2ClientCredentialsConnectionSettings");
@@ -29,8 +27,8 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationSynchronizationOAuth2ClientCredentialsConnectionSettings
      */
-    @javax.annotation.Nonnull
-    public static EducationSynchronizationOAuth2ClientCredentialsConnectionSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationSynchronizationOAuth2ClientCredentialsConnectionSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationSynchronizationOAuth2ClientCredentialsConnectionSettings();
     }
@@ -38,7 +36,7 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("scope", (n) -> { this.setScope(n.getStringValue()); });
@@ -49,7 +47,7 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
      * Gets the scope property value. The scope of the access request (see RFC6749).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getScope() {
         return this.scope;
     }
@@ -57,17 +55,15 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
      * Gets the tokenUrl property value. The URL to get access tokens for the data provider.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTokenUrl() {
         return this.tokenUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("scope", this.getScope());
@@ -76,19 +72,15 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
     /**
      * Sets the scope property value. The scope of the access request (see RFC6749).
      * @param value Value to set for the scope property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScope(@javax.annotation.Nullable final String value) {
+    public void setScope(@jakarta.annotation.Nullable final String value) {
         this.scope = value;
     }
     /**
      * Sets the tokenUrl property value. The URL to get access tokens for the data provider.
      * @param value Value to set for the tokenUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTokenUrl(@javax.annotation.Nullable final String value) {
+    public void setTokenUrl(@jakarta.annotation.Nullable final String value) {
         this.tokenUrl = value;
     }
 }

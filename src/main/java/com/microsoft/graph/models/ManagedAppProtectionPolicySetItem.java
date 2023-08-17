@@ -16,9 +16,7 @@ public class ManagedAppProtectionPolicySetItem extends PolicySetItem implements 
     private String targetedAppManagementLevels;
     /**
      * Instantiates a new managedAppProtectionPolicySetItem and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ManagedAppProtectionPolicySetItem() {
         super();
         this.setOdataType("#microsoft.graph.managedAppProtectionPolicySetItem");
@@ -28,8 +26,8 @@ public class ManagedAppProtectionPolicySetItem extends PolicySetItem implements 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedAppProtectionPolicySetItem
      */
-    @javax.annotation.Nonnull
-    public static ManagedAppProtectionPolicySetItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedAppProtectionPolicySetItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagedAppProtectionPolicySetItem();
     }
@@ -37,7 +35,7 @@ public class ManagedAppProtectionPolicySetItem extends PolicySetItem implements 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("targetedAppManagementLevels", (n) -> { this.setTargetedAppManagementLevels(n.getStringValue()); });
@@ -47,17 +45,15 @@ public class ManagedAppProtectionPolicySetItem extends PolicySetItem implements 
      * Gets the targetedAppManagementLevels property value. TargetedAppManagementLevels of the ManagedAppPolicySetItem.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTargetedAppManagementLevels() {
         return this.targetedAppManagementLevels;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("targetedAppManagementLevels", this.getTargetedAppManagementLevels());
@@ -65,10 +61,8 @@ public class ManagedAppProtectionPolicySetItem extends PolicySetItem implements 
     /**
      * Sets the targetedAppManagementLevels property value. TargetedAppManagementLevels of the ManagedAppPolicySetItem.
      * @param value Value to set for the targetedAppManagementLevels property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetedAppManagementLevels(@javax.annotation.Nullable final String value) {
+    public void setTargetedAppManagementLevels(@jakarta.annotation.Nullable final String value) {
         this.targetedAppManagementLevels = value;
     }
 }

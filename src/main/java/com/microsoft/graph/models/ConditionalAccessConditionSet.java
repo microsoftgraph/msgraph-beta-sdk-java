@@ -21,7 +21,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     private ConditionalAccessClientApplications clientApplications;
     /**
-     * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
+     * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync which includes EAS supported and unsupported platforms.
      */
     private java.util.List<ConditionalAccessClientApp> clientAppTypes;
     /**
@@ -29,7 +29,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      */
     private ConditionalAccessDevices devices;
     /**
-     * Device states in the policy.
+     * Device states in the policy. To be deprecated and removed. Use the devices property instead.
      */
     private ConditionalAccessDeviceStates deviceStates;
     /**
@@ -62,9 +62,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     private ConditionalAccessUsers users;
     /**
      * Instantiates a new conditionalAccessConditionSet and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ConditionalAccessConditionSet() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -73,8 +71,8 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a conditionalAccessConditionSet
      */
-    @javax.annotation.Nonnull
-    public static ConditionalAccessConditionSet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ConditionalAccessConditionSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ConditionalAccessConditionSet();
     }
@@ -82,7 +80,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -90,7 +88,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * Gets the applications property value. Applications and user actions included in and excluded from the policy. Required.
      * @return a conditionalAccessApplications
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConditionalAccessApplications getApplications() {
         return this.applications;
     }
@@ -98,15 +96,15 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * Gets the clientApplications property value. Client applications (service principals and workload identities) included in and excluded from the policy. Either users or clientApplications is required.
      * @return a conditionalAccessClientApplications
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConditionalAccessClientApplications getClientApplications() {
         return this.clientApplications;
     }
     /**
-     * Gets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
+     * Gets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync which includes EAS supported and unsupported platforms.
      * @return a conditionalAccessClientApp
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessClientApp> getClientAppTypes() {
         return this.clientAppTypes;
     }
@@ -114,15 +112,15 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * Gets the devices property value. Devices in the policy.
      * @return a conditionalAccessDevices
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConditionalAccessDevices getDevices() {
         return this.devices;
     }
     /**
-     * Gets the deviceStates property value. Device states in the policy.
+     * Gets the deviceStates property value. Device states in the policy. To be deprecated and removed. Use the devices property instead.
      * @return a conditionalAccessDeviceStates
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConditionalAccessDeviceStates getDeviceStates() {
         return this.deviceStates;
     }
@@ -130,7 +128,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("applications", (n) -> { this.setApplications(n.getObjectValue(ConditionalAccessApplications::createFromDiscriminatorValue)); });
@@ -151,7 +149,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * Gets the locations property value. Locations included in and excluded from the policy.
      * @return a conditionalAccessLocations
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConditionalAccessLocations getLocations() {
         return this.locations;
     }
@@ -159,7 +157,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -167,7 +165,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * Gets the platforms property value. Platforms included in and excluded from the policy.
      * @return a conditionalAccessPlatforms
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConditionalAccessPlatforms getPlatforms() {
         return this.platforms;
     }
@@ -175,7 +173,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * Gets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
      * @return a riskLevel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<RiskLevel> getServicePrincipalRiskLevels() {
         return this.servicePrincipalRiskLevels;
     }
@@ -183,7 +181,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * Gets the signInRiskLevels property value. Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      * @return a riskLevel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<RiskLevel> getSignInRiskLevels() {
         return this.signInRiskLevels;
     }
@@ -191,7 +189,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * Gets the userRiskLevels property value. User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      * @return a riskLevel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<RiskLevel> getUserRiskLevels() {
         return this.userRiskLevels;
     }
@@ -199,17 +197,15 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
      * Gets the users property value. Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
      * @return a conditionalAccessUsers
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConditionalAccessUsers getUsers() {
         return this.users;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("applications", this.getApplications());
         writer.writeObjectValue("clientApplications", this.getClientApplications());
@@ -228,118 +224,92 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the applications property value. Applications and user actions included in and excluded from the policy. Required.
      * @param value Value to set for the applications property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplications(@javax.annotation.Nullable final ConditionalAccessApplications value) {
+    public void setApplications(@jakarta.annotation.Nullable final ConditionalAccessApplications value) {
         this.applications = value;
     }
     /**
      * Sets the clientApplications property value. Client applications (service principals and workload identities) included in and excluded from the policy. Either users or clientApplications is required.
      * @param value Value to set for the clientApplications property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientApplications(@javax.annotation.Nullable final ConditionalAccessClientApplications value) {
+    public void setClientApplications(@jakarta.annotation.Nullable final ConditionalAccessClientApplications value) {
         this.clientApplications = value;
     }
     /**
-     * Sets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
+     * Sets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync which includes EAS supported and unsupported platforms.
      * @param value Value to set for the clientAppTypes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientAppTypes(@javax.annotation.Nullable final java.util.List<ConditionalAccessClientApp> value) {
+    public void setClientAppTypes(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessClientApp> value) {
         this.clientAppTypes = value;
     }
     /**
      * Sets the devices property value. Devices in the policy.
      * @param value Value to set for the devices property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDevices(@javax.annotation.Nullable final ConditionalAccessDevices value) {
+    public void setDevices(@jakarta.annotation.Nullable final ConditionalAccessDevices value) {
         this.devices = value;
     }
     /**
-     * Sets the deviceStates property value. Device states in the policy.
+     * Sets the deviceStates property value. Device states in the policy. To be deprecated and removed. Use the devices property instead.
      * @param value Value to set for the deviceStates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceStates(@javax.annotation.Nullable final ConditionalAccessDeviceStates value) {
+    public void setDeviceStates(@jakarta.annotation.Nullable final ConditionalAccessDeviceStates value) {
         this.deviceStates = value;
     }
     /**
      * Sets the locations property value. Locations included in and excluded from the policy.
      * @param value Value to set for the locations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocations(@javax.annotation.Nullable final ConditionalAccessLocations value) {
+    public void setLocations(@jakarta.annotation.Nullable final ConditionalAccessLocations value) {
         this.locations = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the platforms property value. Platforms included in and excluded from the policy.
      * @param value Value to set for the platforms property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatforms(@javax.annotation.Nullable final ConditionalAccessPlatforms value) {
+    public void setPlatforms(@jakarta.annotation.Nullable final ConditionalAccessPlatforms value) {
         this.platforms = value;
     }
     /**
      * Sets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
      * @param value Value to set for the servicePrincipalRiskLevels property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServicePrincipalRiskLevels(@javax.annotation.Nullable final java.util.List<RiskLevel> value) {
+    public void setServicePrincipalRiskLevels(@jakarta.annotation.Nullable final java.util.List<RiskLevel> value) {
         this.servicePrincipalRiskLevels = value;
     }
     /**
      * Sets the signInRiskLevels property value. Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      * @param value Value to set for the signInRiskLevels property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSignInRiskLevels(@javax.annotation.Nullable final java.util.List<RiskLevel> value) {
+    public void setSignInRiskLevels(@jakarta.annotation.Nullable final java.util.List<RiskLevel> value) {
         this.signInRiskLevels = value;
     }
     /**
      * Sets the userRiskLevels property value. User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      * @param value Value to set for the userRiskLevels property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserRiskLevels(@javax.annotation.Nullable final java.util.List<RiskLevel> value) {
+    public void setUserRiskLevels(@jakarta.annotation.Nullable final java.util.List<RiskLevel> value) {
         this.userRiskLevels = value;
     }
     /**
      * Sets the users property value. Users, groups, and roles included in and excluded from the policy. Either users or clientApplications is required.
      * @param value Value to set for the users property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUsers(@javax.annotation.Nullable final ConditionalAccessUsers value) {
+    public void setUsers(@jakarta.annotation.Nullable final ConditionalAccessUsers value) {
         this.users = value;
     }
 }

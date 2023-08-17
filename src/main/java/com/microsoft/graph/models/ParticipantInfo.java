@@ -50,9 +50,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     private String region;
     /**
      * Instantiates a new participantInfo and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ParticipantInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -61,8 +59,8 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a participantInfo
      */
-    @javax.annotation.Nonnull
-    public static ParticipantInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ParticipantInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ParticipantInfo();
     }
@@ -70,7 +68,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -78,7 +76,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * Gets the countryCode property value. The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCountryCode() {
         return this.countryCode;
     }
@@ -86,7 +84,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * Gets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only.
      * @return a endpointType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EndpointType getEndpointType() {
         return this.endpointType;
     }
@@ -94,7 +92,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("countryCode", (n) -> { this.setCountryCode(n.getStringValue()); });
@@ -112,7 +110,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * Gets the identity property value. The identity property
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getIdentity() {
         return this.identity;
     }
@@ -120,7 +118,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * Gets the languageId property value. The language culture string. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLanguageId() {
         return this.languageId;
     }
@@ -128,7 +126,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * Gets the nonAnonymizedIdentity property value. The nonAnonymizedIdentity property
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getNonAnonymizedIdentity() {
         return this.nonAnonymizedIdentity;
     }
@@ -136,7 +134,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -144,7 +142,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * Gets the participantId property value. The participant ID of the participant. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getParticipantId() {
         return this.participantId;
     }
@@ -152,7 +150,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * Gets the platformId property value. The client platform ID of the participant. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPlatformId() {
         return this.platformId;
     }
@@ -160,17 +158,15 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      * Gets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRegion() {
         return this.region;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("countryCode", this.getCountryCode());
         writer.writeEnumValue("endpointType", this.getEndpointType());
@@ -186,91 +182,71 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the countryCode property value. The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
      * @param value Value to set for the countryCode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountryCode(@javax.annotation.Nullable final String value) {
+    public void setCountryCode(@jakarta.annotation.Nullable final String value) {
         this.countryCode = value;
     }
     /**
      * Sets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only.
      * @param value Value to set for the endpointType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndpointType(@javax.annotation.Nullable final EndpointType value) {
+    public void setEndpointType(@jakarta.annotation.Nullable final EndpointType value) {
         this.endpointType = value;
     }
     /**
      * Sets the identity property value. The identity property
      * @param value Value to set for the identity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentity(@javax.annotation.Nullable final IdentitySet value) {
+    public void setIdentity(@jakarta.annotation.Nullable final IdentitySet value) {
         this.identity = value;
     }
     /**
      * Sets the languageId property value. The language culture string. Read-only.
      * @param value Value to set for the languageId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLanguageId(@javax.annotation.Nullable final String value) {
+    public void setLanguageId(@jakarta.annotation.Nullable final String value) {
         this.languageId = value;
     }
     /**
      * Sets the nonAnonymizedIdentity property value. The nonAnonymizedIdentity property
      * @param value Value to set for the nonAnonymizedIdentity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNonAnonymizedIdentity(@javax.annotation.Nullable final IdentitySet value) {
+    public void setNonAnonymizedIdentity(@jakarta.annotation.Nullable final IdentitySet value) {
         this.nonAnonymizedIdentity = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the participantId property value. The participant ID of the participant. Read-only.
      * @param value Value to set for the participantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParticipantId(@javax.annotation.Nullable final String value) {
+    public void setParticipantId(@jakarta.annotation.Nullable final String value) {
         this.participantId = value;
     }
     /**
      * Sets the platformId property value. The client platform ID of the participant. Read-only.
      * @param value Value to set for the platformId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatformId(@javax.annotation.Nullable final String value) {
+    public void setPlatformId(@jakarta.annotation.Nullable final String value) {
         this.platformId = value;
     }
     /**
      * Sets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only.
      * @param value Value to set for the region property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegion(@javax.annotation.Nullable final String value) {
+    public void setRegion(@jakarta.annotation.Nullable final String value) {
         this.region = value;
     }
 }

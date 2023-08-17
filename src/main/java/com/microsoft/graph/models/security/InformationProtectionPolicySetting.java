@@ -26,9 +26,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
     private String moreInfoUrl;
     /**
      * Instantiates a new informationProtectionPolicySetting and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public InformationProtectionPolicySetting() {
         super();
     }
@@ -37,8 +35,8 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a informationProtectionPolicySetting
      */
-    @javax.annotation.Nonnull
-    public static InformationProtectionPolicySetting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static InformationProtectionPolicySetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new InformationProtectionPolicySetting();
     }
@@ -46,7 +44,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
      * Gets the defaultLabelId property value. The defaultLabelId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDefaultLabelId() {
         return this.defaultLabelId;
     }
@@ -54,7 +52,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("defaultLabelId", (n) -> { this.setDefaultLabelId(n.getStringValue()); });
@@ -67,7 +65,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
      * Gets the isDowngradeJustificationRequired property value. Exposes whether justification input is required on label downgrade.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDowngradeJustificationRequired() {
         return this.isDowngradeJustificationRequired;
     }
@@ -75,7 +73,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
      * Gets the isMandatory property value. Exposes whether mandatory labeling is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsMandatory() {
         return this.isMandatory;
     }
@@ -83,17 +81,15 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
      * Gets the moreInfoUrl property value. Exposes the more information URL that can be configured by the administrator.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMoreInfoUrl() {
         return this.moreInfoUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("defaultLabelId", this.getDefaultLabelId());
@@ -104,37 +100,29 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
     /**
      * Sets the defaultLabelId property value. The defaultLabelId property
      * @param value Value to set for the defaultLabelId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultLabelId(@javax.annotation.Nullable final String value) {
+    public void setDefaultLabelId(@jakarta.annotation.Nullable final String value) {
         this.defaultLabelId = value;
     }
     /**
      * Sets the isDowngradeJustificationRequired property value. Exposes whether justification input is required on label downgrade.
      * @param value Value to set for the isDowngradeJustificationRequired property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDowngradeJustificationRequired(@javax.annotation.Nullable final Boolean value) {
+    public void setIsDowngradeJustificationRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isDowngradeJustificationRequired = value;
     }
     /**
      * Sets the isMandatory property value. Exposes whether mandatory labeling is enabled.
      * @param value Value to set for the isMandatory property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsMandatory(@javax.annotation.Nullable final Boolean value) {
+    public void setIsMandatory(@jakarta.annotation.Nullable final Boolean value) {
         this.isMandatory = value;
     }
     /**
      * Sets the moreInfoUrl property value. Exposes the more information URL that can be configured by the administrator.
      * @param value Value to set for the moreInfoUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMoreInfoUrl(@javax.annotation.Nullable final String value) {
+    public void setMoreInfoUrl(@jakarta.annotation.Nullable final String value) {
         this.moreInfoUrl = value;
     }
 }

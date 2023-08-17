@@ -20,9 +20,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolderReference extends AndroidDe
     private String folderName;
     /**
      * Instantiates a new androidDeviceOwnerKioskModeManagedFolderReference and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AndroidDeviceOwnerKioskModeManagedFolderReference() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerKioskModeManagedFolderReference");
@@ -32,8 +30,8 @@ public class AndroidDeviceOwnerKioskModeManagedFolderReference extends AndroidDe
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidDeviceOwnerKioskModeManagedFolderReference
      */
-    @javax.annotation.Nonnull
-    public static AndroidDeviceOwnerKioskModeManagedFolderReference createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidDeviceOwnerKioskModeManagedFolderReference createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidDeviceOwnerKioskModeManagedFolderReference();
     }
@@ -41,7 +39,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolderReference extends AndroidDe
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("folderIdentifier", (n) -> { this.setFolderIdentifier(n.getStringValue()); });
@@ -52,7 +50,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolderReference extends AndroidDe
      * Gets the folderIdentifier property value. Unique identifier for the folder
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFolderIdentifier() {
         return this.folderIdentifier;
     }
@@ -60,17 +58,15 @@ public class AndroidDeviceOwnerKioskModeManagedFolderReference extends AndroidDe
      * Gets the folderName property value. Name of the folder
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFolderName() {
         return this.folderName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("folderIdentifier", this.getFolderIdentifier());
@@ -79,19 +75,15 @@ public class AndroidDeviceOwnerKioskModeManagedFolderReference extends AndroidDe
     /**
      * Sets the folderIdentifier property value. Unique identifier for the folder
      * @param value Value to set for the folderIdentifier property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFolderIdentifier(@javax.annotation.Nullable final String value) {
+    public void setFolderIdentifier(@jakarta.annotation.Nullable final String value) {
         this.folderIdentifier = value;
     }
     /**
      * Sets the folderName property value. Name of the folder
      * @param value Value to set for the folderName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFolderName(@javax.annotation.Nullable final String value) {
+    public void setFolderName(@jakarta.annotation.Nullable final String value) {
         this.folderName = value;
     }
 }

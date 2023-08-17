@@ -25,9 +25,7 @@ public class OnenoteOperation extends Operation implements Parsable {
     private String resourceLocation;
     /**
      * Instantiates a new onenoteOperation and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public OnenoteOperation() {
         super();
     }
@@ -36,8 +34,8 @@ public class OnenoteOperation extends Operation implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a onenoteOperation
      */
-    @javax.annotation.Nonnull
-    public static OnenoteOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OnenoteOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OnenoteOperation();
     }
@@ -45,7 +43,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      * Gets the error property value. The error returned by the operation.
      * @return a onenoteOperationError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnenoteOperationError getError() {
         return this.error;
     }
@@ -53,7 +51,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(OnenoteOperationError::createFromDiscriminatorValue)); });
@@ -66,7 +64,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      * Gets the percentComplete property value. The operation percent complete if the operation is still in running status.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPercentComplete() {
         return this.percentComplete;
     }
@@ -74,7 +72,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      * Gets the resourceId property value. The resource id.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceId() {
         return this.resourceId;
     }
@@ -82,17 +80,15 @@ public class OnenoteOperation extends Operation implements Parsable {
      * Gets the resourceLocation property value. The resource URI for the object. For example, the resource URI for a copied page or section.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceLocation() {
         return this.resourceLocation;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("error", this.getError());
@@ -103,37 +99,29 @@ public class OnenoteOperation extends Operation implements Parsable {
     /**
      * Sets the error property value. The error returned by the operation.
      * @param value Value to set for the error property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setError(@javax.annotation.Nullable final OnenoteOperationError value) {
+    public void setError(@jakarta.annotation.Nullable final OnenoteOperationError value) {
         this.error = value;
     }
     /**
      * Sets the percentComplete property value. The operation percent complete if the operation is still in running status.
      * @param value Value to set for the percentComplete property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPercentComplete(@javax.annotation.Nullable final String value) {
+    public void setPercentComplete(@jakarta.annotation.Nullable final String value) {
         this.percentComplete = value;
     }
     /**
      * Sets the resourceId property value. The resource id.
      * @param value Value to set for the resourceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceId(@javax.annotation.Nullable final String value) {
+    public void setResourceId(@jakarta.annotation.Nullable final String value) {
         this.resourceId = value;
     }
     /**
      * Sets the resourceLocation property value. The resource URI for the object. For example, the resource URI for a copied page or section.
      * @param value Value to set for the resourceLocation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceLocation(@javax.annotation.Nullable final String value) {
+    public void setResourceLocation(@jakarta.annotation.Nullable final String value) {
         this.resourceLocation = value;
     }
 }

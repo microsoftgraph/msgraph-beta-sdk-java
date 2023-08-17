@@ -41,9 +41,7 @@ public class Note extends OutlookItem implements Parsable {
     private String subject;
     /**
      * Instantiates a new note and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Note() {
         super();
         this.setOdataType("#microsoft.graph.note");
@@ -53,8 +51,8 @@ public class Note extends OutlookItem implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a note
      */
-    @javax.annotation.Nonnull
-    public static Note createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Note createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Note();
     }
@@ -62,7 +60,7 @@ public class Note extends OutlookItem implements Parsable {
      * Gets the attachments property value. The attachments property
      * @return a attachment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Attachment> getAttachments() {
         return this.attachments;
     }
@@ -70,7 +68,7 @@ public class Note extends OutlookItem implements Parsable {
      * Gets the body property value. The body property
      * @return a itemBody
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemBody getBody() {
         return this.body;
     }
@@ -78,7 +76,7 @@ public class Note extends OutlookItem implements Parsable {
      * Gets the extensions property value. The extensions property
      * @return a extension
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
         return this.extensions;
     }
@@ -86,7 +84,7 @@ public class Note extends OutlookItem implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("attachments", (n) -> { this.setAttachments(n.getCollectionOfObjectValues(Attachment::createFromDiscriminatorValue)); });
@@ -103,7 +101,7 @@ public class Note extends OutlookItem implements Parsable {
      * Gets the hasAttachments property value. The hasAttachments property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
         return this.hasAttachments;
     }
@@ -111,7 +109,7 @@ public class Note extends OutlookItem implements Parsable {
      * Gets the isDeleted property value. The isDeleted property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
         return this.isDeleted;
     }
@@ -119,7 +117,7 @@ public class Note extends OutlookItem implements Parsable {
      * Gets the multiValueExtendedProperties property value. The multiValueExtendedProperties property
      * @return a multiValueLegacyExtendedProperty
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
         return this.multiValueExtendedProperties;
     }
@@ -127,7 +125,7 @@ public class Note extends OutlookItem implements Parsable {
      * Gets the singleValueExtendedProperties property value. The singleValueExtendedProperties property
      * @return a singleValueLegacyExtendedProperty
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
         return this.singleValueExtendedProperties;
     }
@@ -135,17 +133,15 @@ public class Note extends OutlookItem implements Parsable {
      * Gets the subject property value. The subject property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubject() {
         return this.subject;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("attachments", this.getAttachments());
@@ -160,73 +156,57 @@ public class Note extends OutlookItem implements Parsable {
     /**
      * Sets the attachments property value. The attachments property
      * @param value Value to set for the attachments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttachments(@javax.annotation.Nullable final java.util.List<Attachment> value) {
+    public void setAttachments(@jakarta.annotation.Nullable final java.util.List<Attachment> value) {
         this.attachments = value;
     }
     /**
      * Sets the body property value. The body property
      * @param value Value to set for the body property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBody(@javax.annotation.Nullable final ItemBody value) {
+    public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
         this.body = value;
     }
     /**
      * Sets the extensions property value. The extensions property
      * @param value Value to set for the extensions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
+    public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
         this.extensions = value;
     }
     /**
      * Sets the hasAttachments property value. The hasAttachments property
      * @param value Value to set for the hasAttachments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
+    public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
         this.hasAttachments = value;
     }
     /**
      * Sets the isDeleted property value. The isDeleted property
      * @param value Value to set for the isDeleted property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDeleted(@javax.annotation.Nullable final Boolean value) {
+    public void setIsDeleted(@jakarta.annotation.Nullable final Boolean value) {
         this.isDeleted = value;
     }
     /**
      * Sets the multiValueExtendedProperties property value. The multiValueExtendedProperties property
      * @param value Value to set for the multiValueExtendedProperties property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
+    public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this.multiValueExtendedProperties = value;
     }
     /**
      * Sets the singleValueExtendedProperties property value. The singleValueExtendedProperties property
      * @param value Value to set for the singleValueExtendedProperties property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
+    public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this.singleValueExtendedProperties = value;
     }
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final String value) {
+    public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
 }

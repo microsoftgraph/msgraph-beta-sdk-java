@@ -16,9 +16,7 @@ public class ImportedAppleDeviceIdentityResult extends ImportedAppleDeviceIdenti
     private Boolean status;
     /**
      * Instantiates a new importedAppleDeviceIdentityResult and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ImportedAppleDeviceIdentityResult() {
         super();
     }
@@ -27,8 +25,8 @@ public class ImportedAppleDeviceIdentityResult extends ImportedAppleDeviceIdenti
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a importedAppleDeviceIdentityResult
      */
-    @javax.annotation.Nonnull
-    public static ImportedAppleDeviceIdentityResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ImportedAppleDeviceIdentityResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ImportedAppleDeviceIdentityResult();
     }
@@ -36,7 +34,7 @@ public class ImportedAppleDeviceIdentityResult extends ImportedAppleDeviceIdenti
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("status", (n) -> { this.setStatus(n.getBooleanValue()); });
@@ -46,17 +44,15 @@ public class ImportedAppleDeviceIdentityResult extends ImportedAppleDeviceIdenti
      * Gets the status property value. Status of imported device identity
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getStatus() {
         return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("status", this.getStatus());
@@ -64,10 +60,8 @@ public class ImportedAppleDeviceIdentityResult extends ImportedAppleDeviceIdenti
     /**
      * Sets the status property value. Status of imported device identity
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final Boolean value) {
+    public void setStatus(@jakarta.annotation.Nullable final Boolean value) {
         this.status = value;
     }
 }

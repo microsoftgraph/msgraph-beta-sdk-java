@@ -20,9 +20,7 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
     private DeviceManagementConfigurationSettingInstanceTemplate settingInstanceTemplate;
     /**
      * Instantiates a new deviceManagementConfigurationSettingTemplate and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementConfigurationSettingTemplate() {
         super();
     }
@@ -31,8 +29,8 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationSettingTemplate
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationSettingTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationSettingTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationSettingTemplate();
     }
@@ -40,7 +38,7 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("settingDefinitions", (n) -> { this.setSettingDefinitions(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDefinition::createFromDiscriminatorValue)); });
@@ -51,7 +49,7 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
      * Gets the settingDefinitions property value. List of related Setting Definitions
      * @return a deviceManagementConfigurationSettingDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingDefinition> getSettingDefinitions() {
         return this.settingDefinitions;
     }
@@ -59,17 +57,15 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
      * Gets the settingInstanceTemplate property value. Setting Instance Template
      * @return a deviceManagementConfigurationSettingInstanceTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingInstanceTemplate getSettingInstanceTemplate() {
         return this.settingInstanceTemplate;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("settingDefinitions", this.getSettingDefinitions());
@@ -78,19 +74,15 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
     /**
      * Sets the settingDefinitions property value. List of related Setting Definitions
      * @param value Value to set for the settingDefinitions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingDefinitions(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDefinition> value) {
+    public void setSettingDefinitions(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDefinition> value) {
         this.settingDefinitions = value;
     }
     /**
      * Sets the settingInstanceTemplate property value. Setting Instance Template
      * @param value Value to set for the settingInstanceTemplate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingInstanceTemplate(@javax.annotation.Nullable final DeviceManagementConfigurationSettingInstanceTemplate value) {
+    public void setSettingInstanceTemplate(@jakarta.annotation.Nullable final DeviceManagementConfigurationSettingInstanceTemplate value) {
         this.settingInstanceTemplate = value;
     }
 }

@@ -94,9 +94,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
     private String userName;
     /**
      * Instantiates a new deviceHealthScriptPolicyState and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceHealthScriptPolicyState() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -105,8 +103,8 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceHealthScriptPolicyState
      */
-    @javax.annotation.Nonnull
-    public static DeviceHealthScriptPolicyState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceHealthScriptPolicyState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceHealthScriptPolicyState();
     }
@@ -114,7 +112,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -122,7 +120,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the assignmentFilterIds property value. A list of the assignment filter ids used for health script applicability evaluation
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAssignmentFilterIds() {
         return this.assignmentFilterIds;
     }
@@ -130,7 +128,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the detectionState property value. Indicates the type of execution status of the device management script.
      * @return a runState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RunState getDetectionState() {
         return this.detectionState;
     }
@@ -138,7 +136,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the deviceId property value. The Intune device Id
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -146,7 +144,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the deviceName property value. Display name of the device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -154,7 +152,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the expectedStateUpdateDateTime property value. The next timestamp of when the device health script is expected to execute
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpectedStateUpdateDateTime() {
         return this.expectedStateUpdateDateTime;
     }
@@ -162,7 +160,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(19);
         deserializerMap.put("assignmentFilterIds", (n) -> { this.setAssignmentFilterIds(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -190,7 +188,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the id property value. Key of the device health script policy state is a concatenation of the MT sideCar policy Id and Intune device Id
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -198,7 +196,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the lastStateUpdateDateTime property value. The last timestamp of when the device health script executed
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastStateUpdateDateTime() {
         return this.lastStateUpdateDateTime;
     }
@@ -206,7 +204,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the lastSyncDateTime property value. The last time that Intune Managment Extension synced with Intune
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
         return this.lastSyncDateTime;
     }
@@ -214,7 +212,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -222,7 +220,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the osVersion property value. Value of the OS Version in string
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsVersion() {
         return this.osVersion;
     }
@@ -230,7 +228,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the policyId property value. The MT sideCar policy Id
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPolicyId() {
         return this.policyId;
     }
@@ -238,7 +236,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the policyName property value. Display name of the device health script
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPolicyName() {
         return this.policyName;
     }
@@ -246,7 +244,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the postRemediationDetectionScriptError property value. Error from the detection script after remediation
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPostRemediationDetectionScriptError() {
         return this.postRemediationDetectionScriptError;
     }
@@ -254,7 +252,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the postRemediationDetectionScriptOutput property value. Detection script output after remediation
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPostRemediationDetectionScriptOutput() {
         return this.postRemediationDetectionScriptOutput;
     }
@@ -262,7 +260,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the preRemediationDetectionScriptError property value. Error from the detection script before remediation
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPreRemediationDetectionScriptError() {
         return this.preRemediationDetectionScriptError;
     }
@@ -270,7 +268,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the preRemediationDetectionScriptOutput property value. Output of the detection script before remediation
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPreRemediationDetectionScriptOutput() {
         return this.preRemediationDetectionScriptOutput;
     }
@@ -278,7 +276,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the remediationScriptError property value. Error output of the remediation script
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRemediationScriptError() {
         return this.remediationScriptError;
     }
@@ -286,7 +284,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the remediationState property value. Indicates the type of execution status of the device management script.
      * @return a remediationState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RemediationState getRemediationState() {
         return this.remediationState;
     }
@@ -294,17 +292,15 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      * Gets the userName property value. Name of the user whom ran the device health script
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserName() {
         return this.userName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("assignmentFilterIds", this.getAssignmentFilterIds());
         writer.writeEnumValue("detectionState", this.getDetectionState());
@@ -330,181 +326,141 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the assignmentFilterIds property value. A list of the assignment filter ids used for health script applicability evaluation
      * @param value Value to set for the assignmentFilterIds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentFilterIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setAssignmentFilterIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.assignmentFilterIds = value;
     }
     /**
      * Sets the detectionState property value. Indicates the type of execution status of the device management script.
      * @param value Value to set for the detectionState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetectionState(@javax.annotation.Nullable final RunState value) {
+    public void setDetectionState(@jakarta.annotation.Nullable final RunState value) {
         this.detectionState = value;
     }
     /**
      * Sets the deviceId property value. The Intune device Id
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the deviceName property value. Display name of the device
      * @param value Value to set for the deviceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
      * Sets the expectedStateUpdateDateTime property value. The next timestamp of when the device health script is expected to execute
      * @param value Value to set for the expectedStateUpdateDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpectedStateUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setExpectedStateUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expectedStateUpdateDateTime = value;
     }
     /**
      * Sets the id property value. Key of the device health script policy state is a concatenation of the MT sideCar policy Id and Intune device Id
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the lastStateUpdateDateTime property value. The last timestamp of when the device health script executed
      * @param value Value to set for the lastStateUpdateDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastStateUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastStateUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastStateUpdateDateTime = value;
     }
     /**
      * Sets the lastSyncDateTime property value. The last time that Intune Managment Extension synced with Intune
      * @param value Value to set for the lastSyncDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSyncDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the osVersion property value. Value of the OS Version in string
      * @param value Value to set for the osVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsVersion(@javax.annotation.Nullable final String value) {
+    public void setOsVersion(@jakarta.annotation.Nullable final String value) {
         this.osVersion = value;
     }
     /**
      * Sets the policyId property value. The MT sideCar policy Id
      * @param value Value to set for the policyId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyId(@javax.annotation.Nullable final String value) {
+    public void setPolicyId(@jakarta.annotation.Nullable final String value) {
         this.policyId = value;
     }
     /**
      * Sets the policyName property value. Display name of the device health script
      * @param value Value to set for the policyName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyName(@javax.annotation.Nullable final String value) {
+    public void setPolicyName(@jakarta.annotation.Nullable final String value) {
         this.policyName = value;
     }
     /**
      * Sets the postRemediationDetectionScriptError property value. Error from the detection script after remediation
      * @param value Value to set for the postRemediationDetectionScriptError property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPostRemediationDetectionScriptError(@javax.annotation.Nullable final String value) {
+    public void setPostRemediationDetectionScriptError(@jakarta.annotation.Nullable final String value) {
         this.postRemediationDetectionScriptError = value;
     }
     /**
      * Sets the postRemediationDetectionScriptOutput property value. Detection script output after remediation
      * @param value Value to set for the postRemediationDetectionScriptOutput property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPostRemediationDetectionScriptOutput(@javax.annotation.Nullable final String value) {
+    public void setPostRemediationDetectionScriptOutput(@jakarta.annotation.Nullable final String value) {
         this.postRemediationDetectionScriptOutput = value;
     }
     /**
      * Sets the preRemediationDetectionScriptError property value. Error from the detection script before remediation
      * @param value Value to set for the preRemediationDetectionScriptError property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreRemediationDetectionScriptError(@javax.annotation.Nullable final String value) {
+    public void setPreRemediationDetectionScriptError(@jakarta.annotation.Nullable final String value) {
         this.preRemediationDetectionScriptError = value;
     }
     /**
      * Sets the preRemediationDetectionScriptOutput property value. Output of the detection script before remediation
      * @param value Value to set for the preRemediationDetectionScriptOutput property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreRemediationDetectionScriptOutput(@javax.annotation.Nullable final String value) {
+    public void setPreRemediationDetectionScriptOutput(@jakarta.annotation.Nullable final String value) {
         this.preRemediationDetectionScriptOutput = value;
     }
     /**
      * Sets the remediationScriptError property value. Error output of the remediation script
      * @param value Value to set for the remediationScriptError property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemediationScriptError(@javax.annotation.Nullable final String value) {
+    public void setRemediationScriptError(@jakarta.annotation.Nullable final String value) {
         this.remediationScriptError = value;
     }
     /**
      * Sets the remediationState property value. Indicates the type of execution status of the device management script.
      * @param value Value to set for the remediationState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemediationState(@javax.annotation.Nullable final RemediationState value) {
+    public void setRemediationState(@jakarta.annotation.Nullable final RemediationState value) {
         this.remediationState = value;
     }
     /**
      * Sets the userName property value. Name of the user whom ran the device health script
      * @param value Value to set for the userName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserName(@javax.annotation.Nullable final String value) {
+    public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
 }

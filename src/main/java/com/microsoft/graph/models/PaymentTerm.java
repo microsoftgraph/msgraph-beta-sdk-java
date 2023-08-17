@@ -53,9 +53,7 @@ public class PaymentTerm implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new paymentTerm and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PaymentTerm() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,8 +62,8 @@ public class PaymentTerm implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a paymentTerm
      */
-    @javax.annotation.Nonnull
-    public static PaymentTerm createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PaymentTerm createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PaymentTerm();
     }
@@ -73,7 +71,7 @@ public class PaymentTerm implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -81,7 +79,7 @@ public class PaymentTerm implements AdditionalDataHolder, Parsable {
      * Gets the calculateDiscountOnCreditMemos property value. The calculateDiscountOnCreditMemos property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCalculateDiscountOnCreditMemos() {
         return this.calculateDiscountOnCreditMemos;
     }
@@ -89,7 +87,7 @@ public class PaymentTerm implements AdditionalDataHolder, Parsable {
      * Gets the code property value. The code property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCode() {
         return this.code;
     }
@@ -97,7 +95,7 @@ public class PaymentTerm implements AdditionalDataHolder, Parsable {
      * Gets the discountDateCalculation property value. The discountDateCalculation property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDiscountDateCalculation() {
         return this.discountDateCalculation;
     }
@@ -105,7 +103,7 @@ public class PaymentTerm implements AdditionalDataHolder, Parsable {
      * Gets the discountPercent property value. The discountPercent property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getDiscountPercent() {
         return this.discountPercent;
     }
@@ -113,7 +111,7 @@ public class PaymentTerm implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -121,7 +119,7 @@ public class PaymentTerm implements AdditionalDataHolder, Parsable {
      * Gets the dueDateCalculation property value. The dueDateCalculation property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDueDateCalculation() {
         return this.dueDateCalculation;
     }
@@ -129,7 +127,7 @@ public class PaymentTerm implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("calculateDiscountOnCreditMemos", (n) -> { this.setCalculateDiscountOnCreditMemos(n.getBooleanValue()); });
@@ -147,7 +145,7 @@ public class PaymentTerm implements AdditionalDataHolder, Parsable {
      * Gets the id property value. The id property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getId() {
         return this.id;
     }
@@ -155,7 +153,7 @@ public class PaymentTerm implements AdditionalDataHolder, Parsable {
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -163,17 +161,15 @@ public class PaymentTerm implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("calculateDiscountOnCreditMemos", this.getCalculateDiscountOnCreditMemos());
         writer.writeStringValue("code", this.getCode());
@@ -189,91 +185,71 @@ public class PaymentTerm implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the calculateDiscountOnCreditMemos property value. The calculateDiscountOnCreditMemos property
      * @param value Value to set for the calculateDiscountOnCreditMemos property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCalculateDiscountOnCreditMemos(@javax.annotation.Nullable final Boolean value) {
+    public void setCalculateDiscountOnCreditMemos(@jakarta.annotation.Nullable final Boolean value) {
         this.calculateDiscountOnCreditMemos = value;
     }
     /**
      * Sets the code property value. The code property
      * @param value Value to set for the code property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCode(@javax.annotation.Nullable final String value) {
+    public void setCode(@jakarta.annotation.Nullable final String value) {
         this.code = value;
     }
     /**
      * Sets the discountDateCalculation property value. The discountDateCalculation property
      * @param value Value to set for the discountDateCalculation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDiscountDateCalculation(@javax.annotation.Nullable final String value) {
+    public void setDiscountDateCalculation(@jakarta.annotation.Nullable final String value) {
         this.discountDateCalculation = value;
     }
     /**
      * Sets the discountPercent property value. The discountPercent property
      * @param value Value to set for the discountPercent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDiscountPercent(@javax.annotation.Nullable final BigDecimal value) {
+    public void setDiscountPercent(@jakarta.annotation.Nullable final BigDecimal value) {
         this.discountPercent = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the dueDateCalculation property value. The dueDateCalculation property
      * @param value Value to set for the dueDateCalculation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDueDateCalculation(@javax.annotation.Nullable final String value) {
+    public void setDueDateCalculation(@jakarta.annotation.Nullable final String value) {
         this.dueDateCalculation = value;
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final UUID value) {
+    public void setId(@jakarta.annotation.Nullable final UUID value) {
         this.id = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

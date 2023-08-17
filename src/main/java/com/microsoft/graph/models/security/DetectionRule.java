@@ -25,9 +25,7 @@ public class DetectionRule extends ProtectionRule implements Parsable {
     private RuleSchedule schedule;
     /**
      * Instantiates a new detectionRule and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DetectionRule() {
         super();
         this.setOdataType("#microsoft.graph.security.detectionRule");
@@ -37,8 +35,8 @@ public class DetectionRule extends ProtectionRule implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a detectionRule
      */
-    @javax.annotation.Nonnull
-    public static DetectionRule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DetectionRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DetectionRule();
     }
@@ -46,7 +44,7 @@ public class DetectionRule extends ProtectionRule implements Parsable {
      * Gets the detectionAction property value. The detectionAction property
      * @return a detectionAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DetectionAction getDetectionAction() {
         return this.detectionAction;
     }
@@ -54,7 +52,7 @@ public class DetectionRule extends ProtectionRule implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("detectionAction", (n) -> { this.setDetectionAction(n.getObjectValue(DetectionAction::createFromDiscriminatorValue)); });
@@ -67,7 +65,7 @@ public class DetectionRule extends ProtectionRule implements Parsable {
      * Gets the lastRunDetails property value. The lastRunDetails property
      * @return a runDetails
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RunDetails getLastRunDetails() {
         return this.lastRunDetails;
     }
@@ -75,7 +73,7 @@ public class DetectionRule extends ProtectionRule implements Parsable {
      * Gets the queryCondition property value. The queryCondition property
      * @return a queryCondition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public QueryCondition getQueryCondition() {
         return this.queryCondition;
     }
@@ -83,17 +81,15 @@ public class DetectionRule extends ProtectionRule implements Parsable {
      * Gets the schedule property value. The schedule property
      * @return a ruleSchedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RuleSchedule getSchedule() {
         return this.schedule;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("detectionAction", this.getDetectionAction());
@@ -104,37 +100,29 @@ public class DetectionRule extends ProtectionRule implements Parsable {
     /**
      * Sets the detectionAction property value. The detectionAction property
      * @param value Value to set for the detectionAction property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetectionAction(@javax.annotation.Nullable final DetectionAction value) {
+    public void setDetectionAction(@jakarta.annotation.Nullable final DetectionAction value) {
         this.detectionAction = value;
     }
     /**
      * Sets the lastRunDetails property value. The lastRunDetails property
      * @param value Value to set for the lastRunDetails property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastRunDetails(@javax.annotation.Nullable final RunDetails value) {
+    public void setLastRunDetails(@jakarta.annotation.Nullable final RunDetails value) {
         this.lastRunDetails = value;
     }
     /**
      * Sets the queryCondition property value. The queryCondition property
      * @param value Value to set for the queryCondition property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQueryCondition(@javax.annotation.Nullable final QueryCondition value) {
+    public void setQueryCondition(@jakarta.annotation.Nullable final QueryCondition value) {
         this.queryCondition = value;
     }
     /**
      * Sets the schedule property value. The schedule property
      * @param value Value to set for the schedule property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchedule(@javax.annotation.Nullable final RuleSchedule value) {
+    public void setSchedule(@jakarta.annotation.Nullable final RuleSchedule value) {
         this.schedule = value;
     }
 }

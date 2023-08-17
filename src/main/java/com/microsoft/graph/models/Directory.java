@@ -65,9 +65,7 @@ public class Directory extends Entity implements Parsable {
     private java.util.List<CompanySubscription> subscriptions;
     /**
      * Instantiates a new directory and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Directory() {
         super();
     }
@@ -76,8 +74,8 @@ public class Directory extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a directory
      */
-    @javax.annotation.Nonnull
-    public static Directory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Directory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Directory();
     }
@@ -85,7 +83,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the administrativeUnits property value. Conceptual container for user and group directory objects.
      * @return a administrativeUnit
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AdministrativeUnit> getAdministrativeUnits() {
         return this.administrativeUnits;
     }
@@ -93,7 +91,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the attributeSets property value. Group of related custom security attribute definitions.
      * @return a attributeSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AttributeSet> getAttributeSets() {
         return this.attributeSets;
     }
@@ -101,7 +99,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the certificateAuthorities property value. The certificateAuthorities property
      * @return a certificateAuthorityPath
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CertificateAuthorityPath getCertificateAuthorities() {
         return this.certificateAuthorities;
     }
@@ -109,7 +107,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the customSecurityAttributeDefinitions property value. Schema of a custom security attributes (key-value pairs).
      * @return a customSecurityAttributeDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CustomSecurityAttributeDefinition> getCustomSecurityAttributeDefinitions() {
         return this.customSecurityAttributeDefinitions;
     }
@@ -117,7 +115,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the deletedItems property value. The deletedItems property
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getDeletedItems() {
         return this.deletedItems;
     }
@@ -125,7 +123,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the featureRolloutPolicies property value. The featureRolloutPolicies property
      * @return a featureRolloutPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<FeatureRolloutPolicy> getFeatureRolloutPolicies() {
         return this.featureRolloutPolicies;
     }
@@ -133,7 +131,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the federationConfigurations property value. Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      * @return a identityProviderBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IdentityProviderBase> getFederationConfigurations() {
         return this.federationConfigurations;
     }
@@ -141,7 +139,7 @@ public class Directory extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("administrativeUnits", (n) -> { this.setAdministrativeUnits(n.getCollectionOfObjectValues(AdministrativeUnit::createFromDiscriminatorValue)); });
@@ -164,7 +162,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the impactedResources property value. The impactedResources property
      * @return a impactedResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ImpactedResource> getImpactedResources() {
         return this.impactedResources;
     }
@@ -172,7 +170,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the inboundSharedUserProfiles property value. A collection of external Azure AD users whose profile data has been shared with the Azure AD tenant. Nullable.
      * @return a inboundSharedUserProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<InboundSharedUserProfile> getInboundSharedUserProfiles() {
         return this.inboundSharedUserProfiles;
     }
@@ -180,7 +178,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the onPremisesSynchronization property value. A container for on-premises directory synchronization functionalities that are available for the organization.
      * @return a onPremisesDirectorySynchronization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OnPremisesDirectorySynchronization> getOnPremisesSynchronization() {
         return this.onPremisesSynchronization;
     }
@@ -188,7 +186,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the outboundSharedUserProfiles property value. The outboundSharedUserProfiles property
      * @return a outboundSharedUserProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OutboundSharedUserProfile> getOutboundSharedUserProfiles() {
         return this.outboundSharedUserProfiles;
     }
@@ -196,7 +194,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the recommendations property value. List of recommended improvements to improve tenant posture.
      * @return a recommendation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Recommendation> getRecommendations() {
         return this.recommendations;
     }
@@ -204,7 +202,7 @@ public class Directory extends Entity implements Parsable {
      * Gets the sharedEmailDomains property value. The sharedEmailDomains property
      * @return a sharedEmailDomain
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SharedEmailDomain> getSharedEmailDomains() {
         return this.sharedEmailDomains;
     }
@@ -212,17 +210,15 @@ public class Directory extends Entity implements Parsable {
      * Gets the subscriptions property value. List of commercial subscriptions that an organization has acquired.
      * @return a companySubscription
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CompanySubscription> getSubscriptions() {
         return this.subscriptions;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("administrativeUnits", this.getAdministrativeUnits());
@@ -243,127 +239,99 @@ public class Directory extends Entity implements Parsable {
     /**
      * Sets the administrativeUnits property value. Conceptual container for user and group directory objects.
      * @param value Value to set for the administrativeUnits property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdministrativeUnits(@javax.annotation.Nullable final java.util.List<AdministrativeUnit> value) {
+    public void setAdministrativeUnits(@jakarta.annotation.Nullable final java.util.List<AdministrativeUnit> value) {
         this.administrativeUnits = value;
     }
     /**
      * Sets the attributeSets property value. Group of related custom security attribute definitions.
      * @param value Value to set for the attributeSets property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttributeSets(@javax.annotation.Nullable final java.util.List<AttributeSet> value) {
+    public void setAttributeSets(@jakarta.annotation.Nullable final java.util.List<AttributeSet> value) {
         this.attributeSets = value;
     }
     /**
      * Sets the certificateAuthorities property value. The certificateAuthorities property
      * @param value Value to set for the certificateAuthorities property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateAuthorities(@javax.annotation.Nullable final CertificateAuthorityPath value) {
+    public void setCertificateAuthorities(@jakarta.annotation.Nullable final CertificateAuthorityPath value) {
         this.certificateAuthorities = value;
     }
     /**
      * Sets the customSecurityAttributeDefinitions property value. Schema of a custom security attributes (key-value pairs).
      * @param value Value to set for the customSecurityAttributeDefinitions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomSecurityAttributeDefinitions(@javax.annotation.Nullable final java.util.List<CustomSecurityAttributeDefinition> value) {
+    public void setCustomSecurityAttributeDefinitions(@jakarta.annotation.Nullable final java.util.List<CustomSecurityAttributeDefinition> value) {
         this.customSecurityAttributeDefinitions = value;
     }
     /**
      * Sets the deletedItems property value. The deletedItems property
      * @param value Value to set for the deletedItems property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeletedItems(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
+    public void setDeletedItems(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.deletedItems = value;
     }
     /**
      * Sets the featureRolloutPolicies property value. The featureRolloutPolicies property
      * @param value Value to set for the featureRolloutPolicies property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeatureRolloutPolicies(@javax.annotation.Nullable final java.util.List<FeatureRolloutPolicy> value) {
+    public void setFeatureRolloutPolicies(@jakarta.annotation.Nullable final java.util.List<FeatureRolloutPolicy> value) {
         this.featureRolloutPolicies = value;
     }
     /**
      * Sets the federationConfigurations property value. Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      * @param value Value to set for the federationConfigurations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFederationConfigurations(@javax.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
+    public void setFederationConfigurations(@jakarta.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
         this.federationConfigurations = value;
     }
     /**
      * Sets the impactedResources property value. The impactedResources property
      * @param value Value to set for the impactedResources property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImpactedResources(@javax.annotation.Nullable final java.util.List<ImpactedResource> value) {
+    public void setImpactedResources(@jakarta.annotation.Nullable final java.util.List<ImpactedResource> value) {
         this.impactedResources = value;
     }
     /**
      * Sets the inboundSharedUserProfiles property value. A collection of external Azure AD users whose profile data has been shared with the Azure AD tenant. Nullable.
      * @param value Value to set for the inboundSharedUserProfiles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInboundSharedUserProfiles(@javax.annotation.Nullable final java.util.List<InboundSharedUserProfile> value) {
+    public void setInboundSharedUserProfiles(@jakarta.annotation.Nullable final java.util.List<InboundSharedUserProfile> value) {
         this.inboundSharedUserProfiles = value;
     }
     /**
      * Sets the onPremisesSynchronization property value. A container for on-premises directory synchronization functionalities that are available for the organization.
      * @param value Value to set for the onPremisesSynchronization property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnPremisesSynchronization(@javax.annotation.Nullable final java.util.List<OnPremisesDirectorySynchronization> value) {
+    public void setOnPremisesSynchronization(@jakarta.annotation.Nullable final java.util.List<OnPremisesDirectorySynchronization> value) {
         this.onPremisesSynchronization = value;
     }
     /**
      * Sets the outboundSharedUserProfiles property value. The outboundSharedUserProfiles property
      * @param value Value to set for the outboundSharedUserProfiles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOutboundSharedUserProfiles(@javax.annotation.Nullable final java.util.List<OutboundSharedUserProfile> value) {
+    public void setOutboundSharedUserProfiles(@jakarta.annotation.Nullable final java.util.List<OutboundSharedUserProfile> value) {
         this.outboundSharedUserProfiles = value;
     }
     /**
      * Sets the recommendations property value. List of recommended improvements to improve tenant posture.
      * @param value Value to set for the recommendations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecommendations(@javax.annotation.Nullable final java.util.List<Recommendation> value) {
+    public void setRecommendations(@jakarta.annotation.Nullable final java.util.List<Recommendation> value) {
         this.recommendations = value;
     }
     /**
      * Sets the sharedEmailDomains property value. The sharedEmailDomains property
      * @param value Value to set for the sharedEmailDomains property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharedEmailDomains(@javax.annotation.Nullable final java.util.List<SharedEmailDomain> value) {
+    public void setSharedEmailDomains(@jakarta.annotation.Nullable final java.util.List<SharedEmailDomain> value) {
         this.sharedEmailDomains = value;
     }
     /**
      * Sets the subscriptions property value. List of commercial subscriptions that an organization has acquired.
      * @param value Value to set for the subscriptions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubscriptions(@javax.annotation.Nullable final java.util.List<CompanySubscription> value) {
+    public void setSubscriptions(@jakarta.annotation.Nullable final java.util.List<CompanySubscription> value) {
         this.subscriptions = value;
     }
 }

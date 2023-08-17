@@ -13,9 +13,7 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
     private java.util.List<AppConsentRequest> appConsentRequests;
     /**
      * Instantiates a new appConsentApprovalRoute and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AppConsentApprovalRoute() {
         super();
     }
@@ -24,8 +22,8 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a appConsentApprovalRoute
      */
-    @javax.annotation.Nonnull
-    public static AppConsentApprovalRoute createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AppConsentApprovalRoute createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AppConsentApprovalRoute();
     }
@@ -33,7 +31,7 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
      * Gets the appConsentRequests property value. A collection of appConsentRequest objects representing apps for which admin consent has been requested by one or more users.
      * @return a appConsentRequest
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AppConsentRequest> getAppConsentRequests() {
         return this.appConsentRequests;
     }
@@ -41,7 +39,7 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appConsentRequests", (n) -> { this.setAppConsentRequests(n.getCollectionOfObjectValues(AppConsentRequest::createFromDiscriminatorValue)); });
@@ -50,10 +48,8 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("appConsentRequests", this.getAppConsentRequests());
@@ -61,10 +57,8 @@ public class AppConsentApprovalRoute extends Entity implements Parsable {
     /**
      * Sets the appConsentRequests property value. A collection of appConsentRequest objects representing apps for which admin consent has been requested by one or more users.
      * @param value Value to set for the appConsentRequests property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppConsentRequests(@javax.annotation.Nullable final java.util.List<AppConsentRequest> value) {
+    public void setAppConsentRequests(@jakarta.annotation.Nullable final java.util.List<AppConsentRequest> value) {
         this.appConsentRequests = value;
     }
 }

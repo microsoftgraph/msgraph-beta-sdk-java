@@ -20,9 +20,7 @@ public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
     private MobileAppAssignmentSettings settings;
     /**
      * Instantiates a new mobileAppPolicySetItem and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MobileAppPolicySetItem() {
         super();
         this.setOdataType("#microsoft.graph.mobileAppPolicySetItem");
@@ -32,8 +30,8 @@ public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a mobileAppPolicySetItem
      */
-    @javax.annotation.Nonnull
-    public static MobileAppPolicySetItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MobileAppPolicySetItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MobileAppPolicySetItem();
     }
@@ -41,7 +39,7 @@ public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("intent", (n) -> { this.setIntent(n.getEnumValue(InstallIntent.class)); });
@@ -52,7 +50,7 @@ public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
      * Gets the intent property value. Possible values for the install intent chosen by the admin.
      * @return a installIntent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InstallIntent getIntent() {
         return this.intent;
     }
@@ -60,17 +58,15 @@ public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
      * Gets the settings property value. Settings of the MobileAppPolicySetItem.
      * @return a mobileAppAssignmentSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MobileAppAssignmentSettings getSettings() {
         return this.settings;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("intent", this.getIntent());
@@ -79,19 +75,15 @@ public class MobileAppPolicySetItem extends PolicySetItem implements Parsable {
     /**
      * Sets the intent property value. Possible values for the install intent chosen by the admin.
      * @param value Value to set for the intent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIntent(@javax.annotation.Nullable final InstallIntent value) {
+    public void setIntent(@jakarta.annotation.Nullable final InstallIntent value) {
         this.intent = value;
     }
     /**
      * Sets the settings property value. Settings of the MobileAppPolicySetItem.
      * @param value Value to set for the settings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettings(@javax.annotation.Nullable final MobileAppAssignmentSettings value) {
+    public void setSettings(@jakarta.annotation.Nullable final MobileAppAssignmentSettings value) {
         this.settings = value;
     }
 }

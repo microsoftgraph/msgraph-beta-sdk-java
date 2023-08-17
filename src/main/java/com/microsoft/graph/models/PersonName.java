@@ -53,9 +53,7 @@ public class PersonName extends ItemFacet implements Parsable {
     private String title;
     /**
      * Instantiates a new personName and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PersonName() {
         super();
         this.setOdataType("#microsoft.graph.personName");
@@ -65,8 +63,8 @@ public class PersonName extends ItemFacet implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a personName
      */
-    @javax.annotation.Nonnull
-    public static PersonName createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PersonName createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PersonName();
     }
@@ -74,7 +72,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * Gets the displayName property value. Provides an ordered rendering of firstName and lastName depending on the locale of the user or their device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -82,7 +80,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -102,7 +100,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * Gets the first property value. First name of the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFirst() {
         return this.first;
     }
@@ -110,7 +108,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * Gets the initials property value. Initials of the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInitials() {
         return this.initials;
     }
@@ -118,7 +116,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * Gets the languageTag property value. Contains the name for the language (en-US, no-NB, en-AU) following IETF BCP47 format.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLanguageTag() {
         return this.languageTag;
     }
@@ -126,7 +124,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * Gets the last property value. Last name of the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLast() {
         return this.last;
     }
@@ -134,7 +132,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * Gets the maiden property value. Maiden name of the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMaiden() {
         return this.maiden;
     }
@@ -142,7 +140,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * Gets the middle property value. Middle name of the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMiddle() {
         return this.middle;
     }
@@ -150,7 +148,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * Gets the nickname property value. Nickname of the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNickname() {
         return this.nickname;
     }
@@ -158,7 +156,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * Gets the pronunciation property value. Guidance on how to pronounce the users name.
      * @return a personNamePronounciation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PersonNamePronounciation getPronunciation() {
         return this.pronunciation;
     }
@@ -166,7 +164,7 @@ public class PersonName extends ItemFacet implements Parsable {
      * Gets the suffix property value. Designators used after the users name (eg: PhD.)
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSuffix() {
         return this.suffix;
     }
@@ -174,17 +172,15 @@ public class PersonName extends ItemFacet implements Parsable {
      * Gets the title property value. Honorifics used to prefix a users name (eg: Dr, Sir, Madam, Mrs.)
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTitle() {
         return this.title;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -202,100 +198,78 @@ public class PersonName extends ItemFacet implements Parsable {
     /**
      * Sets the displayName property value. Provides an ordered rendering of firstName and lastName depending on the locale of the user or their device.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the first property value. First name of the user.
      * @param value Value to set for the first property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirst(@javax.annotation.Nullable final String value) {
+    public void setFirst(@jakarta.annotation.Nullable final String value) {
         this.first = value;
     }
     /**
      * Sets the initials property value. Initials of the user.
      * @param value Value to set for the initials property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitials(@javax.annotation.Nullable final String value) {
+    public void setInitials(@jakarta.annotation.Nullable final String value) {
         this.initials = value;
     }
     /**
      * Sets the languageTag property value. Contains the name for the language (en-US, no-NB, en-AU) following IETF BCP47 format.
      * @param value Value to set for the languageTag property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLanguageTag(@javax.annotation.Nullable final String value) {
+    public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
         this.languageTag = value;
     }
     /**
      * Sets the last property value. Last name of the user.
      * @param value Value to set for the last property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLast(@javax.annotation.Nullable final String value) {
+    public void setLast(@jakarta.annotation.Nullable final String value) {
         this.last = value;
     }
     /**
      * Sets the maiden property value. Maiden name of the user.
      * @param value Value to set for the maiden property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaiden(@javax.annotation.Nullable final String value) {
+    public void setMaiden(@jakarta.annotation.Nullable final String value) {
         this.maiden = value;
     }
     /**
      * Sets the middle property value. Middle name of the user.
      * @param value Value to set for the middle property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMiddle(@javax.annotation.Nullable final String value) {
+    public void setMiddle(@jakarta.annotation.Nullable final String value) {
         this.middle = value;
     }
     /**
      * Sets the nickname property value. Nickname of the user.
      * @param value Value to set for the nickname property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNickname(@javax.annotation.Nullable final String value) {
+    public void setNickname(@jakarta.annotation.Nullable final String value) {
         this.nickname = value;
     }
     /**
      * Sets the pronunciation property value. Guidance on how to pronounce the users name.
      * @param value Value to set for the pronunciation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPronunciation(@javax.annotation.Nullable final PersonNamePronounciation value) {
+    public void setPronunciation(@jakarta.annotation.Nullable final PersonNamePronounciation value) {
         this.pronunciation = value;
     }
     /**
      * Sets the suffix property value. Designators used after the users name (eg: PhD.)
      * @param value Value to set for the suffix property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuffix(@javax.annotation.Nullable final String value) {
+    public void setSuffix(@jakarta.annotation.Nullable final String value) {
         this.suffix = value;
     }
     /**
      * Sets the title property value. Honorifics used to prefix a users name (eg: Dr, Sir, Madam, Mrs.)
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTitle(@javax.annotation.Nullable final String value) {
+    public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
 }

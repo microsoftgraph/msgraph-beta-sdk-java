@@ -47,9 +47,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
     private Boolean sendInvitation;
     /**
      * Instantiates a new invitePostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public InvitePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -58,8 +56,8 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a invitePostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static InvitePostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static InvitePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new InvitePostRequestBody();
     }
@@ -67,7 +65,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -75,7 +73,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the expirationDateTime property value. The expirationDateTime property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExpirationDateTime() {
         return this.expirationDateTime;
     }
@@ -83,7 +81,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getStringValue()); });
@@ -100,7 +98,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the message property value. The message property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMessage() {
         return this.message;
     }
@@ -108,7 +106,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the password property value. The password property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPassword() {
         return this.password;
     }
@@ -116,7 +114,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the recipients property value. The recipients property
      * @return a driveRecipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DriveRecipient> getRecipients() {
         return this.recipients;
     }
@@ -124,7 +122,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the requireSignIn property value. The requireSignIn property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequireSignIn() {
         return this.requireSignIn;
     }
@@ -132,7 +130,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the retainInheritedPermissions property value. The retainInheritedPermissions property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRetainInheritedPermissions() {
         return this.retainInheritedPermissions;
     }
@@ -140,7 +138,7 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the roles property value. The roles property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoles() {
         return this.roles;
     }
@@ -148,17 +146,15 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the sendInvitation property value. The sendInvitation property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSendInvitation() {
         return this.sendInvitation;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("expirationDateTime", this.getExpirationDateTime());
         writer.writeStringValue("message", this.getMessage());
@@ -173,82 +169,64 @@ public class InvitePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the expirationDateTime property value. The expirationDateTime property
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDateTime(@javax.annotation.Nullable final String value) {
+    public void setExpirationDateTime(@jakarta.annotation.Nullable final String value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the message property value. The message property
      * @param value Value to set for the message property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessage(@javax.annotation.Nullable final String value) {
+    public void setMessage(@jakarta.annotation.Nullable final String value) {
         this.message = value;
     }
     /**
      * Sets the password property value. The password property
      * @param value Value to set for the password property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPassword(@javax.annotation.Nullable final String value) {
+    public void setPassword(@jakarta.annotation.Nullable final String value) {
         this.password = value;
     }
     /**
      * Sets the recipients property value. The recipients property
      * @param value Value to set for the recipients property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecipients(@javax.annotation.Nullable final java.util.List<DriveRecipient> value) {
+    public void setRecipients(@jakarta.annotation.Nullable final java.util.List<DriveRecipient> value) {
         this.recipients = value;
     }
     /**
      * Sets the requireSignIn property value. The requireSignIn property
      * @param value Value to set for the requireSignIn property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequireSignIn(@javax.annotation.Nullable final Boolean value) {
+    public void setRequireSignIn(@jakarta.annotation.Nullable final Boolean value) {
         this.requireSignIn = value;
     }
     /**
      * Sets the retainInheritedPermissions property value. The retainInheritedPermissions property
      * @param value Value to set for the retainInheritedPermissions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRetainInheritedPermissions(@javax.annotation.Nullable final Boolean value) {
+    public void setRetainInheritedPermissions(@jakarta.annotation.Nullable final Boolean value) {
         this.retainInheritedPermissions = value;
     }
     /**
      * Sets the roles property value. The roles property
      * @param value Value to set for the roles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoles(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roles = value;
     }
     /**
      * Sets the sendInvitation property value. The sendInvitation property
      * @param value Value to set for the sendInvitation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSendInvitation(@javax.annotation.Nullable final Boolean value) {
+    public void setSendInvitation(@jakarta.annotation.Nullable final Boolean value) {
         this.sendInvitation = value;
     }
 }

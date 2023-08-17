@@ -82,9 +82,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     private String tenantId;
     /**
      * Instantiates a new provisioningObjectSummary and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ProvisioningObjectSummary() {
         super();
     }
@@ -93,8 +91,8 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a provisioningObjectSummary
      */
-    @javax.annotation.Nonnull
-    public static ProvisioningObjectSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ProvisioningObjectSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ProvisioningObjectSummary();
     }
@@ -102,7 +100,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the action property value. The action property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAction() {
         return this.action;
     }
@@ -110,7 +108,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the activityDateTime property value. Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $filter (eq, gt, lt) and orderby.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
         return this.activityDateTime;
     }
@@ -118,7 +116,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the changeId property value. Unique ID of this change in this cycle. Supports $filter (eq, contains).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getChangeId() {
         return this.changeId;
     }
@@ -126,7 +124,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the cycleId property value. Unique ID per job iteration. Supports $filter (eq, contains).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCycleId() {
         return this.cycleId;
     }
@@ -134,7 +132,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the durationInMilliseconds property value. Indicates how long this provisioning action took to finish. Measured in milliseconds. Supports $filter (eq, gt, lt).
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDurationInMilliseconds() {
         return this.durationInMilliseconds;
     }
@@ -142,7 +140,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("action", (n) -> { this.setAction(n.getStringValue()); });
@@ -169,7 +167,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the initiatedBy property value. Details of who initiated this provisioning. Supports $filter (eq, contains).
      * @return a initiator
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Initiator getInitiatedBy() {
         return this.initiatedBy;
     }
@@ -177,7 +175,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the jobId property value. The unique ID for the whole provisioning job. Supports $filter (eq, contains).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getJobId() {
         return this.jobId;
     }
@@ -185,7 +183,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the modifiedProperties property value. Details of each property that was modified in this provisioning action on this object.
      * @return a modifiedProperty
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ModifiedProperty> getModifiedProperties() {
         return this.modifiedProperties;
     }
@@ -193,7 +191,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. Supports $filter (eq, contains).
      * @return a provisioningAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ProvisioningAction getProvisioningAction() {
         return this.provisioningAction;
     }
@@ -201,7 +199,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the provisioningStatusInfo property value. Details of provisioning status. Supports $filter (eq, contains) for status.
      * @return a provisioningStatusInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ProvisioningStatusInfo getProvisioningStatusInfo() {
         return this.provisioningStatusInfo;
     }
@@ -209,7 +207,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the provisioningSteps property value. Details of each step in provisioning.
      * @return a provisioningStep
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ProvisioningStep> getProvisioningSteps() {
         return this.provisioningSteps;
     }
@@ -217,7 +215,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the servicePrincipal property value. Represents the service principal used for provisioning. Supports $filter (eq) for id and name.
      * @return a provisioningServicePrincipal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ProvisioningServicePrincipal getServicePrincipal() {
         return this.servicePrincipal;
     }
@@ -225,7 +223,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the sourceIdentity property value. Details of source object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
      * @return a provisionedIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ProvisionedIdentity getSourceIdentity() {
         return this.sourceIdentity;
     }
@@ -233,7 +231,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the sourceSystem property value. Details of source system of the object being provisioned. Supports $filter (eq, contains) for displayName.
      * @return a provisioningSystem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ProvisioningSystem getSourceSystem() {
         return this.sourceSystem;
     }
@@ -241,7 +239,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the statusInfo property value. The statusInfo property
      * @return a statusBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public StatusBase getStatusInfo() {
         return this.statusInfo;
     }
@@ -249,7 +247,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the targetIdentity property value. Details of target object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
      * @return a provisionedIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ProvisionedIdentity getTargetIdentity() {
         return this.targetIdentity;
     }
@@ -257,7 +255,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the targetSystem property value. Details of target system of the object being provisioned. Supports $filter (eq, contains) for displayName.
      * @return a provisioningSystem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ProvisioningSystem getTargetSystem() {
         return this.targetSystem;
     }
@@ -265,17 +263,15 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * Gets the tenantId property value. Unique Azure AD tenant ID. Supports $filter (eq, contains).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("action", this.getAction());
@@ -300,163 +296,127 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     /**
      * Sets the action property value. The action property
      * @param value Value to set for the action property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAction(@javax.annotation.Nullable final String value) {
+    public void setAction(@jakarta.annotation.Nullable final String value) {
         this.action = value;
     }
     /**
      * Sets the activityDateTime property value. Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $filter (eq, gt, lt) and orderby.
      * @param value Value to set for the activityDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.activityDateTime = value;
     }
     /**
      * Sets the changeId property value. Unique ID of this change in this cycle. Supports $filter (eq, contains).
      * @param value Value to set for the changeId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChangeId(@javax.annotation.Nullable final String value) {
+    public void setChangeId(@jakarta.annotation.Nullable final String value) {
         this.changeId = value;
     }
     /**
      * Sets the cycleId property value. Unique ID per job iteration. Supports $filter (eq, contains).
      * @param value Value to set for the cycleId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCycleId(@javax.annotation.Nullable final String value) {
+    public void setCycleId(@jakarta.annotation.Nullable final String value) {
         this.cycleId = value;
     }
     /**
      * Sets the durationInMilliseconds property value. Indicates how long this provisioning action took to finish. Measured in milliseconds. Supports $filter (eq, gt, lt).
      * @param value Value to set for the durationInMilliseconds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDurationInMilliseconds(@javax.annotation.Nullable final Integer value) {
+    public void setDurationInMilliseconds(@jakarta.annotation.Nullable final Integer value) {
         this.durationInMilliseconds = value;
     }
     /**
      * Sets the initiatedBy property value. Details of who initiated this provisioning. Supports $filter (eq, contains).
      * @param value Value to set for the initiatedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitiatedBy(@javax.annotation.Nullable final Initiator value) {
+    public void setInitiatedBy(@jakarta.annotation.Nullable final Initiator value) {
         this.initiatedBy = value;
     }
     /**
      * Sets the jobId property value. The unique ID for the whole provisioning job. Supports $filter (eq, contains).
      * @param value Value to set for the jobId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJobId(@javax.annotation.Nullable final String value) {
+    public void setJobId(@jakarta.annotation.Nullable final String value) {
         this.jobId = value;
     }
     /**
      * Sets the modifiedProperties property value. Details of each property that was modified in this provisioning action on this object.
      * @param value Value to set for the modifiedProperties property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModifiedProperties(@javax.annotation.Nullable final java.util.List<ModifiedProperty> value) {
+    public void setModifiedProperties(@jakarta.annotation.Nullable final java.util.List<ModifiedProperty> value) {
         this.modifiedProperties = value;
     }
     /**
      * Sets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. Supports $filter (eq, contains).
      * @param value Value to set for the provisioningAction property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProvisioningAction(@javax.annotation.Nullable final ProvisioningAction value) {
+    public void setProvisioningAction(@jakarta.annotation.Nullable final ProvisioningAction value) {
         this.provisioningAction = value;
     }
     /**
      * Sets the provisioningStatusInfo property value. Details of provisioning status. Supports $filter (eq, contains) for status.
      * @param value Value to set for the provisioningStatusInfo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProvisioningStatusInfo(@javax.annotation.Nullable final ProvisioningStatusInfo value) {
+    public void setProvisioningStatusInfo(@jakarta.annotation.Nullable final ProvisioningStatusInfo value) {
         this.provisioningStatusInfo = value;
     }
     /**
      * Sets the provisioningSteps property value. Details of each step in provisioning.
      * @param value Value to set for the provisioningSteps property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProvisioningSteps(@javax.annotation.Nullable final java.util.List<ProvisioningStep> value) {
+    public void setProvisioningSteps(@jakarta.annotation.Nullable final java.util.List<ProvisioningStep> value) {
         this.provisioningSteps = value;
     }
     /**
      * Sets the servicePrincipal property value. Represents the service principal used for provisioning. Supports $filter (eq) for id and name.
      * @param value Value to set for the servicePrincipal property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServicePrincipal(@javax.annotation.Nullable final ProvisioningServicePrincipal value) {
+    public void setServicePrincipal(@jakarta.annotation.Nullable final ProvisioningServicePrincipal value) {
         this.servicePrincipal = value;
     }
     /**
      * Sets the sourceIdentity property value. Details of source object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
      * @param value Value to set for the sourceIdentity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourceIdentity(@javax.annotation.Nullable final ProvisionedIdentity value) {
+    public void setSourceIdentity(@jakarta.annotation.Nullable final ProvisionedIdentity value) {
         this.sourceIdentity = value;
     }
     /**
      * Sets the sourceSystem property value. Details of source system of the object being provisioned. Supports $filter (eq, contains) for displayName.
      * @param value Value to set for the sourceSystem property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourceSystem(@javax.annotation.Nullable final ProvisioningSystem value) {
+    public void setSourceSystem(@jakarta.annotation.Nullable final ProvisioningSystem value) {
         this.sourceSystem = value;
     }
     /**
      * Sets the statusInfo property value. The statusInfo property
      * @param value Value to set for the statusInfo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatusInfo(@javax.annotation.Nullable final StatusBase value) {
+    public void setStatusInfo(@jakarta.annotation.Nullable final StatusBase value) {
         this.statusInfo = value;
     }
     /**
      * Sets the targetIdentity property value. Details of target object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
      * @param value Value to set for the targetIdentity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetIdentity(@javax.annotation.Nullable final ProvisionedIdentity value) {
+    public void setTargetIdentity(@jakarta.annotation.Nullable final ProvisionedIdentity value) {
         this.targetIdentity = value;
     }
     /**
      * Sets the targetSystem property value. Details of target system of the object being provisioned. Supports $filter (eq, contains) for displayName.
      * @param value Value to set for the targetSystem property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetSystem(@javax.annotation.Nullable final ProvisioningSystem value) {
+    public void setTargetSystem(@jakarta.annotation.Nullable final ProvisioningSystem value) {
         this.targetSystem = value;
     }
     /**
      * Sets the tenantId property value. Unique Azure AD tenant ID. Supports $filter (eq, contains).
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
 }

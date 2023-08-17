@@ -42,9 +42,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, Parsable 
     private String rulePackageType;
     /**
      * Instantiates a new responsibleSensitiveType and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ResponsibleSensitiveType() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +51,8 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a responsibleSensitiveType
      */
-    @javax.annotation.Nonnull
-    public static ResponsibleSensitiveType createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ResponsibleSensitiveType createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ResponsibleSensitiveType();
     }
@@ -62,7 +60,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, Parsable 
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +68,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, Parsable 
      * Gets the description property value. The description property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -78,7 +76,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -94,7 +92,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, Parsable 
      * Gets the id property value. The id property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -102,7 +100,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, Parsable 
      * Gets the name property value. The name property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -110,7 +108,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, Parsable 
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -118,7 +116,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, Parsable 
      * Gets the publisherName property value. The publisherName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPublisherName() {
         return this.publisherName;
     }
@@ -126,7 +124,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, Parsable 
      * Gets the rulePackageId property value. The rulePackageId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRulePackageId() {
         return this.rulePackageId;
     }
@@ -134,17 +132,15 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, Parsable 
      * Gets the rulePackageType property value. The rulePackageType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRulePackageType() {
         return this.rulePackageType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("id", this.getId());
@@ -158,73 +154,57 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, Parsable 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the publisherName property value. The publisherName property
      * @param value Value to set for the publisherName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublisherName(@javax.annotation.Nullable final String value) {
+    public void setPublisherName(@jakarta.annotation.Nullable final String value) {
         this.publisherName = value;
     }
     /**
      * Sets the rulePackageId property value. The rulePackageId property
      * @param value Value to set for the rulePackageId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRulePackageId(@javax.annotation.Nullable final String value) {
+    public void setRulePackageId(@jakarta.annotation.Nullable final String value) {
         this.rulePackageId = value;
     }
     /**
      * Sets the rulePackageType property value. The rulePackageType property
      * @param value Value to set for the rulePackageType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRulePackageType(@javax.annotation.Nullable final String value) {
+    public void setRulePackageType(@jakarta.annotation.Nullable final String value) {
         this.rulePackageType = value;
     }
 }

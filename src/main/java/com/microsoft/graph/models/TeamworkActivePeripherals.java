@@ -38,9 +38,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
     private TeamworkPeripheral speaker;
     /**
      * Instantiates a new teamworkActivePeripherals and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TeamworkActivePeripherals() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +47,8 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teamworkActivePeripherals
      */
-    @javax.annotation.Nonnull
-    public static TeamworkActivePeripherals createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeamworkActivePeripherals createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeamworkActivePeripherals();
     }
@@ -58,7 +56,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +64,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
      * Gets the communicationSpeaker property value. The communicationSpeaker property
      * @return a teamworkPeripheral
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkPeripheral getCommunicationSpeaker() {
         return this.communicationSpeaker;
     }
@@ -74,7 +72,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
      * Gets the contentCamera property value. The contentCamera property
      * @return a teamworkPeripheral
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkPeripheral getContentCamera() {
         return this.contentCamera;
     }
@@ -82,7 +80,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("communicationSpeaker", (n) -> { this.setCommunicationSpeaker(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
@@ -97,7 +95,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
      * Gets the microphone property value. The microphone property
      * @return a teamworkPeripheral
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkPeripheral getMicrophone() {
         return this.microphone;
     }
@@ -105,7 +103,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -113,7 +111,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
      * Gets the roomCamera property value. The roomCamera property
      * @return a teamworkPeripheral
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkPeripheral getRoomCamera() {
         return this.roomCamera;
     }
@@ -121,17 +119,15 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
      * Gets the speaker property value. The speaker property
      * @return a teamworkPeripheral
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkPeripheral getSpeaker() {
         return this.speaker;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("communicationSpeaker", this.getCommunicationSpeaker());
         writer.writeObjectValue("contentCamera", this.getContentCamera());
@@ -144,64 +140,50 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, Parsable
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the communicationSpeaker property value. The communicationSpeaker property
      * @param value Value to set for the communicationSpeaker property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCommunicationSpeaker(@javax.annotation.Nullable final TeamworkPeripheral value) {
+    public void setCommunicationSpeaker(@jakarta.annotation.Nullable final TeamworkPeripheral value) {
         this.communicationSpeaker = value;
     }
     /**
      * Sets the contentCamera property value. The contentCamera property
      * @param value Value to set for the contentCamera property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentCamera(@javax.annotation.Nullable final TeamworkPeripheral value) {
+    public void setContentCamera(@jakarta.annotation.Nullable final TeamworkPeripheral value) {
         this.contentCamera = value;
     }
     /**
      * Sets the microphone property value. The microphone property
      * @param value Value to set for the microphone property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMicrophone(@javax.annotation.Nullable final TeamworkPeripheral value) {
+    public void setMicrophone(@jakarta.annotation.Nullable final TeamworkPeripheral value) {
         this.microphone = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the roomCamera property value. The roomCamera property
      * @param value Value to set for the roomCamera property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoomCamera(@javax.annotation.Nullable final TeamworkPeripheral value) {
+    public void setRoomCamera(@jakarta.annotation.Nullable final TeamworkPeripheral value) {
         this.roomCamera = value;
     }
     /**
      * Sets the speaker property value. The speaker property
      * @param value Value to set for the speaker property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSpeaker(@javax.annotation.Nullable final TeamworkPeripheral value) {
+    public void setSpeaker(@jakarta.annotation.Nullable final TeamworkPeripheral value) {
         this.speaker = value;
     }
 }

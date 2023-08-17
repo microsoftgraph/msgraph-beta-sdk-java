@@ -34,9 +34,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
     private BookingReminderRecipients recipients;
     /**
      * Instantiates a new bookingReminder and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public BookingReminder() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +43,8 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a bookingReminder
      */
-    @javax.annotation.Nonnull
-    public static BookingReminder createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BookingReminder createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BookingReminder();
     }
@@ -54,7 +52,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +60,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
@@ -75,7 +73,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      * Gets the message property value. The message in the reminder.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMessage() {
         return this.message;
     }
@@ -83,7 +81,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -91,7 +89,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      * Gets the offset property value. The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getOffset() {
         return this.offset;
     }
@@ -99,17 +97,15 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      * Gets the recipients property value. The recipients property
      * @return a bookingReminderRecipients
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BookingReminderRecipients getRecipients() {
         return this.recipients;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("message", this.getMessage());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -120,46 +116,36 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the message property value. The message in the reminder.
      * @param value Value to set for the message property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessage(@javax.annotation.Nullable final String value) {
+    public void setMessage(@jakarta.annotation.Nullable final String value) {
         this.message = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the offset property value. The amount of time before the start of an appointment that the reminder should be sent. It's denoted in ISO 8601 format.
      * @param value Value to set for the offset property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOffset(@javax.annotation.Nullable final PeriodAndDuration value) {
+    public void setOffset(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.offset = value;
     }
     /**
      * Sets the recipients property value. The recipients property
      * @param value Value to set for the recipients property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecipients(@javax.annotation.Nullable final BookingReminderRecipients value) {
+    public void setRecipients(@jakarta.annotation.Nullable final BookingReminderRecipients value) {
         this.recipients = value;
     }
 }

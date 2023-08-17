@@ -62,9 +62,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new agreementAcceptance and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AgreementAcceptance() {
         super();
     }
@@ -73,8 +71,8 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a agreementAcceptance
      */
-    @javax.annotation.Nonnull
-    public static AgreementAcceptance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AgreementAcceptance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AgreementAcceptance();
     }
@@ -82,7 +80,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * Gets the agreementFileId property value. ID of the agreement file accepted by the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAgreementFileId() {
         return this.agreementFileId;
     }
@@ -90,7 +88,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * Gets the agreementId property value. ID of the agreement.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAgreementId() {
         return this.agreementId;
     }
@@ -98,7 +96,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * Gets the deviceDisplayName property value. The display name of the device used for accepting the agreement.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
         return this.deviceDisplayName;
     }
@@ -106,7 +104,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * Gets the deviceId property value. The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -114,7 +112,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * Gets the deviceOSType property value. The operating system used for accepting the agreement.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceOSType() {
         return this.deviceOSType;
     }
@@ -122,7 +120,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * Gets the deviceOSVersion property value. The operating system version of the device used for accepting the agreement.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceOSVersion() {
         return this.deviceOSVersion;
     }
@@ -130,7 +128,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * Gets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
         return this.expirationDateTime;
     }
@@ -138,7 +136,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("agreementFileId", (n) -> { this.setAgreementFileId(n.getStringValue()); });
@@ -160,7 +158,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * Gets the recordedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq) and eq for null values.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRecordedDateTime() {
         return this.recordedDateTime;
     }
@@ -168,7 +166,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * Gets the state property value. Possible values are: accepted, declined. Supports $filter (eq).
      * @return a agreementAcceptanceState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AgreementAcceptanceState getState() {
         return this.state;
     }
@@ -176,7 +174,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * Gets the userDisplayName property value. Display name of the user when the acceptance was recorded.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserDisplayName() {
         return this.userDisplayName;
     }
@@ -184,7 +182,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * Gets the userEmail property value. Email of the user when the acceptance was recorded.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserEmail() {
         return this.userEmail;
     }
@@ -192,7 +190,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * Gets the userId property value. ID of the user who accepted the agreement. Supports $filter (eq).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -200,17 +198,15 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * Gets the userPrincipalName property value. UPN of the user when the acceptance was recorded.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("agreementFileId", this.getAgreementFileId());
@@ -230,118 +226,92 @@ public class AgreementAcceptance extends Entity implements Parsable {
     /**
      * Sets the agreementFileId property value. ID of the agreement file accepted by the user.
      * @param value Value to set for the agreementFileId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAgreementFileId(@javax.annotation.Nullable final String value) {
+    public void setAgreementFileId(@jakarta.annotation.Nullable final String value) {
         this.agreementFileId = value;
     }
     /**
      * Sets the agreementId property value. ID of the agreement.
      * @param value Value to set for the agreementId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAgreementId(@javax.annotation.Nullable final String value) {
+    public void setAgreementId(@jakarta.annotation.Nullable final String value) {
         this.agreementId = value;
     }
     /**
      * Sets the deviceDisplayName property value. The display name of the device used for accepting the agreement.
      * @param value Value to set for the deviceDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
         this.deviceDisplayName = value;
     }
     /**
      * Sets the deviceId property value. The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values.
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the deviceOSType property value. The operating system used for accepting the agreement.
      * @param value Value to set for the deviceOSType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceOSType(@javax.annotation.Nullable final String value) {
+    public void setDeviceOSType(@jakarta.annotation.Nullable final String value) {
         this.deviceOSType = value;
     }
     /**
      * Sets the deviceOSVersion property value. The operating system version of the device used for accepting the agreement.
      * @param value Value to set for the deviceOSVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceOSVersion(@javax.annotation.Nullable final String value) {
+    public void setDeviceOSVersion(@jakarta.annotation.Nullable final String value) {
         this.deviceOSVersion = value;
     }
     /**
      * Sets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values.
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the recordedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq) and eq for null values.
      * @param value Value to set for the recordedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecordedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setRecordedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.recordedDateTime = value;
     }
     /**
      * Sets the state property value. Possible values are: accepted, declined. Supports $filter (eq).
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final AgreementAcceptanceState value) {
+    public void setState(@jakarta.annotation.Nullable final AgreementAcceptanceState value) {
         this.state = value;
     }
     /**
      * Sets the userDisplayName property value. Display name of the user when the acceptance was recorded.
      * @param value Value to set for the userDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserDisplayName(@javax.annotation.Nullable final String value) {
+    public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
      * Sets the userEmail property value. Email of the user when the acceptance was recorded.
      * @param value Value to set for the userEmail property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserEmail(@javax.annotation.Nullable final String value) {
+    public void setUserEmail(@jakarta.annotation.Nullable final String value) {
         this.userEmail = value;
     }
     /**
      * Sets the userId property value. ID of the user who accepted the agreement. Supports $filter (eq).
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
      * Sets the userPrincipalName property value. UPN of the user when the acceptance was recorded.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

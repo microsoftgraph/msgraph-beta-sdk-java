@@ -184,9 +184,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     private Integer wipeAfterCompanyPortalUpdateDeferralInDays;
     /**
      * Instantiates a new androidManagedAppProtection and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AndroidManagedAppProtection() {
         super();
         this.setOdataType("#microsoft.graph.androidManagedAppProtection");
@@ -196,8 +194,8 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidManagedAppProtection
      */
-    @javax.annotation.Nonnull
-    public static AndroidManagedAppProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidManagedAppProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidManagedAppProtection();
     }
@@ -205,7 +203,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the allowedAndroidDeviceManufacturers property value. Semicolon seperated list of device manufacturers allowed, as a string, for the managed app to work.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAllowedAndroidDeviceManufacturers() {
         return this.allowedAndroidDeviceManufacturers;
     }
@@ -213,7 +211,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the allowedAndroidDeviceModels property value. List of device models allowed, as a string, for the managed app to work.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedAndroidDeviceModels() {
         return this.allowedAndroidDeviceModels;
     }
@@ -221,7 +219,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
      * @return a managedAppRemediationAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfAccountIsClockedOut() {
         return this.appActionIfAccountIsClockedOut;
     }
@@ -229,7 +227,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the appActionIfAndroidDeviceManufacturerNotAllowed property value. An admin initiated action to be applied on a managed app.
      * @return a managedAppRemediationAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfAndroidDeviceManufacturerNotAllowed() {
         return this.appActionIfAndroidDeviceManufacturerNotAllowed;
     }
@@ -237,7 +235,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the appActionIfAndroidDeviceModelNotAllowed property value. An admin initiated action to be applied on a managed app.
      * @return a managedAppRemediationAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfAndroidDeviceModelNotAllowed() {
         return this.appActionIfAndroidDeviceModelNotAllowed;
     }
@@ -245,7 +243,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the appActionIfAndroidSafetyNetAppsVerificationFailed property value. An admin initiated action to be applied on a managed app.
      * @return a managedAppRemediationAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfAndroidSafetyNetAppsVerificationFailed() {
         return this.appActionIfAndroidSafetyNetAppsVerificationFailed;
     }
@@ -253,7 +251,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the appActionIfAndroidSafetyNetDeviceAttestationFailed property value. An admin initiated action to be applied on a managed app.
      * @return a managedAppRemediationAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfAndroidSafetyNetDeviceAttestationFailed() {
         return this.appActionIfAndroidSafetyNetDeviceAttestationFailed;
     }
@@ -261,7 +259,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the appActionIfDeviceLockNotSet property value. An admin initiated action to be applied on a managed app.
      * @return a managedAppRemediationAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfDeviceLockNotSet() {
         return this.appActionIfDeviceLockNotSet;
     }
@@ -269,7 +267,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the appActionIfDevicePasscodeComplexityLessThanHigh property value. If the device does not have a passcode of high complexity or higher, trigger the stored action.
      * @return a managedAppRemediationAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfDevicePasscodeComplexityLessThanHigh() {
         return this.appActionIfDevicePasscodeComplexityLessThanHigh;
     }
@@ -277,7 +275,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the appActionIfDevicePasscodeComplexityLessThanLow property value. If the device does not have a passcode of low complexity or higher, trigger the stored action.
      * @return a managedAppRemediationAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfDevicePasscodeComplexityLessThanLow() {
         return this.appActionIfDevicePasscodeComplexityLessThanLow;
     }
@@ -285,7 +283,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the appActionIfDevicePasscodeComplexityLessThanMedium property value. If the device does not have a passcode of medium complexity or higher, trigger the stored action.
      * @return a managedAppRemediationAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfDevicePasscodeComplexityLessThanMedium() {
         return this.appActionIfDevicePasscodeComplexityLessThanMedium;
     }
@@ -293,7 +291,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the appActionIfSamsungKnoxAttestationRequired property value. Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block & wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured.
      * @return a managedAppRemediationAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfSamsungKnoxAttestationRequired() {
         return this.appActionIfSamsungKnoxAttestationRequired;
     }
@@ -301,7 +299,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the approvedKeyboards property value. If Keyboard Restriction is enabled, only keyboards in this approved list will be allowed. A key should be Android package id for a keyboard and value should be a friendly name
      * @return a keyValuePair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getApprovedKeyboards() {
         return this.approvedKeyboards;
     }
@@ -309,7 +307,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the apps property value. List of apps to which the policy is deployed.
      * @return a managedMobileApp
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
         return this.apps;
     }
@@ -317,7 +315,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the biometricAuthenticationBlocked property value. Indicates whether use of the biometric authentication is allowed in place of a pin if PinRequired is set to True.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBiometricAuthenticationBlocked() {
         return this.biometricAuthenticationBlocked;
     }
@@ -325,7 +323,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the blockAfterCompanyPortalUpdateDeferralInDays property value. Maximum number of days Company Portal update can be deferred on the device or app access will be blocked.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getBlockAfterCompanyPortalUpdateDeferralInDays() {
         return this.blockAfterCompanyPortalUpdateDeferralInDays;
     }
@@ -333,7 +331,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the connectToVpnOnLaunch property value. Whether the app should connect to the configured VPN on launch.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getConnectToVpnOnLaunch() {
         return this.connectToVpnOnLaunch;
     }
@@ -341,7 +339,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomBrowserDisplayName() {
         return this.customBrowserDisplayName;
     }
@@ -349,7 +347,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the customBrowserPackageId property value. Unique identifier of a custom browser to open weblink on Android.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomBrowserPackageId() {
         return this.customBrowserPackageId;
     }
@@ -357,7 +355,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the customDialerAppDisplayName property value. Friendly name of a custom dialer app to click-to-open a phone number on Android.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomDialerAppDisplayName() {
         return this.customDialerAppDisplayName;
     }
@@ -365,7 +363,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the customDialerAppPackageId property value. PackageId of a custom dialer app to click-to-open a phone number on Android.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomDialerAppPackageId() {
         return this.customDialerAppPackageId;
     }
@@ -373,7 +371,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the deployedAppCount property value. Count of apps to which the current policy is deployed.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDeployedAppCount() {
         return this.deployedAppCount;
     }
@@ -381,7 +379,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
      * @return a managedAppPolicyDeploymentSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
         return this.deploymentSummary;
     }
@@ -389,7 +387,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the deviceLockRequired property value. Defines if any kind of lock must be required on android device
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDeviceLockRequired() {
         return this.deviceLockRequired;
     }
@@ -397,7 +395,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDisableAppEncryptionIfDeviceEncryptionIsEnabled() {
         return this.disableAppEncryptionIfDeviceEncryptionIsEnabled;
     }
@@ -405,7 +403,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the encryptAppData property value. Indicates whether application data for managed apps should be encrypted
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEncryptAppData() {
         return this.encryptAppData;
     }
@@ -413,7 +411,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the exemptedAppPackages property value. App packages in this list will be exempt from the policy and will be able to receive data from managed apps.
      * @return a keyValuePair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getExemptedAppPackages() {
         return this.exemptedAppPackages;
     }
@@ -421,7 +419,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowedAndroidDeviceManufacturers", (n) -> { this.setAllowedAndroidDeviceManufacturers(n.getStringValue()); });
@@ -473,7 +471,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the fingerprintAndBiometricEnabled property value. If null, this setting will be ignored. If false both fingerprints and biometrics will not be enabled. If true, both fingerprints and biometrics will be enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getFingerprintAndBiometricEnabled() {
         return this.fingerprintAndBiometricEnabled;
     }
@@ -481,7 +479,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the keyboardsRestricted property value. Indicates if keyboard restriction is enabled. If enabled list of approved keyboards must be provided as well.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKeyboardsRestricted() {
         return this.keyboardsRestricted;
     }
@@ -489,7 +487,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the minimumRequiredCompanyPortalVersion property value. Minimum version of the Company portal that must be installed on the device or app access will be blocked
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMinimumRequiredCompanyPortalVersion() {
         return this.minimumRequiredCompanyPortalVersion;
     }
@@ -497,7 +495,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the minimumRequiredPatchVersion property value. Define the oldest required Android security patch level a user can have to gain secure access to the app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMinimumRequiredPatchVersion() {
         return this.minimumRequiredPatchVersion;
     }
@@ -505,7 +503,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the minimumWarningCompanyPortalVersion property value. Minimum version of the Company portal that must be installed on the device or the user will receive a warning
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMinimumWarningCompanyPortalVersion() {
         return this.minimumWarningCompanyPortalVersion;
     }
@@ -513,7 +511,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMinimumWarningPatchVersion() {
         return this.minimumWarningPatchVersion;
     }
@@ -521,7 +519,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the minimumWipeCompanyPortalVersion property value. Minimum version of the Company portal that must be installed on the device or the company data on the app will be wiped
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMinimumWipeCompanyPortalVersion() {
         return this.minimumWipeCompanyPortalVersion;
     }
@@ -529,7 +527,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the minimumWipePatchVersion property value. Android security patch level  less than or equal to the specified value will wipe the managed app and the associated company data.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMinimumWipePatchVersion() {
         return this.minimumWipePatchVersion;
     }
@@ -537,7 +535,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the requireClass3Biometrics property value. Require user to apply Class 3 Biometrics on their Android device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequireClass3Biometrics() {
         return this.requireClass3Biometrics;
     }
@@ -545,7 +543,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the requiredAndroidSafetyNetAppsVerificationType property value. An admin enforced Android SafetyNet Device Attestation requirement on a managed app.
      * @return a androidManagedAppSafetyNetAppsVerificationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidManagedAppSafetyNetAppsVerificationType getRequiredAndroidSafetyNetAppsVerificationType() {
         return this.requiredAndroidSafetyNetAppsVerificationType;
     }
@@ -553,7 +551,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the requiredAndroidSafetyNetDeviceAttestationType property value. An admin enforced Android SafetyNet Device Attestation requirement on a managed app.
      * @return a androidManagedAppSafetyNetDeviceAttestationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidManagedAppSafetyNetDeviceAttestationType getRequiredAndroidSafetyNetDeviceAttestationType() {
         return this.requiredAndroidSafetyNetDeviceAttestationType;
     }
@@ -561,7 +559,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the requiredAndroidSafetyNetEvaluationType property value. An admin enforced Android SafetyNet evaluation type requirement on a managed app.
      * @return a androidManagedAppSafetyNetEvaluationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidManagedAppSafetyNetEvaluationType getRequiredAndroidSafetyNetEvaluationType() {
         return this.requiredAndroidSafetyNetEvaluationType;
     }
@@ -569,7 +567,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the requirePinAfterBiometricChange property value. A PIN prompt will override biometric prompts if class 3 biometrics are updated on the device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequirePinAfterBiometricChange() {
         return this.requirePinAfterBiometricChange;
     }
@@ -577,7 +575,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the screenCaptureBlocked property value. Indicates whether a managed user can take screen captures of managed apps
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
         return this.screenCaptureBlocked;
     }
@@ -585,7 +583,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the warnAfterCompanyPortalUpdateDeferralInDays property value. Maximum number of days Company Portal update can be deferred on the device or the user will receive the warning
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getWarnAfterCompanyPortalUpdateDeferralInDays() {
         return this.warnAfterCompanyPortalUpdateDeferralInDays;
     }
@@ -593,17 +591,15 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Gets the wipeAfterCompanyPortalUpdateDeferralInDays property value. Maximum number of days Company Portal update can be deferred on the device or the company data on the app will be wiped
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getWipeAfterCompanyPortalUpdateDeferralInDays() {
         return this.wipeAfterCompanyPortalUpdateDeferralInDays;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("allowedAndroidDeviceManufacturers", this.getAllowedAndroidDeviceManufacturers());
@@ -653,388 +649,302 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     /**
      * Sets the allowedAndroidDeviceManufacturers property value. Semicolon seperated list of device manufacturers allowed, as a string, for the managed app to work.
      * @param value Value to set for the allowedAndroidDeviceManufacturers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowedAndroidDeviceManufacturers(@javax.annotation.Nullable final String value) {
+    public void setAllowedAndroidDeviceManufacturers(@jakarta.annotation.Nullable final String value) {
         this.allowedAndroidDeviceManufacturers = value;
     }
     /**
      * Sets the allowedAndroidDeviceModels property value. List of device models allowed, as a string, for the managed app to work.
      * @param value Value to set for the allowedAndroidDeviceModels property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowedAndroidDeviceModels(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setAllowedAndroidDeviceModels(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.allowedAndroidDeviceModels = value;
     }
     /**
      * Sets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
      * @param value Value to set for the appActionIfAccountIsClockedOut property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppActionIfAccountIsClockedOut(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
+    public void setAppActionIfAccountIsClockedOut(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
         this.appActionIfAccountIsClockedOut = value;
     }
     /**
      * Sets the appActionIfAndroidDeviceManufacturerNotAllowed property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfAndroidDeviceManufacturerNotAllowed property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppActionIfAndroidDeviceManufacturerNotAllowed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
+    public void setAppActionIfAndroidDeviceManufacturerNotAllowed(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
         this.appActionIfAndroidDeviceManufacturerNotAllowed = value;
     }
     /**
      * Sets the appActionIfAndroidDeviceModelNotAllowed property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfAndroidDeviceModelNotAllowed property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppActionIfAndroidDeviceModelNotAllowed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
+    public void setAppActionIfAndroidDeviceModelNotAllowed(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
         this.appActionIfAndroidDeviceModelNotAllowed = value;
     }
     /**
      * Sets the appActionIfAndroidSafetyNetAppsVerificationFailed property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfAndroidSafetyNetAppsVerificationFailed property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppActionIfAndroidSafetyNetAppsVerificationFailed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
+    public void setAppActionIfAndroidSafetyNetAppsVerificationFailed(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
         this.appActionIfAndroidSafetyNetAppsVerificationFailed = value;
     }
     /**
      * Sets the appActionIfAndroidSafetyNetDeviceAttestationFailed property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfAndroidSafetyNetDeviceAttestationFailed property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppActionIfAndroidSafetyNetDeviceAttestationFailed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
+    public void setAppActionIfAndroidSafetyNetDeviceAttestationFailed(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
         this.appActionIfAndroidSafetyNetDeviceAttestationFailed = value;
     }
     /**
      * Sets the appActionIfDeviceLockNotSet property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfDeviceLockNotSet property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppActionIfDeviceLockNotSet(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
+    public void setAppActionIfDeviceLockNotSet(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
         this.appActionIfDeviceLockNotSet = value;
     }
     /**
      * Sets the appActionIfDevicePasscodeComplexityLessThanHigh property value. If the device does not have a passcode of high complexity or higher, trigger the stored action.
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanHigh property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppActionIfDevicePasscodeComplexityLessThanHigh(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
+    public void setAppActionIfDevicePasscodeComplexityLessThanHigh(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
         this.appActionIfDevicePasscodeComplexityLessThanHigh = value;
     }
     /**
      * Sets the appActionIfDevicePasscodeComplexityLessThanLow property value. If the device does not have a passcode of low complexity or higher, trigger the stored action.
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanLow property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppActionIfDevicePasscodeComplexityLessThanLow(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
+    public void setAppActionIfDevicePasscodeComplexityLessThanLow(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
         this.appActionIfDevicePasscodeComplexityLessThanLow = value;
     }
     /**
      * Sets the appActionIfDevicePasscodeComplexityLessThanMedium property value. If the device does not have a passcode of medium complexity or higher, trigger the stored action.
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanMedium property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppActionIfDevicePasscodeComplexityLessThanMedium(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
+    public void setAppActionIfDevicePasscodeComplexityLessThanMedium(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
         this.appActionIfDevicePasscodeComplexityLessThanMedium = value;
     }
     /**
      * Sets the appActionIfSamsungKnoxAttestationRequired property value. Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block & wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured.
      * @param value Value to set for the appActionIfSamsungKnoxAttestationRequired property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppActionIfSamsungKnoxAttestationRequired(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
+    public void setAppActionIfSamsungKnoxAttestationRequired(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
         this.appActionIfSamsungKnoxAttestationRequired = value;
     }
     /**
      * Sets the approvedKeyboards property value. If Keyboard Restriction is enabled, only keyboards in this approved list will be allowed. A key should be Android package id for a keyboard and value should be a friendly name
      * @param value Value to set for the approvedKeyboards property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApprovedKeyboards(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
+    public void setApprovedKeyboards(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this.approvedKeyboards = value;
     }
     /**
      * Sets the apps property value. List of apps to which the policy is deployed.
      * @param value Value to set for the apps property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApps(@javax.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
+    public void setApps(@jakarta.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
         this.apps = value;
     }
     /**
      * Sets the biometricAuthenticationBlocked property value. Indicates whether use of the biometric authentication is allowed in place of a pin if PinRequired is set to True.
      * @param value Value to set for the biometricAuthenticationBlocked property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBiometricAuthenticationBlocked(@javax.annotation.Nullable final Boolean value) {
+    public void setBiometricAuthenticationBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.biometricAuthenticationBlocked = value;
     }
     /**
      * Sets the blockAfterCompanyPortalUpdateDeferralInDays property value. Maximum number of days Company Portal update can be deferred on the device or app access will be blocked.
      * @param value Value to set for the blockAfterCompanyPortalUpdateDeferralInDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBlockAfterCompanyPortalUpdateDeferralInDays(@javax.annotation.Nullable final Integer value) {
+    public void setBlockAfterCompanyPortalUpdateDeferralInDays(@jakarta.annotation.Nullable final Integer value) {
         this.blockAfterCompanyPortalUpdateDeferralInDays = value;
     }
     /**
      * Sets the connectToVpnOnLaunch property value. Whether the app should connect to the configured VPN on launch.
      * @param value Value to set for the connectToVpnOnLaunch property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectToVpnOnLaunch(@javax.annotation.Nullable final Boolean value) {
+    public void setConnectToVpnOnLaunch(@jakarta.annotation.Nullable final Boolean value) {
         this.connectToVpnOnLaunch = value;
     }
     /**
      * Sets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android.
      * @param value Value to set for the customBrowserDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomBrowserDisplayName(@javax.annotation.Nullable final String value) {
+    public void setCustomBrowserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.customBrowserDisplayName = value;
     }
     /**
      * Sets the customBrowserPackageId property value. Unique identifier of a custom browser to open weblink on Android.
      * @param value Value to set for the customBrowserPackageId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomBrowserPackageId(@javax.annotation.Nullable final String value) {
+    public void setCustomBrowserPackageId(@jakarta.annotation.Nullable final String value) {
         this.customBrowserPackageId = value;
     }
     /**
      * Sets the customDialerAppDisplayName property value. Friendly name of a custom dialer app to click-to-open a phone number on Android.
      * @param value Value to set for the customDialerAppDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomDialerAppDisplayName(@javax.annotation.Nullable final String value) {
+    public void setCustomDialerAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.customDialerAppDisplayName = value;
     }
     /**
      * Sets the customDialerAppPackageId property value. PackageId of a custom dialer app to click-to-open a phone number on Android.
      * @param value Value to set for the customDialerAppPackageId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomDialerAppPackageId(@javax.annotation.Nullable final String value) {
+    public void setCustomDialerAppPackageId(@jakarta.annotation.Nullable final String value) {
         this.customDialerAppPackageId = value;
     }
     /**
      * Sets the deployedAppCount property value. Count of apps to which the current policy is deployed.
      * @param value Value to set for the deployedAppCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeployedAppCount(@javax.annotation.Nullable final Integer value) {
+    public void setDeployedAppCount(@jakarta.annotation.Nullable final Integer value) {
         this.deployedAppCount = value;
     }
     /**
      * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
      * @param value Value to set for the deploymentSummary property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeploymentSummary(@javax.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
+    public void setDeploymentSummary(@jakarta.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
         this.deploymentSummary = value;
     }
     /**
      * Sets the deviceLockRequired property value. Defines if any kind of lock must be required on android device
      * @param value Value to set for the deviceLockRequired property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceLockRequired(@javax.annotation.Nullable final Boolean value) {
+    public void setDeviceLockRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.deviceLockRequired = value;
     }
     /**
      * Sets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled
      * @param value Value to set for the disableAppEncryptionIfDeviceEncryptionIsEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisableAppEncryptionIfDeviceEncryptionIsEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setDisableAppEncryptionIfDeviceEncryptionIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.disableAppEncryptionIfDeviceEncryptionIsEnabled = value;
     }
     /**
      * Sets the encryptAppData property value. Indicates whether application data for managed apps should be encrypted
      * @param value Value to set for the encryptAppData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEncryptAppData(@javax.annotation.Nullable final Boolean value) {
+    public void setEncryptAppData(@jakarta.annotation.Nullable final Boolean value) {
         this.encryptAppData = value;
     }
     /**
      * Sets the exemptedAppPackages property value. App packages in this list will be exempt from the policy and will be able to receive data from managed apps.
      * @param value Value to set for the exemptedAppPackages property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExemptedAppPackages(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
+    public void setExemptedAppPackages(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this.exemptedAppPackages = value;
     }
     /**
      * Sets the fingerprintAndBiometricEnabled property value. If null, this setting will be ignored. If false both fingerprints and biometrics will not be enabled. If true, both fingerprints and biometrics will be enabled.
      * @param value Value to set for the fingerprintAndBiometricEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFingerprintAndBiometricEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setFingerprintAndBiometricEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.fingerprintAndBiometricEnabled = value;
     }
     /**
      * Sets the keyboardsRestricted property value. Indicates if keyboard restriction is enabled. If enabled list of approved keyboards must be provided as well.
      * @param value Value to set for the keyboardsRestricted property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKeyboardsRestricted(@javax.annotation.Nullable final Boolean value) {
+    public void setKeyboardsRestricted(@jakarta.annotation.Nullable final Boolean value) {
         this.keyboardsRestricted = value;
     }
     /**
      * Sets the minimumRequiredCompanyPortalVersion property value. Minimum version of the Company portal that must be installed on the device or app access will be blocked
      * @param value Value to set for the minimumRequiredCompanyPortalVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumRequiredCompanyPortalVersion(@javax.annotation.Nullable final String value) {
+    public void setMinimumRequiredCompanyPortalVersion(@jakarta.annotation.Nullable final String value) {
         this.minimumRequiredCompanyPortalVersion = value;
     }
     /**
      * Sets the minimumRequiredPatchVersion property value. Define the oldest required Android security patch level a user can have to gain secure access to the app.
      * @param value Value to set for the minimumRequiredPatchVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumRequiredPatchVersion(@javax.annotation.Nullable final String value) {
+    public void setMinimumRequiredPatchVersion(@jakarta.annotation.Nullable final String value) {
         this.minimumRequiredPatchVersion = value;
     }
     /**
      * Sets the minimumWarningCompanyPortalVersion property value. Minimum version of the Company portal that must be installed on the device or the user will receive a warning
      * @param value Value to set for the minimumWarningCompanyPortalVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumWarningCompanyPortalVersion(@javax.annotation.Nullable final String value) {
+    public void setMinimumWarningCompanyPortalVersion(@jakarta.annotation.Nullable final String value) {
         this.minimumWarningCompanyPortalVersion = value;
     }
     /**
      * Sets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app.
      * @param value Value to set for the minimumWarningPatchVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumWarningPatchVersion(@javax.annotation.Nullable final String value) {
+    public void setMinimumWarningPatchVersion(@jakarta.annotation.Nullable final String value) {
         this.minimumWarningPatchVersion = value;
     }
     /**
      * Sets the minimumWipeCompanyPortalVersion property value. Minimum version of the Company portal that must be installed on the device or the company data on the app will be wiped
      * @param value Value to set for the minimumWipeCompanyPortalVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumWipeCompanyPortalVersion(@javax.annotation.Nullable final String value) {
+    public void setMinimumWipeCompanyPortalVersion(@jakarta.annotation.Nullable final String value) {
         this.minimumWipeCompanyPortalVersion = value;
     }
     /**
      * Sets the minimumWipePatchVersion property value. Android security patch level  less than or equal to the specified value will wipe the managed app and the associated company data.
      * @param value Value to set for the minimumWipePatchVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumWipePatchVersion(@javax.annotation.Nullable final String value) {
+    public void setMinimumWipePatchVersion(@jakarta.annotation.Nullable final String value) {
         this.minimumWipePatchVersion = value;
     }
     /**
      * Sets the requireClass3Biometrics property value. Require user to apply Class 3 Biometrics on their Android device.
      * @param value Value to set for the requireClass3Biometrics property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequireClass3Biometrics(@javax.annotation.Nullable final Boolean value) {
+    public void setRequireClass3Biometrics(@jakarta.annotation.Nullable final Boolean value) {
         this.requireClass3Biometrics = value;
     }
     /**
      * Sets the requiredAndroidSafetyNetAppsVerificationType property value. An admin enforced Android SafetyNet Device Attestation requirement on a managed app.
      * @param value Value to set for the requiredAndroidSafetyNetAppsVerificationType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequiredAndroidSafetyNetAppsVerificationType(@javax.annotation.Nullable final AndroidManagedAppSafetyNetAppsVerificationType value) {
+    public void setRequiredAndroidSafetyNetAppsVerificationType(@jakarta.annotation.Nullable final AndroidManagedAppSafetyNetAppsVerificationType value) {
         this.requiredAndroidSafetyNetAppsVerificationType = value;
     }
     /**
      * Sets the requiredAndroidSafetyNetDeviceAttestationType property value. An admin enforced Android SafetyNet Device Attestation requirement on a managed app.
      * @param value Value to set for the requiredAndroidSafetyNetDeviceAttestationType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequiredAndroidSafetyNetDeviceAttestationType(@javax.annotation.Nullable final AndroidManagedAppSafetyNetDeviceAttestationType value) {
+    public void setRequiredAndroidSafetyNetDeviceAttestationType(@jakarta.annotation.Nullable final AndroidManagedAppSafetyNetDeviceAttestationType value) {
         this.requiredAndroidSafetyNetDeviceAttestationType = value;
     }
     /**
      * Sets the requiredAndroidSafetyNetEvaluationType property value. An admin enforced Android SafetyNet evaluation type requirement on a managed app.
      * @param value Value to set for the requiredAndroidSafetyNetEvaluationType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequiredAndroidSafetyNetEvaluationType(@javax.annotation.Nullable final AndroidManagedAppSafetyNetEvaluationType value) {
+    public void setRequiredAndroidSafetyNetEvaluationType(@jakarta.annotation.Nullable final AndroidManagedAppSafetyNetEvaluationType value) {
         this.requiredAndroidSafetyNetEvaluationType = value;
     }
     /**
      * Sets the requirePinAfterBiometricChange property value. A PIN prompt will override biometric prompts if class 3 biometrics are updated on the device.
      * @param value Value to set for the requirePinAfterBiometricChange property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequirePinAfterBiometricChange(@javax.annotation.Nullable final Boolean value) {
+    public void setRequirePinAfterBiometricChange(@jakarta.annotation.Nullable final Boolean value) {
         this.requirePinAfterBiometricChange = value;
     }
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether a managed user can take screen captures of managed apps
      * @param value Value to set for the screenCaptureBlocked property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
+    public void setScreenCaptureBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.screenCaptureBlocked = value;
     }
     /**
      * Sets the warnAfterCompanyPortalUpdateDeferralInDays property value. Maximum number of days Company Portal update can be deferred on the device or the user will receive the warning
      * @param value Value to set for the warnAfterCompanyPortalUpdateDeferralInDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWarnAfterCompanyPortalUpdateDeferralInDays(@javax.annotation.Nullable final Integer value) {
+    public void setWarnAfterCompanyPortalUpdateDeferralInDays(@jakarta.annotation.Nullable final Integer value) {
         this.warnAfterCompanyPortalUpdateDeferralInDays = value;
     }
     /**
      * Sets the wipeAfterCompanyPortalUpdateDeferralInDays property value. Maximum number of days Company Portal update can be deferred on the device or the company data on the app will be wiped
      * @param value Value to set for the wipeAfterCompanyPortalUpdateDeferralInDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWipeAfterCompanyPortalUpdateDeferralInDays(@javax.annotation.Nullable final Integer value) {
+    public void setWipeAfterCompanyPortalUpdateDeferralInDays(@jakarta.annotation.Nullable final Integer value) {
         this.wipeAfterCompanyPortalUpdateDeferralInDays = value;
     }
 }

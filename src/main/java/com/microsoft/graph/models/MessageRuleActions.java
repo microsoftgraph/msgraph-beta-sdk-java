@@ -62,9 +62,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     private Boolean stopProcessingRules;
     /**
      * Instantiates a new messageRuleActions and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MessageRuleActions() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -73,8 +71,8 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a messageRuleActions
      */
-    @javax.annotation.Nonnull
-    public static MessageRuleActions createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MessageRuleActions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MessageRuleActions();
     }
@@ -82,7 +80,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -90,7 +88,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * Gets the assignCategories property value. A list of categories to be assigned to a message.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAssignCategories() {
         return this.assignCategories;
     }
@@ -98,7 +96,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * Gets the copyToFolder property value. The ID of a folder that a message is to be copied to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCopyToFolder() {
         return this.copyToFolder;
     }
@@ -106,7 +104,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * Gets the delete property value. Indicates whether a message should be moved to the Deleted Items folder.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDelete() {
         return this.delete;
     }
@@ -114,7 +112,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("assignCategories", (n) -> { this.setAssignCategories(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -135,7 +133,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * Gets the forwardAsAttachmentTo property value. The email addresses of the recipients to which a message should be forwarded as an attachment.
      * @return a recipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Recipient> getForwardAsAttachmentTo() {
         return this.forwardAsAttachmentTo;
     }
@@ -143,7 +141,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * Gets the forwardTo property value. The email addresses of the recipients to which a message should be forwarded.
      * @return a recipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Recipient> getForwardTo() {
         return this.forwardTo;
     }
@@ -151,7 +149,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * Gets the markAsRead property value. Indicates whether a message should be marked as read.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getMarkAsRead() {
         return this.markAsRead;
     }
@@ -159,7 +157,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * Gets the markImportance property value. Sets the importance of the message, which can be: low, normal, high.
      * @return a importance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Importance getMarkImportance() {
         return this.markImportance;
     }
@@ -167,7 +165,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * Gets the moveToFolder property value. The ID of the folder that a message will be moved to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMoveToFolder() {
         return this.moveToFolder;
     }
@@ -175,7 +173,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -183,7 +181,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * Gets the permanentDelete property value. Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPermanentDelete() {
         return this.permanentDelete;
     }
@@ -191,7 +189,7 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * Gets the redirectTo property value. The email address to which a message should be redirected.
      * @return a recipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Recipient> getRedirectTo() {
         return this.redirectTo;
     }
@@ -199,17 +197,15 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
      * Gets the stopProcessingRules property value. Indicates whether subsequent rules should be evaluated.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getStopProcessingRules() {
         return this.stopProcessingRules;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("assignCategories", this.getAssignCategories());
         writer.writeStringValue("copyToFolder", this.getCopyToFolder());
@@ -228,118 +224,92 @@ public class MessageRuleActions implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the assignCategories property value. A list of categories to be assigned to a message.
      * @param value Value to set for the assignCategories property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignCategories(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setAssignCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.assignCategories = value;
     }
     /**
      * Sets the copyToFolder property value. The ID of a folder that a message is to be copied to.
      * @param value Value to set for the copyToFolder property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCopyToFolder(@javax.annotation.Nullable final String value) {
+    public void setCopyToFolder(@jakarta.annotation.Nullable final String value) {
         this.copyToFolder = value;
     }
     /**
      * Sets the delete property value. Indicates whether a message should be moved to the Deleted Items folder.
      * @param value Value to set for the delete property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDelete(@javax.annotation.Nullable final Boolean value) {
+    public void setDelete(@jakarta.annotation.Nullable final Boolean value) {
         this.delete = value;
     }
     /**
      * Sets the forwardAsAttachmentTo property value. The email addresses of the recipients to which a message should be forwarded as an attachment.
      * @param value Value to set for the forwardAsAttachmentTo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setForwardAsAttachmentTo(@javax.annotation.Nullable final java.util.List<Recipient> value) {
+    public void setForwardAsAttachmentTo(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.forwardAsAttachmentTo = value;
     }
     /**
      * Sets the forwardTo property value. The email addresses of the recipients to which a message should be forwarded.
      * @param value Value to set for the forwardTo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setForwardTo(@javax.annotation.Nullable final java.util.List<Recipient> value) {
+    public void setForwardTo(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.forwardTo = value;
     }
     /**
      * Sets the markAsRead property value. Indicates whether a message should be marked as read.
      * @param value Value to set for the markAsRead property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMarkAsRead(@javax.annotation.Nullable final Boolean value) {
+    public void setMarkAsRead(@jakarta.annotation.Nullable final Boolean value) {
         this.markAsRead = value;
     }
     /**
      * Sets the markImportance property value. Sets the importance of the message, which can be: low, normal, high.
      * @param value Value to set for the markImportance property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMarkImportance(@javax.annotation.Nullable final Importance value) {
+    public void setMarkImportance(@jakarta.annotation.Nullable final Importance value) {
         this.markImportance = value;
     }
     /**
      * Sets the moveToFolder property value. The ID of the folder that a message will be moved to.
      * @param value Value to set for the moveToFolder property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMoveToFolder(@javax.annotation.Nullable final String value) {
+    public void setMoveToFolder(@jakarta.annotation.Nullable final String value) {
         this.moveToFolder = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the permanentDelete property value. Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
      * @param value Value to set for the permanentDelete property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPermanentDelete(@javax.annotation.Nullable final Boolean value) {
+    public void setPermanentDelete(@jakarta.annotation.Nullable final Boolean value) {
         this.permanentDelete = value;
     }
     /**
      * Sets the redirectTo property value. The email address to which a message should be redirected.
      * @param value Value to set for the redirectTo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRedirectTo(@javax.annotation.Nullable final java.util.List<Recipient> value) {
+    public void setRedirectTo(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.redirectTo = value;
     }
     /**
      * Sets the stopProcessingRules property value. Indicates whether subsequent rules should be evaluated.
      * @param value Value to set for the stopProcessingRules property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStopProcessingRules(@javax.annotation.Nullable final Boolean value) {
+    public void setStopProcessingRules(@jakarta.annotation.Nullable final Boolean value) {
         this.stopProcessingRules = value;
     }
 }

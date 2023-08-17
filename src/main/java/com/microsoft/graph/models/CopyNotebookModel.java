@@ -79,9 +79,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     private OnenoteUserRole userRole;
     /**
      * Instantiates a new CopyNotebookModel and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CopyNotebookModel() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -90,8 +88,8 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a CopyNotebookModel
      */
-    @javax.annotation.Nonnull
-    public static CopyNotebookModel createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CopyNotebookModel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CopyNotebookModel();
     }
@@ -99,7 +97,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -107,7 +105,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Gets the createdBy property value. The createdBy property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCreatedBy() {
         return this.createdBy;
     }
@@ -115,7 +113,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Gets the createdByIdentity property value. The createdByIdentity property
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedByIdentity() {
         return this.createdByIdentity;
     }
@@ -123,7 +121,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Gets the createdTime property value. The createdTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedTime() {
         return this.createdTime;
     }
@@ -131,7 +129,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(16);
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getStringValue()); });
@@ -156,7 +154,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Gets the id property value. The id property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -164,7 +162,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Gets the isDefault property value. The isDefault property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
         return this.isDefault;
     }
@@ -172,7 +170,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Gets the isShared property value. The isShared property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsShared() {
         return this.isShared;
     }
@@ -180,7 +178,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Gets the lastModifiedBy property value. The lastModifiedBy property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -188,7 +186,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Gets the lastModifiedByIdentity property value. The lastModifiedByIdentity property
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedByIdentity() {
         return this.lastModifiedByIdentity;
     }
@@ -196,7 +194,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Gets the lastModifiedTime property value. The lastModifiedTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedTime() {
         return this.lastModifiedTime;
     }
@@ -204,7 +202,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Gets the links property value. The links property
      * @return a notebookLinks
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public NotebookLinks getLinks() {
         return this.links;
     }
@@ -212,7 +210,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Gets the name property value. The name property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -220,7 +218,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -228,7 +226,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Gets the sectionGroupsUrl property value. The sectionGroupsUrl property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSectionGroupsUrl() {
         return this.sectionGroupsUrl;
     }
@@ -236,7 +234,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Gets the sectionsUrl property value. The sectionsUrl property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSectionsUrl() {
         return this.sectionsUrl;
     }
@@ -244,7 +242,7 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Gets the self property value. The self property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSelf() {
         return this.self;
     }
@@ -252,17 +250,15 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
      * Gets the userRole property value. The userRole property
      * @return a onenoteUserRole
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnenoteUserRole getUserRole() {
         return this.userRole;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("createdBy", this.getCreatedBy());
         writer.writeObjectValue("createdByIdentity", this.getCreatedByIdentity());
@@ -285,154 +281,120 @@ public class CopyNotebookModel implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final String value) {
+    public void setCreatedBy(@jakarta.annotation.Nullable final String value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdByIdentity property value. The createdByIdentity property
      * @param value Value to set for the createdByIdentity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedByIdentity(@javax.annotation.Nullable final IdentitySet value) {
+    public void setCreatedByIdentity(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdByIdentity = value;
     }
     /**
      * Sets the createdTime property value. The createdTime property
      * @param value Value to set for the createdTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdTime = value;
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the isDefault property value. The isDefault property
      * @param value Value to set for the isDefault property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
+    public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefault = value;
     }
     /**
      * Sets the isShared property value. The isShared property
      * @param value Value to set for the isShared property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsShared(@javax.annotation.Nullable final Boolean value) {
+    public void setIsShared(@jakarta.annotation.Nullable final Boolean value) {
         this.isShared = value;
     }
     /**
      * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final String value) {
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final String value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedByIdentity property value. The lastModifiedByIdentity property
      * @param value Value to set for the lastModifiedByIdentity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedByIdentity(@javax.annotation.Nullable final IdentitySet value) {
+    public void setLastModifiedByIdentity(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedByIdentity = value;
     }
     /**
      * Sets the lastModifiedTime property value. The lastModifiedTime property
      * @param value Value to set for the lastModifiedTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedTime = value;
     }
     /**
      * Sets the links property value. The links property
      * @param value Value to set for the links property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLinks(@javax.annotation.Nullable final NotebookLinks value) {
+    public void setLinks(@jakarta.annotation.Nullable final NotebookLinks value) {
         this.links = value;
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the sectionGroupsUrl property value. The sectionGroupsUrl property
      * @param value Value to set for the sectionGroupsUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSectionGroupsUrl(@javax.annotation.Nullable final String value) {
+    public void setSectionGroupsUrl(@jakarta.annotation.Nullable final String value) {
         this.sectionGroupsUrl = value;
     }
     /**
      * Sets the sectionsUrl property value. The sectionsUrl property
      * @param value Value to set for the sectionsUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSectionsUrl(@javax.annotation.Nullable final String value) {
+    public void setSectionsUrl(@jakarta.annotation.Nullable final String value) {
         this.sectionsUrl = value;
     }
     /**
      * Sets the self property value. The self property
      * @param value Value to set for the self property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSelf(@javax.annotation.Nullable final String value) {
+    public void setSelf(@jakarta.annotation.Nullable final String value) {
         this.self = value;
     }
     /**
      * Sets the userRole property value. The userRole property
      * @param value Value to set for the userRole property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserRole(@javax.annotation.Nullable final OnenoteUserRole value) {
+    public void setUserRole(@jakarta.annotation.Nullable final OnenoteUserRole value) {
         this.userRole = value;
     }
 }

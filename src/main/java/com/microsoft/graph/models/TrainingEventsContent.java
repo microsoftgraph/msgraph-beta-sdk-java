@@ -26,9 +26,7 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
     private Integer trainingsAssignedUserCount;
     /**
      * Instantiates a new trainingEventsContent and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TrainingEventsContent() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +35,8 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a trainingEventsContent
      */
-    @javax.annotation.Nonnull
-    public static TrainingEventsContent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TrainingEventsContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TrainingEventsContent();
     }
@@ -46,7 +44,7 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +52,7 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
      * Gets the assignedTrainingsInfos property value. List of assigned trainings and their information in an attack simulation and training campaign.
      * @return a assignedTrainingInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AssignedTrainingInfo> getAssignedTrainingsInfos() {
         return this.assignedTrainingsInfos;
     }
@@ -62,7 +60,7 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("assignedTrainingsInfos", (n) -> { this.setAssignedTrainingsInfos(n.getCollectionOfObjectValues(AssignedTrainingInfo::createFromDiscriminatorValue)); });
@@ -74,7 +72,7 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -82,17 +80,15 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
      * Gets the trainingsAssignedUserCount property value. Number of users who were assigned trainings in an attack simulation and training campaign.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTrainingsAssignedUserCount() {
         return this.trainingsAssignedUserCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("assignedTrainingsInfos", this.getAssignedTrainingsInfos());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -102,37 +98,29 @@ public class TrainingEventsContent implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the assignedTrainingsInfos property value. List of assigned trainings and their information in an attack simulation and training campaign.
      * @param value Value to set for the assignedTrainingsInfos property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignedTrainingsInfos(@javax.annotation.Nullable final java.util.List<AssignedTrainingInfo> value) {
+    public void setAssignedTrainingsInfos(@jakarta.annotation.Nullable final java.util.List<AssignedTrainingInfo> value) {
         this.assignedTrainingsInfos = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the trainingsAssignedUserCount property value. Number of users who were assigned trainings in an attack simulation and training campaign.
      * @param value Value to set for the trainingsAssignedUserCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrainingsAssignedUserCount(@javax.annotation.Nullable final Integer value) {
+    public void setTrainingsAssignedUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.trainingsAssignedUserCount = value;
     }
 }

@@ -16,9 +16,7 @@ public class AndroidOmaCpConfiguration extends DeviceConfiguration implements Pa
     private byte[] configurationXml;
     /**
      * Instantiates a new androidOmaCpConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AndroidOmaCpConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidOmaCpConfiguration");
@@ -28,8 +26,8 @@ public class AndroidOmaCpConfiguration extends DeviceConfiguration implements Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidOmaCpConfiguration
      */
-    @javax.annotation.Nonnull
-    public static AndroidOmaCpConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidOmaCpConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidOmaCpConfiguration();
     }
@@ -37,7 +35,7 @@ public class AndroidOmaCpConfiguration extends DeviceConfiguration implements Pa
      * Gets the configurationXml property value. Configuration XML that will be applied to the device. When it is read, it only provides a placeholder string since the original data is encrypted and stored.
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getConfigurationXml() {
         return this.configurationXml;
     }
@@ -45,7 +43,7 @@ public class AndroidOmaCpConfiguration extends DeviceConfiguration implements Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("configurationXml", (n) -> { this.setConfigurationXml(n.getByteArrayValue()); });
@@ -54,10 +52,8 @@ public class AndroidOmaCpConfiguration extends DeviceConfiguration implements Pa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeByteArrayValue("configurationXml", this.getConfigurationXml());
@@ -65,10 +61,8 @@ public class AndroidOmaCpConfiguration extends DeviceConfiguration implements Pa
     /**
      * Sets the configurationXml property value. Configuration XML that will be applied to the device. When it is read, it only provides a placeholder string since the original data is encrypted and stored.
      * @param value Value to set for the configurationXml property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigurationXml(@javax.annotation.Nullable final byte[] value) {
+    public void setConfigurationXml(@jakarta.annotation.Nullable final byte[] value) {
         this.configurationXml = value;
     }
 }

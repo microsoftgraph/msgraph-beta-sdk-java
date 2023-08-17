@@ -33,9 +33,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
     private String sectionsUrl;
     /**
      * Instantiates a new sectionGroup and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SectionGroup() {
         super();
         this.setOdataType("#microsoft.graph.sectionGroup");
@@ -45,8 +43,8 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a sectionGroup
      */
-    @javax.annotation.Nonnull
-    public static SectionGroup createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SectionGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SectionGroup();
     }
@@ -54,7 +52,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("parentNotebook", (n) -> { this.setParentNotebook(n.getObjectValue(Notebook::createFromDiscriminatorValue)); });
@@ -69,7 +67,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      * Gets the parentNotebook property value. The notebook that contains the section group. Read-only.
      * @return a notebook
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Notebook getParentNotebook() {
         return this.parentNotebook;
     }
@@ -77,7 +75,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      * Gets the parentSectionGroup property value. The section group that contains the section group. Read-only.
      * @return a sectionGroup
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SectionGroup getParentSectionGroup() {
         return this.parentSectionGroup;
     }
@@ -85,7 +83,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      * Gets the sectionGroups property value. The section groups in the section. Read-only. Nullable.
      * @return a sectionGroup
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SectionGroup> getSectionGroups() {
         return this.sectionGroups;
     }
@@ -93,7 +91,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      * Gets the sectionGroupsUrl property value. The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSectionGroupsUrl() {
         return this.sectionGroupsUrl;
     }
@@ -101,7 +99,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      * Gets the sections property value. The sections in the section group. Read-only. Nullable.
      * @return a onenoteSection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OnenoteSection> getSections() {
         return this.sections;
     }
@@ -109,17 +107,15 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      * Gets the sectionsUrl property value. The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSectionsUrl() {
         return this.sectionsUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("parentNotebook", this.getParentNotebook());
@@ -132,55 +128,43 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
     /**
      * Sets the parentNotebook property value. The notebook that contains the section group. Read-only.
      * @param value Value to set for the parentNotebook property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParentNotebook(@javax.annotation.Nullable final Notebook value) {
+    public void setParentNotebook(@jakarta.annotation.Nullable final Notebook value) {
         this.parentNotebook = value;
     }
     /**
      * Sets the parentSectionGroup property value. The section group that contains the section group. Read-only.
      * @param value Value to set for the parentSectionGroup property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParentSectionGroup(@javax.annotation.Nullable final SectionGroup value) {
+    public void setParentSectionGroup(@jakarta.annotation.Nullable final SectionGroup value) {
         this.parentSectionGroup = value;
     }
     /**
      * Sets the sectionGroups property value. The section groups in the section. Read-only. Nullable.
      * @param value Value to set for the sectionGroups property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSectionGroups(@javax.annotation.Nullable final java.util.List<SectionGroup> value) {
+    public void setSectionGroups(@jakarta.annotation.Nullable final java.util.List<SectionGroup> value) {
         this.sectionGroups = value;
     }
     /**
      * Sets the sectionGroupsUrl property value. The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.
      * @param value Value to set for the sectionGroupsUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSectionGroupsUrl(@javax.annotation.Nullable final String value) {
+    public void setSectionGroupsUrl(@jakarta.annotation.Nullable final String value) {
         this.sectionGroupsUrl = value;
     }
     /**
      * Sets the sections property value. The sections in the section group. Read-only. Nullable.
      * @param value Value to set for the sections property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSections(@javax.annotation.Nullable final java.util.List<OnenoteSection> value) {
+    public void setSections(@jakarta.annotation.Nullable final java.util.List<OnenoteSection> value) {
         this.sections = value;
     }
     /**
      * Sets the sectionsUrl property value. The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
      * @param value Value to set for the sectionsUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSectionsUrl(@javax.annotation.Nullable final String value) {
+    public void setSectionsUrl(@jakarta.annotation.Nullable final String value) {
         this.sectionsUrl = value;
     }
 }

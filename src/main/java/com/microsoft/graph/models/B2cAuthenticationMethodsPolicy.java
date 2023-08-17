@@ -21,9 +21,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
     private Boolean isUserNameAuthenticationEnabled;
     /**
      * Instantiates a new b2cAuthenticationMethodsPolicy and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public B2cAuthenticationMethodsPolicy() {
         super();
     }
@@ -32,8 +30,8 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a b2cAuthenticationMethodsPolicy
      */
-    @javax.annotation.Nonnull
-    public static B2cAuthenticationMethodsPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static B2cAuthenticationMethodsPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new B2cAuthenticationMethodsPolicy();
     }
@@ -41,7 +39,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isEmailPasswordAuthenticationEnabled", (n) -> { this.setIsEmailPasswordAuthenticationEnabled(n.getBooleanValue()); });
@@ -53,7 +51,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
      * Gets the isEmailPasswordAuthenticationEnabled property value. The tenant admin can configure local accounts using email if the email and password authentication method is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsEmailPasswordAuthenticationEnabled() {
         return this.isEmailPasswordAuthenticationEnabled;
     }
@@ -61,7 +59,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
      * Gets the isPhoneOneTimePasswordAuthenticationEnabled property value. The tenant admin can configure local accounts using phone number if the phone number and one-time password authentication method is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsPhoneOneTimePasswordAuthenticationEnabled() {
         return this.isPhoneOneTimePasswordAuthenticationEnabled;
     }
@@ -69,17 +67,15 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
      * Gets the isUserNameAuthenticationEnabled property value. The tenant admin can configure local accounts using username if the username and password authentication method is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsUserNameAuthenticationEnabled() {
         return this.isUserNameAuthenticationEnabled;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("isEmailPasswordAuthenticationEnabled", this.getIsEmailPasswordAuthenticationEnabled());
@@ -89,28 +85,22 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
     /**
      * Sets the isEmailPasswordAuthenticationEnabled property value. The tenant admin can configure local accounts using email if the email and password authentication method is enabled.
      * @param value Value to set for the isEmailPasswordAuthenticationEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsEmailPasswordAuthenticationEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsEmailPasswordAuthenticationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEmailPasswordAuthenticationEnabled = value;
     }
     /**
      * Sets the isPhoneOneTimePasswordAuthenticationEnabled property value. The tenant admin can configure local accounts using phone number if the phone number and one-time password authentication method is enabled.
      * @param value Value to set for the isPhoneOneTimePasswordAuthenticationEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsPhoneOneTimePasswordAuthenticationEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsPhoneOneTimePasswordAuthenticationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isPhoneOneTimePasswordAuthenticationEnabled = value;
     }
     /**
      * Sets the isUserNameAuthenticationEnabled property value. The tenant admin can configure local accounts using username if the username and password authentication method is enabled.
      * @param value Value to set for the isUserNameAuthenticationEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsUserNameAuthenticationEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsUserNameAuthenticationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isUserNameAuthenticationEnabled = value;
     }
 }

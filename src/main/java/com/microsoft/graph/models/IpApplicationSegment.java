@@ -21,9 +21,7 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
     private java.util.List<String> ports;
     /**
      * Instantiates a new ipApplicationSegment and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public IpApplicationSegment() {
         super();
         this.setOdataType("#microsoft.graph.ipApplicationSegment");
@@ -33,8 +31,8 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a ipApplicationSegment
      */
-    @javax.annotation.Nonnull
-    public static IpApplicationSegment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IpApplicationSegment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IpApplicationSegment();
     }
@@ -42,7 +40,7 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
      * Gets the destinationHost property value. The destinationHost property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDestinationHost() {
         return this.destinationHost;
     }
@@ -50,7 +48,7 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("destinationHost", (n) -> { this.setDestinationHost(n.getStringValue()); });
@@ -62,7 +60,7 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
      * Gets the port property value. The port property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPort() {
         return this.port;
     }
@@ -70,17 +68,15 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
      * Gets the ports property value. The ports property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getPorts() {
         return this.ports;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("destinationHost", this.getDestinationHost());
@@ -90,28 +86,22 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
     /**
      * Sets the destinationHost property value. The destinationHost property
      * @param value Value to set for the destinationHost property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDestinationHost(@javax.annotation.Nullable final String value) {
+    public void setDestinationHost(@jakarta.annotation.Nullable final String value) {
         this.destinationHost = value;
     }
     /**
      * Sets the port property value. The port property
      * @param value Value to set for the port property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPort(@javax.annotation.Nullable final Integer value) {
+    public void setPort(@jakarta.annotation.Nullable final Integer value) {
         this.port = value;
     }
     /**
      * Sets the ports property value. The ports property
      * @param value Value to set for the ports property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPorts(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setPorts(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.ports = value;
     }
 }

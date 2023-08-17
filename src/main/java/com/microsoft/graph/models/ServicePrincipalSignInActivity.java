@@ -33,9 +33,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
     private SignInActivity lastSignInActivity;
     /**
      * Instantiates a new servicePrincipalSignInActivity and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ServicePrincipalSignInActivity() {
         super();
     }
@@ -44,8 +42,8 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a servicePrincipalSignInActivity
      */
-    @javax.annotation.Nonnull
-    public static ServicePrincipalSignInActivity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ServicePrincipalSignInActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ServicePrincipalSignInActivity();
     }
@@ -53,7 +51,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
      * Gets the appId property value. The application ID of the resource.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppId() {
         return this.appId;
     }
@@ -61,7 +59,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
      * Gets the applicationAuthenticationClientSignInActivity property value. The sign-in activity of the application in a app-only authentication flow (app-to-app tokens) where the application acts like a client.
      * @return a signInActivity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SignInActivity getApplicationAuthenticationClientSignInActivity() {
         return this.applicationAuthenticationClientSignInActivity;
     }
@@ -69,7 +67,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
      * Gets the applicationAuthenticationResourceSignInActivity property value. The sign-in activity of the application in a app-only authentication flow (app-to-app tokens) where the application acts like a resource.
      * @return a signInActivity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SignInActivity getApplicationAuthenticationResourceSignInActivity() {
         return this.applicationAuthenticationResourceSignInActivity;
     }
@@ -77,7 +75,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
      * Gets the delegatedClientSignInActivity property value. The sign-in activity of the application in a delegated flow (user sign-in) where the application acts like a client.
      * @return a signInActivity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SignInActivity getDelegatedClientSignInActivity() {
         return this.delegatedClientSignInActivity;
     }
@@ -85,7 +83,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
      * Gets the delegatedResourceSignInActivity property value. The sign-in activity of the application in a delegated flow (user sign-in) where the application acts like a resource.
      * @return a signInActivity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SignInActivity getDelegatedResourceSignInActivity() {
         return this.delegatedResourceSignInActivity;
     }
@@ -93,7 +91,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
@@ -108,17 +106,15 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
      * Gets the lastSignInActivity property value. The most recent sign-in activity of the application across delegated or app-only flows where the application is used either as a client or resource.
      * @return a signInActivity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SignInActivity getLastSignInActivity() {
         return this.lastSignInActivity;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appId", this.getAppId());
@@ -131,55 +127,43 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
     /**
      * Sets the appId property value. The application ID of the resource.
      * @param value Value to set for the appId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppId(@javax.annotation.Nullable final String value) {
+    public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }
     /**
      * Sets the applicationAuthenticationClientSignInActivity property value. The sign-in activity of the application in a app-only authentication flow (app-to-app tokens) where the application acts like a client.
      * @param value Value to set for the applicationAuthenticationClientSignInActivity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicationAuthenticationClientSignInActivity(@javax.annotation.Nullable final SignInActivity value) {
+    public void setApplicationAuthenticationClientSignInActivity(@jakarta.annotation.Nullable final SignInActivity value) {
         this.applicationAuthenticationClientSignInActivity = value;
     }
     /**
      * Sets the applicationAuthenticationResourceSignInActivity property value. The sign-in activity of the application in a app-only authentication flow (app-to-app tokens) where the application acts like a resource.
      * @param value Value to set for the applicationAuthenticationResourceSignInActivity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicationAuthenticationResourceSignInActivity(@javax.annotation.Nullable final SignInActivity value) {
+    public void setApplicationAuthenticationResourceSignInActivity(@jakarta.annotation.Nullable final SignInActivity value) {
         this.applicationAuthenticationResourceSignInActivity = value;
     }
     /**
      * Sets the delegatedClientSignInActivity property value. The sign-in activity of the application in a delegated flow (user sign-in) where the application acts like a client.
      * @param value Value to set for the delegatedClientSignInActivity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDelegatedClientSignInActivity(@javax.annotation.Nullable final SignInActivity value) {
+    public void setDelegatedClientSignInActivity(@jakarta.annotation.Nullable final SignInActivity value) {
         this.delegatedClientSignInActivity = value;
     }
     /**
      * Sets the delegatedResourceSignInActivity property value. The sign-in activity of the application in a delegated flow (user sign-in) where the application acts like a resource.
      * @param value Value to set for the delegatedResourceSignInActivity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDelegatedResourceSignInActivity(@javax.annotation.Nullable final SignInActivity value) {
+    public void setDelegatedResourceSignInActivity(@jakarta.annotation.Nullable final SignInActivity value) {
         this.delegatedResourceSignInActivity = value;
     }
     /**
      * Sets the lastSignInActivity property value. The most recent sign-in activity of the application across delegated or app-only flows where the application is used either as a client or resource.
      * @param value Value to set for the lastSignInActivity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSignInActivity(@javax.annotation.Nullable final SignInActivity value) {
+    public void setLastSignInActivity(@jakarta.annotation.Nullable final SignInActivity value) {
         this.lastSignInActivity = value;
     }
 }

@@ -41,9 +41,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     private String termsOfUseUrl;
     /**
      * Instantiates a new mobilityManagementPolicy and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MobilityManagementPolicy() {
         super();
     }
@@ -52,8 +50,8 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a mobilityManagementPolicy
      */
-    @javax.annotation.Nonnull
-    public static MobilityManagementPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MobilityManagementPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MobilityManagementPolicy();
     }
@@ -61,7 +59,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * Gets the appliesTo property value. Indicates the user scope of the mobility management policy. Possible values are: none, all, selected.
      * @return a policyScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PolicyScope getAppliesTo() {
         return this.appliesTo;
     }
@@ -69,7 +67,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * Gets the complianceUrl property value. Compliance URL of the mobility management application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getComplianceUrl() {
         return this.complianceUrl;
     }
@@ -77,7 +75,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * Gets the description property value. Description of the mobility management application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -85,7 +83,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * Gets the discoveryUrl property value. Discovery URL of the mobility management application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDiscoveryUrl() {
         return this.discoveryUrl;
     }
@@ -93,7 +91,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * Gets the displayName property value. Display name of the mobility management application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -101,7 +99,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getEnumValue(PolicyScope.class)); });
@@ -118,7 +116,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * Gets the includedGroups property value. Azure AD groups under the scope of the mobility management application if appliesTo is selected
      * @return a group
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Group> getIncludedGroups() {
         return this.includedGroups;
     }
@@ -126,7 +124,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * Gets the isValid property value. Whether policy is valid. Invalid policies may not be updated and should be deleted.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsValid() {
         return this.isValid;
     }
@@ -134,17 +132,15 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * Gets the termsOfUseUrl property value. Terms of Use URL of the mobility management application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTermsOfUseUrl() {
         return this.termsOfUseUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("appliesTo", this.getAppliesTo());
@@ -159,73 +155,57 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     /**
      * Sets the appliesTo property value. Indicates the user scope of the mobility management policy. Possible values are: none, all, selected.
      * @param value Value to set for the appliesTo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppliesTo(@javax.annotation.Nullable final PolicyScope value) {
+    public void setAppliesTo(@jakarta.annotation.Nullable final PolicyScope value) {
         this.appliesTo = value;
     }
     /**
      * Sets the complianceUrl property value. Compliance URL of the mobility management application.
      * @param value Value to set for the complianceUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComplianceUrl(@javax.annotation.Nullable final String value) {
+    public void setComplianceUrl(@jakarta.annotation.Nullable final String value) {
         this.complianceUrl = value;
     }
     /**
      * Sets the description property value. Description of the mobility management application.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the discoveryUrl property value. Discovery URL of the mobility management application.
      * @param value Value to set for the discoveryUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDiscoveryUrl(@javax.annotation.Nullable final String value) {
+    public void setDiscoveryUrl(@jakarta.annotation.Nullable final String value) {
         this.discoveryUrl = value;
     }
     /**
      * Sets the displayName property value. Display name of the mobility management application.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the includedGroups property value. Azure AD groups under the scope of the mobility management application if appliesTo is selected
      * @param value Value to set for the includedGroups property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncludedGroups(@javax.annotation.Nullable final java.util.List<Group> value) {
+    public void setIncludedGroups(@jakarta.annotation.Nullable final java.util.List<Group> value) {
         this.includedGroups = value;
     }
     /**
      * Sets the isValid property value. Whether policy is valid. Invalid policies may not be updated and should be deleted.
      * @param value Value to set for the isValid property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsValid(@javax.annotation.Nullable final Boolean value) {
+    public void setIsValid(@jakarta.annotation.Nullable final Boolean value) {
         this.isValid = value;
     }
     /**
      * Sets the termsOfUseUrl property value. Terms of Use URL of the mobility management application.
      * @param value Value to set for the termsOfUseUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTermsOfUseUrl(@javax.annotation.Nullable final String value) {
+    public void setTermsOfUseUrl(@jakarta.annotation.Nullable final String value) {
         this.termsOfUseUrl = value;
     }
 }

@@ -19,10 +19,10 @@ public enum DeviceManagementDerivedCredentialIssuer implements ValuedEnum {
     DeviceManagementDerivedCredentialIssuer(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementDerivedCredentialIssuer forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementDerivedCredentialIssuer forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "intercede": return Intercede;

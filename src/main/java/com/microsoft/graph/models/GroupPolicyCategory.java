@@ -45,9 +45,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
     private GroupPolicyCategory parent;
     /**
      * Instantiates a new groupPolicyCategory and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public GroupPolicyCategory() {
         super();
     }
@@ -56,8 +54,8 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a groupPolicyCategory
      */
-    @javax.annotation.Nonnull
-    public static GroupPolicyCategory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GroupPolicyCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GroupPolicyCategory();
     }
@@ -65,7 +63,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * Gets the children property value. The children categories
      * @return a groupPolicyCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyCategory> getChildren() {
         return this.children;
     }
@@ -73,7 +71,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * Gets the definitionFile property value. The id of the definition file the category came from
      * @return a groupPolicyDefinitionFile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GroupPolicyDefinitionFile getDefinitionFile() {
         return this.definitionFile;
     }
@@ -81,7 +79,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * Gets the definitions property value. The immediate GroupPolicyDefinition children of the category
      * @return a groupPolicyDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyDefinition> getDefinitions() {
         return this.definitions;
     }
@@ -89,7 +87,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * Gets the displayName property value. The string id of the category's display name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -97,7 +95,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("children", (n) -> { this.setChildren(n.getCollectionOfObjectValues(GroupPolicyCategory::createFromDiscriminatorValue)); });
@@ -114,7 +112,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * Gets the ingestionSource property value. Category Ingestion source
      * @return a ingestionSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IngestionSource getIngestionSource() {
         return this.ingestionSource;
     }
@@ -122,7 +120,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * Gets the isRoot property value. Defines if the category is a root category
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRoot() {
         return this.isRoot;
     }
@@ -130,7 +128,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -138,17 +136,15 @@ public class GroupPolicyCategory extends Entity implements Parsable {
      * Gets the parent property value. The parent category
      * @return a groupPolicyCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GroupPolicyCategory getParent() {
         return this.parent;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("children", this.getChildren());
@@ -163,73 +159,57 @@ public class GroupPolicyCategory extends Entity implements Parsable {
     /**
      * Sets the children property value. The children categories
      * @param value Value to set for the children property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChildren(@javax.annotation.Nullable final java.util.List<GroupPolicyCategory> value) {
+    public void setChildren(@jakarta.annotation.Nullable final java.util.List<GroupPolicyCategory> value) {
         this.children = value;
     }
     /**
      * Sets the definitionFile property value. The id of the definition file the category came from
      * @param value Value to set for the definitionFile property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefinitionFile(@javax.annotation.Nullable final GroupPolicyDefinitionFile value) {
+    public void setDefinitionFile(@jakarta.annotation.Nullable final GroupPolicyDefinitionFile value) {
         this.definitionFile = value;
     }
     /**
      * Sets the definitions property value. The immediate GroupPolicyDefinition children of the category
      * @param value Value to set for the definitions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefinitions(@javax.annotation.Nullable final java.util.List<GroupPolicyDefinition> value) {
+    public void setDefinitions(@jakarta.annotation.Nullable final java.util.List<GroupPolicyDefinition> value) {
         this.definitions = value;
     }
     /**
      * Sets the displayName property value. The string id of the category's display name
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the ingestionSource property value. Category Ingestion source
      * @param value Value to set for the ingestionSource property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIngestionSource(@javax.annotation.Nullable final IngestionSource value) {
+    public void setIngestionSource(@jakarta.annotation.Nullable final IngestionSource value) {
         this.ingestionSource = value;
     }
     /**
      * Sets the isRoot property value. Defines if the category is a root category
      * @param value Value to set for the isRoot property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRoot(@javax.annotation.Nullable final Boolean value) {
+    public void setIsRoot(@jakarta.annotation.Nullable final Boolean value) {
         this.isRoot = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the entity was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the parent property value. The parent category
      * @param value Value to set for the parent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParent(@javax.annotation.Nullable final GroupPolicyCategory value) {
+    public void setParent(@jakarta.annotation.Nullable final GroupPolicyCategory value) {
         this.parent = value;
     }
 }

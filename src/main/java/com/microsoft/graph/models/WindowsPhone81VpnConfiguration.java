@@ -36,9 +36,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
     private Boolean rememberUserCredentials;
     /**
      * Instantiates a new windowsPhone81VpnConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsPhone81VpnConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsPhone81VpnConfiguration");
@@ -48,8 +46,8 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsPhone81VpnConfiguration
      */
-    @javax.annotation.Nonnull
-    public static WindowsPhone81VpnConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsPhone81VpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsPhone81VpnConfiguration();
     }
@@ -57,7 +55,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * Gets the authenticationMethod property value. VPN Authentication Method.
      * @return a vpnAuthenticationMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VpnAuthenticationMethod getAuthenticationMethod() {
         return this.authenticationMethod;
     }
@@ -65,7 +63,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * Gets the bypassVpnOnCompanyWifi property value. Bypass VPN on company Wi-Fi.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBypassVpnOnCompanyWifi() {
         return this.bypassVpnOnCompanyWifi;
     }
@@ -73,7 +71,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * Gets the bypassVpnOnHomeWifi property value. Bypass VPN on home Wi-Fi.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBypassVpnOnHomeWifi() {
         return this.bypassVpnOnHomeWifi;
     }
@@ -81,7 +79,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * Gets the dnsSuffixSearchList property value. DNS suffix search list.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getDnsSuffixSearchList() {
         return this.dnsSuffixSearchList;
     }
@@ -89,7 +87,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(VpnAuthenticationMethod.class)); });
@@ -104,7 +102,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * Gets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
      * @return a windowsPhone81CertificateProfileBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsPhone81CertificateProfileBase getIdentityCertificate() {
         return this.identityCertificate;
     }
@@ -112,17 +110,15 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      * Gets the rememberUserCredentials property value. Remember user credentials.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRememberUserCredentials() {
         return this.rememberUserCredentials;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("authenticationMethod", this.getAuthenticationMethod());
@@ -135,55 +131,43 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
     /**
      * Sets the authenticationMethod property value. VPN Authentication Method.
      * @param value Value to set for the authenticationMethod property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationMethod(@javax.annotation.Nullable final VpnAuthenticationMethod value) {
+    public void setAuthenticationMethod(@jakarta.annotation.Nullable final VpnAuthenticationMethod value) {
         this.authenticationMethod = value;
     }
     /**
      * Sets the bypassVpnOnCompanyWifi property value. Bypass VPN on company Wi-Fi.
      * @param value Value to set for the bypassVpnOnCompanyWifi property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBypassVpnOnCompanyWifi(@javax.annotation.Nullable final Boolean value) {
+    public void setBypassVpnOnCompanyWifi(@jakarta.annotation.Nullable final Boolean value) {
         this.bypassVpnOnCompanyWifi = value;
     }
     /**
      * Sets the bypassVpnOnHomeWifi property value. Bypass VPN on home Wi-Fi.
      * @param value Value to set for the bypassVpnOnHomeWifi property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBypassVpnOnHomeWifi(@javax.annotation.Nullable final Boolean value) {
+    public void setBypassVpnOnHomeWifi(@jakarta.annotation.Nullable final Boolean value) {
         this.bypassVpnOnHomeWifi = value;
     }
     /**
      * Sets the dnsSuffixSearchList property value. DNS suffix search list.
      * @param value Value to set for the dnsSuffixSearchList property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDnsSuffixSearchList(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setDnsSuffixSearchList(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.dnsSuffixSearchList = value;
     }
     /**
      * Sets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
      * @param value Value to set for the identityCertificate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityCertificate(@javax.annotation.Nullable final WindowsPhone81CertificateProfileBase value) {
+    public void setIdentityCertificate(@jakarta.annotation.Nullable final WindowsPhone81CertificateProfileBase value) {
         this.identityCertificate = value;
     }
     /**
      * Sets the rememberUserCredentials property value. Remember user credentials.
      * @param value Value to set for the rememberUserCredentials property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRememberUserCredentials(@javax.annotation.Nullable final Boolean value) {
+    public void setRememberUserCredentials(@jakarta.annotation.Nullable final Boolean value) {
         this.rememberUserCredentials = value;
     }
 }

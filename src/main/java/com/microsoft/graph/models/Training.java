@@ -66,9 +66,7 @@ public class Training extends Entity implements Parsable {
     private TrainingType type;
     /**
      * Instantiates a new training and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Training() {
         super();
     }
@@ -77,8 +75,8 @@ public class Training extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a training
      */
-    @javax.annotation.Nonnull
-    public static Training createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Training createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Training();
     }
@@ -86,7 +84,7 @@ public class Training extends Entity implements Parsable {
      * Gets the availabilityStatus property value. The availabilityStatus property
      * @return a trainingAvailabilityStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TrainingAvailabilityStatus getAvailabilityStatus() {
         return this.availabilityStatus;
     }
@@ -94,7 +92,7 @@ public class Training extends Entity implements Parsable {
      * Gets the createdBy property value. The createdBy property
      * @return a emailIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
         return this.createdBy;
     }
@@ -102,7 +100,7 @@ public class Training extends Entity implements Parsable {
      * Gets the createdDateTime property value. The createdDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -110,7 +108,7 @@ public class Training extends Entity implements Parsable {
      * Gets the description property value. The description property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -118,7 +116,7 @@ public class Training extends Entity implements Parsable {
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -126,7 +124,7 @@ public class Training extends Entity implements Parsable {
      * Gets the durationInMinutes property value. The durationInMinutes property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDurationInMinutes() {
         return this.durationInMinutes;
     }
@@ -134,7 +132,7 @@ public class Training extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("availabilityStatus", (n) -> { this.setAvailabilityStatus(n.getEnumValue(TrainingAvailabilityStatus.class)); });
@@ -157,7 +155,7 @@ public class Training extends Entity implements Parsable {
      * Gets the hasEvaluation property value. The hasEvaluation property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHasEvaluation() {
         return this.hasEvaluation;
     }
@@ -165,7 +163,7 @@ public class Training extends Entity implements Parsable {
      * Gets the languageDetails property value. The languageDetails property
      * @return a trainingLanguageDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TrainingLanguageDetail> getLanguageDetails() {
         return this.languageDetails;
     }
@@ -173,7 +171,7 @@ public class Training extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. The lastModifiedBy property
      * @return a emailIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -181,7 +179,7 @@ public class Training extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -189,7 +187,7 @@ public class Training extends Entity implements Parsable {
      * Gets the source property value. The source property
      * @return a simulationContentSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SimulationContentSource getSource() {
         return this.source;
     }
@@ -197,7 +195,7 @@ public class Training extends Entity implements Parsable {
      * Gets the supportedLocales property value. The supportedLocales property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedLocales() {
         return this.supportedLocales;
     }
@@ -205,7 +203,7 @@ public class Training extends Entity implements Parsable {
      * Gets the tags property value. The tags property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
         return this.tags;
     }
@@ -213,17 +211,15 @@ public class Training extends Entity implements Parsable {
      * Gets the type property value. The type property
      * @return a trainingType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TrainingType getType() {
         return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("availabilityStatus", this.getAvailabilityStatus());
@@ -244,127 +240,99 @@ public class Training extends Entity implements Parsable {
     /**
      * Sets the availabilityStatus property value. The availabilityStatus property
      * @param value Value to set for the availabilityStatus property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAvailabilityStatus(@javax.annotation.Nullable final TrainingAvailabilityStatus value) {
+    public void setAvailabilityStatus(@jakarta.annotation.Nullable final TrainingAvailabilityStatus value) {
         this.availabilityStatus = value;
     }
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final EmailIdentity value) {
+    public void setCreatedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the durationInMinutes property value. The durationInMinutes property
      * @param value Value to set for the durationInMinutes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDurationInMinutes(@javax.annotation.Nullable final Integer value) {
+    public void setDurationInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.durationInMinutes = value;
     }
     /**
      * Sets the hasEvaluation property value. The hasEvaluation property
      * @param value Value to set for the hasEvaluation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHasEvaluation(@javax.annotation.Nullable final Boolean value) {
+    public void setHasEvaluation(@jakarta.annotation.Nullable final Boolean value) {
         this.hasEvaluation = value;
     }
     /**
      * Sets the languageDetails property value. The languageDetails property
      * @param value Value to set for the languageDetails property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLanguageDetails(@javax.annotation.Nullable final java.util.List<TrainingLanguageDetail> value) {
+    public void setLanguageDetails(@jakarta.annotation.Nullable final java.util.List<TrainingLanguageDetail> value) {
         this.languageDetails = value;
     }
     /**
      * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final EmailIdentity value) {
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the source property value. The source property
      * @param value Value to set for the source property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSource(@javax.annotation.Nullable final SimulationContentSource value) {
+    public void setSource(@jakarta.annotation.Nullable final SimulationContentSource value) {
         this.source = value;
     }
     /**
      * Sets the supportedLocales property value. The supportedLocales property
      * @param value Value to set for the supportedLocales property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedLocales(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setSupportedLocales(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.supportedLocales = value;
     }
     /**
      * Sets the tags property value. The tags property
      * @param value Value to set for the tags property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.tags = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final TrainingType value) {
+    public void setType(@jakarta.annotation.Nullable final TrainingType value) {
         this.type = value;
     }
 }

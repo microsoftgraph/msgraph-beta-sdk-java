@@ -122,9 +122,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     private String windowsAutopilotDeploymentProfileDisplayName;
     /**
      * Instantiates a new deviceManagementAutopilotEvent and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementAutopilotEvent() {
         super();
     }
@@ -133,8 +131,8 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementAutopilotEvent
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementAutopilotEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementAutopilotEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementAutopilotEvent();
     }
@@ -142,7 +140,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the accountSetupDuration property value. Time spent in user ESP.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getAccountSetupDuration() {
         return this.accountSetupDuration;
     }
@@ -150,7 +148,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the accountSetupStatus property value. Deployment states for Autopilot devices
      * @return a windowsAutopilotDeploymentState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsAutopilotDeploymentState getAccountSetupStatus() {
         return this.accountSetupStatus;
     }
@@ -158,7 +156,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the deploymentDuration property value. Autopilot deployment duration including enrollment.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getDeploymentDuration() {
         return this.deploymentDuration;
     }
@@ -166,7 +164,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the deploymentEndDateTime property value. Deployment end time.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getDeploymentEndDateTime() {
         return this.deploymentEndDateTime;
     }
@@ -174,7 +172,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the deploymentStartDateTime property value. Deployment start time.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getDeploymentStartDateTime() {
         return this.deploymentStartDateTime;
     }
@@ -182,7 +180,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the deploymentState property value. Deployment states for Autopilot devices
      * @return a windowsAutopilotDeploymentState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsAutopilotDeploymentState getDeploymentState() {
         return this.deploymentState;
     }
@@ -190,7 +188,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the deploymentTotalDuration property value. Total deployment duration from enrollment to Desktop screen.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getDeploymentTotalDuration() {
         return this.deploymentTotalDuration;
     }
@@ -198,7 +196,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the deviceId property value. Device id associated with the object
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -206,7 +204,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the devicePreparationDuration property value. Time spent in device enrollment.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getDevicePreparationDuration() {
         return this.devicePreparationDuration;
     }
@@ -214,7 +212,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the deviceRegisteredDateTime property value. Device registration date.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getDeviceRegisteredDateTime() {
         return this.deviceRegisteredDateTime;
     }
@@ -222,7 +220,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the deviceSerialNumber property value. Device serial number.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceSerialNumber() {
         return this.deviceSerialNumber;
     }
@@ -230,7 +228,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the deviceSetupDuration property value. Time spent in device ESP.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getDeviceSetupDuration() {
         return this.deviceSetupDuration;
     }
@@ -238,7 +236,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the deviceSetupStatus property value. Deployment states for Autopilot devices
      * @return a windowsAutopilotDeploymentState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsAutopilotDeploymentState getDeviceSetupStatus() {
         return this.deviceSetupStatus;
     }
@@ -246,7 +244,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the enrollmentFailureDetails property value. Enrollment failure details.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEnrollmentFailureDetails() {
         return this.enrollmentFailureDetails;
     }
@@ -254,7 +252,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the enrollmentStartDateTime property value. Device enrollment start date.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEnrollmentStartDateTime() {
         return this.enrollmentStartDateTime;
     }
@@ -262,7 +260,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the enrollmentState property value. The enrollmentState property
      * @return a enrollmentState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EnrollmentState getEnrollmentState() {
         return this.enrollmentState;
     }
@@ -270,7 +268,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the enrollmentType property value. The enrollmentType property
      * @return a windowsAutopilotEnrollmentType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsAutopilotEnrollmentType getEnrollmentType() {
         return this.enrollmentType;
     }
@@ -278,7 +276,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the eventDateTime property value. Time when the event occurred .
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
         return this.eventDateTime;
     }
@@ -286,7 +284,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountSetupDuration", (n) -> { this.setAccountSetupDuration(n.getPeriodAndDurationValue()); });
@@ -322,7 +320,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the managedDeviceName property value. Managed device name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagedDeviceName() {
         return this.managedDeviceName;
     }
@@ -330,7 +328,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the osVersion property value. Device operating system version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsVersion() {
         return this.osVersion;
     }
@@ -338,7 +336,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the policyStatusDetails property value. Policy and application status details for this device.
      * @return a deviceManagementAutopilotPolicyStatusDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementAutopilotPolicyStatusDetail> getPolicyStatusDetails() {
         return this.policyStatusDetails;
     }
@@ -346,7 +344,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the targetedAppCount property value. Count of applications targeted.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTargetedAppCount() {
         return this.targetedAppCount;
     }
@@ -354,7 +352,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the targetedPolicyCount property value. Count of policies targeted.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTargetedPolicyCount() {
         return this.targetedPolicyCount;
     }
@@ -362,7 +360,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the userPrincipalName property value. User principal name used to enroll the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
@@ -370,7 +368,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the windows10EnrollmentCompletionPageConfigurationDisplayName property value. Enrollment Status Page profile name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWindows10EnrollmentCompletionPageConfigurationDisplayName() {
         return this.windows10EnrollmentCompletionPageConfigurationDisplayName;
     }
@@ -378,7 +376,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the windows10EnrollmentCompletionPageConfigurationId property value. Enrollment Status Page profile ID
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWindows10EnrollmentCompletionPageConfigurationId() {
         return this.windows10EnrollmentCompletionPageConfigurationId;
     }
@@ -386,17 +384,15 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      * Gets the windowsAutopilotDeploymentProfileDisplayName property value. Autopilot profile name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWindowsAutopilotDeploymentProfileDisplayName() {
         return this.windowsAutopilotDeploymentProfileDisplayName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writePeriodAndDurationValue("accountSetupDuration", this.getAccountSetupDuration());
@@ -430,244 +426,190 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     /**
      * Sets the accountSetupDuration property value. Time spent in user ESP.
      * @param value Value to set for the accountSetupDuration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccountSetupDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
+    public void setAccountSetupDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.accountSetupDuration = value;
     }
     /**
      * Sets the accountSetupStatus property value. Deployment states for Autopilot devices
      * @param value Value to set for the accountSetupStatus property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccountSetupStatus(@javax.annotation.Nullable final WindowsAutopilotDeploymentState value) {
+    public void setAccountSetupStatus(@jakarta.annotation.Nullable final WindowsAutopilotDeploymentState value) {
         this.accountSetupStatus = value;
     }
     /**
      * Sets the deploymentDuration property value. Autopilot deployment duration including enrollment.
      * @param value Value to set for the deploymentDuration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeploymentDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
+    public void setDeploymentDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.deploymentDuration = value;
     }
     /**
      * Sets the deploymentEndDateTime property value. Deployment end time.
      * @param value Value to set for the deploymentEndDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeploymentEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setDeploymentEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.deploymentEndDateTime = value;
     }
     /**
      * Sets the deploymentStartDateTime property value. Deployment start time.
      * @param value Value to set for the deploymentStartDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeploymentStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setDeploymentStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.deploymentStartDateTime = value;
     }
     /**
      * Sets the deploymentState property value. Deployment states for Autopilot devices
      * @param value Value to set for the deploymentState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeploymentState(@javax.annotation.Nullable final WindowsAutopilotDeploymentState value) {
+    public void setDeploymentState(@jakarta.annotation.Nullable final WindowsAutopilotDeploymentState value) {
         this.deploymentState = value;
     }
     /**
      * Sets the deploymentTotalDuration property value. Total deployment duration from enrollment to Desktop screen.
      * @param value Value to set for the deploymentTotalDuration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeploymentTotalDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
+    public void setDeploymentTotalDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.deploymentTotalDuration = value;
     }
     /**
      * Sets the deviceId property value. Device id associated with the object
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the devicePreparationDuration property value. Time spent in device enrollment.
      * @param value Value to set for the devicePreparationDuration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDevicePreparationDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
+    public void setDevicePreparationDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.devicePreparationDuration = value;
     }
     /**
      * Sets the deviceRegisteredDateTime property value. Device registration date.
      * @param value Value to set for the deviceRegisteredDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceRegisteredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setDeviceRegisteredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.deviceRegisteredDateTime = value;
     }
     /**
      * Sets the deviceSerialNumber property value. Device serial number.
      * @param value Value to set for the deviceSerialNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceSerialNumber(@javax.annotation.Nullable final String value) {
+    public void setDeviceSerialNumber(@jakarta.annotation.Nullable final String value) {
         this.deviceSerialNumber = value;
     }
     /**
      * Sets the deviceSetupDuration property value. Time spent in device ESP.
      * @param value Value to set for the deviceSetupDuration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceSetupDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
+    public void setDeviceSetupDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
         this.deviceSetupDuration = value;
     }
     /**
      * Sets the deviceSetupStatus property value. Deployment states for Autopilot devices
      * @param value Value to set for the deviceSetupStatus property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceSetupStatus(@javax.annotation.Nullable final WindowsAutopilotDeploymentState value) {
+    public void setDeviceSetupStatus(@jakarta.annotation.Nullable final WindowsAutopilotDeploymentState value) {
         this.deviceSetupStatus = value;
     }
     /**
      * Sets the enrollmentFailureDetails property value. Enrollment failure details.
      * @param value Value to set for the enrollmentFailureDetails property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentFailureDetails(@javax.annotation.Nullable final String value) {
+    public void setEnrollmentFailureDetails(@jakarta.annotation.Nullable final String value) {
         this.enrollmentFailureDetails = value;
     }
     /**
      * Sets the enrollmentStartDateTime property value. Device enrollment start date.
      * @param value Value to set for the enrollmentStartDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setEnrollmentStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.enrollmentStartDateTime = value;
     }
     /**
      * Sets the enrollmentState property value. The enrollmentState property
      * @param value Value to set for the enrollmentState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentState(@javax.annotation.Nullable final EnrollmentState value) {
+    public void setEnrollmentState(@jakarta.annotation.Nullable final EnrollmentState value) {
         this.enrollmentState = value;
     }
     /**
      * Sets the enrollmentType property value. The enrollmentType property
      * @param value Value to set for the enrollmentType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentType(@javax.annotation.Nullable final WindowsAutopilotEnrollmentType value) {
+    public void setEnrollmentType(@jakarta.annotation.Nullable final WindowsAutopilotEnrollmentType value) {
         this.enrollmentType = value;
     }
     /**
      * Sets the eventDateTime property value. Time when the event occurred .
      * @param value Value to set for the eventDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.eventDateTime = value;
     }
     /**
      * Sets the managedDeviceName property value. Managed device name.
      * @param value Value to set for the managedDeviceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceName(@javax.annotation.Nullable final String value) {
+    public void setManagedDeviceName(@jakarta.annotation.Nullable final String value) {
         this.managedDeviceName = value;
     }
     /**
      * Sets the osVersion property value. Device operating system version.
      * @param value Value to set for the osVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsVersion(@javax.annotation.Nullable final String value) {
+    public void setOsVersion(@jakarta.annotation.Nullable final String value) {
         this.osVersion = value;
     }
     /**
      * Sets the policyStatusDetails property value. Policy and application status details for this device.
      * @param value Value to set for the policyStatusDetails property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyStatusDetails(@javax.annotation.Nullable final java.util.List<DeviceManagementAutopilotPolicyStatusDetail> value) {
+    public void setPolicyStatusDetails(@jakarta.annotation.Nullable final java.util.List<DeviceManagementAutopilotPolicyStatusDetail> value) {
         this.policyStatusDetails = value;
     }
     /**
      * Sets the targetedAppCount property value. Count of applications targeted.
      * @param value Value to set for the targetedAppCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetedAppCount(@javax.annotation.Nullable final Integer value) {
+    public void setTargetedAppCount(@jakarta.annotation.Nullable final Integer value) {
         this.targetedAppCount = value;
     }
     /**
      * Sets the targetedPolicyCount property value. Count of policies targeted.
      * @param value Value to set for the targetedPolicyCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetedPolicyCount(@javax.annotation.Nullable final Integer value) {
+    public void setTargetedPolicyCount(@jakarta.annotation.Nullable final Integer value) {
         this.targetedPolicyCount = value;
     }
     /**
      * Sets the userPrincipalName property value. User principal name used to enroll the device.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
     /**
      * Sets the windows10EnrollmentCompletionPageConfigurationDisplayName property value. Enrollment Status Page profile name
      * @param value Value to set for the windows10EnrollmentCompletionPageConfigurationDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindows10EnrollmentCompletionPageConfigurationDisplayName(@javax.annotation.Nullable final String value) {
+    public void setWindows10EnrollmentCompletionPageConfigurationDisplayName(@jakarta.annotation.Nullable final String value) {
         this.windows10EnrollmentCompletionPageConfigurationDisplayName = value;
     }
     /**
      * Sets the windows10EnrollmentCompletionPageConfigurationId property value. Enrollment Status Page profile ID
      * @param value Value to set for the windows10EnrollmentCompletionPageConfigurationId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindows10EnrollmentCompletionPageConfigurationId(@javax.annotation.Nullable final String value) {
+    public void setWindows10EnrollmentCompletionPageConfigurationId(@jakarta.annotation.Nullable final String value) {
         this.windows10EnrollmentCompletionPageConfigurationId = value;
     }
     /**
      * Sets the windowsAutopilotDeploymentProfileDisplayName property value. Autopilot profile name.
      * @param value Value to set for the windowsAutopilotDeploymentProfileDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindowsAutopilotDeploymentProfileDisplayName(@javax.annotation.Nullable final String value) {
+    public void setWindowsAutopilotDeploymentProfileDisplayName(@jakarta.annotation.Nullable final String value) {
         this.windowsAutopilotDeploymentProfileDisplayName = value;
     }
 }

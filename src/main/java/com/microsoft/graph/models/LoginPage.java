@@ -50,9 +50,7 @@ public class LoginPage extends Entity implements Parsable {
     private SimulationContentStatus status;
     /**
      * Instantiates a new loginPage and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public LoginPage() {
         super();
     }
@@ -61,8 +59,8 @@ public class LoginPage extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a loginPage
      */
-    @javax.annotation.Nonnull
-    public static LoginPage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static LoginPage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new LoginPage();
     }
@@ -70,7 +68,7 @@ public class LoginPage extends Entity implements Parsable {
      * Gets the content property value. The content property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContent() {
         return this.content;
     }
@@ -78,7 +76,7 @@ public class LoginPage extends Entity implements Parsable {
      * Gets the createdBy property value. The createdBy property
      * @return a emailIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
         return this.createdBy;
     }
@@ -86,7 +84,7 @@ public class LoginPage extends Entity implements Parsable {
      * Gets the createdDateTime property value. The createdDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -94,7 +92,7 @@ public class LoginPage extends Entity implements Parsable {
      * Gets the description property value. The description property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -102,7 +100,7 @@ public class LoginPage extends Entity implements Parsable {
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -110,7 +108,7 @@ public class LoginPage extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
@@ -129,7 +127,7 @@ public class LoginPage extends Entity implements Parsable {
      * Gets the language property value. The language property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLanguage() {
         return this.language;
     }
@@ -137,7 +135,7 @@ public class LoginPage extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. The lastModifiedBy property
      * @return a emailIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -145,7 +143,7 @@ public class LoginPage extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -153,7 +151,7 @@ public class LoginPage extends Entity implements Parsable {
      * Gets the source property value. The source property
      * @return a simulationContentSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SimulationContentSource getSource() {
         return this.source;
     }
@@ -161,17 +159,15 @@ public class LoginPage extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a simulationContentStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SimulationContentStatus getStatus() {
         return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("content", this.getContent());
@@ -188,91 +184,71 @@ public class LoginPage extends Entity implements Parsable {
     /**
      * Sets the content property value. The content property
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContent(@javax.annotation.Nullable final String value) {
+    public void setContent(@jakarta.annotation.Nullable final String value) {
         this.content = value;
     }
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final EmailIdentity value) {
+    public void setCreatedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the language property value. The language property
      * @param value Value to set for the language property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLanguage(@javax.annotation.Nullable final String value) {
+    public void setLanguage(@jakarta.annotation.Nullable final String value) {
         this.language = value;
     }
     /**
      * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final EmailIdentity value) {
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the source property value. The source property
      * @param value Value to set for the source property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSource(@javax.annotation.Nullable final SimulationContentSource value) {
+    public void setSource(@jakarta.annotation.Nullable final SimulationContentSource value) {
         this.source = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final SimulationContentStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final SimulationContentStatus value) {
         this.status = value;
     }
 }

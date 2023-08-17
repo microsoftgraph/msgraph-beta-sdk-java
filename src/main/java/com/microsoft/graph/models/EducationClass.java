@@ -76,7 +76,7 @@ public class EducationClass extends Entity implements Parsable {
      */
     private java.util.List<EducationUser> members;
     /**
-     * The modules property
+     * All modules in the class. Nullable.
      */
     private java.util.List<EducationModule> modules;
     /**
@@ -93,9 +93,7 @@ public class EducationClass extends Entity implements Parsable {
     private EducationTerm term;
     /**
      * Instantiates a new educationClass and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EducationClass() {
         super();
     }
@@ -104,8 +102,8 @@ public class EducationClass extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationClass
      */
-    @javax.annotation.Nonnull
-    public static EducationClass createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationClass createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationClass();
     }
@@ -113,7 +111,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the assignmentCategories property value. All categories associated with this class. Nullable.
      * @return a educationCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationCategory> getAssignmentCategories() {
         return this.assignmentCategories;
     }
@@ -121,7 +119,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the assignmentDefaults property value. Specifies class-level defaults respected by new assignments created in the class.
      * @return a educationAssignmentDefaults
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationAssignmentDefaults getAssignmentDefaults() {
         return this.assignmentDefaults;
     }
@@ -129,7 +127,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the assignments property value. All assignments associated with this class. Nullable.
      * @return a educationAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationAssignment> getAssignments() {
         return this.assignments;
     }
@@ -137,7 +135,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the assignmentSettings property value. Specifies class-level assignments settings.
      * @return a educationAssignmentSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationAssignmentSettings getAssignmentSettings() {
         return this.assignmentSettings;
     }
@@ -145,7 +143,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the classCode property value. Class code used by the school to identify the class.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClassCode() {
         return this.classCode;
     }
@@ -153,7 +151,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the course property value. Course information for the class.
      * @return a educationCourse
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationCourse getCourse() {
         return this.course;
     }
@@ -161,7 +159,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the createdBy property value. Entity who created the class.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -169,7 +167,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the description property value. Description of the class.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -177,7 +175,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the displayName property value. Name of the class.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -185,7 +183,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the externalId property value. ID of the class from the syncing system.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalId() {
         return this.externalId;
     }
@@ -193,7 +191,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the externalName property value. Name of the class in the syncing system.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalName() {
         return this.externalName;
     }
@@ -201,7 +199,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the externalSource property value. The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
      * @return a educationExternalSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationExternalSource getExternalSource() {
         return this.externalSource;
     }
@@ -209,7 +207,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the externalSourceDetail property value. The name of the external source this resources was generated from.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalSourceDetail() {
         return this.externalSourceDetail;
     }
@@ -217,7 +215,7 @@ public class EducationClass extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignmentCategories", (n) -> { this.setAssignmentCategories(n.getCollectionOfObjectValues(EducationCategory::createFromDiscriminatorValue)); });
@@ -247,7 +245,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the grade property value. Grade level of the class.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getGrade() {
         return this.grade;
     }
@@ -255,7 +253,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the group property value. The group property
      * @return a group
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Group getGroup() {
         return this.group;
     }
@@ -263,7 +261,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the mailNickname property value. Mail name for sending email to all members, if this is enabled.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMailNickname() {
         return this.mailNickname;
     }
@@ -271,15 +269,15 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the members property value. All users in the class. Nullable.
      * @return a educationUser
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationUser> getMembers() {
         return this.members;
     }
     /**
-     * Gets the modules property value. The modules property
+     * Gets the modules property value. All modules in the class. Nullable.
      * @return a educationModule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationModule> getModules() {
         return this.modules;
     }
@@ -287,7 +285,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the schools property value. All schools that this class is associated with. Nullable.
      * @return a educationSchool
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationSchool> getSchools() {
         return this.schools;
     }
@@ -295,7 +293,7 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the teachers property value. All teachers in the class. Nullable.
      * @return a educationUser
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationUser> getTeachers() {
         return this.teachers;
     }
@@ -303,17 +301,15 @@ public class EducationClass extends Entity implements Parsable {
      * Gets the term property value. Term for the class.
      * @return a educationTerm
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationTerm getTerm() {
         return this.term;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignmentCategories", this.getAssignmentCategories());
@@ -341,190 +337,148 @@ public class EducationClass extends Entity implements Parsable {
     /**
      * Sets the assignmentCategories property value. All categories associated with this class. Nullable.
      * @param value Value to set for the assignmentCategories property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentCategories(@javax.annotation.Nullable final java.util.List<EducationCategory> value) {
+    public void setAssignmentCategories(@jakarta.annotation.Nullable final java.util.List<EducationCategory> value) {
         this.assignmentCategories = value;
     }
     /**
      * Sets the assignmentDefaults property value. Specifies class-level defaults respected by new assignments created in the class.
      * @param value Value to set for the assignmentDefaults property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentDefaults(@javax.annotation.Nullable final EducationAssignmentDefaults value) {
+    public void setAssignmentDefaults(@jakarta.annotation.Nullable final EducationAssignmentDefaults value) {
         this.assignmentDefaults = value;
     }
     /**
      * Sets the assignments property value. All assignments associated with this class. Nullable.
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignments(@javax.annotation.Nullable final java.util.List<EducationAssignment> value) {
+    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<EducationAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the assignmentSettings property value. Specifies class-level assignments settings.
      * @param value Value to set for the assignmentSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentSettings(@javax.annotation.Nullable final EducationAssignmentSettings value) {
+    public void setAssignmentSettings(@jakarta.annotation.Nullable final EducationAssignmentSettings value) {
         this.assignmentSettings = value;
     }
     /**
      * Sets the classCode property value. Class code used by the school to identify the class.
      * @param value Value to set for the classCode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClassCode(@javax.annotation.Nullable final String value) {
+    public void setClassCode(@jakarta.annotation.Nullable final String value) {
         this.classCode = value;
     }
     /**
      * Sets the course property value. Course information for the class.
      * @param value Value to set for the course property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCourse(@javax.annotation.Nullable final EducationCourse value) {
+    public void setCourse(@jakarta.annotation.Nullable final EducationCourse value) {
         this.course = value;
     }
     /**
      * Sets the createdBy property value. Entity who created the class.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the description property value. Description of the class.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Name of the class.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the externalId property value. ID of the class from the syncing system.
      * @param value Value to set for the externalId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalId(@javax.annotation.Nullable final String value) {
+    public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }
     /**
      * Sets the externalName property value. Name of the class in the syncing system.
      * @param value Value to set for the externalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalName(@javax.annotation.Nullable final String value) {
+    public void setExternalName(@jakarta.annotation.Nullable final String value) {
         this.externalName = value;
     }
     /**
      * Sets the externalSource property value. The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
      * @param value Value to set for the externalSource property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalSource(@javax.annotation.Nullable final EducationExternalSource value) {
+    public void setExternalSource(@jakarta.annotation.Nullable final EducationExternalSource value) {
         this.externalSource = value;
     }
     /**
      * Sets the externalSourceDetail property value. The name of the external source this resources was generated from.
      * @param value Value to set for the externalSourceDetail property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalSourceDetail(@javax.annotation.Nullable final String value) {
+    public void setExternalSourceDetail(@jakarta.annotation.Nullable final String value) {
         this.externalSourceDetail = value;
     }
     /**
      * Sets the grade property value. Grade level of the class.
      * @param value Value to set for the grade property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGrade(@javax.annotation.Nullable final String value) {
+    public void setGrade(@jakarta.annotation.Nullable final String value) {
         this.grade = value;
     }
     /**
      * Sets the group property value. The group property
      * @param value Value to set for the group property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroup(@javax.annotation.Nullable final Group value) {
+    public void setGroup(@jakarta.annotation.Nullable final Group value) {
         this.group = value;
     }
     /**
      * Sets the mailNickname property value. Mail name for sending email to all members, if this is enabled.
      * @param value Value to set for the mailNickname property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMailNickname(@javax.annotation.Nullable final String value) {
+    public void setMailNickname(@jakarta.annotation.Nullable final String value) {
         this.mailNickname = value;
     }
     /**
      * Sets the members property value. All users in the class. Nullable.
      * @param value Value to set for the members property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMembers(@javax.annotation.Nullable final java.util.List<EducationUser> value) {
+    public void setMembers(@jakarta.annotation.Nullable final java.util.List<EducationUser> value) {
         this.members = value;
     }
     /**
-     * Sets the modules property value. The modules property
+     * Sets the modules property value. All modules in the class. Nullable.
      * @param value Value to set for the modules property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModules(@javax.annotation.Nullable final java.util.List<EducationModule> value) {
+    public void setModules(@jakarta.annotation.Nullable final java.util.List<EducationModule> value) {
         this.modules = value;
     }
     /**
      * Sets the schools property value. All schools that this class is associated with. Nullable.
      * @param value Value to set for the schools property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchools(@javax.annotation.Nullable final java.util.List<EducationSchool> value) {
+    public void setSchools(@jakarta.annotation.Nullable final java.util.List<EducationSchool> value) {
         this.schools = value;
     }
     /**
      * Sets the teachers property value. All teachers in the class. Nullable.
      * @param value Value to set for the teachers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTeachers(@javax.annotation.Nullable final java.util.List<EducationUser> value) {
+    public void setTeachers(@jakarta.annotation.Nullable final java.util.List<EducationUser> value) {
         this.teachers = value;
     }
     /**
      * Sets the term property value. Term for the class.
      * @param value Value to set for the term property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTerm(@javax.annotation.Nullable final EducationTerm value) {
+    public void setTerm(@jakarta.annotation.Nullable final EducationTerm value) {
         this.term = value;
     }
 }

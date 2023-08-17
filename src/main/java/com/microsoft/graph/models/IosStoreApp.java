@@ -28,9 +28,7 @@ public class IosStoreApp extends MobileApp implements Parsable {
     private IosMinimumOperatingSystem minimumSupportedOperatingSystem;
     /**
      * Instantiates a new iosStoreApp and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public IosStoreApp() {
         super();
         this.setOdataType("#microsoft.graph.iosStoreApp");
@@ -40,8 +38,8 @@ public class IosStoreApp extends MobileApp implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a iosStoreApp
      */
-    @javax.annotation.Nonnull
-    public static IosStoreApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IosStoreApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IosStoreApp();
     }
@@ -49,7 +47,7 @@ public class IosStoreApp extends MobileApp implements Parsable {
      * Gets the applicableDeviceType property value. Contains properties of the possible iOS device types the mobile app can run on.
      * @return a iosDeviceType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosDeviceType getApplicableDeviceType() {
         return this.applicableDeviceType;
     }
@@ -57,7 +55,7 @@ public class IosStoreApp extends MobileApp implements Parsable {
      * Gets the appStoreUrl property value. The Apple App Store URL
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppStoreUrl() {
         return this.appStoreUrl;
     }
@@ -65,7 +63,7 @@ public class IosStoreApp extends MobileApp implements Parsable {
      * Gets the bundleId property value. The Identity Name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBundleId() {
         return this.bundleId;
     }
@@ -73,7 +71,7 @@ public class IosStoreApp extends MobileApp implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicableDeviceType", (n) -> { this.setApplicableDeviceType(n.getObjectValue(IosDeviceType::createFromDiscriminatorValue)); });
@@ -86,17 +84,15 @@ public class IosStoreApp extends MobileApp implements Parsable {
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
      * @return a iosMinimumOperatingSystem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IosMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
         return this.minimumSupportedOperatingSystem;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("applicableDeviceType", this.getApplicableDeviceType());
@@ -107,37 +103,29 @@ public class IosStoreApp extends MobileApp implements Parsable {
     /**
      * Sets the applicableDeviceType property value. Contains properties of the possible iOS device types the mobile app can run on.
      * @param value Value to set for the applicableDeviceType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicableDeviceType(@javax.annotation.Nullable final IosDeviceType value) {
+    public void setApplicableDeviceType(@jakarta.annotation.Nullable final IosDeviceType value) {
         this.applicableDeviceType = value;
     }
     /**
      * Sets the appStoreUrl property value. The Apple App Store URL
      * @param value Value to set for the appStoreUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppStoreUrl(@javax.annotation.Nullable final String value) {
+    public void setAppStoreUrl(@jakarta.annotation.Nullable final String value) {
         this.appStoreUrl = value;
     }
     /**
      * Sets the bundleId property value. The Identity Name.
      * @param value Value to set for the bundleId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBundleId(@javax.annotation.Nullable final String value) {
+    public void setBundleId(@jakarta.annotation.Nullable final String value) {
         this.bundleId = value;
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final IosMinimumOperatingSystem value) {
+    public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final IosMinimumOperatingSystem value) {
         this.minimumSupportedOperatingSystem = value;
     }
 }

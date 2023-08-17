@@ -30,9 +30,7 @@ public class ReportSuspiciousActivitySettings implements AdditionalDataHolder, P
     private Integer voiceReportingCode;
     /**
      * Instantiates a new reportSuspiciousActivitySettings and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ReportSuspiciousActivitySettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +39,8 @@ public class ReportSuspiciousActivitySettings implements AdditionalDataHolder, P
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a reportSuspiciousActivitySettings
      */
-    @javax.annotation.Nonnull
-    public static ReportSuspiciousActivitySettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ReportSuspiciousActivitySettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ReportSuspiciousActivitySettings();
     }
@@ -50,7 +48,7 @@ public class ReportSuspiciousActivitySettings implements AdditionalDataHolder, P
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +56,7 @@ public class ReportSuspiciousActivitySettings implements AdditionalDataHolder, P
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("includeTarget", (n) -> { this.setIncludeTarget(n.getObjectValue(IncludeTarget::createFromDiscriminatorValue)); });
@@ -71,7 +69,7 @@ public class ReportSuspiciousActivitySettings implements AdditionalDataHolder, P
      * Gets the includeTarget property value. The includeTarget property
      * @return a includeTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IncludeTarget getIncludeTarget() {
         return this.includeTarget;
     }
@@ -79,7 +77,7 @@ public class ReportSuspiciousActivitySettings implements AdditionalDataHolder, P
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -87,7 +85,7 @@ public class ReportSuspiciousActivitySettings implements AdditionalDataHolder, P
      * Gets the state property value. The state property
      * @return a advancedConfigState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AdvancedConfigState getState() {
         return this.state;
     }
@@ -95,17 +93,15 @@ public class ReportSuspiciousActivitySettings implements AdditionalDataHolder, P
      * Gets the voiceReportingCode property value. Specifies the number the user will enter on their phone to report the MFA prompt as suspicious.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getVoiceReportingCode() {
         return this.voiceReportingCode;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("includeTarget", this.getIncludeTarget());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -116,46 +112,36 @@ public class ReportSuspiciousActivitySettings implements AdditionalDataHolder, P
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the includeTarget property value. The includeTarget property
      * @param value Value to set for the includeTarget property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncludeTarget(@javax.annotation.Nullable final IncludeTarget value) {
+    public void setIncludeTarget(@jakarta.annotation.Nullable final IncludeTarget value) {
         this.includeTarget = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final AdvancedConfigState value) {
+    public void setState(@jakarta.annotation.Nullable final AdvancedConfigState value) {
         this.state = value;
     }
     /**
      * Sets the voiceReportingCode property value. Specifies the number the user will enter on their phone to report the MFA prompt as suspicious.
      * @param value Value to set for the voiceReportingCode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVoiceReportingCode(@javax.annotation.Nullable final Integer value) {
+    public void setVoiceReportingCode(@jakarta.annotation.Nullable final Integer value) {
         this.voiceReportingCode = value;
     }
 }

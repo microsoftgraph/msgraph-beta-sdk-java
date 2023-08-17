@@ -42,9 +42,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
     private String userPrincipalName;
     /**
      * Instantiates a new updateDevicePropertiesPostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UpdateDevicePropertiesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +51,8 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a updateDevicePropertiesPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static UpdateDevicePropertiesPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UpdateDevicePropertiesPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UpdateDevicePropertiesPostRequestBody();
     }
@@ -62,7 +60,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +68,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * Gets the addressableUserName property value. The addressableUserName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAddressableUserName() {
         return this.addressableUserName;
     }
@@ -78,7 +76,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * Gets the deviceAccountPassword property value. The deviceAccountPassword property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceAccountPassword() {
         return this.deviceAccountPassword;
     }
@@ -86,7 +84,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * Gets the deviceAccountUpn property value. The deviceAccountUpn property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceAccountUpn() {
         return this.deviceAccountUpn;
     }
@@ -94,7 +92,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * Gets the deviceFriendlyName property value. The deviceFriendlyName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceFriendlyName() {
         return this.deviceFriendlyName;
     }
@@ -102,7 +100,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -110,7 +108,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("addressableUserName", (n) -> { this.setAddressableUserName(n.getStringValue()); });
@@ -126,7 +124,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * Gets the groupTag property value. The groupTag property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getGroupTag() {
         return this.groupTag;
     }
@@ -134,17 +132,15 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * Gets the userPrincipalName property value. The userPrincipalName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("addressableUserName", this.getAddressableUserName());
         writer.writeStringValue("deviceAccountPassword", this.getDeviceAccountPassword());
@@ -158,73 +154,57 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the addressableUserName property value. The addressableUserName property
      * @param value Value to set for the addressableUserName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddressableUserName(@javax.annotation.Nullable final String value) {
+    public void setAddressableUserName(@jakarta.annotation.Nullable final String value) {
         this.addressableUserName = value;
     }
     /**
      * Sets the deviceAccountPassword property value. The deviceAccountPassword property
      * @param value Value to set for the deviceAccountPassword property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceAccountPassword(@javax.annotation.Nullable final String value) {
+    public void setDeviceAccountPassword(@jakarta.annotation.Nullable final String value) {
         this.deviceAccountPassword = value;
     }
     /**
      * Sets the deviceAccountUpn property value. The deviceAccountUpn property
      * @param value Value to set for the deviceAccountUpn property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceAccountUpn(@javax.annotation.Nullable final String value) {
+    public void setDeviceAccountUpn(@jakarta.annotation.Nullable final String value) {
         this.deviceAccountUpn = value;
     }
     /**
      * Sets the deviceFriendlyName property value. The deviceFriendlyName property
      * @param value Value to set for the deviceFriendlyName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceFriendlyName(@javax.annotation.Nullable final String value) {
+    public void setDeviceFriendlyName(@jakarta.annotation.Nullable final String value) {
         this.deviceFriendlyName = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the groupTag property value. The groupTag property
      * @param value Value to set for the groupTag property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupTag(@javax.annotation.Nullable final String value) {
+    public void setGroupTag(@jakarta.annotation.Nullable final String value) {
         this.groupTag = value;
     }
     /**
      * Sets the userPrincipalName property value. The userPrincipalName property
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

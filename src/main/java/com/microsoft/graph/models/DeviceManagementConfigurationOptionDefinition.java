@@ -50,9 +50,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     private DeviceManagementConfigurationSettingValue optionValue;
     /**
      * Instantiates a new deviceManagementConfigurationOptionDefinition and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementConfigurationOptionDefinition() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -61,8 +59,8 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationOptionDefinition
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationOptionDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationOptionDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationOptionDefinition();
     }
@@ -70,7 +68,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -78,7 +76,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * Gets the dependedOnBy property value. List of Settings that depends on this option
      * @return a deviceManagementConfigurationSettingDependedOnBy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingDependedOnBy> getDependedOnBy() {
         return this.dependedOnBy;
     }
@@ -86,7 +84,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * Gets the dependentOn property value. List of dependent settings for this option
      * @return a deviceManagementConfigurationDependentOn
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationDependentOn> getDependentOn() {
         return this.dependentOn;
     }
@@ -94,7 +92,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * Gets the description property value. Description of the option
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -102,7 +100,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * Gets the displayName property value. Friendly name of the option
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -110,7 +108,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("dependedOnBy", (n) -> { this.setDependedOnBy(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDependedOnBy::createFromDiscriminatorValue)); });
@@ -128,7 +126,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * Gets the helpText property value. Help text of the option
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHelpText() {
         return this.helpText;
     }
@@ -136,7 +134,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * Gets the itemId property value. Identifier of option
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getItemId() {
         return this.itemId;
     }
@@ -144,7 +142,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * Gets the name property value. Name of the option
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -152,7 +150,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -160,17 +158,15 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * Gets the optionValue property value. Value of the option
      * @return a deviceManagementConfigurationSettingValue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingValue getOptionValue() {
         return this.optionValue;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("dependedOnBy", this.getDependedOnBy());
         writer.writeCollectionOfObjectValues("dependentOn", this.getDependentOn());
@@ -186,91 +182,71 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the dependedOnBy property value. List of Settings that depends on this option
      * @param value Value to set for the dependedOnBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDependedOnBy(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDependedOnBy> value) {
+    public void setDependedOnBy(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDependedOnBy> value) {
         this.dependedOnBy = value;
     }
     /**
      * Sets the dependentOn property value. List of dependent settings for this option
      * @param value Value to set for the dependentOn property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDependentOn(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationDependentOn> value) {
+    public void setDependentOn(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationDependentOn> value) {
         this.dependentOn = value;
     }
     /**
      * Sets the description property value. Description of the option
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Friendly name of the option
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the helpText property value. Help text of the option
      * @param value Value to set for the helpText property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHelpText(@javax.annotation.Nullable final String value) {
+    public void setHelpText(@jakarta.annotation.Nullable final String value) {
         this.helpText = value;
     }
     /**
      * Sets the itemId property value. Identifier of option
      * @param value Value to set for the itemId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setItemId(@javax.annotation.Nullable final String value) {
+    public void setItemId(@jakarta.annotation.Nullable final String value) {
         this.itemId = value;
     }
     /**
      * Sets the name property value. Name of the option
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the optionValue property value. Value of the option
      * @param value Value to set for the optionValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOptionValue(@javax.annotation.Nullable final DeviceManagementConfigurationSettingValue value) {
+    public void setOptionValue(@jakarta.annotation.Nullable final DeviceManagementConfigurationSettingValue value) {
         this.optionValue = value;
     }
 }

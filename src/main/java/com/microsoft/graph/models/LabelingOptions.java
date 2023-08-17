@@ -34,9 +34,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new labelingOptions and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public LabelingOptions() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +43,8 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a labelingOptions
      */
-    @javax.annotation.Nonnull
-    public static LabelingOptions createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static LabelingOptions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new LabelingOptions();
     }
@@ -54,7 +52,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +60,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      * Gets the assignmentMethod property value. The assignmentMethod property
      * @return a assignmentMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AssignmentMethod getAssignmentMethod() {
         return this.assignmentMethod;
     }
@@ -70,7 +68,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      * Gets the downgradeJustification property value. The downgrade justification object that indicates if downgrade was justified and, if so, the reason.
      * @return a downgradeJustification
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DowngradeJustification getDowngradeJustification() {
         return this.downgradeJustification;
     }
@@ -78,7 +76,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      * Gets the extendedProperties property value. Extended properties will be parsed and returned in the standard MIP labeled metadata format as part of the label information.
      * @return a keyValuePair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getExtendedProperties() {
         return this.extendedProperties;
     }
@@ -86,7 +84,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("assignmentMethod", (n) -> { this.setAssignmentMethod(n.getEnumValue(AssignmentMethod.class)); });
@@ -100,7 +98,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      * Gets the labelId property value. The GUID of the label that should be applied to the information.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLabelId() {
         return this.labelId;
     }
@@ -108,17 +106,15 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("assignmentMethod", this.getAssignmentMethod());
         writer.writeObjectValue("downgradeJustification", this.getDowngradeJustification());
@@ -130,55 +126,43 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the assignmentMethod property value. The assignmentMethod property
      * @param value Value to set for the assignmentMethod property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentMethod(@javax.annotation.Nullable final AssignmentMethod value) {
+    public void setAssignmentMethod(@jakarta.annotation.Nullable final AssignmentMethod value) {
         this.assignmentMethod = value;
     }
     /**
      * Sets the downgradeJustification property value. The downgrade justification object that indicates if downgrade was justified and, if so, the reason.
      * @param value Value to set for the downgradeJustification property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDowngradeJustification(@javax.annotation.Nullable final DowngradeJustification value) {
+    public void setDowngradeJustification(@jakarta.annotation.Nullable final DowngradeJustification value) {
         this.downgradeJustification = value;
     }
     /**
      * Sets the extendedProperties property value. Extended properties will be parsed and returned in the standard MIP labeled metadata format as part of the label information.
      * @param value Value to set for the extendedProperties property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExtendedProperties(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
+    public void setExtendedProperties(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this.extendedProperties = value;
     }
     /**
      * Sets the labelId property value. The GUID of the label that should be applied to the information.
      * @param value Value to set for the labelId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabelId(@javax.annotation.Nullable final String value) {
+    public void setLabelId(@jakarta.annotation.Nullable final String value) {
         this.labelId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

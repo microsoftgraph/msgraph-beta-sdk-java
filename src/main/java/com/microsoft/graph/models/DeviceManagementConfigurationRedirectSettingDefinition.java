@@ -21,9 +21,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
     private String redirectReason;
     /**
      * Instantiates a new deviceManagementConfigurationRedirectSettingDefinition and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementConfigurationRedirectSettingDefinition() {
         super();
     }
@@ -32,8 +30,8 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationRedirectSettingDefinition
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationRedirectSettingDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationRedirectSettingDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationRedirectSettingDefinition();
     }
@@ -41,7 +39,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
      * Gets the deepLink property value. A deep link that points to the specific location in the Intune console where feature support must be managed from.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeepLink() {
         return this.deepLink;
     }
@@ -49,7 +47,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deepLink", (n) -> { this.setDeepLink(n.getStringValue()); });
@@ -61,7 +59,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
      * Gets the redirectMessage property value. A message that explains that clicking the link will redirect the user to a supported page to manage the settings.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRedirectMessage() {
         return this.redirectMessage;
     }
@@ -69,17 +67,15 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
      * Gets the redirectReason property value. Indicates the reason for redirecting the user to an alternative location in the console.  For example: WiFi profiles are not supported in the settings catalog and must be created with a template policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRedirectReason() {
         return this.redirectReason;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("deepLink", this.getDeepLink());
@@ -89,28 +85,22 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
     /**
      * Sets the deepLink property value. A deep link that points to the specific location in the Intune console where feature support must be managed from.
      * @param value Value to set for the deepLink property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeepLink(@javax.annotation.Nullable final String value) {
+    public void setDeepLink(@jakarta.annotation.Nullable final String value) {
         this.deepLink = value;
     }
     /**
      * Sets the redirectMessage property value. A message that explains that clicking the link will redirect the user to a supported page to manage the settings.
      * @param value Value to set for the redirectMessage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRedirectMessage(@javax.annotation.Nullable final String value) {
+    public void setRedirectMessage(@jakarta.annotation.Nullable final String value) {
         this.redirectMessage = value;
     }
     /**
      * Sets the redirectReason property value. Indicates the reason for redirecting the user to an alternative location in the console.  For example: WiFi profiles are not supported in the settings catalog and must be created with a template policy.
      * @param value Value to set for the redirectReason property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRedirectReason(@javax.annotation.Nullable final String value) {
+    public void setRedirectReason(@jakarta.annotation.Nullable final String value) {
         this.redirectReason = value;
     }
 }

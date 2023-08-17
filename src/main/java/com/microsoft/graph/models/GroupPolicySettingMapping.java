@@ -92,9 +92,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     private String settingValueType;
     /**
      * Instantiates a new groupPolicySettingMapping and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public GroupPolicySettingMapping() {
         super();
     }
@@ -103,8 +101,8 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a groupPolicySettingMapping
      */
-    @javax.annotation.Nonnull
-    public static GroupPolicySettingMapping createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GroupPolicySettingMapping createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GroupPolicySettingMapping();
     }
@@ -112,7 +110,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the admxSettingDefinitionId property value. Admx Group Policy Id
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAdmxSettingDefinitionId() {
         return this.admxSettingDefinitionId;
     }
@@ -120,7 +118,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the childIdList property value. List of Child Ids of the group policy setting.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getChildIdList() {
         return this.childIdList;
     }
@@ -128,7 +126,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("admxSettingDefinitionId", (n) -> { this.setAdmxSettingDefinitionId(n.getStringValue()); });
@@ -157,7 +155,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the intuneSettingDefinitionId property value. The Intune Setting Definition Id
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIntuneSettingDefinitionId() {
         return this.intuneSettingDefinitionId;
     }
@@ -165,7 +163,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the intuneSettingUriList property value. The list of Intune Setting URIs this group policy setting maps to
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getIntuneSettingUriList() {
         return this.intuneSettingUriList;
     }
@@ -173,7 +171,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the isMdmSupported property value. Indicates if the setting is supported by Intune or not
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsMdmSupported() {
         return this.isMdmSupported;
     }
@@ -181,7 +179,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the mdmCspName property value. The CSP name this group policy setting maps to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMdmCspName() {
         return this.mdmCspName;
     }
@@ -189,7 +187,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the mdmMinimumOSVersion property value. The minimum OS version this mdm setting supports.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMdmMinimumOSVersion() {
         return this.mdmMinimumOSVersion;
     }
@@ -197,7 +195,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the mdmSettingUri property value. The MDM CSP URI this group policy setting maps to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMdmSettingUri() {
         return this.mdmSettingUri;
     }
@@ -205,7 +203,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the mdmSupportedState property value. Mdm Support Status of the setting.
      * @return a mdmSupportedState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MdmSupportedState getMdmSupportedState() {
         return this.mdmSupportedState;
     }
@@ -213,7 +211,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the parentId property value. Parent Id of the group policy setting.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getParentId() {
         return this.parentId;
     }
@@ -221,7 +219,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the settingCategory property value. The category the group policy setting is in.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingCategory() {
         return this.settingCategory;
     }
@@ -229,7 +227,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the settingDisplayName property value. The display name of this group policy setting.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingDisplayName() {
         return this.settingDisplayName;
     }
@@ -237,7 +235,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the settingDisplayValue property value. The display value of this group policy setting.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingDisplayValue() {
         return this.settingDisplayValue;
     }
@@ -245,7 +243,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the settingDisplayValueType property value. The display value type of this group policy setting.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingDisplayValueType() {
         return this.settingDisplayValueType;
     }
@@ -253,7 +251,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the settingName property value. The name of this group policy setting.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingName() {
         return this.settingName;
     }
@@ -261,7 +259,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the settingScope property value. Scope of the group policy setting.
      * @return a groupPolicySettingScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GroupPolicySettingScope getSettingScope() {
         return this.settingScope;
     }
@@ -269,7 +267,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the settingType property value. Setting type of the group policy.
      * @return a groupPolicySettingType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GroupPolicySettingType getSettingType() {
         return this.settingType;
     }
@@ -277,7 +275,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the settingValue property value. The value of this group policy setting.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingValue() {
         return this.settingValue;
     }
@@ -285,7 +283,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the settingValueDisplayUnits property value. The display units of this group policy setting value
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingValueDisplayUnits() {
         return this.settingValueDisplayUnits;
     }
@@ -293,17 +291,15 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Gets the settingValueType property value. The value type of this group policy setting.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingValueType() {
         return this.settingValueType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("admxSettingDefinitionId", this.getAdmxSettingDefinitionId());
@@ -330,181 +326,141 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     /**
      * Sets the admxSettingDefinitionId property value. Admx Group Policy Id
      * @param value Value to set for the admxSettingDefinitionId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdmxSettingDefinitionId(@javax.annotation.Nullable final String value) {
+    public void setAdmxSettingDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.admxSettingDefinitionId = value;
     }
     /**
      * Sets the childIdList property value. List of Child Ids of the group policy setting.
      * @param value Value to set for the childIdList property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChildIdList(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setChildIdList(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.childIdList = value;
     }
     /**
      * Sets the intuneSettingDefinitionId property value. The Intune Setting Definition Id
      * @param value Value to set for the intuneSettingDefinitionId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIntuneSettingDefinitionId(@javax.annotation.Nullable final String value) {
+    public void setIntuneSettingDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.intuneSettingDefinitionId = value;
     }
     /**
      * Sets the intuneSettingUriList property value. The list of Intune Setting URIs this group policy setting maps to
      * @param value Value to set for the intuneSettingUriList property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIntuneSettingUriList(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setIntuneSettingUriList(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.intuneSettingUriList = value;
     }
     /**
      * Sets the isMdmSupported property value. Indicates if the setting is supported by Intune or not
      * @param value Value to set for the isMdmSupported property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsMdmSupported(@javax.annotation.Nullable final Boolean value) {
+    public void setIsMdmSupported(@jakarta.annotation.Nullable final Boolean value) {
         this.isMdmSupported = value;
     }
     /**
      * Sets the mdmCspName property value. The CSP name this group policy setting maps to.
      * @param value Value to set for the mdmCspName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMdmCspName(@javax.annotation.Nullable final String value) {
+    public void setMdmCspName(@jakarta.annotation.Nullable final String value) {
         this.mdmCspName = value;
     }
     /**
      * Sets the mdmMinimumOSVersion property value. The minimum OS version this mdm setting supports.
      * @param value Value to set for the mdmMinimumOSVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMdmMinimumOSVersion(@javax.annotation.Nullable final Integer value) {
+    public void setMdmMinimumOSVersion(@jakarta.annotation.Nullable final Integer value) {
         this.mdmMinimumOSVersion = value;
     }
     /**
      * Sets the mdmSettingUri property value. The MDM CSP URI this group policy setting maps to.
      * @param value Value to set for the mdmSettingUri property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMdmSettingUri(@javax.annotation.Nullable final String value) {
+    public void setMdmSettingUri(@jakarta.annotation.Nullable final String value) {
         this.mdmSettingUri = value;
     }
     /**
      * Sets the mdmSupportedState property value. Mdm Support Status of the setting.
      * @param value Value to set for the mdmSupportedState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMdmSupportedState(@javax.annotation.Nullable final MdmSupportedState value) {
+    public void setMdmSupportedState(@jakarta.annotation.Nullable final MdmSupportedState value) {
         this.mdmSupportedState = value;
     }
     /**
      * Sets the parentId property value. Parent Id of the group policy setting.
      * @param value Value to set for the parentId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParentId(@javax.annotation.Nullable final String value) {
+    public void setParentId(@jakarta.annotation.Nullable final String value) {
         this.parentId = value;
     }
     /**
      * Sets the settingCategory property value. The category the group policy setting is in.
      * @param value Value to set for the settingCategory property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingCategory(@javax.annotation.Nullable final String value) {
+    public void setSettingCategory(@jakarta.annotation.Nullable final String value) {
         this.settingCategory = value;
     }
     /**
      * Sets the settingDisplayName property value. The display name of this group policy setting.
      * @param value Value to set for the settingDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingDisplayName(@javax.annotation.Nullable final String value) {
+    public void setSettingDisplayName(@jakarta.annotation.Nullable final String value) {
         this.settingDisplayName = value;
     }
     /**
      * Sets the settingDisplayValue property value. The display value of this group policy setting.
      * @param value Value to set for the settingDisplayValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingDisplayValue(@javax.annotation.Nullable final String value) {
+    public void setSettingDisplayValue(@jakarta.annotation.Nullable final String value) {
         this.settingDisplayValue = value;
     }
     /**
      * Sets the settingDisplayValueType property value. The display value type of this group policy setting.
      * @param value Value to set for the settingDisplayValueType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingDisplayValueType(@javax.annotation.Nullable final String value) {
+    public void setSettingDisplayValueType(@jakarta.annotation.Nullable final String value) {
         this.settingDisplayValueType = value;
     }
     /**
      * Sets the settingName property value. The name of this group policy setting.
      * @param value Value to set for the settingName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingName(@javax.annotation.Nullable final String value) {
+    public void setSettingName(@jakarta.annotation.Nullable final String value) {
         this.settingName = value;
     }
     /**
      * Sets the settingScope property value. Scope of the group policy setting.
      * @param value Value to set for the settingScope property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingScope(@javax.annotation.Nullable final GroupPolicySettingScope value) {
+    public void setSettingScope(@jakarta.annotation.Nullable final GroupPolicySettingScope value) {
         this.settingScope = value;
     }
     /**
      * Sets the settingType property value. Setting type of the group policy.
      * @param value Value to set for the settingType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingType(@javax.annotation.Nullable final GroupPolicySettingType value) {
+    public void setSettingType(@jakarta.annotation.Nullable final GroupPolicySettingType value) {
         this.settingType = value;
     }
     /**
      * Sets the settingValue property value. The value of this group policy setting.
      * @param value Value to set for the settingValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingValue(@javax.annotation.Nullable final String value) {
+    public void setSettingValue(@jakarta.annotation.Nullable final String value) {
         this.settingValue = value;
     }
     /**
      * Sets the settingValueDisplayUnits property value. The display units of this group policy setting value
      * @param value Value to set for the settingValueDisplayUnits property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingValueDisplayUnits(@javax.annotation.Nullable final String value) {
+    public void setSettingValueDisplayUnits(@jakarta.annotation.Nullable final String value) {
         this.settingValueDisplayUnits = value;
     }
     /**
      * Sets the settingValueType property value. The value type of this group policy setting.
      * @param value Value to set for the settingValueType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingValueType(@javax.annotation.Nullable final String value) {
+    public void setSettingValueType(@jakarta.annotation.Nullable final String value) {
         this.settingValueType = value;
     }
 }

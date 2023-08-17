@@ -15,10 +15,10 @@ public enum BitLockerRecoveryInformationType implements ValuedEnum {
     BitLockerRecoveryInformationType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static BitLockerRecoveryInformationType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static BitLockerRecoveryInformationType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "passwordAndKey": return PasswordAndKey;

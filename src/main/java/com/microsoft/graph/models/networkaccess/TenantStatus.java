@@ -18,9 +18,7 @@ public class TenantStatus extends Entity implements Parsable {
     private OnboardingStatus onboardingStatus;
     /**
      * Instantiates a new tenantStatus and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TenantStatus() {
         super();
     }
@@ -29,8 +27,8 @@ public class TenantStatus extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a tenantStatus
      */
-    @javax.annotation.Nonnull
-    public static TenantStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TenantStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TenantStatus();
     }
@@ -38,7 +36,7 @@ public class TenantStatus extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("onboardingErrorMessage", (n) -> { this.setOnboardingErrorMessage(n.getStringValue()); });
@@ -49,7 +47,7 @@ public class TenantStatus extends Entity implements Parsable {
      * Gets the onboardingErrorMessage property value. Reflects a message to the user in case of an error.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOnboardingErrorMessage() {
         return this.onboardingErrorMessage;
     }
@@ -57,17 +55,15 @@ public class TenantStatus extends Entity implements Parsable {
      * Gets the onboardingStatus property value. The onboardingStatus property
      * @return a onboardingStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnboardingStatus getOnboardingStatus() {
         return this.onboardingStatus;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("onboardingErrorMessage", this.getOnboardingErrorMessage());
@@ -76,19 +72,15 @@ public class TenantStatus extends Entity implements Parsable {
     /**
      * Sets the onboardingErrorMessage property value. Reflects a message to the user in case of an error.
      * @param value Value to set for the onboardingErrorMessage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnboardingErrorMessage(@javax.annotation.Nullable final String value) {
+    public void setOnboardingErrorMessage(@jakarta.annotation.Nullable final String value) {
         this.onboardingErrorMessage = value;
     }
     /**
      * Sets the onboardingStatus property value. The onboardingStatus property
      * @param value Value to set for the onboardingStatus property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnboardingStatus(@javax.annotation.Nullable final OnboardingStatus value) {
+    public void setOnboardingStatus(@jakarta.annotation.Nullable final OnboardingStatus value) {
         this.onboardingStatus = value;
     }
 }

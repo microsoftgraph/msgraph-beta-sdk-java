@@ -13,9 +13,7 @@ public class GroupMembershipGovernanceCriteria extends GovernanceCriteria implem
     private String groupId;
     /**
      * Instantiates a new groupMembershipGovernanceCriteria and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public GroupMembershipGovernanceCriteria() {
         super();
         this.setOdataType("#microsoft.graph.groupMembershipGovernanceCriteria");
@@ -25,8 +23,8 @@ public class GroupMembershipGovernanceCriteria extends GovernanceCriteria implem
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a groupMembershipGovernanceCriteria
      */
-    @javax.annotation.Nonnull
-    public static GroupMembershipGovernanceCriteria createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GroupMembershipGovernanceCriteria createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GroupMembershipGovernanceCriteria();
     }
@@ -34,7 +32,7 @@ public class GroupMembershipGovernanceCriteria extends GovernanceCriteria implem
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("groupId", (n) -> { this.setGroupId(n.getStringValue()); });
@@ -44,17 +42,15 @@ public class GroupMembershipGovernanceCriteria extends GovernanceCriteria implem
      * Gets the groupId property value. The groupId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getGroupId() {
         return this.groupId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("groupId", this.getGroupId());
@@ -62,10 +58,8 @@ public class GroupMembershipGovernanceCriteria extends GovernanceCriteria implem
     /**
      * Sets the groupId property value. The groupId property
      * @param value Value to set for the groupId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupId(@javax.annotation.Nullable final String value) {
+    public void setGroupId(@jakarta.annotation.Nullable final String value) {
         this.groupId = value;
     }
 }

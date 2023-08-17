@@ -87,9 +87,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     private Integer unlicensedUsersCount;
     /**
      * Instantiates a new managementTemplateCollectionTenantSummary and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ManagementTemplateCollectionTenantSummary() {
         super();
     }
@@ -98,8 +96,8 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managementTemplateCollectionTenantSummary
      */
-    @javax.annotation.Nonnull
-    public static ManagementTemplateCollectionTenantSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagementTemplateCollectionTenantSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagementTemplateCollectionTenantSummary();
     }
@@ -107,7 +105,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the completeStepsCount property value. The completeStepsCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCompleteStepsCount() {
         return this.completeStepsCount;
     }
@@ -115,7 +113,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the completeUsersCount property value. The completeUsersCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCompleteUsersCount() {
         return this.completeUsersCount;
     }
@@ -123,7 +121,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the createdByUserId property value. The createdByUserId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
         return this.createdByUserId;
     }
@@ -131,7 +129,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the createdDateTime property value. The createdDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -139,7 +137,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the dismissedStepsCount property value. The dismissedStepsCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDismissedStepsCount() {
         return this.dismissedStepsCount;
     }
@@ -147,7 +145,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the excludedUsersCount property value. The excludedUsersCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getExcludedUsersCount() {
         return this.excludedUsersCount;
     }
@@ -155,7 +153,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the excludedUsersDistinctCount property value. The excludedUsersDistinctCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getExcludedUsersDistinctCount() {
         return this.excludedUsersDistinctCount;
     }
@@ -163,7 +161,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("completeStepsCount", (n) -> { this.setCompleteStepsCount(n.getIntegerValue()); });
@@ -191,7 +189,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the incompleteStepsCount property value. The incompleteStepsCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getIncompleteStepsCount() {
         return this.incompleteStepsCount;
     }
@@ -199,7 +197,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the incompleteUsersCount property value. The incompleteUsersCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getIncompleteUsersCount() {
         return this.incompleteUsersCount;
     }
@@ -207,7 +205,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the ineligibleStepsCount property value. The ineligibleStepsCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getIneligibleStepsCount() {
         return this.ineligibleStepsCount;
     }
@@ -215,7 +213,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the isComplete property value. The isComplete property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsComplete() {
         return this.isComplete;
     }
@@ -223,7 +221,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the lastActionByUserId property value. The lastActionByUserId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
         return this.lastActionByUserId;
     }
@@ -231,7 +229,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the lastActionDateTime property value. The lastActionDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
         return this.lastActionDateTime;
     }
@@ -239,7 +237,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the managementTemplateCollectionDisplayName property value. The managementTemplateCollectionDisplayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagementTemplateCollectionDisplayName() {
         return this.managementTemplateCollectionDisplayName;
     }
@@ -247,7 +245,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the managementTemplateCollectionId property value. The managementTemplateCollectionId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagementTemplateCollectionId() {
         return this.managementTemplateCollectionId;
     }
@@ -255,7 +253,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the regressedStepsCount property value. The regressedStepsCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRegressedStepsCount() {
         return this.regressedStepsCount;
     }
@@ -263,7 +261,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the regressedUsersCount property value. The regressedUsersCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRegressedUsersCount() {
         return this.regressedUsersCount;
     }
@@ -271,7 +269,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the tenantId property value. The tenantId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -279,17 +277,15 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
      * Gets the unlicensedUsersCount property value. The unlicensedUsersCount property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getUnlicensedUsersCount() {
         return this.unlicensedUsersCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("completeStepsCount", this.getCompleteStepsCount());
@@ -315,172 +311,134 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     /**
      * Sets the completeStepsCount property value. The completeStepsCount property
      * @param value Value to set for the completeStepsCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompleteStepsCount(@javax.annotation.Nullable final Integer value) {
+    public void setCompleteStepsCount(@jakarta.annotation.Nullable final Integer value) {
         this.completeStepsCount = value;
     }
     /**
      * Sets the completeUsersCount property value. The completeUsersCount property
      * @param value Value to set for the completeUsersCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompleteUsersCount(@javax.annotation.Nullable final Integer value) {
+    public void setCompleteUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.completeUsersCount = value;
     }
     /**
      * Sets the createdByUserId property value. The createdByUserId property
      * @param value Value to set for the createdByUserId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedByUserId(@javax.annotation.Nullable final String value) {
+    public void setCreatedByUserId(@jakarta.annotation.Nullable final String value) {
         this.createdByUserId = value;
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the dismissedStepsCount property value. The dismissedStepsCount property
      * @param value Value to set for the dismissedStepsCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDismissedStepsCount(@javax.annotation.Nullable final Integer value) {
+    public void setDismissedStepsCount(@jakarta.annotation.Nullable final Integer value) {
         this.dismissedStepsCount = value;
     }
     /**
      * Sets the excludedUsersCount property value. The excludedUsersCount property
      * @param value Value to set for the excludedUsersCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExcludedUsersCount(@javax.annotation.Nullable final Integer value) {
+    public void setExcludedUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.excludedUsersCount = value;
     }
     /**
      * Sets the excludedUsersDistinctCount property value. The excludedUsersDistinctCount property
      * @param value Value to set for the excludedUsersDistinctCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExcludedUsersDistinctCount(@javax.annotation.Nullable final Integer value) {
+    public void setExcludedUsersDistinctCount(@jakarta.annotation.Nullable final Integer value) {
         this.excludedUsersDistinctCount = value;
     }
     /**
      * Sets the incompleteStepsCount property value. The incompleteStepsCount property
      * @param value Value to set for the incompleteStepsCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncompleteStepsCount(@javax.annotation.Nullable final Integer value) {
+    public void setIncompleteStepsCount(@jakarta.annotation.Nullable final Integer value) {
         this.incompleteStepsCount = value;
     }
     /**
      * Sets the incompleteUsersCount property value. The incompleteUsersCount property
      * @param value Value to set for the incompleteUsersCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncompleteUsersCount(@javax.annotation.Nullable final Integer value) {
+    public void setIncompleteUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.incompleteUsersCount = value;
     }
     /**
      * Sets the ineligibleStepsCount property value. The ineligibleStepsCount property
      * @param value Value to set for the ineligibleStepsCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIneligibleStepsCount(@javax.annotation.Nullable final Integer value) {
+    public void setIneligibleStepsCount(@jakarta.annotation.Nullable final Integer value) {
         this.ineligibleStepsCount = value;
     }
     /**
      * Sets the isComplete property value. The isComplete property
      * @param value Value to set for the isComplete property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsComplete(@javax.annotation.Nullable final Boolean value) {
+    public void setIsComplete(@jakarta.annotation.Nullable final Boolean value) {
         this.isComplete = value;
     }
     /**
      * Sets the lastActionByUserId property value. The lastActionByUserId property
      * @param value Value to set for the lastActionByUserId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActionByUserId(@javax.annotation.Nullable final String value) {
+    public void setLastActionByUserId(@jakarta.annotation.Nullable final String value) {
         this.lastActionByUserId = value;
     }
     /**
      * Sets the lastActionDateTime property value. The lastActionDateTime property
      * @param value Value to set for the lastActionDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastActionDateTime = value;
     }
     /**
      * Sets the managementTemplateCollectionDisplayName property value. The managementTemplateCollectionDisplayName property
      * @param value Value to set for the managementTemplateCollectionDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateCollectionDisplayName(@javax.annotation.Nullable final String value) {
+    public void setManagementTemplateCollectionDisplayName(@jakarta.annotation.Nullable final String value) {
         this.managementTemplateCollectionDisplayName = value;
     }
     /**
      * Sets the managementTemplateCollectionId property value. The managementTemplateCollectionId property
      * @param value Value to set for the managementTemplateCollectionId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateCollectionId(@javax.annotation.Nullable final String value) {
+    public void setManagementTemplateCollectionId(@jakarta.annotation.Nullable final String value) {
         this.managementTemplateCollectionId = value;
     }
     /**
      * Sets the regressedStepsCount property value. The regressedStepsCount property
      * @param value Value to set for the regressedStepsCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegressedStepsCount(@javax.annotation.Nullable final Integer value) {
+    public void setRegressedStepsCount(@jakarta.annotation.Nullable final Integer value) {
         this.regressedStepsCount = value;
     }
     /**
      * Sets the regressedUsersCount property value. The regressedUsersCount property
      * @param value Value to set for the regressedUsersCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegressedUsersCount(@javax.annotation.Nullable final Integer value) {
+    public void setRegressedUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.regressedUsersCount = value;
     }
     /**
      * Sets the tenantId property value. The tenantId property
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
      * Sets the unlicensedUsersCount property value. The unlicensedUsersCount property
      * @param value Value to set for the unlicensedUsersCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnlicensedUsersCount(@javax.annotation.Nullable final Integer value) {
+    public void setUnlicensedUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.unlicensedUsersCount = value;
     }
 }

@@ -16,9 +16,7 @@ public class KeyRealValuePair extends KeyTypedValuePair implements Parsable {
     private Double value;
     /**
      * Instantiates a new keyRealValuePair and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public KeyRealValuePair() {
         super();
         this.setOdataType("#microsoft.graph.keyRealValuePair");
@@ -28,8 +26,8 @@ public class KeyRealValuePair extends KeyTypedValuePair implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a keyRealValuePair
      */
-    @javax.annotation.Nonnull
-    public static KeyRealValuePair createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static KeyRealValuePair createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new KeyRealValuePair();
     }
@@ -37,7 +35,7 @@ public class KeyRealValuePair extends KeyTypedValuePair implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getDoubleValue()); });
@@ -47,17 +45,15 @@ public class KeyRealValuePair extends KeyTypedValuePair implements Parsable {
      * Gets the value property value. The real (floating-point) value of the key-value pair.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getValue() {
         return this.value;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeDoubleValue("value", this.getValue());
@@ -65,10 +61,8 @@ public class KeyRealValuePair extends KeyTypedValuePair implements Parsable {
     /**
      * Sets the value property value. The real (floating-point) value of the key-value pair.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final Double value) {
+    public void setValue(@jakarta.annotation.Nullable final Double value) {
         this.value = value;
     }
 }

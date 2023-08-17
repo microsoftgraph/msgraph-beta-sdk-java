@@ -22,9 +22,7 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
     private TrainingCompletionDuration trainingCompletionDuration;
     /**
      * Instantiates a new microsoftCustomTrainingSetting and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MicrosoftCustomTrainingSetting() {
         super();
         this.setOdataType("#microsoft.graph.microsoftCustomTrainingSetting");
@@ -34,8 +32,8 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a microsoftCustomTrainingSetting
      */
-    @javax.annotation.Nonnull
-    public static MicrosoftCustomTrainingSetting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MicrosoftCustomTrainingSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MicrosoftCustomTrainingSetting();
     }
@@ -43,7 +41,7 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
      * Gets the completionDateTime property value. The completionDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCompletionDateTime() {
         return this.completionDateTime;
     }
@@ -51,7 +49,7 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("completionDateTime", (n) -> { this.setCompletionDateTime(n.getOffsetDateTimeValue()); });
@@ -63,7 +61,7 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
      * Gets the trainingAssignmentMappings property value. The trainingAssignmentMappings property
      * @return a microsoftTrainingAssignmentMapping
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MicrosoftTrainingAssignmentMapping> getTrainingAssignmentMappings() {
         return this.trainingAssignmentMappings;
     }
@@ -71,17 +69,15 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
      * Gets the trainingCompletionDuration property value. The trainingCompletionDuration property
      * @return a trainingCompletionDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TrainingCompletionDuration getTrainingCompletionDuration() {
         return this.trainingCompletionDuration;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("completionDateTime", this.getCompletionDateTime());
@@ -91,28 +87,22 @@ public class MicrosoftCustomTrainingSetting extends TrainingSetting implements P
     /**
      * Sets the completionDateTime property value. The completionDateTime property
      * @param value Value to set for the completionDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completionDateTime = value;
     }
     /**
      * Sets the trainingAssignmentMappings property value. The trainingAssignmentMappings property
      * @param value Value to set for the trainingAssignmentMappings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrainingAssignmentMappings(@javax.annotation.Nullable final java.util.List<MicrosoftTrainingAssignmentMapping> value) {
+    public void setTrainingAssignmentMappings(@jakarta.annotation.Nullable final java.util.List<MicrosoftTrainingAssignmentMapping> value) {
         this.trainingAssignmentMappings = value;
     }
     /**
      * Sets the trainingCompletionDuration property value. The trainingCompletionDuration property
      * @param value Value to set for the trainingCompletionDuration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrainingCompletionDuration(@javax.annotation.Nullable final TrainingCompletionDuration value) {
+    public void setTrainingCompletionDuration(@jakarta.annotation.Nullable final TrainingCompletionDuration value) {
         this.trainingCompletionDuration = value;
     }
 }

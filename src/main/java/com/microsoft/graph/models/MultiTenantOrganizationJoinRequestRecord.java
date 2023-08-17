@@ -25,9 +25,7 @@ public class MultiTenantOrganizationJoinRequestRecord extends Entity implements 
     private MultiTenantOrganizationJoinRequestTransitionDetails transitionDetails;
     /**
      * Instantiates a new multiTenantOrganizationJoinRequestRecord and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MultiTenantOrganizationJoinRequestRecord() {
         super();
     }
@@ -36,8 +34,8 @@ public class MultiTenantOrganizationJoinRequestRecord extends Entity implements 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a multiTenantOrganizationJoinRequestRecord
      */
-    @javax.annotation.Nonnull
-    public static MultiTenantOrganizationJoinRequestRecord createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MultiTenantOrganizationJoinRequestRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MultiTenantOrganizationJoinRequestRecord();
     }
@@ -45,7 +43,7 @@ public class MultiTenantOrganizationJoinRequestRecord extends Entity implements 
      * Gets the addedByTenantId property value. The addedByTenantId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAddedByTenantId() {
         return this.addedByTenantId;
     }
@@ -53,7 +51,7 @@ public class MultiTenantOrganizationJoinRequestRecord extends Entity implements 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("addedByTenantId", (n) -> { this.setAddedByTenantId(n.getStringValue()); });
@@ -66,7 +64,7 @@ public class MultiTenantOrganizationJoinRequestRecord extends Entity implements 
      * Gets the memberState property value. The memberState property
      * @return a multiTenantOrganizationMemberState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MultiTenantOrganizationMemberState getMemberState() {
         return this.memberState;
     }
@@ -74,7 +72,7 @@ public class MultiTenantOrganizationJoinRequestRecord extends Entity implements 
      * Gets the role property value. The role property
      * @return a multiTenantOrganizationMemberRole
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MultiTenantOrganizationMemberRole getRole() {
         return this.role;
     }
@@ -82,17 +80,15 @@ public class MultiTenantOrganizationJoinRequestRecord extends Entity implements 
      * Gets the transitionDetails property value. The transitionDetails property
      * @return a multiTenantOrganizationJoinRequestTransitionDetails
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MultiTenantOrganizationJoinRequestTransitionDetails getTransitionDetails() {
         return this.transitionDetails;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("addedByTenantId", this.getAddedByTenantId());
@@ -103,37 +99,29 @@ public class MultiTenantOrganizationJoinRequestRecord extends Entity implements 
     /**
      * Sets the addedByTenantId property value. The addedByTenantId property
      * @param value Value to set for the addedByTenantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddedByTenantId(@javax.annotation.Nullable final String value) {
+    public void setAddedByTenantId(@jakarta.annotation.Nullable final String value) {
         this.addedByTenantId = value;
     }
     /**
      * Sets the memberState property value. The memberState property
      * @param value Value to set for the memberState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMemberState(@javax.annotation.Nullable final MultiTenantOrganizationMemberState value) {
+    public void setMemberState(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberState value) {
         this.memberState = value;
     }
     /**
      * Sets the role property value. The role property
      * @param value Value to set for the role property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRole(@javax.annotation.Nullable final MultiTenantOrganizationMemberRole value) {
+    public void setRole(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberRole value) {
         this.role = value;
     }
     /**
      * Sets the transitionDetails property value. The transitionDetails property
      * @param value Value to set for the transitionDetails property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTransitionDetails(@javax.annotation.Nullable final MultiTenantOrganizationJoinRequestTransitionDetails value) {
+    public void setTransitionDetails(@jakarta.annotation.Nullable final MultiTenantOrganizationJoinRequestTransitionDetails value) {
         this.transitionDetails = value;
     }
 }

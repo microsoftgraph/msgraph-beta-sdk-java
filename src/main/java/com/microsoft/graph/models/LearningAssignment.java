@@ -30,9 +30,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
     private ItemBody notes;
     /**
      * Instantiates a new learningAssignment and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public LearningAssignment() {
         super();
     }
@@ -41,8 +39,8 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a learningAssignment
      */
-    @javax.annotation.Nonnull
-    public static LearningAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static LearningAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new LearningAssignment();
     }
@@ -50,7 +48,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
      * Gets the assignedDateTime property value. Assigned date for the course activity. Optional.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getAssignedDateTime() {
         return this.assignedDateTime;
     }
@@ -58,7 +56,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
      * Gets the assignerUserId property value. The user ID of the assigner. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssignerUserId() {
         return this.assignerUserId;
     }
@@ -66,7 +64,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
      * Gets the assignmentType property value. The assignmentType property
      * @return a assignmentType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AssignmentType getAssignmentType() {
         return this.assignmentType;
     }
@@ -74,7 +72,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
      * Gets the dueDateTime property value. Due date for the course activity. Optional.
      * @return a dateTimeTimeZone
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DateTimeTimeZone getDueDateTime() {
         return this.dueDateTime;
     }
@@ -82,7 +80,7 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignedDateTime", (n) -> { this.setAssignedDateTime(n.getOffsetDateTimeValue()); });
@@ -96,17 +94,15 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
      * Gets the notes property value. Notes for the course activity. Optional.
      * @return a itemBody
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemBody getNotes() {
         return this.notes;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("assignedDateTime", this.getAssignedDateTime());
@@ -118,46 +114,36 @@ public class LearningAssignment extends LearningCourseActivity implements Parsab
     /**
      * Sets the assignedDateTime property value. Assigned date for the course activity. Optional.
      * @param value Value to set for the assignedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setAssignedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.assignedDateTime = value;
     }
     /**
      * Sets the assignerUserId property value. The user ID of the assigner. Optional.
      * @param value Value to set for the assignerUserId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignerUserId(@javax.annotation.Nullable final String value) {
+    public void setAssignerUserId(@jakarta.annotation.Nullable final String value) {
         this.assignerUserId = value;
     }
     /**
      * Sets the assignmentType property value. The assignmentType property
      * @param value Value to set for the assignmentType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentType(@javax.annotation.Nullable final AssignmentType value) {
+    public void setAssignmentType(@jakarta.annotation.Nullable final AssignmentType value) {
         this.assignmentType = value;
     }
     /**
      * Sets the dueDateTime property value. Due date for the course activity. Optional.
      * @param value Value to set for the dueDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDueDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
+    public void setDueDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.dueDateTime = value;
     }
     /**
      * Sets the notes property value. Notes for the course activity. Optional.
      * @param value Value to set for the notes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotes(@javax.annotation.Nullable final ItemBody value) {
+    public void setNotes(@jakarta.annotation.Nullable final ItemBody value) {
         this.notes = value;
     }
 }

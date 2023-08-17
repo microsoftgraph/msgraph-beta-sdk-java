@@ -25,9 +25,7 @@ public class RoleManagementAlert extends Entity implements Parsable {
     private java.util.List<LongRunningOperation> operations;
     /**
      * Instantiates a new roleManagementAlert and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public RoleManagementAlert() {
         super();
     }
@@ -36,8 +34,8 @@ public class RoleManagementAlert extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a roleManagementAlert
      */
-    @javax.annotation.Nonnull
-    public static RoleManagementAlert createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RoleManagementAlert createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RoleManagementAlert();
     }
@@ -45,7 +43,7 @@ public class RoleManagementAlert extends Entity implements Parsable {
      * Gets the alertConfigurations property value. The various configurations of an alert for Azure AD roles. The configurations are pre-defined and cannot be created or deleted, but some of the configurations can be modified.
      * @return a unifiedRoleManagementAlertConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementAlertConfiguration> getAlertConfigurations() {
         return this.alertConfigurations;
     }
@@ -53,7 +51,7 @@ public class RoleManagementAlert extends Entity implements Parsable {
      * Gets the alertDefinitions property value. Defines an alert, its impact, and measures to mitigate or prevent it.
      * @return a unifiedRoleManagementAlertDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementAlertDefinition> getAlertDefinitions() {
         return this.alertDefinitions;
     }
@@ -61,7 +59,7 @@ public class RoleManagementAlert extends Entity implements Parsable {
      * Gets the alerts property value. Represents the alert entity.
      * @return a unifiedRoleManagementAlert
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementAlert> getAlerts() {
         return this.alerts;
     }
@@ -69,7 +67,7 @@ public class RoleManagementAlert extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alertConfigurations", (n) -> { this.setAlertConfigurations(n.getCollectionOfObjectValues(UnifiedRoleManagementAlertConfiguration::createFromDiscriminatorValue)); });
@@ -82,17 +80,15 @@ public class RoleManagementAlert extends Entity implements Parsable {
      * Gets the operations property value. Represents operations on resources that take a long time to complete and can run in the background until completion.
      * @return a longRunningOperation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<LongRunningOperation> getOperations() {
         return this.operations;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("alertConfigurations", this.getAlertConfigurations());
@@ -103,37 +99,29 @@ public class RoleManagementAlert extends Entity implements Parsable {
     /**
      * Sets the alertConfigurations property value. The various configurations of an alert for Azure AD roles. The configurations are pre-defined and cannot be created or deleted, but some of the configurations can be modified.
      * @param value Value to set for the alertConfigurations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlertConfigurations(@javax.annotation.Nullable final java.util.List<UnifiedRoleManagementAlertConfiguration> value) {
+    public void setAlertConfigurations(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementAlertConfiguration> value) {
         this.alertConfigurations = value;
     }
     /**
      * Sets the alertDefinitions property value. Defines an alert, its impact, and measures to mitigate or prevent it.
      * @param value Value to set for the alertDefinitions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlertDefinitions(@javax.annotation.Nullable final java.util.List<UnifiedRoleManagementAlertDefinition> value) {
+    public void setAlertDefinitions(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementAlertDefinition> value) {
         this.alertDefinitions = value;
     }
     /**
      * Sets the alerts property value. Represents the alert entity.
      * @param value Value to set for the alerts property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlerts(@javax.annotation.Nullable final java.util.List<UnifiedRoleManagementAlert> value) {
+    public void setAlerts(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementAlert> value) {
         this.alerts = value;
     }
     /**
      * Sets the operations property value. Represents operations on resources that take a long time to complete and can run in the background until completion.
      * @param value Value to set for the operations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperations(@javax.annotation.Nullable final java.util.List<LongRunningOperation> value) {
+    public void setOperations(@jakarta.annotation.Nullable final java.util.List<LongRunningOperation> value) {
         this.operations = value;
     }
 }

@@ -21,9 +21,7 @@ public class TeamworkPeripheral extends Entity implements Parsable {
     private String vendorId;
     /**
      * Instantiates a new teamworkPeripheral and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TeamworkPeripheral() {
         super();
     }
@@ -32,8 +30,8 @@ public class TeamworkPeripheral extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teamworkPeripheral
      */
-    @javax.annotation.Nonnull
-    public static TeamworkPeripheral createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeamworkPeripheral createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeamworkPeripheral();
     }
@@ -41,7 +39,7 @@ public class TeamworkPeripheral extends Entity implements Parsable {
      * Gets the displayName property value. Display name for the peripheral.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -49,7 +47,7 @@ public class TeamworkPeripheral extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -61,7 +59,7 @@ public class TeamworkPeripheral extends Entity implements Parsable {
      * Gets the productId property value. The product ID of the device. Each product from a vendor has its own ID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProductId() {
         return this.productId;
     }
@@ -69,17 +67,15 @@ public class TeamworkPeripheral extends Entity implements Parsable {
      * Gets the vendorId property value. The unique identifier for the vendor of the device. Each vendor has a unique ID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVendorId() {
         return this.vendorId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -89,28 +85,22 @@ public class TeamworkPeripheral extends Entity implements Parsable {
     /**
      * Sets the displayName property value. Display name for the peripheral.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the productId property value. The product ID of the device. Each product from a vendor has its own ID.
      * @param value Value to set for the productId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProductId(@javax.annotation.Nullable final String value) {
+    public void setProductId(@jakarta.annotation.Nullable final String value) {
         this.productId = value;
     }
     /**
      * Sets the vendorId property value. The unique identifier for the vendor of the device. Each vendor has a unique ID.
      * @param value Value to set for the vendorId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVendorId(@javax.annotation.Nullable final String value) {
+    public void setVendorId(@jakarta.annotation.Nullable final String value) {
         this.vendorId = value;
     }
 }

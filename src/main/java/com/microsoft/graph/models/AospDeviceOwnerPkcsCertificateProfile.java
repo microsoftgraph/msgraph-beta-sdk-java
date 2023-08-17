@@ -48,9 +48,7 @@ public class AospDeviceOwnerPkcsCertificateProfile extends AospDeviceOwnerCertif
     private String subjectNameFormatString;
     /**
      * Instantiates a new aospDeviceOwnerPkcsCertificateProfile and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AospDeviceOwnerPkcsCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.aospDeviceOwnerPkcsCertificateProfile");
@@ -60,8 +58,8 @@ public class AospDeviceOwnerPkcsCertificateProfile extends AospDeviceOwnerCertif
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a aospDeviceOwnerPkcsCertificateProfile
      */
-    @javax.annotation.Nonnull
-    public static AospDeviceOwnerPkcsCertificateProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AospDeviceOwnerPkcsCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AospDeviceOwnerPkcsCertificateProfile();
     }
@@ -69,7 +67,7 @@ public class AospDeviceOwnerPkcsCertificateProfile extends AospDeviceOwnerCertif
      * Gets the certificateStore property value. CertificateStore types
      * @return a certificateStore
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CertificateStore getCertificateStore() {
         return this.certificateStore;
     }
@@ -77,7 +75,7 @@ public class AospDeviceOwnerPkcsCertificateProfile extends AospDeviceOwnerCertif
      * Gets the certificateTemplateName property value. PKCS Certificate Template Name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCertificateTemplateName() {
         return this.certificateTemplateName;
     }
@@ -85,7 +83,7 @@ public class AospDeviceOwnerPkcsCertificateProfile extends AospDeviceOwnerCertif
      * Gets the certificationAuthority property value. PKCS Certification Authority
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCertificationAuthority() {
         return this.certificationAuthority;
     }
@@ -93,7 +91,7 @@ public class AospDeviceOwnerPkcsCertificateProfile extends AospDeviceOwnerCertif
      * Gets the certificationAuthorityName property value. PKCS Certification Authority Name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCertificationAuthorityName() {
         return this.certificationAuthorityName;
     }
@@ -101,7 +99,7 @@ public class AospDeviceOwnerPkcsCertificateProfile extends AospDeviceOwnerCertif
      * Gets the certificationAuthorityType property value. Device Management Certification Authority Types.
      * @return a deviceManagementCertificationAuthority
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementCertificationAuthority getCertificationAuthorityType() {
         return this.certificationAuthorityType;
     }
@@ -109,7 +107,7 @@ public class AospDeviceOwnerPkcsCertificateProfile extends AospDeviceOwnerCertif
      * Gets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      * @return a customSubjectAlternativeName
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CustomSubjectAlternativeName> getCustomSubjectAlternativeNames() {
         return this.customSubjectAlternativeNames;
     }
@@ -117,7 +115,7 @@ public class AospDeviceOwnerPkcsCertificateProfile extends AospDeviceOwnerCertif
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
@@ -135,7 +133,7 @@ public class AospDeviceOwnerPkcsCertificateProfile extends AospDeviceOwnerCertif
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      * @return a managedDeviceCertificateState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
         return this.managedDeviceCertificateStates;
     }
@@ -143,7 +141,7 @@ public class AospDeviceOwnerPkcsCertificateProfile extends AospDeviceOwnerCertif
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
         return this.subjectAlternativeNameFormatString;
     }
@@ -151,17 +149,15 @@ public class AospDeviceOwnerPkcsCertificateProfile extends AospDeviceOwnerCertif
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubjectNameFormatString() {
         return this.subjectNameFormatString;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("certificateStore", this.getCertificateStore());
@@ -177,82 +173,64 @@ public class AospDeviceOwnerPkcsCertificateProfile extends AospDeviceOwnerCertif
     /**
      * Sets the certificateStore property value. CertificateStore types
      * @param value Value to set for the certificateStore property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateStore(@javax.annotation.Nullable final CertificateStore value) {
+    public void setCertificateStore(@jakarta.annotation.Nullable final CertificateStore value) {
         this.certificateStore = value;
     }
     /**
      * Sets the certificateTemplateName property value. PKCS Certificate Template Name
      * @param value Value to set for the certificateTemplateName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateTemplateName(@javax.annotation.Nullable final String value) {
+    public void setCertificateTemplateName(@jakarta.annotation.Nullable final String value) {
         this.certificateTemplateName = value;
     }
     /**
      * Sets the certificationAuthority property value. PKCS Certification Authority
      * @param value Value to set for the certificationAuthority property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificationAuthority(@javax.annotation.Nullable final String value) {
+    public void setCertificationAuthority(@jakarta.annotation.Nullable final String value) {
         this.certificationAuthority = value;
     }
     /**
      * Sets the certificationAuthorityName property value. PKCS Certification Authority Name
      * @param value Value to set for the certificationAuthorityName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificationAuthorityName(@javax.annotation.Nullable final String value) {
+    public void setCertificationAuthorityName(@jakarta.annotation.Nullable final String value) {
         this.certificationAuthorityName = value;
     }
     /**
      * Sets the certificationAuthorityType property value. Device Management Certification Authority Types.
      * @param value Value to set for the certificationAuthorityType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificationAuthorityType(@javax.annotation.Nullable final DeviceManagementCertificationAuthority value) {
+    public void setCertificationAuthorityType(@jakarta.annotation.Nullable final DeviceManagementCertificationAuthority value) {
         this.certificationAuthorityType = value;
     }
     /**
      * Sets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the customSubjectAlternativeNames property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomSubjectAlternativeNames(@javax.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
+    public void setCustomSubjectAlternativeNames(@jakarta.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
         this.customSubjectAlternativeNames = value;
     }
     /**
      * Sets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      * @param value Value to set for the managedDeviceCertificateStates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
+    public void setManagedDeviceCertificateStates(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
         this.managedDeviceCertificateStates = value;
     }
     /**
      * Sets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
      * @param value Value to set for the subjectAlternativeNameFormatString property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubjectAlternativeNameFormatString(@javax.annotation.Nullable final String value) {
+    public void setSubjectAlternativeNameFormatString(@jakarta.annotation.Nullable final String value) {
         this.subjectAlternativeNameFormatString = value;
     }
     /**
      * Sets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      * @param value Value to set for the subjectNameFormatString property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubjectNameFormatString(@javax.annotation.Nullable final String value) {
+    public void setSubjectNameFormatString(@jakarta.annotation.Nullable final String value) {
         this.subjectNameFormatString = value;
     }
 }

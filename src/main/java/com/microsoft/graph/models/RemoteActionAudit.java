@@ -49,9 +49,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     private String userName;
     /**
      * Instantiates a new remoteActionAudit and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public RemoteActionAudit() {
         super();
     }
@@ -60,8 +58,8 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a remoteActionAudit
      */
-    @javax.annotation.Nonnull
-    public static RemoteActionAudit createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RemoteActionAudit createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RemoteActionAudit();
     }
@@ -69,7 +67,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * Gets the action property value. Remote actions Intune supports.
      * @return a remoteAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RemoteAction getAction() {
         return this.action;
     }
@@ -77,7 +75,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * Gets the actionState property value. The actionState property
      * @return a actionState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ActionState getActionState() {
         return this.actionState;
     }
@@ -85,7 +83,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * Gets the deviceDisplayName property value. Intune device name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
         return this.deviceDisplayName;
     }
@@ -93,7 +91,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * Gets the deviceIMEI property value. IMEI of the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceIMEI() {
         return this.deviceIMEI;
     }
@@ -101,7 +99,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * Gets the deviceOwnerUserPrincipalName property value. Upn of the device owner.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceOwnerUserPrincipalName() {
         return this.deviceOwnerUserPrincipalName;
     }
@@ -109,7 +107,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(RemoteAction.class)); });
@@ -127,7 +125,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * Gets the initiatedByUserPrincipalName property value. User who initiated the device action, format is UPN.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInitiatedByUserPrincipalName() {
         return this.initiatedByUserPrincipalName;
     }
@@ -135,7 +133,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * Gets the managedDeviceId property value. Action target.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
         return this.managedDeviceId;
     }
@@ -143,7 +141,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * Gets the requestDateTime property value. Time when the action was issued, given in UTC.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRequestDateTime() {
         return this.requestDateTime;
     }
@@ -151,17 +149,15 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * Gets the userName property value. [deprecated] Please use InitiatedByUserPrincipalName instead.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserName() {
         return this.userName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("action", this.getAction());
@@ -177,82 +173,64 @@ public class RemoteActionAudit extends Entity implements Parsable {
     /**
      * Sets the action property value. Remote actions Intune supports.
      * @param value Value to set for the action property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAction(@javax.annotation.Nullable final RemoteAction value) {
+    public void setAction(@jakarta.annotation.Nullable final RemoteAction value) {
         this.action = value;
     }
     /**
      * Sets the actionState property value. The actionState property
      * @param value Value to set for the actionState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActionState(@javax.annotation.Nullable final ActionState value) {
+    public void setActionState(@jakarta.annotation.Nullable final ActionState value) {
         this.actionState = value;
     }
     /**
      * Sets the deviceDisplayName property value. Intune device name.
      * @param value Value to set for the deviceDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
         this.deviceDisplayName = value;
     }
     /**
      * Sets the deviceIMEI property value. IMEI of the device.
      * @param value Value to set for the deviceIMEI property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceIMEI(@javax.annotation.Nullable final String value) {
+    public void setDeviceIMEI(@jakarta.annotation.Nullable final String value) {
         this.deviceIMEI = value;
     }
     /**
      * Sets the deviceOwnerUserPrincipalName property value. Upn of the device owner.
      * @param value Value to set for the deviceOwnerUserPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceOwnerUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setDeviceOwnerUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.deviceOwnerUserPrincipalName = value;
     }
     /**
      * Sets the initiatedByUserPrincipalName property value. User who initiated the device action, format is UPN.
      * @param value Value to set for the initiatedByUserPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitiatedByUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setInitiatedByUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.initiatedByUserPrincipalName = value;
     }
     /**
      * Sets the managedDeviceId property value. Action target.
      * @param value Value to set for the managedDeviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
+    public void setManagedDeviceId(@jakarta.annotation.Nullable final String value) {
         this.managedDeviceId = value;
     }
     /**
      * Sets the requestDateTime property value. Time when the action was issued, given in UTC.
      * @param value Value to set for the requestDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setRequestDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.requestDateTime = value;
     }
     /**
      * Sets the userName property value. [deprecated] Please use InitiatedByUserPrincipalName instead.
      * @param value Value to set for the userName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserName(@javax.annotation.Nullable final String value) {
+    public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
 }

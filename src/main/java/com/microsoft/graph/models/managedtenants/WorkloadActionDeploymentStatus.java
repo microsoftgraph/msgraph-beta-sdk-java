@@ -52,9 +52,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
     private WorkloadActionStatus status;
     /**
      * Instantiates a new workloadActionDeploymentStatus and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WorkloadActionDeploymentStatus() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -63,8 +61,8 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workloadActionDeploymentStatus
      */
-    @javax.annotation.Nonnull
-    public static WorkloadActionDeploymentStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WorkloadActionDeploymentStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WorkloadActionDeploymentStatus();
     }
@@ -72,7 +70,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * Gets the actionId property value. The unique identifier for the workload action. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActionId() {
         return this.actionId;
     }
@@ -80,7 +78,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -88,7 +86,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * Gets the deployedPolicyId property value. The identifier of any policy that was created by applying the workload action. Optional. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeployedPolicyId() {
         return this.deployedPolicyId;
     }
@@ -96,7 +94,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * Gets the error property value. The detailed information for exceptions that occur when deploying the workload action. Optional. Required.
      * @return a genericError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GenericError getError() {
         return this.error;
     }
@@ -104,7 +102,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * Gets the excludeGroups property value. The excludeGroups property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getExcludeGroups() {
         return this.excludeGroups;
     }
@@ -112,7 +110,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("actionId", (n) -> { this.setActionId(n.getStringValue()); });
@@ -130,7 +128,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * Gets the includeAllUsers property value. The includeAllUsers property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIncludeAllUsers() {
         return this.includeAllUsers;
     }
@@ -138,7 +136,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * Gets the includeGroups property value. The includeGroups property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeGroups() {
         return this.includeGroups;
     }
@@ -146,7 +144,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * Gets the lastDeploymentDateTime property value. The date and time the workload action was last deployed. Optional.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastDeploymentDateTime() {
         return this.lastDeploymentDateTime;
     }
@@ -154,7 +152,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -162,17 +160,15 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * Gets the status property value. The status property
      * @return a workloadActionStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkloadActionStatus getStatus() {
         return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("actionId", this.getActionId());
         writer.writeStringValue("deployedPolicyId", this.getDeployedPolicyId());
@@ -188,91 +184,71 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
     /**
      * Sets the actionId property value. The unique identifier for the workload action. Required. Read-only.
      * @param value Value to set for the actionId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActionId(@javax.annotation.Nullable final String value) {
+    public void setActionId(@jakarta.annotation.Nullable final String value) {
         this.actionId = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the deployedPolicyId property value. The identifier of any policy that was created by applying the workload action. Optional. Read-only.
      * @param value Value to set for the deployedPolicyId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeployedPolicyId(@javax.annotation.Nullable final String value) {
+    public void setDeployedPolicyId(@jakarta.annotation.Nullable final String value) {
         this.deployedPolicyId = value;
     }
     /**
      * Sets the error property value. The detailed information for exceptions that occur when deploying the workload action. Optional. Required.
      * @param value Value to set for the error property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setError(@javax.annotation.Nullable final GenericError value) {
+    public void setError(@jakarta.annotation.Nullable final GenericError value) {
         this.error = value;
     }
     /**
      * Sets the excludeGroups property value. The excludeGroups property
      * @param value Value to set for the excludeGroups property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExcludeGroups(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setExcludeGroups(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.excludeGroups = value;
     }
     /**
      * Sets the includeAllUsers property value. The includeAllUsers property
      * @param value Value to set for the includeAllUsers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncludeAllUsers(@javax.annotation.Nullable final Boolean value) {
+    public void setIncludeAllUsers(@jakarta.annotation.Nullable final Boolean value) {
         this.includeAllUsers = value;
     }
     /**
      * Sets the includeGroups property value. The includeGroups property
      * @param value Value to set for the includeGroups property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncludeGroups(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setIncludeGroups(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.includeGroups = value;
     }
     /**
      * Sets the lastDeploymentDateTime property value. The date and time the workload action was last deployed. Optional.
      * @param value Value to set for the lastDeploymentDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastDeploymentDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastDeploymentDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastDeploymentDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final WorkloadActionStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final WorkloadActionStatus value) {
         this.status = value;
     }
 }

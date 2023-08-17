@@ -69,9 +69,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     private DeviceManagementConfigurationPolicyTemplateReference templateReference;
     /**
      * Instantiates a new deviceManagementConfigurationPolicy and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementConfigurationPolicy() {
         super();
     }
@@ -80,8 +78,8 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationPolicy
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationPolicy();
     }
@@ -89,7 +87,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * Gets the assignments property value. Policy assignments
      * @return a deviceManagementConfigurationPolicyAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationPolicyAssignment> getAssignments() {
         return this.assignments;
     }
@@ -97,7 +95,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * Gets the createdDateTime property value. Policy creation date and time
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -105,7 +103,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * Gets the creationSource property value. Policy creation source
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCreationSource() {
         return this.creationSource;
     }
@@ -113,7 +111,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * Gets the description property value. Policy description
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -121,7 +119,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(DeviceManagementConfigurationPolicyAssignment::createFromDiscriminatorValue)); });
@@ -144,7 +142,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * Gets the isAssigned property value. Policy assignment status. This property is read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAssigned() {
         return this.isAssigned;
     }
@@ -152,7 +150,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * Gets the lastModifiedDateTime property value. Policy last modification date and time
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -160,7 +158,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * Gets the name property value. Policy name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -168,7 +166,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * Gets the platforms property value. Supported platform types.
      * @return a deviceManagementConfigurationPlatforms
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationPlatforms getPlatforms() {
         return this.platforms;
     }
@@ -176,7 +174,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * Gets the priorityMetaData property value. Indicates the priority of each policies that are selected by the admin during enrollment process
      * @return a deviceManagementPriorityMetaData
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementPriorityMetaData getPriorityMetaData() {
         return this.priorityMetaData;
     }
@@ -184,7 +182,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
         return this.roleScopeTagIds;
     }
@@ -192,7 +190,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * Gets the settingCount property value. Number of settings
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSettingCount() {
         return this.settingCount;
     }
@@ -200,7 +198,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * Gets the settings property value. Policy settings
      * @return a deviceManagementConfigurationSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSetting> getSettings() {
         return this.settings;
     }
@@ -208,7 +206,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * Gets the technologies property value. Describes which technology this setting can be deployed with
      * @return a deviceManagementConfigurationTechnologies
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationTechnologies getTechnologies() {
         return this.technologies;
     }
@@ -216,17 +214,15 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * Gets the templateReference property value. Template reference information
      * @return a deviceManagementConfigurationPolicyTemplateReference
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationPolicyTemplateReference getTemplateReference() {
         return this.templateReference;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
@@ -246,127 +242,99 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     /**
      * Sets the assignments property value. Policy assignments
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignments(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationPolicyAssignment> value) {
+    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationPolicyAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the createdDateTime property value. Policy creation date and time
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the creationSource property value. Policy creation source
      * @param value Value to set for the creationSource property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreationSource(@javax.annotation.Nullable final String value) {
+    public void setCreationSource(@jakarta.annotation.Nullable final String value) {
         this.creationSource = value;
     }
     /**
      * Sets the description property value. Policy description
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the isAssigned property value. Policy assignment status. This property is read-only.
      * @param value Value to set for the isAssigned property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAssigned(@javax.annotation.Nullable final Boolean value) {
+    public void setIsAssigned(@jakarta.annotation.Nullable final Boolean value) {
         this.isAssigned = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Policy last modification date and time
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the name property value. Policy name
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the platforms property value. Supported platform types.
      * @param value Value to set for the platforms property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatforms(@javax.annotation.Nullable final DeviceManagementConfigurationPlatforms value) {
+    public void setPlatforms(@jakarta.annotation.Nullable final DeviceManagementConfigurationPlatforms value) {
         this.platforms = value;
     }
     /**
      * Sets the priorityMetaData property value. Indicates the priority of each policies that are selected by the admin during enrollment process
      * @param value Value to set for the priorityMetaData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPriorityMetaData(@javax.annotation.Nullable final DeviceManagementPriorityMetaData value) {
+    public void setPriorityMetaData(@jakarta.annotation.Nullable final DeviceManagementPriorityMetaData value) {
         this.priorityMetaData = value;
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTagIds = value;
     }
     /**
      * Sets the settingCount property value. Number of settings
      * @param value Value to set for the settingCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingCount(@javax.annotation.Nullable final Integer value) {
+    public void setSettingCount(@jakarta.annotation.Nullable final Integer value) {
         this.settingCount = value;
     }
     /**
      * Sets the settings property value. Policy settings
      * @param value Value to set for the settings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettings(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSetting> value) {
+    public void setSettings(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationSetting> value) {
         this.settings = value;
     }
     /**
      * Sets the technologies property value. Describes which technology this setting can be deployed with
      * @param value Value to set for the technologies property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTechnologies(@javax.annotation.Nullable final DeviceManagementConfigurationTechnologies value) {
+    public void setTechnologies(@jakarta.annotation.Nullable final DeviceManagementConfigurationTechnologies value) {
         this.technologies = value;
     }
     /**
      * Sets the templateReference property value. Template reference information
      * @param value Value to set for the templateReference property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTemplateReference(@javax.annotation.Nullable final DeviceManagementConfigurationPolicyTemplateReference value) {
+    public void setTemplateReference(@jakarta.annotation.Nullable final DeviceManagementConfigurationPolicyTemplateReference value) {
         this.templateReference = value;
     }
 }

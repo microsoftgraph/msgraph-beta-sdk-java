@@ -25,9 +25,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
     private String type;
     /**
      * Instantiates a new kubernetesControllerEvidence and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public KubernetesControllerEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.kubernetesControllerEvidence");
@@ -37,8 +35,8 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a kubernetesControllerEvidence
      */
-    @javax.annotation.Nonnull
-    public static KubernetesControllerEvidence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static KubernetesControllerEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new KubernetesControllerEvidence();
     }
@@ -46,7 +44,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("labels", (n) -> { this.setLabels(n.getObjectValue(Dictionary::createFromDiscriminatorValue)); });
@@ -59,7 +57,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
      * Gets the labels property value. The labels for the Kubernetes pod.
      * @return a dictionary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Dictionary getLabels() {
         return this.labels;
     }
@@ -67,7 +65,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
      * Gets the name property value. The controller name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -75,7 +73,7 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
      * Gets the namespace property value. The service account namespace.
      * @return a kubernetesNamespaceEvidence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public KubernetesNamespaceEvidence getNamespace() {
         return this.namespace;
     }
@@ -83,17 +81,15 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
      * Gets the type property value. The controller type.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getType() {
         return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("labels", this.getLabels());
@@ -104,37 +100,29 @@ public class KubernetesControllerEvidence extends AlertEvidence implements Parsa
     /**
      * Sets the labels property value. The labels for the Kubernetes pod.
      * @param value Value to set for the labels property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabels(@javax.annotation.Nullable final Dictionary value) {
+    public void setLabels(@jakarta.annotation.Nullable final Dictionary value) {
         this.labels = value;
     }
     /**
      * Sets the name property value. The controller name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the namespace property value. The service account namespace.
      * @param value Value to set for the namespace property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNamespace(@javax.annotation.Nullable final KubernetesNamespaceEvidence value) {
+    public void setNamespace(@jakarta.annotation.Nullable final KubernetesNamespaceEvidence value) {
         this.namespace = value;
     }
     /**
      * Sets the type property value. The controller type.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final String value) {
+    public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
 }

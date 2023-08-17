@@ -69,9 +69,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
     private String periodLengthFilter;
     /**
      * Instantiates a new agedAccountsReceivable and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AgedAccountsReceivable() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -80,8 +78,8 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a agedAccountsReceivable
      */
-    @javax.annotation.Nonnull
-    public static AgedAccountsReceivable createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AgedAccountsReceivable createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AgedAccountsReceivable();
     }
@@ -89,7 +87,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -97,7 +95,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
      * Gets the agedAsOfDate property value. The agedAsOfDate property
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getAgedAsOfDate() {
         return this.agedAsOfDate;
     }
@@ -105,7 +103,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
      * Gets the balanceDue property value. The balanceDue property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getBalanceDue() {
         return this.balanceDue;
     }
@@ -113,7 +111,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
      * Gets the currencyCode property value. The currencyCode property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCurrencyCode() {
         return this.currencyCode;
     }
@@ -121,7 +119,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
      * Gets the currentAmount property value. The currentAmount property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getCurrentAmount() {
         return this.currentAmount;
     }
@@ -129,7 +127,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
      * Gets the customerId property value. The customerId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomerId() {
         return this.customerId;
     }
@@ -137,7 +135,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
      * Gets the customerNumber property value. The customerNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomerNumber() {
         return this.customerNumber;
     }
@@ -145,7 +143,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
         deserializerMap.put("agedAsOfDate", (n) -> { this.setAgedAsOfDate(n.getLocalDateValue()); });
@@ -167,7 +165,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
      * Gets the id property value. The id property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getId() {
         return this.id;
     }
@@ -175,7 +173,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
      * Gets the name property value. The name property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -183,7 +181,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -191,7 +189,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
      * Gets the period1Amount property value. The period1Amount property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getPeriod1Amount() {
         return this.period1Amount;
     }
@@ -199,7 +197,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
      * Gets the period2Amount property value. The period2Amount property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getPeriod2Amount() {
         return this.period2Amount;
     }
@@ -207,7 +205,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
      * Gets the period3Amount property value. The period3Amount property
      * @return a decimal
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BigDecimal getPeriod3Amount() {
         return this.period3Amount;
     }
@@ -215,17 +213,15 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
      * Gets the periodLengthFilter property value. The periodLengthFilter property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPeriodLengthFilter() {
         return this.periodLengthFilter;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLocalDateValue("agedAsOfDate", this.getAgedAsOfDate());
         writer.writeBigDecimalValue("balanceDue", this.getBalanceDue());
@@ -245,127 +241,99 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the agedAsOfDate property value. The agedAsOfDate property
      * @param value Value to set for the agedAsOfDate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAgedAsOfDate(@javax.annotation.Nullable final LocalDate value) {
+    public void setAgedAsOfDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.agedAsOfDate = value;
     }
     /**
      * Sets the balanceDue property value. The balanceDue property
      * @param value Value to set for the balanceDue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBalanceDue(@javax.annotation.Nullable final BigDecimal value) {
+    public void setBalanceDue(@jakarta.annotation.Nullable final BigDecimal value) {
         this.balanceDue = value;
     }
     /**
      * Sets the currencyCode property value. The currencyCode property
      * @param value Value to set for the currencyCode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrencyCode(@javax.annotation.Nullable final String value) {
+    public void setCurrencyCode(@jakarta.annotation.Nullable final String value) {
         this.currencyCode = value;
     }
     /**
      * Sets the currentAmount property value. The currentAmount property
      * @param value Value to set for the currentAmount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrentAmount(@javax.annotation.Nullable final BigDecimal value) {
+    public void setCurrentAmount(@jakarta.annotation.Nullable final BigDecimal value) {
         this.currentAmount = value;
     }
     /**
      * Sets the customerId property value. The customerId property
      * @param value Value to set for the customerId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomerId(@javax.annotation.Nullable final String value) {
+    public void setCustomerId(@jakarta.annotation.Nullable final String value) {
         this.customerId = value;
     }
     /**
      * Sets the customerNumber property value. The customerNumber property
      * @param value Value to set for the customerNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomerNumber(@javax.annotation.Nullable final String value) {
+    public void setCustomerNumber(@jakarta.annotation.Nullable final String value) {
         this.customerNumber = value;
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final UUID value) {
+    public void setId(@jakarta.annotation.Nullable final UUID value) {
         this.id = value;
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the period1Amount property value. The period1Amount property
      * @param value Value to set for the period1Amount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPeriod1Amount(@javax.annotation.Nullable final BigDecimal value) {
+    public void setPeriod1Amount(@jakarta.annotation.Nullable final BigDecimal value) {
         this.period1Amount = value;
     }
     /**
      * Sets the period2Amount property value. The period2Amount property
      * @param value Value to set for the period2Amount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPeriod2Amount(@javax.annotation.Nullable final BigDecimal value) {
+    public void setPeriod2Amount(@jakarta.annotation.Nullable final BigDecimal value) {
         this.period2Amount = value;
     }
     /**
      * Sets the period3Amount property value. The period3Amount property
      * @param value Value to set for the period3Amount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPeriod3Amount(@javax.annotation.Nullable final BigDecimal value) {
+    public void setPeriod3Amount(@jakarta.annotation.Nullable final BigDecimal value) {
         this.period3Amount = value;
     }
     /**
      * Sets the periodLengthFilter property value. The periodLengthFilter property
      * @param value Value to set for the periodLengthFilter property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPeriodLengthFilter(@javax.annotation.Nullable final String value) {
+    public void setPeriodLengthFilter(@jakarta.annotation.Nullable final String value) {
         this.periodLengthFilter = value;
     }
 }

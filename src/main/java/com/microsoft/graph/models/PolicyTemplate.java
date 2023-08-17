@@ -17,9 +17,7 @@ public class PolicyTemplate extends Entity implements Parsable {
     private MultiTenantOrganizationPartnerConfigurationTemplate multiTenantOrganizationPartnerConfiguration;
     /**
      * Instantiates a new policyTemplate and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PolicyTemplate() {
         super();
     }
@@ -28,8 +26,8 @@ public class PolicyTemplate extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a policyTemplate
      */
-    @javax.annotation.Nonnull
-    public static PolicyTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PolicyTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PolicyTemplate();
     }
@@ -37,7 +35,7 @@ public class PolicyTemplate extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("multiTenantOrganizationIdentitySynchronization", (n) -> { this.setMultiTenantOrganizationIdentitySynchronization(n.getObjectValue(MultiTenantOrganizationIdentitySyncPolicyTemplate::createFromDiscriminatorValue)); });
@@ -48,7 +46,7 @@ public class PolicyTemplate extends Entity implements Parsable {
      * Gets the multiTenantOrganizationIdentitySynchronization property value. The multiTenantOrganizationIdentitySynchronization property
      * @return a multiTenantOrganizationIdentitySyncPolicyTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MultiTenantOrganizationIdentitySyncPolicyTemplate getMultiTenantOrganizationIdentitySynchronization() {
         return this.multiTenantOrganizationIdentitySynchronization;
     }
@@ -56,17 +54,15 @@ public class PolicyTemplate extends Entity implements Parsable {
      * Gets the multiTenantOrganizationPartnerConfiguration property value. The multiTenantOrganizationPartnerConfiguration property
      * @return a multiTenantOrganizationPartnerConfigurationTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MultiTenantOrganizationPartnerConfigurationTemplate getMultiTenantOrganizationPartnerConfiguration() {
         return this.multiTenantOrganizationPartnerConfiguration;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("multiTenantOrganizationIdentitySynchronization", this.getMultiTenantOrganizationIdentitySynchronization());
@@ -75,19 +71,15 @@ public class PolicyTemplate extends Entity implements Parsable {
     /**
      * Sets the multiTenantOrganizationIdentitySynchronization property value. The multiTenantOrganizationIdentitySynchronization property
      * @param value Value to set for the multiTenantOrganizationIdentitySynchronization property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMultiTenantOrganizationIdentitySynchronization(@javax.annotation.Nullable final MultiTenantOrganizationIdentitySyncPolicyTemplate value) {
+    public void setMultiTenantOrganizationIdentitySynchronization(@jakarta.annotation.Nullable final MultiTenantOrganizationIdentitySyncPolicyTemplate value) {
         this.multiTenantOrganizationIdentitySynchronization = value;
     }
     /**
      * Sets the multiTenantOrganizationPartnerConfiguration property value. The multiTenantOrganizationPartnerConfiguration property
      * @param value Value to set for the multiTenantOrganizationPartnerConfiguration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMultiTenantOrganizationPartnerConfiguration(@javax.annotation.Nullable final MultiTenantOrganizationPartnerConfigurationTemplate value) {
+    public void setMultiTenantOrganizationPartnerConfiguration(@jakarta.annotation.Nullable final MultiTenantOrganizationPartnerConfigurationTemplate value) {
         this.multiTenantOrganizationPartnerConfiguration = value;
     }
 }

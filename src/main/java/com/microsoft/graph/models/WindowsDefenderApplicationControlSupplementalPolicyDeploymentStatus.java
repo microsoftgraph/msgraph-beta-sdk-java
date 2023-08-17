@@ -53,9 +53,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
     private String userPrincipalName;
     /**
      * Instantiates a new windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus() {
         super();
     }
@@ -64,8 +62,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      */
-    @javax.annotation.Nonnull
-    public static WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus();
     }
@@ -73,7 +71,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * Gets the deploymentStatus property value. Enum values for the various WindowsDefenderApplicationControl supplemental policy deployment statuses.
      * @return a windowsDefenderApplicationControlSupplementalPolicyStatuses
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsDefenderApplicationControlSupplementalPolicyStatuses getDeploymentStatus() {
         return this.deploymentStatus;
     }
@@ -81,7 +79,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * Gets the deviceId property value. Device ID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -89,7 +87,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * Gets the deviceName property value. Device name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -97,7 +95,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deploymentStatus", (n) -> { this.setDeploymentStatus(n.getEnumValue(WindowsDefenderApplicationControlSupplementalPolicyStatuses.class)); });
@@ -116,7 +114,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * Gets the lastSyncDateTime property value. Last sync date time.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
         return this.lastSyncDateTime;
     }
@@ -124,7 +122,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * Gets the osDescription property value. Windows OS Version Description.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsDescription() {
         return this.osDescription;
     }
@@ -132,7 +130,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * Gets the osVersion property value. Windows OS Version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsVersion() {
         return this.osVersion;
     }
@@ -140,7 +138,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * Gets the policy property value. The navigation link to the WindowsDefenderApplicationControl supplemental policy.
      * @return a windowsDefenderApplicationControlSupplementalPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsDefenderApplicationControlSupplementalPolicy getPolicy() {
         return this.policy;
     }
@@ -148,7 +146,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * Gets the policyVersion property value. Human readable version of the WindowsDefenderApplicationControl supplemental policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPolicyVersion() {
         return this.policyVersion;
     }
@@ -156,7 +154,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * Gets the userName property value. The name of the user of this device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserName() {
         return this.userName;
     }
@@ -164,17 +162,15 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * Gets the userPrincipalName property value. User Principal Name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("deploymentStatus", this.getDeploymentStatus());
@@ -191,91 +187,71 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
     /**
      * Sets the deploymentStatus property value. Enum values for the various WindowsDefenderApplicationControl supplemental policy deployment statuses.
      * @param value Value to set for the deploymentStatus property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeploymentStatus(@javax.annotation.Nullable final WindowsDefenderApplicationControlSupplementalPolicyStatuses value) {
+    public void setDeploymentStatus(@jakarta.annotation.Nullable final WindowsDefenderApplicationControlSupplementalPolicyStatuses value) {
         this.deploymentStatus = value;
     }
     /**
      * Sets the deviceId property value. Device ID.
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the deviceName property value. Device name.
      * @param value Value to set for the deviceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
      * Sets the lastSyncDateTime property value. Last sync date time.
      * @param value Value to set for the lastSyncDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSyncDateTime = value;
     }
     /**
      * Sets the osDescription property value. Windows OS Version Description.
      * @param value Value to set for the osDescription property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsDescription(@javax.annotation.Nullable final String value) {
+    public void setOsDescription(@jakarta.annotation.Nullable final String value) {
         this.osDescription = value;
     }
     /**
      * Sets the osVersion property value. Windows OS Version.
      * @param value Value to set for the osVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsVersion(@javax.annotation.Nullable final String value) {
+    public void setOsVersion(@jakarta.annotation.Nullable final String value) {
         this.osVersion = value;
     }
     /**
      * Sets the policy property value. The navigation link to the WindowsDefenderApplicationControl supplemental policy.
      * @param value Value to set for the policy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicy(@javax.annotation.Nullable final WindowsDefenderApplicationControlSupplementalPolicy value) {
+    public void setPolicy(@jakarta.annotation.Nullable final WindowsDefenderApplicationControlSupplementalPolicy value) {
         this.policy = value;
     }
     /**
      * Sets the policyVersion property value. Human readable version of the WindowsDefenderApplicationControl supplemental policy.
      * @param value Value to set for the policyVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyVersion(@javax.annotation.Nullable final String value) {
+    public void setPolicyVersion(@jakarta.annotation.Nullable final String value) {
         this.policyVersion = value;
     }
     /**
      * Sets the userName property value. The name of the user of this device.
      * @param value Value to set for the userName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserName(@javax.annotation.Nullable final String value) {
+    public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

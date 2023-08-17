@@ -33,9 +33,7 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
     private Integer tenantAttachDeviceCount;
     /**
      * Instantiates a new userExperienceAnalyticsCloudManagementDevicesSummary and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UserExperienceAnalyticsCloudManagementDevicesSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -44,8 +42,8 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsCloudManagementDevicesSummary
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsCloudManagementDevicesSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsCloudManagementDevicesSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsCloudManagementDevicesSummary();
     }
@@ -53,7 +51,7 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -61,7 +59,7 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
      * Gets the coManagedDeviceCount property value. Total number of  co-managed devices. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCoManagedDeviceCount() {
         return this.coManagedDeviceCount;
     }
@@ -69,7 +67,7 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("coManagedDeviceCount", (n) -> { this.setCoManagedDeviceCount(n.getIntegerValue()); });
@@ -82,7 +80,7 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
      * Gets the intuneDeviceCount property value. The count of intune devices that are not autopilot registerd. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getIntuneDeviceCount() {
         return this.intuneDeviceCount;
     }
@@ -90,7 +88,7 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -98,17 +96,15 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
      * Gets the tenantAttachDeviceCount property value. Total count of tenant attach devices. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTenantAttachDeviceCount() {
         return this.tenantAttachDeviceCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("coManagedDeviceCount", this.getCoManagedDeviceCount());
         writer.writeIntegerValue("intuneDeviceCount", this.getIntuneDeviceCount());
@@ -119,46 +115,36 @@ public class UserExperienceAnalyticsCloudManagementDevicesSummary implements Add
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the coManagedDeviceCount property value. Total number of  co-managed devices. Read-only.
      * @param value Value to set for the coManagedDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCoManagedDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setCoManagedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.coManagedDeviceCount = value;
     }
     /**
      * Sets the intuneDeviceCount property value. The count of intune devices that are not autopilot registerd. Read-only.
      * @param value Value to set for the intuneDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIntuneDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setIntuneDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.intuneDeviceCount = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the tenantAttachDeviceCount property value. Total count of tenant attach devices. Read-only.
      * @param value Value to set for the tenantAttachDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantAttachDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setTenantAttachDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.tenantAttachDeviceCount = value;
     }
 }

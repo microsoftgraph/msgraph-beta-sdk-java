@@ -16,9 +16,7 @@ public class DeliveryOptimizationMaxCacheSizePercentage extends DeliveryOptimiza
     private Integer maximumCacheSizePercentage;
     /**
      * Instantiates a new deliveryOptimizationMaxCacheSizePercentage and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeliveryOptimizationMaxCacheSizePercentage() {
         super();
         this.setOdataType("#microsoft.graph.deliveryOptimizationMaxCacheSizePercentage");
@@ -28,8 +26,8 @@ public class DeliveryOptimizationMaxCacheSizePercentage extends DeliveryOptimiza
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deliveryOptimizationMaxCacheSizePercentage
      */
-    @javax.annotation.Nonnull
-    public static DeliveryOptimizationMaxCacheSizePercentage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeliveryOptimizationMaxCacheSizePercentage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeliveryOptimizationMaxCacheSizePercentage();
     }
@@ -37,7 +35,7 @@ public class DeliveryOptimizationMaxCacheSizePercentage extends DeliveryOptimiza
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("maximumCacheSizePercentage", (n) -> { this.setMaximumCacheSizePercentage(n.getIntegerValue()); });
@@ -47,17 +45,15 @@ public class DeliveryOptimizationMaxCacheSizePercentage extends DeliveryOptimiza
      * Gets the maximumCacheSizePercentage property value. Specifies the maximum cache size that Delivery Optimization can utilize, as a percentage of disk size (1-100). Valid values 1 to 100
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaximumCacheSizePercentage() {
         return this.maximumCacheSizePercentage;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("maximumCacheSizePercentage", this.getMaximumCacheSizePercentage());
@@ -65,10 +61,8 @@ public class DeliveryOptimizationMaxCacheSizePercentage extends DeliveryOptimiza
     /**
      * Sets the maximumCacheSizePercentage property value. Specifies the maximum cache size that Delivery Optimization can utilize, as a percentage of disk size (1-100). Valid values 1 to 100
      * @param value Value to set for the maximumCacheSizePercentage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaximumCacheSizePercentage(@javax.annotation.Nullable final Integer value) {
+    public void setMaximumCacheSizePercentage(@jakarta.annotation.Nullable final Integer value) {
         this.maximumCacheSizePercentage = value;
     }
 }

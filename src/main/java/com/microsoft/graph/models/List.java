@@ -53,9 +53,7 @@ public class List extends BaseItem implements Parsable {
     private SystemFacet system;
     /**
      * Instantiates a new list and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public List() {
         super();
         this.setOdataType("#microsoft.graph.list");
@@ -65,8 +63,8 @@ public class List extends BaseItem implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a list
      */
-    @javax.annotation.Nonnull
-    public static List createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static List createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new List();
     }
@@ -74,7 +72,7 @@ public class List extends BaseItem implements Parsable {
      * Gets the activities property value. The recent activities that took place within this list.
      * @return a itemActivityOLD
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ItemActivityOLD> getActivities() {
         return this.activities;
     }
@@ -82,7 +80,7 @@ public class List extends BaseItem implements Parsable {
      * Gets the columns property value. The columns property
      * @return a columnDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ColumnDefinition> getColumns() {
         return this.columns;
     }
@@ -90,7 +88,7 @@ public class List extends BaseItem implements Parsable {
      * Gets the contentTypes property value. The contentTypes property
      * @return a contentType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ContentType> getContentTypes() {
         return this.contentTypes;
     }
@@ -98,7 +96,7 @@ public class List extends BaseItem implements Parsable {
      * Gets the displayName property value. The displayable title of the list.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -106,7 +104,7 @@ public class List extends BaseItem implements Parsable {
      * Gets the drive property value. Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
      * @return a drive
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Drive getDrive() {
         return this.drive;
     }
@@ -114,7 +112,7 @@ public class List extends BaseItem implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activities", (n) -> { this.setActivities(n.getCollectionOfObjectValues(ItemActivityOLD::createFromDiscriminatorValue)); });
@@ -134,7 +132,7 @@ public class List extends BaseItem implements Parsable {
      * Gets the items property value. All items contained in the list.
      * @return a listItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ListItem> getItems() {
         return this.items;
     }
@@ -142,7 +140,7 @@ public class List extends BaseItem implements Parsable {
      * Gets the list property value. Provides additional details about the list.
      * @return a listInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ListInfo getList() {
         return this.list;
     }
@@ -150,7 +148,7 @@ public class List extends BaseItem implements Parsable {
      * Gets the operations property value. The collection of long running operations for the list.
      * @return a richLongRunningOperation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<RichLongRunningOperation> getOperations() {
         return this.operations;
     }
@@ -158,7 +156,7 @@ public class List extends BaseItem implements Parsable {
      * Gets the sharepointIds property value. The sharepointIds property
      * @return a sharepointIds
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SharepointIds getSharepointIds() {
         return this.sharepointIds;
     }
@@ -166,7 +164,7 @@ public class List extends BaseItem implements Parsable {
      * Gets the subscriptions property value. The set of subscriptions on the list.
      * @return a subscription
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Subscription> getSubscriptions() {
         return this.subscriptions;
     }
@@ -174,17 +172,15 @@ public class List extends BaseItem implements Parsable {
      * Gets the system property value. If present, indicates that this is a system-managed list. Read-only.
      * @return a systemFacet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SystemFacet getSystem() {
         return this.system;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("activities", this.getActivities());
@@ -202,100 +198,78 @@ public class List extends BaseItem implements Parsable {
     /**
      * Sets the activities property value. The recent activities that took place within this list.
      * @param value Value to set for the activities property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivities(@javax.annotation.Nullable final java.util.List<ItemActivityOLD> value) {
+    public void setActivities(@jakarta.annotation.Nullable final java.util.List<ItemActivityOLD> value) {
         this.activities = value;
     }
     /**
      * Sets the columns property value. The columns property
      * @param value Value to set for the columns property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setColumns(@javax.annotation.Nullable final java.util.List<ColumnDefinition> value) {
+    public void setColumns(@jakarta.annotation.Nullable final java.util.List<ColumnDefinition> value) {
         this.columns = value;
     }
     /**
      * Sets the contentTypes property value. The contentTypes property
      * @param value Value to set for the contentTypes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentTypes(@javax.annotation.Nullable final java.util.List<ContentType> value) {
+    public void setContentTypes(@jakarta.annotation.Nullable final java.util.List<ContentType> value) {
         this.contentTypes = value;
     }
     /**
      * Sets the displayName property value. The displayable title of the list.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the drive property value. Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
      * @param value Value to set for the drive property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDrive(@javax.annotation.Nullable final Drive value) {
+    public void setDrive(@jakarta.annotation.Nullable final Drive value) {
         this.drive = value;
     }
     /**
      * Sets the items property value. All items contained in the list.
      * @param value Value to set for the items property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setItems(@javax.annotation.Nullable final java.util.List<ListItem> value) {
+    public void setItems(@jakarta.annotation.Nullable final java.util.List<ListItem> value) {
         this.items = value;
     }
     /**
      * Sets the list property value. Provides additional details about the list.
      * @param value Value to set for the list property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setList(@javax.annotation.Nullable final ListInfo value) {
+    public void setList(@jakarta.annotation.Nullable final ListInfo value) {
         this.list = value;
     }
     /**
      * Sets the operations property value. The collection of long running operations for the list.
      * @param value Value to set for the operations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperations(@javax.annotation.Nullable final java.util.List<RichLongRunningOperation> value) {
+    public void setOperations(@jakarta.annotation.Nullable final java.util.List<RichLongRunningOperation> value) {
         this.operations = value;
     }
     /**
      * Sets the sharepointIds property value. The sharepointIds property
      * @param value Value to set for the sharepointIds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharepointIds(@javax.annotation.Nullable final SharepointIds value) {
+    public void setSharepointIds(@jakarta.annotation.Nullable final SharepointIds value) {
         this.sharepointIds = value;
     }
     /**
      * Sets the subscriptions property value. The set of subscriptions on the list.
      * @param value Value to set for the subscriptions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubscriptions(@javax.annotation.Nullable final java.util.List<Subscription> value) {
+    public void setSubscriptions(@jakarta.annotation.Nullable final java.util.List<Subscription> value) {
         this.subscriptions = value;
     }
     /**
      * Sets the system property value. If present, indicates that this is a system-managed list. Read-only.
      * @param value Value to set for the system property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSystem(@javax.annotation.Nullable final SystemFacet value) {
+    public void setSystem(@jakarta.annotation.Nullable final SystemFacet value) {
         this.system = value;
     }
 }

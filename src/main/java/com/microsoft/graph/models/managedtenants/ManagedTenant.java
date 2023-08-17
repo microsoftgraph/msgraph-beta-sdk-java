@@ -158,9 +158,7 @@ public class ManagedTenant extends Entity implements Parsable {
     private java.util.List<WindowsProtectionState> windowsProtectionStates;
     /**
      * Instantiates a new managedTenant and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ManagedTenant() {
         super();
     }
@@ -169,8 +167,8 @@ public class ManagedTenant extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedTenant
      */
-    @javax.annotation.Nonnull
-    public static ManagedTenant createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedTenant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagedTenant();
     }
@@ -178,7 +176,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the aggregatedPolicyCompliances property value. Aggregate view of device compliance policies across managed tenants.
      * @return a aggregatedPolicyCompliance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AggregatedPolicyCompliance> getAggregatedPolicyCompliances() {
         return this.aggregatedPolicyCompliances;
     }
@@ -186,7 +184,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the appPerformances property value. The appPerformances property
      * @return a appPerformance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AppPerformance> getAppPerformances() {
         return this.appPerformances;
     }
@@ -194,7 +192,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the auditEvents property value. The collection of audit events across managed tenants.
      * @return a auditEvent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AuditEvent> getAuditEvents() {
         return this.auditEvents;
     }
@@ -202,7 +200,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the cloudPcConnections property value. The collection of cloud PC connections across managed tenants.
      * @return a cloudPcConnection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPcConnection> getCloudPcConnections() {
         return this.cloudPcConnections;
     }
@@ -210,7 +208,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the cloudPcDevices property value. The collection of cloud PC devices across managed tenants.
      * @return a cloudPcDevice
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPcDevice> getCloudPcDevices() {
         return this.cloudPcDevices;
     }
@@ -218,7 +216,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the cloudPcsOverview property value. Overview of cloud PC information across managed tenants.
      * @return a cloudPcOverview
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudPcOverview> getCloudPcsOverview() {
         return this.cloudPcsOverview;
     }
@@ -226,7 +224,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the conditionalAccessPolicyCoverages property value. Aggregate view of conditional access policy coverage across managed tenants.
      * @return a conditionalAccessPolicyCoverage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessPolicyCoverage> getConditionalAccessPolicyCoverages() {
         return this.conditionalAccessPolicyCoverages;
     }
@@ -234,7 +232,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the credentialUserRegistrationsSummaries property value. Summary information for user registration for multi-factor authentication and self service password reset across managed tenants.
      * @return a credentialUserRegistrationsSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CredentialUserRegistrationsSummary> getCredentialUserRegistrationsSummaries() {
         return this.credentialUserRegistrationsSummaries;
     }
@@ -242,7 +240,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the deviceAppPerformances property value. The deviceAppPerformances property
      * @return a deviceAppPerformance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceAppPerformance> getDeviceAppPerformances() {
         return this.deviceAppPerformances;
     }
@@ -250,7 +248,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the deviceCompliancePolicySettingStateSummaries property value. Summary information for device compliance policy setting states across managed tenants.
      * @return a deviceCompliancePolicySettingStateSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceCompliancePolicySettingStateSummary> getDeviceCompliancePolicySettingStateSummaries() {
         return this.deviceCompliancePolicySettingStateSummaries;
     }
@@ -258,7 +256,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the deviceHealthStatuses property value. The deviceHealthStatuses property
      * @return a deviceHealthStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceHealthStatus> getDeviceHealthStatuses() {
         return this.deviceHealthStatuses;
     }
@@ -266,7 +264,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("aggregatedPolicyCompliances", (n) -> { this.setAggregatedPolicyCompliances(n.getCollectionOfObjectValues(AggregatedPolicyCompliance::createFromDiscriminatorValue)); });
@@ -312,7 +310,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managedDeviceCompliances property value. The collection of compliance for managed devices across managed tenants.
      * @return a managedDeviceCompliance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCompliance> getManagedDeviceCompliances() {
         return this.managedDeviceCompliances;
     }
@@ -320,7 +318,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managedDeviceComplianceTrends property value. Trend insights for device compliance across managed tenants.
      * @return a managedDeviceComplianceTrend
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceComplianceTrend> getManagedDeviceComplianceTrends() {
         return this.managedDeviceComplianceTrends;
     }
@@ -328,7 +326,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managedTenantAlertLogs property value. The managedTenantAlertLogs property
      * @return a managedTenantAlertLog
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantAlertLog> getManagedTenantAlertLogs() {
         return this.managedTenantAlertLogs;
     }
@@ -336,7 +334,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managedTenantAlertRuleDefinitions property value. The managedTenantAlertRuleDefinitions property
      * @return a managedTenantAlertRuleDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantAlertRuleDefinition> getManagedTenantAlertRuleDefinitions() {
         return this.managedTenantAlertRuleDefinitions;
     }
@@ -344,7 +342,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managedTenantAlertRules property value. The managedTenantAlertRules property
      * @return a managedTenantAlertRule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantAlertRule> getManagedTenantAlertRules() {
         return this.managedTenantAlertRules;
     }
@@ -352,7 +350,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managedTenantAlerts property value. The managedTenantAlerts property
      * @return a managedTenantAlert
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantAlert> getManagedTenantAlerts() {
         return this.managedTenantAlerts;
     }
@@ -360,7 +358,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managedTenantApiNotifications property value. The managedTenantApiNotifications property
      * @return a managedTenantApiNotification
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantApiNotification> getManagedTenantApiNotifications() {
         return this.managedTenantApiNotifications;
     }
@@ -368,7 +366,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managedTenantEmailNotifications property value. The managedTenantEmailNotifications property
      * @return a managedTenantEmailNotification
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantEmailNotification> getManagedTenantEmailNotifications() {
         return this.managedTenantEmailNotifications;
     }
@@ -376,7 +374,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managedTenantTicketingEndpoints property value. The managedTenantTicketingEndpoints property
      * @return a managedTenantTicketingEndpoint
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantTicketingEndpoint> getManagedTenantTicketingEndpoints() {
         return this.managedTenantTicketingEndpoints;
     }
@@ -384,7 +382,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managementActions property value. The collection of baseline management actions across managed tenants.
      * @return a managementAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagementAction> getManagementActions() {
         return this.managementActions;
     }
@@ -392,7 +390,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managementActionTenantDeploymentStatuses property value. The tenant level status of management actions across managed tenants.
      * @return a managementActionTenantDeploymentStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagementActionTenantDeploymentStatus> getManagementActionTenantDeploymentStatuses() {
         return this.managementActionTenantDeploymentStatuses;
     }
@@ -400,7 +398,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managementIntents property value. The collection of baseline management intents across managed tenants.
      * @return a managementIntent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagementIntent> getManagementIntents() {
         return this.managementIntents;
     }
@@ -408,7 +406,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managementTemplateCollections property value. The managementTemplateCollections property
      * @return a managementTemplateCollection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateCollection> getManagementTemplateCollections() {
         return this.managementTemplateCollections;
     }
@@ -416,7 +414,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managementTemplateCollectionTenantSummaries property value. The managementTemplateCollectionTenantSummaries property
      * @return a managementTemplateCollectionTenantSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateCollectionTenantSummary> getManagementTemplateCollectionTenantSummaries() {
         return this.managementTemplateCollectionTenantSummaries;
     }
@@ -424,7 +422,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managementTemplates property value. The collection of baseline management templates across managed tenants.
      * @return a managementTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplate> getManagementTemplates() {
         return this.managementTemplates;
     }
@@ -432,7 +430,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managementTemplateSteps property value. The managementTemplateSteps property
      * @return a managementTemplateStep
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateStep> getManagementTemplateSteps() {
         return this.managementTemplateSteps;
     }
@@ -440,7 +438,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managementTemplateStepTenantSummaries property value. The managementTemplateStepTenantSummaries property
      * @return a managementTemplateStepTenantSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateStepTenantSummary> getManagementTemplateStepTenantSummaries() {
         return this.managementTemplateStepTenantSummaries;
     }
@@ -448,7 +446,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the managementTemplateStepVersions property value. The managementTemplateStepVersions property
      * @return a managementTemplateStepVersion
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateStepVersion> getManagementTemplateStepVersions() {
         return this.managementTemplateStepVersions;
     }
@@ -456,7 +454,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the myRoles property value. The collection of role assignments to a signed-in user for a managed tenant.
      * @return a myRole
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MyRole> getMyRoles() {
         return this.myRoles;
     }
@@ -464,7 +462,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the tenantGroups property value. The collection of a logical grouping of managed tenants used by the multi-tenant management platform.
      * @return a tenantGroup
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TenantGroup> getTenantGroups() {
         return this.tenantGroups;
     }
@@ -472,7 +470,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the tenants property value. The collection of tenants associated with the managing entity.
      * @return a tenant
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Tenant> getTenants() {
         return this.tenants;
     }
@@ -480,7 +478,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the tenantsCustomizedInformation property value. The collection of tenant level customized information across managed tenants.
      * @return a tenantCustomizedInformation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TenantCustomizedInformation> getTenantsCustomizedInformation() {
         return this.tenantsCustomizedInformation;
     }
@@ -488,7 +486,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the tenantsDetailedInformation property value. The collection tenant level detailed information across managed tenants.
      * @return a tenantDetailedInformation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TenantDetailedInformation> getTenantsDetailedInformation() {
         return this.tenantsDetailedInformation;
     }
@@ -496,7 +494,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the tenantTags property value. The collection of tenant tags across managed tenants.
      * @return a tenantTag
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TenantTag> getTenantTags() {
         return this.tenantTags;
     }
@@ -504,7 +502,7 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the windowsDeviceMalwareStates property value. The state of malware for Windows devices, registered with Microsoft Endpoint Manager, across managed tenants.
      * @return a windowsDeviceMalwareState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WindowsDeviceMalwareState> getWindowsDeviceMalwareStates() {
         return this.windowsDeviceMalwareStates;
     }
@@ -512,17 +510,15 @@ public class ManagedTenant extends Entity implements Parsable {
      * Gets the windowsProtectionStates property value. The protection state for Windows devices, registered with Microsoft Endpoint Manager, across managed tenants.
      * @return a windowsProtectionState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WindowsProtectionState> getWindowsProtectionStates() {
         return this.windowsProtectionStates;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("aggregatedPolicyCompliances", this.getAggregatedPolicyCompliances());
@@ -566,334 +562,260 @@ public class ManagedTenant extends Entity implements Parsable {
     /**
      * Sets the aggregatedPolicyCompliances property value. Aggregate view of device compliance policies across managed tenants.
      * @param value Value to set for the aggregatedPolicyCompliances property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAggregatedPolicyCompliances(@javax.annotation.Nullable final java.util.List<AggregatedPolicyCompliance> value) {
+    public void setAggregatedPolicyCompliances(@jakarta.annotation.Nullable final java.util.List<AggregatedPolicyCompliance> value) {
         this.aggregatedPolicyCompliances = value;
     }
     /**
      * Sets the appPerformances property value. The appPerformances property
      * @param value Value to set for the appPerformances property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppPerformances(@javax.annotation.Nullable final java.util.List<AppPerformance> value) {
+    public void setAppPerformances(@jakarta.annotation.Nullable final java.util.List<AppPerformance> value) {
         this.appPerformances = value;
     }
     /**
      * Sets the auditEvents property value. The collection of audit events across managed tenants.
      * @param value Value to set for the auditEvents property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuditEvents(@javax.annotation.Nullable final java.util.List<AuditEvent> value) {
+    public void setAuditEvents(@jakarta.annotation.Nullable final java.util.List<AuditEvent> value) {
         this.auditEvents = value;
     }
     /**
      * Sets the cloudPcConnections property value. The collection of cloud PC connections across managed tenants.
      * @param value Value to set for the cloudPcConnections property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudPcConnections(@javax.annotation.Nullable final java.util.List<CloudPcConnection> value) {
+    public void setCloudPcConnections(@jakarta.annotation.Nullable final java.util.List<CloudPcConnection> value) {
         this.cloudPcConnections = value;
     }
     /**
      * Sets the cloudPcDevices property value. The collection of cloud PC devices across managed tenants.
      * @param value Value to set for the cloudPcDevices property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudPcDevices(@javax.annotation.Nullable final java.util.List<CloudPcDevice> value) {
+    public void setCloudPcDevices(@jakarta.annotation.Nullable final java.util.List<CloudPcDevice> value) {
         this.cloudPcDevices = value;
     }
     /**
      * Sets the cloudPcsOverview property value. Overview of cloud PC information across managed tenants.
      * @param value Value to set for the cloudPcsOverview property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudPcsOverview(@javax.annotation.Nullable final java.util.List<CloudPcOverview> value) {
+    public void setCloudPcsOverview(@jakarta.annotation.Nullable final java.util.List<CloudPcOverview> value) {
         this.cloudPcsOverview = value;
     }
     /**
      * Sets the conditionalAccessPolicyCoverages property value. Aggregate view of conditional access policy coverage across managed tenants.
      * @param value Value to set for the conditionalAccessPolicyCoverages property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConditionalAccessPolicyCoverages(@javax.annotation.Nullable final java.util.List<ConditionalAccessPolicyCoverage> value) {
+    public void setConditionalAccessPolicyCoverages(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessPolicyCoverage> value) {
         this.conditionalAccessPolicyCoverages = value;
     }
     /**
      * Sets the credentialUserRegistrationsSummaries property value. Summary information for user registration for multi-factor authentication and self service password reset across managed tenants.
      * @param value Value to set for the credentialUserRegistrationsSummaries property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCredentialUserRegistrationsSummaries(@javax.annotation.Nullable final java.util.List<CredentialUserRegistrationsSummary> value) {
+    public void setCredentialUserRegistrationsSummaries(@jakarta.annotation.Nullable final java.util.List<CredentialUserRegistrationsSummary> value) {
         this.credentialUserRegistrationsSummaries = value;
     }
     /**
      * Sets the deviceAppPerformances property value. The deviceAppPerformances property
      * @param value Value to set for the deviceAppPerformances property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceAppPerformances(@javax.annotation.Nullable final java.util.List<DeviceAppPerformance> value) {
+    public void setDeviceAppPerformances(@jakarta.annotation.Nullable final java.util.List<DeviceAppPerformance> value) {
         this.deviceAppPerformances = value;
     }
     /**
      * Sets the deviceCompliancePolicySettingStateSummaries property value. Summary information for device compliance policy setting states across managed tenants.
      * @param value Value to set for the deviceCompliancePolicySettingStateSummaries property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceCompliancePolicySettingStateSummaries(@javax.annotation.Nullable final java.util.List<DeviceCompliancePolicySettingStateSummary> value) {
+    public void setDeviceCompliancePolicySettingStateSummaries(@jakarta.annotation.Nullable final java.util.List<DeviceCompliancePolicySettingStateSummary> value) {
         this.deviceCompliancePolicySettingStateSummaries = value;
     }
     /**
      * Sets the deviceHealthStatuses property value. The deviceHealthStatuses property
      * @param value Value to set for the deviceHealthStatuses property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceHealthStatuses(@javax.annotation.Nullable final java.util.List<DeviceHealthStatus> value) {
+    public void setDeviceHealthStatuses(@jakarta.annotation.Nullable final java.util.List<DeviceHealthStatus> value) {
         this.deviceHealthStatuses = value;
     }
     /**
      * Sets the managedDeviceCompliances property value. The collection of compliance for managed devices across managed tenants.
      * @param value Value to set for the managedDeviceCompliances property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceCompliances(@javax.annotation.Nullable final java.util.List<ManagedDeviceCompliance> value) {
+    public void setManagedDeviceCompliances(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceCompliance> value) {
         this.managedDeviceCompliances = value;
     }
     /**
      * Sets the managedDeviceComplianceTrends property value. Trend insights for device compliance across managed tenants.
      * @param value Value to set for the managedDeviceComplianceTrends property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceComplianceTrends(@javax.annotation.Nullable final java.util.List<ManagedDeviceComplianceTrend> value) {
+    public void setManagedDeviceComplianceTrends(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceComplianceTrend> value) {
         this.managedDeviceComplianceTrends = value;
     }
     /**
      * Sets the managedTenantAlertLogs property value. The managedTenantAlertLogs property
      * @param value Value to set for the managedTenantAlertLogs property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedTenantAlertLogs(@javax.annotation.Nullable final java.util.List<ManagedTenantAlertLog> value) {
+    public void setManagedTenantAlertLogs(@jakarta.annotation.Nullable final java.util.List<ManagedTenantAlertLog> value) {
         this.managedTenantAlertLogs = value;
     }
     /**
      * Sets the managedTenantAlertRuleDefinitions property value. The managedTenantAlertRuleDefinitions property
      * @param value Value to set for the managedTenantAlertRuleDefinitions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedTenantAlertRuleDefinitions(@javax.annotation.Nullable final java.util.List<ManagedTenantAlertRuleDefinition> value) {
+    public void setManagedTenantAlertRuleDefinitions(@jakarta.annotation.Nullable final java.util.List<ManagedTenantAlertRuleDefinition> value) {
         this.managedTenantAlertRuleDefinitions = value;
     }
     /**
      * Sets the managedTenantAlertRules property value. The managedTenantAlertRules property
      * @param value Value to set for the managedTenantAlertRules property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedTenantAlertRules(@javax.annotation.Nullable final java.util.List<ManagedTenantAlertRule> value) {
+    public void setManagedTenantAlertRules(@jakarta.annotation.Nullable final java.util.List<ManagedTenantAlertRule> value) {
         this.managedTenantAlertRules = value;
     }
     /**
      * Sets the managedTenantAlerts property value. The managedTenantAlerts property
      * @param value Value to set for the managedTenantAlerts property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedTenantAlerts(@javax.annotation.Nullable final java.util.List<ManagedTenantAlert> value) {
+    public void setManagedTenantAlerts(@jakarta.annotation.Nullable final java.util.List<ManagedTenantAlert> value) {
         this.managedTenantAlerts = value;
     }
     /**
      * Sets the managedTenantApiNotifications property value. The managedTenantApiNotifications property
      * @param value Value to set for the managedTenantApiNotifications property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedTenantApiNotifications(@javax.annotation.Nullable final java.util.List<ManagedTenantApiNotification> value) {
+    public void setManagedTenantApiNotifications(@jakarta.annotation.Nullable final java.util.List<ManagedTenantApiNotification> value) {
         this.managedTenantApiNotifications = value;
     }
     /**
      * Sets the managedTenantEmailNotifications property value. The managedTenantEmailNotifications property
      * @param value Value to set for the managedTenantEmailNotifications property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedTenantEmailNotifications(@javax.annotation.Nullable final java.util.List<ManagedTenantEmailNotification> value) {
+    public void setManagedTenantEmailNotifications(@jakarta.annotation.Nullable final java.util.List<ManagedTenantEmailNotification> value) {
         this.managedTenantEmailNotifications = value;
     }
     /**
      * Sets the managedTenantTicketingEndpoints property value. The managedTenantTicketingEndpoints property
      * @param value Value to set for the managedTenantTicketingEndpoints property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedTenantTicketingEndpoints(@javax.annotation.Nullable final java.util.List<ManagedTenantTicketingEndpoint> value) {
+    public void setManagedTenantTicketingEndpoints(@jakarta.annotation.Nullable final java.util.List<ManagedTenantTicketingEndpoint> value) {
         this.managedTenantTicketingEndpoints = value;
     }
     /**
      * Sets the managementActions property value. The collection of baseline management actions across managed tenants.
      * @param value Value to set for the managementActions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementActions(@javax.annotation.Nullable final java.util.List<ManagementAction> value) {
+    public void setManagementActions(@jakarta.annotation.Nullable final java.util.List<ManagementAction> value) {
         this.managementActions = value;
     }
     /**
      * Sets the managementActionTenantDeploymentStatuses property value. The tenant level status of management actions across managed tenants.
      * @param value Value to set for the managementActionTenantDeploymentStatuses property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementActionTenantDeploymentStatuses(@javax.annotation.Nullable final java.util.List<ManagementActionTenantDeploymentStatus> value) {
+    public void setManagementActionTenantDeploymentStatuses(@jakarta.annotation.Nullable final java.util.List<ManagementActionTenantDeploymentStatus> value) {
         this.managementActionTenantDeploymentStatuses = value;
     }
     /**
      * Sets the managementIntents property value. The collection of baseline management intents across managed tenants.
      * @param value Value to set for the managementIntents property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementIntents(@javax.annotation.Nullable final java.util.List<ManagementIntent> value) {
+    public void setManagementIntents(@jakarta.annotation.Nullable final java.util.List<ManagementIntent> value) {
         this.managementIntents = value;
     }
     /**
      * Sets the managementTemplateCollections property value. The managementTemplateCollections property
      * @param value Value to set for the managementTemplateCollections property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateCollections(@javax.annotation.Nullable final java.util.List<ManagementTemplateCollection> value) {
+    public void setManagementTemplateCollections(@jakarta.annotation.Nullable final java.util.List<ManagementTemplateCollection> value) {
         this.managementTemplateCollections = value;
     }
     /**
      * Sets the managementTemplateCollectionTenantSummaries property value. The managementTemplateCollectionTenantSummaries property
      * @param value Value to set for the managementTemplateCollectionTenantSummaries property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateCollectionTenantSummaries(@javax.annotation.Nullable final java.util.List<ManagementTemplateCollectionTenantSummary> value) {
+    public void setManagementTemplateCollectionTenantSummaries(@jakarta.annotation.Nullable final java.util.List<ManagementTemplateCollectionTenantSummary> value) {
         this.managementTemplateCollectionTenantSummaries = value;
     }
     /**
      * Sets the managementTemplates property value. The collection of baseline management templates across managed tenants.
      * @param value Value to set for the managementTemplates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplates(@javax.annotation.Nullable final java.util.List<ManagementTemplate> value) {
+    public void setManagementTemplates(@jakarta.annotation.Nullable final java.util.List<ManagementTemplate> value) {
         this.managementTemplates = value;
     }
     /**
      * Sets the managementTemplateSteps property value. The managementTemplateSteps property
      * @param value Value to set for the managementTemplateSteps property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateSteps(@javax.annotation.Nullable final java.util.List<ManagementTemplateStep> value) {
+    public void setManagementTemplateSteps(@jakarta.annotation.Nullable final java.util.List<ManagementTemplateStep> value) {
         this.managementTemplateSteps = value;
     }
     /**
      * Sets the managementTemplateStepTenantSummaries property value. The managementTemplateStepTenantSummaries property
      * @param value Value to set for the managementTemplateStepTenantSummaries property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateStepTenantSummaries(@javax.annotation.Nullable final java.util.List<ManagementTemplateStepTenantSummary> value) {
+    public void setManagementTemplateStepTenantSummaries(@jakarta.annotation.Nullable final java.util.List<ManagementTemplateStepTenantSummary> value) {
         this.managementTemplateStepTenantSummaries = value;
     }
     /**
      * Sets the managementTemplateStepVersions property value. The managementTemplateStepVersions property
      * @param value Value to set for the managementTemplateStepVersions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateStepVersions(@javax.annotation.Nullable final java.util.List<ManagementTemplateStepVersion> value) {
+    public void setManagementTemplateStepVersions(@jakarta.annotation.Nullable final java.util.List<ManagementTemplateStepVersion> value) {
         this.managementTemplateStepVersions = value;
     }
     /**
      * Sets the myRoles property value. The collection of role assignments to a signed-in user for a managed tenant.
      * @param value Value to set for the myRoles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMyRoles(@javax.annotation.Nullable final java.util.List<MyRole> value) {
+    public void setMyRoles(@jakarta.annotation.Nullable final java.util.List<MyRole> value) {
         this.myRoles = value;
     }
     /**
      * Sets the tenantGroups property value. The collection of a logical grouping of managed tenants used by the multi-tenant management platform.
      * @param value Value to set for the tenantGroups property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantGroups(@javax.annotation.Nullable final java.util.List<TenantGroup> value) {
+    public void setTenantGroups(@jakarta.annotation.Nullable final java.util.List<TenantGroup> value) {
         this.tenantGroups = value;
     }
     /**
      * Sets the tenants property value. The collection of tenants associated with the managing entity.
      * @param value Value to set for the tenants property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenants(@javax.annotation.Nullable final java.util.List<Tenant> value) {
+    public void setTenants(@jakarta.annotation.Nullable final java.util.List<Tenant> value) {
         this.tenants = value;
     }
     /**
      * Sets the tenantsCustomizedInformation property value. The collection of tenant level customized information across managed tenants.
      * @param value Value to set for the tenantsCustomizedInformation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantsCustomizedInformation(@javax.annotation.Nullable final java.util.List<TenantCustomizedInformation> value) {
+    public void setTenantsCustomizedInformation(@jakarta.annotation.Nullable final java.util.List<TenantCustomizedInformation> value) {
         this.tenantsCustomizedInformation = value;
     }
     /**
      * Sets the tenantsDetailedInformation property value. The collection tenant level detailed information across managed tenants.
      * @param value Value to set for the tenantsDetailedInformation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantsDetailedInformation(@javax.annotation.Nullable final java.util.List<TenantDetailedInformation> value) {
+    public void setTenantsDetailedInformation(@jakarta.annotation.Nullable final java.util.List<TenantDetailedInformation> value) {
         this.tenantsDetailedInformation = value;
     }
     /**
      * Sets the tenantTags property value. The collection of tenant tags across managed tenants.
      * @param value Value to set for the tenantTags property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantTags(@javax.annotation.Nullable final java.util.List<TenantTag> value) {
+    public void setTenantTags(@jakarta.annotation.Nullable final java.util.List<TenantTag> value) {
         this.tenantTags = value;
     }
     /**
      * Sets the windowsDeviceMalwareStates property value. The state of malware for Windows devices, registered with Microsoft Endpoint Manager, across managed tenants.
      * @param value Value to set for the windowsDeviceMalwareStates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindowsDeviceMalwareStates(@javax.annotation.Nullable final java.util.List<WindowsDeviceMalwareState> value) {
+    public void setWindowsDeviceMalwareStates(@jakarta.annotation.Nullable final java.util.List<WindowsDeviceMalwareState> value) {
         this.windowsDeviceMalwareStates = value;
     }
     /**
      * Sets the windowsProtectionStates property value. The protection state for Windows devices, registered with Microsoft Endpoint Manager, across managed tenants.
      * @param value Value to set for the windowsProtectionStates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindowsProtectionStates(@javax.annotation.Nullable final java.util.List<WindowsProtectionState> value) {
+    public void setWindowsProtectionStates(@jakarta.annotation.Nullable final java.util.List<WindowsProtectionState> value) {
         this.windowsProtectionStates = value;
     }
 }

@@ -55,9 +55,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
     private String surname;
     /**
      * Instantiates a new sslCertificateEntity and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SslCertificateEntity() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -66,8 +64,8 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a sslCertificateEntity
      */
-    @javax.annotation.Nonnull
-    public static SslCertificateEntity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SslCertificateEntity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SslCertificateEntity();
     }
@@ -75,7 +73,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -83,7 +81,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
      * Gets the address property value. The address property
      * @return a physicalAddress
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PhysicalAddress getAddress() {
         return this.address;
     }
@@ -91,7 +89,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
      * Gets the alternateNames property value. The alternateNames property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAlternateNames() {
         return this.alternateNames;
     }
@@ -99,7 +97,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
      * Gets the commonName property value. The commonName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCommonName() {
         return this.commonName;
     }
@@ -107,7 +105,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
      * Gets the email property value. The email property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmail() {
         return this.email;
     }
@@ -115,7 +113,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
@@ -134,7 +132,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
      * Gets the givenName property value. The givenName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getGivenName() {
         return this.givenName;
     }
@@ -142,7 +140,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -150,7 +148,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
      * Gets the organizationName property value. The organizationName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOrganizationName() {
         return this.organizationName;
     }
@@ -158,7 +156,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
      * Gets the organizationUnitName property value. The organizationUnitName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOrganizationUnitName() {
         return this.organizationUnitName;
     }
@@ -166,7 +164,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
      * Gets the serialNumber property value. The serialNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSerialNumber() {
         return this.serialNumber;
     }
@@ -174,17 +172,15 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
      * Gets the surname property value. The surname property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSurname() {
         return this.surname;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("address", this.getAddress());
         writer.writeCollectionOfPrimitiveValues("alternateNames", this.getAlternateNames());
@@ -201,100 +197,78 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the address property value. The address property
      * @param value Value to set for the address property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddress(@javax.annotation.Nullable final PhysicalAddress value) {
+    public void setAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.address = value;
     }
     /**
      * Sets the alternateNames property value. The alternateNames property
      * @param value Value to set for the alternateNames property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlternateNames(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setAlternateNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.alternateNames = value;
     }
     /**
      * Sets the commonName property value. The commonName property
      * @param value Value to set for the commonName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCommonName(@javax.annotation.Nullable final String value) {
+    public void setCommonName(@jakarta.annotation.Nullable final String value) {
         this.commonName = value;
     }
     /**
      * Sets the email property value. The email property
      * @param value Value to set for the email property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmail(@javax.annotation.Nullable final String value) {
+    public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
      * Sets the givenName property value. The givenName property
      * @param value Value to set for the givenName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGivenName(@javax.annotation.Nullable final String value) {
+    public void setGivenName(@jakarta.annotation.Nullable final String value) {
         this.givenName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the organizationName property value. The organizationName property
      * @param value Value to set for the organizationName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrganizationName(@javax.annotation.Nullable final String value) {
+    public void setOrganizationName(@jakarta.annotation.Nullable final String value) {
         this.organizationName = value;
     }
     /**
      * Sets the organizationUnitName property value. The organizationUnitName property
      * @param value Value to set for the organizationUnitName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrganizationUnitName(@javax.annotation.Nullable final String value) {
+    public void setOrganizationUnitName(@jakarta.annotation.Nullable final String value) {
         this.organizationUnitName = value;
     }
     /**
      * Sets the serialNumber property value. The serialNumber property
      * @param value Value to set for the serialNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSerialNumber(@javax.annotation.Nullable final String value) {
+    public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
         this.serialNumber = value;
     }
     /**
      * Sets the surname property value. The surname property
      * @param value Value to set for the surname property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSurname(@javax.annotation.Nullable final String value) {
+    public void setSurname(@jakarta.annotation.Nullable final String value) {
         this.surname = value;
     }
 }

@@ -40,9 +40,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
     private String outputName;
     /**
      * Instantiates a new exportPostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ExportPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -51,8 +49,8 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a exportPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static ExportPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ExportPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ExportPostRequestBody();
     }
@@ -60,7 +58,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -68,7 +66,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the azureBlobContainer property value. The azureBlobContainer property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureBlobContainer() {
         return this.azureBlobContainer;
     }
@@ -76,7 +74,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the azureBlobToken property value. The azureBlobToken property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureBlobToken() {
         return this.azureBlobToken;
     }
@@ -84,7 +82,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the description property value. The description property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -92,7 +90,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the exportOptions property value. The exportOptions property
      * @return a exportOptions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExportOptions getExportOptions() {
         return this.exportOptions;
     }
@@ -100,7 +98,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the exportStructure property value. The exportStructure property
      * @return a exportFileStructure
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExportFileStructure getExportStructure() {
         return this.exportStructure;
     }
@@ -108,7 +106,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("azureBlobContainer", (n) -> { this.setAzureBlobContainer(n.getStringValue()); });
@@ -123,17 +121,15 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the outputName property value. The outputName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOutputName() {
         return this.outputName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("azureBlobContainer", this.getAzureBlobContainer());
         writer.writeStringValue("azureBlobToken", this.getAzureBlobToken());
@@ -146,64 +142,50 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the azureBlobContainer property value. The azureBlobContainer property
      * @param value Value to set for the azureBlobContainer property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureBlobContainer(@javax.annotation.Nullable final String value) {
+    public void setAzureBlobContainer(@jakarta.annotation.Nullable final String value) {
         this.azureBlobContainer = value;
     }
     /**
      * Sets the azureBlobToken property value. The azureBlobToken property
      * @param value Value to set for the azureBlobToken property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureBlobToken(@javax.annotation.Nullable final String value) {
+    public void setAzureBlobToken(@jakarta.annotation.Nullable final String value) {
         this.azureBlobToken = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the exportOptions property value. The exportOptions property
      * @param value Value to set for the exportOptions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExportOptions(@javax.annotation.Nullable final ExportOptions value) {
+    public void setExportOptions(@jakarta.annotation.Nullable final ExportOptions value) {
         this.exportOptions = value;
     }
     /**
      * Sets the exportStructure property value. The exportStructure property
      * @param value Value to set for the exportStructure property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExportStructure(@javax.annotation.Nullable final ExportFileStructure value) {
+    public void setExportStructure(@jakarta.annotation.Nullable final ExportFileStructure value) {
         this.exportStructure = value;
     }
     /**
      * Sets the outputName property value. The outputName property
      * @param value Value to set for the outputName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOutputName(@javax.annotation.Nullable final String value) {
+    public void setOutputName(@jakarta.annotation.Nullable final String value) {
         this.outputName = value;
     }
 }

@@ -17,9 +17,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
     private java.util.List<KeyValuePair> properties;
     /**
      * Instantiates a new customAction and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CustomAction() {
         super();
         this.setOdataType("#microsoft.graph.security.customAction");
@@ -29,8 +27,8 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a customAction
      */
-    @javax.annotation.Nonnull
-    public static CustomAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CustomAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CustomAction();
     }
@@ -38,7 +36,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
@@ -49,7 +47,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
      * Gets the name property value. Name of the custom action.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -57,17 +55,15 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
      * Gets the properties property value. Properties, in key-value pair format, of the action.
      * @return a keyValuePair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getProperties() {
         return this.properties;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("name", this.getName());
@@ -76,19 +72,15 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
     /**
      * Sets the name property value. Name of the custom action.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the properties property value. Properties, in key-value pair format, of the action.
      * @param value Value to set for the properties property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProperties(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
+    public void setProperties(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this.properties = value;
     }
 }

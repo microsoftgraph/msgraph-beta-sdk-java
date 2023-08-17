@@ -42,9 +42,7 @@ public class PrintConnector extends Entity implements Parsable {
     private OffsetDateTime registeredDateTime;
     /**
      * Instantiates a new printConnector and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PrintConnector() {
         super();
     }
@@ -53,8 +51,8 @@ public class PrintConnector extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a printConnector
      */
-    @javax.annotation.Nonnull
-    public static PrintConnector createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrintConnector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PrintConnector();
     }
@@ -62,7 +60,7 @@ public class PrintConnector extends Entity implements Parsable {
      * Gets the appVersion property value. The connector's version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppVersion() {
         return this.appVersion;
     }
@@ -70,7 +68,7 @@ public class PrintConnector extends Entity implements Parsable {
      * Gets the deviceHealth property value. The connector's device health.
      * @return a deviceHealth
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceHealth getDeviceHealth() {
         return this.deviceHealth;
     }
@@ -78,7 +76,7 @@ public class PrintConnector extends Entity implements Parsable {
      * Gets the displayName property value. The name of the connector.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -86,7 +84,7 @@ public class PrintConnector extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appVersion", (n) -> { this.setAppVersion(n.getStringValue()); });
@@ -103,7 +101,7 @@ public class PrintConnector extends Entity implements Parsable {
      * Gets the fullyQualifiedDomainName property value. The connector machine's hostname.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFullyQualifiedDomainName() {
         return this.fullyQualifiedDomainName;
     }
@@ -111,7 +109,7 @@ public class PrintConnector extends Entity implements Parsable {
      * Gets the location property value. The physical and/or organizational location of the connector.
      * @return a printerLocation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrinterLocation getLocation() {
         return this.location;
     }
@@ -119,7 +117,7 @@ public class PrintConnector extends Entity implements Parsable {
      * Gets the name property value. The name property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -127,7 +125,7 @@ public class PrintConnector extends Entity implements Parsable {
      * Gets the operatingSystem property value. The connector machine's operating system version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOperatingSystem() {
         return this.operatingSystem;
     }
@@ -135,17 +133,15 @@ public class PrintConnector extends Entity implements Parsable {
      * Gets the registeredDateTime property value. The DateTimeOffset when the connector was registered.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRegisteredDateTime() {
         return this.registeredDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appVersion", this.getAppVersion());
@@ -160,73 +156,57 @@ public class PrintConnector extends Entity implements Parsable {
     /**
      * Sets the appVersion property value. The connector's version.
      * @param value Value to set for the appVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppVersion(@javax.annotation.Nullable final String value) {
+    public void setAppVersion(@jakarta.annotation.Nullable final String value) {
         this.appVersion = value;
     }
     /**
      * Sets the deviceHealth property value. The connector's device health.
      * @param value Value to set for the deviceHealth property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceHealth(@javax.annotation.Nullable final DeviceHealth value) {
+    public void setDeviceHealth(@jakarta.annotation.Nullable final DeviceHealth value) {
         this.deviceHealth = value;
     }
     /**
      * Sets the displayName property value. The name of the connector.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the fullyQualifiedDomainName property value. The connector machine's hostname.
      * @param value Value to set for the fullyQualifiedDomainName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFullyQualifiedDomainName(@javax.annotation.Nullable final String value) {
+    public void setFullyQualifiedDomainName(@jakarta.annotation.Nullable final String value) {
         this.fullyQualifiedDomainName = value;
     }
     /**
      * Sets the location property value. The physical and/or organizational location of the connector.
      * @param value Value to set for the location property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocation(@javax.annotation.Nullable final PrinterLocation value) {
+    public void setLocation(@jakarta.annotation.Nullable final PrinterLocation value) {
         this.location = value;
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the operatingSystem property value. The connector machine's operating system version.
      * @param value Value to set for the operatingSystem property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperatingSystem(@javax.annotation.Nullable final String value) {
+    public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.operatingSystem = value;
     }
     /**
      * Sets the registeredDateTime property value. The DateTimeOffset when the connector was registered.
      * @param value Value to set for the registeredDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegisteredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setRegisteredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.registeredDateTime = value;
     }
 }

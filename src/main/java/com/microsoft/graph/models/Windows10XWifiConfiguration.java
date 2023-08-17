@@ -25,9 +25,7 @@ public class Windows10XWifiConfiguration extends DeviceManagementResourceAccessP
     private String customXmlFileName;
     /**
      * Instantiates a new windows10XWifiConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Windows10XWifiConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10XWifiConfiguration");
@@ -37,8 +35,8 @@ public class Windows10XWifiConfiguration extends DeviceManagementResourceAccessP
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windows10XWifiConfiguration
      */
-    @javax.annotation.Nonnull
-    public static Windows10XWifiConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Windows10XWifiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Windows10XWifiConfiguration();
     }
@@ -46,7 +44,7 @@ public class Windows10XWifiConfiguration extends DeviceManagementResourceAccessP
      * Gets the authenticationCertificateId property value. ID to the Authentication Certificate
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getAuthenticationCertificateId() {
         return this.authenticationCertificateId;
     }
@@ -54,7 +52,7 @@ public class Windows10XWifiConfiguration extends DeviceManagementResourceAccessP
      * Gets the customXml property value. Custom XML commands that configures the VPN connection. (UTF8 byte encoding)
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getCustomXml() {
         return this.customXml;
     }
@@ -62,7 +60,7 @@ public class Windows10XWifiConfiguration extends DeviceManagementResourceAccessP
      * Gets the customXmlFileName property value. Custom Xml file name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomXmlFileName() {
         return this.customXmlFileName;
     }
@@ -70,7 +68,7 @@ public class Windows10XWifiConfiguration extends DeviceManagementResourceAccessP
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationCertificateId", (n) -> { this.setAuthenticationCertificateId(n.getUUIDValue()); });
@@ -81,10 +79,8 @@ public class Windows10XWifiConfiguration extends DeviceManagementResourceAccessP
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeUUIDValue("authenticationCertificateId", this.getAuthenticationCertificateId());
@@ -94,28 +90,22 @@ public class Windows10XWifiConfiguration extends DeviceManagementResourceAccessP
     /**
      * Sets the authenticationCertificateId property value. ID to the Authentication Certificate
      * @param value Value to set for the authenticationCertificateId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationCertificateId(@javax.annotation.Nullable final UUID value) {
+    public void setAuthenticationCertificateId(@jakarta.annotation.Nullable final UUID value) {
         this.authenticationCertificateId = value;
     }
     /**
      * Sets the customXml property value. Custom XML commands that configures the VPN connection. (UTF8 byte encoding)
      * @param value Value to set for the customXml property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomXml(@javax.annotation.Nullable final byte[] value) {
+    public void setCustomXml(@jakarta.annotation.Nullable final byte[] value) {
         this.customXml = value;
     }
     /**
      * Sets the customXmlFileName property value. Custom Xml file name.
      * @param value Value to set for the customXmlFileName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomXmlFileName(@javax.annotation.Nullable final String value) {
+    public void setCustomXmlFileName(@jakarta.annotation.Nullable final String value) {
         this.customXmlFileName = value;
     }
 }

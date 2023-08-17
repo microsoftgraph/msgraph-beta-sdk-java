@@ -34,9 +34,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
     private IncludedUserTypes userTypes;
     /**
      * Instantiates a new userRegistrationFeatureSummary and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UserRegistrationFeatureSummary() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +43,8 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userRegistrationFeatureSummary
      */
-    @javax.annotation.Nonnull
-    public static UserRegistrationFeatureSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserRegistrationFeatureSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserRegistrationFeatureSummary();
     }
@@ -54,7 +52,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +60,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -76,7 +74,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -84,7 +82,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      * Gets the totalUserCount property value. Total number of users accounts, excluding those that are blocked.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getTotalUserCount() {
         return this.totalUserCount;
     }
@@ -92,7 +90,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      * Gets the userRegistrationFeatureCounts property value. Number of users registered or capable for multi-factor authentication, self-service password reset, and passwordless authentication.
      * @return a userRegistrationFeatureCount
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UserRegistrationFeatureCount> getUserRegistrationFeatureCounts() {
         return this.userRegistrationFeatureCounts;
     }
@@ -100,7 +98,7 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      * Gets the userRoles property value. The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
      * @return a includedUserRoles
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IncludedUserRoles getUserRoles() {
         return this.userRoles;
     }
@@ -108,17 +106,15 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
      * Gets the userTypes property value. User type. Possible values are: all, member, guest, unknownFutureValue.
      * @return a includedUserTypes
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IncludedUserTypes getUserTypes() {
         return this.userTypes;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLongValue("totalUserCount", this.getTotalUserCount());
@@ -130,55 +126,43 @@ public class UserRegistrationFeatureSummary implements AdditionalDataHolder, Par
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the totalUserCount property value. Total number of users accounts, excluding those that are blocked.
      * @param value Value to set for the totalUserCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalUserCount(@javax.annotation.Nullable final Long value) {
+    public void setTotalUserCount(@jakarta.annotation.Nullable final Long value) {
         this.totalUserCount = value;
     }
     /**
      * Sets the userRegistrationFeatureCounts property value. Number of users registered or capable for multi-factor authentication, self-service password reset, and passwordless authentication.
      * @param value Value to set for the userRegistrationFeatureCounts property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserRegistrationFeatureCounts(@javax.annotation.Nullable final java.util.List<UserRegistrationFeatureCount> value) {
+    public void setUserRegistrationFeatureCounts(@jakarta.annotation.Nullable final java.util.List<UserRegistrationFeatureCount> value) {
         this.userRegistrationFeatureCounts = value;
     }
     /**
      * Sets the userRoles property value. The role type of the user. Possible values are: all, privilegedAdmin, admin, user, unknownFutureValue.
      * @param value Value to set for the userRoles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserRoles(@javax.annotation.Nullable final IncludedUserRoles value) {
+    public void setUserRoles(@jakarta.annotation.Nullable final IncludedUserRoles value) {
         this.userRoles = value;
     }
     /**
      * Sets the userTypes property value. User type. Possible values are: all, member, guest, unknownFutureValue.
      * @param value Value to set for the userTypes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserTypes(@javax.annotation.Nullable final IncludedUserTypes value) {
+    public void setUserTypes(@jakarta.annotation.Nullable final IncludedUserTypes value) {
         this.userTypes = value;
     }
 }

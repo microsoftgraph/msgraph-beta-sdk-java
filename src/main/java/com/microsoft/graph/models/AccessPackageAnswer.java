@@ -26,9 +26,7 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new accessPackageAnswer and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AccessPackageAnswer() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +35,8 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageAnswer
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageAnswer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageAnswer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -53,7 +51,7 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -61,7 +59,7 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
      * Gets the answeredQuestion property value. The question the answer is for. Required and Read-only.
      * @return a accessPackageQuestion
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageQuestion getAnsweredQuestion() {
         return this.answeredQuestion;
     }
@@ -69,7 +67,7 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
      * Gets the displayValue property value. The display value of the answer. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayValue() {
         return this.displayValue;
     }
@@ -77,7 +75,7 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("answeredQuestion", (n) -> { this.setAnsweredQuestion(n.getObjectValue(AccessPackageQuestion::createFromDiscriminatorValue)); });
@@ -89,17 +87,15 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("answeredQuestion", this.getAnsweredQuestion());
         writer.writeStringValue("displayValue", this.getDisplayValue());
@@ -109,37 +105,29 @@ public class AccessPackageAnswer implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the answeredQuestion property value. The question the answer is for. Required and Read-only.
      * @param value Value to set for the answeredQuestion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnsweredQuestion(@javax.annotation.Nullable final AccessPackageQuestion value) {
+    public void setAnsweredQuestion(@jakarta.annotation.Nullable final AccessPackageQuestion value) {
         this.answeredQuestion = value;
     }
     /**
      * Sets the displayValue property value. The display value of the answer. Required.
      * @param value Value to set for the displayValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayValue(@javax.annotation.Nullable final String value) {
+    public void setDisplayValue(@jakarta.annotation.Nullable final String value) {
         this.displayValue = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

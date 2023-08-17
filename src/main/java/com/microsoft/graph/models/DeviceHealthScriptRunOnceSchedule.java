@@ -17,9 +17,7 @@ public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSch
     private LocalDate date;
     /**
      * Instantiates a new deviceHealthScriptRunOnceSchedule and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceHealthScriptRunOnceSchedule() {
         super();
         this.setOdataType("#microsoft.graph.deviceHealthScriptRunOnceSchedule");
@@ -29,8 +27,8 @@ public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSch
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceHealthScriptRunOnceSchedule
      */
-    @javax.annotation.Nonnull
-    public static DeviceHealthScriptRunOnceSchedule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceHealthScriptRunOnceSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceHealthScriptRunOnceSchedule();
     }
@@ -38,7 +36,7 @@ public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSch
      * Gets the date property value. The date the script is scheduled to run. This collection can contain a maximum of 20 elements.
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getDate() {
         return this.date;
     }
@@ -46,7 +44,7 @@ public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSch
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("date", (n) -> { this.setDate(n.getLocalDateValue()); });
@@ -55,10 +53,8 @@ public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSch
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeLocalDateValue("date", this.getDate());
@@ -66,10 +62,8 @@ public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSch
     /**
      * Sets the date property value. The date the script is scheduled to run. This collection can contain a maximum of 20 elements.
      * @param value Value to set for the date property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDate(@javax.annotation.Nullable final LocalDate value) {
+    public void setDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.date = value;
     }
 }

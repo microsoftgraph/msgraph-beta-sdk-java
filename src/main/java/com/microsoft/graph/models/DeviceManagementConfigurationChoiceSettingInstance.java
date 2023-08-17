@@ -16,9 +16,7 @@ public class DeviceManagementConfigurationChoiceSettingInstance extends DeviceMa
     private DeviceManagementConfigurationChoiceSettingValue choiceSettingValue;
     /**
      * Instantiates a new deviceManagementConfigurationChoiceSettingInstance and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingInstance() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance");
@@ -28,8 +26,8 @@ public class DeviceManagementConfigurationChoiceSettingInstance extends DeviceMa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationChoiceSettingInstance
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationChoiceSettingInstance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationChoiceSettingInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationChoiceSettingInstance();
     }
@@ -37,7 +35,7 @@ public class DeviceManagementConfigurationChoiceSettingInstance extends DeviceMa
      * Gets the choiceSettingValue property value. The choiceSettingValue property
      * @return a deviceManagementConfigurationChoiceSettingValue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingValue getChoiceSettingValue() {
         return this.choiceSettingValue;
     }
@@ -45,7 +43,7 @@ public class DeviceManagementConfigurationChoiceSettingInstance extends DeviceMa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("choiceSettingValue", (n) -> { this.setChoiceSettingValue(n.getObjectValue(DeviceManagementConfigurationChoiceSettingValue::createFromDiscriminatorValue)); });
@@ -54,10 +52,8 @@ public class DeviceManagementConfigurationChoiceSettingInstance extends DeviceMa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("choiceSettingValue", this.getChoiceSettingValue());
@@ -65,10 +61,8 @@ public class DeviceManagementConfigurationChoiceSettingInstance extends DeviceMa
     /**
      * Sets the choiceSettingValue property value. The choiceSettingValue property
      * @param value Value to set for the choiceSettingValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChoiceSettingValue(@javax.annotation.Nullable final DeviceManagementConfigurationChoiceSettingValue value) {
+    public void setChoiceSettingValue(@jakarta.annotation.Nullable final DeviceManagementConfigurationChoiceSettingValue value) {
         this.choiceSettingValue = value;
     }
 }

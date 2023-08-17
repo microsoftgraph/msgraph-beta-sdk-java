@@ -42,9 +42,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
     private String userSid;
     /**
      * Instantiates a new userAccount and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UserAccount() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +51,8 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userAccount
      */
-    @javax.annotation.Nonnull
-    public static UserAccount createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserAccount createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserAccount();
     }
@@ -62,7 +60,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * Gets the accountName property value. The displayed name of the user account.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAccountName() {
         return this.accountName;
     }
@@ -70,7 +68,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -78,7 +76,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * Gets the azureAdUserId property value. The user object identifier in Azure Active Directory (Azure AD).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureAdUserId() {
         return this.azureAdUserId;
     }
@@ -86,7 +84,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. The user display name in Azure AD.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -94,7 +92,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * Gets the domainName property value. The name of the Active Directory domain of which the user is a member.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDomainName() {
         return this.domainName;
     }
@@ -102,7 +100,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
@@ -118,7 +116,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -126,7 +124,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * Gets the userPrincipalName property value. The user principal name of the account in Azure AD.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
@@ -134,17 +132,15 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * Gets the userSid property value. The local security identifier of the user account.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserSid() {
         return this.userSid;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("accountName", this.getAccountName());
         writer.writeStringValue("azureAdUserId", this.getAzureAdUserId());
@@ -158,73 +154,57 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
     /**
      * Sets the accountName property value. The displayed name of the user account.
      * @param value Value to set for the accountName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccountName(@javax.annotation.Nullable final String value) {
+    public void setAccountName(@jakarta.annotation.Nullable final String value) {
         this.accountName = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the azureAdUserId property value. The user object identifier in Azure Active Directory (Azure AD).
      * @param value Value to set for the azureAdUserId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureAdUserId(@javax.annotation.Nullable final String value) {
+    public void setAzureAdUserId(@jakarta.annotation.Nullable final String value) {
         this.azureAdUserId = value;
     }
     /**
      * Sets the displayName property value. The user display name in Azure AD.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the domainName property value. The name of the Active Directory domain of which the user is a member.
      * @param value Value to set for the domainName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDomainName(@javax.annotation.Nullable final String value) {
+    public void setDomainName(@jakarta.annotation.Nullable final String value) {
         this.domainName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the userPrincipalName property value. The user principal name of the account in Azure AD.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
     /**
      * Sets the userSid property value. The local security identifier of the user account.
      * @param value Value to set for the userSid property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserSid(@javax.annotation.Nullable final String value) {
+    public void setUserSid(@jakarta.annotation.Nullable final String value) {
         this.userSid = value;
     }
 }

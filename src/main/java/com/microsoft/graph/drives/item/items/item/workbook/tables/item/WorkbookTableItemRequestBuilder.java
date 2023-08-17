@@ -22,7 +22,6 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -34,77 +33,77 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the clearFilters method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ClearFiltersRequestBuilder clearFilters() {
         return new ClearFiltersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the columns property of the microsoft.graph.workbookTable entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ColumnsRequestBuilder columns() {
         return new ColumnsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the convertToRange method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ConvertToRangeRequestBuilder convertToRange() {
         return new ConvertToRangeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the dataBodyRange method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DataBodyRangeRequestBuilder dataBodyRange() {
         return new DataBodyRangeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the headerRowRange method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public HeaderRowRangeRequestBuilder headerRowRange() {
         return new HeaderRowRangeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the range method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RangeRequestBuilder range() {
         return new RangeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the reapplyFilters method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ReapplyFiltersRequestBuilder reapplyFilters() {
         return new ReapplyFiltersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the rows property of the microsoft.graph.workbookTable entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RowsRequestBuilder rows() {
         return new RowsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the sort property of the microsoft.graph.workbookTable entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SortRequestBuilder sort() {
         return new SortRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the totalRowRange method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TotalRowRangeRequestBuilder totalRowRange() {
         return new TotalRowRangeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the worksheet property of the microsoft.graph.workbookTable entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public WorksheetRequestBuilder worksheet() {
         return new WorksheetRequestBuilder(pathParameters, requestAdapter);
     }
@@ -112,79 +111,45 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new WorkbookTableItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @javax.annotation.Nullable
-    public WorkbookTableItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public WorkbookTableItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new WorkbookTableItemRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @javax.annotation.Nullable
-    public WorkbookTableItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public WorkbookTableItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Deletes the table.
-     * @return a CompletableFuture of void
      * @see <a href="https://learn.microsoft.com/graph/api/table-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
-        try {
-            final RequestInformation requestInfo = toDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return delete(null);
     }
     /**
      * Deletes the table.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
      * @see <a href="https://learn.microsoft.com/graph/api/table-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
      * Retrieve the properties and relationships of table object.
      * @return a CompletableFuture of workbookTable
      * @see <a href="https://learn.microsoft.com/graph/api/table-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookTable> get() {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, WorkbookTable::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<WorkbookTable> executionException = new java.util.concurrent.CompletableFuture<WorkbookTable>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return get(null);
     }
     /**
      * Retrieve the properties and relationships of table object.
@@ -192,19 +157,13 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of workbookTable
      * @see <a href="https://learn.microsoft.com/graph/api/table-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTable> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, WorkbookTable::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<WorkbookTable> executionException = new java.util.concurrent.CompletableFuture<WorkbookTable>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTable> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, WorkbookTable::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the properties of table object.
@@ -212,19 +171,9 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of workbookTable
      * @see <a href="https://learn.microsoft.com/graph/api/table-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTable> patch(@javax.annotation.Nonnull final WorkbookTable body) {
-        try {
-            final RequestInformation requestInfo = toPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, WorkbookTable::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<WorkbookTable> executionException = new java.util.concurrent.CompletableFuture<WorkbookTable>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTable> patch(@jakarta.annotation.Nonnull final WorkbookTable body) {
+        return patch(body, null);
     }
     /**
      * Update the properties of table object.
@@ -233,27 +182,21 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of workbookTable
      * @see <a href="https://learn.microsoft.com/graph/api/table-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTable> patch(@javax.annotation.Nonnull final WorkbookTable body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTable> patch(@jakarta.annotation.Nonnull final WorkbookTable body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, WorkbookTable::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<WorkbookTable> executionException = new java.util.concurrent.CompletableFuture<WorkbookTable>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, WorkbookTable::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Deletes the table.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
     /**
@@ -261,8 +204,8 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -279,8 +222,8 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of table object.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
@@ -288,8 +231,8 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -309,8 +252,8 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final WorkbookTable body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WorkbookTable body) {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -319,8 +262,8 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final WorkbookTable body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WorkbookTable body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -349,13 +292,13 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -365,7 +308,7 @@ public class WorkbookTableItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

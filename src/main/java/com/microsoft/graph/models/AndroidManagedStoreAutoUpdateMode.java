@@ -19,10 +19,10 @@ public enum AndroidManagedStoreAutoUpdateMode implements ValuedEnum {
     AndroidManagedStoreAutoUpdateMode(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidManagedStoreAutoUpdateMode forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidManagedStoreAutoUpdateMode forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "default": return Default;

@@ -17,9 +17,7 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
     private EmailType type;
     /**
      * Instantiates a new typedEmailAddress and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TypedEmailAddress() {
         super();
         this.setOdataType("#microsoft.graph.typedEmailAddress");
@@ -29,8 +27,8 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a typedEmailAddress
      */
-    @javax.annotation.Nonnull
-    public static TypedEmailAddress createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TypedEmailAddress createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TypedEmailAddress();
     }
@@ -38,7 +36,7 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("otherLabel", (n) -> { this.setOtherLabel(n.getStringValue()); });
@@ -49,7 +47,7 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
      * Gets the otherLabel property value. To specify a custom type of email address, set type to other, and assign otherLabel to a custom string. For example, you may use a specific email address for your volunteer activities. Set type to other, and set otherLabel to a custom string such as Volunteer work.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOtherLabel() {
         return this.otherLabel;
     }
@@ -57,17 +55,15 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
      * Gets the type property value. The type of email address. Possible values are: unknown, work, personal, main, other. The default value is unknown, which means address has not been set as a specific type.
      * @return a emailType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailType getType() {
         return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("otherLabel", this.getOtherLabel());
@@ -76,19 +72,15 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
     /**
      * Sets the otherLabel property value. To specify a custom type of email address, set type to other, and assign otherLabel to a custom string. For example, you may use a specific email address for your volunteer activities. Set type to other, and set otherLabel to a custom string such as Volunteer work.
      * @param value Value to set for the otherLabel property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOtherLabel(@javax.annotation.Nullable final String value) {
+    public void setOtherLabel(@jakarta.annotation.Nullable final String value) {
         this.otherLabel = value;
     }
     /**
      * Sets the type property value. The type of email address. Possible values are: unknown, work, personal, main, other. The default value is unknown, which means address has not been set as a specific type.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final EmailType value) {
+    public void setType(@jakarta.annotation.Nullable final EmailType value) {
         this.type = value;
     }
 }

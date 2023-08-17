@@ -45,9 +45,7 @@ public class BusinessFlow extends Entity implements Parsable {
     private BusinessFlowSettings settings;
     /**
      * Instantiates a new businessFlow and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public BusinessFlow() {
         super();
     }
@@ -56,8 +54,8 @@ public class BusinessFlow extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a businessFlow
      */
-    @javax.annotation.Nonnull
-    public static BusinessFlow createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BusinessFlow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BusinessFlow();
     }
@@ -65,7 +63,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * Gets the customData property value. The customData property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomData() {
         return this.customData;
     }
@@ -73,7 +71,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * Gets the deDuplicationId property value. The deDuplicationId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeDuplicationId() {
         return this.deDuplicationId;
     }
@@ -81,7 +79,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * Gets the description property value. The description property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -89,7 +87,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -97,7 +95,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("customData", (n) -> { this.setCustomData(n.getStringValue()); });
@@ -115,7 +113,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * Gets the policy property value. The policy property
      * @return a governancePolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernancePolicy getPolicy() {
         return this.policy;
     }
@@ -123,7 +121,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * Gets the policyTemplateId property value. The policyTemplateId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPolicyTemplateId() {
         return this.policyTemplateId;
     }
@@ -131,7 +129,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * Gets the recordVersion property value. The recordVersion property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRecordVersion() {
         return this.recordVersion;
     }
@@ -139,7 +137,7 @@ public class BusinessFlow extends Entity implements Parsable {
      * Gets the schemaId property value. The schemaId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSchemaId() {
         return this.schemaId;
     }
@@ -147,17 +145,15 @@ public class BusinessFlow extends Entity implements Parsable {
      * Gets the settings property value. The settings property
      * @return a businessFlowSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BusinessFlowSettings getSettings() {
         return this.settings;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("customData", this.getCustomData());
@@ -173,82 +169,64 @@ public class BusinessFlow extends Entity implements Parsable {
     /**
      * Sets the customData property value. The customData property
      * @param value Value to set for the customData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomData(@javax.annotation.Nullable final String value) {
+    public void setCustomData(@jakarta.annotation.Nullable final String value) {
         this.customData = value;
     }
     /**
      * Sets the deDuplicationId property value. The deDuplicationId property
      * @param value Value to set for the deDuplicationId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeDuplicationId(@javax.annotation.Nullable final String value) {
+    public void setDeDuplicationId(@jakarta.annotation.Nullable final String value) {
         this.deDuplicationId = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the policy property value. The policy property
      * @param value Value to set for the policy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicy(@javax.annotation.Nullable final GovernancePolicy value) {
+    public void setPolicy(@jakarta.annotation.Nullable final GovernancePolicy value) {
         this.policy = value;
     }
     /**
      * Sets the policyTemplateId property value. The policyTemplateId property
      * @param value Value to set for the policyTemplateId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyTemplateId(@javax.annotation.Nullable final String value) {
+    public void setPolicyTemplateId(@jakarta.annotation.Nullable final String value) {
         this.policyTemplateId = value;
     }
     /**
      * Sets the recordVersion property value. The recordVersion property
      * @param value Value to set for the recordVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecordVersion(@javax.annotation.Nullable final String value) {
+    public void setRecordVersion(@jakarta.annotation.Nullable final String value) {
         this.recordVersion = value;
     }
     /**
      * Sets the schemaId property value. The schemaId property
      * @param value Value to set for the schemaId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchemaId(@javax.annotation.Nullable final String value) {
+    public void setSchemaId(@jakarta.annotation.Nullable final String value) {
         this.schemaId = value;
     }
     /**
      * Sets the settings property value. The settings property
      * @param value Value to set for the settings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettings(@javax.annotation.Nullable final BusinessFlowSettings value) {
+    public void setSettings(@jakarta.annotation.Nullable final BusinessFlowSettings value) {
         this.settings = value;
     }
 }

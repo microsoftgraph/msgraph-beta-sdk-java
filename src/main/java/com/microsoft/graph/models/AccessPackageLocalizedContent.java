@@ -26,9 +26,7 @@ public class AccessPackageLocalizedContent implements AdditionalDataHolder, Pars
     private String odataType;
     /**
      * Instantiates a new accessPackageLocalizedContent and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AccessPackageLocalizedContent() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +35,8 @@ public class AccessPackageLocalizedContent implements AdditionalDataHolder, Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageLocalizedContent
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageLocalizedContent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageLocalizedContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackageLocalizedContent();
     }
@@ -46,7 +44,7 @@ public class AccessPackageLocalizedContent implements AdditionalDataHolder, Pars
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +52,7 @@ public class AccessPackageLocalizedContent implements AdditionalDataHolder, Pars
      * Gets the defaultText property value. The fallback string, which is used when a requested localization is not available. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDefaultText() {
         return this.defaultText;
     }
@@ -62,7 +60,7 @@ public class AccessPackageLocalizedContent implements AdditionalDataHolder, Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("defaultText", (n) -> { this.setDefaultText(n.getStringValue()); });
@@ -74,7 +72,7 @@ public class AccessPackageLocalizedContent implements AdditionalDataHolder, Pars
      * Gets the localizedTexts property value. Content represented in a format for a specific locale.
      * @return a accessPackageLocalizedText
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageLocalizedText> getLocalizedTexts() {
         return this.localizedTexts;
     }
@@ -82,17 +80,15 @@ public class AccessPackageLocalizedContent implements AdditionalDataHolder, Pars
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("defaultText", this.getDefaultText());
         writer.writeCollectionOfObjectValues("localizedTexts", this.getLocalizedTexts());
@@ -102,37 +98,29 @@ public class AccessPackageLocalizedContent implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the defaultText property value. The fallback string, which is used when a requested localization is not available. Required.
      * @param value Value to set for the defaultText property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultText(@javax.annotation.Nullable final String value) {
+    public void setDefaultText(@jakarta.annotation.Nullable final String value) {
         this.defaultText = value;
     }
     /**
      * Sets the localizedTexts property value. Content represented in a format for a specific locale.
      * @param value Value to set for the localizedTexts property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocalizedTexts(@javax.annotation.Nullable final java.util.List<AccessPackageLocalizedText> value) {
+    public void setLocalizedTexts(@jakarta.annotation.Nullable final java.util.List<AccessPackageLocalizedText> value) {
         this.localizedTexts = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

@@ -27,9 +27,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     private OffsetDateTime modifiedDateTime;
     /**
      * Instantiates a new conditionalAccessPolicy and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ConditionalAccessPolicy() {
         super();
     }
@@ -38,8 +36,8 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a conditionalAccessPolicy
      */
-    @javax.annotation.Nonnull
-    public static ConditionalAccessPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ConditionalAccessPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ConditionalAccessPolicy();
     }
@@ -47,7 +45,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * Gets the createdDateTime property value. Indicates the date and time the conditional access policy was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -55,7 +53,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * Gets the description property value. Provides a summary of the conditional access policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -63,7 +61,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * Gets the displayName property value. Represents the human-readable name or title assigned to the conditional access policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -71,7 +69,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -84,17 +82,15 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * Gets the modifiedDateTime property value. Indicates the date and time when the conditional access policy was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
         return this.modifiedDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -105,37 +101,29 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     /**
      * Sets the createdDateTime property value. Indicates the date and time the conditional access policy was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Provides a summary of the conditional access policy.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Represents the human-readable name or title assigned to the conditional access policy.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the modifiedDateTime property value. Indicates the date and time when the conditional access policy was last modified.
      * @param value Value to set for the modifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.modifiedDateTime = value;
     }
 }

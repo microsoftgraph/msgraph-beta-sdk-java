@@ -23,9 +23,7 @@ public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
     private RejectReason reason;
     /**
      * Instantiates a new rejectPostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public RejectPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -34,8 +32,8 @@ public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a rejectPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static RejectPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RejectPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RejectPostRequestBody();
     }
@@ -43,7 +41,7 @@ public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -51,7 +49,7 @@ public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the callbackUri property value. The callbackUri property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCallbackUri() {
         return this.callbackUri;
     }
@@ -59,7 +57,7 @@ public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("callbackUri", (n) -> { this.setCallbackUri(n.getStringValue()); });
@@ -70,17 +68,15 @@ public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the reason property value. The reason property
      * @return a rejectReason
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RejectReason getReason() {
         return this.reason;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("callbackUri", this.getCallbackUri());
         writer.writeEnumValue("reason", this.getReason());
@@ -89,28 +85,22 @@ public class RejectPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the callbackUri property value. The callbackUri property
      * @param value Value to set for the callbackUri property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallbackUri(@javax.annotation.Nullable final String value) {
+    public void setCallbackUri(@jakarta.annotation.Nullable final String value) {
         this.callbackUri = value;
     }
     /**
      * Sets the reason property value. The reason property
      * @param value Value to set for the reason property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReason(@javax.annotation.Nullable final RejectReason value) {
+    public void setReason(@jakarta.annotation.Nullable final RejectReason value) {
         this.reason = value;
     }
 }

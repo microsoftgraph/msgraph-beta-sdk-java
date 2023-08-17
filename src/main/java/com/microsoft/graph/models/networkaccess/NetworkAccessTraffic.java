@@ -119,9 +119,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new networkAccessTraffic and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public NetworkAccessTraffic() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -130,8 +128,8 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a networkAccessTraffic
      */
-    @javax.annotation.Nonnull
-    public static NetworkAccessTraffic createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static NetworkAccessTraffic createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new NetworkAccessTraffic();
     }
@@ -139,7 +137,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -147,7 +145,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the agentVersion property value. Represents the version of the Global Secure Access client agent software. Supports $filter (eq) and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAgentVersion() {
         return this.agentVersion;
     }
@@ -155,7 +153,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the connectionId property value. Represents a unique identifier assigned to a connection. Supports $filter (eq) and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConnectionId() {
         return this.connectionId;
     }
@@ -163,7 +161,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the createdDateTime property value. Represents the date and time when a network access traffic log entry was created. Supports $filter (eq) and $orderby.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -171,7 +169,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the destinationFQDN property value. Represents the Fully Qualified Domain Name (FQDN) of the destination host or server in a network communication. Supports $filter (eq) and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDestinationFQDN() {
         return this.destinationFQDN;
     }
@@ -179,7 +177,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the destinationIp property value. Represents the IP address of the destination host or server in a network communication. Supports $filter (eq) and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDestinationIp() {
         return this.destinationIp;
     }
@@ -187,7 +185,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the destinationPort property value. Represents the network port number on the destination host or server in a network communication. Supports $filter (eq) and $orderby.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDestinationPort() {
         return this.destinationPort;
     }
@@ -195,7 +193,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the deviceCategory property value. Represents the category classification of a device within a network infrastructure. The possible values are: client, branch, unknownFutureValue. Supports $filter (eq) and $orderby.
      * @return a deviceCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceCategory getDeviceCategory() {
         return this.deviceCategory;
     }
@@ -203,7 +201,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the deviceId property value. Represents a unique identifier assigned to a device within a network infrastructure. Supports $filter (eq) and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -211,7 +209,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the deviceOperatingSystem property value. Represents the operating system installed on a device within a network infrastructure. Supports $filter (eq) and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceOperatingSystem() {
         return this.deviceOperatingSystem;
     }
@@ -219,7 +217,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the deviceOperatingSystemVersion property value. Represents the version or release number of the operating system installed on a device within a network infrastructure. Supports $filter (eq) and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceOperatingSystemVersion() {
         return this.deviceOperatingSystemVersion;
     }
@@ -227,7 +225,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(26);
         deserializerMap.put("agentVersion", (n) -> { this.setAgentVersion(n.getStringValue()); });
@@ -262,7 +260,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the headers property value. Represents the headers included in a network request or response. Supports $filter (eq) and $orderby.
      * @return a headers
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Headers getHeaders() {
         return this.headers;
     }
@@ -270,7 +268,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the networkProtocol property value. Represents the networking protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
      * @return a networkingProtocol
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public NetworkingProtocol getNetworkProtocol() {
         return this.networkProtocol;
     }
@@ -278,7 +276,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -286,7 +284,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the policyId property value. Represents a unique identifier assigned to a policy. Supports $filter (eq) and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPolicyId() {
         return this.policyId;
     }
@@ -294,7 +292,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the policyRuleId property value. Represents a unique identifier assigned to a policy rule. Supports $filter (eq) and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPolicyRuleId() {
         return this.policyRuleId;
     }
@@ -302,7 +300,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the receivedBytes property value. Represents the total number of bytes received in a network communication or data transfer. Supports $filter (eq) and $orderby.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getReceivedBytes() {
         return this.receivedBytes;
     }
@@ -310,7 +308,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the sentBytes property value. Represents the total number of bytes sent in a network communication or data transfer. Supports $filter (eq) and $orderby.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getSentBytes() {
         return this.sentBytes;
     }
@@ -318,7 +316,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the sessionId property value. Represents a unique identifier assigned to a session or connection within a network infrastructure. Supports $filter (eq) and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSessionId() {
         return this.sessionId;
     }
@@ -326,7 +324,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the sourceIp property value. Represents the source IP address in a network communication. Supports $filter (eq) and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSourceIp() {
         return this.sourceIp;
     }
@@ -334,7 +332,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the sourcePort property value. Represents the network port number on the source host or device in a network communication. Supports $filter (eq) and $orderby.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSourcePort() {
         return this.sourcePort;
     }
@@ -342,7 +340,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the tenantId property value. Represents a unique identifier assigned to a tenant within a network infrastructure. Supports $filter (eq) and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -350,7 +348,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the trafficType property value. The trafficType property
      * @return a trafficType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TrafficType getTrafficType() {
         return this.trafficType;
     }
@@ -358,7 +356,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the transactionId property value. Represents a unique identifier assigned to a specific transaction or operation. Key. Supports $filter (eq) and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTransactionId() {
         return this.transactionId;
     }
@@ -366,7 +364,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the transportProtocol property value. Represents the transport protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
      * @return a networkingProtocol
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public NetworkingProtocol getTransportProtocol() {
         return this.transportProtocol;
     }
@@ -374,7 +372,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the userId property value. Represents a unique identifier assigned to a user. Supports $filter (eq) and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -382,17 +380,15 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      * Gets the userPrincipalName property value. Represents the user principal name (UPN) associated with a user. Supports $filter (eq) and $orderby.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("agentVersion", this.getAgentVersion());
         writer.writeStringValue("connectionId", this.getConnectionId());
@@ -425,244 +421,190 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the agentVersion property value. Represents the version of the Global Secure Access client agent software. Supports $filter (eq) and $orderby.
      * @param value Value to set for the agentVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAgentVersion(@javax.annotation.Nullable final String value) {
+    public void setAgentVersion(@jakarta.annotation.Nullable final String value) {
         this.agentVersion = value;
     }
     /**
      * Sets the connectionId property value. Represents a unique identifier assigned to a connection. Supports $filter (eq) and $orderby.
      * @param value Value to set for the connectionId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectionId(@javax.annotation.Nullable final String value) {
+    public void setConnectionId(@jakarta.annotation.Nullable final String value) {
         this.connectionId = value;
     }
     /**
      * Sets the createdDateTime property value. Represents the date and time when a network access traffic log entry was created. Supports $filter (eq) and $orderby.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the destinationFQDN property value. Represents the Fully Qualified Domain Name (FQDN) of the destination host or server in a network communication. Supports $filter (eq) and $orderby.
      * @param value Value to set for the destinationFQDN property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDestinationFQDN(@javax.annotation.Nullable final String value) {
+    public void setDestinationFQDN(@jakarta.annotation.Nullable final String value) {
         this.destinationFQDN = value;
     }
     /**
      * Sets the destinationIp property value. Represents the IP address of the destination host or server in a network communication. Supports $filter (eq) and $orderby.
      * @param value Value to set for the destinationIp property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDestinationIp(@javax.annotation.Nullable final String value) {
+    public void setDestinationIp(@jakarta.annotation.Nullable final String value) {
         this.destinationIp = value;
     }
     /**
      * Sets the destinationPort property value. Represents the network port number on the destination host or server in a network communication. Supports $filter (eq) and $orderby.
      * @param value Value to set for the destinationPort property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDestinationPort(@javax.annotation.Nullable final Integer value) {
+    public void setDestinationPort(@jakarta.annotation.Nullable final Integer value) {
         this.destinationPort = value;
     }
     /**
      * Sets the deviceCategory property value. Represents the category classification of a device within a network infrastructure. The possible values are: client, branch, unknownFutureValue. Supports $filter (eq) and $orderby.
      * @param value Value to set for the deviceCategory property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceCategory(@javax.annotation.Nullable final DeviceCategory value) {
+    public void setDeviceCategory(@jakarta.annotation.Nullable final DeviceCategory value) {
         this.deviceCategory = value;
     }
     /**
      * Sets the deviceId property value. Represents a unique identifier assigned to a device within a network infrastructure. Supports $filter (eq) and $orderby.
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the deviceOperatingSystem property value. Represents the operating system installed on a device within a network infrastructure. Supports $filter (eq) and $orderby.
      * @param value Value to set for the deviceOperatingSystem property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceOperatingSystem(@javax.annotation.Nullable final String value) {
+    public void setDeviceOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.deviceOperatingSystem = value;
     }
     /**
      * Sets the deviceOperatingSystemVersion property value. Represents the version or release number of the operating system installed on a device within a network infrastructure. Supports $filter (eq) and $orderby.
      * @param value Value to set for the deviceOperatingSystemVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceOperatingSystemVersion(@javax.annotation.Nullable final String value) {
+    public void setDeviceOperatingSystemVersion(@jakarta.annotation.Nullable final String value) {
         this.deviceOperatingSystemVersion = value;
     }
     /**
      * Sets the headers property value. Represents the headers included in a network request or response. Supports $filter (eq) and $orderby.
      * @param value Value to set for the headers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHeaders(@javax.annotation.Nullable final Headers value) {
+    public void setHeaders(@jakarta.annotation.Nullable final Headers value) {
         this.headers = value;
     }
     /**
      * Sets the networkProtocol property value. Represents the networking protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
      * @param value Value to set for the networkProtocol property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkProtocol(@javax.annotation.Nullable final NetworkingProtocol value) {
+    public void setNetworkProtocol(@jakarta.annotation.Nullable final NetworkingProtocol value) {
         this.networkProtocol = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the policyId property value. Represents a unique identifier assigned to a policy. Supports $filter (eq) and $orderby.
      * @param value Value to set for the policyId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyId(@javax.annotation.Nullable final String value) {
+    public void setPolicyId(@jakarta.annotation.Nullable final String value) {
         this.policyId = value;
     }
     /**
      * Sets the policyRuleId property value. Represents a unique identifier assigned to a policy rule. Supports $filter (eq) and $orderby.
      * @param value Value to set for the policyRuleId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyRuleId(@javax.annotation.Nullable final String value) {
+    public void setPolicyRuleId(@jakarta.annotation.Nullable final String value) {
         this.policyRuleId = value;
     }
     /**
      * Sets the receivedBytes property value. Represents the total number of bytes received in a network communication or data transfer. Supports $filter (eq) and $orderby.
      * @param value Value to set for the receivedBytes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReceivedBytes(@javax.annotation.Nullable final Long value) {
+    public void setReceivedBytes(@jakarta.annotation.Nullable final Long value) {
         this.receivedBytes = value;
     }
     /**
      * Sets the sentBytes property value. Represents the total number of bytes sent in a network communication or data transfer. Supports $filter (eq) and $orderby.
      * @param value Value to set for the sentBytes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSentBytes(@javax.annotation.Nullable final Long value) {
+    public void setSentBytes(@jakarta.annotation.Nullable final Long value) {
         this.sentBytes = value;
     }
     /**
      * Sets the sessionId property value. Represents a unique identifier assigned to a session or connection within a network infrastructure. Supports $filter (eq) and $orderby.
      * @param value Value to set for the sessionId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSessionId(@javax.annotation.Nullable final String value) {
+    public void setSessionId(@jakarta.annotation.Nullable final String value) {
         this.sessionId = value;
     }
     /**
      * Sets the sourceIp property value. Represents the source IP address in a network communication. Supports $filter (eq) and $orderby.
      * @param value Value to set for the sourceIp property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourceIp(@javax.annotation.Nullable final String value) {
+    public void setSourceIp(@jakarta.annotation.Nullable final String value) {
         this.sourceIp = value;
     }
     /**
      * Sets the sourcePort property value. Represents the network port number on the source host or device in a network communication. Supports $filter (eq) and $orderby.
      * @param value Value to set for the sourcePort property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourcePort(@javax.annotation.Nullable final Integer value) {
+    public void setSourcePort(@jakarta.annotation.Nullable final Integer value) {
         this.sourcePort = value;
     }
     /**
      * Sets the tenantId property value. Represents a unique identifier assigned to a tenant within a network infrastructure. Supports $filter (eq) and $orderby.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
      * Sets the trafficType property value. The trafficType property
      * @param value Value to set for the trafficType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrafficType(@javax.annotation.Nullable final TrafficType value) {
+    public void setTrafficType(@jakarta.annotation.Nullable final TrafficType value) {
         this.trafficType = value;
     }
     /**
      * Sets the transactionId property value. Represents a unique identifier assigned to a specific transaction or operation. Key. Supports $filter (eq) and $orderby.
      * @param value Value to set for the transactionId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTransactionId(@javax.annotation.Nullable final String value) {
+    public void setTransactionId(@jakarta.annotation.Nullable final String value) {
         this.transactionId = value;
     }
     /**
      * Sets the transportProtocol property value. Represents the transport protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
      * @param value Value to set for the transportProtocol property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTransportProtocol(@javax.annotation.Nullable final NetworkingProtocol value) {
+    public void setTransportProtocol(@jakarta.annotation.Nullable final NetworkingProtocol value) {
         this.transportProtocol = value;
     }
     /**
      * Sets the userId property value. Represents a unique identifier assigned to a user. Supports $filter (eq) and $orderby.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
      * Sets the userPrincipalName property value. Represents the user principal name (UPN) associated with a user. Supports $filter (eq) and $orderby.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

@@ -26,9 +26,7 @@ public class ItemActivity extends Entity implements Parsable {
     private DriveItem driveItem;
     /**
      * Instantiates a new itemActivity and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ItemActivity() {
         super();
     }
@@ -37,8 +35,8 @@ public class ItemActivity extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a itemActivity
      */
-    @javax.annotation.Nonnull
-    public static ItemActivity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ItemActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ItemActivity();
     }
@@ -46,7 +44,7 @@ public class ItemActivity extends Entity implements Parsable {
      * Gets the access property value. An item was accessed.
      * @return a accessAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessAction getAccess() {
         return this.access;
     }
@@ -54,7 +52,7 @@ public class ItemActivity extends Entity implements Parsable {
      * Gets the activityDateTime property value. The activityDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
         return this.activityDateTime;
     }
@@ -62,7 +60,7 @@ public class ItemActivity extends Entity implements Parsable {
      * Gets the actor property value. Identity of who performed the action. Read-only.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getActor() {
         return this.actor;
     }
@@ -70,7 +68,7 @@ public class ItemActivity extends Entity implements Parsable {
      * Gets the driveItem property value. Exposes the driveItem that was the target of this activity.
      * @return a driveItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DriveItem getDriveItem() {
         return this.driveItem;
     }
@@ -78,7 +76,7 @@ public class ItemActivity extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("access", (n) -> { this.setAccess(n.getObjectValue(AccessAction::createFromDiscriminatorValue)); });
@@ -90,10 +88,8 @@ public class ItemActivity extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("access", this.getAccess());
@@ -104,37 +100,29 @@ public class ItemActivity extends Entity implements Parsable {
     /**
      * Sets the access property value. An item was accessed.
      * @param value Value to set for the access property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccess(@javax.annotation.Nullable final AccessAction value) {
+    public void setAccess(@jakarta.annotation.Nullable final AccessAction value) {
         this.access = value;
     }
     /**
      * Sets the activityDateTime property value. The activityDateTime property
      * @param value Value to set for the activityDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.activityDateTime = value;
     }
     /**
      * Sets the actor property value. Identity of who performed the action. Read-only.
      * @param value Value to set for the actor property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActor(@javax.annotation.Nullable final IdentitySet value) {
+    public void setActor(@jakarta.annotation.Nullable final IdentitySet value) {
         this.actor = value;
     }
     /**
      * Sets the driveItem property value. Exposes the driveItem that was the target of this activity.
      * @param value Value to set for the driveItem property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDriveItem(@javax.annotation.Nullable final DriveItem value) {
+    public void setDriveItem(@jakarta.annotation.Nullable final DriveItem value) {
         this.driveItem = value;
     }
 }

@@ -36,9 +36,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     private String publisher;
     /**
      * Instantiates a new userExperienceAnalyticsImpactingProcess and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UserExperienceAnalyticsImpactingProcess() {
         super();
     }
@@ -47,8 +45,8 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsImpactingProcess
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsImpactingProcess createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsImpactingProcess createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsImpactingProcess();
     }
@@ -56,7 +54,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      * Gets the category property value. The category of impacting process.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory() {
         return this.category;
     }
@@ -64,7 +62,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      * Gets the description property value. The description of process.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -72,7 +70,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      * Gets the deviceId property value. The unique identifier of the impacted device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -80,7 +78,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("category", (n) -> { this.setCategory(n.getStringValue()); });
@@ -95,7 +93,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      * Gets the impactValue property value. The impact value of the process. Valid values 0 to 1.79769313486232E+308
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getImpactValue() {
         return this.impactValue;
     }
@@ -103,7 +101,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      * Gets the processName property value. The process name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProcessName() {
         return this.processName;
     }
@@ -111,17 +109,15 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      * Gets the publisher property value. The publisher of the process.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPublisher() {
         return this.publisher;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("category", this.getCategory());
@@ -134,55 +130,43 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     /**
      * Sets the category property value. The category of impacting process.
      * @param value Value to set for the category property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory(@javax.annotation.Nullable final String value) {
+    public void setCategory(@jakarta.annotation.Nullable final String value) {
         this.category = value;
     }
     /**
      * Sets the description property value. The description of process.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the deviceId property value. The unique identifier of the impacted device.
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the impactValue property value. The impact value of the process. Valid values 0 to 1.79769313486232E+308
      * @param value Value to set for the impactValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImpactValue(@javax.annotation.Nullable final Double value) {
+    public void setImpactValue(@jakarta.annotation.Nullable final Double value) {
         this.impactValue = value;
     }
     /**
      * Sets the processName property value. The process name.
      * @param value Value to set for the processName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProcessName(@javax.annotation.Nullable final String value) {
+    public void setProcessName(@jakarta.annotation.Nullable final String value) {
         this.processName = value;
     }
     /**
      * Sets the publisher property value. The publisher of the process.
      * @param value Value to set for the publisher property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublisher(@javax.annotation.Nullable final String value) {
+    public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.publisher = value;
     }
 }

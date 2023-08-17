@@ -39,9 +39,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
     private Double potentialScoreImpact;
     /**
      * Instantiates a new userTrainingContentEventInfo and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UserTrainingContentEventInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -50,8 +48,8 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userTrainingContentEventInfo
      */
-    @javax.annotation.Nonnull
-    public static UserTrainingContentEventInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserTrainingContentEventInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserTrainingContentEventInfo();
     }
@@ -59,7 +57,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -67,7 +65,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
      * Gets the browser property value. Browser of the user from where the training event was generated.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBrowser() {
         return this.browser;
     }
@@ -75,7 +73,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
      * Gets the contentDateTime property value. Date and time of the training content playback by the user.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getContentDateTime() {
         return this.contentDateTime;
     }
@@ -83,7 +81,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("browser", (n) -> { this.setBrowser(n.getStringValue()); });
@@ -98,7 +96,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
      * Gets the ipAddress property value. IP address of the user for the training event.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIpAddress() {
         return this.ipAddress;
     }
@@ -106,7 +104,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -114,7 +112,7 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
      * Gets the osPlatformDeviceDetails property value. The operating system, platform, and device details of the user for the training event.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsPlatformDeviceDetails() {
         return this.osPlatformDeviceDetails;
     }
@@ -122,17 +120,15 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
      * Gets the potentialScoreImpact property value. Potential improvement in the tenant security posture after completion of the training by the user.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getPotentialScoreImpact() {
         return this.potentialScoreImpact;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("browser", this.getBrowser());
         writer.writeOffsetDateTimeValue("contentDateTime", this.getContentDateTime());
@@ -145,64 +141,50 @@ public class UserTrainingContentEventInfo implements AdditionalDataHolder, Parsa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the browser property value. Browser of the user from where the training event was generated.
      * @param value Value to set for the browser property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowser(@javax.annotation.Nullable final String value) {
+    public void setBrowser(@jakarta.annotation.Nullable final String value) {
         this.browser = value;
     }
     /**
      * Sets the contentDateTime property value. Date and time of the training content playback by the user.
      * @param value Value to set for the contentDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setContentDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.contentDateTime = value;
     }
     /**
      * Sets the ipAddress property value. IP address of the user for the training event.
      * @param value Value to set for the ipAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIpAddress(@javax.annotation.Nullable final String value) {
+    public void setIpAddress(@jakarta.annotation.Nullable final String value) {
         this.ipAddress = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the osPlatformDeviceDetails property value. The operating system, platform, and device details of the user for the training event.
      * @param value Value to set for the osPlatformDeviceDetails property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsPlatformDeviceDetails(@javax.annotation.Nullable final String value) {
+    public void setOsPlatformDeviceDetails(@jakarta.annotation.Nullable final String value) {
         this.osPlatformDeviceDetails = value;
     }
     /**
      * Sets the potentialScoreImpact property value. Potential improvement in the tenant security posture after completion of the training by the user.
      * @param value Value to set for the potentialScoreImpact property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPotentialScoreImpact(@javax.annotation.Nullable final Double value) {
+    public void setPotentialScoreImpact(@jakarta.annotation.Nullable final Double value) {
         this.potentialScoreImpact = value;
     }
 }

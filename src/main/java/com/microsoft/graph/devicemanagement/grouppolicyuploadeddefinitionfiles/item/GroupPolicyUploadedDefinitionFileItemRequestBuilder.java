@@ -18,7 +18,6 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -30,49 +29,49 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
     /**
      * Provides operations to call the addLanguageFiles method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AddLanguageFilesRequestBuilder addLanguageFiles() {
         return new AddLanguageFilesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the definitions property of the microsoft.graph.groupPolicyDefinitionFile entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DefinitionsRequestBuilder definitions() {
         return new DefinitionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the groupPolicyOperations property of the microsoft.graph.groupPolicyUploadedDefinitionFile entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public GroupPolicyOperationsRequestBuilder groupPolicyOperations() {
         return new GroupPolicyOperationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the remove method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RemoveRequestBuilder remove() {
         return new RemoveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the removeLanguageFiles method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RemoveLanguageFilesRequestBuilder removeLanguageFiles() {
         return new RemoveLanguageFilesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the updateLanguageFiles method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public UpdateLanguageFilesRequestBuilder updateLanguageFiles() {
         return new UpdateLanguageFilesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the uploadNewVersion method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public UploadNewVersionRequestBuilder uploadNewVersion() {
         return new UploadNewVersionRequestBuilder(pathParameters, requestAdapter);
     }
@@ -80,114 +79,64 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
      * Instantiates a new GroupPolicyUploadedDefinitionFileItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @javax.annotation.Nullable
-    public GroupPolicyUploadedDefinitionFileItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public GroupPolicyUploadedDefinitionFileItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/groupPolicyUploadedDefinitionFiles/{groupPolicyUploadedDefinitionFile%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new GroupPolicyUploadedDefinitionFileItemRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @javax.annotation.Nullable
-    public GroupPolicyUploadedDefinitionFileItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public GroupPolicyUploadedDefinitionFileItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/groupPolicyUploadedDefinitionFiles/{groupPolicyUploadedDefinitionFile%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property groupPolicyUploadedDefinitionFiles for deviceManagement
-     * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
-        try {
-            final RequestInformation requestInfo = toDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return delete(null);
     }
     /**
      * Delete navigation property groupPolicyUploadedDefinitionFiles for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
      * The available group policy uploaded definition files for this account.
      * @return a CompletableFuture of groupPolicyUploadedDefinitionFile
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile> get() {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, GroupPolicyUploadedDefinitionFile::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile> executionException = new java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return get(null);
     }
     /**
      * The available group policy uploaded definition files for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of groupPolicyUploadedDefinitionFile
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, GroupPolicyUploadedDefinitionFile::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile> executionException = new java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, GroupPolicyUploadedDefinitionFile::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property groupPolicyUploadedDefinitionFiles in deviceManagement
      * @param body The request body
      * @return a CompletableFuture of groupPolicyUploadedDefinitionFile
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile> patch(@javax.annotation.Nonnull final GroupPolicyUploadedDefinitionFile body) {
-        try {
-            final RequestInformation requestInfo = toPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, GroupPolicyUploadedDefinitionFile::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile> executionException = new java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile> patch(@jakarta.annotation.Nonnull final GroupPolicyUploadedDefinitionFile body) {
+        return patch(body, null);
     }
     /**
      * Update the navigation property groupPolicyUploadedDefinitionFiles in deviceManagement
@@ -195,27 +144,21 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of groupPolicyUploadedDefinitionFile
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile> patch(@javax.annotation.Nonnull final GroupPolicyUploadedDefinitionFile body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile> patch(@jakarta.annotation.Nonnull final GroupPolicyUploadedDefinitionFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, GroupPolicyUploadedDefinitionFile::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile> executionException = new java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, GroupPolicyUploadedDefinitionFile::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property groupPolicyUploadedDefinitionFiles for deviceManagement
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
     /**
@@ -223,8 +166,8 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -241,8 +184,8 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
      * The available group policy uploaded definition files for this account.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
@@ -250,8 +193,8 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -271,8 +214,8 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final GroupPolicyUploadedDefinitionFile body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final GroupPolicyUploadedDefinitionFile body) {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -281,8 +224,8 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final GroupPolicyUploadedDefinitionFile body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final GroupPolicyUploadedDefinitionFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -311,13 +254,13 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -327,7 +270,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

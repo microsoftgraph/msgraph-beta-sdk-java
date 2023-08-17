@@ -26,9 +26,7 @@ public class ManagedIdentity implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new managedIdentity and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ManagedIdentity() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +35,8 @@ public class ManagedIdentity implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedIdentity
      */
-    @javax.annotation.Nonnull
-    public static ManagedIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagedIdentity();
     }
@@ -46,7 +44,7 @@ public class ManagedIdentity implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +52,7 @@ public class ManagedIdentity implements AdditionalDataHolder, Parsable {
      * Gets the associatedResourceId property value. The ARM resource ID of the Azure resource associated with the managed identity used for sign in.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssociatedResourceId() {
         return this.associatedResourceId;
     }
@@ -62,7 +60,7 @@ public class ManagedIdentity implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("associatedResourceId", (n) -> { this.setAssociatedResourceId(n.getStringValue()); });
@@ -74,7 +72,7 @@ public class ManagedIdentity implements AdditionalDataHolder, Parsable {
      * Gets the msiType property value. The possible values are: none, userAssigned, systemAssigned, unknownFutureValue.
      * @return a msiType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MsiType getMsiType() {
         return this.msiType;
     }
@@ -82,17 +80,15 @@ public class ManagedIdentity implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("associatedResourceId", this.getAssociatedResourceId());
         writer.writeEnumValue("msiType", this.getMsiType());
@@ -102,37 +98,29 @@ public class ManagedIdentity implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the associatedResourceId property value. The ARM resource ID of the Azure resource associated with the managed identity used for sign in.
      * @param value Value to set for the associatedResourceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssociatedResourceId(@javax.annotation.Nullable final String value) {
+    public void setAssociatedResourceId(@jakarta.annotation.Nullable final String value) {
         this.associatedResourceId = value;
     }
     /**
      * Sets the msiType property value. The possible values are: none, userAssigned, systemAssigned, unknownFutureValue.
      * @param value Value to set for the msiType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMsiType(@javax.annotation.Nullable final MsiType value) {
+    public void setMsiType(@jakarta.annotation.Nullable final MsiType value) {
         this.msiType = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

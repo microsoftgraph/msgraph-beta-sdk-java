@@ -67,9 +67,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     private String troubleshootingUrl;
     /**
      * Instantiates a new synchronizationStatus and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SynchronizationStatus() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -78,8 +76,8 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a synchronizationStatus
      */
-    @javax.annotation.Nonnull
-    public static SynchronizationStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SynchronizationStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SynchronizationStatus();
     }
@@ -87,7 +85,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -95,7 +93,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * Gets the code property value. The code property
      * @return a synchronizationStatusCode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SynchronizationStatusCode getCode() {
         return this.code;
     }
@@ -103,7 +101,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * Gets the countSuccessiveCompleteFailures property value. Number of consecutive times this job failed.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getCountSuccessiveCompleteFailures() {
         return this.countSuccessiveCompleteFailures;
     }
@@ -111,7 +109,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * Gets the escrowsPruned property value. true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEscrowsPruned() {
         return this.escrowsPruned;
     }
@@ -119,7 +117,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
         deserializerMap.put("code", (n) -> { this.setCode(n.getEnumValue(SynchronizationStatusCode.class)); });
@@ -141,7 +139,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * Gets the lastExecution property value. Details of the last execution of the job.
      * @return a synchronizationTaskExecution
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SynchronizationTaskExecution getLastExecution() {
         return this.lastExecution;
     }
@@ -149,7 +147,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * Gets the lastSuccessfulExecution property value. Details of the last execution of this job, which didn't have any errors.
      * @return a synchronizationTaskExecution
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SynchronizationTaskExecution getLastSuccessfulExecution() {
         return this.lastSuccessfulExecution;
     }
@@ -157,7 +155,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * Gets the lastSuccessfulExecutionWithExports property value. Details of the last execution of the job, which exported objects into the target directory.
      * @return a synchronizationTaskExecution
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SynchronizationTaskExecution getLastSuccessfulExecutionWithExports() {
         return this.lastSuccessfulExecutionWithExports;
     }
@@ -165,7 +163,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -173,7 +171,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * Gets the progress property value. Details of the progress of a job toward completion.
      * @return a synchronizationProgress
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SynchronizationProgress> getProgress() {
         return this.progress;
     }
@@ -181,7 +179,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * Gets the quarantine property value. If job is in quarantine, quarantine details.
      * @return a synchronizationQuarantine
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SynchronizationQuarantine getQuarantine() {
         return this.quarantine;
     }
@@ -189,7 +187,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * Gets the steadyStateFirstAchievedTime property value. The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getSteadyStateFirstAchievedTime() {
         return this.steadyStateFirstAchievedTime;
     }
@@ -197,7 +195,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * Gets the steadyStateLastAchievedTime property value. The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getSteadyStateLastAchievedTime() {
         return this.steadyStateLastAchievedTime;
     }
@@ -205,7 +203,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * Gets the synchronizedEntryCountByType property value. Count of synchronized objects, listed by object type.
      * @return a stringKeyLongValuePair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<StringKeyLongValuePair> getSynchronizedEntryCountByType() {
         return this.synchronizedEntryCountByType;
     }
@@ -213,17 +211,15 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * Gets the troubleshootingUrl property value. In the event of an error, the URL with the troubleshooting steps for the issue.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTroubleshootingUrl() {
         return this.troubleshootingUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("code", this.getCode());
         writer.writeLongValue("countSuccessiveCompleteFailures", this.getCountSuccessiveCompleteFailures());
@@ -243,127 +239,99 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the code property value. The code property
      * @param value Value to set for the code property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCode(@javax.annotation.Nullable final SynchronizationStatusCode value) {
+    public void setCode(@jakarta.annotation.Nullable final SynchronizationStatusCode value) {
         this.code = value;
     }
     /**
      * Sets the countSuccessiveCompleteFailures property value. Number of consecutive times this job failed.
      * @param value Value to set for the countSuccessiveCompleteFailures property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountSuccessiveCompleteFailures(@javax.annotation.Nullable final Long value) {
+    public void setCountSuccessiveCompleteFailures(@jakarta.annotation.Nullable final Long value) {
         this.countSuccessiveCompleteFailures = value;
     }
     /**
      * Sets the escrowsPruned property value. true if the job's escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job's errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.
      * @param value Value to set for the escrowsPruned property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEscrowsPruned(@javax.annotation.Nullable final Boolean value) {
+    public void setEscrowsPruned(@jakarta.annotation.Nullable final Boolean value) {
         this.escrowsPruned = value;
     }
     /**
      * Sets the lastExecution property value. Details of the last execution of the job.
      * @param value Value to set for the lastExecution property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastExecution(@javax.annotation.Nullable final SynchronizationTaskExecution value) {
+    public void setLastExecution(@jakarta.annotation.Nullable final SynchronizationTaskExecution value) {
         this.lastExecution = value;
     }
     /**
      * Sets the lastSuccessfulExecution property value. Details of the last execution of this job, which didn't have any errors.
      * @param value Value to set for the lastSuccessfulExecution property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSuccessfulExecution(@javax.annotation.Nullable final SynchronizationTaskExecution value) {
+    public void setLastSuccessfulExecution(@jakarta.annotation.Nullable final SynchronizationTaskExecution value) {
         this.lastSuccessfulExecution = value;
     }
     /**
      * Sets the lastSuccessfulExecutionWithExports property value. Details of the last execution of the job, which exported objects into the target directory.
      * @param value Value to set for the lastSuccessfulExecutionWithExports property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSuccessfulExecutionWithExports(@javax.annotation.Nullable final SynchronizationTaskExecution value) {
+    public void setLastSuccessfulExecutionWithExports(@jakarta.annotation.Nullable final SynchronizationTaskExecution value) {
         this.lastSuccessfulExecutionWithExports = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the progress property value. Details of the progress of a job toward completion.
      * @param value Value to set for the progress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProgress(@javax.annotation.Nullable final java.util.List<SynchronizationProgress> value) {
+    public void setProgress(@jakarta.annotation.Nullable final java.util.List<SynchronizationProgress> value) {
         this.progress = value;
     }
     /**
      * Sets the quarantine property value. If job is in quarantine, quarantine details.
      * @param value Value to set for the quarantine property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQuarantine(@javax.annotation.Nullable final SynchronizationQuarantine value) {
+    public void setQuarantine(@jakarta.annotation.Nullable final SynchronizationQuarantine value) {
         this.quarantine = value;
     }
     /**
      * Sets the steadyStateFirstAchievedTime property value. The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the steadyStateFirstAchievedTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSteadyStateFirstAchievedTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setSteadyStateFirstAchievedTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.steadyStateFirstAchievedTime = value;
     }
     /**
      * Sets the steadyStateLastAchievedTime property value. The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the steadyStateLastAchievedTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSteadyStateLastAchievedTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setSteadyStateLastAchievedTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.steadyStateLastAchievedTime = value;
     }
     /**
      * Sets the synchronizedEntryCountByType property value. Count of synchronized objects, listed by object type.
      * @param value Value to set for the synchronizedEntryCountByType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSynchronizedEntryCountByType(@javax.annotation.Nullable final java.util.List<StringKeyLongValuePair> value) {
+    public void setSynchronizedEntryCountByType(@jakarta.annotation.Nullable final java.util.List<StringKeyLongValuePair> value) {
         this.synchronizedEntryCountByType = value;
     }
     /**
      * Sets the troubleshootingUrl property value. In the event of an error, the URL with the troubleshooting steps for the issue.
      * @param value Value to set for the troubleshootingUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTroubleshootingUrl(@javax.annotation.Nullable final String value) {
+    public void setTroubleshootingUrl(@jakarta.annotation.Nullable final String value) {
         this.troubleshootingUrl = value;
     }
 }

@@ -74,9 +74,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
     private java.util.List<UnsupportedGroupPolicyExtension> unsupportedGroupPolicyExtensions;
     /**
      * Instantiates a new groupPolicyMigrationReport and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public GroupPolicyMigrationReport() {
         super();
     }
@@ -85,8 +83,8 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a groupPolicyMigrationReport
      */
-    @javax.annotation.Nonnull
-    public static GroupPolicyMigrationReport createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GroupPolicyMigrationReport createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GroupPolicyMigrationReport();
     }
@@ -94,7 +92,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time at which the GroupPolicyMigrationReport was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -102,7 +100,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * Gets the displayName property value. The name of Group Policy Object from the GPO Xml Content
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -110,7 +108,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -134,7 +132,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * Gets the groupPolicyCreatedDateTime property value. The date and time at which the GroupPolicyMigrationReport was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getGroupPolicyCreatedDateTime() {
         return this.groupPolicyCreatedDateTime;
     }
@@ -142,7 +140,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * Gets the groupPolicyLastModifiedDateTime property value. The date and time at which the GroupPolicyMigrationReport was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getGroupPolicyLastModifiedDateTime() {
         return this.groupPolicyLastModifiedDateTime;
     }
@@ -150,7 +148,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * Gets the groupPolicyObjectId property value. The Group Policy Object GUID from GPO Xml content
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getGroupPolicyObjectId() {
         return this.groupPolicyObjectId;
     }
@@ -158,7 +156,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * Gets the groupPolicySettingMappings property value. A list of group policy settings to MDM/Intune mappings.
      * @return a groupPolicySettingMapping
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GroupPolicySettingMapping> getGroupPolicySettingMappings() {
         return this.groupPolicySettingMappings;
     }
@@ -166,7 +164,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time at which the GroupPolicyMigrationReport was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -174,7 +172,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * Gets the migrationReadiness property value. Indicates if the Group Policy Object file is covered and ready for Intune migration.
      * @return a groupPolicyMigrationReadiness
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GroupPolicyMigrationReadiness getMigrationReadiness() {
         return this.migrationReadiness;
     }
@@ -182,7 +180,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * Gets the ouDistinguishedName property value. The distinguished name of the OU.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOuDistinguishedName() {
         return this.ouDistinguishedName;
     }
@@ -190,7 +188,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * Gets the roleScopeTagIds property value. The list of scope tags for the configuration.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
         return this.roleScopeTagIds;
     }
@@ -198,7 +196,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * Gets the supportedSettingsCount property value. The number of Group Policy Settings supported by Intune.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSupportedSettingsCount() {
         return this.supportedSettingsCount;
     }
@@ -206,7 +204,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * Gets the supportedSettingsPercent property value. The Percentage of Group Policy Settings supported by Intune.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSupportedSettingsPercent() {
         return this.supportedSettingsPercent;
     }
@@ -214,7 +212,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * Gets the targetedInActiveDirectory property value. The Targeted in AD property from GPO Xml Content
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getTargetedInActiveDirectory() {
         return this.targetedInActiveDirectory;
     }
@@ -222,7 +220,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * Gets the totalSettingsCount property value. The total number of Group Policy Settings from GPO file.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalSettingsCount() {
         return this.totalSettingsCount;
     }
@@ -230,17 +228,15 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      * Gets the unsupportedGroupPolicyExtensions property value. A list of unsupported group policy extensions inside the Group Policy Object.
      * @return a unsupportedGroupPolicyExtension
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UnsupportedGroupPolicyExtension> getUnsupportedGroupPolicyExtensions() {
         return this.unsupportedGroupPolicyExtensions;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -262,136 +258,106 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
     /**
      * Sets the createdDateTime property value. The date and time at which the GroupPolicyMigrationReport was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the displayName property value. The name of Group Policy Object from the GPO Xml Content
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the groupPolicyCreatedDateTime property value. The date and time at which the GroupPolicyMigrationReport was created.
      * @param value Value to set for the groupPolicyCreatedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupPolicyCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setGroupPolicyCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.groupPolicyCreatedDateTime = value;
     }
     /**
      * Sets the groupPolicyLastModifiedDateTime property value. The date and time at which the GroupPolicyMigrationReport was last modified.
      * @param value Value to set for the groupPolicyLastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupPolicyLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setGroupPolicyLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.groupPolicyLastModifiedDateTime = value;
     }
     /**
      * Sets the groupPolicyObjectId property value. The Group Policy Object GUID from GPO Xml content
      * @param value Value to set for the groupPolicyObjectId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupPolicyObjectId(@javax.annotation.Nullable final UUID value) {
+    public void setGroupPolicyObjectId(@jakarta.annotation.Nullable final UUID value) {
         this.groupPolicyObjectId = value;
     }
     /**
      * Sets the groupPolicySettingMappings property value. A list of group policy settings to MDM/Intune mappings.
      * @param value Value to set for the groupPolicySettingMappings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupPolicySettingMappings(@javax.annotation.Nullable final java.util.List<GroupPolicySettingMapping> value) {
+    public void setGroupPolicySettingMappings(@jakarta.annotation.Nullable final java.util.List<GroupPolicySettingMapping> value) {
         this.groupPolicySettingMappings = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time at which the GroupPolicyMigrationReport was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the migrationReadiness property value. Indicates if the Group Policy Object file is covered and ready for Intune migration.
      * @param value Value to set for the migrationReadiness property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMigrationReadiness(@javax.annotation.Nullable final GroupPolicyMigrationReadiness value) {
+    public void setMigrationReadiness(@jakarta.annotation.Nullable final GroupPolicyMigrationReadiness value) {
         this.migrationReadiness = value;
     }
     /**
      * Sets the ouDistinguishedName property value. The distinguished name of the OU.
      * @param value Value to set for the ouDistinguishedName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOuDistinguishedName(@javax.annotation.Nullable final String value) {
+    public void setOuDistinguishedName(@jakarta.annotation.Nullable final String value) {
         this.ouDistinguishedName = value;
     }
     /**
      * Sets the roleScopeTagIds property value. The list of scope tags for the configuration.
      * @param value Value to set for the roleScopeTagIds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTagIds = value;
     }
     /**
      * Sets the supportedSettingsCount property value. The number of Group Policy Settings supported by Intune.
      * @param value Value to set for the supportedSettingsCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedSettingsCount(@javax.annotation.Nullable final Integer value) {
+    public void setSupportedSettingsCount(@jakarta.annotation.Nullable final Integer value) {
         this.supportedSettingsCount = value;
     }
     /**
      * Sets the supportedSettingsPercent property value. The Percentage of Group Policy Settings supported by Intune.
      * @param value Value to set for the supportedSettingsPercent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedSettingsPercent(@javax.annotation.Nullable final Integer value) {
+    public void setSupportedSettingsPercent(@jakarta.annotation.Nullable final Integer value) {
         this.supportedSettingsPercent = value;
     }
     /**
      * Sets the targetedInActiveDirectory property value. The Targeted in AD property from GPO Xml Content
      * @param value Value to set for the targetedInActiveDirectory property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetedInActiveDirectory(@javax.annotation.Nullable final Boolean value) {
+    public void setTargetedInActiveDirectory(@jakarta.annotation.Nullable final Boolean value) {
         this.targetedInActiveDirectory = value;
     }
     /**
      * Sets the totalSettingsCount property value. The total number of Group Policy Settings from GPO file.
      * @param value Value to set for the totalSettingsCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalSettingsCount(@javax.annotation.Nullable final Integer value) {
+    public void setTotalSettingsCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalSettingsCount = value;
     }
     /**
      * Sets the unsupportedGroupPolicyExtensions property value. A list of unsupported group policy extensions inside the Group Policy Object.
      * @param value Value to set for the unsupportedGroupPolicyExtensions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnsupportedGroupPolicyExtensions(@javax.annotation.Nullable final java.util.List<UnsupportedGroupPolicyExtension> value) {
+    public void setUnsupportedGroupPolicyExtensions(@jakarta.annotation.Nullable final java.util.List<UnsupportedGroupPolicyExtension> value) {
         this.unsupportedGroupPolicyExtensions = value;
     }
 }

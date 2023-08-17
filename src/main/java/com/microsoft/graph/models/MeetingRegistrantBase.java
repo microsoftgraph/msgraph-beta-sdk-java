@@ -13,9 +13,7 @@ public class MeetingRegistrantBase extends Entity implements Parsable {
     private String joinWebUrl;
     /**
      * Instantiates a new meetingRegistrantBase and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MeetingRegistrantBase() {
         super();
     }
@@ -24,8 +22,8 @@ public class MeetingRegistrantBase extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a meetingRegistrantBase
      */
-    @javax.annotation.Nonnull
-    public static MeetingRegistrantBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MeetingRegistrantBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -41,7 +39,7 @@ public class MeetingRegistrantBase extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("joinWebUrl", (n) -> { this.setJoinWebUrl(n.getStringValue()); });
@@ -51,17 +49,15 @@ public class MeetingRegistrantBase extends Entity implements Parsable {
      * Gets the joinWebUrl property value. A unique web URL for the registrant to join the meeting. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getJoinWebUrl() {
         return this.joinWebUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("joinWebUrl", this.getJoinWebUrl());
@@ -69,10 +65,8 @@ public class MeetingRegistrantBase extends Entity implements Parsable {
     /**
      * Sets the joinWebUrl property value. A unique web URL for the registrant to join the meeting. Read-only.
      * @param value Value to set for the joinWebUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJoinWebUrl(@javax.annotation.Nullable final String value) {
+    public void setJoinWebUrl(@jakarta.annotation.Nullable final String value) {
         this.joinWebUrl = value;
     }
 }

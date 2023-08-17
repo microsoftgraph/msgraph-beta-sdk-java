@@ -24,7 +24,6 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -36,70 +35,70 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the axes property of the microsoft.graph.workbookChart entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AxesRequestBuilder axes() {
         return new AxesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the dataLabels property of the microsoft.graph.workbookChart entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DataLabelsRequestBuilder dataLabels() {
         return new DataLabelsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the format property of the microsoft.graph.workbookChart entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public FormatRequestBuilder format() {
         return new FormatRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the image method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ImageRequestBuilder image() {
         return new ImageRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the legend property of the microsoft.graph.workbookChart entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public LegendRequestBuilder legend() {
         return new LegendRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the series property of the microsoft.graph.workbookChart entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SeriesRequestBuilder series() {
         return new SeriesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the setData method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SetDataRequestBuilder setData() {
         return new SetDataRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the setPosition method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SetPositionRequestBuilder setPosition() {
         return new SetPositionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the title property of the microsoft.graph.workbookChart entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TitleRequestBuilder title() {
         return new TitleRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the worksheet property of the microsoft.graph.workbookChart entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public WorksheetRequestBuilder worksheet() {
         return new WorksheetRequestBuilder(pathParameters, requestAdapter);
     }
@@ -107,79 +106,45 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new WorkbookChartItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @javax.annotation.Nullable
-    public WorkbookChartItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public WorkbookChartItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new WorkbookChartItemRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @javax.annotation.Nullable
-    public WorkbookChartItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public WorkbookChartItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Deletes the chart object.
-     * @return a CompletableFuture of void
      * @see <a href="https://learn.microsoft.com/graph/api/chart-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
-        try {
-            final RequestInformation requestInfo = toDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return delete(null);
     }
     /**
      * Deletes the chart object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
      * @see <a href="https://learn.microsoft.com/graph/api/chart-delete?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
      * Retrieve the properties and relationships of chart object.
      * @return a CompletableFuture of workbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/chart-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookChart> get() {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, WorkbookChart::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<WorkbookChart> executionException = new java.util.concurrent.CompletableFuture<WorkbookChart>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return get(null);
     }
     /**
      * Retrieve the properties and relationships of chart object.
@@ -187,27 +152,21 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of workbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/chart-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChart> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, WorkbookChart::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<WorkbookChart> executionException = new java.util.concurrent.CompletableFuture<WorkbookChart>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChart> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, WorkbookChart::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Provides operations to call the image method.
      * @param width Usage: width={width}
      * @return a imageWithWidthRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public ImageWithWidthRequestBuilder imageWithWidth(@javax.annotation.Nonnull final Integer width) {
+    @jakarta.annotation.Nonnull
+    public ImageWithWidthRequestBuilder imageWithWidth(@jakarta.annotation.Nonnull final Integer width) {
         Objects.requireNonNull(width);
         return new ImageWithWidthRequestBuilder(pathParameters, requestAdapter, width);
     }
@@ -217,8 +176,8 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * @param width Usage: width={width}
      * @return a imageWithWidthWithHeightRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public ImageWithWidthWithHeightRequestBuilder imageWithWidthWithHeight(@javax.annotation.Nonnull final Integer height, @javax.annotation.Nonnull final Integer width) {
+    @jakarta.annotation.Nonnull
+    public ImageWithWidthWithHeightRequestBuilder imageWithWidthWithHeight(@jakarta.annotation.Nonnull final Integer height, @jakarta.annotation.Nonnull final Integer width) {
         Objects.requireNonNull(height);
         Objects.requireNonNull(width);
         return new ImageWithWidthWithHeightRequestBuilder(pathParameters, requestAdapter, height, width);
@@ -230,8 +189,8 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * @param width Usage: width={width}
      * @return a imageWithWidthWithHeightWithFittingModeRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public ImageWithWidthWithHeightWithFittingModeRequestBuilder imageWithWidthWithHeightWithFittingMode(@javax.annotation.Nonnull final String fittingMode, @javax.annotation.Nonnull final Integer height, @javax.annotation.Nonnull final Integer width) {
+    @jakarta.annotation.Nonnull
+    public ImageWithWidthWithHeightWithFittingModeRequestBuilder imageWithWidthWithHeightWithFittingMode(@jakarta.annotation.Nonnull final String fittingMode, @jakarta.annotation.Nonnull final Integer height, @jakarta.annotation.Nonnull final Integer width) {
         Objects.requireNonNull(fittingMode);
         Objects.requireNonNull(height);
         Objects.requireNonNull(width);
@@ -243,19 +202,9 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of workbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/chart-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChart> patch(@javax.annotation.Nonnull final WorkbookChart body) {
-        try {
-            final RequestInformation requestInfo = toPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, WorkbookChart::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<WorkbookChart> executionException = new java.util.concurrent.CompletableFuture<WorkbookChart>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChart> patch(@jakarta.annotation.Nonnull final WorkbookChart body) {
+        return patch(body, null);
     }
     /**
      * Update the properties of chart object.
@@ -264,27 +213,21 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * @return a CompletableFuture of workbookChart
      * @see <a href="https://learn.microsoft.com/graph/api/chart-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChart> patch(@javax.annotation.Nonnull final WorkbookChart body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChart> patch(@jakarta.annotation.Nonnull final WorkbookChart body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, WorkbookChart::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<WorkbookChart> executionException = new java.util.concurrent.CompletableFuture<WorkbookChart>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, WorkbookChart::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Deletes the chart object.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
     /**
@@ -292,8 +235,8 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -310,8 +253,8 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of chart object.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
@@ -319,8 +262,8 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -340,8 +283,8 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final WorkbookChart body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WorkbookChart body) {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -350,8 +293,8 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final WorkbookChart body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WorkbookChart body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -380,13 +323,13 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -396,7 +339,7 @@ public class WorkbookChartItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**

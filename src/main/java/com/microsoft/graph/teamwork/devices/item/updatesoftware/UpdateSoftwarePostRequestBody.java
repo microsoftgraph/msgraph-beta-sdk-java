@@ -23,9 +23,7 @@ public class UpdateSoftwarePostRequestBody implements AdditionalDataHolder, Pars
     private String softwareVersion;
     /**
      * Instantiates a new updateSoftwarePostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UpdateSoftwarePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -34,8 +32,8 @@ public class UpdateSoftwarePostRequestBody implements AdditionalDataHolder, Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a updateSoftwarePostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static UpdateSoftwarePostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UpdateSoftwarePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UpdateSoftwarePostRequestBody();
     }
@@ -43,7 +41,7 @@ public class UpdateSoftwarePostRequestBody implements AdditionalDataHolder, Pars
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -51,7 +49,7 @@ public class UpdateSoftwarePostRequestBody implements AdditionalDataHolder, Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("softwareType", (n) -> { this.setSoftwareType(n.getEnumValue(TeamworkSoftwareType.class)); });
@@ -62,7 +60,7 @@ public class UpdateSoftwarePostRequestBody implements AdditionalDataHolder, Pars
      * Gets the softwareType property value. The softwareType property
      * @return a teamworkSoftwareType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkSoftwareType getSoftwareType() {
         return this.softwareType;
     }
@@ -70,17 +68,15 @@ public class UpdateSoftwarePostRequestBody implements AdditionalDataHolder, Pars
      * Gets the softwareVersion property value. The softwareVersion property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSoftwareVersion() {
         return this.softwareVersion;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("softwareType", this.getSoftwareType());
         writer.writeStringValue("softwareVersion", this.getSoftwareVersion());
@@ -89,28 +85,22 @@ public class UpdateSoftwarePostRequestBody implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the softwareType property value. The softwareType property
      * @param value Value to set for the softwareType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSoftwareType(@javax.annotation.Nullable final TeamworkSoftwareType value) {
+    public void setSoftwareType(@jakarta.annotation.Nullable final TeamworkSoftwareType value) {
         this.softwareType = value;
     }
     /**
      * Sets the softwareVersion property value. The softwareVersion property
      * @param value Value to set for the softwareVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSoftwareVersion(@javax.annotation.Nullable final String value) {
+    public void setSoftwareVersion(@jakarta.annotation.Nullable final String value) {
         this.softwareVersion = value;
     }
 }

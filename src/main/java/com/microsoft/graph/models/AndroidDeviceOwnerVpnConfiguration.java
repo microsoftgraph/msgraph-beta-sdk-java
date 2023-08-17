@@ -43,7 +43,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      */
     private String microsoftTunnelSiteId;
     /**
-     * List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+     * List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
      */
     private java.util.List<String> proxyExclusionList;
     /**
@@ -60,9 +60,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     private java.util.List<String> targetedPackageIds;
     /**
      * Instantiates a new androidDeviceOwnerVpnConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AndroidDeviceOwnerVpnConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerVpnConfiguration");
@@ -72,8 +70,8 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidDeviceOwnerVpnConfiguration
      */
-    @javax.annotation.Nonnull
-    public static AndroidDeviceOwnerVpnConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidDeviceOwnerVpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidDeviceOwnerVpnConfiguration();
     }
@@ -81,7 +79,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * Gets the alwaysOn property value. Whether or not to enable always-on VPN connection.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAlwaysOn() {
         return this.alwaysOn;
     }
@@ -89,7 +87,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * Gets the alwaysOnLockdown property value. If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAlwaysOnLockdown() {
         return this.alwaysOnLockdown;
     }
@@ -97,7 +95,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * Gets the connectionType property value. Android VPN connection type.
      * @return a androidVpnConnectionType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidVpnConnectionType getConnectionType() {
         return this.connectionType;
     }
@@ -105,7 +103,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * Gets the customData property value. Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
      * @return a keyValue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getCustomData() {
         return this.customData;
     }
@@ -113,7 +111,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * Gets the customKeyValueData property value. Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
      * @return a keyValuePair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomKeyValueData() {
         return this.customKeyValueData;
     }
@@ -121,7 +119,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * Gets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
      * @return a deviceManagementDerivedCredentialSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings getDerivedCredentialSettings() {
         return this.derivedCredentialSettings;
     }
@@ -129,7 +127,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alwaysOn", (n) -> { this.setAlwaysOn(n.getBooleanValue()); });
@@ -150,7 +148,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * Gets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
      * @return a androidDeviceOwnerCertificateProfileBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidDeviceOwnerCertificateProfileBase getIdentityCertificate() {
         return this.identityCertificate;
     }
@@ -158,15 +156,15 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * Gets the microsoftTunnelSiteId property value. Microsoft Tunnel site ID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMicrosoftTunnelSiteId() {
         return this.microsoftTunnelSiteId;
     }
     /**
-     * Gets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+     * Gets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getProxyExclusionList() {
         return this.proxyExclusionList;
     }
@@ -174,7 +172,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * Gets the proxyServer property value. Proxy server.
      * @return a vpnProxyServer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VpnProxyServer getProxyServer() {
         return this.proxyServer;
     }
@@ -182,7 +180,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * Gets the targetedMobileApps property value. Targeted mobile apps. This collection can contain a maximum of 500 elements.
      * @return a appListItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getTargetedMobileApps() {
         return this.targetedMobileApps;
     }
@@ -190,17 +188,15 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      * Gets the targetedPackageIds property value. Targeted App package IDs.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTargetedPackageIds() {
         return this.targetedPackageIds;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("alwaysOn", this.getAlwaysOn());
@@ -219,109 +215,85 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     /**
      * Sets the alwaysOn property value. Whether or not to enable always-on VPN connection.
      * @param value Value to set for the alwaysOn property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlwaysOn(@javax.annotation.Nullable final Boolean value) {
+    public void setAlwaysOn(@jakarta.annotation.Nullable final Boolean value) {
         this.alwaysOn = value;
     }
     /**
      * Sets the alwaysOnLockdown property value. If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
      * @param value Value to set for the alwaysOnLockdown property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlwaysOnLockdown(@javax.annotation.Nullable final Boolean value) {
+    public void setAlwaysOnLockdown(@jakarta.annotation.Nullable final Boolean value) {
         this.alwaysOnLockdown = value;
     }
     /**
      * Sets the connectionType property value. Android VPN connection type.
      * @param value Value to set for the connectionType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectionType(@javax.annotation.Nullable final AndroidVpnConnectionType value) {
+    public void setConnectionType(@jakarta.annotation.Nullable final AndroidVpnConnectionType value) {
         this.connectionType = value;
     }
     /**
      * Sets the customData property value. Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
      * @param value Value to set for the customData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomData(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
+    public void setCustomData(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
         this.customData = value;
     }
     /**
      * Sets the customKeyValueData property value. Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
      * @param value Value to set for the customKeyValueData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomKeyValueData(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
+    public void setCustomKeyValueData(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this.customKeyValueData = value;
     }
     /**
      * Sets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
      * @param value Value to set for the derivedCredentialSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDerivedCredentialSettings(@javax.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
+    public void setDerivedCredentialSettings(@jakarta.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
         this.derivedCredentialSettings = value;
     }
     /**
      * Sets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
      * @param value Value to set for the identityCertificate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityCertificate(@javax.annotation.Nullable final AndroidDeviceOwnerCertificateProfileBase value) {
+    public void setIdentityCertificate(@jakarta.annotation.Nullable final AndroidDeviceOwnerCertificateProfileBase value) {
         this.identityCertificate = value;
     }
     /**
      * Sets the microsoftTunnelSiteId property value. Microsoft Tunnel site ID.
      * @param value Value to set for the microsoftTunnelSiteId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMicrosoftTunnelSiteId(@javax.annotation.Nullable final String value) {
+    public void setMicrosoftTunnelSiteId(@jakarta.annotation.Nullable final String value) {
         this.microsoftTunnelSiteId = value;
     }
     /**
-     * Sets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+     * Sets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
      * @param value Value to set for the proxyExclusionList property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProxyExclusionList(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setProxyExclusionList(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.proxyExclusionList = value;
     }
     /**
      * Sets the proxyServer property value. Proxy server.
      * @param value Value to set for the proxyServer property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProxyServer(@javax.annotation.Nullable final VpnProxyServer value) {
+    public void setProxyServer(@jakarta.annotation.Nullable final VpnProxyServer value) {
         this.proxyServer = value;
     }
     /**
      * Sets the targetedMobileApps property value. Targeted mobile apps. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the targetedMobileApps property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetedMobileApps(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
+    public void setTargetedMobileApps(@jakarta.annotation.Nullable final java.util.List<AppListItem> value) {
         this.targetedMobileApps = value;
     }
     /**
      * Sets the targetedPackageIds property value. Targeted App package IDs.
      * @param value Value to set for the targetedPackageIds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetedPackageIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setTargetedPackageIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.targetedPackageIds = value;
     }
 }

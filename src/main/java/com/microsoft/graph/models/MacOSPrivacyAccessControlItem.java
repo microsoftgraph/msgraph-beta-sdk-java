@@ -125,9 +125,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
     private Enablement systemPolicySystemAdminFiles;
     /**
      * Instantiates a new macOSPrivacyAccessControlItem and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MacOSPrivacyAccessControlItem() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -136,8 +134,8 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a macOSPrivacyAccessControlItem
      */
-    @javax.annotation.Nonnull
-    public static MacOSPrivacyAccessControlItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MacOSPrivacyAccessControlItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MacOSPrivacyAccessControlItem();
     }
@@ -145,7 +143,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the accessibility property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getAccessibility() {
         return this.accessibility;
     }
@@ -153,7 +151,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -161,7 +159,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the addressBook property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getAddressBook() {
         return this.addressBook;
     }
@@ -169,7 +167,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the appleEventsAllowedReceivers property value. Allow or deny the app or process to send a restricted Apple event to another app or process. You will need to know the identifier, identifier type, and code requirement of the receiving app or process. This collection can contain a maximum of 500 elements.
      * @return a macOSAppleEventReceiver
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MacOSAppleEventReceiver> getAppleEventsAllowedReceivers() {
         return this.appleEventsAllowedReceivers;
     }
@@ -177,7 +175,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the blockCamera property value. Block access to camera app.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBlockCamera() {
         return this.blockCamera;
     }
@@ -185,7 +183,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the blockListenEvent property value. Block the app or process from listening to events from input devices such as mouse, keyboard, and trackpad.Requires macOS 10.15 or later.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBlockListenEvent() {
         return this.blockListenEvent;
     }
@@ -193,7 +191,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the blockMicrophone property value. Block access to microphone.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBlockMicrophone() {
         return this.blockMicrophone;
     }
@@ -201,7 +199,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the blockScreenCapture property value. Block app from capturing contents of system display. Requires macOS 10.15 or later.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBlockScreenCapture() {
         return this.blockScreenCapture;
     }
@@ -209,7 +207,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the calendar property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getCalendar() {
         return this.calendar;
     }
@@ -217,7 +215,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the codeRequirement property value. Enter the code requirement, which can be obtained with the command 'codesign display -r ' in the Terminal app. Include everything after '=>'.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCodeRequirement() {
         return this.codeRequirement;
     }
@@ -225,7 +223,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the displayName property value. The display name of the app, process, or executable.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -233,7 +231,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(27);
         deserializerMap.put("accessibility", (n) -> { this.setAccessibility(n.getEnumValue(Enablement.class)); });
@@ -269,7 +267,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the fileProviderPresence property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getFileProviderPresence() {
         return this.fileProviderPresence;
     }
@@ -277,7 +275,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the identifier property value. The bundle ID or path of the app, process, or executable.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIdentifier() {
         return this.identifier;
     }
@@ -285,7 +283,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the identifierType property value. Process identifier types for MacOS Privacy Preferences
      * @return a macOSProcessIdentifierType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSProcessIdentifierType getIdentifierType() {
         return this.identifierType;
     }
@@ -293,7 +291,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the mediaLibrary property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getMediaLibrary() {
         return this.mediaLibrary;
     }
@@ -301,7 +299,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -309,7 +307,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the photos property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getPhotos() {
         return this.photos;
     }
@@ -317,7 +315,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the postEvent property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getPostEvent() {
         return this.postEvent;
     }
@@ -325,7 +323,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the reminders property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getReminders() {
         return this.reminders;
     }
@@ -333,7 +331,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the speechRecognition property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getSpeechRecognition() {
         return this.speechRecognition;
     }
@@ -341,7 +339,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the staticCodeValidation property value. Statically validates the code requirement. Use this setting if the process invalidates its dynamic code signature.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getStaticCodeValidation() {
         return this.staticCodeValidation;
     }
@@ -349,7 +347,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the systemPolicyAllFiles property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getSystemPolicyAllFiles() {
         return this.systemPolicyAllFiles;
     }
@@ -357,7 +355,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the systemPolicyDesktopFolder property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getSystemPolicyDesktopFolder() {
         return this.systemPolicyDesktopFolder;
     }
@@ -365,7 +363,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the systemPolicyDocumentsFolder property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getSystemPolicyDocumentsFolder() {
         return this.systemPolicyDocumentsFolder;
     }
@@ -373,7 +371,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the systemPolicyDownloadsFolder property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getSystemPolicyDownloadsFolder() {
         return this.systemPolicyDownloadsFolder;
     }
@@ -381,7 +379,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the systemPolicyNetworkVolumes property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getSystemPolicyNetworkVolumes() {
         return this.systemPolicyNetworkVolumes;
     }
@@ -389,7 +387,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the systemPolicyRemovableVolumes property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getSystemPolicyRemovableVolumes() {
         return this.systemPolicyRemovableVolumes;
     }
@@ -397,17 +395,15 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
      * Gets the systemPolicySystemAdminFiles property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getSystemPolicySystemAdminFiles() {
         return this.systemPolicySystemAdminFiles;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("accessibility", this.getAccessibility());
         writer.writeEnumValue("addressBook", this.getAddressBook());
@@ -441,253 +437,197 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Pars
     /**
      * Sets the accessibility property value. Possible values of a property
      * @param value Value to set for the accessibility property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessibility(@javax.annotation.Nullable final Enablement value) {
+    public void setAccessibility(@jakarta.annotation.Nullable final Enablement value) {
         this.accessibility = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the addressBook property value. Possible values of a property
      * @param value Value to set for the addressBook property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddressBook(@javax.annotation.Nullable final Enablement value) {
+    public void setAddressBook(@jakarta.annotation.Nullable final Enablement value) {
         this.addressBook = value;
     }
     /**
      * Sets the appleEventsAllowedReceivers property value. Allow or deny the app or process to send a restricted Apple event to another app or process. You will need to know the identifier, identifier type, and code requirement of the receiving app or process. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the appleEventsAllowedReceivers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppleEventsAllowedReceivers(@javax.annotation.Nullable final java.util.List<MacOSAppleEventReceiver> value) {
+    public void setAppleEventsAllowedReceivers(@jakarta.annotation.Nullable final java.util.List<MacOSAppleEventReceiver> value) {
         this.appleEventsAllowedReceivers = value;
     }
     /**
      * Sets the blockCamera property value. Block access to camera app.
      * @param value Value to set for the blockCamera property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBlockCamera(@javax.annotation.Nullable final Boolean value) {
+    public void setBlockCamera(@jakarta.annotation.Nullable final Boolean value) {
         this.blockCamera = value;
     }
     /**
      * Sets the blockListenEvent property value. Block the app or process from listening to events from input devices such as mouse, keyboard, and trackpad.Requires macOS 10.15 or later.
      * @param value Value to set for the blockListenEvent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBlockListenEvent(@javax.annotation.Nullable final Boolean value) {
+    public void setBlockListenEvent(@jakarta.annotation.Nullable final Boolean value) {
         this.blockListenEvent = value;
     }
     /**
      * Sets the blockMicrophone property value. Block access to microphone.
      * @param value Value to set for the blockMicrophone property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBlockMicrophone(@javax.annotation.Nullable final Boolean value) {
+    public void setBlockMicrophone(@jakarta.annotation.Nullable final Boolean value) {
         this.blockMicrophone = value;
     }
     /**
      * Sets the blockScreenCapture property value. Block app from capturing contents of system display. Requires macOS 10.15 or later.
      * @param value Value to set for the blockScreenCapture property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBlockScreenCapture(@javax.annotation.Nullable final Boolean value) {
+    public void setBlockScreenCapture(@jakarta.annotation.Nullable final Boolean value) {
         this.blockScreenCapture = value;
     }
     /**
      * Sets the calendar property value. Possible values of a property
      * @param value Value to set for the calendar property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCalendar(@javax.annotation.Nullable final Enablement value) {
+    public void setCalendar(@jakarta.annotation.Nullable final Enablement value) {
         this.calendar = value;
     }
     /**
      * Sets the codeRequirement property value. Enter the code requirement, which can be obtained with the command 'codesign display -r ' in the Terminal app. Include everything after '=>'.
      * @param value Value to set for the codeRequirement property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCodeRequirement(@javax.annotation.Nullable final String value) {
+    public void setCodeRequirement(@jakarta.annotation.Nullable final String value) {
         this.codeRequirement = value;
     }
     /**
      * Sets the displayName property value. The display name of the app, process, or executable.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the fileProviderPresence property value. Possible values of a property
      * @param value Value to set for the fileProviderPresence property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileProviderPresence(@javax.annotation.Nullable final Enablement value) {
+    public void setFileProviderPresence(@jakarta.annotation.Nullable final Enablement value) {
         this.fileProviderPresence = value;
     }
     /**
      * Sets the identifier property value. The bundle ID or path of the app, process, or executable.
      * @param value Value to set for the identifier property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentifier(@javax.annotation.Nullable final String value) {
+    public void setIdentifier(@jakarta.annotation.Nullable final String value) {
         this.identifier = value;
     }
     /**
      * Sets the identifierType property value. Process identifier types for MacOS Privacy Preferences
      * @param value Value to set for the identifierType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentifierType(@javax.annotation.Nullable final MacOSProcessIdentifierType value) {
+    public void setIdentifierType(@jakarta.annotation.Nullable final MacOSProcessIdentifierType value) {
         this.identifierType = value;
     }
     /**
      * Sets the mediaLibrary property value. Possible values of a property
      * @param value Value to set for the mediaLibrary property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaLibrary(@javax.annotation.Nullable final Enablement value) {
+    public void setMediaLibrary(@jakarta.annotation.Nullable final Enablement value) {
         this.mediaLibrary = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the photos property value. Possible values of a property
      * @param value Value to set for the photos property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhotos(@javax.annotation.Nullable final Enablement value) {
+    public void setPhotos(@jakarta.annotation.Nullable final Enablement value) {
         this.photos = value;
     }
     /**
      * Sets the postEvent property value. Possible values of a property
      * @param value Value to set for the postEvent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPostEvent(@javax.annotation.Nullable final Enablement value) {
+    public void setPostEvent(@jakarta.annotation.Nullable final Enablement value) {
         this.postEvent = value;
     }
     /**
      * Sets the reminders property value. Possible values of a property
      * @param value Value to set for the reminders property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReminders(@javax.annotation.Nullable final Enablement value) {
+    public void setReminders(@jakarta.annotation.Nullable final Enablement value) {
         this.reminders = value;
     }
     /**
      * Sets the speechRecognition property value. Possible values of a property
      * @param value Value to set for the speechRecognition property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSpeechRecognition(@javax.annotation.Nullable final Enablement value) {
+    public void setSpeechRecognition(@jakarta.annotation.Nullable final Enablement value) {
         this.speechRecognition = value;
     }
     /**
      * Sets the staticCodeValidation property value. Statically validates the code requirement. Use this setting if the process invalidates its dynamic code signature.
      * @param value Value to set for the staticCodeValidation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStaticCodeValidation(@javax.annotation.Nullable final Boolean value) {
+    public void setStaticCodeValidation(@jakarta.annotation.Nullable final Boolean value) {
         this.staticCodeValidation = value;
     }
     /**
      * Sets the systemPolicyAllFiles property value. Possible values of a property
      * @param value Value to set for the systemPolicyAllFiles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSystemPolicyAllFiles(@javax.annotation.Nullable final Enablement value) {
+    public void setSystemPolicyAllFiles(@jakarta.annotation.Nullable final Enablement value) {
         this.systemPolicyAllFiles = value;
     }
     /**
      * Sets the systemPolicyDesktopFolder property value. Possible values of a property
      * @param value Value to set for the systemPolicyDesktopFolder property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSystemPolicyDesktopFolder(@javax.annotation.Nullable final Enablement value) {
+    public void setSystemPolicyDesktopFolder(@jakarta.annotation.Nullable final Enablement value) {
         this.systemPolicyDesktopFolder = value;
     }
     /**
      * Sets the systemPolicyDocumentsFolder property value. Possible values of a property
      * @param value Value to set for the systemPolicyDocumentsFolder property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSystemPolicyDocumentsFolder(@javax.annotation.Nullable final Enablement value) {
+    public void setSystemPolicyDocumentsFolder(@jakarta.annotation.Nullable final Enablement value) {
         this.systemPolicyDocumentsFolder = value;
     }
     /**
      * Sets the systemPolicyDownloadsFolder property value. Possible values of a property
      * @param value Value to set for the systemPolicyDownloadsFolder property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSystemPolicyDownloadsFolder(@javax.annotation.Nullable final Enablement value) {
+    public void setSystemPolicyDownloadsFolder(@jakarta.annotation.Nullable final Enablement value) {
         this.systemPolicyDownloadsFolder = value;
     }
     /**
      * Sets the systemPolicyNetworkVolumes property value. Possible values of a property
      * @param value Value to set for the systemPolicyNetworkVolumes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSystemPolicyNetworkVolumes(@javax.annotation.Nullable final Enablement value) {
+    public void setSystemPolicyNetworkVolumes(@jakarta.annotation.Nullable final Enablement value) {
         this.systemPolicyNetworkVolumes = value;
     }
     /**
      * Sets the systemPolicyRemovableVolumes property value. Possible values of a property
      * @param value Value to set for the systemPolicyRemovableVolumes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSystemPolicyRemovableVolumes(@javax.annotation.Nullable final Enablement value) {
+    public void setSystemPolicyRemovableVolumes(@jakarta.annotation.Nullable final Enablement value) {
         this.systemPolicyRemovableVolumes = value;
     }
     /**
      * Sets the systemPolicySystemAdminFiles property value. Possible values of a property
      * @param value Value to set for the systemPolicySystemAdminFiles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSystemPolicySystemAdminFiles(@javax.annotation.Nullable final Enablement value) {
+    public void setSystemPolicySystemAdminFiles(@jakarta.annotation.Nullable final Enablement value) {
         this.systemPolicySystemAdminFiles = value;
     }
 }

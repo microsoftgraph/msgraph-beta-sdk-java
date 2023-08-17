@@ -34,9 +34,7 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new windows10AppsForceUpdateSchedule and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Windows10AppsForceUpdateSchedule() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +43,8 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windows10AppsForceUpdateSchedule
      */
-    @javax.annotation.Nonnull
-    public static Windows10AppsForceUpdateSchedule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Windows10AppsForceUpdateSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Windows10AppsForceUpdateSchedule();
     }
@@ -54,7 +52,7 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +60,7 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -75,7 +73,7 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -83,7 +81,7 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
      * Gets the recurrence property value. Possible values for App update on Windows10 recurrence.
      * @return a windows10AppsUpdateRecurrence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Windows10AppsUpdateRecurrence getRecurrence() {
         return this.recurrence;
     }
@@ -91,7 +89,7 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
      * Gets the runImmediatelyIfAfterStartDateTime property value. If true, runs the task immediately if StartDateTime is in the past, else, runs at the next recurrence.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRunImmediatelyIfAfterStartDateTime() {
         return this.runImmediatelyIfAfterStartDateTime;
     }
@@ -99,17 +97,15 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
      * Gets the startDateTime property value. The start time for the force restart.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this.startDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("recurrence", this.getRecurrence());
@@ -120,46 +116,36 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the recurrence property value. Possible values for App update on Windows10 recurrence.
      * @param value Value to set for the recurrence property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecurrence(@javax.annotation.Nullable final Windows10AppsUpdateRecurrence value) {
+    public void setRecurrence(@jakarta.annotation.Nullable final Windows10AppsUpdateRecurrence value) {
         this.recurrence = value;
     }
     /**
      * Sets the runImmediatelyIfAfterStartDateTime property value. If true, runs the task immediately if StartDateTime is in the past, else, runs at the next recurrence.
      * @param value Value to set for the runImmediatelyIfAfterStartDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRunImmediatelyIfAfterStartDateTime(@javax.annotation.Nullable final Boolean value) {
+    public void setRunImmediatelyIfAfterStartDateTime(@jakarta.annotation.Nullable final Boolean value) {
         this.runImmediatelyIfAfterStartDateTime = value;
     }
     /**
      * Sets the startDateTime property value. The start time for the force restart.
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
 }

@@ -43,9 +43,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new retentionLabelSettings and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public RetentionLabelSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -54,8 +52,8 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a retentionLabelSettings
      */
-    @javax.annotation.Nonnull
-    public static RetentionLabelSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RetentionLabelSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RetentionLabelSettings();
     }
@@ -63,7 +61,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -71,7 +69,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
      * Gets the behaviorDuringRetentionPeriod property value. The behaviorDuringRetentionPeriod property
      * @return a behaviorDuringRetentionPeriod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BehaviorDuringRetentionPeriod getBehaviorDuringRetentionPeriod() {
         return this.behaviorDuringRetentionPeriod;
     }
@@ -79,7 +77,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("behaviorDuringRetentionPeriod", (n) -> { this.setBehaviorDuringRetentionPeriod(n.getEnumValue(BehaviorDuringRetentionPeriod.class)); });
@@ -95,7 +93,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
      * Gets the isContentUpdateAllowed property value. The isContentUpdateAllowed property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsContentUpdateAllowed() {
         return this.isContentUpdateAllowed;
     }
@@ -103,7 +101,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
      * Gets the isDeleteAllowed property value. The isDeleteAllowed property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDeleteAllowed() {
         return this.isDeleteAllowed;
     }
@@ -111,7 +109,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
      * Gets the isLabelUpdateAllowed property value. The isLabelUpdateAllowed property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsLabelUpdateAllowed() {
         return this.isLabelUpdateAllowed;
     }
@@ -119,7 +117,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
      * Gets the isMetadataUpdateAllowed property value. The isMetadataUpdateAllowed property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsMetadataUpdateAllowed() {
         return this.isMetadataUpdateAllowed;
     }
@@ -127,7 +125,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
      * Gets the isRecordLocked property value. The isRecordLocked property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRecordLocked() {
         return this.isRecordLocked;
     }
@@ -135,17 +133,15 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("behaviorDuringRetentionPeriod", this.getBehaviorDuringRetentionPeriod());
         writer.writeBooleanValue("isContentUpdateAllowed", this.getIsContentUpdateAllowed());
@@ -159,73 +155,57 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the behaviorDuringRetentionPeriod property value. The behaviorDuringRetentionPeriod property
      * @param value Value to set for the behaviorDuringRetentionPeriod property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBehaviorDuringRetentionPeriod(@javax.annotation.Nullable final BehaviorDuringRetentionPeriod value) {
+    public void setBehaviorDuringRetentionPeriod(@jakarta.annotation.Nullable final BehaviorDuringRetentionPeriod value) {
         this.behaviorDuringRetentionPeriod = value;
     }
     /**
      * Sets the isContentUpdateAllowed property value. The isContentUpdateAllowed property
      * @param value Value to set for the isContentUpdateAllowed property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsContentUpdateAllowed(@javax.annotation.Nullable final Boolean value) {
+    public void setIsContentUpdateAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.isContentUpdateAllowed = value;
     }
     /**
      * Sets the isDeleteAllowed property value. The isDeleteAllowed property
      * @param value Value to set for the isDeleteAllowed property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDeleteAllowed(@javax.annotation.Nullable final Boolean value) {
+    public void setIsDeleteAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.isDeleteAllowed = value;
     }
     /**
      * Sets the isLabelUpdateAllowed property value. The isLabelUpdateAllowed property
      * @param value Value to set for the isLabelUpdateAllowed property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsLabelUpdateAllowed(@javax.annotation.Nullable final Boolean value) {
+    public void setIsLabelUpdateAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.isLabelUpdateAllowed = value;
     }
     /**
      * Sets the isMetadataUpdateAllowed property value. The isMetadataUpdateAllowed property
      * @param value Value to set for the isMetadataUpdateAllowed property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsMetadataUpdateAllowed(@javax.annotation.Nullable final Boolean value) {
+    public void setIsMetadataUpdateAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.isMetadataUpdateAllowed = value;
     }
     /**
      * Sets the isRecordLocked property value. The isRecordLocked property
      * @param value Value to set for the isRecordLocked property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRecordLocked(@javax.annotation.Nullable final Boolean value) {
+    public void setIsRecordLocked(@jakarta.annotation.Nullable final Boolean value) {
         this.isRecordLocked = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

@@ -37,9 +37,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
     private TemplateApplicationLevel templateApplicationLevel;
     /**
      * Instantiates a new multiTenantOrganizationPartnerConfigurationTemplate and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MultiTenantOrganizationPartnerConfigurationTemplate() {
         super();
     }
@@ -48,8 +46,8 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a multiTenantOrganizationPartnerConfigurationTemplate
      */
-    @javax.annotation.Nonnull
-    public static MultiTenantOrganizationPartnerConfigurationTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MultiTenantOrganizationPartnerConfigurationTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MultiTenantOrganizationPartnerConfigurationTemplate();
     }
@@ -57,7 +55,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
      * Gets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
      * @return a inboundOutboundPolicyConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InboundOutboundPolicyConfiguration getAutomaticUserConsentSettings() {
         return this.automaticUserConsentSettings;
     }
@@ -65,7 +63,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
      * Gets the b2bCollaborationInbound property value. The b2bCollaborationInbound property
      * @return a crossTenantAccessPolicyB2BSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bCollaborationInbound() {
         return this.b2bCollaborationInbound;
     }
@@ -73,7 +71,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
      * Gets the b2bCollaborationOutbound property value. The b2bCollaborationOutbound property
      * @return a crossTenantAccessPolicyB2BSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bCollaborationOutbound() {
         return this.b2bCollaborationOutbound;
     }
@@ -81,7 +79,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
      * Gets the b2bDirectConnectInbound property value. The b2bDirectConnectInbound property
      * @return a crossTenantAccessPolicyB2BSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bDirectConnectInbound() {
         return this.b2bDirectConnectInbound;
     }
@@ -89,7 +87,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
      * Gets the b2bDirectConnectOutbound property value. The b2bDirectConnectOutbound property
      * @return a crossTenantAccessPolicyB2BSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bDirectConnectOutbound() {
         return this.b2bDirectConnectOutbound;
     }
@@ -97,7 +95,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("automaticUserConsentSettings", (n) -> { this.setAutomaticUserConsentSettings(n.getObjectValue(InboundOutboundPolicyConfiguration::createFromDiscriminatorValue)); });
@@ -113,7 +111,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
      * Gets the inboundTrust property value. The inboundTrust property
      * @return a crossTenantAccessPolicyInboundTrust
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyInboundTrust getInboundTrust() {
         return this.inboundTrust;
     }
@@ -121,17 +119,15 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
      * Gets the templateApplicationLevel property value. The templateApplicationLevel property
      * @return a templateApplicationLevel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TemplateApplicationLevel getTemplateApplicationLevel() {
         return this.templateApplicationLevel;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("automaticUserConsentSettings", this.getAutomaticUserConsentSettings());
@@ -145,64 +141,50 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
     /**
      * Sets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
      * @param value Value to set for the automaticUserConsentSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAutomaticUserConsentSettings(@javax.annotation.Nullable final InboundOutboundPolicyConfiguration value) {
+    public void setAutomaticUserConsentSettings(@jakarta.annotation.Nullable final InboundOutboundPolicyConfiguration value) {
         this.automaticUserConsentSettings = value;
     }
     /**
      * Sets the b2bCollaborationInbound property value. The b2bCollaborationInbound property
      * @param value Value to set for the b2bCollaborationInbound property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setB2bCollaborationInbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
+    public void setB2bCollaborationInbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bCollaborationInbound = value;
     }
     /**
      * Sets the b2bCollaborationOutbound property value. The b2bCollaborationOutbound property
      * @param value Value to set for the b2bCollaborationOutbound property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setB2bCollaborationOutbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
+    public void setB2bCollaborationOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bCollaborationOutbound = value;
     }
     /**
      * Sets the b2bDirectConnectInbound property value. The b2bDirectConnectInbound property
      * @param value Value to set for the b2bDirectConnectInbound property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setB2bDirectConnectInbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
+    public void setB2bDirectConnectInbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bDirectConnectInbound = value;
     }
     /**
      * Sets the b2bDirectConnectOutbound property value. The b2bDirectConnectOutbound property
      * @param value Value to set for the b2bDirectConnectOutbound property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setB2bDirectConnectOutbound(@javax.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
+    public void setB2bDirectConnectOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bDirectConnectOutbound = value;
     }
     /**
      * Sets the inboundTrust property value. The inboundTrust property
      * @param value Value to set for the inboundTrust property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInboundTrust(@javax.annotation.Nullable final CrossTenantAccessPolicyInboundTrust value) {
+    public void setInboundTrust(@jakarta.annotation.Nullable final CrossTenantAccessPolicyInboundTrust value) {
         this.inboundTrust = value;
     }
     /**
      * Sets the templateApplicationLevel property value. The templateApplicationLevel property
      * @param value Value to set for the templateApplicationLevel property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTemplateApplicationLevel(@javax.annotation.Nullable final TemplateApplicationLevel value) {
+    public void setTemplateApplicationLevel(@jakarta.annotation.Nullable final TemplateApplicationLevel value) {
         this.templateApplicationLevel = value;
     }
 }

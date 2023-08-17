@@ -25,9 +25,7 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
     private OffsetDateTime releaseDateTime;
     /**
      * Instantiates a new windowsUpdateCatalogItem and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsUpdateCatalogItem() {
         super();
     }
@@ -36,8 +34,8 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsUpdateCatalogItem
      */
-    @javax.annotation.Nonnull
-    public static WindowsUpdateCatalogItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsUpdateCatalogItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -53,7 +51,7 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
      * Gets the displayName property value. The display name for the catalog item.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -61,7 +59,7 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
      * Gets the endOfSupportDate property value. The last supported date for a catalog item
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEndOfSupportDate() {
         return this.endOfSupportDate;
     }
@@ -69,7 +67,7 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -81,17 +79,15 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
      * Gets the releaseDateTime property value. The date the catalog item was released
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getReleaseDateTime() {
         return this.releaseDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -101,28 +97,22 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
     /**
      * Sets the displayName property value. The display name for the catalog item.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the endOfSupportDate property value. The last supported date for a catalog item
      * @param value Value to set for the endOfSupportDate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndOfSupportDate(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setEndOfSupportDate(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endOfSupportDate = value;
     }
     /**
      * Sets the releaseDateTime property value. The date the catalog item was released
      * @param value Value to set for the releaseDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReleaseDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setReleaseDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.releaseDateTime = value;
     }
 }

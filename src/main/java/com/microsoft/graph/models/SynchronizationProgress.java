@@ -35,9 +35,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
     private String units;
     /**
      * Instantiates a new synchronizationProgress and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SynchronizationProgress() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,8 +44,8 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a synchronizationProgress
      */
-    @javax.annotation.Nonnull
-    public static SynchronizationProgress createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SynchronizationProgress createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SynchronizationProgress();
     }
@@ -55,7 +53,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -63,7 +61,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      * Gets the completedUnits property value. The numerator of a progress ratio; the number of units of changes already processed.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getCompletedUnits() {
         return this.completedUnits;
     }
@@ -71,7 +69,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("completedUnits", (n) -> { this.setCompletedUnits(n.getLongValue()); });
@@ -85,7 +83,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -93,7 +91,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      * Gets the progressObservationDateTime property value. The time of a progress observation as an offset in minutes from UTC.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getProgressObservationDateTime() {
         return this.progressObservationDateTime;
     }
@@ -101,7 +99,7 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      * Gets the totalUnits property value. The denominator of a progress ratio; a number of units of changes to be processed to accomplish synchronization.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getTotalUnits() {
         return this.totalUnits;
     }
@@ -109,17 +107,15 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
      * Gets the units property value. An optional description of the units.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUnits() {
         return this.units;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLongValue("completedUnits", this.getCompletedUnits());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -131,55 +127,43 @@ public class SynchronizationProgress implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the completedUnits property value. The numerator of a progress ratio; the number of units of changes already processed.
      * @param value Value to set for the completedUnits property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedUnits(@javax.annotation.Nullable final Long value) {
+    public void setCompletedUnits(@jakarta.annotation.Nullable final Long value) {
         this.completedUnits = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the progressObservationDateTime property value. The time of a progress observation as an offset in minutes from UTC.
      * @param value Value to set for the progressObservationDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProgressObservationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setProgressObservationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.progressObservationDateTime = value;
     }
     /**
      * Sets the totalUnits property value. The denominator of a progress ratio; a number of units of changes to be processed to accomplish synchronization.
      * @param value Value to set for the totalUnits property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalUnits(@javax.annotation.Nullable final Long value) {
+    public void setTotalUnits(@jakarta.annotation.Nullable final Long value) {
         this.totalUnits = value;
     }
     /**
      * Sets the units property value. An optional description of the units.
      * @param value Value to set for the units property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnits(@javax.annotation.Nullable final String value) {
+    public void setUnits(@jakarta.annotation.Nullable final String value) {
         this.units = value;
     }
 }

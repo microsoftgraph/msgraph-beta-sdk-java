@@ -24,9 +24,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
     private String scriptContent;
     /**
      * Instantiates a new win32LobAppPowerShellScriptDetection and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Win32LobAppPowerShellScriptDetection() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppPowerShellScriptDetection");
@@ -36,8 +34,8 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a win32LobAppPowerShellScriptDetection
      */
-    @javax.annotation.Nonnull
-    public static Win32LobAppPowerShellScriptDetection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Win32LobAppPowerShellScriptDetection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Win32LobAppPowerShellScriptDetection();
     }
@@ -45,7 +43,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
      * Gets the enforceSignatureCheck property value. A value indicating whether signature check is enforced
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnforceSignatureCheck() {
         return this.enforceSignatureCheck;
     }
@@ -53,7 +51,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("enforceSignatureCheck", (n) -> { this.setEnforceSignatureCheck(n.getBooleanValue()); });
@@ -65,7 +63,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
      * Gets the runAs32Bit property value. A value indicating whether this script should run as 32-bit
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRunAs32Bit() {
         return this.runAs32Bit;
     }
@@ -73,17 +71,15 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
      * Gets the scriptContent property value. The base64 encoded script content to detect Win32 Line of Business (LoB) app
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getScriptContent() {
         return this.scriptContent;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("enforceSignatureCheck", this.getEnforceSignatureCheck());
@@ -93,28 +89,22 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
     /**
      * Sets the enforceSignatureCheck property value. A value indicating whether signature check is enforced
      * @param value Value to set for the enforceSignatureCheck property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnforceSignatureCheck(@javax.annotation.Nullable final Boolean value) {
+    public void setEnforceSignatureCheck(@jakarta.annotation.Nullable final Boolean value) {
         this.enforceSignatureCheck = value;
     }
     /**
      * Sets the runAs32Bit property value. A value indicating whether this script should run as 32-bit
      * @param value Value to set for the runAs32Bit property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRunAs32Bit(@javax.annotation.Nullable final Boolean value) {
+    public void setRunAs32Bit(@jakarta.annotation.Nullable final Boolean value) {
         this.runAs32Bit = value;
     }
     /**
      * Sets the scriptContent property value. The base64 encoded script content to detect Win32 Line of Business (LoB) app
      * @param value Value to set for the scriptContent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScriptContent(@javax.annotation.Nullable final String value) {
+    public void setScriptContent(@jakarta.annotation.Nullable final String value) {
         this.scriptContent = value;
     }
 }

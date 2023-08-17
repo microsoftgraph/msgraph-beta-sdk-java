@@ -54,9 +54,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     private String title;
     /**
      * Instantiates a new plannerPlan and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PlannerPlan() {
         super();
     }
@@ -65,8 +63,8 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a plannerPlan
      */
-    @javax.annotation.Nonnull
-    public static PlannerPlan createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PlannerPlan createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PlannerPlan();
     }
@@ -74,7 +72,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * Gets the buckets property value. Collection of buckets in the plan. Read-only. Nullable.
      * @return a plannerBucket
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PlannerBucket> getBuckets() {
         return this.buckets;
     }
@@ -82,7 +80,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * Gets the container property value. Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property cant be updated. Required.
      * @return a plannerPlanContainer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerPlanContainer getContainer() {
         return this.container;
     }
@@ -90,7 +88,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * Gets the contexts property value. Read-only. Additional user experiences in which this plan is used, represented as plannerPlanContext entries.
      * @return a plannerPlanContextCollection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerPlanContextCollection getContexts() {
         return this.contexts;
     }
@@ -98,7 +96,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * Gets the createdBy property value. Read-only. The user who created the plan.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -106,7 +104,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * Gets the createdDateTime property value. Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -114,7 +112,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * Gets the creationSource property value. Contains information about the origin of the plan.
      * @return a plannerPlanCreation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerPlanCreation getCreationSource() {
         return this.creationSource;
     }
@@ -122,7 +120,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * Gets the details property value. Additional details about the plan. Read-only. Nullable.
      * @return a plannerPlanDetails
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerPlanDetails getDetails() {
         return this.details;
     }
@@ -130,7 +128,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("buckets", (n) -> { this.setBuckets(n.getCollectionOfObjectValues(PlannerBucket::createFromDiscriminatorValue)); });
@@ -150,7 +148,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * Gets the owner property value. The owner property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOwner() {
         return this.owner;
     }
@@ -158,7 +156,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * Gets the sharedWithContainers property value. List of containers the plan is shared with.
      * @return a plannerSharedWithContainer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PlannerSharedWithContainer> getSharedWithContainers() {
         return this.sharedWithContainers;
     }
@@ -166,7 +164,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * Gets the tasks property value. Collection of tasks in the plan. Read-only. Nullable.
      * @return a plannerTask
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PlannerTask> getTasks() {
         return this.tasks;
     }
@@ -174,17 +172,15 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * Gets the title property value. Required. Title of the plan.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTitle() {
         return this.title;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("buckets", this.getBuckets());
@@ -202,100 +198,78 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     /**
      * Sets the buckets property value. Collection of buckets in the plan. Read-only. Nullable.
      * @param value Value to set for the buckets property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBuckets(@javax.annotation.Nullable final java.util.List<PlannerBucket> value) {
+    public void setBuckets(@jakarta.annotation.Nullable final java.util.List<PlannerBucket> value) {
         this.buckets = value;
     }
     /**
      * Sets the container property value. Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property cant be updated. Required.
      * @param value Value to set for the container property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContainer(@javax.annotation.Nullable final PlannerPlanContainer value) {
+    public void setContainer(@jakarta.annotation.Nullable final PlannerPlanContainer value) {
         this.container = value;
     }
     /**
      * Sets the contexts property value. Read-only. Additional user experiences in which this plan is used, represented as plannerPlanContext entries.
      * @param value Value to set for the contexts property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContexts(@javax.annotation.Nullable final PlannerPlanContextCollection value) {
+    public void setContexts(@jakarta.annotation.Nullable final PlannerPlanContextCollection value) {
         this.contexts = value;
     }
     /**
      * Sets the createdBy property value. Read-only. The user who created the plan.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the creationSource property value. Contains information about the origin of the plan.
      * @param value Value to set for the creationSource property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreationSource(@javax.annotation.Nullable final PlannerPlanCreation value) {
+    public void setCreationSource(@jakarta.annotation.Nullable final PlannerPlanCreation value) {
         this.creationSource = value;
     }
     /**
      * Sets the details property value. Additional details about the plan. Read-only. Nullable.
      * @param value Value to set for the details property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetails(@javax.annotation.Nullable final PlannerPlanDetails value) {
+    public void setDetails(@jakarta.annotation.Nullable final PlannerPlanDetails value) {
         this.details = value;
     }
     /**
      * Sets the owner property value. The owner property
      * @param value Value to set for the owner property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOwner(@javax.annotation.Nullable final String value) {
+    public void setOwner(@jakarta.annotation.Nullable final String value) {
         this.owner = value;
     }
     /**
      * Sets the sharedWithContainers property value. List of containers the plan is shared with.
      * @param value Value to set for the sharedWithContainers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharedWithContainers(@javax.annotation.Nullable final java.util.List<PlannerSharedWithContainer> value) {
+    public void setSharedWithContainers(@jakarta.annotation.Nullable final java.util.List<PlannerSharedWithContainer> value) {
         this.sharedWithContainers = value;
     }
     /**
      * Sets the tasks property value. Collection of tasks in the plan. Read-only. Nullable.
      * @param value Value to set for the tasks property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTasks(@javax.annotation.Nullable final java.util.List<PlannerTask> value) {
+    public void setTasks(@jakarta.annotation.Nullable final java.util.List<PlannerTask> value) {
         this.tasks = value;
     }
     /**
      * Sets the title property value. Required. Title of the plan.
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTitle(@javax.annotation.Nullable final String value) {
+    public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
 }

@@ -16,9 +16,7 @@ public class MacOSVpnConfiguration extends AppleVpnConfiguration implements Pars
     private MacOSCertificateProfileBase identityCertificate;
     /**
      * Instantiates a new macOSVpnConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MacOSVpnConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSVpnConfiguration");
@@ -28,8 +26,8 @@ public class MacOSVpnConfiguration extends AppleVpnConfiguration implements Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a macOSVpnConfiguration
      */
-    @javax.annotation.Nonnull
-    public static MacOSVpnConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MacOSVpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MacOSVpnConfiguration();
     }
@@ -37,7 +35,7 @@ public class MacOSVpnConfiguration extends AppleVpnConfiguration implements Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("identityCertificate", (n) -> { this.setIdentityCertificate(n.getObjectValue(MacOSCertificateProfileBase::createFromDiscriminatorValue)); });
@@ -47,17 +45,15 @@ public class MacOSVpnConfiguration extends AppleVpnConfiguration implements Pars
      * Gets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
      * @return a macOSCertificateProfileBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSCertificateProfileBase getIdentityCertificate() {
         return this.identityCertificate;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("identityCertificate", this.getIdentityCertificate());
@@ -65,10 +61,8 @@ public class MacOSVpnConfiguration extends AppleVpnConfiguration implements Pars
     /**
      * Sets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
      * @param value Value to set for the identityCertificate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityCertificate(@javax.annotation.Nullable final MacOSCertificateProfileBase value) {
+    public void setIdentityCertificate(@jakarta.annotation.Nullable final MacOSCertificateProfileBase value) {
         this.identityCertificate = value;
     }
 }

@@ -29,9 +29,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     private String originSystem;
     /**
      * Instantiates a new accessPackageResourceRole and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AccessPackageResourceRole() {
         super();
     }
@@ -40,8 +38,8 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageResourceRole
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageResourceRole createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageResourceRole createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackageResourceRole();
     }
@@ -49,7 +47,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      * Gets the accessPackageResource property value. The accessPackageResource property
      * @return a accessPackageResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageResource getAccessPackageResource() {
         return this.accessPackageResource;
     }
@@ -57,7 +55,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      * Gets the description property value. A description for the resource role.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -65,7 +63,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      * Gets the displayName property value. The display name of the resource role such as the role defined by the application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -73,7 +71,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackageResource", (n) -> { this.setAccessPackageResource(n.getObjectValue(AccessPackageResource::createFromDiscriminatorValue)); });
@@ -87,7 +85,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      * Gets the originId property value. The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOriginId() {
         return this.originId;
     }
@@ -95,17 +93,15 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOriginSystem() {
         return this.originSystem;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("accessPackageResource", this.getAccessPackageResource());
@@ -117,46 +113,36 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
     /**
      * Sets the accessPackageResource property value. The accessPackageResource property
      * @param value Value to set for the accessPackageResource property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageResource(@javax.annotation.Nullable final AccessPackageResource value) {
+    public void setAccessPackageResource(@jakarta.annotation.Nullable final AccessPackageResource value) {
         this.accessPackageResource = value;
     }
     /**
      * Sets the description property value. A description for the resource role.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The display name of the resource role such as the role defined by the application.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the originId property value. The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
      * @param value Value to set for the originId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOriginId(@javax.annotation.Nullable final String value) {
+    public void setOriginId(@jakarta.annotation.Nullable final String value) {
         this.originId = value;
     }
     /**
      * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
      * @param value Value to set for the originSystem property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOriginSystem(@javax.annotation.Nullable final String value) {
+    public void setOriginSystem(@jakarta.annotation.Nullable final String value) {
         this.originSystem = value;
     }
 }

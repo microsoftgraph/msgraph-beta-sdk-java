@@ -53,9 +53,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
     private byte[] trustedRootCertificate;
     /**
      * Instantiates a new iosEduCertificateSettings and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public IosEduCertificateSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,8 +62,8 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a iosEduCertificateSettings
      */
-    @javax.annotation.Nonnull
-    public static IosEduCertificateSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IosEduCertificateSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IosEduCertificateSettings();
     }
@@ -73,7 +71,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -81,7 +79,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
      * Gets the certFileName property value. File name to display in UI.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCertFileName() {
         return this.certFileName;
     }
@@ -89,7 +87,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
      * Gets the certificateTemplateName property value. PKCS Certificate Template Name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCertificateTemplateName() {
         return this.certificateTemplateName;
     }
@@ -97,7 +95,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
      * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @return a certificateValidityPeriodScale
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CertificateValidityPeriodScale getCertificateValidityPeriodScale() {
         return this.certificateValidityPeriodScale;
     }
@@ -105,7 +103,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
      * Gets the certificateValidityPeriodValue property value. Value for the Certificate Validity Period.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCertificateValidityPeriodValue() {
         return this.certificateValidityPeriodValue;
     }
@@ -113,7 +111,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
      * Gets the certificationAuthority property value. PKCS Certification Authority.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCertificationAuthority() {
         return this.certificationAuthority;
     }
@@ -121,7 +119,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
      * Gets the certificationAuthorityName property value. PKCS Certification Authority Name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCertificationAuthorityName() {
         return this.certificationAuthorityName;
     }
@@ -129,7 +127,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("certFileName", (n) -> { this.setCertFileName(n.getStringValue()); });
@@ -147,7 +145,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -155,7 +153,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
      * Gets the renewalThresholdPercentage property value. Certificate renewal threshold percentage. Valid values 1 to 99
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRenewalThresholdPercentage() {
         return this.renewalThresholdPercentage;
     }
@@ -163,17 +161,15 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
      * Gets the trustedRootCertificate property value. Trusted Root Certificate.
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getTrustedRootCertificate() {
         return this.trustedRootCertificate;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("certFileName", this.getCertFileName());
         writer.writeStringValue("certificateTemplateName", this.getCertificateTemplateName());
@@ -189,91 +185,71 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, Parsable
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the certFileName property value. File name to display in UI.
      * @param value Value to set for the certFileName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertFileName(@javax.annotation.Nullable final String value) {
+    public void setCertFileName(@jakarta.annotation.Nullable final String value) {
         this.certFileName = value;
     }
     /**
      * Sets the certificateTemplateName property value. PKCS Certificate Template Name.
      * @param value Value to set for the certificateTemplateName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateTemplateName(@javax.annotation.Nullable final String value) {
+    public void setCertificateTemplateName(@jakarta.annotation.Nullable final String value) {
         this.certificateTemplateName = value;
     }
     /**
      * Sets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
      * @param value Value to set for the certificateValidityPeriodScale property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateValidityPeriodScale(@javax.annotation.Nullable final CertificateValidityPeriodScale value) {
+    public void setCertificateValidityPeriodScale(@jakarta.annotation.Nullable final CertificateValidityPeriodScale value) {
         this.certificateValidityPeriodScale = value;
     }
     /**
      * Sets the certificateValidityPeriodValue property value. Value for the Certificate Validity Period.
      * @param value Value to set for the certificateValidityPeriodValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateValidityPeriodValue(@javax.annotation.Nullable final Integer value) {
+    public void setCertificateValidityPeriodValue(@jakarta.annotation.Nullable final Integer value) {
         this.certificateValidityPeriodValue = value;
     }
     /**
      * Sets the certificationAuthority property value. PKCS Certification Authority.
      * @param value Value to set for the certificationAuthority property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificationAuthority(@javax.annotation.Nullable final String value) {
+    public void setCertificationAuthority(@jakarta.annotation.Nullable final String value) {
         this.certificationAuthority = value;
     }
     /**
      * Sets the certificationAuthorityName property value. PKCS Certification Authority Name.
      * @param value Value to set for the certificationAuthorityName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificationAuthorityName(@javax.annotation.Nullable final String value) {
+    public void setCertificationAuthorityName(@jakarta.annotation.Nullable final String value) {
         this.certificationAuthorityName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the renewalThresholdPercentage property value. Certificate renewal threshold percentage. Valid values 1 to 99
      * @param value Value to set for the renewalThresholdPercentage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRenewalThresholdPercentage(@javax.annotation.Nullable final Integer value) {
+    public void setRenewalThresholdPercentage(@jakarta.annotation.Nullable final Integer value) {
         this.renewalThresholdPercentage = value;
     }
     /**
      * Sets the trustedRootCertificate property value. Trusted Root Certificate.
      * @param value Value to set for the trustedRootCertificate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrustedRootCertificate(@javax.annotation.Nullable final byte[] value) {
+    public void setTrustedRootCertificate(@jakarta.annotation.Nullable final byte[] value) {
         this.trustedRootCertificate = value;
     }
 }

@@ -29,9 +29,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     private String uri;
     /**
      * Instantiates a new endpoint and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Endpoint() {
         super();
         this.setOdataType("#microsoft.graph.endpoint");
@@ -41,8 +39,8 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a endpoint
      */
-    @javax.annotation.Nonnull
-    public static Endpoint createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Endpoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Endpoint();
     }
@@ -50,7 +48,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * Gets the capability property value. Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCapability() {
         return this.capability;
     }
@@ -58,7 +56,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("capability", (n) -> { this.setCapability(n.getStringValue()); });
@@ -72,7 +70,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * Gets the providerId property value. Application id of the publishing underlying service. Not nullable. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProviderId() {
         return this.providerId;
     }
@@ -80,7 +78,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * Gets the providerName property value. Name of the publishing underlying service. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProviderName() {
         return this.providerName;
     }
@@ -88,7 +86,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * Gets the providerResourceId property value. For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProviderResourceId() {
         return this.providerResourceId;
     }
@@ -96,17 +94,15 @@ public class Endpoint extends DirectoryObject implements Parsable {
      * Gets the uri property value. URL of the published resource. Not nullable. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUri() {
         return this.uri;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("capability", this.getCapability());
@@ -118,46 +114,36 @@ public class Endpoint extends DirectoryObject implements Parsable {
     /**
      * Sets the capability property value. Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.
      * @param value Value to set for the capability property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCapability(@javax.annotation.Nullable final String value) {
+    public void setCapability(@jakarta.annotation.Nullable final String value) {
         this.capability = value;
     }
     /**
      * Sets the providerId property value. Application id of the publishing underlying service. Not nullable. Read-only.
      * @param value Value to set for the providerId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProviderId(@javax.annotation.Nullable final String value) {
+    public void setProviderId(@jakarta.annotation.Nullable final String value) {
         this.providerId = value;
     }
     /**
      * Sets the providerName property value. Name of the publishing underlying service. Read-only.
      * @param value Value to set for the providerName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProviderName(@javax.annotation.Nullable final String value) {
+    public void setProviderName(@jakarta.annotation.Nullable final String value) {
         this.providerName = value;
     }
     /**
      * Sets the providerResourceId property value. For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
      * @param value Value to set for the providerResourceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProviderResourceId(@javax.annotation.Nullable final String value) {
+    public void setProviderResourceId(@jakarta.annotation.Nullable final String value) {
         this.providerResourceId = value;
     }
     /**
      * Sets the uri property value. URL of the published resource. Not nullable. Read-only.
      * @param value Value to set for the uri property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUri(@javax.annotation.Nullable final String value) {
+    public void setUri(@jakarta.annotation.Nullable final String value) {
         this.uri = value;
     }
 }

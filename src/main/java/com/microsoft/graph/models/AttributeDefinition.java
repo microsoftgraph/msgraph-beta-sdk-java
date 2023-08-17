@@ -66,9 +66,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     private AttributeType type;
     /**
      * Instantiates a new attributeDefinition and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AttributeDefinition() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,8 +75,8 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a attributeDefinition
      */
-    @javax.annotation.Nonnull
-    public static AttributeDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AttributeDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AttributeDefinition();
     }
@@ -86,7 +84,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -94,7 +92,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * Gets the anchor property value. true if the attribute should be used as the anchor for the object. Anchor attributes must have a unique value identifying an object, and must be immutable. Default is false. One, and only one, of the object's attributes must be designated as the anchor to support synchronization.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAnchor() {
         return this.anchor;
     }
@@ -102,7 +100,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * Gets the apiExpressions property value. The apiExpressions property
      * @return a stringKeyStringValuePair
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<StringKeyStringValuePair> getApiExpressions() {
         return this.apiExpressions;
     }
@@ -110,7 +108,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * Gets the caseExact property value. true if value of this attribute should be treated as case-sensitive. This setting affects how the synchronization engine detects changes for the attribute.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCaseExact() {
         return this.caseExact;
     }
@@ -118,7 +116,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * Gets the defaultValue property value. The defaultValue property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDefaultValue() {
         return this.defaultValue;
     }
@@ -126,7 +124,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
         deserializerMap.put("anchor", (n) -> { this.setAnchor(n.getBooleanValue()); });
@@ -148,7 +146,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * Gets the flowNullValues property value. 'true' to allow null values for attributes.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getFlowNullValues() {
         return this.flowNullValues;
     }
@@ -156,7 +154,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * Gets the metadata property value. Metadata for the given object.
      * @return a attributeDefinitionMetadataEntry
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AttributeDefinitionMetadataEntry> getMetadata() {
         return this.metadata;
     }
@@ -164,7 +162,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * Gets the multivalued property value. true if an attribute can have multiple values. Default is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getMultivalued() {
         return this.multivalued;
     }
@@ -172,7 +170,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * Gets the mutability property value. The mutability property
      * @return a mutability
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Mutability getMutability() {
         return this.mutability;
     }
@@ -180,7 +178,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * Gets the name property value. Name of the attribute. Must be unique within the object definition. Not nullable.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -188,7 +186,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -196,7 +194,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * Gets the referencedObjects property value. For attributes with reference type, lists referenced objects (for example, the manager attribute would list User as the referenced object).
      * @return a referencedObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ReferencedObject> getReferencedObjects() {
         return this.referencedObjects;
     }
@@ -204,7 +202,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * Gets the required property value. true if attribute is required. Object can not be created if any of the required attributes are missing. If during synchronization, the required attribute has no value, the default value will be used. If default the value was not set, synchronization will record an error.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequired() {
         return this.required;
     }
@@ -212,17 +210,15 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * Gets the type property value. The type property
      * @return a attributeType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AttributeType getType() {
         return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("anchor", this.getAnchor());
         writer.writeCollectionOfObjectValues("apiExpressions", this.getApiExpressions());
@@ -242,127 +238,99 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the anchor property value. true if the attribute should be used as the anchor for the object. Anchor attributes must have a unique value identifying an object, and must be immutable. Default is false. One, and only one, of the object's attributes must be designated as the anchor to support synchronization.
      * @param value Value to set for the anchor property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnchor(@javax.annotation.Nullable final Boolean value) {
+    public void setAnchor(@jakarta.annotation.Nullable final Boolean value) {
         this.anchor = value;
     }
     /**
      * Sets the apiExpressions property value. The apiExpressions property
      * @param value Value to set for the apiExpressions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApiExpressions(@javax.annotation.Nullable final java.util.List<StringKeyStringValuePair> value) {
+    public void setApiExpressions(@jakarta.annotation.Nullable final java.util.List<StringKeyStringValuePair> value) {
         this.apiExpressions = value;
     }
     /**
      * Sets the caseExact property value. true if value of this attribute should be treated as case-sensitive. This setting affects how the synchronization engine detects changes for the attribute.
      * @param value Value to set for the caseExact property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCaseExact(@javax.annotation.Nullable final Boolean value) {
+    public void setCaseExact(@jakarta.annotation.Nullable final Boolean value) {
         this.caseExact = value;
     }
     /**
      * Sets the defaultValue property value. The defaultValue property
      * @param value Value to set for the defaultValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultValue(@javax.annotation.Nullable final String value) {
+    public void setDefaultValue(@jakarta.annotation.Nullable final String value) {
         this.defaultValue = value;
     }
     /**
      * Sets the flowNullValues property value. 'true' to allow null values for attributes.
      * @param value Value to set for the flowNullValues property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFlowNullValues(@javax.annotation.Nullable final Boolean value) {
+    public void setFlowNullValues(@jakarta.annotation.Nullable final Boolean value) {
         this.flowNullValues = value;
     }
     /**
      * Sets the metadata property value. Metadata for the given object.
      * @param value Value to set for the metadata property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMetadata(@javax.annotation.Nullable final java.util.List<AttributeDefinitionMetadataEntry> value) {
+    public void setMetadata(@jakarta.annotation.Nullable final java.util.List<AttributeDefinitionMetadataEntry> value) {
         this.metadata = value;
     }
     /**
      * Sets the multivalued property value. true if an attribute can have multiple values. Default is false.
      * @param value Value to set for the multivalued property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMultivalued(@javax.annotation.Nullable final Boolean value) {
+    public void setMultivalued(@jakarta.annotation.Nullable final Boolean value) {
         this.multivalued = value;
     }
     /**
      * Sets the mutability property value. The mutability property
      * @param value Value to set for the mutability property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMutability(@javax.annotation.Nullable final Mutability value) {
+    public void setMutability(@jakarta.annotation.Nullable final Mutability value) {
         this.mutability = value;
     }
     /**
      * Sets the name property value. Name of the attribute. Must be unique within the object definition. Not nullable.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the referencedObjects property value. For attributes with reference type, lists referenced objects (for example, the manager attribute would list User as the referenced object).
      * @param value Value to set for the referencedObjects property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReferencedObjects(@javax.annotation.Nullable final java.util.List<ReferencedObject> value) {
+    public void setReferencedObjects(@jakarta.annotation.Nullable final java.util.List<ReferencedObject> value) {
         this.referencedObjects = value;
     }
     /**
      * Sets the required property value. true if attribute is required. Object can not be created if any of the required attributes are missing. If during synchronization, the required attribute has no value, the default value will be used. If default the value was not set, synchronization will record an error.
      * @param value Value to set for the required property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequired(@javax.annotation.Nullable final Boolean value) {
+    public void setRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.required = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final AttributeType value) {
+    public void setType(@jakarta.annotation.Nullable final AttributeType value) {
         this.type = value;
     }
 }

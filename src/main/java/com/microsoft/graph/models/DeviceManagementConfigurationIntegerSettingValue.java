@@ -16,9 +16,7 @@ public class DeviceManagementConfigurationIntegerSettingValue extends DeviceMana
     private Integer value;
     /**
      * Instantiates a new deviceManagementConfigurationIntegerSettingValue and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementConfigurationIntegerSettingValue() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationIntegerSettingValue");
@@ -28,8 +26,8 @@ public class DeviceManagementConfigurationIntegerSettingValue extends DeviceMana
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationIntegerSettingValue
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationIntegerSettingValue createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationIntegerSettingValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationIntegerSettingValue();
     }
@@ -37,7 +35,7 @@ public class DeviceManagementConfigurationIntegerSettingValue extends DeviceMana
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getIntegerValue()); });
@@ -47,17 +45,15 @@ public class DeviceManagementConfigurationIntegerSettingValue extends DeviceMana
      * Gets the value property value. Value of the integer setting.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getValue() {
         return this.value;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("value", this.getValue());
@@ -65,10 +61,8 @@ public class DeviceManagementConfigurationIntegerSettingValue extends DeviceMana
     /**
      * Sets the value property value. Value of the integer setting.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final Integer value) {
+    public void setValue(@jakarta.annotation.Nullable final Integer value) {
         this.value = value;
     }
 }

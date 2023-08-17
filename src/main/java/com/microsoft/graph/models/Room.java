@@ -61,9 +61,7 @@ public class Room extends Place implements Parsable {
     private String videoDeviceName;
     /**
      * Instantiates a new room and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Room() {
         super();
         this.setOdataType("#microsoft.graph.room");
@@ -73,8 +71,8 @@ public class Room extends Place implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a room
      */
-    @javax.annotation.Nonnull
-    public static Room createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Room createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Room();
     }
@@ -82,7 +80,7 @@ public class Room extends Place implements Parsable {
      * Gets the audioDeviceName property value. Specifies the name of the audio device in the room.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAudioDeviceName() {
         return this.audioDeviceName;
     }
@@ -90,7 +88,7 @@ public class Room extends Place implements Parsable {
      * Gets the bookingType property value. Type of room. Possible values are standard, and reserved.
      * @return a bookingType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BookingType getBookingType() {
         return this.bookingType;
     }
@@ -98,7 +96,7 @@ public class Room extends Place implements Parsable {
      * Gets the building property value. Specifies the building name or building number that the room is in.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBuilding() {
         return this.building;
     }
@@ -106,7 +104,7 @@ public class Room extends Place implements Parsable {
      * Gets the capacity property value. Specifies the capacity of the room.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCapacity() {
         return this.capacity;
     }
@@ -114,7 +112,7 @@ public class Room extends Place implements Parsable {
      * Gets the displayDeviceName property value. Specifies the name of the display device in the room.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayDeviceName() {
         return this.displayDeviceName;
     }
@@ -122,7 +120,7 @@ public class Room extends Place implements Parsable {
      * Gets the emailAddress property value. Email address of the room.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmailAddress() {
         return this.emailAddress;
     }
@@ -130,7 +128,7 @@ public class Room extends Place implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("audioDeviceName", (n) -> { this.setAudioDeviceName(n.getStringValue()); });
@@ -152,7 +150,7 @@ public class Room extends Place implements Parsable {
      * Gets the floorLabel property value. Specifies a descriptive label for the floor, for example, P.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFloorLabel() {
         return this.floorLabel;
     }
@@ -160,7 +158,7 @@ public class Room extends Place implements Parsable {
      * Gets the floorNumber property value. Specifies the floor number that the room is on.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFloorNumber() {
         return this.floorNumber;
     }
@@ -168,7 +166,7 @@ public class Room extends Place implements Parsable {
      * Gets the isWheelChairAccessible property value. Specifies whether the room is wheelchair accessible.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsWheelChairAccessible() {
         return this.isWheelChairAccessible;
     }
@@ -176,7 +174,7 @@ public class Room extends Place implements Parsable {
      * Gets the label property value. Specifies a descriptive label for the room, for example, a number or name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLabel() {
         return this.label;
     }
@@ -184,7 +182,7 @@ public class Room extends Place implements Parsable {
      * Gets the nickname property value. Specifies a nickname for the room, for example, 'conf room'.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNickname() {
         return this.nickname;
     }
@@ -192,7 +190,7 @@ public class Room extends Place implements Parsable {
      * Gets the tags property value. Specifies additional features of the room, for example, details like the type of view or furniture type.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
         return this.tags;
     }
@@ -200,17 +198,15 @@ public class Room extends Place implements Parsable {
      * Gets the videoDeviceName property value. Specifies the name of the video device in the room.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVideoDeviceName() {
         return this.videoDeviceName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("audioDeviceName", this.getAudioDeviceName());
@@ -230,118 +226,92 @@ public class Room extends Place implements Parsable {
     /**
      * Sets the audioDeviceName property value. Specifies the name of the audio device in the room.
      * @param value Value to set for the audioDeviceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAudioDeviceName(@javax.annotation.Nullable final String value) {
+    public void setAudioDeviceName(@jakarta.annotation.Nullable final String value) {
         this.audioDeviceName = value;
     }
     /**
      * Sets the bookingType property value. Type of room. Possible values are standard, and reserved.
      * @param value Value to set for the bookingType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBookingType(@javax.annotation.Nullable final BookingType value) {
+    public void setBookingType(@jakarta.annotation.Nullable final BookingType value) {
         this.bookingType = value;
     }
     /**
      * Sets the building property value. Specifies the building name or building number that the room is in.
      * @param value Value to set for the building property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBuilding(@javax.annotation.Nullable final String value) {
+    public void setBuilding(@jakarta.annotation.Nullable final String value) {
         this.building = value;
     }
     /**
      * Sets the capacity property value. Specifies the capacity of the room.
      * @param value Value to set for the capacity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCapacity(@javax.annotation.Nullable final Integer value) {
+    public void setCapacity(@jakarta.annotation.Nullable final Integer value) {
         this.capacity = value;
     }
     /**
      * Sets the displayDeviceName property value. Specifies the name of the display device in the room.
      * @param value Value to set for the displayDeviceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayDeviceName(@javax.annotation.Nullable final String value) {
+    public void setDisplayDeviceName(@jakarta.annotation.Nullable final String value) {
         this.displayDeviceName = value;
     }
     /**
      * Sets the emailAddress property value. Email address of the room.
      * @param value Value to set for the emailAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailAddress(@javax.annotation.Nullable final String value) {
+    public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.emailAddress = value;
     }
     /**
      * Sets the floorLabel property value. Specifies a descriptive label for the floor, for example, P.
      * @param value Value to set for the floorLabel property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFloorLabel(@javax.annotation.Nullable final String value) {
+    public void setFloorLabel(@jakarta.annotation.Nullable final String value) {
         this.floorLabel = value;
     }
     /**
      * Sets the floorNumber property value. Specifies the floor number that the room is on.
      * @param value Value to set for the floorNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFloorNumber(@javax.annotation.Nullable final Integer value) {
+    public void setFloorNumber(@jakarta.annotation.Nullable final Integer value) {
         this.floorNumber = value;
     }
     /**
      * Sets the isWheelChairAccessible property value. Specifies whether the room is wheelchair accessible.
      * @param value Value to set for the isWheelChairAccessible property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsWheelChairAccessible(@javax.annotation.Nullable final Boolean value) {
+    public void setIsWheelChairAccessible(@jakarta.annotation.Nullable final Boolean value) {
         this.isWheelChairAccessible = value;
     }
     /**
      * Sets the label property value. Specifies a descriptive label for the room, for example, a number or name.
      * @param value Value to set for the label property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabel(@javax.annotation.Nullable final String value) {
+    public void setLabel(@jakarta.annotation.Nullable final String value) {
         this.label = value;
     }
     /**
      * Sets the nickname property value. Specifies a nickname for the room, for example, 'conf room'.
      * @param value Value to set for the nickname property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNickname(@javax.annotation.Nullable final String value) {
+    public void setNickname(@jakarta.annotation.Nullable final String value) {
         this.nickname = value;
     }
     /**
      * Sets the tags property value. Specifies additional features of the room, for example, details like the type of view or furniture type.
      * @param value Value to set for the tags property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.tags = value;
     }
     /**
      * Sets the videoDeviceName property value. Specifies the name of the video device in the room.
      * @param value Value to set for the videoDeviceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVideoDeviceName(@javax.annotation.Nullable final String value) {
+    public void setVideoDeviceName(@jakarta.annotation.Nullable final String value) {
         this.videoDeviceName = value;
     }
 }

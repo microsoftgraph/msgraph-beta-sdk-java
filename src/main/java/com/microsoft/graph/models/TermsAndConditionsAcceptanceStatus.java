@@ -33,9 +33,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
     private String userPrincipalName;
     /**
      * Instantiates a new termsAndConditionsAcceptanceStatus and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TermsAndConditionsAcceptanceStatus() {
         super();
     }
@@ -44,8 +42,8 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a termsAndConditionsAcceptanceStatus
      */
-    @javax.annotation.Nonnull
-    public static TermsAndConditionsAcceptanceStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TermsAndConditionsAcceptanceStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TermsAndConditionsAcceptanceStatus();
     }
@@ -53,7 +51,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      * Gets the acceptedDateTime property value. DateTime when the terms were last accepted by the user.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getAcceptedDateTime() {
         return this.acceptedDateTime;
     }
@@ -61,7 +59,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      * Gets the acceptedVersion property value. Most recent version number of the T&C accepted by the user.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getAcceptedVersion() {
         return this.acceptedVersion;
     }
@@ -69,7 +67,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("acceptedDateTime", (n) -> { this.setAcceptedDateTime(n.getOffsetDateTimeValue()); });
@@ -83,7 +81,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      * Gets the termsAndConditions property value. Navigation link to the terms and conditions that are assigned.
      * @return a termsAndConditions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TermsAndConditions getTermsAndConditions() {
         return this.termsAndConditions;
     }
@@ -91,7 +89,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      * Gets the userDisplayName property value. Display name of the user whose acceptance the entity represents.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserDisplayName() {
         return this.userDisplayName;
     }
@@ -99,17 +97,15 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
      * Gets the userPrincipalName property value. The userPrincipalName of the User that accepted the term.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("acceptedDateTime", this.getAcceptedDateTime());
@@ -121,46 +117,36 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsab
     /**
      * Sets the acceptedDateTime property value. DateTime when the terms were last accepted by the user.
      * @param value Value to set for the acceptedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAcceptedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setAcceptedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.acceptedDateTime = value;
     }
     /**
      * Sets the acceptedVersion property value. Most recent version number of the T&C accepted by the user.
      * @param value Value to set for the acceptedVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAcceptedVersion(@javax.annotation.Nullable final Integer value) {
+    public void setAcceptedVersion(@jakarta.annotation.Nullable final Integer value) {
         this.acceptedVersion = value;
     }
     /**
      * Sets the termsAndConditions property value. Navigation link to the terms and conditions that are assigned.
      * @param value Value to set for the termsAndConditions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTermsAndConditions(@javax.annotation.Nullable final TermsAndConditions value) {
+    public void setTermsAndConditions(@jakarta.annotation.Nullable final TermsAndConditions value) {
         this.termsAndConditions = value;
     }
     /**
      * Sets the userDisplayName property value. Display name of the user whose acceptance the entity represents.
      * @param value Value to set for the userDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserDisplayName(@javax.annotation.Nullable final String value) {
+    public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
      * Sets the userPrincipalName property value. The userPrincipalName of the User that accepted the term.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

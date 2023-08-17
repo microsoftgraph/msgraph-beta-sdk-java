@@ -53,9 +53,7 @@ public class PolicySet extends Entity implements Parsable {
     private PolicySetStatus status;
     /**
      * Instantiates a new policySet and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PolicySet() {
         super();
     }
@@ -64,8 +62,8 @@ public class PolicySet extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a policySet
      */
-    @javax.annotation.Nonnull
-    public static PolicySet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PolicySet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PolicySet();
     }
@@ -73,7 +71,7 @@ public class PolicySet extends Entity implements Parsable {
      * Gets the assignments property value. Assignments of the PolicySet.
      * @return a policySetAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PolicySetAssignment> getAssignments() {
         return this.assignments;
     }
@@ -81,7 +79,7 @@ public class PolicySet extends Entity implements Parsable {
      * Gets the createdDateTime property value. Creation time of the PolicySet.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -89,7 +87,7 @@ public class PolicySet extends Entity implements Parsable {
      * Gets the description property value. Description of the PolicySet.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -97,7 +95,7 @@ public class PolicySet extends Entity implements Parsable {
      * Gets the displayName property value. DisplayName of the PolicySet.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -105,7 +103,7 @@ public class PolicySet extends Entity implements Parsable {
      * Gets the errorCode property value. The errorCode property
      * @return a errorCode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ErrorCode getErrorCode() {
         return this.errorCode;
     }
@@ -113,7 +111,7 @@ public class PolicySet extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(PolicySetAssignment::createFromDiscriminatorValue)); });
@@ -132,7 +130,7 @@ public class PolicySet extends Entity implements Parsable {
      * Gets the guidedDeploymentTags property value. Tags of the guided deployment
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getGuidedDeploymentTags() {
         return this.guidedDeploymentTags;
     }
@@ -140,7 +138,7 @@ public class PolicySet extends Entity implements Parsable {
      * Gets the items property value. Items of the PolicySet with maximum count 100.
      * @return a policySetItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PolicySetItem> getItems() {
         return this.items;
     }
@@ -148,7 +146,7 @@ public class PolicySet extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. Last modified time of the PolicySet.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -156,7 +154,7 @@ public class PolicySet extends Entity implements Parsable {
      * Gets the roleScopeTags property value. RoleScopeTags of the PolicySet
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTags() {
         return this.roleScopeTags;
     }
@@ -164,17 +162,15 @@ public class PolicySet extends Entity implements Parsable {
      * Gets the status property value. The enum to specify the status of PolicySet.
      * @return a policySetStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PolicySetStatus getStatus() {
         return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
@@ -191,91 +187,71 @@ public class PolicySet extends Entity implements Parsable {
     /**
      * Sets the assignments property value. Assignments of the PolicySet.
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignments(@javax.annotation.Nullable final java.util.List<PolicySetAssignment> value) {
+    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<PolicySetAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the createdDateTime property value. Creation time of the PolicySet.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Description of the PolicySet.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. DisplayName of the PolicySet.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the errorCode property value. The errorCode property
      * @param value Value to set for the errorCode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorCode(@javax.annotation.Nullable final ErrorCode value) {
+    public void setErrorCode(@jakarta.annotation.Nullable final ErrorCode value) {
         this.errorCode = value;
     }
     /**
      * Sets the guidedDeploymentTags property value. Tags of the guided deployment
      * @param value Value to set for the guidedDeploymentTags property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGuidedDeploymentTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setGuidedDeploymentTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.guidedDeploymentTags = value;
     }
     /**
      * Sets the items property value. Items of the PolicySet with maximum count 100.
      * @param value Value to set for the items property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setItems(@javax.annotation.Nullable final java.util.List<PolicySetItem> value) {
+    public void setItems(@jakarta.annotation.Nullable final java.util.List<PolicySetItem> value) {
         this.items = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Last modified time of the PolicySet.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the roleScopeTags property value. RoleScopeTags of the PolicySet
      * @param value Value to set for the roleScopeTags property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleScopeTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRoleScopeTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTags = value;
     }
     /**
      * Sets the status property value. The enum to specify the status of PolicySet.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final PolicySetStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final PolicySetStatus value) {
         this.status = value;
     }
 }

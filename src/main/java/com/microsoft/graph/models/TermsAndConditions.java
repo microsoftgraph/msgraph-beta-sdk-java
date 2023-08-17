@@ -65,9 +65,7 @@ public class TermsAndConditions extends Entity implements Parsable {
     private Integer version;
     /**
      * Instantiates a new termsAndConditions and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TermsAndConditions() {
         super();
     }
@@ -76,8 +74,8 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a termsAndConditions
      */
-    @javax.annotation.Nonnull
-    public static TermsAndConditions createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TermsAndConditions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TermsAndConditions();
     }
@@ -85,7 +83,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * Gets the acceptanceStatement property value. Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&C policy. This is shown to the user on prompts to accept the T&C policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAcceptanceStatement() {
         return this.acceptanceStatement;
     }
@@ -93,7 +91,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * Gets the acceptanceStatuses property value. The list of acceptance statuses for this T&C policy.
      * @return a termsAndConditionsAcceptanceStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TermsAndConditionsAcceptanceStatus> getAcceptanceStatuses() {
         return this.acceptanceStatuses;
     }
@@ -101,7 +99,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * Gets the assignments property value. The list of assignments for this T&C policy.
      * @return a termsAndConditionsAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TermsAndConditionsAssignment> getAssignments() {
         return this.assignments;
     }
@@ -109,7 +107,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * Gets the bodyText property value. Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBodyText() {
         return this.bodyText;
     }
@@ -117,7 +115,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * Gets the createdDateTime property value. DateTime the object was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -125,7 +123,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * Gets the description property value. Administrator-supplied description of the T&C policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -133,7 +131,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * Gets the displayName property value. Administrator-supplied name for the T&C policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -141,7 +139,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("acceptanceStatement", (n) -> { this.setAcceptanceStatement(n.getStringValue()); });
@@ -163,7 +161,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * Gets the groupAssignments property value. The list of group assignments for this T&C policy.
      * @return a termsAndConditionsGroupAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TermsAndConditionsGroupAssignment> getGroupAssignments() {
         return this.groupAssignments;
     }
@@ -171,7 +169,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -179,7 +177,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * Gets the modifiedDateTime property value. DateTime the object was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
         return this.modifiedDateTime;
     }
@@ -187,7 +185,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
         return this.roleScopeTagIds;
     }
@@ -195,7 +193,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * Gets the title property value. Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTitle() {
         return this.title;
     }
@@ -203,17 +201,15 @@ public class TermsAndConditions extends Entity implements Parsable {
      * Gets the version property value. Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getVersion() {
         return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("acceptanceStatement", this.getAcceptanceStatement());
@@ -233,118 +229,92 @@ public class TermsAndConditions extends Entity implements Parsable {
     /**
      * Sets the acceptanceStatement property value. Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&C policy. This is shown to the user on prompts to accept the T&C policy.
      * @param value Value to set for the acceptanceStatement property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAcceptanceStatement(@javax.annotation.Nullable final String value) {
+    public void setAcceptanceStatement(@jakarta.annotation.Nullable final String value) {
         this.acceptanceStatement = value;
     }
     /**
      * Sets the acceptanceStatuses property value. The list of acceptance statuses for this T&C policy.
      * @param value Value to set for the acceptanceStatuses property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAcceptanceStatuses(@javax.annotation.Nullable final java.util.List<TermsAndConditionsAcceptanceStatus> value) {
+    public void setAcceptanceStatuses(@jakarta.annotation.Nullable final java.util.List<TermsAndConditionsAcceptanceStatus> value) {
         this.acceptanceStatuses = value;
     }
     /**
      * Sets the assignments property value. The list of assignments for this T&C policy.
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignments(@javax.annotation.Nullable final java.util.List<TermsAndConditionsAssignment> value) {
+    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<TermsAndConditionsAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the bodyText property value. Administrator-supplied body text of the terms and conditions, typically the terms themselves. This is shown to the user on prompts to accept the T&C policy.
      * @param value Value to set for the bodyText property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBodyText(@javax.annotation.Nullable final String value) {
+    public void setBodyText(@jakarta.annotation.Nullable final String value) {
         this.bodyText = value;
     }
     /**
      * Sets the createdDateTime property value. DateTime the object was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Administrator-supplied description of the T&C policy.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Administrator-supplied name for the T&C policy.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the groupAssignments property value. The list of group assignments for this T&C policy.
      * @param value Value to set for the groupAssignments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupAssignments(@javax.annotation.Nullable final java.util.List<TermsAndConditionsGroupAssignment> value) {
+    public void setGroupAssignments(@jakarta.annotation.Nullable final java.util.List<TermsAndConditionsGroupAssignment> value) {
         this.groupAssignments = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the modifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the modifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.modifiedDateTime = value;
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTagIds = value;
     }
     /**
      * Sets the title property value. Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&C policy.
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTitle(@javax.annotation.Nullable final String value) {
+    public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
     /**
      * Sets the version property value. Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final Integer value) {
+    public void setVersion(@jakarta.annotation.Nullable final Integer value) {
         this.version = value;
     }
 }

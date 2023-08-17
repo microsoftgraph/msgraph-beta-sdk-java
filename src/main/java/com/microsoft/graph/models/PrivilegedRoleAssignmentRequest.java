@@ -58,9 +58,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     private String userId;
     /**
      * Instantiates a new privilegedRoleAssignmentRequest and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PrivilegedRoleAssignmentRequest() {
         super();
     }
@@ -69,8 +67,8 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a privilegedRoleAssignmentRequest
      */
-    @javax.annotation.Nonnull
-    public static PrivilegedRoleAssignmentRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrivilegedRoleAssignmentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PrivilegedRoleAssignmentRequest();
     }
@@ -78,7 +76,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      * Gets the assignmentState property value. The assignmentState property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssignmentState() {
         return this.assignmentState;
     }
@@ -86,7 +84,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      * Gets the duration property value. The duration property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDuration() {
         return this.duration;
     }
@@ -94,7 +92,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignmentState", (n) -> { this.setAssignmentState(n.getStringValue()); });
@@ -115,7 +113,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      * Gets the reason property value. The reason property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getReason() {
         return this.reason;
     }
@@ -123,7 +121,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      * Gets the requestedDateTime property value. The requestedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRequestedDateTime() {
         return this.requestedDateTime;
     }
@@ -131,7 +129,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      * Gets the roleId property value. The roleId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleId() {
         return this.roleId;
     }
@@ -139,7 +137,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      * Gets the roleInfo property value. The roleInfo property
      * @return a privilegedRole
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrivilegedRole getRoleInfo() {
         return this.roleInfo;
     }
@@ -147,7 +145,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      * Gets the schedule property value. The schedule property
      * @return a governanceSchedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GovernanceSchedule getSchedule() {
         return this.schedule;
     }
@@ -155,7 +153,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      * Gets the status property value. The status property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStatus() {
         return this.status;
     }
@@ -163,7 +161,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      * Gets the ticketNumber property value. The ticketNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTicketNumber() {
         return this.ticketNumber;
     }
@@ -171,7 +169,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      * Gets the ticketSystem property value. The ticketSystem property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTicketSystem() {
         return this.ticketSystem;
     }
@@ -179,7 +177,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      * Gets the type property value. The type property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getType() {
         return this.type;
     }
@@ -187,17 +185,15 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      * Gets the userId property value. The userId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("assignmentState", this.getAssignmentState());
@@ -216,109 +212,85 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     /**
      * Sets the assignmentState property value. The assignmentState property
      * @param value Value to set for the assignmentState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentState(@javax.annotation.Nullable final String value) {
+    public void setAssignmentState(@jakarta.annotation.Nullable final String value) {
         this.assignmentState = value;
     }
     /**
      * Sets the duration property value. The duration property
      * @param value Value to set for the duration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDuration(@javax.annotation.Nullable final String value) {
+    public void setDuration(@jakarta.annotation.Nullable final String value) {
         this.duration = value;
     }
     /**
      * Sets the reason property value. The reason property
      * @param value Value to set for the reason property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReason(@javax.annotation.Nullable final String value) {
+    public void setReason(@jakarta.annotation.Nullable final String value) {
         this.reason = value;
     }
     /**
      * Sets the requestedDateTime property value. The requestedDateTime property
      * @param value Value to set for the requestedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setRequestedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.requestedDateTime = value;
     }
     /**
      * Sets the roleId property value. The roleId property
      * @param value Value to set for the roleId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleId(@javax.annotation.Nullable final String value) {
+    public void setRoleId(@jakarta.annotation.Nullable final String value) {
         this.roleId = value;
     }
     /**
      * Sets the roleInfo property value. The roleInfo property
      * @param value Value to set for the roleInfo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleInfo(@javax.annotation.Nullable final PrivilegedRole value) {
+    public void setRoleInfo(@jakarta.annotation.Nullable final PrivilegedRole value) {
         this.roleInfo = value;
     }
     /**
      * Sets the schedule property value. The schedule property
      * @param value Value to set for the schedule property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchedule(@javax.annotation.Nullable final GovernanceSchedule value) {
+    public void setSchedule(@jakarta.annotation.Nullable final GovernanceSchedule value) {
         this.schedule = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final String value) {
+    public void setStatus(@jakarta.annotation.Nullable final String value) {
         this.status = value;
     }
     /**
      * Sets the ticketNumber property value. The ticketNumber property
      * @param value Value to set for the ticketNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTicketNumber(@javax.annotation.Nullable final String value) {
+    public void setTicketNumber(@jakarta.annotation.Nullable final String value) {
         this.ticketNumber = value;
     }
     /**
      * Sets the ticketSystem property value. The ticketSystem property
      * @param value Value to set for the ticketSystem property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTicketSystem(@javax.annotation.Nullable final String value) {
+    public void setTicketSystem(@jakarta.annotation.Nullable final String value) {
         this.ticketSystem = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final String value) {
+    public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
     /**
      * Sets the userId property value. The userId property
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
 }

@@ -17,9 +17,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
     private EducationAssignmentPointsGrade publishedPoints;
     /**
      * Instantiates a new educationPointsOutcome and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EducationPointsOutcome() {
         super();
         this.setOdataType("#microsoft.graph.educationPointsOutcome");
@@ -29,8 +27,8 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationPointsOutcome
      */
-    @javax.annotation.Nonnull
-    public static EducationPointsOutcome createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationPointsOutcome createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationPointsOutcome();
     }
@@ -38,7 +36,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("points", (n) -> { this.setPoints(n.getObjectValue(EducationAssignmentPointsGrade::createFromDiscriminatorValue)); });
@@ -49,7 +47,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
      * Gets the points property value. The numeric grade the teacher has given the student for this assignment.
      * @return a educationAssignmentPointsGrade
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationAssignmentPointsGrade getPoints() {
         return this.points;
     }
@@ -57,17 +55,15 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
      * Gets the publishedPoints property value. A copy of the points property that is made when the grade is released to the student.
      * @return a educationAssignmentPointsGrade
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationAssignmentPointsGrade getPublishedPoints() {
         return this.publishedPoints;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("points", this.getPoints());
@@ -76,19 +72,15 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
     /**
      * Sets the points property value. The numeric grade the teacher has given the student for this assignment.
      * @param value Value to set for the points property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPoints(@javax.annotation.Nullable final EducationAssignmentPointsGrade value) {
+    public void setPoints(@jakarta.annotation.Nullable final EducationAssignmentPointsGrade value) {
         this.points = value;
     }
     /**
      * Sets the publishedPoints property value. A copy of the points property that is made when the grade is released to the student.
      * @param value Value to set for the publishedPoints property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublishedPoints(@javax.annotation.Nullable final EducationAssignmentPointsGrade value) {
+    public void setPublishedPoints(@jakarta.annotation.Nullable final EducationAssignmentPointsGrade value) {
         this.publishedPoints = value;
     }
 }

@@ -29,9 +29,7 @@ public class PersonWebsite extends ItemFacet implements Parsable {
     private String webUrl;
     /**
      * Instantiates a new personWebsite and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PersonWebsite() {
         super();
         this.setOdataType("#microsoft.graph.personWebsite");
@@ -41,8 +39,8 @@ public class PersonWebsite extends ItemFacet implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a personWebsite
      */
-    @javax.annotation.Nonnull
-    public static PersonWebsite createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PersonWebsite createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PersonWebsite();
     }
@@ -50,7 +48,7 @@ public class PersonWebsite extends ItemFacet implements Parsable {
      * Gets the categories property value. Contains categories a user has associated with the website (for example, personal, recipes).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
         return this.categories;
     }
@@ -58,7 +56,7 @@ public class PersonWebsite extends ItemFacet implements Parsable {
      * Gets the description property value. Contains a description of the website.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -66,7 +64,7 @@ public class PersonWebsite extends ItemFacet implements Parsable {
      * Gets the displayName property value. Contains a friendly name for the website.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -74,7 +72,7 @@ public class PersonWebsite extends ItemFacet implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -88,7 +86,7 @@ public class PersonWebsite extends ItemFacet implements Parsable {
      * Gets the thumbnailUrl property value. The thumbnailUrl property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
         return this.thumbnailUrl;
     }
@@ -96,17 +94,15 @@ public class PersonWebsite extends ItemFacet implements Parsable {
      * Gets the webUrl property value. Contains a link to the website itself.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebUrl() {
         return this.webUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("categories", this.getCategories());
@@ -118,46 +114,36 @@ public class PersonWebsite extends ItemFacet implements Parsable {
     /**
      * Sets the categories property value. Contains categories a user has associated with the website (for example, personal, recipes).
      * @param value Value to set for the categories property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.categories = value;
     }
     /**
      * Sets the description property value. Contains a description of the website.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Contains a friendly name for the website.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the thumbnailUrl property value. The thumbnailUrl property
      * @param value Value to set for the thumbnailUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThumbnailUrl(@javax.annotation.Nullable final String value) {
+    public void setThumbnailUrl(@jakarta.annotation.Nullable final String value) {
         this.thumbnailUrl = value;
     }
     /**
      * Sets the webUrl property value. Contains a link to the website itself.
      * @param value Value to set for the webUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebUrl(@javax.annotation.Nullable final String value) {
+    public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }
 }

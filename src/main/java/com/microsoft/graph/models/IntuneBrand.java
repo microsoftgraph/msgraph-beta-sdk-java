@@ -137,9 +137,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     private RgbColor themeColor;
     /**
      * Instantiates a new intuneBrand and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public IntuneBrand() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -148,8 +146,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a intuneBrand
      */
-    @javax.annotation.Nonnull
-    public static IntuneBrand createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IntuneBrand createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IntuneBrand();
     }
@@ -157,7 +155,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -165,7 +163,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the companyPortalBlockedActions property value. Collection of blocked actions on the company portal as per platform and device ownership types.
      * @return a companyPortalBlockedAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CompanyPortalBlockedAction> getCompanyPortalBlockedActions() {
         return this.companyPortalBlockedActions;
     }
@@ -173,7 +171,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the contactITEmailAddress property value. Email address of the person/organization responsible for IT support.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContactITEmailAddress() {
         return this.contactITEmailAddress;
     }
@@ -181,7 +179,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the contactITName property value. Name of the person/organization responsible for IT support.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContactITName() {
         return this.contactITName;
     }
@@ -189,7 +187,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the contactITNotes property value. Text comments regarding the person/organization responsible for IT support.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContactITNotes() {
         return this.contactITNotes;
     }
@@ -197,7 +195,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the contactITPhoneNumber property value. Phone number of the person/organization responsible for IT support.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContactITPhoneNumber() {
         return this.contactITPhoneNumber;
     }
@@ -205,7 +203,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the customCanSeePrivacyMessage property value. The custom privacy message used to explain what the organization can see and do on managed devices.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomCanSeePrivacyMessage() {
         return this.customCanSeePrivacyMessage;
     }
@@ -213,7 +211,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the customCantSeePrivacyMessage property value. The custom privacy message used to explain what the organization cant see or do on managed devices.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomCantSeePrivacyMessage() {
         return this.customCantSeePrivacyMessage;
     }
@@ -221,7 +219,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the customPrivacyMessage property value. The custom privacy message used to explain what the organization cant see or do on managed devices.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomPrivacyMessage() {
         return this.customPrivacyMessage;
     }
@@ -229,7 +227,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the darkBackgroundLogo property value. Logo image displayed in Company Portal apps which have a dark background behind the logo.
      * @return a mimeContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MimeContent getDarkBackgroundLogo() {
         return this.darkBackgroundLogo;
     }
@@ -237,7 +235,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the disableClientTelemetry property value. Applies to telemetry sent from all clients to the Intune service. When disabled, all proactive troubleshooting and issue warnings within the client are turned off, and telemetry settings appear inactive or hidden to the device user.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDisableClientTelemetry() {
         return this.disableClientTelemetry;
     }
@@ -245,7 +243,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the disableDeviceCategorySelection property value. Boolean that indicates if Device Category Selection will be shown in Company Portal
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDisableDeviceCategorySelection() {
         return this.disableDeviceCategorySelection;
     }
@@ -253,7 +251,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. Company/organization name that is displayed to end users.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -261,7 +259,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the enrollmentAvailability property value. Options available for enrollment flow customization
      * @return a enrollmentAvailabilityOptions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EnrollmentAvailabilityOptions getEnrollmentAvailability() {
         return this.enrollmentAvailability;
     }
@@ -269,7 +267,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(30);
         deserializerMap.put("companyPortalBlockedActions", (n) -> { this.setCompanyPortalBlockedActions(n.getCollectionOfObjectValues(CompanyPortalBlockedAction::createFromDiscriminatorValue)); });
@@ -308,7 +306,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the isFactoryResetDisabled property value. Boolean that represents whether the adminsistrator has disabled the 'Factory Reset' action on corporate owned devices.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsFactoryResetDisabled() {
         return this.isFactoryResetDisabled;
     }
@@ -316,7 +314,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the isRemoveDeviceDisabled property value. Boolean that represents whether the adminsistrator has disabled the 'Remove Device' action on corporate owned devices.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRemoveDeviceDisabled() {
         return this.isRemoveDeviceDisabled;
     }
@@ -324,7 +322,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the landingPageCustomizedImage property value. Customized image displayed in Company Portal app landing page
      * @return a mimeContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MimeContent getLandingPageCustomizedImage() {
         return this.landingPageCustomizedImage;
     }
@@ -332,7 +330,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the lightBackgroundLogo property value. Logo image displayed in Company Portal apps which have a light background behind the logo.
      * @return a mimeContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MimeContent getLightBackgroundLogo() {
         return this.lightBackgroundLogo;
     }
@@ -340,7 +338,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -348,7 +346,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOnlineSupportSiteName() {
         return this.onlineSupportSiteName;
     }
@@ -356,7 +354,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOnlineSupportSiteUrl() {
         return this.onlineSupportSiteUrl;
     }
@@ -364,7 +362,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the privacyUrl property value. URL to the company/organizations privacy policy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrivacyUrl() {
         return this.privacyUrl;
     }
@@ -372,7 +370,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the roleScopeTagIds property value. List of scope tags assigned to the default branding profile
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
         return this.roleScopeTagIds;
     }
@@ -380,7 +378,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the sendDeviceOwnershipChangePushNotification property value. Boolean that indicates if a push notification is sent to users when their device ownership type changes from personal to corporate
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSendDeviceOwnershipChangePushNotification() {
         return this.sendDeviceOwnershipChangePushNotification;
     }
@@ -388,7 +386,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the showAzureADEnterpriseApps property value. Boolean that indicates if AzureAD Enterprise Apps will be shown in Company Portal
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowAzureADEnterpriseApps() {
         return this.showAzureADEnterpriseApps;
     }
@@ -396,7 +394,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the showConfigurationManagerApps property value. Boolean that indicates if ConfigurationManagerApps will be shown in Company Portal
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowConfigurationManagerApps() {
         return this.showConfigurationManagerApps;
     }
@@ -404,7 +402,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the showDisplayNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowDisplayNameNextToLogo() {
         return this.showDisplayNameNextToLogo;
     }
@@ -412,7 +410,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the showLogo property value. Boolean that represents whether the administrator-supplied logo images are shown or not shown.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowLogo() {
         return this.showLogo;
     }
@@ -420,7 +418,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the showNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowNameNextToLogo() {
         return this.showNameNextToLogo;
     }
@@ -428,7 +426,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the showOfficeWebApps property value. Boolean that indicates if Office WebApps will be shown in Company Portal
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getShowOfficeWebApps() {
         return this.showOfficeWebApps;
     }
@@ -436,17 +434,15 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Gets the themeColor property value. Primary theme color used in the Company Portal applications and web portal.
      * @return a rgbColor
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RgbColor getThemeColor() {
         return this.themeColor;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("companyPortalBlockedActions", this.getCompanyPortalBlockedActions());
         writer.writeStringValue("contactITEmailAddress", this.getContactITEmailAddress());
@@ -483,280 +479,218 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the companyPortalBlockedActions property value. Collection of blocked actions on the company portal as per platform and device ownership types.
      * @param value Value to set for the companyPortalBlockedActions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompanyPortalBlockedActions(@javax.annotation.Nullable final java.util.List<CompanyPortalBlockedAction> value) {
+    public void setCompanyPortalBlockedActions(@jakarta.annotation.Nullable final java.util.List<CompanyPortalBlockedAction> value) {
         this.companyPortalBlockedActions = value;
     }
     /**
      * Sets the contactITEmailAddress property value. Email address of the person/organization responsible for IT support.
      * @param value Value to set for the contactITEmailAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContactITEmailAddress(@javax.annotation.Nullable final String value) {
+    public void setContactITEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.contactITEmailAddress = value;
     }
     /**
      * Sets the contactITName property value. Name of the person/organization responsible for IT support.
      * @param value Value to set for the contactITName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContactITName(@javax.annotation.Nullable final String value) {
+    public void setContactITName(@jakarta.annotation.Nullable final String value) {
         this.contactITName = value;
     }
     /**
      * Sets the contactITNotes property value. Text comments regarding the person/organization responsible for IT support.
      * @param value Value to set for the contactITNotes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContactITNotes(@javax.annotation.Nullable final String value) {
+    public void setContactITNotes(@jakarta.annotation.Nullable final String value) {
         this.contactITNotes = value;
     }
     /**
      * Sets the contactITPhoneNumber property value. Phone number of the person/organization responsible for IT support.
      * @param value Value to set for the contactITPhoneNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContactITPhoneNumber(@javax.annotation.Nullable final String value) {
+    public void setContactITPhoneNumber(@jakarta.annotation.Nullable final String value) {
         this.contactITPhoneNumber = value;
     }
     /**
      * Sets the customCanSeePrivacyMessage property value. The custom privacy message used to explain what the organization can see and do on managed devices.
      * @param value Value to set for the customCanSeePrivacyMessage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomCanSeePrivacyMessage(@javax.annotation.Nullable final String value) {
+    public void setCustomCanSeePrivacyMessage(@jakarta.annotation.Nullable final String value) {
         this.customCanSeePrivacyMessage = value;
     }
     /**
      * Sets the customCantSeePrivacyMessage property value. The custom privacy message used to explain what the organization cant see or do on managed devices.
      * @param value Value to set for the customCantSeePrivacyMessage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomCantSeePrivacyMessage(@javax.annotation.Nullable final String value) {
+    public void setCustomCantSeePrivacyMessage(@jakarta.annotation.Nullable final String value) {
         this.customCantSeePrivacyMessage = value;
     }
     /**
      * Sets the customPrivacyMessage property value. The custom privacy message used to explain what the organization cant see or do on managed devices.
      * @param value Value to set for the customPrivacyMessage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomPrivacyMessage(@javax.annotation.Nullable final String value) {
+    public void setCustomPrivacyMessage(@jakarta.annotation.Nullable final String value) {
         this.customPrivacyMessage = value;
     }
     /**
      * Sets the darkBackgroundLogo property value. Logo image displayed in Company Portal apps which have a dark background behind the logo.
      * @param value Value to set for the darkBackgroundLogo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDarkBackgroundLogo(@javax.annotation.Nullable final MimeContent value) {
+    public void setDarkBackgroundLogo(@jakarta.annotation.Nullable final MimeContent value) {
         this.darkBackgroundLogo = value;
     }
     /**
      * Sets the disableClientTelemetry property value. Applies to telemetry sent from all clients to the Intune service. When disabled, all proactive troubleshooting and issue warnings within the client are turned off, and telemetry settings appear inactive or hidden to the device user.
      * @param value Value to set for the disableClientTelemetry property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisableClientTelemetry(@javax.annotation.Nullable final Boolean value) {
+    public void setDisableClientTelemetry(@jakarta.annotation.Nullable final Boolean value) {
         this.disableClientTelemetry = value;
     }
     /**
      * Sets the disableDeviceCategorySelection property value. Boolean that indicates if Device Category Selection will be shown in Company Portal
      * @param value Value to set for the disableDeviceCategorySelection property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisableDeviceCategorySelection(@javax.annotation.Nullable final Boolean value) {
+    public void setDisableDeviceCategorySelection(@jakarta.annotation.Nullable final Boolean value) {
         this.disableDeviceCategorySelection = value;
     }
     /**
      * Sets the displayName property value. Company/organization name that is displayed to end users.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the enrollmentAvailability property value. Options available for enrollment flow customization
      * @param value Value to set for the enrollmentAvailability property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentAvailability(@javax.annotation.Nullable final EnrollmentAvailabilityOptions value) {
+    public void setEnrollmentAvailability(@jakarta.annotation.Nullable final EnrollmentAvailabilityOptions value) {
         this.enrollmentAvailability = value;
     }
     /**
      * Sets the isFactoryResetDisabled property value. Boolean that represents whether the adminsistrator has disabled the 'Factory Reset' action on corporate owned devices.
      * @param value Value to set for the isFactoryResetDisabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsFactoryResetDisabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsFactoryResetDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isFactoryResetDisabled = value;
     }
     /**
      * Sets the isRemoveDeviceDisabled property value. Boolean that represents whether the adminsistrator has disabled the 'Remove Device' action on corporate owned devices.
      * @param value Value to set for the isRemoveDeviceDisabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRemoveDeviceDisabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsRemoveDeviceDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isRemoveDeviceDisabled = value;
     }
     /**
      * Sets the landingPageCustomizedImage property value. Customized image displayed in Company Portal app landing page
      * @param value Value to set for the landingPageCustomizedImage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLandingPageCustomizedImage(@javax.annotation.Nullable final MimeContent value) {
+    public void setLandingPageCustomizedImage(@jakarta.annotation.Nullable final MimeContent value) {
         this.landingPageCustomizedImage = value;
     }
     /**
      * Sets the lightBackgroundLogo property value. Logo image displayed in Company Portal apps which have a light background behind the logo.
      * @param value Value to set for the lightBackgroundLogo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLightBackgroundLogo(@javax.annotation.Nullable final MimeContent value) {
+    public void setLightBackgroundLogo(@jakarta.annotation.Nullable final MimeContent value) {
         this.lightBackgroundLogo = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site.
      * @param value Value to set for the onlineSupportSiteName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnlineSupportSiteName(@javax.annotation.Nullable final String value) {
+    public void setOnlineSupportSiteName(@jakarta.annotation.Nullable final String value) {
         this.onlineSupportSiteName = value;
     }
     /**
      * Sets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site.
      * @param value Value to set for the onlineSupportSiteUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOnlineSupportSiteUrl(@javax.annotation.Nullable final String value) {
+    public void setOnlineSupportSiteUrl(@jakarta.annotation.Nullable final String value) {
         this.onlineSupportSiteUrl = value;
     }
     /**
      * Sets the privacyUrl property value. URL to the company/organizations privacy policy.
      * @param value Value to set for the privacyUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrivacyUrl(@javax.annotation.Nullable final String value) {
+    public void setPrivacyUrl(@jakarta.annotation.Nullable final String value) {
         this.privacyUrl = value;
     }
     /**
      * Sets the roleScopeTagIds property value. List of scope tags assigned to the default branding profile
      * @param value Value to set for the roleScopeTagIds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTagIds = value;
     }
     /**
      * Sets the sendDeviceOwnershipChangePushNotification property value. Boolean that indicates if a push notification is sent to users when their device ownership type changes from personal to corporate
      * @param value Value to set for the sendDeviceOwnershipChangePushNotification property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSendDeviceOwnershipChangePushNotification(@javax.annotation.Nullable final Boolean value) {
+    public void setSendDeviceOwnershipChangePushNotification(@jakarta.annotation.Nullable final Boolean value) {
         this.sendDeviceOwnershipChangePushNotification = value;
     }
     /**
      * Sets the showAzureADEnterpriseApps property value. Boolean that indicates if AzureAD Enterprise Apps will be shown in Company Portal
      * @param value Value to set for the showAzureADEnterpriseApps property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowAzureADEnterpriseApps(@javax.annotation.Nullable final Boolean value) {
+    public void setShowAzureADEnterpriseApps(@jakarta.annotation.Nullable final Boolean value) {
         this.showAzureADEnterpriseApps = value;
     }
     /**
      * Sets the showConfigurationManagerApps property value. Boolean that indicates if ConfigurationManagerApps will be shown in Company Portal
      * @param value Value to set for the showConfigurationManagerApps property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowConfigurationManagerApps(@javax.annotation.Nullable final Boolean value) {
+    public void setShowConfigurationManagerApps(@jakarta.annotation.Nullable final Boolean value) {
         this.showConfigurationManagerApps = value;
     }
     /**
      * Sets the showDisplayNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
      * @param value Value to set for the showDisplayNameNextToLogo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowDisplayNameNextToLogo(@javax.annotation.Nullable final Boolean value) {
+    public void setShowDisplayNameNextToLogo(@jakarta.annotation.Nullable final Boolean value) {
         this.showDisplayNameNextToLogo = value;
     }
     /**
      * Sets the showLogo property value. Boolean that represents whether the administrator-supplied logo images are shown or not shown.
      * @param value Value to set for the showLogo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowLogo(@javax.annotation.Nullable final Boolean value) {
+    public void setShowLogo(@jakarta.annotation.Nullable final Boolean value) {
         this.showLogo = value;
     }
     /**
      * Sets the showNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
      * @param value Value to set for the showNameNextToLogo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowNameNextToLogo(@javax.annotation.Nullable final Boolean value) {
+    public void setShowNameNextToLogo(@jakarta.annotation.Nullable final Boolean value) {
         this.showNameNextToLogo = value;
     }
     /**
      * Sets the showOfficeWebApps property value. Boolean that indicates if Office WebApps will be shown in Company Portal
      * @param value Value to set for the showOfficeWebApps property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShowOfficeWebApps(@javax.annotation.Nullable final Boolean value) {
+    public void setShowOfficeWebApps(@jakarta.annotation.Nullable final Boolean value) {
         this.showOfficeWebApps = value;
     }
     /**
      * Sets the themeColor property value. Primary theme color used in the Company Portal applications and web portal.
      * @param value Value to set for the themeColor property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThemeColor(@javax.annotation.Nullable final RgbColor value) {
+    public void setThemeColor(@jakarta.annotation.Nullable final RgbColor value) {
         this.themeColor = value;
     }
 }

@@ -38,9 +38,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     private SynchronizationSchema schema;
     /**
      * Instantiates a new synchronizationTemplate and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SynchronizationTemplate() {
         super();
     }
@@ -49,8 +47,8 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a synchronizationTemplate
      */
-    @javax.annotation.Nonnull
-    public static SynchronizationTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SynchronizationTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SynchronizationTemplate();
     }
@@ -58,7 +56,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * Gets the applicationId property value. Identifier of the application this template belongs to.
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getApplicationId() {
         return this.applicationId;
     }
@@ -66,7 +64,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * Gets the default property value. true if this template is recommended to be the default for the application.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDefault() {
         return this.defaultEscaped;
     }
@@ -74,7 +72,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * Gets the description property value. Description of the template.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -82,7 +80,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * Gets the discoverable property value. true if this template should appear in the collection of templates available for the application instance (service principal).
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDiscoverable() {
         return this.discoverable;
     }
@@ -90,7 +88,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * Gets the factoryTag property value. One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFactoryTag() {
         return this.factoryTag;
     }
@@ -98,7 +96,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicationId", (n) -> { this.setApplicationId(n.getUUIDValue()); });
@@ -114,7 +112,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * Gets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      * @return a synchronizationMetadataEntry
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SynchronizationMetadataEntry> getMetadata() {
         return this.metadata;
     }
@@ -122,17 +120,15 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * Gets the schema property value. Default synchronization schema for the jobs based on this template.
      * @return a synchronizationSchema
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SynchronizationSchema getSchema() {
         return this.schema;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeUUIDValue("applicationId", this.getApplicationId());
@@ -146,64 +142,50 @@ public class SynchronizationTemplate extends Entity implements Parsable {
     /**
      * Sets the applicationId property value. Identifier of the application this template belongs to.
      * @param value Value to set for the applicationId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicationId(@javax.annotation.Nullable final UUID value) {
+    public void setApplicationId(@jakarta.annotation.Nullable final UUID value) {
         this.applicationId = value;
     }
     /**
      * Sets the default property value. true if this template is recommended to be the default for the application.
      * @param value Value to set for the default property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefault(@javax.annotation.Nullable final Boolean value) {
+    public void setDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.defaultEscaped = value;
     }
     /**
      * Sets the description property value. Description of the template.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the discoverable property value. true if this template should appear in the collection of templates available for the application instance (service principal).
      * @param value Value to set for the discoverable property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDiscoverable(@javax.annotation.Nullable final Boolean value) {
+    public void setDiscoverable(@jakarta.annotation.Nullable final Boolean value) {
         this.discoverable = value;
     }
     /**
      * Sets the factoryTag property value. One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
      * @param value Value to set for the factoryTag property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFactoryTag(@javax.annotation.Nullable final String value) {
+    public void setFactoryTag(@jakarta.annotation.Nullable final String value) {
         this.factoryTag = value;
     }
     /**
      * Sets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      * @param value Value to set for the metadata property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMetadata(@javax.annotation.Nullable final java.util.List<SynchronizationMetadataEntry> value) {
+    public void setMetadata(@jakarta.annotation.Nullable final java.util.List<SynchronizationMetadataEntry> value) {
         this.metadata = value;
     }
     /**
      * Sets the schema property value. Default synchronization schema for the jobs based on this template.
      * @param value Value to set for the schema property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchema(@javax.annotation.Nullable final SynchronizationSchema value) {
+    public void setSchema(@jakarta.annotation.Nullable final SynchronizationSchema value) {
         this.schema = value;
     }
 }

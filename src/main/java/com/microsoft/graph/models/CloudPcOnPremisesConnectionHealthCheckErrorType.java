@@ -74,10 +74,10 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
     CloudPcOnPremisesConnectionHealthCheckErrorType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static CloudPcOnPremisesConnectionHealthCheckErrorType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static CloudPcOnPremisesConnectionHealthCheckErrorType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "dnsCheckFqdnNotFound": return DnsCheckFqdnNotFound;

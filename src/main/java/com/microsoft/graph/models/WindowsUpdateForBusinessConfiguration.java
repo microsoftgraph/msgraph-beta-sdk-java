@@ -158,9 +158,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     private Enablement userWindowsUpdateScanAccess;
     /**
      * Instantiates a new windowsUpdateForBusinessConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsUpdateForBusinessConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdateForBusinessConfiguration");
@@ -170,8 +168,8 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsUpdateForBusinessConfiguration
      */
-    @javax.annotation.Nonnull
-    public static WindowsUpdateForBusinessConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsUpdateForBusinessConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsUpdateForBusinessConfiguration();
     }
@@ -179,7 +177,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the allowWindows11Upgrade property value. When TRUE, allows eligible Windows 10 devices to upgrade to Windows 11. When FALSE, implies the device stays on the existing operating system. Returned by default. Query parameters are not supported.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowWindows11Upgrade() {
         return this.allowWindows11Upgrade;
     }
@@ -187,7 +185,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the automaticUpdateMode property value. Possible values for automatic update mode.
      * @return a automaticUpdateMode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AutomaticUpdateMode getAutomaticUpdateMode() {
         return this.automaticUpdateMode;
     }
@@ -195,7 +193,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the autoRestartNotificationDismissal property value. Auto restart required notification dismissal method
      * @return a autoRestartNotificationDismissalMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AutoRestartNotificationDismissalMethod getAutoRestartNotificationDismissal() {
         return this.autoRestartNotificationDismissal;
     }
@@ -203,7 +201,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the businessReadyUpdatesOnly property value. Which branch devices will receive their updates from
      * @return a windowsUpdateType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsUpdateType getBusinessReadyUpdatesOnly() {
         return this.businessReadyUpdatesOnly;
     }
@@ -211,7 +209,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the deadlineForFeatureUpdatesInDays property value. Number of days before feature updates are installed automatically with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDeadlineForFeatureUpdatesInDays() {
         return this.deadlineForFeatureUpdatesInDays;
     }
@@ -219,7 +217,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the deadlineForQualityUpdatesInDays property value. Number of days before quality updates are installed automatically with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDeadlineForQualityUpdatesInDays() {
         return this.deadlineForQualityUpdatesInDays;
     }
@@ -227,7 +225,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the deadlineGracePeriodInDays property value. Number of days after deadline until restarts occur automatically with valid range from 0 to 7 days. Returned by default. Query parameters are not supported.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDeadlineGracePeriodInDays() {
         return this.deadlineGracePeriodInDays;
     }
@@ -235,7 +233,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
      * @return a windowsDeliveryOptimizationMode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsDeliveryOptimizationMode getDeliveryOptimizationMode() {
         return this.deliveryOptimizationMode;
     }
@@ -243,7 +241,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the driversExcluded property value. When TRUE, excludes Windows update Drivers. When FALSE, does not exclude Windows update Drivers. Returned by default. Query parameters are not supported.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDriversExcluded() {
         return this.driversExcluded;
     }
@@ -251,7 +249,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the engagedRestartDeadlineInDays property value. Deadline in days before automatically scheduling and executing a pending restart outside of active hours, with valid range from 2 to 30 days. Returned by default. Query parameters are not supported.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getEngagedRestartDeadlineInDays() {
         return this.engagedRestartDeadlineInDays;
     }
@@ -259,7 +257,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the engagedRestartSnoozeScheduleInDays property value. Number of days a user can snooze Engaged Restart reminder notifications with valid range from 1 to 3 days. Returned by default. Query parameters are not supported.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getEngagedRestartSnoozeScheduleInDays() {
         return this.engagedRestartSnoozeScheduleInDays;
     }
@@ -267,7 +265,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the engagedRestartTransitionScheduleInDays property value. Number of days before transitioning from Auto Restarts scheduled outside of active hours to Engaged Restart, which requires the user to schedule, with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getEngagedRestartTransitionScheduleInDays() {
         return this.engagedRestartTransitionScheduleInDays;
     }
@@ -275,7 +273,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the featureUpdatesDeferralPeriodInDays property value. Defer Feature Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFeatureUpdatesDeferralPeriodInDays() {
         return this.featureUpdatesDeferralPeriodInDays;
     }
@@ -283,7 +281,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the featureUpdatesPaused property value. When TRUE, assigned devices are paused from receiving feature updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Feature Updates. Returned by default. Query parameters are not supported.s
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getFeatureUpdatesPaused() {
         return this.featureUpdatesPaused;
     }
@@ -291,7 +289,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the featureUpdatesPauseExpiryDateTime property value. The Feature Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getFeatureUpdatesPauseExpiryDateTime() {
         return this.featureUpdatesPauseExpiryDateTime;
     }
@@ -299,7 +297,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the featureUpdatesPauseStartDate property value. The Feature Updates Pause start date. This value is the time when the admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. This property is read-only.
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getFeatureUpdatesPauseStartDate() {
         return this.featureUpdatesPauseStartDate;
     }
@@ -307,7 +305,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the featureUpdatesRollbackStartDateTime property value. The Feature Updates Rollback Start datetime.This value is the time when the admin rolled back the Feature update for the ring.Returned by default.Query parameters are not supported.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getFeatureUpdatesRollbackStartDateTime() {
         return this.featureUpdatesRollbackStartDateTime;
     }
@@ -315,7 +313,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the featureUpdatesRollbackWindowInDays property value. The number of days after a Feature Update for which a rollback is valid with valid range from 2 to 60 days. Returned by default. Query parameters are not supported.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFeatureUpdatesRollbackWindowInDays() {
         return this.featureUpdatesRollbackWindowInDays;
     }
@@ -323,7 +321,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the featureUpdatesWillBeRolledBack property value. When TRUE, rollback Feature Updates on the next device check in. When FALSE, do not rollback Feature Updates on the next device check in. Returned by default.Query parameters are not supported.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getFeatureUpdatesWillBeRolledBack() {
         return this.featureUpdatesWillBeRolledBack;
     }
@@ -331,7 +329,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowWindows11Upgrade", (n) -> { this.setAllowWindows11Upgrade(n.getBooleanValue()); });
@@ -376,7 +374,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the installationSchedule property value. The Installation Schedule. Possible values are: ActiveHoursStart, ActiveHoursEnd, ScheduledInstallDay, ScheduledInstallTime. Returned by default. Query parameters are not supported.
      * @return a windowsUpdateInstallScheduleType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsUpdateInstallScheduleType getInstallationSchedule() {
         return this.installationSchedule;
     }
@@ -384,7 +382,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the microsoftUpdateServiceAllowed property value. When TRUE, allows Microsoft Update Service. When FALSE, does not allow Microsoft Update Service. Returned by default. Query parameters are not supported.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getMicrosoftUpdateServiceAllowed() {
         return this.microsoftUpdateServiceAllowed;
     }
@@ -392,7 +390,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the postponeRebootUntilAfterDeadline property value. When TRUE the device should wait until deadline for rebooting outside of active hours. When FALSE the device should not wait until deadline for rebooting outside of active hours. Returned by default. Query parameters are not supported.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPostponeRebootUntilAfterDeadline() {
         return this.postponeRebootUntilAfterDeadline;
     }
@@ -400,7 +398,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the prereleaseFeatures property value. Possible values for pre-release features.
      * @return a prereleaseFeatures
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrereleaseFeatures getPrereleaseFeatures() {
         return this.prereleaseFeatures;
     }
@@ -408,7 +406,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the qualityUpdatesDeferralPeriodInDays property value. Defer Quality Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getQualityUpdatesDeferralPeriodInDays() {
         return this.qualityUpdatesDeferralPeriodInDays;
     }
@@ -416,7 +414,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the qualityUpdatesPaused property value. When TRUE, assigned devices are paused from receiving quality updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Quality Updates. Returned by default. Query parameters are not supported.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getQualityUpdatesPaused() {
         return this.qualityUpdatesPaused;
     }
@@ -424,7 +422,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the qualityUpdatesPauseExpiryDateTime property value. The Quality Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getQualityUpdatesPauseExpiryDateTime() {
         return this.qualityUpdatesPauseExpiryDateTime;
     }
@@ -432,7 +430,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the qualityUpdatesPauseStartDate property value. The Quality Updates Pause start date. This value is the time when the admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. This property is read-only.
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getQualityUpdatesPauseStartDate() {
         return this.qualityUpdatesPauseStartDate;
     }
@@ -440,7 +438,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the qualityUpdatesRollbackStartDateTime property value. The Quality Updates Rollback Start datetime. This value is the time when the admin rolled back the Quality update for the ring. Returned by default. Query parameters are not supported.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getQualityUpdatesRollbackStartDateTime() {
         return this.qualityUpdatesRollbackStartDateTime;
     }
@@ -448,7 +446,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the qualityUpdatesWillBeRolledBack property value. When TRUE, rollback Quality Updates on the next device check in. When FALSE, do not rollback Quality Updates on the next device check in. Returned by default. Query parameters are not supported.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getQualityUpdatesWillBeRolledBack() {
         return this.qualityUpdatesWillBeRolledBack;
     }
@@ -456,7 +454,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the scheduleImminentRestartWarningInMinutes property value. Specify the period for auto-restart imminent warning notifications. Supported values: 15, 30 or 60 (minutes). Returned by default. Query parameters are not supported.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getScheduleImminentRestartWarningInMinutes() {
         return this.scheduleImminentRestartWarningInMinutes;
     }
@@ -464,7 +462,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the scheduleRestartWarningInHours property value. Specify the period for auto-restart warning reminder notifications. Supported values: 2, 4, 8, 12 or 24 (hours). Returned by default. Query parameters are not supported.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getScheduleRestartWarningInHours() {
         return this.scheduleRestartWarningInHours;
     }
@@ -472,7 +470,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the skipChecksBeforeRestart property value. When TRUE, skips all checks before restart: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc. When FALSE, does not skip all checks before restart. Returned by default. Query parameters are not supported.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSkipChecksBeforeRestart() {
         return this.skipChecksBeforeRestart;
     }
@@ -480,7 +478,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the updateNotificationLevel property value. Windows Update Notification Display Options
      * @return a windowsUpdateNotificationDisplayOption
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsUpdateNotificationDisplayOption getUpdateNotificationLevel() {
         return this.updateNotificationLevel;
     }
@@ -488,7 +486,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the updateWeeks property value. Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue.
      * @return a windowsUpdateForBusinessUpdateWeeks
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsUpdateForBusinessUpdateWeeks getUpdateWeeks() {
         return this.updateWeeks;
     }
@@ -496,7 +494,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the userPauseAccess property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getUserPauseAccess() {
         return this.userPauseAccess;
     }
@@ -504,17 +502,15 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * Gets the userWindowsUpdateScanAccess property value. Possible values of a property
      * @return a enablement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Enablement getUserWindowsUpdateScanAccess() {
         return this.userWindowsUpdateScanAccess;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("allowWindows11Upgrade", this.getAllowWindows11Upgrade());
@@ -555,325 +551,253 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     /**
      * Sets the allowWindows11Upgrade property value. When TRUE, allows eligible Windows 10 devices to upgrade to Windows 11. When FALSE, implies the device stays on the existing operating system. Returned by default. Query parameters are not supported.
      * @param value Value to set for the allowWindows11Upgrade property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowWindows11Upgrade(@javax.annotation.Nullable final Boolean value) {
+    public void setAllowWindows11Upgrade(@jakarta.annotation.Nullable final Boolean value) {
         this.allowWindows11Upgrade = value;
     }
     /**
      * Sets the automaticUpdateMode property value. Possible values for automatic update mode.
      * @param value Value to set for the automaticUpdateMode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAutomaticUpdateMode(@javax.annotation.Nullable final AutomaticUpdateMode value) {
+    public void setAutomaticUpdateMode(@jakarta.annotation.Nullable final AutomaticUpdateMode value) {
         this.automaticUpdateMode = value;
     }
     /**
      * Sets the autoRestartNotificationDismissal property value. Auto restart required notification dismissal method
      * @param value Value to set for the autoRestartNotificationDismissal property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAutoRestartNotificationDismissal(@javax.annotation.Nullable final AutoRestartNotificationDismissalMethod value) {
+    public void setAutoRestartNotificationDismissal(@jakarta.annotation.Nullable final AutoRestartNotificationDismissalMethod value) {
         this.autoRestartNotificationDismissal = value;
     }
     /**
      * Sets the businessReadyUpdatesOnly property value. Which branch devices will receive their updates from
      * @param value Value to set for the businessReadyUpdatesOnly property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBusinessReadyUpdatesOnly(@javax.annotation.Nullable final WindowsUpdateType value) {
+    public void setBusinessReadyUpdatesOnly(@jakarta.annotation.Nullable final WindowsUpdateType value) {
         this.businessReadyUpdatesOnly = value;
     }
     /**
      * Sets the deadlineForFeatureUpdatesInDays property value. Number of days before feature updates are installed automatically with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
      * @param value Value to set for the deadlineForFeatureUpdatesInDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeadlineForFeatureUpdatesInDays(@javax.annotation.Nullable final Integer value) {
+    public void setDeadlineForFeatureUpdatesInDays(@jakarta.annotation.Nullable final Integer value) {
         this.deadlineForFeatureUpdatesInDays = value;
     }
     /**
      * Sets the deadlineForQualityUpdatesInDays property value. Number of days before quality updates are installed automatically with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
      * @param value Value to set for the deadlineForQualityUpdatesInDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeadlineForQualityUpdatesInDays(@javax.annotation.Nullable final Integer value) {
+    public void setDeadlineForQualityUpdatesInDays(@jakarta.annotation.Nullable final Integer value) {
         this.deadlineForQualityUpdatesInDays = value;
     }
     /**
      * Sets the deadlineGracePeriodInDays property value. Number of days after deadline until restarts occur automatically with valid range from 0 to 7 days. Returned by default. Query parameters are not supported.
      * @param value Value to set for the deadlineGracePeriodInDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeadlineGracePeriodInDays(@javax.annotation.Nullable final Integer value) {
+    public void setDeadlineGracePeriodInDays(@jakarta.annotation.Nullable final Integer value) {
         this.deadlineGracePeriodInDays = value;
     }
     /**
      * Sets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
      * @param value Value to set for the deliveryOptimizationMode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeliveryOptimizationMode(@javax.annotation.Nullable final WindowsDeliveryOptimizationMode value) {
+    public void setDeliveryOptimizationMode(@jakarta.annotation.Nullable final WindowsDeliveryOptimizationMode value) {
         this.deliveryOptimizationMode = value;
     }
     /**
      * Sets the driversExcluded property value. When TRUE, excludes Windows update Drivers. When FALSE, does not exclude Windows update Drivers. Returned by default. Query parameters are not supported.
      * @param value Value to set for the driversExcluded property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDriversExcluded(@javax.annotation.Nullable final Boolean value) {
+    public void setDriversExcluded(@jakarta.annotation.Nullable final Boolean value) {
         this.driversExcluded = value;
     }
     /**
      * Sets the engagedRestartDeadlineInDays property value. Deadline in days before automatically scheduling and executing a pending restart outside of active hours, with valid range from 2 to 30 days. Returned by default. Query parameters are not supported.
      * @param value Value to set for the engagedRestartDeadlineInDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEngagedRestartDeadlineInDays(@javax.annotation.Nullable final Integer value) {
+    public void setEngagedRestartDeadlineInDays(@jakarta.annotation.Nullable final Integer value) {
         this.engagedRestartDeadlineInDays = value;
     }
     /**
      * Sets the engagedRestartSnoozeScheduleInDays property value. Number of days a user can snooze Engaged Restart reminder notifications with valid range from 1 to 3 days. Returned by default. Query parameters are not supported.
      * @param value Value to set for the engagedRestartSnoozeScheduleInDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEngagedRestartSnoozeScheduleInDays(@javax.annotation.Nullable final Integer value) {
+    public void setEngagedRestartSnoozeScheduleInDays(@jakarta.annotation.Nullable final Integer value) {
         this.engagedRestartSnoozeScheduleInDays = value;
     }
     /**
      * Sets the engagedRestartTransitionScheduleInDays property value. Number of days before transitioning from Auto Restarts scheduled outside of active hours to Engaged Restart, which requires the user to schedule, with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
      * @param value Value to set for the engagedRestartTransitionScheduleInDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEngagedRestartTransitionScheduleInDays(@javax.annotation.Nullable final Integer value) {
+    public void setEngagedRestartTransitionScheduleInDays(@jakarta.annotation.Nullable final Integer value) {
         this.engagedRestartTransitionScheduleInDays = value;
     }
     /**
      * Sets the featureUpdatesDeferralPeriodInDays property value. Defer Feature Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
      * @param value Value to set for the featureUpdatesDeferralPeriodInDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeatureUpdatesDeferralPeriodInDays(@javax.annotation.Nullable final Integer value) {
+    public void setFeatureUpdatesDeferralPeriodInDays(@jakarta.annotation.Nullable final Integer value) {
         this.featureUpdatesDeferralPeriodInDays = value;
     }
     /**
      * Sets the featureUpdatesPaused property value. When TRUE, assigned devices are paused from receiving feature updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Feature Updates. Returned by default. Query parameters are not supported.s
      * @param value Value to set for the featureUpdatesPaused property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeatureUpdatesPaused(@javax.annotation.Nullable final Boolean value) {
+    public void setFeatureUpdatesPaused(@jakarta.annotation.Nullable final Boolean value) {
         this.featureUpdatesPaused = value;
     }
     /**
      * Sets the featureUpdatesPauseExpiryDateTime property value. The Feature Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
      * @param value Value to set for the featureUpdatesPauseExpiryDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeatureUpdatesPauseExpiryDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setFeatureUpdatesPauseExpiryDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.featureUpdatesPauseExpiryDateTime = value;
     }
     /**
      * Sets the featureUpdatesPauseStartDate property value. The Feature Updates Pause start date. This value is the time when the admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. This property is read-only.
      * @param value Value to set for the featureUpdatesPauseStartDate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeatureUpdatesPauseStartDate(@javax.annotation.Nullable final LocalDate value) {
+    public void setFeatureUpdatesPauseStartDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.featureUpdatesPauseStartDate = value;
     }
     /**
      * Sets the featureUpdatesRollbackStartDateTime property value. The Feature Updates Rollback Start datetime.This value is the time when the admin rolled back the Feature update for the ring.Returned by default.Query parameters are not supported.
      * @param value Value to set for the featureUpdatesRollbackStartDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeatureUpdatesRollbackStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setFeatureUpdatesRollbackStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.featureUpdatesRollbackStartDateTime = value;
     }
     /**
      * Sets the featureUpdatesRollbackWindowInDays property value. The number of days after a Feature Update for which a rollback is valid with valid range from 2 to 60 days. Returned by default. Query parameters are not supported.
      * @param value Value to set for the featureUpdatesRollbackWindowInDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeatureUpdatesRollbackWindowInDays(@javax.annotation.Nullable final Integer value) {
+    public void setFeatureUpdatesRollbackWindowInDays(@jakarta.annotation.Nullable final Integer value) {
         this.featureUpdatesRollbackWindowInDays = value;
     }
     /**
      * Sets the featureUpdatesWillBeRolledBack property value. When TRUE, rollback Feature Updates on the next device check in. When FALSE, do not rollback Feature Updates on the next device check in. Returned by default.Query parameters are not supported.
      * @param value Value to set for the featureUpdatesWillBeRolledBack property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeatureUpdatesWillBeRolledBack(@javax.annotation.Nullable final Boolean value) {
+    public void setFeatureUpdatesWillBeRolledBack(@jakarta.annotation.Nullable final Boolean value) {
         this.featureUpdatesWillBeRolledBack = value;
     }
     /**
      * Sets the installationSchedule property value. The Installation Schedule. Possible values are: ActiveHoursStart, ActiveHoursEnd, ScheduledInstallDay, ScheduledInstallTime. Returned by default. Query parameters are not supported.
      * @param value Value to set for the installationSchedule property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstallationSchedule(@javax.annotation.Nullable final WindowsUpdateInstallScheduleType value) {
+    public void setInstallationSchedule(@jakarta.annotation.Nullable final WindowsUpdateInstallScheduleType value) {
         this.installationSchedule = value;
     }
     /**
      * Sets the microsoftUpdateServiceAllowed property value. When TRUE, allows Microsoft Update Service. When FALSE, does not allow Microsoft Update Service. Returned by default. Query parameters are not supported.
      * @param value Value to set for the microsoftUpdateServiceAllowed property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMicrosoftUpdateServiceAllowed(@javax.annotation.Nullable final Boolean value) {
+    public void setMicrosoftUpdateServiceAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.microsoftUpdateServiceAllowed = value;
     }
     /**
      * Sets the postponeRebootUntilAfterDeadline property value. When TRUE the device should wait until deadline for rebooting outside of active hours. When FALSE the device should not wait until deadline for rebooting outside of active hours. Returned by default. Query parameters are not supported.
      * @param value Value to set for the postponeRebootUntilAfterDeadline property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPostponeRebootUntilAfterDeadline(@javax.annotation.Nullable final Boolean value) {
+    public void setPostponeRebootUntilAfterDeadline(@jakarta.annotation.Nullable final Boolean value) {
         this.postponeRebootUntilAfterDeadline = value;
     }
     /**
      * Sets the prereleaseFeatures property value. Possible values for pre-release features.
      * @param value Value to set for the prereleaseFeatures property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrereleaseFeatures(@javax.annotation.Nullable final PrereleaseFeatures value) {
+    public void setPrereleaseFeatures(@jakarta.annotation.Nullable final PrereleaseFeatures value) {
         this.prereleaseFeatures = value;
     }
     /**
      * Sets the qualityUpdatesDeferralPeriodInDays property value. Defer Quality Updates by these many days with valid range from 0 to 30 days. Returned by default. Query parameters are not supported.
      * @param value Value to set for the qualityUpdatesDeferralPeriodInDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQualityUpdatesDeferralPeriodInDays(@javax.annotation.Nullable final Integer value) {
+    public void setQualityUpdatesDeferralPeriodInDays(@jakarta.annotation.Nullable final Integer value) {
         this.qualityUpdatesDeferralPeriodInDays = value;
     }
     /**
      * Sets the qualityUpdatesPaused property value. When TRUE, assigned devices are paused from receiving quality updates for up to 35 days from the time you pause the ring. When FALSE, does not pause Quality Updates. Returned by default. Query parameters are not supported.
      * @param value Value to set for the qualityUpdatesPaused property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQualityUpdatesPaused(@javax.annotation.Nullable final Boolean value) {
+    public void setQualityUpdatesPaused(@jakarta.annotation.Nullable final Boolean value) {
         this.qualityUpdatesPaused = value;
     }
     /**
      * Sets the qualityUpdatesPauseExpiryDateTime property value. The Quality Updates Pause Expiry datetime. This value is 35 days from the time admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported.
      * @param value Value to set for the qualityUpdatesPauseExpiryDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQualityUpdatesPauseExpiryDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setQualityUpdatesPauseExpiryDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.qualityUpdatesPauseExpiryDateTime = value;
     }
     /**
      * Sets the qualityUpdatesPauseStartDate property value. The Quality Updates Pause start date. This value is the time when the admin paused or extended the pause for the ring. Returned by default. Query parameters are not supported. This property is read-only.
      * @param value Value to set for the qualityUpdatesPauseStartDate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQualityUpdatesPauseStartDate(@javax.annotation.Nullable final LocalDate value) {
+    public void setQualityUpdatesPauseStartDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.qualityUpdatesPauseStartDate = value;
     }
     /**
      * Sets the qualityUpdatesRollbackStartDateTime property value. The Quality Updates Rollback Start datetime. This value is the time when the admin rolled back the Quality update for the ring. Returned by default. Query parameters are not supported.
      * @param value Value to set for the qualityUpdatesRollbackStartDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQualityUpdatesRollbackStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setQualityUpdatesRollbackStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.qualityUpdatesRollbackStartDateTime = value;
     }
     /**
      * Sets the qualityUpdatesWillBeRolledBack property value. When TRUE, rollback Quality Updates on the next device check in. When FALSE, do not rollback Quality Updates on the next device check in. Returned by default. Query parameters are not supported.
      * @param value Value to set for the qualityUpdatesWillBeRolledBack property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQualityUpdatesWillBeRolledBack(@javax.annotation.Nullable final Boolean value) {
+    public void setQualityUpdatesWillBeRolledBack(@jakarta.annotation.Nullable final Boolean value) {
         this.qualityUpdatesWillBeRolledBack = value;
     }
     /**
      * Sets the scheduleImminentRestartWarningInMinutes property value. Specify the period for auto-restart imminent warning notifications. Supported values: 15, 30 or 60 (minutes). Returned by default. Query parameters are not supported.
      * @param value Value to set for the scheduleImminentRestartWarningInMinutes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScheduleImminentRestartWarningInMinutes(@javax.annotation.Nullable final Integer value) {
+    public void setScheduleImminentRestartWarningInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.scheduleImminentRestartWarningInMinutes = value;
     }
     /**
      * Sets the scheduleRestartWarningInHours property value. Specify the period for auto-restart warning reminder notifications. Supported values: 2, 4, 8, 12 or 24 (hours). Returned by default. Query parameters are not supported.
      * @param value Value to set for the scheduleRestartWarningInHours property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScheduleRestartWarningInHours(@javax.annotation.Nullable final Integer value) {
+    public void setScheduleRestartWarningInHours(@jakarta.annotation.Nullable final Integer value) {
         this.scheduleRestartWarningInHours = value;
     }
     /**
      * Sets the skipChecksBeforeRestart property value. When TRUE, skips all checks before restart: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc. When FALSE, does not skip all checks before restart. Returned by default. Query parameters are not supported.
      * @param value Value to set for the skipChecksBeforeRestart property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSkipChecksBeforeRestart(@javax.annotation.Nullable final Boolean value) {
+    public void setSkipChecksBeforeRestart(@jakarta.annotation.Nullable final Boolean value) {
         this.skipChecksBeforeRestart = value;
     }
     /**
      * Sets the updateNotificationLevel property value. Windows Update Notification Display Options
      * @param value Value to set for the updateNotificationLevel property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdateNotificationLevel(@javax.annotation.Nullable final WindowsUpdateNotificationDisplayOption value) {
+    public void setUpdateNotificationLevel(@jakarta.annotation.Nullable final WindowsUpdateNotificationDisplayOption value) {
         this.updateNotificationLevel = value;
     }
     /**
      * Sets the updateWeeks property value. Schedule the update installation on the weeks of the month. Possible values are: UserDefined, FirstWeek, SecondWeek, ThirdWeek, FourthWeek, EveryWeek. Returned by default. Query parameters are not supported. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek, unknownFutureValue.
      * @param value Value to set for the updateWeeks property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdateWeeks(@javax.annotation.Nullable final WindowsUpdateForBusinessUpdateWeeks value) {
+    public void setUpdateWeeks(@jakarta.annotation.Nullable final WindowsUpdateForBusinessUpdateWeeks value) {
         this.updateWeeks = value;
     }
     /**
      * Sets the userPauseAccess property value. Possible values of a property
      * @param value Value to set for the userPauseAccess property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPauseAccess(@javax.annotation.Nullable final Enablement value) {
+    public void setUserPauseAccess(@jakarta.annotation.Nullable final Enablement value) {
         this.userPauseAccess = value;
     }
     /**
      * Sets the userWindowsUpdateScanAccess property value. Possible values of a property
      * @param value Value to set for the userWindowsUpdateScanAccess property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserWindowsUpdateScanAccess(@javax.annotation.Nullable final Enablement value) {
+    public void setUserWindowsUpdateScanAccess(@jakarta.annotation.Nullable final Enablement value) {
         this.userWindowsUpdateScanAccess = value;
     }
 }

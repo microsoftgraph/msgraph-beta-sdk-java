@@ -30,9 +30,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
     private Long siteStorageUsedInBytes;
     /**
      * Instantiates a new office365GroupsActivityStorage and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Office365GroupsActivityStorage() {
         super();
     }
@@ -41,8 +39,8 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a office365GroupsActivityStorage
      */
-    @javax.annotation.Nonnull
-    public static Office365GroupsActivityStorage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Office365GroupsActivityStorage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Office365GroupsActivityStorage();
     }
@@ -50,7 +48,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("mailboxStorageUsedInBytes", (n) -> { this.setMailboxStorageUsedInBytes(n.getLongValue()); });
@@ -64,7 +62,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      * Gets the mailboxStorageUsedInBytes property value. The storage used in group mailbox.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getMailboxStorageUsedInBytes() {
         return this.mailboxStorageUsedInBytes;
     }
@@ -72,7 +70,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      * Gets the reportDate property value. The snapshot date for Exchange and SharePoint used storage.
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getReportDate() {
         return this.reportDate;
     }
@@ -80,7 +78,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      * Gets the reportPeriod property value. The number of days the report covers.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getReportPeriod() {
         return this.reportPeriod;
     }
@@ -88,7 +86,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      * Gets the reportRefreshDate property value. The latest date of the content.
      * @return a LocalDate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalDate getReportRefreshDate() {
         return this.reportRefreshDate;
     }
@@ -96,17 +94,15 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      * Gets the siteStorageUsedInBytes property value. The storage used in SharePoint document library.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getSiteStorageUsedInBytes() {
         return this.siteStorageUsedInBytes;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeLongValue("mailboxStorageUsedInBytes", this.getMailboxStorageUsedInBytes());
@@ -118,46 +114,36 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
     /**
      * Sets the mailboxStorageUsedInBytes property value. The storage used in group mailbox.
      * @param value Value to set for the mailboxStorageUsedInBytes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMailboxStorageUsedInBytes(@javax.annotation.Nullable final Long value) {
+    public void setMailboxStorageUsedInBytes(@jakarta.annotation.Nullable final Long value) {
         this.mailboxStorageUsedInBytes = value;
     }
     /**
      * Sets the reportDate property value. The snapshot date for Exchange and SharePoint used storage.
      * @param value Value to set for the reportDate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReportDate(@javax.annotation.Nullable final LocalDate value) {
+    public void setReportDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.reportDate = value;
     }
     /**
      * Sets the reportPeriod property value. The number of days the report covers.
      * @param value Value to set for the reportPeriod property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReportPeriod(@javax.annotation.Nullable final String value) {
+    public void setReportPeriod(@jakarta.annotation.Nullable final String value) {
         this.reportPeriod = value;
     }
     /**
      * Sets the reportRefreshDate property value. The latest date of the content.
      * @param value Value to set for the reportRefreshDate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReportRefreshDate(@javax.annotation.Nullable final LocalDate value) {
+    public void setReportRefreshDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.reportRefreshDate = value;
     }
     /**
      * Sets the siteStorageUsedInBytes property value. The storage used in SharePoint document library.
      * @param value Value to set for the siteStorageUsedInBytes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSiteStorageUsedInBytes(@javax.annotation.Nullable final Long value) {
+    public void setSiteStorageUsedInBytes(@jakarta.annotation.Nullable final Long value) {
         this.siteStorageUsedInBytes = value;
     }
 }

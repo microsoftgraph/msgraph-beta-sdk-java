@@ -16,9 +16,7 @@ public class MicrosoftStoreForBusinessContainedApp extends MobileContainedApp im
     private String appUserModelId;
     /**
      * Instantiates a new microsoftStoreForBusinessContainedApp and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MicrosoftStoreForBusinessContainedApp() {
         super();
         this.setOdataType("#microsoft.graph.microsoftStoreForBusinessContainedApp");
@@ -28,8 +26,8 @@ public class MicrosoftStoreForBusinessContainedApp extends MobileContainedApp im
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a microsoftStoreForBusinessContainedApp
      */
-    @javax.annotation.Nonnull
-    public static MicrosoftStoreForBusinessContainedApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MicrosoftStoreForBusinessContainedApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MicrosoftStoreForBusinessContainedApp();
     }
@@ -37,7 +35,7 @@ public class MicrosoftStoreForBusinessContainedApp extends MobileContainedApp im
      * Gets the appUserModelId property value. The app user model ID of the contained app of a MicrosoftStoreForBusinessApp.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppUserModelId() {
         return this.appUserModelId;
     }
@@ -45,7 +43,7 @@ public class MicrosoftStoreForBusinessContainedApp extends MobileContainedApp im
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appUserModelId", (n) -> { this.setAppUserModelId(n.getStringValue()); });
@@ -54,10 +52,8 @@ public class MicrosoftStoreForBusinessContainedApp extends MobileContainedApp im
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appUserModelId", this.getAppUserModelId());
@@ -65,10 +61,8 @@ public class MicrosoftStoreForBusinessContainedApp extends MobileContainedApp im
     /**
      * Sets the appUserModelId property value. The app user model ID of the contained app of a MicrosoftStoreForBusinessApp.
      * @param value Value to set for the appUserModelId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppUserModelId(@javax.annotation.Nullable final String value) {
+    public void setAppUserModelId(@jakarta.annotation.Nullable final String value) {
         this.appUserModelId = value;
     }
 }

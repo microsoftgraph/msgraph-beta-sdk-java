@@ -86,9 +86,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     private Boolean trimDuplicates;
     /**
      * Instantiates a new searchRequest and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SearchRequest() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -97,8 +95,8 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a searchRequest
      */
-    @javax.annotation.Nonnull
-    public static SearchRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SearchRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SearchRequest();
     }
@@ -106,7 +104,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -114,7 +112,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the aggregationFilters property value. Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAggregationFilters() {
         return this.aggregationFilters;
     }
@@ -122,7 +120,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the aggregations property value. Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
      * @return a aggregationOption
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AggregationOption> getAggregations() {
         return this.aggregations;
     }
@@ -130,7 +128,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the collapseProperties property value. Contains the ordered collection of fields and limit to collapse results. Optional.
      * @return a collapseProperty
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CollapseProperty> getCollapseProperties() {
         return this.collapseProperties;
     }
@@ -138,7 +136,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the contentSources property value. Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note: contentSource is only applicable when entityType=externalItem. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getContentSources() {
         return this.contentSources;
     }
@@ -146,7 +144,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the enableTopResults property value. This triggers hybrid sort for messages: the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableTopResults() {
         return this.enableTopResults;
     }
@@ -154,7 +152,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the entityTypes property value. One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem, acronym, bookmark, chatMessage. For details about combinations of two or more entity types that are supported in the same search request, see known limitations. Required.
      * @return a entityType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EntityType> getEntityTypes() {
         return this.entityTypes;
     }
@@ -162,7 +160,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(18);
         deserializerMap.put("aggregationFilters", (n) -> { this.setAggregationFilters(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -189,7 +187,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the fields property value. Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft Graph connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is label as title, you can retrieve it using the following syntax : label_title.Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getFields() {
         return this.fields;
     }
@@ -197,7 +195,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the from property value. Specifies the offset for the search results. Offset 0 returns the very first result. Optional.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFrom() {
         return this.from;
     }
@@ -205,7 +203,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -213,7 +211,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the query property value. The query property
      * @return a searchQuery
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SearchQuery getQuery() {
         return this.query;
     }
@@ -221,7 +219,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the queryAlterationOptions property value. Provides query alteration options formatted as a JSON blob that contains two optional flags related to spelling correction. Optional.
      * @return a searchAlterationOptions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SearchAlterationOptions getQueryAlterationOptions() {
         return this.queryAlterationOptions;
     }
@@ -229,7 +227,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the region property value. Required for searches that use application permissions. Represents the geographic location for the search. For details, see Get the region value.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRegion() {
         return this.region;
     }
@@ -237,7 +235,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the resultTemplateOptions property value. Provides the search result templates options for rendering connectors search results.
      * @return a resultTemplateOption
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResultTemplateOption getResultTemplateOptions() {
         return this.resultTemplateOptions;
     }
@@ -245,7 +243,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the sharePointOneDriveOptions property value. Indicates the kind of contents to be searched when a search is performed using application permissions. Optional.
      * @return a sharePointOneDriveOptions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SharePointOneDriveOptions getSharePointOneDriveOptions() {
         return this.sharePointOneDriveOptions;
     }
@@ -253,7 +251,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the size property value. The size of the page to be retrieved. The maximum value is 500. Optional.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSize() {
         return this.size;
     }
@@ -261,7 +259,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the sortProperties property value. Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
      * @return a sortProperty
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SortProperty> getSortProperties() {
         return this.sortProperties;
     }
@@ -269,7 +267,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the stored_fields property value. The stored_fields property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getStoredFields() {
         return this.storedFields;
     }
@@ -277,17 +275,15 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * Gets the trimDuplicates property value. Indicates whether to trim away the duplicate SharePoint files from search results. Default value is false. Optional.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getTrimDuplicates() {
         return this.trimDuplicates;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("aggregationFilters", this.getAggregationFilters());
         writer.writeCollectionOfObjectValues("aggregations", this.getAggregations());
@@ -312,172 +308,134 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the aggregationFilters property value. Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
      * @param value Value to set for the aggregationFilters property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAggregationFilters(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setAggregationFilters(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.aggregationFilters = value;
     }
     /**
      * Sets the aggregations property value. Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
      * @param value Value to set for the aggregations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAggregations(@javax.annotation.Nullable final java.util.List<AggregationOption> value) {
+    public void setAggregations(@jakarta.annotation.Nullable final java.util.List<AggregationOption> value) {
         this.aggregations = value;
     }
     /**
      * Sets the collapseProperties property value. Contains the ordered collection of fields and limit to collapse results. Optional.
      * @param value Value to set for the collapseProperties property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCollapseProperties(@javax.annotation.Nullable final java.util.List<CollapseProperty> value) {
+    public void setCollapseProperties(@jakarta.annotation.Nullable final java.util.List<CollapseProperty> value) {
         this.collapseProperties = value;
     }
     /**
      * Sets the contentSources property value. Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note: contentSource is only applicable when entityType=externalItem. Optional.
      * @param value Value to set for the contentSources property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentSources(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setContentSources(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.contentSources = value;
     }
     /**
      * Sets the enableTopResults property value. This triggers hybrid sort for messages: the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional.
      * @param value Value to set for the enableTopResults property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableTopResults(@javax.annotation.Nullable final Boolean value) {
+    public void setEnableTopResults(@jakarta.annotation.Nullable final Boolean value) {
         this.enableTopResults = value;
     }
     /**
      * Sets the entityTypes property value. One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem, acronym, bookmark, chatMessage. For details about combinations of two or more entity types that are supported in the same search request, see known limitations. Required.
      * @param value Value to set for the entityTypes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEntityTypes(@javax.annotation.Nullable final java.util.List<EntityType> value) {
+    public void setEntityTypes(@jakarta.annotation.Nullable final java.util.List<EntityType> value) {
         this.entityTypes = value;
     }
     /**
      * Sets the fields property value. Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft Graph connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is label as title, you can retrieve it using the following syntax : label_title.Optional.
      * @param value Value to set for the fields property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFields(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setFields(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.fields = value;
     }
     /**
      * Sets the from property value. Specifies the offset for the search results. Offset 0 returns the very first result. Optional.
      * @param value Value to set for the from property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFrom(@javax.annotation.Nullable final Integer value) {
+    public void setFrom(@jakarta.annotation.Nullable final Integer value) {
         this.from = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the query property value. The query property
      * @param value Value to set for the query property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQuery(@javax.annotation.Nullable final SearchQuery value) {
+    public void setQuery(@jakarta.annotation.Nullable final SearchQuery value) {
         this.query = value;
     }
     /**
      * Sets the queryAlterationOptions property value. Provides query alteration options formatted as a JSON blob that contains two optional flags related to spelling correction. Optional.
      * @param value Value to set for the queryAlterationOptions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQueryAlterationOptions(@javax.annotation.Nullable final SearchAlterationOptions value) {
+    public void setQueryAlterationOptions(@jakarta.annotation.Nullable final SearchAlterationOptions value) {
         this.queryAlterationOptions = value;
     }
     /**
      * Sets the region property value. Required for searches that use application permissions. Represents the geographic location for the search. For details, see Get the region value.
      * @param value Value to set for the region property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegion(@javax.annotation.Nullable final String value) {
+    public void setRegion(@jakarta.annotation.Nullable final String value) {
         this.region = value;
     }
     /**
      * Sets the resultTemplateOptions property value. Provides the search result templates options for rendering connectors search results.
      * @param value Value to set for the resultTemplateOptions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResultTemplateOptions(@javax.annotation.Nullable final ResultTemplateOption value) {
+    public void setResultTemplateOptions(@jakarta.annotation.Nullable final ResultTemplateOption value) {
         this.resultTemplateOptions = value;
     }
     /**
      * Sets the sharePointOneDriveOptions property value. Indicates the kind of contents to be searched when a search is performed using application permissions. Optional.
      * @param value Value to set for the sharePointOneDriveOptions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharePointOneDriveOptions(@javax.annotation.Nullable final SharePointOneDriveOptions value) {
+    public void setSharePointOneDriveOptions(@jakarta.annotation.Nullable final SharePointOneDriveOptions value) {
         this.sharePointOneDriveOptions = value;
     }
     /**
      * Sets the size property value. The size of the page to be retrieved. The maximum value is 500. Optional.
      * @param value Value to set for the size property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSize(@javax.annotation.Nullable final Integer value) {
+    public void setSize(@jakarta.annotation.Nullable final Integer value) {
         this.size = value;
     }
     /**
      * Sets the sortProperties property value. Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
      * @param value Value to set for the sortProperties property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSortProperties(@javax.annotation.Nullable final java.util.List<SortProperty> value) {
+    public void setSortProperties(@jakarta.annotation.Nullable final java.util.List<SortProperty> value) {
         this.sortProperties = value;
     }
     /**
      * Sets the stored_fields property value. The stored_fields property
      * @param value Value to set for the stored_fields property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStoredFields(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setStoredFields(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.storedFields = value;
     }
     /**
      * Sets the trimDuplicates property value. Indicates whether to trim away the duplicate SharePoint files from search results. Default value is false. Optional.
      * @param value Value to set for the trimDuplicates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrimDuplicates(@javax.annotation.Nullable final Boolean value) {
+    public void setTrimDuplicates(@jakarta.annotation.Nullable final Boolean value) {
         this.trimDuplicates = value;
     }
 }

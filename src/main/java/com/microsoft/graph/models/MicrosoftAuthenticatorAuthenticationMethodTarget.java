@@ -13,9 +13,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
     private MicrosoftAuthenticatorAuthenticationMode authenticationMode;
     /**
      * Instantiates a new microsoftAuthenticatorAuthenticationMethodTarget and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMethodTarget() {
         super();
     }
@@ -24,8 +22,8 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a microsoftAuthenticatorAuthenticationMethodTarget
      */
-    @javax.annotation.Nonnull
-    public static MicrosoftAuthenticatorAuthenticationMethodTarget createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MicrosoftAuthenticatorAuthenticationMethodTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MicrosoftAuthenticatorAuthenticationMethodTarget();
     }
@@ -33,7 +31,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
      * Gets the authenticationMode property value. The authenticationMode property
      * @return a microsoftAuthenticatorAuthenticationMode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMode getAuthenticationMode() {
         return this.authenticationMode;
     }
@@ -41,7 +39,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationMode", (n) -> { this.setAuthenticationMode(n.getEnumValue(MicrosoftAuthenticatorAuthenticationMode.class)); });
@@ -50,10 +48,8 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("authenticationMode", this.getAuthenticationMode());
@@ -61,10 +57,8 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
     /**
      * Sets the authenticationMode property value. The authenticationMode property
      * @param value Value to set for the authenticationMode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationMode(@javax.annotation.Nullable final MicrosoftAuthenticatorAuthenticationMode value) {
+    public void setAuthenticationMode(@jakarta.annotation.Nullable final MicrosoftAuthenticatorAuthenticationMode value) {
         this.authenticationMode = value;
     }
 }

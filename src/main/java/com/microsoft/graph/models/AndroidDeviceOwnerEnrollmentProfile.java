@@ -97,9 +97,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     private String wifiSsid;
     /**
      * Instantiates a new androidDeviceOwnerEnrollmentProfile and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AndroidDeviceOwnerEnrollmentProfile() {
         super();
     }
@@ -108,8 +106,8 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidDeviceOwnerEnrollmentProfile
      */
-    @javax.annotation.Nonnull
-    public static AndroidDeviceOwnerEnrollmentProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidDeviceOwnerEnrollmentProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidDeviceOwnerEnrollmentProfile();
     }
@@ -117,7 +115,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the accountId property value. Tenant GUID the enrollment profile belongs to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAccountId() {
         return this.accountId;
     }
@@ -125,7 +123,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the configureWifi property value. Boolean that indicates that the Wi-Fi network should be configured during device provisioning. When set to TRUE, device provisioning will use Wi-Fi related properties to automatically connect to Wi-Fi networks. When set to FALSE or undefined, other Wi-Fi related properties will be ignored. Default value is TRUE. Returned by default.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getConfigureWifi() {
         return this.configureWifi;
     }
@@ -133,7 +131,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the createdDateTime property value. Date time the enrollment profile was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -141,7 +139,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the description property value. Description for the enrollment profile.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -149,7 +147,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the displayName property value. Display name for the enrollment profile.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -157,7 +155,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the enrolledDeviceCount property value. Total number of Android devices that have enrolled using this enrollment profile.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getEnrolledDeviceCount() {
         return this.enrolledDeviceCount;
     }
@@ -165,7 +163,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the enrollmentMode property value. The enrollment mode for an enrollment profile.
      * @return a androidDeviceOwnerEnrollmentMode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidDeviceOwnerEnrollmentMode getEnrollmentMode() {
         return this.enrollmentMode;
     }
@@ -173,7 +171,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the enrollmentTokenType property value. The enrollment token type for an enrollment profile.
      * @return a androidDeviceOwnerEnrollmentTokenType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidDeviceOwnerEnrollmentTokenType getEnrollmentTokenType() {
         return this.enrollmentTokenType;
     }
@@ -181,7 +179,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the enrollmentTokenUsageCount property value. Total number of AOSP devices that have enrolled using the current token.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getEnrollmentTokenUsageCount() {
         return this.enrollmentTokenUsageCount;
     }
@@ -189,7 +187,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountId", (n) -> { this.setAccountId(n.getStringValue()); });
@@ -219,7 +217,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the isTeamsDeviceProfile property value. Boolean indicating if this profile is an Android AOSP for Teams device profile.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsTeamsDeviceProfile() {
         return this.isTeamsDeviceProfile;
     }
@@ -227,7 +225,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the lastModifiedDateTime property value. Date time the enrollment profile was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -235,7 +233,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the qrCodeContent property value. String used to generate a QR code for the token.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getQrCodeContent() {
         return this.qrCodeContent;
     }
@@ -243,7 +241,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the qrCodeImage property value. String used to generate a QR code for the token.
      * @return a mimeContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MimeContent getQrCodeImage() {
         return this.qrCodeImage;
     }
@@ -251,7 +249,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
         return this.roleScopeTagIds;
     }
@@ -259,7 +257,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the tokenCreationDateTime property value. Date time the most recently created token was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getTokenCreationDateTime() {
         return this.tokenCreationDateTime;
     }
@@ -267,7 +265,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the tokenExpirationDateTime property value. Date time the most recently created token will expire.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getTokenExpirationDateTime() {
         return this.tokenExpirationDateTime;
     }
@@ -275,7 +273,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the tokenValue property value. Value of the most recently created token for this enrollment profile.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTokenValue() {
         return this.tokenValue;
     }
@@ -283,7 +281,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the wifiHidden property value. Boolean that indicates if hidden wifi networks are enabled
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getWifiHidden() {
         return this.wifiHidden;
     }
@@ -291,7 +289,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the wifiPassword property value. String that contains the wi-fi login password
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWifiPassword() {
         return this.wifiPassword;
     }
@@ -299,7 +297,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the wifiSecurityType property value. This enum represents Wi-Fi Security Types for Android Device Owner AOSP Scenarios.
      * @return a aospWifiSecurityType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AospWifiSecurityType getWifiSecurityType() {
         return this.wifiSecurityType;
     }
@@ -307,17 +305,15 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Gets the wifiSsid property value. String that contains the wi-fi login ssid
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWifiSsid() {
         return this.wifiSsid;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("accountId", this.getAccountId());
@@ -345,190 +341,148 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     /**
      * Sets the accountId property value. Tenant GUID the enrollment profile belongs to.
      * @param value Value to set for the accountId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccountId(@javax.annotation.Nullable final String value) {
+    public void setAccountId(@jakarta.annotation.Nullable final String value) {
         this.accountId = value;
     }
     /**
      * Sets the configureWifi property value. Boolean that indicates that the Wi-Fi network should be configured during device provisioning. When set to TRUE, device provisioning will use Wi-Fi related properties to automatically connect to Wi-Fi networks. When set to FALSE or undefined, other Wi-Fi related properties will be ignored. Default value is TRUE. Returned by default.
      * @param value Value to set for the configureWifi property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigureWifi(@javax.annotation.Nullable final Boolean value) {
+    public void setConfigureWifi(@jakarta.annotation.Nullable final Boolean value) {
         this.configureWifi = value;
     }
     /**
      * Sets the createdDateTime property value. Date time the enrollment profile was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Description for the enrollment profile.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Display name for the enrollment profile.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the enrolledDeviceCount property value. Total number of Android devices that have enrolled using this enrollment profile.
      * @param value Value to set for the enrolledDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrolledDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setEnrolledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.enrolledDeviceCount = value;
     }
     /**
      * Sets the enrollmentMode property value. The enrollment mode for an enrollment profile.
      * @param value Value to set for the enrollmentMode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentMode(@javax.annotation.Nullable final AndroidDeviceOwnerEnrollmentMode value) {
+    public void setEnrollmentMode(@jakarta.annotation.Nullable final AndroidDeviceOwnerEnrollmentMode value) {
         this.enrollmentMode = value;
     }
     /**
      * Sets the enrollmentTokenType property value. The enrollment token type for an enrollment profile.
      * @param value Value to set for the enrollmentTokenType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentTokenType(@javax.annotation.Nullable final AndroidDeviceOwnerEnrollmentTokenType value) {
+    public void setEnrollmentTokenType(@jakarta.annotation.Nullable final AndroidDeviceOwnerEnrollmentTokenType value) {
         this.enrollmentTokenType = value;
     }
     /**
      * Sets the enrollmentTokenUsageCount property value. Total number of AOSP devices that have enrolled using the current token.
      * @param value Value to set for the enrollmentTokenUsageCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentTokenUsageCount(@javax.annotation.Nullable final Integer value) {
+    public void setEnrollmentTokenUsageCount(@jakarta.annotation.Nullable final Integer value) {
         this.enrollmentTokenUsageCount = value;
     }
     /**
      * Sets the isTeamsDeviceProfile property value. Boolean indicating if this profile is an Android AOSP for Teams device profile.
      * @param value Value to set for the isTeamsDeviceProfile property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsTeamsDeviceProfile(@javax.annotation.Nullable final Boolean value) {
+    public void setIsTeamsDeviceProfile(@jakarta.annotation.Nullable final Boolean value) {
         this.isTeamsDeviceProfile = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Date time the enrollment profile was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the qrCodeContent property value. String used to generate a QR code for the token.
      * @param value Value to set for the qrCodeContent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQrCodeContent(@javax.annotation.Nullable final String value) {
+    public void setQrCodeContent(@jakarta.annotation.Nullable final String value) {
         this.qrCodeContent = value;
     }
     /**
      * Sets the qrCodeImage property value. String used to generate a QR code for the token.
      * @param value Value to set for the qrCodeImage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQrCodeImage(@javax.annotation.Nullable final MimeContent value) {
+    public void setQrCodeImage(@jakarta.annotation.Nullable final MimeContent value) {
         this.qrCodeImage = value;
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTagIds = value;
     }
     /**
      * Sets the tokenCreationDateTime property value. Date time the most recently created token was created.
      * @param value Value to set for the tokenCreationDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTokenCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setTokenCreationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.tokenCreationDateTime = value;
     }
     /**
      * Sets the tokenExpirationDateTime property value. Date time the most recently created token will expire.
      * @param value Value to set for the tokenExpirationDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTokenExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setTokenExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.tokenExpirationDateTime = value;
     }
     /**
      * Sets the tokenValue property value. Value of the most recently created token for this enrollment profile.
      * @param value Value to set for the tokenValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTokenValue(@javax.annotation.Nullable final String value) {
+    public void setTokenValue(@jakarta.annotation.Nullable final String value) {
         this.tokenValue = value;
     }
     /**
      * Sets the wifiHidden property value. Boolean that indicates if hidden wifi networks are enabled
      * @param value Value to set for the wifiHidden property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWifiHidden(@javax.annotation.Nullable final Boolean value) {
+    public void setWifiHidden(@jakarta.annotation.Nullable final Boolean value) {
         this.wifiHidden = value;
     }
     /**
      * Sets the wifiPassword property value. String that contains the wi-fi login password
      * @param value Value to set for the wifiPassword property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWifiPassword(@javax.annotation.Nullable final String value) {
+    public void setWifiPassword(@jakarta.annotation.Nullable final String value) {
         this.wifiPassword = value;
     }
     /**
      * Sets the wifiSecurityType property value. This enum represents Wi-Fi Security Types for Android Device Owner AOSP Scenarios.
      * @param value Value to set for the wifiSecurityType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWifiSecurityType(@javax.annotation.Nullable final AospWifiSecurityType value) {
+    public void setWifiSecurityType(@jakarta.annotation.Nullable final AospWifiSecurityType value) {
         this.wifiSecurityType = value;
     }
     /**
      * Sets the wifiSsid property value. String that contains the wi-fi login ssid
      * @param value Value to set for the wifiSsid property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWifiSsid(@javax.annotation.Nullable final String value) {
+    public void setWifiSsid(@jakarta.annotation.Nullable final String value) {
         this.wifiSsid = value;
     }
 }

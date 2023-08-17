@@ -42,9 +42,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
     private String twitterProfileWebUrl;
     /**
      * Instantiates a new virtualEventPresenterDetails and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public VirtualEventPresenterDetails() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +51,8 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a virtualEventPresenterDetails
      */
-    @javax.annotation.Nonnull
-    public static VirtualEventPresenterDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static VirtualEventPresenterDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new VirtualEventPresenterDetails();
     }
@@ -62,7 +60,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +68,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
      * Gets the bio property value. Bio of the presenter.
      * @return a itemBody
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemBody getBio() {
         return this.bio;
     }
@@ -78,7 +76,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
      * Gets the company property value. The presenter's company name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCompany() {
         return this.company;
     }
@@ -86,7 +84,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("bio", (n) -> { this.setBio(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
@@ -102,7 +100,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
      * Gets the jobTitle property value. The presenter's job title.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getJobTitle() {
         return this.jobTitle;
     }
@@ -110,7 +108,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
      * Gets the linkedInProfileWebUrl property value. The presenter's LinkedIn profile URL.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLinkedInProfileWebUrl() {
         return this.linkedInProfileWebUrl;
     }
@@ -118,7 +116,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -126,7 +124,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
      * Gets the personalSiteWebUrl property value. The presenter's personal website URL.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPersonalSiteWebUrl() {
         return this.personalSiteWebUrl;
     }
@@ -134,17 +132,15 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
      * Gets the twitterProfileWebUrl property value. The presenter's Twitter profile URL.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTwitterProfileWebUrl() {
         return this.twitterProfileWebUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("bio", this.getBio());
         writer.writeStringValue("company", this.getCompany());
@@ -158,73 +154,57 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the bio property value. Bio of the presenter.
      * @param value Value to set for the bio property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBio(@javax.annotation.Nullable final ItemBody value) {
+    public void setBio(@jakarta.annotation.Nullable final ItemBody value) {
         this.bio = value;
     }
     /**
      * Sets the company property value. The presenter's company name.
      * @param value Value to set for the company property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompany(@javax.annotation.Nullable final String value) {
+    public void setCompany(@jakarta.annotation.Nullable final String value) {
         this.company = value;
     }
     /**
      * Sets the jobTitle property value. The presenter's job title.
      * @param value Value to set for the jobTitle property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJobTitle(@javax.annotation.Nullable final String value) {
+    public void setJobTitle(@jakarta.annotation.Nullable final String value) {
         this.jobTitle = value;
     }
     /**
      * Sets the linkedInProfileWebUrl property value. The presenter's LinkedIn profile URL.
      * @param value Value to set for the linkedInProfileWebUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLinkedInProfileWebUrl(@javax.annotation.Nullable final String value) {
+    public void setLinkedInProfileWebUrl(@jakarta.annotation.Nullable final String value) {
         this.linkedInProfileWebUrl = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the personalSiteWebUrl property value. The presenter's personal website URL.
      * @param value Value to set for the personalSiteWebUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPersonalSiteWebUrl(@javax.annotation.Nullable final String value) {
+    public void setPersonalSiteWebUrl(@jakarta.annotation.Nullable final String value) {
         this.personalSiteWebUrl = value;
     }
     /**
      * Sets the twitterProfileWebUrl property value. The presenter's Twitter profile URL.
      * @param value Value to set for the twitterProfileWebUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTwitterProfileWebUrl(@javax.annotation.Nullable final String value) {
+    public void setTwitterProfileWebUrl(@jakarta.annotation.Nullable final String value) {
         this.twitterProfileWebUrl = value;
     }
 }

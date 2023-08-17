@@ -49,9 +49,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     private String odataType;
     /**
      * Instantiates a new windowsPackageInformation and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsPackageInformation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -60,8 +58,8 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsPackageInformation
      */
-    @javax.annotation.Nonnull
-    public static WindowsPackageInformation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsPackageInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsPackageInformation();
     }
@@ -69,7 +67,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -77,7 +75,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * Gets the applicableArchitecture property value. Contains properties for Windows architecture.
      * @return a windowsArchitecture
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsArchitecture getApplicableArchitecture() {
         return this.applicableArchitecture;
     }
@@ -85,7 +83,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * Gets the displayName property value. The Display Name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -93,7 +91,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("applicableArchitecture", (n) -> { this.setApplicableArchitecture(n.getEnumValue(WindowsArchitecture.class)); });
@@ -110,7 +108,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * Gets the identityName property value. The Identity Name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIdentityName() {
         return this.identityName;
     }
@@ -118,7 +116,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * Gets the identityPublisher property value. The Identity Publisher.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIdentityPublisher() {
         return this.identityPublisher;
     }
@@ -126,7 +124,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * Gets the identityResourceIdentifier property value. The Identity Resource Identifier.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIdentityResourceIdentifier() {
         return this.identityResourceIdentifier;
     }
@@ -134,7 +132,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * Gets the identityVersion property value. The Identity Version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIdentityVersion() {
         return this.identityVersion;
     }
@@ -142,7 +140,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
      * @return a windowsMinimumOperatingSystem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
         return this.minimumSupportedOperatingSystem;
     }
@@ -150,17 +148,15 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("applicableArchitecture", this.getApplicableArchitecture());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -175,82 +171,64 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the applicableArchitecture property value. Contains properties for Windows architecture.
      * @param value Value to set for the applicableArchitecture property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplicableArchitecture(@javax.annotation.Nullable final WindowsArchitecture value) {
+    public void setApplicableArchitecture(@jakarta.annotation.Nullable final WindowsArchitecture value) {
         this.applicableArchitecture = value;
     }
     /**
      * Sets the displayName property value. The Display Name.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the identityName property value. The Identity Name.
      * @param value Value to set for the identityName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityName(@javax.annotation.Nullable final String value) {
+    public void setIdentityName(@jakarta.annotation.Nullable final String value) {
         this.identityName = value;
     }
     /**
      * Sets the identityPublisher property value. The Identity Publisher.
      * @param value Value to set for the identityPublisher property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityPublisher(@javax.annotation.Nullable final String value) {
+    public void setIdentityPublisher(@jakarta.annotation.Nullable final String value) {
         this.identityPublisher = value;
     }
     /**
      * Sets the identityResourceIdentifier property value. The Identity Resource Identifier.
      * @param value Value to set for the identityResourceIdentifier property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityResourceIdentifier(@javax.annotation.Nullable final String value) {
+    public void setIdentityResourceIdentifier(@jakarta.annotation.Nullable final String value) {
         this.identityResourceIdentifier = value;
     }
     /**
      * Sets the identityVersion property value. The Identity Version.
      * @param value Value to set for the identityVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityVersion(@javax.annotation.Nullable final String value) {
+    public void setIdentityVersion(@jakarta.annotation.Nullable final String value) {
         this.identityVersion = value;
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final WindowsMinimumOperatingSystem value) {
+    public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final WindowsMinimumOperatingSystem value) {
         this.minimumSupportedOperatingSystem = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

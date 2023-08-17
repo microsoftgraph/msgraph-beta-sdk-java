@@ -46,9 +46,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
     private String webId;
     /**
      * Instantiates a new sharepointIds and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SharepointIds() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -57,8 +55,8 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a sharepointIds
      */
-    @javax.annotation.Nonnull
-    public static SharepointIds createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SharepointIds createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SharepointIds();
     }
@@ -66,7 +64,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -74,7 +72,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("listId", (n) -> { this.setListId(n.getStringValue()); });
@@ -91,7 +89,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * Gets the listId property value. The unique identifier (guid) for the item's list in SharePoint.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getListId() {
         return this.listId;
     }
@@ -99,7 +97,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * Gets the listItemId property value. An integer identifier for the item within the containing list.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getListItemId() {
         return this.listItemId;
     }
@@ -107,7 +105,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * Gets the listItemUniqueId property value. The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getListItemUniqueId() {
         return this.listItemUniqueId;
     }
@@ -115,7 +113,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -123,7 +121,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * Gets the siteId property value. The unique identifier (guid) for the item's site collection (SPSite).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSiteId() {
         return this.siteId;
     }
@@ -131,7 +129,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * Gets the siteUrl property value. The SharePoint URL for the site that contains the item.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSiteUrl() {
         return this.siteUrl;
     }
@@ -139,7 +137,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * Gets the tenantId property value. The unique identifier (guid) for the tenancy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -147,17 +145,15 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * Gets the webId property value. The unique identifier (guid) for the item's site (SPWeb).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebId() {
         return this.webId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("listId", this.getListId());
         writer.writeStringValue("listItemId", this.getListItemId());
@@ -172,82 +168,64 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the listId property value. The unique identifier (guid) for the item's list in SharePoint.
      * @param value Value to set for the listId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setListId(@javax.annotation.Nullable final String value) {
+    public void setListId(@jakarta.annotation.Nullable final String value) {
         this.listId = value;
     }
     /**
      * Sets the listItemId property value. An integer identifier for the item within the containing list.
      * @param value Value to set for the listItemId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setListItemId(@javax.annotation.Nullable final String value) {
+    public void setListItemId(@jakarta.annotation.Nullable final String value) {
         this.listItemId = value;
     }
     /**
      * Sets the listItemUniqueId property value. The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site.
      * @param value Value to set for the listItemUniqueId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setListItemUniqueId(@javax.annotation.Nullable final String value) {
+    public void setListItemUniqueId(@jakarta.annotation.Nullable final String value) {
         this.listItemUniqueId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the siteId property value. The unique identifier (guid) for the item's site collection (SPSite).
      * @param value Value to set for the siteId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSiteId(@javax.annotation.Nullable final String value) {
+    public void setSiteId(@jakarta.annotation.Nullable final String value) {
         this.siteId = value;
     }
     /**
      * Sets the siteUrl property value. The SharePoint URL for the site that contains the item.
      * @param value Value to set for the siteUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSiteUrl(@javax.annotation.Nullable final String value) {
+    public void setSiteUrl(@jakarta.annotation.Nullable final String value) {
         this.siteUrl = value;
     }
     /**
      * Sets the tenantId property value. The unique identifier (guid) for the tenancy.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
      * Sets the webId property value. The unique identifier (guid) for the item's site (SPWeb).
      * @param value Value to set for the webId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebId(@javax.annotation.Nullable final String value) {
+    public void setWebId(@jakarta.annotation.Nullable final String value) {
         this.webId = value;
     }
 }

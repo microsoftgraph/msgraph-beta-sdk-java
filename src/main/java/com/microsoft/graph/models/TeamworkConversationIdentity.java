@@ -13,9 +13,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
     private TeamworkConversationIdentityType conversationIdentityType;
     /**
      * Instantiates a new teamworkConversationIdentity and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TeamworkConversationIdentity() {
         super();
         this.setOdataType("#microsoft.graph.teamworkConversationIdentity");
@@ -25,8 +23,8 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teamworkConversationIdentity
      */
-    @javax.annotation.Nonnull
-    public static TeamworkConversationIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeamworkConversationIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeamworkConversationIdentity();
     }
@@ -34,7 +32,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
      * Gets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, and chat.
      * @return a teamworkConversationIdentityType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamworkConversationIdentityType getConversationIdentityType() {
         return this.conversationIdentityType;
     }
@@ -42,7 +40,7 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("conversationIdentityType", (n) -> { this.setConversationIdentityType(n.getEnumValue(TeamworkConversationIdentityType.class)); });
@@ -51,10 +49,8 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("conversationIdentityType", this.getConversationIdentityType());
@@ -62,10 +58,8 @@ public class TeamworkConversationIdentity extends Identity implements Parsable {
     /**
      * Sets the conversationIdentityType property value. Type of conversation. Possible values are: team, channel, and chat.
      * @param value Value to set for the conversationIdentityType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConversationIdentityType(@javax.annotation.Nullable final TeamworkConversationIdentityType value) {
+    public void setConversationIdentityType(@jakarta.annotation.Nullable final TeamworkConversationIdentityType value) {
         this.conversationIdentityType = value;
     }
 }

@@ -13,9 +13,7 @@ public class AddressBookAccountTargetContent extends AccountTargetContent implem
     private java.util.List<String> accountTargetEmails;
     /**
      * Instantiates a new addressBookAccountTargetContent and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AddressBookAccountTargetContent() {
         super();
         this.setOdataType("#microsoft.graph.addressBookAccountTargetContent");
@@ -25,8 +23,8 @@ public class AddressBookAccountTargetContent extends AccountTargetContent implem
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a addressBookAccountTargetContent
      */
-    @javax.annotation.Nonnull
-    public static AddressBookAccountTargetContent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AddressBookAccountTargetContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AddressBookAccountTargetContent();
     }
@@ -34,7 +32,7 @@ public class AddressBookAccountTargetContent extends AccountTargetContent implem
      * Gets the accountTargetEmails property value. List of user emails targeted for an attack simulation training campaign.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAccountTargetEmails() {
         return this.accountTargetEmails;
     }
@@ -42,7 +40,7 @@ public class AddressBookAccountTargetContent extends AccountTargetContent implem
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountTargetEmails", (n) -> { this.setAccountTargetEmails(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -51,10 +49,8 @@ public class AddressBookAccountTargetContent extends AccountTargetContent implem
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("accountTargetEmails", this.getAccountTargetEmails());
@@ -62,10 +58,8 @@ public class AddressBookAccountTargetContent extends AccountTargetContent implem
     /**
      * Sets the accountTargetEmails property value. List of user emails targeted for an attack simulation training campaign.
      * @param value Value to set for the accountTargetEmails property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccountTargetEmails(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setAccountTargetEmails(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.accountTargetEmails = value;
     }
 }

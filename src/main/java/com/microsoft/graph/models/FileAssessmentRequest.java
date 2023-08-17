@@ -17,9 +17,7 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
     private String fileName;
     /**
      * Instantiates a new fileAssessmentRequest and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public FileAssessmentRequest() {
         super();
         this.setOdataType("#microsoft.graph.fileAssessmentRequest");
@@ -29,8 +27,8 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a fileAssessmentRequest
      */
-    @javax.annotation.Nonnull
-    public static FileAssessmentRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static FileAssessmentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new FileAssessmentRequest();
     }
@@ -38,7 +36,7 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * Gets the contentData property value. Base64 encoded file content. The file content cannot fetch back because it isn't stored.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContentData() {
         return this.contentData;
     }
@@ -46,7 +44,7 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contentData", (n) -> { this.setContentData(n.getStringValue()); });
@@ -57,17 +55,15 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
      * Gets the fileName property value. The file name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFileName() {
         return this.fileName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("contentData", this.getContentData());
@@ -76,19 +72,15 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements Pa
     /**
      * Sets the contentData property value. Base64 encoded file content. The file content cannot fetch back because it isn't stored.
      * @param value Value to set for the contentData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentData(@javax.annotation.Nullable final String value) {
+    public void setContentData(@jakarta.annotation.Nullable final String value) {
         this.contentData = value;
     }
     /**
      * Sets the fileName property value. The file name.
      * @param value Value to set for the fileName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileName(@javax.annotation.Nullable final String value) {
+    public void setFileName(@jakarta.annotation.Nullable final String value) {
         this.fileName = value;
     }
 }

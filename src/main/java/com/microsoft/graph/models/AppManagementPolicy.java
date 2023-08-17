@@ -21,9 +21,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     private AppManagementConfiguration restrictions;
     /**
      * Instantiates a new appManagementPolicy and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AppManagementPolicy() {
         super();
         this.setOdataType("#microsoft.graph.appManagementPolicy");
@@ -33,8 +31,8 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a appManagementPolicy
      */
-    @javax.annotation.Nonnull
-    public static AppManagementPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AppManagementPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AppManagementPolicy();
     }
@@ -42,7 +40,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      * Gets the appliesTo property value. Collection of application and service principals to which a policy is applied.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getAppliesTo() {
         return this.appliesTo;
     }
@@ -50,7 +48,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
@@ -62,7 +60,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      * Gets the isEnabled property value. Denotes whether the policy is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
@@ -70,17 +68,15 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      * Gets the restrictions property value. Restrictions that apply to an application or service principal object.
      * @return a appManagementConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AppManagementConfiguration getRestrictions() {
         return this.restrictions;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("appliesTo", this.getAppliesTo());
@@ -90,28 +86,22 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
     /**
      * Sets the appliesTo property value. Collection of application and service principals to which a policy is applied.
      * @param value Value to set for the appliesTo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppliesTo(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
+    public void setAppliesTo(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.appliesTo = value;
     }
     /**
      * Sets the isEnabled property value. Denotes whether the policy is enabled.
      * @param value Value to set for the isEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
      * Sets the restrictions property value. Restrictions that apply to an application or service principal object.
      * @param value Value to set for the restrictions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRestrictions(@javax.annotation.Nullable final AppManagementConfiguration value) {
+    public void setRestrictions(@jakarta.annotation.Nullable final AppManagementConfiguration value) {
         this.restrictions = value;
     }
 }

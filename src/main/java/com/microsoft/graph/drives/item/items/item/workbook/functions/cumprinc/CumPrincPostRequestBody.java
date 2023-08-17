@@ -39,9 +39,7 @@ public class CumPrincPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json type;
     /**
      * Instantiates a new cumPrincPostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CumPrincPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -50,8 +48,8 @@ public class CumPrincPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cumPrincPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static CumPrincPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CumPrincPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CumPrincPostRequestBody();
     }
@@ -59,7 +57,7 @@ public class CumPrincPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -67,7 +65,7 @@ public class CumPrincPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the endPeriod property value. The endPeriod property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getEndPeriod() {
         return this.endPeriod;
     }
@@ -75,7 +73,7 @@ public class CumPrincPostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("endPeriod", (n) -> { this.setEndPeriod(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -90,7 +88,7 @@ public class CumPrincPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the nper property value. The nper property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getNper() {
         return this.nper;
     }
@@ -98,7 +96,7 @@ public class CumPrincPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the pv property value. The pv property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getPv() {
         return this.pv;
     }
@@ -106,7 +104,7 @@ public class CumPrincPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the rate property value. The rate property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getRate() {
         return this.rate;
     }
@@ -114,7 +112,7 @@ public class CumPrincPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the startPeriod property value. The startPeriod property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getStartPeriod() {
         return this.startPeriod;
     }
@@ -122,17 +120,15 @@ public class CumPrincPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the type property value. The type property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getType() {
         return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("endPeriod", this.getEndPeriod());
         writer.writeObjectValue("nper", this.getNper());
@@ -145,64 +141,50 @@ public class CumPrincPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the endPeriod property value. The endPeriod property
      * @param value Value to set for the endPeriod property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndPeriod(@javax.annotation.Nullable final Json value) {
+    public void setEndPeriod(@jakarta.annotation.Nullable final Json value) {
         this.endPeriod = value;
     }
     /**
      * Sets the nper property value. The nper property
      * @param value Value to set for the nper property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNper(@javax.annotation.Nullable final Json value) {
+    public void setNper(@jakarta.annotation.Nullable final Json value) {
         this.nper = value;
     }
     /**
      * Sets the pv property value. The pv property
      * @param value Value to set for the pv property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPv(@javax.annotation.Nullable final Json value) {
+    public void setPv(@jakarta.annotation.Nullable final Json value) {
         this.pv = value;
     }
     /**
      * Sets the rate property value. The rate property
      * @param value Value to set for the rate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRate(@javax.annotation.Nullable final Json value) {
+    public void setRate(@jakarta.annotation.Nullable final Json value) {
         this.rate = value;
     }
     /**
      * Sets the startPeriod property value. The startPeriod property
      * @param value Value to set for the startPeriod property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartPeriod(@javax.annotation.Nullable final Json value) {
+    public void setStartPeriod(@jakarta.annotation.Nullable final Json value) {
         this.startPeriod = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final Json value) {
+    public void setType(@jakarta.annotation.Nullable final Json value) {
         this.type = value;
     }
 }

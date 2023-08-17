@@ -26,9 +26,7 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
     private OffsetDateTime refreshDateTime;
     /**
      * Instantiates a new deviceLocalCredentialInfo and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceLocalCredentialInfo() {
         super();
     }
@@ -37,8 +35,8 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceLocalCredentialInfo
      */
-    @javax.annotation.Nonnull
-    public static DeviceLocalCredentialInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceLocalCredentialInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceLocalCredentialInfo();
     }
@@ -46,7 +44,7 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
      * Gets the credentials property value. The credentials of the device's local administrator account backed up to Azure Active Directory.
      * @return a deviceLocalCredential
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceLocalCredential> getCredentials() {
         return this.credentials;
     }
@@ -54,7 +52,7 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
      * Gets the deviceName property value. Display name of the device that the local credentials are associated with.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -62,7 +60,7 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("credentials", (n) -> { this.setCredentials(n.getCollectionOfObjectValues(DeviceLocalCredential::createFromDiscriminatorValue)); });
@@ -75,7 +73,7 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
      * Gets the lastBackupDateTime property value. When the local administrator account credential was backed up to Azure Active Directory.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastBackupDateTime() {
         return this.lastBackupDateTime;
     }
@@ -83,17 +81,15 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
      * Gets the refreshDateTime property value. When the local administrator account credential will be refreshed and backed up to Azure Active Directory.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRefreshDateTime() {
         return this.refreshDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("credentials", this.getCredentials());
@@ -104,37 +100,29 @@ public class DeviceLocalCredentialInfo extends Entity implements Parsable {
     /**
      * Sets the credentials property value. The credentials of the device's local administrator account backed up to Azure Active Directory.
      * @param value Value to set for the credentials property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCredentials(@javax.annotation.Nullable final java.util.List<DeviceLocalCredential> value) {
+    public void setCredentials(@jakarta.annotation.Nullable final java.util.List<DeviceLocalCredential> value) {
         this.credentials = value;
     }
     /**
      * Sets the deviceName property value. Display name of the device that the local credentials are associated with.
      * @param value Value to set for the deviceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
      * Sets the lastBackupDateTime property value. When the local administrator account credential was backed up to Azure Active Directory.
      * @param value Value to set for the lastBackupDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastBackupDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastBackupDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastBackupDateTime = value;
     }
     /**
      * Sets the refreshDateTime property value. When the local administrator account credential will be refreshed and backed up to Azure Active Directory.
      * @param value Value to set for the refreshDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRefreshDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setRefreshDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.refreshDateTime = value;
     }
 }

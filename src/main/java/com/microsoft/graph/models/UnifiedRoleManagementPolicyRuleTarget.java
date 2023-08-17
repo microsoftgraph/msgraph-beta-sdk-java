@@ -42,9 +42,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
     private java.util.List<DirectoryObject> targetObjects;
     /**
      * Instantiates a new unifiedRoleManagementPolicyRuleTarget and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UnifiedRoleManagementPolicyRuleTarget() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +51,8 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a unifiedRoleManagementPolicyRuleTarget
      */
-    @javax.annotation.Nonnull
-    public static UnifiedRoleManagementPolicyRuleTarget createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UnifiedRoleManagementPolicyRuleTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UnifiedRoleManagementPolicyRuleTarget();
     }
@@ -62,7 +60,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +68,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * Gets the caller property value. The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCaller() {
         return this.caller;
     }
@@ -78,7 +76,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * Gets the enforcedSettings property value. The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getEnforcedSettings() {
         return this.enforcedSettings;
     }
@@ -86,7 +84,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("caller", (n) -> { this.setCaller(n.getStringValue()); });
@@ -102,7 +100,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * Gets the inheritableSettings property value. The list of role settings that can be inherited by child scopes. Use All for all settings.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getInheritableSettings() {
         return this.inheritableSettings;
     }
@@ -110,7 +108,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * Gets the level property value. The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLevel() {
         return this.level;
     }
@@ -118,7 +116,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -126,7 +124,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * Gets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getOperations() {
         return this.operations;
     }
@@ -134,17 +132,15 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
      * Gets the targetObjects property value. The targetObjects property
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getTargetObjects() {
         return this.targetObjects;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("caller", this.getCaller());
         writer.writeCollectionOfPrimitiveValues("enforcedSettings", this.getEnforcedSettings());
@@ -158,73 +154,57 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the caller property value. The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
      * @param value Value to set for the caller property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCaller(@javax.annotation.Nullable final String value) {
+    public void setCaller(@jakarta.annotation.Nullable final String value) {
         this.caller = value;
     }
     /**
      * Sets the enforcedSettings property value. The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings.
      * @param value Value to set for the enforcedSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnforcedSettings(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setEnforcedSettings(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.enforcedSettings = value;
     }
     /**
      * Sets the inheritableSettings property value. The list of role settings that can be inherited by child scopes. Use All for all settings.
      * @param value Value to set for the inheritableSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInheritableSettings(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setInheritableSettings(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.inheritableSettings = value;
     }
     /**
      * Sets the level property value. The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
      * @param value Value to set for the level property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLevel(@javax.annotation.Nullable final String value) {
+    public void setLevel(@jakarta.annotation.Nullable final String value) {
         this.level = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
      * @param value Value to set for the operations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperations(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setOperations(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.operations = value;
     }
     /**
      * Sets the targetObjects property value. The targetObjects property
      * @param value Value to set for the targetObjects property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetObjects(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
+    public void setTargetObjects(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.targetObjects = value;
     }
 }

@@ -41,9 +41,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     private ReviewSet reviewSet;
     /**
      * Instantiates a new caseExportOperation and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CaseExportOperation() {
         super();
     }
@@ -52,8 +50,8 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a caseExportOperation
      */
-    @javax.annotation.Nonnull
-    public static CaseExportOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CaseExportOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CaseExportOperation();
     }
@@ -61,7 +59,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * Gets the azureBlobContainer property value. The name of the Azure storage location where the export will be stored. This only applies to exports stored in your own Azure storage location.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureBlobContainer() {
         return this.azureBlobContainer;
     }
@@ -69,7 +67,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * Gets the azureBlobToken property value. The SAS token for the Azure storage location.  This only applies to exports stored in your own Azure storage location.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureBlobToken() {
         return this.azureBlobToken;
     }
@@ -77,7 +75,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * Gets the description property value. The description provided for the export.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -85,7 +83,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * Gets the exportOptions property value. The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
      * @return a exportOptions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExportOptions getExportOptions() {
         return this.exportOptions;
     }
@@ -93,7 +91,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * Gets the exportStructure property value. The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
      * @return a exportFileStructure
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExportFileStructure getExportStructure() {
         return this.exportStructure;
     }
@@ -101,7 +99,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("azureBlobContainer", (n) -> { this.setAzureBlobContainer(n.getStringValue()); });
@@ -118,7 +116,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * Gets the outputFolderId property value. The outputFolderId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOutputFolderId() {
         return this.outputFolderId;
     }
@@ -126,7 +124,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * Gets the outputName property value. The name provided for the export.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOutputName() {
         return this.outputName;
     }
@@ -134,17 +132,15 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * Gets the reviewSet property value. The review set the content is being exported from.
      * @return a reviewSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ReviewSet getReviewSet() {
         return this.reviewSet;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("azureBlobContainer", this.getAzureBlobContainer());
@@ -159,73 +155,57 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     /**
      * Sets the azureBlobContainer property value. The name of the Azure storage location where the export will be stored. This only applies to exports stored in your own Azure storage location.
      * @param value Value to set for the azureBlobContainer property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureBlobContainer(@javax.annotation.Nullable final String value) {
+    public void setAzureBlobContainer(@jakarta.annotation.Nullable final String value) {
         this.azureBlobContainer = value;
     }
     /**
      * Sets the azureBlobToken property value. The SAS token for the Azure storage location.  This only applies to exports stored in your own Azure storage location.
      * @param value Value to set for the azureBlobToken property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureBlobToken(@javax.annotation.Nullable final String value) {
+    public void setAzureBlobToken(@jakarta.annotation.Nullable final String value) {
         this.azureBlobToken = value;
     }
     /**
      * Sets the description property value. The description provided for the export.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the exportOptions property value. The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
      * @param value Value to set for the exportOptions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExportOptions(@javax.annotation.Nullable final ExportOptions value) {
+    public void setExportOptions(@jakarta.annotation.Nullable final ExportOptions value) {
         this.exportOptions = value;
     }
     /**
      * Sets the exportStructure property value. The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
      * @param value Value to set for the exportStructure property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExportStructure(@javax.annotation.Nullable final ExportFileStructure value) {
+    public void setExportStructure(@jakarta.annotation.Nullable final ExportFileStructure value) {
         this.exportStructure = value;
     }
     /**
      * Sets the outputFolderId property value. The outputFolderId property
      * @param value Value to set for the outputFolderId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOutputFolderId(@javax.annotation.Nullable final String value) {
+    public void setOutputFolderId(@jakarta.annotation.Nullable final String value) {
         this.outputFolderId = value;
     }
     /**
      * Sets the outputName property value. The name provided for the export.
      * @param value Value to set for the outputName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOutputName(@javax.annotation.Nullable final String value) {
+    public void setOutputName(@jakarta.annotation.Nullable final String value) {
         this.outputName = value;
     }
     /**
      * Sets the reviewSet property value. The review set the content is being exported from.
      * @param value Value to set for the reviewSet property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewSet(@javax.annotation.Nullable final ReviewSet value) {
+    public void setReviewSet(@jakarta.annotation.Nullable final ReviewSet value) {
         this.reviewSet = value;
     }
 }

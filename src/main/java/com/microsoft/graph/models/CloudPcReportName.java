@@ -11,15 +11,16 @@ public enum CloudPcReportName implements ValuedEnum {
     SharedUseLicenseUsageRealTimeReport("sharedUseLicenseUsageRealTimeReport"),
     UnknownFutureValue("unknownFutureValue"),
     NoLicenseAvailableConnectivityFailureReport("noLicenseAvailableConnectivityFailureReport"),
-    RemoteConnectionQualityReports("remoteConnectionQualityReports");
+    RemoteConnectionQualityReports("remoteConnectionQualityReports"),
+    InaccessibleCloudPcReports("inaccessibleCloudPcReports");
     public final String value;
     CloudPcReportName(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static CloudPcReportName forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static CloudPcReportName forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "remoteConnectionHistoricalReports": return RemoteConnectionHistoricalReports;
@@ -30,6 +31,7 @@ public enum CloudPcReportName implements ValuedEnum {
             case "unknownFutureValue": return UnknownFutureValue;
             case "noLicenseAvailableConnectivityFailureReport": return NoLicenseAvailableConnectivityFailureReport;
             case "remoteConnectionQualityReports": return RemoteConnectionQualityReports;
+            case "inaccessibleCloudPcReports": return InaccessibleCloudPcReports;
             default: return null;
         }
     }

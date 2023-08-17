@@ -38,9 +38,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     private String textType;
     /**
      * Instantiates a new textColumn and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TextColumn() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +47,8 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a textColumn
      */
-    @javax.annotation.Nonnull
-    public static TextColumn createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TextColumn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TextColumn();
     }
@@ -58,7 +56,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +64,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      * Gets the allowMultipleLines property value. Whether to allow multiple lines of text.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowMultipleLines() {
         return this.allowMultipleLines;
     }
@@ -74,7 +72,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      * Gets the appendChangesToExistingText property value. Whether updates to this column should replace existing text, or append to it.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAppendChangesToExistingText() {
         return this.appendChangesToExistingText;
     }
@@ -82,7 +80,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("allowMultipleLines", (n) -> { this.setAllowMultipleLines(n.getBooleanValue()); });
@@ -97,7 +95,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      * Gets the linesForEditing property value. The size of the text box.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getLinesForEditing() {
         return this.linesForEditing;
     }
@@ -105,7 +103,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      * Gets the maxLength property value. The maximum number of characters for the value.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaxLength() {
         return this.maxLength;
     }
@@ -113,7 +111,7 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -121,17 +119,15 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
      * Gets the textType property value. The type of text being stored. Must be one of plain or richText
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTextType() {
         return this.textType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowMultipleLines", this.getAllowMultipleLines());
         writer.writeBooleanValue("appendChangesToExistingText", this.getAppendChangesToExistingText());
@@ -144,64 +140,50 @@ public class TextColumn implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowMultipleLines property value. Whether to allow multiple lines of text.
      * @param value Value to set for the allowMultipleLines property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowMultipleLines(@javax.annotation.Nullable final Boolean value) {
+    public void setAllowMultipleLines(@jakarta.annotation.Nullable final Boolean value) {
         this.allowMultipleLines = value;
     }
     /**
      * Sets the appendChangesToExistingText property value. Whether updates to this column should replace existing text, or append to it.
      * @param value Value to set for the appendChangesToExistingText property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppendChangesToExistingText(@javax.annotation.Nullable final Boolean value) {
+    public void setAppendChangesToExistingText(@jakarta.annotation.Nullable final Boolean value) {
         this.appendChangesToExistingText = value;
     }
     /**
      * Sets the linesForEditing property value. The size of the text box.
      * @param value Value to set for the linesForEditing property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLinesForEditing(@javax.annotation.Nullable final Integer value) {
+    public void setLinesForEditing(@jakarta.annotation.Nullable final Integer value) {
         this.linesForEditing = value;
     }
     /**
      * Sets the maxLength property value. The maximum number of characters for the value.
      * @param value Value to set for the maxLength property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaxLength(@javax.annotation.Nullable final Integer value) {
+    public void setMaxLength(@jakarta.annotation.Nullable final Integer value) {
         this.maxLength = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the textType property value. The type of text being stored. Must be one of plain or richText
      * @param value Value to set for the textType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTextType(@javax.annotation.Nullable final String value) {
+    public void setTextType(@jakarta.annotation.Nullable final String value) {
         this.textType = value;
     }
 }

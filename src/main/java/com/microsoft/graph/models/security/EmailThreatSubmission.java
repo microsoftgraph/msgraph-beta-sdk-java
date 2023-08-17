@@ -46,9 +46,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     private TenantAllowOrBlockListAction tenantAllowOrBlockListAction;
     /**
      * Instantiates a new emailThreatSubmission and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EmailThreatSubmission() {
         super();
         this.setOdataType("#microsoft.graph.security.emailThreatSubmission");
@@ -58,8 +56,8 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a emailThreatSubmission
      */
-    @javax.annotation.Nonnull
-    public static EmailThreatSubmission createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EmailThreatSubmission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -75,7 +73,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * Gets the attackSimulationInfo property value. If the email is phishing simulation, this field will not be null.
      * @return a attackSimulationInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AttackSimulationInfo getAttackSimulationInfo() {
         return this.attackSimulationInfo;
     }
@@ -83,7 +81,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("attackSimulationInfo", (n) -> { this.setAttackSimulationInfo(n.getObjectValue(AttackSimulationInfo::createFromDiscriminatorValue)); });
@@ -101,7 +99,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * Gets the internetMessageId property value. Specifies the internet message id of the email being submitted. This information is present in the email header.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInternetMessageId() {
         return this.internetMessageId;
     }
@@ -109,7 +107,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * Gets the originalCategory property value. The original category of the submission. The possible values are: notJunk, spam, phishing, malware and unkownFutureValue.
      * @return a submissionCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubmissionCategory getOriginalCategory() {
         return this.originalCategory;
     }
@@ -117,7 +115,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * Gets the receivedDateTime property value. Specifies the date and time stamp when the email was received.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getReceivedDateTime() {
         return this.receivedDateTime;
     }
@@ -125,7 +123,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * Gets the recipientEmailAddress property value. Specifies the email address (in smtp format) of the recipient who received the email.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRecipientEmailAddress() {
         return this.recipientEmailAddress;
     }
@@ -133,7 +131,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * Gets the sender property value. Specifies the email address of the sender.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSender() {
         return this.sender;
     }
@@ -141,7 +139,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * Gets the senderIP property value. Specifies the IP address of the sender.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSenderIP() {
         return this.senderIP;
     }
@@ -149,7 +147,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * Gets the subject property value. Specifies the subject of the email .
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubject() {
         return this.subject;
     }
@@ -157,17 +155,15 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * Gets the tenantAllowOrBlockListAction property value. It is used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
      * @return a tenantAllowOrBlockListAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TenantAllowOrBlockListAction getTenantAllowOrBlockListAction() {
         return this.tenantAllowOrBlockListAction;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("attackSimulationInfo", this.getAttackSimulationInfo());
@@ -183,82 +179,64 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     /**
      * Sets the attackSimulationInfo property value. If the email is phishing simulation, this field will not be null.
      * @param value Value to set for the attackSimulationInfo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttackSimulationInfo(@javax.annotation.Nullable final AttackSimulationInfo value) {
+    public void setAttackSimulationInfo(@jakarta.annotation.Nullable final AttackSimulationInfo value) {
         this.attackSimulationInfo = value;
     }
     /**
      * Sets the internetMessageId property value. Specifies the internet message id of the email being submitted. This information is present in the email header.
      * @param value Value to set for the internetMessageId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInternetMessageId(@javax.annotation.Nullable final String value) {
+    public void setInternetMessageId(@jakarta.annotation.Nullable final String value) {
         this.internetMessageId = value;
     }
     /**
      * Sets the originalCategory property value. The original category of the submission. The possible values are: notJunk, spam, phishing, malware and unkownFutureValue.
      * @param value Value to set for the originalCategory property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOriginalCategory(@javax.annotation.Nullable final SubmissionCategory value) {
+    public void setOriginalCategory(@jakarta.annotation.Nullable final SubmissionCategory value) {
         this.originalCategory = value;
     }
     /**
      * Sets the receivedDateTime property value. Specifies the date and time stamp when the email was received.
      * @param value Value to set for the receivedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReceivedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setReceivedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.receivedDateTime = value;
     }
     /**
      * Sets the recipientEmailAddress property value. Specifies the email address (in smtp format) of the recipient who received the email.
      * @param value Value to set for the recipientEmailAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecipientEmailAddress(@javax.annotation.Nullable final String value) {
+    public void setRecipientEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.recipientEmailAddress = value;
     }
     /**
      * Sets the sender property value. Specifies the email address of the sender.
      * @param value Value to set for the sender property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSender(@javax.annotation.Nullable final String value) {
+    public void setSender(@jakarta.annotation.Nullable final String value) {
         this.sender = value;
     }
     /**
      * Sets the senderIP property value. Specifies the IP address of the sender.
      * @param value Value to set for the senderIP property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSenderIP(@javax.annotation.Nullable final String value) {
+    public void setSenderIP(@jakarta.annotation.Nullable final String value) {
         this.senderIP = value;
     }
     /**
      * Sets the subject property value. Specifies the subject of the email .
      * @param value Value to set for the subject property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final String value) {
+    public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
     /**
      * Sets the tenantAllowOrBlockListAction property value. It is used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
      * @param value Value to set for the tenantAllowOrBlockListAction property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantAllowOrBlockListAction(@javax.annotation.Nullable final TenantAllowOrBlockListAction value) {
+    public void setTenantAllowOrBlockListAction(@jakarta.annotation.Nullable final TenantAllowOrBlockListAction value) {
         this.tenantAllowOrBlockListAction = value;
     }
 }

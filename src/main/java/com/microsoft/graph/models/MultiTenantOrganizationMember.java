@@ -43,9 +43,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     private MultiTenantOrganizationMemberTransitionDetails transitionDetails;
     /**
      * Instantiates a new multiTenantOrganizationMember and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MultiTenantOrganizationMember() {
         super();
         this.setOdataType("#microsoft.graph.multiTenantOrganizationMember");
@@ -55,8 +53,8 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a multiTenantOrganizationMember
      */
-    @javax.annotation.Nonnull
-    public static MultiTenantOrganizationMember createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MultiTenantOrganizationMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MultiTenantOrganizationMember();
     }
@@ -64,7 +62,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
      * Gets the addedByTenantId property value. The addedByTenantId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getAddedByTenantId() {
         return this.addedByTenantId;
     }
@@ -72,7 +70,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
      * Gets the addedDateTime property value. The addedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getAddedDateTime() {
         return this.addedDateTime;
     }
@@ -80,7 +78,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -88,7 +86,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("addedByTenantId", (n) -> { this.setAddedByTenantId(n.getUUIDValue()); });
@@ -105,7 +103,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
      * Gets the joinedDateTime property value. The joinedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getJoinedDateTime() {
         return this.joinedDateTime;
     }
@@ -113,7 +111,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
      * Gets the role property value. The role property
      * @return a multiTenantOrganizationMemberRole
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MultiTenantOrganizationMemberRole getRole() {
         return this.role;
     }
@@ -121,7 +119,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
      * Gets the state property value. The state property
      * @return a multiTenantOrganizationMemberState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MultiTenantOrganizationMemberState getState() {
         return this.state;
     }
@@ -129,7 +127,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
      * Gets the tenantId property value. The tenantId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -137,17 +135,15 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
      * Gets the transitionDetails property value. The transitionDetails property
      * @return a multiTenantOrganizationMemberTransitionDetails
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MultiTenantOrganizationMemberTransitionDetails getTransitionDetails() {
         return this.transitionDetails;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeUUIDValue("addedByTenantId", this.getAddedByTenantId());
@@ -162,73 +158,57 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     /**
      * Sets the addedByTenantId property value. The addedByTenantId property
      * @param value Value to set for the addedByTenantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddedByTenantId(@javax.annotation.Nullable final UUID value) {
+    public void setAddedByTenantId(@jakarta.annotation.Nullable final UUID value) {
         this.addedByTenantId = value;
     }
     /**
      * Sets the addedDateTime property value. The addedDateTime property
      * @param value Value to set for the addedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setAddedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.addedDateTime = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the joinedDateTime property value. The joinedDateTime property
      * @param value Value to set for the joinedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJoinedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setJoinedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.joinedDateTime = value;
     }
     /**
      * Sets the role property value. The role property
      * @param value Value to set for the role property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRole(@javax.annotation.Nullable final MultiTenantOrganizationMemberRole value) {
+    public void setRole(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberRole value) {
         this.role = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final MultiTenantOrganizationMemberState value) {
+    public void setState(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberState value) {
         this.state = value;
     }
     /**
      * Sets the tenantId property value. The tenantId property
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
      * Sets the transitionDetails property value. The transitionDetails property
      * @param value Value to set for the transitionDetails property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTransitionDetails(@javax.annotation.Nullable final MultiTenantOrganizationMemberTransitionDetails value) {
+    public void setTransitionDetails(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberTransitionDetails value) {
         this.transitionDetails = value;
     }
 }

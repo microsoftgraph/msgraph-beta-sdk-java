@@ -34,9 +34,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
     private CloudPcSnapshotStatus status;
     /**
      * Instantiates a new cloudPcSnapshot and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CloudPcSnapshot() {
         super();
     }
@@ -45,8 +43,8 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudPcSnapshot
      */
-    @javax.annotation.Nonnull
-    public static CloudPcSnapshot createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudPcSnapshot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudPcSnapshot();
     }
@@ -54,7 +52,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      * Gets the cloudPcId property value. The unique identifier for the Cloud PC.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCloudPcId() {
         return this.cloudPcId;
     }
@@ -62,7 +60,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time at which the snapshot was taken. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -70,7 +68,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      * Gets the expirationDateTime property value. The date and time when the snapshot expires. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
         return this.expirationDateTime;
     }
@@ -78,7 +76,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("cloudPcId", (n) -> { this.setCloudPcId(n.getStringValue()); });
@@ -93,7 +91,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      * Gets the lastRestoredDateTime property value. The date and time at which the snapshot was last used to restore the Cloud PC device. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastRestoredDateTime() {
         return this.lastRestoredDateTime;
     }
@@ -101,7 +99,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      * Gets the snapshotType property value. The type of snapshot that indicates how to create the snapshot. Possible values are automatic, manual. Default value is automatic.
      * @return a cloudPcSnapshotType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcSnapshotType getSnapshotType() {
         return this.snapshotType;
     }
@@ -109,17 +107,15 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      * Gets the status property value. The status of the Cloud PC snapshot. The possible values are: ready, unknownFutureValue.
      * @return a cloudPcSnapshotStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcSnapshotStatus getStatus() {
         return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("cloudPcId", this.getCloudPcId());
@@ -132,55 +128,43 @@ public class CloudPcSnapshot extends Entity implements Parsable {
     /**
      * Sets the cloudPcId property value. The unique identifier for the Cloud PC.
      * @param value Value to set for the cloudPcId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudPcId(@javax.annotation.Nullable final String value) {
+    public void setCloudPcId(@jakarta.annotation.Nullable final String value) {
         this.cloudPcId = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time at which the snapshot was taken. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the expirationDateTime property value. The date and time when the snapshot expires. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the lastRestoredDateTime property value. The date and time at which the snapshot was last used to restore the Cloud PC device. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastRestoredDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastRestoredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastRestoredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastRestoredDateTime = value;
     }
     /**
      * Sets the snapshotType property value. The type of snapshot that indicates how to create the snapshot. Possible values are automatic, manual. Default value is automatic.
      * @param value Value to set for the snapshotType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSnapshotType(@javax.annotation.Nullable final CloudPcSnapshotType value) {
+    public void setSnapshotType(@jakarta.annotation.Nullable final CloudPcSnapshotType value) {
         this.snapshotType = value;
     }
     /**
      * Sets the status property value. The status of the Cloud PC snapshot. The possible values are: ready, unknownFutureValue.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final CloudPcSnapshotStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final CloudPcSnapshotStatus value) {
         this.status = value;
     }
 }

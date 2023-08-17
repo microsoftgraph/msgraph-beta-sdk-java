@@ -37,9 +37,7 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
     private String uiElementName;
     /**
      * Instantiates a new addContentFooterAction and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AddContentFooterAction() {
         super();
         this.setOdataType("#microsoft.graph.addContentFooterAction");
@@ -49,8 +47,8 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a addContentFooterAction
      */
-    @javax.annotation.Nonnull
-    public static AddContentFooterAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AddContentFooterAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AddContentFooterAction();
     }
@@ -58,7 +56,7 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
      * Gets the alignment property value. The alignment property
      * @return a contentAlignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ContentAlignment getAlignment() {
         return this.alignment;
     }
@@ -66,7 +64,7 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alignment", (n) -> { this.setAlignment(n.getEnumValue(ContentAlignment.class)); });
@@ -82,7 +80,7 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
      * Gets the fontColor property value. Color of the font to use for the footer.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFontColor() {
         return this.fontColor;
     }
@@ -90,7 +88,7 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
      * Gets the fontName property value. Name of the font to use for the footer.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFontName() {
         return this.fontName;
     }
@@ -98,7 +96,7 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
      * Gets the fontSize property value. Font size to use for the footer.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFontSize() {
         return this.fontSize;
     }
@@ -106,7 +104,7 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
      * Gets the margin property value. The margin of the header from the bottom of the document.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMargin() {
         return this.margin;
     }
@@ -114,7 +112,7 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
      * Gets the text property value. The contents of the footer itself.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getText() {
         return this.text;
     }
@@ -122,17 +120,15 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
      * Gets the uiElementName property value. The name of the UI element where the footer should be placed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUiElementName() {
         return this.uiElementName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("alignment", this.getAlignment());
@@ -146,64 +142,50 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
     /**
      * Sets the alignment property value. The alignment property
      * @param value Value to set for the alignment property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlignment(@javax.annotation.Nullable final ContentAlignment value) {
+    public void setAlignment(@jakarta.annotation.Nullable final ContentAlignment value) {
         this.alignment = value;
     }
     /**
      * Sets the fontColor property value. Color of the font to use for the footer.
      * @param value Value to set for the fontColor property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFontColor(@javax.annotation.Nullable final String value) {
+    public void setFontColor(@jakarta.annotation.Nullable final String value) {
         this.fontColor = value;
     }
     /**
      * Sets the fontName property value. Name of the font to use for the footer.
      * @param value Value to set for the fontName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFontName(@javax.annotation.Nullable final String value) {
+    public void setFontName(@jakarta.annotation.Nullable final String value) {
         this.fontName = value;
     }
     /**
      * Sets the fontSize property value. Font size to use for the footer.
      * @param value Value to set for the fontSize property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFontSize(@javax.annotation.Nullable final Integer value) {
+    public void setFontSize(@jakarta.annotation.Nullable final Integer value) {
         this.fontSize = value;
     }
     /**
      * Sets the margin property value. The margin of the header from the bottom of the document.
      * @param value Value to set for the margin property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMargin(@javax.annotation.Nullable final Integer value) {
+    public void setMargin(@jakarta.annotation.Nullable final Integer value) {
         this.margin = value;
     }
     /**
      * Sets the text property value. The contents of the footer itself.
      * @param value Value to set for the text property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setText(@javax.annotation.Nullable final String value) {
+    public void setText(@jakarta.annotation.Nullable final String value) {
         this.text = value;
     }
     /**
      * Sets the uiElementName property value. The name of the UI element where the footer should be placed.
      * @param value Value to set for the uiElementName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUiElementName(@javax.annotation.Nullable final String value) {
+    public void setUiElementName(@jakarta.annotation.Nullable final String value) {
         this.uiElementName = value;
     }
 }

@@ -11,10 +11,10 @@ public enum MultiTenantOrganizationMemberRole implements ValuedEnum {
     MultiTenantOrganizationMemberRole(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MultiTenantOrganizationMemberRole forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MultiTenantOrganizationMemberRole forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "owner": return Owner;

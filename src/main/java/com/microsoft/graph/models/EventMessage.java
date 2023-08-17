@@ -49,9 +49,7 @@ public class EventMessage extends Message implements Parsable {
     private EventType type;
     /**
      * Instantiates a new eventMessage and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EventMessage() {
         super();
         this.setOdataType("#microsoft.graph.eventMessage");
@@ -61,8 +59,8 @@ public class EventMessage extends Message implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a eventMessage
      */
-    @javax.annotation.Nonnull
-    public static EventMessage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EventMessage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -78,7 +76,7 @@ public class EventMessage extends Message implements Parsable {
      * Gets the endDateTime property value. The end time of the requested meeting.
      * @return a dateTimeTimeZone
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
         return this.endDateTime;
     }
@@ -86,7 +84,7 @@ public class EventMessage extends Message implements Parsable {
      * Gets the event property value. The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
      * @return a event
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Event getEvent() {
         return this.event;
     }
@@ -94,7 +92,7 @@ public class EventMessage extends Message implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
@@ -113,7 +111,7 @@ public class EventMessage extends Message implements Parsable {
      * Gets the isAllDay property value. The isAllDay property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAllDay() {
         return this.isAllDay;
     }
@@ -121,7 +119,7 @@ public class EventMessage extends Message implements Parsable {
      * Gets the isDelegated property value. The isDelegated property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDelegated() {
         return this.isDelegated;
     }
@@ -129,7 +127,7 @@ public class EventMessage extends Message implements Parsable {
      * Gets the isOutOfDate property value. The isOutOfDate property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsOutOfDate() {
         return this.isOutOfDate;
     }
@@ -137,7 +135,7 @@ public class EventMessage extends Message implements Parsable {
      * Gets the location property value. The location property
      * @return a location
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Location getLocation() {
         return this.location;
     }
@@ -145,7 +143,7 @@ public class EventMessage extends Message implements Parsable {
      * Gets the meetingMessageType property value. The meetingMessageType property
      * @return a meetingMessageType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MeetingMessageType getMeetingMessageType() {
         return this.meetingMessageType;
     }
@@ -153,7 +151,7 @@ public class EventMessage extends Message implements Parsable {
      * Gets the recurrence property value. The recurrence property
      * @return a patternedRecurrence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PatternedRecurrence getRecurrence() {
         return this.recurrence;
     }
@@ -161,7 +159,7 @@ public class EventMessage extends Message implements Parsable {
      * Gets the startDateTime property value. The startDateTime property
      * @return a dateTimeTimeZone
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {
         return this.startDateTime;
     }
@@ -169,17 +167,15 @@ public class EventMessage extends Message implements Parsable {
      * Gets the type property value. The type property
      * @return a eventType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EventType getType() {
         return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("endDateTime", this.getEndDateTime());
@@ -196,91 +192,71 @@ public class EventMessage extends Message implements Parsable {
     /**
      * Sets the endDateTime property value. The end time of the requested meeting.
      * @param value Value to set for the endDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
+    public void setEndDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.endDateTime = value;
     }
     /**
      * Sets the event property value. The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
      * @param value Value to set for the event property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEvent(@javax.annotation.Nullable final Event value) {
+    public void setEvent(@jakarta.annotation.Nullable final Event value) {
         this.event = value;
     }
     /**
      * Sets the isAllDay property value. The isAllDay property
      * @param value Value to set for the isAllDay property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAllDay(@javax.annotation.Nullable final Boolean value) {
+    public void setIsAllDay(@jakarta.annotation.Nullable final Boolean value) {
         this.isAllDay = value;
     }
     /**
      * Sets the isDelegated property value. The isDelegated property
      * @param value Value to set for the isDelegated property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDelegated(@javax.annotation.Nullable final Boolean value) {
+    public void setIsDelegated(@jakarta.annotation.Nullable final Boolean value) {
         this.isDelegated = value;
     }
     /**
      * Sets the isOutOfDate property value. The isOutOfDate property
      * @param value Value to set for the isOutOfDate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsOutOfDate(@javax.annotation.Nullable final Boolean value) {
+    public void setIsOutOfDate(@jakarta.annotation.Nullable final Boolean value) {
         this.isOutOfDate = value;
     }
     /**
      * Sets the location property value. The location property
      * @param value Value to set for the location property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocation(@javax.annotation.Nullable final Location value) {
+    public void setLocation(@jakarta.annotation.Nullable final Location value) {
         this.location = value;
     }
     /**
      * Sets the meetingMessageType property value. The meetingMessageType property
      * @param value Value to set for the meetingMessageType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMeetingMessageType(@javax.annotation.Nullable final MeetingMessageType value) {
+    public void setMeetingMessageType(@jakarta.annotation.Nullable final MeetingMessageType value) {
         this.meetingMessageType = value;
     }
     /**
      * Sets the recurrence property value. The recurrence property
      * @param value Value to set for the recurrence property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecurrence(@javax.annotation.Nullable final PatternedRecurrence value) {
+    public void setRecurrence(@jakarta.annotation.Nullable final PatternedRecurrence value) {
         this.recurrence = value;
     }
     /**
      * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
+    public void setStartDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.startDateTime = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final EventType value) {
+    public void setType(@jakarta.annotation.Nullable final EventType value) {
         this.type = value;
     }
 }

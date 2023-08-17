@@ -16,9 +16,7 @@ public class AppleVppTokenTroubleshootingEvent extends DeviceManagementTroublesh
     private String tokenId;
     /**
      * Instantiates a new appleVppTokenTroubleshootingEvent and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AppleVppTokenTroubleshootingEvent() {
         super();
     }
@@ -27,8 +25,8 @@ public class AppleVppTokenTroubleshootingEvent extends DeviceManagementTroublesh
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a appleVppTokenTroubleshootingEvent
      */
-    @javax.annotation.Nonnull
-    public static AppleVppTokenTroubleshootingEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AppleVppTokenTroubleshootingEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AppleVppTokenTroubleshootingEvent();
     }
@@ -36,7 +34,7 @@ public class AppleVppTokenTroubleshootingEvent extends DeviceManagementTroublesh
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("tokenId", (n) -> { this.setTokenId(n.getStringValue()); });
@@ -46,17 +44,15 @@ public class AppleVppTokenTroubleshootingEvent extends DeviceManagementTroublesh
      * Gets the tokenId property value. Apple Volume Purchase Program Token Identifier.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTokenId() {
         return this.tokenId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("tokenId", this.getTokenId());
@@ -64,10 +60,8 @@ public class AppleVppTokenTroubleshootingEvent extends DeviceManagementTroublesh
     /**
      * Sets the tokenId property value. Apple Volume Purchase Program Token Identifier.
      * @param value Value to set for the tokenId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTokenId(@javax.annotation.Nullable final String value) {
+    public void setTokenId(@jakarta.annotation.Nullable final String value) {
         this.tokenId = value;
     }
 }

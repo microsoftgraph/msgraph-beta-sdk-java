@@ -37,9 +37,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     private String eventSource;
     /**
      * Instantiates a new userExperienceAnalyticsDeviceTimelineEvent and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UserExperienceAnalyticsDeviceTimelineEvent() {
         super();
     }
@@ -48,8 +46,8 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsDeviceTimelineEvent
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsDeviceTimelineEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsDeviceTimelineEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsDeviceTimelineEvent();
     }
@@ -57,7 +55,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
      * Gets the deviceId property value. The id of the device where the event occurred.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -65,7 +63,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
      * Gets the eventDateTime property value. The time the event occured.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
         return this.eventDateTime;
     }
@@ -73,7 +71,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
      * Gets the eventDetails property value. The details provided by the event, format depends on event type.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEventDetails() {
         return this.eventDetails;
     }
@@ -81,7 +79,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
      * Gets the eventLevel property value. Indicates device event level. Possible values are: None, Verbose, Information, Warning, Error, Critical
      * @return a deviceEventLevel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceEventLevel getEventLevel() {
         return this.eventLevel;
     }
@@ -89,7 +87,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
      * Gets the eventName property value. The name of the event. Examples include: BootEvent, LogonEvent, AppCrashEvent, AppHangEvent.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEventName() {
         return this.eventName;
     }
@@ -97,7 +95,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
      * Gets the eventSource property value. The source of the event. Examples include: Intune, Sccm.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEventSource() {
         return this.eventSource;
     }
@@ -105,7 +103,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
@@ -119,10 +117,8 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("deviceId", this.getDeviceId());
@@ -135,55 +131,43 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     /**
      * Sets the deviceId property value. The id of the device where the event occurred.
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the eventDateTime property value. The time the event occured.
      * @param value Value to set for the eventDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.eventDateTime = value;
     }
     /**
      * Sets the eventDetails property value. The details provided by the event, format depends on event type.
      * @param value Value to set for the eventDetails property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEventDetails(@javax.annotation.Nullable final String value) {
+    public void setEventDetails(@jakarta.annotation.Nullable final String value) {
         this.eventDetails = value;
     }
     /**
      * Sets the eventLevel property value. Indicates device event level. Possible values are: None, Verbose, Information, Warning, Error, Critical
      * @param value Value to set for the eventLevel property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEventLevel(@javax.annotation.Nullable final DeviceEventLevel value) {
+    public void setEventLevel(@jakarta.annotation.Nullable final DeviceEventLevel value) {
         this.eventLevel = value;
     }
     /**
      * Sets the eventName property value. The name of the event. Examples include: BootEvent, LogonEvent, AppCrashEvent, AppHangEvent.
      * @param value Value to set for the eventName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEventName(@javax.annotation.Nullable final String value) {
+    public void setEventName(@jakarta.annotation.Nullable final String value) {
         this.eventName = value;
     }
     /**
      * Sets the eventSource property value. The source of the event. Examples include: Intune, Sccm.
      * @param value Value to set for the eventSource property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEventSource(@javax.annotation.Nullable final String value) {
+    public void setEventSource(@jakarta.annotation.Nullable final String value) {
         this.eventSource = value;
     }
 }

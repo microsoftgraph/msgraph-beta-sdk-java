@@ -38,9 +38,7 @@ public class ConnectorStatusDetails implements AdditionalDataHolder, Parsable {
     private ConnectorHealthState status;
     /**
      * Instantiates a new connectorStatusDetails and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ConnectorStatusDetails() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +47,8 @@ public class ConnectorStatusDetails implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a connectorStatusDetails
      */
-    @javax.annotation.Nonnull
-    public static ConnectorStatusDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ConnectorStatusDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ConnectorStatusDetails();
     }
@@ -58,7 +56,7 @@ public class ConnectorStatusDetails implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +64,7 @@ public class ConnectorStatusDetails implements AdditionalDataHolder, Parsable {
      * Gets the connectorInstanceId property value. Connector Instance Id
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConnectorInstanceId() {
         return this.connectorInstanceId;
     }
@@ -74,7 +72,7 @@ public class ConnectorStatusDetails implements AdditionalDataHolder, Parsable {
      * Gets the connectorName property value. Connectors name for connector status
      * @return a connectorName
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConnectorName getConnectorName() {
         return this.connectorName;
     }
@@ -82,7 +80,7 @@ public class ConnectorStatusDetails implements AdditionalDataHolder, Parsable {
      * Gets the eventDateTime property value. Event datetime
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
         return this.eventDateTime;
     }
@@ -90,7 +88,7 @@ public class ConnectorStatusDetails implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("connectorInstanceId", (n) -> { this.setConnectorInstanceId(n.getStringValue()); });
@@ -104,7 +102,7 @@ public class ConnectorStatusDetails implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -112,17 +110,15 @@ public class ConnectorStatusDetails implements AdditionalDataHolder, Parsable {
      * Gets the status property value. Connector health state for connector status
      * @return a connectorHealthState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ConnectorHealthState getStatus() {
         return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("connectorInstanceId", this.getConnectorInstanceId());
         writer.writeEnumValue("connectorName", this.getConnectorName());
@@ -134,55 +130,43 @@ public class ConnectorStatusDetails implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the connectorInstanceId property value. Connector Instance Id
      * @param value Value to set for the connectorInstanceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectorInstanceId(@javax.annotation.Nullable final String value) {
+    public void setConnectorInstanceId(@jakarta.annotation.Nullable final String value) {
         this.connectorInstanceId = value;
     }
     /**
      * Sets the connectorName property value. Connectors name for connector status
      * @param value Value to set for the connectorName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectorName(@javax.annotation.Nullable final ConnectorName value) {
+    public void setConnectorName(@jakarta.annotation.Nullable final ConnectorName value) {
         this.connectorName = value;
     }
     /**
      * Sets the eventDateTime property value. Event datetime
      * @param value Value to set for the eventDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.eventDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the status property value. Connector health state for connector status
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final ConnectorHealthState value) {
+    public void setStatus(@jakarta.annotation.Nullable final ConnectorHealthState value) {
         this.status = value;
     }
 }

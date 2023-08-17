@@ -45,9 +45,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
     private Integer unknownDeviceCount;
     /**
      * Instantiates a new deviceCompliancePolicyDeviceStateSummary and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceCompliancePolicyDeviceStateSummary() {
         super();
     }
@@ -56,8 +54,8 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceCompliancePolicyDeviceStateSummary
      */
-    @javax.annotation.Nonnull
-    public static DeviceCompliancePolicyDeviceStateSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceCompliancePolicyDeviceStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceCompliancePolicyDeviceStateSummary();
     }
@@ -65,7 +63,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      * Gets the compliantDeviceCount property value. Number of compliant devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCompliantDeviceCount() {
         return this.compliantDeviceCount;
     }
@@ -73,7 +71,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      * Gets the configManagerCount property value. Number of devices that have compliance managed by System Center Configuration Manager
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getConfigManagerCount() {
         return this.configManagerCount;
     }
@@ -81,7 +79,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      * Gets the conflictDeviceCount property value. Number of conflict devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getConflictDeviceCount() {
         return this.conflictDeviceCount;
     }
@@ -89,7 +87,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      * Gets the errorDeviceCount property value. Number of error devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
         return this.errorDeviceCount;
     }
@@ -97,7 +95,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("compliantDeviceCount", (n) -> { this.setCompliantDeviceCount(n.getIntegerValue()); });
@@ -115,7 +113,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      * Gets the inGracePeriodCount property value. Number of devices that are in grace period
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getInGracePeriodCount() {
         return this.inGracePeriodCount;
     }
@@ -123,7 +121,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      * Gets the nonCompliantDeviceCount property value. Number of NonCompliant devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
         return this.nonCompliantDeviceCount;
     }
@@ -131,7 +129,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      * Gets the notApplicableDeviceCount property value. Number of not applicable devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNotApplicableDeviceCount() {
         return this.notApplicableDeviceCount;
     }
@@ -139,7 +137,7 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      * Gets the remediatedDeviceCount property value. Number of remediated devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRemediatedDeviceCount() {
         return this.remediatedDeviceCount;
     }
@@ -147,17 +145,15 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
      * Gets the unknownDeviceCount property value. Number of unknown devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {
         return this.unknownDeviceCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("compliantDeviceCount", this.getCompliantDeviceCount());
@@ -173,82 +169,64 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
     /**
      * Sets the compliantDeviceCount property value. Number of compliant devices
      * @param value Value to set for the compliantDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.compliantDeviceCount = value;
     }
     /**
      * Sets the configManagerCount property value. Number of devices that have compliance managed by System Center Configuration Manager
      * @param value Value to set for the configManagerCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfigManagerCount(@javax.annotation.Nullable final Integer value) {
+    public void setConfigManagerCount(@jakarta.annotation.Nullable final Integer value) {
         this.configManagerCount = value;
     }
     /**
      * Sets the conflictDeviceCount property value. Number of conflict devices
      * @param value Value to set for the conflictDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConflictDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setConflictDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.conflictDeviceCount = value;
     }
     /**
      * Sets the errorDeviceCount property value. Number of error devices
      * @param value Value to set for the errorDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setErrorDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.errorDeviceCount = value;
     }
     /**
      * Sets the inGracePeriodCount property value. Number of devices that are in grace period
      * @param value Value to set for the inGracePeriodCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInGracePeriodCount(@javax.annotation.Nullable final Integer value) {
+    public void setInGracePeriodCount(@jakarta.annotation.Nullable final Integer value) {
         this.inGracePeriodCount = value;
     }
     /**
      * Sets the nonCompliantDeviceCount property value. Number of NonCompliant devices
      * @param value Value to set for the nonCompliantDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNonCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setNonCompliantDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.nonCompliantDeviceCount = value;
     }
     /**
      * Sets the notApplicableDeviceCount property value. Number of not applicable devices
      * @param value Value to set for the notApplicableDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotApplicableDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setNotApplicableDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.notApplicableDeviceCount = value;
     }
     /**
      * Sets the remediatedDeviceCount property value. Number of remediated devices
      * @param value Value to set for the remediatedDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemediatedDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setRemediatedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.remediatedDeviceCount = value;
     }
     /**
      * Sets the unknownDeviceCount property value. Number of unknown devices
      * @param value Value to set for the unknownDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnknownDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setUnknownDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.unknownDeviceCount = value;
     }
 }

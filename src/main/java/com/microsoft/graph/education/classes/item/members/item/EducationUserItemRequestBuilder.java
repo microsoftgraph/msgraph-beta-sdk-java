@@ -12,7 +12,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of educationRoot entities.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
@@ -20,20 +20,16 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new EducationUserItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @javax.annotation.Nullable
-    public EducationUserItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public EducationUserItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/members/{educationUser%2Did}", pathParameters);
     }
     /**
      * Instantiates a new EducationUserItemRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @javax.annotation.Nullable
-    public EducationUserItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public EducationUserItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/members/{educationUser%2Did}", rawUrl);
     }
 }

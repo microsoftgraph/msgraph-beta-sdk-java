@@ -26,9 +26,7 @@ public class CalendarGroup extends Entity implements Parsable {
     private String name;
     /**
      * Instantiates a new calendarGroup and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CalendarGroup() {
         super();
     }
@@ -37,8 +35,8 @@ public class CalendarGroup extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a calendarGroup
      */
-    @javax.annotation.Nonnull
-    public static CalendarGroup createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CalendarGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CalendarGroup();
     }
@@ -46,7 +44,7 @@ public class CalendarGroup extends Entity implements Parsable {
      * Gets the calendars property value. The calendars in the calendar group. Navigation property. Read-only. Nullable.
      * @return a calendar
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Calendar> getCalendars() {
         return this.calendars;
     }
@@ -54,7 +52,7 @@ public class CalendarGroup extends Entity implements Parsable {
      * Gets the changeKey property value. Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getChangeKey() {
         return this.changeKey;
     }
@@ -62,7 +60,7 @@ public class CalendarGroup extends Entity implements Parsable {
      * Gets the classId property value. The class identifier. Read-only.
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getClassId() {
         return this.classId;
     }
@@ -70,7 +68,7 @@ public class CalendarGroup extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("calendars", (n) -> { this.setCalendars(n.getCollectionOfObjectValues(Calendar::createFromDiscriminatorValue)); });
@@ -83,17 +81,15 @@ public class CalendarGroup extends Entity implements Parsable {
      * Gets the name property value. The group name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("calendars", this.getCalendars());
@@ -104,37 +100,29 @@ public class CalendarGroup extends Entity implements Parsable {
     /**
      * Sets the calendars property value. The calendars in the calendar group. Navigation property. Read-only. Nullable.
      * @param value Value to set for the calendars property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCalendars(@javax.annotation.Nullable final java.util.List<Calendar> value) {
+    public void setCalendars(@jakarta.annotation.Nullable final java.util.List<Calendar> value) {
         this.calendars = value;
     }
     /**
      * Sets the changeKey property value. Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
      * @param value Value to set for the changeKey property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChangeKey(@javax.annotation.Nullable final String value) {
+    public void setChangeKey(@jakarta.annotation.Nullable final String value) {
         this.changeKey = value;
     }
     /**
      * Sets the classId property value. The class identifier. Read-only.
      * @param value Value to set for the classId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClassId(@javax.annotation.Nullable final UUID value) {
+    public void setClassId(@jakarta.annotation.Nullable final UUID value) {
         this.classId = value;
     }
     /**
      * Sets the name property value. The group name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
 }

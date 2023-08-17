@@ -16,9 +16,7 @@ public class AndroidDeviceComplianceLocalActionBase extends Entity implements Pa
     private Integer gracePeriodInMinutes;
     /**
      * Instantiates a new androidDeviceComplianceLocalActionBase and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AndroidDeviceComplianceLocalActionBase() {
         super();
     }
@@ -27,8 +25,8 @@ public class AndroidDeviceComplianceLocalActionBase extends Entity implements Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidDeviceComplianceLocalActionBase
      */
-    @javax.annotation.Nonnull
-    public static AndroidDeviceComplianceLocalActionBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidDeviceComplianceLocalActionBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -44,7 +42,7 @@ public class AndroidDeviceComplianceLocalActionBase extends Entity implements Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("gracePeriodInMinutes", (n) -> { this.setGracePeriodInMinutes(n.getIntegerValue()); });
@@ -54,17 +52,15 @@ public class AndroidDeviceComplianceLocalActionBase extends Entity implements Pa
      * Gets the gracePeriodInMinutes property value. Number of minutes to wait till a local action is enforced. Valid values 0 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getGracePeriodInMinutes() {
         return this.gracePeriodInMinutes;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("gracePeriodInMinutes", this.getGracePeriodInMinutes());
@@ -72,10 +68,8 @@ public class AndroidDeviceComplianceLocalActionBase extends Entity implements Pa
     /**
      * Sets the gracePeriodInMinutes property value. Number of minutes to wait till a local action is enforced. Valid values 0 to 2147483647
      * @param value Value to set for the gracePeriodInMinutes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGracePeriodInMinutes(@javax.annotation.Nullable final Integer value) {
+    public void setGracePeriodInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.gracePeriodInMinutes = value;
     }
 }

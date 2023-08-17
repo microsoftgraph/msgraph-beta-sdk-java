@@ -25,9 +25,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
     private OffsetDateTime lastModifiedDateTime;
     /**
      * Instantiates a new groupPolicyPresentation and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public GroupPolicyPresentation() {
         super();
     }
@@ -36,8 +34,8 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a groupPolicyPresentation
      */
-    @javax.annotation.Nonnull
-    public static GroupPolicyPresentation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GroupPolicyPresentation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -61,7 +59,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
      * Gets the definition property value. The group policy definition associated with the presentation.
      * @return a groupPolicyDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GroupPolicyDefinition getDefinition() {
         return this.definition;
     }
@@ -69,7 +67,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("definition", (n) -> { this.setDefinition(n.getObjectValue(GroupPolicyDefinition::createFromDiscriminatorValue)); });
@@ -81,7 +79,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
      * Gets the label property value. Localized text label for any presentation entity. The default value is empty.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLabel() {
         return this.label;
     }
@@ -89,17 +87,15 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("definition", this.getDefinition());
@@ -109,28 +105,22 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
     /**
      * Sets the definition property value. The group policy definition associated with the presentation.
      * @param value Value to set for the definition property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefinition(@javax.annotation.Nullable final GroupPolicyDefinition value) {
+    public void setDefinition(@jakarta.annotation.Nullable final GroupPolicyDefinition value) {
         this.definition = value;
     }
     /**
      * Sets the label property value. Localized text label for any presentation entity. The default value is empty.
      * @param value Value to set for the label property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabel(@javax.annotation.Nullable final String value) {
+    public void setLabel(@jakarta.annotation.Nullable final String value) {
         this.label = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the entity was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
 }

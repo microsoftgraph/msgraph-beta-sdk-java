@@ -21,9 +21,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
     private String servicePrincipalId;
     /**
      * Instantiates a new riskyServicePrincipalHistoryItem and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public RiskyServicePrincipalHistoryItem() {
         super();
     }
@@ -32,8 +30,8 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a riskyServicePrincipalHistoryItem
      */
-    @javax.annotation.Nonnull
-    public static RiskyServicePrincipalHistoryItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RiskyServicePrincipalHistoryItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RiskyServicePrincipalHistoryItem();
     }
@@ -41,7 +39,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
      * Gets the activity property value. The activity related to service principal risk level change.
      * @return a riskServicePrincipalActivity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RiskServicePrincipalActivity getActivity() {
         return this.activity;
     }
@@ -49,7 +47,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activity", (n) -> { this.setActivity(n.getObjectValue(RiskServicePrincipalActivity::createFromDiscriminatorValue)); });
@@ -61,7 +59,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
      * Gets the initiatedBy property value. The identifier of the actor of the operation.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInitiatedBy() {
         return this.initiatedBy;
     }
@@ -69,17 +67,15 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
      * Gets the servicePrincipalId property value. The identifier of the service principal.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getServicePrincipalId() {
         return this.servicePrincipalId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("activity", this.getActivity());
@@ -89,28 +85,22 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
     /**
      * Sets the activity property value. The activity related to service principal risk level change.
      * @param value Value to set for the activity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivity(@javax.annotation.Nullable final RiskServicePrincipalActivity value) {
+    public void setActivity(@jakarta.annotation.Nullable final RiskServicePrincipalActivity value) {
         this.activity = value;
     }
     /**
      * Sets the initiatedBy property value. The identifier of the actor of the operation.
      * @param value Value to set for the initiatedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitiatedBy(@javax.annotation.Nullable final String value) {
+    public void setInitiatedBy(@jakarta.annotation.Nullable final String value) {
         this.initiatedBy = value;
     }
     /**
      * Sets the servicePrincipalId property value. The identifier of the service principal.
      * @param value Value to set for the servicePrincipalId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServicePrincipalId(@javax.annotation.Nullable final String value) {
+    public void setServicePrincipalId(@jakarta.annotation.Nullable final String value) {
         this.servicePrincipalId = value;
     }
 }

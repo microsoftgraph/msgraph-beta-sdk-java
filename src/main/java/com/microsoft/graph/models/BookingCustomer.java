@@ -20,9 +20,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
     private java.util.List<Phone> phones;
     /**
      * Instantiates a new bookingCustomer and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public BookingCustomer() {
         super();
     }
@@ -31,8 +29,8 @@ public class BookingCustomer extends BookingPerson implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a bookingCustomer
      */
-    @javax.annotation.Nonnull
-    public static BookingCustomer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BookingCustomer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BookingCustomer();
     }
@@ -40,7 +38,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
      * Gets the addresses property value. Addresses associated with the customer, including home, business and other addresses.
      * @return a physicalAddress
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PhysicalAddress> getAddresses() {
         return this.addresses;
     }
@@ -48,7 +46,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("addresses", (n) -> { this.setAddresses(n.getCollectionOfObjectValues(PhysicalAddress::createFromDiscriminatorValue)); });
@@ -59,17 +57,15 @@ public class BookingCustomer extends BookingPerson implements Parsable {
      * Gets the phones property value. Phone numbers associated with the customer, including home, business and mobile numbers.
      * @return a phone
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Phone> getPhones() {
         return this.phones;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("addresses", this.getAddresses());
@@ -78,19 +74,15 @@ public class BookingCustomer extends BookingPerson implements Parsable {
     /**
      * Sets the addresses property value. Addresses associated with the customer, including home, business and other addresses.
      * @param value Value to set for the addresses property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddresses(@javax.annotation.Nullable final java.util.List<PhysicalAddress> value) {
+    public void setAddresses(@jakarta.annotation.Nullable final java.util.List<PhysicalAddress> value) {
         this.addresses = value;
     }
     /**
      * Sets the phones property value. Phone numbers associated with the customer, including home, business and mobile numbers.
      * @param value Value to set for the phones property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhones(@javax.annotation.Nullable final java.util.List<Phone> value) {
+    public void setPhones(@jakarta.annotation.Nullable final java.util.List<Phone> value) {
         this.phones = value;
     }
 }

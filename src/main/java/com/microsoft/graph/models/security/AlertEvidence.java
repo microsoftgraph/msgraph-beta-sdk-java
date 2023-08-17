@@ -47,9 +47,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     private EvidenceVerdict verdict;
     /**
      * Instantiates a new alertEvidence and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AlertEvidence() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -58,8 +56,8 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a alertEvidence
      */
-    @javax.annotation.Nonnull
-    public static AlertEvidence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AlertEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -102,7 +100,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -110,7 +108,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * Gets the createdDateTime property value. The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -118,7 +116,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * Gets the detailedRoles property value. Detailed description of the entity role/s in an alert. Values are free-form.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getDetailedRoles() {
         return this.detailedRoles;
     }
@@ -126,7 +124,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -143,7 +141,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -151,7 +149,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * Gets the remediationStatus property value. The remediationStatus property
      * @return a evidenceRemediationStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EvidenceRemediationStatus getRemediationStatus() {
         return this.remediationStatus;
     }
@@ -159,7 +157,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * Gets the remediationStatusDetails property value. Details about the remediation status.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRemediationStatusDetails() {
         return this.remediationStatusDetails;
     }
@@ -167,7 +165,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * Gets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role Attacker.
      * @return a evidenceRole
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EvidenceRole> getRoles() {
         return this.roles;
     }
@@ -175,7 +173,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * Gets the tags property value. Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
         return this.tags;
     }
@@ -183,17 +181,15 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * Gets the verdict property value. The verdict property
      * @return a evidenceVerdict
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EvidenceVerdict getVerdict() {
         return this.verdict;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeCollectionOfPrimitiveValues("detailedRoles", this.getDetailedRoles());
@@ -208,82 +204,64 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the detailedRoles property value. Detailed description of the entity role/s in an alert. Values are free-form.
      * @param value Value to set for the detailedRoles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetailedRoles(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setDetailedRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.detailedRoles = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the remediationStatus property value. The remediationStatus property
      * @param value Value to set for the remediationStatus property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemediationStatus(@javax.annotation.Nullable final EvidenceRemediationStatus value) {
+    public void setRemediationStatus(@jakarta.annotation.Nullable final EvidenceRemediationStatus value) {
         this.remediationStatus = value;
     }
     /**
      * Sets the remediationStatusDetails property value. Details about the remediation status.
      * @param value Value to set for the remediationStatusDetails property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemediationStatusDetails(@javax.annotation.Nullable final String value) {
+    public void setRemediationStatusDetails(@jakarta.annotation.Nullable final String value) {
         this.remediationStatusDetails = value;
     }
     /**
      * Sets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role Attacker.
      * @param value Value to set for the roles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoles(@javax.annotation.Nullable final java.util.List<EvidenceRole> value) {
+    public void setRoles(@jakarta.annotation.Nullable final java.util.List<EvidenceRole> value) {
         this.roles = value;
     }
     /**
      * Sets the tags property value. Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.
      * @param value Value to set for the tags property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.tags = value;
     }
     /**
      * Sets the verdict property value. The verdict property
      * @param value Value to set for the verdict property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVerdict(@javax.annotation.Nullable final EvidenceVerdict value) {
+    public void setVerdict(@jakarta.annotation.Nullable final EvidenceVerdict value) {
         this.verdict = value;
     }
 }

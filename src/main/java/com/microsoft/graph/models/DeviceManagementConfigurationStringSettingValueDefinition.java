@@ -36,9 +36,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
     private Long minimumLength;
     /**
      * Instantiates a new deviceManagementConfigurationStringSettingValueDefinition and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementConfigurationStringSettingValueDefinition() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationStringSettingValueDefinition");
@@ -48,8 +46,8 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationStringSettingValueDefinition
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationStringSettingValueDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationStringSettingValueDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationStringSettingValueDefinition();
     }
@@ -57,7 +55,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("fileTypes", (n) -> { this.setFileTypes(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -72,7 +70,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      * Gets the fileTypes property value. Supported file types for this setting.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getFileTypes() {
         return this.fileTypes;
     }
@@ -80,7 +78,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      * Gets the format property value. The format property
      * @return a deviceManagementConfigurationStringFormat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationStringFormat getFormat() {
         return this.format;
     }
@@ -88,7 +86,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      * Gets the inputValidationSchema property value. Regular expression or any xml or json schema that the input string should match
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInputValidationSchema() {
         return this.inputValidationSchema;
     }
@@ -96,7 +94,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      * Gets the isSecret property value. Specifies whether the setting needs to be treated as a secret. Settings marked as yes will be encrypted in transit and at rest and will be displayed as asterisks when represented in the UX.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSecret() {
         return this.isSecret;
     }
@@ -104,7 +102,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      * Gets the maximumLength property value. Maximum length of string
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getMaximumLength() {
         return this.maximumLength;
     }
@@ -112,17 +110,15 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      * Gets the minimumLength property value. Minimum length of string
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getMinimumLength() {
         return this.minimumLength;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("fileTypes", this.getFileTypes());
@@ -135,55 +131,43 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
     /**
      * Sets the fileTypes property value. Supported file types for this setting.
      * @param value Value to set for the fileTypes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileTypes(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setFileTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.fileTypes = value;
     }
     /**
      * Sets the format property value. The format property
      * @param value Value to set for the format property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFormat(@javax.annotation.Nullable final DeviceManagementConfigurationStringFormat value) {
+    public void setFormat(@jakarta.annotation.Nullable final DeviceManagementConfigurationStringFormat value) {
         this.format = value;
     }
     /**
      * Sets the inputValidationSchema property value. Regular expression or any xml or json schema that the input string should match
      * @param value Value to set for the inputValidationSchema property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInputValidationSchema(@javax.annotation.Nullable final String value) {
+    public void setInputValidationSchema(@jakarta.annotation.Nullable final String value) {
         this.inputValidationSchema = value;
     }
     /**
      * Sets the isSecret property value. Specifies whether the setting needs to be treated as a secret. Settings marked as yes will be encrypted in transit and at rest and will be displayed as asterisks when represented in the UX.
      * @param value Value to set for the isSecret property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSecret(@javax.annotation.Nullable final Boolean value) {
+    public void setIsSecret(@jakarta.annotation.Nullable final Boolean value) {
         this.isSecret = value;
     }
     /**
      * Sets the maximumLength property value. Maximum length of string
      * @param value Value to set for the maximumLength property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaximumLength(@javax.annotation.Nullable final Long value) {
+    public void setMaximumLength(@jakarta.annotation.Nullable final Long value) {
         this.maximumLength = value;
     }
     /**
      * Sets the minimumLength property value. Minimum length of string
      * @param value Value to set for the minimumLength property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumLength(@javax.annotation.Nullable final Long value) {
+    public void setMinimumLength(@jakarta.annotation.Nullable final Long value) {
         this.minimumLength = value;
     }
 }

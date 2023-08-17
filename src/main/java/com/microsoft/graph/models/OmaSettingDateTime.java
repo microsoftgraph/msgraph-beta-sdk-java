@@ -17,9 +17,7 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
     private OffsetDateTime value;
     /**
      * Instantiates a new omaSettingDateTime and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public OmaSettingDateTime() {
         super();
         this.setOdataType("#microsoft.graph.omaSettingDateTime");
@@ -29,8 +27,8 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a omaSettingDateTime
      */
-    @javax.annotation.Nonnull
-    public static OmaSettingDateTime createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OmaSettingDateTime createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OmaSettingDateTime();
     }
@@ -38,7 +36,7 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getOffsetDateTimeValue()); });
@@ -48,17 +46,15 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
      * Gets the value property value. Value.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getValue() {
         return this.value;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("value", this.getValue());
@@ -66,10 +62,8 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
     /**
      * Sets the value property value. Value.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setValue(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.value = value;
     }
 }

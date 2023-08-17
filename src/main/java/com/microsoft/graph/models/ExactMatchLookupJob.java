@@ -17,9 +17,7 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
     private String state;
     /**
      * Instantiates a new exactMatchLookupJob and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ExactMatchLookupJob() {
         super();
         this.setOdataType("#microsoft.graph.exactMatchLookupJob");
@@ -29,8 +27,8 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a exactMatchLookupJob
      */
-    @javax.annotation.Nonnull
-    public static ExactMatchLookupJob createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ExactMatchLookupJob createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ExactMatchLookupJob();
     }
@@ -38,7 +36,7 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("matchingRows", (n) -> { this.setMatchingRows(n.getCollectionOfObjectValues(LookupResultRow::createFromDiscriminatorValue)); });
@@ -49,7 +47,7 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
      * Gets the matchingRows property value. The matchingRows property
      * @return a lookupResultRow
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<LookupResultRow> getMatchingRows() {
         return this.matchingRows;
     }
@@ -57,17 +55,15 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
      * Gets the state property value. The state property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getState() {
         return this.state;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("matchingRows", this.getMatchingRows());
@@ -76,19 +72,15 @@ public class ExactMatchLookupJob extends ExactMatchJobBase implements Parsable {
     /**
      * Sets the matchingRows property value. The matchingRows property
      * @param value Value to set for the matchingRows property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMatchingRows(@javax.annotation.Nullable final java.util.List<LookupResultRow> value) {
+    public void setMatchingRows(@jakarta.annotation.Nullable final java.util.List<LookupResultRow> value) {
         this.matchingRows = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final String value) {
+    public void setState(@jakarta.annotation.Nullable final String value) {
         this.state = value;
     }
 }

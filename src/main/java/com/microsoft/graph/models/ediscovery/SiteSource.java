@@ -14,9 +14,7 @@ public class SiteSource extends DataSource implements Parsable {
     private Site site;
     /**
      * Instantiates a new siteSource and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SiteSource() {
         super();
         this.setOdataType("#microsoft.graph.ediscovery.siteSource");
@@ -26,8 +24,8 @@ public class SiteSource extends DataSource implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a siteSource
      */
-    @javax.annotation.Nonnull
-    public static SiteSource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SiteSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SiteSource();
     }
@@ -35,7 +33,7 @@ public class SiteSource extends DataSource implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("site", (n) -> { this.setSite(n.getObjectValue(Site::createFromDiscriminatorValue)); });
@@ -45,17 +43,15 @@ public class SiteSource extends DataSource implements Parsable {
      * Gets the site property value. The site property
      * @return a site
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Site getSite() {
         return this.site;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("site", this.getSite());
@@ -63,10 +59,8 @@ public class SiteSource extends DataSource implements Parsable {
     /**
      * Sets the site property value. The site property
      * @param value Value to set for the site property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSite(@javax.annotation.Nullable final Site value) {
+    public void setSite(@jakarta.annotation.Nullable final Site value) {
         this.site = value;
     }
 }

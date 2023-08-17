@@ -24,9 +24,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
     private String displayName;
     /**
      * Instantiates a new bookingCustomQuestion and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public BookingCustomQuestion() {
         super();
     }
@@ -35,8 +33,8 @@ public class BookingCustomQuestion extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a bookingCustomQuestion
      */
-    @javax.annotation.Nonnull
-    public static BookingCustomQuestion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BookingCustomQuestion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BookingCustomQuestion();
     }
@@ -44,7 +42,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
      * Gets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
      * @return a answerInputType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AnswerInputType getAnswerInputType() {
         return this.answerInputType;
     }
@@ -52,7 +50,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
      * Gets the answerOptions property value. List of possible answer values.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAnswerOptions() {
         return this.answerOptions;
     }
@@ -60,7 +58,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
      * Gets the displayName property value. Display name of this entity.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -68,7 +66,7 @@ public class BookingCustomQuestion extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("answerInputType", (n) -> { this.setAnswerInputType(n.getEnumValue(AnswerInputType.class)); });
@@ -79,10 +77,8 @@ public class BookingCustomQuestion extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("answerInputType", this.getAnswerInputType());
@@ -92,28 +88,22 @@ public class BookingCustomQuestion extends Entity implements Parsable {
     /**
      * Sets the answerInputType property value. The expected answer type. The possible values are: text, radioButton, unknownFutureValue.
      * @param value Value to set for the answerInputType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnswerInputType(@javax.annotation.Nullable final AnswerInputType value) {
+    public void setAnswerInputType(@jakarta.annotation.Nullable final AnswerInputType value) {
         this.answerInputType = value;
     }
     /**
      * Sets the answerOptions property value. List of possible answer values.
      * @param value Value to set for the answerOptions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnswerOptions(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setAnswerOptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.answerOptions = value;
     }
     /**
      * Sets the displayName property value. Display name of this entity.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
 }

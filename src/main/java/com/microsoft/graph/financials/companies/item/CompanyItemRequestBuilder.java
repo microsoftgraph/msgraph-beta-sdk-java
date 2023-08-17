@@ -46,7 +46,6 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -58,245 +57,245 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accounts property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AccountsRequestBuilder accounts() {
         return new AccountsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the agedAccountsPayable property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AgedAccountsPayableRequestBuilder agedAccountsPayable() {
         return new AgedAccountsPayableRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the agedAccountsReceivable property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AgedAccountsReceivableRequestBuilder agedAccountsReceivable() {
         return new AgedAccountsReceivableRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the companyInformation property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CompanyInformationRequestBuilder companyInformation() {
         return new CompanyInformationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the countriesRegions property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CountriesRegionsRequestBuilder countriesRegions() {
         return new CountriesRegionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the currencies property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CurrenciesRequestBuilder currencies() {
         return new CurrenciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the customerPaymentJournals property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CustomerPaymentJournalsRequestBuilder customerPaymentJournals() {
         return new CustomerPaymentJournalsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the customerPayments property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CustomerPaymentsRequestBuilder customerPayments() {
         return new CustomerPaymentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the customers property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CustomersRequestBuilder customers() {
         return new CustomersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the dimensions property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DimensionsRequestBuilder dimensions() {
         return new DimensionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the dimensionValues property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DimensionValuesRequestBuilder dimensionValues() {
         return new DimensionValuesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the employees property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public EmployeesRequestBuilder employees() {
         return new EmployeesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the generalLedgerEntries property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public GeneralLedgerEntriesRequestBuilder generalLedgerEntries() {
         return new GeneralLedgerEntriesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the itemCategories property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ItemCategoriesRequestBuilder itemCategories() {
         return new ItemCategoriesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the items property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ItemsRequestBuilder items() {
         return new ItemsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the journalLines property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public JournalLinesRequestBuilder journalLines() {
         return new JournalLinesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the journals property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public JournalsRequestBuilder journals() {
         return new JournalsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the paymentMethods property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public PaymentMethodsRequestBuilder paymentMethods() {
         return new PaymentMethodsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the paymentTerms property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public PaymentTermsRequestBuilder paymentTerms() {
         return new PaymentTermsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the picture property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public PictureRequestBuilder picture() {
         return new PictureRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the purchaseInvoiceLines property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public PurchaseInvoiceLinesRequestBuilder purchaseInvoiceLines() {
         return new PurchaseInvoiceLinesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the purchaseInvoices property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public PurchaseInvoicesRequestBuilder purchaseInvoices() {
         return new PurchaseInvoicesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the salesCreditMemoLines property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SalesCreditMemoLinesRequestBuilder salesCreditMemoLines() {
         return new SalesCreditMemoLinesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the salesCreditMemos property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SalesCreditMemosRequestBuilder salesCreditMemos() {
         return new SalesCreditMemosRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the salesInvoiceLines property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SalesInvoiceLinesRequestBuilder salesInvoiceLines() {
         return new SalesInvoiceLinesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the salesInvoices property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SalesInvoicesRequestBuilder salesInvoices() {
         return new SalesInvoicesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the salesOrderLines property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SalesOrderLinesRequestBuilder salesOrderLines() {
         return new SalesOrderLinesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the salesOrders property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SalesOrdersRequestBuilder salesOrders() {
         return new SalesOrdersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the salesQuoteLines property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SalesQuoteLinesRequestBuilder salesQuoteLines() {
         return new SalesQuoteLinesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the salesQuotes property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public SalesQuotesRequestBuilder salesQuotes() {
         return new SalesQuotesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the shipmentMethods property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ShipmentMethodsRequestBuilder shipmentMethods() {
         return new ShipmentMethodsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the taxAreas property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TaxAreasRequestBuilder taxAreas() {
         return new TaxAreasRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the taxGroups property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TaxGroupsRequestBuilder taxGroups() {
         return new TaxGroupsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the unitsOfMeasure property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public UnitsOfMeasureRequestBuilder unitsOfMeasure() {
         return new UnitsOfMeasureRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the vendors property of the microsoft.graph.company entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public VendorsRequestBuilder vendors() {
         return new VendorsRequestBuilder(pathParameters, requestAdapter);
     }
@@ -304,65 +303,45 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new CompanyItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @javax.annotation.Nullable
-    public CompanyItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public CompanyItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}{?%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new CompanyItemRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @javax.annotation.Nullable
-    public CompanyItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public CompanyItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
      * Get companies from financials
      * @return a CompletableFuture of company
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Company> get() {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, Company::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Company> executionException = new java.util.concurrent.CompletableFuture<Company>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return get(null);
     }
     /**
      * Get companies from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of company
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Company> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, Company::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Company> executionException = new java.util.concurrent.CompletableFuture<Company>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Company> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, Company::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get companies from financials
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
@@ -370,8 +349,8 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -394,13 +373,13 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
@@ -410,7 +389,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
 }

@@ -17,9 +17,7 @@ public class CanvasLayout extends Entity implements Parsable {
     private VerticalSection verticalSection;
     /**
      * Instantiates a new canvasLayout and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CanvasLayout() {
         super();
     }
@@ -28,8 +26,8 @@ public class CanvasLayout extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a canvasLayout
      */
-    @javax.annotation.Nonnull
-    public static CanvasLayout createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CanvasLayout createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CanvasLayout();
     }
@@ -37,7 +35,7 @@ public class CanvasLayout extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("horizontalSections", (n) -> { this.setHorizontalSections(n.getCollectionOfObjectValues(HorizontalSection::createFromDiscriminatorValue)); });
@@ -48,7 +46,7 @@ public class CanvasLayout extends Entity implements Parsable {
      * Gets the horizontalSections property value. Collection of horizontal sections on the SharePoint page.
      * @return a horizontalSection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<HorizontalSection> getHorizontalSections() {
         return this.horizontalSections;
     }
@@ -56,17 +54,15 @@ public class CanvasLayout extends Entity implements Parsable {
      * Gets the verticalSection property value. Vertical section on the SharePoint page.
      * @return a verticalSection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VerticalSection getVerticalSection() {
         return this.verticalSection;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("horizontalSections", this.getHorizontalSections());
@@ -75,19 +71,15 @@ public class CanvasLayout extends Entity implements Parsable {
     /**
      * Sets the horizontalSections property value. Collection of horizontal sections on the SharePoint page.
      * @param value Value to set for the horizontalSections property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHorizontalSections(@javax.annotation.Nullable final java.util.List<HorizontalSection> value) {
+    public void setHorizontalSections(@jakarta.annotation.Nullable final java.util.List<HorizontalSection> value) {
         this.horizontalSections = value;
     }
     /**
      * Sets the verticalSection property value. Vertical section on the SharePoint page.
      * @param value Value to set for the verticalSection property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVerticalSection(@javax.annotation.Nullable final VerticalSection value) {
+    public void setVerticalSection(@jakarta.annotation.Nullable final VerticalSection value) {
         this.verticalSection = value;
     }
 }

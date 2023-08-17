@@ -25,9 +25,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
     private Boolean isRequired;
     /**
      * Instantiates a new meetingRegistrationQuestion and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MeetingRegistrationQuestion() {
         super();
     }
@@ -36,8 +34,8 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a meetingRegistrationQuestion
      */
-    @javax.annotation.Nonnull
-    public static MeetingRegistrationQuestion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MeetingRegistrationQuestion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MeetingRegistrationQuestion();
     }
@@ -45,7 +43,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
      * Gets the answerInputType property value. Answer input type of the custom registration question.
      * @return a answerInputType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AnswerInputType getAnswerInputType() {
         return this.answerInputType;
     }
@@ -53,7 +51,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
      * Gets the answerOptions property value. Answer options when answerInputType is radioButton.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAnswerOptions() {
         return this.answerOptions;
     }
@@ -61,7 +59,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
      * Gets the displayName property value. Display name of the custom registration question.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -69,7 +67,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("answerInputType", (n) -> { this.setAnswerInputType(n.getEnumValue(AnswerInputType.class)); });
@@ -82,17 +80,15 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
      * Gets the isRequired property value. Indicates whether the question is required. Default value is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
         return this.isRequired;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("answerInputType", this.getAnswerInputType());
@@ -103,37 +99,29 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
     /**
      * Sets the answerInputType property value. Answer input type of the custom registration question.
      * @param value Value to set for the answerInputType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnswerInputType(@javax.annotation.Nullable final AnswerInputType value) {
+    public void setAnswerInputType(@jakarta.annotation.Nullable final AnswerInputType value) {
         this.answerInputType = value;
     }
     /**
      * Sets the answerOptions property value. Answer options when answerInputType is radioButton.
      * @param value Value to set for the answerOptions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnswerOptions(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setAnswerOptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.answerOptions = value;
     }
     /**
      * Sets the displayName property value. Display name of the custom registration question.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the isRequired property value. Indicates whether the question is required. Default value is false.
      * @param value Value to set for the isRequired property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRequired(@javax.annotation.Nullable final Boolean value) {
+    public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isRequired = value;
     }
 }
