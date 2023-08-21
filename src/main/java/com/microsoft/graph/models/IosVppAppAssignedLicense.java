@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * iOS Volume Purchase Program license assignment. This class does not support Create, Delete, or Update.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosVppAppAssignedLicense extends Entity implements Parsable {
     /**
      * The user email address.
@@ -28,9 +29,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new iosVppAppAssignedLicense and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public IosVppAppAssignedLicense() {
         super();
     }
@@ -39,8 +38,8 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a iosVppAppAssignedLicense
      */
-    @javax.annotation.Nonnull
-    public static IosVppAppAssignedLicense createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IosVppAppAssignedLicense createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -56,7 +55,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("userEmailAddress", (n) -> { this.setUserEmailAddress(n.getStringValue()); });
@@ -69,7 +68,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
      * Gets the userEmailAddress property value. The user email address.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserEmailAddress() {
         return this.userEmailAddress;
     }
@@ -77,7 +76,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
      * Gets the userId property value. The user ID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -85,7 +84,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
      * Gets the userName property value. The user name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserName() {
         return this.userName;
     }
@@ -93,17 +92,15 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
      * Gets the userPrincipalName property value. The user principal name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("userEmailAddress", this.getUserEmailAddress());
@@ -114,37 +111,29 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
     /**
      * Sets the userEmailAddress property value. The user email address.
      * @param value Value to set for the userEmailAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserEmailAddress(@javax.annotation.Nullable final String value) {
+    public void setUserEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.userEmailAddress = value;
     }
     /**
      * Sets the userId property value. The user ID.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
      * Sets the userName property value. The user name.
      * @param value Value to set for the userName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserName(@javax.annotation.Nullable final String value) {
+    public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
     /**
      * Sets the userPrincipalName property value. The user principal name.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

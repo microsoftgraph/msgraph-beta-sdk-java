@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum NotificationTemplateBrandingOptions implements ValuedEnum {
     /** Indicates that no branding options are set in the message template. */
     None("none"),
@@ -25,10 +26,10 @@ public enum NotificationTemplateBrandingOptions implements ValuedEnum {
     NotificationTemplateBrandingOptions(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static NotificationTemplateBrandingOptions forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static NotificationTemplateBrandingOptions forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

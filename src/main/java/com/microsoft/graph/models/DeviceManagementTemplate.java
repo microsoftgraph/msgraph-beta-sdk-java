@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Entity that represents a defined collection of device settings
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementTemplate extends Entity implements Parsable {
     /**
      * Collection of setting categories within the template
@@ -61,9 +62,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     private String versionInfo;
     /**
      * Instantiates a new deviceManagementTemplate and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementTemplate() {
         super();
     }
@@ -72,8 +71,8 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementTemplate
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -88,7 +87,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * Gets the categories property value. Collection of setting categories within the template
      * @return a deviceManagementTemplateSettingCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementTemplateSettingCategory> getCategories() {
         return this.categories;
     }
@@ -96,7 +95,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * Gets the description property value. The template's description
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -104,7 +103,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * Gets the displayName property value. The template's display name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -112,7 +111,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfObjectValues(DeviceManagementTemplateSettingCategory::createFromDiscriminatorValue)); });
@@ -133,7 +132,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * Gets the intentCount property value. Number of Intents created from this template.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getIntentCount() {
         return this.intentCount;
     }
@@ -141,7 +140,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * Gets the isDeprecated property value. The template is deprecated or not. Intents cannot be created from a deprecated template.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDeprecated() {
         return this.isDeprecated;
     }
@@ -149,7 +148,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * Gets the migratableTo property value. Collection of templates this template can migrate to
      * @return a deviceManagementTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementTemplate> getMigratableTo() {
         return this.migratableTo;
     }
@@ -157,7 +156,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * Gets the platformType property value. Supported platform types for policies.
      * @return a policyPlatformType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PolicyPlatformType getPlatformType() {
         return this.platformType;
     }
@@ -165,7 +164,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * Gets the publishedDateTime property value. When the template was published
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getPublishedDateTime() {
         return this.publishedDateTime;
     }
@@ -173,7 +172,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * Gets the settings property value. Collection of all settings this template has
      * @return a deviceManagementSettingInstance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingInstance> getSettings() {
         return this.settings;
     }
@@ -181,7 +180,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * Gets the templateSubtype property value. Template subtype
      * @return a deviceManagementTemplateSubtype
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementTemplateSubtype getTemplateSubtype() {
         return this.templateSubtype;
     }
@@ -189,7 +188,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * Gets the templateType property value. Template type
      * @return a deviceManagementTemplateType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementTemplateType getTemplateType() {
         return this.templateType;
     }
@@ -197,17 +196,15 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * Gets the versionInfo property value. The template's version information
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersionInfo() {
         return this.versionInfo;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("categories", this.getCategories());
@@ -226,109 +223,85 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     /**
      * Sets the categories property value. Collection of setting categories within the template
      * @param value Value to set for the categories property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategories(@javax.annotation.Nullable final java.util.List<DeviceManagementTemplateSettingCategory> value) {
+    public void setCategories(@jakarta.annotation.Nullable final java.util.List<DeviceManagementTemplateSettingCategory> value) {
         this.categories = value;
     }
     /**
      * Sets the description property value. The template's description
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The template's display name
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the intentCount property value. Number of Intents created from this template.
      * @param value Value to set for the intentCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIntentCount(@javax.annotation.Nullable final Integer value) {
+    public void setIntentCount(@jakarta.annotation.Nullable final Integer value) {
         this.intentCount = value;
     }
     /**
      * Sets the isDeprecated property value. The template is deprecated or not. Intents cannot be created from a deprecated template.
      * @param value Value to set for the isDeprecated property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDeprecated(@javax.annotation.Nullable final Boolean value) {
+    public void setIsDeprecated(@jakarta.annotation.Nullable final Boolean value) {
         this.isDeprecated = value;
     }
     /**
      * Sets the migratableTo property value. Collection of templates this template can migrate to
      * @param value Value to set for the migratableTo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMigratableTo(@javax.annotation.Nullable final java.util.List<DeviceManagementTemplate> value) {
+    public void setMigratableTo(@jakarta.annotation.Nullable final java.util.List<DeviceManagementTemplate> value) {
         this.migratableTo = value;
     }
     /**
      * Sets the platformType property value. Supported platform types for policies.
      * @param value Value to set for the platformType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatformType(@javax.annotation.Nullable final PolicyPlatformType value) {
+    public void setPlatformType(@jakarta.annotation.Nullable final PolicyPlatformType value) {
         this.platformType = value;
     }
     /**
      * Sets the publishedDateTime property value. When the template was published
      * @param value Value to set for the publishedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublishedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setPublishedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.publishedDateTime = value;
     }
     /**
      * Sets the settings property value. Collection of all settings this template has
      * @param value Value to set for the settings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettings(@javax.annotation.Nullable final java.util.List<DeviceManagementSettingInstance> value) {
+    public void setSettings(@jakarta.annotation.Nullable final java.util.List<DeviceManagementSettingInstance> value) {
         this.settings = value;
     }
     /**
      * Sets the templateSubtype property value. Template subtype
      * @param value Value to set for the templateSubtype property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTemplateSubtype(@javax.annotation.Nullable final DeviceManagementTemplateSubtype value) {
+    public void setTemplateSubtype(@jakarta.annotation.Nullable final DeviceManagementTemplateSubtype value) {
         this.templateSubtype = value;
     }
     /**
      * Sets the templateType property value. Template type
      * @param value Value to set for the templateType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTemplateType(@javax.annotation.Nullable final DeviceManagementTemplateType value) {
+    public void setTemplateType(@jakarta.annotation.Nullable final DeviceManagementTemplateType value) {
         this.templateType = value;
     }
     /**
      * Sets the versionInfo property value. The template's version information
      * @param value Value to set for the versionInfo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersionInfo(@javax.annotation.Nullable final String value) {
+    public void setVersionInfo(@jakarta.annotation.Nullable final String value) {
         this.versionInfo = value;
     }
 }

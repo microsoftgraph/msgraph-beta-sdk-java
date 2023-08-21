@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * A key-value pair with a string key and a typed value.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class KeyTypedValuePair implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -25,9 +26,7 @@ public class KeyTypedValuePair implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new keyTypedValuePair and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public KeyTypedValuePair() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -36,8 +35,8 @@ public class KeyTypedValuePair implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a keyTypedValuePair
      */
-    @javax.annotation.Nonnull
-    public static KeyTypedValuePair createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static KeyTypedValuePair createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -55,7 +54,7 @@ public class KeyTypedValuePair implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -63,7 +62,7 @@ public class KeyTypedValuePair implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("key", (n) -> { this.setKey(n.getStringValue()); });
@@ -74,7 +73,7 @@ public class KeyTypedValuePair implements AdditionalDataHolder, Parsable {
      * Gets the key property value. The string key of the key-value pair.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getKey() {
         return this.key;
     }
@@ -82,17 +81,15 @@ public class KeyTypedValuePair implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("key", this.getKey());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -101,28 +98,22 @@ public class KeyTypedValuePair implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the key property value. The string key of the key-value pair.
      * @param value Value to set for the key property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKey(@javax.annotation.Nullable final String value) {
+    public void setKey(@jakarta.annotation.Nullable final String value) {
         this.key = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

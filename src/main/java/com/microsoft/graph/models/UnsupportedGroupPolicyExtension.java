@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Unsupported Group Policy Extension.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnsupportedGroupPolicyExtension extends Entity implements Parsable {
     /**
      * ExtensionType of the unsupported extension.
@@ -28,9 +29,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
     private GroupPolicySettingScope settingScope;
     /**
      * Instantiates a new unsupportedGroupPolicyExtension and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UnsupportedGroupPolicyExtension() {
         super();
     }
@@ -39,8 +38,8 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a unsupportedGroupPolicyExtension
      */
-    @javax.annotation.Nonnull
-    public static UnsupportedGroupPolicyExtension createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UnsupportedGroupPolicyExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UnsupportedGroupPolicyExtension();
     }
@@ -48,7 +47,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
      * Gets the extensionType property value. ExtensionType of the unsupported extension.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExtensionType() {
         return this.extensionType;
     }
@@ -56,7 +55,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("extensionType", (n) -> { this.setExtensionType(n.getStringValue()); });
@@ -69,7 +68,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
      * Gets the namespaceUrl property value. Namespace Url of the unsupported extension.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNamespaceUrl() {
         return this.namespaceUrl;
     }
@@ -77,7 +76,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
      * Gets the nodeName property value. Node name of the unsupported extension.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNodeName() {
         return this.nodeName;
     }
@@ -85,17 +84,15 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
      * Gets the settingScope property value. Scope of the group policy setting.
      * @return a groupPolicySettingScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GroupPolicySettingScope getSettingScope() {
         return this.settingScope;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("extensionType", this.getExtensionType());
@@ -106,37 +103,29 @@ public class UnsupportedGroupPolicyExtension extends Entity implements Parsable 
     /**
      * Sets the extensionType property value. ExtensionType of the unsupported extension.
      * @param value Value to set for the extensionType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExtensionType(@javax.annotation.Nullable final String value) {
+    public void setExtensionType(@jakarta.annotation.Nullable final String value) {
         this.extensionType = value;
     }
     /**
      * Sets the namespaceUrl property value. Namespace Url of the unsupported extension.
      * @param value Value to set for the namespaceUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNamespaceUrl(@javax.annotation.Nullable final String value) {
+    public void setNamespaceUrl(@jakarta.annotation.Nullable final String value) {
         this.namespaceUrl = value;
     }
     /**
      * Sets the nodeName property value. Node name of the unsupported extension.
      * @param value Value to set for the nodeName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNodeName(@javax.annotation.Nullable final String value) {
+    public void setNodeName(@jakarta.annotation.Nullable final String value) {
         this.nodeName = value;
     }
     /**
      * Sets the settingScope property value. Scope of the group policy setting.
      * @param value Value to set for the settingScope property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingScope(@javax.annotation.Nullable final GroupPolicySettingScope value) {
+    public void setSettingScope(@jakarta.annotation.Nullable final GroupPolicySettingScope value) {
         this.settingScope = value;
     }
 }

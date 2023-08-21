@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsable {
     /**
      * Specifies whether the tenant allow block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
@@ -35,9 +36,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
     private java.util.List<TenantAllowBlockListEntryResult> results;
     /**
      * Instantiates a new tenantAllowOrBlockListAction and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TenantAllowOrBlockListAction() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,8 +45,8 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a tenantAllowOrBlockListAction
      */
-    @javax.annotation.Nonnull
-    public static TenantAllowOrBlockListAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TenantAllowOrBlockListAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TenantAllowOrBlockListAction();
     }
@@ -55,7 +54,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
      * Gets the action property value. Specifies whether the tenant allow block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
      * @return a tenantAllowBlockListAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TenantAllowBlockListAction getAction() {
         return this.action;
     }
@@ -63,7 +62,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -71,7 +70,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
      * Gets the expirationDateTime property value. Specifies when the tenant allow-block-list expires in date time.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
         return this.expirationDateTime;
     }
@@ -79,7 +78,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(TenantAllowBlockListAction.class)); });
@@ -93,7 +92,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
      * Gets the note property value. Specifies the note added to the tenant allow block list entry in the format of string.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNote() {
         return this.note;
     }
@@ -101,7 +100,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -109,17 +108,15 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
      * Gets the results property value. Contains the result of the submission that lead to the tenant allow-block-list entry creation.
      * @return a tenantAllowBlockListEntryResult
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TenantAllowBlockListEntryResult> getResults() {
         return this.results;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("action", this.getAction());
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
@@ -131,55 +128,43 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
     /**
      * Sets the action property value. Specifies whether the tenant allow block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
      * @param value Value to set for the action property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAction(@javax.annotation.Nullable final TenantAllowBlockListAction value) {
+    public void setAction(@jakarta.annotation.Nullable final TenantAllowBlockListAction value) {
         this.action = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the expirationDateTime property value. Specifies when the tenant allow-block-list expires in date time.
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the note property value. Specifies the note added to the tenant allow block list entry in the format of string.
      * @param value Value to set for the note property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNote(@javax.annotation.Nullable final String value) {
+    public void setNote(@jakarta.annotation.Nullable final String value) {
         this.note = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the results property value. Contains the result of the submission that lead to the tenant allow-block-list entry creation.
      * @param value Value to set for the results property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResults(@javax.annotation.Nullable final java.util.List<TenantAllowBlockListEntryResult> value) {
+    public void setResults(@jakarta.annotation.Nullable final java.util.List<TenantAllowBlockListEntryResult> value) {
         this.results = value;
     }
 }

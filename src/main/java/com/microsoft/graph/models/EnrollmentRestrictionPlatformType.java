@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * This enum indicates the platform type for which the enrollment restriction applies.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum EnrollmentRestrictionPlatformType implements ValuedEnum {
     /** Indicates that the enrollment configuration applies to all platforms */
     AllPlatforms("allPlatforms"),
@@ -29,10 +30,10 @@ public enum EnrollmentRestrictionPlatformType implements ValuedEnum {
     EnrollmentRestrictionPlatformType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static EnrollmentRestrictionPlatformType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static EnrollmentRestrictionPlatformType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "allPlatforms": return AllPlatforms;

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the level of prevalence of the correlation group features in the anomaly. Possible values are: high, medium or low
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence implements ValuedEnum {
     /** Indicates that we have a high prevalence in the correlation between the anomaly and correlation group. */
     High("high"),
@@ -19,10 +20,10 @@ public enum UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence implements 
     UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "high": return High;

@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Contains the properties for auto-assigning a Role Scope Tag to a group to be applied to Devices.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RoleScopeTagAutoAssignment extends Entity implements Parsable {
     /**
      * The auto-assignment target for the specific Role Scope Tag.
@@ -16,9 +17,7 @@ public class RoleScopeTagAutoAssignment extends Entity implements Parsable {
     private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new roleScopeTagAutoAssignment and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public RoleScopeTagAutoAssignment() {
         super();
     }
@@ -27,8 +26,8 @@ public class RoleScopeTagAutoAssignment extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a roleScopeTagAutoAssignment
      */
-    @javax.annotation.Nonnull
-    public static RoleScopeTagAutoAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RoleScopeTagAutoAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RoleScopeTagAutoAssignment();
     }
@@ -36,7 +35,7 @@ public class RoleScopeTagAutoAssignment extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
@@ -46,17 +45,15 @@ public class RoleScopeTagAutoAssignment extends Entity implements Parsable {
      * Gets the target property value. The auto-assignment target for the specific Role Scope Tag.
      * @return a deviceAndAppManagementAssignmentTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
         return this.target;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("target", this.getTarget());
@@ -64,10 +61,8 @@ public class RoleScopeTagAutoAssignment extends Entity implements Parsable {
     /**
      * Sets the target property value. The auto-assignment target for the specific Role Scope Tag.
      * @param value Value to set for the target property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
+    public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this.target = value;
     }
 }

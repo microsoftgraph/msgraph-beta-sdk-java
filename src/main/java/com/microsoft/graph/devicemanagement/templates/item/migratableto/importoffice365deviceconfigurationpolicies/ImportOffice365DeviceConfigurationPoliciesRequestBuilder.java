@@ -9,7 +9,6 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -17,70 +16,51 @@ import java.util.Objects;
 /**
  * Provides operations to call the importOffice365DeviceConfigurationPolicies method.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImportOffice365DeviceConfigurationPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new ImportOffice365DeviceConfigurationPoliciesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @javax.annotation.Nullable
-    public ImportOffice365DeviceConfigurationPoliciesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public ImportOffice365DeviceConfigurationPoliciesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/templates/{deviceManagementTemplate%2Did}/migratableTo/importOffice365DeviceConfigurationPolicies", pathParameters);
     }
     /**
      * Instantiates a new ImportOffice365DeviceConfigurationPoliciesRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @javax.annotation.Nullable
-    public ImportOffice365DeviceConfigurationPoliciesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public ImportOffice365DeviceConfigurationPoliciesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/templates/{deviceManagementTemplate%2Did}/migratableTo/importOffice365DeviceConfigurationPolicies", rawUrl);
     }
     /**
      * Invoke action importOffice365DeviceConfigurationPolicies
      * @return a CompletableFuture of importOffice365DeviceConfigurationPoliciesResponse
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportOffice365DeviceConfigurationPoliciesResponse> post() {
-        try {
-            final RequestInformation requestInfo = toPostRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, ImportOffice365DeviceConfigurationPoliciesResponse::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<ImportOffice365DeviceConfigurationPoliciesResponse> executionException = new java.util.concurrent.CompletableFuture<ImportOffice365DeviceConfigurationPoliciesResponse>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return post(null);
     }
     /**
      * Invoke action importOffice365DeviceConfigurationPolicies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of importOffice365DeviceConfigurationPoliciesResponse
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImportOffice365DeviceConfigurationPoliciesResponse> post(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, ImportOffice365DeviceConfigurationPoliciesResponse::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<ImportOffice365DeviceConfigurationPoliciesResponse> executionException = new java.util.concurrent.CompletableFuture<ImportOffice365DeviceConfigurationPoliciesResponse>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ImportOffice365DeviceConfigurationPoliciesResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, ImportOffice365DeviceConfigurationPoliciesResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action importOffice365DeviceConfigurationPolicies
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation() throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation() {
         return toPostRequestInformation(null);
     }
     /**
@@ -88,8 +68,8 @@ public class ImportOffice365DeviceConfigurationPoliciesRequestBuilder extends Ba
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
@@ -106,6 +86,7 @@ public class ImportOffice365DeviceConfigurationPoliciesRequestBuilder extends Ba
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class PostRequestConfiguration extends BaseRequestConfiguration {
     }
 }

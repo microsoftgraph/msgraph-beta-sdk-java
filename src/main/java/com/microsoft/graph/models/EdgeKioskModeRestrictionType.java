@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Specify how the Microsoft Edge settings are restricted based on kiosk mode.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum EdgeKioskModeRestrictionType implements ValuedEnum {
     /** Not configured (unrestricted). */
     NotConfigured("notConfigured"),
@@ -21,10 +22,10 @@ public enum EdgeKioskModeRestrictionType implements ValuedEnum {
     EdgeKioskModeRestrictionType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static EdgeKioskModeRestrictionType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static EdgeKioskModeRestrictionType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

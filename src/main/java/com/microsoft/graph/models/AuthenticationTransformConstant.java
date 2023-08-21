@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Authentication transform values for Windows10 VPN policies with IKEv2 connection type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AuthenticationTransformConstant implements ValuedEnum {
     /** MD596 */
     Md5_96("md5_96"),
@@ -23,10 +24,10 @@ public enum AuthenticationTransformConstant implements ValuedEnum {
     AuthenticationTransformConstant(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AuthenticationTransformConstant forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AuthenticationTransformConstant forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "md5_96": return Md5_96;

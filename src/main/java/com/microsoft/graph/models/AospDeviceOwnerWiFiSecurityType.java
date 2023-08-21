@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Wi-Fi Security Types for AOSP Device Owner.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AospDeviceOwnerWiFiSecurityType implements ValuedEnum {
     /** Open (No Authentication). */
     Open("open"),
@@ -19,10 +20,10 @@ public enum AospDeviceOwnerWiFiSecurityType implements ValuedEnum {
     AospDeviceOwnerWiFiSecurityType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AospDeviceOwnerWiFiSecurityType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AospDeviceOwnerWiFiSecurityType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "open": return Open;

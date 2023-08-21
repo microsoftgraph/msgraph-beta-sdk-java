@@ -7,13 +7,14 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnPremisesSipInfo implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      */
     private Map<String, Object> additionalData;
     /**
-     * The isSipEnabled property
+     * Indicates whether the user is currently enabled for on-premises Skype for Business.
      */
     private Boolean isSipEnabled;
     /**
@@ -21,18 +22,16 @@ public class OnPremisesSipInfo implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The sipDeploymentLocation property
+     * Indicates a fully qualified DNS name of the Microsoft Online Communications Server deployment.
      */
     private String sipDeploymentLocation;
     /**
-     * The sipPrimaryAddress property
+     * Serves as a unique identifier for each user on the on-premises Skype for Business.
      */
     private String sipPrimaryAddress;
     /**
      * Instantiates a new onPremisesSipInfo and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public OnPremisesSipInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +40,8 @@ public class OnPremisesSipInfo implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a onPremisesSipInfo
      */
-    @javax.annotation.Nonnull
-    public static OnPremisesSipInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OnPremisesSipInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OnPremisesSipInfo();
     }
@@ -50,7 +49,7 @@ public class OnPremisesSipInfo implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +57,7 @@ public class OnPremisesSipInfo implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("isSipEnabled", (n) -> { this.setIsSipEnabled(n.getBooleanValue()); });
@@ -68,10 +67,10 @@ public class OnPremisesSipInfo implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isSipEnabled property value. The isSipEnabled property
+     * Gets the isSipEnabled property value. Indicates whether the user is currently enabled for on-premises Skype for Business.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSipEnabled() {
         return this.isSipEnabled;
     }
@@ -79,33 +78,31 @@ public class OnPremisesSipInfo implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the sipDeploymentLocation property value. The sipDeploymentLocation property
+     * Gets the sipDeploymentLocation property value. Indicates a fully qualified DNS name of the Microsoft Online Communications Server deployment.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSipDeploymentLocation() {
         return this.sipDeploymentLocation;
     }
     /**
-     * Gets the sipPrimaryAddress property value. The sipPrimaryAddress property
+     * Gets the sipPrimaryAddress property value. Serves as a unique identifier for each user on the on-premises Skype for Business.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSipPrimaryAddress() {
         return this.sipPrimaryAddress;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isSipEnabled", this.getIsSipEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -116,46 +113,36 @@ public class OnPremisesSipInfo implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the isSipEnabled property value. The isSipEnabled property
+     * Sets the isSipEnabled property value. Indicates whether the user is currently enabled for on-premises Skype for Business.
      * @param value Value to set for the isSipEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSipEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsSipEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isSipEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
-     * Sets the sipDeploymentLocation property value. The sipDeploymentLocation property
+     * Sets the sipDeploymentLocation property value. Indicates a fully qualified DNS name of the Microsoft Online Communications Server deployment.
      * @param value Value to set for the sipDeploymentLocation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSipDeploymentLocation(@javax.annotation.Nullable final String value) {
+    public void setSipDeploymentLocation(@jakarta.annotation.Nullable final String value) {
         this.sipDeploymentLocation = value;
     }
     /**
-     * Sets the sipPrimaryAddress property value. The sipPrimaryAddress property
+     * Sets the sipPrimaryAddress property value. Serves as a unique identifier for each user on the on-premises Skype for Business.
      * @param value Value to set for the sipPrimaryAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSipPrimaryAddress(@javax.annotation.Nullable final String value) {
+    public void setSipPrimaryAddress(@jakarta.annotation.Nullable final String value) {
         this.sipPrimaryAddress = value;
     }
 }

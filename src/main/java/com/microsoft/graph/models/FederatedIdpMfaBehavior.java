@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum FederatedIdpMfaBehavior implements ValuedEnum {
     AcceptIfMfaDoneByFederatedIdp("acceptIfMfaDoneByFederatedIdp"),
     EnforceMfaByFederatedIdp("enforceMfaByFederatedIdp"),
@@ -12,10 +13,10 @@ public enum FederatedIdpMfaBehavior implements ValuedEnum {
     FederatedIdpMfaBehavior(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static FederatedIdpMfaBehavior forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static FederatedIdpMfaBehavior forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "acceptIfMfaDoneByFederatedIdp": return AcceptIfMfaDoneByFederatedIdp;

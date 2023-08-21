@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Diffie Hellman Group values for Windows10 VPN policies with IKEv2 connection type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DiffieHellmanGroup implements ValuedEnum {
     /** Group1 */
     Group1("group1"),
@@ -23,10 +24,10 @@ public enum DiffieHellmanGroup implements ValuedEnum {
     DiffieHellmanGroup(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DiffieHellmanGroup forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DiffieHellmanGroup forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "group1": return Group1;

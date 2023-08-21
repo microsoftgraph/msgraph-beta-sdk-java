@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Device protection status entity.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsProtectionState extends Entity implements Parsable {
     /**
      * Current anti malware version
@@ -97,9 +98,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
     private Boolean tamperProtectionEnabled;
     /**
      * Instantiates a new windowsProtectionState and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsProtectionState() {
         super();
     }
@@ -108,8 +107,8 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsProtectionState
      */
-    @javax.annotation.Nonnull
-    public static WindowsProtectionState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsProtectionState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsProtectionState();
     }
@@ -117,7 +116,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the antiMalwareVersion property value. Current anti malware version
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAntiMalwareVersion() {
         return this.antiMalwareVersion;
     }
@@ -125,7 +124,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the detectedMalwareState property value. Device malware list
      * @return a windowsDeviceMalwareState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WindowsDeviceMalwareState> getDetectedMalwareState() {
         return this.detectedMalwareState;
     }
@@ -133,7 +132,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the deviceState property value. Indicates device's health state. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
      * @return a windowsDeviceHealthState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsDeviceHealthState getDeviceState() {
         return this.deviceState;
     }
@@ -141,7 +140,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the engineVersion property value. Current endpoint protection engine's version
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEngineVersion() {
         return this.engineVersion;
     }
@@ -149,7 +148,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("antiMalwareVersion", (n) -> { this.setAntiMalwareVersion(n.getStringValue()); });
@@ -179,7 +178,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the fullScanOverdue property value. When TRUE indicates full scan is overdue, when FALSE indicates full scan is not overdue. Defaults to setting on client device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getFullScanOverdue() {
         return this.fullScanOverdue;
     }
@@ -187,7 +186,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the fullScanRequired property value. When TRUE indicates full scan is required, when FALSE indicates full scan is not required. Defaults to setting on client device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getFullScanRequired() {
         return this.fullScanRequired;
     }
@@ -195,7 +194,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the isVirtualMachine property value. When TRUE indicates the device is a virtual machine, when FALSE indicates the device is not a virtual machine. Defaults to setting on client device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsVirtualMachine() {
         return this.isVirtualMachine;
     }
@@ -203,7 +202,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the lastFullScanDateTime property value. Last quick scan datetime
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastFullScanDateTime() {
         return this.lastFullScanDateTime;
     }
@@ -211,7 +210,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the lastFullScanSignatureVersion property value. Last full scan signature version
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLastFullScanSignatureVersion() {
         return this.lastFullScanSignatureVersion;
     }
@@ -219,7 +218,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the lastQuickScanDateTime property value. Last quick scan datetime
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastQuickScanDateTime() {
         return this.lastQuickScanDateTime;
     }
@@ -227,7 +226,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the lastQuickScanSignatureVersion property value. Last quick scan signature version
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLastQuickScanSignatureVersion() {
         return this.lastQuickScanSignatureVersion;
     }
@@ -235,7 +234,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the lastReportedDateTime property value. Last device health status reported time
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
         return this.lastReportedDateTime;
     }
@@ -243,7 +242,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the malwareProtectionEnabled property value. When TRUE indicates anti malware is enabled when FALSE indicates anti malware is not enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getMalwareProtectionEnabled() {
         return this.malwareProtectionEnabled;
     }
@@ -251,7 +250,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the networkInspectionSystemEnabled property value. When TRUE indicates network inspection system enabled, when FALSE indicates network inspection system is not enabled. Defaults to setting on client device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getNetworkInspectionSystemEnabled() {
         return this.networkInspectionSystemEnabled;
     }
@@ -259,7 +258,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the productStatus property value. Product Status of Windows Defender Antivirus. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall.
      * @return a windowsDefenderProductStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsDefenderProductStatus getProductStatus() {
         return this.productStatus;
     }
@@ -267,7 +266,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the quickScanOverdue property value. When TRUE indicates quick scan is overdue, when FALSE indicates quick scan is not overdue. Defaults to setting on client device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getQuickScanOverdue() {
         return this.quickScanOverdue;
     }
@@ -275,7 +274,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the realTimeProtectionEnabled property value. When TRUE indicates real time protection is enabled, when FALSE indicates real time protection is not enabled. Defaults to setting on client device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRealTimeProtectionEnabled() {
         return this.realTimeProtectionEnabled;
     }
@@ -283,7 +282,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the rebootRequired property value. When TRUE indicates reboot is required, when FALSE indicates when TRUE indicates reboot is not required. Defaults to setting on client device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRebootRequired() {
         return this.rebootRequired;
     }
@@ -291,7 +290,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the signatureUpdateOverdue property value. When TRUE indicates signature is out of date, when FALSE indicates signature is not out of date. Defaults to setting on client device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSignatureUpdateOverdue() {
         return this.signatureUpdateOverdue;
     }
@@ -299,7 +298,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the signatureVersion property value. Current malware definitions version
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSignatureVersion() {
         return this.signatureVersion;
     }
@@ -307,17 +306,15 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Gets the tamperProtectionEnabled property value. When TRUE indicates the Windows Defender tamper protection feature is enabled, when FALSE indicates the Windows Defender tamper protection feature is not enabled. Defaults to setting on client device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getTamperProtectionEnabled() {
         return this.tamperProtectionEnabled;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("antiMalwareVersion", this.getAntiMalwareVersion());
@@ -345,190 +342,148 @@ public class WindowsProtectionState extends Entity implements Parsable {
     /**
      * Sets the antiMalwareVersion property value. Current anti malware version
      * @param value Value to set for the antiMalwareVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAntiMalwareVersion(@javax.annotation.Nullable final String value) {
+    public void setAntiMalwareVersion(@jakarta.annotation.Nullable final String value) {
         this.antiMalwareVersion = value;
     }
     /**
      * Sets the detectedMalwareState property value. Device malware list
      * @param value Value to set for the detectedMalwareState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetectedMalwareState(@javax.annotation.Nullable final java.util.List<WindowsDeviceMalwareState> value) {
+    public void setDetectedMalwareState(@jakarta.annotation.Nullable final java.util.List<WindowsDeviceMalwareState> value) {
         this.detectedMalwareState = value;
     }
     /**
      * Sets the deviceState property value. Indicates device's health state. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
      * @param value Value to set for the deviceState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceState(@javax.annotation.Nullable final WindowsDeviceHealthState value) {
+    public void setDeviceState(@jakarta.annotation.Nullable final WindowsDeviceHealthState value) {
         this.deviceState = value;
     }
     /**
      * Sets the engineVersion property value. Current endpoint protection engine's version
      * @param value Value to set for the engineVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEngineVersion(@javax.annotation.Nullable final String value) {
+    public void setEngineVersion(@jakarta.annotation.Nullable final String value) {
         this.engineVersion = value;
     }
     /**
      * Sets the fullScanOverdue property value. When TRUE indicates full scan is overdue, when FALSE indicates full scan is not overdue. Defaults to setting on client device.
      * @param value Value to set for the fullScanOverdue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFullScanOverdue(@javax.annotation.Nullable final Boolean value) {
+    public void setFullScanOverdue(@jakarta.annotation.Nullable final Boolean value) {
         this.fullScanOverdue = value;
     }
     /**
      * Sets the fullScanRequired property value. When TRUE indicates full scan is required, when FALSE indicates full scan is not required. Defaults to setting on client device.
      * @param value Value to set for the fullScanRequired property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFullScanRequired(@javax.annotation.Nullable final Boolean value) {
+    public void setFullScanRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.fullScanRequired = value;
     }
     /**
      * Sets the isVirtualMachine property value. When TRUE indicates the device is a virtual machine, when FALSE indicates the device is not a virtual machine. Defaults to setting on client device.
      * @param value Value to set for the isVirtualMachine property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsVirtualMachine(@javax.annotation.Nullable final Boolean value) {
+    public void setIsVirtualMachine(@jakarta.annotation.Nullable final Boolean value) {
         this.isVirtualMachine = value;
     }
     /**
      * Sets the lastFullScanDateTime property value. Last quick scan datetime
      * @param value Value to set for the lastFullScanDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastFullScanDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastFullScanDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastFullScanDateTime = value;
     }
     /**
      * Sets the lastFullScanSignatureVersion property value. Last full scan signature version
      * @param value Value to set for the lastFullScanSignatureVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastFullScanSignatureVersion(@javax.annotation.Nullable final String value) {
+    public void setLastFullScanSignatureVersion(@jakarta.annotation.Nullable final String value) {
         this.lastFullScanSignatureVersion = value;
     }
     /**
      * Sets the lastQuickScanDateTime property value. Last quick scan datetime
      * @param value Value to set for the lastQuickScanDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastQuickScanDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastQuickScanDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastQuickScanDateTime = value;
     }
     /**
      * Sets the lastQuickScanSignatureVersion property value. Last quick scan signature version
      * @param value Value to set for the lastQuickScanSignatureVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastQuickScanSignatureVersion(@javax.annotation.Nullable final String value) {
+    public void setLastQuickScanSignatureVersion(@jakarta.annotation.Nullable final String value) {
         this.lastQuickScanSignatureVersion = value;
     }
     /**
      * Sets the lastReportedDateTime property value. Last device health status reported time
      * @param value Value to set for the lastReportedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastReportedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastReportedDateTime = value;
     }
     /**
      * Sets the malwareProtectionEnabled property value. When TRUE indicates anti malware is enabled when FALSE indicates anti malware is not enabled.
      * @param value Value to set for the malwareProtectionEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMalwareProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setMalwareProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.malwareProtectionEnabled = value;
     }
     /**
      * Sets the networkInspectionSystemEnabled property value. When TRUE indicates network inspection system enabled, when FALSE indicates network inspection system is not enabled. Defaults to setting on client device.
      * @param value Value to set for the networkInspectionSystemEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkInspectionSystemEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setNetworkInspectionSystemEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.networkInspectionSystemEnabled = value;
     }
     /**
      * Sets the productStatus property value. Product Status of Windows Defender Antivirus. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall.
      * @param value Value to set for the productStatus property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProductStatus(@javax.annotation.Nullable final WindowsDefenderProductStatus value) {
+    public void setProductStatus(@jakarta.annotation.Nullable final WindowsDefenderProductStatus value) {
         this.productStatus = value;
     }
     /**
      * Sets the quickScanOverdue property value. When TRUE indicates quick scan is overdue, when FALSE indicates quick scan is not overdue. Defaults to setting on client device.
      * @param value Value to set for the quickScanOverdue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQuickScanOverdue(@javax.annotation.Nullable final Boolean value) {
+    public void setQuickScanOverdue(@jakarta.annotation.Nullable final Boolean value) {
         this.quickScanOverdue = value;
     }
     /**
      * Sets the realTimeProtectionEnabled property value. When TRUE indicates real time protection is enabled, when FALSE indicates real time protection is not enabled. Defaults to setting on client device.
      * @param value Value to set for the realTimeProtectionEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRealTimeProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setRealTimeProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.realTimeProtectionEnabled = value;
     }
     /**
      * Sets the rebootRequired property value. When TRUE indicates reboot is required, when FALSE indicates when TRUE indicates reboot is not required. Defaults to setting on client device.
      * @param value Value to set for the rebootRequired property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRebootRequired(@javax.annotation.Nullable final Boolean value) {
+    public void setRebootRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.rebootRequired = value;
     }
     /**
      * Sets the signatureUpdateOverdue property value. When TRUE indicates signature is out of date, when FALSE indicates signature is not out of date. Defaults to setting on client device.
      * @param value Value to set for the signatureUpdateOverdue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSignatureUpdateOverdue(@javax.annotation.Nullable final Boolean value) {
+    public void setSignatureUpdateOverdue(@jakarta.annotation.Nullable final Boolean value) {
         this.signatureUpdateOverdue = value;
     }
     /**
      * Sets the signatureVersion property value. Current malware definitions version
      * @param value Value to set for the signatureVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSignatureVersion(@javax.annotation.Nullable final String value) {
+    public void setSignatureVersion(@jakarta.annotation.Nullable final String value) {
         this.signatureVersion = value;
     }
     /**
      * Sets the tamperProtectionEnabled property value. When TRUE indicates the Windows Defender tamper protection feature is enabled, when FALSE indicates the Windows Defender tamper protection feature is not enabled. Defaults to setting on client device.
      * @param value Value to set for the tamperProtectionEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTamperProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setTamperProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.tamperProtectionEnabled = value;
     }
 }

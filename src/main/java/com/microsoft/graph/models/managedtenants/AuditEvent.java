@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuditEvent extends Entity implements Parsable {
     /**
      * A string which uniquely represents the operation that occurred. Required. Read-only.
@@ -63,9 +64,7 @@ public class AuditEvent extends Entity implements Parsable {
     private String tenantNames;
     /**
      * Instantiates a new auditEvent and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AuditEvent() {
         super();
     }
@@ -74,8 +73,8 @@ public class AuditEvent extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a auditEvent
      */
-    @javax.annotation.Nonnull
-    public static AuditEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AuditEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AuditEvent();
     }
@@ -83,7 +82,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the activity property value. A string which uniquely represents the operation that occurred. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActivity() {
         return this.activity;
     }
@@ -91,7 +90,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the activityDateTime property value. The time when the activity ocurred. Required. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
         return this.activityDateTime;
     }
@@ -99,7 +98,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the activityId property value. The identifier of the activity request that made the audit event. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActivityId() {
         return this.activityId;
     }
@@ -107,7 +106,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the category property value. A category which represents a logical grouping of activities. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory() {
         return this.category;
     }
@@ -115,7 +114,7 @@ public class AuditEvent extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activity", (n) -> { this.setActivity(n.getStringValue()); });
@@ -137,7 +136,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the httpVerb property value. The HTTP verb that was used when making the API request. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHttpVerb() {
         return this.httpVerb;
     }
@@ -145,7 +144,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the initiatedByAppId property value. The identifier of the app that was used to make the request. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInitiatedByAppId() {
         return this.initiatedByAppId;
     }
@@ -153,7 +152,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the initiatedByUpn property value. The UPN of the user who initiated the activity. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInitiatedByUpn() {
         return this.initiatedByUpn;
     }
@@ -161,7 +160,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the initiatedByUserId property value. The identifier of the user who initiated the activity. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInitiatedByUserId() {
         return this.initiatedByUserId;
     }
@@ -169,7 +168,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the ipAddress property value. The IP address of where the activity was initiated. This may be an IPv4 or IPv6 address. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIpAddress() {
         return this.ipAddress;
     }
@@ -177,7 +176,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the requestBody property value. The raw HTTP request body. Some sensitive information may be removed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRequestBody() {
         return this.requestBody;
     }
@@ -185,7 +184,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the requestUrl property value. The raw HTTP request URL. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRequestUrl() {
         return this.requestUrl;
     }
@@ -193,7 +192,7 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the tenantIds property value. The collection of Azure Active Directory tenant identifiers for the managed tenants that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantIds() {
         return this.tenantIds;
     }
@@ -201,17 +200,15 @@ public class AuditEvent extends Entity implements Parsable {
      * Gets the tenantNames property value. The collection of tenant names that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantNames() {
         return this.tenantNames;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("activity", this.getActivity());
@@ -231,118 +228,92 @@ public class AuditEvent extends Entity implements Parsable {
     /**
      * Sets the activity property value. A string which uniquely represents the operation that occurred. Required. Read-only.
      * @param value Value to set for the activity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivity(@javax.annotation.Nullable final String value) {
+    public void setActivity(@jakarta.annotation.Nullable final String value) {
         this.activity = value;
     }
     /**
      * Sets the activityDateTime property value. The time when the activity ocurred. Required. Read-only.
      * @param value Value to set for the activityDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.activityDateTime = value;
     }
     /**
      * Sets the activityId property value. The identifier of the activity request that made the audit event. Required. Read-only.
      * @param value Value to set for the activityId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityId(@javax.annotation.Nullable final String value) {
+    public void setActivityId(@jakarta.annotation.Nullable final String value) {
         this.activityId = value;
     }
     /**
      * Sets the category property value. A category which represents a logical grouping of activities. Required. Read-only.
      * @param value Value to set for the category property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory(@javax.annotation.Nullable final String value) {
+    public void setCategory(@jakarta.annotation.Nullable final String value) {
         this.category = value;
     }
     /**
      * Sets the httpVerb property value. The HTTP verb that was used when making the API request. Required. Read-only.
      * @param value Value to set for the httpVerb property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHttpVerb(@javax.annotation.Nullable final String value) {
+    public void setHttpVerb(@jakarta.annotation.Nullable final String value) {
         this.httpVerb = value;
     }
     /**
      * Sets the initiatedByAppId property value. The identifier of the app that was used to make the request. Required. Read-only.
      * @param value Value to set for the initiatedByAppId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitiatedByAppId(@javax.annotation.Nullable final String value) {
+    public void setInitiatedByAppId(@jakarta.annotation.Nullable final String value) {
         this.initiatedByAppId = value;
     }
     /**
      * Sets the initiatedByUpn property value. The UPN of the user who initiated the activity. Required. Read-only.
      * @param value Value to set for the initiatedByUpn property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitiatedByUpn(@javax.annotation.Nullable final String value) {
+    public void setInitiatedByUpn(@jakarta.annotation.Nullable final String value) {
         this.initiatedByUpn = value;
     }
     /**
      * Sets the initiatedByUserId property value. The identifier of the user who initiated the activity. Required. Read-only.
      * @param value Value to set for the initiatedByUserId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitiatedByUserId(@javax.annotation.Nullable final String value) {
+    public void setInitiatedByUserId(@jakarta.annotation.Nullable final String value) {
         this.initiatedByUserId = value;
     }
     /**
      * Sets the ipAddress property value. The IP address of where the activity was initiated. This may be an IPv4 or IPv6 address. Required. Read-only.
      * @param value Value to set for the ipAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIpAddress(@javax.annotation.Nullable final String value) {
+    public void setIpAddress(@jakarta.annotation.Nullable final String value) {
         this.ipAddress = value;
     }
     /**
      * Sets the requestBody property value. The raw HTTP request body. Some sensitive information may be removed.
      * @param value Value to set for the requestBody property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestBody(@javax.annotation.Nullable final String value) {
+    public void setRequestBody(@jakarta.annotation.Nullable final String value) {
         this.requestBody = value;
     }
     /**
      * Sets the requestUrl property value. The raw HTTP request URL. Required. Read-only.
      * @param value Value to set for the requestUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestUrl(@javax.annotation.Nullable final String value) {
+    public void setRequestUrl(@jakarta.annotation.Nullable final String value) {
         this.requestUrl = value;
     }
     /**
      * Sets the tenantIds property value. The collection of Azure Active Directory tenant identifiers for the managed tenants that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
      * @param value Value to set for the tenantIds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantIds(@javax.annotation.Nullable final String value) {
+    public void setTenantIds(@jakarta.annotation.Nullable final String value) {
         this.tenantIds = value;
     }
     /**
      * Sets the tenantNames property value. The collection of tenant names that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
      * @param value Value to set for the tenantNames property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantNames(@javax.annotation.Nullable final String value) {
+    public void setTenantNames(@jakarta.annotation.Nullable final String value) {
         this.tenantNames = value;
     }
 }

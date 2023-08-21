@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * The importedAppleDeviceIdentity resource represents the imported device identity of an Apple device .
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     /**
      * Created Date Time of the device
@@ -57,9 +58,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     private String serialNumber;
     /**
      * Instantiates a new importedAppleDeviceIdentity and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ImportedAppleDeviceIdentity() {
         super();
     }
@@ -68,8 +67,8 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a importedAppleDeviceIdentity
      */
-    @javax.annotation.Nonnull
-    public static ImportedAppleDeviceIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ImportedAppleDeviceIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -84,7 +83,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * Gets the createdDateTime property value. Created Date Time of the device
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -92,7 +91,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * Gets the description property value. The description of the device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -100,7 +99,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * Gets the discoverySource property value. The discoverySource property
      * @return a discoverySource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DiscoverySource getDiscoverySource() {
         return this.discoverySource;
     }
@@ -108,7 +107,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * Gets the enrollmentState property value. The enrollmentState property
      * @return a enrollmentState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EnrollmentState getEnrollmentState() {
         return this.enrollmentState;
     }
@@ -116,7 +115,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -136,7 +135,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * Gets the isDeleted property value. Indicates if the device is deleted from Apple Business Manager
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
         return this.isDeleted;
     }
@@ -144,7 +143,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * Gets the isSupervised property value. Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSupervised() {
         return this.isSupervised;
     }
@@ -152,7 +151,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * Gets the lastContactedDateTime property value. Last Contacted Date Time of the device
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastContactedDateTime() {
         return this.lastContactedDateTime;
     }
@@ -160,7 +159,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * Gets the platform property value. The platform property
      * @return a platform
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Platform getPlatform() {
         return this.platform;
     }
@@ -168,7 +167,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * Gets the requestedEnrollmentProfileAssignmentDateTime property value. The time enrollment profile was assigned to the device
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRequestedEnrollmentProfileAssignmentDateTime() {
         return this.requestedEnrollmentProfileAssignmentDateTime;
     }
@@ -176,7 +175,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * Gets the requestedEnrollmentProfileId property value. Enrollment profile Id admin intends to apply to the device during next enrollment
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRequestedEnrollmentProfileId() {
         return this.requestedEnrollmentProfileId;
     }
@@ -184,17 +183,15 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * Gets the serialNumber property value. Device serial number
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSerialNumber() {
         return this.serialNumber;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -212,100 +209,78 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     /**
      * Sets the createdDateTime property value. Created Date Time of the device
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description of the device
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the discoverySource property value. The discoverySource property
      * @param value Value to set for the discoverySource property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDiscoverySource(@javax.annotation.Nullable final DiscoverySource value) {
+    public void setDiscoverySource(@jakarta.annotation.Nullable final DiscoverySource value) {
         this.discoverySource = value;
     }
     /**
      * Sets the enrollmentState property value. The enrollmentState property
      * @param value Value to set for the enrollmentState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentState(@javax.annotation.Nullable final EnrollmentState value) {
+    public void setEnrollmentState(@jakarta.annotation.Nullable final EnrollmentState value) {
         this.enrollmentState = value;
     }
     /**
      * Sets the isDeleted property value. Indicates if the device is deleted from Apple Business Manager
      * @param value Value to set for the isDeleted property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDeleted(@javax.annotation.Nullable final Boolean value) {
+    public void setIsDeleted(@jakarta.annotation.Nullable final Boolean value) {
         this.isDeleted = value;
     }
     /**
      * Sets the isSupervised property value. Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
      * @param value Value to set for the isSupervised property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSupervised(@javax.annotation.Nullable final Boolean value) {
+    public void setIsSupervised(@jakarta.annotation.Nullable final Boolean value) {
         this.isSupervised = value;
     }
     /**
      * Sets the lastContactedDateTime property value. Last Contacted Date Time of the device
      * @param value Value to set for the lastContactedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastContactedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastContactedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastContactedDateTime = value;
     }
     /**
      * Sets the platform property value. The platform property
      * @param value Value to set for the platform property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatform(@javax.annotation.Nullable final Platform value) {
+    public void setPlatform(@jakarta.annotation.Nullable final Platform value) {
         this.platform = value;
     }
     /**
      * Sets the requestedEnrollmentProfileAssignmentDateTime property value. The time enrollment profile was assigned to the device
      * @param value Value to set for the requestedEnrollmentProfileAssignmentDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestedEnrollmentProfileAssignmentDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setRequestedEnrollmentProfileAssignmentDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.requestedEnrollmentProfileAssignmentDateTime = value;
     }
     /**
      * Sets the requestedEnrollmentProfileId property value. Enrollment profile Id admin intends to apply to the device during next enrollment
      * @param value Value to set for the requestedEnrollmentProfileId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestedEnrollmentProfileId(@javax.annotation.Nullable final String value) {
+    public void setRequestedEnrollmentProfileId(@jakarta.annotation.Nullable final String value) {
         this.requestedEnrollmentProfileId = value;
     }
     /**
      * Sets the serialNumber property value. Device serial number
      * @param value Value to set for the serialNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSerialNumber(@javax.annotation.Nullable final String value) {
+    public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
         this.serialNumber = value;
     }
 }

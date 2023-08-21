@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AnswerVariant implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -39,9 +40,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
     private String webUrl;
     /**
      * Instantiates a new answerVariant and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AnswerVariant() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -50,8 +49,8 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a answerVariant
      */
-    @javax.annotation.Nonnull
-    public static AnswerVariant createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AnswerVariant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AnswerVariant();
     }
@@ -59,7 +58,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -67,7 +66,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * Gets the description property value. Answer variation description shown on search results page.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -75,7 +74,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. Answer variation name displayed in search results.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -83,7 +82,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -98,7 +97,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * Gets the languageTag property value. The languageTag property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLanguageTag() {
         return this.languageTag;
     }
@@ -106,7 +105,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -114,7 +113,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * Gets the platform property value. The platform property
      * @return a devicePlatformType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DevicePlatformType getPlatform() {
         return this.platform;
     }
@@ -122,17 +121,15 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * Gets the webUrl property value. Answer variation URL link. When users click this answer variation in search results, they will go to this URL.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebUrl() {
         return this.webUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -145,64 +142,50 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the description property value. Answer variation description shown on search results page.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Answer variation name displayed in search results.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the languageTag property value. The languageTag property
      * @param value Value to set for the languageTag property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLanguageTag(@javax.annotation.Nullable final String value) {
+    public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
         this.languageTag = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the platform property value. The platform property
      * @param value Value to set for the platform property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatform(@javax.annotation.Nullable final DevicePlatformType value) {
+    public void setPlatform(@jakarta.annotation.Nullable final DevicePlatformType value) {
         this.platform = value;
     }
     /**
      * Sets the webUrl property value. Answer variation URL link. When users click this answer variation in search results, they will go to this URL.
      * @param value Value to set for the webUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebUrl(@javax.annotation.Nullable final String value) {
+    public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }
 }

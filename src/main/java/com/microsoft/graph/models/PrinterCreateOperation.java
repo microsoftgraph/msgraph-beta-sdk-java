@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrinterCreateOperation extends PrintOperation implements Parsable {
     /**
      * The signed certificate created during the registration process. Read-only.
@@ -17,9 +18,7 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
     private Printer printer;
     /**
      * Instantiates a new printerCreateOperation and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PrinterCreateOperation() {
         super();
         this.setOdataType("#microsoft.graph.printerCreateOperation");
@@ -29,8 +28,8 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a printerCreateOperation
      */
-    @javax.annotation.Nonnull
-    public static PrinterCreateOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrinterCreateOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PrinterCreateOperation();
     }
@@ -38,7 +37,7 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
      * Gets the certificate property value. The signed certificate created during the registration process. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCertificate() {
         return this.certificate;
     }
@@ -46,7 +45,7 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("certificate", (n) -> { this.setCertificate(n.getStringValue()); });
@@ -57,17 +56,15 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
      * Gets the printer property value. The printer property
      * @return a printer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Printer getPrinter() {
         return this.printer;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("certificate", this.getCertificate());
@@ -76,19 +73,15 @@ public class PrinterCreateOperation extends PrintOperation implements Parsable {
     /**
      * Sets the certificate property value. The signed certificate created during the registration process. Read-only.
      * @param value Value to set for the certificate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificate(@javax.annotation.Nullable final String value) {
+    public void setCertificate(@jakarta.annotation.Nullable final String value) {
         this.certificate = value;
     }
     /**
      * Sets the printer property value. The printer property
      * @param value Value to set for the printer property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrinter(@javax.annotation.Nullable final Printer value) {
+    public void setPrinter(@jakarta.annotation.Nullable final Printer value) {
         this.printer = value;
     }
 }

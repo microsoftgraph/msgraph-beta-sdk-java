@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EventMessageResponse extends EventMessage implements Parsable {
     /**
      * The proposedNewTime property
@@ -17,9 +18,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
     private ResponseType responseType;
     /**
      * Instantiates a new eventMessageResponse and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EventMessageResponse() {
         super();
         this.setOdataType("#microsoft.graph.eventMessageResponse");
@@ -29,8 +28,8 @@ public class EventMessageResponse extends EventMessage implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a eventMessageResponse
      */
-    @javax.annotation.Nonnull
-    public static EventMessageResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EventMessageResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EventMessageResponse();
     }
@@ -38,7 +37,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("proposedNewTime", (n) -> { this.setProposedNewTime(n.getObjectValue(TimeSlot::createFromDiscriminatorValue)); });
@@ -49,7 +48,7 @@ public class EventMessageResponse extends EventMessage implements Parsable {
      * Gets the proposedNewTime property value. The proposedNewTime property
      * @return a timeSlot
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TimeSlot getProposedNewTime() {
         return this.proposedNewTime;
     }
@@ -57,17 +56,15 @@ public class EventMessageResponse extends EventMessage implements Parsable {
      * Gets the responseType property value. The responseType property
      * @return a responseType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResponseType getResponseType() {
         return this.responseType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("proposedNewTime", this.getProposedNewTime());
@@ -76,19 +73,15 @@ public class EventMessageResponse extends EventMessage implements Parsable {
     /**
      * Sets the proposedNewTime property value. The proposedNewTime property
      * @param value Value to set for the proposedNewTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProposedNewTime(@javax.annotation.Nullable final TimeSlot value) {
+    public void setProposedNewTime(@jakarta.annotation.Nullable final TimeSlot value) {
         this.proposedNewTime = value;
     }
     /**
      * Sets the responseType property value. The responseType property
      * @param value Value to set for the responseType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResponseType(@javax.annotation.Nullable final ResponseType value) {
+    public void setResponseType(@jakarta.annotation.Nullable final ResponseType value) {
         this.responseType = value;
     }
 }

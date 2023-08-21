@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * AppLogUploadStatus
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AppLogUploadState implements ValuedEnum {
     /** Default. Indicates that request is waiting to be processed or under processing. */
     Pending("pending"),
@@ -19,10 +20,10 @@ public enum AppLogUploadState implements ValuedEnum {
     AppLogUploadState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AppLogUploadState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AppLogUploadState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "pending": return Pending;

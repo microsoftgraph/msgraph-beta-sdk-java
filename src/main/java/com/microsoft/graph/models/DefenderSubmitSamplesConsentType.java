@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for DefenderSubmitSamplesConsentType
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DefenderSubmitSamplesConsentType implements ValuedEnum {
     /** Send safe samples automatically */
     SendSafeSamplesAutomatically("sendSafeSamplesAutomatically"),
@@ -19,10 +20,10 @@ public enum DefenderSubmitSamplesConsentType implements ValuedEnum {
     DefenderSubmitSamplesConsentType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DefenderSubmitSamplesConsentType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DefenderSubmitSamplesConsentType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "sendSafeSamplesAutomatically": return SendSafeSamplesAutomatically;

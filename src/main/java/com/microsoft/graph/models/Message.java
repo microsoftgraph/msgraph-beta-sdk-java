@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Message extends OutlookItem implements Parsable {
     /**
      * The fileAttachment and itemAttachment attachments for the message.
@@ -146,9 +147,7 @@ public class Message extends OutlookItem implements Parsable {
     private String webLink;
     /**
      * Instantiates a new message and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Message() {
         super();
         this.setOdataType("#microsoft.graph.message");
@@ -158,8 +157,8 @@ public class Message extends OutlookItem implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a message
      */
-    @javax.annotation.Nonnull
-    public static Message createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Message createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -177,7 +176,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the attachments property value. The fileAttachment and itemAttachment attachments for the message.
      * @return a attachment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Attachment> getAttachments() {
         return this.attachments;
     }
@@ -185,7 +184,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the bccRecipients property value. The Bcc: recipients for the message.
      * @return a recipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Recipient> getBccRecipients() {
         return this.bccRecipients;
     }
@@ -193,7 +192,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the body property value. The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body.
      * @return a itemBody
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemBody getBody() {
         return this.body;
     }
@@ -201,7 +200,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the bodyPreview property value. The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBodyPreview() {
         return this.bodyPreview;
     }
@@ -209,7 +208,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the ccRecipients property value. The Cc: recipients for the message.
      * @return a recipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Recipient> getCcRecipients() {
         return this.ccRecipients;
     }
@@ -217,7 +216,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the conversationId property value. The ID of the conversation the email belongs to.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConversationId() {
         return this.conversationId;
     }
@@ -225,7 +224,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the conversationIndex property value. Indicates the position of the message within the conversation.
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getConversationIndex() {
         return this.conversationIndex;
     }
@@ -233,7 +232,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the extensions property value. The collection of open extensions defined for the message. Nullable.
      * @return a extension
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
         return this.extensions;
     }
@@ -241,7 +240,7 @@ public class Message extends OutlookItem implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("attachments", (n) -> { this.setAttachments(n.getCollectionOfObjectValues(Attachment::createFromDiscriminatorValue)); });
@@ -284,7 +283,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the flag property value. The flag value that indicates the status, start date, due date, or completion date for the message.
      * @return a followupFlag
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FollowupFlag getFlag() {
         return this.flag;
     }
@@ -292,7 +291,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the from property value. The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
      * @return a recipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Recipient getFrom() {
         return this.from;
     }
@@ -300,7 +299,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the hasAttachments property value. Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src='cid:image001.jpg@01D26CD8.6C05F070'>.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
         return this.hasAttachments;
     }
@@ -308,7 +307,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the importance property value. The importance property
      * @return a importance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Importance getImportance() {
         return this.importance;
     }
@@ -316,7 +315,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the inferenceClassification property value. The inferenceClassification property
      * @return a inferenceClassificationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InferenceClassificationType getInferenceClassification() {
         return this.inferenceClassification;
     }
@@ -324,7 +323,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the internetMessageHeaders property value. The internetMessageHeaders property
      * @return a internetMessageHeader
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<InternetMessageHeader> getInternetMessageHeaders() {
         return this.internetMessageHeaders;
     }
@@ -332,7 +331,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the internetMessageId property value. The internetMessageId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInternetMessageId() {
         return this.internetMessageId;
     }
@@ -340,7 +339,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the isDeliveryReceiptRequested property value. The isDeliveryReceiptRequested property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDeliveryReceiptRequested() {
         return this.isDeliveryReceiptRequested;
     }
@@ -348,7 +347,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the isDraft property value. The isDraft property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDraft() {
         return this.isDraft;
     }
@@ -356,7 +355,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the isRead property value. The isRead property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRead() {
         return this.isRead;
     }
@@ -364,7 +363,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the isReadReceiptRequested property value. The isReadReceiptRequested property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsReadReceiptRequested() {
         return this.isReadReceiptRequested;
     }
@@ -372,7 +371,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the mentions property value. A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.
      * @return a mention
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Mention> getMentions() {
         return this.mentions;
     }
@@ -380,7 +379,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the mentionsPreview property value. The mentionsPreview property
      * @return a mentionsPreview
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MentionsPreview getMentionsPreview() {
         return this.mentionsPreview;
     }
@@ -388,7 +387,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the message. Nullable.
      * @return a multiValueLegacyExtendedProperty
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
         return this.multiValueExtendedProperties;
     }
@@ -396,7 +395,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the parentFolderId property value. The parentFolderId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getParentFolderId() {
         return this.parentFolderId;
     }
@@ -404,7 +403,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the receivedDateTime property value. The receivedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getReceivedDateTime() {
         return this.receivedDateTime;
     }
@@ -412,7 +411,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the replyTo property value. The replyTo property
      * @return a recipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Recipient> getReplyTo() {
         return this.replyTo;
     }
@@ -420,7 +419,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the sender property value. The sender property
      * @return a recipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Recipient getSender() {
         return this.sender;
     }
@@ -428,7 +427,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the sentDateTime property value. The sentDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getSentDateTime() {
         return this.sentDateTime;
     }
@@ -436,7 +435,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the message. Nullable.
      * @return a singleValueLegacyExtendedProperty
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
         return this.singleValueExtendedProperties;
     }
@@ -444,7 +443,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the subject property value. The subject property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubject() {
         return this.subject;
     }
@@ -452,7 +451,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the toRecipients property value. The toRecipients property
      * @return a recipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Recipient> getToRecipients() {
         return this.toRecipients;
     }
@@ -460,7 +459,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the uniqueBody property value. The uniqueBody property
      * @return a itemBody
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemBody getUniqueBody() {
         return this.uniqueBody;
     }
@@ -468,7 +467,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the unsubscribeData property value. The unsubscribeData property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getUnsubscribeData() {
         return this.unsubscribeData;
     }
@@ -476,7 +475,7 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the unsubscribeEnabled property value. The unsubscribeEnabled property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getUnsubscribeEnabled() {
         return this.unsubscribeEnabled;
     }
@@ -484,17 +483,15 @@ public class Message extends OutlookItem implements Parsable {
      * Gets the webLink property value. The webLink property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebLink() {
         return this.webLink;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("attachments", this.getAttachments());
@@ -535,307 +532,239 @@ public class Message extends OutlookItem implements Parsable {
     /**
      * Sets the attachments property value. The fileAttachment and itemAttachment attachments for the message.
      * @param value Value to set for the attachments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttachments(@javax.annotation.Nullable final java.util.List<Attachment> value) {
+    public void setAttachments(@jakarta.annotation.Nullable final java.util.List<Attachment> value) {
         this.attachments = value;
     }
     /**
      * Sets the bccRecipients property value. The Bcc: recipients for the message.
      * @param value Value to set for the bccRecipients property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBccRecipients(@javax.annotation.Nullable final java.util.List<Recipient> value) {
+    public void setBccRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.bccRecipients = value;
     }
     /**
      * Sets the body property value. The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body.
      * @param value Value to set for the body property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBody(@javax.annotation.Nullable final ItemBody value) {
+    public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
         this.body = value;
     }
     /**
      * Sets the bodyPreview property value. The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
      * @param value Value to set for the bodyPreview property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBodyPreview(@javax.annotation.Nullable final String value) {
+    public void setBodyPreview(@jakarta.annotation.Nullable final String value) {
         this.bodyPreview = value;
     }
     /**
      * Sets the ccRecipients property value. The Cc: recipients for the message.
      * @param value Value to set for the ccRecipients property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCcRecipients(@javax.annotation.Nullable final java.util.List<Recipient> value) {
+    public void setCcRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.ccRecipients = value;
     }
     /**
      * Sets the conversationId property value. The ID of the conversation the email belongs to.
      * @param value Value to set for the conversationId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConversationId(@javax.annotation.Nullable final String value) {
+    public void setConversationId(@jakarta.annotation.Nullable final String value) {
         this.conversationId = value;
     }
     /**
      * Sets the conversationIndex property value. Indicates the position of the message within the conversation.
      * @param value Value to set for the conversationIndex property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConversationIndex(@javax.annotation.Nullable final byte[] value) {
+    public void setConversationIndex(@jakarta.annotation.Nullable final byte[] value) {
         this.conversationIndex = value;
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the message. Nullable.
      * @param value Value to set for the extensions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
+    public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
         this.extensions = value;
     }
     /**
      * Sets the flag property value. The flag value that indicates the status, start date, due date, or completion date for the message.
      * @param value Value to set for the flag property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFlag(@javax.annotation.Nullable final FollowupFlag value) {
+    public void setFlag(@jakarta.annotation.Nullable final FollowupFlag value) {
         this.flag = value;
     }
     /**
      * Sets the from property value. The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
      * @param value Value to set for the from property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFrom(@javax.annotation.Nullable final Recipient value) {
+    public void setFrom(@jakarta.annotation.Nullable final Recipient value) {
         this.from = value;
     }
     /**
      * Sets the hasAttachments property value. Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src='cid:image001.jpg@01D26CD8.6C05F070'>.
      * @param value Value to set for the hasAttachments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
+    public void setHasAttachments(@jakarta.annotation.Nullable final Boolean value) {
         this.hasAttachments = value;
     }
     /**
      * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImportance(@javax.annotation.Nullable final Importance value) {
+    public void setImportance(@jakarta.annotation.Nullable final Importance value) {
         this.importance = value;
     }
     /**
      * Sets the inferenceClassification property value. The inferenceClassification property
      * @param value Value to set for the inferenceClassification property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInferenceClassification(@javax.annotation.Nullable final InferenceClassificationType value) {
+    public void setInferenceClassification(@jakarta.annotation.Nullable final InferenceClassificationType value) {
         this.inferenceClassification = value;
     }
     /**
      * Sets the internetMessageHeaders property value. The internetMessageHeaders property
      * @param value Value to set for the internetMessageHeaders property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInternetMessageHeaders(@javax.annotation.Nullable final java.util.List<InternetMessageHeader> value) {
+    public void setInternetMessageHeaders(@jakarta.annotation.Nullable final java.util.List<InternetMessageHeader> value) {
         this.internetMessageHeaders = value;
     }
     /**
      * Sets the internetMessageId property value. The internetMessageId property
      * @param value Value to set for the internetMessageId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInternetMessageId(@javax.annotation.Nullable final String value) {
+    public void setInternetMessageId(@jakarta.annotation.Nullable final String value) {
         this.internetMessageId = value;
     }
     /**
      * Sets the isDeliveryReceiptRequested property value. The isDeliveryReceiptRequested property
      * @param value Value to set for the isDeliveryReceiptRequested property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDeliveryReceiptRequested(@javax.annotation.Nullable final Boolean value) {
+    public void setIsDeliveryReceiptRequested(@jakarta.annotation.Nullable final Boolean value) {
         this.isDeliveryReceiptRequested = value;
     }
     /**
      * Sets the isDraft property value. The isDraft property
      * @param value Value to set for the isDraft property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDraft(@javax.annotation.Nullable final Boolean value) {
+    public void setIsDraft(@jakarta.annotation.Nullable final Boolean value) {
         this.isDraft = value;
     }
     /**
      * Sets the isRead property value. The isRead property
      * @param value Value to set for the isRead property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRead(@javax.annotation.Nullable final Boolean value) {
+    public void setIsRead(@jakarta.annotation.Nullable final Boolean value) {
         this.isRead = value;
     }
     /**
      * Sets the isReadReceiptRequested property value. The isReadReceiptRequested property
      * @param value Value to set for the isReadReceiptRequested property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsReadReceiptRequested(@javax.annotation.Nullable final Boolean value) {
+    public void setIsReadReceiptRequested(@jakarta.annotation.Nullable final Boolean value) {
         this.isReadReceiptRequested = value;
     }
     /**
      * Sets the mentions property value. A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.
      * @param value Value to set for the mentions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMentions(@javax.annotation.Nullable final java.util.List<Mention> value) {
+    public void setMentions(@jakarta.annotation.Nullable final java.util.List<Mention> value) {
         this.mentions = value;
     }
     /**
      * Sets the mentionsPreview property value. The mentionsPreview property
      * @param value Value to set for the mentionsPreview property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMentionsPreview(@javax.annotation.Nullable final MentionsPreview value) {
+    public void setMentionsPreview(@jakarta.annotation.Nullable final MentionsPreview value) {
         this.mentionsPreview = value;
     }
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the message. Nullable.
      * @param value Value to set for the multiValueExtendedProperties property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
+    public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this.multiValueExtendedProperties = value;
     }
     /**
      * Sets the parentFolderId property value. The parentFolderId property
      * @param value Value to set for the parentFolderId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParentFolderId(@javax.annotation.Nullable final String value) {
+    public void setParentFolderId(@jakarta.annotation.Nullable final String value) {
         this.parentFolderId = value;
     }
     /**
      * Sets the receivedDateTime property value. The receivedDateTime property
      * @param value Value to set for the receivedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReceivedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setReceivedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.receivedDateTime = value;
     }
     /**
      * Sets the replyTo property value. The replyTo property
      * @param value Value to set for the replyTo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReplyTo(@javax.annotation.Nullable final java.util.List<Recipient> value) {
+    public void setReplyTo(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.replyTo = value;
     }
     /**
      * Sets the sender property value. The sender property
      * @param value Value to set for the sender property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSender(@javax.annotation.Nullable final Recipient value) {
+    public void setSender(@jakarta.annotation.Nullable final Recipient value) {
         this.sender = value;
     }
     /**
      * Sets the sentDateTime property value. The sentDateTime property
      * @param value Value to set for the sentDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSentDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setSentDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.sentDateTime = value;
     }
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the message. Nullable.
      * @param value Value to set for the singleValueExtendedProperties property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
+    public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this.singleValueExtendedProperties = value;
     }
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final String value) {
+    public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
     /**
      * Sets the toRecipients property value. The toRecipients property
      * @param value Value to set for the toRecipients property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setToRecipients(@javax.annotation.Nullable final java.util.List<Recipient> value) {
+    public void setToRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {
         this.toRecipients = value;
     }
     /**
      * Sets the uniqueBody property value. The uniqueBody property
      * @param value Value to set for the uniqueBody property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUniqueBody(@javax.annotation.Nullable final ItemBody value) {
+    public void setUniqueBody(@jakarta.annotation.Nullable final ItemBody value) {
         this.uniqueBody = value;
     }
     /**
      * Sets the unsubscribeData property value. The unsubscribeData property
      * @param value Value to set for the unsubscribeData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnsubscribeData(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setUnsubscribeData(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.unsubscribeData = value;
     }
     /**
      * Sets the unsubscribeEnabled property value. The unsubscribeEnabled property
      * @param value Value to set for the unsubscribeEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUnsubscribeEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setUnsubscribeEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.unsubscribeEnabled = value;
     }
     /**
      * Sets the webLink property value. The webLink property
      * @param value Value to set for the webLink property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebLink(@javax.annotation.Nullable final String value) {
+    public void setWebLink(@jakarta.annotation.Nullable final String value) {
         this.webLink = value;
     }
 }

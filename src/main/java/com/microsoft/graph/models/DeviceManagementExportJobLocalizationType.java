@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Configures how the requested export job is localized
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementExportJobLocalizationType implements ValuedEnum {
     /** Configures the export job to expose localized values as an additional column */
     LocalizedValuesAsAdditionalColumn("localizedValuesAsAdditionalColumn"),
@@ -15,10 +16,10 @@ public enum DeviceManagementExportJobLocalizationType implements ValuedEnum {
     DeviceManagementExportJobLocalizationType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementExportJobLocalizationType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementExportJobLocalizationType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "localizedValuesAsAdditionalColumn": return LocalizedValuesAsAdditionalColumn;

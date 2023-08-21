@@ -12,6 +12,7 @@ import java.util.Objects;
 /**
  * The Zebra FOTA deployment complex type that describes the settings required to create a FOTA deployment.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -87,9 +88,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     private ZebraFotaUpdateType updateType;
     /**
      * Instantiates a new zebraFotaDeploymentSettings and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ZebraFotaDeploymentSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -98,8 +97,8 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a zebraFotaDeploymentSettings
      */
-    @javax.annotation.Nonnull
-    public static ZebraFotaDeploymentSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ZebraFotaDeploymentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ZebraFotaDeploymentSettings();
     }
@@ -107,7 +106,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -115,7 +114,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the batteryRuleMinimumBatteryLevelPercentage property value. Minimum battery level (%) required for both download and installation. Default: -1 (System defaults). Maximum is 100.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getBatteryRuleMinimumBatteryLevelPercentage() {
         return this.batteryRuleMinimumBatteryLevelPercentage;
     }
@@ -123,7 +122,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the batteryRuleRequireCharger property value. Flag indicating if charger is required. When set to false, the client can install updates whether the device is in or out of the charger. Applied only for installation. Defaults to false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBatteryRuleRequireCharger() {
         return this.batteryRuleRequireCharger;
     }
@@ -131,7 +130,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the deviceModel property value. Deploy update for devices with this model only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceModel() {
         return this.deviceModel;
     }
@@ -139,7 +138,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the downloadRuleNetworkType property value. Represents various network types for Zebra FOTA deployment.
      * @return a zebraFotaNetworkType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ZebraFotaNetworkType getDownloadRuleNetworkType() {
         return this.downloadRuleNetworkType;
     }
@@ -147,7 +146,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the downloadRuleStartDateTime property value. Date and time in the device time zone when the download will start (e.g., 2018-07-25T10:20:32). The default value is UTC now and the maximum is 10 days from deployment creation.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getDownloadRuleStartDateTime() {
         return this.downloadRuleStartDateTime;
     }
@@ -155,7 +154,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(17);
         deserializerMap.put("batteryRuleMinimumBatteryLevelPercentage", (n) -> { this.setBatteryRuleMinimumBatteryLevelPercentage(n.getIntegerValue()); });
@@ -181,7 +180,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the firmwareTargetArtifactDescription property value. A description provided by Zebra for the the firmware artifact to update the device to (e.g.: LifeGuard Update 120 (released 29-June-2022).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFirmwareTargetArtifactDescription() {
         return this.firmwareTargetArtifactDescription;
     }
@@ -189,7 +188,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the firmwareTargetBoardSupportPackageVersion property value. Deployment's Board Support Package (BSP. E.g.: '01.18.02.00'). Required only for custom update type.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFirmwareTargetBoardSupportPackageVersion() {
         return this.firmwareTargetBoardSupportPackageVersion;
     }
@@ -197,7 +196,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the firmwareTargetOsVersion property value. Target OS Version (e.g.: '8.1.0'). Required only for custom update type.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFirmwareTargetOsVersion() {
         return this.firmwareTargetOsVersion;
     }
@@ -205,7 +204,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the firmwareTargetPatch property value. Target patch name (e.g.: 'U06'). Required only for custom update type.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFirmwareTargetPatch() {
         return this.firmwareTargetPatch;
     }
@@ -213,7 +212,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the installRuleStartDateTime property value. Date and time in device time zone when the install will start. Default - download startDate if configured, otherwise defaults to NOW. Ignored when deployment update type was set to auto.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getInstallRuleStartDateTime() {
         return this.installRuleStartDateTime;
     }
@@ -221,7 +220,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the installRuleWindowEndTime property value. Time of day after which the install cannot start. Possible range is 00:30:00 to 23:59:59. Should be greater than 'installRuleWindowStartTime' by 30 mins. The time is expressed in a 24-hour format, as hh:mm, and is in the device time zone. Default - 23:59:59. Respected for all values of update type, including AUTO.
      * @return a LocalTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalTime getInstallRuleWindowEndTime() {
         return this.installRuleWindowEndTime;
     }
@@ -229,7 +228,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the installRuleWindowStartTime property value. Time of day (00:00:00 - 23:30:00) when installation should begin. The time is expressed in a 24-hour format, as hh:mm, and is in the device time zone. Default - 00:00:00. Respected for all values of update type, including AUTO.
      * @return a LocalTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalTime getInstallRuleWindowStartTime() {
         return this.installRuleWindowStartTime;
     }
@@ -237,7 +236,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -245,7 +244,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the scheduleDurationInDays property value. Maximum 28 days. Default is 28 days. Sequence of dates are: 1) Download start date. 2) Install start date. 3) Schedule end date. If any of the values are not provided, the date provided in the preceding step of the sequence is used. If no values are provided, the string value of the current UTC is used.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getScheduleDurationInDays() {
         return this.scheduleDurationInDays;
     }
@@ -253,7 +252,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the scheduleMode property value. Represents various schedule modes for Zebra FOTA deployment.
      * @return a zebraFotaScheduleMode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ZebraFotaScheduleMode getScheduleMode() {
         return this.scheduleMode;
     }
@@ -261,7 +260,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the timeZoneOffsetInMinutes property value. This attribute indicates the deployment time offset (e.g.180 represents an offset of +03:00, and -270 represents an offset of -04:30). The time offset is the time timezone where the devices are located. The deployment start and end data uses this timezone
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTimeZoneOffsetInMinutes() {
         return this.timeZoneOffsetInMinutes;
     }
@@ -269,17 +268,15 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Gets the updateType property value. Represents various update types for Zebra FOTA deployment.
      * @return a zebraFotaUpdateType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ZebraFotaUpdateType getUpdateType() {
         return this.updateType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("batteryRuleMinimumBatteryLevelPercentage", this.getBatteryRuleMinimumBatteryLevelPercentage());
         writer.writeBooleanValue("batteryRuleRequireCharger", this.getBatteryRuleRequireCharger());
@@ -303,163 +300,127 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the batteryRuleMinimumBatteryLevelPercentage property value. Minimum battery level (%) required for both download and installation. Default: -1 (System defaults). Maximum is 100.
      * @param value Value to set for the batteryRuleMinimumBatteryLevelPercentage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBatteryRuleMinimumBatteryLevelPercentage(@javax.annotation.Nullable final Integer value) {
+    public void setBatteryRuleMinimumBatteryLevelPercentage(@jakarta.annotation.Nullable final Integer value) {
         this.batteryRuleMinimumBatteryLevelPercentage = value;
     }
     /**
      * Sets the batteryRuleRequireCharger property value. Flag indicating if charger is required. When set to false, the client can install updates whether the device is in or out of the charger. Applied only for installation. Defaults to false.
      * @param value Value to set for the batteryRuleRequireCharger property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBatteryRuleRequireCharger(@javax.annotation.Nullable final Boolean value) {
+    public void setBatteryRuleRequireCharger(@jakarta.annotation.Nullable final Boolean value) {
         this.batteryRuleRequireCharger = value;
     }
     /**
      * Sets the deviceModel property value. Deploy update for devices with this model only.
      * @param value Value to set for the deviceModel property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceModel(@javax.annotation.Nullable final String value) {
+    public void setDeviceModel(@jakarta.annotation.Nullable final String value) {
         this.deviceModel = value;
     }
     /**
      * Sets the downloadRuleNetworkType property value. Represents various network types for Zebra FOTA deployment.
      * @param value Value to set for the downloadRuleNetworkType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDownloadRuleNetworkType(@javax.annotation.Nullable final ZebraFotaNetworkType value) {
+    public void setDownloadRuleNetworkType(@jakarta.annotation.Nullable final ZebraFotaNetworkType value) {
         this.downloadRuleNetworkType = value;
     }
     /**
      * Sets the downloadRuleStartDateTime property value. Date and time in the device time zone when the download will start (e.g., 2018-07-25T10:20:32). The default value is UTC now and the maximum is 10 days from deployment creation.
      * @param value Value to set for the downloadRuleStartDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDownloadRuleStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setDownloadRuleStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.downloadRuleStartDateTime = value;
     }
     /**
      * Sets the firmwareTargetArtifactDescription property value. A description provided by Zebra for the the firmware artifact to update the device to (e.g.: LifeGuard Update 120 (released 29-June-2022).
      * @param value Value to set for the firmwareTargetArtifactDescription property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirmwareTargetArtifactDescription(@javax.annotation.Nullable final String value) {
+    public void setFirmwareTargetArtifactDescription(@jakarta.annotation.Nullable final String value) {
         this.firmwareTargetArtifactDescription = value;
     }
     /**
      * Sets the firmwareTargetBoardSupportPackageVersion property value. Deployment's Board Support Package (BSP. E.g.: '01.18.02.00'). Required only for custom update type.
      * @param value Value to set for the firmwareTargetBoardSupportPackageVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirmwareTargetBoardSupportPackageVersion(@javax.annotation.Nullable final String value) {
+    public void setFirmwareTargetBoardSupportPackageVersion(@jakarta.annotation.Nullable final String value) {
         this.firmwareTargetBoardSupportPackageVersion = value;
     }
     /**
      * Sets the firmwareTargetOsVersion property value. Target OS Version (e.g.: '8.1.0'). Required only for custom update type.
      * @param value Value to set for the firmwareTargetOsVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirmwareTargetOsVersion(@javax.annotation.Nullable final String value) {
+    public void setFirmwareTargetOsVersion(@jakarta.annotation.Nullable final String value) {
         this.firmwareTargetOsVersion = value;
     }
     /**
      * Sets the firmwareTargetPatch property value. Target patch name (e.g.: 'U06'). Required only for custom update type.
      * @param value Value to set for the firmwareTargetPatch property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirmwareTargetPatch(@javax.annotation.Nullable final String value) {
+    public void setFirmwareTargetPatch(@jakarta.annotation.Nullable final String value) {
         this.firmwareTargetPatch = value;
     }
     /**
      * Sets the installRuleStartDateTime property value. Date and time in device time zone when the install will start. Default - download startDate if configured, otherwise defaults to NOW. Ignored when deployment update type was set to auto.
      * @param value Value to set for the installRuleStartDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstallRuleStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setInstallRuleStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.installRuleStartDateTime = value;
     }
     /**
      * Sets the installRuleWindowEndTime property value. Time of day after which the install cannot start. Possible range is 00:30:00 to 23:59:59. Should be greater than 'installRuleWindowStartTime' by 30 mins. The time is expressed in a 24-hour format, as hh:mm, and is in the device time zone. Default - 23:59:59. Respected for all values of update type, including AUTO.
      * @param value Value to set for the installRuleWindowEndTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstallRuleWindowEndTime(@javax.annotation.Nullable final LocalTime value) {
+    public void setInstallRuleWindowEndTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.installRuleWindowEndTime = value;
     }
     /**
      * Sets the installRuleWindowStartTime property value. Time of day (00:00:00 - 23:30:00) when installation should begin. The time is expressed in a 24-hour format, as hh:mm, and is in the device time zone. Default - 00:00:00. Respected for all values of update type, including AUTO.
      * @param value Value to set for the installRuleWindowStartTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstallRuleWindowStartTime(@javax.annotation.Nullable final LocalTime value) {
+    public void setInstallRuleWindowStartTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.installRuleWindowStartTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the scheduleDurationInDays property value. Maximum 28 days. Default is 28 days. Sequence of dates are: 1) Download start date. 2) Install start date. 3) Schedule end date. If any of the values are not provided, the date provided in the preceding step of the sequence is used. If no values are provided, the string value of the current UTC is used.
      * @param value Value to set for the scheduleDurationInDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScheduleDurationInDays(@javax.annotation.Nullable final Integer value) {
+    public void setScheduleDurationInDays(@jakarta.annotation.Nullable final Integer value) {
         this.scheduleDurationInDays = value;
     }
     /**
      * Sets the scheduleMode property value. Represents various schedule modes for Zebra FOTA deployment.
      * @param value Value to set for the scheduleMode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScheduleMode(@javax.annotation.Nullable final ZebraFotaScheduleMode value) {
+    public void setScheduleMode(@jakarta.annotation.Nullable final ZebraFotaScheduleMode value) {
         this.scheduleMode = value;
     }
     /**
      * Sets the timeZoneOffsetInMinutes property value. This attribute indicates the deployment time offset (e.g.180 represents an offset of +03:00, and -270 represents an offset of -04:30). The time offset is the time timezone where the devices are located. The deployment start and end data uses this timezone
      * @param value Value to set for the timeZoneOffsetInMinutes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTimeZoneOffsetInMinutes(@javax.annotation.Nullable final Integer value) {
+    public void setTimeZoneOffsetInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.timeZoneOffsetInMinutes = value;
     }
     /**
      * Sets the updateType property value. Represents various update types for Zebra FOTA deployment.
      * @param value Value to set for the updateType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdateType(@javax.annotation.Nullable final ZebraFotaUpdateType value) {
+    public void setUpdateType(@jakarta.annotation.Nullable final ZebraFotaUpdateType value) {
         this.updateType = value;
     }
 }

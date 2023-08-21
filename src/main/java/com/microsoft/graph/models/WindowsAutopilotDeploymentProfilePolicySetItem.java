@@ -9,12 +9,11 @@ import java.util.Objects;
 /**
  * A class containing the properties used for windows autopilot deployment profile PolicySetItem.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsAutopilotDeploymentProfilePolicySetItem extends PolicySetItem implements Parsable {
     /**
      * Instantiates a new windowsAutopilotDeploymentProfilePolicySetItem and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsAutopilotDeploymentProfilePolicySetItem() {
         super();
         this.setOdataType("#microsoft.graph.windowsAutopilotDeploymentProfilePolicySetItem");
@@ -24,8 +23,8 @@ public class WindowsAutopilotDeploymentProfilePolicySetItem extends PolicySetIte
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsAutopilotDeploymentProfilePolicySetItem
      */
-    @javax.annotation.Nonnull
-    public static WindowsAutopilotDeploymentProfilePolicySetItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsAutopilotDeploymentProfilePolicySetItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsAutopilotDeploymentProfilePolicySetItem();
     }
@@ -33,7 +32,7 @@ public class WindowsAutopilotDeploymentProfilePolicySetItem extends PolicySetIte
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         return deserializerMap;
@@ -41,10 +40,8 @@ public class WindowsAutopilotDeploymentProfilePolicySetItem extends PolicySetIte
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
     }

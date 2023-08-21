@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ObjectDefinition implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
     private java.util.List<String> supportedApis;
     /**
      * Instantiates a new objectDefinition and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ObjectDefinition() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +44,8 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a objectDefinition
      */
-    @javax.annotation.Nonnull
-    public static ObjectDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ObjectDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ObjectDefinition();
     }
@@ -54,7 +53,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +61,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      * Gets the attributes property value. Defines attributes of the object.
      * @return a attributeDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AttributeDefinition> getAttributes() {
         return this.attributes;
     }
@@ -70,7 +69,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("attributes", (n) -> { this.setAttributes(n.getCollectionOfObjectValues(AttributeDefinition::createFromDiscriminatorValue)); });
@@ -84,7 +83,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      * Gets the metadata property value. Metadata for the given object.
      * @return a objectDefinitionMetadataEntry
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ObjectDefinitionMetadataEntry> getMetadata() {
         return this.metadata;
     }
@@ -92,7 +91,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      * Gets the name property value. Name of the object. Must be unique within a directory definition. Not nullable.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -100,7 +99,7 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -108,17 +107,15 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
      * Gets the supportedApis property value. The API that the provisioning service queries to retrieve data for synchronization.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedApis() {
         return this.supportedApis;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("attributes", this.getAttributes());
         writer.writeCollectionOfObjectValues("metadata", this.getMetadata());
@@ -130,55 +127,43 @@ public class ObjectDefinition implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the attributes property value. Defines attributes of the object.
      * @param value Value to set for the attributes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttributes(@javax.annotation.Nullable final java.util.List<AttributeDefinition> value) {
+    public void setAttributes(@jakarta.annotation.Nullable final java.util.List<AttributeDefinition> value) {
         this.attributes = value;
     }
     /**
      * Sets the metadata property value. Metadata for the given object.
      * @param value Value to set for the metadata property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMetadata(@javax.annotation.Nullable final java.util.List<ObjectDefinitionMetadataEntry> value) {
+    public void setMetadata(@jakarta.annotation.Nullable final java.util.List<ObjectDefinitionMetadataEntry> value) {
         this.metadata = value;
     }
     /**
      * Sets the name property value. Name of the object. Must be unique within a directory definition. Not nullable.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the supportedApis property value. The API that the provisioning service queries to retrieve data for synchronization.
      * @param value Value to set for the supportedApis property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportedApis(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setSupportedApis(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.supportedApis = value;
     }
 }

@@ -3,6 +3,7 @@ package com.microsoft.graph.models.identitygovernance;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WorkflowExecutionType implements ValuedEnum {
     Scheduled("scheduled"),
     OnDemand("onDemand"),
@@ -11,10 +12,10 @@ public enum WorkflowExecutionType implements ValuedEnum {
     WorkflowExecutionType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WorkflowExecutionType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WorkflowExecutionType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "scheduled": return Scheduled;

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * An enum representing possible values for cross profile data sharing.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidDeviceOwnerCrossProfileDataSharing implements ValuedEnum {
     /** Not configured; this value defaults to CROSS_PROFILE_DATA_SHARING_UNSPECIFIED. */
     NotConfigured("notConfigured"),
@@ -21,10 +22,10 @@ public enum AndroidDeviceOwnerCrossProfileDataSharing implements ValuedEnum {
     AndroidDeviceOwnerCrossProfileDataSharing(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidDeviceOwnerCrossProfileDataSharing forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidDeviceOwnerCrossProfileDataSharing forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

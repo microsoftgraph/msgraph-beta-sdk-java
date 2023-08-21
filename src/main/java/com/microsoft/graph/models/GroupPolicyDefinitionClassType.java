@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Group Policy Definition Class Type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum GroupPolicyDefinitionClassType implements ValuedEnum {
     /** Identifies placement of the policy setting under the user configuration node. */
     User("user"),
@@ -15,10 +16,10 @@ public enum GroupPolicyDefinitionClassType implements ValuedEnum {
     GroupPolicyDefinitionClassType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static GroupPolicyDefinitionClassType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static GroupPolicyDefinitionClassType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "user": return User;

@@ -3,6 +3,7 @@ package com.microsoft.graph.models.windowsupdates;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum QualityUpdateClassification implements ValuedEnum {
     All("all"),
     Security("security"),
@@ -12,10 +13,10 @@ public enum QualityUpdateClassification implements ValuedEnum {
     QualityUpdateClassification(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static QualityUpdateClassification forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static QualityUpdateClassification forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "all": return All;

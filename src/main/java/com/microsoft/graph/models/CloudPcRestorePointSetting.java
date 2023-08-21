@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
     private Boolean userRestoreEnabled;
     /**
      * Instantiates a new cloudPcRestorePointSetting and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CloudPcRestorePointSetting() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +36,8 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudPcRestorePointSetting
      */
-    @javax.annotation.Nonnull
-    public static CloudPcRestorePointSetting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudPcRestorePointSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudPcRestorePointSetting();
     }
@@ -46,7 +45,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +53,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("frequencyInHours", (n) -> { this.setFrequencyInHours(n.getIntegerValue()); });
@@ -66,7 +65,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
      * Gets the frequencyInHours property value. The time interval in hours to take snapshots (restore points) of a Cloud PC automatically. Possible values are 4, 6, 12, 16, and 24. The default frequency is 12 hours.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFrequencyInHours() {
         return this.frequencyInHours;
     }
@@ -74,7 +73,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -82,17 +81,15 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
      * Gets the userRestoreEnabled property value. If true, the user has the ability to use snapshots to restore Cloud PCs. If false, non-admin users cannot use snapshots to restore the Cloud PC.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getUserRestoreEnabled() {
         return this.userRestoreEnabled;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("frequencyInHours", this.getFrequencyInHours());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -102,37 +99,29 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the frequencyInHours property value. The time interval in hours to take snapshots (restore points) of a Cloud PC automatically. Possible values are 4, 6, 12, 16, and 24. The default frequency is 12 hours.
      * @param value Value to set for the frequencyInHours property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFrequencyInHours(@javax.annotation.Nullable final Integer value) {
+    public void setFrequencyInHours(@jakarta.annotation.Nullable final Integer value) {
         this.frequencyInHours = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the userRestoreEnabled property value. If true, the user has the ability to use snapshots to restore Cloud PCs. If false, non-admin users cannot use snapshots to restore the Cloud PC.
      * @param value Value to set for the userRestoreEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserRestoreEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setUserRestoreEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.userRestoreEnabled = value;
     }
 }

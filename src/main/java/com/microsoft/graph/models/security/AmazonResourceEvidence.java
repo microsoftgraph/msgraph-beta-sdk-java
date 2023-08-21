@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
     /**
      * The unique identifier for the Amazon account.
@@ -25,9 +26,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
     private String resourceType;
     /**
      * Instantiates a new amazonResourceEvidence and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AmazonResourceEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.amazonResourceEvidence");
@@ -37,8 +36,8 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a amazonResourceEvidence
      */
-    @javax.annotation.Nonnull
-    public static AmazonResourceEvidence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AmazonResourceEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AmazonResourceEvidence();
     }
@@ -46,7 +45,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
      * Gets the amazonAccountId property value. The unique identifier for the Amazon account.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAmazonAccountId() {
         return this.amazonAccountId;
     }
@@ -54,7 +53,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
      * Gets the amazonResourceId property value. The Amazon resource identifier (ARN) for the cloud resource.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAmazonResourceId() {
         return this.amazonResourceId;
     }
@@ -62,7 +61,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("amazonAccountId", (n) -> { this.setAmazonAccountId(n.getStringValue()); });
@@ -75,7 +74,7 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
      * Gets the resourceName property value. The name of the resource.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceName() {
         return this.resourceName;
     }
@@ -83,17 +82,15 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
      * Gets the resourceType property value. The type of the resource.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceType() {
         return this.resourceType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("amazonAccountId", this.getAmazonAccountId());
@@ -104,37 +101,29 @@ public class AmazonResourceEvidence extends AlertEvidence implements Parsable {
     /**
      * Sets the amazonAccountId property value. The unique identifier for the Amazon account.
      * @param value Value to set for the amazonAccountId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAmazonAccountId(@javax.annotation.Nullable final String value) {
+    public void setAmazonAccountId(@jakarta.annotation.Nullable final String value) {
         this.amazonAccountId = value;
     }
     /**
      * Sets the amazonResourceId property value. The Amazon resource identifier (ARN) for the cloud resource.
      * @param value Value to set for the amazonResourceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAmazonResourceId(@javax.annotation.Nullable final String value) {
+    public void setAmazonResourceId(@jakarta.annotation.Nullable final String value) {
         this.amazonResourceId = value;
     }
     /**
      * Sets the resourceName property value. The name of the resource.
      * @param value Value to set for the resourceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceName(@javax.annotation.Nullable final String value) {
+    public void setResourceName(@jakarta.annotation.Nullable final String value) {
         this.resourceName = value;
     }
     /**
      * Sets the resourceType property value. The type of the resource.
      * @param value Value to set for the resourceType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceType(@javax.annotation.Nullable final String value) {
+    public void setResourceType(@jakarta.annotation.Nullable final String value) {
         this.resourceType = value;
     }
 }

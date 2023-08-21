@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Chassis type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ChassisType implements ValuedEnum {
     /** Unknown. */
     Unknown("unknown"),
@@ -29,10 +30,10 @@ public enum ChassisType implements ValuedEnum {
     ChassisType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ChassisType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ChassisType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

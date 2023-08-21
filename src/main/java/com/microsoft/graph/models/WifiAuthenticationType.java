@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Wi-Fi Authentication Type Settings.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WifiAuthenticationType implements ValuedEnum {
     /** None */
     None("none"),
@@ -21,10 +22,10 @@ public enum WifiAuthenticationType implements ValuedEnum {
     WifiAuthenticationType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WifiAuthenticationType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WifiAuthenticationType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

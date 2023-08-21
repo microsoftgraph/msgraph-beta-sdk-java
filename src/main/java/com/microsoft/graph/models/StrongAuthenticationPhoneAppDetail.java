@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsable {
     /**
      * The authenticationType property
@@ -71,9 +72,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     private Integer tokenGenerationIntervalInSeconds;
     /**
      * Instantiates a new strongAuthenticationPhoneAppDetail and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public StrongAuthenticationPhoneAppDetail() {
         super();
     }
@@ -82,8 +81,8 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a strongAuthenticationPhoneAppDetail
      */
-    @javax.annotation.Nonnull
-    public static StrongAuthenticationPhoneAppDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static StrongAuthenticationPhoneAppDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new StrongAuthenticationPhoneAppDetail();
     }
@@ -91,7 +90,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * Gets the authenticationType property value. The authenticationType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAuthenticationType() {
         return this.authenticationType;
     }
@@ -99,7 +98,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * Gets the authenticatorFlavor property value. The authenticatorFlavor property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAuthenticatorFlavor() {
         return this.authenticatorFlavor;
     }
@@ -107,7 +106,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * Gets the deviceId property value. The deviceId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getDeviceId() {
         return this.deviceId;
     }
@@ -115,7 +114,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * Gets the deviceName property value. The deviceName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -123,7 +122,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * Gets the deviceTag property value. The deviceTag property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceTag() {
         return this.deviceTag;
     }
@@ -131,7 +130,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * Gets the deviceToken property value. The deviceToken property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceToken() {
         return this.deviceToken;
     }
@@ -139,7 +138,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationType", (n) -> { this.setAuthenticationType(n.getStringValue()); });
@@ -163,7 +162,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * Gets the hashFunction property value. The hashFunction property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHashFunction() {
         return this.hashFunction;
     }
@@ -171,7 +170,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * Gets the lastAuthenticatedDateTime property value. The lastAuthenticatedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastAuthenticatedDateTime() {
         return this.lastAuthenticatedDateTime;
     }
@@ -179,7 +178,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * Gets the notificationType property value. The notificationType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNotificationType() {
         return this.notificationType;
     }
@@ -187,7 +186,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * Gets the oathSecretKey property value. The oathSecretKey property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOathSecretKey() {
         return this.oathSecretKey;
     }
@@ -195,7 +194,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * Gets the oathTokenMetadata property value. The oathTokenMetadata property
      * @return a oathTokenMetadata
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OathTokenMetadata getOathTokenMetadata() {
         return this.oathTokenMetadata;
     }
@@ -203,7 +202,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * Gets the oathTokenTimeDriftInSeconds property value. The oathTokenTimeDriftInSeconds property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getOathTokenTimeDriftInSeconds() {
         return this.oathTokenTimeDriftInSeconds;
     }
@@ -211,7 +210,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * Gets the phoneAppVersion property value. The phoneAppVersion property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPhoneAppVersion() {
         return this.phoneAppVersion;
     }
@@ -219,7 +218,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * Gets the tenantDeviceId property value. The tenantDeviceId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantDeviceId() {
         return this.tenantDeviceId;
     }
@@ -227,17 +226,15 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
      * Gets the tokenGenerationIntervalInSeconds property value. The tokenGenerationIntervalInSeconds property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTokenGenerationIntervalInSeconds() {
         return this.tokenGenerationIntervalInSeconds;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("authenticationType", this.getAuthenticationType());
@@ -259,136 +256,106 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     /**
      * Sets the authenticationType property value. The authenticationType property
      * @param value Value to set for the authenticationType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationType(@javax.annotation.Nullable final String value) {
+    public void setAuthenticationType(@jakarta.annotation.Nullable final String value) {
         this.authenticationType = value;
     }
     /**
      * Sets the authenticatorFlavor property value. The authenticatorFlavor property
      * @param value Value to set for the authenticatorFlavor property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticatorFlavor(@javax.annotation.Nullable final String value) {
+    public void setAuthenticatorFlavor(@jakarta.annotation.Nullable final String value) {
         this.authenticatorFlavor = value;
     }
     /**
      * Sets the deviceId property value. The deviceId property
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final UUID value) {
+    public void setDeviceId(@jakarta.annotation.Nullable final UUID value) {
         this.deviceId = value;
     }
     /**
      * Sets the deviceName property value. The deviceName property
      * @param value Value to set for the deviceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
      * Sets the deviceTag property value. The deviceTag property
      * @param value Value to set for the deviceTag property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceTag(@javax.annotation.Nullable final String value) {
+    public void setDeviceTag(@jakarta.annotation.Nullable final String value) {
         this.deviceTag = value;
     }
     /**
      * Sets the deviceToken property value. The deviceToken property
      * @param value Value to set for the deviceToken property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceToken(@javax.annotation.Nullable final String value) {
+    public void setDeviceToken(@jakarta.annotation.Nullable final String value) {
         this.deviceToken = value;
     }
     /**
      * Sets the hashFunction property value. The hashFunction property
      * @param value Value to set for the hashFunction property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHashFunction(@javax.annotation.Nullable final String value) {
+    public void setHashFunction(@jakarta.annotation.Nullable final String value) {
         this.hashFunction = value;
     }
     /**
      * Sets the lastAuthenticatedDateTime property value. The lastAuthenticatedDateTime property
      * @param value Value to set for the lastAuthenticatedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastAuthenticatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastAuthenticatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastAuthenticatedDateTime = value;
     }
     /**
      * Sets the notificationType property value. The notificationType property
      * @param value Value to set for the notificationType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotificationType(@javax.annotation.Nullable final String value) {
+    public void setNotificationType(@jakarta.annotation.Nullable final String value) {
         this.notificationType = value;
     }
     /**
      * Sets the oathSecretKey property value. The oathSecretKey property
      * @param value Value to set for the oathSecretKey property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOathSecretKey(@javax.annotation.Nullable final String value) {
+    public void setOathSecretKey(@jakarta.annotation.Nullable final String value) {
         this.oathSecretKey = value;
     }
     /**
      * Sets the oathTokenMetadata property value. The oathTokenMetadata property
      * @param value Value to set for the oathTokenMetadata property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOathTokenMetadata(@javax.annotation.Nullable final OathTokenMetadata value) {
+    public void setOathTokenMetadata(@jakarta.annotation.Nullable final OathTokenMetadata value) {
         this.oathTokenMetadata = value;
     }
     /**
      * Sets the oathTokenTimeDriftInSeconds property value. The oathTokenTimeDriftInSeconds property
      * @param value Value to set for the oathTokenTimeDriftInSeconds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOathTokenTimeDriftInSeconds(@javax.annotation.Nullable final Integer value) {
+    public void setOathTokenTimeDriftInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.oathTokenTimeDriftInSeconds = value;
     }
     /**
      * Sets the phoneAppVersion property value. The phoneAppVersion property
      * @param value Value to set for the phoneAppVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhoneAppVersion(@javax.annotation.Nullable final String value) {
+    public void setPhoneAppVersion(@jakarta.annotation.Nullable final String value) {
         this.phoneAppVersion = value;
     }
     /**
      * Sets the tenantDeviceId property value. The tenantDeviceId property
      * @param value Value to set for the tenantDeviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantDeviceId(@javax.annotation.Nullable final String value) {
+    public void setTenantDeviceId(@jakarta.annotation.Nullable final String value) {
         this.tenantDeviceId = value;
     }
     /**
      * Sets the tokenGenerationIntervalInSeconds property value. The tokenGenerationIntervalInSeconds property
      * @param value Value to set for the tokenGenerationIntervalInSeconds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTokenGenerationIntervalInSeconds(@javax.annotation.Nullable final Integer value) {
+    public void setTokenGenerationIntervalInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.tokenGenerationIntervalInSeconds = value;
     }
 }

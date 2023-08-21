@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Entity that represents a single Microsoft Tunnel server
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftTunnelServer extends Entity implements Parsable {
     /**
      * The digest of the current agent image running on this server
@@ -33,9 +34,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
     private MicrosoftTunnelServerHealthStatus tunnelServerHealthStatus;
     /**
      * Instantiates a new microsoftTunnelServer and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MicrosoftTunnelServer() {
         super();
     }
@@ -44,8 +43,8 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a microsoftTunnelServer
      */
-    @javax.annotation.Nonnull
-    public static MicrosoftTunnelServer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MicrosoftTunnelServer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MicrosoftTunnelServer();
     }
@@ -53,7 +52,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
      * Gets the agentImageDigest property value. The digest of the current agent image running on this server
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAgentImageDigest() {
         return this.agentImageDigest;
     }
@@ -61,7 +60,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
      * Gets the displayName property value. The display name for the server. This property is required when a server is created and cannot be cleared during updates.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -69,7 +68,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("agentImageDigest", (n) -> { this.setAgentImageDigest(n.getStringValue()); });
@@ -83,7 +82,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
      * Gets the lastCheckinDateTime property value. Indicates when the server last checked in
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastCheckinDateTime() {
         return this.lastCheckinDateTime;
     }
@@ -91,7 +90,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
      * Gets the serverImageDigest property value. The digest of the current server image running on this server
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getServerImageDigest() {
         return this.serverImageDigest;
     }
@@ -99,17 +98,15 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
      * Gets the tunnelServerHealthStatus property value. Enum of possible MicrosoftTunnelServer health status types
      * @return a microsoftTunnelServerHealthStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MicrosoftTunnelServerHealthStatus getTunnelServerHealthStatus() {
         return this.tunnelServerHealthStatus;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("agentImageDigest", this.getAgentImageDigest());
@@ -121,46 +118,36 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
     /**
      * Sets the agentImageDigest property value. The digest of the current agent image running on this server
      * @param value Value to set for the agentImageDigest property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAgentImageDigest(@javax.annotation.Nullable final String value) {
+    public void setAgentImageDigest(@jakarta.annotation.Nullable final String value) {
         this.agentImageDigest = value;
     }
     /**
      * Sets the displayName property value. The display name for the server. This property is required when a server is created and cannot be cleared during updates.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the lastCheckinDateTime property value. Indicates when the server last checked in
      * @param value Value to set for the lastCheckinDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastCheckinDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastCheckinDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastCheckinDateTime = value;
     }
     /**
      * Sets the serverImageDigest property value. The digest of the current server image running on this server
      * @param value Value to set for the serverImageDigest property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServerImageDigest(@javax.annotation.Nullable final String value) {
+    public void setServerImageDigest(@jakarta.annotation.Nullable final String value) {
         this.serverImageDigest = value;
     }
     /**
      * Sets the tunnelServerHealthStatus property value. Enum of possible MicrosoftTunnelServer health status types
      * @param value Value to set for the tunnelServerHealthStatus property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTunnelServerHealthStatus(@javax.annotation.Nullable final MicrosoftTunnelServerHealthStatus value) {
+    public void setTunnelServerHealthStatus(@jakarta.annotation.Nullable final MicrosoftTunnelServerHealthStatus value) {
         this.tunnelServerHealthStatus = value;
     }
 }

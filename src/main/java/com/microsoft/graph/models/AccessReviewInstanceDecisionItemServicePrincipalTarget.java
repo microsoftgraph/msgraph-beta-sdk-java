@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends AccessReviewInstanceDecisionItemTarget implements Parsable {
     /**
      * The appId for the service principal entity being reviewed.
@@ -21,9 +22,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
     private String servicePrincipalId;
     /**
      * Instantiates a new accessReviewInstanceDecisionItemServicePrincipalTarget and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AccessReviewInstanceDecisionItemServicePrincipalTarget() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItemServicePrincipalTarget");
@@ -33,8 +32,8 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessReviewInstanceDecisionItemServicePrincipalTarget
      */
-    @javax.annotation.Nonnull
-    public static AccessReviewInstanceDecisionItemServicePrincipalTarget createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessReviewInstanceDecisionItemServicePrincipalTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessReviewInstanceDecisionItemServicePrincipalTarget();
     }
@@ -42,7 +41,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
      * Gets the appId property value. The appId for the service principal entity being reviewed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppId() {
         return this.appId;
     }
@@ -50,7 +49,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
@@ -62,7 +61,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
      * Gets the servicePrincipalDisplayName property value. The display name of the service principal whose access is being reviewed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getServicePrincipalDisplayName() {
         return this.servicePrincipalDisplayName;
     }
@@ -70,17 +69,15 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
      * Gets the servicePrincipalId property value. The servicePrincipalId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getServicePrincipalId() {
         return this.servicePrincipalId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appId", this.getAppId());
@@ -90,28 +87,22 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
     /**
      * Sets the appId property value. The appId for the service principal entity being reviewed.
      * @param value Value to set for the appId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppId(@javax.annotation.Nullable final String value) {
+    public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }
     /**
      * Sets the servicePrincipalDisplayName property value. The display name of the service principal whose access is being reviewed.
      * @param value Value to set for the servicePrincipalDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServicePrincipalDisplayName(@javax.annotation.Nullable final String value) {
+    public void setServicePrincipalDisplayName(@jakarta.annotation.Nullable final String value) {
         this.servicePrincipalDisplayName = value;
     }
     /**
      * Sets the servicePrincipalId property value. The servicePrincipalId property
      * @param value Value to set for the servicePrincipalId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServicePrincipalId(@javax.annotation.Nullable final String value) {
+    public void setServicePrincipalId(@jakarta.annotation.Nullable final String value) {
         this.servicePrincipalId = value;
     }
 }

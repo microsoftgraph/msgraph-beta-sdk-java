@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class InitiateInvestigationResponseAction extends ResponseAction implements Parsable {
     /**
      * The identifier property
@@ -13,9 +14,7 @@ public class InitiateInvestigationResponseAction extends ResponseAction implemen
     private DeviceIdEntityIdentifier identifier;
     /**
      * Instantiates a new initiateInvestigationResponseAction and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public InitiateInvestigationResponseAction() {
         super();
         this.setOdataType("#microsoft.graph.security.initiateInvestigationResponseAction");
@@ -25,8 +24,8 @@ public class InitiateInvestigationResponseAction extends ResponseAction implemen
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a initiateInvestigationResponseAction
      */
-    @javax.annotation.Nonnull
-    public static InitiateInvestigationResponseAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static InitiateInvestigationResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new InitiateInvestigationResponseAction();
     }
@@ -34,7 +33,7 @@ public class InitiateInvestigationResponseAction extends ResponseAction implemen
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumValue(DeviceIdEntityIdentifier.class)); });
@@ -44,17 +43,15 @@ public class InitiateInvestigationResponseAction extends ResponseAction implemen
      * Gets the identifier property value. The identifier property
      * @return a deviceIdEntityIdentifier
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceIdEntityIdentifier getIdentifier() {
         return this.identifier;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("identifier", this.getIdentifier());
@@ -62,10 +59,8 @@ public class InitiateInvestigationResponseAction extends ResponseAction implemen
     /**
      * Sets the identifier property value. The identifier property
      * @param value Value to set for the identifier property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentifier(@javax.annotation.Nullable final DeviceIdEntityIdentifier value) {
+    public void setIdentifier(@jakarta.annotation.Nullable final DeviceIdEntityIdentifier value) {
         this.identifier = value;
     }
 }

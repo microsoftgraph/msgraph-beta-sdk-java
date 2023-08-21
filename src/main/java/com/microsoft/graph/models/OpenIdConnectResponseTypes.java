@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum OpenIdConnectResponseTypes implements ValuedEnum {
     Code("code"),
     Id_token("id_token"),
@@ -11,10 +12,10 @@ public enum OpenIdConnectResponseTypes implements ValuedEnum {
     OpenIdConnectResponseTypes(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static OpenIdConnectResponseTypes forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static OpenIdConnectResponseTypes forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "code": return Code;

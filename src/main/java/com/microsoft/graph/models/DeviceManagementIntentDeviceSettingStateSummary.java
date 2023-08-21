@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Entity that represents device setting state summary for an intent
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementIntentDeviceSettingStateSummary extends Entity implements Parsable {
     /**
      * Number of compliant devices
@@ -40,9 +41,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
     private String settingName;
     /**
      * Instantiates a new deviceManagementIntentDeviceSettingStateSummary and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementIntentDeviceSettingStateSummary() {
         super();
     }
@@ -51,8 +50,8 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementIntentDeviceSettingStateSummary
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementIntentDeviceSettingStateSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementIntentDeviceSettingStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementIntentDeviceSettingStateSummary();
     }
@@ -60,7 +59,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * Gets the compliantCount property value. Number of compliant devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCompliantCount() {
         return this.compliantCount;
     }
@@ -68,7 +67,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * Gets the conflictCount property value. Number of devices in conflict
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getConflictCount() {
         return this.conflictCount;
     }
@@ -76,7 +75,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * Gets the errorCount property value. Number of error devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getErrorCount() {
         return this.errorCount;
     }
@@ -84,7 +83,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("compliantCount", (n) -> { this.setCompliantCount(n.getIntegerValue()); });
@@ -100,7 +99,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * Gets the nonCompliantCount property value. Number of non compliant devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNonCompliantCount() {
         return this.nonCompliantCount;
     }
@@ -108,7 +107,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * Gets the notApplicableCount property value. Number of not applicable devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
         return this.notApplicableCount;
     }
@@ -116,7 +115,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * Gets the remediatedCount property value. Number of remediated devices
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRemediatedCount() {
         return this.remediatedCount;
     }
@@ -124,17 +123,15 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * Gets the settingName property value. Name of a setting
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingName() {
         return this.settingName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("compliantCount", this.getCompliantCount());
@@ -148,64 +145,50 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
     /**
      * Sets the compliantCount property value. Number of compliant devices
      * @param value Value to set for the compliantCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompliantCount(@javax.annotation.Nullable final Integer value) {
+    public void setCompliantCount(@jakarta.annotation.Nullable final Integer value) {
         this.compliantCount = value;
     }
     /**
      * Sets the conflictCount property value. Number of devices in conflict
      * @param value Value to set for the conflictCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConflictCount(@javax.annotation.Nullable final Integer value) {
+    public void setConflictCount(@jakarta.annotation.Nullable final Integer value) {
         this.conflictCount = value;
     }
     /**
      * Sets the errorCount property value. Number of error devices
      * @param value Value to set for the errorCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorCount(@javax.annotation.Nullable final Integer value) {
+    public void setErrorCount(@jakarta.annotation.Nullable final Integer value) {
         this.errorCount = value;
     }
     /**
      * Sets the nonCompliantCount property value. Number of non compliant devices
      * @param value Value to set for the nonCompliantCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNonCompliantCount(@javax.annotation.Nullable final Integer value) {
+    public void setNonCompliantCount(@jakarta.annotation.Nullable final Integer value) {
         this.nonCompliantCount = value;
     }
     /**
      * Sets the notApplicableCount property value. Number of not applicable devices
      * @param value Value to set for the notApplicableCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotApplicableCount(@javax.annotation.Nullable final Integer value) {
+    public void setNotApplicableCount(@jakarta.annotation.Nullable final Integer value) {
         this.notApplicableCount = value;
     }
     /**
      * Sets the remediatedCount property value. Number of remediated devices
      * @param value Value to set for the remediatedCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemediatedCount(@javax.annotation.Nullable final Integer value) {
+    public void setRemediatedCount(@jakarta.annotation.Nullable final Integer value) {
         this.remediatedCount = value;
     }
     /**
      * Sets the settingName property value. Name of a setting
      * @param value Value to set for the settingName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingName(@javax.annotation.Nullable final String value) {
+    public void setSettingName(@jakarta.annotation.Nullable final String value) {
         this.settingName = value;
     }
 }

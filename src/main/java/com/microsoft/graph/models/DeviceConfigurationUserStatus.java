@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfigurationUserStatus extends Entity implements Parsable {
     /**
      * Devices count for that user.
@@ -30,9 +31,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new deviceConfigurationUserStatus and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceConfigurationUserStatus() {
         super();
     }
@@ -41,8 +40,8 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceConfigurationUserStatus
      */
-    @javax.annotation.Nonnull
-    public static DeviceConfigurationUserStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceConfigurationUserStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceConfigurationUserStatus();
     }
@@ -50,7 +49,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
      * Gets the devicesCount property value. Devices count for that user.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDevicesCount() {
         return this.devicesCount;
     }
@@ -58,7 +57,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("devicesCount", (n) -> { this.setDevicesCount(n.getIntegerValue()); });
@@ -72,7 +71,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
      * Gets the lastReportedDateTime property value. Last modified date time of the policy report.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
         return this.lastReportedDateTime;
     }
@@ -80,7 +79,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a complianceStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ComplianceStatus getStatus() {
         return this.status;
     }
@@ -88,7 +87,7 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
      * Gets the userDisplayName property value. User name of the DevicePolicyStatus.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserDisplayName() {
         return this.userDisplayName;
     }
@@ -96,17 +95,15 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
      * Gets the userPrincipalName property value. UserPrincipalName.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("devicesCount", this.getDevicesCount());
@@ -118,46 +115,36 @@ public class DeviceConfigurationUserStatus extends Entity implements Parsable {
     /**
      * Sets the devicesCount property value. Devices count for that user.
      * @param value Value to set for the devicesCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDevicesCount(@javax.annotation.Nullable final Integer value) {
+    public void setDevicesCount(@jakarta.annotation.Nullable final Integer value) {
         this.devicesCount = value;
     }
     /**
      * Sets the lastReportedDateTime property value. Last modified date time of the policy report.
      * @param value Value to set for the lastReportedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastReportedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastReportedDateTime = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final ComplianceStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final ComplianceStatus value) {
         this.status = value;
     }
     /**
      * Sets the userDisplayName property value. User name of the DevicePolicyStatus.
      * @param value Value to set for the userDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserDisplayName(@javax.annotation.Nullable final String value) {
+    public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
      * Sets the userPrincipalName property value. UserPrincipalName.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

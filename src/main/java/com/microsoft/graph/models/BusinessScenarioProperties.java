@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class BusinessScenarioProperties implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
     private String webUrl;
     /**
      * Instantiates a new businessScenarioProperties and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public BusinessScenarioProperties() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +48,8 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a businessScenarioProperties
      */
-    @javax.annotation.Nonnull
-    public static BusinessScenarioProperties createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BusinessScenarioProperties createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BusinessScenarioProperties();
     }
@@ -58,7 +57,7 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +65,7 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
      * Gets the externalBucketId property value. The identifier for the bucketDefinition configured in the plannerPlanConfiguration for the scenario. The task will be placed in the corresponding plannerBucket in the target plan. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalBucketId() {
         return this.externalBucketId;
     }
@@ -74,7 +73,7 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
      * Gets the externalContextId property value. The identifier for the context of the task. Context is an application controlled value, and tasks can be queried by their externalContextId. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalContextId() {
         return this.externalContextId;
     }
@@ -82,7 +81,7 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
      * Gets the externalObjectId property value. Application-specific identifier for the task. Every task for the same scenario must have a unique identifier specified for this property. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalObjectId() {
         return this.externalObjectId;
     }
@@ -90,7 +89,7 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
      * Gets the externalObjectVersion property value. Application-specific version of the task. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalObjectVersion() {
         return this.externalObjectVersion;
     }
@@ -98,7 +97,7 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("externalBucketId", (n) -> { this.setExternalBucketId(n.getStringValue()); });
@@ -113,7 +112,7 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -121,17 +120,15 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
      * Gets the webUrl property value. The URL to the application-specific experience for this task. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebUrl() {
         return this.webUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("externalBucketId", this.getExternalBucketId());
         writer.writeStringValue("externalContextId", this.getExternalContextId());
@@ -144,64 +141,50 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the externalBucketId property value. The identifier for the bucketDefinition configured in the plannerPlanConfiguration for the scenario. The task will be placed in the corresponding plannerBucket in the target plan. Required.
      * @param value Value to set for the externalBucketId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalBucketId(@javax.annotation.Nullable final String value) {
+    public void setExternalBucketId(@jakarta.annotation.Nullable final String value) {
         this.externalBucketId = value;
     }
     /**
      * Sets the externalContextId property value. The identifier for the context of the task. Context is an application controlled value, and tasks can be queried by their externalContextId. Optional.
      * @param value Value to set for the externalContextId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalContextId(@javax.annotation.Nullable final String value) {
+    public void setExternalContextId(@jakarta.annotation.Nullable final String value) {
         this.externalContextId = value;
     }
     /**
      * Sets the externalObjectId property value. Application-specific identifier for the task. Every task for the same scenario must have a unique identifier specified for this property. Required.
      * @param value Value to set for the externalObjectId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalObjectId(@javax.annotation.Nullable final String value) {
+    public void setExternalObjectId(@jakarta.annotation.Nullable final String value) {
         this.externalObjectId = value;
     }
     /**
      * Sets the externalObjectVersion property value. Application-specific version of the task. Optional.
      * @param value Value to set for the externalObjectVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalObjectVersion(@javax.annotation.Nullable final String value) {
+    public void setExternalObjectVersion(@jakarta.annotation.Nullable final String value) {
         this.externalObjectVersion = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the webUrl property value. The URL to the application-specific experience for this task. Optional.
      * @param value Value to set for the webUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebUrl(@javax.annotation.Nullable final String value) {
+    public void setWebUrl(@jakarta.annotation.Nullable final String value) {
         this.webUrl = value;
     }
 }

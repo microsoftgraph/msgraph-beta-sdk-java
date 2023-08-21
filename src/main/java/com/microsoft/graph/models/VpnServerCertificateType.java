@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The type of certificate the VPN server will present to the VPN client for authentication
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum VpnServerCertificateType implements ValuedEnum {
     /** RSA */
     Rsa("rsa"),
@@ -19,10 +20,10 @@ public enum VpnServerCertificateType implements ValuedEnum {
     VpnServerCertificateType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static VpnServerCertificateType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static VpnServerCertificateType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "rsa": return Rsa;

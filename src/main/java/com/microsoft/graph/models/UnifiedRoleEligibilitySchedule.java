@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements Parsable {
     /**
      * Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
@@ -17,9 +18,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
     private RequestSchedule scheduleInfo;
     /**
      * Instantiates a new unifiedRoleEligibilitySchedule and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UnifiedRoleEligibilitySchedule() {
         super();
     }
@@ -28,8 +27,8 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a unifiedRoleEligibilitySchedule
      */
-    @javax.annotation.Nonnull
-    public static UnifiedRoleEligibilitySchedule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UnifiedRoleEligibilitySchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UnifiedRoleEligibilitySchedule();
     }
@@ -37,7 +36,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("memberType", (n) -> { this.setMemberType(n.getStringValue()); });
@@ -48,7 +47,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
      * Gets the memberType property value. Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMemberType() {
         return this.memberType;
     }
@@ -56,17 +55,15 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
      * Gets the scheduleInfo property value. The schedule object of the eligible role assignment request.
      * @return a requestSchedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RequestSchedule getScheduleInfo() {
         return this.scheduleInfo;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("memberType", this.getMemberType());
@@ -75,19 +72,15 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
     /**
      * Sets the memberType property value. Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
      * @param value Value to set for the memberType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMemberType(@javax.annotation.Nullable final String value) {
+    public void setMemberType(@jakarta.annotation.Nullable final String value) {
         this.memberType = value;
     }
     /**
      * Sets the scheduleInfo property value. The schedule object of the eligible role assignment request.
      * @param value Value to set for the scheduleInfo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScheduleInfo(@javax.annotation.Nullable final RequestSchedule value) {
+    public void setScheduleInfo(@jakarta.annotation.Nullable final RequestSchedule value) {
         this.scheduleInfo = value;
     }
 }

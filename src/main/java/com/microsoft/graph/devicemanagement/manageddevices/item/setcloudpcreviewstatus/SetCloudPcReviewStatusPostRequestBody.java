@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SetCloudPcReviewStatusPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -19,9 +20,7 @@ public class SetCloudPcReviewStatusPostRequestBody implements AdditionalDataHold
     private CloudPcReviewStatus reviewStatus;
     /**
      * Instantiates a new setCloudPcReviewStatusPostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SetCloudPcReviewStatusPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -30,8 +29,8 @@ public class SetCloudPcReviewStatusPostRequestBody implements AdditionalDataHold
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a setCloudPcReviewStatusPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static SetCloudPcReviewStatusPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SetCloudPcReviewStatusPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SetCloudPcReviewStatusPostRequestBody();
     }
@@ -39,7 +38,7 @@ public class SetCloudPcReviewStatusPostRequestBody implements AdditionalDataHold
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -47,7 +46,7 @@ public class SetCloudPcReviewStatusPostRequestBody implements AdditionalDataHold
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
         deserializerMap.put("reviewStatus", (n) -> { this.setReviewStatus(n.getObjectValue(CloudPcReviewStatus::createFromDiscriminatorValue)); });
@@ -57,17 +56,15 @@ public class SetCloudPcReviewStatusPostRequestBody implements AdditionalDataHold
      * Gets the reviewStatus property value. The reviewStatus property
      * @return a cloudPcReviewStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcReviewStatus getReviewStatus() {
         return this.reviewStatus;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("reviewStatus", this.getReviewStatus());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -75,19 +72,15 @@ public class SetCloudPcReviewStatusPostRequestBody implements AdditionalDataHold
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the reviewStatus property value. The reviewStatus property
      * @param value Value to set for the reviewStatus property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewStatus(@javax.annotation.Nullable final CloudPcReviewStatus value) {
+    public void setReviewStatus(@jakarta.annotation.Nullable final CloudPcReviewStatus value) {
         this.reviewStatus = value;
     }
 }

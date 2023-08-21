@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     private String odataType;
     /**
      * Instantiates a new broadcastMeetingSettings and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public BroadcastMeetingSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +52,8 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a broadcastMeetingSettings
      */
-    @javax.annotation.Nonnull
-    public static BroadcastMeetingSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BroadcastMeetingSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BroadcastMeetingSettings();
     }
@@ -62,7 +61,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +69,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      * Gets the allowedAudience property value. Defines who can join the Teams live event. Possible values are listed in the following table.
      * @return a broadcastMeetingAudience
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BroadcastMeetingAudience getAllowedAudience() {
         return this.allowedAudience;
     }
@@ -78,7 +77,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      * Gets the captions property value. Caption settings of a Teams live event.
      * @return a broadcastMeetingCaptionSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BroadcastMeetingCaptionSettings getCaptions() {
         return this.captions;
     }
@@ -86,7 +85,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("allowedAudience", (n) -> { this.setAllowedAudience(n.getEnumValue(BroadcastMeetingAudience.class)); });
@@ -102,7 +101,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      * Gets the isAttendeeReportEnabled property value. Indicates whether attendee report is enabled for this Teams live event. Default value is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAttendeeReportEnabled() {
         return this.isAttendeeReportEnabled;
     }
@@ -110,7 +109,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      * Gets the isQuestionAndAnswerEnabled property value. Indicates whether Q&A is enabled for this Teams live event. Default value is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsQuestionAndAnswerEnabled() {
         return this.isQuestionAndAnswerEnabled;
     }
@@ -118,7 +117,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      * Gets the isRecordingEnabled property value. Indicates whether recording is enabled for this Teams live event. Default value is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRecordingEnabled() {
         return this.isRecordingEnabled;
     }
@@ -126,7 +125,7 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      * Gets the isVideoOnDemandEnabled property value. Indicates whether video on demand is enabled for this Teams live event. Default value is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsVideoOnDemandEnabled() {
         return this.isVideoOnDemandEnabled;
     }
@@ -134,17 +133,15 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("allowedAudience", this.getAllowedAudience());
         writer.writeObjectValue("captions", this.getCaptions());
@@ -158,73 +155,57 @@ public class BroadcastMeetingSettings implements AdditionalDataHolder, Parsable 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowedAudience property value. Defines who can join the Teams live event. Possible values are listed in the following table.
      * @param value Value to set for the allowedAudience property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowedAudience(@javax.annotation.Nullable final BroadcastMeetingAudience value) {
+    public void setAllowedAudience(@jakarta.annotation.Nullable final BroadcastMeetingAudience value) {
         this.allowedAudience = value;
     }
     /**
      * Sets the captions property value. Caption settings of a Teams live event.
      * @param value Value to set for the captions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCaptions(@javax.annotation.Nullable final BroadcastMeetingCaptionSettings value) {
+    public void setCaptions(@jakarta.annotation.Nullable final BroadcastMeetingCaptionSettings value) {
         this.captions = value;
     }
     /**
      * Sets the isAttendeeReportEnabled property value. Indicates whether attendee report is enabled for this Teams live event. Default value is false.
      * @param value Value to set for the isAttendeeReportEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAttendeeReportEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsAttendeeReportEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isAttendeeReportEnabled = value;
     }
     /**
      * Sets the isQuestionAndAnswerEnabled property value. Indicates whether Q&A is enabled for this Teams live event. Default value is false.
      * @param value Value to set for the isQuestionAndAnswerEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsQuestionAndAnswerEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsQuestionAndAnswerEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isQuestionAndAnswerEnabled = value;
     }
     /**
      * Sets the isRecordingEnabled property value. Indicates whether recording is enabled for this Teams live event. Default value is false.
      * @param value Value to set for the isRecordingEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRecordingEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsRecordingEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isRecordingEnabled = value;
     }
     /**
      * Sets the isVideoOnDemandEnabled property value. Indicates whether video on demand is enabled for this Teams live event. Default value is false.
      * @param value Value to set for the isVideoOnDemandEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsVideoOnDemandEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsVideoOnDemandEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isVideoOnDemandEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

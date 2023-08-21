@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Represents the expected type for a macOS custom attribute script value.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceCustomAttributeValueType implements ValuedEnum {
     /** Indicates the value for a custom attribute script is an integer. */
     Integer("integer"),
@@ -17,10 +18,10 @@ public enum DeviceCustomAttributeValueType implements ValuedEnum {
     DeviceCustomAttributeValueType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceCustomAttributeValueType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceCustomAttributeValueType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "integer": return Integer;

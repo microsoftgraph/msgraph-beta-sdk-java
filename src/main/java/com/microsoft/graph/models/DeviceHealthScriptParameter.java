@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Base properties of the script parameter.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -37,9 +38,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
     private String odataType;
     /**
      * Instantiates a new deviceHealthScriptParameter and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceHealthScriptParameter() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -48,8 +47,8 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceHealthScriptParameter
      */
-    @javax.annotation.Nonnull
-    public static DeviceHealthScriptParameter createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceHealthScriptParameter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -66,7 +65,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -74,7 +73,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
      * Gets the applyDefaultValueWhenNotAssigned property value. Whether Apply DefaultValue When Not Assigned
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getApplyDefaultValueWhenNotAssigned() {
         return this.applyDefaultValueWhenNotAssigned;
     }
@@ -82,7 +81,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
      * Gets the description property value. The description of the param
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -90,7 +89,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("applyDefaultValueWhenNotAssigned", (n) -> { this.setApplyDefaultValueWhenNotAssigned(n.getBooleanValue()); });
@@ -104,7 +103,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
      * Gets the isRequired property value. Whether the param is required
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
         return this.isRequired;
     }
@@ -112,7 +111,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
      * Gets the name property value. The name of the param
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -120,17 +119,15 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("applyDefaultValueWhenNotAssigned", this.getApplyDefaultValueWhenNotAssigned());
         writer.writeStringValue("description", this.getDescription());
@@ -142,55 +139,43 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the applyDefaultValueWhenNotAssigned property value. Whether Apply DefaultValue When Not Assigned
      * @param value Value to set for the applyDefaultValueWhenNotAssigned property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplyDefaultValueWhenNotAssigned(@javax.annotation.Nullable final Boolean value) {
+    public void setApplyDefaultValueWhenNotAssigned(@jakarta.annotation.Nullable final Boolean value) {
         this.applyDefaultValueWhenNotAssigned = value;
     }
     /**
      * Sets the description property value. The description of the param
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the isRequired property value. Whether the param is required
      * @param value Value to set for the isRequired property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRequired(@javax.annotation.Nullable final Boolean value) {
+    public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isRequired = value;
     }
     /**
      * Sets the name property value. The name of the param
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

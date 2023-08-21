@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible types of reasons for an Apple Volume Purchase Program token action failure.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum VppTokenActionFailureReason implements ValuedEnum {
     /** None. */
     None("none"),
@@ -21,10 +22,10 @@ public enum VppTokenActionFailureReason implements ValuedEnum {
     VppTokenActionFailureReason(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static VppTokenActionFailureReason forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static VppTokenActionFailureReason forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

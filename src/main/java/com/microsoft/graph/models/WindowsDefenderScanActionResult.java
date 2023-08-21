@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Windows Defender last scan result
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDefenderScanActionResult extends DeviceActionResult implements Parsable {
     /**
      * Scan type either full scan or quick scan
@@ -16,9 +17,7 @@ public class WindowsDefenderScanActionResult extends DeviceActionResult implemen
     private String scanType;
     /**
      * Instantiates a new windowsDefenderScanActionResult and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsDefenderScanActionResult() {
         super();
     }
@@ -27,8 +26,8 @@ public class WindowsDefenderScanActionResult extends DeviceActionResult implemen
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsDefenderScanActionResult
      */
-    @javax.annotation.Nonnull
-    public static WindowsDefenderScanActionResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsDefenderScanActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsDefenderScanActionResult();
     }
@@ -36,7 +35,7 @@ public class WindowsDefenderScanActionResult extends DeviceActionResult implemen
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("scanType", (n) -> { this.setScanType(n.getStringValue()); });
@@ -46,17 +45,15 @@ public class WindowsDefenderScanActionResult extends DeviceActionResult implemen
      * Gets the scanType property value. Scan type either full scan or quick scan
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getScanType() {
         return this.scanType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("scanType", this.getScanType());
@@ -64,10 +61,8 @@ public class WindowsDefenderScanActionResult extends DeviceActionResult implemen
     /**
      * Sets the scanType property value. Scan type either full scan or quick scan
      * @param value Value to set for the scanType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScanType(@javax.annotation.Nullable final String value) {
+    public void setScanType(@jakarta.annotation.Nullable final String value) {
         this.scanType = value;
     }
 }

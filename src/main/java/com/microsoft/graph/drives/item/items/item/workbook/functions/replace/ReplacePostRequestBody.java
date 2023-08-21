@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -31,9 +32,7 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
     private Json startNum;
     /**
      * Instantiates a new replacePostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ReplacePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +41,8 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a replacePostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static ReplacePostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ReplacePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ReplacePostRequestBody();
     }
@@ -51,7 +50,7 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -59,7 +58,7 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("newText", (n) -> { this.setNewText(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -72,7 +71,7 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the newText property value. The newText property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getNewText() {
         return this.newText;
     }
@@ -80,7 +79,7 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the numChars property value. The numChars property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getNumChars() {
         return this.numChars;
     }
@@ -88,7 +87,7 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the oldText property value. The oldText property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getOldText() {
         return this.oldText;
     }
@@ -96,17 +95,15 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the startNum property value. The startNum property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getStartNum() {
         return this.startNum;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("newText", this.getNewText());
         writer.writeObjectValue("numChars", this.getNumChars());
@@ -117,46 +114,36 @@ public class ReplacePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the newText property value. The newText property
      * @param value Value to set for the newText property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNewText(@javax.annotation.Nullable final Json value) {
+    public void setNewText(@jakarta.annotation.Nullable final Json value) {
         this.newText = value;
     }
     /**
      * Sets the numChars property value. The numChars property
      * @param value Value to set for the numChars property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNumChars(@javax.annotation.Nullable final Json value) {
+    public void setNumChars(@jakarta.annotation.Nullable final Json value) {
         this.numChars = value;
     }
     /**
      * Sets the oldText property value. The oldText property
      * @param value Value to set for the oldText property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOldText(@javax.annotation.Nullable final Json value) {
+    public void setOldText(@jakarta.annotation.Nullable final Json value) {
         this.oldText = value;
     }
     /**
      * Sets the startNum property value. The startNum property
      * @param value Value to set for the startNum property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartNum(@javax.annotation.Nullable final Json value) {
+    public void setStartNum(@jakarta.annotation.Nullable final Json value) {
         this.startNum = value;
     }
 }

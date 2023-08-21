@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class InvalidLicenseAlertIncident extends UnifiedRoleManagementAlertIncident implements Parsable {
     /**
      * Status of the tenant's Azure AD Premium P2 license.
@@ -13,9 +14,7 @@ public class InvalidLicenseAlertIncident extends UnifiedRoleManagementAlertIncid
     private String tenantLicenseStatus;
     /**
      * Instantiates a new invalidLicenseAlertIncident and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public InvalidLicenseAlertIncident() {
         super();
         this.setOdataType("#microsoft.graph.invalidLicenseAlertIncident");
@@ -25,8 +24,8 @@ public class InvalidLicenseAlertIncident extends UnifiedRoleManagementAlertIncid
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a invalidLicenseAlertIncident
      */
-    @javax.annotation.Nonnull
-    public static InvalidLicenseAlertIncident createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static InvalidLicenseAlertIncident createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new InvalidLicenseAlertIncident();
     }
@@ -34,7 +33,7 @@ public class InvalidLicenseAlertIncident extends UnifiedRoleManagementAlertIncid
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("tenantLicenseStatus", (n) -> { this.setTenantLicenseStatus(n.getStringValue()); });
@@ -44,17 +43,15 @@ public class InvalidLicenseAlertIncident extends UnifiedRoleManagementAlertIncid
      * Gets the tenantLicenseStatus property value. Status of the tenant's Azure AD Premium P2 license.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantLicenseStatus() {
         return this.tenantLicenseStatus;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("tenantLicenseStatus", this.getTenantLicenseStatus());
@@ -62,10 +59,8 @@ public class InvalidLicenseAlertIncident extends UnifiedRoleManagementAlertIncid
     /**
      * Sets the tenantLicenseStatus property value. Status of the tenant's Azure AD Premium P2 license.
      * @param value Value to set for the tenantLicenseStatus property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantLicenseStatus(@javax.annotation.Nullable final String value) {
+    public void setTenantLicenseStatus(@jakarta.annotation.Nullable final String value) {
         this.tenantLicenseStatus = value;
     }
 }

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values of the ConfigurationUsage list.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ConfigurationUsage implements ValuedEnum {
     /** Disallowed. */
     Blocked("blocked"),
@@ -19,10 +20,10 @@ public enum ConfigurationUsage implements ValuedEnum {
     ConfigurationUsage(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ConfigurationUsage forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ConfigurationUsage forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "blocked": return Blocked;

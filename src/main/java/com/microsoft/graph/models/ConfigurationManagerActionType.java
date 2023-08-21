@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Action type on Configuration Manager client
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ConfigurationManagerActionType implements ValuedEnum {
     /** Refresh machine policy on Configuration Manager client */
     RefreshMachinePolicy("refreshMachinePolicy"),
@@ -25,10 +26,10 @@ public enum ConfigurationManagerActionType implements ValuedEnum {
     ConfigurationManagerActionType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ConfigurationManagerActionType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ConfigurationManagerActionType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "refreshMachinePolicy": return RefreshMachinePolicy;

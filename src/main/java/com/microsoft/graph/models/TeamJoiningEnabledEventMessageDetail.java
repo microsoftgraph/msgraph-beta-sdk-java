@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
      * Initiator of the event.
@@ -17,9 +18,7 @@ public class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail imp
     private String teamId;
     /**
      * Instantiates a new teamJoiningEnabledEventMessageDetail and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TeamJoiningEnabledEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.teamJoiningEnabledEventMessageDetail");
@@ -29,8 +28,8 @@ public class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail imp
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teamJoiningEnabledEventMessageDetail
      */
-    @javax.annotation.Nonnull
-    public static TeamJoiningEnabledEventMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeamJoiningEnabledEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeamJoiningEnabledEventMessageDetail();
     }
@@ -38,7 +37,7 @@ public class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail imp
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -49,7 +48,7 @@ public class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail imp
      * Gets the initiator property value. Initiator of the event.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
         return this.initiator;
     }
@@ -57,17 +56,15 @@ public class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail imp
      * Gets the teamId property value. Unique identifier of the team.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTeamId() {
         return this.teamId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("initiator", this.getInitiator());
@@ -76,19 +73,15 @@ public class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail imp
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
+    public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }
     /**
      * Sets the teamId property value. Unique identifier of the team.
      * @param value Value to set for the teamId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTeamId(@javax.annotation.Nullable final String value) {
+    public void setTeamId(@jakarta.annotation.Nullable final String value) {
         this.teamId = value;
     }
 }

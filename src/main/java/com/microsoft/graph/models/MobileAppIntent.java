@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the status of the mobile app on the device.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MobileAppIntent implements ValuedEnum {
     /** Available */
     Available("available"),
@@ -25,10 +26,10 @@ public enum MobileAppIntent implements ValuedEnum {
     MobileAppIntent(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MobileAppIntent forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MobileAppIntent forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "available": return Available;

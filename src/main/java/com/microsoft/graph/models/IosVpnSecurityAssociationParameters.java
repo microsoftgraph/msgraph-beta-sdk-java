@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * VPN Security Association Parameters
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -37,9 +38,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
     private VpnIntegrityAlgorithmType securityIntegrityAlgorithm;
     /**
      * Instantiates a new iosVpnSecurityAssociationParameters and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public IosVpnSecurityAssociationParameters() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -48,8 +47,8 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a iosVpnSecurityAssociationParameters
      */
-    @javax.annotation.Nonnull
-    public static IosVpnSecurityAssociationParameters createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IosVpnSecurityAssociationParameters createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IosVpnSecurityAssociationParameters();
     }
@@ -57,7 +56,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -65,7 +64,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("lifetimeInMinutes", (n) -> { this.setLifetimeInMinutes(n.getIntegerValue()); });
@@ -79,7 +78,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      * Gets the lifetimeInMinutes property value. Lifetime (minutes)
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getLifetimeInMinutes() {
         return this.lifetimeInMinutes;
     }
@@ -87,7 +86,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -95,7 +94,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      * Gets the securityDiffieHellmanGroup property value. Diffie-Hellman Group
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSecurityDiffieHellmanGroup() {
         return this.securityDiffieHellmanGroup;
     }
@@ -103,7 +102,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      * Gets the securityEncryptionAlgorithm property value. Encryption algorithm. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
      * @return a vpnEncryptionAlgorithmType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VpnEncryptionAlgorithmType getSecurityEncryptionAlgorithm() {
         return this.securityEncryptionAlgorithm;
     }
@@ -111,17 +110,15 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      * Gets the securityIntegrityAlgorithm property value. Integrity algorithm. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
      * @return a vpnIntegrityAlgorithmType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public VpnIntegrityAlgorithmType getSecurityIntegrityAlgorithm() {
         return this.securityIntegrityAlgorithm;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("lifetimeInMinutes", this.getLifetimeInMinutes());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -133,55 +130,43 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the lifetimeInMinutes property value. Lifetime (minutes)
      * @param value Value to set for the lifetimeInMinutes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLifetimeInMinutes(@javax.annotation.Nullable final Integer value) {
+    public void setLifetimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.lifetimeInMinutes = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the securityDiffieHellmanGroup property value. Diffie-Hellman Group
      * @param value Value to set for the securityDiffieHellmanGroup property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityDiffieHellmanGroup(@javax.annotation.Nullable final Integer value) {
+    public void setSecurityDiffieHellmanGroup(@jakarta.annotation.Nullable final Integer value) {
         this.securityDiffieHellmanGroup = value;
     }
     /**
      * Sets the securityEncryptionAlgorithm property value. Encryption algorithm. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
      * @param value Value to set for the securityEncryptionAlgorithm property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityEncryptionAlgorithm(@javax.annotation.Nullable final VpnEncryptionAlgorithmType value) {
+    public void setSecurityEncryptionAlgorithm(@jakarta.annotation.Nullable final VpnEncryptionAlgorithmType value) {
         this.securityEncryptionAlgorithm = value;
     }
     /**
      * Sets the securityIntegrityAlgorithm property value. Integrity algorithm. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
      * @param value Value to set for the securityIntegrityAlgorithm property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityIntegrityAlgorithm(@javax.annotation.Nullable final VpnIntegrityAlgorithmType value) {
+    public void setSecurityIntegrityAlgorithm(@jakarta.annotation.Nullable final VpnIntegrityAlgorithmType value) {
         this.securityIntegrityAlgorithm = value;
     }
 }

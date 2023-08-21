@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EncryptContent extends LabelActionBase implements Parsable {
     /**
      * The encryptWith property
@@ -13,9 +14,7 @@ public class EncryptContent extends LabelActionBase implements Parsable {
     private EncryptWith encryptWith;
     /**
      * Instantiates a new encryptContent and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EncryptContent() {
         super();
         this.setOdataType("#microsoft.graph.encryptContent");
@@ -25,8 +24,8 @@ public class EncryptContent extends LabelActionBase implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a encryptContent
      */
-    @javax.annotation.Nonnull
-    public static EncryptContent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EncryptContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -42,7 +41,7 @@ public class EncryptContent extends LabelActionBase implements Parsable {
      * Gets the encryptWith property value. The encryptWith property
      * @return a encryptWith
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EncryptWith getEncryptWith() {
         return this.encryptWith;
     }
@@ -50,7 +49,7 @@ public class EncryptContent extends LabelActionBase implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("encryptWith", (n) -> { this.setEncryptWith(n.getEnumValue(EncryptWith.class)); });
@@ -59,10 +58,8 @@ public class EncryptContent extends LabelActionBase implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("encryptWith", this.getEncryptWith());
@@ -70,10 +67,8 @@ public class EncryptContent extends LabelActionBase implements Parsable {
     /**
      * Sets the encryptWith property value. The encryptWith property
      * @param value Value to set for the encryptWith property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEncryptWith(@javax.annotation.Nullable final EncryptWith value) {
+    public void setEncryptWith(@jakarta.annotation.Nullable final EncryptWith value) {
         this.encryptWith = value;
     }
 }

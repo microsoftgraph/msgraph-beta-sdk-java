@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class OauthApplicationEvidence extends AlertEvidence implements Parsable {
     /**
      * Unique identifier of the application.
@@ -25,9 +26,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
     private String publisher;
     /**
      * Instantiates a new oauthApplicationEvidence and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public OauthApplicationEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.oauthApplicationEvidence");
@@ -37,8 +36,8 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a oauthApplicationEvidence
      */
-    @javax.annotation.Nonnull
-    public static OauthApplicationEvidence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OauthApplicationEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OauthApplicationEvidence();
     }
@@ -46,7 +45,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
      * Gets the appId property value. Unique identifier of the application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppId() {
         return this.appId;
     }
@@ -54,7 +53,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
      * Gets the displayName property value. Name of the application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -62,7 +61,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
@@ -75,7 +74,7 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
      * Gets the objectId property value. The unique identifier of the application object in Azure AD.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getObjectId() {
         return this.objectId;
     }
@@ -83,17 +82,15 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
      * Gets the publisher property value. The name of the application publisher.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPublisher() {
         return this.publisher;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appId", this.getAppId());
@@ -104,37 +101,29 @@ public class OauthApplicationEvidence extends AlertEvidence implements Parsable 
     /**
      * Sets the appId property value. Unique identifier of the application.
      * @param value Value to set for the appId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppId(@javax.annotation.Nullable final String value) {
+    public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }
     /**
      * Sets the displayName property value. Name of the application.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the objectId property value. The unique identifier of the application object in Azure AD.
      * @param value Value to set for the objectId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setObjectId(@javax.annotation.Nullable final String value) {
+    public void setObjectId(@jakarta.annotation.Nullable final String value) {
         this.objectId = value;
     }
     /**
      * Sets the publisher property value. The name of the application publisher.
      * @param value Value to set for the publisher property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublisher(@javax.annotation.Nullable final String value) {
+    public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.publisher = value;
     }
 }

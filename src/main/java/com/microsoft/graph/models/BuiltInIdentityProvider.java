@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class BuiltInIdentityProvider extends IdentityProviderBase implements Parsable {
     /**
      * The identity provider type. For a B2B scenario, possible values: AADSignup, MicrosoftAccount, EmailOTP. Required.
@@ -17,9 +18,7 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
     private IdentityProviderState state;
     /**
      * Instantiates a new builtInIdentityProvider and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public BuiltInIdentityProvider() {
         super();
         this.setOdataType("#microsoft.graph.builtInIdentityProvider");
@@ -29,8 +28,8 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a builtInIdentityProvider
      */
-    @javax.annotation.Nonnull
-    public static BuiltInIdentityProvider createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BuiltInIdentityProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BuiltInIdentityProvider();
     }
@@ -38,7 +37,7 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("identityProviderType", (n) -> { this.setIdentityProviderType(n.getStringValue()); });
@@ -49,7 +48,7 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
      * Gets the identityProviderType property value. The identity provider type. For a B2B scenario, possible values: AADSignup, MicrosoftAccount, EmailOTP. Required.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIdentityProviderType() {
         return this.identityProviderType;
     }
@@ -57,17 +56,15 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
      * Gets the state property value. The state property
      * @return a identityProviderState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentityProviderState getState() {
         return this.state;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("identityProviderType", this.getIdentityProviderType());
@@ -76,19 +73,15 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
     /**
      * Sets the identityProviderType property value. The identity provider type. For a B2B scenario, possible values: AADSignup, MicrosoftAccount, EmailOTP. Required.
      * @param value Value to set for the identityProviderType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityProviderType(@javax.annotation.Nullable final String value) {
+    public void setIdentityProviderType(@jakarta.annotation.Nullable final String value) {
         this.identityProviderType = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final IdentityProviderState value) {
+    public void setState(@jakarta.annotation.Nullable final IdentityProviderState value) {
         this.state = value;
     }
 }

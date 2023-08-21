@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagementTemplate extends Entity implements Parsable {
     /**
      * The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
@@ -76,9 +77,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     private java.util.List<WorkloadAction> workloadActions;
     /**
      * Instantiates a new managementTemplate and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ManagementTemplate() {
         super();
     }
@@ -87,8 +86,8 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managementTemplate
      */
-    @javax.annotation.Nonnull
-    public static ManagementTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagementTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagementTemplate();
     }
@@ -96,7 +95,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Gets the category property value. The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
      * @return a managementCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagementCategory getCategory() {
         return this.category;
     }
@@ -104,7 +103,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Gets the createdByUserId property value. The createdByUserId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
         return this.createdByUserId;
     }
@@ -112,7 +111,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Gets the createdDateTime property value. The createdDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -120,7 +119,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Gets the description property value. The description for the management template. Optional. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -128,7 +127,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Gets the displayName property value. The display name for the management template. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -136,7 +135,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(ManagementCategory.class)); });
@@ -161,7 +160,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Gets the informationLinks property value. The informationLinks property
      * @return a actionUrl
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ActionUrl> getInformationLinks() {
         return this.informationLinks;
     }
@@ -169,7 +168,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Gets the lastActionByUserId property value. The lastActionByUserId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
         return this.lastActionByUserId;
     }
@@ -177,7 +176,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Gets the lastActionDateTime property value. The lastActionDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
         return this.lastActionDateTime;
     }
@@ -185,7 +184,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Gets the managementTemplateCollections property value. The managementTemplateCollections property
      * @return a managementTemplateCollection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateCollection> getManagementTemplateCollections() {
         return this.managementTemplateCollections;
     }
@@ -193,7 +192,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Gets the managementTemplateSteps property value. The managementTemplateSteps property
      * @return a managementTemplateStep
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateStep> getManagementTemplateSteps() {
         return this.managementTemplateSteps;
     }
@@ -201,7 +200,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Gets the parameters property value. The collection of parameters used by the management template. Optional. Read-only.
      * @return a templateParameter
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TemplateParameter> getParameters() {
         return this.parameters;
     }
@@ -209,7 +208,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Gets the priority property value. The priority property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPriority() {
         return this.priority;
     }
@@ -217,7 +216,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Gets the provider property value. The provider property
      * @return a managementProvider
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagementProvider getProvider() {
         return this.provider;
     }
@@ -225,7 +224,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Gets the userImpact property value. The userImpact property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserImpact() {
         return this.userImpact;
     }
@@ -233,7 +232,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Gets the version property value. The version property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getVersion() {
         return this.version;
     }
@@ -241,17 +240,15 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Gets the workloadActions property value. The collection of workload actions associated with the management template. Optional. Read-only.
      * @return a workloadAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WorkloadAction> getWorkloadActions() {
         return this.workloadActions;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("category", this.getCategory());
@@ -274,145 +271,113 @@ public class ManagementTemplate extends Entity implements Parsable {
     /**
      * Sets the category property value. The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
      * @param value Value to set for the category property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory(@javax.annotation.Nullable final ManagementCategory value) {
+    public void setCategory(@jakarta.annotation.Nullable final ManagementCategory value) {
         this.category = value;
     }
     /**
      * Sets the createdByUserId property value. The createdByUserId property
      * @param value Value to set for the createdByUserId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedByUserId(@javax.annotation.Nullable final String value) {
+    public void setCreatedByUserId(@jakarta.annotation.Nullable final String value) {
         this.createdByUserId = value;
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description for the management template. Optional. Read-only.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The display name for the management template. Required. Read-only.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the informationLinks property value. The informationLinks property
      * @param value Value to set for the informationLinks property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInformationLinks(@javax.annotation.Nullable final java.util.List<ActionUrl> value) {
+    public void setInformationLinks(@jakarta.annotation.Nullable final java.util.List<ActionUrl> value) {
         this.informationLinks = value;
     }
     /**
      * Sets the lastActionByUserId property value. The lastActionByUserId property
      * @param value Value to set for the lastActionByUserId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActionByUserId(@javax.annotation.Nullable final String value) {
+    public void setLastActionByUserId(@jakarta.annotation.Nullable final String value) {
         this.lastActionByUserId = value;
     }
     /**
      * Sets the lastActionDateTime property value. The lastActionDateTime property
      * @param value Value to set for the lastActionDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastActionDateTime = value;
     }
     /**
      * Sets the managementTemplateCollections property value. The managementTemplateCollections property
      * @param value Value to set for the managementTemplateCollections property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateCollections(@javax.annotation.Nullable final java.util.List<ManagementTemplateCollection> value) {
+    public void setManagementTemplateCollections(@jakarta.annotation.Nullable final java.util.List<ManagementTemplateCollection> value) {
         this.managementTemplateCollections = value;
     }
     /**
      * Sets the managementTemplateSteps property value. The managementTemplateSteps property
      * @param value Value to set for the managementTemplateSteps property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateSteps(@javax.annotation.Nullable final java.util.List<ManagementTemplateStep> value) {
+    public void setManagementTemplateSteps(@jakarta.annotation.Nullable final java.util.List<ManagementTemplateStep> value) {
         this.managementTemplateSteps = value;
     }
     /**
      * Sets the parameters property value. The collection of parameters used by the management template. Optional. Read-only.
      * @param value Value to set for the parameters property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParameters(@javax.annotation.Nullable final java.util.List<TemplateParameter> value) {
+    public void setParameters(@jakarta.annotation.Nullable final java.util.List<TemplateParameter> value) {
         this.parameters = value;
     }
     /**
      * Sets the priority property value. The priority property
      * @param value Value to set for the priority property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPriority(@javax.annotation.Nullable final Integer value) {
+    public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.priority = value;
     }
     /**
      * Sets the provider property value. The provider property
      * @param value Value to set for the provider property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProvider(@javax.annotation.Nullable final ManagementProvider value) {
+    public void setProvider(@jakarta.annotation.Nullable final ManagementProvider value) {
         this.provider = value;
     }
     /**
      * Sets the userImpact property value. The userImpact property
      * @param value Value to set for the userImpact property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserImpact(@javax.annotation.Nullable final String value) {
+    public void setUserImpact(@jakarta.annotation.Nullable final String value) {
         this.userImpact = value;
     }
     /**
      * Sets the version property value. The version property
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final Integer value) {
+    public void setVersion(@jakarta.annotation.Nullable final Integer value) {
         this.version = value;
     }
     /**
      * Sets the workloadActions property value. The collection of workload actions associated with the management template. Optional. Read-only.
      * @param value Value to set for the workloadActions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkloadActions(@javax.annotation.Nullable final java.util.List<WorkloadAction> value) {
+    public void setWorkloadActions(@jakarta.annotation.Nullable final java.util.List<WorkloadAction> value) {
         this.workloadActions = value;
     }
 }

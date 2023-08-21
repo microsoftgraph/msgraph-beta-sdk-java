@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class HostSslCertificatePort implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -31,9 +32,7 @@ public class HostSslCertificatePort implements AdditionalDataHolder, Parsable {
     private Integer port;
     /**
      * Instantiates a new hostSslCertificatePort and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public HostSslCertificatePort() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +41,8 @@ public class HostSslCertificatePort implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a hostSslCertificatePort
      */
-    @javax.annotation.Nonnull
-    public static HostSslCertificatePort createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static HostSslCertificatePort createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new HostSslCertificatePort();
     }
@@ -51,7 +50,7 @@ public class HostSslCertificatePort implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -59,7 +58,7 @@ public class HostSslCertificatePort implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
@@ -72,7 +71,7 @@ public class HostSslCertificatePort implements AdditionalDataHolder, Parsable {
      * Gets the firstSeenDateTime property value. The firstSeenDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
         return this.firstSeenDateTime;
     }
@@ -80,7 +79,7 @@ public class HostSslCertificatePort implements AdditionalDataHolder, Parsable {
      * Gets the lastSeenDateTime property value. The lastSeenDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
         return this.lastSeenDateTime;
     }
@@ -88,7 +87,7 @@ public class HostSslCertificatePort implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -96,17 +95,15 @@ public class HostSslCertificatePort implements AdditionalDataHolder, Parsable {
      * Gets the port property value. The port property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPort() {
         return this.port;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("firstSeenDateTime", this.getFirstSeenDateTime());
         writer.writeOffsetDateTimeValue("lastSeenDateTime", this.getLastSeenDateTime());
@@ -117,46 +114,36 @@ public class HostSslCertificatePort implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the firstSeenDateTime property value. The firstSeenDateTime property
      * @param value Value to set for the firstSeenDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstSeenDateTime = value;
     }
     /**
      * Sets the lastSeenDateTime property value. The lastSeenDateTime property
      * @param value Value to set for the lastSeenDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSeenDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the port property value. The port property
      * @param value Value to set for the port property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPort(@javax.annotation.Nullable final Integer value) {
+    public void setPort(@jakarta.annotation.Nullable final Integer value) {
         this.port = value;
     }
 }

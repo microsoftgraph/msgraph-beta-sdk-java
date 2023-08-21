@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Represents the level to which the device's clipboard may be shared between apps
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedAppClipboardSharingLevel implements ValuedEnum {
     /** Sharing is allowed between all apps, managed or not */
     AllApps("allApps"),
@@ -19,10 +20,10 @@ public enum ManagedAppClipboardSharingLevel implements ValuedEnum {
     ManagedAppClipboardSharingLevel(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ManagedAppClipboardSharingLevel forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ManagedAppClipboardSharingLevel forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "allApps": return AllApps;

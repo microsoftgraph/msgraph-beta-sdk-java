@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Subject Name Format Options for Apple devices.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AppleSubjectNameFormat implements ValuedEnum {
     /** Common name. */
     CommonName("commonName"),
@@ -23,10 +24,10 @@ public enum AppleSubjectNameFormat implements ValuedEnum {
     AppleSubjectNameFormat(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AppleSubjectNameFormat forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AppleSubjectNameFormat forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "commonName": return CommonName;

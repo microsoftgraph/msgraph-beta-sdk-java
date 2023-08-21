@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Video implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -58,9 +59,7 @@ public class Video implements AdditionalDataHolder, Parsable {
     private Integer width;
     /**
      * Instantiates a new video and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Video() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -69,8 +68,8 @@ public class Video implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a video
      */
-    @javax.annotation.Nonnull
-    public static Video createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Video createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Video();
     }
@@ -78,7 +77,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -86,7 +85,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * Gets the audioBitsPerSample property value. Number of audio bits per sample.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getAudioBitsPerSample() {
         return this.audioBitsPerSample;
     }
@@ -94,7 +93,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * Gets the audioChannels property value. Number of audio channels.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getAudioChannels() {
         return this.audioChannels;
     }
@@ -102,7 +101,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * Gets the audioFormat property value. Name of the audio format (AAC, MP3, etc.).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAudioFormat() {
         return this.audioFormat;
     }
@@ -110,7 +109,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * Gets the audioSamplesPerSecond property value. Number of audio samples per second.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getAudioSamplesPerSecond() {
         return this.audioSamplesPerSecond;
     }
@@ -118,7 +117,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * Gets the bitrate property value. Bit rate of the video in bits per second.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getBitrate() {
         return this.bitrate;
     }
@@ -126,7 +125,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * Gets the duration property value. Duration of the file in milliseconds.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getDuration() {
         return this.duration;
     }
@@ -134,7 +133,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("audioBitsPerSample", (n) -> { this.setAudioBitsPerSample(n.getIntegerValue()); });
@@ -154,7 +153,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * Gets the fourCC property value. 'Four character code' name of the video format.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFourCC() {
         return this.fourCC;
     }
@@ -162,7 +161,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * Gets the frameRate property value. The frameRate property
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getFrameRate() {
         return this.frameRate;
     }
@@ -170,7 +169,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * Gets the height property value. Height of the video, in pixels.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getHeight() {
         return this.height;
     }
@@ -178,7 +177,7 @@ public class Video implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -186,17 +185,15 @@ public class Video implements AdditionalDataHolder, Parsable {
      * Gets the width property value. Width of the video, in pixels.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getWidth() {
         return this.width;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("audioBitsPerSample", this.getAudioBitsPerSample());
         writer.writeIntegerValue("audioChannels", this.getAudioChannels());
@@ -214,109 +211,85 @@ public class Video implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the audioBitsPerSample property value. Number of audio bits per sample.
      * @param value Value to set for the audioBitsPerSample property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAudioBitsPerSample(@javax.annotation.Nullable final Integer value) {
+    public void setAudioBitsPerSample(@jakarta.annotation.Nullable final Integer value) {
         this.audioBitsPerSample = value;
     }
     /**
      * Sets the audioChannels property value. Number of audio channels.
      * @param value Value to set for the audioChannels property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAudioChannels(@javax.annotation.Nullable final Integer value) {
+    public void setAudioChannels(@jakarta.annotation.Nullable final Integer value) {
         this.audioChannels = value;
     }
     /**
      * Sets the audioFormat property value. Name of the audio format (AAC, MP3, etc.).
      * @param value Value to set for the audioFormat property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAudioFormat(@javax.annotation.Nullable final String value) {
+    public void setAudioFormat(@jakarta.annotation.Nullable final String value) {
         this.audioFormat = value;
     }
     /**
      * Sets the audioSamplesPerSecond property value. Number of audio samples per second.
      * @param value Value to set for the audioSamplesPerSecond property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAudioSamplesPerSecond(@javax.annotation.Nullable final Integer value) {
+    public void setAudioSamplesPerSecond(@jakarta.annotation.Nullable final Integer value) {
         this.audioSamplesPerSecond = value;
     }
     /**
      * Sets the bitrate property value. Bit rate of the video in bits per second.
      * @param value Value to set for the bitrate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBitrate(@javax.annotation.Nullable final Integer value) {
+    public void setBitrate(@jakarta.annotation.Nullable final Integer value) {
         this.bitrate = value;
     }
     /**
      * Sets the duration property value. Duration of the file in milliseconds.
      * @param value Value to set for the duration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDuration(@javax.annotation.Nullable final Long value) {
+    public void setDuration(@jakarta.annotation.Nullable final Long value) {
         this.duration = value;
     }
     /**
      * Sets the fourCC property value. 'Four character code' name of the video format.
      * @param value Value to set for the fourCC property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFourCC(@javax.annotation.Nullable final String value) {
+    public void setFourCC(@jakarta.annotation.Nullable final String value) {
         this.fourCC = value;
     }
     /**
      * Sets the frameRate property value. The frameRate property
      * @param value Value to set for the frameRate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFrameRate(@javax.annotation.Nullable final Double value) {
+    public void setFrameRate(@jakarta.annotation.Nullable final Double value) {
         this.frameRate = value;
     }
     /**
      * Sets the height property value. Height of the video, in pixels.
      * @param value Value to set for the height property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHeight(@javax.annotation.Nullable final Integer value) {
+    public void setHeight(@jakarta.annotation.Nullable final Integer value) {
         this.height = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the width property value. Width of the video, in pixels.
      * @param value Value to set for the width property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWidth(@javax.annotation.Nullable final Integer value) {
+    public void setWidth(@jakarta.annotation.Nullable final Integer value) {
         this.width = value;
     }
 }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     /**
      * The collection of checklist items on the task.
@@ -33,9 +34,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     private PlannerExternalReferences references;
     /**
      * Instantiates a new plannerTaskDetails and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PlannerTaskDetails() {
         super();
     }
@@ -44,8 +43,8 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a plannerTaskDetails
      */
-    @javax.annotation.Nonnull
-    public static PlannerTaskDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PlannerTaskDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PlannerTaskDetails();
     }
@@ -53,7 +52,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
      * Gets the checklist property value. The collection of checklist items on the task.
      * @return a plannerChecklistItems
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerChecklistItems getChecklist() {
         return this.checklist;
     }
@@ -61,7 +60,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
      * Gets the completionRequirements property value. Contains detailed information about requirements on the task.
      * @return a plannerTaskCompletionRequirementDetails
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerTaskCompletionRequirementDetails getCompletionRequirements() {
         return this.completionRequirements;
     }
@@ -69,7 +68,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
      * Gets the description property value. Description of the task.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -77,7 +76,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("checklist", (n) -> { this.setChecklist(n.getObjectValue(PlannerChecklistItems::createFromDiscriminatorValue)); });
@@ -92,7 +91,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
      * Gets the notes property value. Rich text description of the task. To be used by HTML-aware clients. For backwards compatibility, a plain-text version of the HTML description will be synced to the 'description' field. If this field has not previously been set but 'description' has been, the existing description will be synchronized to 'notes' with minimal whitespace-preserving HTML markup. Setting both 'description' and 'notes' is an error and will result in an exception.
      * @return a itemBody
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemBody getNotes() {
         return this.notes;
     }
@@ -100,7 +99,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
      * Gets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
      * @return a plannerPreviewType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerPreviewType getPreviewType() {
         return this.previewType;
     }
@@ -108,17 +107,15 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
      * Gets the references property value. The collection of references on the task.
      * @return a plannerExternalReferences
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PlannerExternalReferences getReferences() {
         return this.references;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("checklist", this.getChecklist());
@@ -131,55 +128,43 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     /**
      * Sets the checklist property value. The collection of checklist items on the task.
      * @param value Value to set for the checklist property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChecklist(@javax.annotation.Nullable final PlannerChecklistItems value) {
+    public void setChecklist(@jakarta.annotation.Nullable final PlannerChecklistItems value) {
         this.checklist = value;
     }
     /**
      * Sets the completionRequirements property value. Contains detailed information about requirements on the task.
      * @param value Value to set for the completionRequirements property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletionRequirements(@javax.annotation.Nullable final PlannerTaskCompletionRequirementDetails value) {
+    public void setCompletionRequirements(@jakarta.annotation.Nullable final PlannerTaskCompletionRequirementDetails value) {
         this.completionRequirements = value;
     }
     /**
      * Sets the description property value. Description of the task.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the notes property value. Rich text description of the task. To be used by HTML-aware clients. For backwards compatibility, a plain-text version of the HTML description will be synced to the 'description' field. If this field has not previously been set but 'description' has been, the existing description will be synchronized to 'notes' with minimal whitespace-preserving HTML markup. Setting both 'description' and 'notes' is an error and will result in an exception.
      * @param value Value to set for the notes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotes(@javax.annotation.Nullable final ItemBody value) {
+    public void setNotes(@jakarta.annotation.Nullable final ItemBody value) {
         this.notes = value;
     }
     /**
      * Sets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
      * @param value Value to set for the previewType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreviewType(@javax.annotation.Nullable final PlannerPreviewType value) {
+    public void setPreviewType(@jakarta.annotation.Nullable final PlannerPreviewType value) {
         this.previewType = value;
     }
     /**
      * Sets the references property value. The collection of references on the task.
      * @param value Value to set for the references property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReferences(@javax.annotation.Nullable final PlannerExternalReferences value) {
+    public void setReferences(@jakarta.annotation.Nullable final PlannerExternalReferences value) {
         this.references = value;
     }
 }

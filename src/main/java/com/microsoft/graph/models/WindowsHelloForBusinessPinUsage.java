@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Windows Hello for Business pin usage options
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsHelloForBusinessPinUsage implements ValuedEnum {
     /** Allowed the usage of certain pin rule */
     Allowed("allowed"),
@@ -17,10 +18,10 @@ public enum WindowsHelloForBusinessPinUsage implements ValuedEnum {
     WindowsHelloForBusinessPinUsage(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsHelloForBusinessPinUsage forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsHelloForBusinessPinUsage forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "allowed": return Allowed;

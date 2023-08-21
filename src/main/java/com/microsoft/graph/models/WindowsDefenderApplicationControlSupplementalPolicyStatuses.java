@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Enum values for the various WindowsDefenderApplicationControl supplemental policy deployment statuses.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsDefenderApplicationControlSupplementalPolicyStatuses implements ValuedEnum {
     /** The status of the WindowsDefenderApplicationControl supplemental policy is not known. */
     Unknown("unknown"),
@@ -21,10 +22,10 @@ public enum WindowsDefenderApplicationControlSupplementalPolicyStatuses implemen
     WindowsDefenderApplicationControlSupplementalPolicyStatuses(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsDefenderApplicationControlSupplementalPolicyStatuses forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsDefenderApplicationControlSupplementalPolicyStatuses forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

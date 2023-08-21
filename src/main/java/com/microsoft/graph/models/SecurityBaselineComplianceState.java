@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Security Baseline Compliance State
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum SecurityBaselineComplianceState implements ValuedEnum {
     /** Unknown state */
     Unknown("unknown"),
@@ -23,10 +24,10 @@ public enum SecurityBaselineComplianceState implements ValuedEnum {
     SecurityBaselineComplianceState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static SecurityBaselineComplianceState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static SecurityBaselineComplianceState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

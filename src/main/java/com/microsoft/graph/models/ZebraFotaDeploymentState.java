@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Represents the state of Zebra FOTA deployment.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ZebraFotaDeploymentState implements ValuedEnum {
     /** Deployment is created but Zebra has not confirmed its creation. */
     PendingCreation("pendingCreation"),
@@ -27,10 +28,10 @@ public enum ZebraFotaDeploymentState implements ValuedEnum {
     ZebraFotaDeploymentState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ZebraFotaDeploymentState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ZebraFotaDeploymentState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "pendingCreation": return PendingCreation;

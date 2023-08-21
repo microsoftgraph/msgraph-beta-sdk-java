@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TimeConstraint implements AdditionalDataHolder, Parsable {
     /**
      * The nature of the activity, optional. Possible values are: work, personal, unrestricted, or unknown.
@@ -26,9 +27,7 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
     private java.util.List<TimeSlot> timeSlots;
     /**
      * Instantiates a new timeConstraint and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TimeConstraint() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +36,8 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a timeConstraint
      */
-    @javax.annotation.Nonnull
-    public static TimeConstraint createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TimeConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TimeConstraint();
     }
@@ -46,7 +45,7 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
      * Gets the activityDomain property value. The nature of the activity, optional. Possible values are: work, personal, unrestricted, or unknown.
      * @return a activityDomain
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ActivityDomain getActivityDomain() {
         return this.activityDomain;
     }
@@ -54,7 +53,7 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +61,7 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("activityDomain", (n) -> { this.setActivityDomain(n.getEnumValue(ActivityDomain.class)); });
@@ -74,7 +73,7 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -82,17 +81,15 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
      * Gets the timeSlots property value. The timeSlots property
      * @return a timeSlot
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TimeSlot> getTimeSlots() {
         return this.timeSlots;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("activityDomain", this.getActivityDomain());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -102,37 +99,29 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
     /**
      * Sets the activityDomain property value. The nature of the activity, optional. Possible values are: work, personal, unrestricted, or unknown.
      * @param value Value to set for the activityDomain property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityDomain(@javax.annotation.Nullable final ActivityDomain value) {
+    public void setActivityDomain(@jakarta.annotation.Nullable final ActivityDomain value) {
         this.activityDomain = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the timeSlots property value. The timeSlots property
      * @param value Value to set for the timeSlots property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTimeSlots(@javax.annotation.Nullable final java.util.List<TimeSlot> value) {
+    public void setTimeSlots(@jakarta.annotation.Nullable final java.util.List<TimeSlot> value) {
         this.timeSlots = value;
     }
 }

@@ -3,6 +3,7 @@ package com.microsoft.graph.models.callrecords;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum NetworkConnectionType implements ValuedEnum {
     Unknown("unknown"),
     Wired("wired"),
@@ -14,10 +15,10 @@ public enum NetworkConnectionType implements ValuedEnum {
     NetworkConnectionType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static NetworkConnectionType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static NetworkConnectionType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

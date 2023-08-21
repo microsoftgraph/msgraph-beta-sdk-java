@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Windows VPN connection type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsVpnConnectionType implements ValuedEnum {
     /** Pulse Secure. */
     PulseSecure("pulseSecure"),
@@ -19,10 +20,10 @@ public enum WindowsVpnConnectionType implements ValuedEnum {
     WindowsVpnConnectionType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsVpnConnectionType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsVpnConnectionType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "pulseSecure": return PulseSecure;

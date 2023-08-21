@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageAssignment extends Entity implements Parsable {
     /**
      * Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
@@ -70,9 +71,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     private String targetId;
     /**
      * Instantiates a new accessPackageAssignment and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AccessPackageAssignment() {
         super();
     }
@@ -81,8 +80,8 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageAssignment
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessPackageAssignment();
     }
@@ -90,7 +89,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * Gets the accessPackage property value. Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
      * @return a accessPackage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackage getAccessPackage() {
         return this.accessPackage;
     }
@@ -98,7 +97,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * Gets the accessPackageAssignmentPolicy property value. Read-only. Nullable. Supports $filter (eq) on the id property
      * @return a accessPackageAssignmentPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageAssignmentPolicy getAccessPackageAssignmentPolicy() {
         return this.accessPackageAssignmentPolicy;
     }
@@ -106,7 +105,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * Gets the accessPackageAssignmentRequests property value. The accessPackageAssignmentRequests property
      * @return a accessPackageAssignmentRequest
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentRequest> getAccessPackageAssignmentRequests() {
         return this.accessPackageAssignmentRequests;
     }
@@ -114,7 +113,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * Gets the accessPackageAssignmentResourceRoles property value. The resource roles delivered to the target user for this assignment. Read-only. Nullable.
      * @return a accessPackageAssignmentResourceRole
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentResourceRole> getAccessPackageAssignmentResourceRoles() {
         return this.accessPackageAssignmentResourceRoles;
     }
@@ -122,7 +121,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * Gets the accessPackageId property value. The identifier of the access package. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAccessPackageId() {
         return this.accessPackageId;
     }
@@ -130,7 +129,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * Gets the assignmentPolicyId property value. The identifier of the access package assignment policy. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssignmentPolicyId() {
         return this.assignmentPolicyId;
     }
@@ -138,7 +137,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * Gets the assignmentState property value. The state of the access package assignment. Possible values are Delivering, Delivered, or Expired. Read-only. Supports $filter (eq).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssignmentState() {
         return this.assignmentState;
     }
@@ -146,7 +145,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * Gets the assignmentStatus property value. More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssignmentStatus() {
         return this.assignmentStatus;
     }
@@ -154,7 +153,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * Gets the catalogId property value. The identifier of the catalog containing the access package. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCatalogId() {
         return this.catalogId;
     }
@@ -162,7 +161,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * Gets the customExtensionCalloutInstances property value. Information about all the custom extension calls that were made during the access package assignment workflow.
      * @return a customExtensionCalloutInstance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CustomExtensionCalloutInstance> getCustomExtensionCalloutInstances() {
         return this.customExtensionCalloutInstances;
     }
@@ -170,7 +169,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * Gets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpiredDateTime() {
         return this.expiredDateTime;
     }
@@ -178,7 +177,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackage", (n) -> { this.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
@@ -202,7 +201,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * Gets the isExtended property value. Indicates whether the access package assignment is extended. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsExtended() {
         return this.isExtended;
     }
@@ -210,7 +209,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * Gets the schedule property value. When the access assignment is to be in place. Read-only.
      * @return a requestSchedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RequestSchedule getSchedule() {
         return this.schedule;
     }
@@ -218,7 +217,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * Gets the target property value. The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
      * @return a accessPackageSubject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageSubject getTarget() {
         return this.target;
     }
@@ -226,17 +225,15 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * Gets the targetId property value. The ID of the subject with the assignment. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTargetId() {
         return this.targetId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("accessPackage", this.getAccessPackage());
@@ -258,136 +255,106 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     /**
      * Sets the accessPackage property value. Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
      * @param value Value to set for the accessPackage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackage(@javax.annotation.Nullable final AccessPackage value) {
+    public void setAccessPackage(@jakarta.annotation.Nullable final AccessPackage value) {
         this.accessPackage = value;
     }
     /**
      * Sets the accessPackageAssignmentPolicy property value. Read-only. Nullable. Supports $filter (eq) on the id property
      * @param value Value to set for the accessPackageAssignmentPolicy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageAssignmentPolicy(@javax.annotation.Nullable final AccessPackageAssignmentPolicy value) {
+    public void setAccessPackageAssignmentPolicy(@jakarta.annotation.Nullable final AccessPackageAssignmentPolicy value) {
         this.accessPackageAssignmentPolicy = value;
     }
     /**
      * Sets the accessPackageAssignmentRequests property value. The accessPackageAssignmentRequests property
      * @param value Value to set for the accessPackageAssignmentRequests property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageAssignmentRequests(@javax.annotation.Nullable final java.util.List<AccessPackageAssignmentRequest> value) {
+    public void setAccessPackageAssignmentRequests(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignmentRequest> value) {
         this.accessPackageAssignmentRequests = value;
     }
     /**
      * Sets the accessPackageAssignmentResourceRoles property value. The resource roles delivered to the target user for this assignment. Read-only. Nullable.
      * @param value Value to set for the accessPackageAssignmentResourceRoles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageAssignmentResourceRoles(@javax.annotation.Nullable final java.util.List<AccessPackageAssignmentResourceRole> value) {
+    public void setAccessPackageAssignmentResourceRoles(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignmentResourceRole> value) {
         this.accessPackageAssignmentResourceRoles = value;
     }
     /**
      * Sets the accessPackageId property value. The identifier of the access package. Read-only.
      * @param value Value to set for the accessPackageId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageId(@javax.annotation.Nullable final String value) {
+    public void setAccessPackageId(@jakarta.annotation.Nullable final String value) {
         this.accessPackageId = value;
     }
     /**
      * Sets the assignmentPolicyId property value. The identifier of the access package assignment policy. Read-only.
      * @param value Value to set for the assignmentPolicyId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentPolicyId(@javax.annotation.Nullable final String value) {
+    public void setAssignmentPolicyId(@jakarta.annotation.Nullable final String value) {
         this.assignmentPolicyId = value;
     }
     /**
      * Sets the assignmentState property value. The state of the access package assignment. Possible values are Delivering, Delivered, or Expired. Read-only. Supports $filter (eq).
      * @param value Value to set for the assignmentState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentState(@javax.annotation.Nullable final String value) {
+    public void setAssignmentState(@jakarta.annotation.Nullable final String value) {
         this.assignmentState = value;
     }
     /**
      * Sets the assignmentStatus property value. More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
      * @param value Value to set for the assignmentStatus property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentStatus(@javax.annotation.Nullable final String value) {
+    public void setAssignmentStatus(@jakarta.annotation.Nullable final String value) {
         this.assignmentStatus = value;
     }
     /**
      * Sets the catalogId property value. The identifier of the catalog containing the access package. Read-only.
      * @param value Value to set for the catalogId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCatalogId(@javax.annotation.Nullable final String value) {
+    public void setCatalogId(@jakarta.annotation.Nullable final String value) {
         this.catalogId = value;
     }
     /**
      * Sets the customExtensionCalloutInstances property value. Information about all the custom extension calls that were made during the access package assignment workflow.
      * @param value Value to set for the customExtensionCalloutInstances property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomExtensionCalloutInstances(@javax.annotation.Nullable final java.util.List<CustomExtensionCalloutInstance> value) {
+    public void setCustomExtensionCalloutInstances(@jakarta.annotation.Nullable final java.util.List<CustomExtensionCalloutInstance> value) {
         this.customExtensionCalloutInstances = value;
     }
     /**
      * Sets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the expiredDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpiredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setExpiredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expiredDateTime = value;
     }
     /**
      * Sets the isExtended property value. Indicates whether the access package assignment is extended. Read-only.
      * @param value Value to set for the isExtended property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsExtended(@javax.annotation.Nullable final Boolean value) {
+    public void setIsExtended(@jakarta.annotation.Nullable final Boolean value) {
         this.isExtended = value;
     }
     /**
      * Sets the schedule property value. When the access assignment is to be in place. Read-only.
      * @param value Value to set for the schedule property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSchedule(@javax.annotation.Nullable final RequestSchedule value) {
+    public void setSchedule(@jakarta.annotation.Nullable final RequestSchedule value) {
         this.schedule = value;
     }
     /**
      * Sets the target property value. The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
      * @param value Value to set for the target property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTarget(@javax.annotation.Nullable final AccessPackageSubject value) {
+    public void setTarget(@jakarta.annotation.Nullable final AccessPackageSubject value) {
         this.target = value;
     }
     /**
      * Sets the targetId property value. The ID of the subject with the assignment. Read-only.
      * @param value Value to set for the targetId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetId(@javax.annotation.Nullable final String value) {
+    public void setTargetId(@jakarta.annotation.Nullable final String value) {
         this.targetId = value;
     }
 }

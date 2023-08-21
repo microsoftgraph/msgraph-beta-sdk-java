@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implements Parsable {
     /**
      * The chat between the user and Teams app.
@@ -13,9 +14,7 @@ public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implemen
     private Chat chat;
     /**
      * Instantiates a new userScopeTeamsAppInstallation and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UserScopeTeamsAppInstallation() {
         super();
         this.setOdataType("#microsoft.graph.userScopeTeamsAppInstallation");
@@ -25,8 +24,8 @@ public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implemen
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userScopeTeamsAppInstallation
      */
-    @javax.annotation.Nonnull
-    public static UserScopeTeamsAppInstallation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserScopeTeamsAppInstallation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserScopeTeamsAppInstallation();
     }
@@ -34,7 +33,7 @@ public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implemen
      * Gets the chat property value. The chat between the user and Teams app.
      * @return a chat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Chat getChat() {
         return this.chat;
     }
@@ -42,7 +41,7 @@ public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implemen
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("chat", (n) -> { this.setChat(n.getObjectValue(Chat::createFromDiscriminatorValue)); });
@@ -51,10 +50,8 @@ public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implemen
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("chat", this.getChat());
@@ -62,10 +59,8 @@ public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implemen
     /**
      * Sets the chat property value. The chat between the user and Teams app.
      * @param value Value to set for the chat property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChat(@javax.annotation.Nullable final Chat value) {
+    public void setChat(@jakarta.annotation.Nullable final Chat value) {
         this.chat = value;
     }
 }

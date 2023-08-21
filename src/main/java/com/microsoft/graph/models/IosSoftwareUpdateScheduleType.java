@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Updatescheduletypefor iOS software updates.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum IosSoftwareUpdateScheduleType implements ValuedEnum {
     /** Update outside of active hours. */
     UpdateOutsideOfActiveHours("updateOutsideOfActiveHours"),
@@ -19,10 +20,10 @@ public enum IosSoftwareUpdateScheduleType implements ValuedEnum {
     IosSoftwareUpdateScheduleType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static IosSoftwareUpdateScheduleType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static IosSoftwareUpdateScheduleType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "updateOutsideOfActiveHours": return UpdateOutsideOfActiveHours;

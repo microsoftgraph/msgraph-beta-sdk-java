@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DirectorySettingTemplate extends DirectoryObject implements Parsable {
     /**
      * Description of the template. Read-only.
@@ -21,9 +22,7 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
     private java.util.List<SettingTemplateValue> values;
     /**
      * Instantiates a new directorySettingTemplate and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DirectorySettingTemplate() {
         super();
         this.setOdataType("#microsoft.graph.directorySettingTemplate");
@@ -33,8 +32,8 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a directorySettingTemplate
      */
-    @javax.annotation.Nonnull
-    public static DirectorySettingTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DirectorySettingTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DirectorySettingTemplate();
     }
@@ -42,7 +41,7 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
      * Gets the description property value. Description of the template. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -50,7 +49,7 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
      * Gets the displayName property value. Display name of the template. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -58,7 +57,7 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -70,17 +69,15 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
      * Gets the values property value. Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.  Read-only.
      * @return a settingTemplateValue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SettingTemplateValue> getValues() {
         return this.values;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -90,28 +87,22 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
     /**
      * Sets the description property value. Description of the template. Read-only.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Display name of the template. Read-only.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the values property value. Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.  Read-only.
      * @param value Value to set for the values property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValues(@javax.annotation.Nullable final java.util.List<SettingTemplateValue> value) {
+    public void setValues(@jakarta.annotation.Nullable final java.util.List<SettingTemplateValue> value) {
         this.values = value;
     }
 }

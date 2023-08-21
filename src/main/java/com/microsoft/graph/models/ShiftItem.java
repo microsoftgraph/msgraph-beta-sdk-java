@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ShiftItem extends ScheduleEntity implements Parsable {
     /**
      * An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required.
@@ -21,9 +22,7 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
     private String notes;
     /**
      * Instantiates a new shiftItem and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ShiftItem() {
         super();
     }
@@ -32,8 +31,8 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a shiftItem
      */
-    @javax.annotation.Nonnull
-    public static ShiftItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ShiftItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -48,7 +47,7 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      * Gets the activities property value. An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required.
      * @return a shiftActivity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ShiftActivity> getActivities() {
         return this.activities;
     }
@@ -56,7 +55,7 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      * Gets the displayName property value. The shift label of the shiftItem.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -64,7 +63,7 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activities", (n) -> { this.setActivities(n.getCollectionOfObjectValues(ShiftActivity::createFromDiscriminatorValue)); });
@@ -76,17 +75,15 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      * Gets the notes property value. The shift notes for the shiftItem.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNotes() {
         return this.notes;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("activities", this.getActivities());
@@ -96,28 +93,22 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
     /**
      * Sets the activities property value. An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required.
      * @param value Value to set for the activities property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivities(@javax.annotation.Nullable final java.util.List<ShiftActivity> value) {
+    public void setActivities(@jakarta.annotation.Nullable final java.util.List<ShiftActivity> value) {
         this.activities = value;
     }
     /**
      * Sets the displayName property value. The shift label of the shiftItem.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the notes property value. The shift notes for the shiftItem.
      * @param value Value to set for the notes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotes(@javax.annotation.Nullable final String value) {
+    public void setNotes(@jakarta.annotation.Nullable final String value) {
         this.notes = value;
     }
 }

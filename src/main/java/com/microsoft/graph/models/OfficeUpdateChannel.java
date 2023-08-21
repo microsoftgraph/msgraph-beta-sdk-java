@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The Enum to specify the Office365 Updates Channel.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum OfficeUpdateChannel implements ValuedEnum {
     None("none"),
     Current("current"),
@@ -17,10 +18,10 @@ public enum OfficeUpdateChannel implements ValuedEnum {
     OfficeUpdateChannel(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static OfficeUpdateChannel forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static OfficeUpdateChannel forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PinnedChatMessageInfo extends Entity implements Parsable {
     /**
      * Represents details about the chat message that is pinned.
@@ -13,9 +14,7 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
     private ChatMessage message;
     /**
      * Instantiates a new pinnedChatMessageInfo and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PinnedChatMessageInfo() {
         super();
     }
@@ -24,8 +23,8 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a pinnedChatMessageInfo
      */
-    @javax.annotation.Nonnull
-    public static PinnedChatMessageInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PinnedChatMessageInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PinnedChatMessageInfo();
     }
@@ -33,7 +32,7 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("message", (n) -> { this.setMessage(n.getObjectValue(ChatMessage::createFromDiscriminatorValue)); });
@@ -43,17 +42,15 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
      * Gets the message property value. Represents details about the chat message that is pinned.
      * @return a chatMessage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ChatMessage getMessage() {
         return this.message;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("message", this.getMessage());
@@ -61,10 +58,8 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
     /**
      * Sets the message property value. Represents details about the chat message that is pinned.
      * @param value Value to set for the message property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessage(@javax.annotation.Nullable final ChatMessage value) {
+    public void setMessage(@jakarta.annotation.Nullable final ChatMessage value) {
         this.message = value;
     }
 }

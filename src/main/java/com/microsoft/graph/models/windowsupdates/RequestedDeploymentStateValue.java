@@ -3,6 +3,7 @@ package com.microsoft.graph.models.windowsupdates;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum RequestedDeploymentStateValue implements ValuedEnum {
     None("none"),
     Paused("paused"),
@@ -12,10 +13,10 @@ public enum RequestedDeploymentStateValue implements ValuedEnum {
     RequestedDeploymentStateValue(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static RequestedDeploymentStateValue forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static RequestedDeploymentStateValue forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

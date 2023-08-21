@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the type of restart action.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Win32LobAppRestartBehavior implements ValuedEnum {
     /** Intune will restart the device after running the app installation if the operation returns a reboot code. */
     BasedOnReturnCode("basedOnReturnCode"),
@@ -19,10 +20,10 @@ public enum Win32LobAppRestartBehavior implements ValuedEnum {
     Win32LobAppRestartBehavior(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static Win32LobAppRestartBehavior forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static Win32LobAppRestartBehavior forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "basedOnReturnCode": return BasedOnReturnCode;

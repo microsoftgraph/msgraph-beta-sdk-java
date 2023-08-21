@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Constraint that enforces an AbstractComplex type has or is set to a particular value
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingAbstractImplementationConstraint extends DeviceManagementConstraint implements Parsable {
     /**
      * List of value which means not configured for the setting
@@ -16,9 +17,7 @@ public class DeviceManagementSettingAbstractImplementationConstraint extends Dev
     private java.util.List<String> allowedAbstractImplementationDefinitionIds;
     /**
      * Instantiates a new deviceManagementSettingAbstractImplementationConstraint and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementSettingAbstractImplementationConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingAbstractImplementationConstraint");
@@ -28,8 +27,8 @@ public class DeviceManagementSettingAbstractImplementationConstraint extends Dev
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementSettingAbstractImplementationConstraint
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementSettingAbstractImplementationConstraint createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementSettingAbstractImplementationConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementSettingAbstractImplementationConstraint();
     }
@@ -37,7 +36,7 @@ public class DeviceManagementSettingAbstractImplementationConstraint extends Dev
      * Gets the allowedAbstractImplementationDefinitionIds property value. List of value which means not configured for the setting
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedAbstractImplementationDefinitionIds() {
         return this.allowedAbstractImplementationDefinitionIds;
     }
@@ -45,7 +44,7 @@ public class DeviceManagementSettingAbstractImplementationConstraint extends Dev
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowedAbstractImplementationDefinitionIds", (n) -> { this.setAllowedAbstractImplementationDefinitionIds(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -54,10 +53,8 @@ public class DeviceManagementSettingAbstractImplementationConstraint extends Dev
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("allowedAbstractImplementationDefinitionIds", this.getAllowedAbstractImplementationDefinitionIds());
@@ -65,10 +62,8 @@ public class DeviceManagementSettingAbstractImplementationConstraint extends Dev
     /**
      * Sets the allowedAbstractImplementationDefinitionIds property value. List of value which means not configured for the setting
      * @param value Value to set for the allowedAbstractImplementationDefinitionIds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowedAbstractImplementationDefinitionIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setAllowedAbstractImplementationDefinitionIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.allowedAbstractImplementationDefinitionIds = value;
     }
 }

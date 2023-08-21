@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * An admin enforced Android SafetyNet Device Attestation requirement on a managed app.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidManagedAppSafetyNetDeviceAttestationType implements ValuedEnum {
     /** no requirement set */
     None("none"),
@@ -17,10 +18,10 @@ public enum AndroidManagedAppSafetyNetDeviceAttestationType implements ValuedEnu
     AndroidManagedAppSafetyNetDeviceAttestationType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidManagedAppSafetyNetDeviceAttestationType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidManagedAppSafetyNetDeviceAttestationType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

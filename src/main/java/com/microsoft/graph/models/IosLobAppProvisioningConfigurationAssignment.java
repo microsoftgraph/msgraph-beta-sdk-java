@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * A class containing the properties used for Group Assignment of an iOS LOB App Provisioning and Configuration.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosLobAppProvisioningConfigurationAssignment extends Entity implements Parsable {
     /**
      * The target group assignment defined by the admin.
@@ -16,9 +17,7 @@ public class IosLobAppProvisioningConfigurationAssignment extends Entity impleme
     private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new iosLobAppProvisioningConfigurationAssignment and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public IosLobAppProvisioningConfigurationAssignment() {
         super();
     }
@@ -27,8 +26,8 @@ public class IosLobAppProvisioningConfigurationAssignment extends Entity impleme
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a iosLobAppProvisioningConfigurationAssignment
      */
-    @javax.annotation.Nonnull
-    public static IosLobAppProvisioningConfigurationAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IosLobAppProvisioningConfigurationAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IosLobAppProvisioningConfigurationAssignment();
     }
@@ -36,7 +35,7 @@ public class IosLobAppProvisioningConfigurationAssignment extends Entity impleme
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
@@ -46,17 +45,15 @@ public class IosLobAppProvisioningConfigurationAssignment extends Entity impleme
      * Gets the target property value. The target group assignment defined by the admin.
      * @return a deviceAndAppManagementAssignmentTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
         return this.target;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("target", this.getTarget());
@@ -64,10 +61,8 @@ public class IosLobAppProvisioningConfigurationAssignment extends Entity impleme
     /**
      * Sets the target property value. The target group assignment defined by the admin.
      * @param value Value to set for the target property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
+    public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this.target = value;
     }
 }

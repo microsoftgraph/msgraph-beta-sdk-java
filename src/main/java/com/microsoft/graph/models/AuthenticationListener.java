@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationListener extends Entity implements Parsable {
     /**
      * The priority of the listener. Determines the order of evaluation when an event has multiple listeners. The priority is evaluated from low to high.
@@ -17,9 +18,7 @@ public class AuthenticationListener extends Entity implements Parsable {
     private AuthenticationSourceFilter sourceFilter;
     /**
      * Instantiates a new authenticationListener and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AuthenticationListener() {
         super();
     }
@@ -28,8 +27,8 @@ public class AuthenticationListener extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a authenticationListener
      */
-    @javax.annotation.Nonnull
-    public static AuthenticationListener createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AuthenticationListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -44,7 +43,7 @@ public class AuthenticationListener extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
@@ -55,7 +54,7 @@ public class AuthenticationListener extends Entity implements Parsable {
      * Gets the priority property value. The priority of the listener. Determines the order of evaluation when an event has multiple listeners. The priority is evaluated from low to high.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPriority() {
         return this.priority;
     }
@@ -63,17 +62,15 @@ public class AuthenticationListener extends Entity implements Parsable {
      * Gets the sourceFilter property value. Filter based on the source of the authentication that is used to determine whether the listener is evaluated. This is currently limited to evaluations based on application the user is authenticating to.
      * @return a authenticationSourceFilter
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationSourceFilter getSourceFilter() {
         return this.sourceFilter;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("priority", this.getPriority());
@@ -82,19 +79,15 @@ public class AuthenticationListener extends Entity implements Parsable {
     /**
      * Sets the priority property value. The priority of the listener. Determines the order of evaluation when an event has multiple listeners. The priority is evaluated from low to high.
      * @param value Value to set for the priority property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPriority(@javax.annotation.Nullable final Integer value) {
+    public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.priority = value;
     }
     /**
      * Sets the sourceFilter property value. Filter based on the source of the authentication that is used to determine whether the listener is evaluated. This is currently limited to evaluations based on application the user is authenticating to.
      * @param value Value to set for the sourceFilter property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourceFilter(@javax.annotation.Nullable final AuthenticationSourceFilter value) {
+    public void setSourceFilter(@jakarta.annotation.Nullable final AuthenticationSourceFilter value) {
         this.sourceFilter = value;
     }
 }

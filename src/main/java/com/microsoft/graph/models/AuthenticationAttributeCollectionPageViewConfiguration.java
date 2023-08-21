@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationAttributeCollectionPageViewConfiguration implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
     private String title;
     /**
      * Instantiates a new authenticationAttributeCollectionPageViewConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AuthenticationAttributeCollectionPageViewConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +40,8 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a authenticationAttributeCollectionPageViewConfiguration
      */
-    @javax.annotation.Nonnull
-    public static AuthenticationAttributeCollectionPageViewConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AuthenticationAttributeCollectionPageViewConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AuthenticationAttributeCollectionPageViewConfiguration();
     }
@@ -50,7 +49,7 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +57,7 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
      * Gets the description property value. The description of the page.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -66,7 +65,7 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -79,7 +78,7 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
      * Gets the inputs property value. The display configuration of attributes being collected on the attribute collection page.
      * @return a authenticationAttributeCollectionInputConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AuthenticationAttributeCollectionInputConfiguration> getInputs() {
         return this.inputs;
     }
@@ -87,7 +86,7 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -95,17 +94,15 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
      * Gets the title property value. The title of the attribute collection page.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTitle() {
         return this.title;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeCollectionOfObjectValues("inputs", this.getInputs());
@@ -116,46 +113,36 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the description property value. The description of the page.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the inputs property value. The display configuration of attributes being collected on the attribute collection page.
      * @param value Value to set for the inputs property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInputs(@javax.annotation.Nullable final java.util.List<AuthenticationAttributeCollectionInputConfiguration> value) {
+    public void setInputs(@jakarta.annotation.Nullable final java.util.List<AuthenticationAttributeCollectionInputConfiguration> value) {
         this.inputs = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the title property value. The title of the attribute collection page.
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTitle(@javax.annotation.Nullable final String value) {
+    public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
 }

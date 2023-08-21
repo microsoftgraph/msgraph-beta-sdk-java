@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Represents an ADMX longDecimalTextBox element and an ADMX longDecimal element.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUploadedPresentation implements Parsable {
     /**
      * An unsigned integer that specifies the initial value for the decimal text box. The default value is 1.
@@ -36,9 +37,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
     private Long spinStep;
     /**
      * Instantiates a new groupPolicyPresentationLongDecimalTextBox and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public GroupPolicyPresentationLongDecimalTextBox() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyPresentationLongDecimalTextBox");
@@ -48,8 +47,8 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a groupPolicyPresentationLongDecimalTextBox
      */
-    @javax.annotation.Nonnull
-    public static GroupPolicyPresentationLongDecimalTextBox createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GroupPolicyPresentationLongDecimalTextBox createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GroupPolicyPresentationLongDecimalTextBox();
     }
@@ -57,7 +56,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      * Gets the defaultValue property value. An unsigned integer that specifies the initial value for the decimal text box. The default value is 1.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getDefaultValue() {
         return this.defaultValue;
     }
@@ -65,7 +64,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getLongValue()); });
@@ -80,7 +79,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      * Gets the maxValue property value. An unsigned long that specifies the maximum allowed value. The default value is 9999.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getMaxValue() {
         return this.maxValue;
     }
@@ -88,7 +87,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      * Gets the minValue property value. An unsigned long that specifies the minimum allowed value. The default value is 0.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getMinValue() {
         return this.minValue;
     }
@@ -96,7 +95,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      * Gets the required property value. Requirement to enter a value in the parameter box. The default value is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequired() {
         return this.required;
     }
@@ -104,7 +103,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      * Gets the spin property value. If true, create a spin control; otherwise, create a text box for numeric entry. The default value is true.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSpin() {
         return this.spin;
     }
@@ -112,17 +111,15 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      * Gets the spinStep property value. An unsigned integer that specifies the increment of change for the spin control. The default value is 1.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getSpinStep() {
         return this.spinStep;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeLongValue("defaultValue", this.getDefaultValue());
@@ -135,55 +132,43 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
     /**
      * Sets the defaultValue property value. An unsigned integer that specifies the initial value for the decimal text box. The default value is 1.
      * @param value Value to set for the defaultValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultValue(@javax.annotation.Nullable final Long value) {
+    public void setDefaultValue(@jakarta.annotation.Nullable final Long value) {
         this.defaultValue = value;
     }
     /**
      * Sets the maxValue property value. An unsigned long that specifies the maximum allowed value. The default value is 9999.
      * @param value Value to set for the maxValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaxValue(@javax.annotation.Nullable final Long value) {
+    public void setMaxValue(@jakarta.annotation.Nullable final Long value) {
         this.maxValue = value;
     }
     /**
      * Sets the minValue property value. An unsigned long that specifies the minimum allowed value. The default value is 0.
      * @param value Value to set for the minValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinValue(@javax.annotation.Nullable final Long value) {
+    public void setMinValue(@jakarta.annotation.Nullable final Long value) {
         this.minValue = value;
     }
     /**
      * Sets the required property value. Requirement to enter a value in the parameter box. The default value is false.
      * @param value Value to set for the required property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequired(@javax.annotation.Nullable final Boolean value) {
+    public void setRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.required = value;
     }
     /**
      * Sets the spin property value. If true, create a spin control; otherwise, create a text box for numeric entry. The default value is true.
      * @param value Value to set for the spin property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSpin(@javax.annotation.Nullable final Boolean value) {
+    public void setSpin(@jakarta.annotation.Nullable final Boolean value) {
         this.spin = value;
     }
     /**
      * Sets the spinStep property value. An unsigned integer that specifies the increment of change for the spin control. The default value is 1.
      * @param value Value to set for the spinStep property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSpinStep(@javax.annotation.Nullable final Long value) {
+    public void setSpinStep(@jakarta.annotation.Nullable final Long value) {
         this.spinStep = value;
     }
 }

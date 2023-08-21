@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CallTranscriptEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
      * Unique identifier of the call.
@@ -21,9 +22,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
     private IdentitySet meetingOrganizer;
     /**
      * Instantiates a new callTranscriptEventMessageDetail and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CallTranscriptEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.callTranscriptEventMessageDetail");
@@ -33,8 +32,8 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a callTranscriptEventMessageDetail
      */
-    @javax.annotation.Nonnull
-    public static CallTranscriptEventMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CallTranscriptEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CallTranscriptEventMessageDetail();
     }
@@ -42,7 +41,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      * Gets the callId property value. Unique identifier of the call.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCallId() {
         return this.callId;
     }
@@ -50,7 +49,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      * Gets the callTranscriptICalUid property value. Unique identifier for a call transcript.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCallTranscriptICalUid() {
         return this.callTranscriptICalUid;
     }
@@ -58,7 +57,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("callId", (n) -> { this.setCallId(n.getStringValue()); });
@@ -70,17 +69,15 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
      * Gets the meetingOrganizer property value. The organizer of the meeting.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getMeetingOrganizer() {
         return this.meetingOrganizer;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("callId", this.getCallId());
@@ -90,28 +87,22 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
     /**
      * Sets the callId property value. Unique identifier of the call.
      * @param value Value to set for the callId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallId(@javax.annotation.Nullable final String value) {
+    public void setCallId(@jakarta.annotation.Nullable final String value) {
         this.callId = value;
     }
     /**
      * Sets the callTranscriptICalUid property value. Unique identifier for a call transcript.
      * @param value Value to set for the callTranscriptICalUid property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCallTranscriptICalUid(@javax.annotation.Nullable final String value) {
+    public void setCallTranscriptICalUid(@jakarta.annotation.Nullable final String value) {
         this.callTranscriptICalUid = value;
     }
     /**
      * Sets the meetingOrganizer property value. The organizer of the meeting.
      * @param value Value to set for the meetingOrganizer property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMeetingOrganizer(@javax.annotation.Nullable final IdentitySet value) {
+    public void setMeetingOrganizer(@jakarta.annotation.Nullable final IdentitySet value) {
         this.meetingOrganizer = value;
     }
 }

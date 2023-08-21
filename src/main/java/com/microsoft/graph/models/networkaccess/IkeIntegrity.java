@@ -3,6 +3,7 @@ package com.microsoft.graph.models.networkaccess;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum IkeIntegrity implements ValuedEnum {
     Sha256("sha256"),
     Sha384("sha384"),
@@ -13,10 +14,10 @@ public enum IkeIntegrity implements ValuedEnum {
     IkeIntegrity(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static IkeIntegrity forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static IkeIntegrity forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "sha256": return Sha256;

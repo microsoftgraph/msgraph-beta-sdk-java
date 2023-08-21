@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * The security baseline compliance state summary of the security baseline for a device.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityBaselineDeviceState extends Entity implements Parsable {
     /**
      * Display name of the device
@@ -33,9 +34,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new securityBaselineDeviceState and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SecurityBaselineDeviceState() {
         super();
     }
@@ -44,8 +43,8 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a securityBaselineDeviceState
      */
-    @javax.annotation.Nonnull
-    public static SecurityBaselineDeviceState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SecurityBaselineDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SecurityBaselineDeviceState();
     }
@@ -53,7 +52,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      * Gets the deviceDisplayName property value. Display name of the device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
         return this.deviceDisplayName;
     }
@@ -61,7 +60,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceDisplayName", (n) -> { this.setDeviceDisplayName(n.getStringValue()); });
@@ -75,7 +74,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      * Gets the lastReportedDateTime property value. Last modified date time of the policy report
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
         return this.lastReportedDateTime;
     }
@@ -83,7 +82,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      * Gets the managedDeviceId property value. Intune device id
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
         return this.managedDeviceId;
     }
@@ -91,7 +90,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      * Gets the state property value. Security Baseline Compliance State
      * @return a securityBaselineComplianceState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SecurityBaselineComplianceState getState() {
         return this.state;
     }
@@ -99,17 +98,15 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      * Gets the userPrincipalName property value. User Principal Name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("deviceDisplayName", this.getDeviceDisplayName());
@@ -121,46 +118,36 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     /**
      * Sets the deviceDisplayName property value. Display name of the device
      * @param value Value to set for the deviceDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
         this.deviceDisplayName = value;
     }
     /**
      * Sets the lastReportedDateTime property value. Last modified date time of the policy report
      * @param value Value to set for the lastReportedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastReportedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastReportedDateTime = value;
     }
     /**
      * Sets the managedDeviceId property value. Intune device id
      * @param value Value to set for the managedDeviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
+    public void setManagedDeviceId(@jakarta.annotation.Nullable final String value) {
         this.managedDeviceId = value;
     }
     /**
      * Sets the state property value. Security Baseline Compliance State
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final SecurityBaselineComplianceState value) {
+    public void setState(@jakarta.annotation.Nullable final SecurityBaselineComplianceState value) {
         this.state = value;
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

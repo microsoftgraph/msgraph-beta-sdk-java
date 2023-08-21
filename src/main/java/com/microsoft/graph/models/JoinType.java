@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Device enrollment join type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum JoinType implements ValuedEnum {
     /** Unknown enrollment join type. */
     Unknown("unknown"),
@@ -19,10 +20,10 @@ public enum JoinType implements ValuedEnum {
     JoinType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static JoinType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static JoinType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

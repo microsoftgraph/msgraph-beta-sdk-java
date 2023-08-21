@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Describes applicability for the mode the device is in
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementConfigurationDeviceMode implements ValuedEnum {
     /** No Device Mode specified */
     None("none"),
@@ -15,10 +16,10 @@ public enum DeviceManagementConfigurationDeviceMode implements ValuedEnum {
     DeviceManagementConfigurationDeviceMode(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementConfigurationDeviceMode forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementConfigurationDeviceMode forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

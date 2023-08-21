@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum PrintJobStateDetail implements ValuedEnum {
     UploadPending("uploadPending"),
     Transforming("transforming"),
@@ -16,10 +17,10 @@ public enum PrintJobStateDetail implements ValuedEnum {
     PrintJobStateDetail(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static PrintJobStateDetail forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static PrintJobStateDetail forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "uploadPending": return UploadPending;

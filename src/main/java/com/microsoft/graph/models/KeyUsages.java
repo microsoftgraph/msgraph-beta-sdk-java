@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Key Usage Options.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum KeyUsages implements ValuedEnum {
     /** Key Encipherment Usage. */
     KeyEncipherment("keyEncipherment"),
@@ -15,10 +16,10 @@ public enum KeyUsages implements ValuedEnum {
     KeyUsages(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static KeyUsages forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static KeyUsages forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "keyEncipherment": return KeyEncipherment;

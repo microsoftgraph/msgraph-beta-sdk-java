@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Forward Secrecy Group values for Windows10 VPN policies with IKEv2 connection type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum PerfectForwardSecrecyGroup implements ValuedEnum {
     /** PFS1 */
     Pfs1("pfs1"),
@@ -25,10 +26,10 @@ public enum PerfectForwardSecrecyGroup implements ValuedEnum {
     PerfectForwardSecrecyGroup(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static PerfectForwardSecrecyGroup forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static PerfectForwardSecrecyGroup forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "pfs1": return Pfs1;

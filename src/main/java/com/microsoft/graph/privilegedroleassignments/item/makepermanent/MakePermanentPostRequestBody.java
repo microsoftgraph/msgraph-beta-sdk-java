@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MakePermanentPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class MakePermanentPostRequestBody implements AdditionalDataHolder, Parsa
     private String ticketSystem;
     /**
      * Instantiates a new makePermanentPostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MakePermanentPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +36,8 @@ public class MakePermanentPostRequestBody implements AdditionalDataHolder, Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a makePermanentPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static MakePermanentPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MakePermanentPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MakePermanentPostRequestBody();
     }
@@ -46,7 +45,7 @@ public class MakePermanentPostRequestBody implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +53,7 @@ public class MakePermanentPostRequestBody implements AdditionalDataHolder, Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("reason", (n) -> { this.setReason(n.getStringValue()); });
@@ -66,7 +65,7 @@ public class MakePermanentPostRequestBody implements AdditionalDataHolder, Parsa
      * Gets the reason property value. The reason property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getReason() {
         return this.reason;
     }
@@ -74,7 +73,7 @@ public class MakePermanentPostRequestBody implements AdditionalDataHolder, Parsa
      * Gets the ticketNumber property value. The ticketNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTicketNumber() {
         return this.ticketNumber;
     }
@@ -82,17 +81,15 @@ public class MakePermanentPostRequestBody implements AdditionalDataHolder, Parsa
      * Gets the ticketSystem property value. The ticketSystem property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTicketSystem() {
         return this.ticketSystem;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("reason", this.getReason());
         writer.writeStringValue("ticketNumber", this.getTicketNumber());
@@ -102,37 +99,29 @@ public class MakePermanentPostRequestBody implements AdditionalDataHolder, Parsa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the reason property value. The reason property
      * @param value Value to set for the reason property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReason(@javax.annotation.Nullable final String value) {
+    public void setReason(@jakarta.annotation.Nullable final String value) {
         this.reason = value;
     }
     /**
      * Sets the ticketNumber property value. The ticketNumber property
      * @param value Value to set for the ticketNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTicketNumber(@javax.annotation.Nullable final String value) {
+    public void setTicketNumber(@jakarta.annotation.Nullable final String value) {
         this.ticketNumber = value;
     }
     /**
      * Sets the ticketSystem property value. The ticketSystem property
      * @param value Value to set for the ticketSystem property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTicketSystem(@javax.annotation.Nullable final String value) {
+    public void setTicketSystem(@jakarta.annotation.Nullable final String value) {
         this.ticketSystem = value;
     }
 }

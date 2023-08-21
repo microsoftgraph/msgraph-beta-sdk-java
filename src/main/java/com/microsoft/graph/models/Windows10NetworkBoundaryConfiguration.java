@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Windows10 Network Boundary Configuration
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Windows Network Isolation Policy
@@ -16,9 +17,7 @@ public class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration i
     private WindowsNetworkIsolationPolicy windowsNetworkIsolationPolicy;
     /**
      * Instantiates a new windows10NetworkBoundaryConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Windows10NetworkBoundaryConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10NetworkBoundaryConfiguration");
@@ -28,8 +27,8 @@ public class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration i
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windows10NetworkBoundaryConfiguration
      */
-    @javax.annotation.Nonnull
-    public static Windows10NetworkBoundaryConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Windows10NetworkBoundaryConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Windows10NetworkBoundaryConfiguration();
     }
@@ -37,7 +36,7 @@ public class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration i
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("windowsNetworkIsolationPolicy", (n) -> { this.setWindowsNetworkIsolationPolicy(n.getObjectValue(WindowsNetworkIsolationPolicy::createFromDiscriminatorValue)); });
@@ -47,17 +46,15 @@ public class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration i
      * Gets the windowsNetworkIsolationPolicy property value. Windows Network Isolation Policy
      * @return a windowsNetworkIsolationPolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsNetworkIsolationPolicy getWindowsNetworkIsolationPolicy() {
         return this.windowsNetworkIsolationPolicy;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("windowsNetworkIsolationPolicy", this.getWindowsNetworkIsolationPolicy());
@@ -65,10 +62,8 @@ public class Windows10NetworkBoundaryConfiguration extends DeviceConfiguration i
     /**
      * Sets the windowsNetworkIsolationPolicy property value. Windows Network Isolation Policy
      * @param value Value to set for the windowsNetworkIsolationPolicy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindowsNetworkIsolationPolicy(@javax.annotation.Nullable final WindowsNetworkIsolationPolicy value) {
+    public void setWindowsNetworkIsolationPolicy(@jakarta.annotation.Nullable final WindowsNetworkIsolationPolicy value) {
         this.windowsNetworkIsolationPolicy = value;
     }
 }

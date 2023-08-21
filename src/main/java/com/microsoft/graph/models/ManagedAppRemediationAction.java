@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * An admin initiated action to be applied on a managed app.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedAppRemediationAction implements ValuedEnum {
     /** app and the corresponding company data to be blocked */
     Block("block"),
@@ -17,10 +18,10 @@ public enum ManagedAppRemediationAction implements ValuedEnum {
     ManagedAppRemediationAction(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ManagedAppRemediationAction forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ManagedAppRemediationAction forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "block": return Block;

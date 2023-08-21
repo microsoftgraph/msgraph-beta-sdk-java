@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DirectoryObjectPartnerReference extends DirectoryObject implements Parsable {
     /**
      * Description of the object returned. Read-only.
@@ -26,9 +27,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
     private String objectType;
     /**
      * Instantiates a new directoryObjectPartnerReference and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DirectoryObjectPartnerReference() {
         super();
         this.setOdataType("#microsoft.graph.directoryObjectPartnerReference");
@@ -38,8 +37,8 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a directoryObjectPartnerReference
      */
-    @javax.annotation.Nonnull
-    public static DirectoryObjectPartnerReference createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DirectoryObjectPartnerReference createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DirectoryObjectPartnerReference();
     }
@@ -47,7 +46,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * Gets the description property value. Description of the object returned. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -55,7 +54,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * Gets the displayName property value. Name of directory object being returned, like group or application. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -63,7 +62,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * Gets the externalPartnerTenantId property value. The tenant identifier for the partner tenant. Read-only.
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getExternalPartnerTenantId() {
         return this.externalPartnerTenantId;
     }
@@ -71,7 +70,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -84,17 +83,15 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * Gets the objectType property value. The type of the referenced object in the partner tenant. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getObjectType() {
         return this.objectType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -105,37 +102,29 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
     /**
      * Sets the description property value. Description of the object returned. Read-only.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Name of directory object being returned, like group or application. Read-only.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the externalPartnerTenantId property value. The tenant identifier for the partner tenant. Read-only.
      * @param value Value to set for the externalPartnerTenantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalPartnerTenantId(@javax.annotation.Nullable final UUID value) {
+    public void setExternalPartnerTenantId(@jakarta.annotation.Nullable final UUID value) {
         this.externalPartnerTenantId = value;
     }
     /**
      * Sets the objectType property value. The type of the referenced object in the partner tenant. Read-only.
      * @param value Value to set for the objectType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setObjectType(@javax.annotation.Nullable final String value) {
+    public void setObjectType(@jakarta.annotation.Nullable final String value) {
         this.objectType = value;
     }
 }

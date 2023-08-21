@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Referred setting information about reusable setting
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationReferredSettingInformation implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -20,14 +21,12 @@ public class DeviceManagementConfigurationReferredSettingInformation implements 
      */
     private String odataType;
     /**
-     * Setting definition id that is being referred to a setting. Applicable for reusable setting.
+     * Setting definition id that is being referred to a setting. Applicable for reusable setting
      */
     private String settingDefinitionId;
     /**
      * Instantiates a new deviceManagementConfigurationReferredSettingInformation and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementConfigurationReferredSettingInformation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -36,8 +35,8 @@ public class DeviceManagementConfigurationReferredSettingInformation implements 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationReferredSettingInformation
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationReferredSettingInformation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationReferredSettingInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationReferredSettingInformation();
     }
@@ -45,7 +44,7 @@ public class DeviceManagementConfigurationReferredSettingInformation implements 
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -53,7 +52,7 @@ public class DeviceManagementConfigurationReferredSettingInformation implements 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -64,25 +63,23 @@ public class DeviceManagementConfigurationReferredSettingInformation implements 
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the settingDefinitionId property value. Setting definition id that is being referred to a setting. Applicable for reusable setting.
+     * Gets the settingDefinitionId property value. Setting definition id that is being referred to a setting. Applicable for reusable setting
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingDefinitionId() {
         return this.settingDefinitionId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("settingDefinitionId", this.getSettingDefinitionId());
@@ -91,28 +88,22 @@ public class DeviceManagementConfigurationReferredSettingInformation implements 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
-     * Sets the settingDefinitionId property value. Setting definition id that is being referred to a setting. Applicable for reusable setting.
+     * Sets the settingDefinitionId property value. Setting definition id that is being referred to a setting. Applicable for reusable setting
      * @param value Value to set for the settingDefinitionId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingDefinitionId(@javax.annotation.Nullable final String value) {
+    public void setSettingDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.settingDefinitionId = value;
     }
 }

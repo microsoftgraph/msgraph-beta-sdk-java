@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Windows 10 VPN profile target types.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Windows10VpnProfileTarget implements ValuedEnum {
     /** User targeted VPN profile. */
     User("user"),
@@ -17,10 +18,10 @@ public enum Windows10VpnProfileTarget implements ValuedEnum {
     Windows10VpnProfileTarget(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static Windows10VpnProfileTarget forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static Windows10VpnProfileTarget forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "user": return User;

@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum SharingCapabilities implements ValuedEnum {
     Disabled("disabled"),
     ExternalUserSharingOnly("externalUserSharingOnly"),
@@ -13,10 +14,10 @@ public enum SharingCapabilities implements ValuedEnum {
     SharingCapabilities(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static SharingCapabilities forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static SharingCapabilities forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "disabled": return Disabled;

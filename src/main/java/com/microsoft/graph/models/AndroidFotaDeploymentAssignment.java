@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Describes deployment security group to assign a deployment to. The backend will expand the security Group ID to extract device serial numbers prior sending a create deployment request to Zebra.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -37,9 +38,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
     private AndroidFotaDeploymentAssignmentTarget target;
     /**
      * Instantiates a new androidFotaDeploymentAssignment and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AndroidFotaDeploymentAssignment() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -48,8 +47,8 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a androidFotaDeploymentAssignment
      */
-    @javax.annotation.Nonnull
-    public static AndroidFotaDeploymentAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AndroidFotaDeploymentAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AndroidFotaDeploymentAssignment();
     }
@@ -57,7 +56,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -65,7 +64,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
      * Gets the assignmentTarget property value. The Azure Active Directory (Azure AD) we are deploying firmware updates to (e.g.: d93c8f48-bd42-4514-ba40-bc6b84780930). NOTE: Use this property moving forward because the existing property, target, is deprecated.
      * @return a deviceAndAppManagementAssignmentTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getAssignmentTarget() {
         return this.assignmentTarget;
     }
@@ -73,7 +72,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
      * Gets the displayName property value. The display name of the Azure AD security group used for the assignment.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -81,7 +80,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("assignmentTarget", (n) -> { this.setAssignmentTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
@@ -95,7 +94,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
      * Gets the id property value. A unique identifier assigned to each Android FOTA Assignment entity
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -103,7 +102,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -111,17 +110,15 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
      * Gets the target property value. The AAD Group we are deploying firmware updates to
      * @return a androidFotaDeploymentAssignmentTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidFotaDeploymentAssignmentTarget getTarget() {
         return this.target;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("assignmentTarget", this.getAssignmentTarget());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -133,55 +130,43 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the assignmentTarget property value. The Azure Active Directory (Azure AD) we are deploying firmware updates to (e.g.: d93c8f48-bd42-4514-ba40-bc6b84780930). NOTE: Use this property moving forward because the existing property, target, is deprecated.
      * @param value Value to set for the assignmentTarget property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignmentTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
+    public void setAssignmentTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this.assignmentTarget = value;
     }
     /**
      * Sets the displayName property value. The display name of the Azure AD security group used for the assignment.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the id property value. A unique identifier assigned to each Android FOTA Assignment entity
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the target property value. The AAD Group we are deploying firmware updates to
      * @param value Value to set for the target property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTarget(@javax.annotation.Nullable final AndroidFotaDeploymentAssignmentTarget value) {
+    public void setTarget(@jakarta.annotation.Nullable final AndroidFotaDeploymentAssignmentTarget value) {
         this.target = value;
     }
 }

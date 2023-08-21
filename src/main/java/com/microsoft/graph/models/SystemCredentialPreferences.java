@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SystemCredentialPreferences implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Parsab
     private AdvancedConfigState state;
     /**
      * Instantiates a new systemCredentialPreferences and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SystemCredentialPreferences() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +40,8 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a systemCredentialPreferences
      */
-    @javax.annotation.Nonnull
-    public static SystemCredentialPreferences createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SystemCredentialPreferences createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SystemCredentialPreferences();
     }
@@ -50,7 +49,7 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +57,7 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Parsab
      * Gets the excludeTargets property value. Users and groups excluded from the preferred authentication method experience of the system.
      * @return a excludeTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ExcludeTarget> getExcludeTargets() {
         return this.excludeTargets;
     }
@@ -66,7 +65,7 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("excludeTargets", (n) -> { this.setExcludeTargets(n.getCollectionOfObjectValues(ExcludeTarget::createFromDiscriminatorValue)); });
@@ -79,7 +78,7 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Parsab
      * Gets the includeTargets property value. Users and groups included in the preferred authentication method experience of the system.
      * @return a includeTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IncludeTarget> getIncludeTargets() {
         return this.includeTargets;
     }
@@ -87,7 +86,7 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Parsab
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -95,17 +94,15 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Parsab
      * Gets the state property value. The state property
      * @return a advancedConfigState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AdvancedConfigState getState() {
         return this.state;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("excludeTargets", this.getExcludeTargets());
         writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
@@ -116,46 +113,36 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Parsab
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the excludeTargets property value. Users and groups excluded from the preferred authentication method experience of the system.
      * @param value Value to set for the excludeTargets property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExcludeTargets(@javax.annotation.Nullable final java.util.List<ExcludeTarget> value) {
+    public void setExcludeTargets(@jakarta.annotation.Nullable final java.util.List<ExcludeTarget> value) {
         this.excludeTargets = value;
     }
     /**
      * Sets the includeTargets property value. Users and groups included in the preferred authentication method experience of the system.
      * @param value Value to set for the includeTargets property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncludeTargets(@javax.annotation.Nullable final java.util.List<IncludeTarget> value) {
+    public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<IncludeTarget> value) {
         this.includeTargets = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final AdvancedConfigState value) {
+    public void setState(@jakarta.annotation.Nullable final AdvancedConfigState value) {
         this.state = value;
     }
 }

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Exchange Active Sync services.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum EasServices implements ValuedEnum {
     None("none"),
     /** Enables synchronization of calendars. */
@@ -22,10 +23,10 @@ public enum EasServices implements ValuedEnum {
     EasServices(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static EasServices forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static EasServices forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

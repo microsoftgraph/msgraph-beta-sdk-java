@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Owner type of device.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedDeviceOwnerType implements ValuedEnum {
     /** Unknown. */
     Unknown("unknown"),
@@ -17,10 +18,10 @@ public enum ManagedDeviceOwnerType implements ValuedEnum {
     ManagedDeviceOwnerType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ManagedDeviceOwnerType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ManagedDeviceOwnerType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

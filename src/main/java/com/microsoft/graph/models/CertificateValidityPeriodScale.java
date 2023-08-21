@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Certificate Validity Period Options.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum CertificateValidityPeriodScale implements ValuedEnum {
     /** Days. */
     Days("days"),
@@ -17,10 +18,10 @@ public enum CertificateValidityPeriodScale implements ValuedEnum {
     CertificateValidityPeriodScale(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static CertificateValidityPeriodScale forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static CertificateValidityPeriodScale forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "days": return Days;

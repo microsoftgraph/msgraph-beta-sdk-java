@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The type of VPN client authentication type
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum VpnClientAuthenticationType implements ValuedEnum {
     /** User Authentication */
     UserAuthentication("userAuthentication"),
@@ -15,10 +16,10 @@ public enum VpnClientAuthenticationType implements ValuedEnum {
     VpnClientAuthenticationType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static VpnClientAuthenticationType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static VpnClientAuthenticationType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "userAuthentication": return UserAuthentication;

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Describes which technology this setting can be deployed with
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
     /** Default. Setting cannot be deployed through any channel. */
     None("none"),
@@ -33,10 +34,10 @@ public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
     DeviceManagementConfigurationTechnologies(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementConfigurationTechnologies forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementConfigurationTechnologies forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

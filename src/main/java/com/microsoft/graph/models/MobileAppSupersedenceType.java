@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the supersedence type associated with a relationship between two mobile apps.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MobileAppSupersedenceType implements ValuedEnum {
     /** Indicates that the child app should be updated by the internal logic of the parent app. */
     Update("update"),
@@ -15,10 +16,10 @@ public enum MobileAppSupersedenceType implements ValuedEnum {
     MobileAppSupersedenceType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MobileAppSupersedenceType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MobileAppSupersedenceType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "update": return Update;

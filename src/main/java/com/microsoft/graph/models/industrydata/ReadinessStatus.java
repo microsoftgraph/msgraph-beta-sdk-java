@@ -3,6 +3,7 @@ package com.microsoft.graph.models.industrydata;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ReadinessStatus implements ValuedEnum {
     NotReady("notReady"),
     Ready("ready"),
@@ -14,10 +15,10 @@ public enum ReadinessStatus implements ValuedEnum {
     ReadinessStatus(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ReadinessStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ReadinessStatus forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notReady": return NotReady;

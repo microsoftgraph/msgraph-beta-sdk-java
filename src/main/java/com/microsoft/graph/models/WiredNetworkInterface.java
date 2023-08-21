@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Apple network interface type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WiredNetworkInterface implements ValuedEnum {
     /** Any Ethernet. */
     AnyEthernet("anyEthernet"),
@@ -25,10 +26,10 @@ public enum WiredNetworkInterface implements ValuedEnum {
     WiredNetworkInterface(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WiredNetworkInterface forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WiredNetworkInterface forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "anyEthernet": return AnyEthernet;

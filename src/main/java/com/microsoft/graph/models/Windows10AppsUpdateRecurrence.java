@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for App update on Windows10 recurrence.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Windows10AppsUpdateRecurrence implements ValuedEnum {
     /** Default value, specifies a single occurence. */
     None("none"),
@@ -19,10 +20,10 @@ public enum Windows10AppsUpdateRecurrence implements ValuedEnum {
     Windows10AppsUpdateRecurrence(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static Windows10AppsUpdateRecurrence forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static Windows10AppsUpdateRecurrence forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

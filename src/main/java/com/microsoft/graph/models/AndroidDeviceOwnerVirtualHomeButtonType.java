@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Android Device Owner Kiosk Mode managed home screen virtual home button type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidDeviceOwnerVirtualHomeButtonType implements ValuedEnum {
     /** Not configured; this value is ignored. */
     NotConfigured("notConfigured"),
@@ -17,10 +18,10 @@ public enum AndroidDeviceOwnerVirtualHomeButtonType implements ValuedEnum {
     AndroidDeviceOwnerVirtualHomeButtonType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidDeviceOwnerVirtualHomeButtonType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidDeviceOwnerVirtualHomeButtonType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     private String replacesCallId;
     /**
      * Instantiates a new invitationParticipantInfo and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public InvitationParticipantInfo() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +52,8 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a invitationParticipantInfo
      */
-    @javax.annotation.Nonnull
-    public static InvitationParticipantInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static InvitationParticipantInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new InvitationParticipantInfo();
     }
@@ -62,7 +61,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +69,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * Gets the endpointType property value. The type of endpoint. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
      * @return a endpointType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EndpointType getEndpointType() {
         return this.endpointType;
     }
@@ -78,7 +77,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("endpointType", (n) -> { this.setEndpointType(n.getEnumValue(EndpointType.class)); });
@@ -94,7 +93,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * Gets the hidden property value. Optional. Whether to hide the participant from the roster.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHidden() {
         return this.hidden;
     }
@@ -102,7 +101,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * Gets the identity property value. The identity property
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getIdentity() {
         return this.identity;
     }
@@ -110,7 +109,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -118,7 +117,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * Gets the participantId property value. Optional. The ID of the target participant.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getParticipantId() {
         return this.participantId;
     }
@@ -126,7 +125,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * Gets the removeFromDefaultAudioRoutingGroup property value. Optional. Whether to remove them from the main mixer.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRemoveFromDefaultAudioRoutingGroup() {
         return this.removeFromDefaultAudioRoutingGroup;
     }
@@ -134,17 +133,15 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
      * Gets the replacesCallId property value. Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getReplacesCallId() {
         return this.replacesCallId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("endpointType", this.getEndpointType());
         writer.writeBooleanValue("hidden", this.getHidden());
@@ -158,73 +155,57 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, Parsable
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the endpointType property value. The type of endpoint. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
      * @param value Value to set for the endpointType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndpointType(@javax.annotation.Nullable final EndpointType value) {
+    public void setEndpointType(@jakarta.annotation.Nullable final EndpointType value) {
         this.endpointType = value;
     }
     /**
      * Sets the hidden property value. Optional. Whether to hide the participant from the roster.
      * @param value Value to set for the hidden property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHidden(@javax.annotation.Nullable final Boolean value) {
+    public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
         this.hidden = value;
     }
     /**
      * Sets the identity property value. The identity property
      * @param value Value to set for the identity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentity(@javax.annotation.Nullable final IdentitySet value) {
+    public void setIdentity(@jakarta.annotation.Nullable final IdentitySet value) {
         this.identity = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the participantId property value. Optional. The ID of the target participant.
      * @param value Value to set for the participantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParticipantId(@javax.annotation.Nullable final String value) {
+    public void setParticipantId(@jakarta.annotation.Nullable final String value) {
         this.participantId = value;
     }
     /**
      * Sets the removeFromDefaultAudioRoutingGroup property value. Optional. Whether to remove them from the main mixer.
      * @param value Value to set for the removeFromDefaultAudioRoutingGroup property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemoveFromDefaultAudioRoutingGroup(@javax.annotation.Nullable final Boolean value) {
+    public void setRemoveFromDefaultAudioRoutingGroup(@jakarta.annotation.Nullable final Boolean value) {
         this.removeFromDefaultAudioRoutingGroup = value;
     }
     /**
      * Sets the replacesCallId property value. Optional. The call which the target identity is currently a part of. For peer-to-peer case, the call will be dropped once the participant is added successfully.
      * @param value Value to set for the replacesCallId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReplacesCallId(@javax.annotation.Nullable final String value) {
+    public void setReplacesCallId(@jakarta.annotation.Nullable final String value) {
         this.replacesCallId = value;
     }
 }

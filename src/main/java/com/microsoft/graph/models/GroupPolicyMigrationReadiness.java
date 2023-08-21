@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates if the Group Policy Object file is covered and ready for Intune migration.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum GroupPolicyMigrationReadiness implements ValuedEnum {
     /** No Intune coverage */
     None("none"),
@@ -21,10 +22,10 @@ public enum GroupPolicyMigrationReadiness implements ValuedEnum {
     GroupPolicyMigrationReadiness(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static GroupPolicyMigrationReadiness forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static GroupPolicyMigrationReadiness forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

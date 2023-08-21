@@ -10,9 +10,10 @@ import java.util.Objects;
 /**
  * Entity representing a job to export a report
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementExportJob extends Entity implements Parsable {
     /**
-     * Time that the exported report expires
+     * Time that the exported report expires. This property is read-only.
      */
     private OffsetDateTime expirationDateTime;
     /**
@@ -32,7 +33,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      */
     private String reportName;
     /**
-     * Time that the exported report was requested
+     * Time that the exported report was requested. This property is read-only.
      */
     private OffsetDateTime requestDateTime;
     /**
@@ -48,14 +49,12 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      */
     private DeviceManagementReportStatus status;
     /**
-     * Temporary location of the exported report
+     * Temporary location of the exported report. This property is read-only.
      */
     private String url;
     /**
      * Instantiates a new deviceManagementExportJob and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementExportJob() {
         super();
     }
@@ -64,16 +63,16 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementExportJob
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementExportJob createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementExportJob createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementExportJob();
     }
     /**
-     * Gets the expirationDateTime property value. Time that the exported report expires
+     * Gets the expirationDateTime property value. Time that the exported report expires. This property is read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
         return this.expirationDateTime;
     }
@@ -81,7 +80,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
@@ -100,7 +99,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * Gets the filter property value. Filters applied on the report
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFilter() {
         return this.filter;
     }
@@ -108,7 +107,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * Gets the format property value. Possible values for the file format of a report
      * @return a deviceManagementReportFileFormat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementReportFileFormat getFormat() {
         return this.format;
     }
@@ -116,7 +115,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * Gets the localizationType property value. Configures how the requested export job is localized
      * @return a deviceManagementExportJobLocalizationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementExportJobLocalizationType getLocalizationType() {
         return this.localizationType;
     }
@@ -124,15 +123,15 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * Gets the reportName property value. Name of the report
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getReportName() {
         return this.reportName;
     }
     /**
-     * Gets the requestDateTime property value. Time that the exported report was requested
+     * Gets the requestDateTime property value. Time that the exported report was requested. This property is read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRequestDateTime() {
         return this.requestDateTime;
     }
@@ -140,7 +139,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * Gets the select property value. Columns selected from the report
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSelect() {
         return this.select;
     }
@@ -148,7 +147,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * Gets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSnapshotId() {
         return this.snapshotId;
     }
@@ -156,25 +155,23 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
      * Gets the status property value. Possible statuses associated with a generated report
      * @return a deviceManagementReportStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementReportStatus getStatus() {
         return this.status;
     }
     /**
-     * Gets the url property value. Temporary location of the exported report
+     * Gets the url property value. Temporary location of the exported report. This property is read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUrl() {
         return this.url;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("filter", this.getFilter());
@@ -186,93 +183,73 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the expirationDateTime property value. Time that the exported report expires
+     * Sets the expirationDateTime property value. Time that the exported report expires. This property is read-only.
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the filter property value. Filters applied on the report
      * @param value Value to set for the filter property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFilter(@javax.annotation.Nullable final String value) {
+    public void setFilter(@jakarta.annotation.Nullable final String value) {
         this.filter = value;
     }
     /**
      * Sets the format property value. Possible values for the file format of a report
      * @param value Value to set for the format property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFormat(@javax.annotation.Nullable final DeviceManagementReportFileFormat value) {
+    public void setFormat(@jakarta.annotation.Nullable final DeviceManagementReportFileFormat value) {
         this.format = value;
     }
     /**
      * Sets the localizationType property value. Configures how the requested export job is localized
      * @param value Value to set for the localizationType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocalizationType(@javax.annotation.Nullable final DeviceManagementExportJobLocalizationType value) {
+    public void setLocalizationType(@jakarta.annotation.Nullable final DeviceManagementExportJobLocalizationType value) {
         this.localizationType = value;
     }
     /**
      * Sets the reportName property value. Name of the report
      * @param value Value to set for the reportName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReportName(@javax.annotation.Nullable final String value) {
+    public void setReportName(@jakarta.annotation.Nullable final String value) {
         this.reportName = value;
     }
     /**
-     * Sets the requestDateTime property value. Time that the exported report was requested
+     * Sets the requestDateTime property value. Time that the exported report was requested. This property is read-only.
      * @param value Value to set for the requestDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequestDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setRequestDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.requestDateTime = value;
     }
     /**
      * Sets the select property value. Columns selected from the report
      * @param value Value to set for the select property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSelect(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setSelect(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.select = value;
     }
     /**
      * Sets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
      * @param value Value to set for the snapshotId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSnapshotId(@javax.annotation.Nullable final String value) {
+    public void setSnapshotId(@jakarta.annotation.Nullable final String value) {
         this.snapshotId = value;
     }
     /**
      * Sets the status property value. Possible statuses associated with a generated report
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final DeviceManagementReportStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final DeviceManagementReportStatus value) {
         this.status = value;
     }
     /**
-     * Sets the url property value. Temporary location of the exported report
+     * Sets the url property value. Temporary location of the exported report. This property is read-only.
      * @param value Value to set for the url property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUrl(@javax.annotation.Nullable final String value) {
+    public void setUrl(@jakarta.annotation.Nullable final String value) {
         this.url = value;
     }
 }

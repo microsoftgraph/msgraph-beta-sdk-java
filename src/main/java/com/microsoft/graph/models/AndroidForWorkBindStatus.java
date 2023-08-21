@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Bind status of the tenant with the Google EMM API
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidForWorkBindStatus implements ValuedEnum {
     NotBound("notBound"),
     Bound("bound"),
@@ -15,10 +16,10 @@ public enum AndroidForWorkBindStatus implements ValuedEnum {
     AndroidForWorkBindStatus(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidForWorkBindStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidForWorkBindStatus forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notBound": return NotBound;

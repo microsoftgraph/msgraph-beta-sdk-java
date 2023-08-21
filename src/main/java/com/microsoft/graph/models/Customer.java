@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Customer implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -116,9 +117,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     private String website;
     /**
      * Instantiates a new customer and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Customer() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -127,8 +126,8 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a customer
      */
-    @javax.annotation.Nonnull
-    public static Customer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Customer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Customer();
     }
@@ -136,7 +135,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -144,7 +143,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the address property value. The address property
      * @return a postalAddressType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PostalAddressType getAddress() {
         return this.address;
     }
@@ -152,7 +151,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the blocked property value. The blocked property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBlocked() {
         return this.blocked;
     }
@@ -160,7 +159,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the currency property value. The currency property
      * @return a currency
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Currency getCurrency() {
         return this.currency;
     }
@@ -168,7 +167,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the currencyCode property value. The currencyCode property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCurrencyCode() {
         return this.currencyCode;
     }
@@ -176,7 +175,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the currencyId property value. The currencyId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getCurrencyId() {
         return this.currencyId;
     }
@@ -184,7 +183,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -192,7 +191,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the email property value. The email property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmail() {
         return this.email;
     }
@@ -200,7 +199,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(25);
         deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
@@ -234,7 +233,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the id property value. The id property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getId() {
         return this.id;
     }
@@ -242,7 +241,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -250,7 +249,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the number property value. The number property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNumber() {
         return this.number;
     }
@@ -258,7 +257,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -266,7 +265,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the paymentMethod property value. The paymentMethod property
      * @return a paymentMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PaymentMethod getPaymentMethod() {
         return this.paymentMethod;
     }
@@ -274,7 +273,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the paymentMethodId property value. The paymentMethodId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getPaymentMethodId() {
         return this.paymentMethodId;
     }
@@ -282,7 +281,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the paymentTerm property value. The paymentTerm property
      * @return a paymentTerm
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PaymentTerm getPaymentTerm() {
         return this.paymentTerm;
     }
@@ -290,7 +289,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the paymentTermsId property value. The paymentTermsId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getPaymentTermsId() {
         return this.paymentTermsId;
     }
@@ -298,7 +297,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the phoneNumber property value. The phoneNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
@@ -306,7 +305,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the picture property value. The picture property
      * @return a picture
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Picture> getPicture() {
         return this.picture;
     }
@@ -314,7 +313,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the shipmentMethod property value. The shipmentMethod property
      * @return a shipmentMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ShipmentMethod getShipmentMethod() {
         return this.shipmentMethod;
     }
@@ -322,7 +321,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the shipmentMethodId property value. The shipmentMethodId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getShipmentMethodId() {
         return this.shipmentMethodId;
     }
@@ -330,7 +329,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the taxAreaDisplayName property value. The taxAreaDisplayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTaxAreaDisplayName() {
         return this.taxAreaDisplayName;
     }
@@ -338,7 +337,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the taxAreaId property value. The taxAreaId property
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getTaxAreaId() {
         return this.taxAreaId;
     }
@@ -346,7 +345,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the taxLiable property value. The taxLiable property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getTaxLiable() {
         return this.taxLiable;
     }
@@ -354,7 +353,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the taxRegistrationNumber property value. The taxRegistrationNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTaxRegistrationNumber() {
         return this.taxRegistrationNumber;
     }
@@ -362,7 +361,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the type property value. The type property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getType() {
         return this.type;
     }
@@ -370,17 +369,15 @@ public class Customer implements AdditionalDataHolder, Parsable {
      * Gets the website property value. The website property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWebsite() {
         return this.website;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("address", this.getAddress());
         writer.writeStringValue("blocked", this.getBlocked());
@@ -412,235 +409,183 @@ public class Customer implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the address property value. The address property
      * @param value Value to set for the address property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddress(@javax.annotation.Nullable final PostalAddressType value) {
+    public void setAddress(@jakarta.annotation.Nullable final PostalAddressType value) {
         this.address = value;
     }
     /**
      * Sets the blocked property value. The blocked property
      * @param value Value to set for the blocked property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBlocked(@javax.annotation.Nullable final String value) {
+    public void setBlocked(@jakarta.annotation.Nullable final String value) {
         this.blocked = value;
     }
     /**
      * Sets the currency property value. The currency property
      * @param value Value to set for the currency property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrency(@javax.annotation.Nullable final Currency value) {
+    public void setCurrency(@jakarta.annotation.Nullable final Currency value) {
         this.currency = value;
     }
     /**
      * Sets the currencyCode property value. The currencyCode property
      * @param value Value to set for the currencyCode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrencyCode(@javax.annotation.Nullable final String value) {
+    public void setCurrencyCode(@jakarta.annotation.Nullable final String value) {
         this.currencyCode = value;
     }
     /**
      * Sets the currencyId property value. The currencyId property
      * @param value Value to set for the currencyId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrencyId(@javax.annotation.Nullable final UUID value) {
+    public void setCurrencyId(@jakarta.annotation.Nullable final UUID value) {
         this.currencyId = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the email property value. The email property
      * @param value Value to set for the email property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmail(@javax.annotation.Nullable final String value) {
+    public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final UUID value) {
+    public void setId(@jakarta.annotation.Nullable final UUID value) {
         this.id = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNumber(@javax.annotation.Nullable final String value) {
+    public void setNumber(@jakarta.annotation.Nullable final String value) {
         this.number = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the paymentMethod property value. The paymentMethod property
      * @param value Value to set for the paymentMethod property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPaymentMethod(@javax.annotation.Nullable final PaymentMethod value) {
+    public void setPaymentMethod(@jakarta.annotation.Nullable final PaymentMethod value) {
         this.paymentMethod = value;
     }
     /**
      * Sets the paymentMethodId property value. The paymentMethodId property
      * @param value Value to set for the paymentMethodId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPaymentMethodId(@javax.annotation.Nullable final UUID value) {
+    public void setPaymentMethodId(@jakarta.annotation.Nullable final UUID value) {
         this.paymentMethodId = value;
     }
     /**
      * Sets the paymentTerm property value. The paymentTerm property
      * @param value Value to set for the paymentTerm property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPaymentTerm(@javax.annotation.Nullable final PaymentTerm value) {
+    public void setPaymentTerm(@jakarta.annotation.Nullable final PaymentTerm value) {
         this.paymentTerm = value;
     }
     /**
      * Sets the paymentTermsId property value. The paymentTermsId property
      * @param value Value to set for the paymentTermsId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPaymentTermsId(@javax.annotation.Nullable final UUID value) {
+    public void setPaymentTermsId(@jakarta.annotation.Nullable final UUID value) {
         this.paymentTermsId = value;
     }
     /**
      * Sets the phoneNumber property value. The phoneNumber property
      * @param value Value to set for the phoneNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhoneNumber(@javax.annotation.Nullable final String value) {
+    public void setPhoneNumber(@jakarta.annotation.Nullable final String value) {
         this.phoneNumber = value;
     }
     /**
      * Sets the picture property value. The picture property
      * @param value Value to set for the picture property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPicture(@javax.annotation.Nullable final java.util.List<Picture> value) {
+    public void setPicture(@jakarta.annotation.Nullable final java.util.List<Picture> value) {
         this.picture = value;
     }
     /**
      * Sets the shipmentMethod property value. The shipmentMethod property
      * @param value Value to set for the shipmentMethod property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShipmentMethod(@javax.annotation.Nullable final ShipmentMethod value) {
+    public void setShipmentMethod(@jakarta.annotation.Nullable final ShipmentMethod value) {
         this.shipmentMethod = value;
     }
     /**
      * Sets the shipmentMethodId property value. The shipmentMethodId property
      * @param value Value to set for the shipmentMethodId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShipmentMethodId(@javax.annotation.Nullable final UUID value) {
+    public void setShipmentMethodId(@jakarta.annotation.Nullable final UUID value) {
         this.shipmentMethodId = value;
     }
     /**
      * Sets the taxAreaDisplayName property value. The taxAreaDisplayName property
      * @param value Value to set for the taxAreaDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTaxAreaDisplayName(@javax.annotation.Nullable final String value) {
+    public void setTaxAreaDisplayName(@jakarta.annotation.Nullable final String value) {
         this.taxAreaDisplayName = value;
     }
     /**
      * Sets the taxAreaId property value. The taxAreaId property
      * @param value Value to set for the taxAreaId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTaxAreaId(@javax.annotation.Nullable final UUID value) {
+    public void setTaxAreaId(@jakarta.annotation.Nullable final UUID value) {
         this.taxAreaId = value;
     }
     /**
      * Sets the taxLiable property value. The taxLiable property
      * @param value Value to set for the taxLiable property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTaxLiable(@javax.annotation.Nullable final Boolean value) {
+    public void setTaxLiable(@jakarta.annotation.Nullable final Boolean value) {
         this.taxLiable = value;
     }
     /**
      * Sets the taxRegistrationNumber property value. The taxRegistrationNumber property
      * @param value Value to set for the taxRegistrationNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTaxRegistrationNumber(@javax.annotation.Nullable final String value) {
+    public void setTaxRegistrationNumber(@jakarta.annotation.Nullable final String value) {
         this.taxRegistrationNumber = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final String value) {
+    public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
     /**
      * Sets the website property value. The website property
      * @param value Value to set for the website property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWebsite(@javax.annotation.Nullable final String value) {
+    public void setWebsite(@jakarta.annotation.Nullable final String value) {
         this.website = value;
     }
 }

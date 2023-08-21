@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * VPN DNS Rule definition.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class VpnDnsRule implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -41,9 +42,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
     private java.util.List<String> servers;
     /**
      * Instantiates a new vpnDnsRule and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public VpnDnsRule() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -52,8 +51,8 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a vpnDnsRule
      */
-    @javax.annotation.Nonnull
-    public static VpnDnsRule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static VpnDnsRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new VpnDnsRule();
     }
@@ -61,7 +60,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -69,7 +68,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * Gets the autoTrigger property value. Automatically connect to the VPN when the device connects to this domain: Default False.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAutoTrigger() {
         return this.autoTrigger;
     }
@@ -77,7 +76,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("autoTrigger", (n) -> { this.setAutoTrigger(n.getBooleanValue()); });
@@ -92,7 +91,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * Gets the name property value. Name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -100,7 +99,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -108,7 +107,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * Gets the persistent property value. Keep this rule active even when the VPN is not connected: Default False
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPersistent() {
         return this.persistent;
     }
@@ -116,7 +115,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * Gets the proxyServerUri property value. Proxy Server Uri.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProxyServerUri() {
         return this.proxyServerUri;
     }
@@ -124,17 +123,15 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * Gets the servers property value. Servers.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getServers() {
         return this.servers;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("autoTrigger", this.getAutoTrigger());
         writer.writeStringValue("name", this.getName());
@@ -147,64 +144,50 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the autoTrigger property value. Automatically connect to the VPN when the device connects to this domain: Default False.
      * @param value Value to set for the autoTrigger property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAutoTrigger(@javax.annotation.Nullable final Boolean value) {
+    public void setAutoTrigger(@jakarta.annotation.Nullable final Boolean value) {
         this.autoTrigger = value;
     }
     /**
      * Sets the name property value. Name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the persistent property value. Keep this rule active even when the VPN is not connected: Default False
      * @param value Value to set for the persistent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPersistent(@javax.annotation.Nullable final Boolean value) {
+    public void setPersistent(@jakarta.annotation.Nullable final Boolean value) {
         this.persistent = value;
     }
     /**
      * Sets the proxyServerUri property value. Proxy Server Uri.
      * @param value Value to set for the proxyServerUri property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProxyServerUri(@javax.annotation.Nullable final String value) {
+    public void setProxyServerUri(@jakarta.annotation.Nullable final String value) {
         this.proxyServerUri = value;
     }
     /**
      * Sets the servers property value. Servers.
      * @param value Value to set for the servers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServers(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setServers(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.servers = value;
     }
 }

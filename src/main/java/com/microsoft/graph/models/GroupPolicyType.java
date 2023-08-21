@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Type of Group Policy File or Definition.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum GroupPolicyType implements ValuedEnum {
     /** Group Policy administrative templates built-in to the Policy configuration service provider (CSP). */
     AdmxBacked("admxBacked"),
@@ -15,10 +16,10 @@ public enum GroupPolicyType implements ValuedEnum {
     GroupPolicyType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static GroupPolicyType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static GroupPolicyType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "admxBacked": return AdmxBacked;

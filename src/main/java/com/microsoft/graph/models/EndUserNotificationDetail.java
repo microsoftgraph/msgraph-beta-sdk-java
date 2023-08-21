@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EndUserNotificationDetail extends Entity implements Parsable {
     /**
      * The emailContent property
@@ -33,9 +34,7 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
     private String subject;
     /**
      * Instantiates a new endUserNotificationDetail and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EndUserNotificationDetail() {
         super();
     }
@@ -44,8 +43,8 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a endUserNotificationDetail
      */
-    @javax.annotation.Nonnull
-    public static EndUserNotificationDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EndUserNotificationDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EndUserNotificationDetail();
     }
@@ -53,7 +52,7 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
      * Gets the emailContent property value. The emailContent property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmailContent() {
         return this.emailContent;
     }
@@ -61,7 +60,7 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("emailContent", (n) -> { this.setEmailContent(n.getStringValue()); });
@@ -76,7 +75,7 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
      * Gets the isDefaultLangauge property value. The isDefaultLangauge property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDefaultLangauge() {
         return this.isDefaultLangauge;
     }
@@ -84,7 +83,7 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
      * Gets the language property value. The language property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLanguage() {
         return this.language;
     }
@@ -92,7 +91,7 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
      * Gets the locale property value. The locale property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLocale() {
         return this.locale;
     }
@@ -100,7 +99,7 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
      * Gets the sentFrom property value. The sentFrom property
      * @return a emailIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailIdentity getSentFrom() {
         return this.sentFrom;
     }
@@ -108,17 +107,15 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
      * Gets the subject property value. The subject property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubject() {
         return this.subject;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("emailContent", this.getEmailContent());
@@ -131,55 +128,43 @@ public class EndUserNotificationDetail extends Entity implements Parsable {
     /**
      * Sets the emailContent property value. The emailContent property
      * @param value Value to set for the emailContent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailContent(@javax.annotation.Nullable final String value) {
+    public void setEmailContent(@jakarta.annotation.Nullable final String value) {
         this.emailContent = value;
     }
     /**
      * Sets the isDefaultLangauge property value. The isDefaultLangauge property
      * @param value Value to set for the isDefaultLangauge property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDefaultLangauge(@javax.annotation.Nullable final Boolean value) {
+    public void setIsDefaultLangauge(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefaultLangauge = value;
     }
     /**
      * Sets the language property value. The language property
      * @param value Value to set for the language property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLanguage(@javax.annotation.Nullable final String value) {
+    public void setLanguage(@jakarta.annotation.Nullable final String value) {
         this.language = value;
     }
     /**
      * Sets the locale property value. The locale property
      * @param value Value to set for the locale property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocale(@javax.annotation.Nullable final String value) {
+    public void setLocale(@jakarta.annotation.Nullable final String value) {
         this.locale = value;
     }
     /**
      * Sets the sentFrom property value. The sentFrom property
      * @param value Value to set for the sentFrom property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSentFrom(@javax.annotation.Nullable final EmailIdentity value) {
+    public void setSentFrom(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.sentFrom = value;
     }
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final String value) {
+    public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
 }

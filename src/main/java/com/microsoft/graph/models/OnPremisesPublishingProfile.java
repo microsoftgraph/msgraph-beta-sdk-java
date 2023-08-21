@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnPremisesPublishingProfile extends Entity implements Parsable {
     /**
      * List of existing onPremisesAgentGroup objects. Read-only. Nullable.
@@ -41,9 +42,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     private java.util.List<PublishedResource> publishedResources;
     /**
      * Instantiates a new onPremisesPublishingProfile and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public OnPremisesPublishingProfile() {
         super();
     }
@@ -52,8 +51,8 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a onPremisesPublishingProfile
      */
-    @javax.annotation.Nonnull
-    public static OnPremisesPublishingProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OnPremisesPublishingProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OnPremisesPublishingProfile();
     }
@@ -61,7 +60,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * Gets the agentGroups property value. List of existing onPremisesAgentGroup objects. Read-only. Nullable.
      * @return a onPremisesAgentGroup
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OnPremisesAgentGroup> getAgentGroups() {
         return this.agentGroups;
     }
@@ -69,7 +68,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * Gets the agents property value. List of existing onPremisesAgent objects. Read-only. Nullable.
      * @return a onPremisesAgent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OnPremisesAgent> getAgents() {
         return this.agents;
     }
@@ -77,7 +76,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * Gets the connectorGroups property value. List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
      * @return a connectorGroup
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ConnectorGroup> getConnectorGroups() {
         return this.connectorGroups;
     }
@@ -85,7 +84,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * Gets the connectors property value. List of existing connector objects for applications published through Application Proxy. Read-only. Nullable.
      * @return a connector
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Connector> getConnectors() {
         return this.connectors;
     }
@@ -93,7 +92,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("agentGroups", (n) -> { this.setAgentGroups(n.getCollectionOfObjectValues(OnPremisesAgentGroup::createFromDiscriminatorValue)); });
@@ -110,7 +109,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * Gets the hybridAgentUpdaterConfiguration property value. Represents a hybridAgentUpdaterConfiguration object.
      * @return a hybridAgentUpdaterConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public HybridAgentUpdaterConfiguration getHybridAgentUpdaterConfiguration() {
         return this.hybridAgentUpdaterConfiguration;
     }
@@ -118,7 +117,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * Gets the isDefaultAccessEnabled property value. The isDefaultAccessEnabled property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDefaultAccessEnabled() {
         return this.isDefaultAccessEnabled;
     }
@@ -126,7 +125,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * Gets the isEnabled property value. Represents if Azure AD Application Proxy is enabled for the tenant.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
@@ -134,17 +133,15 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * Gets the publishedResources property value. List of existing publishedResource objects. Read-only. Nullable.
      * @return a publishedResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PublishedResource> getPublishedResources() {
         return this.publishedResources;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("agentGroups", this.getAgentGroups());
@@ -159,73 +156,57 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     /**
      * Sets the agentGroups property value. List of existing onPremisesAgentGroup objects. Read-only. Nullable.
      * @param value Value to set for the agentGroups property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAgentGroups(@javax.annotation.Nullable final java.util.List<OnPremisesAgentGroup> value) {
+    public void setAgentGroups(@jakarta.annotation.Nullable final java.util.List<OnPremisesAgentGroup> value) {
         this.agentGroups = value;
     }
     /**
      * Sets the agents property value. List of existing onPremisesAgent objects. Read-only. Nullable.
      * @param value Value to set for the agents property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAgents(@javax.annotation.Nullable final java.util.List<OnPremisesAgent> value) {
+    public void setAgents(@jakarta.annotation.Nullable final java.util.List<OnPremisesAgent> value) {
         this.agents = value;
     }
     /**
      * Sets the connectorGroups property value. List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
      * @param value Value to set for the connectorGroups property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectorGroups(@javax.annotation.Nullable final java.util.List<ConnectorGroup> value) {
+    public void setConnectorGroups(@jakarta.annotation.Nullable final java.util.List<ConnectorGroup> value) {
         this.connectorGroups = value;
     }
     /**
      * Sets the connectors property value. List of existing connector objects for applications published through Application Proxy. Read-only. Nullable.
      * @param value Value to set for the connectors property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectors(@javax.annotation.Nullable final java.util.List<Connector> value) {
+    public void setConnectors(@jakarta.annotation.Nullable final java.util.List<Connector> value) {
         this.connectors = value;
     }
     /**
      * Sets the hybridAgentUpdaterConfiguration property value. Represents a hybridAgentUpdaterConfiguration object.
      * @param value Value to set for the hybridAgentUpdaterConfiguration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHybridAgentUpdaterConfiguration(@javax.annotation.Nullable final HybridAgentUpdaterConfiguration value) {
+    public void setHybridAgentUpdaterConfiguration(@jakarta.annotation.Nullable final HybridAgentUpdaterConfiguration value) {
         this.hybridAgentUpdaterConfiguration = value;
     }
     /**
      * Sets the isDefaultAccessEnabled property value. The isDefaultAccessEnabled property
      * @param value Value to set for the isDefaultAccessEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDefaultAccessEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsDefaultAccessEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefaultAccessEnabled = value;
     }
     /**
      * Sets the isEnabled property value. Represents if Azure AD Application Proxy is enabled for the tenant.
      * @param value Value to set for the isEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
      * Sets the publishedResources property value. List of existing publishedResource objects. Read-only. Nullable.
      * @param value Value to set for the publishedResources property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublishedResources(@javax.annotation.Nullable final java.util.List<PublishedResource> value) {
+    public void setPublishedResources(@jakarta.annotation.Nullable final java.util.List<PublishedResource> value) {
         this.publishedResources = value;
     }
 }

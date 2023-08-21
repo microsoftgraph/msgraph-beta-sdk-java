@@ -18,7 +18,6 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -26,42 +25,43 @@ import java.util.Objects;
 /**
  * Provides operations to manage the assignmentFilters property of the microsoft.graph.deviceManagement entity.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AssignmentFiltersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the enable method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public EnableRequestBuilder enable() {
         return new EnableRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getState method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public GetStateRequestBuilder getState() {
         return new GetStateRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the validateFilter method.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ValidateFilterRequestBuilder validateFilter() {
         return new ValidateFilterRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the assignmentFilters property of the microsoft.graph.deviceManagement entity.
-     * @param deviceAndAppManagementAssignmentFilterId Unique identifier of the item
+     * @param deviceAndAppManagementAssignmentFilterId The unique identifier of deviceAndAppManagementAssignmentFilter
      * @return a DeviceAndAppManagementAssignmentFilterItemRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public DeviceAndAppManagementAssignmentFilterItemRequestBuilder byDeviceAndAppManagementAssignmentFilterId(@javax.annotation.Nonnull final String deviceAndAppManagementAssignmentFilterId) {
+    @jakarta.annotation.Nonnull
+    public DeviceAndAppManagementAssignmentFilterItemRequestBuilder byDeviceAndAppManagementAssignmentFilterId(@jakarta.annotation.Nonnull final String deviceAndAppManagementAssignmentFilterId) {
         Objects.requireNonNull(deviceAndAppManagementAssignmentFilterId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceAndAppManagementAssignmentFilter%2Did", deviceAndAppManagementAssignmentFilterId);
@@ -71,66 +71,46 @@ public class AssignmentFiltersRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new AssignmentFiltersRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @javax.annotation.Nullable
-    public AssignmentFiltersRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public AssignmentFiltersRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/assignmentFilters{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new AssignmentFiltersRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @javax.annotation.Nullable
-    public AssignmentFiltersRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public AssignmentFiltersRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceManagement/assignmentFilters{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
      * The list of assignment filters
      * @return a CompletableFuture of deviceAndAppManagementAssignmentFilterCollectionResponse
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilterCollectionResponse> get() {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, DeviceAndAppManagementAssignmentFilterCollectionResponse::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilterCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilterCollectionResponse>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return get(null);
     }
     /**
      * The list of assignment filters
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceAndAppManagementAssignmentFilterCollectionResponse
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilterCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, DeviceAndAppManagementAssignmentFilterCollectionResponse::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilterCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilterCollectionResponse>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilterCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, DeviceAndAppManagementAssignmentFilterCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Provides operations to call the getPlatformSupportedProperties method.
      * @param platform Usage: platform='{platform}'
      * @return a getPlatformSupportedPropertiesWithPlatformRequestBuilder
      */
-    @javax.annotation.Nonnull
-    public GetPlatformSupportedPropertiesWithPlatformRequestBuilder getPlatformSupportedPropertiesWithPlatform(@javax.annotation.Nonnull final String platform) {
+    @jakarta.annotation.Nonnull
+    public GetPlatformSupportedPropertiesWithPlatformRequestBuilder getPlatformSupportedPropertiesWithPlatform(@jakarta.annotation.Nonnull final String platform) {
         Objects.requireNonNull(platform);
         return new GetPlatformSupportedPropertiesWithPlatformRequestBuilder(pathParameters, requestAdapter, platform);
     }
@@ -139,19 +119,9 @@ public class AssignmentFiltersRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a CompletableFuture of deviceAndAppManagementAssignmentFilter
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilter> post(@javax.annotation.Nonnull final DeviceAndAppManagementAssignmentFilter body) {
-        try {
-            final RequestInformation requestInfo = toPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, DeviceAndAppManagementAssignmentFilter::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilter> executionException = new java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilter>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilter> post(@jakarta.annotation.Nonnull final DeviceAndAppManagementAssignmentFilter body) {
+        return post(body, null);
     }
     /**
      * Create new navigation property to assignmentFilters for deviceManagement
@@ -159,27 +129,21 @@ public class AssignmentFiltersRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceAndAppManagementAssignmentFilter
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilter> post(@javax.annotation.Nonnull final DeviceAndAppManagementAssignmentFilter body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilter> post(@jakarta.annotation.Nonnull final DeviceAndAppManagementAssignmentFilter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, DeviceAndAppManagementAssignmentFilter::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilter> executionException = new java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilter>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, DeviceAndAppManagementAssignmentFilter::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The list of assignment filters
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
@@ -187,8 +151,8 @@ public class AssignmentFiltersRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -208,8 +172,8 @@ public class AssignmentFiltersRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final DeviceAndAppManagementAssignmentFilter body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceAndAppManagementAssignmentFilter body) {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -218,8 +182,8 @@ public class AssignmentFiltersRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final DeviceAndAppManagementAssignmentFilter body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceAndAppManagementAssignmentFilter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -238,69 +202,72 @@ public class AssignmentFiltersRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of assignment filters
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
         /**
          * Include count of items
          */
         @QueryParameter(name = "%24count")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Boolean count;
         /**
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Filter items by property values
          */
         @QueryParameter(name = "%24filter")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String filter;
         /**
          * Order items by property values
          */
         @QueryParameter(name = "%24orderby")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] orderby;
         /**
          * Search items by search phrases
          */
         @QueryParameter(name = "%24search")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String search;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
         /**
          * Skip the first n items
          */
         @QueryParameter(name = "%24skip")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer skip;
         /**
          * Show only the first n items
          */
         @QueryParameter(name = "%24top")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public Integer top;
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetRequestConfiguration extends BaseRequestConfiguration {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class PostRequestConfiguration extends BaseRequestConfiguration {
     }
 }

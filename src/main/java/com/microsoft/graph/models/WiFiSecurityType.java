@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Wi-Fi Security Types.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WiFiSecurityType implements ValuedEnum {
     /** Open (No Authentication). */
     Open("open"),
@@ -23,10 +24,10 @@ public enum WiFiSecurityType implements ValuedEnum {
     WiFiSecurityType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WiFiSecurityType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WiFiSecurityType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "open": return Open;

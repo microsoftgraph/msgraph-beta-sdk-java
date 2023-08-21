@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The current status of the Ndes Connector.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum NdesConnectorState implements ValuedEnum {
     /** State not available yet for this connector. */
     None("none"),
@@ -17,10 +18,10 @@ public enum NdesConnectorState implements ValuedEnum {
     NdesConnectorState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static NdesConnectorState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static NdesConnectorState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

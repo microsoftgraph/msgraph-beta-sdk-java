@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for automatic update classification.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum UpdateClassification implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),
@@ -19,10 +20,10 @@ public enum UpdateClassification implements ValuedEnum {
     UpdateClassification(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static UpdateClassification forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static UpdateClassification forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "userDefined": return UserDefined;

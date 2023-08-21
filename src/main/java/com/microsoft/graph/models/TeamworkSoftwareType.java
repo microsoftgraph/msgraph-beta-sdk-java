@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum TeamworkSoftwareType implements ValuedEnum {
     AdminAgent("adminAgent"),
     OperatingSystem("operatingSystem"),
@@ -15,10 +16,10 @@ public enum TeamworkSoftwareType implements ValuedEnum {
     TeamworkSoftwareType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static TeamworkSoftwareType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static TeamworkSoftwareType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "adminAgent": return AdminAgent;

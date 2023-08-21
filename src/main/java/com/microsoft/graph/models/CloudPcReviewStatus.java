@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -55,9 +56,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     private CloudPcUserAccessLevel userAccessLevel;
     /**
      * Instantiates a new cloudPcReviewStatus and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CloudPcReviewStatus() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -66,8 +65,8 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudPcReviewStatus
      */
-    @javax.annotation.Nonnull
-    public static CloudPcReviewStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudPcReviewStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudPcReviewStatus();
     }
@@ -75,7 +74,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -83,7 +82,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * Gets the azureStorageAccountId property value. The resource ID of the Azure Storage account in which the Cloud PC snapshot is being saved.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureStorageAccountId() {
         return this.azureStorageAccountId;
     }
@@ -91,7 +90,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * Gets the azureStorageAccountName property value. The name of the Azure Storage account in which the Cloud PC snapshot is being saved.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureStorageAccountName() {
         return this.azureStorageAccountName;
     }
@@ -99,7 +98,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * Gets the azureStorageContainerName property value. The name of the container in an Azure Storage account in which the Cloud PC snapshot is being saved.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureStorageContainerName() {
         return this.azureStorageContainerName;
     }
@@ -107,7 +106,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("azureStorageAccountId", (n) -> { this.setAzureStorageAccountId(n.getStringValue()); });
@@ -126,7 +125,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * Gets the inReview property value. True if the Cloud PC is set to in review by the administrator.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getInReview() {
         return this.inReview;
     }
@@ -134,7 +133,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -142,7 +141,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * Gets the restorePointDateTime property value. The specific date and time of the Cloud PC snapshot that was taken and saved automatically, when the Cloud PC is set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getRestorePointDateTime() {
         return this.restorePointDateTime;
     }
@@ -150,7 +149,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * Gets the reviewStartDateTime property value. The specific date and time when the Cloud PC was set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getReviewStartDateTime() {
         return this.reviewStartDateTime;
     }
@@ -158,7 +157,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * Gets the subscriptionId property value. The ID of the Azure subscription in which the Cloud PC snapshot is being saved, in GUID format.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
@@ -166,7 +165,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * Gets the subscriptionName property value. The name of the Azure subscription in which the Cloud PC snapshot is being saved.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubscriptionName() {
         return this.subscriptionName;
     }
@@ -174,17 +173,15 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * Gets the userAccessLevel property value. The userAccessLevel property
      * @return a cloudPcUserAccessLevel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcUserAccessLevel getUserAccessLevel() {
         return this.userAccessLevel;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("azureStorageAccountId", this.getAzureStorageAccountId());
         writer.writeStringValue("azureStorageAccountName", this.getAzureStorageAccountName());
@@ -201,100 +198,78 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the azureStorageAccountId property value. The resource ID of the Azure Storage account in which the Cloud PC snapshot is being saved.
      * @param value Value to set for the azureStorageAccountId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureStorageAccountId(@javax.annotation.Nullable final String value) {
+    public void setAzureStorageAccountId(@jakarta.annotation.Nullable final String value) {
         this.azureStorageAccountId = value;
     }
     /**
      * Sets the azureStorageAccountName property value. The name of the Azure Storage account in which the Cloud PC snapshot is being saved.
      * @param value Value to set for the azureStorageAccountName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureStorageAccountName(@javax.annotation.Nullable final String value) {
+    public void setAzureStorageAccountName(@jakarta.annotation.Nullable final String value) {
         this.azureStorageAccountName = value;
     }
     /**
      * Sets the azureStorageContainerName property value. The name of the container in an Azure Storage account in which the Cloud PC snapshot is being saved.
      * @param value Value to set for the azureStorageContainerName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureStorageContainerName(@javax.annotation.Nullable final String value) {
+    public void setAzureStorageContainerName(@jakarta.annotation.Nullable final String value) {
         this.azureStorageContainerName = value;
     }
     /**
      * Sets the inReview property value. True if the Cloud PC is set to in review by the administrator.
      * @param value Value to set for the inReview property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInReview(@javax.annotation.Nullable final Boolean value) {
+    public void setInReview(@jakarta.annotation.Nullable final Boolean value) {
         this.inReview = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the restorePointDateTime property value. The specific date and time of the Cloud PC snapshot that was taken and saved automatically, when the Cloud PC is set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      * @param value Value to set for the restorePointDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRestorePointDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setRestorePointDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.restorePointDateTime = value;
     }
     /**
      * Sets the reviewStartDateTime property value. The specific date and time when the Cloud PC was set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      * @param value Value to set for the reviewStartDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setReviewStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.reviewStartDateTime = value;
     }
     /**
      * Sets the subscriptionId property value. The ID of the Azure subscription in which the Cloud PC snapshot is being saved, in GUID format.
      * @param value Value to set for the subscriptionId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubscriptionId(@javax.annotation.Nullable final String value) {
+    public void setSubscriptionId(@jakarta.annotation.Nullable final String value) {
         this.subscriptionId = value;
     }
     /**
      * Sets the subscriptionName property value. The name of the Azure subscription in which the Cloud PC snapshot is being saved.
      * @param value Value to set for the subscriptionName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubscriptionName(@javax.annotation.Nullable final String value) {
+    public void setSubscriptionName(@jakarta.annotation.Nullable final String value) {
         this.subscriptionName = value;
     }
     /**
      * Sets the userAccessLevel property value. The userAccessLevel property
      * @param value Value to set for the userAccessLevel property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserAccessLevel(@javax.annotation.Nullable final CloudPcUserAccessLevel value) {
+    public void setUserAccessLevel(@jakarta.annotation.Nullable final CloudPcUserAccessLevel value) {
         this.userAccessLevel = value;
     }
 }

@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Contains properties used to assign an Win32 LOB mobile app to a group.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
      * Contains value for delivery optimization priority.
@@ -28,9 +29,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     private Win32LobAppRestartSettings restartSettings;
     /**
      * Instantiates a new win32LobAppAssignmentSettings and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Win32LobAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppAssignmentSettings");
@@ -40,8 +39,8 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a win32LobAppAssignmentSettings
      */
-    @javax.annotation.Nonnull
-    public static Win32LobAppAssignmentSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Win32LobAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Win32LobAppAssignmentSettings();
     }
@@ -49,7 +48,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * Gets the deliveryOptimizationPriority property value. Contains value for delivery optimization priority.
      * @return a win32LobAppDeliveryOptimizationPriority
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Win32LobAppDeliveryOptimizationPriority getDeliveryOptimizationPriority() {
         return this.deliveryOptimizationPriority;
     }
@@ -57,7 +56,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deliveryOptimizationPriority", (n) -> { this.setDeliveryOptimizationPriority(n.getEnumValue(Win32LobAppDeliveryOptimizationPriority.class)); });
@@ -70,7 +69,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * Gets the installTimeSettings property value. The install time settings to apply for this app assignment.
      * @return a mobileAppInstallTimeSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MobileAppInstallTimeSettings getInstallTimeSettings() {
         return this.installTimeSettings;
     }
@@ -78,7 +77,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * Gets the notifications property value. Contains value for notification status.
      * @return a win32LobAppNotification
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Win32LobAppNotification getNotifications() {
         return this.notifications;
     }
@@ -86,17 +85,15 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * Gets the restartSettings property value. The reboot settings to apply for this app assignment.
      * @return a win32LobAppRestartSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Win32LobAppRestartSettings getRestartSettings() {
         return this.restartSettings;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("deliveryOptimizationPriority", this.getDeliveryOptimizationPriority());
@@ -107,37 +104,29 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     /**
      * Sets the deliveryOptimizationPriority property value. Contains value for delivery optimization priority.
      * @param value Value to set for the deliveryOptimizationPriority property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeliveryOptimizationPriority(@javax.annotation.Nullable final Win32LobAppDeliveryOptimizationPriority value) {
+    public void setDeliveryOptimizationPriority(@jakarta.annotation.Nullable final Win32LobAppDeliveryOptimizationPriority value) {
         this.deliveryOptimizationPriority = value;
     }
     /**
      * Sets the installTimeSettings property value. The install time settings to apply for this app assignment.
      * @param value Value to set for the installTimeSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstallTimeSettings(@javax.annotation.Nullable final MobileAppInstallTimeSettings value) {
+    public void setInstallTimeSettings(@jakarta.annotation.Nullable final MobileAppInstallTimeSettings value) {
         this.installTimeSettings = value;
     }
     /**
      * Sets the notifications property value. Contains value for notification status.
      * @param value Value to set for the notifications property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotifications(@javax.annotation.Nullable final Win32LobAppNotification value) {
+    public void setNotifications(@jakarta.annotation.Nullable final Win32LobAppNotification value) {
         this.notifications = value;
     }
     /**
      * Sets the restartSettings property value. The reboot settings to apply for this app assignment.
      * @param value Value to set for the restartSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRestartSettings(@javax.annotation.Nullable final Win32LobAppRestartSettings value) {
+    public void setRestartSettings(@jakarta.annotation.Nullable final Win32LobAppRestartSettings value) {
         this.restartSettings = value;
     }
 }

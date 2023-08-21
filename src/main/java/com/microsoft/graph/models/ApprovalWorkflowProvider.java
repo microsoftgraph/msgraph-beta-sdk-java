@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ApprovalWorkflowProvider extends Entity implements Parsable {
     /**
      * The businessFlows property
@@ -25,9 +26,7 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
     private java.util.List<GovernancePolicyTemplate> policyTemplates;
     /**
      * Instantiates a new approvalWorkflowProvider and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ApprovalWorkflowProvider() {
         super();
     }
@@ -36,8 +35,8 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a approvalWorkflowProvider
      */
-    @javax.annotation.Nonnull
-    public static ApprovalWorkflowProvider createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ApprovalWorkflowProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ApprovalWorkflowProvider();
     }
@@ -45,7 +44,7 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
      * Gets the businessFlows property value. The businessFlows property
      * @return a businessFlow
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<BusinessFlow> getBusinessFlows() {
         return this.businessFlows;
     }
@@ -53,7 +52,7 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
      * Gets the businessFlowsWithRequestsAwaitingMyDecision property value. The businessFlowsWithRequestsAwaitingMyDecision property
      * @return a businessFlow
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<BusinessFlow> getBusinessFlowsWithRequestsAwaitingMyDecision() {
         return this.businessFlowsWithRequestsAwaitingMyDecision;
     }
@@ -61,7 +60,7 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -69,7 +68,7 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("businessFlows", (n) -> { this.setBusinessFlows(n.getCollectionOfObjectValues(BusinessFlow::createFromDiscriminatorValue)); });
@@ -82,17 +81,15 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
      * Gets the policyTemplates property value. The policyTemplates property
      * @return a governancePolicyTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<GovernancePolicyTemplate> getPolicyTemplates() {
         return this.policyTemplates;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("businessFlows", this.getBusinessFlows());
@@ -103,37 +100,29 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
     /**
      * Sets the businessFlows property value. The businessFlows property
      * @param value Value to set for the businessFlows property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBusinessFlows(@javax.annotation.Nullable final java.util.List<BusinessFlow> value) {
+    public void setBusinessFlows(@jakarta.annotation.Nullable final java.util.List<BusinessFlow> value) {
         this.businessFlows = value;
     }
     /**
      * Sets the businessFlowsWithRequestsAwaitingMyDecision property value. The businessFlowsWithRequestsAwaitingMyDecision property
      * @param value Value to set for the businessFlowsWithRequestsAwaitingMyDecision property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBusinessFlowsWithRequestsAwaitingMyDecision(@javax.annotation.Nullable final java.util.List<BusinessFlow> value) {
+    public void setBusinessFlowsWithRequestsAwaitingMyDecision(@jakarta.annotation.Nullable final java.util.List<BusinessFlow> value) {
         this.businessFlowsWithRequestsAwaitingMyDecision = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the policyTemplates property value. The policyTemplates property
      * @param value Value to set for the policyTemplates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyTemplates(@javax.annotation.Nullable final java.util.List<GovernancePolicyTemplate> value) {
+    public void setPolicyTemplates(@jakarta.annotation.Nullable final java.util.List<GovernancePolicyTemplate> value) {
         this.policyTemplates = value;
     }
 }

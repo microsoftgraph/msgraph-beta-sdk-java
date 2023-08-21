@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum PrinterProcessingStateDetail implements ValuedEnum {
     Paused("paused"),
     MediaJam("mediaJam"),
@@ -834,10 +835,10 @@ public enum PrinterProcessingStateDetail implements ValuedEnum {
     PrinterProcessingStateDetail(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static PrinterProcessingStateDetail forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static PrinterProcessingStateDetail forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "paused": return Paused;

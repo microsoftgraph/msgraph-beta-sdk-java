@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values of Cloud Block Level
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DefenderCloudBlockLevelType implements ValuedEnum {
     /** Default value, uses the default Windows Defender Antivirus blocking level and provides strong detection without increasing the risk of detecting legitimate files */
     NotConfigured("notConfigured"),
@@ -19,10 +20,10 @@ public enum DefenderCloudBlockLevelType implements ValuedEnum {
     DefenderCloudBlockLevelType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DefenderCloudBlockLevelType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DefenderCloudBlockLevelType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

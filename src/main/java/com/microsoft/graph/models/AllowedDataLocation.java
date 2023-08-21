@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AllowedDataLocation extends Entity implements Parsable {
     /**
      * The appId property
@@ -25,9 +26,7 @@ public class AllowedDataLocation extends Entity implements Parsable {
     private String location;
     /**
      * Instantiates a new allowedDataLocation and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AllowedDataLocation() {
         super();
     }
@@ -36,8 +35,8 @@ public class AllowedDataLocation extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a allowedDataLocation
      */
-    @javax.annotation.Nonnull
-    public static AllowedDataLocation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AllowedDataLocation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AllowedDataLocation();
     }
@@ -45,7 +44,7 @@ public class AllowedDataLocation extends Entity implements Parsable {
      * Gets the appId property value. The appId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppId() {
         return this.appId;
     }
@@ -53,7 +52,7 @@ public class AllowedDataLocation extends Entity implements Parsable {
      * Gets the domain property value. The domain property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDomain() {
         return this.domain;
     }
@@ -61,7 +60,7 @@ public class AllowedDataLocation extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
@@ -74,7 +73,7 @@ public class AllowedDataLocation extends Entity implements Parsable {
      * Gets the isDefault property value. The isDefault property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
         return this.isDefault;
     }
@@ -82,17 +81,15 @@ public class AllowedDataLocation extends Entity implements Parsable {
      * Gets the location property value. The location property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLocation() {
         return this.location;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appId", this.getAppId());
@@ -103,37 +100,29 @@ public class AllowedDataLocation extends Entity implements Parsable {
     /**
      * Sets the appId property value. The appId property
      * @param value Value to set for the appId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppId(@javax.annotation.Nullable final String value) {
+    public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }
     /**
      * Sets the domain property value. The domain property
      * @param value Value to set for the domain property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDomain(@javax.annotation.Nullable final String value) {
+    public void setDomain(@jakarta.annotation.Nullable final String value) {
         this.domain = value;
     }
     /**
      * Sets the isDefault property value. The isDefault property
      * @param value Value to set for the isDefault property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
+    public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefault = value;
     }
     /**
      * Sets the location property value. The location property
      * @param value Value to set for the location property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocation(@javax.annotation.Nullable final String value) {
+    public void setLocation(@jakarta.annotation.Nullable final String value) {
         this.location = value;
     }
 }

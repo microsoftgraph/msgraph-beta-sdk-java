@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetInaccessibleCloudPcReportsPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class GetInaccessibleCloudPcReportsPostRequestBody implements AdditionalD
     private Integer top;
     /**
      * Instantiates a new getInaccessibleCloudPcReportsPostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public GetInaccessibleCloudPcReportsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +52,8 @@ public class GetInaccessibleCloudPcReportsPostRequestBody implements AdditionalD
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a getInaccessibleCloudPcReportsPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static GetInaccessibleCloudPcReportsPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GetInaccessibleCloudPcReportsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new GetInaccessibleCloudPcReportsPostRequestBody();
     }
@@ -62,7 +61,7 @@ public class GetInaccessibleCloudPcReportsPostRequestBody implements AdditionalD
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +69,7 @@ public class GetInaccessibleCloudPcReportsPostRequestBody implements AdditionalD
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("filter", (n) -> { this.setFilter(n.getStringValue()); });
@@ -86,7 +85,7 @@ public class GetInaccessibleCloudPcReportsPostRequestBody implements AdditionalD
      * Gets the filter property value. The filter property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFilter() {
         return this.filter;
     }
@@ -94,7 +93,7 @@ public class GetInaccessibleCloudPcReportsPostRequestBody implements AdditionalD
      * Gets the groupBy property value. The groupBy property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getGroupBy() {
         return this.groupBy;
     }
@@ -102,7 +101,7 @@ public class GetInaccessibleCloudPcReportsPostRequestBody implements AdditionalD
      * Gets the orderBy property value. The orderBy property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getOrderBy() {
         return this.orderBy;
     }
@@ -110,7 +109,7 @@ public class GetInaccessibleCloudPcReportsPostRequestBody implements AdditionalD
      * Gets the search property value. The search property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSearch() {
         return this.search;
     }
@@ -118,7 +117,7 @@ public class GetInaccessibleCloudPcReportsPostRequestBody implements AdditionalD
      * Gets the select property value. The select property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSelect() {
         return this.select;
     }
@@ -126,7 +125,7 @@ public class GetInaccessibleCloudPcReportsPostRequestBody implements AdditionalD
      * Gets the skip property value. The skip property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSkip() {
         return this.skip;
     }
@@ -134,17 +133,15 @@ public class GetInaccessibleCloudPcReportsPostRequestBody implements AdditionalD
      * Gets the top property value. The top property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTop() {
         return this.top;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("filter", this.getFilter());
         writer.writeCollectionOfPrimitiveValues("groupBy", this.getGroupBy());
@@ -158,73 +155,57 @@ public class GetInaccessibleCloudPcReportsPostRequestBody implements AdditionalD
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the filter property value. The filter property
      * @param value Value to set for the filter property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFilter(@javax.annotation.Nullable final String value) {
+    public void setFilter(@jakarta.annotation.Nullable final String value) {
         this.filter = value;
     }
     /**
      * Sets the groupBy property value. The groupBy property
      * @param value Value to set for the groupBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupBy(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setGroupBy(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.groupBy = value;
     }
     /**
      * Sets the orderBy property value. The orderBy property
      * @param value Value to set for the orderBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrderBy(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setOrderBy(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.orderBy = value;
     }
     /**
      * Sets the search property value. The search property
      * @param value Value to set for the search property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSearch(@javax.annotation.Nullable final String value) {
+    public void setSearch(@jakarta.annotation.Nullable final String value) {
         this.search = value;
     }
     /**
      * Sets the select property value. The select property
      * @param value Value to set for the select property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSelect(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setSelect(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.select = value;
     }
     /**
      * Sets the skip property value. The skip property
      * @param value Value to set for the skip property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSkip(@javax.annotation.Nullable final Integer value) {
+    public void setSkip(@jakarta.annotation.Nullable final Integer value) {
         this.skip = value;
     }
     /**
      * Sets the top property value. The top property
      * @param value Value to set for the top property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTop(@javax.annotation.Nullable final Integer value) {
+    public void setTop(@jakarta.annotation.Nullable final Integer value) {
         this.top = value;
     }
 }

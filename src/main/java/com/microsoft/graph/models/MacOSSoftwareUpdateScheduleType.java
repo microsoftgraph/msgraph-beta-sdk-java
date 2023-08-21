@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Updatescheduletypefor macOS software updates.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MacOSSoftwareUpdateScheduleType implements ValuedEnum {
     /** Always update. */
     AlwaysUpdate("alwaysUpdate"),
@@ -17,10 +18,10 @@ public enum MacOSSoftwareUpdateScheduleType implements ValuedEnum {
     MacOSSoftwareUpdateScheduleType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MacOSSoftwareUpdateScheduleType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MacOSSoftwareUpdateScheduleType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "alwaysUpdate": return AlwaysUpdate;

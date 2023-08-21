@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AccessReviewHistoryDecisionFilter implements ValuedEnum {
     Approve("approve"),
     Deny("deny"),
@@ -14,10 +15,10 @@ public enum AccessReviewHistoryDecisionFilter implements ValuedEnum {
     AccessReviewHistoryDecisionFilter(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AccessReviewHistoryDecisionFilter forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AccessReviewHistoryDecisionFilter forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "approve": return Approve;

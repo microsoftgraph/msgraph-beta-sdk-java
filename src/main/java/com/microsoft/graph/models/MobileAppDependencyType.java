@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the dependency type associated with a relationship between two mobile apps.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MobileAppDependencyType implements ValuedEnum {
     /** Indicates that the child app should be detected before installing the parent app. */
     Detect("detect"),
@@ -15,10 +16,10 @@ public enum MobileAppDependencyType implements ValuedEnum {
     MobileAppDependencyType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MobileAppDependencyType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MobileAppDependencyType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "detect": return Detect;

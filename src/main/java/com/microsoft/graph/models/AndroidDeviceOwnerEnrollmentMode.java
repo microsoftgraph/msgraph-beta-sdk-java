@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The enrollment mode for an enrollment profile.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidDeviceOwnerEnrollmentMode implements ValuedEnum {
     CorporateOwnedDedicatedDevice("corporateOwnedDedicatedDevice"),
     CorporateOwnedFullyManaged("corporateOwnedFullyManaged"),
@@ -18,10 +19,10 @@ public enum AndroidDeviceOwnerEnrollmentMode implements ValuedEnum {
     AndroidDeviceOwnerEnrollmentMode(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidDeviceOwnerEnrollmentMode forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidDeviceOwnerEnrollmentMode forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "corporateOwnedDedicatedDevice": return CorporateOwnedDedicatedDevice;

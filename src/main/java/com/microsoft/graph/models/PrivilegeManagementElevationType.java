@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the type of elevation occured
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum PrivilegeManagementElevationType implements ValuedEnum {
     /** Default. If the type was unknown on the client for some reasons. */
     Undetermined("undetermined"),
@@ -23,10 +24,10 @@ public enum PrivilegeManagementElevationType implements ValuedEnum {
     PrivilegeManagementElevationType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static PrivilegeManagementElevationType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static PrivilegeManagementElevationType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "undetermined": return Undetermined;

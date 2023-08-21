@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * This enum represents associated assignment payload type
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AssociatedAssignmentPayloadType implements ValuedEnum {
     /** Invalid payload type */
     Unknown("unknown"),
@@ -35,10 +36,10 @@ public enum AssociatedAssignmentPayloadType implements ValuedEnum {
     AssociatedAssignmentPayloadType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AssociatedAssignmentPayloadType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AssociatedAssignmentPayloadType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

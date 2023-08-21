@@ -3,6 +3,7 @@ package com.microsoft.graph.models.networkaccess;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum IkeEncryption implements ValuedEnum {
     Aes128("aes128"),
     Aes192("aes192"),
@@ -14,10 +15,10 @@ public enum IkeEncryption implements ValuedEnum {
     IkeEncryption(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static IkeEncryption forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static IkeEncryption forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "aes128": return Aes128;

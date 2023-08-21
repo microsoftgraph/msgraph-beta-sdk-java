@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource extends AccessReviewInstanceDecisionItemResource implements Parsable {
     /**
      * Display name of the access package to which access has been granted.
@@ -17,9 +18,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
     private String accessPackageId;
     /**
      * Instantiates a new accessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource");
@@ -29,8 +28,8 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource
      */
-    @javax.annotation.Nonnull
-    public static AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource();
     }
@@ -38,7 +37,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
      * Gets the accessPackageDisplayName property value. Display name of the access package to which access has been granted.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAccessPackageDisplayName() {
         return this.accessPackageDisplayName;
     }
@@ -46,7 +45,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
      * Gets the accessPackageId property value. Identifier of the access package to which access has been granted.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAccessPackageId() {
         return this.accessPackageId;
     }
@@ -54,7 +53,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessPackageDisplayName", (n) -> { this.setAccessPackageDisplayName(n.getStringValue()); });
@@ -64,10 +63,8 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("accessPackageDisplayName", this.getAccessPackageDisplayName());
@@ -76,19 +73,15 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
     /**
      * Sets the accessPackageDisplayName property value. Display name of the access package to which access has been granted.
      * @param value Value to set for the accessPackageDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageDisplayName(@javax.annotation.Nullable final String value) {
+    public void setAccessPackageDisplayName(@jakarta.annotation.Nullable final String value) {
         this.accessPackageDisplayName = value;
     }
     /**
      * Sets the accessPackageId property value. Identifier of the access package to which access has been granted.
      * @param value Value to set for the accessPackageId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessPackageId(@javax.annotation.Nullable final String value) {
+    public void setAccessPackageId(@jakarta.annotation.Nullable final String value) {
         this.accessPackageId = value;
     }
 }

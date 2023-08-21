@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The tile size of Windows app in the start layout.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsAppStartLayoutTileSize implements ValuedEnum {
     /** Hidden. */
     Hidden("hidden"),
@@ -21,10 +22,10 @@ public enum WindowsAppStartLayoutTileSize implements ValuedEnum {
     WindowsAppStartLayoutTileSize(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsAppStartLayoutTileSize forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsAppStartLayoutTileSize forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "hidden": return Hidden;

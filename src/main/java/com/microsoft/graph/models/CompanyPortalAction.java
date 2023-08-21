@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Action on a device that can be executed in the Company Portal
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum CompanyPortalAction implements ValuedEnum {
     /** Unknown device action */
     Unknown("unknown"),
@@ -17,10 +18,10 @@ public enum CompanyPortalAction implements ValuedEnum {
     CompanyPortalAction(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static CompanyPortalAction forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static CompanyPortalAction forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

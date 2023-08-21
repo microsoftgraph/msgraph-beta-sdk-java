@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * This entity contains the properties used to assign a windows driver update profile to a group.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDriverUpdateProfileAssignment extends Entity implements Parsable {
     /**
      * Base type for assignment targets.
@@ -16,9 +17,7 @@ public class WindowsDriverUpdateProfileAssignment extends Entity implements Pars
     private DeviceAndAppManagementAssignmentTarget target;
     /**
      * Instantiates a new windowsDriverUpdateProfileAssignment and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsDriverUpdateProfileAssignment() {
         super();
     }
@@ -27,8 +26,8 @@ public class WindowsDriverUpdateProfileAssignment extends Entity implements Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsDriverUpdateProfileAssignment
      */
-    @javax.annotation.Nonnull
-    public static WindowsDriverUpdateProfileAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsDriverUpdateProfileAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsDriverUpdateProfileAssignment();
     }
@@ -36,7 +35,7 @@ public class WindowsDriverUpdateProfileAssignment extends Entity implements Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
@@ -46,17 +45,15 @@ public class WindowsDriverUpdateProfileAssignment extends Entity implements Pars
      * Gets the target property value. Base type for assignment targets.
      * @return a deviceAndAppManagementAssignmentTarget
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {
         return this.target;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("target", this.getTarget());
@@ -64,10 +61,8 @@ public class WindowsDriverUpdateProfileAssignment extends Entity implements Pars
     /**
      * Sets the target property value. Base type for assignment targets.
      * @param value Value to set for the target property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
+    public void setTarget(@jakarta.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this.target = value;
     }
 }

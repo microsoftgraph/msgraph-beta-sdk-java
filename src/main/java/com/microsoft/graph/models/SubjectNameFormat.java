@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Subject Name Format Options.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum SubjectNameFormat implements ValuedEnum {
     /** Common name. */
     CommonName("commonName"),
@@ -29,10 +30,10 @@ public enum SubjectNameFormat implements ValuedEnum {
     SubjectNameFormat(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static SubjectNameFormat forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static SubjectNameFormat forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "commonName": return CommonName;

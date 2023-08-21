@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0).
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DetectedAppPlatformType implements ValuedEnum {
     /** Default. Set to unknown when platform cannot be determined. */
     Unknown("unknown"),
@@ -35,10 +36,10 @@ public enum DetectedAppPlatformType implements ValuedEnum {
     DetectedAppPlatformType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DetectedAppPlatformType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DetectedAppPlatformType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

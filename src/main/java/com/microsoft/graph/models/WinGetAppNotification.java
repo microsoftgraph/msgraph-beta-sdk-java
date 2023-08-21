@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Contains value for notification status.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WinGetAppNotification implements ValuedEnum {
     /** Show all notifications. */
     ShowAll("showAll"),
@@ -19,10 +20,10 @@ public enum WinGetAppNotification implements ValuedEnum {
     WinGetAppNotification(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WinGetAppNotification forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WinGetAppNotification forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "showAll": return ShowAll;

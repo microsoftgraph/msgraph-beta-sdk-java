@@ -15,6 +15,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Security extends Entity implements Parsable {
     /**
      * Notifications for suspicious or potential security issues in a customers tenant.
@@ -114,9 +115,7 @@ public class Security extends Entity implements Parsable {
     private java.util.List<UserSecurityProfile> userSecurityProfiles;
     /**
      * Instantiates a new security and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Security() {
         super();
     }
@@ -125,8 +124,8 @@ public class Security extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a security
      */
-    @javax.annotation.Nonnull
-    public static Security createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Security createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Security();
     }
@@ -134,7 +133,7 @@ public class Security extends Entity implements Parsable {
      * Gets the alerts property value. Notifications for suspicious or potential security issues in a customers tenant.
      * @return a alert
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Alert> getAlerts() {
         return this.alerts;
     }
@@ -142,7 +141,7 @@ public class Security extends Entity implements Parsable {
      * Gets the alerts_v2 property value. A collection of alerts in Microsoft 365 Defender.
      * @return a alert
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Alert> getAlertsV2() {
         return this.alertsV2;
     }
@@ -150,7 +149,7 @@ public class Security extends Entity implements Parsable {
      * Gets the attackSimulation property value. Provides tenants capability to launch a simulated and realistic phishing attack and learn from it.
      * @return a attackSimulationRoot
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AttackSimulationRoot getAttackSimulation() {
         return this.attackSimulation;
     }
@@ -158,7 +157,7 @@ public class Security extends Entity implements Parsable {
      * Gets the cases property value. The cases property
      * @return a casesRoot
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CasesRoot getCases() {
         return this.cases;
     }
@@ -166,7 +165,7 @@ public class Security extends Entity implements Parsable {
      * Gets the cloudAppSecurityProfiles property value. The cloudAppSecurityProfiles property
      * @return a cloudAppSecurityProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CloudAppSecurityProfile> getCloudAppSecurityProfiles() {
         return this.cloudAppSecurityProfiles;
     }
@@ -174,7 +173,7 @@ public class Security extends Entity implements Parsable {
      * Gets the domainSecurityProfiles property value. The domainSecurityProfiles property
      * @return a domainSecurityProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DomainSecurityProfile> getDomainSecurityProfiles() {
         return this.domainSecurityProfiles;
     }
@@ -182,7 +181,7 @@ public class Security extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
@@ -215,7 +214,7 @@ public class Security extends Entity implements Parsable {
      * Gets the fileSecurityProfiles property value. The fileSecurityProfiles property
      * @return a fileSecurityProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<FileSecurityProfile> getFileSecurityProfiles() {
         return this.fileSecurityProfiles;
     }
@@ -223,7 +222,7 @@ public class Security extends Entity implements Parsable {
      * Gets the hostSecurityProfiles property value. The hostSecurityProfiles property
      * @return a hostSecurityProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<HostSecurityProfile> getHostSecurityProfiles() {
         return this.hostSecurityProfiles;
     }
@@ -231,7 +230,7 @@ public class Security extends Entity implements Parsable {
      * Gets the incidents property value. A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
      * @return a incident
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Incident> getIncidents() {
         return this.incidents;
     }
@@ -239,7 +238,7 @@ public class Security extends Entity implements Parsable {
      * Gets the informationProtection property value. The informationProtection property
      * @return a informationProtection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InformationProtection getInformationProtection() {
         return this.informationProtection;
     }
@@ -247,7 +246,7 @@ public class Security extends Entity implements Parsable {
      * Gets the ipSecurityProfiles property value. The ipSecurityProfiles property
      * @return a ipSecurityProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IpSecurityProfile> getIpSecurityProfiles() {
         return this.ipSecurityProfiles;
     }
@@ -255,7 +254,7 @@ public class Security extends Entity implements Parsable {
      * Gets the labels property value. The labels property
      * @return a labelsRoot
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LabelsRoot getLabels() {
         return this.labels;
     }
@@ -263,7 +262,7 @@ public class Security extends Entity implements Parsable {
      * Gets the providerStatus property value. The providerStatus property
      * @return a securityProviderStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SecurityProviderStatus> getProviderStatus() {
         return this.providerStatus;
     }
@@ -271,7 +270,7 @@ public class Security extends Entity implements Parsable {
      * Gets the providerTenantSettings property value. The providerTenantSettings property
      * @return a providerTenantSetting
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ProviderTenantSetting> getProviderTenantSettings() {
         return this.providerTenantSettings;
     }
@@ -279,7 +278,7 @@ public class Security extends Entity implements Parsable {
      * Gets the secureScoreControlProfiles property value. The secureScoreControlProfiles property
      * @return a secureScoreControlProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SecureScoreControlProfile> getSecureScoreControlProfiles() {
         return this.secureScoreControlProfiles;
     }
@@ -287,7 +286,7 @@ public class Security extends Entity implements Parsable {
      * Gets the secureScores property value. Measurements of tenants security posture to help protect them from threats.
      * @return a secureScore
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SecureScore> getSecureScores() {
         return this.secureScores;
     }
@@ -295,7 +294,7 @@ public class Security extends Entity implements Parsable {
      * Gets the securityActions property value. The securityActions property
      * @return a securityAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SecurityAction> getSecurityActions() {
         return this.securityActions;
     }
@@ -303,7 +302,7 @@ public class Security extends Entity implements Parsable {
      * Gets the subjectRightsRequests property value. The subjectRightsRequests property
      * @return a subjectRightsRequest
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SubjectRightsRequest> getSubjectRightsRequests() {
         return this.subjectRightsRequests;
     }
@@ -311,7 +310,7 @@ public class Security extends Entity implements Parsable {
      * Gets the threatIntelligence property value. The threatIntelligence property
      * @return a threatIntelligence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ThreatIntelligence getThreatIntelligence() {
         return this.threatIntelligence;
     }
@@ -319,7 +318,7 @@ public class Security extends Entity implements Parsable {
      * Gets the threatSubmission property value. A threat submission sent to Microsoft; for example, a suspicious email threat, URL threat, or file threat.
      * @return a threatSubmissionRoot
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ThreatSubmissionRoot getThreatSubmission() {
         return this.threatSubmission;
     }
@@ -327,7 +326,7 @@ public class Security extends Entity implements Parsable {
      * Gets the tiIndicators property value. The tiIndicators property
      * @return a tiIndicator
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TiIndicator> getTiIndicators() {
         return this.tiIndicators;
     }
@@ -335,7 +334,7 @@ public class Security extends Entity implements Parsable {
      * Gets the triggers property value. The triggers property
      * @return a triggersRoot
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TriggersRoot getTriggers() {
         return this.triggers;
     }
@@ -343,7 +342,7 @@ public class Security extends Entity implements Parsable {
      * Gets the triggerTypes property value. The triggerTypes property
      * @return a triggerTypesRoot
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TriggerTypesRoot getTriggerTypes() {
         return this.triggerTypes;
     }
@@ -351,17 +350,15 @@ public class Security extends Entity implements Parsable {
      * Gets the userSecurityProfiles property value. The userSecurityProfiles property
      * @return a userSecurityProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UserSecurityProfile> getUserSecurityProfiles() {
         return this.userSecurityProfiles;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("alerts", this.getAlerts());
@@ -392,217 +389,169 @@ public class Security extends Entity implements Parsable {
     /**
      * Sets the alerts property value. Notifications for suspicious or potential security issues in a customers tenant.
      * @param value Value to set for the alerts property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlerts(@javax.annotation.Nullable final java.util.List<Alert> value) {
+    public void setAlerts(@jakarta.annotation.Nullable final java.util.List<Alert> value) {
         this.alerts = value;
     }
     /**
      * Sets the alerts_v2 property value. A collection of alerts in Microsoft 365 Defender.
      * @param value Value to set for the alerts_v2 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlertsV2(@javax.annotation.Nullable final java.util.List<Alert> value) {
+    public void setAlertsV2(@jakarta.annotation.Nullable final java.util.List<Alert> value) {
         this.alertsV2 = value;
     }
     /**
      * Sets the attackSimulation property value. Provides tenants capability to launch a simulated and realistic phishing attack and learn from it.
      * @param value Value to set for the attackSimulation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAttackSimulation(@javax.annotation.Nullable final AttackSimulationRoot value) {
+    public void setAttackSimulation(@jakarta.annotation.Nullable final AttackSimulationRoot value) {
         this.attackSimulation = value;
     }
     /**
      * Sets the cases property value. The cases property
      * @param value Value to set for the cases property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCases(@javax.annotation.Nullable final CasesRoot value) {
+    public void setCases(@jakarta.annotation.Nullable final CasesRoot value) {
         this.cases = value;
     }
     /**
      * Sets the cloudAppSecurityProfiles property value. The cloudAppSecurityProfiles property
      * @param value Value to set for the cloudAppSecurityProfiles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudAppSecurityProfiles(@javax.annotation.Nullable final java.util.List<CloudAppSecurityProfile> value) {
+    public void setCloudAppSecurityProfiles(@jakarta.annotation.Nullable final java.util.List<CloudAppSecurityProfile> value) {
         this.cloudAppSecurityProfiles = value;
     }
     /**
      * Sets the domainSecurityProfiles property value. The domainSecurityProfiles property
      * @param value Value to set for the domainSecurityProfiles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDomainSecurityProfiles(@javax.annotation.Nullable final java.util.List<DomainSecurityProfile> value) {
+    public void setDomainSecurityProfiles(@jakarta.annotation.Nullable final java.util.List<DomainSecurityProfile> value) {
         this.domainSecurityProfiles = value;
     }
     /**
      * Sets the fileSecurityProfiles property value. The fileSecurityProfiles property
      * @param value Value to set for the fileSecurityProfiles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileSecurityProfiles(@javax.annotation.Nullable final java.util.List<FileSecurityProfile> value) {
+    public void setFileSecurityProfiles(@jakarta.annotation.Nullable final java.util.List<FileSecurityProfile> value) {
         this.fileSecurityProfiles = value;
     }
     /**
      * Sets the hostSecurityProfiles property value. The hostSecurityProfiles property
      * @param value Value to set for the hostSecurityProfiles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHostSecurityProfiles(@javax.annotation.Nullable final java.util.List<HostSecurityProfile> value) {
+    public void setHostSecurityProfiles(@jakarta.annotation.Nullable final java.util.List<HostSecurityProfile> value) {
         this.hostSecurityProfiles = value;
     }
     /**
      * Sets the incidents property value. A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
      * @param value Value to set for the incidents property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncidents(@javax.annotation.Nullable final java.util.List<Incident> value) {
+    public void setIncidents(@jakarta.annotation.Nullable final java.util.List<Incident> value) {
         this.incidents = value;
     }
     /**
      * Sets the informationProtection property value. The informationProtection property
      * @param value Value to set for the informationProtection property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInformationProtection(@javax.annotation.Nullable final InformationProtection value) {
+    public void setInformationProtection(@jakarta.annotation.Nullable final InformationProtection value) {
         this.informationProtection = value;
     }
     /**
      * Sets the ipSecurityProfiles property value. The ipSecurityProfiles property
      * @param value Value to set for the ipSecurityProfiles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIpSecurityProfiles(@javax.annotation.Nullable final java.util.List<IpSecurityProfile> value) {
+    public void setIpSecurityProfiles(@jakarta.annotation.Nullable final java.util.List<IpSecurityProfile> value) {
         this.ipSecurityProfiles = value;
     }
     /**
      * Sets the labels property value. The labels property
      * @param value Value to set for the labels property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabels(@javax.annotation.Nullable final LabelsRoot value) {
+    public void setLabels(@jakarta.annotation.Nullable final LabelsRoot value) {
         this.labels = value;
     }
     /**
      * Sets the providerStatus property value. The providerStatus property
      * @param value Value to set for the providerStatus property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProviderStatus(@javax.annotation.Nullable final java.util.List<SecurityProviderStatus> value) {
+    public void setProviderStatus(@jakarta.annotation.Nullable final java.util.List<SecurityProviderStatus> value) {
         this.providerStatus = value;
     }
     /**
      * Sets the providerTenantSettings property value. The providerTenantSettings property
      * @param value Value to set for the providerTenantSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProviderTenantSettings(@javax.annotation.Nullable final java.util.List<ProviderTenantSetting> value) {
+    public void setProviderTenantSettings(@jakarta.annotation.Nullable final java.util.List<ProviderTenantSetting> value) {
         this.providerTenantSettings = value;
     }
     /**
      * Sets the secureScoreControlProfiles property value. The secureScoreControlProfiles property
      * @param value Value to set for the secureScoreControlProfiles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecureScoreControlProfiles(@javax.annotation.Nullable final java.util.List<SecureScoreControlProfile> value) {
+    public void setSecureScoreControlProfiles(@jakarta.annotation.Nullable final java.util.List<SecureScoreControlProfile> value) {
         this.secureScoreControlProfiles = value;
     }
     /**
      * Sets the secureScores property value. Measurements of tenants security posture to help protect them from threats.
      * @param value Value to set for the secureScores property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecureScores(@javax.annotation.Nullable final java.util.List<SecureScore> value) {
+    public void setSecureScores(@jakarta.annotation.Nullable final java.util.List<SecureScore> value) {
         this.secureScores = value;
     }
     /**
      * Sets the securityActions property value. The securityActions property
      * @param value Value to set for the securityActions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityActions(@javax.annotation.Nullable final java.util.List<SecurityAction> value) {
+    public void setSecurityActions(@jakarta.annotation.Nullable final java.util.List<SecurityAction> value) {
         this.securityActions = value;
     }
     /**
      * Sets the subjectRightsRequests property value. The subjectRightsRequests property
      * @param value Value to set for the subjectRightsRequests property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubjectRightsRequests(@javax.annotation.Nullable final java.util.List<SubjectRightsRequest> value) {
+    public void setSubjectRightsRequests(@jakarta.annotation.Nullable final java.util.List<SubjectRightsRequest> value) {
         this.subjectRightsRequests = value;
     }
     /**
      * Sets the threatIntelligence property value. The threatIntelligence property
      * @param value Value to set for the threatIntelligence property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThreatIntelligence(@javax.annotation.Nullable final ThreatIntelligence value) {
+    public void setThreatIntelligence(@jakarta.annotation.Nullable final ThreatIntelligence value) {
         this.threatIntelligence = value;
     }
     /**
      * Sets the threatSubmission property value. A threat submission sent to Microsoft; for example, a suspicious email threat, URL threat, or file threat.
      * @param value Value to set for the threatSubmission property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThreatSubmission(@javax.annotation.Nullable final ThreatSubmissionRoot value) {
+    public void setThreatSubmission(@jakarta.annotation.Nullable final ThreatSubmissionRoot value) {
         this.threatSubmission = value;
     }
     /**
      * Sets the tiIndicators property value. The tiIndicators property
      * @param value Value to set for the tiIndicators property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTiIndicators(@javax.annotation.Nullable final java.util.List<TiIndicator> value) {
+    public void setTiIndicators(@jakarta.annotation.Nullable final java.util.List<TiIndicator> value) {
         this.tiIndicators = value;
     }
     /**
      * Sets the triggers property value. The triggers property
      * @param value Value to set for the triggers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTriggers(@javax.annotation.Nullable final TriggersRoot value) {
+    public void setTriggers(@jakarta.annotation.Nullable final TriggersRoot value) {
         this.triggers = value;
     }
     /**
      * Sets the triggerTypes property value. The triggerTypes property
      * @param value Value to set for the triggerTypes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTriggerTypes(@javax.annotation.Nullable final TriggerTypesRoot value) {
+    public void setTriggerTypes(@jakarta.annotation.Nullable final TriggerTypesRoot value) {
         this.triggerTypes = value;
     }
     /**
      * Sets the userSecurityProfiles property value. The userSecurityProfiles property
      * @param value Value to set for the userSecurityProfiles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserSecurityProfiles(@javax.annotation.Nullable final java.util.List<UserSecurityProfile> value) {
+    public void setUserSecurityProfiles(@jakarta.annotation.Nullable final java.util.List<UserSecurityProfile> value) {
         this.userSecurityProfiles = value;
     }
 }

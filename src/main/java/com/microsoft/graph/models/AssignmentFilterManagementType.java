@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Supported filter management types whether its devices or apps.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AssignmentFilterManagementType implements ValuedEnum {
     /** Indicates when filter is supported based on device properties. This is the default value when management type resolution fails. */
     Devices("devices"),
@@ -17,10 +18,10 @@ public enum AssignmentFilterManagementType implements ValuedEnum {
     AssignmentFilterManagementType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AssignmentFilterManagementType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AssignmentFilterManagementType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "devices": return Devices;

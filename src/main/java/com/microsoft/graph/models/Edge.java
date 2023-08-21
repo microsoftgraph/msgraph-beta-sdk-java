@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Edge extends Entity implements Parsable {
     /**
      * A container for Internet Explorer mode resources.
@@ -13,9 +14,7 @@ public class Edge extends Entity implements Parsable {
     private InternetExplorerMode internetExplorerMode;
     /**
      * Instantiates a new edge and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Edge() {
         super();
     }
@@ -24,8 +23,8 @@ public class Edge extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a edge
      */
-    @javax.annotation.Nonnull
-    public static Edge createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Edge createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Edge();
     }
@@ -33,7 +32,7 @@ public class Edge extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("internetExplorerMode", (n) -> { this.setInternetExplorerMode(n.getObjectValue(InternetExplorerMode::createFromDiscriminatorValue)); });
@@ -43,17 +42,15 @@ public class Edge extends Entity implements Parsable {
      * Gets the internetExplorerMode property value. A container for Internet Explorer mode resources.
      * @return a internetExplorerMode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InternetExplorerMode getInternetExplorerMode() {
         return this.internetExplorerMode;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("internetExplorerMode", this.getInternetExplorerMode());
@@ -61,10 +58,8 @@ public class Edge extends Entity implements Parsable {
     /**
      * Sets the internetExplorerMode property value. A container for Internet Explorer mode resources.
      * @param value Value to set for the internetExplorerMode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInternetExplorerMode(@javax.annotation.Nullable final InternetExplorerMode value) {
+    public void setInternetExplorerMode(@jakarta.annotation.Nullable final InternetExplorerMode value) {
         this.internetExplorerMode = value;
     }
 }

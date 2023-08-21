@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Approval extends Entity implements Parsable {
     /**
      * Used to represent the decision associated with a single step in the approval process configured in approvalStage.
@@ -13,9 +14,7 @@ public class Approval extends Entity implements Parsable {
     private java.util.List<ApprovalStep> steps;
     /**
      * Instantiates a new approval and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Approval() {
         super();
     }
@@ -24,8 +23,8 @@ public class Approval extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a approval
      */
-    @javax.annotation.Nonnull
-    public static Approval createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Approval createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Approval();
     }
@@ -33,7 +32,7 @@ public class Approval extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("steps", (n) -> { this.setSteps(n.getCollectionOfObjectValues(ApprovalStep::createFromDiscriminatorValue)); });
@@ -43,17 +42,15 @@ public class Approval extends Entity implements Parsable {
      * Gets the steps property value. Used to represent the decision associated with a single step in the approval process configured in approvalStage.
      * @return a approvalStep
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ApprovalStep> getSteps() {
         return this.steps;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("steps", this.getSteps());
@@ -61,10 +58,8 @@ public class Approval extends Entity implements Parsable {
     /**
      * Sets the steps property value. Used to represent the decision associated with a single step in the approval process configured in approvalStage.
      * @param value Value to set for the steps property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSteps(@javax.annotation.Nullable final java.util.List<ApprovalStep> value) {
+    public void setSteps(@jakarta.annotation.Nullable final java.util.List<ApprovalStep> value) {
         this.steps = value;
     }
 }

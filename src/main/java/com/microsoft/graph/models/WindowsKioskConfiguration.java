@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * This entity provides descriptions of the declared methods, properties and relationships exposed by the kiosk resource.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsKioskConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Enable public browsing kiosk mode for the Microsoft Edge browser. The Default is false.
@@ -52,9 +53,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     private WindowsKioskForceUpdateSchedule windowsKioskForceUpdateSchedule;
     /**
      * Instantiates a new windowsKioskConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsKioskConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsKioskConfiguration");
@@ -64,8 +63,8 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsKioskConfiguration
      */
-    @javax.annotation.Nonnull
-    public static WindowsKioskConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsKioskConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsKioskConfiguration();
     }
@@ -73,7 +72,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * Gets the edgeKioskEnablePublicBrowsing property value. Enable public browsing kiosk mode for the Microsoft Edge browser. The Default is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEdgeKioskEnablePublicBrowsing() {
         return this.edgeKioskEnablePublicBrowsing;
     }
@@ -81,7 +80,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("edgeKioskEnablePublicBrowsing", (n) -> { this.setEdgeKioskEnablePublicBrowsing(n.getBooleanValue()); });
@@ -100,7 +99,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * Gets the kioskBrowserBlockedUrlExceptions property value. Specify URLs that the kiosk browser is allowed to navigate to
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getKioskBrowserBlockedUrlExceptions() {
         return this.kioskBrowserBlockedUrlExceptions;
     }
@@ -108,7 +107,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * Gets the kioskBrowserBlockedURLs property value. Specify URLs that the kiosk browsers should not navigate to
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getKioskBrowserBlockedURLs() {
         return this.kioskBrowserBlockedURLs;
     }
@@ -116,7 +115,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * Gets the kioskBrowserDefaultUrl property value. Specify the default URL the browser should navigate to on launch.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getKioskBrowserDefaultUrl() {
         return this.kioskBrowserDefaultUrl;
     }
@@ -124,7 +123,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * Gets the kioskBrowserEnableEndSessionButton property value. Enable the kiosk browser's end session button. By default, the end session button is disabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskBrowserEnableEndSessionButton() {
         return this.kioskBrowserEnableEndSessionButton;
     }
@@ -132,7 +131,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * Gets the kioskBrowserEnableHomeButton property value. Enable the kiosk browser's home button. By default, the home button is disabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskBrowserEnableHomeButton() {
         return this.kioskBrowserEnableHomeButton;
     }
@@ -140,7 +139,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * Gets the kioskBrowserEnableNavigationButtons property value. Enable the kiosk browser's navigation buttons(forward/back). By default, the navigation buttons are disabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getKioskBrowserEnableNavigationButtons() {
         return this.kioskBrowserEnableNavigationButtons;
     }
@@ -148,7 +147,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * Gets the kioskBrowserRestartOnIdleTimeInMinutes property value. Specify the number of minutes the session is idle until the kiosk browser restarts in a fresh state.  Valid values are 1-1440. Valid values 1 to 1440
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getKioskBrowserRestartOnIdleTimeInMinutes() {
         return this.kioskBrowserRestartOnIdleTimeInMinutes;
     }
@@ -156,7 +155,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * Gets the kioskProfiles property value. This policy setting allows to define a list of Kiosk profiles for a Kiosk configuration. This collection can contain a maximum of 3 elements.
      * @return a windowsKioskProfile
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WindowsKioskProfile> getKioskProfiles() {
         return this.kioskProfiles;
     }
@@ -164,17 +163,15 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
      * Gets the windowsKioskForceUpdateSchedule property value. force update schedule for Kiosk devices.
      * @return a windowsKioskForceUpdateSchedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsKioskForceUpdateSchedule getWindowsKioskForceUpdateSchedule() {
         return this.windowsKioskForceUpdateSchedule;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("edgeKioskEnablePublicBrowsing", this.getEdgeKioskEnablePublicBrowsing());
@@ -191,91 +188,71 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     /**
      * Sets the edgeKioskEnablePublicBrowsing property value. Enable public browsing kiosk mode for the Microsoft Edge browser. The Default is false.
      * @param value Value to set for the edgeKioskEnablePublicBrowsing property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEdgeKioskEnablePublicBrowsing(@javax.annotation.Nullable final Boolean value) {
+    public void setEdgeKioskEnablePublicBrowsing(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeKioskEnablePublicBrowsing = value;
     }
     /**
      * Sets the kioskBrowserBlockedUrlExceptions property value. Specify URLs that the kiosk browser is allowed to navigate to
      * @param value Value to set for the kioskBrowserBlockedUrlExceptions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskBrowserBlockedUrlExceptions(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setKioskBrowserBlockedUrlExceptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.kioskBrowserBlockedUrlExceptions = value;
     }
     /**
      * Sets the kioskBrowserBlockedURLs property value. Specify URLs that the kiosk browsers should not navigate to
      * @param value Value to set for the kioskBrowserBlockedURLs property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskBrowserBlockedURLs(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setKioskBrowserBlockedURLs(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.kioskBrowserBlockedURLs = value;
     }
     /**
      * Sets the kioskBrowserDefaultUrl property value. Specify the default URL the browser should navigate to on launch.
      * @param value Value to set for the kioskBrowserDefaultUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskBrowserDefaultUrl(@javax.annotation.Nullable final String value) {
+    public void setKioskBrowserDefaultUrl(@jakarta.annotation.Nullable final String value) {
         this.kioskBrowserDefaultUrl = value;
     }
     /**
      * Sets the kioskBrowserEnableEndSessionButton property value. Enable the kiosk browser's end session button. By default, the end session button is disabled.
      * @param value Value to set for the kioskBrowserEnableEndSessionButton property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskBrowserEnableEndSessionButton(@javax.annotation.Nullable final Boolean value) {
+    public void setKioskBrowserEnableEndSessionButton(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskBrowserEnableEndSessionButton = value;
     }
     /**
      * Sets the kioskBrowserEnableHomeButton property value. Enable the kiosk browser's home button. By default, the home button is disabled.
      * @param value Value to set for the kioskBrowserEnableHomeButton property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskBrowserEnableHomeButton(@javax.annotation.Nullable final Boolean value) {
+    public void setKioskBrowserEnableHomeButton(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskBrowserEnableHomeButton = value;
     }
     /**
      * Sets the kioskBrowserEnableNavigationButtons property value. Enable the kiosk browser's navigation buttons(forward/back). By default, the navigation buttons are disabled.
      * @param value Value to set for the kioskBrowserEnableNavigationButtons property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskBrowserEnableNavigationButtons(@javax.annotation.Nullable final Boolean value) {
+    public void setKioskBrowserEnableNavigationButtons(@jakarta.annotation.Nullable final Boolean value) {
         this.kioskBrowserEnableNavigationButtons = value;
     }
     /**
      * Sets the kioskBrowserRestartOnIdleTimeInMinutes property value. Specify the number of minutes the session is idle until the kiosk browser restarts in a fresh state.  Valid values are 1-1440. Valid values 1 to 1440
      * @param value Value to set for the kioskBrowserRestartOnIdleTimeInMinutes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskBrowserRestartOnIdleTimeInMinutes(@javax.annotation.Nullable final Integer value) {
+    public void setKioskBrowserRestartOnIdleTimeInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.kioskBrowserRestartOnIdleTimeInMinutes = value;
     }
     /**
      * Sets the kioskProfiles property value. This policy setting allows to define a list of Kiosk profiles for a Kiosk configuration. This collection can contain a maximum of 3 elements.
      * @param value Value to set for the kioskProfiles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKioskProfiles(@javax.annotation.Nullable final java.util.List<WindowsKioskProfile> value) {
+    public void setKioskProfiles(@jakarta.annotation.Nullable final java.util.List<WindowsKioskProfile> value) {
         this.kioskProfiles = value;
     }
     /**
      * Sets the windowsKioskForceUpdateSchedule property value. force update schedule for Kiosk devices.
      * @param value Value to set for the windowsKioskForceUpdateSchedule property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindowsKioskForceUpdateSchedule(@javax.annotation.Nullable final WindowsKioskForceUpdateSchedule value) {
+    public void setWindowsKioskForceUpdateSchedule(@jakarta.annotation.Nullable final WindowsKioskForceUpdateSchedule value) {
         this.windowsKioskForceUpdateSchedule = value;
     }
 }

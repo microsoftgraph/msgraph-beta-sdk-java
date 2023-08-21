@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The type of Exchange Connector.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementExchangeConnectorType implements ValuedEnum {
     /** Connects to on-premises Exchange Environment. */
     OnPremises("onPremises"),
@@ -21,10 +22,10 @@ public enum DeviceManagementExchangeConnectorType implements ValuedEnum {
     DeviceManagementExchangeConnectorType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementExchangeConnectorType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementExchangeConnectorType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "onPremises": return OnPremises;

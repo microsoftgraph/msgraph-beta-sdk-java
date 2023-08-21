@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EnrichedAuditLogs extends Entity implements Parsable {
     /**
      * Exchange Online enriched audit logs settings.
@@ -22,9 +23,7 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
     private EnrichedAuditLogsSettings teams;
     /**
      * Instantiates a new enrichedAuditLogs and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EnrichedAuditLogs() {
         super();
     }
@@ -33,8 +32,8 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a enrichedAuditLogs
      */
-    @javax.annotation.Nonnull
-    public static EnrichedAuditLogs createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EnrichedAuditLogs createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EnrichedAuditLogs();
     }
@@ -42,7 +41,7 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
      * Gets the exchange property value. Exchange Online enriched audit logs settings.
      * @return a enrichedAuditLogsSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EnrichedAuditLogsSettings getExchange() {
         return this.exchange;
     }
@@ -50,7 +49,7 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("exchange", (n) -> { this.setExchange(n.getObjectValue(EnrichedAuditLogsSettings::createFromDiscriminatorValue)); });
@@ -62,7 +61,7 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
      * Gets the sharepoint property value. SharePoint Online enriched audit logs settings.
      * @return a enrichedAuditLogsSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EnrichedAuditLogsSettings getSharepoint() {
         return this.sharepoint;
     }
@@ -70,17 +69,15 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
      * Gets the teams property value. Teams enriched audit logs settings.
      * @return a enrichedAuditLogsSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EnrichedAuditLogsSettings getTeams() {
         return this.teams;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("exchange", this.getExchange());
@@ -90,28 +87,22 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
     /**
      * Sets the exchange property value. Exchange Online enriched audit logs settings.
      * @param value Value to set for the exchange property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExchange(@javax.annotation.Nullable final EnrichedAuditLogsSettings value) {
+    public void setExchange(@jakarta.annotation.Nullable final EnrichedAuditLogsSettings value) {
         this.exchange = value;
     }
     /**
      * Sets the sharepoint property value. SharePoint Online enriched audit logs settings.
      * @param value Value to set for the sharepoint property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharepoint(@javax.annotation.Nullable final EnrichedAuditLogsSettings value) {
+    public void setSharepoint(@jakarta.annotation.Nullable final EnrichedAuditLogsSettings value) {
         this.sharepoint = value;
     }
     /**
      * Sets the teams property value. Teams enriched audit logs settings.
      * @param value Value to set for the teams property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTeams(@javax.annotation.Nullable final EnrichedAuditLogsSettings value) {
+    public void setTeams(@jakarta.annotation.Nullable final EnrichedAuditLogsSettings value) {
         this.teams = value;
     }
 }

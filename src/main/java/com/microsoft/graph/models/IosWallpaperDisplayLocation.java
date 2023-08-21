@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * An enum type for wallpaper display location specifier.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum IosWallpaperDisplayLocation implements ValuedEnum {
     /** No location specified for wallpaper display. */
     NotConfigured("notConfigured"),
@@ -19,10 +20,10 @@ public enum IosWallpaperDisplayLocation implements ValuedEnum {
     IosWallpaperDisplayLocation(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static IosWallpaperDisplayLocation forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static IosWallpaperDisplayLocation forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;
