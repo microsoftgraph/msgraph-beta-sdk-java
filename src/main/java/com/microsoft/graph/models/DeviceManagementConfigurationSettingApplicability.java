@@ -60,7 +60,7 @@ public class DeviceManagementConfigurationSettingApplicability implements IJsonB
 
     /**
      * The Platform.
-     * Platform setting can be applied on. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
+     * Platform setting can be applied on. Posible values are: none, android, androidEnterprise, iOs, macOs, windows10X, windows10, aosp, and linux. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
      */
     @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose
@@ -69,7 +69,7 @@ public class DeviceManagementConfigurationSettingApplicability implements IJsonB
 
     /**
      * The Technologies.
-     * Which technology channels this setting can be deployed through. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, enrollment, endpointPrivilegeManagement, unknownFutureValue.
+     * Which technology channels this setting can be deployed through. Posible values are: none, mdm, configManager, intuneManagementExtension, thirdParty, documentGateway, appleRemoteManagement, microsoftSense, exchangeOnline, edgeMam, linuxMdm, extensibility, enrollment, endpointPrivilegeManagement. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, mobileApplicationManagement, linuxMdm, enrollment, endpointPrivilegeManagement, unknownFutureValue.
      */
     @SerializedName(value = "technologies", alternate = {"Technologies"})
     @Expose

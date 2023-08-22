@@ -148,6 +148,18 @@ public enum ConditionalAccessRule
     */
     MICROSOFT_ADMIN_PORTALS,
     /**
+    * device Code Flow
+    */
+    DEVICE_CODE_FLOW,
+    /**
+    * authentication Transfer
+    */
+    AUTHENTICATION_TRANSFER,
+    /**
+    * insider Risk
+    */
+    INSIDER_RISK,
+    /**
     * For ConditionalAccessRule values that were not expected from the service
     */
     UNEXPECTED_VALUE

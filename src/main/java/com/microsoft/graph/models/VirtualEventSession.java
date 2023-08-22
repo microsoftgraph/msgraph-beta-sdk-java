@@ -8,7 +8,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.OnlineMeeting;
+import com.microsoft.graph.requests.VirtualEventRegistrationCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -25,6 +27,13 @@ import javax.annotation.Nonnull;
 public class VirtualEventSession extends OnlineMeeting implements IJsonBackedObject {
 
 
+    /**
+     * The Registrations.
+     * 
+     */
+	@Nullable
+    public com.microsoft.graph.requests.VirtualEventRegistrationCollectionPage registrations;
+
 
     /**
      * Sets the raw JSON object
@@ -34,5 +43,9 @@ public class VirtualEventSession extends OnlineMeeting implements IJsonBackedObj
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("registrations")) {
+            registrations = serializer.deserializeObject(json.get("registrations"), com.microsoft.graph.requests.VirtualEventRegistrationCollectionPage.class);
+        }
     }
 }

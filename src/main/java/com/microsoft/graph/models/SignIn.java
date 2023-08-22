@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AppliedConditionalAccessPolicy;
 import com.microsoft.graph.models.AppliedAuthenticationEventListener;
+import com.microsoft.graph.models.TokenProtectionStatus;
 import com.microsoft.graph.models.AuthenticationAppDeviceDetails;
 import com.microsoft.graph.models.AuthenticationAppPolicyDetails;
 import com.microsoft.graph.models.AuthenticationContext;
@@ -27,6 +28,7 @@ import com.microsoft.graph.models.SignInLocation;
 import com.microsoft.graph.models.ManagedIdentity;
 import com.microsoft.graph.models.MfaDetail;
 import com.microsoft.graph.models.NetworkLocationDetail;
+import com.microsoft.graph.models.OriginalTransferMethods;
 import com.microsoft.graph.models.PrivateLinkDetails;
 import com.microsoft.graph.models.RiskDetail;
 import com.microsoft.graph.models.RiskLevel;
@@ -88,6 +90,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<AppliedAuthenticationEventListener> appliedEventListeners;
+
+    /**
+     * The App Token Protection Status.
+     * 
+     */
+    @SerializedName(value = "appTokenProtectionStatus", alternate = {"AppTokenProtectionStatus"})
+    @Expose
+	@Nullable
+    public TokenProtectionStatus appTokenProtectionStatus;
 
     /**
      * The Authentication App Device Details.
@@ -343,7 +354,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Managed Service Identity.
-     * Contains information about the managed identity used for the sign in, including its type and associated Azure Resource Manager (ARM) resource ID.
+     * Contains information about the managed identity used for the sign in, including its type, associated Azure Resource Manager (ARM) resource ID, and federated token information.
      */
     @SerializedName(value = "managedServiceIdentity", alternate = {"ManagedServiceIdentity"})
     @Expose
@@ -376,6 +387,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String originalRequestId;
+
+    /**
+     * The Original Transfer Method.
+     * 
+     */
+    @SerializedName(value = "originalTransferMethod", alternate = {"OriginalTransferMethod"})
+    @Expose
+	@Nullable
+    public OriginalTransferMethods originalTransferMethod;
 
     /**
      * The Private Link Details.
@@ -547,6 +567,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public SignInIdentifierType signInIdentifierType;
+
+    /**
+     * The Sign In Token Protection Status.
+     * 
+     */
+    @SerializedName(value = "signInTokenProtectionStatus", alternate = {"SignInTokenProtectionStatus"})
+    @Expose
+	@Nullable
+    public TokenProtectionStatus signInTokenProtectionStatus;
 
     /**
      * The Status.

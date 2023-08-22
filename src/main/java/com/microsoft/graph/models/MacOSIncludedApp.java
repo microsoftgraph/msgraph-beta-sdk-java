@@ -39,7 +39,7 @@ public class MacOSIncludedApp implements IJsonBackedObject {
 
     /**
      * The Bundle Id.
-     * The CFBundleIdentifier.
+     * The bundleId of the app. This maps to the CFBundleIdentifier in the app's bundle configuration.
      */
     @SerializedName(value = "bundleId", alternate = {"BundleId"})
     @Expose
@@ -48,7 +48,7 @@ public class MacOSIncludedApp implements IJsonBackedObject {
 
     /**
      * The Bundle Version.
-     * The CFBundleVersion.
+     * The version of the app. This maps to the CFBundleShortVersion in the app's bundle configuration.
      */
     @SerializedName(value = "bundleVersion", alternate = {"BundleVersion"})
     @Expose

@@ -34,6 +34,33 @@ public class CallTranscript extends Entity implements IJsonBackedObject {
 	@Nullable
     public java.time.OffsetDateTime createdDateTime;
 
+    /**
+     * The Meeting Id.
+     * The unique identifier of the online meeting related to this transcript. Read-only.
+     */
+    @SerializedName(value = "meetingId", alternate = {"MeetingId"})
+    @Expose
+	@Nullable
+    public String meetingId;
+
+    /**
+     * The Meeting Organizer Id.
+     * The unique identifier of the organizer of the onlineMeeting related to this transcript. Read-only.
+     */
+    @SerializedName(value = "meetingOrganizerId", alternate = {"MeetingOrganizerId"})
+    @Expose
+	@Nullable
+    public String meetingOrganizerId;
+
+    /**
+     * The Transcript Content Url.
+     * The URL which can be used to access the content of the transcript. Read-only.
+     */
+    @SerializedName(value = "transcriptContentUrl", alternate = {"TranscriptContentUrl"})
+    @Expose
+	@Nullable
+    public String transcriptContentUrl;
+
 
     /**
      * Sets the raw JSON object

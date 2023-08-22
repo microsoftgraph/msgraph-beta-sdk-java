@@ -9,10 +9,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.security.models.WhoisContact;
-import com.microsoft.graph.security.models.WhoisNameserver;
-import com.microsoft.graph.security.models.Host;
-import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.security.models.WhoisBaseRecord;
+import com.microsoft.graph.security.requests.WhoisHistoryRecordCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -26,170 +24,15 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Whois Record.
  */
-public class WhoisRecord extends Entity implements IJsonBackedObject {
+public class WhoisRecord extends WhoisBaseRecord implements IJsonBackedObject {
 
 
     /**
-     * The Abuse.
+     * The History.
      * 
      */
-    @SerializedName(value = "abuse", alternate = {"Abuse"})
-    @Expose
 	@Nullable
-    public WhoisContact abuse;
-
-    /**
-     * The Admin.
-     * 
-     */
-    @SerializedName(value = "admin", alternate = {"Admin"})
-    @Expose
-	@Nullable
-    public WhoisContact admin;
-
-    /**
-     * The Billing.
-     * 
-     */
-    @SerializedName(value = "billing", alternate = {"Billing"})
-    @Expose
-	@Nullable
-    public WhoisContact billing;
-
-    /**
-     * The Domain Status.
-     * 
-     */
-    @SerializedName(value = "domainStatus", alternate = {"DomainStatus"})
-    @Expose
-	@Nullable
-    public String domainStatus;
-
-    /**
-     * The Expiration Date Time.
-     * 
-     */
-    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime expirationDateTime;
-
-    /**
-     * The First Seen Date Time.
-     * 
-     */
-    @SerializedName(value = "firstSeenDateTime", alternate = {"FirstSeenDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime firstSeenDateTime;
-
-    /**
-     * The Last Seen Date Time.
-     * 
-     */
-    @SerializedName(value = "lastSeenDateTime", alternate = {"LastSeenDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime lastSeenDateTime;
-
-    /**
-     * The Last Update Date Time.
-     * 
-     */
-    @SerializedName(value = "lastUpdateDateTime", alternate = {"LastUpdateDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime lastUpdateDateTime;
-
-    /**
-     * The Nameservers.
-     * 
-     */
-    @SerializedName(value = "nameservers", alternate = {"Nameservers"})
-    @Expose
-	@Nullable
-    public java.util.List<WhoisNameserver> nameservers;
-
-    /**
-     * The Noc.
-     * 
-     */
-    @SerializedName(value = "noc", alternate = {"Noc"})
-    @Expose
-	@Nullable
-    public WhoisContact noc;
-
-    /**
-     * The Raw Whois Text.
-     * 
-     */
-    @SerializedName(value = "rawWhoisText", alternate = {"RawWhoisText"})
-    @Expose
-	@Nullable
-    public String rawWhoisText;
-
-    /**
-     * The Registrant.
-     * 
-     */
-    @SerializedName(value = "registrant", alternate = {"Registrant"})
-    @Expose
-	@Nullable
-    public WhoisContact registrant;
-
-    /**
-     * The Registrar.
-     * 
-     */
-    @SerializedName(value = "registrar", alternate = {"Registrar"})
-    @Expose
-	@Nullable
-    public WhoisContact registrar;
-
-    /**
-     * The Registration Date Time.
-     * 
-     */
-    @SerializedName(value = "registrationDateTime", alternate = {"RegistrationDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime registrationDateTime;
-
-    /**
-     * The Technical.
-     * 
-     */
-    @SerializedName(value = "technical", alternate = {"Technical"})
-    @Expose
-	@Nullable
-    public WhoisContact technical;
-
-    /**
-     * The Whois Server.
-     * 
-     */
-    @SerializedName(value = "whoisServer", alternate = {"WhoisServer"})
-    @Expose
-	@Nullable
-    public String whoisServer;
-
-    /**
-     * The Zone.
-     * 
-     */
-    @SerializedName(value = "zone", alternate = {"Zone"})
-    @Expose
-	@Nullable
-    public WhoisContact zone;
-
-    /**
-     * The Host.
-     * 
-     */
-    @SerializedName(value = "host", alternate = {"Host"})
-    @Expose
-	@Nullable
-    public Host host;
+    public com.microsoft.graph.security.requests.WhoisHistoryRecordCollectionPage history;
 
 
     /**
@@ -200,5 +43,9 @@ public class WhoisRecord extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("history")) {
+            history = serializer.deserializeObject(json.get("history"), com.microsoft.graph.security.requests.WhoisHistoryRecordCollectionPage.class);
+        }
     }
 }

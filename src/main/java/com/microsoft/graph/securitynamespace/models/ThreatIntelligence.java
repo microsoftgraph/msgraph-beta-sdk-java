@@ -24,6 +24,7 @@ import com.microsoft.graph.security.requests.PassiveDnsRecordCollectionPage;
 import com.microsoft.graph.security.requests.SslCertificateCollectionPage;
 import com.microsoft.graph.security.requests.SubdomainCollectionPage;
 import com.microsoft.graph.security.requests.VulnerabilityCollectionPage;
+import com.microsoft.graph.security.requests.WhoisHistoryRecordCollectionPage;
 import com.microsoft.graph.security.requests.WhoisRecordCollectionPage;
 
 
@@ -168,6 +169,15 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.security.requests.VulnerabilityCollectionPage vulnerabilities;
 
     /**
+     * The Whois History Records.
+     * 
+     */
+    @SerializedName(value = "whoisHistoryRecords", alternate = {"WhoisHistoryRecords"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.security.requests.WhoisHistoryRecordCollectionPage whoisHistoryRecords;
+
+    /**
      * The Whois Records.
      * 
      */
@@ -240,6 +250,10 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
 
         if (json.has("vulnerabilities")) {
             vulnerabilities = serializer.deserializeObject(json.get("vulnerabilities"), com.microsoft.graph.security.requests.VulnerabilityCollectionPage.class);
+        }
+
+        if (json.has("whoisHistoryRecords")) {
+            whoisHistoryRecords = serializer.deserializeObject(json.get("whoisHistoryRecords"), com.microsoft.graph.security.requests.WhoisHistoryRecordCollectionPage.class);
         }
 
         if (json.has("whoisRecords")) {

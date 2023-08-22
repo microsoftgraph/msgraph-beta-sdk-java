@@ -27,7 +27,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
 
     /**
      * The Maximum Count.
-     * Maximum number of setting group count in the collection
+     * Maximum number of setting group count in the collection. Valid values 1 to 100
      */
     @SerializedName(value = "maximumCount", alternate = {"MaximumCount"})
     @Expose
@@ -36,7 +36,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
 
     /**
      * The Minimum Count.
-     * Minimum number of setting group count in the collection
+     * Minimum number of setting group count in the collection. Valid values 1 to 100
      */
     @SerializedName(value = "minimumCount", alternate = {"MinimumCount"})
     @Expose
