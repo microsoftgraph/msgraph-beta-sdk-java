@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Management state of device in Microsoft Intune.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagementState implements ValuedEnum {
     /** The device is under management */
     Managed("managed"),
@@ -35,10 +36,10 @@ public enum ManagementState implements ValuedEnum {
     ManagementState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ManagementState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ManagementState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "managed": return Managed;

@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAllDeviceCertificateState extends Entity implements Parsable {
     /**
      * Certificate expiry date
@@ -58,9 +59,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     private String userPrincipalName;
     /**
      * Instantiates a new managedAllDeviceCertificateState and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ManagedAllDeviceCertificateState() {
         super();
     }
@@ -69,8 +68,8 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedAllDeviceCertificateState
      */
-    @javax.annotation.Nonnull
-    public static ManagedAllDeviceCertificateState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedAllDeviceCertificateState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagedAllDeviceCertificateState();
     }
@@ -78,7 +77,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * Gets the certificateExpirationDateTime property value. Certificate expiry date
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCertificateExpirationDateTime() {
         return this.certificateExpirationDateTime;
     }
@@ -86,7 +85,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * Gets the certificateExtendedKeyUsages property value. Enhanced Key Usage
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCertificateExtendedKeyUsages() {
         return this.certificateExtendedKeyUsages;
     }
@@ -94,7 +93,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * Gets the certificateIssuanceDateTime property value. Issuance date
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCertificateIssuanceDateTime() {
         return this.certificateIssuanceDateTime;
     }
@@ -102,7 +101,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * Gets the certificateIssuerName property value. Issuer
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCertificateIssuerName() {
         return this.certificateIssuerName;
     }
@@ -110,7 +109,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * Gets the certificateKeyUsages property value. Key Usage
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCertificateKeyUsages() {
         return this.certificateKeyUsages;
     }
@@ -118,7 +117,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * Gets the certificateRevokeStatus property value. Certificate Revocation Status.
      * @return a certificateRevocationStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CertificateRevocationStatus getCertificateRevokeStatus() {
         return this.certificateRevokeStatus;
     }
@@ -126,7 +125,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * Gets the certificateRevokeStatusLastChangeDateTime property value. The time the revoke status was last changed
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCertificateRevokeStatusLastChangeDateTime() {
         return this.certificateRevokeStatusLastChangeDateTime;
     }
@@ -134,7 +133,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * Gets the certificateSerialNumber property value. Serial number
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCertificateSerialNumber() {
         return this.certificateSerialNumber;
     }
@@ -142,7 +141,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * Gets the certificateSubjectName property value. Certificate subject name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCertificateSubjectName() {
         return this.certificateSubjectName;
     }
@@ -150,7 +149,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * Gets the certificateThumbprint property value. Thumbprint
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCertificateThumbprint() {
         return this.certificateThumbprint;
     }
@@ -158,7 +157,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("certificateExpirationDateTime", (n) -> { this.setCertificateExpirationDateTime(n.getOffsetDateTimeValue()); });
@@ -179,7 +178,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * Gets the managedDeviceDisplayName property value. Device display name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagedDeviceDisplayName() {
         return this.managedDeviceDisplayName;
     }
@@ -187,17 +186,15 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * Gets the userPrincipalName property value. User principal name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("certificateExpirationDateTime", this.getCertificateExpirationDateTime());
@@ -216,109 +213,85 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     /**
      * Sets the certificateExpirationDateTime property value. Certificate expiry date
      * @param value Value to set for the certificateExpirationDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCertificateExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.certificateExpirationDateTime = value;
     }
     /**
      * Sets the certificateExtendedKeyUsages property value. Enhanced Key Usage
      * @param value Value to set for the certificateExtendedKeyUsages property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateExtendedKeyUsages(@javax.annotation.Nullable final String value) {
+    public void setCertificateExtendedKeyUsages(@jakarta.annotation.Nullable final String value) {
         this.certificateExtendedKeyUsages = value;
     }
     /**
      * Sets the certificateIssuanceDateTime property value. Issuance date
      * @param value Value to set for the certificateIssuanceDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateIssuanceDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCertificateIssuanceDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.certificateIssuanceDateTime = value;
     }
     /**
      * Sets the certificateIssuerName property value. Issuer
      * @param value Value to set for the certificateIssuerName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateIssuerName(@javax.annotation.Nullable final String value) {
+    public void setCertificateIssuerName(@jakarta.annotation.Nullable final String value) {
         this.certificateIssuerName = value;
     }
     /**
      * Sets the certificateKeyUsages property value. Key Usage
      * @param value Value to set for the certificateKeyUsages property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateKeyUsages(@javax.annotation.Nullable final Integer value) {
+    public void setCertificateKeyUsages(@jakarta.annotation.Nullable final Integer value) {
         this.certificateKeyUsages = value;
     }
     /**
      * Sets the certificateRevokeStatus property value. Certificate Revocation Status.
      * @param value Value to set for the certificateRevokeStatus property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateRevokeStatus(@javax.annotation.Nullable final CertificateRevocationStatus value) {
+    public void setCertificateRevokeStatus(@jakarta.annotation.Nullable final CertificateRevocationStatus value) {
         this.certificateRevokeStatus = value;
     }
     /**
      * Sets the certificateRevokeStatusLastChangeDateTime property value. The time the revoke status was last changed
      * @param value Value to set for the certificateRevokeStatusLastChangeDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateRevokeStatusLastChangeDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCertificateRevokeStatusLastChangeDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.certificateRevokeStatusLastChangeDateTime = value;
     }
     /**
      * Sets the certificateSerialNumber property value. Serial number
      * @param value Value to set for the certificateSerialNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateSerialNumber(@javax.annotation.Nullable final String value) {
+    public void setCertificateSerialNumber(@jakarta.annotation.Nullable final String value) {
         this.certificateSerialNumber = value;
     }
     /**
      * Sets the certificateSubjectName property value. Certificate subject name
      * @param value Value to set for the certificateSubjectName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateSubjectName(@javax.annotation.Nullable final String value) {
+    public void setCertificateSubjectName(@jakarta.annotation.Nullable final String value) {
         this.certificateSubjectName = value;
     }
     /**
      * Sets the certificateThumbprint property value. Thumbprint
      * @param value Value to set for the certificateThumbprint property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateThumbprint(@javax.annotation.Nullable final String value) {
+    public void setCertificateThumbprint(@jakarta.annotation.Nullable final String value) {
         this.certificateThumbprint = value;
     }
     /**
      * Sets the managedDeviceDisplayName property value. Device display name
      * @param value Value to set for the managedDeviceDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceDisplayName(@javax.annotation.Nullable final String value) {
+    public void setManagedDeviceDisplayName(@jakarta.annotation.Nullable final String value) {
         this.managedDeviceDisplayName = value;
     }
     /**
      * Sets the userPrincipalName property value. User principal name
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

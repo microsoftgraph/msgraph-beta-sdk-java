@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Determines which clients a content cache will serve.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MacOSContentCachingClientPolicy implements ValuedEnum {
     /** Defaults to clients in local network. */
     NotConfigured("notConfigured"),
@@ -21,10 +22,10 @@ public enum MacOSContentCachingClientPolicy implements ValuedEnum {
     MacOSContentCachingClientPolicy(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MacOSContentCachingClientPolicy forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MacOSContentCachingClientPolicy forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

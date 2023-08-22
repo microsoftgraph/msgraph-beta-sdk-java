@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Allows IT admins to set a predefined default search engine for MDM-Controlled devices.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
     /**
      * Allows IT admind to set a predefined default search engine for MDM-Controlled devices
@@ -16,9 +17,7 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
     private EdgeSearchEngineType edgeSearchEngineType;
     /**
      * Instantiates a new edgeSearchEngine and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EdgeSearchEngine() {
         super();
         this.setOdataType("#microsoft.graph.edgeSearchEngine");
@@ -28,8 +27,8 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a edgeSearchEngine
      */
-    @javax.annotation.Nonnull
-    public static EdgeSearchEngine createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EdgeSearchEngine createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EdgeSearchEngine();
     }
@@ -37,7 +36,7 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
      * Gets the edgeSearchEngineType property value. Allows IT admind to set a predefined default search engine for MDM-Controlled devices
      * @return a edgeSearchEngineType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EdgeSearchEngineType getEdgeSearchEngineType() {
         return this.edgeSearchEngineType;
     }
@@ -45,7 +44,7 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("edgeSearchEngineType", (n) -> { this.setEdgeSearchEngineType(n.getEnumValue(EdgeSearchEngineType.class)); });
@@ -54,10 +53,8 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("edgeSearchEngineType", this.getEdgeSearchEngineType());
@@ -65,10 +62,8 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
     /**
      * Sets the edgeSearchEngineType property value. Allows IT admind to set a predefined default search engine for MDM-Controlled devices
      * @param value Value to set for the edgeSearchEngineType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEdgeSearchEngineType(@javax.annotation.Nullable final EdgeSearchEngineType value) {
+    public void setEdgeSearchEngineType(@jakarta.annotation.Nullable final EdgeSearchEngineType value) {
         this.edgeSearchEngineType = value;
     }
 }

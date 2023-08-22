@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Custom group id type
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeliveryOptimizationGroupIdCustom extends DeliveryOptimizationGroupIdSource implements Parsable {
     /**
      * Specifies an arbitrary group ID that the device belongs to
@@ -16,9 +17,7 @@ public class DeliveryOptimizationGroupIdCustom extends DeliveryOptimizationGroup
     private String groupIdCustom;
     /**
      * Instantiates a new deliveryOptimizationGroupIdCustom and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeliveryOptimizationGroupIdCustom() {
         super();
         this.setOdataType("#microsoft.graph.deliveryOptimizationGroupIdCustom");
@@ -28,8 +27,8 @@ public class DeliveryOptimizationGroupIdCustom extends DeliveryOptimizationGroup
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deliveryOptimizationGroupIdCustom
      */
-    @javax.annotation.Nonnull
-    public static DeliveryOptimizationGroupIdCustom createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeliveryOptimizationGroupIdCustom createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeliveryOptimizationGroupIdCustom();
     }
@@ -37,7 +36,7 @@ public class DeliveryOptimizationGroupIdCustom extends DeliveryOptimizationGroup
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("groupIdCustom", (n) -> { this.setGroupIdCustom(n.getStringValue()); });
@@ -47,17 +46,15 @@ public class DeliveryOptimizationGroupIdCustom extends DeliveryOptimizationGroup
      * Gets the groupIdCustom property value. Specifies an arbitrary group ID that the device belongs to
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getGroupIdCustom() {
         return this.groupIdCustom;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("groupIdCustom", this.getGroupIdCustom());
@@ -65,10 +62,8 @@ public class DeliveryOptimizationGroupIdCustom extends DeliveryOptimizationGroup
     /**
      * Sets the groupIdCustom property value. Specifies an arbitrary group ID that the device belongs to
      * @param value Value to set for the groupIdCustom property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupIdCustom(@javax.annotation.Nullable final String value) {
+    public void setGroupIdCustom(@jakarta.annotation.Nullable final String value) {
         this.groupIdCustom = value;
     }
 }

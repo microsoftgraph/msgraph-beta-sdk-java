@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class InformationProtectionLabel extends Entity implements Parsable {
     /**
      * The color that the UI should display for the label, if configured.
@@ -37,9 +38,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
     private String tooltip;
     /**
      * Instantiates a new informationProtectionLabel and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public InformationProtectionLabel() {
         super();
     }
@@ -48,8 +47,8 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a informationProtectionLabel
      */
-    @javax.annotation.Nonnull
-    public static InformationProtectionLabel createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static InformationProtectionLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new InformationProtectionLabel();
     }
@@ -57,7 +56,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * Gets the color property value. The color that the UI should display for the label, if configured.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getColor() {
         return this.color;
     }
@@ -65,7 +64,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * Gets the description property value. The admin-defined description for the label.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -73,7 +72,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("color", (n) -> { this.setColor(n.getStringValue()); });
@@ -89,7 +88,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * Gets the isActive property value. Indicates whether the label is active or not. Active labels should be hidden or disabled in UI.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsActive() {
         return this.isActive;
     }
@@ -97,7 +96,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * Gets the name property value. The plaintext name of the label.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -105,7 +104,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * Gets the parent property value. The parent label associated with a child label. Null if label has no parent.
      * @return a parentLabelDetails
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ParentLabelDetails getParent() {
         return this.parent;
     }
@@ -113,7 +112,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * Gets the sensitivity property value. The sensitivity value of the label, where lower is less sensitive.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSensitivity() {
         return this.sensitivity;
     }
@@ -121,17 +120,15 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * Gets the tooltip property value. The tooltip that should be displayed for the label in a UI.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTooltip() {
         return this.tooltip;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("color", this.getColor());
@@ -145,64 +142,50 @@ public class InformationProtectionLabel extends Entity implements Parsable {
     /**
      * Sets the color property value. The color that the UI should display for the label, if configured.
      * @param value Value to set for the color property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setColor(@javax.annotation.Nullable final String value) {
+    public void setColor(@jakarta.annotation.Nullable final String value) {
         this.color = value;
     }
     /**
      * Sets the description property value. The admin-defined description for the label.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the isActive property value. Indicates whether the label is active or not. Active labels should be hidden or disabled in UI.
      * @param value Value to set for the isActive property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsActive(@javax.annotation.Nullable final Boolean value) {
+    public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {
         this.isActive = value;
     }
     /**
      * Sets the name property value. The plaintext name of the label.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the parent property value. The parent label associated with a child label. Null if label has no parent.
      * @param value Value to set for the parent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setParent(@javax.annotation.Nullable final ParentLabelDetails value) {
+    public void setParent(@jakarta.annotation.Nullable final ParentLabelDetails value) {
         this.parent = value;
     }
     /**
      * Sets the sensitivity property value. The sensitivity value of the label, where lower is less sensitive.
      * @param value Value to set for the sensitivity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSensitivity(@javax.annotation.Nullable final Integer value) {
+    public void setSensitivity(@jakarta.annotation.Nullable final Integer value) {
         this.sensitivity = value;
     }
     /**
      * Sets the tooltip property value. The tooltip that should be displayed for the label in a UI.
      * @param value Value to set for the tooltip property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTooltip(@javax.annotation.Nullable final String value) {
+    public void setTooltip(@jakarta.annotation.Nullable final String value) {
         this.tooltip = value;
     }
 }

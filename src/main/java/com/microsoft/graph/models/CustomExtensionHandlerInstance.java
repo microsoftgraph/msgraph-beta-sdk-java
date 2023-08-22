@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
     private AccessPackageCustomExtensionHandlerStatus status;
     /**
      * Instantiates a new customExtensionHandlerInstance and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CustomExtensionHandlerInstance() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +44,8 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a customExtensionHandlerInstance
      */
-    @javax.annotation.Nonnull
-    public static CustomExtensionHandlerInstance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CustomExtensionHandlerInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CustomExtensionHandlerInstance();
     }
@@ -54,7 +53,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +61,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      * Gets the customExtensionId property value. Identifier of the customAccessPackageWorkflowExtension triggered at this instance.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCustomExtensionId() {
         return this.customExtensionId;
     }
@@ -70,7 +69,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      * Gets the externalCorrelationId property value. The unique run ID for the logic app.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalCorrelationId() {
         return this.externalCorrelationId;
     }
@@ -78,7 +77,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("customExtensionId", (n) -> { this.setCustomExtensionId(n.getStringValue()); });
@@ -92,7 +91,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -100,7 +99,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      * Gets the stage property value. Indicates the stage of the request workflow when the access package custom extension runs. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
      * @return a accessPackageCustomExtensionStage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageCustomExtensionStage getStage() {
         return this.stage;
     }
@@ -108,17 +107,15 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      * Gets the status property value. Status of the request to run the access package custom extension workflow that is associated with the logic app. The possible values are: requestSent, requestReceived, unknownFutureValue.
      * @return a accessPackageCustomExtensionHandlerStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageCustomExtensionHandlerStatus getStatus() {
         return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("customExtensionId", this.getCustomExtensionId());
         writer.writeStringValue("externalCorrelationId", this.getExternalCorrelationId());
@@ -130,55 +127,43 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the customExtensionId property value. Identifier of the customAccessPackageWorkflowExtension triggered at this instance.
      * @param value Value to set for the customExtensionId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomExtensionId(@javax.annotation.Nullable final String value) {
+    public void setCustomExtensionId(@jakarta.annotation.Nullable final String value) {
         this.customExtensionId = value;
     }
     /**
      * Sets the externalCorrelationId property value. The unique run ID for the logic app.
      * @param value Value to set for the externalCorrelationId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalCorrelationId(@javax.annotation.Nullable final String value) {
+    public void setExternalCorrelationId(@jakarta.annotation.Nullable final String value) {
         this.externalCorrelationId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the stage property value. Indicates the stage of the request workflow when the access package custom extension runs. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
      * @param value Value to set for the stage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStage(@javax.annotation.Nullable final AccessPackageCustomExtensionStage value) {
+    public void setStage(@jakarta.annotation.Nullable final AccessPackageCustomExtensionStage value) {
         this.stage = value;
     }
     /**
      * Sets the status property value. Status of the request to run the access package custom extension workflow that is associated with the logic app. The possible values are: requestSent, requestReceived, unknownFutureValue.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final AccessPackageCustomExtensionHandlerStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final AccessPackageCustomExtensionHandlerStatus value) {
         this.status = value;
     }
 }

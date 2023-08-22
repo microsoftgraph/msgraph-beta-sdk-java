@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class File extends Entity implements Parsable {
     /**
      * The content property
@@ -59,9 +60,7 @@ public class File extends Entity implements Parsable {
     private String subjectTitle;
     /**
      * Instantiates a new file and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public File() {
         super();
     }
@@ -70,8 +69,8 @@ public class File extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a file
      */
-    @javax.annotation.Nonnull
-    public static File createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static File createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -86,7 +85,7 @@ public class File extends Entity implements Parsable {
      * Gets the content property value. The content property
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getContent() {
         return this.content;
     }
@@ -94,7 +93,7 @@ public class File extends Entity implements Parsable {
      * Gets the dateTime property value. The dateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getDateTime() {
         return this.dateTime;
     }
@@ -102,7 +101,7 @@ public class File extends Entity implements Parsable {
      * Gets the extension property value. The extension property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExtension() {
         return this.extension;
     }
@@ -110,7 +109,7 @@ public class File extends Entity implements Parsable {
      * Gets the extractedTextContent property value. The extractedTextContent property
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getExtractedTextContent() {
         return this.extractedTextContent;
     }
@@ -118,7 +117,7 @@ public class File extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
@@ -139,7 +138,7 @@ public class File extends Entity implements Parsable {
      * Gets the mediaType property value. The mediaType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMediaType() {
         return this.mediaType;
     }
@@ -147,7 +146,7 @@ public class File extends Entity implements Parsable {
      * Gets the name property value. The name property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -155,7 +154,7 @@ public class File extends Entity implements Parsable {
      * Gets the otherProperties property value. The otherProperties property
      * @return a stringValueDictionary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public StringValueDictionary getOtherProperties() {
         return this.otherProperties;
     }
@@ -163,7 +162,7 @@ public class File extends Entity implements Parsable {
      * Gets the processingStatus property value. The processingStatus property
      * @return a fileProcessingStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FileProcessingStatus getProcessingStatus() {
         return this.processingStatus;
     }
@@ -171,7 +170,7 @@ public class File extends Entity implements Parsable {
      * Gets the senderOrAuthors property value. The senderOrAuthors property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSenderOrAuthors() {
         return this.senderOrAuthors;
     }
@@ -179,7 +178,7 @@ public class File extends Entity implements Parsable {
      * Gets the size property value. The size property
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getSize() {
         return this.size;
     }
@@ -187,7 +186,7 @@ public class File extends Entity implements Parsable {
      * Gets the sourceType property value. The sourceType property
      * @return a sourceType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SourceType getSourceType() {
         return this.sourceType;
     }
@@ -195,17 +194,15 @@ public class File extends Entity implements Parsable {
      * Gets the subjectTitle property value. The subjectTitle property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubjectTitle() {
         return this.subjectTitle;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeByteArrayValue("content", this.getContent());
@@ -224,109 +221,85 @@ public class File extends Entity implements Parsable {
     /**
      * Sets the content property value. The content property
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContent(@javax.annotation.Nullable final byte[] value) {
+    public void setContent(@jakarta.annotation.Nullable final byte[] value) {
         this.content = value;
     }
     /**
      * Sets the dateTime property value. The dateTime property
      * @param value Value to set for the dateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.dateTime = value;
     }
     /**
      * Sets the extension property value. The extension property
      * @param value Value to set for the extension property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExtension(@javax.annotation.Nullable final String value) {
+    public void setExtension(@jakarta.annotation.Nullable final String value) {
         this.extension = value;
     }
     /**
      * Sets the extractedTextContent property value. The extractedTextContent property
      * @param value Value to set for the extractedTextContent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExtractedTextContent(@javax.annotation.Nullable final byte[] value) {
+    public void setExtractedTextContent(@jakarta.annotation.Nullable final byte[] value) {
         this.extractedTextContent = value;
     }
     /**
      * Sets the mediaType property value. The mediaType property
      * @param value Value to set for the mediaType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaType(@javax.annotation.Nullable final String value) {
+    public void setMediaType(@jakarta.annotation.Nullable final String value) {
         this.mediaType = value;
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the otherProperties property value. The otherProperties property
      * @param value Value to set for the otherProperties property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOtherProperties(@javax.annotation.Nullable final StringValueDictionary value) {
+    public void setOtherProperties(@jakarta.annotation.Nullable final StringValueDictionary value) {
         this.otherProperties = value;
     }
     /**
      * Sets the processingStatus property value. The processingStatus property
      * @param value Value to set for the processingStatus property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProcessingStatus(@javax.annotation.Nullable final FileProcessingStatus value) {
+    public void setProcessingStatus(@jakarta.annotation.Nullable final FileProcessingStatus value) {
         this.processingStatus = value;
     }
     /**
      * Sets the senderOrAuthors property value. The senderOrAuthors property
      * @param value Value to set for the senderOrAuthors property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSenderOrAuthors(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setSenderOrAuthors(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.senderOrAuthors = value;
     }
     /**
      * Sets the size property value. The size property
      * @param value Value to set for the size property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSize(@javax.annotation.Nullable final Long value) {
+    public void setSize(@jakarta.annotation.Nullable final Long value) {
         this.size = value;
     }
     /**
      * Sets the sourceType property value. The sourceType property
      * @param value Value to set for the sourceType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourceType(@javax.annotation.Nullable final SourceType value) {
+    public void setSourceType(@jakarta.annotation.Nullable final SourceType value) {
         this.sourceType = value;
     }
     /**
      * Sets the subjectTitle property value. The subjectTitle property
      * @param value Value to set for the subjectTitle property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubjectTitle(@javax.annotation.Nullable final String value) {
+    public void setSubjectTitle(@jakarta.annotation.Nullable final String value) {
         this.subjectTitle = value;
     }
 }

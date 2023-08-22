@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Work From Anywhere windows device upgrade eligibility status.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum OperatingSystemUpgradeEligibility implements ValuedEnum {
     /** The device is upgraded to latest version of windows. */
     Upgraded("upgraded"),
@@ -21,10 +22,10 @@ public enum OperatingSystemUpgradeEligibility implements ValuedEnum {
     OperatingSystemUpgradeEligibility(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static OperatingSystemUpgradeEligibility forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static OperatingSystemUpgradeEligibility forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "upgraded": return Upgraded;

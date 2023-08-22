@@ -3,6 +3,7 @@ package com.microsoft.graph.models.managedtenants;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagementParameterValueType implements ValuedEnum {
     String("string"),
     Integer("integer"),
@@ -17,10 +18,10 @@ public enum ManagementParameterValueType implements ValuedEnum {
     ManagementParameterValueType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ManagementParameterValueType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ManagementParameterValueType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "string": return String;

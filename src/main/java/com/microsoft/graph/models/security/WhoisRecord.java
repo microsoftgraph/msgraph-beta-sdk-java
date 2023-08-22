@@ -1,463 +1,66 @@
 package com.microsoft.graph.models.security;
 
-import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class WhoisRecord extends Entity implements Parsable {
+@jakarta.annotation.Generated("com.microsoft.kiota")
+public class WhoisRecord extends WhoisBaseRecord implements Parsable {
     /**
-     * The abuse property
+     * The history property
      */
-    private WhoisContact abuse;
-    /**
-     * The admin property
-     */
-    private WhoisContact admin;
-    /**
-     * The billing property
-     */
-    private WhoisContact billing;
-    /**
-     * The domainStatus property
-     */
-    private String domainStatus;
-    /**
-     * The expirationDateTime property
-     */
-    private OffsetDateTime expirationDateTime;
-    /**
-     * The firstSeenDateTime property
-     */
-    private OffsetDateTime firstSeenDateTime;
-    /**
-     * The host property
-     */
-    private Host host;
-    /**
-     * The lastSeenDateTime property
-     */
-    private OffsetDateTime lastSeenDateTime;
-    /**
-     * The lastUpdateDateTime property
-     */
-    private OffsetDateTime lastUpdateDateTime;
-    /**
-     * The nameservers property
-     */
-    private java.util.List<WhoisNameserver> nameservers;
-    /**
-     * The noc property
-     */
-    private WhoisContact noc;
-    /**
-     * The rawWhoisText property
-     */
-    private String rawWhoisText;
-    /**
-     * The registrant property
-     */
-    private WhoisContact registrant;
-    /**
-     * The registrar property
-     */
-    private WhoisContact registrar;
-    /**
-     * The registrationDateTime property
-     */
-    private OffsetDateTime registrationDateTime;
-    /**
-     * The technical property
-     */
-    private WhoisContact technical;
-    /**
-     * The whoisServer property
-     */
-    private String whoisServer;
-    /**
-     * The zone property
-     */
-    private WhoisContact zone;
+    private java.util.List<WhoisHistoryRecord> history;
     /**
      * Instantiates a new whoisRecord and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WhoisRecord() {
         super();
+        this.setOdataType("#microsoft.graph.security.whoisRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a whoisRecord
      */
-    @javax.annotation.Nonnull
-    public static WhoisRecord createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WhoisRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WhoisRecord();
-    }
-    /**
-     * Gets the abuse property value. The abuse property
-     * @return a whoisContact
-     */
-    @javax.annotation.Nullable
-    public WhoisContact getAbuse() {
-        return this.abuse;
-    }
-    /**
-     * Gets the admin property value. The admin property
-     * @return a whoisContact
-     */
-    @javax.annotation.Nullable
-    public WhoisContact getAdmin() {
-        return this.admin;
-    }
-    /**
-     * Gets the billing property value. The billing property
-     * @return a whoisContact
-     */
-    @javax.annotation.Nullable
-    public WhoisContact getBilling() {
-        return this.billing;
-    }
-    /**
-     * Gets the domainStatus property value. The domainStatus property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getDomainStatus() {
-        return this.domainStatus;
-    }
-    /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
-     * @return a OffsetDateTime
-     */
-    @javax.annotation.Nullable
-    public OffsetDateTime getExpirationDateTime() {
-        return this.expirationDateTime;
     }
     /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("abuse", (n) -> { this.setAbuse(n.getObjectValue(WhoisContact::createFromDiscriminatorValue)); });
-        deserializerMap.put("admin", (n) -> { this.setAdmin(n.getObjectValue(WhoisContact::createFromDiscriminatorValue)); });
-        deserializerMap.put("billing", (n) -> { this.setBilling(n.getObjectValue(WhoisContact::createFromDiscriminatorValue)); });
-        deserializerMap.put("domainStatus", (n) -> { this.setDomainStatus(n.getStringValue()); });
-        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("host", (n) -> { this.setHost(n.getObjectValue(Host::createFromDiscriminatorValue)); });
-        deserializerMap.put("lastSeenDateTime", (n) -> { this.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("lastUpdateDateTime", (n) -> { this.setLastUpdateDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("nameservers", (n) -> { this.setNameservers(n.getCollectionOfObjectValues(WhoisNameserver::createFromDiscriminatorValue)); });
-        deserializerMap.put("noc", (n) -> { this.setNoc(n.getObjectValue(WhoisContact::createFromDiscriminatorValue)); });
-        deserializerMap.put("rawWhoisText", (n) -> { this.setRawWhoisText(n.getStringValue()); });
-        deserializerMap.put("registrant", (n) -> { this.setRegistrant(n.getObjectValue(WhoisContact::createFromDiscriminatorValue)); });
-        deserializerMap.put("registrar", (n) -> { this.setRegistrar(n.getObjectValue(WhoisContact::createFromDiscriminatorValue)); });
-        deserializerMap.put("registrationDateTime", (n) -> { this.setRegistrationDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("technical", (n) -> { this.setTechnical(n.getObjectValue(WhoisContact::createFromDiscriminatorValue)); });
-        deserializerMap.put("whoisServer", (n) -> { this.setWhoisServer(n.getStringValue()); });
-        deserializerMap.put("zone", (n) -> { this.setZone(n.getObjectValue(WhoisContact::createFromDiscriminatorValue)); });
+        deserializerMap.put("history", (n) -> { this.setHistory(n.getCollectionOfObjectValues(WhoisHistoryRecord::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the firstSeenDateTime property value. The firstSeenDateTime property
-     * @return a OffsetDateTime
+     * Gets the history property value. The history property
+     * @return a whoisHistoryRecord
      */
-    @javax.annotation.Nullable
-    public OffsetDateTime getFirstSeenDateTime() {
-        return this.firstSeenDateTime;
-    }
-    /**
-     * Gets the host property value. The host property
-     * @return a host
-     */
-    @javax.annotation.Nullable
-    public Host getHost() {
-        return this.host;
-    }
-    /**
-     * Gets the lastSeenDateTime property value. The lastSeenDateTime property
-     * @return a OffsetDateTime
-     */
-    @javax.annotation.Nullable
-    public OffsetDateTime getLastSeenDateTime() {
-        return this.lastSeenDateTime;
-    }
-    /**
-     * Gets the lastUpdateDateTime property value. The lastUpdateDateTime property
-     * @return a OffsetDateTime
-     */
-    @javax.annotation.Nullable
-    public OffsetDateTime getLastUpdateDateTime() {
-        return this.lastUpdateDateTime;
-    }
-    /**
-     * Gets the nameservers property value. The nameservers property
-     * @return a whoisNameserver
-     */
-    @javax.annotation.Nullable
-    public java.util.List<WhoisNameserver> getNameservers() {
-        return this.nameservers;
-    }
-    /**
-     * Gets the noc property value. The noc property
-     * @return a whoisContact
-     */
-    @javax.annotation.Nullable
-    public WhoisContact getNoc() {
-        return this.noc;
-    }
-    /**
-     * Gets the rawWhoisText property value. The rawWhoisText property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getRawWhoisText() {
-        return this.rawWhoisText;
-    }
-    /**
-     * Gets the registrant property value. The registrant property
-     * @return a whoisContact
-     */
-    @javax.annotation.Nullable
-    public WhoisContact getRegistrant() {
-        return this.registrant;
-    }
-    /**
-     * Gets the registrar property value. The registrar property
-     * @return a whoisContact
-     */
-    @javax.annotation.Nullable
-    public WhoisContact getRegistrar() {
-        return this.registrar;
-    }
-    /**
-     * Gets the registrationDateTime property value. The registrationDateTime property
-     * @return a OffsetDateTime
-     */
-    @javax.annotation.Nullable
-    public OffsetDateTime getRegistrationDateTime() {
-        return this.registrationDateTime;
-    }
-    /**
-     * Gets the technical property value. The technical property
-     * @return a whoisContact
-     */
-    @javax.annotation.Nullable
-    public WhoisContact getTechnical() {
-        return this.technical;
-    }
-    /**
-     * Gets the whoisServer property value. The whoisServer property
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getWhoisServer() {
-        return this.whoisServer;
-    }
-    /**
-     * Gets the zone property value. The zone property
-     * @return a whoisContact
-     */
-    @javax.annotation.Nullable
-    public WhoisContact getZone() {
-        return this.zone;
+    @jakarta.annotation.Nullable
+    public java.util.List<WhoisHistoryRecord> getHistory() {
+        return this.history;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeObjectValue("abuse", this.getAbuse());
-        writer.writeObjectValue("admin", this.getAdmin());
-        writer.writeObjectValue("billing", this.getBilling());
-        writer.writeStringValue("domainStatus", this.getDomainStatus());
-        writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
-        writer.writeOffsetDateTimeValue("firstSeenDateTime", this.getFirstSeenDateTime());
-        writer.writeObjectValue("host", this.getHost());
-        writer.writeOffsetDateTimeValue("lastSeenDateTime", this.getLastSeenDateTime());
-        writer.writeOffsetDateTimeValue("lastUpdateDateTime", this.getLastUpdateDateTime());
-        writer.writeCollectionOfObjectValues("nameservers", this.getNameservers());
-        writer.writeObjectValue("noc", this.getNoc());
-        writer.writeStringValue("rawWhoisText", this.getRawWhoisText());
-        writer.writeObjectValue("registrant", this.getRegistrant());
-        writer.writeObjectValue("registrar", this.getRegistrar());
-        writer.writeOffsetDateTimeValue("registrationDateTime", this.getRegistrationDateTime());
-        writer.writeObjectValue("technical", this.getTechnical());
-        writer.writeStringValue("whoisServer", this.getWhoisServer());
-        writer.writeObjectValue("zone", this.getZone());
+        writer.writeCollectionOfObjectValues("history", this.getHistory());
     }
     /**
-     * Sets the abuse property value. The abuse property
-     * @param value Value to set for the abuse property.
-     * @return a void
+     * Sets the history property value. The history property
+     * @param value Value to set for the history property.
      */
-    @javax.annotation.Nonnull
-    public void setAbuse(@javax.annotation.Nullable final WhoisContact value) {
-        this.abuse = value;
-    }
-    /**
-     * Sets the admin property value. The admin property
-     * @param value Value to set for the admin property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setAdmin(@javax.annotation.Nullable final WhoisContact value) {
-        this.admin = value;
-    }
-    /**
-     * Sets the billing property value. The billing property
-     * @param value Value to set for the billing property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setBilling(@javax.annotation.Nullable final WhoisContact value) {
-        this.billing = value;
-    }
-    /**
-     * Sets the domainStatus property value. The domainStatus property
-     * @param value Value to set for the domainStatus property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setDomainStatus(@javax.annotation.Nullable final String value) {
-        this.domainStatus = value;
-    }
-    /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
-     * @param value Value to set for the expirationDateTime property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this.expirationDateTime = value;
-    }
-    /**
-     * Sets the firstSeenDateTime property value. The firstSeenDateTime property
-     * @param value Value to set for the firstSeenDateTime property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this.firstSeenDateTime = value;
-    }
-    /**
-     * Sets the host property value. The host property
-     * @param value Value to set for the host property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setHost(@javax.annotation.Nullable final Host value) {
-        this.host = value;
-    }
-    /**
-     * Sets the lastSeenDateTime property value. The lastSeenDateTime property
-     * @param value Value to set for the lastSeenDateTime property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this.lastSeenDateTime = value;
-    }
-    /**
-     * Sets the lastUpdateDateTime property value. The lastUpdateDateTime property
-     * @param value Value to set for the lastUpdateDateTime property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setLastUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdateDateTime = value;
-    }
-    /**
-     * Sets the nameservers property value. The nameservers property
-     * @param value Value to set for the nameservers property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setNameservers(@javax.annotation.Nullable final java.util.List<WhoisNameserver> value) {
-        this.nameservers = value;
-    }
-    /**
-     * Sets the noc property value. The noc property
-     * @param value Value to set for the noc property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setNoc(@javax.annotation.Nullable final WhoisContact value) {
-        this.noc = value;
-    }
-    /**
-     * Sets the rawWhoisText property value. The rawWhoisText property
-     * @param value Value to set for the rawWhoisText property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setRawWhoisText(@javax.annotation.Nullable final String value) {
-        this.rawWhoisText = value;
-    }
-    /**
-     * Sets the registrant property value. The registrant property
-     * @param value Value to set for the registrant property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setRegistrant(@javax.annotation.Nullable final WhoisContact value) {
-        this.registrant = value;
-    }
-    /**
-     * Sets the registrar property value. The registrar property
-     * @param value Value to set for the registrar property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setRegistrar(@javax.annotation.Nullable final WhoisContact value) {
-        this.registrar = value;
-    }
-    /**
-     * Sets the registrationDateTime property value. The registrationDateTime property
-     * @param value Value to set for the registrationDateTime property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setRegistrationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this.registrationDateTime = value;
-    }
-    /**
-     * Sets the technical property value. The technical property
-     * @param value Value to set for the technical property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setTechnical(@javax.annotation.Nullable final WhoisContact value) {
-        this.technical = value;
-    }
-    /**
-     * Sets the whoisServer property value. The whoisServer property
-     * @param value Value to set for the whoisServer property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setWhoisServer(@javax.annotation.Nullable final String value) {
-        this.whoisServer = value;
-    }
-    /**
-     * Sets the zone property value. The zone property
-     * @param value Value to set for the zone property.
-     * @return a void
-     */
-    @javax.annotation.Nonnull
-    public void setZone(@javax.annotation.Nullable final WhoisContact value) {
-        this.zone = value;
+    public void setHistory(@jakarta.annotation.Nullable final java.util.List<WhoisHistoryRecord> value) {
+        this.history = value;
     }
 }

@@ -3,6 +3,7 @@ package com.microsoft.graph.models.callrecords;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WifiBand implements ValuedEnum {
     Unknown("unknown"),
     Frequency24GHz("frequency24GHz"),
@@ -13,10 +14,10 @@ public enum WifiBand implements ValuedEnum {
     WifiBand(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WifiBand forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WifiBand forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

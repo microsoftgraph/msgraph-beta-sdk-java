@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DelegatedAdminCustomer extends Entity implements Parsable {
     /**
      * The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
@@ -21,9 +22,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
     private String tenantId;
     /**
      * Instantiates a new delegatedAdminCustomer and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DelegatedAdminCustomer() {
         super();
     }
@@ -32,8 +31,8 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a delegatedAdminCustomer
      */
-    @javax.annotation.Nonnull
-    public static DelegatedAdminCustomer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DelegatedAdminCustomer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DelegatedAdminCustomer();
     }
@@ -41,7 +40,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
      * Gets the displayName property value. The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -49,7 +48,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -61,7 +60,7 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
      * Gets the serviceManagementDetails property value. Contains the management details of a service in the customer tenant that's managed by delegated administration.
      * @return a delegatedAdminServiceManagementDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminServiceManagementDetail> getServiceManagementDetails() {
         return this.serviceManagementDetails;
     }
@@ -69,17 +68,15 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
      * Gets the tenantId property value. The Azure AD-assigned tenant ID of the customer. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -89,28 +86,22 @@ public class DelegatedAdminCustomer extends Entity implements Parsable {
     /**
      * Sets the displayName property value. The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the serviceManagementDetails property value. Contains the management details of a service in the customer tenant that's managed by delegated administration.
      * @param value Value to set for the serviceManagementDetails property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServiceManagementDetails(@javax.annotation.Nullable final java.util.List<DelegatedAdminServiceManagementDetail> value) {
+    public void setServiceManagementDetails(@jakarta.annotation.Nullable final java.util.List<DelegatedAdminServiceManagementDetail> value) {
         this.serviceManagementDetails = value;
     }
     /**
      * Sets the tenantId property value. The Azure AD-assigned tenant ID of the customer. Read-only.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
 }

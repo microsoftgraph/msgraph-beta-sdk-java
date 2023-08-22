@@ -3,6 +3,7 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum EventPropagationStatus implements ValuedEnum {
     None("none"),
     InProcessing("inProcessing"),
@@ -13,10 +14,10 @@ public enum EventPropagationStatus implements ValuedEnum {
     EventPropagationStatus(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static EventPropagationStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static EventPropagationStatus forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

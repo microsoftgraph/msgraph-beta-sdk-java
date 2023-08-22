@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Non-EAP methods for authentication when PEAP is the selected EAP type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum NonEapAuthenticationMethodForPeap implements ValuedEnum {
     /** None. */
     None("none"),
@@ -15,10 +16,10 @@ public enum NonEapAuthenticationMethodForPeap implements ValuedEnum {
     NonEapAuthenticationMethodForPeap(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static NonEapAuthenticationMethodForPeap forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static NonEapAuthenticationMethodForPeap forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

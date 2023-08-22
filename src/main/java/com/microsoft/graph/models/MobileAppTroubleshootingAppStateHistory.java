@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * History Item contained in the Mobile App Troubleshooting Event.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHistoryItem implements Parsable {
     /**
      * Defines the Action Types for an Intune Application.
@@ -24,9 +25,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
     private RunState runState;
     /**
      * Instantiates a new mobileAppTroubleshootingAppStateHistory and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MobileAppTroubleshootingAppStateHistory() {
         super();
     }
@@ -35,8 +34,8 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a mobileAppTroubleshootingAppStateHistory
      */
-    @javax.annotation.Nonnull
-    public static MobileAppTroubleshootingAppStateHistory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MobileAppTroubleshootingAppStateHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MobileAppTroubleshootingAppStateHistory();
     }
@@ -44,7 +43,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
      * Gets the actionType property value. Defines the Action Types for an Intune Application.
      * @return a mobileAppActionType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MobileAppActionType getActionType() {
         return this.actionType;
     }
@@ -52,7 +51,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
      * Gets the errorCode property value. Error code for the failure, empty if no failure.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getErrorCode() {
         return this.errorCode;
     }
@@ -60,7 +59,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("actionType", (n) -> { this.setActionType(n.getEnumValue(MobileAppActionType.class)); });
@@ -72,17 +71,15 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
      * Gets the runState property value. Indicates the type of execution status of the device management script.
      * @return a runState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RunState getRunState() {
         return this.runState;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("actionType", this.getActionType());
@@ -92,28 +89,22 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
     /**
      * Sets the actionType property value. Defines the Action Types for an Intune Application.
      * @param value Value to set for the actionType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActionType(@javax.annotation.Nullable final MobileAppActionType value) {
+    public void setActionType(@jakarta.annotation.Nullable final MobileAppActionType value) {
         this.actionType = value;
     }
     /**
      * Sets the errorCode property value. Error code for the failure, empty if no failure.
      * @param value Value to set for the errorCode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorCode(@javax.annotation.Nullable final String value) {
+    public void setErrorCode(@jakarta.annotation.Nullable final String value) {
         this.errorCode = value;
     }
     /**
      * Sets the runState property value. Indicates the type of execution status of the device management script.
      * @param value Value to set for the runState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRunState(@javax.annotation.Nullable final RunState value) {
+    public void setRunState(@jakarta.annotation.Nullable final RunState value) {
         this.runState = value;
     }
 }

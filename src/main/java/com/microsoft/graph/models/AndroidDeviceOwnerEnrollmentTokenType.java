@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The enrollment token type for an enrollment profile.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidDeviceOwnerEnrollmentTokenType implements ValuedEnum {
     /** Default token type. */
     Default("default"),
@@ -15,10 +16,10 @@ public enum AndroidDeviceOwnerEnrollmentTokenType implements ValuedEnum {
     AndroidDeviceOwnerEnrollmentTokenType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidDeviceOwnerEnrollmentTokenType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidDeviceOwnerEnrollmentTokenType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "default": return Default;

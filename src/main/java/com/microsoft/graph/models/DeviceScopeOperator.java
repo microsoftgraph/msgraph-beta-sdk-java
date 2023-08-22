@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Device scope configuration query operator. Possible values are: equals, notEquals, contains, notContains, greaterThan, lessThan. Default value: equals.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceScopeOperator implements ValuedEnum {
     /** No operator set for the device scope configuration. */
     None("none"),
@@ -17,10 +18,10 @@ public enum DeviceScopeOperator implements ValuedEnum {
     DeviceScopeOperator(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceScopeOperator forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceScopeOperator forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

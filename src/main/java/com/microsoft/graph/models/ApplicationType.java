@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible types of Application
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ApplicationType implements ValuedEnum {
     /** The windows universal application */
     Universal("universal"),
@@ -15,10 +16,10 @@ public enum ApplicationType implements ValuedEnum {
     ApplicationType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ApplicationType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ApplicationType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "universal": return Universal;

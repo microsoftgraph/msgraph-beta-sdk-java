@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum CloudPcAuditActorType implements ValuedEnum {
     ItPro("itPro"),
     Application("application"),
@@ -12,10 +13,10 @@ public enum CloudPcAuditActorType implements ValuedEnum {
     CloudPcAuditActorType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static CloudPcAuditActorType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static CloudPcAuditActorType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "itPro": return ItPro;

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Authoring source of a policy
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum SecurityBaselinePolicySourceType implements ValuedEnum {
     DeviceConfiguration("deviceConfiguration"),
     DeviceIntent("deviceIntent");
@@ -13,10 +14,10 @@ public enum SecurityBaselinePolicySourceType implements ValuedEnum {
     SecurityBaselinePolicySourceType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static SecurityBaselinePolicySourceType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static SecurityBaselinePolicySourceType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "deviceConfiguration": return DeviceConfiguration;

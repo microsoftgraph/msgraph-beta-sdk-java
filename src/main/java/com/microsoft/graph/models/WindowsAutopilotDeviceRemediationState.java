@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Device remediation status, indicating whether or not hardware has been changed for an Autopilot-registered device.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsAutopilotDeviceRemediationState implements ValuedEnum {
     /** Unknown status. */
     Unknown("unknown"),
@@ -21,10 +22,10 @@ public enum WindowsAutopilotDeviceRemediationState implements ValuedEnum {
     WindowsAutopilotDeviceRemediationState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsAutopilotDeviceRemediationState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsAutopilotDeviceRemediationState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharedInsight extends Entity implements Parsable {
     /**
      * Details about the shared item. Read only.
@@ -33,9 +34,7 @@ public class SharedInsight extends Entity implements Parsable {
     private java.util.List<SharingDetail> sharingHistory;
     /**
      * Instantiates a new sharedInsight and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SharedInsight() {
         super();
     }
@@ -44,8 +43,8 @@ public class SharedInsight extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a sharedInsight
      */
-    @javax.annotation.Nonnull
-    public static SharedInsight createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SharedInsight createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SharedInsight();
     }
@@ -53,7 +52,7 @@ public class SharedInsight extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("lastShared", (n) -> { this.setLastShared(n.getObjectValue(SharingDetail::createFromDiscriminatorValue)); });
@@ -68,7 +67,7 @@ public class SharedInsight extends Entity implements Parsable {
      * Gets the lastShared property value. Details about the shared item. Read only.
      * @return a sharingDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SharingDetail getLastShared() {
         return this.lastShared;
     }
@@ -76,7 +75,7 @@ public class SharedInsight extends Entity implements Parsable {
      * Gets the lastSharedMethod property value. The lastSharedMethod property
      * @return a entity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Entity getLastSharedMethod() {
         return this.lastSharedMethod;
     }
@@ -84,7 +83,7 @@ public class SharedInsight extends Entity implements Parsable {
      * Gets the resource property value. Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
      * @return a entity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Entity getResource() {
         return this.resource;
     }
@@ -92,7 +91,7 @@ public class SharedInsight extends Entity implements Parsable {
      * Gets the resourceReference property value. Reference properties of the shared document, such as the url and type of the document. Read-only
      * @return a resourceReference
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResourceReference getResourceReference() {
         return this.resourceReference;
     }
@@ -100,7 +99,7 @@ public class SharedInsight extends Entity implements Parsable {
      * Gets the resourceVisualization property value. Properties that you can use to visualize the document in your experience. Read-only
      * @return a resourceVisualization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResourceVisualization getResourceVisualization() {
         return this.resourceVisualization;
     }
@@ -108,17 +107,15 @@ public class SharedInsight extends Entity implements Parsable {
      * Gets the sharingHistory property value. The sharingHistory property
      * @return a sharingDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SharingDetail> getSharingHistory() {
         return this.sharingHistory;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("lastShared", this.getLastShared());
@@ -129,55 +126,43 @@ public class SharedInsight extends Entity implements Parsable {
     /**
      * Sets the lastShared property value. Details about the shared item. Read only.
      * @param value Value to set for the lastShared property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastShared(@javax.annotation.Nullable final SharingDetail value) {
+    public void setLastShared(@jakarta.annotation.Nullable final SharingDetail value) {
         this.lastShared = value;
     }
     /**
      * Sets the lastSharedMethod property value. The lastSharedMethod property
      * @param value Value to set for the lastSharedMethod property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSharedMethod(@javax.annotation.Nullable final Entity value) {
+    public void setLastSharedMethod(@jakarta.annotation.Nullable final Entity value) {
         this.lastSharedMethod = value;
     }
     /**
      * Sets the resource property value. Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
      * @param value Value to set for the resource property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResource(@javax.annotation.Nullable final Entity value) {
+    public void setResource(@jakarta.annotation.Nullable final Entity value) {
         this.resource = value;
     }
     /**
      * Sets the resourceReference property value. Reference properties of the shared document, such as the url and type of the document. Read-only
      * @param value Value to set for the resourceReference property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceReference(@javax.annotation.Nullable final ResourceReference value) {
+    public void setResourceReference(@jakarta.annotation.Nullable final ResourceReference value) {
         this.resourceReference = value;
     }
     /**
      * Sets the resourceVisualization property value. Properties that you can use to visualize the document in your experience. Read-only
      * @param value Value to set for the resourceVisualization property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceVisualization(@javax.annotation.Nullable final ResourceVisualization value) {
+    public void setResourceVisualization(@jakarta.annotation.Nullable final ResourceVisualization value) {
         this.resourceVisualization = value;
     }
     /**
      * Sets the sharingHistory property value. The sharingHistory property
      * @param value Value to set for the sharingHistory property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharingHistory(@javax.annotation.Nullable final java.util.List<SharingDetail> value) {
+    public void setSharingHistory(@jakarta.annotation.Nullable final java.util.List<SharingDetail> value) {
         this.sharingHistory = value;
     }
 }

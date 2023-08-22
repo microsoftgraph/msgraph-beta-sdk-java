@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Wi-Fi Security Types for Android.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidWiFiSecurityType implements ValuedEnum {
     /** Open (No Authentication). */
     Open("open"),
@@ -17,10 +18,10 @@ public enum AndroidWiFiSecurityType implements ValuedEnum {
     AndroidWiFiSecurityType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidWiFiSecurityType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidWiFiSecurityType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "open": return Open;

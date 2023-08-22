@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureCommunicationServicesUserConversationMember extends ConversationMember implements Parsable {
     /**
      * Azure Communication Services ID of the user.
@@ -13,9 +14,7 @@ public class AzureCommunicationServicesUserConversationMember extends Conversati
     private String azureCommunicationServicesId;
     /**
      * Instantiates a new azureCommunicationServicesUserConversationMember and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AzureCommunicationServicesUserConversationMember() {
         super();
         this.setOdataType("#microsoft.graph.azureCommunicationServicesUserConversationMember");
@@ -25,8 +24,8 @@ public class AzureCommunicationServicesUserConversationMember extends Conversati
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a azureCommunicationServicesUserConversationMember
      */
-    @javax.annotation.Nonnull
-    public static AzureCommunicationServicesUserConversationMember createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AzureCommunicationServicesUserConversationMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AzureCommunicationServicesUserConversationMember();
     }
@@ -34,7 +33,7 @@ public class AzureCommunicationServicesUserConversationMember extends Conversati
      * Gets the azureCommunicationServicesId property value. Azure Communication Services ID of the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureCommunicationServicesId() {
         return this.azureCommunicationServicesId;
     }
@@ -42,7 +41,7 @@ public class AzureCommunicationServicesUserConversationMember extends Conversati
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("azureCommunicationServicesId", (n) -> { this.setAzureCommunicationServicesId(n.getStringValue()); });
@@ -51,10 +50,8 @@ public class AzureCommunicationServicesUserConversationMember extends Conversati
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("azureCommunicationServicesId", this.getAzureCommunicationServicesId());
@@ -62,10 +59,8 @@ public class AzureCommunicationServicesUserConversationMember extends Conversati
     /**
      * Sets the azureCommunicationServicesId property value. Azure Communication Services ID of the user.
      * @param value Value to set for the azureCommunicationServicesId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureCommunicationServicesId(@javax.annotation.Nullable final String value) {
+    public void setAzureCommunicationServicesId(@jakarta.annotation.Nullable final String value) {
         this.azureCommunicationServicesId = value;
     }
 }

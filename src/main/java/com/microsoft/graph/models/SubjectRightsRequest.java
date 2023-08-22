@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SubjectRightsRequest extends Entity implements Parsable {
     /**
      * The approvers property
@@ -122,9 +123,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     private SubjectRightsRequestType type;
     /**
      * Instantiates a new subjectRightsRequest and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SubjectRightsRequest() {
         super();
     }
@@ -133,8 +132,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a subjectRightsRequest
      */
-    @javax.annotation.Nonnull
-    public static SubjectRightsRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SubjectRightsRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SubjectRightsRequest();
     }
@@ -142,7 +141,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the approvers property value. The approvers property
      * @return a user
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<User> getApprovers() {
         return this.approvers;
     }
@@ -150,7 +149,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the assignedTo property value. Identity that the request is assigned to.
      * @return a identity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Identity getAssignedTo() {
         return this.assignedTo;
     }
@@ -158,7 +157,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the closedDateTime property value. The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getClosedDateTime() {
         return this.closedDateTime;
     }
@@ -166,7 +165,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the collaborators property value. The collaborators property
      * @return a user
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<User> getCollaborators() {
         return this.collaborators;
     }
@@ -174,7 +173,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the contentQuery property value. KQL based content query that should be used for search. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContentQuery() {
         return this.contentQuery;
     }
@@ -182,7 +181,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the createdBy property value. Identity information for the entity that created the request.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -190,7 +189,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -198,7 +197,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the dataSubject property value. Information about the data subject.
      * @return a dataSubject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DataSubject getDataSubject() {
         return this.dataSubject;
     }
@@ -206,7 +205,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the dataSubjectType property value. The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
      * @return a dataSubjectType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DataSubjectType getDataSubjectType() {
         return this.dataSubjectType;
     }
@@ -214,7 +213,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the description property value. Description for the request.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -222,7 +221,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the displayName property value. The name of the request.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -230,7 +229,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the externalId property value. The external ID for the request that is immutable after creation and is used for tracking the request for the external system. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalId() {
         return this.externalId;
     }
@@ -238,7 +237,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("approvers", (n) -> { this.setApprovers(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
@@ -275,7 +274,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the history property value. Collection of history change events.
      * @return a subjectRightsRequestHistory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SubjectRightsRequestHistory> getHistory() {
         return this.history;
     }
@@ -283,7 +282,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the includeAllVersions property value. Include all versions of the documents. By default, the current copies of the documents will be returned. If SharePoint sites have versioning enabled, including all versions will include the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIncludeAllVersions() {
         return this.includeAllVersions;
     }
@@ -291,7 +290,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the includeAuthoredContent property value. Include content authored by the data subject. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIncludeAuthoredContent() {
         return this.includeAuthoredContent;
     }
@@ -299,7 +298,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the insight property value. Insight about the request.
      * @return a subjectRightsRequestDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectRightsRequestDetail getInsight() {
         return this.insight;
     }
@@ -307,7 +306,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the internalDueDateTime property value. The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getInternalDueDateTime() {
         return this.internalDueDateTime;
     }
@@ -315,7 +314,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. Identity information for the entity that last modified the request.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -323,7 +322,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -331,7 +330,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the mailboxlocations property value. The mailboxlocations property
      * @return a subjectRightsRequestMailboxLocation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectRightsRequestMailboxLocation getMailboxlocations() {
         return this.mailboxlocations;
     }
@@ -339,7 +338,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the notes property value. List of notes associated with the request.
      * @return a authoredNote
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AuthoredNote> getNotes() {
         return this.notes;
     }
@@ -347,7 +346,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the pauseAfterEstimate property value. Pause the request after estimate has finished. By default, the data estimate will run and then pause, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPauseAfterEstimate() {
         return this.pauseAfterEstimate;
     }
@@ -355,7 +354,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the regulations property value. List of regulations that this request will fulfill.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRegulations() {
         return this.regulations;
     }
@@ -363,7 +362,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the sitelocations property value. The sitelocations property
      * @return a subjectRightsRequestSiteLocation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectRightsRequestSiteLocation getSitelocations() {
         return this.sitelocations;
     }
@@ -371,7 +370,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the stages property value. Information about the different stages for the request.
      * @return a subjectRightsRequestStageDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SubjectRightsRequestStageDetail> getStages() {
         return this.stages;
     }
@@ -379,7 +378,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
      * @return a subjectRightsRequestStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectRightsRequestStatus getStatus() {
         return this.status;
     }
@@ -387,7 +386,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the team property value. Information about the Microsoft Teams team that was created for the request.
      * @return a team
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Team getTeam() {
         return this.team;
     }
@@ -395,17 +394,15 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Gets the type property value. The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
      * @return a subjectRightsRequestType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectRightsRequestType getType() {
         return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("approvers", this.getApprovers());
@@ -440,253 +437,197 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     /**
      * Sets the approvers property value. The approvers property
      * @param value Value to set for the approvers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApprovers(@javax.annotation.Nullable final java.util.List<User> value) {
+    public void setApprovers(@jakarta.annotation.Nullable final java.util.List<User> value) {
         this.approvers = value;
     }
     /**
      * Sets the assignedTo property value. Identity that the request is assigned to.
      * @param value Value to set for the assignedTo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignedTo(@javax.annotation.Nullable final Identity value) {
+    public void setAssignedTo(@jakarta.annotation.Nullable final Identity value) {
         this.assignedTo = value;
     }
     /**
      * Sets the closedDateTime property value. The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the closedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClosedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setClosedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.closedDateTime = value;
     }
     /**
      * Sets the collaborators property value. The collaborators property
      * @param value Value to set for the collaborators property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCollaborators(@javax.annotation.Nullable final java.util.List<User> value) {
+    public void setCollaborators(@jakarta.annotation.Nullable final java.util.List<User> value) {
         this.collaborators = value;
     }
     /**
      * Sets the contentQuery property value. KQL based content query that should be used for search. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param value Value to set for the contentQuery property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentQuery(@javax.annotation.Nullable final String value) {
+    public void setContentQuery(@jakarta.annotation.Nullable final String value) {
         this.contentQuery = value;
     }
     /**
      * Sets the createdBy property value. Identity information for the entity that created the request.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the dataSubject property value. Information about the data subject.
      * @param value Value to set for the dataSubject property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDataSubject(@javax.annotation.Nullable final DataSubject value) {
+    public void setDataSubject(@jakarta.annotation.Nullable final DataSubject value) {
         this.dataSubject = value;
     }
     /**
      * Sets the dataSubjectType property value. The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
      * @param value Value to set for the dataSubjectType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDataSubjectType(@javax.annotation.Nullable final DataSubjectType value) {
+    public void setDataSubjectType(@jakarta.annotation.Nullable final DataSubjectType value) {
         this.dataSubjectType = value;
     }
     /**
      * Sets the description property value. Description for the request.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The name of the request.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the externalId property value. The external ID for the request that is immutable after creation and is used for tracking the request for the external system. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param value Value to set for the externalId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalId(@javax.annotation.Nullable final String value) {
+    public void setExternalId(@jakarta.annotation.Nullable final String value) {
         this.externalId = value;
     }
     /**
      * Sets the history property value. Collection of history change events.
      * @param value Value to set for the history property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHistory(@javax.annotation.Nullable final java.util.List<SubjectRightsRequestHistory> value) {
+    public void setHistory(@jakarta.annotation.Nullable final java.util.List<SubjectRightsRequestHistory> value) {
         this.history = value;
     }
     /**
      * Sets the includeAllVersions property value. Include all versions of the documents. By default, the current copies of the documents will be returned. If SharePoint sites have versioning enabled, including all versions will include the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param value Value to set for the includeAllVersions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncludeAllVersions(@javax.annotation.Nullable final Boolean value) {
+    public void setIncludeAllVersions(@jakarta.annotation.Nullable final Boolean value) {
         this.includeAllVersions = value;
     }
     /**
      * Sets the includeAuthoredContent property value. Include content authored by the data subject. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param value Value to set for the includeAuthoredContent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncludeAuthoredContent(@javax.annotation.Nullable final Boolean value) {
+    public void setIncludeAuthoredContent(@jakarta.annotation.Nullable final Boolean value) {
         this.includeAuthoredContent = value;
     }
     /**
      * Sets the insight property value. Insight about the request.
      * @param value Value to set for the insight property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInsight(@javax.annotation.Nullable final SubjectRightsRequestDetail value) {
+    public void setInsight(@jakarta.annotation.Nullable final SubjectRightsRequestDetail value) {
         this.insight = value;
     }
     /**
      * Sets the internalDueDateTime property value. The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the internalDueDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInternalDueDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setInternalDueDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.internalDueDateTime = value;
     }
     /**
      * Sets the lastModifiedBy property value. Identity information for the entity that last modified the request.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the mailboxlocations property value. The mailboxlocations property
      * @param value Value to set for the mailboxlocations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMailboxlocations(@javax.annotation.Nullable final SubjectRightsRequestMailboxLocation value) {
+    public void setMailboxlocations(@jakarta.annotation.Nullable final SubjectRightsRequestMailboxLocation value) {
         this.mailboxlocations = value;
     }
     /**
      * Sets the notes property value. List of notes associated with the request.
      * @param value Value to set for the notes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotes(@javax.annotation.Nullable final java.util.List<AuthoredNote> value) {
+    public void setNotes(@jakarta.annotation.Nullable final java.util.List<AuthoredNote> value) {
         this.notes = value;
     }
     /**
      * Sets the pauseAfterEstimate property value. Pause the request after estimate has finished. By default, the data estimate will run and then pause, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param value Value to set for the pauseAfterEstimate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPauseAfterEstimate(@javax.annotation.Nullable final Boolean value) {
+    public void setPauseAfterEstimate(@jakarta.annotation.Nullable final Boolean value) {
         this.pauseAfterEstimate = value;
     }
     /**
      * Sets the regulations property value. List of regulations that this request will fulfill.
      * @param value Value to set for the regulations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRegulations(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRegulations(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.regulations = value;
     }
     /**
      * Sets the sitelocations property value. The sitelocations property
      * @param value Value to set for the sitelocations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSitelocations(@javax.annotation.Nullable final SubjectRightsRequestSiteLocation value) {
+    public void setSitelocations(@jakarta.annotation.Nullable final SubjectRightsRequestSiteLocation value) {
         this.sitelocations = value;
     }
     /**
      * Sets the stages property value. Information about the different stages for the request.
      * @param value Value to set for the stages property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStages(@javax.annotation.Nullable final java.util.List<SubjectRightsRequestStageDetail> value) {
+    public void setStages(@jakarta.annotation.Nullable final java.util.List<SubjectRightsRequestStageDetail> value) {
         this.stages = value;
     }
     /**
      * Sets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final SubjectRightsRequestStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final SubjectRightsRequestStatus value) {
         this.status = value;
     }
     /**
      * Sets the team property value. Information about the Microsoft Teams team that was created for the request.
      * @param value Value to set for the team property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTeam(@javax.annotation.Nullable final Team value) {
+    public void setTeam(@jakarta.annotation.Nullable final Team value) {
         this.team = value;
     }
     /**
      * Sets the type property value. The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final SubjectRightsRequestType value) {
+    public void setType(@jakarta.annotation.Nullable final SubjectRightsRequestType value) {
         this.type = value;
     }
 }

@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExactMatchUploadAgent extends Entity implements Parsable {
     /**
      * The creationDateTime property
@@ -18,9 +19,7 @@ public class ExactMatchUploadAgent extends Entity implements Parsable {
     private String description;
     /**
      * Instantiates a new exactMatchUploadAgent and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ExactMatchUploadAgent() {
         super();
     }
@@ -29,8 +28,8 @@ public class ExactMatchUploadAgent extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a exactMatchUploadAgent
      */
-    @javax.annotation.Nonnull
-    public static ExactMatchUploadAgent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ExactMatchUploadAgent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ExactMatchUploadAgent();
     }
@@ -38,7 +37,7 @@ public class ExactMatchUploadAgent extends Entity implements Parsable {
      * Gets the creationDateTime property value. The creationDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
         return this.creationDateTime;
     }
@@ -46,7 +45,7 @@ public class ExactMatchUploadAgent extends Entity implements Parsable {
      * Gets the description property value. The description property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -54,7 +53,7 @@ public class ExactMatchUploadAgent extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("creationDateTime", (n) -> { this.setCreationDateTime(n.getOffsetDateTimeValue()); });
@@ -64,10 +63,8 @@ public class ExactMatchUploadAgent extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("creationDateTime", this.getCreationDateTime());
@@ -76,19 +73,15 @@ public class ExactMatchUploadAgent extends Entity implements Parsable {
     /**
      * Sets the creationDateTime property value. The creationDateTime property
      * @param value Value to set for the creationDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.creationDateTime = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
 }

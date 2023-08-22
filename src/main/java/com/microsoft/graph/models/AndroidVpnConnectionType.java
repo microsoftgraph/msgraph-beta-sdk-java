@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Android VPN connection type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidVpnConnectionType implements ValuedEnum {
     /** Cisco AnyConnect. */
     CiscoAnyConnect("ciscoAnyConnect"),
@@ -29,10 +30,10 @@ public enum AndroidVpnConnectionType implements ValuedEnum {
     AndroidVpnConnectionType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidVpnConnectionType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidVpnConnectionType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "ciscoAnyConnect": return CiscoAnyConnect;

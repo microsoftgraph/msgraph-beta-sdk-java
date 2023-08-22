@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -118,9 +119,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     private String odataType;
     /**
      * Instantiates a new plannerCategoryDescriptions and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PlannerCategoryDescriptions() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -129,8 +128,8 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a plannerCategoryDescriptions
      */
-    @javax.annotation.Nonnull
-    public static PlannerCategoryDescriptions createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PlannerCategoryDescriptions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PlannerCategoryDescriptions();
     }
@@ -138,7 +137,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -146,7 +145,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category1 property value. The label associated with Category 1
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory1() {
         return this.category1;
     }
@@ -154,7 +153,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category10 property value. The label associated with Category 10
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory10() {
         return this.category10;
     }
@@ -162,7 +161,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category11 property value. The label associated with Category 11
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory11() {
         return this.category11;
     }
@@ -170,7 +169,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category12 property value. The label associated with Category 12
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory12() {
         return this.category12;
     }
@@ -178,7 +177,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category13 property value. The label associated with Category 13
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory13() {
         return this.category13;
     }
@@ -186,7 +185,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category14 property value. The label associated with Category 14
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory14() {
         return this.category14;
     }
@@ -194,7 +193,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category15 property value. The label associated with Category 15
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory15() {
         return this.category15;
     }
@@ -202,7 +201,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category16 property value. The label associated with Category 16
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory16() {
         return this.category16;
     }
@@ -210,7 +209,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category17 property value. The label associated with Category 17
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory17() {
         return this.category17;
     }
@@ -218,7 +217,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category18 property value. The label associated with Category 18
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory18() {
         return this.category18;
     }
@@ -226,7 +225,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category19 property value. The label associated with Category 19
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory19() {
         return this.category19;
     }
@@ -234,7 +233,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category2 property value. The label associated with Category 2
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory2() {
         return this.category2;
     }
@@ -242,7 +241,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category20 property value. The label associated with Category 20
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory20() {
         return this.category20;
     }
@@ -250,7 +249,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category21 property value. The label associated with Category 21
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory21() {
         return this.category21;
     }
@@ -258,7 +257,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category22 property value. The label associated with Category 22
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory22() {
         return this.category22;
     }
@@ -266,7 +265,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category23 property value. The label associated with Category 23
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory23() {
         return this.category23;
     }
@@ -274,7 +273,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category24 property value. The label associated with Category 24
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory24() {
         return this.category24;
     }
@@ -282,7 +281,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category25 property value. The label associated with Category 25
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory25() {
         return this.category25;
     }
@@ -290,7 +289,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category3 property value. The label associated with Category 3
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory3() {
         return this.category3;
     }
@@ -298,7 +297,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category4 property value. The label associated with Category 4
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory4() {
         return this.category4;
     }
@@ -306,7 +305,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category5 property value. The label associated with Category 5
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory5() {
         return this.category5;
     }
@@ -314,7 +313,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category6 property value. The label associated with Category 6
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory6() {
         return this.category6;
     }
@@ -322,7 +321,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category7 property value. The label associated with Category 7
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory7() {
         return this.category7;
     }
@@ -330,7 +329,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category8 property value. The label associated with Category 8
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory8() {
         return this.category8;
     }
@@ -338,7 +337,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the category9 property value. The label associated with Category 9
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory9() {
         return this.category9;
     }
@@ -346,7 +345,7 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(26);
         deserializerMap.put("category1", (n) -> { this.setCategory1(n.getStringValue()); });
@@ -381,17 +380,15 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("category1", this.getCategory1());
         writer.writeStringValue("category10", this.getCategory10());
@@ -424,244 +421,190 @@ public class PlannerCategoryDescriptions implements AdditionalDataHolder, Parsab
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the category1 property value. The label associated with Category 1
      * @param value Value to set for the category1 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory1(@javax.annotation.Nullable final String value) {
+    public void setCategory1(@jakarta.annotation.Nullable final String value) {
         this.category1 = value;
     }
     /**
      * Sets the category10 property value. The label associated with Category 10
      * @param value Value to set for the category10 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory10(@javax.annotation.Nullable final String value) {
+    public void setCategory10(@jakarta.annotation.Nullable final String value) {
         this.category10 = value;
     }
     /**
      * Sets the category11 property value. The label associated with Category 11
      * @param value Value to set for the category11 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory11(@javax.annotation.Nullable final String value) {
+    public void setCategory11(@jakarta.annotation.Nullable final String value) {
         this.category11 = value;
     }
     /**
      * Sets the category12 property value. The label associated with Category 12
      * @param value Value to set for the category12 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory12(@javax.annotation.Nullable final String value) {
+    public void setCategory12(@jakarta.annotation.Nullable final String value) {
         this.category12 = value;
     }
     /**
      * Sets the category13 property value. The label associated with Category 13
      * @param value Value to set for the category13 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory13(@javax.annotation.Nullable final String value) {
+    public void setCategory13(@jakarta.annotation.Nullable final String value) {
         this.category13 = value;
     }
     /**
      * Sets the category14 property value. The label associated with Category 14
      * @param value Value to set for the category14 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory14(@javax.annotation.Nullable final String value) {
+    public void setCategory14(@jakarta.annotation.Nullable final String value) {
         this.category14 = value;
     }
     /**
      * Sets the category15 property value. The label associated with Category 15
      * @param value Value to set for the category15 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory15(@javax.annotation.Nullable final String value) {
+    public void setCategory15(@jakarta.annotation.Nullable final String value) {
         this.category15 = value;
     }
     /**
      * Sets the category16 property value. The label associated with Category 16
      * @param value Value to set for the category16 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory16(@javax.annotation.Nullable final String value) {
+    public void setCategory16(@jakarta.annotation.Nullable final String value) {
         this.category16 = value;
     }
     /**
      * Sets the category17 property value. The label associated with Category 17
      * @param value Value to set for the category17 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory17(@javax.annotation.Nullable final String value) {
+    public void setCategory17(@jakarta.annotation.Nullable final String value) {
         this.category17 = value;
     }
     /**
      * Sets the category18 property value. The label associated with Category 18
      * @param value Value to set for the category18 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory18(@javax.annotation.Nullable final String value) {
+    public void setCategory18(@jakarta.annotation.Nullable final String value) {
         this.category18 = value;
     }
     /**
      * Sets the category19 property value. The label associated with Category 19
      * @param value Value to set for the category19 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory19(@javax.annotation.Nullable final String value) {
+    public void setCategory19(@jakarta.annotation.Nullable final String value) {
         this.category19 = value;
     }
     /**
      * Sets the category2 property value. The label associated with Category 2
      * @param value Value to set for the category2 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory2(@javax.annotation.Nullable final String value) {
+    public void setCategory2(@jakarta.annotation.Nullable final String value) {
         this.category2 = value;
     }
     /**
      * Sets the category20 property value. The label associated with Category 20
      * @param value Value to set for the category20 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory20(@javax.annotation.Nullable final String value) {
+    public void setCategory20(@jakarta.annotation.Nullable final String value) {
         this.category20 = value;
     }
     /**
      * Sets the category21 property value. The label associated with Category 21
      * @param value Value to set for the category21 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory21(@javax.annotation.Nullable final String value) {
+    public void setCategory21(@jakarta.annotation.Nullable final String value) {
         this.category21 = value;
     }
     /**
      * Sets the category22 property value. The label associated with Category 22
      * @param value Value to set for the category22 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory22(@javax.annotation.Nullable final String value) {
+    public void setCategory22(@jakarta.annotation.Nullable final String value) {
         this.category22 = value;
     }
     /**
      * Sets the category23 property value. The label associated with Category 23
      * @param value Value to set for the category23 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory23(@javax.annotation.Nullable final String value) {
+    public void setCategory23(@jakarta.annotation.Nullable final String value) {
         this.category23 = value;
     }
     /**
      * Sets the category24 property value. The label associated with Category 24
      * @param value Value to set for the category24 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory24(@javax.annotation.Nullable final String value) {
+    public void setCategory24(@jakarta.annotation.Nullable final String value) {
         this.category24 = value;
     }
     /**
      * Sets the category25 property value. The label associated with Category 25
      * @param value Value to set for the category25 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory25(@javax.annotation.Nullable final String value) {
+    public void setCategory25(@jakarta.annotation.Nullable final String value) {
         this.category25 = value;
     }
     /**
      * Sets the category3 property value. The label associated with Category 3
      * @param value Value to set for the category3 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory3(@javax.annotation.Nullable final String value) {
+    public void setCategory3(@jakarta.annotation.Nullable final String value) {
         this.category3 = value;
     }
     /**
      * Sets the category4 property value. The label associated with Category 4
      * @param value Value to set for the category4 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory4(@javax.annotation.Nullable final String value) {
+    public void setCategory4(@jakarta.annotation.Nullable final String value) {
         this.category4 = value;
     }
     /**
      * Sets the category5 property value. The label associated with Category 5
      * @param value Value to set for the category5 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory5(@javax.annotation.Nullable final String value) {
+    public void setCategory5(@jakarta.annotation.Nullable final String value) {
         this.category5 = value;
     }
     /**
      * Sets the category6 property value. The label associated with Category 6
      * @param value Value to set for the category6 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory6(@javax.annotation.Nullable final String value) {
+    public void setCategory6(@jakarta.annotation.Nullable final String value) {
         this.category6 = value;
     }
     /**
      * Sets the category7 property value. The label associated with Category 7
      * @param value Value to set for the category7 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory7(@javax.annotation.Nullable final String value) {
+    public void setCategory7(@jakarta.annotation.Nullable final String value) {
         this.category7 = value;
     }
     /**
      * Sets the category8 property value. The label associated with Category 8
      * @param value Value to set for the category8 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory8(@javax.annotation.Nullable final String value) {
+    public void setCategory8(@jakarta.annotation.Nullable final String value) {
         this.category8 = value;
     }
     /**
      * Sets the category9 property value. The label associated with Category 9
      * @param value Value to set for the category9 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory9(@javax.annotation.Nullable final String value) {
+    public void setCategory9(@jakarta.annotation.Nullable final String value) {
         this.category9 = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

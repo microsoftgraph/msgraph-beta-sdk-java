@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The scheduling priority options for downloading and preparing the requested mac OS update
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MacOSPriority implements ValuedEnum {
     /** Indicates low scheduling priority for downloading and preparing the requested update */
     Low("low"),
@@ -17,10 +18,10 @@ public enum MacOSPriority implements ValuedEnum {
     MacOSPriority(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MacOSPriority forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MacOSPriority forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "low": return Low;

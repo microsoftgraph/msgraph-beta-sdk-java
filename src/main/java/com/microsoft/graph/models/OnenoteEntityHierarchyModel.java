@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel implements Parsable {
     /**
      * The createdBy property
@@ -26,9 +27,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
     private OffsetDateTime lastModifiedDateTime;
     /**
      * Instantiates a new onenoteEntityHierarchyModel and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public OnenoteEntityHierarchyModel() {
         super();
         this.setOdataType("#microsoft.graph.onenoteEntityHierarchyModel");
@@ -38,8 +37,8 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a onenoteEntityHierarchyModel
      */
-    @javax.annotation.Nonnull
-    public static OnenoteEntityHierarchyModel createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OnenoteEntityHierarchyModel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -56,7 +55,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
      * Gets the createdBy property value. The createdBy property
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -64,7 +63,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -72,7 +71,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -85,7 +84,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
      * Gets the lastModifiedBy property value. The lastModifiedBy property
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -93,17 +92,15 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("createdBy", this.getCreatedBy());
@@ -114,37 +111,29 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
 }

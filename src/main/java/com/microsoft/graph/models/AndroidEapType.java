@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Extensible Authentication Protocol (EAP) Configuration Types.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidEapType implements ValuedEnum {
     /** Extensible Authentication Protocol-Transport Layer Security (EAP-TLS). */
     EapTls("eapTls"),
@@ -17,10 +18,10 @@ public enum AndroidEapType implements ValuedEnum {
     AndroidEapType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidEapType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidEapType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "eapTls": return EapTls;

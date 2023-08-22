@@ -8,11 +8,16 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Alert extends Entity implements Parsable {
     /**
      * The adversary or activity group that is associated with this alert.
      */
     private String actorDisplayName;
+    /**
+     * The alertPolicyId property
+     */
+    private String alertPolicyId;
     /**
      * URL for the alert page in the Microsoft 365 Defender portal.
      */
@@ -26,7 +31,7 @@ public class Alert extends Entity implements Parsable {
      */
     private String category;
     /**
-     * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, benignPositive, unknownFutureValue.
+     * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
      */
     private AlertClassification classification;
     /**
@@ -127,9 +132,7 @@ public class Alert extends Entity implements Parsable {
     private String title;
     /**
      * Instantiates a new alert and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Alert() {
         super();
     }
@@ -138,8 +141,8 @@ public class Alert extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a alert
      */
-    @javax.annotation.Nonnull
-    public static Alert createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Alert createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Alert();
     }
@@ -147,15 +150,23 @@ public class Alert extends Entity implements Parsable {
      * Gets the actorDisplayName property value. The adversary or activity group that is associated with this alert.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActorDisplayName() {
         return this.actorDisplayName;
+    }
+    /**
+     * Gets the alertPolicyId property value. The alertPolicyId property
+     * @return a string
+     */
+    @jakarta.annotation.Nullable
+    public String getAlertPolicyId() {
+        return this.alertPolicyId;
     }
     /**
      * Gets the alertWebUrl property value. URL for the alert page in the Microsoft 365 Defender portal.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAlertWebUrl() {
         return this.alertWebUrl;
     }
@@ -163,7 +174,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the assignedTo property value. Owner of the alert, or null if no owner is assigned.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAssignedTo() {
         return this.assignedTo;
     }
@@ -171,15 +182,15 @@ public class Alert extends Entity implements Parsable {
      * Gets the category property value. The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&CK framework.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCategory() {
         return this.category;
     }
     /**
-     * Gets the classification property value. Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, benignPositive, unknownFutureValue.
+     * Gets the classification property value. Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
      * @return a alertClassification
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AlertClassification getClassification() {
         return this.classification;
     }
@@ -187,7 +198,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the comments property value. Array of comments created by the Security Operations (SecOps) team during the alert management process.
      * @return a alertComment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AlertComment> getComments() {
         return this.comments;
     }
@@ -195,7 +206,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the createdDateTime property value. Time when Microsoft 365 Defender created the alert.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -203,7 +214,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the description property value. String value describing each alert.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -211,7 +222,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the detectionSource property value. Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud.
      * @return a detectionSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DetectionSource getDetectionSource() {
         return this.detectionSource;
     }
@@ -219,7 +230,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the detectorId property value. The ID of the detector that triggered the alert.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDetectorId() {
         return this.detectorId;
     }
@@ -227,7 +238,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the determination property value. Specifies the result of the investigation, whether the alert represents a true attack and if so, the nature of the attack. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      * @return a alertDetermination
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AlertDetermination getDetermination() {
         return this.determination;
     }
@@ -235,7 +246,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the evidence property value. Collection of evidence related to the alert.
      * @return a alertEvidence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AlertEvidence> getEvidence() {
         return this.evidence;
     }
@@ -243,10 +254,11 @@ public class Alert extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("actorDisplayName", (n) -> { this.setActorDisplayName(n.getStringValue()); });
+        deserializerMap.put("alertPolicyId", (n) -> { this.setAlertPolicyId(n.getStringValue()); });
         deserializerMap.put("alertWebUrl", (n) -> { this.setAlertWebUrl(n.getStringValue()); });
         deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getStringValue()); });
         deserializerMap.put("category", (n) -> { this.setCategory(n.getStringValue()); });
@@ -281,7 +293,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the firstActivityDateTime property value. The earliest activity associated with the alert.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getFirstActivityDateTime() {
         return this.firstActivityDateTime;
     }
@@ -289,7 +301,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the incidentId property value. Unique identifier to represent the incident this alert resource is associated with.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIncidentId() {
         return this.incidentId;
     }
@@ -297,7 +309,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the incidentWebUrl property value. URL for the incident page in the Microsoft 365 Defender portal.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIncidentWebUrl() {
         return this.incidentWebUrl;
     }
@@ -305,7 +317,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the lastActivityDateTime property value. The oldest activity associated with the alert.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastActivityDateTime() {
         return this.lastActivityDateTime;
     }
@@ -313,7 +325,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the lastUpdateDateTime property value. Time when the alert was last updated at Microsoft 365 Defender.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdateDateTime() {
         return this.lastUpdateDateTime;
     }
@@ -321,7 +333,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the mitreTechniques property value. The attack techniques, as aligned with the MITRE ATT&CK framework.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getMitreTechniques() {
         return this.mitreTechniques;
     }
@@ -329,7 +341,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the providerAlertId property value. The ID of the alert as it appears in the security provider product that generated the alert.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProviderAlertId() {
         return this.providerAlertId;
     }
@@ -337,7 +349,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the recommendedActions property value. Recommended response and remediation actions to take in the event this alert was generated.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRecommendedActions() {
         return this.recommendedActions;
     }
@@ -345,7 +357,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the resolvedDateTime property value. Time when the alert was resolved.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getResolvedDateTime() {
         return this.resolvedDateTime;
     }
@@ -353,7 +365,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the serviceSource property value. The serviceSource property
      * @return a serviceSource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServiceSource getServiceSource() {
         return this.serviceSource;
     }
@@ -361,7 +373,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the severity property value. The severity property
      * @return a alertSeverity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AlertSeverity getSeverity() {
         return this.severity;
     }
@@ -369,7 +381,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a alertStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AlertStatus getStatus() {
         return this.status;
     }
@@ -377,7 +389,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the systemTags property value. The systemTags property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSystemTags() {
         return this.systemTags;
     }
@@ -385,7 +397,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the tenantId property value. The Azure Active Directory tenant the alert was created in.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -393,7 +405,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the threatDisplayName property value. The threat associated with this alert.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getThreatDisplayName() {
         return this.threatDisplayName;
     }
@@ -401,7 +413,7 @@ public class Alert extends Entity implements Parsable {
      * Gets the threatFamilyName property value. Threat family associated with this alert.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getThreatFamilyName() {
         return this.threatFamilyName;
     }
@@ -409,20 +421,19 @@ public class Alert extends Entity implements Parsable {
      * Gets the title property value. Brief identifying string value describing the alert.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTitle() {
         return this.title;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("actorDisplayName", this.getActorDisplayName());
+        writer.writeStringValue("alertPolicyId", this.getAlertPolicyId());
         writer.writeStringValue("alertWebUrl", this.getAlertWebUrl());
         writer.writeStringValue("assignedTo", this.getAssignedTo());
         writer.writeStringValue("category", this.getCategory());
@@ -455,262 +466,211 @@ public class Alert extends Entity implements Parsable {
     /**
      * Sets the actorDisplayName property value. The adversary or activity group that is associated with this alert.
      * @param value Value to set for the actorDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActorDisplayName(@javax.annotation.Nullable final String value) {
+    public void setActorDisplayName(@jakarta.annotation.Nullable final String value) {
         this.actorDisplayName = value;
+    }
+    /**
+     * Sets the alertPolicyId property value. The alertPolicyId property
+     * @param value Value to set for the alertPolicyId property.
+     */
+    public void setAlertPolicyId(@jakarta.annotation.Nullable final String value) {
+        this.alertPolicyId = value;
     }
     /**
      * Sets the alertWebUrl property value. URL for the alert page in the Microsoft 365 Defender portal.
      * @param value Value to set for the alertWebUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAlertWebUrl(@javax.annotation.Nullable final String value) {
+    public void setAlertWebUrl(@jakarta.annotation.Nullable final String value) {
         this.alertWebUrl = value;
     }
     /**
      * Sets the assignedTo property value. Owner of the alert, or null if no owner is assigned.
      * @param value Value to set for the assignedTo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignedTo(@javax.annotation.Nullable final String value) {
+    public void setAssignedTo(@jakarta.annotation.Nullable final String value) {
         this.assignedTo = value;
     }
     /**
      * Sets the category property value. The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&CK framework.
      * @param value Value to set for the category property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory(@javax.annotation.Nullable final String value) {
+    public void setCategory(@jakarta.annotation.Nullable final String value) {
         this.category = value;
     }
     /**
-     * Sets the classification property value. Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, benignPositive, unknownFutureValue.
+     * Sets the classification property value. Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
      * @param value Value to set for the classification property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClassification(@javax.annotation.Nullable final AlertClassification value) {
+    public void setClassification(@jakarta.annotation.Nullable final AlertClassification value) {
         this.classification = value;
     }
     /**
      * Sets the comments property value. Array of comments created by the Security Operations (SecOps) team during the alert management process.
      * @param value Value to set for the comments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComments(@javax.annotation.Nullable final java.util.List<AlertComment> value) {
+    public void setComments(@jakarta.annotation.Nullable final java.util.List<AlertComment> value) {
         this.comments = value;
     }
     /**
      * Sets the createdDateTime property value. Time when Microsoft 365 Defender created the alert.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. String value describing each alert.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the detectionSource property value. Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud.
      * @param value Value to set for the detectionSource property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetectionSource(@javax.annotation.Nullable final DetectionSource value) {
+    public void setDetectionSource(@jakarta.annotation.Nullable final DetectionSource value) {
         this.detectionSource = value;
     }
     /**
      * Sets the detectorId property value. The ID of the detector that triggered the alert.
      * @param value Value to set for the detectorId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetectorId(@javax.annotation.Nullable final String value) {
+    public void setDetectorId(@jakarta.annotation.Nullable final String value) {
         this.detectorId = value;
     }
     /**
      * Sets the determination property value. Specifies the result of the investigation, whether the alert represents a true attack and if so, the nature of the attack. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      * @param value Value to set for the determination property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetermination(@javax.annotation.Nullable final AlertDetermination value) {
+    public void setDetermination(@jakarta.annotation.Nullable final AlertDetermination value) {
         this.determination = value;
     }
     /**
      * Sets the evidence property value. Collection of evidence related to the alert.
      * @param value Value to set for the evidence property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEvidence(@javax.annotation.Nullable final java.util.List<AlertEvidence> value) {
+    public void setEvidence(@jakarta.annotation.Nullable final java.util.List<AlertEvidence> value) {
         this.evidence = value;
     }
     /**
      * Sets the firstActivityDateTime property value. The earliest activity associated with the alert.
      * @param value Value to set for the firstActivityDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirstActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setFirstActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstActivityDateTime = value;
     }
     /**
      * Sets the incidentId property value. Unique identifier to represent the incident this alert resource is associated with.
      * @param value Value to set for the incidentId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncidentId(@javax.annotation.Nullable final String value) {
+    public void setIncidentId(@jakarta.annotation.Nullable final String value) {
         this.incidentId = value;
     }
     /**
      * Sets the incidentWebUrl property value. URL for the incident page in the Microsoft 365 Defender portal.
      * @param value Value to set for the incidentWebUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIncidentWebUrl(@javax.annotation.Nullable final String value) {
+    public void setIncidentWebUrl(@jakarta.annotation.Nullable final String value) {
         this.incidentWebUrl = value;
     }
     /**
      * Sets the lastActivityDateTime property value. The oldest activity associated with the alert.
      * @param value Value to set for the lastActivityDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastActivityDateTime = value;
     }
     /**
      * Sets the lastUpdateDateTime property value. Time when the alert was last updated at Microsoft 365 Defender.
      * @param value Value to set for the lastUpdateDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdateDateTime = value;
     }
     /**
      * Sets the mitreTechniques property value. The attack techniques, as aligned with the MITRE ATT&CK framework.
      * @param value Value to set for the mitreTechniques property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMitreTechniques(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setMitreTechniques(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.mitreTechniques = value;
     }
     /**
      * Sets the providerAlertId property value. The ID of the alert as it appears in the security provider product that generated the alert.
      * @param value Value to set for the providerAlertId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProviderAlertId(@javax.annotation.Nullable final String value) {
+    public void setProviderAlertId(@jakarta.annotation.Nullable final String value) {
         this.providerAlertId = value;
     }
     /**
      * Sets the recommendedActions property value. Recommended response and remediation actions to take in the event this alert was generated.
      * @param value Value to set for the recommendedActions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecommendedActions(@javax.annotation.Nullable final String value) {
+    public void setRecommendedActions(@jakarta.annotation.Nullable final String value) {
         this.recommendedActions = value;
     }
     /**
      * Sets the resolvedDateTime property value. Time when the alert was resolved.
      * @param value Value to set for the resolvedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResolvedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setResolvedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.resolvedDateTime = value;
     }
     /**
      * Sets the serviceSource property value. The serviceSource property
      * @param value Value to set for the serviceSource property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServiceSource(@javax.annotation.Nullable final ServiceSource value) {
+    public void setServiceSource(@jakarta.annotation.Nullable final ServiceSource value) {
         this.serviceSource = value;
     }
     /**
      * Sets the severity property value. The severity property
      * @param value Value to set for the severity property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSeverity(@javax.annotation.Nullable final AlertSeverity value) {
+    public void setSeverity(@jakarta.annotation.Nullable final AlertSeverity value) {
         this.severity = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final AlertStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final AlertStatus value) {
         this.status = value;
     }
     /**
      * Sets the systemTags property value. The systemTags property
      * @param value Value to set for the systemTags property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSystemTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setSystemTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.systemTags = value;
     }
     /**
      * Sets the tenantId property value. The Azure Active Directory tenant the alert was created in.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
      * Sets the threatDisplayName property value. The threat associated with this alert.
      * @param value Value to set for the threatDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThreatDisplayName(@javax.annotation.Nullable final String value) {
+    public void setThreatDisplayName(@jakarta.annotation.Nullable final String value) {
         this.threatDisplayName = value;
     }
     /**
      * Sets the threatFamilyName property value. Threat family associated with this alert.
      * @param value Value to set for the threatFamilyName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setThreatFamilyName(@javax.annotation.Nullable final String value) {
+    public void setThreatFamilyName(@jakarta.annotation.Nullable final String value) {
         this.threatFamilyName = value;
     }
     /**
      * Sets the title property value. Brief identifying string value describing the alert.
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTitle(@javax.annotation.Nullable final String value) {
+    public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
 }

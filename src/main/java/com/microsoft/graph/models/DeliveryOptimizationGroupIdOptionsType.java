@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for the DeliveryOptimizationGroupIdOptionsType setting.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeliveryOptimizationGroupIdOptionsType implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),
@@ -21,10 +22,10 @@ public enum DeliveryOptimizationGroupIdOptionsType implements ValuedEnum {
     DeliveryOptimizationGroupIdOptionsType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeliveryOptimizationGroupIdOptionsType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeliveryOptimizationGroupIdOptionsType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

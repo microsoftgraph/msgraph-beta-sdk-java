@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Key Size Options.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum KeySize implements ValuedEnum {
     /** 1024 Bits. */
     Size1024("size1024"),
@@ -17,10 +18,10 @@ public enum KeySize implements ValuedEnum {
     KeySize(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static KeySize forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static KeySize forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "size1024": return Size1024;

@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharingDetail implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -39,9 +40,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     private String sharingType;
     /**
      * Instantiates a new sharingDetail and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SharingDetail() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -50,8 +49,8 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a sharingDetail
      */
-    @javax.annotation.Nonnull
-    public static SharingDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SharingDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SharingDetail();
     }
@@ -59,7 +58,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -67,7 +66,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -82,7 +81,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -90,7 +89,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * Gets the sharedBy property value. The user who shared the document.
      * @return a insightIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InsightIdentity getSharedBy() {
         return this.sharedBy;
     }
@@ -98,7 +97,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * Gets the sharedDateTime property value. The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getSharedDateTime() {
         return this.sharedDateTime;
     }
@@ -106,7 +105,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * Gets the sharingReference property value. The sharingReference property
      * @return a resourceReference
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ResourceReference getSharingReference() {
         return this.sharingReference;
     }
@@ -114,7 +113,7 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * Gets the sharingSubject property value. The subject with which the document was shared.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSharingSubject() {
         return this.sharingSubject;
     }
@@ -122,17 +121,15 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
      * Gets the sharingType property value. Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSharingType() {
         return this.sharingType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("sharedBy", this.getSharedBy());
@@ -144,64 +141,50 @@ public class SharingDetail implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the sharedBy property value. The user who shared the document.
      * @param value Value to set for the sharedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharedBy(@javax.annotation.Nullable final InsightIdentity value) {
+    public void setSharedBy(@jakarta.annotation.Nullable final InsightIdentity value) {
         this.sharedBy = value;
     }
     /**
      * Sets the sharedDateTime property value. The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the sharedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setSharedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.sharedDateTime = value;
     }
     /**
      * Sets the sharingReference property value. The sharingReference property
      * @param value Value to set for the sharingReference property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharingReference(@javax.annotation.Nullable final ResourceReference value) {
+    public void setSharingReference(@jakarta.annotation.Nullable final ResourceReference value) {
         this.sharingReference = value;
     }
     /**
      * Sets the sharingSubject property value. The subject with which the document was shared.
      * @param value Value to set for the sharingSubject property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharingSubject(@javax.annotation.Nullable final String value) {
+    public void setSharingSubject(@jakarta.annotation.Nullable final String value) {
         this.sharingSubject = value;
     }
     /**
      * Sets the sharingType property value. Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
      * @param value Value to set for the sharingType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharingType(@javax.annotation.Nullable final String value) {
+    public void setSharingType(@jakarta.annotation.Nullable final String value) {
         this.sharingType = value;
     }
 }

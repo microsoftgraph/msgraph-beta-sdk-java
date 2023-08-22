@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Type of display modes for the start menu.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsStartMenuModeType implements ValuedEnum {
     /** User defined. Default value. */
     UserDefined("userDefined"),
@@ -17,10 +18,10 @@ public enum WindowsStartMenuModeType implements ValuedEnum {
     WindowsStartMenuModeType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsStartMenuModeType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsStartMenuModeType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "userDefined": return UserDefined;

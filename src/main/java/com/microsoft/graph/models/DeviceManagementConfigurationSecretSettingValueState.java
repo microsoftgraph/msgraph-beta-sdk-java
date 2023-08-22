@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * type tracking the encryption state of a secret setting value
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementConfigurationSecretSettingValueState implements ValuedEnum {
     /** default invalid value */
     Invalid("invalid"),
@@ -17,10 +18,10 @@ public enum DeviceManagementConfigurationSecretSettingValueState implements Valu
     DeviceManagementConfigurationSecretSettingValueState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementConfigurationSecretSettingValueState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementConfigurationSecretSettingValueState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "invalid": return Invalid;

@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ConditionalAccessConditions implements ValuedEnum {
     None("none"),
     Application("application"),
@@ -19,15 +20,17 @@ public enum ConditionalAccessConditions implements ValuedEnum {
     IpAddressSeenByResourceProvider("ipAddressSeenByResourceProvider"),
     UnknownFutureValue("unknownFutureValue"),
     ServicePrincipals("servicePrincipals"),
-    ServicePrincipalRisk("servicePrincipalRisk");
+    ServicePrincipalRisk("servicePrincipalRisk"),
+    AuthenticationFlows("authenticationFlows"),
+    InsiderRisk("insiderRisk");
     public final String value;
     ConditionalAccessConditions(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ConditionalAccessConditions forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ConditionalAccessConditions forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;
@@ -46,6 +49,8 @@ public enum ConditionalAccessConditions implements ValuedEnum {
             case "unknownFutureValue": return UnknownFutureValue;
             case "servicePrincipals": return ServicePrincipals;
             case "servicePrincipalRisk": return ServicePrincipalRisk;
+            case "authenticationFlows": return AuthenticationFlows;
+            case "insiderRisk": return InsiderRisk;
             default: return null;
         }
     }

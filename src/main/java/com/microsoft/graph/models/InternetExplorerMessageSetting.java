@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * What message will be displayed by Edge before switching to Internet Explorer.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum InternetExplorerMessageSetting implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),
@@ -19,10 +20,10 @@ public enum InternetExplorerMessageSetting implements ValuedEnum {
     InternetExplorerMessageSetting(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static InternetExplorerMessageSetting forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static InternetExplorerMessageSetting forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Admin implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -58,9 +59,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
     private AdminWindows windows;
     /**
      * Instantiates a new admin and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Admin() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -69,8 +68,8 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a admin
      */
-    @javax.annotation.Nonnull
-    public static Admin createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Admin createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Admin();
     }
@@ -78,7 +77,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -86,7 +85,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * Gets the appsAndServices property value. The appsAndServices property
      * @return a adminAppsAndServices
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AdminAppsAndServices getAppsAndServices() {
         return this.appsAndServices;
     }
@@ -94,7 +93,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * Gets the dynamics property value. The dynamics property
      * @return a adminDynamics
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AdminDynamics getDynamics() {
         return this.dynamics;
     }
@@ -102,7 +101,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * Gets the edge property value. A container for Microsoft Edge resources. Read-only.
      * @return a edge
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Edge getEdge() {
         return this.edge;
     }
@@ -110,7 +109,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("appsAndServices", (n) -> { this.setAppsAndServices(n.getObjectValue(AdminAppsAndServices::createFromDiscriminatorValue)); });
@@ -130,7 +129,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * Gets the forms property value. The forms property
      * @return a adminForms
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AdminForms getForms() {
         return this.forms;
     }
@@ -138,7 +137,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -146,7 +145,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * Gets the people property value. The people property
      * @return a peopleAdminSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeopleAdminSettings getPeople() {
         return this.people;
     }
@@ -154,7 +153,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * Gets the reportSettings property value. A container for administrative resources to manage reports.
      * @return a adminReportSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AdminReportSettings getReportSettings() {
         return this.reportSettings;
     }
@@ -162,7 +161,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * Gets the serviceAnnouncement property value. A container for service communications resources. Read-only.
      * @return a serviceAnnouncement
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ServiceAnnouncement getServiceAnnouncement() {
         return this.serviceAnnouncement;
     }
@@ -170,7 +169,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * Gets the sharepoint property value. The sharepoint property
      * @return a sharepoint
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Sharepoint getSharepoint() {
         return this.sharepoint;
     }
@@ -178,7 +177,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * Gets the todo property value. The todo property
      * @return a adminTodo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AdminTodo getTodo() {
         return this.todo;
     }
@@ -186,17 +185,15 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * Gets the windows property value. A container for all Windows administrator functionalities. Read-only.
      * @return a adminWindows
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AdminWindows getWindows() {
         return this.windows;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("appsAndServices", this.getAppsAndServices());
         writer.writeObjectValue("dynamics", this.getDynamics());
@@ -214,109 +211,85 @@ public class Admin implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the appsAndServices property value. The appsAndServices property
      * @param value Value to set for the appsAndServices property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppsAndServices(@javax.annotation.Nullable final AdminAppsAndServices value) {
+    public void setAppsAndServices(@jakarta.annotation.Nullable final AdminAppsAndServices value) {
         this.appsAndServices = value;
     }
     /**
      * Sets the dynamics property value. The dynamics property
      * @param value Value to set for the dynamics property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDynamics(@javax.annotation.Nullable final AdminDynamics value) {
+    public void setDynamics(@jakarta.annotation.Nullable final AdminDynamics value) {
         this.dynamics = value;
     }
     /**
      * Sets the edge property value. A container for Microsoft Edge resources. Read-only.
      * @param value Value to set for the edge property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEdge(@javax.annotation.Nullable final Edge value) {
+    public void setEdge(@jakarta.annotation.Nullable final Edge value) {
         this.edge = value;
     }
     /**
      * Sets the forms property value. The forms property
      * @param value Value to set for the forms property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setForms(@javax.annotation.Nullable final AdminForms value) {
+    public void setForms(@jakarta.annotation.Nullable final AdminForms value) {
         this.forms = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the people property value. The people property
      * @param value Value to set for the people property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPeople(@javax.annotation.Nullable final PeopleAdminSettings value) {
+    public void setPeople(@jakarta.annotation.Nullable final PeopleAdminSettings value) {
         this.people = value;
     }
     /**
      * Sets the reportSettings property value. A container for administrative resources to manage reports.
      * @param value Value to set for the reportSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReportSettings(@javax.annotation.Nullable final AdminReportSettings value) {
+    public void setReportSettings(@jakarta.annotation.Nullable final AdminReportSettings value) {
         this.reportSettings = value;
     }
     /**
      * Sets the serviceAnnouncement property value. A container for service communications resources. Read-only.
      * @param value Value to set for the serviceAnnouncement property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServiceAnnouncement(@javax.annotation.Nullable final ServiceAnnouncement value) {
+    public void setServiceAnnouncement(@jakarta.annotation.Nullable final ServiceAnnouncement value) {
         this.serviceAnnouncement = value;
     }
     /**
      * Sets the sharepoint property value. The sharepoint property
      * @param value Value to set for the sharepoint property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharepoint(@javax.annotation.Nullable final Sharepoint value) {
+    public void setSharepoint(@jakarta.annotation.Nullable final Sharepoint value) {
         this.sharepoint = value;
     }
     /**
      * Sets the todo property value. The todo property
      * @param value Value to set for the todo property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTodo(@javax.annotation.Nullable final AdminTodo value) {
+    public void setTodo(@jakarta.annotation.Nullable final AdminTodo value) {
         this.todo = value;
     }
     /**
      * Sets the windows property value. A container for all Windows administrator functionalities. Read-only.
      * @param value Value to set for the windows property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindows(@javax.annotation.Nullable final AdminWindows value) {
+    public void setWindows(@jakarta.annotation.Nullable final AdminWindows value) {
         this.windows = value;
     }
 }

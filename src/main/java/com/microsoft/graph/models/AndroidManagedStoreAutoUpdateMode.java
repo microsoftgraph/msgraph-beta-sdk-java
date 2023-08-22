@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Prioritization for automatic updates of Android Managed Store apps set on assignment.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidManagedStoreAutoUpdateMode implements ValuedEnum {
     /** Default update behavior (device must be connected to Wifi, charging and not actively used). */
     Default("default"),
@@ -19,10 +20,10 @@ public enum AndroidManagedStoreAutoUpdateMode implements ValuedEnum {
     AndroidManagedStoreAutoUpdateMode(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidManagedStoreAutoUpdateMode forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidManagedStoreAutoUpdateMode forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "default": return Default;

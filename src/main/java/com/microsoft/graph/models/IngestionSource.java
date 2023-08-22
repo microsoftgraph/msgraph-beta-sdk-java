@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Category Ingestion source
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum IngestionSource implements ValuedEnum {
     /** Indicates unknown category */
     Unknown("unknown"),
@@ -19,10 +20,10 @@ public enum IngestionSource implements ValuedEnum {
     IngestionSource(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static IngestionSource forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static IngestionSource forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

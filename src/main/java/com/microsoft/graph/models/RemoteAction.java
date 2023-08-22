@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Remote actions Intune supports.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum RemoteAction implements ValuedEnum {
     /** Indicate user initiates an unknown action. */
     Unknown("unknown"),
@@ -81,10 +82,10 @@ public enum RemoteAction implements ValuedEnum {
     RemoteAction(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static RemoteAction forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static RemoteAction forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

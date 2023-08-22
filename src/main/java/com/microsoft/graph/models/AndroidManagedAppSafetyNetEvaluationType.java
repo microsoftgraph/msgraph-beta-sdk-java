@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * An admin enforced Android SafetyNet evaluation type requirement on a managed app.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidManagedAppSafetyNetEvaluationType implements ValuedEnum {
     /** Require basic evaluation */
     Basic("basic"),
@@ -15,10 +16,10 @@ public enum AndroidManagedAppSafetyNetEvaluationType implements ValuedEnum {
     AndroidManagedAppSafetyNetEvaluationType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidManagedAppSafetyNetEvaluationType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidManagedAppSafetyNetEvaluationType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "basic": return Basic;

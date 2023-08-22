@@ -11,6 +11,7 @@ import java.util.Objects;
 /**
  * Conflict summary for a set of device configuration policies.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -46,9 +47,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
     private String userPrincipalName;
     /**
      * Instantiates a new deviceConfigurationTargetedUserAndDevice and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceConfigurationTargetedUserAndDevice() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -57,8 +56,8 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceConfigurationTargetedUserAndDevice
      */
-    @javax.annotation.Nonnull
-    public static DeviceConfigurationTargetedUserAndDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceConfigurationTargetedUserAndDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceConfigurationTargetedUserAndDevice();
     }
@@ -66,7 +65,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -74,7 +73,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
      * Gets the deviceId property value. The id of the device in the checkin.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -82,7 +81,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
      * Gets the deviceName property value. The name of the device in the checkin.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -90,7 +89,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
@@ -106,7 +105,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
      * Gets the lastCheckinDateTime property value. Last checkin time for this user/device pair.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastCheckinDateTime() {
         return this.lastCheckinDateTime;
     }
@@ -114,7 +113,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -122,7 +121,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
      * Gets the userDisplayName property value. The display name of the user in the checkin
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserDisplayName() {
         return this.userDisplayName;
     }
@@ -130,7 +129,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
      * Gets the userId property value. The id of the user in the checkin.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -138,17 +137,15 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
      * Gets the userPrincipalName property value. The UPN of the user in the checkin.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("deviceId", this.getDeviceId());
         writer.writeStringValue("deviceName", this.getDeviceName());
@@ -162,73 +159,57 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the deviceId property value. The id of the device in the checkin.
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the deviceName property value. The name of the device in the checkin.
      * @param value Value to set for the deviceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
      * Sets the lastCheckinDateTime property value. Last checkin time for this user/device pair.
      * @param value Value to set for the lastCheckinDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastCheckinDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastCheckinDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastCheckinDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the userDisplayName property value. The display name of the user in the checkin
      * @param value Value to set for the userDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserDisplayName(@javax.annotation.Nullable final String value) {
+    public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.userDisplayName = value;
     }
     /**
      * Sets the userId property value. The id of the user in the checkin.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
      * Sets the userPrincipalName property value. The UPN of the user in the checkin.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

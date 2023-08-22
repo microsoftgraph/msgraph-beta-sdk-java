@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Which branch devices will receive their updates from
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsUpdateType implements ValuedEnum {
     /** Allow the user to set. */
     UserDefined("userDefined"),
@@ -23,10 +24,10 @@ public enum WindowsUpdateType implements ValuedEnum {
     WindowsUpdateType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsUpdateType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsUpdateType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "userDefined": return UserDefined;

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Contains all supported Powershell Script output detection type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Win32LobAppPowerShellScriptDetectionType implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),
@@ -25,10 +26,10 @@ public enum Win32LobAppPowerShellScriptDetectionType implements ValuedEnum {
     Win32LobAppPowerShellScriptDetectionType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static Win32LobAppPowerShellScriptDetectionType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static Win32LobAppPowerShellScriptDetectionType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

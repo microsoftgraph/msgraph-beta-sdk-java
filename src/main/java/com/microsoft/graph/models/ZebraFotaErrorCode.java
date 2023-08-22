@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * An error code indicating the failure reason, when the deployment state is createFailed. Possible values: See zebraFotaErrorCode enum.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ZebraFotaErrorCode implements ValuedEnum {
     /** Default error code indicating success (no error). */
     Success("success"),
@@ -27,10 +28,10 @@ public enum ZebraFotaErrorCode implements ValuedEnum {
     ZebraFotaErrorCode(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ZebraFotaErrorCode forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ZebraFotaErrorCode forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "success": return Success;

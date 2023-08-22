@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementAlertDefinition extends Entity implements Parsable {
     /**
      * The description of the alert.
@@ -49,9 +50,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     private AlertSeverity severityLevel;
     /**
      * Instantiates a new unifiedRoleManagementAlertDefinition and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UnifiedRoleManagementAlertDefinition() {
         super();
     }
@@ -60,8 +59,8 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a unifiedRoleManagementAlertDefinition
      */
-    @javax.annotation.Nonnull
-    public static UnifiedRoleManagementAlertDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UnifiedRoleManagementAlertDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UnifiedRoleManagementAlertDefinition();
     }
@@ -69,7 +68,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
      * Gets the description property value. The description of the alert.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -77,7 +76,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
      * Gets the displayName property value. The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Azure portal.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -85,7 +84,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -104,7 +103,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
      * Gets the howToPrevent property value. Long-form text that indicates the ways to prevent the alert from being triggered in your tenant.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHowToPrevent() {
         return this.howToPrevent;
     }
@@ -112,7 +111,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
      * Gets the isConfigurable property value. true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization does not have Azure AD Premium P2' cannot be configured, because the criteria is restricted.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsConfigurable() {
         return this.isConfigurable;
     }
@@ -120,7 +119,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
      * Gets the isRemediatable property value. true if the alert can be remediated, and false otherwise.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRemediatable() {
         return this.isRemediatable;
     }
@@ -128,7 +127,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
      * Gets the mitigationSteps property value. The methods to mitigate the alert when it's triggered in the tenant. For example, to mitigate the 'There are too many global administrators', you could remove redundant privileged role assignments.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMitigationSteps() {
         return this.mitigationSteps;
     }
@@ -136,7 +135,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
      * Gets the scopeId property value. The identifier of the scope where the alert is related. / is the only supported one for the tenant. Supports $filter (eq, ne).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getScopeId() {
         return this.scopeId;
     }
@@ -144,7 +143,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
      * Gets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD Roles.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getScopeType() {
         return this.scopeType;
     }
@@ -152,7 +151,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
      * Gets the securityImpact property value. Security impact of the alert. For example, it could be information leaks or unauthorized access.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSecurityImpact() {
         return this.securityImpact;
     }
@@ -160,17 +159,15 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
      * Gets the severityLevel property value. Severity level of the alert. The possible values are: unknown, informational, low, medium, high, unknownFutureValue.
      * @return a alertSeverity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AlertSeverity getSeverityLevel() {
         return this.severityLevel;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -187,91 +184,71 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     /**
      * Sets the description property value. The description of the alert.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Azure portal.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the howToPrevent property value. Long-form text that indicates the ways to prevent the alert from being triggered in your tenant.
      * @param value Value to set for the howToPrevent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHowToPrevent(@javax.annotation.Nullable final String value) {
+    public void setHowToPrevent(@jakarta.annotation.Nullable final String value) {
         this.howToPrevent = value;
     }
     /**
      * Sets the isConfigurable property value. true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization does not have Azure AD Premium P2' cannot be configured, because the criteria is restricted.
      * @param value Value to set for the isConfigurable property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsConfigurable(@javax.annotation.Nullable final Boolean value) {
+    public void setIsConfigurable(@jakarta.annotation.Nullable final Boolean value) {
         this.isConfigurable = value;
     }
     /**
      * Sets the isRemediatable property value. true if the alert can be remediated, and false otherwise.
      * @param value Value to set for the isRemediatable property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRemediatable(@javax.annotation.Nullable final Boolean value) {
+    public void setIsRemediatable(@jakarta.annotation.Nullable final Boolean value) {
         this.isRemediatable = value;
     }
     /**
      * Sets the mitigationSteps property value. The methods to mitigate the alert when it's triggered in the tenant. For example, to mitigate the 'There are too many global administrators', you could remove redundant privileged role assignments.
      * @param value Value to set for the mitigationSteps property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMitigationSteps(@javax.annotation.Nullable final String value) {
+    public void setMitigationSteps(@jakarta.annotation.Nullable final String value) {
         this.mitigationSteps = value;
     }
     /**
      * Sets the scopeId property value. The identifier of the scope where the alert is related. / is the only supported one for the tenant. Supports $filter (eq, ne).
      * @param value Value to set for the scopeId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScopeId(@javax.annotation.Nullable final String value) {
+    public void setScopeId(@jakarta.annotation.Nullable final String value) {
         this.scopeId = value;
     }
     /**
      * Sets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD Roles.
      * @param value Value to set for the scopeType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScopeType(@javax.annotation.Nullable final String value) {
+    public void setScopeType(@jakarta.annotation.Nullable final String value) {
         this.scopeType = value;
     }
     /**
      * Sets the securityImpact property value. Security impact of the alert. For example, it could be information leaks or unauthorized access.
      * @param value Value to set for the securityImpact property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityImpact(@javax.annotation.Nullable final String value) {
+    public void setSecurityImpact(@jakarta.annotation.Nullable final String value) {
         this.securityImpact = value;
     }
     /**
      * Sets the severityLevel property value. Severity level of the alert. The possible values are: unknown, informational, low, medium, high, unknownFutureValue.
      * @param value Value to set for the severityLevel property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSeverityLevel(@javax.annotation.Nullable final AlertSeverity value) {
+    public void setSeverityLevel(@jakarta.annotation.Nullable final AlertSeverity value) {
         this.severityLevel = value;
     }
 }

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     private AccessPackageLocalizedContent text;
     /**
      * Instantiates a new accessPackageQuestion and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AccessPackageQuestion() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +48,8 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessPackageQuestion
      */
-    @javax.annotation.Nonnull
-    public static AccessPackageQuestion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessPackageQuestion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -66,7 +65,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -74,7 +73,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
@@ -89,7 +88,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * Gets the id property value. ID of the question.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getId() {
         return this.id;
     }
@@ -97,7 +96,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * Gets the isAnswerEditable property value. Specifies whether the requestor is allowed to edit answers to questions.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAnswerEditable() {
         return this.isAnswerEditable;
     }
@@ -105,7 +104,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * Gets the isRequired property value. Whether the requestor is required to supply an answer or not.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
         return this.isRequired;
     }
@@ -113,7 +112,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -121,7 +120,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * Gets the sequence property value. Relative position of this question when displaying a list of questions to the requestor.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSequence() {
         return this.sequence;
     }
@@ -129,17 +128,15 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      * Gets the text property value. The text of the question to show to the requestor.
      * @return a accessPackageLocalizedContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessPackageLocalizedContent getText() {
         return this.text;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
         writer.writeBooleanValue("isAnswerEditable", this.getIsAnswerEditable());
@@ -152,64 +149,50 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the id property value. ID of the question.
      * @param value Value to set for the id property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setId(@javax.annotation.Nullable final String value) {
+    public void setId(@jakarta.annotation.Nullable final String value) {
         this.id = value;
     }
     /**
      * Sets the isAnswerEditable property value. Specifies whether the requestor is allowed to edit answers to questions.
      * @param value Value to set for the isAnswerEditable property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAnswerEditable(@javax.annotation.Nullable final Boolean value) {
+    public void setIsAnswerEditable(@jakarta.annotation.Nullable final Boolean value) {
         this.isAnswerEditable = value;
     }
     /**
      * Sets the isRequired property value. Whether the requestor is required to supply an answer or not.
      * @param value Value to set for the isRequired property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRequired(@javax.annotation.Nullable final Boolean value) {
+    public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isRequired = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the sequence property value. Relative position of this question when displaying a list of questions to the requestor.
      * @param value Value to set for the sequence property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSequence(@javax.annotation.Nullable final Integer value) {
+    public void setSequence(@jakarta.annotation.Nullable final Integer value) {
         this.sequence = value;
     }
     /**
      * Sets the text property value. The text of the question to show to the requestor.
      * @param value Value to set for the text property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setText(@javax.annotation.Nullable final AccessPackageLocalizedContent value) {
+    public void setText(@jakarta.annotation.Nullable final AccessPackageLocalizedContent value) {
         this.text = value;
     }
 }

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The endpoint security configuration applicable platform.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum EndpointSecurityConfigurationApplicablePlatform implements ValuedEnum {
     /** Unknown. */
     Unknown("unknown"),
@@ -19,10 +20,10 @@ public enum EndpointSecurityConfigurationApplicablePlatform implements ValuedEnu
     EndpointSecurityConfigurationApplicablePlatform(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static EndpointSecurityConfigurationApplicablePlatform forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static EndpointSecurityConfigurationApplicablePlatform forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

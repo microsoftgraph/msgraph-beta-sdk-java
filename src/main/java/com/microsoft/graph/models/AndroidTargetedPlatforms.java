@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Specifies which platform(s) can be targeted for a given Android LOB application or Managed Android LOB application.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidTargetedPlatforms implements ValuedEnum {
     /** Indicates the Android targeted platform is Android Device Administrator. */
     AndroidDeviceAdministrator("androidDeviceAdministrator"),
@@ -17,10 +18,10 @@ public enum AndroidTargetedPlatforms implements ValuedEnum {
     AndroidTargetedPlatforms(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidTargetedPlatforms forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidTargetedPlatforms forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "androidDeviceAdministrator": return AndroidDeviceAdministrator;

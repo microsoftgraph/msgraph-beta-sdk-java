@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Subject Alternative Name Options.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum SubjectAlternativeNameType implements ValuedEnum {
     /** No subject alternative name. */
     None("none"),
@@ -23,10 +24,10 @@ public enum SubjectAlternativeNameType implements ValuedEnum {
     SubjectAlternativeNameType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static SubjectAlternativeNameType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static SubjectAlternativeNameType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase implements Parsable {
     /**
      * The list of certificates uploaded for this API connector.
@@ -13,9 +14,7 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
     private java.util.List<Pkcs12CertificateInformation> certificateList;
     /**
      * Instantiates a new clientCertificateAuthentication and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ClientCertificateAuthentication() {
         super();
         this.setOdataType("#microsoft.graph.clientCertificateAuthentication");
@@ -25,8 +24,8 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a clientCertificateAuthentication
      */
-    @javax.annotation.Nonnull
-    public static ClientCertificateAuthentication createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ClientCertificateAuthentication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ClientCertificateAuthentication();
     }
@@ -34,7 +33,7 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
      * Gets the certificateList property value. The list of certificates uploaded for this API connector.
      * @return a pkcs12CertificateInformation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Pkcs12CertificateInformation> getCertificateList() {
         return this.certificateList;
     }
@@ -42,7 +41,7 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("certificateList", (n) -> { this.setCertificateList(n.getCollectionOfObjectValues(Pkcs12CertificateInformation::createFromDiscriminatorValue)); });
@@ -51,10 +50,8 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("certificateList", this.getCertificateList());
@@ -62,10 +59,8 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
     /**
      * Sets the certificateList property value. The list of certificates uploaded for this API connector.
      * @param value Value to set for the certificateList property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCertificateList(@javax.annotation.Nullable final java.util.List<Pkcs12CertificateInformation> value) {
+    public void setCertificateList(@jakarta.annotation.Nullable final java.util.List<Pkcs12CertificateInformation> value) {
         this.certificateList = value;
     }
 }

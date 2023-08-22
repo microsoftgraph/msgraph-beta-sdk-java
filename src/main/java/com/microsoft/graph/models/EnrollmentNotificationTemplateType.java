@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * This enum indicates the Template type for which the enrollment notification applies.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum EnrollmentNotificationTemplateType implements ValuedEnum {
     /** Email Notification */
     Email("email"),
@@ -17,10 +18,10 @@ public enum EnrollmentNotificationTemplateType implements ValuedEnum {
     EnrollmentNotificationTemplateType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static EnrollmentNotificationTemplateType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static EnrollmentNotificationTemplateType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "email": return Email;

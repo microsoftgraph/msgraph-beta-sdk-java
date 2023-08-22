@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
     private String value;
     /**
      * Instantiates a new userAttributeValuesItem and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UserAttributeValuesItem() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +40,8 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userAttributeValuesItem
      */
-    @javax.annotation.Nonnull
-    public static UserAttributeValuesItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserAttributeValuesItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserAttributeValuesItem();
     }
@@ -50,7 +49,7 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +57,7 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("isDefault", (n) -> { this.setIsDefault(n.getBooleanValue()); });
@@ -71,7 +70,7 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
      * Gets the isDefault property value. Used to set the value as the default.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
         return this.isDefault;
     }
@@ -79,7 +78,7 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
      * Gets the name property value. The display name of the property displayed to the end user in the user flow.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -87,7 +86,7 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -95,17 +94,15 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
      * Gets the value property value. The value that is set when this item is selected.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getValue() {
         return this.value;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isDefault", this.getIsDefault());
         writer.writeStringValue("name", this.getName());
@@ -116,46 +113,36 @@ public class UserAttributeValuesItem implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the isDefault property value. Used to set the value as the default.
      * @param value Value to set for the isDefault property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
+    public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefault = value;
     }
     /**
      * Sets the name property value. The display name of the property displayed to the end user in the user flow.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the value property value. The value that is set when this item is selected.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final String value) {
+    public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }
 }

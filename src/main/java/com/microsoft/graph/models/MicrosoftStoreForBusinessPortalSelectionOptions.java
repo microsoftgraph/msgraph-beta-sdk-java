@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Portal to which admin syncs available Microsoft Store for Business apps. This is available in the Intune Admin Console.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MicrosoftStoreForBusinessPortalSelectionOptions implements ValuedEnum {
     /** This option is not available for the account */
     None("none"),
@@ -17,10 +18,10 @@ public enum MicrosoftStoreForBusinessPortalSelectionOptions implements ValuedEnu
     MicrosoftStoreForBusinessPortalSelectionOptions(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MicrosoftStoreForBusinessPortalSelectionOptions forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MicrosoftStoreForBusinessPortalSelectionOptions forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

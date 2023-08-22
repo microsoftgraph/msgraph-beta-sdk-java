@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Values for the SignInAssistantSettings.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum SignInAssistantOptions implements ValuedEnum {
     /** Not configured - wlidsvc Start will be set to SERVICE_DEMAND_START. */
     NotConfigured("notConfigured"),
@@ -15,10 +16,10 @@ public enum SignInAssistantOptions implements ValuedEnum {
     SignInAssistantOptions(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static SignInAssistantOptions forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static SignInAssistantOptions forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

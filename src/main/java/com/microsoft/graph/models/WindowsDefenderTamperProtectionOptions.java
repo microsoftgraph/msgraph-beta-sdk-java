@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Defender TamperProtection setting options
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsDefenderTamperProtectionOptions implements ValuedEnum {
     /** Not Configured */
     NotConfigured("notConfigured"),
@@ -17,10 +18,10 @@ public enum WindowsDefenderTamperProtectionOptions implements ValuedEnum {
     WindowsDefenderTamperProtectionOptions(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsDefenderTamperProtectionOptions forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsDefenderTamperProtectionOptions forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

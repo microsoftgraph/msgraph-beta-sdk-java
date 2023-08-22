@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the publishing state of an app.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MobileAppPublishingState implements ValuedEnum {
     /** The app is not yet published. */
     NotPublished("notPublished"),
@@ -17,10 +18,10 @@ public enum MobileAppPublishingState implements ValuedEnum {
     MobileAppPublishingState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MobileAppPublishingState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MobileAppPublishingState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notPublished": return NotPublished;

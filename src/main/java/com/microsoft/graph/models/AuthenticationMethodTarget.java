@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationMethodTarget extends Entity implements Parsable {
     /**
      * Determines if the user is enforced to register the authentication method.
@@ -17,9 +18,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
     private AuthenticationMethodTargetType targetType;
     /**
      * Instantiates a new authenticationMethodTarget and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AuthenticationMethodTarget() {
         super();
     }
@@ -28,8 +27,8 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a authenticationMethodTarget
      */
-    @javax.annotation.Nonnull
-    public static AuthenticationMethodTarget createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AuthenticationMethodTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -46,7 +45,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isRegistrationRequired", (n) -> { this.setIsRegistrationRequired(n.getBooleanValue()); });
@@ -57,7 +56,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
      * Gets the isRegistrationRequired property value. Determines if the user is enforced to register the authentication method.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsRegistrationRequired() {
         return this.isRegistrationRequired;
     }
@@ -65,17 +64,15 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
      * Gets the targetType property value. The targetType property
      * @return a authenticationMethodTargetType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationMethodTargetType getTargetType() {
         return this.targetType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("isRegistrationRequired", this.getIsRegistrationRequired());
@@ -84,19 +81,15 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
     /**
      * Sets the isRegistrationRequired property value. Determines if the user is enforced to register the authentication method.
      * @param value Value to set for the isRegistrationRequired property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsRegistrationRequired(@javax.annotation.Nullable final Boolean value) {
+    public void setIsRegistrationRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isRegistrationRequired = value;
     }
     /**
      * Sets the targetType property value. The targetType property
      * @param value Value to set for the targetType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetType(@javax.annotation.Nullable final AuthenticationMethodTargetType value) {
+    public void setTargetType(@jakarta.annotation.Nullable final AuthenticationMethodTargetType value) {
         this.targetType = value;
     }
 }

@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MeetingCapabilities implements ValuedEnum {
     QuestionAndAnswer("questionAndAnswer"),
     UnknownFutureValue("unknownFutureValue");
@@ -10,10 +11,10 @@ public enum MeetingCapabilities implements ValuedEnum {
     MeetingCapabilities(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MeetingCapabilities forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MeetingCapabilities forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "questionAndAnswer": return QuestionAndAnswer;

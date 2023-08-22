@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerExternalBucketSource extends PlannerBucketCreation implements Parsable {
     /**
      * Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like 'com.constoso.customerSupport'.
@@ -21,9 +22,7 @@ public class PlannerExternalBucketSource extends PlannerBucketCreation implement
     private String externalObjectId;
     /**
      * Instantiates a new plannerExternalBucketSource and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PlannerExternalBucketSource() {
         super();
         this.setOdataType("#microsoft.graph.plannerExternalBucketSource");
@@ -33,8 +32,8 @@ public class PlannerExternalBucketSource extends PlannerBucketCreation implement
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a plannerExternalBucketSource
      */
-    @javax.annotation.Nonnull
-    public static PlannerExternalBucketSource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PlannerExternalBucketSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PlannerExternalBucketSource();
     }
@@ -42,7 +41,7 @@ public class PlannerExternalBucketSource extends PlannerBucketCreation implement
      * Gets the contextScenarioId property value. Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like 'com.constoso.customerSupport'.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContextScenarioId() {
         return this.contextScenarioId;
     }
@@ -50,7 +49,7 @@ public class PlannerExternalBucketSource extends PlannerBucketCreation implement
      * Gets the externalContextId property value. Nullable. The id of the external entity's containing entity or context.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalContextId() {
         return this.externalContextId;
     }
@@ -58,7 +57,7 @@ public class PlannerExternalBucketSource extends PlannerBucketCreation implement
      * Gets the externalObjectId property value. Nullable. The id of the entity that an external service associates with a bucket.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getExternalObjectId() {
         return this.externalObjectId;
     }
@@ -66,7 +65,7 @@ public class PlannerExternalBucketSource extends PlannerBucketCreation implement
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contextScenarioId", (n) -> { this.setContextScenarioId(n.getStringValue()); });
@@ -77,10 +76,8 @@ public class PlannerExternalBucketSource extends PlannerBucketCreation implement
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("contextScenarioId", this.getContextScenarioId());
@@ -90,28 +87,22 @@ public class PlannerExternalBucketSource extends PlannerBucketCreation implement
     /**
      * Sets the contextScenarioId property value. Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like 'com.constoso.customerSupport'.
      * @param value Value to set for the contextScenarioId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContextScenarioId(@javax.annotation.Nullable final String value) {
+    public void setContextScenarioId(@jakarta.annotation.Nullable final String value) {
         this.contextScenarioId = value;
     }
     /**
      * Sets the externalContextId property value. Nullable. The id of the external entity's containing entity or context.
      * @param value Value to set for the externalContextId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalContextId(@javax.annotation.Nullable final String value) {
+    public void setExternalContextId(@jakarta.annotation.Nullable final String value) {
         this.externalContextId = value;
     }
     /**
      * Sets the externalObjectId property value. Nullable. The id of the entity that an external service associates with a bucket.
      * @param value Value to set for the externalObjectId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExternalObjectId(@javax.annotation.Nullable final String value) {
+    public void setExternalObjectId(@jakarta.annotation.Nullable final String value) {
         this.externalObjectId = value;
     }
 }

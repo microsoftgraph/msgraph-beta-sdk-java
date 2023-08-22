@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PasswordCredential implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -48,9 +49,7 @@ public class PasswordCredential implements AdditionalDataHolder, Parsable {
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new passwordCredential and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PasswordCredential() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -59,8 +58,8 @@ public class PasswordCredential implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a passwordCredential
      */
-    @javax.annotation.Nonnull
-    public static PasswordCredential createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PasswordCredential createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PasswordCredential();
     }
@@ -68,7 +67,7 @@ public class PasswordCredential implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -76,7 +75,7 @@ public class PasswordCredential implements AdditionalDataHolder, Parsable {
      * Gets the customKeyIdentifier property value. Do not use.
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getCustomKeyIdentifier() {
         return this.customKeyIdentifier;
     }
@@ -84,7 +83,7 @@ public class PasswordCredential implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. Friendly name for the password. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -92,7 +91,7 @@ public class PasswordCredential implements AdditionalDataHolder, Parsable {
      * Gets the endDateTime property value. The date and time at which the password expires represented using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
         return this.endDateTime;
     }
@@ -100,7 +99,7 @@ public class PasswordCredential implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("customKeyIdentifier", (n) -> { this.setCustomKeyIdentifier(n.getByteArrayValue()); });
@@ -117,7 +116,7 @@ public class PasswordCredential implements AdditionalDataHolder, Parsable {
      * Gets the hint property value. Contains the first three characters of the password. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHint() {
         return this.hint;
     }
@@ -125,7 +124,7 @@ public class PasswordCredential implements AdditionalDataHolder, Parsable {
      * Gets the keyId property value. The unique identifier for the password.
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getKeyId() {
         return this.keyId;
     }
@@ -133,7 +132,7 @@ public class PasswordCredential implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -141,7 +140,7 @@ public class PasswordCredential implements AdditionalDataHolder, Parsable {
      * Gets the secretText property value. Read-only; Contains the strong passwords generated by Azure AD that are 16-64 characters in length. The generated password value is only returned during the initial POST request to addPassword. There is no way to retrieve this password in the future.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSecretText() {
         return this.secretText;
     }
@@ -149,17 +148,15 @@ public class PasswordCredential implements AdditionalDataHolder, Parsable {
      * Gets the startDateTime property value. The date and time at which the password becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this.startDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("customKeyIdentifier", this.getCustomKeyIdentifier());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -174,82 +171,64 @@ public class PasswordCredential implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the customKeyIdentifier property value. Do not use.
      * @param value Value to set for the customKeyIdentifier property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomKeyIdentifier(@javax.annotation.Nullable final byte[] value) {
+    public void setCustomKeyIdentifier(@jakarta.annotation.Nullable final byte[] value) {
         this.customKeyIdentifier = value;
     }
     /**
      * Sets the displayName property value. Friendly name for the password. Optional.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the endDateTime property value. The date and time at which the password expires represented using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
      * @param value Value to set for the endDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
      * Sets the hint property value. Contains the first three characters of the password. Read-only.
      * @param value Value to set for the hint property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHint(@javax.annotation.Nullable final String value) {
+    public void setHint(@jakarta.annotation.Nullable final String value) {
         this.hint = value;
     }
     /**
      * Sets the keyId property value. The unique identifier for the password.
      * @param value Value to set for the keyId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKeyId(@javax.annotation.Nullable final UUID value) {
+    public void setKeyId(@jakarta.annotation.Nullable final UUID value) {
         this.keyId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the secretText property value. Read-only; Contains the strong passwords generated by Azure AD that are 16-64 characters in length. The generated password value is only returned during the initial POST request to addPassword. There is no way to retrieve this password in the future.
      * @param value Value to set for the secretText property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecretText(@javax.annotation.Nullable final String value) {
+    public void setSecretText(@jakarta.annotation.Nullable final String value) {
         this.secretText = value;
     }
     /**
      * Sets the startDateTime property value. The date and time at which the password becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
 }

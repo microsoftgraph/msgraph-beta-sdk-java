@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IpmtPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -39,9 +40,7 @@ public class IpmtPostRequestBody implements AdditionalDataHolder, Parsable {
     private Json type;
     /**
      * Instantiates a new ipmtPostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public IpmtPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -50,8 +49,8 @@ public class IpmtPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a ipmtPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static IpmtPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IpmtPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IpmtPostRequestBody();
     }
@@ -59,7 +58,7 @@ public class IpmtPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -67,7 +66,7 @@ public class IpmtPostRequestBody implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("fv", (n) -> { this.setFv(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -82,7 +81,7 @@ public class IpmtPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the fv property value. The fv property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getFv() {
         return this.fv;
     }
@@ -90,7 +89,7 @@ public class IpmtPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the nper property value. The nper property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getNper() {
         return this.nper;
     }
@@ -98,7 +97,7 @@ public class IpmtPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the per property value. The per property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getPer() {
         return this.per;
     }
@@ -106,7 +105,7 @@ public class IpmtPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the pv property value. The pv property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getPv() {
         return this.pv;
     }
@@ -114,7 +113,7 @@ public class IpmtPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the rate property value. The rate property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getRate() {
         return this.rate;
     }
@@ -122,17 +121,15 @@ public class IpmtPostRequestBody implements AdditionalDataHolder, Parsable {
      * Gets the type property value. The type property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getType() {
         return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("fv", this.getFv());
         writer.writeObjectValue("nper", this.getNper());
@@ -145,64 +142,50 @@ public class IpmtPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the fv property value. The fv property
      * @param value Value to set for the fv property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFv(@javax.annotation.Nullable final Json value) {
+    public void setFv(@jakarta.annotation.Nullable final Json value) {
         this.fv = value;
     }
     /**
      * Sets the nper property value. The nper property
      * @param value Value to set for the nper property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNper(@javax.annotation.Nullable final Json value) {
+    public void setNper(@jakarta.annotation.Nullable final Json value) {
         this.nper = value;
     }
     /**
      * Sets the per property value. The per property
      * @param value Value to set for the per property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPer(@javax.annotation.Nullable final Json value) {
+    public void setPer(@jakarta.annotation.Nullable final Json value) {
         this.per = value;
     }
     /**
      * Sets the pv property value. The pv property
      * @param value Value to set for the pv property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPv(@javax.annotation.Nullable final Json value) {
+    public void setPv(@jakarta.annotation.Nullable final Json value) {
         this.pv = value;
     }
     /**
      * Sets the rate property value. The rate property
      * @param value Value to set for the rate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRate(@javax.annotation.Nullable final Json value) {
+    public void setRate(@jakarta.annotation.Nullable final Json value) {
         this.rate = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final Json value) {
+    public void setType(@jakarta.annotation.Nullable final Json value) {
         this.type = value;
     }
 }

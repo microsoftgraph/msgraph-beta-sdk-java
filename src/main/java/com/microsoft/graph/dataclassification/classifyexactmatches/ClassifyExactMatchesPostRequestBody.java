@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -31,9 +32,7 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
     private String timeoutInMs;
     /**
      * Instantiates a new classifyExactMatchesPostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ClassifyExactMatchesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +41,8 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a classifyExactMatchesPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static ClassifyExactMatchesPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ClassifyExactMatchesPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ClassifyExactMatchesPostRequestBody();
     }
@@ -51,7 +50,7 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -59,7 +58,7 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
      * Gets the contentClassifications property value. The contentClassifications property
      * @return a contentClassification
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ContentClassification> getContentClassifications() {
         return this.contentClassifications;
     }
@@ -67,7 +66,7 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("contentClassifications", (n) -> { this.setContentClassifications(n.getCollectionOfObjectValues(ContentClassification::createFromDiscriminatorValue)); });
@@ -80,7 +79,7 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
      * Gets the sensitiveTypeIds property value. The sensitiveTypeIds property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSensitiveTypeIds() {
         return this.sensitiveTypeIds;
     }
@@ -88,7 +87,7 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
      * Gets the text property value. The text property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getText() {
         return this.text;
     }
@@ -96,17 +95,15 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
      * Gets the timeoutInMs property value. The timeoutInMs property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTimeoutInMs() {
         return this.timeoutInMs;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("contentClassifications", this.getContentClassifications());
         writer.writeCollectionOfPrimitiveValues("sensitiveTypeIds", this.getSensitiveTypeIds());
@@ -117,46 +114,36 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the contentClassifications property value. The contentClassifications property
      * @param value Value to set for the contentClassifications property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentClassifications(@javax.annotation.Nullable final java.util.List<ContentClassification> value) {
+    public void setContentClassifications(@jakarta.annotation.Nullable final java.util.List<ContentClassification> value) {
         this.contentClassifications = value;
     }
     /**
      * Sets the sensitiveTypeIds property value. The sensitiveTypeIds property
      * @param value Value to set for the sensitiveTypeIds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSensitiveTypeIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setSensitiveTypeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.sensitiveTypeIds = value;
     }
     /**
      * Sets the text property value. The text property
      * @param value Value to set for the text property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setText(@javax.annotation.Nullable final String value) {
+    public void setText(@jakarta.annotation.Nullable final String value) {
         this.text = value;
     }
     /**
      * Sets the timeoutInMs property value. The timeoutInMs property
      * @param value Value to set for the timeoutInMs property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTimeoutInMs(@javax.annotation.Nullable final String value) {
+    public void setTimeoutInMs(@jakarta.annotation.Nullable final String value) {
         this.timeoutInMs = value;
     }
 }

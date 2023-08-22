@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
     private String operatingSystem;
     /**
      * Instantiates a new authenticationAppDeviceDetails and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AuthenticationAppDeviceDetails() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +44,8 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a authenticationAppDeviceDetails
      */
-    @javax.annotation.Nonnull
-    public static AuthenticationAppDeviceDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AuthenticationAppDeviceDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AuthenticationAppDeviceDetails();
     }
@@ -54,7 +53,7 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +61,7 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
      * Gets the appVersion property value. The version of the client authentication app used during the authentication step.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppVersion() {
         return this.appVersion;
     }
@@ -70,7 +69,7 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
      * Gets the clientApp property value. The name of the client authentication app used during the authentication step.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClientApp() {
         return this.clientApp;
     }
@@ -78,7 +77,7 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
      * Gets the deviceId property value. ID of the device used during the authentication step.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -86,7 +85,7 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("appVersion", (n) -> { this.setAppVersion(n.getStringValue()); });
@@ -100,7 +99,7 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -108,17 +107,15 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
      * Gets the operatingSystem property value. The operating system running on the device used for the authentication step.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOperatingSystem() {
         return this.operatingSystem;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appVersion", this.getAppVersion());
         writer.writeStringValue("clientApp", this.getClientApp());
@@ -130,55 +127,43 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the appVersion property value. The version of the client authentication app used during the authentication step.
      * @param value Value to set for the appVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppVersion(@javax.annotation.Nullable final String value) {
+    public void setAppVersion(@jakarta.annotation.Nullable final String value) {
         this.appVersion = value;
     }
     /**
      * Sets the clientApp property value. The name of the client authentication app used during the authentication step.
      * @param value Value to set for the clientApp property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientApp(@javax.annotation.Nullable final String value) {
+    public void setClientApp(@jakarta.annotation.Nullable final String value) {
         this.clientApp = value;
     }
     /**
      * Sets the deviceId property value. ID of the device used during the authentication step.
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the operatingSystem property value. The operating system running on the device used for the authentication step.
      * @param value Value to set for the operatingSystem property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperatingSystem(@javax.annotation.Nullable final String value) {
+    public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.operatingSystem = value;
     }
 }

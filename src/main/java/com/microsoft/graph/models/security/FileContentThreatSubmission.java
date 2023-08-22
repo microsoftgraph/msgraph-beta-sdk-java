@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class FileContentThreatSubmission extends FileThreatSubmission implements Parsable {
     /**
      * It specifies the file content in base 64 format.
@@ -13,9 +14,7 @@ public class FileContentThreatSubmission extends FileThreatSubmission implements
     private String fileContent;
     /**
      * Instantiates a new fileContentThreatSubmission and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public FileContentThreatSubmission() {
         super();
         this.setOdataType("#microsoft.graph.security.fileContentThreatSubmission");
@@ -25,8 +24,8 @@ public class FileContentThreatSubmission extends FileThreatSubmission implements
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a fileContentThreatSubmission
      */
-    @javax.annotation.Nonnull
-    public static FileContentThreatSubmission createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static FileContentThreatSubmission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new FileContentThreatSubmission();
     }
@@ -34,7 +33,7 @@ public class FileContentThreatSubmission extends FileThreatSubmission implements
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("fileContent", (n) -> { this.setFileContent(n.getStringValue()); });
@@ -44,17 +43,15 @@ public class FileContentThreatSubmission extends FileThreatSubmission implements
      * Gets the fileContent property value. It specifies the file content in base 64 format.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFileContent() {
         return this.fileContent;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("fileContent", this.getFileContent());
@@ -62,10 +59,8 @@ public class FileContentThreatSubmission extends FileThreatSubmission implements
     /**
      * Sets the fileContent property value. It specifies the file content in base 64 format.
      * @param value Value to set for the fileContent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileContent(@javax.annotation.Nullable final String value) {
+    public void setFileContent(@jakarta.annotation.Nullable final String value) {
         this.fileContent = value;
     }
 }

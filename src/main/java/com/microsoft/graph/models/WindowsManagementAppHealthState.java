@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Windows management app health state entity.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsManagementAppHealthState extends Entity implements Parsable {
     /**
      * Name of the device on which Windows management app is installed.
@@ -33,9 +34,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
     private OffsetDateTime lastCheckInDateTime;
     /**
      * Instantiates a new windowsManagementAppHealthState and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsManagementAppHealthState() {
         super();
     }
@@ -44,8 +43,8 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsManagementAppHealthState
      */
-    @javax.annotation.Nonnull
-    public static WindowsManagementAppHealthState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsManagementAppHealthState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsManagementAppHealthState();
     }
@@ -53,7 +52,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
      * Gets the deviceName property value. Name of the device on which Windows management app is installed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -61,7 +60,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
      * Gets the deviceOSVersion property value. Windows 10 OS version of the device on which Windows management app is installed.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceOSVersion() {
         return this.deviceOSVersion;
     }
@@ -69,7 +68,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
@@ -83,7 +82,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
      * Gets the healthState property value. Indicates health state of the Windows management app.
      * @return a healthState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public HealthState getHealthState() {
         return this.healthState;
     }
@@ -91,7 +90,7 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
      * Gets the installedVersion property value. Windows management app installed version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInstalledVersion() {
         return this.installedVersion;
     }
@@ -99,17 +98,15 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
      * Gets the lastCheckInDateTime property value. Windows management app last check-in time.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastCheckInDateTime() {
         return this.lastCheckInDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("deviceName", this.getDeviceName());
@@ -121,46 +118,36 @@ public class WindowsManagementAppHealthState extends Entity implements Parsable 
     /**
      * Sets the deviceName property value. Name of the device on which Windows management app is installed.
      * @param value Value to set for the deviceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
      * Sets the deviceOSVersion property value. Windows 10 OS version of the device on which Windows management app is installed.
      * @param value Value to set for the deviceOSVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceOSVersion(@javax.annotation.Nullable final String value) {
+    public void setDeviceOSVersion(@jakarta.annotation.Nullable final String value) {
         this.deviceOSVersion = value;
     }
     /**
      * Sets the healthState property value. Indicates health state of the Windows management app.
      * @param value Value to set for the healthState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHealthState(@javax.annotation.Nullable final HealthState value) {
+    public void setHealthState(@jakarta.annotation.Nullable final HealthState value) {
         this.healthState = value;
     }
     /**
      * Sets the installedVersion property value. Windows management app installed version.
      * @param value Value to set for the installedVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstalledVersion(@javax.annotation.Nullable final String value) {
+    public void setInstalledVersion(@jakarta.annotation.Nullable final String value) {
         this.installedVersion = value;
     }
     /**
      * Sets the lastCheckInDateTime property value. Windows management app last check-in time.
      * @param value Value to set for the lastCheckInDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastCheckInDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastCheckInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastCheckInDateTime = value;
     }
 }

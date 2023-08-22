@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * FileVault State
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum FileVaultState implements ValuedEnum {
     /** FileVault State Success */
     Success("success"),
@@ -19,10 +20,10 @@ public enum FileVaultState implements ValuedEnum {
     FileVaultState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static FileVaultState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static FileVaultState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "success": return Success;

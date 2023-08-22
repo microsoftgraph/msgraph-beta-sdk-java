@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SiteCollection implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -30,9 +31,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
     private Root root;
     /**
      * Instantiates a new siteCollection and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SiteCollection() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,8 +40,8 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a siteCollection
      */
-    @javax.annotation.Nonnull
-    public static SiteCollection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SiteCollection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SiteCollection();
     }
@@ -50,7 +49,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -58,7 +57,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      * Gets the dataLocationCode property value. The geographic region code for where this site collection resides. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDataLocationCode() {
         return this.dataLocationCode;
     }
@@ -66,7 +65,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("dataLocationCode", (n) -> { this.setDataLocationCode(n.getStringValue()); });
@@ -79,7 +78,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      * Gets the hostname property value. The hostname for the site collection. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHostname() {
         return this.hostname;
     }
@@ -87,7 +86,7 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -95,17 +94,15 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
      * Gets the root property value. If present, indicates that this is a root site collection in SharePoint. Read-only.
      * @return a root
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Root getRoot() {
         return this.root;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("dataLocationCode", this.getDataLocationCode());
         writer.writeStringValue("hostname", this.getHostname());
@@ -116,46 +113,36 @@ public class SiteCollection implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the dataLocationCode property value. The geographic region code for where this site collection resides. Read-only.
      * @param value Value to set for the dataLocationCode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDataLocationCode(@javax.annotation.Nullable final String value) {
+    public void setDataLocationCode(@jakarta.annotation.Nullable final String value) {
         this.dataLocationCode = value;
     }
     /**
      * Sets the hostname property value. The hostname for the site collection. Read-only.
      * @param value Value to set for the hostname property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHostname(@javax.annotation.Nullable final String value) {
+    public void setHostname(@jakarta.annotation.Nullable final String value) {
         this.hostname = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the root property value. If present, indicates that this is a root site collection in SharePoint. Read-only.
      * @param value Value to set for the root property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoot(@javax.annotation.Nullable final Root value) {
+    public void setRoot(@jakarta.annotation.Nullable final Root value) {
         this.root = value;
     }
 }

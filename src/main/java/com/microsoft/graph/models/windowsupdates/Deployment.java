@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Deployment extends Entity implements Parsable {
     /**
      * Specifies the audience to which content is deployed.
@@ -35,9 +36,7 @@ public class Deployment extends Entity implements Parsable {
     private DeploymentState state;
     /**
      * Instantiates a new deployment and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Deployment() {
         super();
     }
@@ -46,8 +45,8 @@ public class Deployment extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deployment
      */
-    @javax.annotation.Nonnull
-    public static Deployment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Deployment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Deployment();
     }
@@ -55,7 +54,7 @@ public class Deployment extends Entity implements Parsable {
      * Gets the audience property value. Specifies the audience to which content is deployed.
      * @return a deploymentAudience
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeploymentAudience getAudience() {
         return this.audience;
     }
@@ -63,7 +62,7 @@ public class Deployment extends Entity implements Parsable {
      * Gets the content property value. Specifies what content to deploy. Cannot be changed. Returned by default.
      * @return a deployableContent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeployableContent getContent() {
         return this.content;
     }
@@ -71,7 +70,7 @@ public class Deployment extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time the deployment was created. Returned by default. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -79,7 +78,7 @@ public class Deployment extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("audience", (n) -> { this.setAudience(n.getObjectValue(DeploymentAudience::createFromDiscriminatorValue)); });
@@ -94,7 +93,7 @@ public class Deployment extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time the deployment was last modified. Returned by default. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -102,7 +101,7 @@ public class Deployment extends Entity implements Parsable {
      * Gets the settings property value. Settings specified on the specific deployment governing how to deploy content. Returned by default.
      * @return a deploymentSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeploymentSettings getSettings() {
         return this.settings;
     }
@@ -110,17 +109,15 @@ public class Deployment extends Entity implements Parsable {
      * Gets the state property value. Execution status of the deployment. Returned by default.
      * @return a deploymentState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeploymentState getState() {
         return this.state;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("audience", this.getAudience());
@@ -133,55 +130,43 @@ public class Deployment extends Entity implements Parsable {
     /**
      * Sets the audience property value. Specifies the audience to which content is deployed.
      * @param value Value to set for the audience property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAudience(@javax.annotation.Nullable final DeploymentAudience value) {
+    public void setAudience(@jakarta.annotation.Nullable final DeploymentAudience value) {
         this.audience = value;
     }
     /**
      * Sets the content property value. Specifies what content to deploy. Cannot be changed. Returned by default.
      * @param value Value to set for the content property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContent(@javax.annotation.Nullable final DeployableContent value) {
+    public void setContent(@jakarta.annotation.Nullable final DeployableContent value) {
         this.content = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time the deployment was created. Returned by default. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the deployment was last modified. Returned by default. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the settings property value. Settings specified on the specific deployment governing how to deploy content. Returned by default.
      * @param value Value to set for the settings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettings(@javax.annotation.Nullable final DeploymentSettings value) {
+    public void setSettings(@jakarta.annotation.Nullable final DeploymentSettings value) {
         this.settings = value;
     }
     /**
      * Sets the state property value. Execution status of the deployment. Returned by default.
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final DeploymentState value) {
+    public void setState(@jakarta.annotation.Nullable final DeploymentState value) {
         this.state = value;
     }
 }

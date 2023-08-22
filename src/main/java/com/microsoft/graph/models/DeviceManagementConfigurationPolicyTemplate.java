@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Device Management Configuration Policy Template
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationPolicyTemplate extends Entity implements Parsable {
     /**
      * Allow unmanaged setting templates
@@ -60,9 +61,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     private Integer version;
     /**
      * Instantiates a new deviceManagementConfigurationPolicyTemplate and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementConfigurationPolicyTemplate() {
         super();
     }
@@ -71,8 +70,8 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationPolicyTemplate
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationPolicyTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationPolicyTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationPolicyTemplate();
     }
@@ -80,7 +79,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * Gets the allowUnmanagedSettings property value. Allow unmanaged setting templates
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowUnmanagedSettings() {
         return this.allowUnmanagedSettings;
     }
@@ -88,7 +87,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * Gets the baseId property value. Template base identifier
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBaseId() {
         return this.baseId;
     }
@@ -96,7 +95,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * Gets the description property value. Template description
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -104,7 +103,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * Gets the displayName property value. Template display name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -112,7 +111,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * Gets the displayVersion property value. Description of template version
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayVersion() {
         return this.displayVersion;
     }
@@ -120,7 +119,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowUnmanagedSettings", (n) -> { this.setAllowUnmanagedSettings(n.getBooleanValue()); });
@@ -141,7 +140,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * Gets the lifecycleState property value. Describes current lifecycle state of a template
      * @return a deviceManagementTemplateLifecycleState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementTemplateLifecycleState getLifecycleState() {
         return this.lifecycleState;
     }
@@ -149,7 +148,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * Gets the platforms property value. Supported platform types.
      * @return a deviceManagementConfigurationPlatforms
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationPlatforms getPlatforms() {
         return this.platforms;
     }
@@ -157,7 +156,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * Gets the settingTemplateCount property value. Number of setting templates. Valid values 0 to 2147483647. This property is read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSettingTemplateCount() {
         return this.settingTemplateCount;
     }
@@ -165,7 +164,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * Gets the settingTemplates property value. Setting templates
      * @return a deviceManagementConfigurationSettingTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingTemplate> getSettingTemplates() {
         return this.settingTemplates;
     }
@@ -173,7 +172,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * Gets the technologies property value. Describes which technology this setting can be deployed with
      * @return a deviceManagementConfigurationTechnologies
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationTechnologies getTechnologies() {
         return this.technologies;
     }
@@ -181,7 +180,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * Gets the templateFamily property value. Describes the TemplateFamily for the Template entity
      * @return a deviceManagementConfigurationTemplateFamily
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceManagementConfigurationTemplateFamily getTemplateFamily() {
         return this.templateFamily;
     }
@@ -189,17 +188,15 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * Gets the version property value. Template version. Valid values 1 to 2147483647. This property is read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getVersion() {
         return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("allowUnmanagedSettings", this.getAllowUnmanagedSettings());
@@ -216,109 +213,85 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     /**
      * Sets the allowUnmanagedSettings property value. Allow unmanaged setting templates
      * @param value Value to set for the allowUnmanagedSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowUnmanagedSettings(@javax.annotation.Nullable final Boolean value) {
+    public void setAllowUnmanagedSettings(@jakarta.annotation.Nullable final Boolean value) {
         this.allowUnmanagedSettings = value;
     }
     /**
      * Sets the baseId property value. Template base identifier
      * @param value Value to set for the baseId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBaseId(@javax.annotation.Nullable final String value) {
+    public void setBaseId(@jakarta.annotation.Nullable final String value) {
         this.baseId = value;
     }
     /**
      * Sets the description property value. Template description
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. Template display name
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the displayVersion property value. Description of template version
      * @param value Value to set for the displayVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayVersion(@javax.annotation.Nullable final String value) {
+    public void setDisplayVersion(@jakarta.annotation.Nullable final String value) {
         this.displayVersion = value;
     }
     /**
      * Sets the lifecycleState property value. Describes current lifecycle state of a template
      * @param value Value to set for the lifecycleState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLifecycleState(@javax.annotation.Nullable final DeviceManagementTemplateLifecycleState value) {
+    public void setLifecycleState(@jakarta.annotation.Nullable final DeviceManagementTemplateLifecycleState value) {
         this.lifecycleState = value;
     }
     /**
      * Sets the platforms property value. Supported platform types.
      * @param value Value to set for the platforms property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatforms(@javax.annotation.Nullable final DeviceManagementConfigurationPlatforms value) {
+    public void setPlatforms(@jakarta.annotation.Nullable final DeviceManagementConfigurationPlatforms value) {
         this.platforms = value;
     }
     /**
      * Sets the settingTemplateCount property value. Number of setting templates. Valid values 0 to 2147483647. This property is read-only.
      * @param value Value to set for the settingTemplateCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingTemplateCount(@javax.annotation.Nullable final Integer value) {
+    public void setSettingTemplateCount(@jakarta.annotation.Nullable final Integer value) {
         this.settingTemplateCount = value;
     }
     /**
      * Sets the settingTemplates property value. Setting templates
      * @param value Value to set for the settingTemplates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingTemplates(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingTemplate> value) {
+    public void setSettingTemplates(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingTemplate> value) {
         this.settingTemplates = value;
     }
     /**
      * Sets the technologies property value. Describes which technology this setting can be deployed with
      * @param value Value to set for the technologies property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTechnologies(@javax.annotation.Nullable final DeviceManagementConfigurationTechnologies value) {
+    public void setTechnologies(@jakarta.annotation.Nullable final DeviceManagementConfigurationTechnologies value) {
         this.technologies = value;
     }
     /**
      * Sets the templateFamily property value. Describes the TemplateFamily for the Template entity
      * @param value Value to set for the templateFamily property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTemplateFamily(@javax.annotation.Nullable final DeviceManagementConfigurationTemplateFamily value) {
+    public void setTemplateFamily(@jakarta.annotation.Nullable final DeviceManagementConfigurationTemplateFamily value) {
         this.templateFamily = value;
     }
     /**
      * Sets the version property value. Template version. Valid values 1 to 2147483647. This property is read-only.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final Integer value) {
+    public void setVersion(@jakarta.annotation.Nullable final Integer value) {
         this.version = value;
     }
 }

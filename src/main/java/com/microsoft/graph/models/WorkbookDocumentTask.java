@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookDocumentTask extends Entity implements Parsable {
     /**
      * The assignees property
@@ -54,9 +55,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     private String title;
     /**
      * Instantiates a new workbookDocumentTask and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WorkbookDocumentTask() {
         super();
     }
@@ -65,8 +64,8 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workbookDocumentTask
      */
-    @javax.annotation.Nonnull
-    public static WorkbookDocumentTask createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WorkbookDocumentTask createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WorkbookDocumentTask();
     }
@@ -74,7 +73,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
      * Gets the assignees property value. The assignees property
      * @return a workbookEmailIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WorkbookEmailIdentity> getAssignees() {
         return this.assignees;
     }
@@ -82,7 +81,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
      * Gets the changes property value. The changes property
      * @return a workbookDocumentTaskChange
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WorkbookDocumentTaskChange> getChanges() {
         return this.changes;
     }
@@ -90,7 +89,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
      * Gets the comment property value. The comment property
      * @return a workbookComment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookComment getComment() {
         return this.comment;
     }
@@ -98,7 +97,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
      * Gets the completedBy property value. The completedBy property
      * @return a workbookEmailIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookEmailIdentity getCompletedBy() {
         return this.completedBy;
     }
@@ -106,7 +105,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
      * Gets the completedDateTime property value. The completedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
         return this.completedDateTime;
     }
@@ -114,7 +113,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
      * Gets the createdBy property value. The createdBy property
      * @return a workbookEmailIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookEmailIdentity getCreatedBy() {
         return this.createdBy;
     }
@@ -122,7 +121,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
      * Gets the createdDateTime property value. The createdDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -130,7 +129,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignees", (n) -> { this.setAssignees(n.getCollectionOfObjectValues(WorkbookEmailIdentity::createFromDiscriminatorValue)); });
@@ -150,7 +149,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
      * Gets the percentComplete property value. The percentComplete property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPercentComplete() {
         return this.percentComplete;
     }
@@ -158,7 +157,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
      * Gets the priority property value. The priority property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPriority() {
         return this.priority;
     }
@@ -166,7 +165,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
      * Gets the startAndDueDateTime property value. The startAndDueDateTime property
      * @return a workbookDocumentTaskSchedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookDocumentTaskSchedule getStartAndDueDateTime() {
         return this.startAndDueDateTime;
     }
@@ -174,17 +173,15 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
      * Gets the title property value. The title property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTitle() {
         return this.title;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignees", this.getAssignees());
@@ -202,100 +199,78 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     /**
      * Sets the assignees property value. The assignees property
      * @param value Value to set for the assignees property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignees(@javax.annotation.Nullable final java.util.List<WorkbookEmailIdentity> value) {
+    public void setAssignees(@jakarta.annotation.Nullable final java.util.List<WorkbookEmailIdentity> value) {
         this.assignees = value;
     }
     /**
      * Sets the changes property value. The changes property
      * @param value Value to set for the changes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChanges(@javax.annotation.Nullable final java.util.List<WorkbookDocumentTaskChange> value) {
+    public void setChanges(@jakarta.annotation.Nullable final java.util.List<WorkbookDocumentTaskChange> value) {
         this.changes = value;
     }
     /**
      * Sets the comment property value. The comment property
      * @param value Value to set for the comment property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComment(@javax.annotation.Nullable final WorkbookComment value) {
+    public void setComment(@jakarta.annotation.Nullable final WorkbookComment value) {
         this.comment = value;
     }
     /**
      * Sets the completedBy property value. The completedBy property
      * @param value Value to set for the completedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedBy(@javax.annotation.Nullable final WorkbookEmailIdentity value) {
+    public void setCompletedBy(@jakarta.annotation.Nullable final WorkbookEmailIdentity value) {
         this.completedBy = value;
     }
     /**
      * Sets the completedDateTime property value. The completedDateTime property
      * @param value Value to set for the completedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completedDateTime = value;
     }
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final WorkbookEmailIdentity value) {
+    public void setCreatedBy(@jakarta.annotation.Nullable final WorkbookEmailIdentity value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the percentComplete property value. The percentComplete property
      * @param value Value to set for the percentComplete property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPercentComplete(@javax.annotation.Nullable final Integer value) {
+    public void setPercentComplete(@jakarta.annotation.Nullable final Integer value) {
         this.percentComplete = value;
     }
     /**
      * Sets the priority property value. The priority property
      * @param value Value to set for the priority property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPriority(@javax.annotation.Nullable final Integer value) {
+    public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.priority = value;
     }
     /**
      * Sets the startAndDueDateTime property value. The startAndDueDateTime property
      * @param value Value to set for the startAndDueDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartAndDueDateTime(@javax.annotation.Nullable final WorkbookDocumentTaskSchedule value) {
+    public void setStartAndDueDateTime(@jakarta.annotation.Nullable final WorkbookDocumentTaskSchedule value) {
         this.startAndDueDateTime = value;
     }
     /**
      * Sets the title property value. The title property
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTitle(@javax.annotation.Nullable final String value) {
+    public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
 }

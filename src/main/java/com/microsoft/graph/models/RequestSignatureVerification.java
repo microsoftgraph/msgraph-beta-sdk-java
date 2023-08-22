@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RequestSignatureVerification implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
     private String odataType;
     /**
      * Instantiates a new requestSignatureVerification and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public RequestSignatureVerification() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +36,8 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a requestSignatureVerification
      */
-    @javax.annotation.Nonnull
-    public static RequestSignatureVerification createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RequestSignatureVerification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RequestSignatureVerification();
     }
@@ -46,7 +45,7 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +53,7 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
      * Gets the allowedWeakAlgorithms property value. Specifies whether this application accepts weak algorithms.  The possible values are: rsaSha1, unknownFutureValue.
      * @return a weakAlgorithms
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WeakAlgorithms getAllowedWeakAlgorithms() {
         return this.allowedWeakAlgorithms;
     }
@@ -62,7 +61,7 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("allowedWeakAlgorithms", (n) -> { this.setAllowedWeakAlgorithms(n.getEnumValue(WeakAlgorithms.class)); });
@@ -74,7 +73,7 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
      * Gets the isSignedRequestRequired property value. Specifies whether signed authentication requests for this application should be required.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSignedRequestRequired() {
         return this.isSignedRequestRequired;
     }
@@ -82,17 +81,15 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("allowedWeakAlgorithms", this.getAllowedWeakAlgorithms());
         writer.writeBooleanValue("isSignedRequestRequired", this.getIsSignedRequestRequired());
@@ -102,37 +99,29 @@ public class RequestSignatureVerification implements AdditionalDataHolder, Parsa
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowedWeakAlgorithms property value. Specifies whether this application accepts weak algorithms.  The possible values are: rsaSha1, unknownFutureValue.
      * @param value Value to set for the allowedWeakAlgorithms property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowedWeakAlgorithms(@javax.annotation.Nullable final WeakAlgorithms value) {
+    public void setAllowedWeakAlgorithms(@jakarta.annotation.Nullable final WeakAlgorithms value) {
         this.allowedWeakAlgorithms = value;
     }
     /**
      * Sets the isSignedRequestRequired property value. Specifies whether signed authentication requests for this application should be required.
      * @param value Value to set for the isSignedRequestRequired property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSignedRequestRequired(@javax.annotation.Nullable final Boolean value) {
+    public void setIsSignedRequestRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isSignedRequestRequired = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

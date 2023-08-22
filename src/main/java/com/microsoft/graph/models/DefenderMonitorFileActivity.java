@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for monitoring file activity.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DefenderMonitorFileActivity implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),
@@ -21,10 +22,10 @@ public enum DefenderMonitorFileActivity implements ValuedEnum {
     DefenderMonitorFileActivity(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DefenderMonitorFileActivity forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DefenderMonitorFileActivity forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "userDefined": return UserDefined;

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Scope of the group policy setting.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum GroupPolicySettingScope implements ValuedEnum {
     /** Device scope unknown */
     Unknown("unknown"),
@@ -17,10 +18,10 @@ public enum GroupPolicySettingScope implements ValuedEnum {
     GroupPolicySettingScope(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static GroupPolicySettingScope forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static GroupPolicySettingScope forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

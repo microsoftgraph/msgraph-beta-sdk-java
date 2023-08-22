@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Setting implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
     private ManagementParameterValueType valueType;
     /**
      * Instantiates a new setting and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Setting() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +48,8 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a setting
      */
-    @javax.annotation.Nonnull
-    public static Setting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Setting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Setting();
     }
@@ -58,7 +57,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +65,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * Gets the displayName property value. The display name for the setting. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -74,7 +73,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -89,7 +88,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * Gets the jsonValue property value. The value for the setting serialized as string of JSON. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getJsonValue() {
         return this.jsonValue;
     }
@@ -97,7 +96,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -105,7 +104,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * Gets the overwriteAllowed property value. A flag indicating whether the setting can be override existing configurations when applied. Required. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getOverwriteAllowed() {
         return this.overwriteAllowed;
     }
@@ -113,7 +112,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * Gets the settingId property value. The settingId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSettingId() {
         return this.settingId;
     }
@@ -121,17 +120,15 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * Gets the valueType property value. The valueType property
      * @return a managementParameterValueType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagementParameterValueType getValueType() {
         return this.valueType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("jsonValue", this.getJsonValue());
@@ -144,64 +141,50 @@ public class Setting implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the displayName property value. The display name for the setting. Required. Read-only.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the jsonValue property value. The value for the setting serialized as string of JSON. Required. Read-only.
      * @param value Value to set for the jsonValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJsonValue(@javax.annotation.Nullable final String value) {
+    public void setJsonValue(@jakarta.annotation.Nullable final String value) {
         this.jsonValue = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the overwriteAllowed property value. A flag indicating whether the setting can be override existing configurations when applied. Required. Read-only.
      * @param value Value to set for the overwriteAllowed property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOverwriteAllowed(@javax.annotation.Nullable final Boolean value) {
+    public void setOverwriteAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.overwriteAllowed = value;
     }
     /**
      * Sets the settingId property value. The settingId property
      * @param value Value to set for the settingId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettingId(@javax.annotation.Nullable final String value) {
+    public void setSettingId(@jakarta.annotation.Nullable final String value) {
         this.settingId = value;
     }
     /**
      * Sets the valueType property value. The valueType property
      * @param value Value to set for the valueType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValueType(@javax.annotation.Nullable final ManagementParameterValueType value) {
+    public void setValueType(@jakarta.annotation.Nullable final ManagementParameterValueType value) {
         this.valueType = value;
     }
 }

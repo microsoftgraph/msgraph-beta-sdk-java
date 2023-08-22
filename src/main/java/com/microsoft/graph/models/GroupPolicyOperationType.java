@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Type of Group Policy operation.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum GroupPolicyOperationType implements ValuedEnum {
     /** Group Policy invalid operation type. */
     None("none"),
@@ -25,10 +26,10 @@ public enum GroupPolicyOperationType implements ValuedEnum {
     GroupPolicyOperationType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static GroupPolicyOperationType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static GroupPolicyOperationType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

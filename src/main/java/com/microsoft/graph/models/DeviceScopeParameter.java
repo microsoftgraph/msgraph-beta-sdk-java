@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Device scope configuration parameter. It will be expend in future to add more parameter. Eg: device scope parameter can be OS version, Disk Type, Device manufacturer, device model or Scope tag. Default value: scopeTag.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceScopeParameter implements ValuedEnum {
     /** Device Scope parameter is not set */
     None("none"),
@@ -17,10 +18,10 @@ public enum DeviceScopeParameter implements ValuedEnum {
     DeviceScopeParameter(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceScopeParameter forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceScopeParameter forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

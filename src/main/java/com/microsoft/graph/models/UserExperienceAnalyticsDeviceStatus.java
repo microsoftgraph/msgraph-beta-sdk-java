@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the status of the device in the correlation group. Eg: Device status can be anomalous, affected, at risk.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum UserExperienceAnalyticsDeviceStatus implements ValuedEnum {
     /** Indicates the the device is part of the anomaly. */
     Anomalous("anomalous"),
@@ -19,10 +20,10 @@ public enum UserExperienceAnalyticsDeviceStatus implements ValuedEnum {
     UserExperienceAnalyticsDeviceStatus(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static UserExperienceAnalyticsDeviceStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static UserExperienceAnalyticsDeviceStatus forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "anomalous": return Anomalous;

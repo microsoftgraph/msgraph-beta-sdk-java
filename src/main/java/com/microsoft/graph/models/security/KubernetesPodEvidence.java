@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     /**
      * The list of pod containers which are not init or ephemeral containers.
@@ -45,9 +46,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     private KubernetesServiceAccountEvidence serviceAccount;
     /**
      * Instantiates a new kubernetesPodEvidence and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public KubernetesPodEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.kubernetesPodEvidence");
@@ -57,8 +56,8 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a kubernetesPodEvidence
      */
-    @javax.annotation.Nonnull
-    public static KubernetesPodEvidence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static KubernetesPodEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new KubernetesPodEvidence();
     }
@@ -66,7 +65,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
      * Gets the containers property value. The list of pod containers which are not init or ephemeral containers.
      * @return a containerEvidence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ContainerEvidence> getContainers() {
         return this.containers;
     }
@@ -74,7 +73,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
      * Gets the controller property value. The pod controller.
      * @return a kubernetesControllerEvidence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public KubernetesControllerEvidence getController() {
         return this.controller;
     }
@@ -82,7 +81,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
      * Gets the ephemeralContainers property value. The list of pod ephemeral containers.
      * @return a containerEvidence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ContainerEvidence> getEphemeralContainers() {
         return this.ephemeralContainers;
     }
@@ -90,7 +89,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("containers", (n) -> { this.setContainers(n.getCollectionOfObjectValues(ContainerEvidence::createFromDiscriminatorValue)); });
@@ -108,7 +107,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
      * Gets the initContainers property value. The list of pod init containers.
      * @return a containerEvidence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ContainerEvidence> getInitContainers() {
         return this.initContainers;
     }
@@ -116,7 +115,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
      * Gets the labels property value. The pod labels.
      * @return a dictionary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Dictionary getLabels() {
         return this.labels;
     }
@@ -124,7 +123,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
      * Gets the name property value. The pod name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -132,7 +131,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
      * Gets the namespace property value. The pod namespace.
      * @return a kubernetesNamespaceEvidence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public KubernetesNamespaceEvidence getNamespace() {
         return this.namespace;
     }
@@ -140,7 +139,7 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
      * Gets the podIp property value. The pod IP.
      * @return a ipEvidence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IpEvidence getPodIp() {
         return this.podIp;
     }
@@ -148,17 +147,15 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
      * Gets the serviceAccount property value. The pod service account.
      * @return a kubernetesServiceAccountEvidence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public KubernetesServiceAccountEvidence getServiceAccount() {
         return this.serviceAccount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("containers", this.getContainers());
@@ -174,82 +171,64 @@ public class KubernetesPodEvidence extends AlertEvidence implements Parsable {
     /**
      * Sets the containers property value. The list of pod containers which are not init or ephemeral containers.
      * @param value Value to set for the containers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContainers(@javax.annotation.Nullable final java.util.List<ContainerEvidence> value) {
+    public void setContainers(@jakarta.annotation.Nullable final java.util.List<ContainerEvidence> value) {
         this.containers = value;
     }
     /**
      * Sets the controller property value. The pod controller.
      * @param value Value to set for the controller property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setController(@javax.annotation.Nullable final KubernetesControllerEvidence value) {
+    public void setController(@jakarta.annotation.Nullable final KubernetesControllerEvidence value) {
         this.controller = value;
     }
     /**
      * Sets the ephemeralContainers property value. The list of pod ephemeral containers.
      * @param value Value to set for the ephemeralContainers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEphemeralContainers(@javax.annotation.Nullable final java.util.List<ContainerEvidence> value) {
+    public void setEphemeralContainers(@jakarta.annotation.Nullable final java.util.List<ContainerEvidence> value) {
         this.ephemeralContainers = value;
     }
     /**
      * Sets the initContainers property value. The list of pod init containers.
      * @param value Value to set for the initContainers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitContainers(@javax.annotation.Nullable final java.util.List<ContainerEvidence> value) {
+    public void setInitContainers(@jakarta.annotation.Nullable final java.util.List<ContainerEvidence> value) {
         this.initContainers = value;
     }
     /**
      * Sets the labels property value. The pod labels.
      * @param value Value to set for the labels property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabels(@javax.annotation.Nullable final Dictionary value) {
+    public void setLabels(@jakarta.annotation.Nullable final Dictionary value) {
         this.labels = value;
     }
     /**
      * Sets the name property value. The pod name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the namespace property value. The pod namespace.
      * @param value Value to set for the namespace property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNamespace(@javax.annotation.Nullable final KubernetesNamespaceEvidence value) {
+    public void setNamespace(@jakarta.annotation.Nullable final KubernetesNamespaceEvidence value) {
         this.namespace = value;
     }
     /**
      * Sets the podIp property value. The pod IP.
      * @param value Value to set for the podIp property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPodIp(@javax.annotation.Nullable final IpEvidence value) {
+    public void setPodIp(@jakarta.annotation.Nullable final IpEvidence value) {
         this.podIp = value;
     }
     /**
      * Sets the serviceAccount property value. The pod service account.
      * @param value Value to set for the serviceAccount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServiceAccount(@javax.annotation.Nullable final KubernetesServiceAccountEvidence value) {
+    public void setServiceAccount(@jakarta.annotation.Nullable final KubernetesServiceAccountEvidence value) {
         this.serviceAccount = value;
     }
 }

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible statuses associated with a generated report
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementReportStatus implements ValuedEnum {
     /** Report generation status is unknown */
     Unknown("unknown"),
@@ -21,10 +22,10 @@ public enum DeviceManagementReportStatus implements ValuedEnum {
     DeviceManagementReportStatus(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementReportStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementReportStatus forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

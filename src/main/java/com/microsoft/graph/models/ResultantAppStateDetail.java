@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Enum indicating additional details regarding why an application has a particular install state.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ResultantAppStateDetail implements ValuedEnum {
     /** Device architecture (e.g. x86/amd64) is not applicable for the application. */
     ProcessorArchitectureNotApplicable("processorArchitectureNotApplicable"),
@@ -83,10 +84,10 @@ public enum ResultantAppStateDetail implements ValuedEnum {
     ResultantAppStateDetail(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ResultantAppStateDetail forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ResultantAppStateDetail forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "processorArchitectureNotApplicable": return ProcessorArchitectureNotApplicable;

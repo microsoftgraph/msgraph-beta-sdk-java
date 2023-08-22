@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * An enum type to represent approval actions of single or list of drivers.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DriverApprovalAction implements ValuedEnum {
     /** This indicates the action to approve single or list of drivers. */
     Approve("approve"),
@@ -17,10 +18,10 @@ public enum DriverApprovalAction implements ValuedEnum {
     DriverApprovalAction(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DriverApprovalAction forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DriverApprovalAction forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "approve": return Approve;

@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SetPositionPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -23,9 +24,7 @@ public class SetPositionPostRequestBody implements AdditionalDataHolder, Parsabl
     private Json startCell;
     /**
      * Instantiates a new setPositionPostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SetPositionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -34,8 +33,8 @@ public class SetPositionPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a setPositionPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static SetPositionPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SetPositionPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SetPositionPostRequestBody();
     }
@@ -43,7 +42,7 @@ public class SetPositionPostRequestBody implements AdditionalDataHolder, Parsabl
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -51,7 +50,7 @@ public class SetPositionPostRequestBody implements AdditionalDataHolder, Parsabl
      * Gets the endCell property value. The endCell property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getEndCell() {
         return this.endCell;
     }
@@ -59,7 +58,7 @@ public class SetPositionPostRequestBody implements AdditionalDataHolder, Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("endCell", (n) -> { this.setEndCell(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -70,17 +69,15 @@ public class SetPositionPostRequestBody implements AdditionalDataHolder, Parsabl
      * Gets the startCell property value. The startCell property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getStartCell() {
         return this.startCell;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("endCell", this.getEndCell());
         writer.writeObjectValue("startCell", this.getStartCell());
@@ -89,28 +86,22 @@ public class SetPositionPostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the endCell property value. The endCell property
      * @param value Value to set for the endCell property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEndCell(@javax.annotation.Nullable final Json value) {
+    public void setEndCell(@jakarta.annotation.Nullable final Json value) {
         this.endCell = value;
     }
     /**
      * Sets the startCell property value. The startCell property
      * @param value Value to set for the startCell property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartCell(@javax.annotation.Nullable final Json value) {
+    public void setStartCell(@jakarta.annotation.Nullable final Json value) {
         this.startCell = value;
     }
 }

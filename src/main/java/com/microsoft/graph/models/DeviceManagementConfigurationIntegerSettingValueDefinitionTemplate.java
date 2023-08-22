@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Integer Setting Value Definition Template
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -29,9 +30,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     private String odataType;
     /**
      * Instantiates a new deviceManagementConfigurationIntegerSettingValueDefinitionTemplate and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -40,8 +39,8 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationIntegerSettingValueDefinitionTemplate
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate();
     }
@@ -49,7 +48,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -57,7 +56,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("maxValue", (n) -> { this.setMaxValue(n.getIntegerValue()); });
@@ -69,7 +68,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
      * Gets the maxValue property value. Integer Setting Maximum Value. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaxValue() {
         return this.maxValue;
     }
@@ -77,7 +76,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
      * Gets the minValue property value. Integer Setting Minimum Value. Valid values -2147483648 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMinValue() {
         return this.minValue;
     }
@@ -85,17 +84,15 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("maxValue", this.getMaxValue());
         writer.writeIntegerValue("minValue", this.getMinValue());
@@ -105,37 +102,29 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the maxValue property value. Integer Setting Maximum Value. Valid values -2147483648 to 2147483647
      * @param value Value to set for the maxValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaxValue(@javax.annotation.Nullable final Integer value) {
+    public void setMaxValue(@jakarta.annotation.Nullable final Integer value) {
         this.maxValue = value;
     }
     /**
      * Sets the minValue property value. Integer Setting Minimum Value. Valid values -2147483648 to 2147483647
      * @param value Value to set for the minValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinValue(@javax.annotation.Nullable final Integer value) {
+    public void setMinValue(@jakarta.annotation.Nullable final Integer value) {
         this.minValue = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

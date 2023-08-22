@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for firewallCertificateRevocationListCheckMethod
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum FirewallCertificateRevocationListCheckMethodType implements ValuedEnum {
     /** No value configured by Intune, do not override the user-configured device default value */
     DeviceDefault("deviceDefault"),
@@ -19,10 +20,10 @@ public enum FirewallCertificateRevocationListCheckMethodType implements ValuedEn
     FirewallCertificateRevocationListCheckMethodType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static FirewallCertificateRevocationListCheckMethodType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static FirewallCertificateRevocationListCheckMethodType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "deviceDefault": return DeviceDefault;

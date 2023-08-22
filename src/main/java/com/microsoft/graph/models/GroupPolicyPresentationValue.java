@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * The base presentation value entity that stores the value for a single group policy presentation.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyPresentationValue extends Entity implements Parsable {
     /**
      * The date and time the object was created.
@@ -29,9 +30,7 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
     private GroupPolicyPresentation presentation;
     /**
      * Instantiates a new groupPolicyPresentationValue and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public GroupPolicyPresentationValue() {
         super();
     }
@@ -40,8 +39,8 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a groupPolicyPresentationValue
      */
-    @javax.annotation.Nonnull
-    public static GroupPolicyPresentationValue createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GroupPolicyPresentationValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -61,7 +60,7 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time the object was created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -69,7 +68,7 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
      * Gets the definitionValue property value. The group policy definition value associated with the presentation value.
      * @return a groupPolicyDefinitionValue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GroupPolicyDefinitionValue getDefinitionValue() {
         return this.definitionValue;
     }
@@ -77,7 +76,7 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -90,7 +89,7 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time the object was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -98,17 +97,15 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
      * Gets the presentation property value. The group policy presentation associated with the presentation value.
      * @return a groupPolicyPresentation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public GroupPolicyPresentation getPresentation() {
         return this.presentation;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -119,37 +116,29 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
     /**
      * Sets the createdDateTime property value. The date and time the object was created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the definitionValue property value. The group policy definition value associated with the presentation value.
      * @param value Value to set for the definitionValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefinitionValue(@javax.annotation.Nullable final GroupPolicyDefinitionValue value) {
+    public void setDefinitionValue(@jakarta.annotation.Nullable final GroupPolicyDefinitionValue value) {
         this.definitionValue = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the presentation property value. The group policy presentation associated with the presentation value.
      * @param value Value to set for the presentation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPresentation(@javax.annotation.Nullable final GroupPolicyPresentation value) {
+    public void setPresentation(@jakarta.annotation.Nullable final GroupPolicyPresentation value) {
         this.presentation = value;
     }
 }

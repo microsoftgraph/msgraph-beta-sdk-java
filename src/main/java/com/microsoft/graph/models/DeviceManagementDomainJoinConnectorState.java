@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The ODJ request states.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementDomainJoinConnectorState implements ValuedEnum {
     /** Connector is actively pinging Intune. */
     Active("active"),
@@ -17,10 +18,10 @@ public enum DeviceManagementDomainJoinConnectorState implements ValuedEnum {
     DeviceManagementDomainJoinConnectorState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementDomainJoinConnectorState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementDomainJoinConnectorState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "active": return Active;

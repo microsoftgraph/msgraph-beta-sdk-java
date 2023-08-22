@@ -7,52 +7,51 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationModule extends Entity implements Parsable {
     /**
-     * The createdBy property
+     * The display name of the user that created the module.
      */
     private IdentitySet createdBy;
     /**
-     * The createdDateTime property
+     * Date time the module was created.  The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
      */
     private OffsetDateTime createdDateTime;
     /**
-     * The description property
+     * Description of the module.
      */
     private String description;
     /**
-     * The displayName property
+     * Name of the module.
      */
     private String displayName;
     /**
-     * The isPinned property
+     * Indicates whether the module is pinned or not.
      */
     private Boolean isPinned;
     /**
-     * The lastModifiedBy property
+     * The last user that modified the module.
      */
     private IdentitySet lastModifiedBy;
     /**
-     * The lastModifiedDateTime property
+     * Date time the module was last modified.  The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
-     * The resources property
+     * Learning objects that are associated with this module.  Only teachers can modify this list. Nullable.
      */
     private java.util.List<EducationModuleResource> resources;
     /**
-     * The resourcesFolderUrl property
+     * Folder URL where all the file resources for this module are stored.
      */
     private String resourcesFolderUrl;
     /**
-     * The status property
+     * Status of the module.  You can't use a PATCH operation to update this value. Possible values are: draft and published.
      */
     private EducationModuleStatus status;
     /**
      * Instantiates a new educationModule and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EducationModule() {
         super();
     }
@@ -61,40 +60,40 @@ public class EducationModule extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationModule
      */
-    @javax.annotation.Nonnull
-    public static EducationModule createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationModule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationModule();
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. The display name of the user that created the module.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date time the module was created.  The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the module.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Name of the module.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -102,7 +101,7 @@ public class EducationModule extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -118,60 +117,58 @@ public class EducationModule extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isPinned property value. The isPinned property
+     * Gets the isPinned property value. Indicates whether the module is pinned or not.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsPinned() {
         return this.isPinned;
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. The last user that modified the module.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Date time the module was last modified.  The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
     /**
-     * Gets the resources property value. The resources property
+     * Gets the resources property value. Learning objects that are associated with this module.  Only teachers can modify this list. Nullable.
      * @return a educationModuleResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EducationModuleResource> getResources() {
         return this.resources;
     }
     /**
-     * Gets the resourcesFolderUrl property value. The resourcesFolderUrl property
+     * Gets the resourcesFolderUrl property value. Folder URL where all the file resources for this module are stored.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourcesFolderUrl() {
         return this.resourcesFolderUrl;
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Status of the module.  You can't use a PATCH operation to update this value. Possible values are: draft and published.
      * @return a educationModuleStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationModuleStatus getStatus() {
         return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -180,93 +177,73 @@ public class EducationModule extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("resources", this.getResources());
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. The display name of the user that created the module.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date time the module was created.  The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the module.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Name of the module.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
-     * Sets the isPinned property value. The isPinned property
+     * Sets the isPinned property value. Indicates whether the module is pinned or not.
      * @param value Value to set for the isPinned property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsPinned(@javax.annotation.Nullable final Boolean value) {
+    public void setIsPinned(@jakarta.annotation.Nullable final Boolean value) {
         this.isPinned = value;
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. The last user that modified the module.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Date time the module was last modified.  The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
-     * Sets the resources property value. The resources property
+     * Sets the resources property value. Learning objects that are associated with this module.  Only teachers can modify this list. Nullable.
      * @param value Value to set for the resources property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResources(@javax.annotation.Nullable final java.util.List<EducationModuleResource> value) {
+    public void setResources(@jakarta.annotation.Nullable final java.util.List<EducationModuleResource> value) {
         this.resources = value;
     }
     /**
-     * Sets the resourcesFolderUrl property value. The resourcesFolderUrl property
+     * Sets the resourcesFolderUrl property value. Folder URL where all the file resources for this module are stored.
      * @param value Value to set for the resourcesFolderUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourcesFolderUrl(@javax.annotation.Nullable final String value) {
+    public void setResourcesFolderUrl(@jakarta.annotation.Nullable final String value) {
         this.resourcesFolderUrl = value;
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Status of the module.  You can't use a PATCH operation to update this value. Possible values are: draft and published.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final EducationModuleStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final EducationModuleStatus value) {
         this.status = value;
     }
 }

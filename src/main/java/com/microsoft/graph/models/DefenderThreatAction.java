@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Defenders default action to take on detected Malware threats.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DefenderThreatAction implements ValuedEnum {
     /** Apply action based on the update definition. */
     DeviceDefault("deviceDefault"),
@@ -25,10 +26,10 @@ public enum DefenderThreatAction implements ValuedEnum {
     DefenderThreatAction(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DefenderThreatAction forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DefenderThreatAction forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "deviceDefault": return DeviceDefault;

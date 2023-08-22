@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class HyperlinkPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -23,9 +24,7 @@ public class HyperlinkPostRequestBody implements AdditionalDataHolder, Parsable 
     private Json linkLocation;
     /**
      * Instantiates a new hyperlinkPostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public HyperlinkPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -34,8 +33,8 @@ public class HyperlinkPostRequestBody implements AdditionalDataHolder, Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a hyperlinkPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static HyperlinkPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static HyperlinkPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new HyperlinkPostRequestBody();
     }
@@ -43,7 +42,7 @@ public class HyperlinkPostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -51,7 +50,7 @@ public class HyperlinkPostRequestBody implements AdditionalDataHolder, Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("friendlyName", (n) -> { this.setFriendlyName(n.getObjectValue(Json::createFromDiscriminatorValue)); });
@@ -62,7 +61,7 @@ public class HyperlinkPostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the friendlyName property value. The friendlyName property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getFriendlyName() {
         return this.friendlyName;
     }
@@ -70,17 +69,15 @@ public class HyperlinkPostRequestBody implements AdditionalDataHolder, Parsable 
      * Gets the linkLocation property value. The linkLocation property
      * @return a Json
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Json getLinkLocation() {
         return this.linkLocation;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("friendlyName", this.getFriendlyName());
         writer.writeObjectValue("linkLocation", this.getLinkLocation());
@@ -89,28 +86,22 @@ public class HyperlinkPostRequestBody implements AdditionalDataHolder, Parsable 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the friendlyName property value. The friendlyName property
      * @param value Value to set for the friendlyName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFriendlyName(@javax.annotation.Nullable final Json value) {
+    public void setFriendlyName(@jakarta.annotation.Nullable final Json value) {
         this.friendlyName = value;
     }
     /**
      * Sets the linkLocation property value. The linkLocation property
      * @param value Value to set for the linkLocation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLinkLocation(@javax.annotation.Nullable final Json value) {
+    public void setLinkLocation(@jakarta.annotation.Nullable final Json value) {
         this.linkLocation = value;
     }
 }

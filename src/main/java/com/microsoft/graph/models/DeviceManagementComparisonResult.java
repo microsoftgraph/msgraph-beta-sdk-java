@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Setting comparison result type
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementComparisonResult implements ValuedEnum {
     /** Unknown setting comparison */
     Unknown("unknown"),
@@ -21,10 +22,10 @@ public enum DeviceManagementComparisonResult implements ValuedEnum {
     DeviceManagementComparisonResult(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementComparisonResult forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementComparisonResult forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

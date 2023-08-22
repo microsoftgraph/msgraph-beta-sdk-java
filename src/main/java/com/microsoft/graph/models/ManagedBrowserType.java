@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Type of managed browser
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedBrowserType implements ValuedEnum {
     /** Not configured */
     NotConfigured("notConfigured"),
@@ -15,10 +16,10 @@ public enum ManagedBrowserType implements ValuedEnum {
     ManagedBrowserType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ManagedBrowserType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ManagedBrowserType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

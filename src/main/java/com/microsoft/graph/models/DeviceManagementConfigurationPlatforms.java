@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Supported platform types.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementConfigurationPlatforms implements ValuedEnum {
     /** Default. No platform type specified. */
     None("none"),
@@ -27,10 +28,10 @@ public enum DeviceManagementConfigurationPlatforms implements ValuedEnum {
     DeviceManagementConfigurationPlatforms(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementConfigurationPlatforms forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementConfigurationPlatforms forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceStartHandler implements Parsable {
     /**
      * The configuration property
@@ -17,9 +18,7 @@ public class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceS
     private OnTokenIssuanceStartCustomExtension customExtension;
     /**
      * Instantiates a new onTokenIssuanceStartCustomExtensionHandler and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public OnTokenIssuanceStartCustomExtensionHandler() {
         super();
         this.setOdataType("#microsoft.graph.onTokenIssuanceStartCustomExtensionHandler");
@@ -29,8 +28,8 @@ public class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceS
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a onTokenIssuanceStartCustomExtensionHandler
      */
-    @javax.annotation.Nonnull
-    public static OnTokenIssuanceStartCustomExtensionHandler createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static OnTokenIssuanceStartCustomExtensionHandler createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new OnTokenIssuanceStartCustomExtensionHandler();
     }
@@ -38,7 +37,7 @@ public class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceS
      * Gets the configuration property value. The configuration property
      * @return a customExtensionOverwriteConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CustomExtensionOverwriteConfiguration getConfiguration() {
         return this.configuration;
     }
@@ -46,7 +45,7 @@ public class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceS
      * Gets the customExtension property value. The customExtension property
      * @return a onTokenIssuanceStartCustomExtension
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OnTokenIssuanceStartCustomExtension getCustomExtension() {
         return this.customExtension;
     }
@@ -54,7 +53,7 @@ public class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceS
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("configuration", (n) -> { this.setConfiguration(n.getObjectValue(CustomExtensionOverwriteConfiguration::createFromDiscriminatorValue)); });
@@ -64,10 +63,8 @@ public class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceS
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("configuration", this.getConfiguration());
@@ -76,19 +73,15 @@ public class OnTokenIssuanceStartCustomExtensionHandler extends OnTokenIssuanceS
     /**
      * Sets the configuration property value. The configuration property
      * @param value Value to set for the configuration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConfiguration(@javax.annotation.Nullable final CustomExtensionOverwriteConfiguration value) {
+    public void setConfiguration(@jakarta.annotation.Nullable final CustomExtensionOverwriteConfiguration value) {
         this.configuration = value;
     }
     /**
      * Sets the customExtension property value. The customExtension property
      * @param value Value to set for the customExtension property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCustomExtension(@javax.annotation.Nullable final OnTokenIssuanceStartCustomExtension value) {
+    public void setCustomExtension(@jakarta.annotation.Nullable final OnTokenIssuanceStartCustomExtension value) {
         this.customExtension = value;
     }
 }

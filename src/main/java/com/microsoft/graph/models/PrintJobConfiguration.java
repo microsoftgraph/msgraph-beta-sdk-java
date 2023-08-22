@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -94,9 +95,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
     private PrintScaling scaling;
     /**
      * Instantiates a new printJobConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PrintJobConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -105,8 +104,8 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a printJobConfiguration
      */
-    @javax.annotation.Nonnull
-    public static PrintJobConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrintJobConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PrintJobConfiguration();
     }
@@ -114,7 +113,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -122,7 +121,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the collate property value. Whether the printer should collate pages wehen printing multiple copies of a multi-page document.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCollate() {
         return this.collate;
     }
@@ -130,7 +129,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the colorMode property value. The color mode the printer should use to print the job. Valid values are described in the table below. Read-only.
      * @return a printColorMode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrintColorMode getColorMode() {
         return this.colorMode;
     }
@@ -138,7 +137,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the copies property value. The number of copies that should be printed. Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCopies() {
         return this.copies;
     }
@@ -146,7 +145,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the dpi property value. The resolution to use when printing the job, expressed in dots per inch (DPI). Read-only.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDpi() {
         return this.dpi;
     }
@@ -154,7 +153,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the duplexMode property value. The duplex mode the printer should use when printing the job. Valid values are described in the table below. Read-only.
      * @return a printDuplexMode
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrintDuplexMode getDuplexMode() {
         return this.duplexMode;
     }
@@ -162,7 +161,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the feedOrientation property value. The orientation to use when feeding media into the printer. Valid values are described in the following table. Read-only.
      * @return a printerFeedOrientation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrinterFeedOrientation getFeedOrientation() {
         return this.feedOrientation;
     }
@@ -170,7 +169,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(20);
         deserializerMap.put("collate", (n) -> { this.setCollate(n.getBooleanValue()); });
@@ -199,7 +198,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the finishings property value. Finishing processes to use when printing.
      * @return a printFinishing
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintFinishing> getFinishings() {
         return this.finishings;
     }
@@ -207,7 +206,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the fitPdfToPage property value. The fitPdfToPage property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getFitPdfToPage() {
         return this.fitPdfToPage;
     }
@@ -215,7 +214,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the inputBin property value. The input bin (tray) to use when printing. See the printer's capabilities for a list of supported input bins.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInputBin() {
         return this.inputBin;
     }
@@ -223,7 +222,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the margin property value. The margin settings to use when printing.
      * @return a printMargin
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrintMargin getMargin() {
         return this.margin;
     }
@@ -231,7 +230,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the mediaSize property value. The media sizeto use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMediaSize() {
         return this.mediaSize;
     }
@@ -239,7 +238,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the mediaType property value. The default media (such as paper) type to print the document on.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMediaType() {
         return this.mediaType;
     }
@@ -247,7 +246,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the multipageLayout property value. The direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
      * @return a printMultipageLayout
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrintMultipageLayout getMultipageLayout() {
         return this.multipageLayout;
     }
@@ -255,7 +254,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -263,7 +262,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the orientation property value. The orientation setting the printer should use when printing the job. Valid values are described in the following table.
      * @return a printOrientation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrintOrientation getOrientation() {
         return this.orientation;
     }
@@ -271,7 +270,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the outputBin property value. The output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOutputBin() {
         return this.outputBin;
     }
@@ -279,7 +278,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the pageRanges property value. The page ranges to print. Read-only.
      * @return a integerRange
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IntegerRange> getPageRanges() {
         return this.pageRanges;
     }
@@ -287,7 +286,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the pagesPerSheet property value. The number of document pages to print on each sheet.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPagesPerSheet() {
         return this.pagesPerSheet;
     }
@@ -295,7 +294,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the quality property value. The print quality to use when printing the job. Valid values are described in the table below. Read-only.
      * @return a printQuality
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrintQuality getQuality() {
         return this.quality;
     }
@@ -303,17 +302,15 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * Gets the scaling property value. Specifies how the printer should scale the document data to fit the requested media. Valid values are described in the following table.
      * @return a printScaling
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PrintScaling getScaling() {
         return this.scaling;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("collate", this.getCollate());
         writer.writeEnumValue("colorMode", this.getColorMode());
@@ -340,190 +337,148 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the collate property value. Whether the printer should collate pages wehen printing multiple copies of a multi-page document.
      * @param value Value to set for the collate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCollate(@javax.annotation.Nullable final Boolean value) {
+    public void setCollate(@jakarta.annotation.Nullable final Boolean value) {
         this.collate = value;
     }
     /**
      * Sets the colorMode property value. The color mode the printer should use to print the job. Valid values are described in the table below. Read-only.
      * @param value Value to set for the colorMode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setColorMode(@javax.annotation.Nullable final PrintColorMode value) {
+    public void setColorMode(@jakarta.annotation.Nullable final PrintColorMode value) {
         this.colorMode = value;
     }
     /**
      * Sets the copies property value. The number of copies that should be printed. Read-only.
      * @param value Value to set for the copies property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCopies(@javax.annotation.Nullable final Integer value) {
+    public void setCopies(@jakarta.annotation.Nullable final Integer value) {
         this.copies = value;
     }
     /**
      * Sets the dpi property value. The resolution to use when printing the job, expressed in dots per inch (DPI). Read-only.
      * @param value Value to set for the dpi property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDpi(@javax.annotation.Nullable final Integer value) {
+    public void setDpi(@jakarta.annotation.Nullable final Integer value) {
         this.dpi = value;
     }
     /**
      * Sets the duplexMode property value. The duplex mode the printer should use when printing the job. Valid values are described in the table below. Read-only.
      * @param value Value to set for the duplexMode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDuplexMode(@javax.annotation.Nullable final PrintDuplexMode value) {
+    public void setDuplexMode(@jakarta.annotation.Nullable final PrintDuplexMode value) {
         this.duplexMode = value;
     }
     /**
      * Sets the feedOrientation property value. The orientation to use when feeding media into the printer. Valid values are described in the following table. Read-only.
      * @param value Value to set for the feedOrientation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeedOrientation(@javax.annotation.Nullable final PrinterFeedOrientation value) {
+    public void setFeedOrientation(@jakarta.annotation.Nullable final PrinterFeedOrientation value) {
         this.feedOrientation = value;
     }
     /**
      * Sets the finishings property value. Finishing processes to use when printing.
      * @param value Value to set for the finishings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFinishings(@javax.annotation.Nullable final java.util.List<PrintFinishing> value) {
+    public void setFinishings(@jakarta.annotation.Nullable final java.util.List<PrintFinishing> value) {
         this.finishings = value;
     }
     /**
      * Sets the fitPdfToPage property value. The fitPdfToPage property
      * @param value Value to set for the fitPdfToPage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFitPdfToPage(@javax.annotation.Nullable final Boolean value) {
+    public void setFitPdfToPage(@jakarta.annotation.Nullable final Boolean value) {
         this.fitPdfToPage = value;
     }
     /**
      * Sets the inputBin property value. The input bin (tray) to use when printing. See the printer's capabilities for a list of supported input bins.
      * @param value Value to set for the inputBin property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInputBin(@javax.annotation.Nullable final String value) {
+    public void setInputBin(@jakarta.annotation.Nullable final String value) {
         this.inputBin = value;
     }
     /**
      * Sets the margin property value. The margin settings to use when printing.
      * @param value Value to set for the margin property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMargin(@javax.annotation.Nullable final PrintMargin value) {
+    public void setMargin(@jakarta.annotation.Nullable final PrintMargin value) {
         this.margin = value;
     }
     /**
      * Sets the mediaSize property value. The media sizeto use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
      * @param value Value to set for the mediaSize property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaSize(@javax.annotation.Nullable final String value) {
+    public void setMediaSize(@jakarta.annotation.Nullable final String value) {
         this.mediaSize = value;
     }
     /**
      * Sets the mediaType property value. The default media (such as paper) type to print the document on.
      * @param value Value to set for the mediaType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMediaType(@javax.annotation.Nullable final String value) {
+    public void setMediaType(@jakarta.annotation.Nullable final String value) {
         this.mediaType = value;
     }
     /**
      * Sets the multipageLayout property value. The direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
      * @param value Value to set for the multipageLayout property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMultipageLayout(@javax.annotation.Nullable final PrintMultipageLayout value) {
+    public void setMultipageLayout(@jakarta.annotation.Nullable final PrintMultipageLayout value) {
         this.multipageLayout = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the orientation property value. The orientation setting the printer should use when printing the job. Valid values are described in the following table.
      * @param value Value to set for the orientation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrientation(@javax.annotation.Nullable final PrintOrientation value) {
+    public void setOrientation(@jakarta.annotation.Nullable final PrintOrientation value) {
         this.orientation = value;
     }
     /**
      * Sets the outputBin property value. The output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
      * @param value Value to set for the outputBin property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOutputBin(@javax.annotation.Nullable final String value) {
+    public void setOutputBin(@jakarta.annotation.Nullable final String value) {
         this.outputBin = value;
     }
     /**
      * Sets the pageRanges property value. The page ranges to print. Read-only.
      * @param value Value to set for the pageRanges property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPageRanges(@javax.annotation.Nullable final java.util.List<IntegerRange> value) {
+    public void setPageRanges(@jakarta.annotation.Nullable final java.util.List<IntegerRange> value) {
         this.pageRanges = value;
     }
     /**
      * Sets the pagesPerSheet property value. The number of document pages to print on each sheet.
      * @param value Value to set for the pagesPerSheet property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPagesPerSheet(@javax.annotation.Nullable final Integer value) {
+    public void setPagesPerSheet(@jakarta.annotation.Nullable final Integer value) {
         this.pagesPerSheet = value;
     }
     /**
      * Sets the quality property value. The print quality to use when printing the job. Valid values are described in the table below. Read-only.
      * @param value Value to set for the quality property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setQuality(@javax.annotation.Nullable final PrintQuality value) {
+    public void setQuality(@jakarta.annotation.Nullable final PrintQuality value) {
         this.quality = value;
     }
     /**
      * Sets the scaling property value. Specifies how the printer should scale the document data to fit the requested media. Valid values are described in the following table.
      * @param value Value to set for the scaling property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScaling(@javax.annotation.Nullable final PrintScaling value) {
+    public void setScaling(@jakarta.annotation.Nullable final PrintScaling value) {
         this.scaling = value;
     }
 }

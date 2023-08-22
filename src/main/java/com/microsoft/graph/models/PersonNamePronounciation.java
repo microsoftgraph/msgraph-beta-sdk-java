@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PersonNamePronounciation implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
     private String odataType;
     /**
      * Instantiates a new personNamePronounciation and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PersonNamePronounciation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +48,8 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a personNamePronounciation
      */
-    @javax.annotation.Nonnull
-    public static PersonNamePronounciation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PersonNamePronounciation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PersonNamePronounciation();
     }
@@ -58,7 +57,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +65,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -74,7 +73,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -89,7 +88,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * Gets the first property value. The first property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFirst() {
         return this.first;
     }
@@ -97,7 +96,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * Gets the last property value. The last property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLast() {
         return this.last;
     }
@@ -105,7 +104,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * Gets the maiden property value. The maiden property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMaiden() {
         return this.maiden;
     }
@@ -113,7 +112,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * Gets the middle property value. The middle property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMiddle() {
         return this.middle;
     }
@@ -121,17 +120,15 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("first", this.getFirst());
@@ -144,64 +141,50 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the first property value. The first property
      * @param value Value to set for the first property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirst(@javax.annotation.Nullable final String value) {
+    public void setFirst(@jakarta.annotation.Nullable final String value) {
         this.first = value;
     }
     /**
      * Sets the last property value. The last property
      * @param value Value to set for the last property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLast(@javax.annotation.Nullable final String value) {
+    public void setLast(@jakarta.annotation.Nullable final String value) {
         this.last = value;
     }
     /**
      * Sets the maiden property value. The maiden property
      * @param value Value to set for the maiden property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaiden(@javax.annotation.Nullable final String value) {
+    public void setMaiden(@jakarta.annotation.Nullable final String value) {
         this.maiden = value;
     }
     /**
      * Sets the middle property value. The middle property
      * @param value Value to set for the middle property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMiddle(@javax.annotation.Nullable final String value) {
+    public void setMiddle(@jakarta.annotation.Nullable final String value) {
         this.middle = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

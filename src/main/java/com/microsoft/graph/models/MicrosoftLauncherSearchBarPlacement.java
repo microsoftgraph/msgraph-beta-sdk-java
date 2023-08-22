@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Microsoft Launcher Search Bar Placement selection.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MicrosoftLauncherSearchBarPlacement implements ValuedEnum {
     /** Not configured; this value is ignored. */
     NotConfigured("notConfigured"),
@@ -19,10 +20,10 @@ public enum MicrosoftLauncherSearchBarPlacement implements ValuedEnum {
     MicrosoftLauncherSearchBarPlacement(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MicrosoftLauncherSearchBarPlacement forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MicrosoftLauncherSearchBarPlacement forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

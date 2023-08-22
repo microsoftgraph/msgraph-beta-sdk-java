@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Error code for rule validation.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Code implements ValuedEnum {
     /** None error. */
     None("none"),
@@ -75,10 +76,10 @@ public enum Code implements ValuedEnum {
     Code(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static Code forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static Code forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

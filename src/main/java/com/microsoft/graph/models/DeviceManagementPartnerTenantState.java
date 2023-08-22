@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Partner state of this tenant.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementPartnerTenantState implements ValuedEnum {
     /** Partner state is unknown. */
     Unknown("unknown"),
@@ -23,10 +24,10 @@ public enum DeviceManagementPartnerTenantState implements ValuedEnum {
     DeviceManagementPartnerTenantState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementPartnerTenantState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementPartnerTenantState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Device registration status.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceRegistrationState implements ValuedEnum {
     /** The device is not registered. */
     NotRegistered("notRegistered"),
@@ -27,10 +28,10 @@ public enum DeviceRegistrationState implements ValuedEnum {
     DeviceRegistrationState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceRegistrationState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceRegistrationState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notRegistered": return NotRegistered;

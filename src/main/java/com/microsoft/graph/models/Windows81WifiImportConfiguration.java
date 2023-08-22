@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Windows 8.1+ Wi-Fi import configuration. By configuring this profile you can instruct Windows 8.1 (and later) devices to connect to desired Wi-Fi endpoint. Connect a Windows 8.1 device to the desired Wi-Fi network and extract the XML from that device to later embed into this Wi-Fi profile.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows81WifiImportConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
@@ -24,9 +25,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
     private String profileName;
     /**
      * Instantiates a new windows81WifiImportConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Windows81WifiImportConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows81WifiImportConfiguration");
@@ -36,8 +35,8 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windows81WifiImportConfiguration
      */
-    @javax.annotation.Nonnull
-    public static Windows81WifiImportConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Windows81WifiImportConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Windows81WifiImportConfiguration();
     }
@@ -45,7 +44,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("payload", (n) -> { this.setPayload(n.getByteArrayValue()); });
@@ -57,7 +56,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
      * Gets the payload property value. Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
      * @return a base64url
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public byte[] getPayload() {
         return this.payload;
     }
@@ -65,7 +64,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
      * Gets the payloadFileName property value. Payload file name (.xml).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPayloadFileName() {
         return this.payloadFileName;
     }
@@ -73,17 +72,15 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
      * Gets the profileName property value. Profile name displayed in the UI.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProfileName() {
         return this.profileName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeByteArrayValue("payload", this.getPayload());
@@ -93,28 +90,22 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
     /**
      * Sets the payload property value. Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
      * @param value Value to set for the payload property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPayload(@javax.annotation.Nullable final byte[] value) {
+    public void setPayload(@jakarta.annotation.Nullable final byte[] value) {
         this.payload = value;
     }
     /**
      * Sets the payloadFileName property value. Payload file name (.xml).
      * @param value Value to set for the payloadFileName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPayloadFileName(@javax.annotation.Nullable final String value) {
+    public void setPayloadFileName(@jakarta.annotation.Nullable final String value) {
         this.payloadFileName = value;
     }
     /**
      * Sets the profileName property value. Profile name displayed in the UI.
      * @param value Value to set for the profileName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProfileName(@javax.annotation.Nullable final String value) {
+    public void setProfileName(@jakarta.annotation.Nullable final String value) {
         this.profileName = value;
     }
 }

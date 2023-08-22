@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the device scope status after the device scope has been enabled. Possible values are: none, computing, insufficientData or completed. Default value is none.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceScopeStatus implements ValuedEnum {
     /** Indicates the device scope is not enabled and there are no calculations in progress. */
     None("none"),
@@ -21,10 +22,10 @@ public enum DeviceScopeStatus implements ValuedEnum {
     DeviceScopeStatus(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceScopeStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceScopeStatus forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

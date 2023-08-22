@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CalendarSharingMessage extends Message implements Parsable {
     /**
      * The canAccept property
@@ -25,9 +26,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
     private String suggestedCalendarName;
     /**
      * Instantiates a new calendarSharingMessage and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CalendarSharingMessage() {
         super();
         this.setOdataType("#microsoft.graph.calendarSharingMessage");
@@ -37,8 +36,8 @@ public class CalendarSharingMessage extends Message implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a calendarSharingMessage
      */
-    @javax.annotation.Nonnull
-    public static CalendarSharingMessage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CalendarSharingMessage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CalendarSharingMessage();
     }
@@ -46,7 +45,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
      * Gets the canAccept property value. The canAccept property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCanAccept() {
         return this.canAccept;
     }
@@ -54,7 +53,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("canAccept", (n) -> { this.setCanAccept(n.getBooleanValue()); });
@@ -67,7 +66,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
      * Gets the sharingMessageAction property value. The sharingMessageAction property
      * @return a calendarSharingMessageAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CalendarSharingMessageAction getSharingMessageAction() {
         return this.sharingMessageAction;
     }
@@ -75,7 +74,7 @@ public class CalendarSharingMessage extends Message implements Parsable {
      * Gets the sharingMessageActions property value. The sharingMessageActions property
      * @return a calendarSharingMessageAction
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<CalendarSharingMessageAction> getSharingMessageActions() {
         return this.sharingMessageActions;
     }
@@ -83,17 +82,15 @@ public class CalendarSharingMessage extends Message implements Parsable {
      * Gets the suggestedCalendarName property value. The suggestedCalendarName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSuggestedCalendarName() {
         return this.suggestedCalendarName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("canAccept", this.getCanAccept());
@@ -104,37 +101,29 @@ public class CalendarSharingMessage extends Message implements Parsable {
     /**
      * Sets the canAccept property value. The canAccept property
      * @param value Value to set for the canAccept property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCanAccept(@javax.annotation.Nullable final Boolean value) {
+    public void setCanAccept(@jakarta.annotation.Nullable final Boolean value) {
         this.canAccept = value;
     }
     /**
      * Sets the sharingMessageAction property value. The sharingMessageAction property
      * @param value Value to set for the sharingMessageAction property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharingMessageAction(@javax.annotation.Nullable final CalendarSharingMessageAction value) {
+    public void setSharingMessageAction(@jakarta.annotation.Nullable final CalendarSharingMessageAction value) {
         this.sharingMessageAction = value;
     }
     /**
      * Sets the sharingMessageActions property value. The sharingMessageActions property
      * @param value Value to set for the sharingMessageActions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharingMessageActions(@javax.annotation.Nullable final java.util.List<CalendarSharingMessageAction> value) {
+    public void setSharingMessageActions(@jakarta.annotation.Nullable final java.util.List<CalendarSharingMessageAction> value) {
         this.sharingMessageActions = value;
     }
     /**
      * Sets the suggestedCalendarName property value. The suggestedCalendarName property
      * @param value Value to set for the suggestedCalendarName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuggestedCalendarName(@javax.annotation.Nullable final String value) {
+    public void setSuggestedCalendarName(@jakarta.annotation.Nullable final String value) {
         this.suggestedCalendarName = value;
     }
 }

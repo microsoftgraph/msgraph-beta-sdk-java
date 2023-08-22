@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExactMatchSession extends ExactMatchSessionBase implements Parsable {
     /**
      * The checksum property
@@ -41,9 +42,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
     private String uploadAgentId;
     /**
      * Instantiates a new exactMatchSession and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ExactMatchSession() {
         super();
     }
@@ -52,8 +51,8 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a exactMatchSession
      */
-    @javax.annotation.Nonnull
-    public static ExactMatchSession createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ExactMatchSession createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ExactMatchSession();
     }
@@ -61,7 +60,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
      * Gets the checksum property value. The checksum property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getChecksum() {
         return this.checksum;
     }
@@ -69,7 +68,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
      * Gets the dataUploadURI property value. The dataUploadURI property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDataUploadURI() {
         return this.dataUploadURI;
     }
@@ -77,7 +76,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("checksum", (n) -> { this.setChecksum(n.getStringValue()); });
@@ -94,7 +93,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
      * Gets the fields property value. The fields property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getFields() {
         return this.fields;
     }
@@ -102,7 +101,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
      * Gets the fileName property value. The fileName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFileName() {
         return this.fileName;
     }
@@ -110,7 +109,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
      * Gets the rowsPerBlock property value. The rowsPerBlock property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getRowsPerBlock() {
         return this.rowsPerBlock;
     }
@@ -118,7 +117,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
      * Gets the salt property value. The salt property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSalt() {
         return this.salt;
     }
@@ -126,7 +125,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
      * Gets the uploadAgent property value. The uploadAgent property
      * @return a exactMatchUploadAgent
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ExactMatchUploadAgent getUploadAgent() {
         return this.uploadAgent;
     }
@@ -134,17 +133,15 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
      * Gets the uploadAgentId property value. The uploadAgentId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUploadAgentId() {
         return this.uploadAgentId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("checksum", this.getChecksum());
@@ -159,73 +156,57 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
     /**
      * Sets the checksum property value. The checksum property
      * @param value Value to set for the checksum property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChecksum(@javax.annotation.Nullable final String value) {
+    public void setChecksum(@jakarta.annotation.Nullable final String value) {
         this.checksum = value;
     }
     /**
      * Sets the dataUploadURI property value. The dataUploadURI property
      * @param value Value to set for the dataUploadURI property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDataUploadURI(@javax.annotation.Nullable final String value) {
+    public void setDataUploadURI(@jakarta.annotation.Nullable final String value) {
         this.dataUploadURI = value;
     }
     /**
      * Sets the fields property value. The fields property
      * @param value Value to set for the fields property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFields(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setFields(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.fields = value;
     }
     /**
      * Sets the fileName property value. The fileName property
      * @param value Value to set for the fileName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileName(@javax.annotation.Nullable final String value) {
+    public void setFileName(@jakarta.annotation.Nullable final String value) {
         this.fileName = value;
     }
     /**
      * Sets the rowsPerBlock property value. The rowsPerBlock property
      * @param value Value to set for the rowsPerBlock property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRowsPerBlock(@javax.annotation.Nullable final Integer value) {
+    public void setRowsPerBlock(@jakarta.annotation.Nullable final Integer value) {
         this.rowsPerBlock = value;
     }
     /**
      * Sets the salt property value. The salt property
      * @param value Value to set for the salt property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSalt(@javax.annotation.Nullable final String value) {
+    public void setSalt(@jakarta.annotation.Nullable final String value) {
         this.salt = value;
     }
     /**
      * Sets the uploadAgent property value. The uploadAgent property
      * @param value Value to set for the uploadAgent property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUploadAgent(@javax.annotation.Nullable final ExactMatchUploadAgent value) {
+    public void setUploadAgent(@jakarta.annotation.Nullable final ExactMatchUploadAgent value) {
         this.uploadAgent = value;
     }
     /**
      * Sets the uploadAgentId property value. The uploadAgentId property
      * @param value Value to set for the uploadAgentId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUploadAgentId(@javax.annotation.Nullable final String value) {
+    public void setUploadAgentId(@jakarta.annotation.Nullable final String value) {
         this.uploadAgentId = value;
     }
 }

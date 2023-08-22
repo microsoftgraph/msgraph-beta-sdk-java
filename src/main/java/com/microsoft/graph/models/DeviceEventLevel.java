@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates device event level. Possible values are: None, Verbose, Information, Warning, Error, Critical
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceEventLevel implements ValuedEnum {
     /** Indicates that the device event level is none. */
     None("none"),
@@ -25,10 +26,10 @@ public enum DeviceEventLevel implements ValuedEnum {
     DeviceEventLevel(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceEventLevel forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceEventLevel forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

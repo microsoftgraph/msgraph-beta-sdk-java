@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookWorksheetProtection extends Entity implements Parsable {
     /**
      * Sheet protection options. Read-only.
@@ -17,9 +18,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     private Boolean protectedEscaped;
     /**
      * Instantiates a new workbookWorksheetProtection and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WorkbookWorksheetProtection() {
         super();
     }
@@ -28,8 +27,8 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workbookWorksheetProtection
      */
-    @javax.annotation.Nonnull
-    public static WorkbookWorksheetProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WorkbookWorksheetProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WorkbookWorksheetProtection();
     }
@@ -37,7 +36,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("options", (n) -> { this.setOptions(n.getObjectValue(WorkbookWorksheetProtectionOptions::createFromDiscriminatorValue)); });
@@ -48,7 +47,7 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
      * Gets the options property value. Sheet protection options. Read-only.
      * @return a workbookWorksheetProtectionOptions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookWorksheetProtectionOptions getOptions() {
         return this.options;
     }
@@ -56,17 +55,15 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
      * Gets the protected property value. Indicates if the worksheet is protected.  Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getProtected() {
         return this.protectedEscaped;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("options", this.getOptions());
@@ -75,19 +72,15 @@ public class WorkbookWorksheetProtection extends Entity implements Parsable {
     /**
      * Sets the options property value. Sheet protection options. Read-only.
      * @param value Value to set for the options property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOptions(@javax.annotation.Nullable final WorkbookWorksheetProtectionOptions value) {
+    public void setOptions(@jakarta.annotation.Nullable final WorkbookWorksheetProtectionOptions value) {
         this.options = value;
     }
     /**
      * Sets the protected property value. Indicates if the worksheet is protected.  Read-only.
      * @param value Value to set for the protected property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProtected(@javax.annotation.Nullable final Boolean value) {
+    public void setProtected(@jakarta.annotation.Nullable final Boolean value) {
         this.protectedEscaped = value;
     }
 }

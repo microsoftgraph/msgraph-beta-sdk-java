@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Determine the access level to specific Windows privacy data category.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsPrivacyDataAccessLevel implements ValuedEnum {
     /** No access level specified, no intents. Device may behave either as in UserInControl or ForceAllow. It may depend on the privacy data been accessed, Windows versions and other factors. */
     NotConfigured("notConfigured"),
@@ -19,10 +20,10 @@ public enum WindowsPrivacyDataAccessLevel implements ValuedEnum {
     WindowsPrivacyDataAccessLevel(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsPrivacyDataAccessLevel forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsPrivacyDataAccessLevel forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

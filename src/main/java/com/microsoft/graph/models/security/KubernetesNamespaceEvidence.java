@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsable {
     /**
      * The namespace cluster.
@@ -21,9 +22,7 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
     private String name;
     /**
      * Instantiates a new kubernetesNamespaceEvidence and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public KubernetesNamespaceEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.kubernetesNamespaceEvidence");
@@ -33,8 +32,8 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a kubernetesNamespaceEvidence
      */
-    @javax.annotation.Nonnull
-    public static KubernetesNamespaceEvidence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static KubernetesNamespaceEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new KubernetesNamespaceEvidence();
     }
@@ -42,7 +41,7 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
      * Gets the cluster property value. The namespace cluster.
      * @return a kubernetesClusterEvidence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public KubernetesClusterEvidence getCluster() {
         return this.cluster;
     }
@@ -50,7 +49,7 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("cluster", (n) -> { this.setCluster(n.getObjectValue(KubernetesClusterEvidence::createFromDiscriminatorValue)); });
@@ -62,7 +61,7 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
      * Gets the labels property value. The labels for the Kubernetes pod.
      * @return a dictionary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Dictionary getLabels() {
         return this.labels;
     }
@@ -70,17 +69,15 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
      * Gets the name property value. The namespace name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("cluster", this.getCluster());
@@ -90,28 +87,22 @@ public class KubernetesNamespaceEvidence extends AlertEvidence implements Parsab
     /**
      * Sets the cluster property value. The namespace cluster.
      * @param value Value to set for the cluster property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCluster(@javax.annotation.Nullable final KubernetesClusterEvidence value) {
+    public void setCluster(@jakarta.annotation.Nullable final KubernetesClusterEvidence value) {
         this.cluster = value;
     }
     /**
      * Sets the labels property value. The labels for the Kubernetes pod.
      * @param value Value to set for the labels property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabels(@javax.annotation.Nullable final Dictionary value) {
+    public void setLabels(@jakarta.annotation.Nullable final Dictionary value) {
         this.labels = value;
     }
     /**
      * Sets the name property value. The namespace name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
 }

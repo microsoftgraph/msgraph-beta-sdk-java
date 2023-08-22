@@ -11,6 +11,7 @@ import java.util.Objects;
 /**
  * Unmanaged device discovered in the network.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -66,9 +67,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     private String osVersion;
     /**
      * Instantiates a new unmanagedDevice and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UnmanagedDevice() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -77,8 +76,8 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a unmanagedDevice
      */
-    @javax.annotation.Nonnull
-    public static UnmanagedDevice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UnmanagedDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UnmanagedDevice();
     }
@@ -86,7 +85,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -94,7 +93,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * Gets the deviceName property value. Device name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -102,7 +101,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * Gets the domain property value. Domain.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDomain() {
         return this.domain;
     }
@@ -110,7 +109,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
@@ -131,7 +130,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * Gets the ipAddress property value. IP address.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIpAddress() {
         return this.ipAddress;
     }
@@ -139,7 +138,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * Gets the lastLoggedOnUser property value. Last logged on user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLastLoggedOnUser() {
         return this.lastLoggedOnUser;
     }
@@ -147,7 +146,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * Gets the lastSeenDateTime property value. Last seen date and time.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
         return this.lastSeenDateTime;
     }
@@ -155,7 +154,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * Gets the location property value. Location.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLocation() {
         return this.location;
     }
@@ -163,7 +162,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * Gets the macAddress property value. MAC address.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMacAddress() {
         return this.macAddress;
     }
@@ -171,7 +170,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * Gets the manufacturer property value. Manufacturer.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManufacturer() {
         return this.manufacturer;
     }
@@ -179,7 +178,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * Gets the model property value. Model.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getModel() {
         return this.model;
     }
@@ -187,7 +186,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -195,7 +194,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * Gets the os property value. Operating system.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOs() {
         return this.os;
     }
@@ -203,17 +202,15 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      * Gets the osVersion property value. Operating system version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsVersion() {
         return this.osVersion;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("deviceName", this.getDeviceName());
         writer.writeStringValue("domain", this.getDomain());
@@ -232,118 +229,92 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the deviceName property value. Device name.
      * @param value Value to set for the deviceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
      * Sets the domain property value. Domain.
      * @param value Value to set for the domain property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDomain(@javax.annotation.Nullable final String value) {
+    public void setDomain(@jakarta.annotation.Nullable final String value) {
         this.domain = value;
     }
     /**
      * Sets the ipAddress property value. IP address.
      * @param value Value to set for the ipAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIpAddress(@javax.annotation.Nullable final String value) {
+    public void setIpAddress(@jakarta.annotation.Nullable final String value) {
         this.ipAddress = value;
     }
     /**
      * Sets the lastLoggedOnUser property value. Last logged on user.
      * @param value Value to set for the lastLoggedOnUser property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastLoggedOnUser(@javax.annotation.Nullable final String value) {
+    public void setLastLoggedOnUser(@jakarta.annotation.Nullable final String value) {
         this.lastLoggedOnUser = value;
     }
     /**
      * Sets the lastSeenDateTime property value. Last seen date and time.
      * @param value Value to set for the lastSeenDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSeenDateTime = value;
     }
     /**
      * Sets the location property value. Location.
      * @param value Value to set for the location property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocation(@javax.annotation.Nullable final String value) {
+    public void setLocation(@jakarta.annotation.Nullable final String value) {
         this.location = value;
     }
     /**
      * Sets the macAddress property value. MAC address.
      * @param value Value to set for the macAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMacAddress(@javax.annotation.Nullable final String value) {
+    public void setMacAddress(@jakarta.annotation.Nullable final String value) {
         this.macAddress = value;
     }
     /**
      * Sets the manufacturer property value. Manufacturer.
      * @param value Value to set for the manufacturer property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManufacturer(@javax.annotation.Nullable final String value) {
+    public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
      * Sets the model property value. Model.
      * @param value Value to set for the model property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModel(@javax.annotation.Nullable final String value) {
+    public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the os property value. Operating system.
      * @param value Value to set for the os property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOs(@javax.annotation.Nullable final String value) {
+    public void setOs(@jakarta.annotation.Nullable final String value) {
         this.os = value;
     }
     /**
      * Sets the osVersion property value. Operating system version.
      * @param value Value to set for the osVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsVersion(@javax.annotation.Nullable final String value) {
+    public void setOsVersion(@jakarta.annotation.Nullable final String value) {
         this.osVersion = value;
     }
 }

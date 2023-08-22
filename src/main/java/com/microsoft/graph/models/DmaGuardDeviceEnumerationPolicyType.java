@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values of the DmaGuardDeviceEnumerationPolicy.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DmaGuardDeviceEnumerationPolicyType implements ValuedEnum {
     /** Default value. Devices with DMA remapping incompatible drivers will only be enumerated after the user unlocks the screen. */
     DeviceDefault("deviceDefault"),
@@ -17,10 +18,10 @@ public enum DmaGuardDeviceEnumerationPolicyType implements ValuedEnum {
     DmaGuardDeviceEnumerationPolicyType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DmaGuardDeviceEnumerationPolicyType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DmaGuardDeviceEnumerationPolicyType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "deviceDefault": return DeviceDefault;

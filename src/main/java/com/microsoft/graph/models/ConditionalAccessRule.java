@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ConditionalAccessRule implements ValuedEnum {
     AllApps("allApps"),
     FirstPartyApps("firstPartyApps"),
@@ -37,15 +38,18 @@ public enum ConditionalAccessRule implements ValuedEnum {
     B2bDirectConnectUser("b2bDirectConnectUser"),
     OtherExternalUser("otherExternalUser"),
     ServiceProvider("serviceProvider"),
-    MicrosoftAdminPortals("microsoftAdminPortals");
+    MicrosoftAdminPortals("microsoftAdminPortals"),
+    DeviceCodeFlow("deviceCodeFlow"),
+    AuthenticationTransfer("authenticationTransfer"),
+    InsiderRisk("insiderRisk");
     public final String value;
     ConditionalAccessRule(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ConditionalAccessRule forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ConditionalAccessRule forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "allApps": return AllApps;
@@ -82,6 +86,9 @@ public enum ConditionalAccessRule implements ValuedEnum {
             case "otherExternalUser": return OtherExternalUser;
             case "serviceProvider": return ServiceProvider;
             case "microsoftAdminPortals": return MicrosoftAdminPortals;
+            case "deviceCodeFlow": return DeviceCodeFlow;
+            case "authenticationTransfer": return AuthenticationTransfer;
+            case "insiderRisk": return InsiderRisk;
             default: return null;
         }
     }

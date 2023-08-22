@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for the Certificate Destination Store.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum CertificateDestinationStore implements ValuedEnum {
     /** Computer Certificate Store - Root. */
     ComputerCertStoreRoot("computerCertStoreRoot"),
@@ -17,10 +18,10 @@ public enum CertificateDestinationStore implements ValuedEnum {
     CertificateDestinationStore(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static CertificateDestinationStore forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static CertificateDestinationStore forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "computerCertStoreRoot": return ComputerCertStoreRoot;

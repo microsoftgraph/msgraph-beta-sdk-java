@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookTableSort extends Entity implements Parsable {
     /**
      * The fields property
@@ -21,9 +22,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
     private String method;
     /**
      * Instantiates a new workbookTableSort and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WorkbookTableSort() {
         super();
     }
@@ -32,8 +31,8 @@ public class WorkbookTableSort extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workbookTableSort
      */
-    @javax.annotation.Nonnull
-    public static WorkbookTableSort createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WorkbookTableSort createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WorkbookTableSort();
     }
@@ -41,7 +40,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("fields", (n) -> { this.setFields(n.getCollectionOfObjectValues(WorkbookSortField::createFromDiscriminatorValue)); });
@@ -53,7 +52,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
      * Gets the fields property value. The fields property
      * @return a workbookSortField
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WorkbookSortField> getFields() {
         return this.fields;
     }
@@ -61,7 +60,7 @@ public class WorkbookTableSort extends Entity implements Parsable {
      * Gets the matchCase property value. Represents whether the casing impacted the last sort of the table. Read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getMatchCase() {
         return this.matchCase;
     }
@@ -69,17 +68,15 @@ public class WorkbookTableSort extends Entity implements Parsable {
      * Gets the method property value. Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMethod() {
         return this.method;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("fields", this.getFields());
@@ -89,28 +86,22 @@ public class WorkbookTableSort extends Entity implements Parsable {
     /**
      * Sets the fields property value. The fields property
      * @param value Value to set for the fields property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFields(@javax.annotation.Nullable final java.util.List<WorkbookSortField> value) {
+    public void setFields(@jakarta.annotation.Nullable final java.util.List<WorkbookSortField> value) {
         this.fields = value;
     }
     /**
      * Sets the matchCase property value. Represents whether the casing impacted the last sort of the table. Read-only.
      * @param value Value to set for the matchCase property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMatchCase(@javax.annotation.Nullable final Boolean value) {
+    public void setMatchCase(@jakarta.annotation.Nullable final Boolean value) {
         this.matchCase = value;
     }
     /**
      * Sets the method property value. Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.
      * @param value Value to set for the method property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMethod(@javax.annotation.Nullable final String value) {
+    public void setMethod(@jakarta.annotation.Nullable final String value) {
         this.method = value;
     }
 }

@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable {
     /**
      * The default decision to apply if the request is not reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
@@ -55,9 +56,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
     private OffsetDateTime startDateTime;
     /**
      * Instantiates a new assignmentReviewSettings and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AssignmentReviewSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -66,8 +65,8 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a assignmentReviewSettings
      */
-    @javax.annotation.Nonnull
-    public static AssignmentReviewSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AssignmentReviewSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AssignmentReviewSettings();
     }
@@ -75,7 +74,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * Gets the accessReviewTimeoutBehavior property value. The default decision to apply if the request is not reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
      * @return a accessReviewTimeoutBehavior
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessReviewTimeoutBehavior getAccessReviewTimeoutBehavior() {
         return this.accessReviewTimeoutBehavior;
     }
@@ -83,7 +82,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -91,7 +90,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * Gets the durationInDays property value. The number of days within which reviewers should provide input.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDurationInDays() {
         return this.durationInDays;
     }
@@ -99,7 +98,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("accessReviewTimeoutBehavior", (n) -> { this.setAccessReviewTimeoutBehavior(n.getEnumValue(AccessReviewTimeoutBehavior.class)); });
@@ -118,7 +117,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * Gets the isAccessRecommendationEnabled property value. Specifies whether to display recommendations to the reviewer. The default value is true
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAccessRecommendationEnabled() {
         return this.isAccessRecommendationEnabled;
     }
@@ -126,7 +125,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * Gets the isApprovalJustificationRequired property value. Specifies whether the reviewer must provide justification for the approval. The default value is true.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsApprovalJustificationRequired() {
         return this.isApprovalJustificationRequired;
     }
@@ -134,7 +133,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * Gets the isEnabled property value. If true, access reviews are required for assignments from this policy.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
@@ -142,7 +141,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -150,7 +149,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * Gets the recurrenceType property value. The interval for recurrence, such as monthly or quarterly.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRecurrenceType() {
         return this.recurrenceType;
     }
@@ -158,7 +157,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * Gets the reviewers property value. If the reviewerType is Reviewers, this collection specifies the users who will be reviewers, either by ID or as members of a group, using a collection of singleUser and groupMembers.
      * @return a userSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UserSet> getReviewers() {
         return this.reviewers;
     }
@@ -166,7 +165,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * Gets the reviewerType property value. Who should be asked to do the review, either Self, Reviewers or Manager.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getReviewerType() {
         return this.reviewerType;
     }
@@ -174,17 +173,15 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * Gets the startDateTime property value. When the first review should start.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
         return this.startDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("accessReviewTimeoutBehavior", this.getAccessReviewTimeoutBehavior());
         writer.writeIntegerValue("durationInDays", this.getDurationInDays());
@@ -201,100 +198,78 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
     /**
      * Sets the accessReviewTimeoutBehavior property value. The default decision to apply if the request is not reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
      * @param value Value to set for the accessReviewTimeoutBehavior property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessReviewTimeoutBehavior(@javax.annotation.Nullable final AccessReviewTimeoutBehavior value) {
+    public void setAccessReviewTimeoutBehavior(@jakarta.annotation.Nullable final AccessReviewTimeoutBehavior value) {
         this.accessReviewTimeoutBehavior = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the durationInDays property value. The number of days within which reviewers should provide input.
      * @param value Value to set for the durationInDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDurationInDays(@javax.annotation.Nullable final Integer value) {
+    public void setDurationInDays(@jakarta.annotation.Nullable final Integer value) {
         this.durationInDays = value;
     }
     /**
      * Sets the isAccessRecommendationEnabled property value. Specifies whether to display recommendations to the reviewer. The default value is true
      * @param value Value to set for the isAccessRecommendationEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAccessRecommendationEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsAccessRecommendationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isAccessRecommendationEnabled = value;
     }
     /**
      * Sets the isApprovalJustificationRequired property value. Specifies whether the reviewer must provide justification for the approval. The default value is true.
      * @param value Value to set for the isApprovalJustificationRequired property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsApprovalJustificationRequired(@javax.annotation.Nullable final Boolean value) {
+    public void setIsApprovalJustificationRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.isApprovalJustificationRequired = value;
     }
     /**
      * Sets the isEnabled property value. If true, access reviews are required for assignments from this policy.
      * @param value Value to set for the isEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the recurrenceType property value. The interval for recurrence, such as monthly or quarterly.
      * @param value Value to set for the recurrenceType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecurrenceType(@javax.annotation.Nullable final String value) {
+    public void setRecurrenceType(@jakarta.annotation.Nullable final String value) {
         this.recurrenceType = value;
     }
     /**
      * Sets the reviewers property value. If the reviewerType is Reviewers, this collection specifies the users who will be reviewers, either by ID or as members of a group, using a collection of singleUser and groupMembers.
      * @param value Value to set for the reviewers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewers(@javax.annotation.Nullable final java.util.List<UserSet> value) {
+    public void setReviewers(@jakarta.annotation.Nullable final java.util.List<UserSet> value) {
         this.reviewers = value;
     }
     /**
      * Sets the reviewerType property value. Who should be asked to do the review, either Self, Reviewers or Manager.
      * @param value Value to set for the reviewerType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewerType(@javax.annotation.Nullable final String value) {
+    public void setReviewerType(@jakarta.annotation.Nullable final String value) {
         this.reviewerType = value;
     }
     /**
      * Sets the startDateTime property value. When the first review should start.
      * @param value Value to set for the startDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
 }

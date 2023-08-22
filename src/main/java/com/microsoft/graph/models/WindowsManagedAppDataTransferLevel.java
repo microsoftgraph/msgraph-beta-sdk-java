@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Data can be transferred from/to these classes of apps
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsManagedAppDataTransferLevel implements ValuedEnum {
     /** All apps. */
     AllApps("allApps"),
@@ -15,10 +16,10 @@ public enum WindowsManagedAppDataTransferLevel implements ValuedEnum {
     WindowsManagedAppDataTransferLevel(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsManagedAppDataTransferLevel forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsManagedAppDataTransferLevel forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "allApps": return AllApps;

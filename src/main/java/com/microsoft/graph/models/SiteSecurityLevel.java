@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for site security level.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum SiteSecurityLevel implements ValuedEnum {
     /** User Defined, default value, no intent. */
     UserDefined("userDefined"),
@@ -23,10 +24,10 @@ public enum SiteSecurityLevel implements ValuedEnum {
     SiteSecurityLevel(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static SiteSecurityLevel forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static SiteSecurityLevel forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "userDefined": return UserDefined;

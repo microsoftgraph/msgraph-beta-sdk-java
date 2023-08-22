@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
      * The createdDateTime property
@@ -26,9 +27,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
     private String displayName;
     /**
      * Instantiates a new passwordlessMicrosoftAuthenticatorAuthenticationMethod and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.passwordlessMicrosoftAuthenticatorAuthenticationMethod");
@@ -38,8 +37,8 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a passwordlessMicrosoftAuthenticatorAuthenticationMethod
      */
-    @javax.annotation.Nonnull
-    public static PasswordlessMicrosoftAuthenticatorAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PasswordlessMicrosoftAuthenticatorAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PasswordlessMicrosoftAuthenticatorAuthenticationMethod();
     }
@@ -47,7 +46,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      * Gets the createdDateTime property value. The createdDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -55,7 +54,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      * Gets the creationDateTime property value. The timestamp when this method was registered to the user.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
         return this.creationDateTime;
     }
@@ -63,7 +62,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      * Gets the device property value. The device property
      * @return a device
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Device getDevice() {
         return this.device;
     }
@@ -71,7 +70,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      * Gets the displayName property value. The display name of the mobile device as given by the user.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -79,7 +78,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -91,10 +90,8 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -105,37 +102,29 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the creationDateTime property value. The timestamp when this method was registered to the user.
      * @param value Value to set for the creationDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.creationDateTime = value;
     }
     /**
      * Sets the device property value. The device property
      * @param value Value to set for the device property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDevice(@javax.annotation.Nullable final Device value) {
+    public void setDevice(@jakarta.annotation.Nullable final Device value) {
         this.device = value;
     }
     /**
      * Sets the displayName property value. The display name of the mobile device as given by the user.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
 }

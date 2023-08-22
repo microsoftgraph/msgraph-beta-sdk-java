@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Supported certificate sources for email signing and encryption.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum EmailCertificateType implements ValuedEnum {
     /** Do not use a certificate as a source. */
     None("none"),
@@ -17,10 +18,10 @@ public enum EmailCertificateType implements ValuedEnum {
     EmailCertificateType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static EmailCertificateType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static EmailCertificateType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

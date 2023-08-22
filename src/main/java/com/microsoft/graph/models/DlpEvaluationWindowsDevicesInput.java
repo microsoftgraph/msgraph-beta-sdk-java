@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput implements Parsable {
     /**
      * The contentProperties property
@@ -17,9 +18,7 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
     private String sharedBy;
     /**
      * Instantiates a new dlpEvaluationWindowsDevicesInput and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DlpEvaluationWindowsDevicesInput() {
         super();
         this.setOdataType("#microsoft.graph.dlpEvaluationWindowsDevicesInput");
@@ -29,8 +28,8 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a dlpEvaluationWindowsDevicesInput
      */
-    @javax.annotation.Nonnull
-    public static DlpEvaluationWindowsDevicesInput createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DlpEvaluationWindowsDevicesInput createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DlpEvaluationWindowsDevicesInput();
     }
@@ -38,7 +37,7 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
      * Gets the contentProperties property value. The contentProperties property
      * @return a contentProperties
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ContentProperties getContentProperties() {
         return this.contentProperties;
     }
@@ -46,7 +45,7 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contentProperties", (n) -> { this.setContentProperties(n.getObjectValue(ContentProperties::createFromDiscriminatorValue)); });
@@ -57,17 +56,15 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
      * Gets the sharedBy property value. The sharedBy property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSharedBy() {
         return this.sharedBy;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("contentProperties", this.getContentProperties());
@@ -76,19 +73,15 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
     /**
      * Sets the contentProperties property value. The contentProperties property
      * @param value Value to set for the contentProperties property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContentProperties(@javax.annotation.Nullable final ContentProperties value) {
+    public void setContentProperties(@jakarta.annotation.Nullable final ContentProperties value) {
         this.contentProperties = value;
     }
     /**
      * Sets the sharedBy property value. The sharedBy property
      * @param value Value to set for the sharedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharedBy(@javax.annotation.Nullable final String value) {
+    public void setSharedBy(@jakarta.annotation.Nullable final String value) {
         this.sharedBy = value;
     }
 }

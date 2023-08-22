@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum BroadcastMeetingAudience implements ValuedEnum {
     RoleIsAttendee("roleIsAttendee"),
     Organization("organization"),
@@ -12,10 +13,10 @@ public enum BroadcastMeetingAudience implements ValuedEnum {
     BroadcastMeetingAudience(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static BroadcastMeetingAudience forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static BroadcastMeetingAudience forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "roleIsAttendee": return RoleIsAttendee;

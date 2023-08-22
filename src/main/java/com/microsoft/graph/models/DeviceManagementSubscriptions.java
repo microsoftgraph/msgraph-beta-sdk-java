@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Tenant mobile device management subscriptions.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementSubscriptions implements ValuedEnum {
     /** None */
     None("none"),
@@ -23,10 +24,10 @@ public enum DeviceManagementSubscriptions implements ValuedEnum {
     DeviceManagementSubscriptions(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementSubscriptions forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementSubscriptions forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

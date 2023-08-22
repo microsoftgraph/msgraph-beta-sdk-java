@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * VPN Authentication Method.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum VpnAuthenticationMethod implements ValuedEnum {
     /** Authenticate with a certificate. */
     Certificate("certificate"),
@@ -21,10 +22,10 @@ public enum VpnAuthenticationMethod implements ValuedEnum {
     VpnAuthenticationMethod(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static VpnAuthenticationMethod forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static VpnAuthenticationMethod forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "certificate": return Certificate;

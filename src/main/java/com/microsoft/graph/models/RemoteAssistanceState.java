@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * State of remote assistance for the account
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum RemoteAssistanceState implements ValuedEnum {
     /** Remote assistance is disabled for the account. With this value, Quick Assist remote assistance sessions are not allowed for the account. */
     Disabled("disabled"),
@@ -15,10 +16,10 @@ public enum RemoteAssistanceState implements ValuedEnum {
     RemoteAssistanceState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static RemoteAssistanceState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static RemoteAssistanceState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "disabled": return Disabled;

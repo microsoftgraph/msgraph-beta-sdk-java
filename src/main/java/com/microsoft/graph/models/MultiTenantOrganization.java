@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MultiTenantOrganization extends Entity implements Parsable {
     /**
      * The createdDateTime property
@@ -34,9 +35,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
     private java.util.List<MultiTenantOrganizationMember> tenants;
     /**
      * Instantiates a new multiTenantOrganization and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MultiTenantOrganization() {
         super();
     }
@@ -45,8 +44,8 @@ public class MultiTenantOrganization extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a multiTenantOrganization
      */
-    @javax.annotation.Nonnull
-    public static MultiTenantOrganization createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MultiTenantOrganization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MultiTenantOrganization();
     }
@@ -54,7 +53,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
      * Gets the createdDateTime property value. The createdDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -62,7 +61,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
      * Gets the description property value. The description property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -70,7 +69,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
      * Gets the displayName property value. The displayName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -78,7 +77,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -93,7 +92,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
      * Gets the joinRequest property value. The joinRequest property
      * @return a multiTenantOrganizationJoinRequestRecord
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MultiTenantOrganizationJoinRequestRecord getJoinRequest() {
         return this.joinRequest;
     }
@@ -101,7 +100,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
      * Gets the state property value. The state property
      * @return a multiTenantOrganizationState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MultiTenantOrganizationState getState() {
         return this.state;
     }
@@ -109,17 +108,15 @@ public class MultiTenantOrganization extends Entity implements Parsable {
      * Gets the tenants property value. The tenants property
      * @return a multiTenantOrganizationMember
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MultiTenantOrganizationMember> getTenants() {
         return this.tenants;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -132,55 +129,43 @@ public class MultiTenantOrganization extends Entity implements Parsable {
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the joinRequest property value. The joinRequest property
      * @param value Value to set for the joinRequest property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setJoinRequest(@javax.annotation.Nullable final MultiTenantOrganizationJoinRequestRecord value) {
+    public void setJoinRequest(@jakarta.annotation.Nullable final MultiTenantOrganizationJoinRequestRecord value) {
         this.joinRequest = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final MultiTenantOrganizationState value) {
+    public void setState(@jakarta.annotation.Nullable final MultiTenantOrganizationState value) {
         this.state = value;
     }
     /**
      * Sets the tenants property value. The tenants property
      * @param value Value to set for the tenants property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenants(@javax.annotation.Nullable final java.util.List<MultiTenantOrganizationMember> value) {
+    public void setTenants(@jakarta.annotation.Nullable final java.util.List<MultiTenantOrganizationMember> value) {
         this.tenants = value;
     }
 }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class BaseSitePage extends BaseItem implements Parsable {
     /**
      * The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue.
@@ -21,9 +22,7 @@ public class BaseSitePage extends BaseItem implements Parsable {
     private String title;
     /**
      * Instantiates a new baseSitePage and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public BaseSitePage() {
         super();
         this.setOdataType("#microsoft.graph.baseSitePage");
@@ -33,8 +32,8 @@ public class BaseSitePage extends BaseItem implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a baseSitePage
      */
-    @javax.annotation.Nonnull
-    public static BaseSitePage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BaseSitePage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -49,7 +48,7 @@ public class BaseSitePage extends BaseItem implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("pageLayout", (n) -> { this.setPageLayout(n.getEnumValue(PageLayoutType.class)); });
@@ -61,7 +60,7 @@ public class BaseSitePage extends BaseItem implements Parsable {
      * Gets the pageLayout property value. The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue.
      * @return a pageLayoutType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PageLayoutType getPageLayout() {
         return this.pageLayout;
     }
@@ -69,7 +68,7 @@ public class BaseSitePage extends BaseItem implements Parsable {
      * Gets the publishingState property value. The publishing status and the MM.mm version of the page.
      * @return a publicationFacet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PublicationFacet getPublishingState() {
         return this.publishingState;
     }
@@ -77,17 +76,15 @@ public class BaseSitePage extends BaseItem implements Parsable {
      * Gets the title property value. Title of the sitePage.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTitle() {
         return this.title;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("pageLayout", this.getPageLayout());
@@ -97,28 +94,22 @@ public class BaseSitePage extends BaseItem implements Parsable {
     /**
      * Sets the pageLayout property value. The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue.
      * @param value Value to set for the pageLayout property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPageLayout(@javax.annotation.Nullable final PageLayoutType value) {
+    public void setPageLayout(@jakarta.annotation.Nullable final PageLayoutType value) {
         this.pageLayout = value;
     }
     /**
      * Sets the publishingState property value. The publishing status and the MM.mm version of the page.
      * @param value Value to set for the publishingState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublishingState(@javax.annotation.Nullable final PublicationFacet value) {
+    public void setPublishingState(@jakarta.annotation.Nullable final PublicationFacet value) {
         this.publishingState = value;
     }
     /**
      * Sets the title property value. Title of the sitePage.
      * @param value Value to set for the title property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTitle(@javax.annotation.Nullable final String value) {
+    public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
 }

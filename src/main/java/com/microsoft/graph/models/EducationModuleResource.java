@@ -6,16 +6,15 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationModuleResource extends Entity implements Parsable {
     /**
-     * The resource property
+     * Resource object that has been associated with this module.
      */
     private EducationResource resource;
     /**
      * Instantiates a new educationModuleResource and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public EducationModuleResource() {
         super();
     }
@@ -24,8 +23,8 @@ public class EducationModuleResource extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a educationModuleResource
      */
-    @javax.annotation.Nonnull
-    public static EducationModuleResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static EducationModuleResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EducationModuleResource();
     }
@@ -33,38 +32,34 @@ public class EducationModuleResource extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("resource", (n) -> { this.setResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the resource property value. The resource property
+     * Gets the resource property value. Resource object that has been associated with this module.
      * @return a educationResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EducationResource getResource() {
         return this.resource;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("resource", this.getResource());
     }
     /**
-     * Sets the resource property value. The resource property
+     * Sets the resource property value. Resource object that has been associated with this module.
      * @param value Value to set for the resource property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResource(@javax.annotation.Nullable final EducationResource value) {
+    public void setResource(@jakarta.annotation.Nullable final EducationResource value) {
         this.resource = value;
     }
 }

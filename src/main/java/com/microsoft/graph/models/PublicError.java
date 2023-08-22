@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PublicError implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
     private String target;
     /**
      * Instantiates a new publicError and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PublicError() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +48,8 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a publicError
      */
-    @javax.annotation.Nonnull
-    public static PublicError createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PublicError createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PublicError();
     }
@@ -58,7 +57,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +65,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * Gets the code property value. Represents the error code.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCode() {
         return this.code;
     }
@@ -74,7 +73,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * Gets the details property value. Details of the error.
      * @return a publicErrorDetail
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PublicErrorDetail> getDetails() {
         return this.details;
     }
@@ -82,7 +81,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
@@ -97,7 +96,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * Gets the innerError property value. Details of the inner error.
      * @return a publicInnerError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PublicInnerError getInnerError() {
         return this.innerError;
     }
@@ -105,7 +104,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * Gets the message property value. A non-localized message for the developer.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMessage() {
         return this.message;
     }
@@ -113,7 +112,7 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -121,17 +120,15 @@ public class PublicError implements AdditionalDataHolder, Parsable {
      * Gets the target property value. The target of the error.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTarget() {
         return this.target;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("code", this.getCode());
         writer.writeCollectionOfObjectValues("details", this.getDetails());
@@ -144,64 +141,50 @@ public class PublicError implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the code property value. Represents the error code.
      * @param value Value to set for the code property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCode(@javax.annotation.Nullable final String value) {
+    public void setCode(@jakarta.annotation.Nullable final String value) {
         this.code = value;
     }
     /**
      * Sets the details property value. Details of the error.
      * @param value Value to set for the details property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDetails(@javax.annotation.Nullable final java.util.List<PublicErrorDetail> value) {
+    public void setDetails(@jakarta.annotation.Nullable final java.util.List<PublicErrorDetail> value) {
         this.details = value;
     }
     /**
      * Sets the innerError property value. Details of the inner error.
      * @param value Value to set for the innerError property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInnerError(@javax.annotation.Nullable final PublicInnerError value) {
+    public void setInnerError(@jakarta.annotation.Nullable final PublicInnerError value) {
         this.innerError = value;
     }
     /**
      * Sets the message property value. A non-localized message for the developer.
      * @param value Value to set for the message property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessage(@javax.annotation.Nullable final String value) {
+    public void setMessage(@jakarta.annotation.Nullable final String value) {
         this.message = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the target property value. The target of the error.
      * @param value Value to set for the target property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTarget(@javax.annotation.Nullable final String value) {
+    public void setTarget(@jakarta.annotation.Nullable final String value) {
         this.target = value;
     }
 }

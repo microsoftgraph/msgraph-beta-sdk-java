@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
     private String odataType;
     /**
      * Instantiates a new teamworkFeaturesConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TeamworkFeaturesConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +48,8 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teamworkFeaturesConfiguration
      */
-    @javax.annotation.Nonnull
-    public static TeamworkFeaturesConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeamworkFeaturesConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeamworkFeaturesConfiguration();
     }
@@ -58,7 +57,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +65,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * Gets the emailToSendLogsAndFeedback property value. Email address to send logs and feedback.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEmailToSendLogsAndFeedback() {
         return this.emailToSendLogsAndFeedback;
     }
@@ -74,7 +73,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("emailToSendLogsAndFeedback", (n) -> { this.setEmailToSendLogsAndFeedback(n.getStringValue()); });
@@ -89,7 +88,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * Gets the isAutoScreenShareEnabled property value. True if auto screen shared is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsAutoScreenShareEnabled() {
         return this.isAutoScreenShareEnabled;
     }
@@ -97,7 +96,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * Gets the isBluetoothBeaconingEnabled property value. True if Bluetooth beaconing is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsBluetoothBeaconingEnabled() {
         return this.isBluetoothBeaconingEnabled;
     }
@@ -105,7 +104,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * Gets the isHideMeetingNamesEnabled property value. True if hiding meeting names is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsHideMeetingNamesEnabled() {
         return this.isHideMeetingNamesEnabled;
     }
@@ -113,7 +112,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * Gets the isSendLogsAndFeedbackEnabled property value. True if sending logs and feedback is enabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSendLogsAndFeedbackEnabled() {
         return this.isSendLogsAndFeedbackEnabled;
     }
@@ -121,17 +120,15 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("emailToSendLogsAndFeedback", this.getEmailToSendLogsAndFeedback());
         writer.writeBooleanValue("isAutoScreenShareEnabled", this.getIsAutoScreenShareEnabled());
@@ -144,64 +141,50 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the emailToSendLogsAndFeedback property value. Email address to send logs and feedback.
      * @param value Value to set for the emailToSendLogsAndFeedback property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEmailToSendLogsAndFeedback(@javax.annotation.Nullable final String value) {
+    public void setEmailToSendLogsAndFeedback(@jakarta.annotation.Nullable final String value) {
         this.emailToSendLogsAndFeedback = value;
     }
     /**
      * Sets the isAutoScreenShareEnabled property value. True if auto screen shared is enabled.
      * @param value Value to set for the isAutoScreenShareEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsAutoScreenShareEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsAutoScreenShareEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isAutoScreenShareEnabled = value;
     }
     /**
      * Sets the isBluetoothBeaconingEnabled property value. True if Bluetooth beaconing is enabled.
      * @param value Value to set for the isBluetoothBeaconingEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsBluetoothBeaconingEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsBluetoothBeaconingEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isBluetoothBeaconingEnabled = value;
     }
     /**
      * Sets the isHideMeetingNamesEnabled property value. True if hiding meeting names is enabled.
      * @param value Value to set for the isHideMeetingNamesEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsHideMeetingNamesEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsHideMeetingNamesEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isHideMeetingNamesEnabled = value;
     }
     /**
      * Sets the isSendLogsAndFeedbackEnabled property value. True if sending logs and feedback is enabled.
      * @param value Value to set for the isSendLogsAndFeedbackEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSendLogsAndFeedbackEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setIsSendLogsAndFeedbackEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isSendLogsAndFeedbackEnabled = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

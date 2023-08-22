@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class NetworkInterface implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new networkInterface and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public NetworkInterface() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +48,8 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a networkInterface
      */
-    @javax.annotation.Nonnull
-    public static NetworkInterface createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static NetworkInterface createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new NetworkInterface();
     }
@@ -58,7 +57,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +65,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
      * Gets the description property value. Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -74,7 +73,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -89,7 +88,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
      * Gets the ipV4Address property value. Last IPv4 address associated with this NIC.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIpV4Address() {
         return this.ipV4Address;
     }
@@ -97,7 +96,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
      * Gets the ipV6Address property value. Last Public (aka global) IPv6 address associated with this NIC.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIpV6Address() {
         return this.ipV6Address;
     }
@@ -105,7 +104,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
      * Gets the localIpV6Address property value. Last local (link-local or site-local) IPv6 address associated with this NIC.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLocalIpV6Address() {
         return this.localIpV6Address;
     }
@@ -113,7 +112,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
      * Gets the macAddress property value. MAC address of the NIC on this host.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMacAddress() {
         return this.macAddress;
     }
@@ -121,17 +120,15 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("ipV4Address", this.getIpV4Address());
@@ -144,64 +141,50 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the description property value. Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the ipV4Address property value. Last IPv4 address associated with this NIC.
      * @param value Value to set for the ipV4Address property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIpV4Address(@javax.annotation.Nullable final String value) {
+    public void setIpV4Address(@jakarta.annotation.Nullable final String value) {
         this.ipV4Address = value;
     }
     /**
      * Sets the ipV6Address property value. Last Public (aka global) IPv6 address associated with this NIC.
      * @param value Value to set for the ipV6Address property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIpV6Address(@javax.annotation.Nullable final String value) {
+    public void setIpV6Address(@jakarta.annotation.Nullable final String value) {
         this.ipV6Address = value;
     }
     /**
      * Sets the localIpV6Address property value. Last local (link-local or site-local) IPv6 address associated with this NIC.
      * @param value Value to set for the localIpV6Address property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocalIpV6Address(@javax.annotation.Nullable final String value) {
+    public void setLocalIpV6Address(@jakarta.annotation.Nullable final String value) {
         this.localIpV6Address = value;
     }
     /**
      * Sets the macAddress property value. MAC address of the NIC on this host.
      * @param value Value to set for the macAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMacAddress(@javax.annotation.Nullable final String value) {
+    public void setMacAddress(@jakarta.annotation.Nullable final String value) {
         this.macAddress = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

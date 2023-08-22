@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Workbook extends Entity implements Parsable {
     /**
      * The application property
@@ -37,9 +38,7 @@ public class Workbook extends Entity implements Parsable {
     private java.util.List<WorkbookWorksheet> worksheets;
     /**
      * Instantiates a new workbook and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Workbook() {
         super();
     }
@@ -48,8 +47,8 @@ public class Workbook extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workbook
      */
-    @javax.annotation.Nonnull
-    public static Workbook createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Workbook createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Workbook();
     }
@@ -57,7 +56,7 @@ public class Workbook extends Entity implements Parsable {
      * Gets the application property value. The application property
      * @return a workbookApplication
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookApplication getApplication() {
         return this.application;
     }
@@ -65,7 +64,7 @@ public class Workbook extends Entity implements Parsable {
      * Gets the comments property value. The comments property
      * @return a workbookComment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WorkbookComment> getComments() {
         return this.comments;
     }
@@ -73,7 +72,7 @@ public class Workbook extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("application", (n) -> { this.setApplication(n.getObjectValue(WorkbookApplication::createFromDiscriminatorValue)); });
@@ -89,7 +88,7 @@ public class Workbook extends Entity implements Parsable {
      * Gets the functions property value. The functions property
      * @return a workbookFunctions
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookFunctions getFunctions() {
         return this.functions;
     }
@@ -97,7 +96,7 @@ public class Workbook extends Entity implements Parsable {
      * Gets the names property value. Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
      * @return a workbookNamedItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WorkbookNamedItem> getNames() {
         return this.names;
     }
@@ -105,7 +104,7 @@ public class Workbook extends Entity implements Parsable {
      * Gets the operations property value. The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
      * @return a workbookOperation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WorkbookOperation> getOperations() {
         return this.operations;
     }
@@ -113,7 +112,7 @@ public class Workbook extends Entity implements Parsable {
      * Gets the tables property value. Represents a collection of tables associated with the workbook. Read-only.
      * @return a workbookTable
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WorkbookTable> getTables() {
         return this.tables;
     }
@@ -121,17 +120,15 @@ public class Workbook extends Entity implements Parsable {
      * Gets the worksheets property value. Represents a collection of worksheets associated with the workbook. Read-only.
      * @return a workbookWorksheet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WorkbookWorksheet> getWorksheets() {
         return this.worksheets;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("application", this.getApplication());
@@ -145,64 +142,50 @@ public class Workbook extends Entity implements Parsable {
     /**
      * Sets the application property value. The application property
      * @param value Value to set for the application property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplication(@javax.annotation.Nullable final WorkbookApplication value) {
+    public void setApplication(@jakarta.annotation.Nullable final WorkbookApplication value) {
         this.application = value;
     }
     /**
      * Sets the comments property value. The comments property
      * @param value Value to set for the comments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComments(@javax.annotation.Nullable final java.util.List<WorkbookComment> value) {
+    public void setComments(@jakarta.annotation.Nullable final java.util.List<WorkbookComment> value) {
         this.comments = value;
     }
     /**
      * Sets the functions property value. The functions property
      * @param value Value to set for the functions property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFunctions(@javax.annotation.Nullable final WorkbookFunctions value) {
+    public void setFunctions(@jakarta.annotation.Nullable final WorkbookFunctions value) {
         this.functions = value;
     }
     /**
      * Sets the names property value. Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
      * @param value Value to set for the names property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNames(@javax.annotation.Nullable final java.util.List<WorkbookNamedItem> value) {
+    public void setNames(@jakarta.annotation.Nullable final java.util.List<WorkbookNamedItem> value) {
         this.names = value;
     }
     /**
      * Sets the operations property value. The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
      * @param value Value to set for the operations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperations(@javax.annotation.Nullable final java.util.List<WorkbookOperation> value) {
+    public void setOperations(@jakarta.annotation.Nullable final java.util.List<WorkbookOperation> value) {
         this.operations = value;
     }
     /**
      * Sets the tables property value. Represents a collection of tables associated with the workbook. Read-only.
      * @param value Value to set for the tables property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTables(@javax.annotation.Nullable final java.util.List<WorkbookTable> value) {
+    public void setTables(@jakarta.annotation.Nullable final java.util.List<WorkbookTable> value) {
         this.tables = value;
     }
     /**
      * Sets the worksheets property value. Represents a collection of worksheets associated with the workbook. Read-only.
      * @param value Value to set for the worksheets property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorksheets(@javax.annotation.Nullable final java.util.List<WorkbookWorksheet> value) {
+    public void setWorksheets(@jakarta.annotation.Nullable final java.util.List<WorkbookWorksheet> value) {
         this.worksheets = value;
     }
 }

@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Admin consent information.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AdminConsent implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -29,9 +30,7 @@ public class AdminConsent implements AdditionalDataHolder, Parsable {
     private AdminConsentState shareUserExperienceAnalyticsData;
     /**
      * Instantiates a new adminConsent and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AdminConsent() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -40,8 +39,8 @@ public class AdminConsent implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a adminConsent
      */
-    @javax.annotation.Nonnull
-    public static AdminConsent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AdminConsent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AdminConsent();
     }
@@ -49,7 +48,7 @@ public class AdminConsent implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -57,7 +56,7 @@ public class AdminConsent implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -69,7 +68,7 @@ public class AdminConsent implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -77,7 +76,7 @@ public class AdminConsent implements AdditionalDataHolder, Parsable {
      * Gets the shareAPNSData property value. Admin consent state.
      * @return a adminConsentState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AdminConsentState getShareAPNSData() {
         return this.shareAPNSData;
     }
@@ -85,17 +84,15 @@ public class AdminConsent implements AdditionalDataHolder, Parsable {
      * Gets the shareUserExperienceAnalyticsData property value. Admin consent state.
      * @return a adminConsentState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AdminConsentState getShareUserExperienceAnalyticsData() {
         return this.shareUserExperienceAnalyticsData;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("shareAPNSData", this.getShareAPNSData());
@@ -105,37 +102,29 @@ public class AdminConsent implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the shareAPNSData property value. Admin consent state.
      * @param value Value to set for the shareAPNSData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShareAPNSData(@javax.annotation.Nullable final AdminConsentState value) {
+    public void setShareAPNSData(@jakarta.annotation.Nullable final AdminConsentState value) {
         this.shareAPNSData = value;
     }
     /**
      * Sets the shareUserExperienceAnalyticsData property value. Admin consent state.
      * @param value Value to set for the shareUserExperienceAnalyticsData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setShareUserExperienceAnalyticsData(@javax.annotation.Nullable final AdminConsentState value) {
+    public void setShareUserExperienceAnalyticsData(@jakarta.annotation.Nullable final AdminConsentState value) {
         this.shareUserExperienceAnalyticsData = value;
     }
 }

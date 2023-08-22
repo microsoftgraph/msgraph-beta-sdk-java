@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Partner state of this tenant.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MobileThreatPartnerTenantState implements ValuedEnum {
     /** Partner is unavailable. */
     Unavailable("unavailable"),
@@ -25,10 +26,10 @@ public enum MobileThreatPartnerTenantState implements ValuedEnum {
     MobileThreatPartnerTenantState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MobileThreatPartnerTenantState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MobileThreatPartnerTenantState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unavailable": return Unavailable;

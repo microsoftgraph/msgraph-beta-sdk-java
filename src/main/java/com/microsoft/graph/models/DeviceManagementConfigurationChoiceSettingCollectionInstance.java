@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Setting instance within policy
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationChoiceSettingCollectionInstance extends DeviceManagementConfigurationSettingInstance implements Parsable {
     /**
      * Choice setting collection value
@@ -16,9 +17,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
     private java.util.List<DeviceManagementConfigurationChoiceSettingValue> choiceSettingCollectionValue;
     /**
      * Instantiates a new deviceManagementConfigurationChoiceSettingCollectionInstance and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingCollectionInstance() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionInstance");
@@ -28,8 +27,8 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationChoiceSettingCollectionInstance
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationChoiceSettingCollectionInstance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationChoiceSettingCollectionInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementConfigurationChoiceSettingCollectionInstance();
     }
@@ -37,7 +36,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
      * Gets the choiceSettingCollectionValue property value. Choice setting collection value
      * @return a deviceManagementConfigurationChoiceSettingValue
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationChoiceSettingValue> getChoiceSettingCollectionValue() {
         return this.choiceSettingCollectionValue;
     }
@@ -45,7 +44,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("choiceSettingCollectionValue", (n) -> { this.setChoiceSettingCollectionValue(n.getCollectionOfObjectValues(DeviceManagementConfigurationChoiceSettingValue::createFromDiscriminatorValue)); });
@@ -54,10 +53,8 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("choiceSettingCollectionValue", this.getChoiceSettingCollectionValue());
@@ -65,10 +62,8 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
     /**
      * Sets the choiceSettingCollectionValue property value. Choice setting collection value
      * @param value Value to set for the choiceSettingCollectionValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setChoiceSettingCollectionValue(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationChoiceSettingValue> value) {
+    public void setChoiceSettingCollectionValue(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationChoiceSettingValue> value) {
         this.choiceSettingCollectionValue = value;
     }
 }

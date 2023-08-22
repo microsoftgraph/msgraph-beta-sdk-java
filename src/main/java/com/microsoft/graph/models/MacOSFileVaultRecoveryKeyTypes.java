@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Recovery key types for macOS FileVault
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MacOSFileVaultRecoveryKeyTypes implements ValuedEnum {
     /** Device default value, no intent. */
     NotConfigured("notConfigured"),
@@ -17,10 +18,10 @@ public enum MacOSFileVaultRecoveryKeyTypes implements ValuedEnum {
     MacOSFileVaultRecoveryKeyTypes(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MacOSFileVaultRecoveryKeyTypes forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MacOSFileVaultRecoveryKeyTypes forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

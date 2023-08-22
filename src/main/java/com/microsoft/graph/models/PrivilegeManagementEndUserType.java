@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The type of user account on Windows that was used to performed the elevation.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum PrivilegeManagementEndUserType implements ValuedEnum {
     /** Default. Unable to determine the login type of the user. */
     Undetermined("undetermined"),
@@ -21,10 +22,10 @@ public enum PrivilegeManagementEndUserType implements ValuedEnum {
     PrivilegeManagementEndUserType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static PrivilegeManagementEndUserType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static PrivilegeManagementEndUserType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "undetermined": return Undetermined;

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Type of browsing data sent to Microsoft 365 analytics
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum EdgeTelemetryMode implements ValuedEnum {
     /** Default  No telemetry data collected or sent */
     NotConfigured("notConfigured"),
@@ -19,10 +20,10 @@ public enum EdgeTelemetryMode implements ValuedEnum {
     EdgeTelemetryMode(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static EdgeTelemetryMode forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static EdgeTelemetryMode forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

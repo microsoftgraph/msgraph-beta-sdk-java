@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
     private String uniqueId;
     /**
      * Instantiates a new teamworkHardwareDetail and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TeamworkHardwareDetail() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +48,8 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teamworkHardwareDetail
      */
-    @javax.annotation.Nonnull
-    public static TeamworkHardwareDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TeamworkHardwareDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TeamworkHardwareDetail();
     }
@@ -58,7 +57,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +65,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("macAddresses", (n) -> { this.setMacAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -81,7 +80,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * Gets the macAddresses property value. MAC address.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getMacAddresses() {
         return this.macAddresses;
     }
@@ -89,7 +88,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * Gets the manufacturer property value. Device manufacturer.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManufacturer() {
         return this.manufacturer;
     }
@@ -97,7 +96,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * Gets the model property value. Devie model.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getModel() {
         return this.model;
     }
@@ -105,7 +104,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -113,7 +112,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * Gets the serialNumber property value. Device serial number.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSerialNumber() {
         return this.serialNumber;
     }
@@ -121,17 +120,15 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * Gets the uniqueId property value. The unique identifier for the device.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUniqueId() {
         return this.uniqueId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("macAddresses", this.getMacAddresses());
         writer.writeStringValue("manufacturer", this.getManufacturer());
@@ -144,64 +141,50 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the macAddresses property value. MAC address.
      * @param value Value to set for the macAddresses property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMacAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setMacAddresses(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.macAddresses = value;
     }
     /**
      * Sets the manufacturer property value. Device manufacturer.
      * @param value Value to set for the manufacturer property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManufacturer(@javax.annotation.Nullable final String value) {
+    public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
      * Sets the model property value. Devie model.
      * @param value Value to set for the model property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModel(@javax.annotation.Nullable final String value) {
+    public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the serialNumber property value. Device serial number.
      * @param value Value to set for the serialNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSerialNumber(@javax.annotation.Nullable final String value) {
+    public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
         this.serialNumber = value;
     }
     /**
      * Sets the uniqueId property value. The unique identifier for the device.
      * @param value Value to set for the uniqueId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUniqueId(@javax.annotation.Nullable final String value) {
+    public void setUniqueId(@jakarta.annotation.Nullable final String value) {
         this.uniqueId = value;
     }
 }

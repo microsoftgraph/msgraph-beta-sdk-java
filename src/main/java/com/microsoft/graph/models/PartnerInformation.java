@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PartnerInformation implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -50,9 +51,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
     private String supportUrl;
     /**
      * Instantiates a new partnerInformation and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PartnerInformation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -61,8 +60,8 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a partnerInformation
      */
-    @javax.annotation.Nonnull
-    public static PartnerInformation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PartnerInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PartnerInformation();
     }
@@ -70,7 +69,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -78,7 +77,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
      * Gets the commerceUrl property value. The commerceUrl property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCommerceUrl() {
         return this.commerceUrl;
     }
@@ -86,7 +85,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
      * Gets the companyName property value. The companyName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCompanyName() {
         return this.companyName;
     }
@@ -94,7 +93,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
      * Gets the companyType property value. The companyType property
      * @return a partnerTenantType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PartnerTenantType getCompanyType() {
         return this.companyType;
     }
@@ -102,7 +101,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("commerceUrl", (n) -> { this.setCommerceUrl(n.getStringValue()); });
@@ -120,7 +119,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
      * Gets the helpUrl property value. The helpUrl property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHelpUrl() {
         return this.helpUrl;
     }
@@ -128,7 +127,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -136,7 +135,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
      * Gets the partnerTenantId property value. The partnerTenantId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPartnerTenantId() {
         return this.partnerTenantId;
     }
@@ -144,7 +143,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
      * Gets the supportEmails property value. The supportEmails property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSupportEmails() {
         return this.supportEmails;
     }
@@ -152,7 +151,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
      * Gets the supportTelephones property value. The supportTelephones property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getSupportTelephones() {
         return this.supportTelephones;
     }
@@ -160,17 +159,15 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
      * Gets the supportUrl property value. The supportUrl property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSupportUrl() {
         return this.supportUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("commerceUrl", this.getCommerceUrl());
         writer.writeStringValue("companyName", this.getCompanyName());
@@ -186,91 +183,71 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the commerceUrl property value. The commerceUrl property
      * @param value Value to set for the commerceUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCommerceUrl(@javax.annotation.Nullable final String value) {
+    public void setCommerceUrl(@jakarta.annotation.Nullable final String value) {
         this.commerceUrl = value;
     }
     /**
      * Sets the companyName property value. The companyName property
      * @param value Value to set for the companyName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompanyName(@javax.annotation.Nullable final String value) {
+    public void setCompanyName(@jakarta.annotation.Nullable final String value) {
         this.companyName = value;
     }
     /**
      * Sets the companyType property value. The companyType property
      * @param value Value to set for the companyType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompanyType(@javax.annotation.Nullable final PartnerTenantType value) {
+    public void setCompanyType(@jakarta.annotation.Nullable final PartnerTenantType value) {
         this.companyType = value;
     }
     /**
      * Sets the helpUrl property value. The helpUrl property
      * @param value Value to set for the helpUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHelpUrl(@javax.annotation.Nullable final String value) {
+    public void setHelpUrl(@jakarta.annotation.Nullable final String value) {
         this.helpUrl = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the partnerTenantId property value. The partnerTenantId property
      * @param value Value to set for the partnerTenantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPartnerTenantId(@javax.annotation.Nullable final String value) {
+    public void setPartnerTenantId(@jakarta.annotation.Nullable final String value) {
         this.partnerTenantId = value;
     }
     /**
      * Sets the supportEmails property value. The supportEmails property
      * @param value Value to set for the supportEmails property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportEmails(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setSupportEmails(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.supportEmails = value;
     }
     /**
      * Sets the supportTelephones property value. The supportTelephones property
      * @param value Value to set for the supportTelephones property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportTelephones(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setSupportTelephones(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.supportTelephones = value;
     }
     /**
      * Sets the supportUrl property value. The supportUrl property
      * @param value Value to set for the supportUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSupportUrl(@javax.annotation.Nullable final String value) {
+    public void setSupportUrl(@jakarta.annotation.Nullable final String value) {
         this.supportUrl = value;
     }
 }

@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsAutopilotEnrollmentType implements ValuedEnum {
     Unknown("unknown"),
     AzureADJoinedWithAutopilotProfile("azureADJoinedWithAutopilotProfile"),
@@ -17,10 +18,10 @@ public enum WindowsAutopilotEnrollmentType implements ValuedEnum {
     WindowsAutopilotEnrollmentType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsAutopilotEnrollmentType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsAutopilotEnrollmentType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

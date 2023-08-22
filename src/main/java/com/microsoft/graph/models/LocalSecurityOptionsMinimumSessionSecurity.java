@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for LocalSecurityOptionsMinimumSessionSecurity
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum LocalSecurityOptionsMinimumSessionSecurity implements ValuedEnum {
     /** Send LM & NTLM responses */
     None("none"),
@@ -19,10 +20,10 @@ public enum LocalSecurityOptionsMinimumSessionSecurity implements ValuedEnum {
     LocalSecurityOptionsMinimumSessionSecurity(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static LocalSecurityOptionsMinimumSessionSecurity forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static LocalSecurityOptionsMinimumSessionSecurity forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Summary data for managed devices
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceOverview extends Entity implements Parsable {
     /**
      * Distribution of Exchange Access State in Intune
@@ -41,9 +42,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     private Integer mdmEnrolledCount;
     /**
      * Instantiates a new managedDeviceOverview and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ManagedDeviceOverview() {
         super();
     }
@@ -52,8 +51,8 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managedDeviceOverview
      */
-    @javax.annotation.Nonnull
-    public static ManagedDeviceOverview createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagedDeviceOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagedDeviceOverview();
     }
@@ -61,7 +60,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * Gets the deviceExchangeAccessStateSummary property value. Distribution of Exchange Access State in Intune
      * @return a deviceExchangeAccessStateSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceExchangeAccessStateSummary getDeviceExchangeAccessStateSummary() {
         return this.deviceExchangeAccessStateSummary;
     }
@@ -69,7 +68,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * Gets the deviceOperatingSystemSummary property value. Device operating system summary.
      * @return a deviceOperatingSystemSummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceOperatingSystemSummary getDeviceOperatingSystemSummary() {
         return this.deviceOperatingSystemSummary;
     }
@@ -77,7 +76,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * Gets the dualEnrolledDeviceCount property value. The number of devices enrolled in both MDM and EAS
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDualEnrolledDeviceCount() {
         return this.dualEnrolledDeviceCount;
     }
@@ -85,7 +84,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * Gets the enrolledDeviceCount property value. Total enrolled device count. Does not include PC devices managed via Intune PC Agent
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getEnrolledDeviceCount() {
         return this.enrolledDeviceCount;
     }
@@ -93,7 +92,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceExchangeAccessStateSummary", (n) -> { this.setDeviceExchangeAccessStateSummary(n.getObjectValue(DeviceExchangeAccessStateSummary::createFromDiscriminatorValue)); });
@@ -109,7 +108,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. Last modified date time of device overview
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -117,7 +116,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * Gets the managedDeviceModelsAndManufacturers property value. Models and Manufactures meatadata for managed devices in the account
      * @return a managedDeviceModelsAndManufacturers
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagedDeviceModelsAndManufacturers getManagedDeviceModelsAndManufacturers() {
         return this.managedDeviceModelsAndManufacturers;
     }
@@ -125,17 +124,15 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * Gets the mdmEnrolledCount property value. The number of devices enrolled in MDM
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMdmEnrolledCount() {
         return this.mdmEnrolledCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("deviceExchangeAccessStateSummary", this.getDeviceExchangeAccessStateSummary());
@@ -149,64 +146,50 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     /**
      * Sets the deviceExchangeAccessStateSummary property value. Distribution of Exchange Access State in Intune
      * @param value Value to set for the deviceExchangeAccessStateSummary property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceExchangeAccessStateSummary(@javax.annotation.Nullable final DeviceExchangeAccessStateSummary value) {
+    public void setDeviceExchangeAccessStateSummary(@jakarta.annotation.Nullable final DeviceExchangeAccessStateSummary value) {
         this.deviceExchangeAccessStateSummary = value;
     }
     /**
      * Sets the deviceOperatingSystemSummary property value. Device operating system summary.
      * @param value Value to set for the deviceOperatingSystemSummary property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceOperatingSystemSummary(@javax.annotation.Nullable final DeviceOperatingSystemSummary value) {
+    public void setDeviceOperatingSystemSummary(@jakarta.annotation.Nullable final DeviceOperatingSystemSummary value) {
         this.deviceOperatingSystemSummary = value;
     }
     /**
      * Sets the dualEnrolledDeviceCount property value. The number of devices enrolled in both MDM and EAS
      * @param value Value to set for the dualEnrolledDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDualEnrolledDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setDualEnrolledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.dualEnrolledDeviceCount = value;
     }
     /**
      * Sets the enrolledDeviceCount property value. Total enrolled device count. Does not include PC devices managed via Intune PC Agent
      * @param value Value to set for the enrolledDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrolledDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setEnrolledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.enrolledDeviceCount = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Last modified date time of device overview
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the managedDeviceModelsAndManufacturers property value. Models and Manufactures meatadata for managed devices in the account
      * @param value Value to set for the managedDeviceModelsAndManufacturers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagedDeviceModelsAndManufacturers(@javax.annotation.Nullable final ManagedDeviceModelsAndManufacturers value) {
+    public void setManagedDeviceModelsAndManufacturers(@jakarta.annotation.Nullable final ManagedDeviceModelsAndManufacturers value) {
         this.managedDeviceModelsAndManufacturers = value;
     }
     /**
      * Sets the mdmEnrolledCount property value. The number of devices enrolled in MDM
      * @param value Value to set for the mdmEnrolledCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMdmEnrolledCount(@javax.annotation.Nullable final Integer value) {
+    public void setMdmEnrolledCount(@jakarta.annotation.Nullable final Integer value) {
         this.mdmEnrolledCount = value;
     }
 }

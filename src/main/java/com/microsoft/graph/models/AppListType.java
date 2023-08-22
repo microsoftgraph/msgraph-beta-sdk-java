@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values of the compliance app list.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AppListType implements ValuedEnum {
     /** Default value, no intent. */
     None("none"),
@@ -17,10 +18,10 @@ public enum AppListType implements ValuedEnum {
     AppListType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AppListType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AppListType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

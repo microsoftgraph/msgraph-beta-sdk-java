@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * PFX Import Options.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum IntendedPurpose implements ValuedEnum {
     /** Unassigned */
     Unassigned("unassigned"),
@@ -21,10 +22,10 @@ public enum IntendedPurpose implements ValuedEnum {
     IntendedPurpose(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static IntendedPurpose forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static IntendedPurpose forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unassigned": return Unassigned;

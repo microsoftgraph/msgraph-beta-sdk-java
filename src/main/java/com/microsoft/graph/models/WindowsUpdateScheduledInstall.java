@@ -7,6 +7,7 @@ import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType implements Parsable {
     /**
      * Possible values for a weekly schedule.
@@ -18,9 +19,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
     private LocalTime scheduledInstallTime;
     /**
      * Instantiates a new windowsUpdateScheduledInstall and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsUpdateScheduledInstall() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdateScheduledInstall");
@@ -30,8 +29,8 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsUpdateScheduledInstall
      */
-    @javax.annotation.Nonnull
-    public static WindowsUpdateScheduledInstall createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsUpdateScheduledInstall createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsUpdateScheduledInstall();
     }
@@ -39,7 +38,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("scheduledInstallDay", (n) -> { this.setScheduledInstallDay(n.getEnumValue(WeeklySchedule.class)); });
@@ -50,7 +49,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      * Gets the scheduledInstallDay property value. Possible values for a weekly schedule.
      * @return a weeklySchedule
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WeeklySchedule getScheduledInstallDay() {
         return this.scheduledInstallDay;
     }
@@ -58,17 +57,15 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      * Gets the scheduledInstallTime property value. Scheduled Install Time during day
      * @return a LocalTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public LocalTime getScheduledInstallTime() {
         return this.scheduledInstallTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("scheduledInstallDay", this.getScheduledInstallDay());
@@ -77,19 +74,15 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
     /**
      * Sets the scheduledInstallDay property value. Possible values for a weekly schedule.
      * @param value Value to set for the scheduledInstallDay property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScheduledInstallDay(@javax.annotation.Nullable final WeeklySchedule value) {
+    public void setScheduledInstallDay(@jakarta.annotation.Nullable final WeeklySchedule value) {
         this.scheduledInstallDay = value;
     }
     /**
      * Sets the scheduledInstallTime property value. Scheduled Install Time during day
      * @param value Value to set for the scheduledInstallTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScheduledInstallTime(@javax.annotation.Nullable final LocalTime value) {
+    public void setScheduledInstallTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.scheduledInstallTime = value;
     }
 }

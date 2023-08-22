@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * MacOS software update account summary report for a device and user
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsable {
     /**
      * Summary of the updates by category.
@@ -57,9 +58,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
     private String userPrincipalName;
     /**
      * Instantiates a new macOSSoftwareUpdateAccountSummary and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MacOSSoftwareUpdateAccountSummary() {
         super();
     }
@@ -68,8 +67,8 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a macOSSoftwareUpdateAccountSummary
      */
-    @javax.annotation.Nonnull
-    public static MacOSSoftwareUpdateAccountSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MacOSSoftwareUpdateAccountSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MacOSSoftwareUpdateAccountSummary();
     }
@@ -77,7 +76,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * Gets the categorySummaries property value. Summary of the updates by category.
      * @return a macOSSoftwareUpdateCategorySummary
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MacOSSoftwareUpdateCategorySummary> getCategorySummaries() {
         return this.categorySummaries;
     }
@@ -85,7 +84,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * Gets the deviceId property value. The device ID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceId() {
         return this.deviceId;
     }
@@ -93,7 +92,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * Gets the deviceName property value. The device name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -101,7 +100,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * Gets the displayName property value. The name of the report
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -109,7 +108,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * Gets the failedUpdateCount property value. Number of failed updates on the device.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFailedUpdateCount() {
         return this.failedUpdateCount;
     }
@@ -117,7 +116,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("categorySummaries", (n) -> { this.setCategorySummaries(n.getCollectionOfObjectValues(MacOSSoftwareUpdateCategorySummary::createFromDiscriminatorValue)); });
@@ -137,7 +136,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * Gets the lastUpdatedDateTime property value. Last date time the report for this device was updated.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
         return this.lastUpdatedDateTime;
     }
@@ -145,7 +144,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * Gets the osVersion property value. The OS version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsVersion() {
         return this.osVersion;
     }
@@ -153,7 +152,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * Gets the successfulUpdateCount property value. Number of successful updates on the device.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSuccessfulUpdateCount() {
         return this.successfulUpdateCount;
     }
@@ -161,7 +160,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * Gets the totalUpdateCount property value. Number of total updates on the device.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTotalUpdateCount() {
         return this.totalUpdateCount;
     }
@@ -169,7 +168,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * Gets the userId property value. The user ID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
@@ -177,17 +176,15 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * Gets the userPrincipalName property value. The user principal name
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("categorySummaries", this.getCategorySummaries());
@@ -205,100 +202,78 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
     /**
      * Sets the categorySummaries property value. Summary of the updates by category.
      * @param value Value to set for the categorySummaries property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategorySummaries(@javax.annotation.Nullable final java.util.List<MacOSSoftwareUpdateCategorySummary> value) {
+    public void setCategorySummaries(@jakarta.annotation.Nullable final java.util.List<MacOSSoftwareUpdateCategorySummary> value) {
         this.categorySummaries = value;
     }
     /**
      * Sets the deviceId property value. The device ID.
      * @param value Value to set for the deviceId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceId(@javax.annotation.Nullable final String value) {
+    public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.deviceId = value;
     }
     /**
      * Sets the deviceName property value. The device name.
      * @param value Value to set for the deviceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceName(@javax.annotation.Nullable final String value) {
+    public void setDeviceName(@jakarta.annotation.Nullable final String value) {
         this.deviceName = value;
     }
     /**
      * Sets the displayName property value. The name of the report
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the failedUpdateCount property value. Number of failed updates on the device.
      * @param value Value to set for the failedUpdateCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedUpdateCount(@javax.annotation.Nullable final Integer value) {
+    public void setFailedUpdateCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedUpdateCount = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. Last date time the report for this device was updated.
      * @param value Value to set for the lastUpdatedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the osVersion property value. The OS version.
      * @param value Value to set for the osVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsVersion(@javax.annotation.Nullable final String value) {
+    public void setOsVersion(@jakarta.annotation.Nullable final String value) {
         this.osVersion = value;
     }
     /**
      * Sets the successfulUpdateCount property value. Number of successful updates on the device.
      * @param value Value to set for the successfulUpdateCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuccessfulUpdateCount(@javax.annotation.Nullable final Integer value) {
+    public void setSuccessfulUpdateCount(@jakarta.annotation.Nullable final Integer value) {
         this.successfulUpdateCount = value;
     }
     /**
      * Sets the totalUpdateCount property value. Number of total updates on the device.
      * @param value Value to set for the totalUpdateCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalUpdateCount(@javax.annotation.Nullable final Integer value) {
+    public void setTotalUpdateCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalUpdateCount = value;
     }
     /**
      * Sets the userId property value. The user ID.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
      * Sets the userPrincipalName property value. The user principal name
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

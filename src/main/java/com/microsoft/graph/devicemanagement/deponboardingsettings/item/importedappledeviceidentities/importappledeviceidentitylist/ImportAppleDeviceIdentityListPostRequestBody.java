@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -23,9 +24,7 @@ public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalD
     private Boolean overwriteImportedDeviceIdentities;
     /**
      * Instantiates a new importAppleDeviceIdentityListPostRequestBody and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ImportAppleDeviceIdentityListPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -34,8 +33,8 @@ public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalD
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a importAppleDeviceIdentityListPostRequestBody
      */
-    @javax.annotation.Nonnull
-    public static ImportAppleDeviceIdentityListPostRequestBody createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ImportAppleDeviceIdentityListPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ImportAppleDeviceIdentityListPostRequestBody();
     }
@@ -43,7 +42,7 @@ public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalD
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -51,7 +50,7 @@ public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalD
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("importedAppleDeviceIdentities", (n) -> { this.setImportedAppleDeviceIdentities(n.getCollectionOfObjectValues(ImportedAppleDeviceIdentity::createFromDiscriminatorValue)); });
@@ -62,7 +61,7 @@ public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalD
      * Gets the importedAppleDeviceIdentities property value. The importedAppleDeviceIdentities property
      * @return a importedAppleDeviceIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ImportedAppleDeviceIdentity> getImportedAppleDeviceIdentities() {
         return this.importedAppleDeviceIdentities;
     }
@@ -70,17 +69,15 @@ public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalD
      * Gets the overwriteImportedDeviceIdentities property value. The overwriteImportedDeviceIdentities property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getOverwriteImportedDeviceIdentities() {
         return this.overwriteImportedDeviceIdentities;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("importedAppleDeviceIdentities", this.getImportedAppleDeviceIdentities());
         writer.writeBooleanValue("overwriteImportedDeviceIdentities", this.getOverwriteImportedDeviceIdentities());
@@ -89,28 +86,22 @@ public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalD
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the importedAppleDeviceIdentities property value. The importedAppleDeviceIdentities property
      * @param value Value to set for the importedAppleDeviceIdentities property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImportedAppleDeviceIdentities(@javax.annotation.Nullable final java.util.List<ImportedAppleDeviceIdentity> value) {
+    public void setImportedAppleDeviceIdentities(@jakarta.annotation.Nullable final java.util.List<ImportedAppleDeviceIdentity> value) {
         this.importedAppleDeviceIdentities = value;
     }
     /**
      * Sets the overwriteImportedDeviceIdentities property value. The overwriteImportedDeviceIdentities property
      * @param value Value to set for the overwriteImportedDeviceIdentities property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOverwriteImportedDeviceIdentities(@javax.annotation.Nullable final Boolean value) {
+    public void setOverwriteImportedDeviceIdentities(@jakarta.annotation.Nullable final Boolean value) {
         this.overwriteImportedDeviceIdentities = value;
     }
 }

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Allow(Not Configured) or prevent(Block) the syncing of Microsoft Edge Browser settings. Option to prevent syncing across devices, but allow user override.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum BrowserSyncSetting implements ValuedEnum {
     /** Default  Allow syncing of browser settings across devices. */
     NotConfigured("notConfigured"),
@@ -17,10 +18,10 @@ public enum BrowserSyncSetting implements ValuedEnum {
     BrowserSyncSetting(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static BrowserSyncSetting forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static BrowserSyncSetting forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

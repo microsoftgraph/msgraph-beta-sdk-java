@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DlpEvaluatePoliciesJobResponse extends JobResponseBase implements Parsable {
     /**
      * The result property
@@ -13,9 +14,7 @@ public class DlpEvaluatePoliciesJobResponse extends JobResponseBase implements P
     private DlpPoliciesJobResult result;
     /**
      * Instantiates a new dlpEvaluatePoliciesJobResponse and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DlpEvaluatePoliciesJobResponse() {
         super();
     }
@@ -24,8 +23,8 @@ public class DlpEvaluatePoliciesJobResponse extends JobResponseBase implements P
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a dlpEvaluatePoliciesJobResponse
      */
-    @javax.annotation.Nonnull
-    public static DlpEvaluatePoliciesJobResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DlpEvaluatePoliciesJobResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DlpEvaluatePoliciesJobResponse();
     }
@@ -33,7 +32,7 @@ public class DlpEvaluatePoliciesJobResponse extends JobResponseBase implements P
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("result", (n) -> { this.setResult(n.getObjectValue(DlpPoliciesJobResult::createFromDiscriminatorValue)); });
@@ -43,17 +42,15 @@ public class DlpEvaluatePoliciesJobResponse extends JobResponseBase implements P
      * Gets the result property value. The result property
      * @return a dlpPoliciesJobResult
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DlpPoliciesJobResult getResult() {
         return this.result;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("result", this.getResult());
@@ -61,10 +58,8 @@ public class DlpEvaluatePoliciesJobResponse extends JobResponseBase implements P
     /**
      * Sets the result property value. The result property
      * @param value Value to set for the result property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResult(@javax.annotation.Nullable final DlpPoliciesJobResult value) {
+    public void setResult(@jakarta.annotation.Nullable final DlpPoliciesJobResult value) {
         this.result = value;
     }
 }

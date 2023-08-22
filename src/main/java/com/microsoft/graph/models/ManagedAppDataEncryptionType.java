@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Represents the level to which app data is encrypted for managed apps
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedAppDataEncryptionType implements ValuedEnum {
     /** App data is encrypted based on the default settings on the device. */
     UseDeviceSettings("useDeviceSettings"),
@@ -19,10 +20,10 @@ public enum ManagedAppDataEncryptionType implements ValuedEnum {
     ManagedAppDataEncryptionType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ManagedAppDataEncryptionType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ManagedAppDataEncryptionType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "useDeviceSettings": return UseDeviceSettings;
