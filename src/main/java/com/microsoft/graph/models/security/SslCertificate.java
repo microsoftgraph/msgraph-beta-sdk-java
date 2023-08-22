@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SslCertificate extends Artifact implements Parsable {
     /**
      * The expirationDateTime property
@@ -50,9 +51,7 @@ public class SslCertificate extends Artifact implements Parsable {
     private SslCertificateEntity subject;
     /**
      * Instantiates a new sslCertificate and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SslCertificate() {
         super();
         this.setOdataType("#microsoft.graph.security.sslCertificate");
@@ -62,8 +61,8 @@ public class SslCertificate extends Artifact implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a sslCertificate
      */
-    @javax.annotation.Nonnull
-    public static SslCertificate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SslCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SslCertificate();
     }
@@ -71,7 +70,7 @@ public class SslCertificate extends Artifact implements Parsable {
      * Gets the expirationDateTime property value. The expirationDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
         return this.expirationDateTime;
     }
@@ -79,7 +78,7 @@ public class SslCertificate extends Artifact implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
@@ -98,7 +97,7 @@ public class SslCertificate extends Artifact implements Parsable {
      * Gets the fingerprint property value. The fingerprint property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getFingerprint() {
         return this.fingerprint;
     }
@@ -106,7 +105,7 @@ public class SslCertificate extends Artifact implements Parsable {
      * Gets the firstSeenDateTime property value. The firstSeenDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
         return this.firstSeenDateTime;
     }
@@ -114,7 +113,7 @@ public class SslCertificate extends Artifact implements Parsable {
      * Gets the issueDateTime property value. The issueDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getIssueDateTime() {
         return this.issueDateTime;
     }
@@ -122,7 +121,7 @@ public class SslCertificate extends Artifact implements Parsable {
      * Gets the issuer property value. The issuer property
      * @return a sslCertificateEntity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SslCertificateEntity getIssuer() {
         return this.issuer;
     }
@@ -130,7 +129,7 @@ public class SslCertificate extends Artifact implements Parsable {
      * Gets the lastSeenDateTime property value. The lastSeenDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
         return this.lastSeenDateTime;
     }
@@ -138,7 +137,7 @@ public class SslCertificate extends Artifact implements Parsable {
      * Gets the relatedHosts property value. The relatedHosts property
      * @return a host
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Host> getRelatedHosts() {
         return this.relatedHosts;
     }
@@ -146,7 +145,7 @@ public class SslCertificate extends Artifact implements Parsable {
      * Gets the serialNumber property value. The serialNumber property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSerialNumber() {
         return this.serialNumber;
     }
@@ -154,7 +153,7 @@ public class SslCertificate extends Artifact implements Parsable {
      * Gets the sha1 property value. The sha1 property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSha1() {
         return this.sha1;
     }
@@ -162,17 +161,15 @@ public class SslCertificate extends Artifact implements Parsable {
      * Gets the subject property value. The subject property
      * @return a sslCertificateEntity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SslCertificateEntity getSubject() {
         return this.subject;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
@@ -189,91 +186,71 @@ public class SslCertificate extends Artifact implements Parsable {
     /**
      * Sets the expirationDateTime property value. The expirationDateTime property
      * @param value Value to set for the expirationDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
      * Sets the fingerprint property value. The fingerprint property
      * @param value Value to set for the fingerprint property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFingerprint(@javax.annotation.Nullable final String value) {
+    public void setFingerprint(@jakarta.annotation.Nullable final String value) {
         this.fingerprint = value;
     }
     /**
      * Sets the firstSeenDateTime property value. The firstSeenDateTime property
      * @param value Value to set for the firstSeenDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstSeenDateTime = value;
     }
     /**
      * Sets the issueDateTime property value. The issueDateTime property
      * @param value Value to set for the issueDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIssueDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setIssueDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.issueDateTime = value;
     }
     /**
      * Sets the issuer property value. The issuer property
      * @param value Value to set for the issuer property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIssuer(@javax.annotation.Nullable final SslCertificateEntity value) {
+    public void setIssuer(@jakarta.annotation.Nullable final SslCertificateEntity value) {
         this.issuer = value;
     }
     /**
      * Sets the lastSeenDateTime property value. The lastSeenDateTime property
      * @param value Value to set for the lastSeenDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSeenDateTime = value;
     }
     /**
      * Sets the relatedHosts property value. The relatedHosts property
      * @param value Value to set for the relatedHosts property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRelatedHosts(@javax.annotation.Nullable final java.util.List<Host> value) {
+    public void setRelatedHosts(@jakarta.annotation.Nullable final java.util.List<Host> value) {
         this.relatedHosts = value;
     }
     /**
      * Sets the serialNumber property value. The serialNumber property
      * @param value Value to set for the serialNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSerialNumber(@javax.annotation.Nullable final String value) {
+    public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
         this.serialNumber = value;
     }
     /**
      * Sets the sha1 property value. The sha1 property
      * @param value Value to set for the sha1 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSha1(@javax.annotation.Nullable final String value) {
+    public void setSha1(@jakarta.annotation.Nullable final String value) {
         this.sha1 = value;
     }
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final SslCertificateEntity value) {
+    public void setSubject(@jakarta.annotation.Nullable final SslCertificateEntity value) {
         this.subject = value;
     }
 }

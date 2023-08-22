@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Configuration manager client state
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ConfigurationManagerClientState implements ValuedEnum {
     /** Configuration manager agent is older than 1806 or not installed or this device has not checked into Intune for over 30 days. */
     Unknown("unknown"),
@@ -23,10 +24,10 @@ public enum ConfigurationManagerClientState implements ValuedEnum {
     ConfigurationManagerClientState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ConfigurationManagerClientState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ConfigurationManagerClientState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

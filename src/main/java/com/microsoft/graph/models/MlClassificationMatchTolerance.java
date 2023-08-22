@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MlClassificationMatchTolerance implements ValuedEnum {
     Exact("exact"),
     Near("near");
@@ -10,10 +11,10 @@ public enum MlClassificationMatchTolerance implements ValuedEnum {
     MlClassificationMatchTolerance(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MlClassificationMatchTolerance forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MlClassificationMatchTolerance forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "exact": return Exact;

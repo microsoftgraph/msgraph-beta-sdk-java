@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Windows update catalog item entity
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem implements Parsable {
     /**
      * Windows quality update classification
@@ -24,9 +25,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
     private String kbArticleId;
     /**
      * Instantiates a new windowsQualityUpdateCatalogItem and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsQualityUpdateCatalogItem() {
         super();
         this.setOdataType("#microsoft.graph.windowsQualityUpdateCatalogItem");
@@ -36,8 +35,8 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsQualityUpdateCatalogItem
      */
-    @javax.annotation.Nonnull
-    public static WindowsQualityUpdateCatalogItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsQualityUpdateCatalogItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsQualityUpdateCatalogItem();
     }
@@ -45,7 +44,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * Gets the classification property value. Windows quality update classification
      * @return a windowsQualityUpdateClassification
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsQualityUpdateClassification getClassification() {
         return this.classification;
     }
@@ -53,7 +52,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(WindowsQualityUpdateClassification.class)); });
@@ -65,7 +64,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * Gets the isExpeditable property value. Flag indicating if update qualifies for expedite
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsExpeditable() {
         return this.isExpeditable;
     }
@@ -73,17 +72,15 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * Gets the kbArticleId property value. Knowledge base article id
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getKbArticleId() {
         return this.kbArticleId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("classification", this.getClassification());
@@ -93,28 +90,22 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
     /**
      * Sets the classification property value. Windows quality update classification
      * @param value Value to set for the classification property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClassification(@javax.annotation.Nullable final WindowsQualityUpdateClassification value) {
+    public void setClassification(@jakarta.annotation.Nullable final WindowsQualityUpdateClassification value) {
         this.classification = value;
     }
     /**
      * Sets the isExpeditable property value. Flag indicating if update qualifies for expedite
      * @param value Value to set for the isExpeditable property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsExpeditable(@javax.annotation.Nullable final Boolean value) {
+    public void setIsExpeditable(@jakarta.annotation.Nullable final Boolean value) {
         this.isExpeditable = value;
     }
     /**
      * Sets the kbArticleId property value. Knowledge base article id
      * @param value Value to set for the kbArticleId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setKbArticleId(@javax.annotation.Nullable final String value) {
+    public void setKbArticleId(@jakarta.annotation.Nullable final String value) {
         this.kbArticleId = value;
     }
 }

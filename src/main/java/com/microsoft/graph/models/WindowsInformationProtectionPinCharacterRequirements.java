@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Pin Character Requirements
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsInformationProtectionPinCharacterRequirements implements ValuedEnum {
     /** Not allow */
     NotAllow("notAllow"),
@@ -17,10 +18,10 @@ public enum WindowsInformationProtectionPinCharacterRequirements implements Valu
     WindowsInformationProtectionPinCharacterRequirements(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsInformationProtectionPinCharacterRequirements forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsInformationProtectionPinCharacterRequirements forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notAllow": return NotAllow;

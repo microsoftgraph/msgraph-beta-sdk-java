@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Apps rating as in media content
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum RatingAppsType implements ValuedEnum {
     /** Default value, allow all apps content */
     AllAllowed("allAllowed"),
@@ -23,10 +24,10 @@ public enum RatingAppsType implements ValuedEnum {
     RatingAppsType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static RatingAppsType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static RatingAppsType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "allAllowed": return AllAllowed;

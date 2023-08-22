@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Movies rating labels in Germany
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum RatingGermanyMoviesType implements ValuedEnum {
     /** Default value, allow all movies content */
     AllAllowed("allAllowed"),
@@ -25,10 +26,10 @@ public enum RatingGermanyMoviesType implements ValuedEnum {
     RatingGermanyMoviesType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static RatingGermanyMoviesType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static RatingGermanyMoviesType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "allAllowed": return AllAllowed;

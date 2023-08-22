@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Represents various states for Zebra FOTA connector.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ZebraFotaConnectorState implements ValuedEnum {
     /** Default value when the connector has not been setup (the feature has not been used yet). */
     None("none"),
@@ -19,10 +20,10 @@ public enum ZebraFotaConnectorState implements ValuedEnum {
     ZebraFotaConnectorState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ZebraFotaConnectorState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ZebraFotaConnectorState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

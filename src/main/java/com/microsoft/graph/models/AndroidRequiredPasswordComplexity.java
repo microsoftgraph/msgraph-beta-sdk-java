@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidRequiredPasswordComplexity implements ValuedEnum {
     /** Device default value, no password. */
     None("none"),
@@ -19,10 +20,10 @@ public enum AndroidRequiredPasswordComplexity implements ValuedEnum {
     AndroidRequiredPasswordComplexity(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidRequiredPasswordComplexity forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidRequiredPasswordComplexity forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

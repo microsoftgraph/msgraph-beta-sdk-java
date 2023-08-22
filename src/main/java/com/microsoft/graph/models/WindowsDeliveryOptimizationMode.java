@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Delivery optimization mode for peer distribution
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsDeliveryOptimizationMode implements ValuedEnum {
     /** Allow the user to set. */
     UserDefined("userDefined"),
@@ -25,10 +26,10 @@ public enum WindowsDeliveryOptimizationMode implements ValuedEnum {
     WindowsDeliveryOptimizationMode(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsDeliveryOptimizationMode forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsDeliveryOptimizationMode forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "userDefined": return UserDefined;

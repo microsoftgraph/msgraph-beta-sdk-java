@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the state of the anomaly. Eg: anomaly severity can be new, active, disabled, removed or other.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum UserExperienceAnalyticsAnomalyState implements ValuedEnum {
     /** Indicates the state of anomaly is new. */
     New("new"),
@@ -23,10 +24,10 @@ public enum UserExperienceAnalyticsAnomalyState implements ValuedEnum {
     UserExperienceAnalyticsAnomalyState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static UserExperienceAnalyticsAnomalyState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static UserExperienceAnalyticsAnomalyState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "new": return New;

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for monitoring file activity.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DefenderRealtimeScanDirection implements ValuedEnum {
     /** 0 (default)  Monitor all files(bi-directional) */
     MonitorAllFiles("monitorAllFiles"),
@@ -17,10 +18,10 @@ public enum DefenderRealtimeScanDirection implements ValuedEnum {
     DefenderRealtimeScanDirection(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DefenderRealtimeScanDirection forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DefenderRealtimeScanDirection forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "monitorAllFiles": return MonitorAllFiles;

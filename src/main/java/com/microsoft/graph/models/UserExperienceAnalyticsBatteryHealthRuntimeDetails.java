@@ -10,21 +10,22 @@ import java.util.Objects;
 /**
  * The user experience analytics battery health runtime entity contains count of devices broken down into 3 categories - devices with runtime > 5 hours, devices with runtime 3-5 hours and devices with runtime < 3 hours.This API provides the count of devices in these 3 categories.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity implements Parsable {
     /**
-     * Number of active devices within the tenant. Valid values -2147483648 to 2147483647
+     * Number of active devices within the tenant. Valid values 0 to 2147483647
      */
     private Integer activeDevices;
     /**
-     * Number of devices whose active runtime is greater than 3 hours but lesser than 5 hours. Valid values -2147483648 to 2147483647
+     * Number of devices whose active runtime is greater than 3 hours but lesser than 5 hours. Valid values 0 to 2147483647
      */
     private Integer batteryRuntimeFair;
     /**
-     * Number of devices  whose active runtime is greater than 5 hours. Valid values -2147483648 to 2147483647
+     * Number of devices  whose active runtime is greater than 5 hours. Valid values 0 to 2147483647
      */
     private Integer batteryRuntimeGood;
     /**
-     * Number of devices whose active runtime is lesser than 3 hours. Valid values -2147483648 to 2147483647
+     * Number of devices whose active runtime is lesser than 3 hours. Valid values 0 to 2147483647
      */
     private Integer batteryRuntimePoor;
     /**
@@ -33,9 +34,7 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity i
     private OffsetDateTime lastRefreshedDateTime;
     /**
      * Instantiates a new userExperienceAnalyticsBatteryHealthRuntimeDetails and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UserExperienceAnalyticsBatteryHealthRuntimeDetails() {
         super();
     }
@@ -44,40 +43,40 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity i
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userExperienceAnalyticsBatteryHealthRuntimeDetails
      */
-    @javax.annotation.Nonnull
-    public static UserExperienceAnalyticsBatteryHealthRuntimeDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserExperienceAnalyticsBatteryHealthRuntimeDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserExperienceAnalyticsBatteryHealthRuntimeDetails();
     }
     /**
-     * Gets the activeDevices property value. Number of active devices within the tenant. Valid values -2147483648 to 2147483647
+     * Gets the activeDevices property value. Number of active devices within the tenant. Valid values 0 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getActiveDevices() {
         return this.activeDevices;
     }
     /**
-     * Gets the batteryRuntimeFair property value. Number of devices whose active runtime is greater than 3 hours but lesser than 5 hours. Valid values -2147483648 to 2147483647
+     * Gets the batteryRuntimeFair property value. Number of devices whose active runtime is greater than 3 hours but lesser than 5 hours. Valid values 0 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getBatteryRuntimeFair() {
         return this.batteryRuntimeFair;
     }
     /**
-     * Gets the batteryRuntimeGood property value. Number of devices  whose active runtime is greater than 5 hours. Valid values -2147483648 to 2147483647
+     * Gets the batteryRuntimeGood property value. Number of devices  whose active runtime is greater than 5 hours. Valid values 0 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getBatteryRuntimeGood() {
         return this.batteryRuntimeGood;
     }
     /**
-     * Gets the batteryRuntimePoor property value. Number of devices whose active runtime is lesser than 3 hours. Valid values -2147483648 to 2147483647
+     * Gets the batteryRuntimePoor property value. Number of devices whose active runtime is lesser than 3 hours. Valid values 0 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getBatteryRuntimePoor() {
         return this.batteryRuntimePoor;
     }
@@ -85,7 +84,7 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity i
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeDevices", (n) -> { this.setActiveDevices(n.getIntegerValue()); });
@@ -99,17 +98,15 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity i
      * Gets the lastRefreshedDateTime property value. Recorded date time of this runtime details instance.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastRefreshedDateTime() {
         return this.lastRefreshedDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("activeDevices", this.getActiveDevices());
@@ -119,48 +116,38 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity i
         writer.writeOffsetDateTimeValue("lastRefreshedDateTime", this.getLastRefreshedDateTime());
     }
     /**
-     * Sets the activeDevices property value. Number of active devices within the tenant. Valid values -2147483648 to 2147483647
+     * Sets the activeDevices property value. Number of active devices within the tenant. Valid values 0 to 2147483647
      * @param value Value to set for the activeDevices property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActiveDevices(@javax.annotation.Nullable final Integer value) {
+    public void setActiveDevices(@jakarta.annotation.Nullable final Integer value) {
         this.activeDevices = value;
     }
     /**
-     * Sets the batteryRuntimeFair property value. Number of devices whose active runtime is greater than 3 hours but lesser than 5 hours. Valid values -2147483648 to 2147483647
+     * Sets the batteryRuntimeFair property value. Number of devices whose active runtime is greater than 3 hours but lesser than 5 hours. Valid values 0 to 2147483647
      * @param value Value to set for the batteryRuntimeFair property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBatteryRuntimeFair(@javax.annotation.Nullable final Integer value) {
+    public void setBatteryRuntimeFair(@jakarta.annotation.Nullable final Integer value) {
         this.batteryRuntimeFair = value;
     }
     /**
-     * Sets the batteryRuntimeGood property value. Number of devices  whose active runtime is greater than 5 hours. Valid values -2147483648 to 2147483647
+     * Sets the batteryRuntimeGood property value. Number of devices  whose active runtime is greater than 5 hours. Valid values 0 to 2147483647
      * @param value Value to set for the batteryRuntimeGood property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBatteryRuntimeGood(@javax.annotation.Nullable final Integer value) {
+    public void setBatteryRuntimeGood(@jakarta.annotation.Nullable final Integer value) {
         this.batteryRuntimeGood = value;
     }
     /**
-     * Sets the batteryRuntimePoor property value. Number of devices whose active runtime is lesser than 3 hours. Valid values -2147483648 to 2147483647
+     * Sets the batteryRuntimePoor property value. Number of devices whose active runtime is lesser than 3 hours. Valid values 0 to 2147483647
      * @param value Value to set for the batteryRuntimePoor property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBatteryRuntimePoor(@javax.annotation.Nullable final Integer value) {
+    public void setBatteryRuntimePoor(@jakarta.annotation.Nullable final Integer value) {
         this.batteryRuntimePoor = value;
     }
     /**
      * Sets the lastRefreshedDateTime property value. Recorded date time of this runtime details instance.
      * @param value Value to set for the lastRefreshedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastRefreshedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastRefreshedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastRefreshedDateTime = value;
     }
 }

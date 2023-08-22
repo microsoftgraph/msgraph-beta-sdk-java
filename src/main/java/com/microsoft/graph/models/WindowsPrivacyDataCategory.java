@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Windows privacy data category specifier for privacy data access.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsPrivacyDataCategory implements ValuedEnum {
     /** No access level specified, no intents. Device may behave either as in UserInControl or ForceAllow. It may depend on the privacy data been accessed, Windows versions and other factors. */
     NotConfigured("notConfigured"),
@@ -49,10 +50,10 @@ public enum WindowsPrivacyDataCategory implements ValuedEnum {
     WindowsPrivacyDataCategory(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsPrivacyDataCategory forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsPrivacyDataCategory forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

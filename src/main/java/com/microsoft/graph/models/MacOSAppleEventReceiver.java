@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Represents a process that can receive an Apple Event notification.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -37,9 +38,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new macOSAppleEventReceiver and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MacOSAppleEventReceiver() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -48,8 +47,8 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a macOSAppleEventReceiver
      */
-    @javax.annotation.Nonnull
-    public static MacOSAppleEventReceiver createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MacOSAppleEventReceiver createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MacOSAppleEventReceiver();
     }
@@ -57,7 +56,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -65,7 +64,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
      * Gets the allowed property value. Allow or block this app from receiving Apple events.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAllowed() {
         return this.allowed;
     }
@@ -73,7 +72,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
      * Gets the codeRequirement property value. Code requirement for the app or binary that receives the Apple Event.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCodeRequirement() {
         return this.codeRequirement;
     }
@@ -81,7 +80,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("allowed", (n) -> { this.setAllowed(n.getBooleanValue()); });
@@ -95,7 +94,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
      * Gets the identifier property value. Bundle ID of the app or file path of the process or executable that receives the Apple Event.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIdentifier() {
         return this.identifier;
     }
@@ -103,7 +102,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
      * Gets the identifierType property value. Process identifier types for MacOS Privacy Preferences
      * @return a macOSProcessIdentifierType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MacOSProcessIdentifierType getIdentifierType() {
         return this.identifierType;
     }
@@ -111,17 +110,15 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowed", this.getAllowed());
         writer.writeStringValue("codeRequirement", this.getCodeRequirement());
@@ -133,55 +130,43 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the allowed property value. Allow or block this app from receiving Apple events.
      * @param value Value to set for the allowed property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAllowed(@javax.annotation.Nullable final Boolean value) {
+    public void setAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.allowed = value;
     }
     /**
      * Sets the codeRequirement property value. Code requirement for the app or binary that receives the Apple Event.
      * @param value Value to set for the codeRequirement property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCodeRequirement(@javax.annotation.Nullable final String value) {
+    public void setCodeRequirement(@jakarta.annotation.Nullable final String value) {
         this.codeRequirement = value;
     }
     /**
      * Sets the identifier property value. Bundle ID of the app or file path of the process or executable that receives the Apple Event.
      * @param value Value to set for the identifier property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentifier(@javax.annotation.Nullable final String value) {
+    public void setIdentifier(@jakarta.annotation.Nullable final String value) {
         this.identifier = value;
     }
     /**
      * Sets the identifierType property value. Process identifier types for MacOS Privacy Preferences
      * @param value Value to set for the identifierType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentifierType(@javax.annotation.Nullable final MacOSProcessIdentifierType value) {
+    public void setIdentifierType(@jakarta.annotation.Nullable final MacOSProcessIdentifierType value) {
         this.identifierType = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

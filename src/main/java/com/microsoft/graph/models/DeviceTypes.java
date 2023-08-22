@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Device type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceTypes implements ValuedEnum {
     /** Desktop. */
     Desktop("desktop"),
@@ -55,10 +56,10 @@ public enum DeviceTypes implements ValuedEnum {
     DeviceTypes(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceTypes forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceTypes forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "desktop": return Desktop;

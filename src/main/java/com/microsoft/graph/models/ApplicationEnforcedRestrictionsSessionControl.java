@@ -6,12 +6,11 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ApplicationEnforcedRestrictionsSessionControl extends ConditionalAccessSessionControl implements Parsable {
     /**
      * Instantiates a new applicationEnforcedRestrictionsSessionControl and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ApplicationEnforcedRestrictionsSessionControl() {
         super();
         this.setOdataType("#microsoft.graph.applicationEnforcedRestrictionsSessionControl");
@@ -21,8 +20,8 @@ public class ApplicationEnforcedRestrictionsSessionControl extends ConditionalAc
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a applicationEnforcedRestrictionsSessionControl
      */
-    @javax.annotation.Nonnull
-    public static ApplicationEnforcedRestrictionsSessionControl createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ApplicationEnforcedRestrictionsSessionControl createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ApplicationEnforcedRestrictionsSessionControl();
     }
@@ -30,7 +29,7 @@ public class ApplicationEnforcedRestrictionsSessionControl extends ConditionalAc
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         return deserializerMap;
@@ -38,10 +37,8 @@ public class ApplicationEnforcedRestrictionsSessionControl extends ConditionalAc
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
     }

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Device management features.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedDeviceManagementFeatures implements ValuedEnum {
     /** Unknown device management features. */
     None("none"),
@@ -15,10 +16,10 @@ public enum ManagedDeviceManagementFeatures implements ValuedEnum {
     ManagedDeviceManagementFeatures(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ManagedDeviceManagementFeatures forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ManagedDeviceManagementFeatures forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

@@ -12,6 +12,7 @@ import java.util.UUID;
 /**
  * Collection of app diagnostics associated with a user.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -55,9 +56,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
     private UUID powerliftId;
     /**
      * Instantiates a new powerliftIncidentMetadata and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PowerliftIncidentMetadata() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -66,8 +65,8 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a powerliftIncidentMetadata
      */
-    @javax.annotation.Nonnull
-    public static PowerliftIncidentMetadata createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PowerliftIncidentMetadata createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PowerliftIncidentMetadata();
     }
@@ -75,7 +74,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -83,7 +82,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * Gets the application property value. The name of the application the diagnostic is from. Example: com.microsoft.CompanyPortal
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getApplication() {
         return this.application;
     }
@@ -91,7 +90,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * Gets the clientVersion property value. The version of the application. Example: 5.2203.1
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClientVersion() {
         return this.clientVersion;
     }
@@ -99,7 +98,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * Gets the createdAtDateTime property value. The time the app diagnostic was created. Example: 2022-04-19T17:24:45.313Z
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedAtDateTime() {
         return this.createdAtDateTime;
     }
@@ -107,7 +106,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * Gets the easyId property value. The unique app diagnostic identifier as a user friendly 8 character hexadecimal string. Example: 8520467A
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEasyId() {
         return this.easyId;
     }
@@ -115,7 +114,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("application", (n) -> { this.setApplication(n.getStringValue()); });
@@ -133,7 +132,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * Gets the fileNames property value. A list of files that are associated with the diagnostic.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getFileNames() {
         return this.fileNames;
     }
@@ -141,7 +140,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * Gets the locale property value. The locale information of the application. Example: en-US
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLocale() {
         return this.locale;
     }
@@ -149,7 +148,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -157,7 +156,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * Gets the platform property value. The device's OS the diagnostic is from. Example: iOS
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPlatform() {
         return this.platform;
     }
@@ -165,17 +164,15 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * Gets the powerliftId property value. The unique identifier of the app diagnostic. Example: 8520467a-49a9-44a4-8447-8dfb8bec6726
      * @return a UUID
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UUID getPowerliftId() {
         return this.powerliftId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("application", this.getApplication());
         writer.writeStringValue("clientVersion", this.getClientVersion());
@@ -191,91 +188,71 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the application property value. The name of the application the diagnostic is from. Example: com.microsoft.CompanyPortal
      * @param value Value to set for the application property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplication(@javax.annotation.Nullable final String value) {
+    public void setApplication(@jakarta.annotation.Nullable final String value) {
         this.application = value;
     }
     /**
      * Sets the clientVersion property value. The version of the application. Example: 5.2203.1
      * @param value Value to set for the clientVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientVersion(@javax.annotation.Nullable final String value) {
+    public void setClientVersion(@jakarta.annotation.Nullable final String value) {
         this.clientVersion = value;
     }
     /**
      * Sets the createdAtDateTime property value. The time the app diagnostic was created. Example: 2022-04-19T17:24:45.313Z
      * @param value Value to set for the createdAtDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedAtDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedAtDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdAtDateTime = value;
     }
     /**
      * Sets the easyId property value. The unique app diagnostic identifier as a user friendly 8 character hexadecimal string. Example: 8520467A
      * @param value Value to set for the easyId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEasyId(@javax.annotation.Nullable final String value) {
+    public void setEasyId(@jakarta.annotation.Nullable final String value) {
         this.easyId = value;
     }
     /**
      * Sets the fileNames property value. A list of files that are associated with the diagnostic.
      * @param value Value to set for the fileNames property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFileNames(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setFileNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.fileNames = value;
     }
     /**
      * Sets the locale property value. The locale information of the application. Example: en-US
      * @param value Value to set for the locale property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocale(@javax.annotation.Nullable final String value) {
+    public void setLocale(@jakarta.annotation.Nullable final String value) {
         this.locale = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the platform property value. The device's OS the diagnostic is from. Example: iOS
      * @param value Value to set for the platform property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatform(@javax.annotation.Nullable final String value) {
+    public void setPlatform(@jakarta.annotation.Nullable final String value) {
         this.platform = value;
     }
     /**
      * Sets the powerliftId property value. The unique identifier of the app diagnostic. Example: 8520467a-49a9-44a4-8447-8dfb8bec6726
      * @param value Value to set for the powerliftId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPowerliftId(@javax.annotation.Nullable final UUID value) {
+    public void setPowerliftId(@jakarta.annotation.Nullable final UUID value) {
         this.powerliftId = value;
     }
 }

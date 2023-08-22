@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * State of lost mode, indicating if lost mode is enabled or disabled
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum LostModeState implements ValuedEnum {
     /** Lost mode is disabled. */
     Disabled("disabled"),
@@ -15,10 +16,10 @@ public enum LostModeState implements ValuedEnum {
     LostModeState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static LostModeState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static LostModeState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "disabled": return Disabled;

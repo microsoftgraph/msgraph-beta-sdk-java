@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * KioskModeApp v4 for Win32 app support
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsable {
     /**
      * This is the classicapppath to be used by v4 Win32 app while in Kiosk Mode
@@ -32,9 +33,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
     private Boolean edgeNoFirstRun;
     /**
      * Instantiates a new windowsKioskWin32App and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsKioskWin32App() {
         super();
         this.setOdataType("#microsoft.graph.windowsKioskWin32App");
@@ -44,8 +43,8 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsKioskWin32App
      */
-    @javax.annotation.Nonnull
-    public static WindowsKioskWin32App createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsKioskWin32App createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsKioskWin32App();
     }
@@ -53,7 +52,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
      * Gets the classicAppPath property value. This is the classicapppath to be used by v4 Win32 app while in Kiosk Mode
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClassicAppPath() {
         return this.classicAppPath;
     }
@@ -61,7 +60,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
      * Gets the edgeKiosk property value. Edge kiosk (url) for Edge kiosk mode
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEdgeKiosk() {
         return this.edgeKiosk;
     }
@@ -69,7 +68,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
      * Gets the edgeKioskIdleTimeoutMinutes property value. Edge kiosk idle timeout in minutes for Edge kiosk mode. Valid values 0 to 1440
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getEdgeKioskIdleTimeoutMinutes() {
         return this.edgeKioskIdleTimeoutMinutes;
     }
@@ -77,7 +76,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
      * Gets the edgeKioskType property value. Edge kiosk type
      * @return a windowsEdgeKioskType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsEdgeKioskType getEdgeKioskType() {
         return this.edgeKioskType;
     }
@@ -85,7 +84,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
      * Gets the edgeNoFirstRun property value. Edge first run flag for Edge kiosk mode
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEdgeNoFirstRun() {
         return this.edgeNoFirstRun;
     }
@@ -93,7 +92,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("classicAppPath", (n) -> { this.setClassicAppPath(n.getStringValue()); });
@@ -106,10 +105,8 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("classicAppPath", this.getClassicAppPath());
@@ -121,46 +118,36 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
     /**
      * Sets the classicAppPath property value. This is the classicapppath to be used by v4 Win32 app while in Kiosk Mode
      * @param value Value to set for the classicAppPath property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClassicAppPath(@javax.annotation.Nullable final String value) {
+    public void setClassicAppPath(@jakarta.annotation.Nullable final String value) {
         this.classicAppPath = value;
     }
     /**
      * Sets the edgeKiosk property value. Edge kiosk (url) for Edge kiosk mode
      * @param value Value to set for the edgeKiosk property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEdgeKiosk(@javax.annotation.Nullable final String value) {
+    public void setEdgeKiosk(@jakarta.annotation.Nullable final String value) {
         this.edgeKiosk = value;
     }
     /**
      * Sets the edgeKioskIdleTimeoutMinutes property value. Edge kiosk idle timeout in minutes for Edge kiosk mode. Valid values 0 to 1440
      * @param value Value to set for the edgeKioskIdleTimeoutMinutes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEdgeKioskIdleTimeoutMinutes(@javax.annotation.Nullable final Integer value) {
+    public void setEdgeKioskIdleTimeoutMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.edgeKioskIdleTimeoutMinutes = value;
     }
     /**
      * Sets the edgeKioskType property value. Edge kiosk type
      * @param value Value to set for the edgeKioskType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEdgeKioskType(@javax.annotation.Nullable final WindowsEdgeKioskType value) {
+    public void setEdgeKioskType(@jakarta.annotation.Nullable final WindowsEdgeKioskType value) {
         this.edgeKioskType = value;
     }
     /**
      * Sets the edgeNoFirstRun property value. Edge first run flag for Edge kiosk mode
      * @param value Value to set for the edgeNoFirstRun property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEdgeNoFirstRun(@javax.annotation.Nullable final Boolean value) {
+    public void setEdgeNoFirstRun(@jakarta.annotation.Nullable final Boolean value) {
         this.edgeNoFirstRun = value;
     }
 }

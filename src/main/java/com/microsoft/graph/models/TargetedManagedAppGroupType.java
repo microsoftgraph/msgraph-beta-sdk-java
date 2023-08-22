@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum TargetedManagedAppGroupType implements ValuedEnum {
     /** Target the collection of apps manually selected by the admin. */
     SelectedPublicApps("selectedPublicApps"),
@@ -19,10 +20,10 @@ public enum TargetedManagedAppGroupType implements ValuedEnum {
     TargetedManagedAppGroupType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static TargetedManagedAppGroupType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static TargetedManagedAppGroupType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "selectedPublicApps": return SelectedPublicApps;

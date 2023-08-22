@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Values for the InkWorkspaceAccess setting.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum InkAccessSetting implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),
@@ -17,10 +18,10 @@ public enum InkAccessSetting implements ValuedEnum {
     InkAccessSetting(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static InkAccessSetting forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static InkAccessSetting forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

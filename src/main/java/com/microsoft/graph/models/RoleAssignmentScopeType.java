@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Specifies the type of scope for a Role Assignment.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum RoleAssignmentScopeType implements ValuedEnum {
     /** Allow assignments to the specified ResourceScopes. */
     ResourceScope("resourceScope"),
@@ -19,10 +20,10 @@ public enum RoleAssignmentScopeType implements ValuedEnum {
     RoleAssignmentScopeType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static RoleAssignmentScopeType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static RoleAssignmentScopeType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "resourceScope": return ResourceScope;

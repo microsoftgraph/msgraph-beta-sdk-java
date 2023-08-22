@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     /**
      * Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
@@ -29,9 +30,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     private java.util.List<IdentityProviderBase> userFlowIdentityProviders;
     /**
      * Instantiates a new b2xIdentityUserFlow and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public B2xIdentityUserFlow() {
         super();
     }
@@ -40,8 +39,8 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a b2xIdentityUserFlow
      */
-    @javax.annotation.Nonnull
-    public static B2xIdentityUserFlow createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static B2xIdentityUserFlow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new B2xIdentityUserFlow();
     }
@@ -49,7 +48,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * Gets the apiConnectorConfiguration property value. Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      * @return a userFlowApiConnectorConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserFlowApiConnectorConfiguration getApiConnectorConfiguration() {
         return this.apiConnectorConfiguration;
     }
@@ -57,7 +56,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("apiConnectorConfiguration", (n) -> { this.setApiConnectorConfiguration(n.getObjectValue(UserFlowApiConnectorConfiguration::createFromDiscriminatorValue)); });
@@ -71,7 +70,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * Gets the identityProviders property value. The identityProviders property
      * @return a identityProvider
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IdentityProvider> getIdentityProviders() {
         return this.identityProviders;
     }
@@ -79,7 +78,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * Gets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows.
      * @return a userFlowLanguageConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UserFlowLanguageConfiguration> getLanguages() {
         return this.languages;
     }
@@ -87,7 +86,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * Gets the userAttributeAssignments property value. The user attribute assignments included in the user flow.
      * @return a identityUserFlowAttributeAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IdentityUserFlowAttributeAssignment> getUserAttributeAssignments() {
         return this.userAttributeAssignments;
     }
@@ -95,17 +94,15 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
      * Gets the userFlowIdentityProviders property value. The userFlowIdentityProviders property
      * @return a identityProviderBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IdentityProviderBase> getUserFlowIdentityProviders() {
         return this.userFlowIdentityProviders;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("apiConnectorConfiguration", this.getApiConnectorConfiguration());
@@ -117,46 +114,36 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     /**
      * Sets the apiConnectorConfiguration property value. Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      * @param value Value to set for the apiConnectorConfiguration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApiConnectorConfiguration(@javax.annotation.Nullable final UserFlowApiConnectorConfiguration value) {
+    public void setApiConnectorConfiguration(@jakarta.annotation.Nullable final UserFlowApiConnectorConfiguration value) {
         this.apiConnectorConfiguration = value;
     }
     /**
      * Sets the identityProviders property value. The identityProviders property
      * @param value Value to set for the identityProviders property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityProviders(@javax.annotation.Nullable final java.util.List<IdentityProvider> value) {
+    public void setIdentityProviders(@jakarta.annotation.Nullable final java.util.List<IdentityProvider> value) {
         this.identityProviders = value;
     }
     /**
      * Sets the languages property value. The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows.
      * @param value Value to set for the languages property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLanguages(@javax.annotation.Nullable final java.util.List<UserFlowLanguageConfiguration> value) {
+    public void setLanguages(@jakarta.annotation.Nullable final java.util.List<UserFlowLanguageConfiguration> value) {
         this.languages = value;
     }
     /**
      * Sets the userAttributeAssignments property value. The user attribute assignments included in the user flow.
      * @param value Value to set for the userAttributeAssignments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserAttributeAssignments(@javax.annotation.Nullable final java.util.List<IdentityUserFlowAttributeAssignment> value) {
+    public void setUserAttributeAssignments(@jakarta.annotation.Nullable final java.util.List<IdentityUserFlowAttributeAssignment> value) {
         this.userAttributeAssignments = value;
     }
     /**
      * Sets the userFlowIdentityProviders property value. The userFlowIdentityProviders property
      * @param value Value to set for the userFlowIdentityProviders property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserFlowIdentityProviders(@javax.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
+    public void setUserFlowIdentityProviders(@jakarta.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
         this.userFlowIdentityProviders = value;
     }
 }

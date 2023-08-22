@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Deployment states for Autopilot devices
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsAutopilotDeploymentState implements ValuedEnum {
     /** The deployment state is unknown. */
     Unknown("unknown"),
@@ -27,10 +28,10 @@ public enum WindowsAutopilotDeploymentState implements ValuedEnum {
     WindowsAutopilotDeploymentState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsAutopilotDeploymentState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsAutopilotDeploymentState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

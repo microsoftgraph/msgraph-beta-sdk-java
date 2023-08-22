@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Contains rule types for Win32 LOB apps.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Win32LobAppRuleType implements ValuedEnum {
     /** Detection rule. */
     Detection("detection"),
@@ -15,10 +16,10 @@ public enum Win32LobAppRuleType implements ValuedEnum {
     Win32LobAppRuleType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static Win32LobAppRuleType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static Win32LobAppRuleType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "detection": return Detection;

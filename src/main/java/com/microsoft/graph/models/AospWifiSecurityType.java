@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * This enum represents Wi-Fi Security Types for Android Device Owner AOSP Scenarios.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AospWifiSecurityType implements ValuedEnum {
     /** No security type. */
     None("none"),
@@ -17,10 +18,10 @@ public enum AospWifiSecurityType implements ValuedEnum {
     AospWifiSecurityType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AospWifiSecurityType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AospWifiSecurityType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

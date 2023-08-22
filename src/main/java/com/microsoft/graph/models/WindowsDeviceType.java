@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Contains properties for Windows device type. Multiple values can be selected. Default value is `none`.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsDeviceType implements ValuedEnum {
     /** No device types supported. Default value. */
     None("none"),
@@ -23,10 +24,10 @@ public enum WindowsDeviceType implements ValuedEnum {
     WindowsDeviceType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsDeviceType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsDeviceType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

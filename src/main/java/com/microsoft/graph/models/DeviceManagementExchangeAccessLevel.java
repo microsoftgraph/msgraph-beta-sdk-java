@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Access Level in Exchange.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementExchangeAccessLevel implements ValuedEnum {
     /** No device access rule has been configured in Exchange. */
     None("none"),
@@ -19,10 +20,10 @@ public enum DeviceManagementExchangeAccessLevel implements ValuedEnum {
     DeviceManagementExchangeAccessLevel(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementExchangeAccessLevel forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementExchangeAccessLevel forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

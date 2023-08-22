@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Represents an assignment to a group.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable {
     /**
      * The group Id that is the target of the assignment.
@@ -16,9 +17,7 @@ public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarge
     private String groupId;
     /**
      * Instantiates a new groupAssignmentTarget and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public GroupAssignmentTarget() {
         super();
         this.setOdataType("#microsoft.graph.groupAssignmentTarget");
@@ -28,8 +27,8 @@ public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarge
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a groupAssignmentTarget
      */
-    @javax.annotation.Nonnull
-    public static GroupAssignmentTarget createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static GroupAssignmentTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -44,7 +43,7 @@ public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarge
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("groupId", (n) -> { this.setGroupId(n.getStringValue()); });
@@ -54,17 +53,15 @@ public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarge
      * Gets the groupId property value. The group Id that is the target of the assignment.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getGroupId() {
         return this.groupId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("groupId", this.getGroupId());
@@ -72,10 +69,8 @@ public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarge
     /**
      * Sets the groupId property value. The group Id that is the target of the assignment.
      * @param value Value to set for the groupId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setGroupId(@javax.annotation.Nullable final String value) {
+    public void setGroupId(@jakarta.annotation.Nullable final String value) {
         this.groupId = value;
     }
 }

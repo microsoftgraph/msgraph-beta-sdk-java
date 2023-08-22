@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the type of content allowed to be cached by Apple's content caching service.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MacOSContentCachingType implements ValuedEnum {
     /** Default. Both user iCloud data and non-iCloud data will be cached. */
     NotConfigured("notConfigured"),
@@ -17,10 +18,10 @@ public enum MacOSContentCachingType implements ValuedEnum {
     MacOSContentCachingType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MacOSContentCachingType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MacOSContentCachingType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

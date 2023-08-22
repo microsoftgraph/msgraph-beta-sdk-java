@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Type of Group Policy operation status.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum GroupPolicyOperationStatus implements ValuedEnum {
     /** Group Policy unknown operation status. */
     Unknown("unknown"),
@@ -19,10 +20,10 @@ public enum GroupPolicyOperationStatus implements ValuedEnum {
     GroupPolicyOperationStatus(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static GroupPolicyOperationStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static GroupPolicyOperationStatus forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

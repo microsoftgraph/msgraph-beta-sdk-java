@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * An enum type to represent approval type of a driver update profile.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DriverUpdateProfileApprovalType implements ValuedEnum {
     /** This indicates a driver and firmware profile needs to be approved manually. */
     Manual("manual"),
@@ -15,10 +16,10 @@ public enum DriverUpdateProfileApprovalType implements ValuedEnum {
     DriverUpdateProfileApprovalType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DriverUpdateProfileApprovalType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DriverUpdateProfileApprovalType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "manual": return Manual;

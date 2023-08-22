@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Mention extends Entity implements Parsable {
     /**
      * The name of the application where the mention is created. Optional. Not used and defaulted as null for message.
@@ -42,9 +43,7 @@ public class Mention extends Entity implements Parsable {
     private OffsetDateTime serverCreatedDateTime;
     /**
      * Instantiates a new mention and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Mention() {
         super();
     }
@@ -53,8 +52,8 @@ public class Mention extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a mention
      */
-    @javax.annotation.Nonnull
-    public static Mention createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Mention createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Mention();
     }
@@ -62,7 +61,7 @@ public class Mention extends Entity implements Parsable {
      * Gets the application property value. The name of the application where the mention is created. Optional. Not used and defaulted as null for message.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getApplication() {
         return this.application;
     }
@@ -70,7 +69,7 @@ public class Mention extends Entity implements Parsable {
      * Gets the clientReference property value. A unique identifier that represents a parent of the resource instance. Optional. Not used and defaulted as null for message.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getClientReference() {
         return this.clientReference;
     }
@@ -78,7 +77,7 @@ public class Mention extends Entity implements Parsable {
      * Gets the createdBy property value. The email information of the user who made the mention.
      * @return a emailAddress
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailAddress getCreatedBy() {
         return this.createdBy;
     }
@@ -86,7 +85,7 @@ public class Mention extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time that the mention is created on the client.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -94,7 +93,7 @@ public class Mention extends Entity implements Parsable {
      * Gets the deepLink property value. A deep web link to the context of the mention in the resource instance. Optional. Not used and defaulted as null for message.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeepLink() {
         return this.deepLink;
     }
@@ -102,7 +101,7 @@ public class Mention extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("application", (n) -> { this.setApplication(n.getStringValue()); });
@@ -119,7 +118,7 @@ public class Mention extends Entity implements Parsable {
      * Gets the mentioned property value. The mentioned property
      * @return a emailAddress
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailAddress getMentioned() {
         return this.mentioned;
     }
@@ -127,7 +126,7 @@ public class Mention extends Entity implements Parsable {
      * Gets the mentionText property value. Optional. Not used and defaulted as null for message. To get the mentions in a message, see the bodyPreview property of the message instead.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMentionText() {
         return this.mentionText;
     }
@@ -135,17 +134,15 @@ public class Mention extends Entity implements Parsable {
      * Gets the serverCreatedDateTime property value. The date and time that the mention is created on the server. Optional. Not used and defaulted as null for message.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getServerCreatedDateTime() {
         return this.serverCreatedDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("application", this.getApplication());
@@ -160,73 +157,57 @@ public class Mention extends Entity implements Parsable {
     /**
      * Sets the application property value. The name of the application where the mention is created. Optional. Not used and defaulted as null for message.
      * @param value Value to set for the application property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplication(@javax.annotation.Nullable final String value) {
+    public void setApplication(@jakarta.annotation.Nullable final String value) {
         this.application = value;
     }
     /**
      * Sets the clientReference property value. A unique identifier that represents a parent of the resource instance. Optional. Not used and defaulted as null for message.
      * @param value Value to set for the clientReference property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setClientReference(@javax.annotation.Nullable final String value) {
+    public void setClientReference(@jakarta.annotation.Nullable final String value) {
         this.clientReference = value;
     }
     /**
      * Sets the createdBy property value. The email information of the user who made the mention.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final EmailAddress value) {
+    public void setCreatedBy(@jakarta.annotation.Nullable final EmailAddress value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time that the mention is created on the client.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the deepLink property value. A deep web link to the context of the mention in the resource instance. Optional. Not used and defaulted as null for message.
      * @param value Value to set for the deepLink property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeepLink(@javax.annotation.Nullable final String value) {
+    public void setDeepLink(@jakarta.annotation.Nullable final String value) {
         this.deepLink = value;
     }
     /**
      * Sets the mentioned property value. The mentioned property
      * @param value Value to set for the mentioned property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMentioned(@javax.annotation.Nullable final EmailAddress value) {
+    public void setMentioned(@jakarta.annotation.Nullable final EmailAddress value) {
         this.mentioned = value;
     }
     /**
      * Sets the mentionText property value. Optional. Not used and defaulted as null for message. To get the mentions in a message, see the bodyPreview property of the message instead.
      * @param value Value to set for the mentionText property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMentionText(@javax.annotation.Nullable final String value) {
+    public void setMentionText(@jakarta.annotation.Nullable final String value) {
         this.mentionText = value;
     }
     /**
      * Sets the serverCreatedDateTime property value. The date and time that the mention is created on the server. Optional. Not used and defaulted as null for message.
      * @param value Value to set for the serverCreatedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setServerCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setServerCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.serverCreatedDateTime = value;
     }
 }

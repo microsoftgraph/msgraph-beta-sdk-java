@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudAppSecurityProfile extends Entity implements Parsable {
     /**
      * The azureSubscriptionId property
@@ -78,9 +79,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     private SecurityVendorInformation vendorInformation;
     /**
      * Instantiates a new cloudAppSecurityProfile and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CloudAppSecurityProfile() {
         super();
     }
@@ -89,8 +88,8 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudAppSecurityProfile
      */
-    @javax.annotation.Nonnull
-    public static CloudAppSecurityProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudAppSecurityProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudAppSecurityProfile();
     }
@@ -98,7 +97,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Gets the azureSubscriptionId property value. The azureSubscriptionId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureSubscriptionId() {
         return this.azureSubscriptionId;
     }
@@ -106,7 +105,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Gets the azureTenantId property value. The azureTenantId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureTenantId() {
         return this.azureTenantId;
     }
@@ -114,7 +113,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Gets the createdDateTime property value. The createdDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -122,7 +121,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Gets the deploymentPackageUrl property value. The deploymentPackageUrl property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeploymentPackageUrl() {
         return this.deploymentPackageUrl;
     }
@@ -130,7 +129,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Gets the destinationServiceName property value. The destinationServiceName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDestinationServiceName() {
         return this.destinationServiceName;
     }
@@ -138,7 +137,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("azureSubscriptionId", (n) -> { this.setAzureSubscriptionId(n.getStringValue()); });
@@ -164,7 +163,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Gets the isSigned property value. The isSigned property
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSigned() {
         return this.isSigned;
     }
@@ -172,7 +171,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -180,7 +179,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Gets the manifest property value. The manifest property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManifest() {
         return this.manifest;
     }
@@ -188,7 +187,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Gets the name property value. The name property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -196,7 +195,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Gets the permissionsRequired property value. The permissionsRequired property
      * @return a applicationPermissionsRequired
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ApplicationPermissionsRequired getPermissionsRequired() {
         return this.permissionsRequired;
     }
@@ -204,7 +203,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Gets the platform property value. The platform property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPlatform() {
         return this.platform;
     }
@@ -212,7 +211,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Gets the policyName property value. The policyName property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPolicyName() {
         return this.policyName;
     }
@@ -220,7 +219,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Gets the publisher property value. The publisher property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPublisher() {
         return this.publisher;
     }
@@ -228,7 +227,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Gets the riskScore property value. The riskScore property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRiskScore() {
         return this.riskScore;
     }
@@ -236,7 +235,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Gets the tags property value. The tags property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
         return this.tags;
     }
@@ -244,7 +243,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Gets the type property value. The type property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getType() {
         return this.type;
     }
@@ -252,17 +251,15 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Gets the vendorInformation property value. The vendorInformation property
      * @return a securityVendorInformation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {
         return this.vendorInformation;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("azureSubscriptionId", this.getAzureSubscriptionId());
@@ -286,154 +283,120 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     /**
      * Sets the azureSubscriptionId property value. The azureSubscriptionId property
      * @param value Value to set for the azureSubscriptionId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureSubscriptionId(@javax.annotation.Nullable final String value) {
+    public void setAzureSubscriptionId(@jakarta.annotation.Nullable final String value) {
         this.azureSubscriptionId = value;
     }
     /**
      * Sets the azureTenantId property value. The azureTenantId property
      * @param value Value to set for the azureTenantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureTenantId(@javax.annotation.Nullable final String value) {
+    public void setAzureTenantId(@jakarta.annotation.Nullable final String value) {
         this.azureTenantId = value;
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the deploymentPackageUrl property value. The deploymentPackageUrl property
      * @param value Value to set for the deploymentPackageUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeploymentPackageUrl(@javax.annotation.Nullable final String value) {
+    public void setDeploymentPackageUrl(@jakarta.annotation.Nullable final String value) {
         this.deploymentPackageUrl = value;
     }
     /**
      * Sets the destinationServiceName property value. The destinationServiceName property
      * @param value Value to set for the destinationServiceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDestinationServiceName(@javax.annotation.Nullable final String value) {
+    public void setDestinationServiceName(@jakarta.annotation.Nullable final String value) {
         this.destinationServiceName = value;
     }
     /**
      * Sets the isSigned property value. The isSigned property
      * @param value Value to set for the isSigned property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSigned(@javax.annotation.Nullable final Boolean value) {
+    public void setIsSigned(@jakarta.annotation.Nullable final Boolean value) {
         this.isSigned = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the manifest property value. The manifest property
      * @param value Value to set for the manifest property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManifest(@javax.annotation.Nullable final String value) {
+    public void setManifest(@jakarta.annotation.Nullable final String value) {
         this.manifest = value;
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the permissionsRequired property value. The permissionsRequired property
      * @param value Value to set for the permissionsRequired property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPermissionsRequired(@javax.annotation.Nullable final ApplicationPermissionsRequired value) {
+    public void setPermissionsRequired(@jakarta.annotation.Nullable final ApplicationPermissionsRequired value) {
         this.permissionsRequired = value;
     }
     /**
      * Sets the platform property value. The platform property
      * @param value Value to set for the platform property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatform(@javax.annotation.Nullable final String value) {
+    public void setPlatform(@jakarta.annotation.Nullable final String value) {
         this.platform = value;
     }
     /**
      * Sets the policyName property value. The policyName property
      * @param value Value to set for the policyName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPolicyName(@javax.annotation.Nullable final String value) {
+    public void setPolicyName(@jakarta.annotation.Nullable final String value) {
         this.policyName = value;
     }
     /**
      * Sets the publisher property value. The publisher property
      * @param value Value to set for the publisher property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublisher(@javax.annotation.Nullable final String value) {
+    public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.publisher = value;
     }
     /**
      * Sets the riskScore property value. The riskScore property
      * @param value Value to set for the riskScore property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRiskScore(@javax.annotation.Nullable final String value) {
+    public void setRiskScore(@jakarta.annotation.Nullable final String value) {
         this.riskScore = value;
     }
     /**
      * Sets the tags property value. The tags property
      * @param value Value to set for the tags property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.tags = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setType(@javax.annotation.Nullable final String value) {
+    public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
     /**
      * Sets the vendorInformation property value. The vendorInformation property
      * @param value Value to set for the vendorInformation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
+    public void setVendorInformation(@jakarta.annotation.Nullable final SecurityVendorInformation value) {
         this.vendorInformation = value;
     }
 }

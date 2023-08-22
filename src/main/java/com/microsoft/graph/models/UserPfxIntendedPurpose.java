@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Supported values for the intended purpose of a user PFX certificate.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum UserPfxIntendedPurpose implements ValuedEnum {
     /** No roles/usages assigned. */
     Unassigned("unassigned"),
@@ -21,10 +22,10 @@ public enum UserPfxIntendedPurpose implements ValuedEnum {
     UserPfxIntendedPurpose(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static UserPfxIntendedPurpose forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static UserPfxIntendedPurpose forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unassigned": return Unassigned;

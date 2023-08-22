@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Group Policy Configuration Ingestion Type
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum GroupPolicyConfigurationIngestionType implements ValuedEnum {
     /** Unknown policy configuration ingestion type */
     Unknown("unknown"),
@@ -21,10 +22,10 @@ public enum GroupPolicyConfigurationIngestionType implements ValuedEnum {
     GroupPolicyConfigurationIngestionType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static GroupPolicyConfigurationIngestionType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static GroupPolicyConfigurationIngestionType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

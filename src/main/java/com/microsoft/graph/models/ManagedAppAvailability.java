@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * A managed (MAM) application's availability.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedAppAvailability implements ValuedEnum {
     /** A globally available app to all tenants. */
     Global("global"),
@@ -15,10 +16,10 @@ public enum ManagedAppAvailability implements ValuedEnum {
     ManagedAppAvailability(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ManagedAppAvailability forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ManagedAppAvailability forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "global": return Global;

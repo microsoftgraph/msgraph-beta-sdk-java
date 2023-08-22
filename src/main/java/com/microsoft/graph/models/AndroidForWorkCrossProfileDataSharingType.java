@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Android For Work cross profile data sharing type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidForWorkCrossProfileDataSharingType implements ValuedEnum {
     /** Device default value, no intent. */
     DeviceDefault("deviceDefault"),
@@ -19,10 +20,10 @@ public enum AndroidForWorkCrossProfileDataSharingType implements ValuedEnum {
     AndroidForWorkCrossProfileDataSharingType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidForWorkCrossProfileDataSharingType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidForWorkCrossProfileDataSharingType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "deviceDefault": return DeviceDefault;

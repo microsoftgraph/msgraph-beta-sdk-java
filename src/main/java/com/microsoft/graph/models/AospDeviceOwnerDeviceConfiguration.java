@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * This topic provides descriptions of the declared methods, properties and relationships exposed by the AndroidDeviceOwnerAOSPDeviceConfiguration resource.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Indicates whether or not the user is allowed to enable unknown sources setting. When set to true, user is not allowed to enable unknown sources settings.
@@ -68,9 +69,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     private Boolean wifiBlockEditConfigurations;
     /**
      * Instantiates a new aospDeviceOwnerDeviceConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AospDeviceOwnerDeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.aospDeviceOwnerDeviceConfiguration");
@@ -80,8 +79,8 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a aospDeviceOwnerDeviceConfiguration
      */
-    @javax.annotation.Nonnull
-    public static AospDeviceOwnerDeviceConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AospDeviceOwnerDeviceConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AospDeviceOwnerDeviceConfiguration();
     }
@@ -89,7 +88,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * Gets the appsBlockInstallFromUnknownSources property value. Indicates whether or not the user is allowed to enable unknown sources setting. When set to true, user is not allowed to enable unknown sources settings.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAppsBlockInstallFromUnknownSources() {
         return this.appsBlockInstallFromUnknownSources;
     }
@@ -97,7 +96,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * Gets the bluetoothBlockConfiguration property value. Indicates whether or not to block a user from configuring bluetooth.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBluetoothBlockConfiguration() {
         return this.bluetoothBlockConfiguration;
     }
@@ -105,7 +104,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * Gets the bluetoothBlocked property value. Indicates whether or not to disable the use of bluetooth. When set to true, bluetooth cannot be enabled on the device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBluetoothBlocked() {
         return this.bluetoothBlocked;
     }
@@ -113,7 +112,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * Gets the cameraBlocked property value. Indicates whether or not to disable the use of the camera.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCameraBlocked() {
         return this.cameraBlocked;
     }
@@ -121,7 +120,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * Gets the factoryResetBlocked property value. Indicates whether or not the factory reset option in settings is disabled.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getFactoryResetBlocked() {
         return this.factoryResetBlocked;
     }
@@ -129,7 +128,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appsBlockInstallFromUnknownSources", (n) -> { this.setAppsBlockInstallFromUnknownSources(n.getBooleanValue()); });
@@ -152,7 +151,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * Gets the passwordMinimumLength property value. Indicates the minimum length of the password required on the device. Valid values 4 to 16
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
         return this.passwordMinimumLength;
     }
@@ -160,7 +159,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * Gets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeScreenTimeout() {
         return this.passwordMinutesOfInactivityBeforeScreenTimeout;
     }
@@ -168,7 +167,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * Gets the passwordRequiredType property value. Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @return a androidDeviceOwnerRequiredPasswordType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AndroidDeviceOwnerRequiredPasswordType getPasswordRequiredType() {
         return this.passwordRequiredType;
     }
@@ -176,7 +175,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * Gets the passwordSignInFailureCountBeforeFactoryReset property value. Indicates the number of times a user can enter an incorrect password before the device is wiped. Valid values 4 to 11
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordSignInFailureCountBeforeFactoryReset() {
         return this.passwordSignInFailureCountBeforeFactoryReset;
     }
@@ -184,7 +183,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * Gets the screenCaptureBlocked property value. Indicates whether or not to disable the capability to take screenshots.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
         return this.screenCaptureBlocked;
     }
@@ -192,7 +191,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * Gets the securityAllowDebuggingFeatures property value. Indicates whether or not to block the user from enabling debugging features on the device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getSecurityAllowDebuggingFeatures() {
         return this.securityAllowDebuggingFeatures;
     }
@@ -200,7 +199,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * Gets the storageBlockExternalMedia property value. Indicates whether or not to block external media.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getStorageBlockExternalMedia() {
         return this.storageBlockExternalMedia;
     }
@@ -208,7 +207,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * Gets the storageBlockUsbFileTransfer property value. Indicates whether or not to block USB file transfer.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getStorageBlockUsbFileTransfer() {
         return this.storageBlockUsbFileTransfer;
     }
@@ -216,17 +215,15 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * Gets the wifiBlockEditConfigurations property value. Indicates whether or not to block the user from editing the wifi connection settings.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getWifiBlockEditConfigurations() {
         return this.wifiBlockEditConfigurations;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("appsBlockInstallFromUnknownSources", this.getAppsBlockInstallFromUnknownSources());
@@ -247,127 +244,99 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     /**
      * Sets the appsBlockInstallFromUnknownSources property value. Indicates whether or not the user is allowed to enable unknown sources setting. When set to true, user is not allowed to enable unknown sources settings.
      * @param value Value to set for the appsBlockInstallFromUnknownSources property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppsBlockInstallFromUnknownSources(@javax.annotation.Nullable final Boolean value) {
+    public void setAppsBlockInstallFromUnknownSources(@jakarta.annotation.Nullable final Boolean value) {
         this.appsBlockInstallFromUnknownSources = value;
     }
     /**
      * Sets the bluetoothBlockConfiguration property value. Indicates whether or not to block a user from configuring bluetooth.
      * @param value Value to set for the bluetoothBlockConfiguration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBluetoothBlockConfiguration(@javax.annotation.Nullable final Boolean value) {
+    public void setBluetoothBlockConfiguration(@jakarta.annotation.Nullable final Boolean value) {
         this.bluetoothBlockConfiguration = value;
     }
     /**
      * Sets the bluetoothBlocked property value. Indicates whether or not to disable the use of bluetooth. When set to true, bluetooth cannot be enabled on the device.
      * @param value Value to set for the bluetoothBlocked property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBluetoothBlocked(@javax.annotation.Nullable final Boolean value) {
+    public void setBluetoothBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.bluetoothBlocked = value;
     }
     /**
      * Sets the cameraBlocked property value. Indicates whether or not to disable the use of the camera.
      * @param value Value to set for the cameraBlocked property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCameraBlocked(@javax.annotation.Nullable final Boolean value) {
+    public void setCameraBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.cameraBlocked = value;
     }
     /**
      * Sets the factoryResetBlocked property value. Indicates whether or not the factory reset option in settings is disabled.
      * @param value Value to set for the factoryResetBlocked property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFactoryResetBlocked(@javax.annotation.Nullable final Boolean value) {
+    public void setFactoryResetBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.factoryResetBlocked = value;
     }
     /**
      * Sets the passwordMinimumLength property value. Indicates the minimum length of the password required on the device. Valid values 4 to 16
      * @param value Value to set for the passwordMinimumLength property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
+    public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumLength = value;
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
+    public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
     /**
      * Sets the passwordRequiredType property value. Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @param value Value to set for the passwordRequiredType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordRequiredType(@javax.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
+    public void setPasswordRequiredType(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
         this.passwordRequiredType = value;
     }
     /**
      * Sets the passwordSignInFailureCountBeforeFactoryReset property value. Indicates the number of times a user can enter an incorrect password before the device is wiped. Valid values 4 to 11
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
+    public void setPasswordSignInFailureCountBeforeFactoryReset(@jakarta.annotation.Nullable final Integer value) {
         this.passwordSignInFailureCountBeforeFactoryReset = value;
     }
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether or not to disable the capability to take screenshots.
      * @param value Value to set for the screenCaptureBlocked property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
+    public void setScreenCaptureBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.screenCaptureBlocked = value;
     }
     /**
      * Sets the securityAllowDebuggingFeatures property value. Indicates whether or not to block the user from enabling debugging features on the device.
      * @param value Value to set for the securityAllowDebuggingFeatures property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecurityAllowDebuggingFeatures(@javax.annotation.Nullable final Boolean value) {
+    public void setSecurityAllowDebuggingFeatures(@jakarta.annotation.Nullable final Boolean value) {
         this.securityAllowDebuggingFeatures = value;
     }
     /**
      * Sets the storageBlockExternalMedia property value. Indicates whether or not to block external media.
      * @param value Value to set for the storageBlockExternalMedia property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStorageBlockExternalMedia(@javax.annotation.Nullable final Boolean value) {
+    public void setStorageBlockExternalMedia(@jakarta.annotation.Nullable final Boolean value) {
         this.storageBlockExternalMedia = value;
     }
     /**
      * Sets the storageBlockUsbFileTransfer property value. Indicates whether or not to block USB file transfer.
      * @param value Value to set for the storageBlockUsbFileTransfer property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStorageBlockUsbFileTransfer(@javax.annotation.Nullable final Boolean value) {
+    public void setStorageBlockUsbFileTransfer(@jakarta.annotation.Nullable final Boolean value) {
         this.storageBlockUsbFileTransfer = value;
     }
     /**
      * Sets the wifiBlockEditConfigurations property value. Indicates whether or not to block the user from editing the wifi connection settings.
      * @param value Value to set for the wifiBlockEditConfigurations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWifiBlockEditConfigurations(@javax.annotation.Nullable final Boolean value) {
+    public void setWifiBlockEditConfigurations(@jakarta.annotation.Nullable final Boolean value) {
         this.wifiBlockEditConfigurations = value;
     }
 }

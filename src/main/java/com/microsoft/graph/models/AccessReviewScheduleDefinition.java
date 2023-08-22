@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewScheduleDefinition extends Entity implements Parsable {
     /**
      * Defines the list of additional users or group members to be notified of the access review progress.
@@ -74,9 +75,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
     private String status;
     /**
      * Instantiates a new accessReviewScheduleDefinition and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AccessReviewScheduleDefinition() {
         super();
     }
@@ -85,8 +84,8 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a accessReviewScheduleDefinition
      */
-    @javax.annotation.Nonnull
-    public static AccessReviewScheduleDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AccessReviewScheduleDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AccessReviewScheduleDefinition();
     }
@@ -94,7 +93,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * Gets the additionalNotificationRecipients property value. Defines the list of additional users or group members to be notified of the access review progress.
      * @return a accessReviewNotificationRecipientItem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessReviewNotificationRecipientItem> getAdditionalNotificationRecipients() {
         return this.additionalNotificationRecipients;
     }
@@ -102,7 +101,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * Gets the backupReviewers property value. The backupReviewers property
      * @return a accessReviewReviewerScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getBackupReviewers() {
         return this.backupReviewers;
     }
@@ -110,7 +109,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * Gets the createdBy property value. User who created this review. Read-only.
      * @return a userIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UserIdentity getCreatedBy() {
         return this.createdBy;
     }
@@ -118,7 +117,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * Gets the createdDateTime property value. Timestamp when the access review series was created. Supports $select. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -126,7 +125,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * Gets the descriptionForAdmins property value. Description provided by review creators to provide more context of the review to admins. Supports $select.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescriptionForAdmins() {
         return this.descriptionForAdmins;
     }
@@ -134,7 +133,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * Gets the descriptionForReviewers property value. Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review. Email notifications support up to 256 characters. Supports $select.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescriptionForReviewers() {
         return this.descriptionForReviewers;
     }
@@ -142,7 +141,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * Gets the displayName property value. Name of the access review series. Supports $select and $orderBy. Required on create.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -150,7 +149,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * Gets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. See accessReviewReviewerScope. Replaces backupReviewers. Supports $select. NOTE: The value of this property will be ignored if fallback reviewers are assigned through the stageSettings property.
      * @return a accessReviewReviewerScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getFallbackReviewers() {
         return this.fallbackReviewers;
     }
@@ -158,7 +157,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("additionalNotificationRecipients", (n) -> { this.setAdditionalNotificationRecipients(n.getCollectionOfObjectValues(AccessReviewNotificationRecipientItem::createFromDiscriminatorValue)); });
@@ -183,7 +182,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * Gets the instanceEnumerationScope property value. This property is required when scoping a review to guest users' access across all Microsoft 365 groups and determines which Microsoft 365 groups are reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope. Supports $select. For examples of options for configuring instanceEnumerationScope, see Configure the scope of your access review definition using the Microsoft Graph API.
      * @return a accessReviewScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessReviewScope getInstanceEnumerationScope() {
         return this.instanceEnumerationScope;
     }
@@ -191,7 +190,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * Gets the instances property value. Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.
      * @return a accessReviewInstance
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessReviewInstance> getInstances() {
         return this.instances;
     }
@@ -199,7 +198,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. Timestamp when the access review series was last modified. Supports $select. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -207,7 +206,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * Gets the reviewers property value. This collection of access review scopes is used to define who are the reviewers. The reviewers property is only updatable if individual users are assigned as reviewers. Required on create. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. NOTE: The value of this property will be ignored if reviewers are assigned through the stageSettings property.
      * @return a accessReviewReviewerScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getReviewers() {
         return this.reviewers;
     }
@@ -215,7 +214,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * Gets the scope property value. Defines the entities whose access is reviewed. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.
      * @return a accessReviewScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessReviewScope getScope() {
         return this.scope;
     }
@@ -223,7 +222,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * Gets the settings property value. The settings for an access review series, see type definition below. Supports $select. Required on create.
      * @return a accessReviewScheduleSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AccessReviewScheduleSettings getSettings() {
         return this.settings;
     }
@@ -231,7 +230,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * Gets the stageSettings property value. Required only for a multi-stage access review to define the stages and their settings. You can break down each review instance into up to three sequential stages, where each stage can have a different set of reviewers, fallback reviewers, and settings. Stages will be created sequentially based on the dependsOn property. Optional.  When this property is defined, its settings are used instead of the corresponding settings in the accessReviewScheduleDefinition object and its settings, reviewers, and fallbackReviewers properties.
      * @return a accessReviewStageSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<AccessReviewStageSettings> getStageSettings() {
         return this.stageSettings;
     }
@@ -239,17 +238,15 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * Gets the status property value. This read-only field specifies the status of an access review. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.  Supports $select, $orderby, and $filter (eq only). Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getStatus() {
         return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("additionalNotificationRecipients", this.getAdditionalNotificationRecipients());
@@ -272,145 +269,113 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
     /**
      * Sets the additionalNotificationRecipients property value. Defines the list of additional users or group members to be notified of the access review progress.
      * @param value Value to set for the additionalNotificationRecipients property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalNotificationRecipients(@javax.annotation.Nullable final java.util.List<AccessReviewNotificationRecipientItem> value) {
+    public void setAdditionalNotificationRecipients(@jakarta.annotation.Nullable final java.util.List<AccessReviewNotificationRecipientItem> value) {
         this.additionalNotificationRecipients = value;
     }
     /**
      * Sets the backupReviewers property value. The backupReviewers property
      * @param value Value to set for the backupReviewers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBackupReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
+    public void setBackupReviewers(@jakarta.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this.backupReviewers = value;
     }
     /**
      * Sets the createdBy property value. User who created this review. Read-only.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final UserIdentity value) {
+    public void setCreatedBy(@jakarta.annotation.Nullable final UserIdentity value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. Timestamp when the access review series was created. Supports $select. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the descriptionForAdmins property value. Description provided by review creators to provide more context of the review to admins. Supports $select.
      * @param value Value to set for the descriptionForAdmins property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescriptionForAdmins(@javax.annotation.Nullable final String value) {
+    public void setDescriptionForAdmins(@jakarta.annotation.Nullable final String value) {
         this.descriptionForAdmins = value;
     }
     /**
      * Sets the descriptionForReviewers property value. Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review. Email notifications support up to 256 characters. Supports $select.
      * @param value Value to set for the descriptionForReviewers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescriptionForReviewers(@javax.annotation.Nullable final String value) {
+    public void setDescriptionForReviewers(@jakarta.annotation.Nullable final String value) {
         this.descriptionForReviewers = value;
     }
     /**
      * Sets the displayName property value. Name of the access review series. Supports $select and $orderBy. Required on create.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. See accessReviewReviewerScope. Replaces backupReviewers. Supports $select. NOTE: The value of this property will be ignored if fallback reviewers are assigned through the stageSettings property.
      * @param value Value to set for the fallbackReviewers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFallbackReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
+    public void setFallbackReviewers(@jakarta.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this.fallbackReviewers = value;
     }
     /**
      * Sets the instanceEnumerationScope property value. This property is required when scoping a review to guest users' access across all Microsoft 365 groups and determines which Microsoft 365 groups are reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope. Supports $select. For examples of options for configuring instanceEnumerationScope, see Configure the scope of your access review definition using the Microsoft Graph API.
      * @param value Value to set for the instanceEnumerationScope property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstanceEnumerationScope(@javax.annotation.Nullable final AccessReviewScope value) {
+    public void setInstanceEnumerationScope(@jakarta.annotation.Nullable final AccessReviewScope value) {
         this.instanceEnumerationScope = value;
     }
     /**
      * Sets the instances property value. Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.
      * @param value Value to set for the instances property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstances(@javax.annotation.Nullable final java.util.List<AccessReviewInstance> value) {
+    public void setInstances(@jakarta.annotation.Nullable final java.util.List<AccessReviewInstance> value) {
         this.instances = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Timestamp when the access review series was last modified. Supports $select. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the reviewers property value. This collection of access review scopes is used to define who are the reviewers. The reviewers property is only updatable if individual users are assigned as reviewers. Required on create. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. NOTE: The value of this property will be ignored if reviewers are assigned through the stageSettings property.
      * @param value Value to set for the reviewers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
+    public void setReviewers(@jakarta.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this.reviewers = value;
     }
     /**
      * Sets the scope property value. Defines the entities whose access is reviewed. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.
      * @param value Value to set for the scope property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScope(@javax.annotation.Nullable final AccessReviewScope value) {
+    public void setScope(@jakarta.annotation.Nullable final AccessReviewScope value) {
         this.scope = value;
     }
     /**
      * Sets the settings property value. The settings for an access review series, see type definition below. Supports $select. Required on create.
      * @param value Value to set for the settings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSettings(@javax.annotation.Nullable final AccessReviewScheduleSettings value) {
+    public void setSettings(@jakarta.annotation.Nullable final AccessReviewScheduleSettings value) {
         this.settings = value;
     }
     /**
      * Sets the stageSettings property value. Required only for a multi-stage access review to define the stages and their settings. You can break down each review instance into up to three sequential stages, where each stage can have a different set of reviewers, fallback reviewers, and settings. Stages will be created sequentially based on the dependsOn property. Optional.  When this property is defined, its settings are used instead of the corresponding settings in the accessReviewScheduleDefinition object and its settings, reviewers, and fallbackReviewers properties.
      * @param value Value to set for the stageSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStageSettings(@javax.annotation.Nullable final java.util.List<AccessReviewStageSettings> value) {
+    public void setStageSettings(@jakarta.annotation.Nullable final java.util.List<AccessReviewStageSettings> value) {
         this.stageSettings = value;
     }
     /**
      * Sets the status property value. This read-only field specifies the status of an access review. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.  Supports $select, $orderby, and $filter (eq only). Read-only.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final String value) {
+    public void setStatus(@jakarta.annotation.Nullable final String value) {
         this.status = value;
     }
 }

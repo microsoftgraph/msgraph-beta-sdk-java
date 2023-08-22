@@ -9,16 +9,15 @@ import java.util.Objects;
 /**
  * Contains properties used when assigning a Windows AppX mobile app to a group.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
-     * Whether or not to use device execution context for Windows AppX mobile app.
+     * When TRUE, indicates that device execution context will be used for the AppX mobile app. When FALSE, indicates that user context will be used for the AppX mobile app. By default, this property is set to FALSE. Once this property has been set to TRUE it cannot be changed.
      */
     private Boolean useDeviceContext;
     /**
      * Instantiates a new windowsAppXAppAssignmentSettings and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsAppXAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.windowsAppXAppAssignmentSettings");
@@ -28,8 +27,8 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsAppXAppAssignmentSettings
      */
-    @javax.annotation.Nonnull
-    public static WindowsAppXAppAssignmentSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsAppXAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsAppXAppAssignmentSettings();
     }
@@ -37,38 +36,34 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("useDeviceContext", (n) -> { this.setUseDeviceContext(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the useDeviceContext property value. Whether or not to use device execution context for Windows AppX mobile app.
+     * Gets the useDeviceContext property value. When TRUE, indicates that device execution context will be used for the AppX mobile app. When FALSE, indicates that user context will be used for the AppX mobile app. By default, this property is set to FALSE. Once this property has been set to TRUE it cannot be changed.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getUseDeviceContext() {
         return this.useDeviceContext;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("useDeviceContext", this.getUseDeviceContext());
     }
     /**
-     * Sets the useDeviceContext property value. Whether or not to use device execution context for Windows AppX mobile app.
+     * Sets the useDeviceContext property value. When TRUE, indicates that device execution context will be used for the AppX mobile app. When FALSE, indicates that user context will be used for the AppX mobile app. By default, this property is set to FALSE. Once this property has been set to TRUE it cannot be changed.
      * @param value Value to set for the useDeviceContext property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUseDeviceContext(@javax.annotation.Nullable final Boolean value) {
+    public void setUseDeviceContext(@jakarta.annotation.Nullable final Boolean value) {
         this.useDeviceContext = value;
     }
 }

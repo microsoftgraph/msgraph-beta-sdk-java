@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProtectByTemplateAction extends InformationProtectionAction implements Parsable {
     /**
      * The unique identifier for a protection template in Microsoft Purview Information Protection to apply to the content.
@@ -13,9 +14,7 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
     private String templateId;
     /**
      * Instantiates a new protectByTemplateAction and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ProtectByTemplateAction() {
         super();
         this.setOdataType("#microsoft.graph.security.protectByTemplateAction");
@@ -25,8 +24,8 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a protectByTemplateAction
      */
-    @javax.annotation.Nonnull
-    public static ProtectByTemplateAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ProtectByTemplateAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ProtectByTemplateAction();
     }
@@ -34,7 +33,7 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("templateId", (n) -> { this.setTemplateId(n.getStringValue()); });
@@ -44,17 +43,15 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
      * Gets the templateId property value. The unique identifier for a protection template in Microsoft Purview Information Protection to apply to the content.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTemplateId() {
         return this.templateId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("templateId", this.getTemplateId());
@@ -62,10 +59,8 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
     /**
      * Sets the templateId property value. The unique identifier for a protection template in Microsoft Purview Information Protection to apply to the content.
      * @param value Value to set for the templateId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTemplateId(@javax.annotation.Nullable final String value) {
+    public void setTemplateId(@jakarta.annotation.Nullable final String value) {
         this.templateId = value;
     }
 }

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Android Device Owner Kiosk Mode folder icon type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidDeviceOwnerKioskModeFolderIcon implements ValuedEnum {
     /** Not configured; this value is ignored. */
     NotConfigured("notConfigured"),
@@ -21,10 +22,10 @@ public enum AndroidDeviceOwnerKioskModeFolderIcon implements ValuedEnum {
     AndroidDeviceOwnerKioskModeFolderIcon(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidDeviceOwnerKioskModeFolderIcon forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidDeviceOwnerKioskModeFolderIcon forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerRoster extends Entity implements Parsable {
     /**
      * Retrieves the members of the plannerRoster.
@@ -17,9 +18,7 @@ public class PlannerRoster extends Entity implements Parsable {
     private java.util.List<PlannerPlan> plans;
     /**
      * Instantiates a new plannerRoster and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PlannerRoster() {
         super();
     }
@@ -28,8 +27,8 @@ public class PlannerRoster extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a plannerRoster
      */
-    @javax.annotation.Nonnull
-    public static PlannerRoster createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PlannerRoster createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PlannerRoster();
     }
@@ -37,7 +36,7 @@ public class PlannerRoster extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(PlannerRosterMember::createFromDiscriminatorValue)); });
@@ -48,7 +47,7 @@ public class PlannerRoster extends Entity implements Parsable {
      * Gets the members property value. Retrieves the members of the plannerRoster.
      * @return a plannerRosterMember
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PlannerRosterMember> getMembers() {
         return this.members;
     }
@@ -56,17 +55,15 @@ public class PlannerRoster extends Entity implements Parsable {
      * Gets the plans property value. Retrieves the plans contained by the plannerRoster.
      * @return a plannerPlan
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PlannerPlan> getPlans() {
         return this.plans;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("members", this.getMembers());
@@ -75,19 +72,15 @@ public class PlannerRoster extends Entity implements Parsable {
     /**
      * Sets the members property value. Retrieves the members of the plannerRoster.
      * @param value Value to set for the members property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMembers(@javax.annotation.Nullable final java.util.List<PlannerRosterMember> value) {
+    public void setMembers(@jakarta.annotation.Nullable final java.util.List<PlannerRosterMember> value) {
         this.members = value;
     }
     /**
      * Sets the plans property value. Retrieves the plans contained by the plannerRoster.
      * @param value Value to set for the plans property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlans(@javax.annotation.Nullable final java.util.List<PlannerPlan> value) {
+    public void setPlans(@jakarta.annotation.Nullable final java.util.List<PlannerPlan> value) {
         this.plans = value;
     }
 }

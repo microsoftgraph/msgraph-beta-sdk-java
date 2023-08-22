@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * An enum representing possible values for delegated app scope.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidDeviceOwnerDelegatedAppScopeType implements ValuedEnum {
     /** Unspecified; this value defaults to DELEGATED_SCOPE_UNSPECIFIED. */
     Unspecified("unspecified"),
@@ -21,10 +22,10 @@ public enum AndroidDeviceOwnerDelegatedAppScopeType implements ValuedEnum {
     AndroidDeviceOwnerDelegatedAppScopeType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidDeviceOwnerDelegatedAppScopeType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidDeviceOwnerDelegatedAppScopeType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unspecified": return Unspecified;

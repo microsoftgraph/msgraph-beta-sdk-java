@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Determines when notification previews are visible on an iOS device. Previews can include things like text (from Messages and Mail) and invitation details (from Calendar). When configured, it will override the user's defined preview settings.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum IosNotificationPreviewVisibility implements ValuedEnum {
     /** Notification preview settings will not be overwritten. */
     NotConfigured("notConfigured"),
@@ -19,10 +20,10 @@ public enum IosNotificationPreviewVisibility implements ValuedEnum {
     IosNotificationPreviewVisibility(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static IosNotificationPreviewVisibility forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static IosNotificationPreviewVisibility forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

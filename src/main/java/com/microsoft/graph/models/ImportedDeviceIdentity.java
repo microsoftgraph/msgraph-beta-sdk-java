@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * The importedDeviceIdentity resource represents a unique hardware identity of a device that has been pre-staged for pre-enrollment configuration.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImportedDeviceIdentity extends Entity implements Parsable {
     /**
      * Created Date Time of the device
@@ -45,9 +46,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     private Platform platform;
     /**
      * Instantiates a new importedDeviceIdentity and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ImportedDeviceIdentity() {
         super();
     }
@@ -56,8 +55,8 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a importedDeviceIdentity
      */
-    @javax.annotation.Nonnull
-    public static ImportedDeviceIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ImportedDeviceIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -72,7 +71,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * Gets the createdDateTime property value. Created Date Time of the device
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -80,7 +79,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * Gets the description property value. The description of the device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -88,7 +87,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * Gets the enrollmentState property value. The enrollmentState property
      * @return a enrollmentState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EnrollmentState getEnrollmentState() {
         return this.enrollmentState;
     }
@@ -96,7 +95,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -113,7 +112,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * Gets the importedDeviceIdentifier property value. Imported Device Identifier
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getImportedDeviceIdentifier() {
         return this.importedDeviceIdentifier;
     }
@@ -121,7 +120,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * Gets the importedDeviceIdentityType property value. The importedDeviceIdentityType property
      * @return a importedDeviceIdentityType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ImportedDeviceIdentityType getImportedDeviceIdentityType() {
         return this.importedDeviceIdentityType;
     }
@@ -129,7 +128,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * Gets the lastContactedDateTime property value. Last Contacted Date Time of the device
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastContactedDateTime() {
         return this.lastContactedDateTime;
     }
@@ -137,7 +136,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. Last Modified DateTime of the description
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -145,17 +144,15 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * Gets the platform property value. The platform property
      * @return a platform
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Platform getPlatform() {
         return this.platform;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -170,73 +167,57 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     /**
      * Sets the createdDateTime property value. Created Date Time of the device
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description of the device
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the enrollmentState property value. The enrollmentState property
      * @param value Value to set for the enrollmentState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnrollmentState(@javax.annotation.Nullable final EnrollmentState value) {
+    public void setEnrollmentState(@jakarta.annotation.Nullable final EnrollmentState value) {
         this.enrollmentState = value;
     }
     /**
      * Sets the importedDeviceIdentifier property value. Imported Device Identifier
      * @param value Value to set for the importedDeviceIdentifier property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImportedDeviceIdentifier(@javax.annotation.Nullable final String value) {
+    public void setImportedDeviceIdentifier(@jakarta.annotation.Nullable final String value) {
         this.importedDeviceIdentifier = value;
     }
     /**
      * Sets the importedDeviceIdentityType property value. The importedDeviceIdentityType property
      * @param value Value to set for the importedDeviceIdentityType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImportedDeviceIdentityType(@javax.annotation.Nullable final ImportedDeviceIdentityType value) {
+    public void setImportedDeviceIdentityType(@jakarta.annotation.Nullable final ImportedDeviceIdentityType value) {
         this.importedDeviceIdentityType = value;
     }
     /**
      * Sets the lastContactedDateTime property value. Last Contacted Date Time of the device
      * @param value Value to set for the lastContactedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastContactedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastContactedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastContactedDateTime = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Last Modified DateTime of the description
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the platform property value. The platform property
      * @param value Value to set for the platform property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatform(@javax.annotation.Nullable final Platform value) {
+    public void setPlatform(@jakarta.annotation.Nullable final Platform value) {
         this.platform = value;
     }
 }

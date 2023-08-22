@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CatalogContent extends DeployableContent implements Parsable {
     /**
      * The catalogEntry property
@@ -13,9 +14,7 @@ public class CatalogContent extends DeployableContent implements Parsable {
     private CatalogEntry catalogEntry;
     /**
      * Instantiates a new catalogContent and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CatalogContent() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.catalogContent");
@@ -25,8 +24,8 @@ public class CatalogContent extends DeployableContent implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a catalogContent
      */
-    @javax.annotation.Nonnull
-    public static CatalogContent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CatalogContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CatalogContent();
     }
@@ -34,7 +33,7 @@ public class CatalogContent extends DeployableContent implements Parsable {
      * Gets the catalogEntry property value. The catalogEntry property
      * @return a catalogEntry
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CatalogEntry getCatalogEntry() {
         return this.catalogEntry;
     }
@@ -42,7 +41,7 @@ public class CatalogContent extends DeployableContent implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("catalogEntry", (n) -> { this.setCatalogEntry(n.getObjectValue(CatalogEntry::createFromDiscriminatorValue)); });
@@ -51,10 +50,8 @@ public class CatalogContent extends DeployableContent implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("catalogEntry", this.getCatalogEntry());
@@ -62,10 +59,8 @@ public class CatalogContent extends DeployableContent implements Parsable {
     /**
      * Sets the catalogEntry property value. The catalogEntry property
      * @param value Value to set for the catalogEntry property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCatalogEntry(@javax.annotation.Nullable final CatalogEntry value) {
+    public void setCatalogEntry(@jakarta.annotation.Nullable final CatalogEntry value) {
         this.catalogEntry = value;
     }
 }

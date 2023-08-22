@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsable {
     /**
      * Identifier of the job run.
@@ -75,9 +76,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     private OffsetDateTime timeEnded;
     /**
      * Instantiates a new synchronizationTaskExecution and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SynchronizationTaskExecution() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -86,8 +85,8 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a synchronizationTaskExecution
      */
-    @javax.annotation.Nonnull
-    public static SynchronizationTaskExecution createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SynchronizationTaskExecution createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SynchronizationTaskExecution();
     }
@@ -95,7 +94,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * Gets the activityIdentifier property value. Identifier of the job run.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActivityIdentifier() {
         return this.activityIdentifier;
     }
@@ -103,7 +102,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -111,7 +110,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * Gets the countEntitled property value. Count of processed entries that were assigned for this application.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getCountEntitled() {
         return this.countEntitled;
     }
@@ -119,7 +118,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * Gets the countEntitledForProvisioning property value. Count of processed entries that were assigned for provisioning.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getCountEntitledForProvisioning() {
         return this.countEntitledForProvisioning;
     }
@@ -127,7 +126,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * Gets the countEscrowed property value. Count of entries that were escrowed (errors).
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getCountEscrowed() {
         return this.countEscrowed;
     }
@@ -135,7 +134,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * Gets the countEscrowedRaw property value. Count of entries that were escrowed, including system-generated escrows.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getCountEscrowedRaw() {
         return this.countEscrowedRaw;
     }
@@ -143,7 +142,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * Gets the countExported property value. Count of exported entries.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getCountExported() {
         return this.countExported;
     }
@@ -151,7 +150,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * Gets the countExports property value. Count of entries that were expected to be exported.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getCountExports() {
         return this.countExports;
     }
@@ -159,7 +158,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * Gets the countImported property value. Count of imported entries.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getCountImported() {
         return this.countImported;
     }
@@ -167,7 +166,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * Gets the countImportedDeltas property value. Count of imported delta-changes.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getCountImportedDeltas() {
         return this.countImportedDeltas;
     }
@@ -175,7 +174,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * Gets the countImportedReferenceDeltas property value. Count of imported delta-changes pertaining to reference changes.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getCountImportedReferenceDeltas() {
         return this.countImportedReferenceDeltas;
     }
@@ -183,7 +182,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * Gets the error property value. If an error was encountered, contains a synchronizationError object with details.
      * @return a synchronizationError
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SynchronizationError getError() {
         return this.error;
     }
@@ -191,7 +190,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(15);
         deserializerMap.put("activityIdentifier", (n) -> { this.setActivityIdentifier(n.getStringValue()); });
@@ -215,7 +214,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -223,7 +222,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * Gets the state property value. The state property
      * @return a synchronizationTaskExecutionResult
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SynchronizationTaskExecutionResult getState() {
         return this.state;
     }
@@ -231,7 +230,7 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * Gets the timeBegan property value. Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getTimeBegan() {
         return this.timeBegan;
     }
@@ -239,17 +238,15 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
      * Gets the timeEnded property value. Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getTimeEnded() {
         return this.timeEnded;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("activityIdentifier", this.getActivityIdentifier());
         writer.writeLongValue("countEntitled", this.getCountEntitled());
@@ -271,145 +268,113 @@ public class SynchronizationTaskExecution implements AdditionalDataHolder, Parsa
     /**
      * Sets the activityIdentifier property value. Identifier of the job run.
      * @param value Value to set for the activityIdentifier property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityIdentifier(@javax.annotation.Nullable final String value) {
+    public void setActivityIdentifier(@jakarta.annotation.Nullable final String value) {
         this.activityIdentifier = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the countEntitled property value. Count of processed entries that were assigned for this application.
      * @param value Value to set for the countEntitled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountEntitled(@javax.annotation.Nullable final Long value) {
+    public void setCountEntitled(@jakarta.annotation.Nullable final Long value) {
         this.countEntitled = value;
     }
     /**
      * Sets the countEntitledForProvisioning property value. Count of processed entries that were assigned for provisioning.
      * @param value Value to set for the countEntitledForProvisioning property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountEntitledForProvisioning(@javax.annotation.Nullable final Long value) {
+    public void setCountEntitledForProvisioning(@jakarta.annotation.Nullable final Long value) {
         this.countEntitledForProvisioning = value;
     }
     /**
      * Sets the countEscrowed property value. Count of entries that were escrowed (errors).
      * @param value Value to set for the countEscrowed property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountEscrowed(@javax.annotation.Nullable final Long value) {
+    public void setCountEscrowed(@jakarta.annotation.Nullable final Long value) {
         this.countEscrowed = value;
     }
     /**
      * Sets the countEscrowedRaw property value. Count of entries that were escrowed, including system-generated escrows.
      * @param value Value to set for the countEscrowedRaw property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountEscrowedRaw(@javax.annotation.Nullable final Long value) {
+    public void setCountEscrowedRaw(@jakarta.annotation.Nullable final Long value) {
         this.countEscrowedRaw = value;
     }
     /**
      * Sets the countExported property value. Count of exported entries.
      * @param value Value to set for the countExported property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountExported(@javax.annotation.Nullable final Long value) {
+    public void setCountExported(@jakarta.annotation.Nullable final Long value) {
         this.countExported = value;
     }
     /**
      * Sets the countExports property value. Count of entries that were expected to be exported.
      * @param value Value to set for the countExports property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountExports(@javax.annotation.Nullable final Long value) {
+    public void setCountExports(@jakarta.annotation.Nullable final Long value) {
         this.countExports = value;
     }
     /**
      * Sets the countImported property value. Count of imported entries.
      * @param value Value to set for the countImported property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountImported(@javax.annotation.Nullable final Long value) {
+    public void setCountImported(@jakarta.annotation.Nullable final Long value) {
         this.countImported = value;
     }
     /**
      * Sets the countImportedDeltas property value. Count of imported delta-changes.
      * @param value Value to set for the countImportedDeltas property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountImportedDeltas(@javax.annotation.Nullable final Long value) {
+    public void setCountImportedDeltas(@jakarta.annotation.Nullable final Long value) {
         this.countImportedDeltas = value;
     }
     /**
      * Sets the countImportedReferenceDeltas property value. Count of imported delta-changes pertaining to reference changes.
      * @param value Value to set for the countImportedReferenceDeltas property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountImportedReferenceDeltas(@javax.annotation.Nullable final Long value) {
+    public void setCountImportedReferenceDeltas(@jakarta.annotation.Nullable final Long value) {
         this.countImportedReferenceDeltas = value;
     }
     /**
      * Sets the error property value. If an error was encountered, contains a synchronizationError object with details.
      * @param value Value to set for the error property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setError(@javax.annotation.Nullable final SynchronizationError value) {
+    public void setError(@jakarta.annotation.Nullable final SynchronizationError value) {
         this.error = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setState(@javax.annotation.Nullable final SynchronizationTaskExecutionResult value) {
+    public void setState(@jakarta.annotation.Nullable final SynchronizationTaskExecutionResult value) {
         this.state = value;
     }
     /**
      * Sets the timeBegan property value. Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the timeBegan property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTimeBegan(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setTimeBegan(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.timeBegan = value;
     }
     /**
      * Sets the timeEnded property value. Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the timeEnded property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTimeEnded(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setTimeEnded(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.timeEnded = value;
     }
 }

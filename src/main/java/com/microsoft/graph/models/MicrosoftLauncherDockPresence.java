@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Microsoft Launcher Dock Presence selection.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MicrosoftLauncherDockPresence implements ValuedEnum {
     /** Not configured; this value is ignored. */
     NotConfigured("notConfigured"),
@@ -19,10 +20,10 @@ public enum MicrosoftLauncherDockPresence implements ValuedEnum {
     MicrosoftLauncherDockPresence(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MicrosoftLauncherDockPresence forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MicrosoftLauncherDockPresence forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

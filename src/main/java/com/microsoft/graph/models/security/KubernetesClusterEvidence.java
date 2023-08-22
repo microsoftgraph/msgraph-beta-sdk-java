@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class KubernetesClusterEvidence extends AlertEvidence implements Parsable {
     /**
      * The cloud identifier of the cluster. Can be either an amazonResourceEvidence, azureResourceEvidence, or googleCloudResourceEvidence object.
@@ -29,9 +30,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     private String version;
     /**
      * Instantiates a new kubernetesClusterEvidence and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public KubernetesClusterEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.kubernetesClusterEvidence");
@@ -41,8 +40,8 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a kubernetesClusterEvidence
      */
-    @javax.annotation.Nonnull
-    public static KubernetesClusterEvidence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static KubernetesClusterEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new KubernetesClusterEvidence();
     }
@@ -50,7 +49,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
      * Gets the cloudResource property value. The cloud identifier of the cluster. Can be either an amazonResourceEvidence, azureResourceEvidence, or googleCloudResourceEvidence object.
      * @return a alertEvidence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AlertEvidence getCloudResource() {
         return this.cloudResource;
     }
@@ -58,7 +57,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
      * Gets the distribution property value. The distribution type of the cluster.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDistribution() {
         return this.distribution;
     }
@@ -66,7 +65,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("cloudResource", (n) -> { this.setCloudResource(n.getObjectValue(AlertEvidence::createFromDiscriminatorValue)); });
@@ -80,7 +79,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
      * Gets the name property value. The cluster name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -88,7 +87,7 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
      * Gets the platform property value. The platform the cluster runs on. Possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
      * @return a kubernetesPlatform
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public KubernetesPlatform getPlatform() {
         return this.platform;
     }
@@ -96,17 +95,15 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
      * Gets the version property value. The kubernetes version of the cluster.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getVersion() {
         return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("cloudResource", this.getCloudResource());
@@ -118,46 +115,36 @@ public class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     /**
      * Sets the cloudResource property value. The cloud identifier of the cluster. Can be either an amazonResourceEvidence, azureResourceEvidence, or googleCloudResourceEvidence object.
      * @param value Value to set for the cloudResource property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCloudResource(@javax.annotation.Nullable final AlertEvidence value) {
+    public void setCloudResource(@jakarta.annotation.Nullable final AlertEvidence value) {
         this.cloudResource = value;
     }
     /**
      * Sets the distribution property value. The distribution type of the cluster.
      * @param value Value to set for the distribution property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDistribution(@javax.annotation.Nullable final String value) {
+    public void setDistribution(@jakarta.annotation.Nullable final String value) {
         this.distribution = value;
     }
     /**
      * Sets the name property value. The cluster name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the platform property value. The platform the cluster runs on. Possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
      * @param value Value to set for the platform property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPlatform(@javax.annotation.Nullable final KubernetesPlatform value) {
+    public void setPlatform(@jakarta.annotation.Nullable final KubernetesPlatform value) {
         this.platform = value;
     }
     /**
      * Sets the version property value. The kubernetes version of the cluster.
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final String value) {
+    public void setVersion(@jakarta.annotation.Nullable final String value) {
         this.version = value;
     }
 }

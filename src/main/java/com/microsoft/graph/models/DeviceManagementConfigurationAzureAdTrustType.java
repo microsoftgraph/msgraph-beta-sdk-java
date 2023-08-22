@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Required AAD Trust Type
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementConfigurationAzureAdTrustType implements ValuedEnum {
     /** No AAD Trust Type specified */
     None("none"),
@@ -19,10 +20,10 @@ public enum DeviceManagementConfigurationAzureAdTrustType implements ValuedEnum 
     DeviceManagementConfigurationAzureAdTrustType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementConfigurationAzureAdTrustType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementConfigurationAzureAdTrustType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

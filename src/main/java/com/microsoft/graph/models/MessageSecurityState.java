@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MessageSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -55,9 +56,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new messageSecurityState and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MessageSecurityState() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -66,8 +65,8 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a messageSecurityState
      */
-    @javax.annotation.Nonnull
-    public static MessageSecurityState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MessageSecurityState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MessageSecurityState();
     }
@@ -75,7 +74,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -83,7 +82,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the connectingIP property value. The connectingIP property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getConnectingIP() {
         return this.connectingIP;
     }
@@ -91,7 +90,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the deliveryAction property value. The deliveryAction property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeliveryAction() {
         return this.deliveryAction;
     }
@@ -99,7 +98,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the deliveryLocation property value. The deliveryLocation property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeliveryLocation() {
         return this.deliveryLocation;
     }
@@ -107,7 +106,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the directionality property value. The directionality property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDirectionality() {
         return this.directionality;
     }
@@ -115,7 +114,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("connectingIP", (n) -> { this.setConnectingIP(n.getStringValue()); });
@@ -134,7 +133,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the internetMessageId property value. The internetMessageId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInternetMessageId() {
         return this.internetMessageId;
     }
@@ -142,7 +141,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the messageFingerprint property value. The messageFingerprint property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMessageFingerprint() {
         return this.messageFingerprint;
     }
@@ -150,7 +149,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the messageReceivedDateTime property value. The messageReceivedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getMessageReceivedDateTime() {
         return this.messageReceivedDateTime;
     }
@@ -158,7 +157,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the messageSubject property value. The messageSubject property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMessageSubject() {
         return this.messageSubject;
     }
@@ -166,7 +165,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the networkMessageId property value. The networkMessageId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getNetworkMessageId() {
         return this.networkMessageId;
     }
@@ -174,17 +173,15 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("connectingIP", this.getConnectingIP());
         writer.writeStringValue("deliveryAction", this.getDeliveryAction());
@@ -201,100 +198,78 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the connectingIP property value. The connectingIP property
      * @param value Value to set for the connectingIP property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setConnectingIP(@javax.annotation.Nullable final String value) {
+    public void setConnectingIP(@jakarta.annotation.Nullable final String value) {
         this.connectingIP = value;
     }
     /**
      * Sets the deliveryAction property value. The deliveryAction property
      * @param value Value to set for the deliveryAction property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeliveryAction(@javax.annotation.Nullable final String value) {
+    public void setDeliveryAction(@jakarta.annotation.Nullable final String value) {
         this.deliveryAction = value;
     }
     /**
      * Sets the deliveryLocation property value. The deliveryLocation property
      * @param value Value to set for the deliveryLocation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeliveryLocation(@javax.annotation.Nullable final String value) {
+    public void setDeliveryLocation(@jakarta.annotation.Nullable final String value) {
         this.deliveryLocation = value;
     }
     /**
      * Sets the directionality property value. The directionality property
      * @param value Value to set for the directionality property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDirectionality(@javax.annotation.Nullable final String value) {
+    public void setDirectionality(@jakarta.annotation.Nullable final String value) {
         this.directionality = value;
     }
     /**
      * Sets the internetMessageId property value. The internetMessageId property
      * @param value Value to set for the internetMessageId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInternetMessageId(@javax.annotation.Nullable final String value) {
+    public void setInternetMessageId(@jakarta.annotation.Nullable final String value) {
         this.internetMessageId = value;
     }
     /**
      * Sets the messageFingerprint property value. The messageFingerprint property
      * @param value Value to set for the messageFingerprint property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessageFingerprint(@javax.annotation.Nullable final String value) {
+    public void setMessageFingerprint(@jakarta.annotation.Nullable final String value) {
         this.messageFingerprint = value;
     }
     /**
      * Sets the messageReceivedDateTime property value. The messageReceivedDateTime property
      * @param value Value to set for the messageReceivedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessageReceivedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setMessageReceivedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.messageReceivedDateTime = value;
     }
     /**
      * Sets the messageSubject property value. The messageSubject property
      * @param value Value to set for the messageSubject property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessageSubject(@javax.annotation.Nullable final String value) {
+    public void setMessageSubject(@jakarta.annotation.Nullable final String value) {
         this.messageSubject = value;
     }
     /**
      * Sets the networkMessageId property value. The networkMessageId property
      * @param value Value to set for the networkMessageId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkMessageId(@javax.annotation.Nullable final String value) {
+    public void setNetworkMessageId(@jakarta.annotation.Nullable final String value) {
         this.networkMessageId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

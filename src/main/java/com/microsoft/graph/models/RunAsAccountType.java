@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the type of execution context the app runs in.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum RunAsAccountType implements ValuedEnum {
     /** System context */
     System("system"),
@@ -15,10 +16,10 @@ public enum RunAsAccountType implements ValuedEnum {
     RunAsAccountType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static RunAsAccountType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static RunAsAccountType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "system": return System;

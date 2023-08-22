@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Defenders action to take on detected Potentially Unwanted Application (PUA).
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DefenderPotentiallyUnwantedAppAction implements ValuedEnum {
     /** PUA Protection is off. Defender will not protect against potentially unwanted applications. */
     DeviceDefault("deviceDefault"),
@@ -17,10 +18,10 @@ public enum DefenderPotentiallyUnwantedAppAction implements ValuedEnum {
     DefenderPotentiallyUnwantedAppAction(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DefenderPotentiallyUnwantedAppAction forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DefenderPotentiallyUnwantedAppAction forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "deviceDefault": return DeviceDefault;

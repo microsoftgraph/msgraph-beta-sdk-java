@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * This topic provides descriptions of the declared methods, properties and relationships exposed by the windows81GeneralConfiguration resource.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows81GeneralConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
@@ -152,9 +153,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     private String workFoldersUrl;
     /**
      * Instantiates a new windows81GeneralConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Windows81GeneralConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows81GeneralConfiguration");
@@ -164,8 +163,8 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windows81GeneralConfiguration
      */
-    @javax.annotation.Nonnull
-    public static Windows81GeneralConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Windows81GeneralConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Windows81GeneralConfiguration();
     }
@@ -173,7 +172,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the accountsBlockAddingNonMicrosoftAccountEmail property value. Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAccountsBlockAddingNonMicrosoftAccountEmail() {
         return this.accountsBlockAddingNonMicrosoftAccountEmail;
     }
@@ -181,7 +180,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the applyOnlyToWindows81 property value. Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getApplyOnlyToWindows81() {
         return this.applyOnlyToWindows81;
     }
@@ -189,7 +188,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the browserBlockAutofill property value. Indicates whether or not to block auto fill.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBrowserBlockAutofill() {
         return this.browserBlockAutofill;
     }
@@ -197,7 +196,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the browserBlockAutomaticDetectionOfIntranetSites property value. Indicates whether or not to block automatic detection of Intranet sites.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBrowserBlockAutomaticDetectionOfIntranetSites() {
         return this.browserBlockAutomaticDetectionOfIntranetSites;
     }
@@ -205,7 +204,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the browserBlockEnterpriseModeAccess property value. Indicates whether or not to block enterprise mode access.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBrowserBlockEnterpriseModeAccess() {
         return this.browserBlockEnterpriseModeAccess;
     }
@@ -213,7 +212,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the browserBlockJavaScript property value. Indicates whether or not to Block the user from using JavaScript.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBrowserBlockJavaScript() {
         return this.browserBlockJavaScript;
     }
@@ -221,7 +220,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the browserBlockPlugins property value. Indicates whether or not to block plug-ins.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBrowserBlockPlugins() {
         return this.browserBlockPlugins;
     }
@@ -229,7 +228,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the browserBlockPopups property value. Indicates whether or not to block popups.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBrowserBlockPopups() {
         return this.browserBlockPopups;
     }
@@ -237,7 +236,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the browserBlockSendingDoNotTrackHeader property value. Indicates whether or not to Block the user from sending the do not track header.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBrowserBlockSendingDoNotTrackHeader() {
         return this.browserBlockSendingDoNotTrackHeader;
     }
@@ -245,7 +244,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the browserBlockSingleWordEntryOnIntranetSites property value. Indicates whether or not to block a single word entry on Intranet sites.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBrowserBlockSingleWordEntryOnIntranetSites() {
         return this.browserBlockSingleWordEntryOnIntranetSites;
     }
@@ -253,7 +252,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the browserEnterpriseModeSiteListLocation property value. The enterprise mode site list location. Could be a local file, local network or http location.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBrowserEnterpriseModeSiteListLocation() {
         return this.browserEnterpriseModeSiteListLocation;
     }
@@ -261,7 +260,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the browserInternetSecurityLevel property value. Possible values for internet site security level.
      * @return a internetSiteSecurityLevel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public InternetSiteSecurityLevel getBrowserInternetSecurityLevel() {
         return this.browserInternetSecurityLevel;
     }
@@ -269,7 +268,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the browserIntranetSecurityLevel property value. Possible values for site security level.
      * @return a siteSecurityLevel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SiteSecurityLevel getBrowserIntranetSecurityLevel() {
         return this.browserIntranetSecurityLevel;
     }
@@ -277,7 +276,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the browserLoggingReportLocation property value. The logging report location.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBrowserLoggingReportLocation() {
         return this.browserLoggingReportLocation;
     }
@@ -285,7 +284,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the browserRequireFirewall property value. Indicates whether or not to require a firewall.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBrowserRequireFirewall() {
         return this.browserRequireFirewall;
     }
@@ -293,7 +292,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the browserRequireFraudWarning property value. Indicates whether or not to require fraud warning.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBrowserRequireFraudWarning() {
         return this.browserRequireFraudWarning;
     }
@@ -301,7 +300,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the browserRequireHighSecurityForRestrictedSites property value. Indicates whether or not to require high security for restricted sites.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBrowserRequireHighSecurityForRestrictedSites() {
         return this.browserRequireHighSecurityForRestrictedSites;
     }
@@ -309,7 +308,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the browserRequireSmartScreen property value. Indicates whether or not to require the user to use the smart screen filter.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBrowserRequireSmartScreen() {
         return this.browserRequireSmartScreen;
     }
@@ -317,7 +316,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the browserTrustedSitesSecurityLevel property value. Possible values for site security level.
      * @return a siteSecurityLevel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SiteSecurityLevel getBrowserTrustedSitesSecurityLevel() {
         return this.browserTrustedSitesSecurityLevel;
     }
@@ -325,7 +324,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCellularBlockDataRoaming() {
         return this.cellularBlockDataRoaming;
     }
@@ -333,7 +332,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the diagnosticsBlockDataSubmission property value. Indicates whether or not to block diagnostic data submission.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDiagnosticsBlockDataSubmission() {
         return this.diagnosticsBlockDataSubmission;
     }
@@ -341,7 +340,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountsBlockAddingNonMicrosoftAccountEmail", (n) -> { this.setAccountsBlockAddingNonMicrosoftAccountEmail(n.getBooleanValue()); });
@@ -385,7 +384,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the minimumAutoInstallClassification property value. Possible values for automatic update classification.
      * @return a updateClassification
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UpdateClassification getMinimumAutoInstallClassification() {
         return this.minimumAutoInstallClassification;
     }
@@ -393,7 +392,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the passwordBlockPicturePasswordAndPin property value. Indicates whether or not to Block the user from using a pictures password and pin.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPasswordBlockPicturePasswordAndPin() {
         return this.passwordBlockPicturePasswordAndPin;
     }
@@ -401,7 +400,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the passwordExpirationDays property value. Password expiration in days.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
         return this.passwordExpirationDays;
     }
@@ -409,7 +408,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
         return this.passwordMinimumCharacterSetCount;
     }
@@ -417,7 +416,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the passwordMinimumLength property value. The minimum password length.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
         return this.passwordMinimumLength;
     }
@@ -425,7 +424,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the passwordMinutesOfInactivityBeforeScreenTimeout property value. The minutes of inactivity before the screen times out.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeScreenTimeout() {
         return this.passwordMinutesOfInactivityBeforeScreenTimeout;
     }
@@ -433,7 +432,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of. Valid values 0 to 24
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
         return this.passwordPreviousPasswordBlockCount;
     }
@@ -441,7 +440,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return a requiredPasswordType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
         return this.passwordRequiredType;
     }
@@ -449,7 +448,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the passwordSignInFailureCountBeforeFactoryReset property value. The number of sign in failures before factory reset.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPasswordSignInFailureCountBeforeFactoryReset() {
         return this.passwordSignInFailureCountBeforeFactoryReset;
     }
@@ -457,7 +456,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the storageRequireDeviceEncryption property value. Indicates whether or not to require encryption on a mobile device.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getStorageRequireDeviceEncryption() {
         return this.storageRequireDeviceEncryption;
     }
@@ -465,7 +464,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the updatesMinimumAutoInstallClassification property value. Possible values for automatic update classification.
      * @return a updateClassification
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UpdateClassification getUpdatesMinimumAutoInstallClassification() {
         return this.updatesMinimumAutoInstallClassification;
     }
@@ -473,7 +472,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the updatesRequireAutomaticUpdates property value. Indicates whether or not to require automatic updates.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getUpdatesRequireAutomaticUpdates() {
         return this.updatesRequireAutomaticUpdates;
     }
@@ -481,7 +480,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the userAccountControlSettings property value. Possible values for Windows user account control settings.
      * @return a windowsUserAccountControlSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsUserAccountControlSettings getUserAccountControlSettings() {
         return this.userAccountControlSettings;
     }
@@ -489,17 +488,15 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Gets the workFoldersUrl property value. The work folders url.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWorkFoldersUrl() {
         return this.workFoldersUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("accountsBlockAddingNonMicrosoftAccountEmail", this.getAccountsBlockAddingNonMicrosoftAccountEmail());
@@ -540,316 +537,246 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     /**
      * Sets the accountsBlockAddingNonMicrosoftAccountEmail property value. Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
      * @param value Value to set for the accountsBlockAddingNonMicrosoftAccountEmail property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccountsBlockAddingNonMicrosoftAccountEmail(@javax.annotation.Nullable final Boolean value) {
+    public void setAccountsBlockAddingNonMicrosoftAccountEmail(@jakarta.annotation.Nullable final Boolean value) {
         this.accountsBlockAddingNonMicrosoftAccountEmail = value;
     }
     /**
      * Sets the applyOnlyToWindows81 property value. Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
      * @param value Value to set for the applyOnlyToWindows81 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApplyOnlyToWindows81(@javax.annotation.Nullable final Boolean value) {
+    public void setApplyOnlyToWindows81(@jakarta.annotation.Nullable final Boolean value) {
         this.applyOnlyToWindows81 = value;
     }
     /**
      * Sets the browserBlockAutofill property value. Indicates whether or not to block auto fill.
      * @param value Value to set for the browserBlockAutofill property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowserBlockAutofill(@javax.annotation.Nullable final Boolean value) {
+    public void setBrowserBlockAutofill(@jakarta.annotation.Nullable final Boolean value) {
         this.browserBlockAutofill = value;
     }
     /**
      * Sets the browserBlockAutomaticDetectionOfIntranetSites property value. Indicates whether or not to block automatic detection of Intranet sites.
      * @param value Value to set for the browserBlockAutomaticDetectionOfIntranetSites property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowserBlockAutomaticDetectionOfIntranetSites(@javax.annotation.Nullable final Boolean value) {
+    public void setBrowserBlockAutomaticDetectionOfIntranetSites(@jakarta.annotation.Nullable final Boolean value) {
         this.browserBlockAutomaticDetectionOfIntranetSites = value;
     }
     /**
      * Sets the browserBlockEnterpriseModeAccess property value. Indicates whether or not to block enterprise mode access.
      * @param value Value to set for the browserBlockEnterpriseModeAccess property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowserBlockEnterpriseModeAccess(@javax.annotation.Nullable final Boolean value) {
+    public void setBrowserBlockEnterpriseModeAccess(@jakarta.annotation.Nullable final Boolean value) {
         this.browserBlockEnterpriseModeAccess = value;
     }
     /**
      * Sets the browserBlockJavaScript property value. Indicates whether or not to Block the user from using JavaScript.
      * @param value Value to set for the browserBlockJavaScript property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowserBlockJavaScript(@javax.annotation.Nullable final Boolean value) {
+    public void setBrowserBlockJavaScript(@jakarta.annotation.Nullable final Boolean value) {
         this.browserBlockJavaScript = value;
     }
     /**
      * Sets the browserBlockPlugins property value. Indicates whether or not to block plug-ins.
      * @param value Value to set for the browserBlockPlugins property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowserBlockPlugins(@javax.annotation.Nullable final Boolean value) {
+    public void setBrowserBlockPlugins(@jakarta.annotation.Nullable final Boolean value) {
         this.browserBlockPlugins = value;
     }
     /**
      * Sets the browserBlockPopups property value. Indicates whether or not to block popups.
      * @param value Value to set for the browserBlockPopups property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowserBlockPopups(@javax.annotation.Nullable final Boolean value) {
+    public void setBrowserBlockPopups(@jakarta.annotation.Nullable final Boolean value) {
         this.browserBlockPopups = value;
     }
     /**
      * Sets the browserBlockSendingDoNotTrackHeader property value. Indicates whether or not to Block the user from sending the do not track header.
      * @param value Value to set for the browserBlockSendingDoNotTrackHeader property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowserBlockSendingDoNotTrackHeader(@javax.annotation.Nullable final Boolean value) {
+    public void setBrowserBlockSendingDoNotTrackHeader(@jakarta.annotation.Nullable final Boolean value) {
         this.browserBlockSendingDoNotTrackHeader = value;
     }
     /**
      * Sets the browserBlockSingleWordEntryOnIntranetSites property value. Indicates whether or not to block a single word entry on Intranet sites.
      * @param value Value to set for the browserBlockSingleWordEntryOnIntranetSites property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowserBlockSingleWordEntryOnIntranetSites(@javax.annotation.Nullable final Boolean value) {
+    public void setBrowserBlockSingleWordEntryOnIntranetSites(@jakarta.annotation.Nullable final Boolean value) {
         this.browserBlockSingleWordEntryOnIntranetSites = value;
     }
     /**
      * Sets the browserEnterpriseModeSiteListLocation property value. The enterprise mode site list location. Could be a local file, local network or http location.
      * @param value Value to set for the browserEnterpriseModeSiteListLocation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowserEnterpriseModeSiteListLocation(@javax.annotation.Nullable final String value) {
+    public void setBrowserEnterpriseModeSiteListLocation(@jakarta.annotation.Nullable final String value) {
         this.browserEnterpriseModeSiteListLocation = value;
     }
     /**
      * Sets the browserInternetSecurityLevel property value. Possible values for internet site security level.
      * @param value Value to set for the browserInternetSecurityLevel property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowserInternetSecurityLevel(@javax.annotation.Nullable final InternetSiteSecurityLevel value) {
+    public void setBrowserInternetSecurityLevel(@jakarta.annotation.Nullable final InternetSiteSecurityLevel value) {
         this.browserInternetSecurityLevel = value;
     }
     /**
      * Sets the browserIntranetSecurityLevel property value. Possible values for site security level.
      * @param value Value to set for the browserIntranetSecurityLevel property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowserIntranetSecurityLevel(@javax.annotation.Nullable final SiteSecurityLevel value) {
+    public void setBrowserIntranetSecurityLevel(@jakarta.annotation.Nullable final SiteSecurityLevel value) {
         this.browserIntranetSecurityLevel = value;
     }
     /**
      * Sets the browserLoggingReportLocation property value. The logging report location.
      * @param value Value to set for the browserLoggingReportLocation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowserLoggingReportLocation(@javax.annotation.Nullable final String value) {
+    public void setBrowserLoggingReportLocation(@jakarta.annotation.Nullable final String value) {
         this.browserLoggingReportLocation = value;
     }
     /**
      * Sets the browserRequireFirewall property value. Indicates whether or not to require a firewall.
      * @param value Value to set for the browserRequireFirewall property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowserRequireFirewall(@javax.annotation.Nullable final Boolean value) {
+    public void setBrowserRequireFirewall(@jakarta.annotation.Nullable final Boolean value) {
         this.browserRequireFirewall = value;
     }
     /**
      * Sets the browserRequireFraudWarning property value. Indicates whether or not to require fraud warning.
      * @param value Value to set for the browserRequireFraudWarning property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowserRequireFraudWarning(@javax.annotation.Nullable final Boolean value) {
+    public void setBrowserRequireFraudWarning(@jakarta.annotation.Nullable final Boolean value) {
         this.browserRequireFraudWarning = value;
     }
     /**
      * Sets the browserRequireHighSecurityForRestrictedSites property value. Indicates whether or not to require high security for restricted sites.
      * @param value Value to set for the browserRequireHighSecurityForRestrictedSites property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowserRequireHighSecurityForRestrictedSites(@javax.annotation.Nullable final Boolean value) {
+    public void setBrowserRequireHighSecurityForRestrictedSites(@jakarta.annotation.Nullable final Boolean value) {
         this.browserRequireHighSecurityForRestrictedSites = value;
     }
     /**
      * Sets the browserRequireSmartScreen property value. Indicates whether or not to require the user to use the smart screen filter.
      * @param value Value to set for the browserRequireSmartScreen property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowserRequireSmartScreen(@javax.annotation.Nullable final Boolean value) {
+    public void setBrowserRequireSmartScreen(@jakarta.annotation.Nullable final Boolean value) {
         this.browserRequireSmartScreen = value;
     }
     /**
      * Sets the browserTrustedSitesSecurityLevel property value. Possible values for site security level.
      * @param value Value to set for the browserTrustedSitesSecurityLevel property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBrowserTrustedSitesSecurityLevel(@javax.annotation.Nullable final SiteSecurityLevel value) {
+    public void setBrowserTrustedSitesSecurityLevel(@jakarta.annotation.Nullable final SiteSecurityLevel value) {
         this.browserTrustedSitesSecurityLevel = value;
     }
     /**
      * Sets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
      * @param value Value to set for the cellularBlockDataRoaming property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCellularBlockDataRoaming(@javax.annotation.Nullable final Boolean value) {
+    public void setCellularBlockDataRoaming(@jakarta.annotation.Nullable final Boolean value) {
         this.cellularBlockDataRoaming = value;
     }
     /**
      * Sets the diagnosticsBlockDataSubmission property value. Indicates whether or not to block diagnostic data submission.
      * @param value Value to set for the diagnosticsBlockDataSubmission property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDiagnosticsBlockDataSubmission(@javax.annotation.Nullable final Boolean value) {
+    public void setDiagnosticsBlockDataSubmission(@jakarta.annotation.Nullable final Boolean value) {
         this.diagnosticsBlockDataSubmission = value;
     }
     /**
      * Sets the minimumAutoInstallClassification property value. Possible values for automatic update classification.
      * @param value Value to set for the minimumAutoInstallClassification property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMinimumAutoInstallClassification(@javax.annotation.Nullable final UpdateClassification value) {
+    public void setMinimumAutoInstallClassification(@jakarta.annotation.Nullable final UpdateClassification value) {
         this.minimumAutoInstallClassification = value;
     }
     /**
      * Sets the passwordBlockPicturePasswordAndPin property value. Indicates whether or not to Block the user from using a pictures password and pin.
      * @param value Value to set for the passwordBlockPicturePasswordAndPin property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordBlockPicturePasswordAndPin(@javax.annotation.Nullable final Boolean value) {
+    public void setPasswordBlockPicturePasswordAndPin(@jakarta.annotation.Nullable final Boolean value) {
         this.passwordBlockPicturePasswordAndPin = value;
     }
     /**
      * Sets the passwordExpirationDays property value. Password expiration in days.
      * @param value Value to set for the passwordExpirationDays property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
+    public void setPasswordExpirationDays(@jakarta.annotation.Nullable final Integer value) {
         this.passwordExpirationDays = value;
     }
     /**
      * Sets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
+    public void setPasswordMinimumCharacterSetCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumCharacterSetCount = value;
     }
     /**
      * Sets the passwordMinimumLength property value. The minimum password length.
      * @param value Value to set for the passwordMinimumLength property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
+    public void setPasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinimumLength = value;
     }
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. The minutes of inactivity before the screen times out.
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
+    public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@jakarta.annotation.Nullable final Integer value) {
         this.passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of. Valid values 0 to 24
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
+    public void setPasswordPreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.passwordPreviousPasswordBlockCount = value;
     }
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
+    public void setPasswordRequiredType(@jakarta.annotation.Nullable final RequiredPasswordType value) {
         this.passwordRequiredType = value;
     }
     /**
      * Sets the passwordSignInFailureCountBeforeFactoryReset property value. The number of sign in failures before factory reset.
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
+    public void setPasswordSignInFailureCountBeforeFactoryReset(@jakarta.annotation.Nullable final Integer value) {
         this.passwordSignInFailureCountBeforeFactoryReset = value;
     }
     /**
      * Sets the storageRequireDeviceEncryption property value. Indicates whether or not to require encryption on a mobile device.
      * @param value Value to set for the storageRequireDeviceEncryption property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStorageRequireDeviceEncryption(@javax.annotation.Nullable final Boolean value) {
+    public void setStorageRequireDeviceEncryption(@jakarta.annotation.Nullable final Boolean value) {
         this.storageRequireDeviceEncryption = value;
     }
     /**
      * Sets the updatesMinimumAutoInstallClassification property value. Possible values for automatic update classification.
      * @param value Value to set for the updatesMinimumAutoInstallClassification property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdatesMinimumAutoInstallClassification(@javax.annotation.Nullable final UpdateClassification value) {
+    public void setUpdatesMinimumAutoInstallClassification(@jakarta.annotation.Nullable final UpdateClassification value) {
         this.updatesMinimumAutoInstallClassification = value;
     }
     /**
      * Sets the updatesRequireAutomaticUpdates property value. Indicates whether or not to require automatic updates.
      * @param value Value to set for the updatesRequireAutomaticUpdates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdatesRequireAutomaticUpdates(@javax.annotation.Nullable final Boolean value) {
+    public void setUpdatesRequireAutomaticUpdates(@jakarta.annotation.Nullable final Boolean value) {
         this.updatesRequireAutomaticUpdates = value;
     }
     /**
      * Sets the userAccountControlSettings property value. Possible values for Windows user account control settings.
      * @param value Value to set for the userAccountControlSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserAccountControlSettings(@javax.annotation.Nullable final WindowsUserAccountControlSettings value) {
+    public void setUserAccountControlSettings(@jakarta.annotation.Nullable final WindowsUserAccountControlSettings value) {
         this.userAccountControlSettings = value;
     }
     /**
      * Sets the workFoldersUrl property value. The work folders url.
      * @param value Value to set for the workFoldersUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkFoldersUrl(@javax.annotation.Nullable final String value) {
+    public void setWorkFoldersUrl(@jakarta.annotation.Nullable final String value) {
         this.workFoldersUrl = value;
     }
 }

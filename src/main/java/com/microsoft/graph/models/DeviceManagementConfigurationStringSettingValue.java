@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Simple setting value
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationStringSettingValue extends DeviceManagementConfigurationSimpleSettingValue implements Parsable {
     /**
      * Value of the string setting.
@@ -16,9 +17,7 @@ public class DeviceManagementConfigurationStringSettingValue extends DeviceManag
     private String value;
     /**
      * Instantiates a new deviceManagementConfigurationStringSettingValue and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementConfigurationStringSettingValue() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationStringSettingValue");
@@ -28,8 +27,8 @@ public class DeviceManagementConfigurationStringSettingValue extends DeviceManag
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementConfigurationStringSettingValue
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementConfigurationStringSettingValue createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationStringSettingValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -44,7 +43,7 @@ public class DeviceManagementConfigurationStringSettingValue extends DeviceManag
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
@@ -54,17 +53,15 @@ public class DeviceManagementConfigurationStringSettingValue extends DeviceManag
      * Gets the value property value. Value of the string setting.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getValue() {
         return this.value;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("value", this.getValue());
@@ -72,10 +69,8 @@ public class DeviceManagementConfigurationStringSettingValue extends DeviceManag
     /**
      * Sets the value property value. Value of the string setting.
      * @param value Value to set for the value property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setValue(@javax.annotation.Nullable final String value) {
+    public void setValue(@jakarta.annotation.Nullable final String value) {
         this.value = value;
     }
 }

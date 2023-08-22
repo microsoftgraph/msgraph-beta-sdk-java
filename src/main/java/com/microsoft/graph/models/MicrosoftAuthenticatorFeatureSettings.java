@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -34,9 +35,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
     private String odataType;
     /**
      * Instantiates a new microsoftAuthenticatorFeatureSettings and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MicrosoftAuthenticatorFeatureSettings() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,8 +44,8 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a microsoftAuthenticatorFeatureSettings
      */
-    @javax.annotation.Nonnull
-    public static MicrosoftAuthenticatorFeatureSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MicrosoftAuthenticatorFeatureSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MicrosoftAuthenticatorFeatureSettings();
     }
@@ -54,7 +53,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -62,7 +61,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
      * Gets the companionAppAllowedState property value. Determines whether users will be able to approve push notifications on other Microsoft applications such as Outlook Mobile.
      * @return a authenticationMethodFeatureConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationMethodFeatureConfiguration getCompanionAppAllowedState() {
         return this.companionAppAllowedState;
     }
@@ -70,7 +69,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
      * Gets the displayAppInformationRequiredState property value. Determines whether the user's Authenticator app will show them the client app they are signing into.
      * @return a authenticationMethodFeatureConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationMethodFeatureConfiguration getDisplayAppInformationRequiredState() {
         return this.displayAppInformationRequiredState;
     }
@@ -78,7 +77,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
      * Gets the displayLocationInformationRequiredState property value. Determines whether the user's Authenticator app will show them the geographic location of where the authentication request originated from.
      * @return a authenticationMethodFeatureConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationMethodFeatureConfiguration getDisplayLocationInformationRequiredState() {
         return this.displayLocationInformationRequiredState;
     }
@@ -86,7 +85,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("companionAppAllowedState", (n) -> { this.setCompanionAppAllowedState(n.getObjectValue(AuthenticationMethodFeatureConfiguration::createFromDiscriminatorValue)); });
@@ -100,7 +99,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
      * Gets the numberMatchingRequiredState property value. Specifies whether the user needs to enter a number in the Authenticator app from the login screen to complete their login. Value is ignored for phone sign-in notifications.
      * @return a authenticationMethodFeatureConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AuthenticationMethodFeatureConfiguration getNumberMatchingRequiredState() {
         return this.numberMatchingRequiredState;
     }
@@ -108,17 +107,15 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("companionAppAllowedState", this.getCompanionAppAllowedState());
         writer.writeObjectValue("displayAppInformationRequiredState", this.getDisplayAppInformationRequiredState());
@@ -130,55 +127,43 @@ public class MicrosoftAuthenticatorFeatureSettings implements AdditionalDataHold
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the companionAppAllowedState property value. Determines whether users will be able to approve push notifications on other Microsoft applications such as Outlook Mobile.
      * @param value Value to set for the companionAppAllowedState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCompanionAppAllowedState(@javax.annotation.Nullable final AuthenticationMethodFeatureConfiguration value) {
+    public void setCompanionAppAllowedState(@jakarta.annotation.Nullable final AuthenticationMethodFeatureConfiguration value) {
         this.companionAppAllowedState = value;
     }
     /**
      * Sets the displayAppInformationRequiredState property value. Determines whether the user's Authenticator app will show them the client app they are signing into.
      * @param value Value to set for the displayAppInformationRequiredState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayAppInformationRequiredState(@javax.annotation.Nullable final AuthenticationMethodFeatureConfiguration value) {
+    public void setDisplayAppInformationRequiredState(@jakarta.annotation.Nullable final AuthenticationMethodFeatureConfiguration value) {
         this.displayAppInformationRequiredState = value;
     }
     /**
      * Sets the displayLocationInformationRequiredState property value. Determines whether the user's Authenticator app will show them the geographic location of where the authentication request originated from.
      * @param value Value to set for the displayLocationInformationRequiredState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayLocationInformationRequiredState(@javax.annotation.Nullable final AuthenticationMethodFeatureConfiguration value) {
+    public void setDisplayLocationInformationRequiredState(@jakarta.annotation.Nullable final AuthenticationMethodFeatureConfiguration value) {
         this.displayLocationInformationRequiredState = value;
     }
     /**
      * Sets the numberMatchingRequiredState property value. Specifies whether the user needs to enter a number in the Authenticator app from the login screen to complete their login. Value is ignored for phone sign-in notifications.
      * @param value Value to set for the numberMatchingRequiredState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNumberMatchingRequiredState(@javax.annotation.Nullable final AuthenticationMethodFeatureConfiguration value) {
+    public void setNumberMatchingRequiredState(@jakarta.annotation.Nullable final AuthenticationMethodFeatureConfiguration value) {
         this.numberMatchingRequiredState = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

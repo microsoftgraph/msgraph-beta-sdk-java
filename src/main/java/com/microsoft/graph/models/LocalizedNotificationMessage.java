@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * The text content of a Notification Message Template for the specified locale.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class LocalizedNotificationMessage extends Entity implements Parsable {
     /**
      * Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
@@ -33,9 +34,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
     private String subject;
     /**
      * Instantiates a new localizedNotificationMessage and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public LocalizedNotificationMessage() {
         super();
     }
@@ -44,8 +43,8 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a localizedNotificationMessage
      */
-    @javax.annotation.Nonnull
-    public static LocalizedNotificationMessage createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static LocalizedNotificationMessage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new LocalizedNotificationMessage();
     }
@@ -53,7 +52,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isDefault", (n) -> { this.setIsDefault(n.getBooleanValue()); });
@@ -67,7 +66,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      * Gets the isDefault property value. Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
         return this.isDefault;
     }
@@ -75,7 +74,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -83,7 +82,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      * Gets the locale property value. The Locale for which this message is destined.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLocale() {
         return this.locale;
     }
@@ -91,7 +90,7 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      * Gets the messageTemplate property value. The Message Template content.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMessageTemplate() {
         return this.messageTemplate;
     }
@@ -99,17 +98,15 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
      * Gets the subject property value. The Message Template Subject.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubject() {
         return this.subject;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("isDefault", this.getIsDefault());
@@ -121,46 +118,36 @@ public class LocalizedNotificationMessage extends Entity implements Parsable {
     /**
      * Sets the isDefault property value. Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
      * @param value Value to set for the isDefault property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
+    public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefault = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the locale property value. The Locale for which this message is destined.
      * @param value Value to set for the locale property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocale(@javax.annotation.Nullable final String value) {
+    public void setLocale(@jakarta.annotation.Nullable final String value) {
         this.locale = value;
     }
     /**
      * Sets the messageTemplate property value. The Message Template content.
      * @param value Value to set for the messageTemplate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessageTemplate(@javax.annotation.Nullable final String value) {
+    public void setMessageTemplate(@jakarta.annotation.Nullable final String value) {
         this.messageTemplate = value;
     }
     /**
      * Sets the subject property value. The Message Template Subject.
      * @param value Value to set for the subject property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final String value) {
+    public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
 }

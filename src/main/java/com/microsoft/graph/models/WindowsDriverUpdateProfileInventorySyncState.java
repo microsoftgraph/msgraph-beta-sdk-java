@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Windows DnF update inventory sync state.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsDriverUpdateProfileInventorySyncState implements ValuedEnum {
     /** Pending sync. */
     Pending("pending"),
@@ -17,10 +18,10 @@ public enum WindowsDriverUpdateProfileInventorySyncState implements ValuedEnum {
     WindowsDriverUpdateProfileInventorySyncState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsDriverUpdateProfileInventorySyncState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsDriverUpdateProfileInventorySyncState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "pending": return Pending;

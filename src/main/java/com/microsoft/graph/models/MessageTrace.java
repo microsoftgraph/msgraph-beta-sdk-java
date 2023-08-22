@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MessageTrace extends Entity implements Parsable {
     /**
      * The destinationIPAddress property
@@ -42,9 +43,7 @@ public class MessageTrace extends Entity implements Parsable {
     private String subject;
     /**
      * Instantiates a new messageTrace and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MessageTrace() {
         super();
     }
@@ -53,8 +52,8 @@ public class MessageTrace extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a messageTrace
      */
-    @javax.annotation.Nonnull
-    public static MessageTrace createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MessageTrace createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MessageTrace();
     }
@@ -62,7 +61,7 @@ public class MessageTrace extends Entity implements Parsable {
      * Gets the destinationIPAddress property value. The destinationIPAddress property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDestinationIPAddress() {
         return this.destinationIPAddress;
     }
@@ -70,7 +69,7 @@ public class MessageTrace extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("destinationIPAddress", (n) -> { this.setDestinationIPAddress(n.getStringValue()); });
@@ -87,7 +86,7 @@ public class MessageTrace extends Entity implements Parsable {
      * Gets the messageId property value. The messageId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMessageId() {
         return this.messageId;
     }
@@ -95,7 +94,7 @@ public class MessageTrace extends Entity implements Parsable {
      * Gets the receivedDateTime property value. The receivedDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getReceivedDateTime() {
         return this.receivedDateTime;
     }
@@ -103,7 +102,7 @@ public class MessageTrace extends Entity implements Parsable {
      * Gets the recipients property value. The recipients property
      * @return a messageRecipient
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MessageRecipient> getRecipients() {
         return this.recipients;
     }
@@ -111,7 +110,7 @@ public class MessageTrace extends Entity implements Parsable {
      * Gets the senderEmail property value. The senderEmail property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSenderEmail() {
         return this.senderEmail;
     }
@@ -119,7 +118,7 @@ public class MessageTrace extends Entity implements Parsable {
      * Gets the size property value. The size property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSize() {
         return this.size;
     }
@@ -127,7 +126,7 @@ public class MessageTrace extends Entity implements Parsable {
      * Gets the sourceIPAddress property value. The sourceIPAddress property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSourceIPAddress() {
         return this.sourceIPAddress;
     }
@@ -135,17 +134,15 @@ public class MessageTrace extends Entity implements Parsable {
      * Gets the subject property value. The subject property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubject() {
         return this.subject;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("destinationIPAddress", this.getDestinationIPAddress());
@@ -160,73 +157,57 @@ public class MessageTrace extends Entity implements Parsable {
     /**
      * Sets the destinationIPAddress property value. The destinationIPAddress property
      * @param value Value to set for the destinationIPAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDestinationIPAddress(@javax.annotation.Nullable final String value) {
+    public void setDestinationIPAddress(@jakarta.annotation.Nullable final String value) {
         this.destinationIPAddress = value;
     }
     /**
      * Sets the messageId property value. The messageId property
      * @param value Value to set for the messageId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMessageId(@javax.annotation.Nullable final String value) {
+    public void setMessageId(@jakarta.annotation.Nullable final String value) {
         this.messageId = value;
     }
     /**
      * Sets the receivedDateTime property value. The receivedDateTime property
      * @param value Value to set for the receivedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setReceivedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setReceivedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.receivedDateTime = value;
     }
     /**
      * Sets the recipients property value. The recipients property
      * @param value Value to set for the recipients property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecipients(@javax.annotation.Nullable final java.util.List<MessageRecipient> value) {
+    public void setRecipients(@jakarta.annotation.Nullable final java.util.List<MessageRecipient> value) {
         this.recipients = value;
     }
     /**
      * Sets the senderEmail property value. The senderEmail property
      * @param value Value to set for the senderEmail property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSenderEmail(@javax.annotation.Nullable final String value) {
+    public void setSenderEmail(@jakarta.annotation.Nullable final String value) {
         this.senderEmail = value;
     }
     /**
      * Sets the size property value. The size property
      * @param value Value to set for the size property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSize(@javax.annotation.Nullable final Integer value) {
+    public void setSize(@jakarta.annotation.Nullable final Integer value) {
         this.size = value;
     }
     /**
      * Sets the sourceIPAddress property value. The sourceIPAddress property
      * @param value Value to set for the sourceIPAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourceIPAddress(@javax.annotation.Nullable final String value) {
+    public void setSourceIPAddress(@jakarta.annotation.Nullable final String value) {
         this.sourceIPAddress = value;
     }
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final String value) {
+    public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
 }

@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum BrowserSharedCookieSourceEnvironment implements ValuedEnum {
     /** Share session cookies from Microsoft Edge to Internet Explorer. */
     MicrosoftEdge("microsoftEdge"),
@@ -16,10 +17,10 @@ public enum BrowserSharedCookieSourceEnvironment implements ValuedEnum {
     BrowserSharedCookieSourceEnvironment(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static BrowserSharedCookieSourceEnvironment forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static BrowserSharedCookieSourceEnvironment forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "microsoftEdge": return MicrosoftEdge;

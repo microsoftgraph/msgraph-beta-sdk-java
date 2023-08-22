@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Windows Domain Join device configuration.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDomainJoinConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Active Directory domain name to join.
@@ -32,9 +33,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
     private String organizationalUnit;
     /**
      * Instantiates a new windowsDomainJoinConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsDomainJoinConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsDomainJoinConfiguration");
@@ -44,8 +43,8 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsDomainJoinConfiguration
      */
-    @javax.annotation.Nonnull
-    public static WindowsDomainJoinConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsDomainJoinConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsDomainJoinConfiguration();
     }
@@ -53,7 +52,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * Gets the activeDirectoryDomainName property value. Active Directory domain name to join.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getActiveDirectoryDomainName() {
         return this.activeDirectoryDomainName;
     }
@@ -61,7 +60,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * Gets the computerNameStaticPrefix property value. Fixed prefix to be used for computer name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getComputerNameStaticPrefix() {
         return this.computerNameStaticPrefix;
     }
@@ -69,7 +68,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * Gets the computerNameSuffixRandomCharCount property value. Dynamically generated characters used as suffix for computer name. Valid values 3 to 14
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getComputerNameSuffixRandomCharCount() {
         return this.computerNameSuffixRandomCharCount;
     }
@@ -77,7 +76,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeDirectoryDomainName", (n) -> { this.setActiveDirectoryDomainName(n.getStringValue()); });
@@ -91,7 +90,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * Gets the networkAccessConfigurations property value. Reference to device configurations required for network connectivity
      * @return a deviceConfiguration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeviceConfiguration> getNetworkAccessConfigurations() {
         return this.networkAccessConfigurations;
     }
@@ -99,17 +98,15 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * Gets the organizationalUnit property value. Organizational unit (OU) where the computer account will be created. If this parameter is NULL, the well known computer object container will be used as published in the domain.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOrganizationalUnit() {
         return this.organizationalUnit;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("activeDirectoryDomainName", this.getActiveDirectoryDomainName());
@@ -121,46 +118,36 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
     /**
      * Sets the activeDirectoryDomainName property value. Active Directory domain name to join.
      * @param value Value to set for the activeDirectoryDomainName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActiveDirectoryDomainName(@javax.annotation.Nullable final String value) {
+    public void setActiveDirectoryDomainName(@jakarta.annotation.Nullable final String value) {
         this.activeDirectoryDomainName = value;
     }
     /**
      * Sets the computerNameStaticPrefix property value. Fixed prefix to be used for computer name.
      * @param value Value to set for the computerNameStaticPrefix property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComputerNameStaticPrefix(@javax.annotation.Nullable final String value) {
+    public void setComputerNameStaticPrefix(@jakarta.annotation.Nullable final String value) {
         this.computerNameStaticPrefix = value;
     }
     /**
      * Sets the computerNameSuffixRandomCharCount property value. Dynamically generated characters used as suffix for computer name. Valid values 3 to 14
      * @param value Value to set for the computerNameSuffixRandomCharCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComputerNameSuffixRandomCharCount(@javax.annotation.Nullable final Integer value) {
+    public void setComputerNameSuffixRandomCharCount(@jakarta.annotation.Nullable final Integer value) {
         this.computerNameSuffixRandomCharCount = value;
     }
     /**
      * Sets the networkAccessConfigurations property value. Reference to device configurations required for network connectivity
      * @param value Value to set for the networkAccessConfigurations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNetworkAccessConfigurations(@javax.annotation.Nullable final java.util.List<DeviceConfiguration> value) {
+    public void setNetworkAccessConfigurations(@jakarta.annotation.Nullable final java.util.List<DeviceConfiguration> value) {
         this.networkAccessConfigurations = value;
     }
     /**
      * Sets the organizationalUnit property value. Organizational unit (OU) where the computer account will be created. If this parameter is NULL, the well known computer object container will be used as published in the domain.
      * @param value Value to set for the organizationalUnit property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOrganizationalUnit(@javax.annotation.Nullable final String value) {
+    public void setOrganizationalUnit(@jakarta.annotation.Nullable final String value) {
         this.organizationalUnit = value;
     }
 }

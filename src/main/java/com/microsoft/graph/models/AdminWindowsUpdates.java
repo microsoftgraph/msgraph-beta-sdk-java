@@ -12,6 +12,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class AdminWindowsUpdates extends Entity implements Parsable {
     /**
      * Catalog of content that can be approved for deployment by the deployment service. Read-only.
@@ -39,9 +40,7 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
     private java.util.List<UpdatePolicy> updatePolicies;
     /**
      * Instantiates a new adminWindowsUpdates and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public AdminWindowsUpdates() {
         super();
     }
@@ -50,8 +49,8 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a adminWindowsUpdates
      */
-    @javax.annotation.Nonnull
-    public static AdminWindowsUpdates createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static AdminWindowsUpdates createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new AdminWindowsUpdates();
     }
@@ -59,7 +58,7 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
      * Gets the catalog property value. Catalog of content that can be approved for deployment by the deployment service. Read-only.
      * @return a catalog
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Catalog getCatalog() {
         return this.catalog;
     }
@@ -67,7 +66,7 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
      * Gets the deploymentAudiences property value. The set of updatableAsset resources to which a deployment can apply.
      * @return a deploymentAudience
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeploymentAudience> getDeploymentAudiences() {
         return this.deploymentAudiences;
     }
@@ -75,7 +74,7 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
      * Gets the deployments property value. Deployments created using the deployment service.
      * @return a deployment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Deployment> getDeployments() {
         return this.deployments;
     }
@@ -83,7 +82,7 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("catalog", (n) -> { this.setCatalog(n.getObjectValue(Catalog::createFromDiscriminatorValue)); });
@@ -98,7 +97,7 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
      * Gets the resourceConnections property value. Service connections to external resources such as analytics workspaces.
      * @return a resourceConnection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ResourceConnection> getResourceConnections() {
         return this.resourceConnections;
     }
@@ -106,7 +105,7 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
      * Gets the updatableAssets property value. Assets registered with the deployment service that can receive updates.
      * @return a updatableAsset
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getUpdatableAssets() {
         return this.updatableAssets;
     }
@@ -114,17 +113,15 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
      * Gets the updatePolicies property value. A collection of policies for approving the deployment of different content to an audience over time.
      * @return a updatePolicy
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<UpdatePolicy> getUpdatePolicies() {
         return this.updatePolicies;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("catalog", this.getCatalog());
@@ -137,55 +134,43 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
     /**
      * Sets the catalog property value. Catalog of content that can be approved for deployment by the deployment service. Read-only.
      * @param value Value to set for the catalog property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCatalog(@javax.annotation.Nullable final Catalog value) {
+    public void setCatalog(@jakarta.annotation.Nullable final Catalog value) {
         this.catalog = value;
     }
     /**
      * Sets the deploymentAudiences property value. The set of updatableAsset resources to which a deployment can apply.
      * @param value Value to set for the deploymentAudiences property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeploymentAudiences(@javax.annotation.Nullable final java.util.List<DeploymentAudience> value) {
+    public void setDeploymentAudiences(@jakarta.annotation.Nullable final java.util.List<DeploymentAudience> value) {
         this.deploymentAudiences = value;
     }
     /**
      * Sets the deployments property value. Deployments created using the deployment service.
      * @param value Value to set for the deployments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeployments(@javax.annotation.Nullable final java.util.List<Deployment> value) {
+    public void setDeployments(@jakarta.annotation.Nullable final java.util.List<Deployment> value) {
         this.deployments = value;
     }
     /**
      * Sets the resourceConnections property value. Service connections to external resources such as analytics workspaces.
      * @param value Value to set for the resourceConnections property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceConnections(@javax.annotation.Nullable final java.util.List<ResourceConnection> value) {
+    public void setResourceConnections(@jakarta.annotation.Nullable final java.util.List<ResourceConnection> value) {
         this.resourceConnections = value;
     }
     /**
      * Sets the updatableAssets property value. Assets registered with the deployment service that can receive updates.
      * @param value Value to set for the updatableAssets property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdatableAssets(@javax.annotation.Nullable final java.util.List<UpdatableAsset> value) {
+    public void setUpdatableAssets(@jakarta.annotation.Nullable final java.util.List<UpdatableAsset> value) {
         this.updatableAssets = value;
     }
     /**
      * Sets the updatePolicies property value. A collection of policies for approving the deployment of different content to an audience over time.
      * @param value Value to set for the updatePolicies property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUpdatePolicies(@javax.annotation.Nullable final java.util.List<UpdatePolicy> value) {
+    public void setUpdatePolicies(@jakarta.annotation.Nullable final java.util.List<UpdatePolicy> value) {
         this.updatePolicies = value;
     }
 }

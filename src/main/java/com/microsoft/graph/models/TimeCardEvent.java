@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TimeCardEvent implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -31,9 +32,7 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
     private String odataType;
     /**
      * Instantiates a new timeCardEvent and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TimeCardEvent() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -42,8 +41,8 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a timeCardEvent
      */
-    @javax.annotation.Nonnull
-    public static TimeCardEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TimeCardEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TimeCardEvent();
     }
@@ -51,7 +50,7 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -59,7 +58,7 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
      * Gets the atApprovedLocation property value. Indicates whether the entry was recorded at the approved location.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getAtApprovedLocation() {
         return this.atApprovedLocation;
     }
@@ -67,7 +66,7 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
      * Gets the dateTime property value. The time the entry is recorded.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getDateTime() {
         return this.dateTime;
     }
@@ -75,7 +74,7 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("atApprovedLocation", (n) -> { this.setAtApprovedLocation(n.getBooleanValue()); });
@@ -88,7 +87,7 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
      * Gets the notes property value. Notes about the timeCardEvent.
      * @return a itemBody
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ItemBody getNotes() {
         return this.notes;
     }
@@ -96,17 +95,15 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("atApprovedLocation", this.getAtApprovedLocation());
         writer.writeOffsetDateTimeValue("dateTime", this.getDateTime());
@@ -117,46 +114,36 @@ public class TimeCardEvent implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the atApprovedLocation property value. Indicates whether the entry was recorded at the approved location.
      * @param value Value to set for the atApprovedLocation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAtApprovedLocation(@javax.annotation.Nullable final Boolean value) {
+    public void setAtApprovedLocation(@jakarta.annotation.Nullable final Boolean value) {
         this.atApprovedLocation = value;
     }
     /**
      * Sets the dateTime property value. The time the entry is recorded.
      * @param value Value to set for the dateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.dateTime = value;
     }
     /**
      * Sets the notes property value. Notes about the timeCardEvent.
      * @param value Value to set for the notes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotes(@javax.annotation.Nullable final ItemBody value) {
+    public void setNotes(@jakarta.annotation.Nullable final ItemBody value) {
         this.notes = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
 }

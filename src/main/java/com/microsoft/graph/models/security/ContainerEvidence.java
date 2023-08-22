@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContainerEvidence extends AlertEvidence implements Parsable {
     /**
      * The list of arguments.
@@ -37,9 +38,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
     private KubernetesPodEvidence pod;
     /**
      * Instantiates a new containerEvidence and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ContainerEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.containerEvidence");
@@ -49,8 +48,8 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a containerEvidence
      */
-    @javax.annotation.Nonnull
-    public static ContainerEvidence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ContainerEvidence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ContainerEvidence();
     }
@@ -58,7 +57,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
      * Gets the args property value. The list of arguments.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getArgs() {
         return this.args;
     }
@@ -66,7 +65,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
      * Gets the command property value. The list of commands.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getCommand() {
         return this.command;
     }
@@ -74,7 +73,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
      * Gets the containerId property value. The container ID.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getContainerId() {
         return this.containerId;
     }
@@ -82,7 +81,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("args", (n) -> { this.setArgs(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -98,7 +97,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
      * Gets the image property value. The image used to run the container.
      * @return a containerImageEvidence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ContainerImageEvidence getImage() {
         return this.image;
     }
@@ -106,7 +105,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
      * Gets the isPrivileged property value. The privileged status.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsPrivileged() {
         return this.isPrivileged;
     }
@@ -114,7 +113,7 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
      * Gets the name property value. The container name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -122,17 +121,15 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
      * Gets the pod property value. The pod that this container belongs to.
      * @return a kubernetesPodEvidence
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public KubernetesPodEvidence getPod() {
         return this.pod;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("args", this.getArgs());
@@ -146,64 +143,50 @@ public class ContainerEvidence extends AlertEvidence implements Parsable {
     /**
      * Sets the args property value. The list of arguments.
      * @param value Value to set for the args property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setArgs(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setArgs(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.args = value;
     }
     /**
      * Sets the command property value. The list of commands.
      * @param value Value to set for the command property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCommand(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setCommand(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.command = value;
     }
     /**
      * Sets the containerId property value. The container ID.
      * @param value Value to set for the containerId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setContainerId(@javax.annotation.Nullable final String value) {
+    public void setContainerId(@jakarta.annotation.Nullable final String value) {
         this.containerId = value;
     }
     /**
      * Sets the image property value. The image used to run the container.
      * @param value Value to set for the image property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImage(@javax.annotation.Nullable final ContainerImageEvidence value) {
+    public void setImage(@jakarta.annotation.Nullable final ContainerImageEvidence value) {
         this.image = value;
     }
     /**
      * Sets the isPrivileged property value. The privileged status.
      * @param value Value to set for the isPrivileged property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsPrivileged(@javax.annotation.Nullable final Boolean value) {
+    public void setIsPrivileged(@jakarta.annotation.Nullable final Boolean value) {
         this.isPrivileged = value;
     }
     /**
      * Sets the name property value. The container name.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the pod property value. The pod that this container belongs to.
      * @param value Value to set for the pod property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPod(@javax.annotation.Nullable final KubernetesPodEvidence value) {
+    public void setPod(@jakarta.annotation.Nullable final KubernetesPodEvidence value) {
         this.pod = value;
     }
 }

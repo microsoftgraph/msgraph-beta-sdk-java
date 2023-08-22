@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DirectoryObject extends Entity implements Parsable {
     /**
      * Date and time when this object was deleted. Always null when the object hasn't been deleted.
@@ -14,9 +15,7 @@ public class DirectoryObject extends Entity implements Parsable {
     private OffsetDateTime deletedDateTime;
     /**
      * Instantiates a new directoryObject and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DirectoryObject() {
         super();
     }
@@ -25,8 +24,8 @@ public class DirectoryObject extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a directoryObject
      */
-    @javax.annotation.Nonnull
-    public static DirectoryObject createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DirectoryObject createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -76,7 +75,7 @@ public class DirectoryObject extends Entity implements Parsable {
      * Gets the deletedDateTime property value. Date and time when this object was deleted. Always null when the object hasn't been deleted.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getDeletedDateTime() {
         return this.deletedDateTime;
     }
@@ -84,7 +83,7 @@ public class DirectoryObject extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deletedDateTime", (n) -> { this.setDeletedDateTime(n.getOffsetDateTimeValue()); });
@@ -93,10 +92,8 @@ public class DirectoryObject extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("deletedDateTime", this.getDeletedDateTime());
@@ -104,10 +101,8 @@ public class DirectoryObject extends Entity implements Parsable {
     /**
      * Sets the deletedDateTime property value. Date and time when this object was deleted. Always null when the object hasn't been deleted.
      * @param value Value to set for the deletedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setDeletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.deletedDateTime = value;
     }
 }

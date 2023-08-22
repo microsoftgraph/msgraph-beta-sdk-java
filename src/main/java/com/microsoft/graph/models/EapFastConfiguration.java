@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Available settings for EAP-FAST Configuration.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum EapFastConfiguration implements ValuedEnum {
     /** Use EAP-FAST without Protected Access Credential (PAC). */
     NoProtectedAccessCredential("noProtectedAccessCredential"),
@@ -19,10 +20,10 @@ public enum EapFastConfiguration implements ValuedEnum {
     EapFastConfiguration(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static EapFastConfiguration forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static EapFastConfiguration forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "noProtectedAccessCredential": return NoProtectedAccessCredential;

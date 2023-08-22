@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Windows10 Enterprise Modern App Management Configuration.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Indicates whether or not to uninstall a fixed list of built-in Windows apps.
@@ -16,9 +17,7 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
     private Boolean uninstallBuiltInApps;
     /**
      * Instantiates a new windows10EnterpriseModernAppManagementConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Windows10EnterpriseModernAppManagementConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10EnterpriseModernAppManagementConfiguration");
@@ -28,8 +27,8 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windows10EnterpriseModernAppManagementConfiguration
      */
-    @javax.annotation.Nonnull
-    public static Windows10EnterpriseModernAppManagementConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Windows10EnterpriseModernAppManagementConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Windows10EnterpriseModernAppManagementConfiguration();
     }
@@ -37,7 +36,7 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("uninstallBuiltInApps", (n) -> { this.setUninstallBuiltInApps(n.getBooleanValue()); });
@@ -47,17 +46,15 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
      * Gets the uninstallBuiltInApps property value. Indicates whether or not to uninstall a fixed list of built-in Windows apps.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getUninstallBuiltInApps() {
         return this.uninstallBuiltInApps;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("uninstallBuiltInApps", this.getUninstallBuiltInApps());
@@ -65,10 +62,8 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
     /**
      * Sets the uninstallBuiltInApps property value. Indicates whether or not to uninstall a fixed list of built-in Windows apps.
      * @param value Value to set for the uninstallBuiltInApps property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUninstallBuiltInApps(@javax.annotation.Nullable final Boolean value) {
+    public void setUninstallBuiltInApps(@jakarta.annotation.Nullable final Boolean value) {
         this.uninstallBuiltInApps = value;
     }
 }

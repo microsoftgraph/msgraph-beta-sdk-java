@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Criteria which defines the type of device this access rule will apply to
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementExchangeAccessRuleType implements ValuedEnum {
     /** Family of devices */
     Family("family"),
@@ -15,10 +16,10 @@ public enum DeviceManagementExchangeAccessRuleType implements ValuedEnum {
     DeviceManagementExchangeAccessRuleType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementExchangeAccessRuleType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementExchangeAccessRuleType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "family": return Family;

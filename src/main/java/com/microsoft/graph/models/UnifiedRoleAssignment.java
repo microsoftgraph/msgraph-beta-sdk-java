@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleAssignment extends Entity implements Parsable {
     /**
      * Details of the app specific scope when the assignment scope is app specific. Containment entity.
@@ -53,9 +54,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
     private String roleDefinitionId;
     /**
      * Instantiates a new unifiedRoleAssignment and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UnifiedRoleAssignment() {
         super();
     }
@@ -64,8 +63,8 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a unifiedRoleAssignment
      */
-    @javax.annotation.Nonnull
-    public static UnifiedRoleAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UnifiedRoleAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UnifiedRoleAssignment();
     }
@@ -73,7 +72,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * Gets the appScope property value. Details of the app specific scope when the assignment scope is app specific. Containment entity.
      * @return a appScope
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AppScope getAppScope() {
         return this.appScope;
     }
@@ -81,7 +80,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * Gets the appScopeId property value. Identifier of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.  For the entitlement management provider, use app scopes to specify a catalog, for example /AccessPackageCatalog/beedadfe-01d5-4025-910b-84abb9369997.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppScopeId() {
         return this.appScopeId;
     }
@@ -89,7 +88,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * Gets the condition property value. The condition property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCondition() {
         return this.condition;
     }
@@ -97,7 +96,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * Gets the directoryScope property value. The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DirectoryObject getDirectoryScope() {
         return this.directoryScope;
     }
@@ -105,7 +104,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * Gets the directoryScopeId property value. Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDirectoryScopeId() {
         return this.directoryScopeId;
     }
@@ -113,7 +112,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appScope", (n) -> { this.setAppScope(n.getObjectValue(AppScope::createFromDiscriminatorValue)); });
@@ -133,7 +132,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * Gets the principal property value. The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
      * @return a directoryObject
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DirectoryObject getPrincipal() {
         return this.principal;
     }
@@ -141,7 +140,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * Gets the principalId property value. Identifier of the principal to which the assignment is granted. Supports $filter (eq operator only).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrincipalId() {
         return this.principalId;
     }
@@ -149,7 +148,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * Gets the principalOrganizationId property value. The principalOrganizationId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPrincipalOrganizationId() {
         return this.principalOrganizationId;
     }
@@ -157,7 +156,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * Gets the resourceScope property value. The scope at which the unifiedRoleAssignment applies. This is / for service-wide. DO NOT USE. This property will be deprecated soon.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getResourceScope() {
         return this.resourceScope;
     }
@@ -165,7 +164,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * Gets the roleDefinition property value. The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
      * @return a unifiedRoleDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public UnifiedRoleDefinition getRoleDefinition() {
         return this.roleDefinition;
     }
@@ -173,17 +172,15 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
      * Gets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition the assignment is for. Read-only. Supports $filter (eq operator only).
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("appScope", this.getAppScope());
@@ -201,100 +198,78 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
     /**
      * Sets the appScope property value. Details of the app specific scope when the assignment scope is app specific. Containment entity.
      * @param value Value to set for the appScope property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppScope(@javax.annotation.Nullable final AppScope value) {
+    public void setAppScope(@jakarta.annotation.Nullable final AppScope value) {
         this.appScope = value;
     }
     /**
      * Sets the appScopeId property value. Identifier of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.  For the entitlement management provider, use app scopes to specify a catalog, for example /AccessPackageCatalog/beedadfe-01d5-4025-910b-84abb9369997.
      * @param value Value to set for the appScopeId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppScopeId(@javax.annotation.Nullable final String value) {
+    public void setAppScopeId(@jakarta.annotation.Nullable final String value) {
         this.appScopeId = value;
     }
     /**
      * Sets the condition property value. The condition property
      * @param value Value to set for the condition property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCondition(@javax.annotation.Nullable final String value) {
+    public void setCondition(@jakarta.annotation.Nullable final String value) {
         this.condition = value;
     }
     /**
      * Sets the directoryScope property value. The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
      * @param value Value to set for the directoryScope property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDirectoryScope(@javax.annotation.Nullable final DirectoryObject value) {
+    public void setDirectoryScope(@jakarta.annotation.Nullable final DirectoryObject value) {
         this.directoryScope = value;
     }
     /**
      * Sets the directoryScopeId property value. Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
      * @param value Value to set for the directoryScopeId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDirectoryScopeId(@javax.annotation.Nullable final String value) {
+    public void setDirectoryScopeId(@jakarta.annotation.Nullable final String value) {
         this.directoryScopeId = value;
     }
     /**
      * Sets the principal property value. The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
      * @param value Value to set for the principal property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipal(@javax.annotation.Nullable final DirectoryObject value) {
+    public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {
         this.principal = value;
     }
     /**
      * Sets the principalId property value. Identifier of the principal to which the assignment is granted. Supports $filter (eq operator only).
      * @param value Value to set for the principalId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipalId(@javax.annotation.Nullable final String value) {
+    public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
         this.principalId = value;
     }
     /**
      * Sets the principalOrganizationId property value. The principalOrganizationId property
      * @param value Value to set for the principalOrganizationId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPrincipalOrganizationId(@javax.annotation.Nullable final String value) {
+    public void setPrincipalOrganizationId(@jakarta.annotation.Nullable final String value) {
         this.principalOrganizationId = value;
     }
     /**
      * Sets the resourceScope property value. The scope at which the unifiedRoleAssignment applies. This is / for service-wide. DO NOT USE. This property will be deprecated soon.
      * @param value Value to set for the resourceScope property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResourceScope(@javax.annotation.Nullable final String value) {
+    public void setResourceScope(@jakarta.annotation.Nullable final String value) {
         this.resourceScope = value;
     }
     /**
      * Sets the roleDefinition property value. The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
      * @param value Value to set for the roleDefinition property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinition(@javax.annotation.Nullable final UnifiedRoleDefinition value) {
+    public void setRoleDefinition(@jakarta.annotation.Nullable final UnifiedRoleDefinition value) {
         this.roleDefinition = value;
     }
     /**
      * Sets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition the assignment is for. Read-only. Supports $filter (eq operator only).
      * @param value Value to set for the roleDefinitionId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
+    public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.roleDefinitionId = value;
     }
 }

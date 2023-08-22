@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * An enum representing the Android SafetyNet attestation evaluation types.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidSafetyNetEvaluationType implements ValuedEnum {
     /** Default value. Typical measurements and reference data were used. */
     Basic("basic"),
@@ -15,10 +16,10 @@ public enum AndroidSafetyNetEvaluationType implements ValuedEnum {
     AndroidSafetyNetEvaluationType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidSafetyNetEvaluationType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidSafetyNetEvaluationType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "basic": return Basic;

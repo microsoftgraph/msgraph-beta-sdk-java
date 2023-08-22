@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * System Update Types for Android Device Owner.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidDeviceOwnerSystemUpdateInstallType implements ValuedEnum {
     /** Device default behavior, which typically prompts the user to accept system updates. */
     DeviceDefault("deviceDefault"),
@@ -19,10 +20,10 @@ public enum AndroidDeviceOwnerSystemUpdateInstallType implements ValuedEnum {
     AndroidDeviceOwnerSystemUpdateInstallType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidDeviceOwnerSystemUpdateInstallType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidDeviceOwnerSystemUpdateInstallType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "deviceDefault": return DeviceDefault;

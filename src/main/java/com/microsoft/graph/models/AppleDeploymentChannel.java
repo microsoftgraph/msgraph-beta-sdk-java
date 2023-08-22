@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AppleDeploymentChannel implements ValuedEnum {
     /** Send payload down over Device Channel. */
     DeviceChannel("deviceChannel"),
@@ -15,10 +16,10 @@ public enum AppleDeploymentChannel implements ValuedEnum {
     AppleDeploymentChannel(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AppleDeploymentChannel forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AppleDeploymentChannel forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "deviceChannel": return DeviceChannel;

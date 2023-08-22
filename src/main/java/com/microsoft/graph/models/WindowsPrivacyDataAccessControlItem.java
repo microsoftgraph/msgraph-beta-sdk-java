@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Specify access control level per privacy data category
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsable {
     /**
      * Determine the access level to specific Windows privacy data category.
@@ -28,9 +29,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
     private WindowsPrivacyDataCategory dataCategory;
     /**
      * Instantiates a new windowsPrivacyDataAccessControlItem and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsPrivacyDataAccessControlItem() {
         super();
     }
@@ -39,8 +38,8 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsPrivacyDataAccessControlItem
      */
-    @javax.annotation.Nonnull
-    public static WindowsPrivacyDataAccessControlItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsPrivacyDataAccessControlItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsPrivacyDataAccessControlItem();
     }
@@ -48,7 +47,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
      * Gets the accessLevel property value. Determine the access level to specific Windows privacy data category.
      * @return a windowsPrivacyDataAccessLevel
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsPrivacyDataAccessLevel getAccessLevel() {
         return this.accessLevel;
     }
@@ -56,7 +55,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
      * Gets the appDisplayName property value. The Package Family Name of a Windows app. When set, the access level applies to the specified application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppDisplayName() {
         return this.appDisplayName;
     }
@@ -64,7 +63,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
      * Gets the appPackageFamilyName property value. The Package Family Name of a Windows app. When set, the access level applies to the specified application.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppPackageFamilyName() {
         return this.appPackageFamilyName;
     }
@@ -72,7 +71,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
      * Gets the dataCategory property value. Windows privacy data category specifier for privacy data access.
      * @return a windowsPrivacyDataCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsPrivacyDataCategory getDataCategory() {
         return this.dataCategory;
     }
@@ -80,7 +79,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessLevel", (n) -> { this.setAccessLevel(n.getEnumValue(WindowsPrivacyDataAccessLevel.class)); });
@@ -92,10 +91,8 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("accessLevel", this.getAccessLevel());
@@ -106,37 +103,29 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
     /**
      * Sets the accessLevel property value. Determine the access level to specific Windows privacy data category.
      * @param value Value to set for the accessLevel property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccessLevel(@javax.annotation.Nullable final WindowsPrivacyDataAccessLevel value) {
+    public void setAccessLevel(@jakarta.annotation.Nullable final WindowsPrivacyDataAccessLevel value) {
         this.accessLevel = value;
     }
     /**
      * Sets the appDisplayName property value. The Package Family Name of a Windows app. When set, the access level applies to the specified application.
      * @param value Value to set for the appDisplayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppDisplayName(@javax.annotation.Nullable final String value) {
+    public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.appDisplayName = value;
     }
     /**
      * Sets the appPackageFamilyName property value. The Package Family Name of a Windows app. When set, the access level applies to the specified application.
      * @param value Value to set for the appPackageFamilyName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppPackageFamilyName(@javax.annotation.Nullable final String value) {
+    public void setAppPackageFamilyName(@jakarta.annotation.Nullable final String value) {
         this.appPackageFamilyName = value;
     }
     /**
      * Sets the dataCategory property value. Windows privacy data category specifier for privacy data access.
      * @param value Value to set for the dataCategory property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDataCategory(@javax.annotation.Nullable final WindowsPrivacyDataCategory value) {
+    public void setDataCategory(@jakarta.annotation.Nullable final WindowsPrivacyDataCategory value) {
         this.dataCategory = value;
     }
 }

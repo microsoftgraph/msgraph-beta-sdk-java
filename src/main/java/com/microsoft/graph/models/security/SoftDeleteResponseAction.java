@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SoftDeleteResponseAction extends ResponseAction implements Parsable {
     /**
      * The identifier property
@@ -13,9 +14,7 @@ public class SoftDeleteResponseAction extends ResponseAction implements Parsable
     private EmailEntityIdentifier identifier;
     /**
      * Instantiates a new softDeleteResponseAction and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SoftDeleteResponseAction() {
         super();
         this.setOdataType("#microsoft.graph.security.softDeleteResponseAction");
@@ -25,8 +24,8 @@ public class SoftDeleteResponseAction extends ResponseAction implements Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a softDeleteResponseAction
      */
-    @javax.annotation.Nonnull
-    public static SoftDeleteResponseAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SoftDeleteResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SoftDeleteResponseAction();
     }
@@ -34,7 +33,7 @@ public class SoftDeleteResponseAction extends ResponseAction implements Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumValue(EmailEntityIdentifier.class)); });
@@ -44,17 +43,15 @@ public class SoftDeleteResponseAction extends ResponseAction implements Parsable
      * Gets the identifier property value. The identifier property
      * @return a emailEntityIdentifier
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EmailEntityIdentifier getIdentifier() {
         return this.identifier;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("identifier", this.getIdentifier());
@@ -62,10 +59,8 @@ public class SoftDeleteResponseAction extends ResponseAction implements Parsable
     /**
      * Sets the identifier property value. The identifier property
      * @param value Value to set for the identifier property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentifier(@javax.annotation.Nullable final EmailEntityIdentifier value) {
+    public void setIdentifier(@jakarta.annotation.Nullable final EmailEntityIdentifier value) {
         this.identifier = value;
     }
 }

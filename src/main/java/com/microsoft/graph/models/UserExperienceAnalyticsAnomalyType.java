@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the category of the anomaly. Eg: anomaly type can be device, application, stop error, driver or other.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum UserExperienceAnalyticsAnomalyType implements ValuedEnum {
     /** Indicates the detected anomaly is due to certain devices. */
     Device("device"),
@@ -23,10 +24,10 @@ public enum UserExperienceAnalyticsAnomalyType implements ValuedEnum {
     UserExperienceAnalyticsAnomalyType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static UserExperienceAnalyticsAnomalyType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static UserExperienceAnalyticsAnomalyType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "device": return Device;

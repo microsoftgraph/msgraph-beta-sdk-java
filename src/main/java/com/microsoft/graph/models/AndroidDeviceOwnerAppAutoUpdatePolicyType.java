@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Android Device Owner possible values for states of the device's app auto update policy.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidDeviceOwnerAppAutoUpdatePolicyType implements ValuedEnum {
     /** Not configured; this value is ignored. */
     NotConfigured("notConfigured"),
@@ -21,10 +22,10 @@ public enum AndroidDeviceOwnerAppAutoUpdatePolicyType implements ValuedEnum {
     AndroidDeviceOwnerAppAutoUpdatePolicyType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidDeviceOwnerAppAutoUpdatePolicyType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidDeviceOwnerAppAutoUpdatePolicyType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

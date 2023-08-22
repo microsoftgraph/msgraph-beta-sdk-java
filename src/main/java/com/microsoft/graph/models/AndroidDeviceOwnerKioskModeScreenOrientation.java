@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Android Device Owner Kiosk Mode managed home screen orientation.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidDeviceOwnerKioskModeScreenOrientation implements ValuedEnum {
     /** Not configured; this value is ignored. */
     NotConfigured("notConfigured"),
@@ -19,10 +20,10 @@ public enum AndroidDeviceOwnerKioskModeScreenOrientation implements ValuedEnum {
     AndroidDeviceOwnerKioskModeScreenOrientation(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidDeviceOwnerKioskModeScreenOrientation forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidDeviceOwnerKioskModeScreenOrientation forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

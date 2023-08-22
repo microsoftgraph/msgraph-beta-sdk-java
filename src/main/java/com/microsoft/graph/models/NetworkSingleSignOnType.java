@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Wi-Fi Network Single Sign On Type Settings.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum NetworkSingleSignOnType implements ValuedEnum {
     /** Disabled */
     Disabled("disabled"),
@@ -17,10 +18,10 @@ public enum NetworkSingleSignOnType implements ValuedEnum {
     NetworkSingleSignOnType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static NetworkSingleSignOnType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static NetworkSingleSignOnType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "disabled": return Disabled;

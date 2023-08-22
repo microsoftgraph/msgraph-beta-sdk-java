@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IpSecurityProfile extends Entity implements Parsable {
     /**
      * The activityGroupNames property
@@ -62,9 +63,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
     private SecurityVendorInformation vendorInformation;
     /**
      * Instantiates a new ipSecurityProfile and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public IpSecurityProfile() {
         super();
     }
@@ -73,8 +72,8 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a ipSecurityProfile
      */
-    @javax.annotation.Nonnull
-    public static IpSecurityProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IpSecurityProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IpSecurityProfile();
     }
@@ -82,7 +81,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * Gets the activityGroupNames property value. The activityGroupNames property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getActivityGroupNames() {
         return this.activityGroupNames;
     }
@@ -90,7 +89,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * Gets the address property value. The address property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAddress() {
         return this.address;
     }
@@ -98,7 +97,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * Gets the azureSubscriptionId property value. The azureSubscriptionId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureSubscriptionId() {
         return this.azureSubscriptionId;
     }
@@ -106,7 +105,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * Gets the azureTenantId property value. The azureTenantId property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAzureTenantId() {
         return this.azureTenantId;
     }
@@ -114,7 +113,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * Gets the countHits property value. The countHits property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCountHits() {
         return this.countHits;
     }
@@ -122,7 +121,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * Gets the countHosts property value. The countHosts property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getCountHosts() {
         return this.countHosts;
     }
@@ -130,7 +129,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activityGroupNames", (n) -> { this.setActivityGroupNames(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -152,7 +151,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * Gets the firstSeenDateTime property value. The firstSeenDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
         return this.firstSeenDateTime;
     }
@@ -160,7 +159,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * Gets the ipCategories property value. The ipCategories property
      * @return a ipCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IpCategory> getIpCategories() {
         return this.ipCategories;
     }
@@ -168,7 +167,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * Gets the ipReferenceData property value. The ipReferenceData property
      * @return a ipReferenceData
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<IpReferenceData> getIpReferenceData() {
         return this.ipReferenceData;
     }
@@ -176,7 +175,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * Gets the lastSeenDateTime property value. The lastSeenDateTime property
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
         return this.lastSeenDateTime;
     }
@@ -184,7 +183,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * Gets the riskScore property value. The riskScore property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRiskScore() {
         return this.riskScore;
     }
@@ -192,7 +191,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * Gets the tags property value. The tags property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
         return this.tags;
     }
@@ -200,17 +199,15 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * Gets the vendorInformation property value. The vendorInformation property
      * @return a securityVendorInformation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {
         return this.vendorInformation;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("activityGroupNames", this.getActivityGroupNames());
@@ -230,118 +227,92 @@ public class IpSecurityProfile extends Entity implements Parsable {
     /**
      * Sets the activityGroupNames property value. The activityGroupNames property
      * @param value Value to set for the activityGroupNames property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActivityGroupNames(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setActivityGroupNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.activityGroupNames = value;
     }
     /**
      * Sets the address property value. The address property
      * @param value Value to set for the address property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAddress(@javax.annotation.Nullable final String value) {
+    public void setAddress(@jakarta.annotation.Nullable final String value) {
         this.address = value;
     }
     /**
      * Sets the azureSubscriptionId property value. The azureSubscriptionId property
      * @param value Value to set for the azureSubscriptionId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureSubscriptionId(@javax.annotation.Nullable final String value) {
+    public void setAzureSubscriptionId(@jakarta.annotation.Nullable final String value) {
         this.azureSubscriptionId = value;
     }
     /**
      * Sets the azureTenantId property value. The azureTenantId property
      * @param value Value to set for the azureTenantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAzureTenantId(@javax.annotation.Nullable final String value) {
+    public void setAzureTenantId(@jakarta.annotation.Nullable final String value) {
         this.azureTenantId = value;
     }
     /**
      * Sets the countHits property value. The countHits property
      * @param value Value to set for the countHits property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountHits(@javax.annotation.Nullable final Integer value) {
+    public void setCountHits(@jakarta.annotation.Nullable final Integer value) {
         this.countHits = value;
     }
     /**
      * Sets the countHosts property value. The countHosts property
      * @param value Value to set for the countHosts property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCountHosts(@javax.annotation.Nullable final Integer value) {
+    public void setCountHosts(@jakarta.annotation.Nullable final Integer value) {
         this.countHosts = value;
     }
     /**
      * Sets the firstSeenDateTime property value. The firstSeenDateTime property
      * @param value Value to set for the firstSeenDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstSeenDateTime = value;
     }
     /**
      * Sets the ipCategories property value. The ipCategories property
      * @param value Value to set for the ipCategories property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIpCategories(@javax.annotation.Nullable final java.util.List<IpCategory> value) {
+    public void setIpCategories(@jakarta.annotation.Nullable final java.util.List<IpCategory> value) {
         this.ipCategories = value;
     }
     /**
      * Sets the ipReferenceData property value. The ipReferenceData property
      * @param value Value to set for the ipReferenceData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIpReferenceData(@javax.annotation.Nullable final java.util.List<IpReferenceData> value) {
+    public void setIpReferenceData(@jakarta.annotation.Nullable final java.util.List<IpReferenceData> value) {
         this.ipReferenceData = value;
     }
     /**
      * Sets the lastSeenDateTime property value. The lastSeenDateTime property
      * @param value Value to set for the lastSeenDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSeenDateTime = value;
     }
     /**
      * Sets the riskScore property value. The riskScore property
      * @param value Value to set for the riskScore property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRiskScore(@javax.annotation.Nullable final String value) {
+    public void setRiskScore(@jakarta.annotation.Nullable final String value) {
         this.riskScore = value;
     }
     /**
      * Sets the tags property value. The tags property
      * @param value Value to set for the tags property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.tags = value;
     }
     /**
      * Sets the vendorInformation property value. The vendorInformation property
      * @param value Value to set for the vendorInformation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
+    public void setVendorInformation(@jakarta.annotation.Nullable final SecurityVendorInformation value) {
         this.vendorInformation = value;
     }
 }

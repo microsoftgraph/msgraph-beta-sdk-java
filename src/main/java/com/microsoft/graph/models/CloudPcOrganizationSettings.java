@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcOrganizationSettings extends Entity implements Parsable {
     /**
      * Specifies whether new Cloud PCs will be automatically enrolled in Microsoft Endpoint Manager (MEM). The default value is false.
@@ -29,9 +30,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
     private CloudPcWindowsSettings windowsSettings;
     /**
      * Instantiates a new cloudPcOrganizationSettings and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CloudPcOrganizationSettings() {
         super();
     }
@@ -40,8 +39,8 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a cloudPcOrganizationSettings
      */
-    @javax.annotation.Nonnull
-    public static CloudPcOrganizationSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CloudPcOrganizationSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CloudPcOrganizationSettings();
     }
@@ -49,7 +48,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
      * Gets the enableMEMAutoEnroll property value. Specifies whether new Cloud PCs will be automatically enrolled in Microsoft Endpoint Manager (MEM). The default value is false.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableMEMAutoEnroll() {
         return this.enableMEMAutoEnroll;
     }
@@ -57,7 +56,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
      * Gets the enableSingleSignOn property value. True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Azure Active Directory (Azure AD) with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnableSingleSignOn() {
         return this.enableSingleSignOn;
     }
@@ -65,7 +64,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("enableMEMAutoEnroll", (n) -> { this.setEnableMEMAutoEnroll(n.getBooleanValue()); });
@@ -79,7 +78,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
      * Gets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. The possible values are: windows10, windows11, unknownFutureValue.
      * @return a cloudPcOperatingSystem
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcOperatingSystem getOsVersion() {
         return this.osVersion;
     }
@@ -87,7 +86,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
      * Gets the userAccountType property value. The account type of the user on provisioned Cloud PCs. The possible values are: standardUser, administrator, unknownFutureValue.
      * @return a cloudPcUserAccountType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcUserAccountType getUserAccountType() {
         return this.userAccountType;
     }
@@ -95,17 +94,15 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
      * Gets the windowsSettings property value. Represents the Cloud PC organization settings for a tenant. A tenant has only one cloudPcOrganizationSettings object. The default language value en-US.
      * @return a cloudPcWindowsSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public CloudPcWindowsSettings getWindowsSettings() {
         return this.windowsSettings;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("enableMEMAutoEnroll", this.getEnableMEMAutoEnroll());
@@ -117,46 +114,36 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
     /**
      * Sets the enableMEMAutoEnroll property value. Specifies whether new Cloud PCs will be automatically enrolled in Microsoft Endpoint Manager (MEM). The default value is false.
      * @param value Value to set for the enableMEMAutoEnroll property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableMEMAutoEnroll(@javax.annotation.Nullable final Boolean value) {
+    public void setEnableMEMAutoEnroll(@jakarta.annotation.Nullable final Boolean value) {
         this.enableMEMAutoEnroll = value;
     }
     /**
      * Sets the enableSingleSignOn property value. True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Azure Active Directory (Azure AD) with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
      * @param value Value to set for the enableSingleSignOn property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnableSingleSignOn(@javax.annotation.Nullable final Boolean value) {
+    public void setEnableSingleSignOn(@jakarta.annotation.Nullable final Boolean value) {
         this.enableSingleSignOn = value;
     }
     /**
      * Sets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. The possible values are: windows10, windows11, unknownFutureValue.
      * @param value Value to set for the osVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsVersion(@javax.annotation.Nullable final CloudPcOperatingSystem value) {
+    public void setOsVersion(@jakarta.annotation.Nullable final CloudPcOperatingSystem value) {
         this.osVersion = value;
     }
     /**
      * Sets the userAccountType property value. The account type of the user on provisioned Cloud PCs. The possible values are: standardUser, administrator, unknownFutureValue.
      * @param value Value to set for the userAccountType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserAccountType(@javax.annotation.Nullable final CloudPcUserAccountType value) {
+    public void setUserAccountType(@jakarta.annotation.Nullable final CloudPcUserAccountType value) {
         this.userAccountType = value;
     }
     /**
      * Sets the windowsSettings property value. Represents the Cloud PC organization settings for a tenant. A tenant has only one cloudPcOrganizationSettings object. The default language value en-US.
      * @param value Value to set for the windowsSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWindowsSettings(@javax.annotation.Nullable final CloudPcWindowsSettings value) {
+    public void setWindowsSettings(@jakarta.annotation.Nullable final CloudPcWindowsSettings value) {
         this.windowsSettings = value;
     }
 }

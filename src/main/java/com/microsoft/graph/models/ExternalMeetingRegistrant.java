@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements Parsable {
     /**
      * The tenant ID of this registrant if in Azure Active Directory.
@@ -17,9 +18,7 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
     private String userId;
     /**
      * Instantiates a new externalMeetingRegistrant and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ExternalMeetingRegistrant() {
         super();
         this.setOdataType("#microsoft.graph.externalMeetingRegistrant");
@@ -29,8 +28,8 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a externalMeetingRegistrant
      */
-    @javax.annotation.Nonnull
-    public static ExternalMeetingRegistrant createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ExternalMeetingRegistrant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ExternalMeetingRegistrant();
     }
@@ -38,7 +37,7 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
@@ -49,7 +48,7 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
      * Gets the tenantId property value. The tenant ID of this registrant if in Azure Active Directory.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTenantId() {
         return this.tenantId;
     }
@@ -57,17 +56,15 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
      * Gets the userId property value. The user ID of this registrant if in Azure Active Directory.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("tenantId", this.getTenantId());
@@ -76,19 +73,15 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
     /**
      * Sets the tenantId property value. The tenant ID of this registrant if in Azure Active Directory.
      * @param value Value to set for the tenantId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenantId(@javax.annotation.Nullable final String value) {
+    public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
      * Sets the userId property value. The user ID of this registrant if in Azure Active Directory.
      * @param value Value to set for the userId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserId(@javax.annotation.Nullable final String value) {
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
 }

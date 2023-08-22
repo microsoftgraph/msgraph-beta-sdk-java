@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for LocalSecurityOptionsStandardUserElevationPromptBehavior
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum LocalSecurityOptionsStandardUserElevationPromptBehaviorType implements ValuedEnum {
     /** Not Configured */
     NotConfigured("notConfigured"),
@@ -19,10 +20,10 @@ public enum LocalSecurityOptionsStandardUserElevationPromptBehaviorType implemen
     LocalSecurityOptionsStandardUserElevationPromptBehaviorType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static LocalSecurityOptionsStandardUserElevationPromptBehaviorType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static LocalSecurityOptionsStandardUserElevationPromptBehaviorType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

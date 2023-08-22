@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RetentionLabel extends Entity implements Parsable {
     /**
      * Specifies the action to take on a document with this label applied during the retention period. The possible values are: none, delete, startDispositionReview, unknownFutureValue.
@@ -80,9 +81,7 @@ public class RetentionLabel extends Entity implements Parsable {
     private RetentionTrigger retentionTrigger;
     /**
      * Instantiates a new retentionLabel and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public RetentionLabel() {
         super();
     }
@@ -91,8 +90,8 @@ public class RetentionLabel extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a retentionLabel
      */
-    @javax.annotation.Nonnull
-    public static RetentionLabel createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RetentionLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new RetentionLabel();
     }
@@ -100,7 +99,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Gets the actionAfterRetentionPeriod property value. Specifies the action to take on a document with this label applied during the retention period. The possible values are: none, delete, startDispositionReview, unknownFutureValue.
      * @return a actionAfterRetentionPeriod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ActionAfterRetentionPeriod getActionAfterRetentionPeriod() {
         return this.actionAfterRetentionPeriod;
     }
@@ -108,7 +107,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Gets the behaviorDuringRetentionPeriod property value. Specifies how the behavior of a document with this label should be during the retention period. The possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue.
      * @return a behaviorDuringRetentionPeriod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BehaviorDuringRetentionPeriod getBehaviorDuringRetentionPeriod() {
         return this.behaviorDuringRetentionPeriod;
     }
@@ -116,7 +115,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Gets the createdBy property value. Represents the user who created the retentionLabel.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -124,7 +123,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Gets the createdDateTime property value. Represents the date and time in which the retentionLabel is created.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -132,7 +131,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Gets the defaultRecordBehavior property value. Specifies the locked or unlocked state of a record label when it is created.The possible values are: startLocked, startUnlocked, unknownFutureValue.
      * @return a defaultRecordBehavior
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DefaultRecordBehavior getDefaultRecordBehavior() {
         return this.defaultRecordBehavior;
     }
@@ -140,7 +139,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Gets the descriptionForAdmins property value. Provides label information for the admin. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescriptionForAdmins() {
         return this.descriptionForAdmins;
     }
@@ -148,7 +147,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Gets the descriptionForUsers property value. Provides the label information for the user. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescriptionForUsers() {
         return this.descriptionForUsers;
     }
@@ -156,7 +155,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Gets the descriptors property value. Represents out-of-the-box values that provide more options to improve the manageability and organization of the content you need to label.
      * @return a filePlanDescriptor
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FilePlanDescriptor getDescriptors() {
         return this.descriptors;
     }
@@ -164,7 +163,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Gets the displayName property value. Unique string that defines a label name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -172,7 +171,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Gets the dispositionReviewStages property value. When action at the end of retention is chosen as 'dispositionReview', dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.
      * @return a dispositionReviewStage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DispositionReviewStage> getDispositionReviewStages() {
         return this.dispositionReviewStages;
     }
@@ -180,7 +179,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("actionAfterRetentionPeriod", (n) -> { this.setActionAfterRetentionPeriod(n.getEnumValue(ActionAfterRetentionPeriod.class)); });
@@ -206,7 +205,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Gets the isInUse property value. Specifies whether the label is currently being used.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsInUse() {
         return this.isInUse;
     }
@@ -214,7 +213,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Gets the labelToBeApplied property value. Specifies the replacement label to be applied automatically after the retention period of the current label ends.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLabelToBeApplied() {
         return this.labelToBeApplied;
     }
@@ -222,7 +221,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. The user who last modified the retentionLabel.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -230,7 +229,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The latest date time when the retentionLabel was modified.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -238,7 +237,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Gets the retentionDuration property value. Specifies the number of days to retain the content.
      * @return a retentionDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RetentionDuration getRetentionDuration() {
         return this.retentionDuration;
     }
@@ -246,7 +245,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Gets the retentionEventType property value. Represents the type associated with a retention event.
      * @return a retentionEventType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RetentionEventType getRetentionEventType() {
         return this.retentionEventType;
     }
@@ -254,17 +253,15 @@ public class RetentionLabel extends Entity implements Parsable {
      * Gets the retentionTrigger property value. Specifies whether the retention duration is calculated from the content creation date, labeled date, or last modification date. The possible values are: dateLabeled, dateCreated, dateModified, dateOfEvent, unknownFutureValue.
      * @return a retentionTrigger
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RetentionTrigger getRetentionTrigger() {
         return this.retentionTrigger;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("actionAfterRetentionPeriod", this.getActionAfterRetentionPeriod());
@@ -288,154 +285,120 @@ public class RetentionLabel extends Entity implements Parsable {
     /**
      * Sets the actionAfterRetentionPeriod property value. Specifies the action to take on a document with this label applied during the retention period. The possible values are: none, delete, startDispositionReview, unknownFutureValue.
      * @param value Value to set for the actionAfterRetentionPeriod property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActionAfterRetentionPeriod(@javax.annotation.Nullable final ActionAfterRetentionPeriod value) {
+    public void setActionAfterRetentionPeriod(@jakarta.annotation.Nullable final ActionAfterRetentionPeriod value) {
         this.actionAfterRetentionPeriod = value;
     }
     /**
      * Sets the behaviorDuringRetentionPeriod property value. Specifies how the behavior of a document with this label should be during the retention period. The possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue.
      * @param value Value to set for the behaviorDuringRetentionPeriod property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBehaviorDuringRetentionPeriod(@javax.annotation.Nullable final BehaviorDuringRetentionPeriod value) {
+    public void setBehaviorDuringRetentionPeriod(@jakarta.annotation.Nullable final BehaviorDuringRetentionPeriod value) {
         this.behaviorDuringRetentionPeriod = value;
     }
     /**
      * Sets the createdBy property value. Represents the user who created the retentionLabel.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. Represents the date and time in which the retentionLabel is created.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the defaultRecordBehavior property value. Specifies the locked or unlocked state of a record label when it is created.The possible values are: startLocked, startUnlocked, unknownFutureValue.
      * @param value Value to set for the defaultRecordBehavior property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultRecordBehavior(@javax.annotation.Nullable final DefaultRecordBehavior value) {
+    public void setDefaultRecordBehavior(@jakarta.annotation.Nullable final DefaultRecordBehavior value) {
         this.defaultRecordBehavior = value;
     }
     /**
      * Sets the descriptionForAdmins property value. Provides label information for the admin. Optional.
      * @param value Value to set for the descriptionForAdmins property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescriptionForAdmins(@javax.annotation.Nullable final String value) {
+    public void setDescriptionForAdmins(@jakarta.annotation.Nullable final String value) {
         this.descriptionForAdmins = value;
     }
     /**
      * Sets the descriptionForUsers property value. Provides the label information for the user. Optional.
      * @param value Value to set for the descriptionForUsers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescriptionForUsers(@javax.annotation.Nullable final String value) {
+    public void setDescriptionForUsers(@jakarta.annotation.Nullable final String value) {
         this.descriptionForUsers = value;
     }
     /**
      * Sets the descriptors property value. Represents out-of-the-box values that provide more options to improve the manageability and organization of the content you need to label.
      * @param value Value to set for the descriptors property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescriptors(@javax.annotation.Nullable final FilePlanDescriptor value) {
+    public void setDescriptors(@jakarta.annotation.Nullable final FilePlanDescriptor value) {
         this.descriptors = value;
     }
     /**
      * Sets the displayName property value. Unique string that defines a label name.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the dispositionReviewStages property value. When action at the end of retention is chosen as 'dispositionReview', dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.
      * @param value Value to set for the dispositionReviewStages property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDispositionReviewStages(@javax.annotation.Nullable final java.util.List<DispositionReviewStage> value) {
+    public void setDispositionReviewStages(@jakarta.annotation.Nullable final java.util.List<DispositionReviewStage> value) {
         this.dispositionReviewStages = value;
     }
     /**
      * Sets the isInUse property value. Specifies whether the label is currently being used.
      * @param value Value to set for the isInUse property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsInUse(@javax.annotation.Nullable final Boolean value) {
+    public void setIsInUse(@jakarta.annotation.Nullable final Boolean value) {
         this.isInUse = value;
     }
     /**
      * Sets the labelToBeApplied property value. Specifies the replacement label to be applied automatically after the retention period of the current label ends.
      * @param value Value to set for the labelToBeApplied property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLabelToBeApplied(@javax.annotation.Nullable final String value) {
+    public void setLabelToBeApplied(@jakarta.annotation.Nullable final String value) {
         this.labelToBeApplied = value;
     }
     /**
      * Sets the lastModifiedBy property value. The user who last modified the retentionLabel.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The latest date time when the retentionLabel was modified.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the retentionDuration property value. Specifies the number of days to retain the content.
      * @param value Value to set for the retentionDuration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRetentionDuration(@javax.annotation.Nullable final RetentionDuration value) {
+    public void setRetentionDuration(@jakarta.annotation.Nullable final RetentionDuration value) {
         this.retentionDuration = value;
     }
     /**
      * Sets the retentionEventType property value. Represents the type associated with a retention event.
      * @param value Value to set for the retentionEventType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRetentionEventType(@javax.annotation.Nullable final RetentionEventType value) {
+    public void setRetentionEventType(@jakarta.annotation.Nullable final RetentionEventType value) {
         this.retentionEventType = value;
     }
     /**
      * Sets the retentionTrigger property value. Specifies whether the retention duration is calculated from the content creation date, labeled date, or last modification date. The possible values are: dateLabeled, dateCreated, dateModified, dateOfEvent, unknownFutureValue.
      * @param value Value to set for the retentionTrigger property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRetentionTrigger(@javax.annotation.Nullable final RetentionTrigger value) {
+    public void setRetentionTrigger(@jakarta.annotation.Nullable final RetentionTrigger value) {
         this.retentionTrigger = value;
     }
 }

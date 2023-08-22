@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookPivotTable extends Entity implements Parsable {
     /**
      * Name of the PivotTable.
@@ -17,9 +18,7 @@ public class WorkbookPivotTable extends Entity implements Parsable {
     private WorkbookWorksheet worksheet;
     /**
      * Instantiates a new workbookPivotTable and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WorkbookPivotTable() {
         super();
     }
@@ -28,8 +27,8 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a workbookPivotTable
      */
-    @javax.annotation.Nonnull
-    public static WorkbookPivotTable createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WorkbookPivotTable createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WorkbookPivotTable();
     }
@@ -37,7 +36,7 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
@@ -48,7 +47,7 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      * Gets the name property value. Name of the PivotTable.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -56,17 +55,15 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      * Gets the worksheet property value. The worksheet containing the current PivotTable. Read-only.
      * @return a workbookWorksheet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkbookWorksheet getWorksheet() {
         return this.worksheet;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("name", this.getName());
@@ -75,19 +72,15 @@ public class WorkbookPivotTable extends Entity implements Parsable {
     /**
      * Sets the name property value. Name of the PivotTable.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the worksheet property value. The worksheet containing the current PivotTable. Read-only.
      * @param value Value to set for the worksheet property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorksheet(@javax.annotation.Nullable final WorkbookWorksheet value) {
+    public void setWorksheet(@jakarta.annotation.Nullable final WorkbookWorksheet value) {
         this.worksheet = value;
     }
 }

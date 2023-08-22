@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Determines the conflict resolution strategy, when more than one Mobile Threat Defense provider is enabled.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MobileThreatDefensePartnerPriority implements ValuedEnum {
     /** Indicates use of Microsoft Defender Endpoint over 3rd party MTD connectors */
     DefenderOverThirdPartyPartner("defenderOverThirdPartyPartner"),
@@ -17,10 +18,10 @@ public enum MobileThreatDefensePartnerPriority implements ValuedEnum {
     MobileThreatDefensePartnerPriority(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MobileThreatDefensePartnerPriority forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MobileThreatDefensePartnerPriority forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "defenderOverThirdPartyPartner": return DefenderOverThirdPartyPartner;

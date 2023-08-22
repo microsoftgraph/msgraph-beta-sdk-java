@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The administrator intent for the assignment of the profile.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementResourceAccessProfileIntent implements ValuedEnum {
     /** Apply the profile. */
     Apply("apply"),
@@ -15,10 +16,10 @@ public enum DeviceManagementResourceAccessProfileIntent implements ValuedEnum {
     DeviceManagementResourceAccessProfileIntent(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementResourceAccessProfileIntent forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementResourceAccessProfileIntent forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "apply": return Apply;

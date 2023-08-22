@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Indicates the type of app that a VPN traffic rule is associated with.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum VpnTrafficRuleAppType implements ValuedEnum {
     /** The traffic rule is not associated with an app. */
     None("none"),
@@ -17,10 +18,10 @@ public enum VpnTrafficRuleAppType implements ValuedEnum {
     VpnTrafficRuleAppType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static VpnTrafficRuleAppType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static VpnTrafficRuleAppType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

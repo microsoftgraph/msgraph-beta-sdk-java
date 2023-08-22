@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Contains properties for the installation status for a user. This will be deprecated starting May, 2023 (Intune Release 2305).
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserAppInstallStatus extends Entity implements Parsable {
     /**
      * The navigation link to the mobile app.
@@ -40,9 +41,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
     private String userPrincipalName;
     /**
      * Instantiates a new userAppInstallStatus and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public UserAppInstallStatus() {
         super();
     }
@@ -51,8 +50,8 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a userAppInstallStatus
      */
-    @javax.annotation.Nonnull
-    public static UserAppInstallStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static UserAppInstallStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new UserAppInstallStatus();
     }
@@ -60,7 +59,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * Gets the app property value. The navigation link to the mobile app.
      * @return a mobileApp
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public MobileApp getApp() {
         return this.app;
     }
@@ -68,7 +67,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * Gets the deviceStatuses property value. The install state of the app on devices.
      * @return a mobileAppInstallStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<MobileAppInstallStatus> getDeviceStatuses() {
         return this.deviceStatuses;
     }
@@ -76,7 +75,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * Gets the failedDeviceCount property value. Failed Device Count.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getFailedDeviceCount() {
         return this.failedDeviceCount;
     }
@@ -84,7 +83,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("app", (n) -> { this.setApp(n.getObjectValue(MobileApp::createFromDiscriminatorValue)); });
@@ -100,7 +99,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * Gets the installedDeviceCount property value. Installed Device Count.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getInstalledDeviceCount() {
         return this.installedDeviceCount;
     }
@@ -108,7 +107,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * Gets the notInstalledDeviceCount property value. Not installed device count.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNotInstalledDeviceCount() {
         return this.notInstalledDeviceCount;
     }
@@ -116,7 +115,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * Gets the userName property value. User name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserName() {
         return this.userName;
     }
@@ -124,17 +123,15 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * Gets the userPrincipalName property value. User Principal Name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("app", this.getApp());
@@ -148,64 +145,50 @@ public class UserAppInstallStatus extends Entity implements Parsable {
     /**
      * Sets the app property value. The navigation link to the mobile app.
      * @param value Value to set for the app property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setApp(@javax.annotation.Nullable final MobileApp value) {
+    public void setApp(@jakarta.annotation.Nullable final MobileApp value) {
         this.app = value;
     }
     /**
      * Sets the deviceStatuses property value. The install state of the app on devices.
      * @param value Value to set for the deviceStatuses property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceStatuses(@javax.annotation.Nullable final java.util.List<MobileAppInstallStatus> value) {
+    public void setDeviceStatuses(@jakarta.annotation.Nullable final java.util.List<MobileAppInstallStatus> value) {
         this.deviceStatuses = value;
     }
     /**
      * Sets the failedDeviceCount property value. Failed Device Count.
      * @param value Value to set for the failedDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFailedDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setFailedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.failedDeviceCount = value;
     }
     /**
      * Sets the installedDeviceCount property value. Installed Device Count.
      * @param value Value to set for the installedDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInstalledDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setInstalledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.installedDeviceCount = value;
     }
     /**
      * Sets the notInstalledDeviceCount property value. Not installed device count.
      * @param value Value to set for the notInstalledDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotInstalledDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setNotInstalledDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.notInstalledDeviceCount = value;
     }
     /**
      * Sets the userName property value. User name.
      * @param value Value to set for the userName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserName(@javax.annotation.Nullable final String value) {
+    public void setUserName(@jakarta.annotation.Nullable final String value) {
         this.userName = value;
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name.
      * @param value Value to set for the userPrincipalName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.userPrincipalName = value;
     }
 }

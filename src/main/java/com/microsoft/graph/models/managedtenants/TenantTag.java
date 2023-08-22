@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantTag extends Entity implements Parsable {
     /**
      * The identifier for the account that created the tenant tag. Required. Read-only.
@@ -43,9 +44,7 @@ public class TenantTag extends Entity implements Parsable {
     private java.util.List<TenantInfo> tenants;
     /**
      * Instantiates a new tenantTag and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TenantTag() {
         super();
     }
@@ -54,8 +53,8 @@ public class TenantTag extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a tenantTag
      */
-    @javax.annotation.Nonnull
-    public static TenantTag createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TenantTag createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TenantTag();
     }
@@ -63,7 +62,7 @@ public class TenantTag extends Entity implements Parsable {
      * Gets the createdByUserId property value. The identifier for the account that created the tenant tag. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
         return this.createdByUserId;
     }
@@ -71,7 +70,7 @@ public class TenantTag extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time when the tenant tag was created. Required. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -79,7 +78,7 @@ public class TenantTag extends Entity implements Parsable {
      * Gets the deletedDateTime property value. The date and time when the tenant tag was deleted. Required. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getDeletedDateTime() {
         return this.deletedDateTime;
     }
@@ -87,7 +86,7 @@ public class TenantTag extends Entity implements Parsable {
      * Gets the description property value. The description for the tenant tag. Optional. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -95,7 +94,7 @@ public class TenantTag extends Entity implements Parsable {
      * Gets the displayName property value. The display name for the tenant tag. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -103,7 +102,7 @@ public class TenantTag extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdByUserId", (n) -> { this.setCreatedByUserId(n.getStringValue()); });
@@ -120,7 +119,7 @@ public class TenantTag extends Entity implements Parsable {
      * Gets the lastActionByUserId property value. The identifier for the account that lasted on the tenant tag. Optional. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
         return this.lastActionByUserId;
     }
@@ -128,7 +127,7 @@ public class TenantTag extends Entity implements Parsable {
      * Gets the lastActionDateTime property value. The date and time the last action was performed against the tenant tag. Optional. Read-only.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
         return this.lastActionDateTime;
     }
@@ -136,17 +135,15 @@ public class TenantTag extends Entity implements Parsable {
      * Gets the tenants property value. The collection of managed tenants associated with the tenant tag. Optional.
      * @return a tenantInfo
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TenantInfo> getTenants() {
         return this.tenants;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("createdByUserId", this.getCreatedByUserId());
@@ -161,73 +158,57 @@ public class TenantTag extends Entity implements Parsable {
     /**
      * Sets the createdByUserId property value. The identifier for the account that created the tenant tag. Required. Read-only.
      * @param value Value to set for the createdByUserId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedByUserId(@javax.annotation.Nullable final String value) {
+    public void setCreatedByUserId(@jakarta.annotation.Nullable final String value) {
         this.createdByUserId = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when the tenant tag was created. Required. Read-only.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the deletedDateTime property value. The date and time when the tenant tag was deleted. Required. Read-only.
      * @param value Value to set for the deletedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setDeletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.deletedDateTime = value;
     }
     /**
      * Sets the description property value. The description for the tenant tag. Optional. Read-only.
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the displayName property value. The display name for the tenant tag. Required. Read-only.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the lastActionByUserId property value. The identifier for the account that lasted on the tenant tag. Optional. Read-only.
      * @param value Value to set for the lastActionByUserId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActionByUserId(@javax.annotation.Nullable final String value) {
+    public void setLastActionByUserId(@jakarta.annotation.Nullable final String value) {
         this.lastActionByUserId = value;
     }
     /**
      * Sets the lastActionDateTime property value. The date and time the last action was performed against the tenant tag. Optional. Read-only.
      * @param value Value to set for the lastActionDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastActionDateTime = value;
     }
     /**
      * Sets the tenants property value. The collection of managed tenants associated with the tenant tag. Optional.
      * @param value Value to set for the tenants property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTenants(@javax.annotation.Nullable final java.util.List<TenantInfo> value) {
+    public void setTenants(@jakarta.annotation.Nullable final java.util.List<TenantInfo> value) {
         this.tenants = value;
     }
 }

@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceLocalCredential extends Entity implements Parsable {
     /**
      * The name of the local admin account for which LAPS is enabled.
@@ -26,9 +27,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
     private String passwordBase64;
     /**
      * Instantiates a new deviceLocalCredential and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceLocalCredential() {
         super();
     }
@@ -37,8 +36,8 @@ public class DeviceLocalCredential extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceLocalCredential
      */
-    @javax.annotation.Nonnull
-    public static DeviceLocalCredential createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceLocalCredential createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceLocalCredential();
     }
@@ -46,7 +45,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
      * Gets the accountName property value. The name of the local admin account for which LAPS is enabled.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAccountName() {
         return this.accountName;
     }
@@ -54,7 +53,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
      * Gets the accountSid property value. The SID of the local admin account for which LAPS is enabled.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAccountSid() {
         return this.accountSid;
     }
@@ -62,7 +61,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
      * Gets the backupDateTime property value. When the local adminstrator account credential for the device object was backed up to Azure Active Directory.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getBackupDateTime() {
         return this.backupDateTime;
     }
@@ -70,7 +69,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
@@ -83,17 +82,15 @@ public class DeviceLocalCredential extends Entity implements Parsable {
      * Gets the passwordBase64 property value. The password for the local administrator account that is backed up to Azure Active Directory and returned as a base 64 encoded value.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPasswordBase64() {
         return this.passwordBase64;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("accountName", this.getAccountName());
@@ -104,37 +101,29 @@ public class DeviceLocalCredential extends Entity implements Parsable {
     /**
      * Sets the accountName property value. The name of the local admin account for which LAPS is enabled.
      * @param value Value to set for the accountName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccountName(@javax.annotation.Nullable final String value) {
+    public void setAccountName(@jakarta.annotation.Nullable final String value) {
         this.accountName = value;
     }
     /**
      * Sets the accountSid property value. The SID of the local admin account for which LAPS is enabled.
      * @param value Value to set for the accountSid property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAccountSid(@javax.annotation.Nullable final String value) {
+    public void setAccountSid(@jakarta.annotation.Nullable final String value) {
         this.accountSid = value;
     }
     /**
      * Sets the backupDateTime property value. When the local adminstrator account credential for the device object was backed up to Azure Active Directory.
      * @param value Value to set for the backupDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBackupDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setBackupDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backupDateTime = value;
     }
     /**
      * Sets the passwordBase64 property value. The password for the local administrator account that is backed up to Azure Active Directory and returned as a base 64 encoded value.
      * @param value Value to set for the passwordBase64 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPasswordBase64(@javax.annotation.Nullable final String value) {
+    public void setPasswordBase64(@jakarta.annotation.Nullable final String value) {
         this.passwordBase64 = value;
     }
 }

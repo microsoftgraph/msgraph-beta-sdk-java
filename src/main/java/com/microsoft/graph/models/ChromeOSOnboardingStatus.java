@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The onboarding status of the tenant.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ChromeOSOnboardingStatus implements ValuedEnum {
     /** Unknown */
     Unknown("unknown"),
@@ -23,10 +24,10 @@ public enum ChromeOSOnboardingStatus implements ValuedEnum {
     ChromeOSOnboardingStatus(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ChromeOSOnboardingStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ChromeOSOnboardingStatus forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

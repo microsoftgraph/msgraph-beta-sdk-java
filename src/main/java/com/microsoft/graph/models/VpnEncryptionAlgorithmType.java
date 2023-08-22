@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The type of VPN security association encryption algorithm
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum VpnEncryptionAlgorithmType implements ValuedEnum {
     /** AES-256 */
     Aes256("aes256"),
@@ -29,10 +30,10 @@ public enum VpnEncryptionAlgorithmType implements ValuedEnum {
     VpnEncryptionAlgorithmType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static VpnEncryptionAlgorithmType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static VpnEncryptionAlgorithmType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "aes256": return Aes256;

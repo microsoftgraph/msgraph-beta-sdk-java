@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Represents the payload type AssignmentFilter is being assigned to.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AssignmentFilterPayloadType implements ValuedEnum {
     /** NotSet */
     NotSet("notSet"),
@@ -15,10 +16,10 @@ public enum AssignmentFilterPayloadType implements ValuedEnum {
     AssignmentFilterPayloadType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AssignmentFilterPayloadType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AssignmentFilterPayloadType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notSet": return NotSet;

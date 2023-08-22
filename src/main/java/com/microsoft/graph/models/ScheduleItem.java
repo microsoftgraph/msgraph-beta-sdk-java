@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ScheduleItem implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
     private String subject;
     /**
      * Instantiates a new scheduleItem and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ScheduleItem() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +52,8 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a scheduleItem
      */
-    @javax.annotation.Nonnull
-    public static ScheduleItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ScheduleItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ScheduleItem();
     }
@@ -62,7 +61,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +69,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * Gets the end property value. The date, time, and time zone that the corresponding event ends.
      * @return a dateTimeTimeZone
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DateTimeTimeZone getEnd() {
         return this.end;
     }
@@ -78,7 +77,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("end", (n) -> { this.setEnd(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
@@ -94,7 +93,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * Gets the isPrivate property value. The sensitivity of the corresponding event. True if the event is marked private, false otherwise. Optional.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsPrivate() {
         return this.isPrivate;
     }
@@ -102,7 +101,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * Gets the location property value. The location where the corresponding event is held or attended from. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLocation() {
         return this.location;
     }
@@ -110,7 +109,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -118,7 +117,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * Gets the start property value. The date, time, and time zone that the corresponding event starts.
      * @return a dateTimeTimeZone
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DateTimeTimeZone getStart() {
         return this.start;
     }
@@ -126,7 +125,7 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * Gets the status property value. The availability status of the user or resource during the corresponding event. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @return a freeBusyStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public FreeBusyStatus getStatus() {
         return this.status;
     }
@@ -134,17 +133,15 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
      * Gets the subject property value. The corresponding event's subject line. Optional.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubject() {
         return this.subject;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("end", this.getEnd());
         writer.writeBooleanValue("isPrivate", this.getIsPrivate());
@@ -158,73 +155,57 @@ public class ScheduleItem implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the end property value. The date, time, and time zone that the corresponding event ends.
      * @param value Value to set for the end property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnd(@javax.annotation.Nullable final DateTimeTimeZone value) {
+    public void setEnd(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.end = value;
     }
     /**
      * Sets the isPrivate property value. The sensitivity of the corresponding event. True if the event is marked private, false otherwise. Optional.
      * @param value Value to set for the isPrivate property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsPrivate(@javax.annotation.Nullable final Boolean value) {
+    public void setIsPrivate(@jakarta.annotation.Nullable final Boolean value) {
         this.isPrivate = value;
     }
     /**
      * Sets the location property value. The location where the corresponding event is held or attended from. Optional.
      * @param value Value to set for the location property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocation(@javax.annotation.Nullable final String value) {
+    public void setLocation(@jakarta.annotation.Nullable final String value) {
         this.location = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the start property value. The date, time, and time zone that the corresponding event starts.
      * @param value Value to set for the start property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStart(@javax.annotation.Nullable final DateTimeTimeZone value) {
+    public void setStart(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.start = value;
     }
     /**
      * Sets the status property value. The availability status of the user or resource during the corresponding event. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final FreeBusyStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final FreeBusyStatus value) {
         this.status = value;
     }
     /**
      * Sets the subject property value. The corresponding event's subject line. Optional.
      * @param value Value to set for the subject property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final String value) {
+    public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
 }

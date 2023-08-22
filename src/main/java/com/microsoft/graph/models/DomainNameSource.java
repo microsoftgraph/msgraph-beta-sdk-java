@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Domainname source.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DomainNameSource implements ValuedEnum {
     /** Full domain name. */
     FullDomainName("fullDomainName"),
@@ -15,10 +16,10 @@ public enum DomainNameSource implements ValuedEnum {
     DomainNameSource(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DomainNameSource forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DomainNameSource forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "fullDomainName": return FullDomainName;

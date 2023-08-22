@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Teamwork extends Entity implements Parsable {
     /**
      * The deletedChats property
@@ -33,9 +34,7 @@ public class Teamwork extends Entity implements Parsable {
     private java.util.List<WorkforceIntegration> workforceIntegrations;
     /**
      * Instantiates a new teamwork and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Teamwork() {
         super();
     }
@@ -44,8 +43,8 @@ public class Teamwork extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a teamwork
      */
-    @javax.annotation.Nonnull
-    public static Teamwork createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Teamwork createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Teamwork();
     }
@@ -53,7 +52,7 @@ public class Teamwork extends Entity implements Parsable {
      * Gets the deletedChats property value. The deletedChats property
      * @return a deletedChat
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeletedChat> getDeletedChats() {
         return this.deletedChats;
     }
@@ -61,7 +60,7 @@ public class Teamwork extends Entity implements Parsable {
      * Gets the deletedTeams property value. A collection of deleted teams.
      * @return a deletedTeam
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<DeletedTeam> getDeletedTeams() {
         return this.deletedTeams;
     }
@@ -69,7 +68,7 @@ public class Teamwork extends Entity implements Parsable {
      * Gets the devices property value. The Teams devices provisioned for the tenant.
      * @return a teamworkDevice
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TeamworkDevice> getDevices() {
         return this.devices;
     }
@@ -77,7 +76,7 @@ public class Teamwork extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deletedChats", (n) -> { this.setDeletedChats(n.getCollectionOfObjectValues(DeletedChat::createFromDiscriminatorValue)); });
@@ -92,7 +91,7 @@ public class Teamwork extends Entity implements Parsable {
      * Gets the teamsAppSettings property value. Represents tenant-wide settings for all Teams apps in the tenant.
      * @return a teamsAppSettings
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TeamsAppSettings getTeamsAppSettings() {
         return this.teamsAppSettings;
     }
@@ -100,7 +99,7 @@ public class Teamwork extends Entity implements Parsable {
      * Gets the teamTemplates property value. The templates associated with a team.
      * @return a teamTemplate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<TeamTemplate> getTeamTemplates() {
         return this.teamTemplates;
     }
@@ -108,17 +107,15 @@ public class Teamwork extends Entity implements Parsable {
      * Gets the workforceIntegrations property value. A workforce integration with shifts.
      * @return a workforceIntegration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WorkforceIntegration> getWorkforceIntegrations() {
         return this.workforceIntegrations;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("deletedChats", this.getDeletedChats());
@@ -131,55 +128,43 @@ public class Teamwork extends Entity implements Parsable {
     /**
      * Sets the deletedChats property value. The deletedChats property
      * @param value Value to set for the deletedChats property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeletedChats(@javax.annotation.Nullable final java.util.List<DeletedChat> value) {
+    public void setDeletedChats(@jakarta.annotation.Nullable final java.util.List<DeletedChat> value) {
         this.deletedChats = value;
     }
     /**
      * Sets the deletedTeams property value. A collection of deleted teams.
      * @param value Value to set for the deletedTeams property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeletedTeams(@javax.annotation.Nullable final java.util.List<DeletedTeam> value) {
+    public void setDeletedTeams(@jakarta.annotation.Nullable final java.util.List<DeletedTeam> value) {
         this.deletedTeams = value;
     }
     /**
      * Sets the devices property value. The Teams devices provisioned for the tenant.
      * @param value Value to set for the devices property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDevices(@javax.annotation.Nullable final java.util.List<TeamworkDevice> value) {
+    public void setDevices(@jakarta.annotation.Nullable final java.util.List<TeamworkDevice> value) {
         this.devices = value;
     }
     /**
      * Sets the teamsAppSettings property value. Represents tenant-wide settings for all Teams apps in the tenant.
      * @param value Value to set for the teamsAppSettings property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTeamsAppSettings(@javax.annotation.Nullable final TeamsAppSettings value) {
+    public void setTeamsAppSettings(@jakarta.annotation.Nullable final TeamsAppSettings value) {
         this.teamsAppSettings = value;
     }
     /**
      * Sets the teamTemplates property value. The templates associated with a team.
      * @param value Value to set for the teamTemplates property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTeamTemplates(@javax.annotation.Nullable final java.util.List<TeamTemplate> value) {
+    public void setTeamTemplates(@jakarta.annotation.Nullable final java.util.List<TeamTemplate> value) {
         this.teamTemplates = value;
     }
     /**
      * Sets the workforceIntegrations property value. A workforce integration with shifts.
      * @param value Value to set for the workforceIntegrations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkforceIntegrations(@javax.annotation.Nullable final java.util.List<WorkforceIntegration> value) {
+    public void setWorkforceIntegrations(@jakarta.annotation.Nullable final java.util.List<WorkforceIntegration> value) {
         this.workforceIntegrations = value;
     }
 }

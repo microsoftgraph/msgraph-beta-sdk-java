@@ -48,7 +48,6 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -56,263 +55,264 @@ import java.util.Objects;
 /**
  * Provides operations to manage the managedTenants property of the microsoft.graph.tenantRelationship entity.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the aggregatedPolicyCompliances property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AggregatedPolicyCompliancesRequestBuilder aggregatedPolicyCompliances() {
         return new AggregatedPolicyCompliancesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the appPerformances property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AppPerformancesRequestBuilder appPerformances() {
         return new AppPerformancesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the auditEvents property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public AuditEventsRequestBuilder auditEvents() {
         return new AuditEventsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the cloudPcConnections property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CloudPcConnectionsRequestBuilder cloudPcConnections() {
         return new CloudPcConnectionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the cloudPcDevices property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CloudPcDevicesRequestBuilder cloudPcDevices() {
         return new CloudPcDevicesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the cloudPcsOverview property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CloudPcsOverviewRequestBuilder cloudPcsOverview() {
         return new CloudPcsOverviewRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the conditionalAccessPolicyCoverages property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ConditionalAccessPolicyCoveragesRequestBuilder conditionalAccessPolicyCoverages() {
         return new ConditionalAccessPolicyCoveragesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the credentialUserRegistrationsSummaries property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public CredentialUserRegistrationsSummariesRequestBuilder credentialUserRegistrationsSummaries() {
         return new CredentialUserRegistrationsSummariesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the deviceAppPerformances property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DeviceAppPerformancesRequestBuilder deviceAppPerformances() {
         return new DeviceAppPerformancesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the deviceCompliancePolicySettingStateSummaries property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DeviceCompliancePolicySettingStateSummariesRequestBuilder deviceCompliancePolicySettingStateSummaries() {
         return new DeviceCompliancePolicySettingStateSummariesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the deviceHealthStatuses property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public DeviceHealthStatusesRequestBuilder deviceHealthStatuses() {
         return new DeviceHealthStatusesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managedDeviceCompliances property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagedDeviceCompliancesRequestBuilder managedDeviceCompliances() {
         return new ManagedDeviceCompliancesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managedDeviceComplianceTrends property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagedDeviceComplianceTrendsRequestBuilder managedDeviceComplianceTrends() {
         return new ManagedDeviceComplianceTrendsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managedTenantAlertLogs property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagedTenantAlertLogsRequestBuilder managedTenantAlertLogs() {
         return new ManagedTenantAlertLogsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managedTenantAlertRuleDefinitions property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagedTenantAlertRuleDefinitionsRequestBuilder managedTenantAlertRuleDefinitions() {
         return new ManagedTenantAlertRuleDefinitionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managedTenantAlertRules property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagedTenantAlertRulesRequestBuilder managedTenantAlertRules() {
         return new ManagedTenantAlertRulesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managedTenantAlerts property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagedTenantAlertsRequestBuilder managedTenantAlerts() {
         return new ManagedTenantAlertsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managedTenantApiNotifications property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagedTenantApiNotificationsRequestBuilder managedTenantApiNotifications() {
         return new ManagedTenantApiNotificationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managedTenantEmailNotifications property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagedTenantEmailNotificationsRequestBuilder managedTenantEmailNotifications() {
         return new ManagedTenantEmailNotificationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managedTenantTicketingEndpoints property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagedTenantTicketingEndpointsRequestBuilder managedTenantTicketingEndpoints() {
         return new ManagedTenantTicketingEndpointsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managementActions property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagementActionsRequestBuilder managementActions() {
         return new ManagementActionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managementActionTenantDeploymentStatuses property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagementActionTenantDeploymentStatusesRequestBuilder managementActionTenantDeploymentStatuses() {
         return new ManagementActionTenantDeploymentStatusesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managementIntents property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagementIntentsRequestBuilder managementIntents() {
         return new ManagementIntentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managementTemplateCollections property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagementTemplateCollectionsRequestBuilder managementTemplateCollections() {
         return new ManagementTemplateCollectionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managementTemplateCollectionTenantSummaries property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagementTemplateCollectionTenantSummariesRequestBuilder managementTemplateCollectionTenantSummaries() {
         return new ManagementTemplateCollectionTenantSummariesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managementTemplates property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagementTemplatesRequestBuilder managementTemplates() {
         return new ManagementTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managementTemplateSteps property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagementTemplateStepsRequestBuilder managementTemplateSteps() {
         return new ManagementTemplateStepsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managementTemplateStepTenantSummaries property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagementTemplateStepTenantSummariesRequestBuilder managementTemplateStepTenantSummaries() {
         return new ManagementTemplateStepTenantSummariesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managementTemplateStepVersions property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public ManagementTemplateStepVersionsRequestBuilder managementTemplateStepVersions() {
         return new ManagementTemplateStepVersionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the myRoles property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public MyRolesRequestBuilder myRoles() {
         return new MyRolesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tenantGroups property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TenantGroupsRequestBuilder tenantGroups() {
         return new TenantGroupsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tenants property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TenantsRequestBuilder tenants() {
         return new TenantsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tenantsCustomizedInformation property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TenantsCustomizedInformationRequestBuilder tenantsCustomizedInformation() {
         return new TenantsCustomizedInformationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tenantsDetailedInformation property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TenantsDetailedInformationRequestBuilder tenantsDetailedInformation() {
         return new TenantsDetailedInformationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tenantTags property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public TenantTagsRequestBuilder tenantTags() {
         return new TenantTagsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the windowsDeviceMalwareStates property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public WindowsDeviceMalwareStatesRequestBuilder windowsDeviceMalwareStates() {
         return new WindowsDeviceMalwareStatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the windowsProtectionStates property of the microsoft.graph.managedTenants.managedTenant entity.
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public WindowsProtectionStatesRequestBuilder windowsProtectionStates() {
         return new WindowsProtectionStatesRequestBuilder(pathParameters, requestAdapter);
     }
@@ -320,114 +320,66 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new ManagedTenantsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @javax.annotation.Nullable
-    public ManagedTenantsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public ManagedTenantsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants{?%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new ManagedTenantsRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @return a void
      */
-    @javax.annotation.Nullable
-    public ManagedTenantsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public ManagedTenantsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants{?%24select,%24expand}", rawUrl);
     }
     /**
      * Delete navigation property managedTenants for tenantRelationships
-     * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
-        try {
-            final RequestInformation requestInfo = toDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return delete(null);
     }
     /**
      * Delete navigation property managedTenants for tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<Void> executionException = new java.util.concurrent.CompletableFuture<Void>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
      * The operations available to interact with the multi-tenant management platform.
      * @return a CompletableFuture of managedTenant
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenant> get() {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<ManagedTenant> executionException = new java.util.concurrent.CompletableFuture<ManagedTenant>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        return get(null);
     }
     /**
      * The operations available to interact with the multi-tenant management platform.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedTenant
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedTenant> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<ManagedTenant> executionException = new java.util.concurrent.CompletableFuture<ManagedTenant>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedTenant> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property managedTenants in tenantRelationships
      * @param body The request body
      * @return a CompletableFuture of managedTenant
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedTenant> patch(@javax.annotation.Nonnull final ManagedTenant body) {
-        try {
-            final RequestInformation requestInfo = toPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<ManagedTenant> executionException = new java.util.concurrent.CompletableFuture<ManagedTenant>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedTenant> patch(@jakarta.annotation.Nonnull final ManagedTenant body) {
+        return patch(body, null);
     }
     /**
      * Update the navigation property managedTenants in tenantRelationships
@@ -435,27 +387,21 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of managedTenant
      */
-    @javax.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedTenant> patch(@javax.annotation.Nonnull final ManagedTenant body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedTenant> patch(@jakarta.annotation.Nonnull final ManagedTenant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-            return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, errorMapping);
-        } catch (URISyntaxException ex) {
-            final java.util.concurrent.CompletableFuture<ManagedTenant> executionException = new java.util.concurrent.CompletableFuture<ManagedTenant>();
-            executionException.completeExceptionally(ex);
-            return executionException;
-        }
+        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.sendAsync(requestInfo, ManagedTenant::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property managedTenants for tenantRelationships
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation() throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
     /**
@@ -463,8 +409,8 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.DELETE;
         requestInfo.urlTemplate = urlTemplate;
@@ -481,8 +427,8 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
      * The operations available to interact with the multi-tenant management platform.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
@@ -490,8 +436,8 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
@@ -511,8 +457,8 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final ManagedTenant body) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ManagedTenant body) {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -521,8 +467,8 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
-    @javax.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final ManagedTenant body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ManagedTenant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -541,38 +487,42 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
      * The operations available to interact with the multi-tenant management platform.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
         /**
          * Expand related entities
          */
         @QueryParameter(name = "%24expand")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
         @QueryParameter(name = "%24select")
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public String[] select;
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetRequestConfiguration extends BaseRequestConfiguration {
         /**
          * Request query parameters
          */
-        @javax.annotation.Nullable
+        @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
     public class PatchRequestConfiguration extends BaseRequestConfiguration {
     }
 }

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Setting control type representation in the UX
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementConfigurationControlType implements ValuedEnum {
     /** Default. UX uses default UX element base on setting type for the setting. */
     Default("default"),
@@ -27,10 +28,10 @@ public enum DeviceManagementConfigurationControlType implements ValuedEnum {
     DeviceManagementConfigurationControlType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementConfigurationControlType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementConfigurationControlType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "default": return Default;

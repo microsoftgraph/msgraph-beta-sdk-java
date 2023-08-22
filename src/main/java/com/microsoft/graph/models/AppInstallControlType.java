@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * App Install control Setting
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AppInstallControlType implements ValuedEnum {
     /** Not configured */
     NotConfigured("notConfigured"),
@@ -21,10 +22,10 @@ public enum AppInstallControlType implements ValuedEnum {
     AppInstallControlType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AppInstallControlType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AppInstallControlType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

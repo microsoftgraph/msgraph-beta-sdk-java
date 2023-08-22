@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Used together with personalApplications to control how apps in the personal profile are allowed or blocked.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum PersonalProfilePersonalPlayStoreMode implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),
@@ -17,10 +18,10 @@ public enum PersonalProfilePersonalPlayStoreMode implements ValuedEnum {
     PersonalProfilePersonalPlayStoreMode(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static PersonalProfilePersonalPlayStoreMode forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static PersonalProfilePersonalPlayStoreMode forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

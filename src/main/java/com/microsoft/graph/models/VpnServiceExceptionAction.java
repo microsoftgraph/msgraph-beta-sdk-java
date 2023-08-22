@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * The VPN action to take for a specific service.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum VpnServiceExceptionAction implements ValuedEnum {
     /** Make all traffic from that service go through the VPN */
     ForceTrafficViaVPN("forceTrafficViaVPN"),
@@ -17,10 +18,10 @@ public enum VpnServiceExceptionAction implements ValuedEnum {
     VpnServiceExceptionAction(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static VpnServiceExceptionAction forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static VpnServiceExceptionAction forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "forceTrafficViaVPN": return ForceTrafficViaVPN;

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintTaskDefinition extends Entity implements Parsable {
     /**
      * The createdBy property
@@ -21,9 +22,7 @@ public class PrintTaskDefinition extends Entity implements Parsable {
     private java.util.List<PrintTask> tasks;
     /**
      * Instantiates a new printTaskDefinition and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PrintTaskDefinition() {
         super();
     }
@@ -32,8 +31,8 @@ public class PrintTaskDefinition extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a printTaskDefinition
      */
-    @javax.annotation.Nonnull
-    public static PrintTaskDefinition createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PrintTaskDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PrintTaskDefinition();
     }
@@ -41,7 +40,7 @@ public class PrintTaskDefinition extends Entity implements Parsable {
      * Gets the createdBy property value. The createdBy property
      * @return a appIdentity
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public AppIdentity getCreatedBy() {
         return this.createdBy;
     }
@@ -49,7 +48,7 @@ public class PrintTaskDefinition extends Entity implements Parsable {
      * Gets the displayName property value. The name of the printTaskDefinition.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -57,7 +56,7 @@ public class PrintTaskDefinition extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(AppIdentity::createFromDiscriminatorValue)); });
@@ -69,17 +68,15 @@ public class PrintTaskDefinition extends Entity implements Parsable {
      * Gets the tasks property value. A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
      * @return a printTask
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PrintTask> getTasks() {
         return this.tasks;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("createdBy", this.getCreatedBy());
@@ -89,28 +86,22 @@ public class PrintTaskDefinition extends Entity implements Parsable {
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final AppIdentity value) {
+    public void setCreatedBy(@jakarta.annotation.Nullable final AppIdentity value) {
         this.createdBy = value;
     }
     /**
      * Sets the displayName property value. The name of the printTaskDefinition.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the tasks property value. A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
      * @param value Value to set for the tasks property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTasks(@javax.annotation.Nullable final java.util.List<PrintTask> value) {
+    public void setTasks(@jakarta.annotation.Nullable final java.util.List<PrintTask> value) {
         this.tasks = value;
     }
 }

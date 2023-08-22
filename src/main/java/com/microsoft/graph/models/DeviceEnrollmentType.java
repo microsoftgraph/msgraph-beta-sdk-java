@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible ways of adding a mobile device to management.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceEnrollmentType implements ValuedEnum {
     /** Default value, enrollment type was not collected. */
     Unknown("unknown"),
@@ -45,10 +46,10 @@ public enum DeviceEnrollmentType implements ValuedEnum {
     DeviceEnrollmentType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceEnrollmentType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceEnrollmentType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

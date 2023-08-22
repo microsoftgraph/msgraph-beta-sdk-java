@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Hardware information of a given device.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class HardwareInformation implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -181,9 +182,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
     private java.util.List<String> wiredIPv4Addresses;
     /**
      * Instantiates a new hardwareInformation and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public HardwareInformation() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -192,8 +191,8 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a hardwareInformation
      */
-    @javax.annotation.Nonnull
-    public static HardwareInformation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static HardwareInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new HardwareInformation();
     }
@@ -201,7 +200,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -209,7 +208,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the batteryChargeCycles property value. The number of charge cycles the devices current battery has gone through. Valid values 0 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getBatteryChargeCycles() {
         return this.batteryChargeCycles;
     }
@@ -217,7 +216,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the batteryHealthPercentage property value. The devices current batterys health percentage. Valid values 0 to 100
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getBatteryHealthPercentage() {
         return this.batteryHealthPercentage;
     }
@@ -225,7 +224,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the batteryLevelPercentage property value. The battery level, between 0.0 and 100, or null if the battery level cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 5.0 and later, and is available only when Device Information access right is obtained. Valid values 0 to 100
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getBatteryLevelPercentage() {
         return this.batteryLevelPercentage;
     }
@@ -233,7 +232,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the batterySerialNumber property value. The serial number of the devices current battery
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBatterySerialNumber() {
         return this.batterySerialNumber;
     }
@@ -241,7 +240,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the cellularTechnology property value. Cellular technology of the device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getCellularTechnology() {
         return this.cellularTechnology;
     }
@@ -249,7 +248,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the deviceFullQualifiedDomainName property value. Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceFullQualifiedDomainName() {
         return this.deviceFullQualifiedDomainName;
     }
@@ -257,7 +256,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the deviceGuardLocalSystemAuthorityCredentialGuardState property value. The deviceGuardLocalSystemAuthorityCredentialGuardState property
      * @return a deviceGuardLocalSystemAuthorityCredentialGuardState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceGuardLocalSystemAuthorityCredentialGuardState getDeviceGuardLocalSystemAuthorityCredentialGuardState() {
         return this.deviceGuardLocalSystemAuthorityCredentialGuardState;
     }
@@ -265,7 +264,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the deviceGuardVirtualizationBasedSecurityHardwareRequirementState property value. The deviceGuardVirtualizationBasedSecurityHardwareRequirementState property
      * @return a deviceGuardVirtualizationBasedSecurityHardwareRequirementState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceGuardVirtualizationBasedSecurityHardwareRequirementState getDeviceGuardVirtualizationBasedSecurityHardwareRequirementState() {
         return this.deviceGuardVirtualizationBasedSecurityHardwareRequirementState;
     }
@@ -273,7 +272,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the deviceGuardVirtualizationBasedSecurityState property value. The deviceGuardVirtualizationBasedSecurityState property
      * @return a deviceGuardVirtualizationBasedSecurityState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceGuardVirtualizationBasedSecurityState getDeviceGuardVirtualizationBasedSecurityState() {
         return this.deviceGuardVirtualizationBasedSecurityState;
     }
@@ -281,7 +280,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the deviceLicensingLastErrorCode property value. A standard error code indicating the last error, or 0 indicating no error (default). The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing. Valid values 0 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getDeviceLicensingLastErrorCode() {
         return this.deviceLicensingLastErrorCode;
     }
@@ -289,7 +288,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the deviceLicensingLastErrorDescription property value. Error text message as a descripition for deviceLicensingLastErrorCode. The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDeviceLicensingLastErrorDescription() {
         return this.deviceLicensingLastErrorDescription;
     }
@@ -297,7 +296,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the deviceLicensingStatus property value. Indicates the device licensing status after Windows device based subscription has been enabled.
      * @return a deviceLicensingStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceLicensingStatus getDeviceLicensingStatus() {
         return this.deviceLicensingStatus;
     }
@@ -305,7 +304,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the esimIdentifier property value. eSIM identifier
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getEsimIdentifier() {
         return this.esimIdentifier;
     }
@@ -313,7 +312,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(41);
         deserializerMap.put("batteryChargeCycles", (n) -> { this.setBatteryChargeCycles(n.getIntegerValue()); });
@@ -363,7 +362,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the freeStorageSpace property value. Free storage space of the device.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getFreeStorageSpace() {
         return this.freeStorageSpace;
     }
@@ -371,7 +370,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the imei property value. IMEI
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getImei() {
         return this.imei;
     }
@@ -379,7 +378,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the ipAddressV4 property value. IPAddressV4
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getIpAddressV4() {
         return this.ipAddressV4;
     }
@@ -387,7 +386,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the isEncrypted property value. Encryption status of the device
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsEncrypted() {
         return this.isEncrypted;
     }
@@ -395,7 +394,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the isSharedDevice property value. Shared iPad
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSharedDevice() {
         return this.isSharedDevice;
     }
@@ -403,7 +402,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the isSupervised property value. Supervised mode of the device
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getIsSupervised() {
         return this.isSupervised;
     }
@@ -411,7 +410,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the manufacturer property value. Manufacturer of the device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManufacturer() {
         return this.manufacturer;
     }
@@ -419,7 +418,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the meid property value. MEID
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getMeid() {
         return this.meid;
     }
@@ -427,7 +426,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the model property value. Model of the device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getModel() {
         return this.model;
     }
@@ -435,7 +434,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -443,7 +442,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the operatingSystemEdition property value. String that specifies the OS edition.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOperatingSystemEdition() {
         return this.operatingSystemEdition;
     }
@@ -451,7 +450,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the operatingSystemLanguage property value. Operating system language of the device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOperatingSystemLanguage() {
         return this.operatingSystemLanguage;
     }
@@ -459,7 +458,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the operatingSystemProductType property value. Int that specifies the Windows Operating System ProductType. More details here https://go.microsoft.com/fwlink/?linkid=2126950. Valid values 0 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getOperatingSystemProductType() {
         return this.operatingSystemProductType;
     }
@@ -467,7 +466,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the osBuildNumber property value. Operating System Build Number on Android device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOsBuildNumber() {
         return this.osBuildNumber;
     }
@@ -475,7 +474,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the phoneNumber property value. Phone number of the device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
@@ -483,7 +482,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the productName property value. The product name, e.g. iPad8,12 etc. The update frequency of this property is weekly. Note this property is currently supported only on iOS/MacOS devices, and is available only when Device Information access right is obtained.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getProductName() {
         return this.productName;
     }
@@ -491,7 +490,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the residentUsersCount property value. The number of users currently on this device, or null (default) if the value of this property cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 13.4 and later, and is available only when Device Information access right is obtained. Valid values 0 to 2147483647
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getResidentUsersCount() {
         return this.residentUsersCount;
     }
@@ -499,7 +498,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the serialNumber property value. Serial number.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSerialNumber() {
         return this.serialNumber;
     }
@@ -507,7 +506,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the sharedDeviceCachedUsers property value. All users on the shared Apple device
      * @return a sharedAppleDeviceUser
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SharedAppleDeviceUser> getSharedDeviceCachedUsers() {
         return this.sharedDeviceCachedUsers;
     }
@@ -515,7 +514,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the subnetAddress property value. SubnetAddress
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubnetAddress() {
         return this.subnetAddress;
     }
@@ -523,7 +522,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the subscriberCarrier property value. Subscriber carrier of the device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSubscriberCarrier() {
         return this.subscriberCarrier;
     }
@@ -531,7 +530,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the systemManagementBIOSVersion property value. BIOS version as reported by SMBIOS
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getSystemManagementBIOSVersion() {
         return this.systemManagementBIOSVersion;
     }
@@ -539,7 +538,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the totalStorageSpace property value. Total storage space of the device.
      * @return a int64
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Long getTotalStorageSpace() {
         return this.totalStorageSpace;
     }
@@ -547,7 +546,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the tpmManufacturer property value. The identifying information that uniquely names the TPM manufacturer
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTpmManufacturer() {
         return this.tpmManufacturer;
     }
@@ -555,7 +554,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the tpmSpecificationVersion property value. String that specifies the specification version.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTpmSpecificationVersion() {
         return this.tpmSpecificationVersion;
     }
@@ -563,7 +562,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the tpmVersion property value. The version of the TPM, as specified by the manufacturer
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTpmVersion() {
         return this.tpmVersion;
     }
@@ -571,7 +570,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the wifiMac property value. WiFi MAC address of the device
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getWifiMac() {
         return this.wifiMac;
     }
@@ -579,17 +578,15 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Gets the wiredIPv4Addresses property value. A list of wired IPv4 addresses. The update frequency (the maximum delay for the change of property value to be synchronized from the device to the cloud storage) of this property is daily. Note this property is currently supported only on devices running on Windows.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getWiredIPv4Addresses() {
         return this.wiredIPv4Addresses;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("batteryChargeCycles", this.getBatteryChargeCycles());
         writer.writeIntegerValue("batteryHealthPercentage", this.getBatteryHealthPercentage());
@@ -637,379 +634,295 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the batteryChargeCycles property value. The number of charge cycles the devices current battery has gone through. Valid values 0 to 2147483647
      * @param value Value to set for the batteryChargeCycles property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBatteryChargeCycles(@javax.annotation.Nullable final Integer value) {
+    public void setBatteryChargeCycles(@jakarta.annotation.Nullable final Integer value) {
         this.batteryChargeCycles = value;
     }
     /**
      * Sets the batteryHealthPercentage property value. The devices current batterys health percentage. Valid values 0 to 100
      * @param value Value to set for the batteryHealthPercentage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBatteryHealthPercentage(@javax.annotation.Nullable final Integer value) {
+    public void setBatteryHealthPercentage(@jakarta.annotation.Nullable final Integer value) {
         this.batteryHealthPercentage = value;
     }
     /**
      * Sets the batteryLevelPercentage property value. The battery level, between 0.0 and 100, or null if the battery level cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 5.0 and later, and is available only when Device Information access right is obtained. Valid values 0 to 100
      * @param value Value to set for the batteryLevelPercentage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBatteryLevelPercentage(@javax.annotation.Nullable final Double value) {
+    public void setBatteryLevelPercentage(@jakarta.annotation.Nullable final Double value) {
         this.batteryLevelPercentage = value;
     }
     /**
      * Sets the batterySerialNumber property value. The serial number of the devices current battery
      * @param value Value to set for the batterySerialNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBatterySerialNumber(@javax.annotation.Nullable final String value) {
+    public void setBatterySerialNumber(@jakarta.annotation.Nullable final String value) {
         this.batterySerialNumber = value;
     }
     /**
      * Sets the cellularTechnology property value. Cellular technology of the device
      * @param value Value to set for the cellularTechnology property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCellularTechnology(@javax.annotation.Nullable final String value) {
+    public void setCellularTechnology(@jakarta.annotation.Nullable final String value) {
         this.cellularTechnology = value;
     }
     /**
      * Sets the deviceFullQualifiedDomainName property value. Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string.
      * @param value Value to set for the deviceFullQualifiedDomainName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceFullQualifiedDomainName(@javax.annotation.Nullable final String value) {
+    public void setDeviceFullQualifiedDomainName(@jakarta.annotation.Nullable final String value) {
         this.deviceFullQualifiedDomainName = value;
     }
     /**
      * Sets the deviceGuardLocalSystemAuthorityCredentialGuardState property value. The deviceGuardLocalSystemAuthorityCredentialGuardState property
      * @param value Value to set for the deviceGuardLocalSystemAuthorityCredentialGuardState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceGuardLocalSystemAuthorityCredentialGuardState(@javax.annotation.Nullable final DeviceGuardLocalSystemAuthorityCredentialGuardState value) {
+    public void setDeviceGuardLocalSystemAuthorityCredentialGuardState(@jakarta.annotation.Nullable final DeviceGuardLocalSystemAuthorityCredentialGuardState value) {
         this.deviceGuardLocalSystemAuthorityCredentialGuardState = value;
     }
     /**
      * Sets the deviceGuardVirtualizationBasedSecurityHardwareRequirementState property value. The deviceGuardVirtualizationBasedSecurityHardwareRequirementState property
      * @param value Value to set for the deviceGuardVirtualizationBasedSecurityHardwareRequirementState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceGuardVirtualizationBasedSecurityHardwareRequirementState(@javax.annotation.Nullable final DeviceGuardVirtualizationBasedSecurityHardwareRequirementState value) {
+    public void setDeviceGuardVirtualizationBasedSecurityHardwareRequirementState(@jakarta.annotation.Nullable final DeviceGuardVirtualizationBasedSecurityHardwareRequirementState value) {
         this.deviceGuardVirtualizationBasedSecurityHardwareRequirementState = value;
     }
     /**
      * Sets the deviceGuardVirtualizationBasedSecurityState property value. The deviceGuardVirtualizationBasedSecurityState property
      * @param value Value to set for the deviceGuardVirtualizationBasedSecurityState property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceGuardVirtualizationBasedSecurityState(@javax.annotation.Nullable final DeviceGuardVirtualizationBasedSecurityState value) {
+    public void setDeviceGuardVirtualizationBasedSecurityState(@jakarta.annotation.Nullable final DeviceGuardVirtualizationBasedSecurityState value) {
         this.deviceGuardVirtualizationBasedSecurityState = value;
     }
     /**
      * Sets the deviceLicensingLastErrorCode property value. A standard error code indicating the last error, or 0 indicating no error (default). The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing. Valid values 0 to 2147483647
      * @param value Value to set for the deviceLicensingLastErrorCode property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceLicensingLastErrorCode(@javax.annotation.Nullable final Integer value) {
+    public void setDeviceLicensingLastErrorCode(@jakarta.annotation.Nullable final Integer value) {
         this.deviceLicensingLastErrorCode = value;
     }
     /**
      * Sets the deviceLicensingLastErrorDescription property value. Error text message as a descripition for deviceLicensingLastErrorCode. The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing.
      * @param value Value to set for the deviceLicensingLastErrorDescription property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceLicensingLastErrorDescription(@javax.annotation.Nullable final String value) {
+    public void setDeviceLicensingLastErrorDescription(@jakarta.annotation.Nullable final String value) {
         this.deviceLicensingLastErrorDescription = value;
     }
     /**
      * Sets the deviceLicensingStatus property value. Indicates the device licensing status after Windows device based subscription has been enabled.
      * @param value Value to set for the deviceLicensingStatus property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceLicensingStatus(@javax.annotation.Nullable final DeviceLicensingStatus value) {
+    public void setDeviceLicensingStatus(@jakarta.annotation.Nullable final DeviceLicensingStatus value) {
         this.deviceLicensingStatus = value;
     }
     /**
      * Sets the esimIdentifier property value. eSIM identifier
      * @param value Value to set for the esimIdentifier property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEsimIdentifier(@javax.annotation.Nullable final String value) {
+    public void setEsimIdentifier(@jakarta.annotation.Nullable final String value) {
         this.esimIdentifier = value;
     }
     /**
      * Sets the freeStorageSpace property value. Free storage space of the device.
      * @param value Value to set for the freeStorageSpace property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFreeStorageSpace(@javax.annotation.Nullable final Long value) {
+    public void setFreeStorageSpace(@jakarta.annotation.Nullable final Long value) {
         this.freeStorageSpace = value;
     }
     /**
      * Sets the imei property value. IMEI
      * @param value Value to set for the imei property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImei(@javax.annotation.Nullable final String value) {
+    public void setImei(@jakarta.annotation.Nullable final String value) {
         this.imei = value;
     }
     /**
      * Sets the ipAddressV4 property value. IPAddressV4
      * @param value Value to set for the ipAddressV4 property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIpAddressV4(@javax.annotation.Nullable final String value) {
+    public void setIpAddressV4(@jakarta.annotation.Nullable final String value) {
         this.ipAddressV4 = value;
     }
     /**
      * Sets the isEncrypted property value. Encryption status of the device
      * @param value Value to set for the isEncrypted property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsEncrypted(@javax.annotation.Nullable final Boolean value) {
+    public void setIsEncrypted(@jakarta.annotation.Nullable final Boolean value) {
         this.isEncrypted = value;
     }
     /**
      * Sets the isSharedDevice property value. Shared iPad
      * @param value Value to set for the isSharedDevice property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSharedDevice(@javax.annotation.Nullable final Boolean value) {
+    public void setIsSharedDevice(@jakarta.annotation.Nullable final Boolean value) {
         this.isSharedDevice = value;
     }
     /**
      * Sets the isSupervised property value. Supervised mode of the device
      * @param value Value to set for the isSupervised property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsSupervised(@javax.annotation.Nullable final Boolean value) {
+    public void setIsSupervised(@jakarta.annotation.Nullable final Boolean value) {
         this.isSupervised = value;
     }
     /**
      * Sets the manufacturer property value. Manufacturer of the device
      * @param value Value to set for the manufacturer property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManufacturer(@javax.annotation.Nullable final String value) {
+    public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.manufacturer = value;
     }
     /**
      * Sets the meid property value. MEID
      * @param value Value to set for the meid property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMeid(@javax.annotation.Nullable final String value) {
+    public void setMeid(@jakarta.annotation.Nullable final String value) {
         this.meid = value;
     }
     /**
      * Sets the model property value. Model of the device
      * @param value Value to set for the model property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setModel(@javax.annotation.Nullable final String value) {
+    public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the operatingSystemEdition property value. String that specifies the OS edition.
      * @param value Value to set for the operatingSystemEdition property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperatingSystemEdition(@javax.annotation.Nullable final String value) {
+    public void setOperatingSystemEdition(@jakarta.annotation.Nullable final String value) {
         this.operatingSystemEdition = value;
     }
     /**
      * Sets the operatingSystemLanguage property value. Operating system language of the device
      * @param value Value to set for the operatingSystemLanguage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperatingSystemLanguage(@javax.annotation.Nullable final String value) {
+    public void setOperatingSystemLanguage(@jakarta.annotation.Nullable final String value) {
         this.operatingSystemLanguage = value;
     }
     /**
      * Sets the operatingSystemProductType property value. Int that specifies the Windows Operating System ProductType. More details here https://go.microsoft.com/fwlink/?linkid=2126950. Valid values 0 to 2147483647
      * @param value Value to set for the operatingSystemProductType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperatingSystemProductType(@javax.annotation.Nullable final Integer value) {
+    public void setOperatingSystemProductType(@jakarta.annotation.Nullable final Integer value) {
         this.operatingSystemProductType = value;
     }
     /**
      * Sets the osBuildNumber property value. Operating System Build Number on Android device
      * @param value Value to set for the osBuildNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOsBuildNumber(@javax.annotation.Nullable final String value) {
+    public void setOsBuildNumber(@jakarta.annotation.Nullable final String value) {
         this.osBuildNumber = value;
     }
     /**
      * Sets the phoneNumber property value. Phone number of the device
      * @param value Value to set for the phoneNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPhoneNumber(@javax.annotation.Nullable final String value) {
+    public void setPhoneNumber(@jakarta.annotation.Nullable final String value) {
         this.phoneNumber = value;
     }
     /**
      * Sets the productName property value. The product name, e.g. iPad8,12 etc. The update frequency of this property is weekly. Note this property is currently supported only on iOS/MacOS devices, and is available only when Device Information access right is obtained.
      * @param value Value to set for the productName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProductName(@javax.annotation.Nullable final String value) {
+    public void setProductName(@jakarta.annotation.Nullable final String value) {
         this.productName = value;
     }
     /**
      * Sets the residentUsersCount property value. The number of users currently on this device, or null (default) if the value of this property cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 13.4 and later, and is available only when Device Information access right is obtained. Valid values 0 to 2147483647
      * @param value Value to set for the residentUsersCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResidentUsersCount(@javax.annotation.Nullable final Integer value) {
+    public void setResidentUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.residentUsersCount = value;
     }
     /**
      * Sets the serialNumber property value. Serial number.
      * @param value Value to set for the serialNumber property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSerialNumber(@javax.annotation.Nullable final String value) {
+    public void setSerialNumber(@jakarta.annotation.Nullable final String value) {
         this.serialNumber = value;
     }
     /**
      * Sets the sharedDeviceCachedUsers property value. All users on the shared Apple device
      * @param value Value to set for the sharedDeviceCachedUsers property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSharedDeviceCachedUsers(@javax.annotation.Nullable final java.util.List<SharedAppleDeviceUser> value) {
+    public void setSharedDeviceCachedUsers(@jakarta.annotation.Nullable final java.util.List<SharedAppleDeviceUser> value) {
         this.sharedDeviceCachedUsers = value;
     }
     /**
      * Sets the subnetAddress property value. SubnetAddress
      * @param value Value to set for the subnetAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubnetAddress(@javax.annotation.Nullable final String value) {
+    public void setSubnetAddress(@jakarta.annotation.Nullable final String value) {
         this.subnetAddress = value;
     }
     /**
      * Sets the subscriberCarrier property value. Subscriber carrier of the device
      * @param value Value to set for the subscriberCarrier property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubscriberCarrier(@javax.annotation.Nullable final String value) {
+    public void setSubscriberCarrier(@jakarta.annotation.Nullable final String value) {
         this.subscriberCarrier = value;
     }
     /**
      * Sets the systemManagementBIOSVersion property value. BIOS version as reported by SMBIOS
      * @param value Value to set for the systemManagementBIOSVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSystemManagementBIOSVersion(@javax.annotation.Nullable final String value) {
+    public void setSystemManagementBIOSVersion(@jakarta.annotation.Nullable final String value) {
         this.systemManagementBIOSVersion = value;
     }
     /**
      * Sets the totalStorageSpace property value. Total storage space of the device.
      * @param value Value to set for the totalStorageSpace property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTotalStorageSpace(@javax.annotation.Nullable final Long value) {
+    public void setTotalStorageSpace(@jakarta.annotation.Nullable final Long value) {
         this.totalStorageSpace = value;
     }
     /**
      * Sets the tpmManufacturer property value. The identifying information that uniquely names the TPM manufacturer
      * @param value Value to set for the tpmManufacturer property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTpmManufacturer(@javax.annotation.Nullable final String value) {
+    public void setTpmManufacturer(@jakarta.annotation.Nullable final String value) {
         this.tpmManufacturer = value;
     }
     /**
      * Sets the tpmSpecificationVersion property value. String that specifies the specification version.
      * @param value Value to set for the tpmSpecificationVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTpmSpecificationVersion(@javax.annotation.Nullable final String value) {
+    public void setTpmSpecificationVersion(@jakarta.annotation.Nullable final String value) {
         this.tpmSpecificationVersion = value;
     }
     /**
      * Sets the tpmVersion property value. The version of the TPM, as specified by the manufacturer
      * @param value Value to set for the tpmVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTpmVersion(@javax.annotation.Nullable final String value) {
+    public void setTpmVersion(@jakarta.annotation.Nullable final String value) {
         this.tpmVersion = value;
     }
     /**
      * Sets the wifiMac property value. WiFi MAC address of the device
      * @param value Value to set for the wifiMac property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWifiMac(@javax.annotation.Nullable final String value) {
+    public void setWifiMac(@jakarta.annotation.Nullable final String value) {
         this.wifiMac = value;
     }
     /**
      * Sets the wiredIPv4Addresses property value. A list of wired IPv4 addresses. The update frequency (the maximum delay for the change of property value to be synchronized from the device to the cloud storage) of this property is daily. Note this property is currently supported only on devices running on Windows.
      * @param value Value to set for the wiredIPv4Addresses property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWiredIPv4Addresses(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setWiredIPv4Addresses(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.wiredIPv4Addresses = value;
     }
 }

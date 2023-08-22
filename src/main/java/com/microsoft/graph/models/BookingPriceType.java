@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Represents the type of pricing of a booking service.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum BookingPriceType implements ValuedEnum {
     /** The price of the service is not defined. */
     Undefined("undefined"),
@@ -27,10 +28,10 @@ public enum BookingPriceType implements ValuedEnum {
     BookingPriceType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static BookingPriceType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static BookingPriceType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "undefined": return Undefined;

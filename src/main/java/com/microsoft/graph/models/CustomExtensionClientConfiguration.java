@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomExtensionClientConfiguration implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -26,9 +27,7 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
     private Integer timeoutInMilliseconds;
     /**
      * Instantiates a new customExtensionClientConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CustomExtensionClientConfiguration() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -37,8 +36,8 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a customExtensionClientConfiguration
      */
-    @javax.annotation.Nonnull
-    public static CustomExtensionClientConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CustomExtensionClientConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CustomExtensionClientConfiguration();
     }
@@ -46,7 +45,7 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -54,7 +53,7 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("maximumRetries", (n) -> { this.setMaximumRetries(n.getIntegerValue()); });
@@ -66,7 +65,7 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
      * Gets the maximumRetries property value. The max number of retries that Azure AD will make to the external API. Values of 0 or 1 are supported. If null, the default for the service will apply.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaximumRetries() {
         return this.maximumRetries;
     }
@@ -74,7 +73,7 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -82,17 +81,15 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
      * Gets the timeoutInMilliseconds property value. The max duration in milliseconds that Azure AD will wait for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. If null, the default for the service will apply.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getTimeoutInMilliseconds() {
         return this.timeoutInMilliseconds;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("maximumRetries", this.getMaximumRetries());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -102,37 +99,29 @@ public class CustomExtensionClientConfiguration implements AdditionalDataHolder,
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the maximumRetries property value. The max number of retries that Azure AD will make to the external API. Values of 0 or 1 are supported. If null, the default for the service will apply.
      * @param value Value to set for the maximumRetries property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaximumRetries(@javax.annotation.Nullable final Integer value) {
+    public void setMaximumRetries(@jakarta.annotation.Nullable final Integer value) {
         this.maximumRetries = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the timeoutInMilliseconds property value. The max duration in milliseconds that Azure AD will wait for a response from the external app before it shuts down the connection. The valid range is between 200 and 2000 milliseconds. If null, the default for the service will apply.
      * @param value Value to set for the timeoutInMilliseconds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTimeoutInMilliseconds(@javax.annotation.Nullable final Integer value) {
+    public void setTimeoutInMilliseconds(@jakarta.annotation.Nullable final Integer value) {
         this.timeoutInMilliseconds = value;
     }
 }

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Flags representing firewall rule interface types.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsFirewallRuleInterfaceTypes implements ValuedEnum {
     /** No flags set. */
     NotConfigured("notConfigured"),
@@ -19,10 +20,10 @@ public enum WindowsFirewallRuleInterfaceTypes implements ValuedEnum {
     WindowsFirewallRuleInterfaceTypes(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WindowsFirewallRuleInterfaceTypes forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WindowsFirewallRuleInterfaceTypes forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

@@ -3,6 +3,7 @@ package com.microsoft.graph.models.networkaccess;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum BandwidthCapacityInMbps implements ValuedEnum {
     Mbps250("mbps250"),
     Mbps500("mbps500"),
@@ -13,10 +14,10 @@ public enum BandwidthCapacityInMbps implements ValuedEnum {
     BandwidthCapacityInMbps(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static BandwidthCapacityInMbps forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static BandwidthCapacityInMbps forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "mbps250": return Mbps250;

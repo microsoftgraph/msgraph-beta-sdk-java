@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * TV content rating labels in Canada
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum RatingCanadaTelevisionType implements ValuedEnum {
     /** Default value, allow all TV shows content */
     AllAllowed("allAllowed"),
@@ -27,10 +28,10 @@ public enum RatingCanadaTelevisionType implements ValuedEnum {
     RatingCanadaTelevisionType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static RatingCanadaTelevisionType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static RatingCanadaTelevisionType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "allAllowed": return AllAllowed;

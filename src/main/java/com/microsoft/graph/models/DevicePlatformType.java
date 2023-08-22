@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Supported platform types.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DevicePlatformType implements ValuedEnum {
     /** Android. */
     Android("android"),
@@ -37,10 +38,10 @@ public enum DevicePlatformType implements ValuedEnum {
     DevicePlatformType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DevicePlatformType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DevicePlatformType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "android": return Android;

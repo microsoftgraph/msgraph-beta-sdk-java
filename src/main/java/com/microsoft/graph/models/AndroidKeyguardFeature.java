@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Android keyguard feature.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidKeyguardFeature implements ValuedEnum {
     /** Not configured; this value is ignored. */
     NotConfigured("notConfigured"),
@@ -33,10 +34,10 @@ public enum AndroidKeyguardFeature implements ValuedEnum {
     AndroidKeyguardFeature(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidKeyguardFeature forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidKeyguardFeature forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

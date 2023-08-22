@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Wired Network Authentication Type Settings.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WiredNetworkAuthenticationType implements ValuedEnum {
     /** None */
     None("none"),
@@ -23,10 +24,10 @@ public enum WiredNetworkAuthenticationType implements ValuedEnum {
     WiredNetworkAuthenticationType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static WiredNetworkAuthenticationType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static WiredNetworkAuthenticationType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

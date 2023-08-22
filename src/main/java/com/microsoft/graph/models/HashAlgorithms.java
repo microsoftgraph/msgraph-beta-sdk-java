@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Hash Algorithm Options.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum HashAlgorithms implements ValuedEnum {
     /** SHA-1 Hash Algorithm. */
     Sha1("sha1"),
@@ -15,10 +16,10 @@ public enum HashAlgorithms implements ValuedEnum {
     HashAlgorithms(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static HashAlgorithms forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static HashAlgorithms forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "sha1": return Sha1;

@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * VPN Proxy Server.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10VpnProxyServer extends VpnProxyServer implements Parsable {
     /**
      * Bypass proxy server for local address.
@@ -16,9 +17,7 @@ public class Windows10VpnProxyServer extends VpnProxyServer implements Parsable 
     private Boolean bypassProxyServerForLocalAddress;
     /**
      * Instantiates a new windows10VpnProxyServer and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Windows10VpnProxyServer() {
         super();
         this.setOdataType("#microsoft.graph.windows10VpnProxyServer");
@@ -28,8 +27,8 @@ public class Windows10VpnProxyServer extends VpnProxyServer implements Parsable 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windows10VpnProxyServer
      */
-    @javax.annotation.Nonnull
-    public static Windows10VpnProxyServer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Windows10VpnProxyServer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Windows10VpnProxyServer();
     }
@@ -37,7 +36,7 @@ public class Windows10VpnProxyServer extends VpnProxyServer implements Parsable 
      * Gets the bypassProxyServerForLocalAddress property value. Bypass proxy server for local address.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getBypassProxyServerForLocalAddress() {
         return this.bypassProxyServerForLocalAddress;
     }
@@ -45,7 +44,7 @@ public class Windows10VpnProxyServer extends VpnProxyServer implements Parsable 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("bypassProxyServerForLocalAddress", (n) -> { this.setBypassProxyServerForLocalAddress(n.getBooleanValue()); });
@@ -54,10 +53,8 @@ public class Windows10VpnProxyServer extends VpnProxyServer implements Parsable 
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("bypassProxyServerForLocalAddress", this.getBypassProxyServerForLocalAddress());
@@ -65,10 +62,8 @@ public class Windows10VpnProxyServer extends VpnProxyServer implements Parsable 
     /**
      * Sets the bypassProxyServerForLocalAddress property value. Bypass proxy server for local address.
      * @param value Value to set for the bypassProxyServerForLocalAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBypassProxyServerForLocalAddress(@javax.annotation.Nullable final Boolean value) {
+    public void setBypassProxyServerForLocalAddress(@jakarta.annotation.Nullable final Boolean value) {
         this.bypassProxyServerForLocalAddress = value;
     }
 }

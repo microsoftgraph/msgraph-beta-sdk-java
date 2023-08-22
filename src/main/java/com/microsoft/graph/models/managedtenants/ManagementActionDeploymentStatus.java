@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagementActionDeploymentStatus implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -38,9 +39,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
     private java.util.List<WorkloadActionDeploymentStatus> workloadActionDeploymentStatuses;
     /**
      * Instantiates a new managementActionDeploymentStatus and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ManagementActionDeploymentStatus() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,8 +48,8 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a managementActionDeploymentStatus
      */
-    @javax.annotation.Nonnull
-    public static ManagementActionDeploymentStatus createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ManagementActionDeploymentStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ManagementActionDeploymentStatus();
     }
@@ -58,7 +57,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -66,7 +65,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("managementActionId", (n) -> { this.setManagementActionId(n.getStringValue()); });
@@ -81,7 +80,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
      * Gets the managementActionId property value. The identifier for the management action. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagementActionId() {
         return this.managementActionId;
     }
@@ -89,7 +88,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
      * Gets the managementTemplateId property value. The management template identifier that was used to generate the management action. Required. Read-only.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getManagementTemplateId() {
         return this.managementTemplateId;
     }
@@ -97,7 +96,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
      * Gets the managementTemplateVersion property value. The managementTemplateVersion property
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getManagementTemplateVersion() {
         return this.managementTemplateVersion;
     }
@@ -105,7 +104,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -113,7 +112,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
      * Gets the status property value. The status property
      * @return a managementActionStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ManagementActionStatus getStatus() {
         return this.status;
     }
@@ -121,17 +120,15 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
      * Gets the workloadActionDeploymentStatuses property value. The collection of workload action deployment statues for the given management action. Optional.
      * @return a workloadActionDeploymentStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<WorkloadActionDeploymentStatus> getWorkloadActionDeploymentStatuses() {
         return this.workloadActionDeploymentStatuses;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("managementActionId", this.getManagementActionId());
         writer.writeStringValue("managementTemplateId", this.getManagementTemplateId());
@@ -144,64 +141,50 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, P
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the managementActionId property value. The identifier for the management action. Required. Read-only.
      * @param value Value to set for the managementActionId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementActionId(@javax.annotation.Nullable final String value) {
+    public void setManagementActionId(@jakarta.annotation.Nullable final String value) {
         this.managementActionId = value;
     }
     /**
      * Sets the managementTemplateId property value. The management template identifier that was used to generate the management action. Required. Read-only.
      * @param value Value to set for the managementTemplateId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateId(@javax.annotation.Nullable final String value) {
+    public void setManagementTemplateId(@jakarta.annotation.Nullable final String value) {
         this.managementTemplateId = value;
     }
     /**
      * Sets the managementTemplateVersion property value. The managementTemplateVersion property
      * @param value Value to set for the managementTemplateVersion property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setManagementTemplateVersion(@javax.annotation.Nullable final Integer value) {
+    public void setManagementTemplateVersion(@jakarta.annotation.Nullable final Integer value) {
         this.managementTemplateVersion = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final ManagementActionStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final ManagementActionStatus value) {
         this.status = value;
     }
     /**
      * Sets the workloadActionDeploymentStatuses property value. The collection of workload action deployment statues for the given management action. Optional.
      * @param value Value to set for the workloadActionDeploymentStatuses property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkloadActionDeploymentStatuses(@javax.annotation.Nullable final java.util.List<WorkloadActionDeploymentStatus> value) {
+    public void setWorkloadActionDeploymentStatuses(@jakarta.annotation.Nullable final java.util.List<WorkloadActionDeploymentStatus> value) {
         this.workloadActionDeploymentStatuses = value;
     }
 }

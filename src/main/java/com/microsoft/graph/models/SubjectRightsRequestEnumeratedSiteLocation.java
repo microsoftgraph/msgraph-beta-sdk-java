@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsRequestSiteLocation implements Parsable {
     /**
      * Collection of site URLs that should be included. Includes the URL of each site, for example, https://www.contoso.com/site1.
@@ -13,9 +14,7 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
     private java.util.List<String> urls;
     /**
      * Instantiates a new subjectRightsRequestEnumeratedSiteLocation and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public SubjectRightsRequestEnumeratedSiteLocation() {
         super();
         this.setOdataType("#microsoft.graph.subjectRightsRequestEnumeratedSiteLocation");
@@ -25,8 +24,8 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a subjectRightsRequestEnumeratedSiteLocation
      */
-    @javax.annotation.Nonnull
-    public static SubjectRightsRequestEnumeratedSiteLocation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static SubjectRightsRequestEnumeratedSiteLocation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SubjectRightsRequestEnumeratedSiteLocation();
     }
@@ -34,7 +33,7 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("urls", (n) -> { this.setUrls(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -44,17 +43,15 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
      * Gets the urls property value. Collection of site URLs that should be included. Includes the URL of each site, for example, https://www.contoso.com/site1.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getUrls() {
         return this.urls;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("urls", this.getUrls());
@@ -62,10 +59,8 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
     /**
      * Sets the urls property value. Collection of site URLs that should be included. Includes the URL of each site, for example, https://www.contoso.com/site1.
      * @param value Value to set for the urls property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setUrls(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.urls = value;
     }
 }

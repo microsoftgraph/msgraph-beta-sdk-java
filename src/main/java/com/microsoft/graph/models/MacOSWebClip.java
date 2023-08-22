@@ -9,9 +9,10 @@ import java.util.Objects;
 /**
  * Contains properties and inherited properties for macOS web apps.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSWebClip extends MobileApp implements Parsable {
     /**
-     * The web app URL starting with http:// or https://, such as https://learn.microsoft.com/en-us/mem/.
+     * The web app URL starting with http:// or https://, such as https://learn.microsoft.com/mem/.
      */
     private String appUrl;
     /**
@@ -19,14 +20,12 @@ public class MacOSWebClip extends MobileApp implements Parsable {
      */
     private Boolean fullScreenEnabled;
     /**
-     * Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding "shine" to the icon. If FALSE, SpringBoard can add "shine".
+     * Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding 'shine' to the icon. If FALSE, SpringBoard can add 'shine'.
      */
     private Boolean preComposedIconEnabled;
     /**
      * Instantiates a new macOSWebClip and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public MacOSWebClip() {
         super();
         this.setOdataType("#microsoft.graph.macOSWebClip");
@@ -36,16 +35,16 @@ public class MacOSWebClip extends MobileApp implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a macOSWebClip
      */
-    @javax.annotation.Nonnull
-    public static MacOSWebClip createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static MacOSWebClip createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new MacOSWebClip();
     }
     /**
-     * Gets the appUrl property value. The web app URL starting with http:// or https://, such as https://learn.microsoft.com/en-us/mem/.
+     * Gets the appUrl property value. The web app URL starting with http:// or https://, such as https://learn.microsoft.com/mem/.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppUrl() {
         return this.appUrl;
     }
@@ -53,7 +52,7 @@ public class MacOSWebClip extends MobileApp implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appUrl", (n) -> { this.setAppUrl(n.getStringValue()); });
@@ -65,25 +64,23 @@ public class MacOSWebClip extends MobileApp implements Parsable {
      * Gets the fullScreenEnabled property value. Whether or not to open the web clip as a full-screen web app. Defaults to false. If TRUE, opens the web clip as a full-screen web app. If FALSE, the web clip opens inside of another app.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getFullScreenEnabled() {
         return this.fullScreenEnabled;
     }
     /**
-     * Gets the preComposedIconEnabled property value. Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding "shine" to the icon. If FALSE, SpringBoard can add "shine".
+     * Gets the preComposedIconEnabled property value. Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding 'shine' to the icon. If FALSE, SpringBoard can add 'shine'.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPreComposedIconEnabled() {
         return this.preComposedIconEnabled;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appUrl", this.getAppUrl());
@@ -91,30 +88,24 @@ public class MacOSWebClip extends MobileApp implements Parsable {
         writer.writeBooleanValue("preComposedIconEnabled", this.getPreComposedIconEnabled());
     }
     /**
-     * Sets the appUrl property value. The web app URL starting with http:// or https://, such as https://learn.microsoft.com/en-us/mem/.
+     * Sets the appUrl property value. The web app URL starting with http:// or https://, such as https://learn.microsoft.com/mem/.
      * @param value Value to set for the appUrl property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppUrl(@javax.annotation.Nullable final String value) {
+    public void setAppUrl(@jakarta.annotation.Nullable final String value) {
         this.appUrl = value;
     }
     /**
      * Sets the fullScreenEnabled property value. Whether or not to open the web clip as a full-screen web app. Defaults to false. If TRUE, opens the web clip as a full-screen web app. If FALSE, the web clip opens inside of another app.
      * @param value Value to set for the fullScreenEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFullScreenEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setFullScreenEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.fullScreenEnabled = value;
     }
     /**
-     * Sets the preComposedIconEnabled property value. Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding "shine" to the icon. If FALSE, SpringBoard can add "shine".
+     * Sets the preComposedIconEnabled property value. Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding 'shine' to the icon. If FALSE, SpringBoard can add 'shine'.
      * @param value Value to set for the preComposedIconEnabled property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPreComposedIconEnabled(@javax.annotation.Nullable final Boolean value) {
+    public void setPreComposedIconEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.preComposedIconEnabled = value;
     }
 }

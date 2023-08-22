@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * Contains properties for the run summary of a device management script.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementScriptRunSummary extends Entity implements Parsable {
     /**
      * Error device count.
@@ -28,9 +29,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
     private Integer successUserCount;
     /**
      * Instantiates a new deviceManagementScriptRunSummary and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceManagementScriptRunSummary() {
         super();
     }
@@ -39,8 +38,8 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceManagementScriptRunSummary
      */
-    @javax.annotation.Nonnull
-    public static DeviceManagementScriptRunSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementScriptRunSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceManagementScriptRunSummary();
     }
@@ -48,7 +47,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
      * Gets the errorDeviceCount property value. Error device count.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
         return this.errorDeviceCount;
     }
@@ -56,7 +55,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
      * Gets the errorUserCount property value. Error user count.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getErrorUserCount() {
         return this.errorUserCount;
     }
@@ -64,7 +63,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("errorDeviceCount", (n) -> { this.setErrorDeviceCount(n.getIntegerValue()); });
@@ -77,7 +76,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
      * Gets the successDeviceCount property value. Success device count.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSuccessDeviceCount() {
         return this.successDeviceCount;
     }
@@ -85,17 +84,15 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
      * Gets the successUserCount property value. Success user count.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getSuccessUserCount() {
         return this.successUserCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("errorDeviceCount", this.getErrorDeviceCount());
@@ -106,37 +103,29 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
     /**
      * Sets the errorDeviceCount property value. Error device count.
      * @param value Value to set for the errorDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setErrorDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.errorDeviceCount = value;
     }
     /**
      * Sets the errorUserCount property value. Error user count.
      * @param value Value to set for the errorUserCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setErrorUserCount(@javax.annotation.Nullable final Integer value) {
+    public void setErrorUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.errorUserCount = value;
     }
     /**
      * Sets the successDeviceCount property value. Success device count.
      * @param value Value to set for the successDeviceCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuccessDeviceCount(@javax.annotation.Nullable final Integer value) {
+    public void setSuccessDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.successDeviceCount = value;
     }
     /**
      * Sets the successUserCount property value. Success user count.
      * @param value Value to set for the successUserCount property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSuccessUserCount(@javax.annotation.Nullable final Integer value) {
+    public void setSuccessUserCount(@jakarta.annotation.Nullable final Integer value) {
         this.successUserCount = value;
     }
 }

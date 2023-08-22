@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Device app management task priority.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceAppManagementTaskPriority implements ValuedEnum {
     /** No priority set. */
     None("none"),
@@ -17,10 +18,10 @@ public enum DeviceAppManagementTaskPriority implements ValuedEnum {
     DeviceAppManagementTaskPriority(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceAppManagementTaskPriority forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceAppManagementTaskPriority forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

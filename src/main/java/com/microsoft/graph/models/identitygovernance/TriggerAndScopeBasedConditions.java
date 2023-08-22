@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions implements Parsable {
     /**
      * Defines who the workflow runs for.
@@ -18,9 +19,7 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
     private WorkflowExecutionTrigger trigger;
     /**
      * Instantiates a new triggerAndScopeBasedConditions and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TriggerAndScopeBasedConditions() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.triggerAndScopeBasedConditions");
@@ -30,8 +29,8 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a triggerAndScopeBasedConditions
      */
-    @javax.annotation.Nonnull
-    public static TriggerAndScopeBasedConditions createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TriggerAndScopeBasedConditions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TriggerAndScopeBasedConditions();
     }
@@ -39,7 +38,7 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("scope", (n) -> { this.setScope(n.getObjectValue(SubjectSet::createFromDiscriminatorValue)); });
@@ -50,7 +49,7 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
      * Gets the scope property value. Defines who the workflow runs for.
      * @return a subjectSet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public SubjectSet getScope() {
         return this.scope;
     }
@@ -58,17 +57,15 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
      * Gets the trigger property value. What triggers a workflow to run.
      * @return a workflowExecutionTrigger
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WorkflowExecutionTrigger getTrigger() {
         return this.trigger;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("scope", this.getScope());
@@ -77,19 +74,15 @@ public class TriggerAndScopeBasedConditions extends WorkflowExecutionConditions 
     /**
      * Sets the scope property value. Defines who the workflow runs for.
      * @param value Value to set for the scope property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setScope(@javax.annotation.Nullable final SubjectSet value) {
+    public void setScope(@jakarta.annotation.Nullable final SubjectSet value) {
         this.scope = value;
     }
     /**
      * Sets the trigger property value. What triggers a workflow to run.
      * @param value Value to set for the trigger property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrigger(@javax.annotation.Nullable final WorkflowExecutionTrigger value) {
+    public void setTrigger(@jakarta.annotation.Nullable final WorkflowExecutionTrigger value) {
         this.trigger = value;
     }
 }

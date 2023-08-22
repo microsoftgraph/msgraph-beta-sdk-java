@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * CertificateStore types
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum CertificateStore implements ValuedEnum {
     User("user"),
     Machine("machine");
@@ -13,10 +14,10 @@ public enum CertificateStore implements ValuedEnum {
     CertificateStore(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static CertificateStore forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static CertificateStore forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "user": return User;

@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class RecommendationBase extends Entity implements Parsable {
     /**
      * List of actions to take to complete a recommendation.
@@ -90,9 +91,7 @@ public class RecommendationBase extends Entity implements Parsable {
     private RecommendationStatus status;
     /**
      * Instantiates a new recommendationBase and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public RecommendationBase() {
         super();
     }
@@ -101,8 +100,8 @@ public class RecommendationBase extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a recommendationBase
      */
-    @javax.annotation.Nonnull
-    public static RecommendationBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static RecommendationBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -117,7 +116,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the actionSteps property value. List of actions to take to complete a recommendation.
      * @return a actionStep
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ActionStep> getActionSteps() {
         return this.actionSteps;
     }
@@ -125,7 +124,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the benefits property value. An explanation of why completing the recommendation will benefit you. Corresponds to the Value section of a recommendation shown in the Azure AD portal.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getBenefits() {
         return this.benefits;
     }
@@ -133,7 +132,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the category property value. The category property
      * @return a recommendationCategory
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RecommendationCategory getCategory() {
         return this.category;
     }
@@ -141,7 +140,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time when the recommendation was detected as applicable to your directory.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -149,7 +148,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the currentScore property value. The number of points the tenant has attained. Only applies to recommendations with category set to identitySecureScore.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getCurrentScore() {
         return this.currentScore;
     }
@@ -157,7 +156,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the displayName property value. The title of the recommendation.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -165,7 +164,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the featureAreas property value. The directory feature that the recommendation is related to.
      * @return a recommendationFeatureAreas
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<RecommendationFeatureAreas> getFeatureAreas() {
         return this.featureAreas;
     }
@@ -173,7 +172,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("actionSteps", (n) -> { this.setActionSteps(n.getCollectionOfObjectValues(ActionStep::createFromDiscriminatorValue)); });
@@ -202,7 +201,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the impactedResources property value. The list of directory objects associated with the recommendation.
      * @return a impactedResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ImpactedResource> getImpactedResources() {
         return this.impactedResources;
     }
@@ -210,7 +209,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the impactStartDateTime property value. The future date and time when a recommendation should be completed.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getImpactStartDateTime() {
         return this.impactStartDateTime;
     }
@@ -218,7 +217,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the impactType property value. Indicates the scope of impact of a recommendation. Tenant level indicates that the recommendation impacts the whole tenant. Other possible values include users, applications.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getImpactType() {
         return this.impactType;
     }
@@ -226,7 +225,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the insights property value. Describes why a recommendation uniquely applies to your directory. Corresponds to the Description section of a recommendation shown in the Azure AD portal.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getInsights() {
         return this.insights;
     }
@@ -234,7 +233,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the lastCheckedDateTime property value. The most recent date and time a recommendation was deemed applicable to your directory.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastCheckedDateTime() {
         return this.lastCheckedDateTime;
     }
@@ -242,7 +241,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. Name of the user who last updated the status of the recommendation.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -250,7 +249,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time the status of a recommendation was last updated.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -258,7 +257,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the maxScore property value. The maximum number of points attainable. Only applies to recommendations with category set to identitySecureScore.
      * @return a double
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Double getMaxScore() {
         return this.maxScore;
     }
@@ -266,7 +265,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the postponeUntilDateTime property value. The future date and time when the status of a postponed recommendation will be active again.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getPostponeUntilDateTime() {
         return this.postponeUntilDateTime;
     }
@@ -274,7 +273,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the priority property value. The priority property
      * @return a recommendationPriority
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RecommendationPriority getPriority() {
         return this.priority;
     }
@@ -282,7 +281,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the recommendationType property value. Friendly shortname to identify the recommendation. The possible values are: adfsAppsMigration, enableDesktopSSO, enablePHS, enableProvisioning, switchFromPerUserMFA, tenantMFA, thirdPartyApps, turnOffPerUserMFA, useAuthenticatorApp, useMyApps, staleApps, staleAppCreds, applicationCredentialExpiry, servicePrincipalKeyExpiry, adminMFAV2, blockLegacyAuthentication, integratedApps, mfaRegistrationV2, pwagePolicyNew, passwordHashSync, oneAdmin, roleOverlap, selfServicePasswordReset, signinRiskPolicy, userRiskPolicy, verifyAppPublisher, privateLinkForAAD, appRoleAssignmentsGroups, appRoleAssignmentsUsers, managedIdentity, overprivilegedApps, unknownFutureValue.
      * @return a recommendationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RecommendationType getRecommendationType() {
         return this.recommendationType;
     }
@@ -290,7 +289,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the remediationImpact property value. Description of the impact on users of the remediation. Only applies to recommendations with category set to identitySecureScore.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getRemediationImpact() {
         return this.remediationImpact;
     }
@@ -298,17 +297,15 @@ public class RecommendationBase extends Entity implements Parsable {
      * Gets the status property value. The status property
      * @return a recommendationStatus
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public RecommendationStatus getStatus() {
         return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("actionSteps", this.getActionSteps());
@@ -335,181 +332,141 @@ public class RecommendationBase extends Entity implements Parsable {
     /**
      * Sets the actionSteps property value. List of actions to take to complete a recommendation.
      * @param value Value to set for the actionSteps property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setActionSteps(@javax.annotation.Nullable final java.util.List<ActionStep> value) {
+    public void setActionSteps(@jakarta.annotation.Nullable final java.util.List<ActionStep> value) {
         this.actionSteps = value;
     }
     /**
      * Sets the benefits property value. An explanation of why completing the recommendation will benefit you. Corresponds to the Value section of a recommendation shown in the Azure AD portal.
      * @param value Value to set for the benefits property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBenefits(@javax.annotation.Nullable final String value) {
+    public void setBenefits(@jakarta.annotation.Nullable final String value) {
         this.benefits = value;
     }
     /**
      * Sets the category property value. The category property
      * @param value Value to set for the category property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCategory(@javax.annotation.Nullable final RecommendationCategory value) {
+    public void setCategory(@jakarta.annotation.Nullable final RecommendationCategory value) {
         this.category = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when the recommendation was detected as applicable to your directory.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the currentScore property value. The number of points the tenant has attained. Only applies to recommendations with category set to identitySecureScore.
      * @param value Value to set for the currentScore property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCurrentScore(@javax.annotation.Nullable final Double value) {
+    public void setCurrentScore(@jakarta.annotation.Nullable final Double value) {
         this.currentScore = value;
     }
     /**
      * Sets the displayName property value. The title of the recommendation.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the featureAreas property value. The directory feature that the recommendation is related to.
      * @param value Value to set for the featureAreas property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setFeatureAreas(@javax.annotation.Nullable final java.util.List<RecommendationFeatureAreas> value) {
+    public void setFeatureAreas(@jakarta.annotation.Nullable final java.util.List<RecommendationFeatureAreas> value) {
         this.featureAreas = value;
     }
     /**
      * Sets the impactedResources property value. The list of directory objects associated with the recommendation.
      * @param value Value to set for the impactedResources property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImpactedResources(@javax.annotation.Nullable final java.util.List<ImpactedResource> value) {
+    public void setImpactedResources(@jakarta.annotation.Nullable final java.util.List<ImpactedResource> value) {
         this.impactedResources = value;
     }
     /**
      * Sets the impactStartDateTime property value. The future date and time when a recommendation should be completed.
      * @param value Value to set for the impactStartDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImpactStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setImpactStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.impactStartDateTime = value;
     }
     /**
      * Sets the impactType property value. Indicates the scope of impact of a recommendation. Tenant level indicates that the recommendation impacts the whole tenant. Other possible values include users, applications.
      * @param value Value to set for the impactType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setImpactType(@javax.annotation.Nullable final String value) {
+    public void setImpactType(@jakarta.annotation.Nullable final String value) {
         this.impactType = value;
     }
     /**
      * Sets the insights property value. Describes why a recommendation uniquely applies to your directory. Corresponds to the Description section of a recommendation shown in the Azure AD portal.
      * @param value Value to set for the insights property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInsights(@javax.annotation.Nullable final String value) {
+    public void setInsights(@jakarta.annotation.Nullable final String value) {
         this.insights = value;
     }
     /**
      * Sets the lastCheckedDateTime property value. The most recent date and time a recommendation was deemed applicable to your directory.
      * @param value Value to set for the lastCheckedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastCheckedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastCheckedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastCheckedDateTime = value;
     }
     /**
      * Sets the lastModifiedBy property value. Name of the user who last updated the status of the recommendation.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final String value) {
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final String value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the status of a recommendation was last updated.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the maxScore property value. The maximum number of points attainable. Only applies to recommendations with category set to identitySecureScore.
      * @param value Value to set for the maxScore property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaxScore(@javax.annotation.Nullable final Double value) {
+    public void setMaxScore(@jakarta.annotation.Nullable final Double value) {
         this.maxScore = value;
     }
     /**
      * Sets the postponeUntilDateTime property value. The future date and time when the status of a postponed recommendation will be active again.
      * @param value Value to set for the postponeUntilDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPostponeUntilDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setPostponeUntilDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.postponeUntilDateTime = value;
     }
     /**
      * Sets the priority property value. The priority property
      * @param value Value to set for the priority property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPriority(@javax.annotation.Nullable final RecommendationPriority value) {
+    public void setPriority(@jakarta.annotation.Nullable final RecommendationPriority value) {
         this.priority = value;
     }
     /**
      * Sets the recommendationType property value. Friendly shortname to identify the recommendation. The possible values are: adfsAppsMigration, enableDesktopSSO, enablePHS, enableProvisioning, switchFromPerUserMFA, tenantMFA, thirdPartyApps, turnOffPerUserMFA, useAuthenticatorApp, useMyApps, staleApps, staleAppCreds, applicationCredentialExpiry, servicePrincipalKeyExpiry, adminMFAV2, blockLegacyAuthentication, integratedApps, mfaRegistrationV2, pwagePolicyNew, passwordHashSync, oneAdmin, roleOverlap, selfServicePasswordReset, signinRiskPolicy, userRiskPolicy, verifyAppPublisher, privateLinkForAAD, appRoleAssignmentsGroups, appRoleAssignmentsUsers, managedIdentity, overprivilegedApps, unknownFutureValue.
      * @param value Value to set for the recommendationType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRecommendationType(@javax.annotation.Nullable final RecommendationType value) {
+    public void setRecommendationType(@jakarta.annotation.Nullable final RecommendationType value) {
         this.recommendationType = value;
     }
     /**
      * Sets the remediationImpact property value. Description of the impact on users of the remediation. Only applies to recommendations with category set to identitySecureScore.
      * @param value Value to set for the remediationImpact property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRemediationImpact(@javax.annotation.Nullable final String value) {
+    public void setRemediationImpact(@jakarta.annotation.Nullable final String value) {
         this.remediationImpact = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final RecommendationStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final RecommendationStatus value) {
         this.status = value;
     }
 }

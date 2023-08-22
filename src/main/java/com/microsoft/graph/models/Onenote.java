@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class Onenote extends Entity implements Parsable {
     /**
      * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
@@ -33,9 +34,7 @@ public class Onenote extends Entity implements Parsable {
     private java.util.List<OnenoteSection> sections;
     /**
      * Instantiates a new onenote and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public Onenote() {
         super();
     }
@@ -44,8 +43,8 @@ public class Onenote extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a onenote
      */
-    @javax.annotation.Nonnull
-    public static Onenote createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static Onenote createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Onenote();
     }
@@ -53,7 +52,7 @@ public class Onenote extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("notebooks", (n) -> { this.setNotebooks(n.getCollectionOfObjectValues(Notebook::createFromDiscriminatorValue)); });
@@ -68,7 +67,7 @@ public class Onenote extends Entity implements Parsable {
      * Gets the notebooks property value. The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
      * @return a notebook
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Notebook> getNotebooks() {
         return this.notebooks;
     }
@@ -76,7 +75,7 @@ public class Onenote extends Entity implements Parsable {
      * Gets the operations property value. The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
      * @return a onenoteOperation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OnenoteOperation> getOperations() {
         return this.operations;
     }
@@ -84,7 +83,7 @@ public class Onenote extends Entity implements Parsable {
      * Gets the pages property value. The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @return a onenotePage
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OnenotePage> getPages() {
         return this.pages;
     }
@@ -92,7 +91,7 @@ public class Onenote extends Entity implements Parsable {
      * Gets the resources property value. The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      * @return a onenoteResource
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OnenoteResource> getResources() {
         return this.resources;
     }
@@ -100,7 +99,7 @@ public class Onenote extends Entity implements Parsable {
      * Gets the sectionGroups property value. The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @return a sectionGroup
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<SectionGroup> getSectionGroups() {
         return this.sectionGroups;
     }
@@ -108,17 +107,15 @@ public class Onenote extends Entity implements Parsable {
      * Gets the sections property value. The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @return a onenoteSection
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<OnenoteSection> getSections() {
         return this.sections;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("notebooks", this.getNotebooks());
@@ -131,55 +128,43 @@ public class Onenote extends Entity implements Parsable {
     /**
      * Sets the notebooks property value. The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
      * @param value Value to set for the notebooks property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNotebooks(@javax.annotation.Nullable final java.util.List<Notebook> value) {
+    public void setNotebooks(@jakarta.annotation.Nullable final java.util.List<Notebook> value) {
         this.notebooks = value;
     }
     /**
      * Sets the operations property value. The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
      * @param value Value to set for the operations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOperations(@javax.annotation.Nullable final java.util.List<OnenoteOperation> value) {
+    public void setOperations(@jakarta.annotation.Nullable final java.util.List<OnenoteOperation> value) {
         this.operations = value;
     }
     /**
      * Sets the pages property value. The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @param value Value to set for the pages property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPages(@javax.annotation.Nullable final java.util.List<OnenotePage> value) {
+    public void setPages(@jakarta.annotation.Nullable final java.util.List<OnenotePage> value) {
         this.pages = value;
     }
     /**
      * Sets the resources property value. The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      * @param value Value to set for the resources property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setResources(@javax.annotation.Nullable final java.util.List<OnenoteResource> value) {
+    public void setResources(@jakarta.annotation.Nullable final java.util.List<OnenoteResource> value) {
         this.resources = value;
     }
     /**
      * Sets the sectionGroups property value. The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @param value Value to set for the sectionGroups property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSectionGroups(@javax.annotation.Nullable final java.util.List<SectionGroup> value) {
+    public void setSectionGroups(@jakarta.annotation.Nullable final java.util.List<SectionGroup> value) {
         this.sectionGroups = value;
     }
     /**
      * Sets the sections property value. The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @param value Value to set for the sections property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSections(@javax.annotation.Nullable final java.util.List<OnenoteSection> value) {
+    public void setSections(@jakarta.annotation.Nullable final java.util.List<OnenoteSection> value) {
         this.sections = value;
     }
 }

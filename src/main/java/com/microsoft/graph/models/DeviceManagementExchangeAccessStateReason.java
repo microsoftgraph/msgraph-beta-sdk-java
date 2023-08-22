@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Device Exchange Access State Reason.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementExchangeAccessStateReason implements ValuedEnum {
     /** No access state reason discovered from Exchange */
     None("none"),
@@ -43,10 +44,10 @@ public enum DeviceManagementExchangeAccessStateReason implements ValuedEnum {
     DeviceManagementExchangeAccessStateReason(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceManagementExchangeAccessStateReason forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceManagementExchangeAccessStateReason forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

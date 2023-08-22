@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Flag enum to determine whether to delay software updates for macOS.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MacOSSoftwareUpdateDelayPolicy implements ValuedEnum {
     /** Software update delays will not be enforced. */
     None("none"),
@@ -21,10 +22,10 @@ public enum MacOSSoftwareUpdateDelayPolicy implements ValuedEnum {
     MacOSSoftwareUpdateDelayPolicy(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MacOSSoftwareUpdateDelayPolicy forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MacOSSoftwareUpdateDelayPolicy forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;

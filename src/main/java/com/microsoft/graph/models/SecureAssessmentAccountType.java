@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Type of accounts that are allowed for Windows10SecureAssessment ConfigurationAccount.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum SecureAssessmentAccountType implements ValuedEnum {
     /** Indicates an Azure AD account in format of AzureAD/username@tenant.com. */
     AzureADAccount("azureADAccount"),
@@ -19,10 +20,10 @@ public enum SecureAssessmentAccountType implements ValuedEnum {
     SecureAssessmentAccountType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static SecureAssessmentAccountType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static SecureAssessmentAccountType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "azureADAccount": return AzureADAccount;

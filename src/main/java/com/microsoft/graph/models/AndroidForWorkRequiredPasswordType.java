@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Android For Work required password type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidForWorkRequiredPasswordType implements ValuedEnum {
     /** Device default value, no intent. */
     DeviceDefault("deviceDefault"),
@@ -27,10 +28,10 @@ public enum AndroidForWorkRequiredPasswordType implements ValuedEnum {
     AndroidForWorkRequiredPasswordType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidForWorkRequiredPasswordType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidForWorkRequiredPasswordType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "deviceDefault": return DeviceDefault;

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Windows 10 Application type.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Windows10AppType implements ValuedEnum {
     /** Desktop. */
     Desktop("desktop"),
@@ -15,10 +16,10 @@ public enum Windows10AppType implements ValuedEnum {
     Windows10AppType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static Windows10AppType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static Windows10AppType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "desktop": return Desktop;

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Describes the various states for an embedded SIM activation code.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum EmbeddedSIMDeviceStateValue implements ValuedEnum {
     /** Designates that the embedded SIM activation code is free and available to be assigned to a device. */
     NotEvaluated("notEvaluated"),
@@ -27,10 +28,10 @@ public enum EmbeddedSIMDeviceStateValue implements ValuedEnum {
     EmbeddedSIMDeviceStateValue(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static EmbeddedSIMDeviceStateValue forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static EmbeddedSIMDeviceStateValue forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notEvaluated": return NotEvaluated;

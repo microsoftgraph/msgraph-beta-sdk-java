@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertConfiguration implements Parsable {
     /**
      * The number of days to look back from current timestamp within which the account has not signed in.
@@ -14,9 +15,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
     private PeriodAndDuration duration;
     /**
      * Instantiates a new staleSignInAlertConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public StaleSignInAlertConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.staleSignInAlertConfiguration");
@@ -26,8 +25,8 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a staleSignInAlertConfiguration
      */
-    @javax.annotation.Nonnull
-    public static StaleSignInAlertConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static StaleSignInAlertConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new StaleSignInAlertConfiguration();
     }
@@ -35,7 +34,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
      * Gets the duration property value. The number of days to look back from current timestamp within which the account has not signed in.
      * @return a PeriodAndDuration
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public PeriodAndDuration getDuration() {
         return this.duration;
     }
@@ -43,7 +42,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodAndDurationValue()); });
@@ -52,10 +51,8 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writePeriodAndDurationValue("duration", this.getDuration());
@@ -63,10 +60,8 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
     /**
      * Sets the duration property value. The number of days to look back from current timestamp within which the account has not signed in.
      * @param value Value to set for the duration property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDuration(@javax.annotation.Nullable final PeriodAndDuration value) {
-        this.duration = value;
+    public void setDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
+        this.duration = PeriodAndDuration.ofPeriodAndDuration(value);
     }
 }

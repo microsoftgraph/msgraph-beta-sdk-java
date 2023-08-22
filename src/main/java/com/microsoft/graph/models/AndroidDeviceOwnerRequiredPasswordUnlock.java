@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * An enum representing possible values for required password unlock.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidDeviceOwnerRequiredPasswordUnlock implements ValuedEnum {
     /** Timeout period before strong authentication is required is set to the device's default. */
     DeviceDefault("deviceDefault"),
@@ -17,10 +18,10 @@ public enum AndroidDeviceOwnerRequiredPasswordUnlock implements ValuedEnum {
     AndroidDeviceOwnerRequiredPasswordUnlock(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static AndroidDeviceOwnerRequiredPasswordUnlock forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static AndroidDeviceOwnerRequiredPasswordUnlock forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "deviceDefault": return DeviceDefault;

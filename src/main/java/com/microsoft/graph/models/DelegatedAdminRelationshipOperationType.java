@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DelegatedAdminRelationshipOperationType implements ValuedEnum {
     DelegatedAdminAccessAssignmentUpdate("delegatedAdminAccessAssignmentUpdate"),
     UnknownFutureValue("unknownFutureValue");
@@ -10,10 +11,10 @@ public enum DelegatedAdminRelationshipOperationType implements ValuedEnum {
     DelegatedAdminRelationshipOperationType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DelegatedAdminRelationshipOperationType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DelegatedAdminRelationshipOperationType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "delegatedAdminAccessAssignmentUpdate": return DelegatedAdminAccessAssignmentUpdate;

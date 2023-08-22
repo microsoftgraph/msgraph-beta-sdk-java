@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Enum of possible MicrosoftTunnelServer health status types
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MicrosoftTunnelServerHealthStatus implements ValuedEnum {
     /** Indicates that the health status of the server is unknown. This occurs when no health status has been reported, for example when the server is initialized, but has not yet been evaluated for its health. */
     Unknown("unknown"),
@@ -27,10 +28,10 @@ public enum MicrosoftTunnelServerHealthStatus implements ValuedEnum {
     MicrosoftTunnelServerHealthStatus(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MicrosoftTunnelServerHealthStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MicrosoftTunnelServerHealthStatus forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

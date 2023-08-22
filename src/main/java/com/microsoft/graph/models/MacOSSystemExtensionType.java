@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Flag enum representing the allowed macOS system extension types.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MacOSSystemExtensionType implements ValuedEnum {
     /** Enables driver extensions. */
     DriverExtensionsAllowed("driverExtensionsAllowed"),
@@ -17,10 +18,10 @@ public enum MacOSSystemExtensionType implements ValuedEnum {
     MacOSSystemExtensionType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MacOSSystemExtensionType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MacOSSystemExtensionType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "driverExtensionsAllowed": return DriverExtensionsAllowed;

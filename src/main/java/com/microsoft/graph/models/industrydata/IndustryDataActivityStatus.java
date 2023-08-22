@@ -3,6 +3,7 @@ package com.microsoft.graph.models.industrydata;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum IndustryDataActivityStatus implements ValuedEnum {
     InProgress("inProgress"),
     Skipped("skipped"),
@@ -15,10 +16,10 @@ public enum IndustryDataActivityStatus implements ValuedEnum {
     IndustryDataActivityStatus(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static IndustryDataActivityStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static IndustryDataActivityStatus forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "inProgress": return InProgress;

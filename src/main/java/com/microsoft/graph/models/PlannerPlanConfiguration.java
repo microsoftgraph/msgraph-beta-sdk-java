@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerPlanConfiguration extends Entity implements Parsable {
     /**
      * List the buckets that should be created in the plan.
@@ -38,9 +39,7 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
     private java.util.List<PlannerPlanConfigurationLocalization> localizations;
     /**
      * Instantiates a new plannerPlanConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public PlannerPlanConfiguration() {
         super();
     }
@@ -49,8 +48,8 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a plannerPlanConfiguration
      */
-    @javax.annotation.Nonnull
-    public static PlannerPlanConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static PlannerPlanConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new PlannerPlanConfiguration();
     }
@@ -58,7 +57,7 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
      * Gets the buckets property value. List the buckets that should be created in the plan.
      * @return a plannerPlanConfigurationBucketDefinition
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PlannerPlanConfigurationBucketDefinition> getBuckets() {
         return this.buckets;
     }
@@ -66,7 +65,7 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
      * Gets the createdBy property value. The identity of the creator of the plan configuration.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
         return this.createdBy;
     }
@@ -74,7 +73,7 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
      * Gets the createdDateTime property value. The date and time when the plan configuration was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -82,7 +81,7 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
      * Gets the defaultLanguage property value. The language code for the default language to be used for the names of the objects created for the plan.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDefaultLanguage() {
         return this.defaultLanguage;
     }
@@ -90,7 +89,7 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("buckets", (n) -> { this.setBuckets(n.getCollectionOfObjectValues(PlannerPlanConfigurationBucketDefinition::createFromDiscriminatorValue)); });
@@ -106,7 +105,7 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
      * Gets the lastModifiedBy property value. The identity of the user who last modified the plan configuration.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -114,7 +113,7 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. The date and time when the plan configuration was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -122,17 +121,15 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
      * Gets the localizations property value. Localized names for the plan configuration.
      * @return a plannerPlanConfigurationLocalization
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<PlannerPlanConfigurationLocalization> getLocalizations() {
         return this.localizations;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("buckets", this.getBuckets());
@@ -146,64 +143,50 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
     /**
      * Sets the buckets property value. List the buckets that should be created in the plan.
      * @param value Value to set for the buckets property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setBuckets(@javax.annotation.Nullable final java.util.List<PlannerPlanConfigurationBucketDefinition> value) {
+    public void setBuckets(@jakarta.annotation.Nullable final java.util.List<PlannerPlanConfigurationBucketDefinition> value) {
         this.buckets = value;
     }
     /**
      * Sets the createdBy property value. The identity of the creator of the plan configuration.
      * @param value Value to set for the createdBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when the plan configuration was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the defaultLanguage property value. The language code for the default language to be used for the names of the objects created for the plan.
      * @param value Value to set for the defaultLanguage property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDefaultLanguage(@javax.annotation.Nullable final String value) {
+    public void setDefaultLanguage(@jakarta.annotation.Nullable final String value) {
         this.defaultLanguage = value;
     }
     /**
      * Sets the lastModifiedBy property value. The identity of the user who last modified the plan configuration.
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the plan configuration was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the localizations property value. Localized names for the plan configuration.
      * @param value Value to set for the localizations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLocalizations(@javax.annotation.Nullable final java.util.List<PlannerPlanConfigurationLocalization> value) {
+    public void setLocalizations(@jakarta.annotation.Nullable final java.util.List<PlannerPlanConfigurationLocalization> value) {
         this.localizations = value;
     }
 }

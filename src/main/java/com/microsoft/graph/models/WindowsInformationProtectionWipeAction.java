@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * Represents wipe requests issued by tenant admin for Bring-Your-Own-Device(BYOD) Windows devices.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsInformationProtectionWipeAction extends Entity implements Parsable {
     /**
      * Last checkin time of the device that was targeted by this wipe action.
@@ -37,9 +38,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     private String targetedUserId;
     /**
      * Instantiates a new windowsInformationProtectionWipeAction and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsInformationProtectionWipeAction() {
         super();
     }
@@ -48,8 +47,8 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsInformationProtectionWipeAction
      */
-    @javax.annotation.Nonnull
-    public static WindowsInformationProtectionWipeAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsInformationProtectionWipeAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsInformationProtectionWipeAction();
     }
@@ -57,7 +56,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("lastCheckInDateTime", (n) -> { this.setLastCheckInDateTime(n.getOffsetDateTimeValue()); });
@@ -72,7 +71,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      * Gets the lastCheckInDateTime property value. Last checkin time of the device that was targeted by this wipe action.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastCheckInDateTime() {
         return this.lastCheckInDateTime;
     }
@@ -80,7 +79,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      * Gets the status property value. The status property
      * @return a actionState
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ActionState getStatus() {
         return this.status;
     }
@@ -88,7 +87,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      * Gets the targetedDeviceMacAddress property value. Targeted device Mac address.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTargetedDeviceMacAddress() {
         return this.targetedDeviceMacAddress;
     }
@@ -96,7 +95,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      * Gets the targetedDeviceName property value. Targeted device name.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTargetedDeviceName() {
         return this.targetedDeviceName;
     }
@@ -104,7 +103,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      * Gets the targetedDeviceRegistrationId property value. The DeviceRegistrationId being targeted by this wipe action.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTargetedDeviceRegistrationId() {
         return this.targetedDeviceRegistrationId;
     }
@@ -112,17 +111,15 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      * Gets the targetedUserId property value. The UserId being targeted by this wipe action.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTargetedUserId() {
         return this.targetedUserId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("lastCheckInDateTime", this.getLastCheckInDateTime());
@@ -135,55 +132,43 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     /**
      * Sets the lastCheckInDateTime property value. Last checkin time of the device that was targeted by this wipe action.
      * @param value Value to set for the lastCheckInDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastCheckInDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastCheckInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastCheckInDateTime = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setStatus(@javax.annotation.Nullable final ActionState value) {
+    public void setStatus(@jakarta.annotation.Nullable final ActionState value) {
         this.status = value;
     }
     /**
      * Sets the targetedDeviceMacAddress property value. Targeted device Mac address.
      * @param value Value to set for the targetedDeviceMacAddress property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetedDeviceMacAddress(@javax.annotation.Nullable final String value) {
+    public void setTargetedDeviceMacAddress(@jakarta.annotation.Nullable final String value) {
         this.targetedDeviceMacAddress = value;
     }
     /**
      * Sets the targetedDeviceName property value. Targeted device name.
      * @param value Value to set for the targetedDeviceName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetedDeviceName(@javax.annotation.Nullable final String value) {
+    public void setTargetedDeviceName(@jakarta.annotation.Nullable final String value) {
         this.targetedDeviceName = value;
     }
     /**
      * Sets the targetedDeviceRegistrationId property value. The DeviceRegistrationId being targeted by this wipe action.
      * @param value Value to set for the targetedDeviceRegistrationId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetedDeviceRegistrationId(@javax.annotation.Nullable final String value) {
+    public void setTargetedDeviceRegistrationId(@jakarta.annotation.Nullable final String value) {
         this.targetedDeviceRegistrationId = value;
     }
     /**
      * Sets the targetedUserId property value. The UserId being targeted by this wipe action.
      * @param value Value to set for the targetedUserId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetedUserId(@javax.annotation.Nullable final String value) {
+    public void setTargetedUserId(@jakarta.annotation.Nullable final String value) {
         this.targetedUserId = value;
     }
 }

@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * An enum type to represent approval status of a driver.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DriverApprovalStatus implements ValuedEnum {
     /** This indicates a driver needs IT admin's review. */
     NeedsReview("needsReview"),
@@ -19,10 +20,10 @@ public enum DriverApprovalStatus implements ValuedEnum {
     DriverApprovalStatus(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DriverApprovalStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DriverApprovalStatus forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "needsReview": return NeedsReview;

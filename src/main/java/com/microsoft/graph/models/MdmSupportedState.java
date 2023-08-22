@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Mdm Support Status of the setting.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MdmSupportedState implements ValuedEnum {
     /** Mdm support status of the setting is not known. */
     Unknown("unknown"),
@@ -19,10 +20,10 @@ public enum MdmSupportedState implements ValuedEnum {
     MdmSupportedState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static MdmSupportedState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static MdmSupportedState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

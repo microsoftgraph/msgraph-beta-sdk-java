@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -51,9 +52,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
     private BrowserSharedCookieSourceEnvironment sourceEnvironment;
     /**
      * Instantiates a new browserSharedCookieHistory and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public BrowserSharedCookieHistory() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -62,8 +61,8 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a browserSharedCookieHistory
      */
-    @javax.annotation.Nonnull
-    public static BrowserSharedCookieHistory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static BrowserSharedCookieHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new BrowserSharedCookieHistory();
     }
@@ -71,7 +70,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -79,7 +78,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      * Gets the comment property value. The comment for the shared cookie.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getComment() {
         return this.comment;
     }
@@ -87,7 +86,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      * Gets the displayName property value. The name of the cookie.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -95,7 +94,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
@@ -113,7 +112,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      * Gets the hostOnly property value. Controls whether a cookie is a host-only or domain cookie.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getHostOnly() {
         return this.hostOnly;
     }
@@ -121,7 +120,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      * Gets the hostOrDomain property value. The URL of the cookie.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getHostOrDomain() {
         return this.hostOrDomain;
     }
@@ -129,7 +128,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      * Gets the lastModifiedBy property value. The lastModifiedBy property
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -137,7 +136,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -145,7 +144,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      * Gets the path property value. The path of the cookie.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getPath() {
         return this.path;
     }
@@ -153,7 +152,7 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      * Gets the publishedDateTime property value. The date and time when the cookie was last published.
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getPublishedDateTime() {
         return this.publishedDateTime;
     }
@@ -161,17 +160,15 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
      * Gets the sourceEnvironment property value. Specifies how the cookies are shared between Microsoft Edge and Internet Explorer. The possible values are: microsoftEdge, internetExplorer11, both, unknownFutureValue.
      * @return a browserSharedCookieSourceEnvironment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public BrowserSharedCookieSourceEnvironment getSourceEnvironment() {
         return this.sourceEnvironment;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("comment", this.getComment());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -187,91 +184,71 @@ public class BrowserSharedCookieHistory implements AdditionalDataHolder, Parsabl
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the comment property value. The comment for the shared cookie.
      * @param value Value to set for the comment property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setComment(@javax.annotation.Nullable final String value) {
+    public void setComment(@jakarta.annotation.Nullable final String value) {
         this.comment = value;
     }
     /**
      * Sets the displayName property value. The name of the cookie.
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the hostOnly property value. Controls whether a cookie is a host-only or domain cookie.
      * @param value Value to set for the hostOnly property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHostOnly(@javax.annotation.Nullable final Boolean value) {
+    public void setHostOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.hostOnly = value;
     }
     /**
      * Sets the hostOrDomain property value. The URL of the cookie.
      * @param value Value to set for the hostOrDomain property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setHostOrDomain(@javax.annotation.Nullable final String value) {
+    public void setHostOrDomain(@jakarta.annotation.Nullable final String value) {
         this.hostOrDomain = value;
     }
     /**
      * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.lastModifiedBy = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the path property value. The path of the cookie.
      * @param value Value to set for the path property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPath(@javax.annotation.Nullable final String value) {
+    public void setPath(@jakarta.annotation.Nullable final String value) {
         this.path = value;
     }
     /**
      * Sets the publishedDateTime property value. The date and time when the cookie was last published.
      * @param value Value to set for the publishedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPublishedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setPublishedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.publishedDateTime = value;
     }
     /**
      * Sets the sourceEnvironment property value. Specifies how the cookies are shared between Microsoft Edge and Internet Explorer. The possible values are: microsoftEdge, internetExplorer11, both, unknownFutureValue.
      * @param value Value to set for the sourceEnvironment property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSourceEnvironment(@javax.annotation.Nullable final BrowserSharedCookieSourceEnvironment value) {
+    public void setSourceEnvironment(@jakarta.annotation.Nullable final BrowserSharedCookieSourceEnvironment value) {
         this.sourceEnvironment = value;
     }
 }

@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProfileCardProperty extends Entity implements Parsable {
     /**
      * Allows an administrator to set a custom display label for the directory property and localize it for the users in their tenant.
@@ -17,9 +18,7 @@ public class ProfileCardProperty extends Entity implements Parsable {
     private String directoryPropertyName;
     /**
      * Instantiates a new profileCardProperty and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public ProfileCardProperty() {
         super();
     }
@@ -28,8 +27,8 @@ public class ProfileCardProperty extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a profileCardProperty
      */
-    @javax.annotation.Nonnull
-    public static ProfileCardProperty createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static ProfileCardProperty createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new ProfileCardProperty();
     }
@@ -37,7 +36,7 @@ public class ProfileCardProperty extends Entity implements Parsable {
      * Gets the annotations property value. Allows an administrator to set a custom display label for the directory property and localize it for the users in their tenant.
      * @return a profileCardAnnotation
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<ProfileCardAnnotation> getAnnotations() {
         return this.annotations;
     }
@@ -45,7 +44,7 @@ public class ProfileCardProperty extends Entity implements Parsable {
      * Gets the directoryPropertyName property value. Identifies a profileCardProperty resource in Get, Update, or Delete operations. Allows an administrator to surface hidden Azure Active Directory (Azure AD) properties on the Microsoft 365 profile card within their tenant. When present, the Azure AD field referenced in this field will be visible to all users in your tenant on the contact pane of the profile card. Allowed values for this field are: UserPrincipalName, Fax, StreetAddress, PostalCode, StateOrProvince, Alias, CustomAttribute1,  CustomAttribute2, CustomAttribute3, CustomAttribute4, CustomAttribute5, CustomAttribute6, CustomAttribute7, CustomAttribute8, CustomAttribute9, CustomAttribute10, CustomAttribute11, CustomAttribute12, CustomAttribute13, CustomAttribute14, CustomAttribute15.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDirectoryPropertyName() {
         return this.directoryPropertyName;
     }
@@ -53,7 +52,7 @@ public class ProfileCardProperty extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("annotations", (n) -> { this.setAnnotations(n.getCollectionOfObjectValues(ProfileCardAnnotation::createFromDiscriminatorValue)); });
@@ -63,10 +62,8 @@ public class ProfileCardProperty extends Entity implements Parsable {
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("annotations", this.getAnnotations());
@@ -75,19 +72,15 @@ public class ProfileCardProperty extends Entity implements Parsable {
     /**
      * Sets the annotations property value. Allows an administrator to set a custom display label for the directory property and localize it for the users in their tenant.
      * @param value Value to set for the annotations property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAnnotations(@javax.annotation.Nullable final java.util.List<ProfileCardAnnotation> value) {
+    public void setAnnotations(@jakarta.annotation.Nullable final java.util.List<ProfileCardAnnotation> value) {
         this.annotations = value;
     }
     /**
      * Sets the directoryPropertyName property value. Identifies a profileCardProperty resource in Get, Update, or Delete operations. Allows an administrator to surface hidden Azure Active Directory (Azure AD) properties on the Microsoft 365 profile card within their tenant. When present, the Azure AD field referenced in this field will be visible to all users in your tenant on the contact pane of the profile card. Allowed values for this field are: UserPrincipalName, Fax, StreetAddress, PostalCode, StateOrProvince, Alias, CustomAttribute1,  CustomAttribute2, CustomAttribute3, CustomAttribute4, CustomAttribute5, CustomAttribute6, CustomAttribute7, CustomAttribute8, CustomAttribute9, CustomAttribute10, CustomAttribute11, CustomAttribute12, CustomAttribute13, CustomAttribute14, CustomAttribute15.
      * @param value Value to set for the directoryPropertyName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDirectoryPropertyName(@javax.annotation.Nullable final String value) {
+    public void setDirectoryPropertyName(@jakarta.annotation.Nullable final String value) {
         this.directoryPropertyName = value;
     }
 }

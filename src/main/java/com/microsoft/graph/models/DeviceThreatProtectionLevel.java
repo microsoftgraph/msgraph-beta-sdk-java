@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Device threat protection levels for the Device Threat Protection API.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceThreatProtectionLevel implements ValuedEnum {
     /** Default Value. Do not use. */
     Unavailable("unavailable"),
@@ -23,10 +24,10 @@ public enum DeviceThreatProtectionLevel implements ValuedEnum {
     DeviceThreatProtectionLevel(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DeviceThreatProtectionLevel forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DeviceThreatProtectionLevel forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unavailable": return Unavailable;

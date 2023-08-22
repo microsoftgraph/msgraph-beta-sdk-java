@@ -9,6 +9,7 @@ import java.util.Objects;
 /**
  * This entity provides descriptions of the declared methods, properties and relationships exposed by the Wired Network CSP.
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Specify the duration for which automatic authentication attempts will be blocked from occuring after a failed authentication attempt.
@@ -108,9 +109,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     private java.util.List<String> trustedServerCertificateNames;
     /**
      * Instantiates a new windowsWiredNetworkConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public WindowsWiredNetworkConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsWiredNetworkConfiguration");
@@ -120,8 +119,8 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a windowsWiredNetworkConfiguration
      */
-    @javax.annotation.Nonnull
-    public static WindowsWiredNetworkConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static WindowsWiredNetworkConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new WindowsWiredNetworkConfiguration();
     }
@@ -129,7 +128,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the authenticationBlockPeriodInMinutes property value. Specify the duration for which automatic authentication attempts will be blocked from occuring after a failed authentication attempt.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getAuthenticationBlockPeriodInMinutes() {
         return this.authenticationBlockPeriodInMinutes;
     }
@@ -137,7 +136,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the authenticationMethod property value. Specify the authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential. Possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
      * @return a wiredNetworkAuthenticationMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WiredNetworkAuthenticationMethod getAuthenticationMethod() {
         return this.authenticationMethod;
     }
@@ -145,7 +144,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the authenticationPeriodInSeconds property value. Specify the number of seconds for the client to wait after an authentication attempt before failing. Valid range 1-3600.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getAuthenticationPeriodInSeconds() {
         return this.authenticationPeriodInSeconds;
     }
@@ -153,7 +152,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the authenticationRetryDelayPeriodInSeconds property value. Specify the number of seconds between a failed authentication and the next authentication attempt. Valid range 1-3600.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getAuthenticationRetryDelayPeriodInSeconds() {
         return this.authenticationRetryDelayPeriodInSeconds;
     }
@@ -161,7 +160,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you're using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest. Possible values are: none, user, machine, machineOrUser, guest, unknownFutureValue.
      * @return a wiredNetworkAuthenticationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WiredNetworkAuthenticationType getAuthenticationType() {
         return this.authenticationType;
     }
@@ -169,7 +168,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the cacheCredentials property value. When TRUE, caches user credentials on the device so that users don't need to keep entering them each time they connect. When FALSE, do not cache credentials. Default value is FALSE.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getCacheCredentials() {
         return this.cacheCredentials;
     }
@@ -177,7 +176,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the disableUserPromptForServerValidation property value. When TRUE, prevents the user from being prompted to authorize new servers for trusted certification authorities when EAP type is selected as PEAP. When FALSE, does not prevent the user from being prompted. Default value is FALSE.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getDisableUserPromptForServerValidation() {
         return this.disableUserPromptForServerValidation;
     }
@@ -185,7 +184,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the eapolStartPeriodInSeconds property value. Specify the number of seconds to wait before sending an EAPOL (Extensible Authentication Protocol over LAN) Start message. Valid range 1-3600.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getEapolStartPeriodInSeconds() {
         return this.eapolStartPeriodInSeconds;
     }
@@ -193,7 +192,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
      * @return a eapType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public EapType getEapType() {
         return this.eapType;
     }
@@ -201,7 +200,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the enforce8021X property value. When TRUE, the automatic configuration service for wired networks requires the use of 802.1X for port authentication. When FALSE, 802.1X is not required. Default value is FALSE.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getEnforce8021X() {
         return this.enforce8021X;
     }
@@ -209,7 +208,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationBlockPeriodInMinutes", (n) -> { this.setAuthenticationBlockPeriodInMinutes(n.getIntegerValue()); });
@@ -242,7 +241,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the forceFIPSCompliance property value. When TRUE, forces FIPS compliance. When FALSE, does not enable FIPS compliance. Default value is FALSE.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getForceFIPSCompliance() {
         return this.forceFIPSCompliance;
     }
@@ -250,7 +249,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the identityCertificateForClientAuthentication property value. Specify identity certificate for client authentication.
      * @return a windowsCertificateProfileBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsCertificateProfileBase getIdentityCertificateForClientAuthentication() {
         return this.identityCertificateForClientAuthentication;
     }
@@ -258,7 +257,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @return a nonEapAuthenticationMethodForEapTtlsType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public NonEapAuthenticationMethodForEapTtlsType getInnerAuthenticationProtocolForEAPTTLS() {
         return this.innerAuthenticationProtocolForEAPTTLS;
     }
@@ -266,7 +265,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the maximumAuthenticationFailures property value. Specify the maximum authentication failures allowed for a set of credentials. Valid range 1-100.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaximumAuthenticationFailures() {
         return this.maximumAuthenticationFailures;
     }
@@ -274,7 +273,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the maximumEAPOLStartMessages property value. Specify the maximum number of EAPOL (Extensible Authentication Protocol over LAN) Start messages to be sent before returning failure. Valid range 1-100.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getMaximumEAPOLStartMessages() {
         return this.maximumEAPOLStartMessages;
     }
@@ -282,7 +281,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the outerIdentityPrivacyTemporaryValue property value. Specify the string to replace usernames for privacy when using EAP TTLS or PEAP.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOuterIdentityPrivacyTemporaryValue() {
         return this.outerIdentityPrivacyTemporaryValue;
     }
@@ -290,7 +289,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the performServerValidation property value. When TRUE, enables verification of server's identity by validating the certificate when EAP type is selected as PEAP. When FALSE, the certificate is not validated. Default value is TRUE.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getPerformServerValidation() {
         return this.performServerValidation;
     }
@@ -298,7 +297,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the requireCryptographicBinding property value. When TRUE, enables cryptographic binding when EAP type is selected as PEAP. When FALSE, does not enable cryptogrpahic binding. Default value is TRUE.
      * @return a boolean
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Boolean getRequireCryptographicBinding() {
         return this.requireCryptographicBinding;
     }
@@ -306,7 +305,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the rootCertificateForClientValidation property value. Specify root certificate for client validation.
      * @return a windows81TrustedRootCertificate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Windows81TrustedRootCertificate getRootCertificateForClientValidation() {
         return this.rootCertificateForClientValidation;
     }
@@ -314,7 +313,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the rootCertificatesForServerValidation property value. Specify root certificates for server validation. This collection can contain a maximum of 500 elements.
      * @return a windows81TrustedRootCertificate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<Windows81TrustedRootCertificate> getRootCertificatesForServerValidation() {
         return this.rootCertificatesForServerValidation;
     }
@@ -322,7 +321,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the secondaryAuthenticationMethod property value. Specify the secondary authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential. Possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
      * @return a wiredNetworkAuthenticationMethod
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WiredNetworkAuthenticationMethod getSecondaryAuthenticationMethod() {
         return this.secondaryAuthenticationMethod;
     }
@@ -330,7 +329,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the secondaryIdentityCertificateForClientAuthentication property value. Specify secondary identity certificate for client authentication.
      * @return a windowsCertificateProfileBase
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public WindowsCertificateProfileBase getSecondaryIdentityCertificateForClientAuthentication() {
         return this.secondaryIdentityCertificateForClientAuthentication;
     }
@@ -338,7 +337,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the secondaryRootCertificateForClientValidation property value. Specify secondary root certificate for client validation.
      * @return a windows81TrustedRootCertificate
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Windows81TrustedRootCertificate getSecondaryRootCertificateForClientValidation() {
         return this.secondaryRootCertificateForClientValidation;
     }
@@ -346,17 +345,15 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Gets the trustedServerCertificateNames property value. Specify trusted server certificate names.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getTrustedServerCertificateNames() {
         return this.trustedServerCertificateNames;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("authenticationBlockPeriodInMinutes", this.getAuthenticationBlockPeriodInMinutes());
@@ -387,217 +384,169 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     /**
      * Sets the authenticationBlockPeriodInMinutes property value. Specify the duration for which automatic authentication attempts will be blocked from occuring after a failed authentication attempt.
      * @param value Value to set for the authenticationBlockPeriodInMinutes property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationBlockPeriodInMinutes(@javax.annotation.Nullable final Integer value) {
+    public void setAuthenticationBlockPeriodInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.authenticationBlockPeriodInMinutes = value;
     }
     /**
      * Sets the authenticationMethod property value. Specify the authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential. Possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
      * @param value Value to set for the authenticationMethod property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationMethod(@javax.annotation.Nullable final WiredNetworkAuthenticationMethod value) {
+    public void setAuthenticationMethod(@jakarta.annotation.Nullable final WiredNetworkAuthenticationMethod value) {
         this.authenticationMethod = value;
     }
     /**
      * Sets the authenticationPeriodInSeconds property value. Specify the number of seconds for the client to wait after an authentication attempt before failing. Valid range 1-3600.
      * @param value Value to set for the authenticationPeriodInSeconds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationPeriodInSeconds(@javax.annotation.Nullable final Integer value) {
+    public void setAuthenticationPeriodInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.authenticationPeriodInSeconds = value;
     }
     /**
      * Sets the authenticationRetryDelayPeriodInSeconds property value. Specify the number of seconds between a failed authentication and the next authentication attempt. Valid range 1-3600.
      * @param value Value to set for the authenticationRetryDelayPeriodInSeconds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationRetryDelayPeriodInSeconds(@javax.annotation.Nullable final Integer value) {
+    public void setAuthenticationRetryDelayPeriodInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.authenticationRetryDelayPeriodInSeconds = value;
     }
     /**
      * Sets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you're using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest. Possible values are: none, user, machine, machineOrUser, guest, unknownFutureValue.
      * @param value Value to set for the authenticationType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAuthenticationType(@javax.annotation.Nullable final WiredNetworkAuthenticationType value) {
+    public void setAuthenticationType(@jakarta.annotation.Nullable final WiredNetworkAuthenticationType value) {
         this.authenticationType = value;
     }
     /**
      * Sets the cacheCredentials property value. When TRUE, caches user credentials on the device so that users don't need to keep entering them each time they connect. When FALSE, do not cache credentials. Default value is FALSE.
      * @param value Value to set for the cacheCredentials property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCacheCredentials(@javax.annotation.Nullable final Boolean value) {
+    public void setCacheCredentials(@jakarta.annotation.Nullable final Boolean value) {
         this.cacheCredentials = value;
     }
     /**
      * Sets the disableUserPromptForServerValidation property value. When TRUE, prevents the user from being prompted to authorize new servers for trusted certification authorities when EAP type is selected as PEAP. When FALSE, does not prevent the user from being prompted. Default value is FALSE.
      * @param value Value to set for the disableUserPromptForServerValidation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisableUserPromptForServerValidation(@javax.annotation.Nullable final Boolean value) {
+    public void setDisableUserPromptForServerValidation(@jakarta.annotation.Nullable final Boolean value) {
         this.disableUserPromptForServerValidation = value;
     }
     /**
      * Sets the eapolStartPeriodInSeconds property value. Specify the number of seconds to wait before sending an EAPOL (Extensible Authentication Protocol over LAN) Start message. Valid range 1-3600.
      * @param value Value to set for the eapolStartPeriodInSeconds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEapolStartPeriodInSeconds(@javax.annotation.Nullable final Integer value) {
+    public void setEapolStartPeriodInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.eapolStartPeriodInSeconds = value;
     }
     /**
      * Sets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
      * @param value Value to set for the eapType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEapType(@javax.annotation.Nullable final EapType value) {
+    public void setEapType(@jakarta.annotation.Nullable final EapType value) {
         this.eapType = value;
     }
     /**
      * Sets the enforce8021X property value. When TRUE, the automatic configuration service for wired networks requires the use of 802.1X for port authentication. When FALSE, 802.1X is not required. Default value is FALSE.
      * @param value Value to set for the enforce8021X property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setEnforce8021X(@javax.annotation.Nullable final Boolean value) {
+    public void setEnforce8021X(@jakarta.annotation.Nullable final Boolean value) {
         this.enforce8021X = value;
     }
     /**
      * Sets the forceFIPSCompliance property value. When TRUE, forces FIPS compliance. When FALSE, does not enable FIPS compliance. Default value is FALSE.
      * @param value Value to set for the forceFIPSCompliance property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setForceFIPSCompliance(@javax.annotation.Nullable final Boolean value) {
+    public void setForceFIPSCompliance(@jakarta.annotation.Nullable final Boolean value) {
         this.forceFIPSCompliance = value;
     }
     /**
      * Sets the identityCertificateForClientAuthentication property value. Specify identity certificate for client authentication.
      * @param value Value to set for the identityCertificateForClientAuthentication property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentityCertificateForClientAuthentication(@javax.annotation.Nullable final WindowsCertificateProfileBase value) {
+    public void setIdentityCertificateForClientAuthentication(@jakarta.annotation.Nullable final WindowsCertificateProfileBase value) {
         this.identityCertificateForClientAuthentication = value;
     }
     /**
      * Sets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @param value Value to set for the innerAuthenticationProtocolForEAPTTLS property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInnerAuthenticationProtocolForEAPTTLS(@javax.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
+    public void setInnerAuthenticationProtocolForEAPTTLS(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
         this.innerAuthenticationProtocolForEAPTTLS = value;
     }
     /**
      * Sets the maximumAuthenticationFailures property value. Specify the maximum authentication failures allowed for a set of credentials. Valid range 1-100.
      * @param value Value to set for the maximumAuthenticationFailures property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaximumAuthenticationFailures(@javax.annotation.Nullable final Integer value) {
+    public void setMaximumAuthenticationFailures(@jakarta.annotation.Nullable final Integer value) {
         this.maximumAuthenticationFailures = value;
     }
     /**
      * Sets the maximumEAPOLStartMessages property value. Specify the maximum number of EAPOL (Extensible Authentication Protocol over LAN) Start messages to be sent before returning failure. Valid range 1-100.
      * @param value Value to set for the maximumEAPOLStartMessages property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setMaximumEAPOLStartMessages(@javax.annotation.Nullable final Integer value) {
+    public void setMaximumEAPOLStartMessages(@jakarta.annotation.Nullable final Integer value) {
         this.maximumEAPOLStartMessages = value;
     }
     /**
      * Sets the outerIdentityPrivacyTemporaryValue property value. Specify the string to replace usernames for privacy when using EAP TTLS or PEAP.
      * @param value Value to set for the outerIdentityPrivacyTemporaryValue property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOuterIdentityPrivacyTemporaryValue(@javax.annotation.Nullable final String value) {
+    public void setOuterIdentityPrivacyTemporaryValue(@jakarta.annotation.Nullable final String value) {
         this.outerIdentityPrivacyTemporaryValue = value;
     }
     /**
      * Sets the performServerValidation property value. When TRUE, enables verification of server's identity by validating the certificate when EAP type is selected as PEAP. When FALSE, the certificate is not validated. Default value is TRUE.
      * @param value Value to set for the performServerValidation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPerformServerValidation(@javax.annotation.Nullable final Boolean value) {
+    public void setPerformServerValidation(@jakarta.annotation.Nullable final Boolean value) {
         this.performServerValidation = value;
     }
     /**
      * Sets the requireCryptographicBinding property value. When TRUE, enables cryptographic binding when EAP type is selected as PEAP. When FALSE, does not enable cryptogrpahic binding. Default value is TRUE.
      * @param value Value to set for the requireCryptographicBinding property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRequireCryptographicBinding(@javax.annotation.Nullable final Boolean value) {
+    public void setRequireCryptographicBinding(@jakarta.annotation.Nullable final Boolean value) {
         this.requireCryptographicBinding = value;
     }
     /**
      * Sets the rootCertificateForClientValidation property value. Specify root certificate for client validation.
      * @param value Value to set for the rootCertificateForClientValidation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRootCertificateForClientValidation(@javax.annotation.Nullable final Windows81TrustedRootCertificate value) {
+    public void setRootCertificateForClientValidation(@jakarta.annotation.Nullable final Windows81TrustedRootCertificate value) {
         this.rootCertificateForClientValidation = value;
     }
     /**
      * Sets the rootCertificatesForServerValidation property value. Specify root certificates for server validation. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the rootCertificatesForServerValidation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRootCertificatesForServerValidation(@javax.annotation.Nullable final java.util.List<Windows81TrustedRootCertificate> value) {
+    public void setRootCertificatesForServerValidation(@jakarta.annotation.Nullable final java.util.List<Windows81TrustedRootCertificate> value) {
         this.rootCertificatesForServerValidation = value;
     }
     /**
      * Sets the secondaryAuthenticationMethod property value. Specify the secondary authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential. Possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
      * @param value Value to set for the secondaryAuthenticationMethod property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecondaryAuthenticationMethod(@javax.annotation.Nullable final WiredNetworkAuthenticationMethod value) {
+    public void setSecondaryAuthenticationMethod(@jakarta.annotation.Nullable final WiredNetworkAuthenticationMethod value) {
         this.secondaryAuthenticationMethod = value;
     }
     /**
      * Sets the secondaryIdentityCertificateForClientAuthentication property value. Specify secondary identity certificate for client authentication.
      * @param value Value to set for the secondaryIdentityCertificateForClientAuthentication property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecondaryIdentityCertificateForClientAuthentication(@javax.annotation.Nullable final WindowsCertificateProfileBase value) {
+    public void setSecondaryIdentityCertificateForClientAuthentication(@jakarta.annotation.Nullable final WindowsCertificateProfileBase value) {
         this.secondaryIdentityCertificateForClientAuthentication = value;
     }
     /**
      * Sets the secondaryRootCertificateForClientValidation property value. Specify secondary root certificate for client validation.
      * @param value Value to set for the secondaryRootCertificateForClientValidation property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSecondaryRootCertificateForClientValidation(@javax.annotation.Nullable final Windows81TrustedRootCertificate value) {
+    public void setSecondaryRootCertificateForClientValidation(@jakarta.annotation.Nullable final Windows81TrustedRootCertificate value) {
         this.secondaryRootCertificateForClientValidation = value;
     }
     /**
      * Sets the trustedServerCertificateNames property value. Specify trusted server certificate names.
      * @param value Value to set for the trustedServerCertificateNames property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTrustedServerCertificateNames(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setTrustedServerCertificateNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.trustedServerCertificateNames = value;
     }
 }

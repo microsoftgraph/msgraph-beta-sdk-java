@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Restricted apps state
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum RestrictedAppsState implements ValuedEnum {
     /** Prohibited apps */
     ProhibitedApps("prohibitedApps"),
@@ -15,10 +16,10 @@ public enum RestrictedAppsState implements ValuedEnum {
     RestrictedAppsState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static RestrictedAppsState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static RestrictedAppsState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "prohibitedApps": return ProhibitedApps;

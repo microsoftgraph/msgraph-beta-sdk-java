@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Possible values for defenderSecurityCenterNotificationsFromApp
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DefenderSecurityCenterNotificationsFromAppType implements ValuedEnum {
     /** Not Configured */
     NotConfigured("notConfigured"),
@@ -17,10 +18,10 @@ public enum DefenderSecurityCenterNotificationsFromAppType implements ValuedEnum
     DefenderSecurityCenterNotificationsFromAppType(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static DefenderSecurityCenterNotificationsFromAppType forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static DefenderSecurityCenterNotificationsFromAppType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;

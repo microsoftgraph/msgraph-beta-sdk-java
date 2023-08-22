@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * The Base Class of Device Enrollment Configuration
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     /**
      * The list of group assignments for the device configuration profile
@@ -49,9 +50,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     private Integer version;
     /**
      * Instantiates a new deviceEnrollmentConfiguration and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public DeviceEnrollmentConfiguration() {
         super();
     }
@@ -60,8 +59,8 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a deviceEnrollmentConfiguration
      */
-    @javax.annotation.Nonnull
-    public static DeviceEnrollmentConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static DeviceEnrollmentConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
@@ -82,7 +81,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * Gets the assignments property value. The list of group assignments for the device configuration profile
      * @return a enrollmentConfigurationAssignment
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<EnrollmentConfigurationAssignment> getAssignments() {
         return this.assignments;
     }
@@ -90,7 +89,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * Gets the createdDateTime property value. Created date time in UTC of the device enrollment configuration
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
         return this.createdDateTime;
     }
@@ -98,7 +97,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * Gets the description property value. The description of the device enrollment configuration
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
@@ -106,7 +105,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * Gets the deviceEnrollmentConfigurationType property value. Describes the TemplateFamily for the Template entity
      * @return a deviceEnrollmentConfigurationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceEnrollmentConfigurationType getDeviceEnrollmentConfigurationType() {
         return this.deviceEnrollmentConfigurationType;
     }
@@ -114,7 +113,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * Gets the displayName property value. The display name of the device enrollment configuration
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
@@ -122,7 +121,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(EnrollmentConfigurationAssignment::createFromDiscriminatorValue)); });
@@ -140,7 +139,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * Gets the lastModifiedDateTime property value. Last modified date time in UTC of the device enrollment configuration
      * @return a OffsetDateTime
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.lastModifiedDateTime;
     }
@@ -148,7 +147,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * Gets the priority property value. Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPriority() {
         return this.priority;
     }
@@ -156,7 +155,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * Gets the roleScopeTagIds property value. Optional role scope tags for the enrollment restrictions.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
         return this.roleScopeTagIds;
     }
@@ -164,17 +163,15 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * Gets the version property value. The version of the device enrollment configuration
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getVersion() {
         return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
@@ -190,82 +187,64 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     /**
      * Sets the assignments property value. The list of group assignments for the device configuration profile
      * @param value Value to set for the assignments property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAssignments(@javax.annotation.Nullable final java.util.List<EnrollmentConfigurationAssignment> value) {
+    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<EnrollmentConfigurationAssignment> value) {
         this.assignments = value;
     }
     /**
      * Sets the createdDateTime property value. Created date time in UTC of the device enrollment configuration
      * @param value Value to set for the createdDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description of the device enrollment configuration
      * @param value Value to set for the description property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDescription(@javax.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
      * Sets the deviceEnrollmentConfigurationType property value. Describes the TemplateFamily for the Template entity
      * @param value Value to set for the deviceEnrollmentConfigurationType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDeviceEnrollmentConfigurationType(@javax.annotation.Nullable final DeviceEnrollmentConfigurationType value) {
+    public void setDeviceEnrollmentConfigurationType(@jakarta.annotation.Nullable final DeviceEnrollmentConfigurationType value) {
         this.deviceEnrollmentConfigurationType = value;
     }
     /**
      * Sets the displayName property value. The display name of the device enrollment configuration
      * @param value Value to set for the displayName property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setDisplayName(@javax.annotation.Nullable final String value) {
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Last modified date time in UTC of the device enrollment configuration
      * @param value Value to set for the lastModifiedDateTime property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
      * Sets the priority property value. Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
      * @param value Value to set for the priority property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPriority(@javax.annotation.Nullable final Integer value) {
+    public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.priority = value;
     }
     /**
      * Sets the roleScopeTagIds property value. Optional role scope tags for the enrollment restrictions.
      * @param value Value to set for the roleScopeTagIds property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
+    public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.roleScopeTagIds = value;
     }
     /**
      * Sets the version property value. The version of the device enrollment configuration
      * @param value Value to set for the version property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setVersion(@javax.annotation.Nullable final Integer value) {
+    public void setVersion(@jakarta.annotation.Nullable final Integer value) {
         this.version = value;
     }
 }

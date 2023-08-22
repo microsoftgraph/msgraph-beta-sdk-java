@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class IsolateDeviceResponseAction extends ResponseAction implements Parsable {
     /**
      * The identifier property
@@ -17,9 +18,7 @@ public class IsolateDeviceResponseAction extends ResponseAction implements Parsa
     private IsolationType isolationType;
     /**
      * Instantiates a new isolateDeviceResponseAction and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public IsolateDeviceResponseAction() {
         super();
         this.setOdataType("#microsoft.graph.security.isolateDeviceResponseAction");
@@ -29,8 +28,8 @@ public class IsolateDeviceResponseAction extends ResponseAction implements Parsa
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a isolateDeviceResponseAction
      */
-    @javax.annotation.Nonnull
-    public static IsolateDeviceResponseAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static IsolateDeviceResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new IsolateDeviceResponseAction();
     }
@@ -38,7 +37,7 @@ public class IsolateDeviceResponseAction extends ResponseAction implements Parsa
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumValue(DeviceIdEntityIdentifier.class)); });
@@ -49,7 +48,7 @@ public class IsolateDeviceResponseAction extends ResponseAction implements Parsa
      * Gets the identifier property value. The identifier property
      * @return a deviceIdEntityIdentifier
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public DeviceIdEntityIdentifier getIdentifier() {
         return this.identifier;
     }
@@ -57,17 +56,15 @@ public class IsolateDeviceResponseAction extends ResponseAction implements Parsa
      * Gets the isolationType property value. The isolationType property
      * @return a isolationType
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IsolationType getIsolationType() {
         return this.isolationType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("identifier", this.getIdentifier());
@@ -76,19 +73,15 @@ public class IsolateDeviceResponseAction extends ResponseAction implements Parsa
     /**
      * Sets the identifier property value. The identifier property
      * @param value Value to set for the identifier property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIdentifier(@javax.annotation.Nullable final DeviceIdEntityIdentifier value) {
+    public void setIdentifier(@jakarta.annotation.Nullable final DeviceIdEntityIdentifier value) {
         this.identifier = value;
     }
     /**
      * Sets the isolationType property value. The isolationType property
      * @param value Value to set for the isolationType property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setIsolationType(@javax.annotation.Nullable final IsolationType value) {
+    public void setIsolationType(@jakarta.annotation.Nullable final IsolationType value) {
         this.isolationType = value;
     }
 }

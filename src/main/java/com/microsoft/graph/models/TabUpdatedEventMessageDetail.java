@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class TabUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
      * Initiator of the event.
@@ -17,9 +18,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
     private String tabId;
     /**
      * Instantiates a new tabUpdatedEventMessageDetail and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public TabUpdatedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.tabUpdatedEventMessageDetail");
@@ -29,8 +28,8 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a tabUpdatedEventMessageDetail
      */
-    @javax.annotation.Nonnull
-    public static TabUpdatedEventMessageDetail createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static TabUpdatedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new TabUpdatedEventMessageDetail();
     }
@@ -38,7 +37,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -49,7 +48,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
      * Gets the initiator property value. Initiator of the event.
      * @return a identitySet
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
         return this.initiator;
     }
@@ -57,17 +56,15 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
      * Gets the tabId property value. Unique identifier of the tab.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTabId() {
         return this.tabId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("initiator", this.getInitiator());
@@ -76,19 +73,15 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
+    public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
         this.initiator = value;
     }
     /**
      * Sets the tabId property value. Unique identifier of the tab.
      * @param value Value to set for the tabId property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTabId(@javax.annotation.Nullable final String value) {
+    public void setTabId(@jakarta.annotation.Nullable final String value) {
         this.tabId = value;
     }
 }

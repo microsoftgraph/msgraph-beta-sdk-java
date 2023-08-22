@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Determines how often to check if a peer connection is still alive
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum VpnDeadPeerDetectionRate implements ValuedEnum {
     /** Medium */
     Medium("medium"),
@@ -19,10 +20,10 @@ public enum VpnDeadPeerDetectionRate implements ValuedEnum {
     VpnDeadPeerDetectionRate(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static VpnDeadPeerDetectionRate forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static VpnDeadPeerDetectionRate forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "medium": return Medium;

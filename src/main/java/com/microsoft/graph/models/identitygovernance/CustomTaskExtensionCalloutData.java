@@ -8,6 +8,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomTaskExtensionCalloutData extends CustomExtensionData implements Parsable {
     /**
      * The subject property
@@ -27,9 +28,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
     private Workflow workflow;
     /**
      * Instantiates a new customTaskExtensionCalloutData and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public CustomTaskExtensionCalloutData() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.customTaskExtensionCalloutData");
@@ -39,8 +38,8 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a customTaskExtensionCalloutData
      */
-    @javax.annotation.Nonnull
-    public static CustomTaskExtensionCalloutData createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static CustomTaskExtensionCalloutData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CustomTaskExtensionCalloutData();
     }
@@ -48,7 +47,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getObjectValue(User::createFromDiscriminatorValue)); });
@@ -61,7 +60,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      * Gets the subject property value. The subject property
      * @return a user
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public User getSubject() {
         return this.subject;
     }
@@ -69,7 +68,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      * Gets the task property value. The task property
      * @return a task
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Task getTask() {
         return this.task;
     }
@@ -77,7 +76,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      * Gets the taskProcessingresult property value. The taskProcessingresult property
      * @return a taskProcessingResult
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public TaskProcessingResult getTaskProcessingresult() {
         return this.taskProcessingresult;
     }
@@ -85,17 +84,15 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      * Gets the workflow property value. The workflow property
      * @return a workflow
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Workflow getWorkflow() {
         return this.workflow;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("subject", this.getSubject());
@@ -106,37 +103,29 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setSubject(@javax.annotation.Nullable final User value) {
+    public void setSubject(@jakarta.annotation.Nullable final User value) {
         this.subject = value;
     }
     /**
      * Sets the task property value. The task property
      * @param value Value to set for the task property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTask(@javax.annotation.Nullable final Task value) {
+    public void setTask(@jakarta.annotation.Nullable final Task value) {
         this.task = value;
     }
     /**
      * Sets the taskProcessingresult property value. The taskProcessingresult property
      * @param value Value to set for the taskProcessingresult property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTaskProcessingresult(@javax.annotation.Nullable final TaskProcessingResult value) {
+    public void setTaskProcessingresult(@jakarta.annotation.Nullable final TaskProcessingResult value) {
         this.taskProcessingresult = value;
     }
     /**
      * Sets the workflow property value. The workflow property
      * @param value Value to set for the workflow property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setWorkflow(@javax.annotation.Nullable final Workflow value) {
+    public void setWorkflow(@jakarta.annotation.Nullable final Workflow value) {
         this.workflow = value;
     }
 }

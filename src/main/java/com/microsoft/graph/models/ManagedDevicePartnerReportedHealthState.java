@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  * Available health states for the Device Health API
  */
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedDevicePartnerReportedHealthState implements ValuedEnum {
     /** Device health state is not yet reported */
     Unknown("unknown"),
@@ -31,10 +32,10 @@ public enum ManagedDevicePartnerReportedHealthState implements ValuedEnum {
     ManagedDevicePartnerReportedHealthState(final String value) {
         this.value = value;
     }
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
-    @javax.annotation.Nullable
-    public static ManagedDevicePartnerReportedHealthState forValue(@javax.annotation.Nonnull final String searchValue) {
+    @jakarta.annotation.Nullable
+    public static ManagedDevicePartnerReportedHealthState forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;

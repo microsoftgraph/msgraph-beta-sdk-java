@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
 public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -42,9 +43,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
     private String targetPort;
     /**
      * Instantiates a new kubernetesServicePort and sets the default values.
-     * @return a void
      */
-    @javax.annotation.Nullable
     public KubernetesServicePort() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,8 +52,8 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      * @param parseNode The parse node to use to read the discriminator value and create the object
      * @return a kubernetesServicePort
      */
-    @javax.annotation.Nonnull
-    public static KubernetesServicePort createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+    @jakarta.annotation.Nonnull
+    public static KubernetesServicePort createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new KubernetesServicePort();
     }
@@ -62,7 +61,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this.additionalData;
     }
@@ -70,7 +69,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      * Gets the appProtocol property value. The application protocol for this port.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getAppProtocol() {
         return this.appProtocol;
     }
@@ -78,7 +77,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
-    @javax.annotation.Nonnull
+    @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("appProtocol", (n) -> { this.setAppProtocol(n.getStringValue()); });
@@ -94,7 +93,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      * Gets the name property value. The name of this port within the service.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
@@ -102,7 +101,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      * Gets the nodePort property value. The port on each node on which this service is exposed when the type is either NodePort or LoadBalancer.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getNodePort() {
         return this.nodePort;
     }
@@ -110,7 +109,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      * Gets the @odata.type property value. The OdataType property
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
@@ -118,7 +117,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      * Gets the port property value. The port that this service exposes.
      * @return a integer
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public Integer getPort() {
         return this.port;
     }
@@ -126,7 +125,7 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      * Gets the protocol property value. The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
      * @return a containerPortProtocol
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public ContainerPortProtocol getProtocol() {
         return this.protocol;
     }
@@ -134,17 +133,15 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
      * Gets the targetPort property value. The name or number of the port to access on the pods targeted by the service. The port number must be in the range 1 to 65535. The name must be an IANASVCNAME.
      * @return a string
      */
-    @javax.annotation.Nullable
+    @jakarta.annotation.Nullable
     public String getTargetPort() {
         return this.targetPort;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appProtocol", this.getAppProtocol());
         writer.writeStringValue("name", this.getName());
@@ -158,73 +155,57 @@ public class KubernetesServicePort implements AdditionalDataHolder, Parsable {
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the additionalData property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
      * Sets the appProtocol property value. The application protocol for this port.
      * @param value Value to set for the appProtocol property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setAppProtocol(@javax.annotation.Nullable final String value) {
+    public void setAppProtocol(@jakarta.annotation.Nullable final String value) {
         this.appProtocol = value;
     }
     /**
      * Sets the name property value. The name of this port within the service.
      * @param value Value to set for the name property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setName(@javax.annotation.Nullable final String value) {
+    public void setName(@jakarta.annotation.Nullable final String value) {
         this.name = value;
     }
     /**
      * Sets the nodePort property value. The port on each node on which this service is exposed when the type is either NodePort or LoadBalancer.
      * @param value Value to set for the nodePort property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setNodePort(@javax.annotation.Nullable final Integer value) {
+    public void setNodePort(@jakarta.annotation.Nullable final Integer value) {
         this.nodePort = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setOdataType(@javax.annotation.Nullable final String value) {
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
     }
     /**
      * Sets the port property value. The port that this service exposes.
      * @param value Value to set for the port property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setPort(@javax.annotation.Nullable final Integer value) {
+    public void setPort(@jakarta.annotation.Nullable final Integer value) {
         this.port = value;
     }
     /**
      * Sets the protocol property value. The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
      * @param value Value to set for the protocol property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setProtocol(@javax.annotation.Nullable final ContainerPortProtocol value) {
+    public void setProtocol(@jakarta.annotation.Nullable final ContainerPortProtocol value) {
         this.protocol = value;
     }
     /**
      * Sets the targetPort property value. The name or number of the port to access on the pods targeted by the service. The port number must be in the range 1 to 65535. The name must be an IANASVCNAME.
      * @param value Value to set for the targetPort property.
-     * @return a void
      */
-    @javax.annotation.Nonnull
-    public void setTargetPort(@javax.annotation.Nullable final String value) {
+    public void setTargetPort(@jakarta.annotation.Nullable final String value) {
         this.targetPort = value;
     }
 }
