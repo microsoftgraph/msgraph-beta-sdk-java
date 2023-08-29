@@ -4,6 +4,7 @@ import com.microsoft.graph.models.CallRecording;
 import com.microsoft.graph.models.CallRecordingCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.solutions.virtualevents.events.item.sessions.item.recordings.count.CountRequestBuilder;
+import com.microsoft.graph.solutions.virtualevents.events.item.sessions.item.recordings.delta.DeltaRequestBuilder;
 import com.microsoft.graph.solutions.virtualevents.events.item.sessions.item.recordings.item.CallRecordingItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -29,6 +30,13 @@ public class RecordingsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the delta method.
+     */
+    @jakarta.annotation.Nonnull
+    public DeltaRequestBuilder delta() {
+        return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the recordings property of the microsoft.graph.onlineMeeting entity.

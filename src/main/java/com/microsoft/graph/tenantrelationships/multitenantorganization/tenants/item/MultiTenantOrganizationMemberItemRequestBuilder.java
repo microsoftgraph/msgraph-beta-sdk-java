@@ -37,15 +37,17 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/tenantRelationships/multiTenantOrganization/tenants/{multiTenantOrganizationMember%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property tenants for tenantRelationships
+     * Remove a tenant from a multi-tenant organization. A tenant can be removed in the following scenarios: To allow for asynchronous processing, you must wait for up to 2 hours before removal of a tenant is completed.
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-delete-tenants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         return delete(null);
     }
     /**
-     * Delete navigation property tenants for tenantRelationships
+     * Remove a tenant from a multi-tenant organization. A tenant can be removed in the following scenarios: To allow for asynchronous processing, you must wait for up to 2 hours before removal of a tenant is completed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-delete-tenants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -56,17 +58,19 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get tenants from tenantRelationships
+     * Get a tenant and its properties in the multi-tenant organization.
      * @return a CompletableFuture of multiTenantOrganizationMember
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MultiTenantOrganizationMember> get() {
         return get(null);
     }
     /**
-     * Get tenants from tenantRelationships
+     * Get a tenant and its properties in the multi-tenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of multiTenantOrganizationMember
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MultiTenantOrganizationMember> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -101,7 +105,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         return this.requestAdapter.sendAsync(requestInfo, MultiTenantOrganizationMember::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete navigation property tenants for tenantRelationships
+     * Remove a tenant from a multi-tenant organization. A tenant can be removed in the following scenarios: To allow for asynchronous processing, you must wait for up to 2 hours before removal of a tenant is completed.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +113,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property tenants for tenantRelationships
+     * Remove a tenant from a multi-tenant organization. A tenant can be removed in the following scenarios: To allow for asynchronous processing, you must wait for up to 2 hours before removal of a tenant is completed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +132,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Get tenants from tenantRelationships
+     * Get a tenant and its properties in the multi-tenant organization.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +140,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Get tenants from tenantRelationships
+     * Get a tenant and its properties in the multi-tenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -195,7 +199,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get tenants from tenantRelationships
+     * Get a tenant and its properties in the multi-tenant organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

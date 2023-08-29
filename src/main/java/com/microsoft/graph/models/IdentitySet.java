@@ -14,11 +14,11 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The Identity of the Application. This property is read-only.
+     * Optional. The application associated with this action.
      */
     private Identity application;
     /**
-     * The Identity of the Device. This property is read-only.
+     * Optional. The device associated with this action.
      */
     private Identity device;
     /**
@@ -26,7 +26,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The Identity of the User. This property is read-only.
+     * Optional. The user associated with this action.
      */
     private Identity user;
     /**
@@ -65,7 +65,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the application property value. The Identity of the Application. This property is read-only.
+     * Gets the application property value. Optional. The application associated with this action.
      * @return a identity
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         return this.application;
     }
     /**
-     * Gets the device property value. The Identity of the Device. This property is read-only.
+     * Gets the device property value. Optional. The device associated with this action.
      * @return a identity
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the user property value. The Identity of the User. This property is read-only.
+     * Gets the user property value. Optional. The user associated with this action.
      * @return a identity
      */
     @jakarta.annotation.Nullable
@@ -129,14 +129,14 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the application property value. The Identity of the Application. This property is read-only.
+     * Sets the application property value. Optional. The application associated with this action.
      * @param value Value to set for the application property.
      */
     public void setApplication(@jakarta.annotation.Nullable final Identity value) {
         this.application = value;
     }
     /**
-     * Sets the device property value. The Identity of the Device. This property is read-only.
+     * Sets the device property value. Optional. The device associated with this action.
      * @param value Value to set for the device property.
      */
     public void setDevice(@jakarta.annotation.Nullable final Identity value) {
@@ -150,7 +150,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the user property value. The Identity of the User. This property is read-only.
+     * Sets the user property value. Optional. The user associated with this action.
      * @param value Value to set for the user property.
      */
     public void setUser(@jakarta.annotation.Nullable final Identity value) {

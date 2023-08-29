@@ -14,11 +14,11 @@ public class MultiTenantOrganizationJoinRequestTransitionDetails implements Addi
      */
     private Map<String, Object> additionalData;
     /**
-     * The desiredMemberState property
+     * State of the tenant in the multi-tenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
      */
     private MultiTenantOrganizationMemberState desiredMemberState;
     /**
-     * The details property
+     * Details that explain the processing status if any. Read-only.
      */
     private String details;
     /**
@@ -26,7 +26,7 @@ public class MultiTenantOrganizationJoinRequestTransitionDetails implements Addi
      */
     private String odataType;
     /**
-     * The status property
+     * Processing state of the asynchronous job. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only.
      */
     private MultiTenantOrganizationMemberProcessingStatus status;
     /**
@@ -54,7 +54,7 @@ public class MultiTenantOrganizationJoinRequestTransitionDetails implements Addi
         return this.additionalData;
     }
     /**
-     * Gets the desiredMemberState property value. The desiredMemberState property
+     * Gets the desiredMemberState property value. State of the tenant in the multi-tenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
      * @return a multiTenantOrganizationMemberState
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class MultiTenantOrganizationJoinRequestTransitionDetails implements Addi
         return this.desiredMemberState;
     }
     /**
-     * Gets the details property value. The details property
+     * Gets the details property value. Details that explain the processing status if any. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class MultiTenantOrganizationJoinRequestTransitionDetails implements Addi
         return this.odataType;
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Processing state of the asynchronous job. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only.
      * @return a multiTenantOrganizationMemberProcessingStatus
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class MultiTenantOrganizationJoinRequestTransitionDetails implements Addi
         this.additionalData = value;
     }
     /**
-     * Sets the desiredMemberState property value. The desiredMemberState property
+     * Sets the desiredMemberState property value. State of the tenant in the multi-tenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
      * @param value Value to set for the desiredMemberState property.
      */
     public void setDesiredMemberState(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberState value) {
         this.desiredMemberState = value;
     }
     /**
-     * Sets the details property value. The details property
+     * Sets the details property value. Details that explain the processing status if any. Read-only.
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final String value) {
@@ -139,7 +139,7 @@ public class MultiTenantOrganizationJoinRequestTransitionDetails implements Addi
         this.odataType = value;
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Processing state of the asynchronous job. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberProcessingStatus value) {
