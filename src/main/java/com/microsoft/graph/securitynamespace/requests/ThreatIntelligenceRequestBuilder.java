@@ -337,6 +337,26 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder<ThreatI
         return new com.microsoft.graph.security.requests.VulnerabilityRequestBuilder(getRequestUrlWithAdditionalSegment("vulnerabilities") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the WhoisHistoryRecord collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.WhoisHistoryRecordCollectionRequestBuilder whoisHistoryRecords() {
+        return new com.microsoft.graph.security.requests.WhoisHistoryRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("whoisHistoryRecords"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the WhoisHistoryRecord item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.WhoisHistoryRecordRequestBuilder whoisHistoryRecords(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.WhoisHistoryRecordRequestBuilder(getRequestUrlWithAdditionalSegment("whoisHistoryRecords") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the WhoisRecord collection
      *
      * @return the collection request builder

@@ -166,7 +166,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Cloud Realtime Communication Info.
-     * 
+     * Microsoft realtime communication information related to the user.  Supports $filter (eq, ne,not).
      */
     @SerializedName(value = "cloudRealtimeCommunicationInfo", alternate = {"CloudRealtimeCommunicationInfo"})
     @Expose
@@ -535,7 +535,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sip Info.
-     * 
+     * Contains all on-premises Session Initiation Protocol (SIP) information related to the user. Read-only.
      */
     @SerializedName(value = "onPremisesSipInfo", alternate = {"OnPremisesSipInfo"})
     @Expose
@@ -955,7 +955,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Owned Objects.
-     * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+     * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand, $select nested in $expand, and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage ownedObjects;
@@ -1387,7 +1387,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Permission Grants.
-     * 
+     * List all resource-specific permission grants of a user.
      */
     @SerializedName(value = "permissionGrants", alternate = {"PermissionGrants"})
     @Expose

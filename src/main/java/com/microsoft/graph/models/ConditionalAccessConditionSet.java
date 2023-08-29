@@ -67,7 +67,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Client App Types.
-     * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
+     * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync which includes EAS supported and unsupported platforms.
      */
     @SerializedName(value = "clientAppTypes", alternate = {"ClientAppTypes"})
     @Expose
@@ -85,7 +85,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Device States.
-     * Device states in the policy.
+     * Device states in the policy. To be deprecated and removed. Use the devices property instead.
      */
     @SerializedName(value = "deviceStates", alternate = {"DeviceStates"})
     @Expose

@@ -37,6 +37,15 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
     public String altSecId;
 
     /**
+     * The Cleanup Scheduled Date Time.
+     * 
+     */
+    @SerializedName(value = "cleanupScheduledDateTime", alternate = {"CleanupScheduledDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime cleanupScheduledDateTime;
+
+    /**
      * The Connected Organization Id.
      * The identifier of the connected organization of the subject.
      */

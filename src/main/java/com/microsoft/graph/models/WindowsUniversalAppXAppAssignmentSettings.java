@@ -27,7 +27,7 @@ public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignme
 
     /**
      * The Use Device Context.
-     * If true, uses device execution context for Windows Universal AppX mobile app. Device-context install is not allowed when this type of app is targeted with Available intent. Defaults to false.
+     * Whether or not to use device execution context for Windows Universal AppX mobile app.
      */
     @SerializedName(value = "useDeviceContext", alternate = {"UseDeviceContext"})
     @Expose

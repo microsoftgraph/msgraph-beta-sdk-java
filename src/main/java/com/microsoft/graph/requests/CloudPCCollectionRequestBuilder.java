@@ -62,7 +62,9 @@ public class CloudPCCollectionRequestBuilder extends BaseCollectionRequestBuilde
      * Gets a builder to execute the method
      * @return the request builder collection
      * @param parameters the parameters for the service method
+     * @deprecated The bulkResize action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api.
      */
+    @Deprecated
     @Nonnull
     public CloudPCBulkResizeCollectionRequestBuilder bulkResize(@Nonnull final CloudPCBulkResizeParameterSet parameters) {
         return new CloudPCBulkResizeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bulkResize"), getClient(), null, parameters);
