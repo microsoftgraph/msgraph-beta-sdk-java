@@ -165,6 +165,16 @@ public class ManagementTemplateCollectionTenantSummariesRequestBuilder extends B
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a managementTemplateCollectionTenantSummariesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ManagementTemplateCollectionTenantSummariesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ManagementTemplateCollectionTenantSummariesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get managementTemplateCollectionTenantSummaries from tenantRelationships
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

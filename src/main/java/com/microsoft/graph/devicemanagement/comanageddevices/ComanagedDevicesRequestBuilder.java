@@ -224,6 +224,16 @@ public class ComanagedDevicesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a comanagedDevicesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ComanagedDevicesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ComanagedDevicesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The list of co-managed devices report
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

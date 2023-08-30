@@ -231,6 +231,16 @@ public class DataClassificationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a dataClassificationRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DataClassificationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DataClassificationRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get dataClassification
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

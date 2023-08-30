@@ -118,6 +118,16 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a membersRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MembersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MembersRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieves the teachers and students for a class. Note that if the delegated token is used, members can only be seen by other members of the class.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -9,27 +9,27 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity implements Parsable {
     /**
-     * The automaticUserConsentSettings property
+     * Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
      */
     private InboundOutboundPolicyConfiguration automaticUserConsentSettings;
     /**
-     * The b2bCollaborationInbound property
+     * Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
      */
     private CrossTenantAccessPolicyB2BSetting b2bCollaborationInbound;
     /**
-     * The b2bCollaborationOutbound property
+     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
      */
     private CrossTenantAccessPolicyB2BSetting b2bCollaborationOutbound;
     /**
-     * The b2bDirectConnectInbound property
+     * Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect.
      */
     private CrossTenantAccessPolicyB2BSetting b2bDirectConnectInbound;
     /**
-     * The b2bDirectConnectOutbound property
+     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
      */
     private CrossTenantAccessPolicyB2BSetting b2bDirectConnectOutbound;
     /**
-     * The inboundTrust property
+     * Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
      */
     private CrossTenantAccessPolicyInboundTrust inboundTrust;
     /**
@@ -53,7 +53,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
         return new MultiTenantOrganizationPartnerConfigurationTemplate();
     }
     /**
-     * Gets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
+     * Gets the automaticUserConsentSettings property value. Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
      * @return a inboundOutboundPolicyConfiguration
      */
     @jakarta.annotation.Nullable
@@ -61,7 +61,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
         return this.automaticUserConsentSettings;
     }
     /**
-     * Gets the b2bCollaborationInbound property value. The b2bCollaborationInbound property
+     * Gets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
      * @return a crossTenantAccessPolicyB2BSetting
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
         return this.b2bCollaborationInbound;
     }
     /**
-     * Gets the b2bCollaborationOutbound property value. The b2bCollaborationOutbound property
+     * Gets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
      * @return a crossTenantAccessPolicyB2BSetting
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
         return this.b2bCollaborationOutbound;
     }
     /**
-     * Gets the b2bDirectConnectInbound property value. The b2bDirectConnectInbound property
+     * Gets the b2bDirectConnectInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect.
      * @return a crossTenantAccessPolicyB2BSetting
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
         return this.b2bDirectConnectInbound;
     }
     /**
-     * Gets the b2bDirectConnectOutbound property value. The b2bDirectConnectOutbound property
+     * Gets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
      * @return a crossTenantAccessPolicyB2BSetting
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
         return deserializerMap;
     }
     /**
-     * Gets the inboundTrust property value. The inboundTrust property
+     * Gets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
      * @return a crossTenantAccessPolicyInboundTrust
      */
     @jakarta.annotation.Nullable
@@ -140,42 +140,42 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
         writer.writeEnumValue("templateApplicationLevel", this.getTemplateApplicationLevel());
     }
     /**
-     * Sets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
+     * Sets the automaticUserConsentSettings property value. Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
      * @param value Value to set for the automaticUserConsentSettings property.
      */
     public void setAutomaticUserConsentSettings(@jakarta.annotation.Nullable final InboundOutboundPolicyConfiguration value) {
         this.automaticUserConsentSettings = value;
     }
     /**
-     * Sets the b2bCollaborationInbound property value. The b2bCollaborationInbound property
+     * Sets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
      * @param value Value to set for the b2bCollaborationInbound property.
      */
     public void setB2bCollaborationInbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bCollaborationInbound = value;
     }
     /**
-     * Sets the b2bCollaborationOutbound property value. The b2bCollaborationOutbound property
+     * Sets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
      * @param value Value to set for the b2bCollaborationOutbound property.
      */
     public void setB2bCollaborationOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bCollaborationOutbound = value;
     }
     /**
-     * Sets the b2bDirectConnectInbound property value. The b2bDirectConnectInbound property
+     * Sets the b2bDirectConnectInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect.
      * @param value Value to set for the b2bDirectConnectInbound property.
      */
     public void setB2bDirectConnectInbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bDirectConnectInbound = value;
     }
     /**
-     * Sets the b2bDirectConnectOutbound property value. The b2bDirectConnectOutbound property
+     * Sets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
      * @param value Value to set for the b2bDirectConnectOutbound property.
      */
     public void setB2bDirectConnectOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.b2bDirectConnectOutbound = value;
     }
     /**
-     * Sets the inboundTrust property value. The inboundTrust property
+     * Sets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
      * @param value Value to set for the inboundTrust property.
      */
     public void setInboundTrust(@jakarta.annotation.Nullable final CrossTenantAccessPolicyInboundTrust value) {

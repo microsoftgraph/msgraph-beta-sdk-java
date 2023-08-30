@@ -88,6 +88,16 @@ public class GetOffice365ActiveUserCountsWithPeriodRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a getOffice365ActiveUserCountsWithPeriodRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GetOffice365ActiveUserCountsWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GetOffice365ActiveUserCountsWithPeriodRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function getOffice365ActiveUserCounts
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

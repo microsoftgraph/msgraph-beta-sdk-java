@@ -6,6 +6,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MonitoringSignal implements ValuedEnum {
     Rollback("rollback"),
+    Ineligible("ineligible"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     MonitoringSignal(final String value) {
@@ -18,6 +19,7 @@ public enum MonitoringSignal implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "rollback": return Rollback;
+            case "ineligible": return Ineligible;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

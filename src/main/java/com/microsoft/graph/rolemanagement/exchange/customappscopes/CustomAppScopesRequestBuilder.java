@@ -169,6 +169,16 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a customAppScopesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CustomAppScopesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CustomAppScopesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

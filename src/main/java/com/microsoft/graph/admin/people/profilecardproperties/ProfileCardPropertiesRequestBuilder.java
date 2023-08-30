@@ -169,6 +169,16 @@ public class ProfileCardPropertiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a profileCardPropertiesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ProfileCardPropertiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ProfileCardPropertiesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a collection of profileCardProperty resources for an organization. Each resource is identified by its directoryPropertyName property.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

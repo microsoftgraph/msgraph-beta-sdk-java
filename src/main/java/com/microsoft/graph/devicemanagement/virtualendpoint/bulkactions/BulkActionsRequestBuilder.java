@@ -165,6 +165,16 @@ public class BulkActionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a bulkActionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public BulkActionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new BulkActionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get bulkActions from deviceManagement
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

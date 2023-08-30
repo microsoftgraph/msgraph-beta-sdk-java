@@ -108,6 +108,16 @@ public class PrincipalsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a principalsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PrincipalsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PrincipalsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

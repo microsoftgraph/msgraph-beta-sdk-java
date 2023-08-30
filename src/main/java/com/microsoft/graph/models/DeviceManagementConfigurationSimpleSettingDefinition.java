@@ -9,19 +9,19 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationSimpleSettingDefinition extends DeviceManagementConfigurationSettingDefinition implements Parsable {
     /**
-     * Default setting value for this setting.
+     * Default setting value for this setting
      */
     private DeviceManagementConfigurationSettingValue defaultValue;
     /**
-     * list of child settings that depend on this setting.
+     * list of child settings that depend on this setting
      */
     private java.util.List<DeviceManagementConfigurationSettingDependedOnBy> dependedOnBy;
     /**
-     * list of parent settings this setting is dependent on.
+     * list of parent settings this setting is dependent on
      */
     private java.util.List<DeviceManagementConfigurationDependentOn> dependentOn;
     /**
-     * Definition of the value for this setting.
+     * Definition of the value for this setting
      */
     private DeviceManagementConfigurationSettingValueDefinition valueDefinition;
     /**
@@ -48,7 +48,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
         return new DeviceManagementConfigurationSimpleSettingDefinition();
     }
     /**
-     * Gets the defaultValue property value. Default setting value for this setting.
+     * Gets the defaultValue property value. Default setting value for this setting
      * @return a deviceManagementConfigurationSettingValue
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
         return this.defaultValue;
     }
     /**
-     * Gets the dependedOnBy property value. list of child settings that depend on this setting.
+     * Gets the dependedOnBy property value. list of child settings that depend on this setting
      * @return a deviceManagementConfigurationSettingDependedOnBy
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
         return this.dependedOnBy;
     }
     /**
-     * Gets the dependentOn property value. list of parent settings this setting is dependent on.
+     * Gets the dependentOn property value. list of parent settings this setting is dependent on
      * @return a deviceManagementConfigurationDependentOn
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
         return deserializerMap;
     }
     /**
-     * Gets the valueDefinition property value. Definition of the value for this setting.
+     * Gets the valueDefinition property value. Definition of the value for this setting
      * @return a deviceManagementConfigurationSettingValueDefinition
      */
     @jakarta.annotation.Nullable
@@ -105,28 +105,28 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
         writer.writeObjectValue("valueDefinition", this.getValueDefinition());
     }
     /**
-     * Sets the defaultValue property value. Default setting value for this setting.
+     * Sets the defaultValue property value. Default setting value for this setting
      * @param value Value to set for the defaultValue property.
      */
     public void setDefaultValue(@jakarta.annotation.Nullable final DeviceManagementConfigurationSettingValue value) {
         this.defaultValue = value;
     }
     /**
-     * Sets the dependedOnBy property value. list of child settings that depend on this setting.
+     * Sets the dependedOnBy property value. list of child settings that depend on this setting
      * @param value Value to set for the dependedOnBy property.
      */
     public void setDependedOnBy(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDependedOnBy> value) {
         this.dependedOnBy = value;
     }
     /**
-     * Sets the dependentOn property value. list of parent settings this setting is dependent on.
+     * Sets the dependentOn property value. list of parent settings this setting is dependent on
      * @param value Value to set for the dependentOn property.
      */
     public void setDependentOn(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationDependentOn> value) {
         this.dependentOn = value;
     }
     /**
-     * Sets the valueDefinition property value. Definition of the value for this setting.
+     * Sets the valueDefinition property value. Definition of the value for this setting
      * @param value Value to set for the valueDefinition property.
      */
     public void setValueDefinition(@jakarta.annotation.Nullable final DeviceManagementConfigurationSettingValueDefinition value) {

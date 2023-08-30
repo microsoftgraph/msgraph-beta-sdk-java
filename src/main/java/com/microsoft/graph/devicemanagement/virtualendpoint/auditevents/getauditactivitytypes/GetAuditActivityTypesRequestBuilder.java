@@ -86,6 +86,16 @@ public class GetAuditActivityTypesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a getAuditActivityTypesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GetAuditActivityTypesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GetAuditActivityTypesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function getAuditActivityTypes
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

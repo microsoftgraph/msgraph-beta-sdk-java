@@ -210,6 +210,19 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a provisioningPoliciesRequestBuilder
+     * @deprecated
+     * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public ProvisioningPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ProvisioningPoliciesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List properties and relationships of the cloudPcProvisioningPolicy objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

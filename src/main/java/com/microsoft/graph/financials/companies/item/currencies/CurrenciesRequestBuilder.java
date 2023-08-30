@@ -166,6 +166,16 @@ public class CurrenciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a currenciesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CurrenciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CurrenciesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get currencies from financials
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

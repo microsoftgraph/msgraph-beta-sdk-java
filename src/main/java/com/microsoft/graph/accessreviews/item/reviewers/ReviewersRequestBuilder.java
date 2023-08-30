@@ -169,6 +169,16 @@ public class ReviewersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a reviewersRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ReviewersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ReviewersRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * In the Azure AD access reviews feature, retrieve the reviewers of an accessReview object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

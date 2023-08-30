@@ -173,6 +173,16 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a accessPackageAssignmentResourceRolesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AccessPackageAssignmentResourceRolesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AccessPackageAssignmentResourceRolesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The resource roles delivered to the target user for this assignment. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

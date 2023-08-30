@@ -14,7 +14,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Name for this key-value pair. For more information about possible names for each resource type that uses this configuration, see keyValuePair names and values.
+     * Name for this key-value pair
      */
     private String name;
     /**
@@ -22,7 +22,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Value for this key-value pair. For more information about possible values for each resource type that uses this configuration, see keyValuePair names and values.
+     * Value for this key-value pair
      */
     private String value;
     /**
@@ -62,7 +62,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the name property value. Name for this key-value pair. For more information about possible names for each resource type that uses this configuration, see keyValuePair names and values.
+     * Gets the name property value. Name for this key-value pair
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the value property value. Value for this key-value pair. For more information about possible values for each resource type that uses this configuration, see keyValuePair names and values.
+     * Gets the value property value. Value for this key-value pair
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the name property value. Name for this key-value pair. For more information about possible names for each resource type that uses this configuration, see keyValuePair names and values.
+     * Sets the name property value. Name for this key-value pair
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -118,7 +118,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the value property value. Value for this key-value pair. For more information about possible values for each resource type that uses this configuration, see keyValuePair names and values.
+     * Sets the value property value. Value for this key-value pair
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

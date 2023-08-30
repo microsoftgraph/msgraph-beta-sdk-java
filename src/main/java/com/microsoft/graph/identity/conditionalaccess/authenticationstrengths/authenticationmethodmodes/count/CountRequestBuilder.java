@@ -98,6 +98,19 @@ public class CountRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a CountRequestBuilder
+     * @deprecated
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public CountRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CountRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the number of the resource
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

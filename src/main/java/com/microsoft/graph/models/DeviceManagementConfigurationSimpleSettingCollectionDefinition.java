@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationSimpleSettingCollectionDefinition extends DeviceManagementConfigurationSimpleSettingDefinition implements Parsable {
     /**
-     * Maximum number of simple settings in the collection. Valid values 1 to 100
+     * Maximum number of simple settings in the collection
      */
     private Integer maximumCount;
     /**
-     * Minimum number of simple settings in the collection. Valid values 1 to 100
+     * Minimum number of simple settings in the collection
      */
     private Integer minimumCount;
     /**
@@ -44,7 +44,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
         return deserializerMap;
     }
     /**
-     * Gets the maximumCount property value. Maximum number of simple settings in the collection. Valid values 1 to 100
+     * Gets the maximumCount property value. Maximum number of simple settings in the collection
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
         return this.maximumCount;
     }
     /**
-     * Gets the minimumCount property value. Minimum number of simple settings in the collection. Valid values 1 to 100
+     * Gets the minimumCount property value. Minimum number of simple settings in the collection
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -70,14 +70,14 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
         writer.writeIntegerValue("minimumCount", this.getMinimumCount());
     }
     /**
-     * Sets the maximumCount property value. Maximum number of simple settings in the collection. Valid values 1 to 100
+     * Sets the maximumCount property value. Maximum number of simple settings in the collection
      * @param value Value to set for the maximumCount property.
      */
     public void setMaximumCount(@jakarta.annotation.Nullable final Integer value) {
         this.maximumCount = value;
     }
     /**
-     * Sets the minimumCount property value. Minimum number of simple settings in the collection. Valid values 1 to 100
+     * Sets the minimumCount property value. Minimum number of simple settings in the collection
      * @param value Value to set for the minimumCount property.
      */
     public void setMinimumCount(@jakarta.annotation.Nullable final Integer value) {

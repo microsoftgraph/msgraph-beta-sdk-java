@@ -158,7 +158,7 @@ public class SignIn extends Entity implements Parsable {
      */
     private String originalRequestId;
     /**
-     * The originalTransferMethod property
+     * Transfer method used to initiate a session throughout all subsequent request. The possible values are: none, deviceCodeFlow, authenticationTransfer, unknownFutureValue.
      */
     private OriginalTransferMethods originalTransferMethod;
     /**
@@ -238,7 +238,7 @@ public class SignIn extends Entity implements Parsable {
      */
     private SignInIdentifierType signInIdentifierType;
     /**
-     * The signInTokenProtectionStatus property
+     * Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
      */
     private TokenProtectionStatus signInTokenProtectionStatus;
     /**
@@ -666,7 +666,7 @@ public class SignIn extends Entity implements Parsable {
         return this.originalRequestId;
     }
     /**
-     * Gets the originalTransferMethod property value. The originalTransferMethod property
+     * Gets the originalTransferMethod property value. Transfer method used to initiate a session throughout all subsequent request. The possible values are: none, deviceCodeFlow, authenticationTransfer, unknownFutureValue.
      * @return a originalTransferMethods
      */
     @jakarta.annotation.Nullable
@@ -826,7 +826,7 @@ public class SignIn extends Entity implements Parsable {
         return this.signInIdentifierType;
     }
     /**
-     * Gets the signInTokenProtectionStatus property value. The signInTokenProtectionStatus property
+     * Gets the signInTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
      * @return a tokenProtectionStatus
      */
     @jakarta.annotation.Nullable
@@ -1240,7 +1240,7 @@ public class SignIn extends Entity implements Parsable {
         this.originalRequestId = value;
     }
     /**
-     * Sets the originalTransferMethod property value. The originalTransferMethod property
+     * Sets the originalTransferMethod property value. Transfer method used to initiate a session throughout all subsequent request. The possible values are: none, deviceCodeFlow, authenticationTransfer, unknownFutureValue.
      * @param value Value to set for the originalTransferMethod property.
      */
     public void setOriginalTransferMethod(@jakarta.annotation.Nullable final OriginalTransferMethods value) {
@@ -1380,7 +1380,7 @@ public class SignIn extends Entity implements Parsable {
         this.signInIdentifierType = value;
     }
     /**
-     * Sets the signInTokenProtectionStatus property value. The signInTokenProtectionStatus property
+     * Sets the signInTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
      * @param value Value to set for the signInTokenProtectionStatus property.
      */
     public void setSignInTokenProtectionStatus(@jakarta.annotation.Nullable final TokenProtectionStatus value) {

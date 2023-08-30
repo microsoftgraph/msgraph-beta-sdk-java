@@ -165,6 +165,16 @@ public class SettingDefinitionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a settingDefinitionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SettingDefinitionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SettingDefinitionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The setting definitions this category contains
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

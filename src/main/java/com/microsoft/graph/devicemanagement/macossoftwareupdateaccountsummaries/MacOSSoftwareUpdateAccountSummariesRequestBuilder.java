@@ -165,6 +165,16 @@ public class MacOSSoftwareUpdateAccountSummariesRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a macOSSoftwareUpdateAccountSummariesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MacOSSoftwareUpdateAccountSummariesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MacOSSoftwareUpdateAccountSummariesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The MacOS software update account summaries for this account.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

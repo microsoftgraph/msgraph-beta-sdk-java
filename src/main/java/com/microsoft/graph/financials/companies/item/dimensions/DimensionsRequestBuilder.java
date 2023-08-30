@@ -109,6 +109,16 @@ public class DimensionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a dimensionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DimensionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DimensionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get dimensions from financials
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -165,6 +165,16 @@ public class PrivilegeManagementElevationsRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a privilegeManagementElevationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PrivilegeManagementElevationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PrivilegeManagementElevationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The endpoint privilege management elevation event entity contains elevation details.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

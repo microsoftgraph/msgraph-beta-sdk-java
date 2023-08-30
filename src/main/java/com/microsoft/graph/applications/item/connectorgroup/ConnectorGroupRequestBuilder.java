@@ -95,6 +95,16 @@ public class ConnectorGroupRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a connectorGroupRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ConnectorGroupRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ConnectorGroupRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The connectorGroup the application is using with Azure AD Application Proxy. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

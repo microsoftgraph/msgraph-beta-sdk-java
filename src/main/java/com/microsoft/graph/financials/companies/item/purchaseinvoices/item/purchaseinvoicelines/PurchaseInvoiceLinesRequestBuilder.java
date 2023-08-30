@@ -108,6 +108,16 @@ public class PurchaseInvoiceLinesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a purchaseInvoiceLinesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PurchaseInvoiceLinesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PurchaseInvoiceLinesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get purchaseInvoiceLines from financials
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

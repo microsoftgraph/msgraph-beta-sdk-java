@@ -165,6 +165,16 @@ public class DispositionReviewStagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a dispositionReviewStagesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DispositionReviewStagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DispositionReviewStagesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * When action at the end of retention is chosen as 'dispositionReview', dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

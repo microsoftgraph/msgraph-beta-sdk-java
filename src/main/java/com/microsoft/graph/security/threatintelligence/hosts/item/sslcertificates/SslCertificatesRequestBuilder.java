@@ -108,6 +108,16 @@ public class SslCertificatesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a sslCertificatesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SslCertificatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SslCertificatesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get sslCertificates from security
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

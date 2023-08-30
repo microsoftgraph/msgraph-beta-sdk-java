@@ -108,6 +108,16 @@ public class ApproversRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a approversRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ApproversRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ApproversRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get approvers from security
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

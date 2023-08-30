@@ -165,6 +165,16 @@ public class EvaluateLabelJobsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a evaluateLabelJobsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public EvaluateLabelJobsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new EvaluateLabelJobsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get evaluateLabelJobs from dataClassification
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

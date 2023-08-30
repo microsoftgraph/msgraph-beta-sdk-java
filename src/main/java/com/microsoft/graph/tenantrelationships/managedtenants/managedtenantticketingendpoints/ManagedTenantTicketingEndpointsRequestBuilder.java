@@ -165,6 +165,16 @@ public class ManagedTenantTicketingEndpointsRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a managedTenantTicketingEndpointsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ManagedTenantTicketingEndpointsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ManagedTenantTicketingEndpointsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get managedTenantTicketingEndpoints from tenantRelationships
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

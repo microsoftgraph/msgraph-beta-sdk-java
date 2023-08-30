@@ -165,6 +165,16 @@ public class PolicyRulesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a policyRulesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PolicyRulesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PolicyRulesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Represents the definition of the policy ruleset that makes up the core definition of a policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

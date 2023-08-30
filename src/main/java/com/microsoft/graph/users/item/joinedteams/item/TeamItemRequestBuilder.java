@@ -87,6 +87,16 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a TeamItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TeamItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TeamItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

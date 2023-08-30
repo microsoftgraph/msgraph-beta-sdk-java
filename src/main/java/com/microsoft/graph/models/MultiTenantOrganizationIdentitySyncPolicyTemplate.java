@@ -13,7 +13,7 @@ public class MultiTenantOrganizationIdentitySyncPolicyTemplate extends Entity im
      */
     private TemplateApplicationLevel templateApplicationLevel;
     /**
-     * The userSyncInbound property
+     * Defines whether users can be synchronized from the partner tenant.
      */
     private CrossTenantUserSyncInbound userSyncInbound;
     /**
@@ -52,7 +52,7 @@ public class MultiTenantOrganizationIdentitySyncPolicyTemplate extends Entity im
         return this.templateApplicationLevel;
     }
     /**
-     * Gets the userSyncInbound property value. The userSyncInbound property
+     * Gets the userSyncInbound property value. Defines whether users can be synchronized from the partner tenant.
      * @return a crossTenantUserSyncInbound
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class MultiTenantOrganizationIdentitySyncPolicyTemplate extends Entity im
         this.templateApplicationLevel = value;
     }
     /**
-     * Sets the userSyncInbound property value. The userSyncInbound property
+     * Sets the userSyncInbound property value. Defines whether users can be synchronized from the partner tenant.
      * @param value Value to set for the userSyncInbound property.
      */
     public void setUserSyncInbound(@jakarta.annotation.Nullable final CrossTenantUserSyncInbound value) {

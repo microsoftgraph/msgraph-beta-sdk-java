@@ -165,6 +165,16 @@ public class ManagedTenantApiNotificationsRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a managedTenantApiNotificationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ManagedTenantApiNotificationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ManagedTenantApiNotificationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get managedTenantApiNotifications from tenantRelationships
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

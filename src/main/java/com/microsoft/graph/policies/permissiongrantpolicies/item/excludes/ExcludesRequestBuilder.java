@@ -59,7 +59,7 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/permissionGrantPolicies/{permissionGrantPolicy%2Did}/excludes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the condition sets which are *excluded* in a permissionGrantPolicy.
+     * Retrieve the condition sets that are *excluded* in a permissionGrantPolicy.
      * @return a CompletableFuture of permissionGrantConditionSetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-list-excludes?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +68,7 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the condition sets which are *excluded* in a permissionGrantPolicy.
+     * Retrieve the condition sets that are *excluded* in a permissionGrantPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permissionGrantConditionSetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-list-excludes?view=graph-rest-1.0">Find more info here</a>
@@ -108,7 +108,7 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PermissionGrantConditionSet::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the condition sets which are *excluded* in a permissionGrantPolicy.
+     * Retrieve the condition sets that are *excluded* in a permissionGrantPolicy.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the condition sets which are *excluded* in a permissionGrantPolicy.
+     * Retrieve the condition sets that are *excluded* in a permissionGrantPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,17 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the condition sets which are *excluded* in a permissionGrantPolicy.
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a excludesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ExcludesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ExcludesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Retrieve the condition sets that are *excluded* in a permissionGrantPolicy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

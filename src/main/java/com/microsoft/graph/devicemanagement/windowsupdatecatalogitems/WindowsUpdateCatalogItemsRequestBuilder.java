@@ -165,6 +165,16 @@ public class WindowsUpdateCatalogItemsRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a windowsUpdateCatalogItemsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public WindowsUpdateCatalogItemsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new WindowsUpdateCatalogItemsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * A collection of windows update catalog items (fetaure updates item , quality updates item)
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -6,6 +6,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum MonitoringAction implements ValuedEnum {
     AlertError("alertError"),
+    OfferFallback("offerFallback"),
     PauseDeployment("pauseDeployment"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
@@ -19,6 +20,7 @@ public enum MonitoringAction implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "alertError": return AlertError;
+            case "offerFallback": return OfferFallback;
             case "pauseDeployment": return PauseDeployment;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;

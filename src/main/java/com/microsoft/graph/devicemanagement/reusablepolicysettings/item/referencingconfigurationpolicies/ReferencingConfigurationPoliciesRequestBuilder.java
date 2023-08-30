@@ -165,6 +165,16 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a referencingConfigurationPoliciesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ReferencingConfigurationPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ReferencingConfigurationPoliciesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * configuration policies referencing the current reusable setting. This property is read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

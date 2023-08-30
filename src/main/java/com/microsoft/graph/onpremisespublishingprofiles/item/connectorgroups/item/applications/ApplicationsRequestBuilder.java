@@ -108,6 +108,16 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a applicationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ApplicationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ApplicationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get applications from onPremisesPublishingProfiles
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

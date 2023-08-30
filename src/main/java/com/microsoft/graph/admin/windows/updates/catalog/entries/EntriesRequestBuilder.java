@@ -167,6 +167,16 @@ public class EntriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a entriesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public EntriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new EntriesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of catalogEntry resources from the catalog. Currently, this operation returns entries of the featureUpdateCatalogEntry or qualityUpdateCatalog types, inherited from catalogEntry. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

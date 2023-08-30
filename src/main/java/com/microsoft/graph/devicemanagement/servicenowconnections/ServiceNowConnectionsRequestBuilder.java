@@ -165,6 +165,16 @@ public class ServiceNowConnectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a serviceNowConnectionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceNowConnectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ServiceNowConnectionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * A list of ServiceNowConnections
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -108,6 +108,16 @@ public class DirectoryScopesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a directoryScopesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DirectoryScopesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DirectoryScopesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

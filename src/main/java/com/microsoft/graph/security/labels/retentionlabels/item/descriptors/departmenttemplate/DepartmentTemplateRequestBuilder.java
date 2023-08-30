@@ -87,6 +87,16 @@ public class DepartmentTemplateRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a departmentTemplateRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DepartmentTemplateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DepartmentTemplateRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Specifies the  department or business unit of an organization to which a label belongs.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

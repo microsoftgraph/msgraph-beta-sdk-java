@@ -165,6 +165,16 @@ public class HostSecurityProfilesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a hostSecurityProfilesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public HostSecurityProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new HostSecurityProfilesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get hostSecurityProfiles from security
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

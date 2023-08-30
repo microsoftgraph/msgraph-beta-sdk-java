@@ -173,6 +173,16 @@ public class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a androidManagedAppProtectionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AndroidManagedAppProtectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AndroidManagedAppProtectionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Android managed app policies.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

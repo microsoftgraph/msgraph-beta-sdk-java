@@ -84,6 +84,16 @@ public class ImportOffice365DeviceConfigurationPoliciesRequestBuilder extends Ba
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a importOffice365DeviceConfigurationPoliciesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ImportOffice365DeviceConfigurationPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ImportOffice365DeviceConfigurationPoliciesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

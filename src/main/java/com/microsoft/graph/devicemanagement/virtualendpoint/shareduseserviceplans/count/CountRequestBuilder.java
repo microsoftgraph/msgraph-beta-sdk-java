@@ -98,6 +98,19 @@ public class CountRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a CountRequestBuilder
+     * @deprecated
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public CountRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CountRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the number of the resource
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

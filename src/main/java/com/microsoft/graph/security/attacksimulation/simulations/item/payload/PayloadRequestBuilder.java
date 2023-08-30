@@ -87,6 +87,16 @@ public class PayloadRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a payloadRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PayloadRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PayloadRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The payload associated with a simulation during its creation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

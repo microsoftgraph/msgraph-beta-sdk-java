@@ -165,6 +165,16 @@ public class ReusablePolicySettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a reusablePolicySettingsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ReusablePolicySettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ReusablePolicySettingsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List of all reusable settings that can be referred in a policy
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
