@@ -104,7 +104,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements IJsonBackedObject
 
     /**
      * The Status.
-     * The status of the health check item. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
+     * The status of the health check item. Possible values are: pending, running, passed, failed, warning, informational, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

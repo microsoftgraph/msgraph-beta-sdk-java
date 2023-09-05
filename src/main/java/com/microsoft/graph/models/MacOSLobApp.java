@@ -57,7 +57,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Ignore Version Detection.
-     * When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature.
+     * When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature. The default value is FALSE.
      */
     @SerializedName(value = "ignoreVersionDetection", alternate = {"IgnoreVersionDetection"})
     @Expose
@@ -66,7 +66,7 @@ public class MacOSLobApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Install As Managed.
-     * When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged.
+     * When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged. The default value is FALSE.
      */
     @SerializedName(value = "installAsManaged", alternate = {"InstallAsManaged"})
     @Expose

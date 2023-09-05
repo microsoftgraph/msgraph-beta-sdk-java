@@ -31,7 +31,7 @@ public class MultiTenantOrganization extends Entity implements IJsonBackedObject
 
     /**
      * The Created Date Time.
-     * 
+     * Date when multi-tenant organization was created. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -40,7 +40,7 @@ public class MultiTenantOrganization extends Entity implements IJsonBackedObject
 
     /**
      * The Description.
-     * 
+     * Description of the multi-tenant organization.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -49,7 +49,7 @@ public class MultiTenantOrganization extends Entity implements IJsonBackedObject
 
     /**
      * The Display Name.
-     * 
+     * Display name of the multi-tenant organization.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -58,7 +58,7 @@ public class MultiTenantOrganization extends Entity implements IJsonBackedObject
 
     /**
      * The State.
-     * 
+     * State of the multi-tenant organization. The possible values are: active, inactive, unknownFutureValue. active indicates the multi-tenant organization is created. inactive indicates the multi-tenant organization is not created. Read-only.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -67,7 +67,7 @@ public class MultiTenantOrganization extends Entity implements IJsonBackedObject
 
     /**
      * The Join Request.
-     * 
+     * Defines the status of a tenant joining a multi-tenant organization.
      */
     @SerializedName(value = "joinRequest", alternate = {"JoinRequest"})
     @Expose
@@ -76,7 +76,7 @@ public class MultiTenantOrganization extends Entity implements IJsonBackedObject
 
     /**
      * The Tenants.
-     * 
+     * Defines tenants added to a multi-tenant organization.
      */
     @SerializedName(value = "tenants", alternate = {"Tenants"})
     @Expose

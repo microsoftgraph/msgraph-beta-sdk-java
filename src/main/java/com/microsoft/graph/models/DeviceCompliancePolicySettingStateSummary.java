@@ -120,7 +120,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
     /**
      * The Device Compliance Setting States.
-     * Not yet documented
+     * 
      */
     @SerializedName(value = "deviceComplianceSettingStates", alternate = {"DeviceComplianceSettingStates"})
     @Expose

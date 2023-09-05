@@ -16,6 +16,10 @@ public enum MonitoringAction
     */
     ALERT_ERROR,
     /**
+    * offer Fallback
+    */
+    OFFER_FALLBACK,
+    /**
     * pause Deployment
     */
     PAUSE_DEPLOYMENT,

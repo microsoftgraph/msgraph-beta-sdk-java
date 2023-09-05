@@ -9,9 +9,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.VirtualEventRegistrationQuestionAnswer;
+import com.microsoft.graph.models.VirtualEventAttendeeRegistrationStatus;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.VirtualEventRegistrationQuestionCollectionPage;
-import com.microsoft.graph.requests.VirtualEventRegistrantCollectionPage;
+import com.microsoft.graph.requests.VirtualEventSessionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -29,40 +30,83 @@ public class VirtualEventRegistration extends Entity implements IJsonBackedObjec
 
 
     /**
-     * The Capacity.
-     * Total capacity of the virtual event.
+     * The Cancelation Date Time.
+     * 
      */
-    @SerializedName(value = "capacity", alternate = {"Capacity"})
+    @SerializedName(value = "cancelationDateTime", alternate = {"CancelationDateTime"})
     @Expose
 	@Nullable
-    public Integer capacity;
+    public java.time.OffsetDateTime cancelationDateTime;
 
     /**
-     * The Registration Web Url.
-     * Registration URL of the virtual event.
+     * The Email.
+     * 
      */
-    @SerializedName(value = "registrationWebUrl", alternate = {"RegistrationWebUrl"})
+    @SerializedName(value = "email", alternate = {"Email"})
     @Expose
 	@Nullable
-    public String registrationWebUrl;
+    public String email;
 
     /**
-     * The Questions.
-     * Registration questions.
+     * The First Name.
+     * 
      */
-    @SerializedName(value = "questions", alternate = {"Questions"})
+    @SerializedName(value = "firstName", alternate = {"FirstName"})
     @Expose
 	@Nullable
-    public com.microsoft.graph.requests.VirtualEventRegistrationQuestionCollectionPage questions;
+    public String firstName;
 
     /**
-     * The Registrants.
-     * Information of attendees who have registered for the virtual event.
+     * The Last Name.
+     * 
      */
-    @SerializedName(value = "registrants", alternate = {"Registrants"})
+    @SerializedName(value = "lastName", alternate = {"LastName"})
     @Expose
 	@Nullable
-    public com.microsoft.graph.requests.VirtualEventRegistrantCollectionPage registrants;
+    public String lastName;
+
+    /**
+     * The Registration Date Time.
+     * 
+     */
+    @SerializedName(value = "registrationDateTime", alternate = {"RegistrationDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime registrationDateTime;
+
+    /**
+     * The Registration Question Answers.
+     * 
+     */
+    @SerializedName(value = "registrationQuestionAnswers", alternate = {"RegistrationQuestionAnswers"})
+    @Expose
+	@Nullable
+    public java.util.List<VirtualEventRegistrationQuestionAnswer> registrationQuestionAnswers;
+
+    /**
+     * The Status.
+     * 
+     */
+    @SerializedName(value = "status", alternate = {"Status"})
+    @Expose
+	@Nullable
+    public VirtualEventAttendeeRegistrationStatus status;
+
+    /**
+     * The User Id.
+     * 
+     */
+    @SerializedName(value = "userId", alternate = {"UserId"})
+    @Expose
+	@Nullable
+    public String userId;
+
+    /**
+     * The Sessions.
+     * 
+     */
+	@Nullable
+    public com.microsoft.graph.requests.VirtualEventSessionCollectionPage sessions;
 
 
     /**
@@ -74,12 +118,8 @@ public class VirtualEventRegistration extends Entity implements IJsonBackedObjec
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
 
-        if (json.has("questions")) {
-            questions = serializer.deserializeObject(json.get("questions"), com.microsoft.graph.requests.VirtualEventRegistrationQuestionCollectionPage.class);
-        }
-
-        if (json.has("registrants")) {
-            registrants = serializer.deserializeObject(json.get("registrants"), com.microsoft.graph.requests.VirtualEventRegistrantCollectionPage.class);
+        if (json.has("sessions")) {
+            sessions = serializer.deserializeObject(json.get("sessions"), com.microsoft.graph.requests.VirtualEventSessionCollectionPage.class);
         }
     }
 }

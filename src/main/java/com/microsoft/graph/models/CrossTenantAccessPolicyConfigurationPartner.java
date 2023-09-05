@@ -98,7 +98,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The Is In Multi Tenant Organization.
-     * 
+     * Identifies whether a tenant is a member of a multi-tenant organization.
      */
     @SerializedName(value = "isInMultiTenantOrganization", alternate = {"IsInMultiTenantOrganization"})
     @Expose

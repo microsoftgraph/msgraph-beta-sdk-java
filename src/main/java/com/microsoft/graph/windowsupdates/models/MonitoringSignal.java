@@ -16,6 +16,10 @@ public enum MonitoringSignal
     */
     ROLLBACK,
     /**
+    * ineligible
+    */
+    INELIGIBLE,
+    /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,

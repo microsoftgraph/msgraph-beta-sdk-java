@@ -17,7 +17,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Managed Device Reprovision Cloud Pc Request Builder.
+ * @deprecated The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead
  */
+@Deprecated
 public class ManagedDeviceReprovisionCloudPcRequestBuilder extends BaseActionRequestBuilder<ManagedDevice> {
 
     /**
