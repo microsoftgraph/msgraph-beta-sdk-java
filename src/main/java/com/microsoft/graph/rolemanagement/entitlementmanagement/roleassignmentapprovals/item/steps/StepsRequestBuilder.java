@@ -167,6 +167,16 @@ public class StepsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a stepsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public StepsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new StepsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios:
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

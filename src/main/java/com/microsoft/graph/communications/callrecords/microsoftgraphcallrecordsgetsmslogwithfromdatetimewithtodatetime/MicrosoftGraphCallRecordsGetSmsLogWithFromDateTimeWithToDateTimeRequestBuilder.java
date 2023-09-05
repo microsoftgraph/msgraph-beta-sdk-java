@@ -91,6 +91,16 @@ public class MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTimeReq
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a microsoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTimeRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTimeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTimeRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function getSmsLog
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

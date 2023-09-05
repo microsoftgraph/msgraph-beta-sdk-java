@@ -87,6 +87,16 @@ public class CitationTemplateRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a citationTemplateRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CitationTemplateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CitationTemplateRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The specific rule or regulation created by a jurisdiction used to determine whether certain labels and content should be retained or deleted.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

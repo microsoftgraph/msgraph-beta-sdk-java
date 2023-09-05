@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
     /**
      * The supportedSolution property
      */
-    private CloudPcManagementService supportedSolution;
+    private EnumSet<CloudPcManagementService> supportedSolution;
     /**
      * Instantiates a new cloudPcSupportedRegion and sets the default values.
      */
@@ -58,7 +59,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("regionGroup", (n) -> { this.setRegionGroup(n.getEnumValue(CloudPcRegionGroup.class)); });
         deserializerMap.put("regionStatus", (n) -> { this.setRegionStatus(n.getEnumValue(CloudPcSupportedRegionStatus.class)); });
-        deserializerMap.put("supportedSolution", (n) -> { this.setSupportedSolution(n.getEnumValue(CloudPcManagementService.class)); });
+        deserializerMap.put("supportedSolution", (n) -> { this.setSupportedSolution(n.getEnumSetValue(CloudPcManagementService.class)); });
         return deserializerMap;
     }
     /**
@@ -95,7 +96,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeEnumValue("regionGroup", this.getRegionGroup());
         writer.writeEnumValue("regionStatus", this.getRegionStatus());
-        writer.writeEnumValue("supportedSolution", this.getSupportedSolution());
+        writer.writeEnumSetValue("supportedSolution", this.getSupportedSolution());
     }
     /**
      * Sets the displayName property value. The name for the supported region. Read-only.

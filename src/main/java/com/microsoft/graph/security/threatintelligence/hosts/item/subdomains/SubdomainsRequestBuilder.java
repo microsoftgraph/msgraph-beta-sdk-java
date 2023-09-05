@@ -110,6 +110,16 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a subdomainsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SubdomainsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SubdomainsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the list of subdomain resources associated with a host.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

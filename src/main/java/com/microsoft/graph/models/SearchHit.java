@@ -100,7 +100,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
-        deserializerMap.put("_summary", (n) -> { this.setsummary(n.getStringValue()); });
+        deserializerMap.put("_summary", (n) -> { this.setSummary(n.getStringValue()); });
         deserializerMap.put("contentSource", (n) -> { this.setContentSource(n.getStringValue()); });
         deserializerMap.put("hitId", (n) -> { this.setHitId(n.getStringValue()); });
         deserializerMap.put("_id", (n) -> { this.setId(n.getStringValue()); });
@@ -111,7 +111,7 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         deserializerMap.put("resultTemplateId", (n) -> { this.setResultTemplateId(n.getStringValue()); });
         deserializerMap.put("_score", (n) -> { this.setScore(n.getIntegerValue()); });
         deserializerMap.put("_source", (n) -> { this.setSource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
-        deserializerMap.put("summary", (n) -> { this.setsummary(n.getStringValue()); });
+        deserializerMap.put("summary", (n) -> { this.setSummary(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -187,12 +187,12 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         return this.source;
     }
     /**
-     * Gets the summary property value. A summary of the result, if a summary is available.
+     * Gets the _summary property value. The _summary property
      * @return a string
      */
     @jakarta.annotation.Nullable
-    public String getsummary() {
-        return this.summary;
+    public String getSummary() {
+        return this._summary;
     }
     /**
      * Serializes information the current object
@@ -210,8 +210,8 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("resultTemplateId", this.getResultTemplateId());
         writer.writeIntegerValue("_score", this.getScore());
         writer.writeObjectValue("_source", this.getSource());
-        writer.writeStringValue("summary", this.getsummary());
-        writer.writeStringValue("_summary", this.getsummary());
+        writer.writeStringValue("summary", this.getSummary());
+        writer.writeStringValue("_summary", this.getSummary());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -292,10 +292,10 @@ public class SearchHit implements AdditionalDataHolder, Parsable {
         this.source = value;
     }
     /**
-     * Sets the summary property value. A summary of the result, if a summary is available.
-     * @param value Value to set for the summary property.
+     * Sets the _summary property value. The _summary property
+     * @param value Value to set for the _summary property.
      */
-    public void setsummary(@jakarta.annotation.Nullable final String value) {
-        this.summary = value;
+    public void setSummary(@jakarta.annotation.Nullable final String value) {
+        this._summary = value;
     }
 }

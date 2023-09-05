@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     /**
      * Specifies which platform(s) can be targeted for a given Android LOB application or Managed Android LOB application.
      */
-    private AndroidTargetedPlatforms targetedPlatforms;
+    private EnumSet<AndroidTargetedPlatforms> targetedPlatforms;
     /**
      * The version code of Android Line of Business (LoB) app.
      */
@@ -67,7 +68,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
         deserializerMap.put("identityVersion", (n) -> { this.setIdentityVersion(n.getStringValue()); });
         deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { this.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
         deserializerMap.put("packageId", (n) -> { this.setPackageId(n.getStringValue()); });
-        deserializerMap.put("targetedPlatforms", (n) -> { this.setTargetedPlatforms(n.getEnumValue(AndroidTargetedPlatforms.class)); });
+        deserializerMap.put("targetedPlatforms", (n) -> { this.setTargetedPlatforms(n.getEnumSetValue(AndroidTargetedPlatforms.class)); });
         deserializerMap.put("versionCode", (n) -> { this.setVersionCode(n.getStringValue()); });
         deserializerMap.put("versionName", (n) -> { this.setVersionName(n.getStringValue()); });
         return deserializerMap;
@@ -139,7 +140,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
         writer.writeStringValue("identityVersion", this.getIdentityVersion());
         writer.writeObjectValue("minimumSupportedOperatingSystem", this.getMinimumSupportedOperatingSystem());
         writer.writeStringValue("packageId", this.getPackageId());
-        writer.writeEnumValue("targetedPlatforms", this.getTargetedPlatforms());
+        writer.writeEnumSetValue("targetedPlatforms", this.getTargetedPlatforms());
         writer.writeStringValue("versionCode", this.getVersionCode());
         writer.writeStringValue("versionName", this.getVersionName());
     }

@@ -165,6 +165,16 @@ public class DeviceConfigurationConflictSummaryRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a deviceConfigurationConflictSummaryRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceConfigurationConflictSummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeviceConfigurationConflictSummaryRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Summary of policies in conflict state for this account.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

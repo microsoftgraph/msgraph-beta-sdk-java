@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     /**
      * Indicates all the requirements specified on the plannerTask. Possible values are: none, checklistCompletion, unknownFutureValue. Read-only. The plannerTaskCompletionRequirementDetails in plannerTaskDetails has details of the requirements specified, if any.
      */
-    private PlannerTaskCompletionRequirements specifiedCompletionRequirements;
+    private EnumSet<PlannerTaskCompletionRequirements> specifiedCompletionRequirements;
     /**
      * Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
@@ -304,7 +305,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         deserializerMap.put("progressTaskBoardFormat", (n) -> { this.setProgressTaskBoardFormat(n.getObjectValue(PlannerProgressTaskBoardTaskFormat::createFromDiscriminatorValue)); });
         deserializerMap.put("recurrence", (n) -> { this.setRecurrence(n.getObjectValue(PlannerTaskRecurrence::createFromDiscriminatorValue)); });
         deserializerMap.put("referenceCount", (n) -> { this.setReferenceCount(n.getIntegerValue()); });
-        deserializerMap.put("specifiedCompletionRequirements", (n) -> { this.setSpecifiedCompletionRequirements(n.getEnumValue(PlannerTaskCompletionRequirements.class)); });
+        deserializerMap.put("specifiedCompletionRequirements", (n) -> { this.setSpecifiedCompletionRequirements(n.getEnumSetValue(PlannerTaskCompletionRequirements.class)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
         return deserializerMap;
@@ -437,7 +438,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         writer.writeObjectValue("progressTaskBoardFormat", this.getProgressTaskBoardFormat());
         writer.writeObjectValue("recurrence", this.getRecurrence());
         writer.writeIntegerValue("referenceCount", this.getReferenceCount());
-        writer.writeEnumValue("specifiedCompletionRequirements", this.getSpecifiedCompletionRequirements());
+        writer.writeEnumSetValue("specifiedCompletionRequirements", this.getSpecifiedCompletionRequirements());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeStringValue("title", this.getTitle());
     }

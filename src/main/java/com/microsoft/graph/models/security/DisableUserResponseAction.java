@@ -3,6 +3,7 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +12,7 @@ public class DisableUserResponseAction extends ResponseAction implements Parsabl
     /**
      * The identifier property
      */
-    private DisableUserEntityIdentifier identifier;
+    private EnumSet<DisableUserEntityIdentifier> identifier;
     /**
      * Instantiates a new disableUserResponseAction and sets the default values.
      */
@@ -36,7 +37,7 @@ public class DisableUserResponseAction extends ResponseAction implements Parsabl
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumValue(DisableUserEntityIdentifier.class)); });
+        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumSetValue(DisableUserEntityIdentifier.class)); });
         return deserializerMap;
     }
     /**
@@ -54,7 +55,7 @@ public class DisableUserResponseAction extends ResponseAction implements Parsabl
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("identifier", this.getIdentifier());
+        writer.writeEnumSetValue("identifier", this.getIdentifier());
     }
     /**
      * Sets the identifier property value. The identifier property

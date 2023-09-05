@@ -195,6 +195,19 @@ public class AccessPackageResourceScopesRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a accessPackageResourceScopesRequestBuilder
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public AccessPackageResourceScopesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AccessPackageResourceScopesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get accessPackageResourceScopes from identityGovernance
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

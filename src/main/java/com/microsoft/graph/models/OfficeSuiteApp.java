@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     /**
      * Contains properties for Windows architecture.
      */
-    private WindowsArchitecture officePlatformArchitecture;
+    private EnumSet<WindowsArchitecture> officePlatformArchitecture;
     /**
      * Describes the OfficeSuiteApp file format types that can be selected.
      */
@@ -108,7 +109,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
         deserializerMap.put("installProgressDisplayLevel", (n) -> { this.setInstallProgressDisplayLevel(n.getEnumValue(OfficeSuiteInstallProgressDisplayLevel.class)); });
         deserializerMap.put("localesToInstall", (n) -> { this.setLocalesToInstall(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("officeConfigurationXml", (n) -> { this.setOfficeConfigurationXml(n.getByteArrayValue()); });
-        deserializerMap.put("officePlatformArchitecture", (n) -> { this.setOfficePlatformArchitecture(n.getEnumValue(WindowsArchitecture.class)); });
+        deserializerMap.put("officePlatformArchitecture", (n) -> { this.setOfficePlatformArchitecture(n.getEnumSetValue(WindowsArchitecture.class)); });
         deserializerMap.put("officeSuiteAppDefaultFileFormat", (n) -> { this.setOfficeSuiteAppDefaultFileFormat(n.getEnumValue(OfficeSuiteDefaultFileFormatType.class)); });
         deserializerMap.put("productIds", (n) -> { this.setProductIds(n.getCollectionOfEnumValues(OfficeProductId.class)); });
         deserializerMap.put("shouldUninstallOlderVersionsOfOffice", (n) -> { this.setShouldUninstallOlderVersionsOfOffice(n.getBooleanValue()); });
@@ -218,7 +219,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
         writer.writeEnumValue("installProgressDisplayLevel", this.getInstallProgressDisplayLevel());
         writer.writeCollectionOfPrimitiveValues("localesToInstall", this.getLocalesToInstall());
         writer.writeByteArrayValue("officeConfigurationXml", this.getOfficeConfigurationXml());
-        writer.writeEnumValue("officePlatformArchitecture", this.getOfficePlatformArchitecture());
+        writer.writeEnumSetValue("officePlatformArchitecture", this.getOfficePlatformArchitecture());
         writer.writeEnumValue("officeSuiteAppDefaultFileFormat", this.getOfficeSuiteAppDefaultFileFormat());
         writer.writeCollectionOfEnumValues("productIds", this.getProductIds());
         writer.writeBooleanValue("shouldUninstallOlderVersionsOfOffice", this.getShouldUninstallOlderVersionsOfOffice());

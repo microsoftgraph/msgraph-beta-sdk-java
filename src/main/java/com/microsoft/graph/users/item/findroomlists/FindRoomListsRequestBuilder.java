@@ -88,6 +88,16 @@ public class FindRoomListsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a findRoomListsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public FindRoomListsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new FindRoomListsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the room lists defined in a tenant, as represented by their emailAddress objects. Tenants can organize meeting rooms into room lists. In this API, each meeting room and room list is represented by an emailAddress instance.You can get all the room lists in the tenant, get all the rooms in the tenant, or get all the rooms in a specific room list.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

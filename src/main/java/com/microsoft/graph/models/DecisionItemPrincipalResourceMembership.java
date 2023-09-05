@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +17,7 @@ public class DecisionItemPrincipalResourceMembership implements AdditionalDataHo
     /**
      * The membershipType property
      */
-    private DecisionItemPrincipalResourceMembershipType membershipType;
+    private EnumSet<DecisionItemPrincipalResourceMembershipType> membershipType;
     /**
      * The OdataType property
      */
@@ -52,7 +53,7 @@ public class DecisionItemPrincipalResourceMembership implements AdditionalDataHo
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("membershipType", (n) -> { this.setMembershipType(n.getEnumValue(DecisionItemPrincipalResourceMembershipType.class)); });
+        deserializerMap.put("membershipType", (n) -> { this.setMembershipType(n.getEnumSetValue(DecisionItemPrincipalResourceMembershipType.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -78,7 +79,7 @@ public class DecisionItemPrincipalResourceMembership implements AdditionalDataHo
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeEnumValue("membershipType", this.getMembershipType());
+        writer.writeEnumSetValue("membershipType", this.getMembershipType());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }

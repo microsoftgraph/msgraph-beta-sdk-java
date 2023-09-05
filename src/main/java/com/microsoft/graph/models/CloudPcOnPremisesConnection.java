@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -43,7 +44,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     /**
      * The managedBy property
      */
-    private CloudPcManagementService managedBy;
+    private EnumSet<CloudPcManagementService> managedBy;
     /**
      * The organizational unit (OU) in which the computer account is created. If left null, the OU thats configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
      */
@@ -147,7 +148,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         deserializerMap.put("healthCheckStatus", (n) -> { this.setHealthCheckStatus(n.getEnumValue(CloudPcOnPremisesConnectionStatus.class)); });
         deserializerMap.put("healthCheckStatusDetails", (n) -> { this.setHealthCheckStatusDetails(n.getObjectValue(CloudPcOnPremisesConnectionStatusDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("inUse", (n) -> { this.setInUse(n.getBooleanValue()); });
-        deserializerMap.put("managedBy", (n) -> { this.setManagedBy(n.getEnumValue(CloudPcManagementService.class)); });
+        deserializerMap.put("managedBy", (n) -> { this.setManagedBy(n.getEnumSetValue(CloudPcManagementService.class)); });
         deserializerMap.put("organizationalUnit", (n) -> { this.setOrganizationalUnit(n.getStringValue()); });
         deserializerMap.put("resourceGroupId", (n) -> { this.setResourceGroupId(n.getStringValue()); });
         deserializerMap.put("subnetId", (n) -> { this.setSubnetId(n.getStringValue()); });
@@ -269,7 +270,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         writer.writeEnumValue("healthCheckStatus", this.getHealthCheckStatus());
         writer.writeObjectValue("healthCheckStatusDetails", this.getHealthCheckStatusDetails());
         writer.writeBooleanValue("inUse", this.getInUse());
-        writer.writeEnumValue("managedBy", this.getManagedBy());
+        writer.writeEnumSetValue("managedBy", this.getManagedBy());
         writer.writeStringValue("organizationalUnit", this.getOrganizationalUnit());
         writer.writeStringValue("resourceGroupId", this.getResourceGroupId());
         writer.writeStringValue("subnetId", this.getSubnetId());

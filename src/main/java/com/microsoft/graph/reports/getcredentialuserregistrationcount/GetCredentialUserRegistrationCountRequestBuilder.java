@@ -88,6 +88,16 @@ public class GetCredentialUserRegistrationCountRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a getCredentialUserRegistrationCountRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GetCredentialUserRegistrationCountRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GetCredentialUserRegistrationCountRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Report the current state of how many users in your organization are registered for self-service password reset and multi-factor authentication (MFA) capabilities.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

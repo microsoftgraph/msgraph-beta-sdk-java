@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     /**
      * The scope property
      */
-    private SensitiveTypeScope scope;
+    private EnumSet<SensitiveTypeScope> scope;
     /**
      * The sensitiveTypeSource property
      */
@@ -77,7 +78,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
         deserializerMap.put("classificationAttributes", (n) -> { this.setClassificationAttributes(n.getCollectionOfObjectValues(ClassificationAttribute::createFromDiscriminatorValue)); });
         deserializerMap.put("classificationMethod", (n) -> { this.setClassificationMethod(n.getEnumValue(ClassificationMethod.class)); });
         deserializerMap.put("matches", (n) -> { this.setMatches(n.getCollectionOfObjectValues(SensitiveContentLocation::createFromDiscriminatorValue)); });
-        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumValue(SensitiveTypeScope.class)); });
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumSetValue(SensitiveTypeScope.class)); });
         deserializerMap.put("sensitiveTypeSource", (n) -> { this.setSensitiveTypeSource(n.getEnumValue(SensitiveTypeSource.class)); });
         return deserializerMap;
     }
@@ -115,7 +116,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
         writer.writeCollectionOfObjectValues("classificationAttributes", this.getClassificationAttributes());
         writer.writeEnumValue("classificationMethod", this.getClassificationMethod());
         writer.writeCollectionOfObjectValues("matches", this.getMatches());
-        writer.writeEnumValue("scope", this.getScope());
+        writer.writeEnumSetValue("scope", this.getScope());
         writer.writeEnumValue("sensitiveTypeSource", this.getSensitiveTypeSource());
     }
     /**

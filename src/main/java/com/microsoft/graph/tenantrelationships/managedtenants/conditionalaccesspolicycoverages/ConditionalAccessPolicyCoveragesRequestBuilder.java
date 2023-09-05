@@ -167,6 +167,16 @@ public class ConditionalAccessPolicyCoveragesRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a conditionalAccessPolicyCoveragesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ConditionalAccessPolicyCoveragesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ConditionalAccessPolicyCoveragesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the conditionalAccessPolicyCoverage objects and their properties. Use this operation to list of Azure Active Directory conditional access policy coverage across all tenants that are being managed by the multi-tenant management platform.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

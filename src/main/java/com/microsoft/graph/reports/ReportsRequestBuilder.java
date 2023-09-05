@@ -1650,6 +1650,16 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a reportsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ReportsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get reports
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

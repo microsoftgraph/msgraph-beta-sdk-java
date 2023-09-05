@@ -165,6 +165,16 @@ public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a cartToClassAssociationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CartToClassAssociationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CartToClassAssociationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The Cart To Class Associations.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

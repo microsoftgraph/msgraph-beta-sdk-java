@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public class Win32LobAppProductCodeDetection extends Win32LobAppDetection implem
     /**
      * Contains properties for detection operator.
      */
-    private Win32LobAppDetectionOperator productVersionOperator;
+    private EnumSet<Win32LobAppDetectionOperator> productVersionOperator;
     /**
      * Instantiates a new win32LobAppProductCodeDetection and sets the default values.
      */
@@ -49,7 +50,7 @@ public class Win32LobAppProductCodeDetection extends Win32LobAppDetection implem
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("productCode", (n) -> { this.setProductCode(n.getStringValue()); });
         deserializerMap.put("productVersion", (n) -> { this.setProductVersion(n.getStringValue()); });
-        deserializerMap.put("productVersionOperator", (n) -> { this.setProductVersionOperator(n.getEnumValue(Win32LobAppDetectionOperator.class)); });
+        deserializerMap.put("productVersionOperator", (n) -> { this.setProductVersionOperator(n.getEnumSetValue(Win32LobAppDetectionOperator.class)); });
         return deserializerMap;
     }
     /**
@@ -85,7 +86,7 @@ public class Win32LobAppProductCodeDetection extends Win32LobAppDetection implem
         super.serialize(writer);
         writer.writeStringValue("productCode", this.getProductCode());
         writer.writeStringValue("productVersion", this.getProductVersion());
-        writer.writeEnumValue("productVersionOperator", this.getProductVersionOperator());
+        writer.writeEnumSetValue("productVersionOperator", this.getProductVersionOperator());
     }
     /**
      * Sets the productCode property value. The product code of Win32 Line of Business (LoB) app.

@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
     /**
      * Specifies the setting for user mailbox denoted by a comma-separated string.
      */
-    private UserMailboxSetting userMailboxSetting;
+    private EnumSet<UserMailboxSetting> userMailboxSetting;
     /**
      * Instantiates a new submissionResult and sets the default values.
      */
@@ -105,7 +106,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         deserializerMap.put("detectedFiles", (n) -> { this.setDetectedFiles(n.getCollectionOfObjectValues(SubmissionDetectedFile::createFromDiscriminatorValue)); });
         deserializerMap.put("detectedUrls", (n) -> { this.setDetectedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("userMailboxSetting", (n) -> { this.setUserMailboxSetting(n.getEnumValue(UserMailboxSetting.class)); });
+        deserializerMap.put("userMailboxSetting", (n) -> { this.setUserMailboxSetting(n.getEnumSetValue(UserMailboxSetting.class)); });
         return deserializerMap;
     }
     /**
@@ -135,7 +136,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("detectedFiles", this.getDetectedFiles());
         writer.writeCollectionOfPrimitiveValues("detectedUrls", this.getDetectedUrls());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeEnumValue("userMailboxSetting", this.getUserMailboxSetting());
+        writer.writeEnumSetValue("userMailboxSetting", this.getUserMailboxSetting());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**

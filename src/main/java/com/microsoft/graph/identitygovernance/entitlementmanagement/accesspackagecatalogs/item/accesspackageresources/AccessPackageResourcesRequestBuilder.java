@@ -197,6 +197,19 @@ public class AccessPackageResourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a accessPackageResourcesRequestBuilder
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public AccessPackageResourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AccessPackageResourcesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of accessPackageResource objects in an accessPackageCatalog.  To request to add or remove an accessPackageResource, use create accessPackageResourceRequest.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

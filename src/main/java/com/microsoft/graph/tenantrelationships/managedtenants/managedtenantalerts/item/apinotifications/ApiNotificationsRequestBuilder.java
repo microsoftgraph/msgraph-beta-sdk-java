@@ -108,6 +108,16 @@ public class ApiNotificationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a apiNotificationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ApiNotificationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ApiNotificationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get apiNotifications from tenantRelationships
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

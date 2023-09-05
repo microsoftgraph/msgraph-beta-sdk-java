@@ -176,6 +176,16 @@ public class AppConsentRequestsForApprovalRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a appConsentRequestsForApprovalRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AppConsentRequestsForApprovalRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AppConsentRequestsForApprovalRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get appConsentRequestsForApproval from users
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

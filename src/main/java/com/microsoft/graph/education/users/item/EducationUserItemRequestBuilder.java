@@ -129,21 +129,21 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, EducationUser::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the relatedContact collection of an educationUser object.
+     * Update the properties of an educationuser object.
      * @param body The request body
      * @return a CompletableFuture of educationUser
-     * @see <a href="https://learn.microsoft.com/graph/api/relatedcontact-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> patch(@jakarta.annotation.Nonnull final EducationUser body) {
         return patch(body, null);
     }
     /**
-     * Update the relatedContact collection of an educationUser object.
+     * Update the properties of an educationuser object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationUser
-     * @see <a href="https://learn.microsoft.com/graph/api/relatedcontact-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationUser> patch(@jakarta.annotation.Nonnull final EducationUser body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -211,7 +211,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the relatedContact collection of an educationUser object.
+     * Update the properties of an educationuser object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +220,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the relatedContact collection of an educationUser object.
+     * Update the properties of an educationuser object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -241,6 +241,16 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a EducationUserItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public EducationUserItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new EducationUserItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

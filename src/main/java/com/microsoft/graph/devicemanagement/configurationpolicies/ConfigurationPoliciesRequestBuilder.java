@@ -165,6 +165,16 @@ public class ConfigurationPoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a configurationPoliciesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ConfigurationPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ConfigurationPoliciesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List of all Configuration policies
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
     /**
      * Device health monitoring scope
      */
-    private WindowsHealthMonitoringScope configDeviceHealthMonitoringScope;
+    private EnumSet<WindowsHealthMonitoringScope> configDeviceHealthMonitoringScope;
     /**
      * Instantiates a new windowsHealthMonitoringConfiguration and sets the default values.
      */
@@ -73,7 +74,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowDeviceHealthMonitoring", (n) -> { this.setAllowDeviceHealthMonitoring(n.getEnumValue(Enablement.class)); });
         deserializerMap.put("configDeviceHealthMonitoringCustomScope", (n) -> { this.setConfigDeviceHealthMonitoringCustomScope(n.getStringValue()); });
-        deserializerMap.put("configDeviceHealthMonitoringScope", (n) -> { this.setConfigDeviceHealthMonitoringScope(n.getEnumValue(WindowsHealthMonitoringScope.class)); });
+        deserializerMap.put("configDeviceHealthMonitoringScope", (n) -> { this.setConfigDeviceHealthMonitoringScope(n.getEnumSetValue(WindowsHealthMonitoringScope.class)); });
         return deserializerMap;
     }
     /**
@@ -85,7 +86,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
         super.serialize(writer);
         writer.writeEnumValue("allowDeviceHealthMonitoring", this.getAllowDeviceHealthMonitoring());
         writer.writeStringValue("configDeviceHealthMonitoringCustomScope", this.getConfigDeviceHealthMonitoringCustomScope());
-        writer.writeEnumValue("configDeviceHealthMonitoringScope", this.getConfigDeviceHealthMonitoringScope());
+        writer.writeEnumSetValue("configDeviceHealthMonitoringScope", this.getConfigDeviceHealthMonitoringScope());
     }
     /**
      * Sets the allowDeviceHealthMonitoring property value. Possible values of a property

@@ -165,6 +165,16 @@ public class WindowsInformationProtectionDeviceRegistrationsRequestBuilder exten
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a windowsInformationProtectionDeviceRegistrationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public WindowsInformationProtectionDeviceRegistrationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new WindowsInformationProtectionDeviceRegistrationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Windows information protection device registrations that are not MDM enrolled.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

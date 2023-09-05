@@ -16,7 +16,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      */
     private java.util.List<String> fileTypes;
     /**
-     * The format property
+     * Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub, bashScript, unknownFutureValue.
      */
     private DeviceManagementConfigurationStringFormat format;
     /**
@@ -76,7 +76,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         return this.fileTypes;
     }
     /**
-     * Gets the format property value. The format property
+     * Gets the format property value. Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub, bashScript, unknownFutureValue.
      * @return a deviceManagementConfigurationStringFormat
      */
     @jakarta.annotation.Nullable
@@ -137,7 +137,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         this.fileTypes = value;
     }
     /**
-     * Sets the format property value. The format property
+     * Sets the format property value. Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub, bashScript, unknownFutureValue.
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final DeviceManagementConfigurationStringFormat value) {

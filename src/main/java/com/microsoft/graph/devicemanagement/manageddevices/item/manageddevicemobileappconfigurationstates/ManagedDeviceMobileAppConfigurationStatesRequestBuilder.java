@@ -165,6 +165,16 @@ public class ManagedDeviceMobileAppConfigurationStatesRequestBuilder extends Bas
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a managedDeviceMobileAppConfigurationStatesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ManagedDeviceMobileAppConfigurationStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ManagedDeviceMobileAppConfigurationStatesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Managed device mobile app configuration states for this device.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -167,6 +167,16 @@ public class AlertIncidentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a alertIncidentsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AlertIncidentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AlertIncidentsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the alert incidents. The alert incidents are a collection of any following type that is derived from the unifiedRoleManagementAlertIncident object:
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

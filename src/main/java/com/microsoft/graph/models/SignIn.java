@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -56,7 +57,7 @@ public class SignIn extends Entity implements Parsable {
     /**
      * Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue. For authentications that use protocols other than the possible values listed, the protocol type is listed as none.
      */
-    private ProtocolType authenticationProtocol;
+    private EnumSet<ProtocolType> authenticationProtocol;
     /**
      * This holds the highest level of authentication needed through all the sign-in steps, for sign-in to succeed.  Supports $filter (eq, startsWith).
      */
@@ -96,7 +97,7 @@ public class SignIn extends Entity implements Parsable {
     /**
      * Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue. If the sign in did not cross tenant boundaries, the value is none.
      */
-    private SignInAccessType crossTenantAccessType;
+    private EnumSet<SignInAccessType> crossTenantAccessType;
     /**
      * The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser.  Supports $filter (eq, startsWith) on browser and operatingSystem properties.
      */
@@ -120,7 +121,7 @@ public class SignIn extends Entity implements Parsable {
     /**
      * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
      */
-    private IncomingTokenType incomingTokenType;
+    private EnumSet<IncomingTokenType> incomingTokenType;
     /**
      * The IP address of the client from where the sign-in occurred.  Supports $filter (eq, startsWith).
      */
@@ -158,7 +159,7 @@ public class SignIn extends Entity implements Parsable {
      */
     private String originalRequestId;
     /**
-     * The originalTransferMethod property
+     * Transfer method used to initiate a session throughout all subsequent request. The possible values are: none, deviceCodeFlow, authenticationTransfer, unknownFutureValue.
      */
     private OriginalTransferMethods originalTransferMethod;
     /**
@@ -238,7 +239,7 @@ public class SignIn extends Entity implements Parsable {
      */
     private SignInIdentifierType signInIdentifierType;
     /**
-     * The signInTokenProtectionStatus property
+     * Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
      */
     private TokenProtectionStatus signInTokenProtectionStatus;
     /**
@@ -503,7 +504,7 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("authenticationDetails", (n) -> { this.setAuthenticationDetails(n.getCollectionOfObjectValues(AuthenticationDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationMethodsUsed", (n) -> { this.setAuthenticationMethodsUsed(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("authenticationProcessingDetails", (n) -> { this.setAuthenticationProcessingDetails(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
-        deserializerMap.put("authenticationProtocol", (n) -> { this.setAuthenticationProtocol(n.getEnumValue(ProtocolType.class)); });
+        deserializerMap.put("authenticationProtocol", (n) -> { this.setAuthenticationProtocol(n.getEnumSetValue(ProtocolType.class)); });
         deserializerMap.put("authenticationRequirement", (n) -> { this.setAuthenticationRequirement(n.getStringValue()); });
         deserializerMap.put("authenticationRequirementPolicies", (n) -> { this.setAuthenticationRequirementPolicies(n.getCollectionOfObjectValues(AuthenticationRequirementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("autonomousSystemNumber", (n) -> { this.setAutonomousSystemNumber(n.getIntegerValue()); });
@@ -513,13 +514,13 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("conditionalAccessStatus", (n) -> { this.setConditionalAccessStatus(n.getEnumValue(ConditionalAccessStatus.class)); });
         deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("crossTenantAccessType", (n) -> { this.setCrossTenantAccessType(n.getEnumValue(SignInAccessType.class)); });
+        deserializerMap.put("crossTenantAccessType", (n) -> { this.setCrossTenantAccessType(n.getEnumSetValue(SignInAccessType.class)); });
         deserializerMap.put("deviceDetail", (n) -> { this.setDeviceDetail(n.getObjectValue(DeviceDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("federatedCredentialId", (n) -> { this.setFederatedCredentialId(n.getStringValue()); });
         deserializerMap.put("flaggedForReview", (n) -> { this.setFlaggedForReview(n.getBooleanValue()); });
         deserializerMap.put("homeTenantId", (n) -> { this.setHomeTenantId(n.getStringValue()); });
         deserializerMap.put("homeTenantName", (n) -> { this.setHomeTenantName(n.getStringValue()); });
-        deserializerMap.put("incomingTokenType", (n) -> { this.setIncomingTokenType(n.getEnumValue(IncomingTokenType.class)); });
+        deserializerMap.put("incomingTokenType", (n) -> { this.setIncomingTokenType(n.getEnumSetValue(IncomingTokenType.class)); });
         deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
         deserializerMap.put("ipAddressFromResourceProvider", (n) -> { this.setIpAddressFromResourceProvider(n.getStringValue()); });
         deserializerMap.put("isInteractive", (n) -> { this.setIsInteractive(n.getBooleanValue()); });
@@ -666,7 +667,7 @@ public class SignIn extends Entity implements Parsable {
         return this.originalRequestId;
     }
     /**
-     * Gets the originalTransferMethod property value. The originalTransferMethod property
+     * Gets the originalTransferMethod property value. Transfer method used to initiate a session throughout all subsequent request. The possible values are: none, deviceCodeFlow, authenticationTransfer, unknownFutureValue.
      * @return a originalTransferMethods
      */
     @jakarta.annotation.Nullable
@@ -826,7 +827,7 @@ public class SignIn extends Entity implements Parsable {
         return this.signInIdentifierType;
     }
     /**
-     * Gets the signInTokenProtectionStatus property value. The signInTokenProtectionStatus property
+     * Gets the signInTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
      * @return a tokenProtectionStatus
      */
     @jakarta.annotation.Nullable
@@ -923,7 +924,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("authenticationDetails", this.getAuthenticationDetails());
         writer.writeCollectionOfPrimitiveValues("authenticationMethodsUsed", this.getAuthenticationMethodsUsed());
         writer.writeCollectionOfObjectValues("authenticationProcessingDetails", this.getAuthenticationProcessingDetails());
-        writer.writeEnumValue("authenticationProtocol", this.getAuthenticationProtocol());
+        writer.writeEnumSetValue("authenticationProtocol", this.getAuthenticationProtocol());
         writer.writeStringValue("authenticationRequirement", this.getAuthenticationRequirement());
         writer.writeCollectionOfObjectValues("authenticationRequirementPolicies", this.getAuthenticationRequirementPolicies());
         writer.writeIntegerValue("autonomousSystemNumber", this.getAutonomousSystemNumber());
@@ -933,13 +934,13 @@ public class SignIn extends Entity implements Parsable {
         writer.writeEnumValue("conditionalAccessStatus", this.getConditionalAccessStatus());
         writer.writeStringValue("correlationId", this.getCorrelationId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
-        writer.writeEnumValue("crossTenantAccessType", this.getCrossTenantAccessType());
+        writer.writeEnumSetValue("crossTenantAccessType", this.getCrossTenantAccessType());
         writer.writeObjectValue("deviceDetail", this.getDeviceDetail());
         writer.writeStringValue("federatedCredentialId", this.getFederatedCredentialId());
         writer.writeBooleanValue("flaggedForReview", this.getFlaggedForReview());
         writer.writeStringValue("homeTenantId", this.getHomeTenantId());
         writer.writeStringValue("homeTenantName", this.getHomeTenantName());
-        writer.writeEnumValue("incomingTokenType", this.getIncomingTokenType());
+        writer.writeEnumSetValue("incomingTokenType", this.getIncomingTokenType());
         writer.writeStringValue("ipAddress", this.getIpAddress());
         writer.writeStringValue("ipAddressFromResourceProvider", this.getIpAddressFromResourceProvider());
         writer.writeBooleanValue("isInteractive", this.getIsInteractive());
@@ -1240,7 +1241,7 @@ public class SignIn extends Entity implements Parsable {
         this.originalRequestId = value;
     }
     /**
-     * Sets the originalTransferMethod property value. The originalTransferMethod property
+     * Sets the originalTransferMethod property value. Transfer method used to initiate a session throughout all subsequent request. The possible values are: none, deviceCodeFlow, authenticationTransfer, unknownFutureValue.
      * @param value Value to set for the originalTransferMethod property.
      */
     public void setOriginalTransferMethod(@jakarta.annotation.Nullable final OriginalTransferMethods value) {
@@ -1380,7 +1381,7 @@ public class SignIn extends Entity implements Parsable {
         this.signInIdentifierType = value;
     }
     /**
-     * Sets the signInTokenProtectionStatus property value. The signInTokenProtectionStatus property
+     * Sets the signInTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
      * @param value Value to set for the signInTokenProtectionStatus property.
      */
     public void setSignInTokenProtectionStatus(@jakarta.annotation.Nullable final TokenProtectionStatus value) {

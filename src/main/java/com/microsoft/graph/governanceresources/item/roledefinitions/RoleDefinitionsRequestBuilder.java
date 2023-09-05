@@ -165,6 +165,16 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a roleDefinitionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RoleDefinitionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RoleDefinitionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The collection of role defintions for the resource.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

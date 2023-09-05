@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -42,7 +43,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     /**
      * Supported platform types.
      */
-    private DeviceManagementConfigurationPlatforms platforms;
+    private EnumSet<DeviceManagementConfigurationPlatforms> platforms;
     /**
      * Root id of the category.
      */
@@ -50,11 +51,11 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     /**
      * Supported setting types
      */
-    private DeviceManagementConfigurationSettingUsage settingUsage;
+    private EnumSet<DeviceManagementConfigurationSettingUsage> settingUsage;
     /**
      * Describes which technology this setting can be deployed with
      */
-    private DeviceManagementConfigurationTechnologies technologies;
+    private EnumSet<DeviceManagementConfigurationTechnologies> technologies;
     /**
      * Instantiates a new deviceManagementConfigurationCategory and sets the default values.
      */
@@ -117,10 +118,10 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
         deserializerMap.put("helpText", (n) -> { this.setHelpText(n.getStringValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("parentCategoryId", (n) -> { this.setParentCategoryId(n.getStringValue()); });
-        deserializerMap.put("platforms", (n) -> { this.setPlatforms(n.getEnumValue(DeviceManagementConfigurationPlatforms.class)); });
+        deserializerMap.put("platforms", (n) -> { this.setPlatforms(n.getEnumSetValue(DeviceManagementConfigurationPlatforms.class)); });
         deserializerMap.put("rootCategoryId", (n) -> { this.setRootCategoryId(n.getStringValue()); });
-        deserializerMap.put("settingUsage", (n) -> { this.setSettingUsage(n.getEnumValue(DeviceManagementConfigurationSettingUsage.class)); });
-        deserializerMap.put("technologies", (n) -> { this.setTechnologies(n.getEnumValue(DeviceManagementConfigurationTechnologies.class)); });
+        deserializerMap.put("settingUsage", (n) -> { this.setSettingUsage(n.getEnumSetValue(DeviceManagementConfigurationSettingUsage.class)); });
+        deserializerMap.put("technologies", (n) -> { this.setTechnologies(n.getEnumSetValue(DeviceManagementConfigurationTechnologies.class)); });
         return deserializerMap;
     }
     /**
@@ -193,10 +194,10 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
         writer.writeStringValue("helpText", this.getHelpText());
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("parentCategoryId", this.getParentCategoryId());
-        writer.writeEnumValue("platforms", this.getPlatforms());
+        writer.writeEnumSetValue("platforms", this.getPlatforms());
         writer.writeStringValue("rootCategoryId", this.getRootCategoryId());
-        writer.writeEnumValue("settingUsage", this.getSettingUsage());
-        writer.writeEnumValue("technologies", this.getTechnologies());
+        writer.writeEnumSetValue("settingUsage", this.getSettingUsage());
+        writer.writeEnumSetValue("technologies", this.getTechnologies());
     }
     /**
      * Sets the categoryDescription property value. Description of the category header in policy summary.

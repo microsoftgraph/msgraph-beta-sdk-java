@@ -86,6 +86,16 @@ public class MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder 
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a microsoftGraphDeviceManagementGetPortalNotificationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function getPortalNotifications
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

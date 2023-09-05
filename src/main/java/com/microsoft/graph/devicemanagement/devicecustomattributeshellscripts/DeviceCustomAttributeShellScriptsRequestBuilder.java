@@ -165,6 +165,16 @@ public class DeviceCustomAttributeShellScriptsRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a deviceCustomAttributeShellScriptsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceCustomAttributeShellScriptsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeviceCustomAttributeShellScriptsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The list of device custom attribute shell scripts associated with the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

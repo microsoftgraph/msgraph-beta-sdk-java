@@ -37,7 +37,7 @@ public class HostPairItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/childHostPairs/{hostPair%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      * @return a CompletableFuture of hostPair
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class HostPairItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of hostPair
      */
@@ -58,7 +58,7 @@ public class HostPairItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, HostPair::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class HostPairItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -87,7 +87,17 @@ public class HostPairItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a HostPairItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public HostPairItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new HostPairItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

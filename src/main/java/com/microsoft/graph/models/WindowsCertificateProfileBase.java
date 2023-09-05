@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
     /**
      * Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      */
-    private SubjectAlternativeNameType subjectAlternativeNameType;
+    private EnumSet<SubjectAlternativeNameType> subjectAlternativeNameType;
     /**
      * Subject Name Format Options.
      */
@@ -91,7 +92,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
         deserializerMap.put("certificateValidityPeriodValue", (n) -> { this.setCertificateValidityPeriodValue(n.getIntegerValue()); });
         deserializerMap.put("keyStorageProvider", (n) -> { this.setKeyStorageProvider(n.getEnumValue(KeyStorageProviderOption.class)); });
         deserializerMap.put("renewalThresholdPercentage", (n) -> { this.setRenewalThresholdPercentage(n.getIntegerValue()); });
-        deserializerMap.put("subjectAlternativeNameType", (n) -> { this.setSubjectAlternativeNameType(n.getEnumValue(SubjectAlternativeNameType.class)); });
+        deserializerMap.put("subjectAlternativeNameType", (n) -> { this.setSubjectAlternativeNameType(n.getEnumSetValue(SubjectAlternativeNameType.class)); });
         deserializerMap.put("subjectNameFormat", (n) -> { this.setSubjectNameFormat(n.getEnumValue(SubjectNameFormat.class)); });
         return deserializerMap;
     }
@@ -138,7 +139,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
         writer.writeIntegerValue("certificateValidityPeriodValue", this.getCertificateValidityPeriodValue());
         writer.writeEnumValue("keyStorageProvider", this.getKeyStorageProvider());
         writer.writeIntegerValue("renewalThresholdPercentage", this.getRenewalThresholdPercentage());
-        writer.writeEnumValue("subjectAlternativeNameType", this.getSubjectAlternativeNameType());
+        writer.writeEnumSetValue("subjectAlternativeNameType", this.getSubjectAlternativeNameType());
         writer.writeEnumValue("subjectNameFormat", this.getSubjectNameFormat());
     }
     /**

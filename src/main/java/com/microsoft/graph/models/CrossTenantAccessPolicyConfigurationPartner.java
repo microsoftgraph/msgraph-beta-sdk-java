@@ -42,7 +42,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     private CrossTenantAccessPolicyInboundTrust inboundTrust;
     /**
-     * The isInMultiTenantOrganization property
+     * Identifies whether a tenant is a member of a multi-tenant organization.
      */
     private Boolean isInMultiTenantOrganization;
     /**
@@ -163,7 +163,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         return this.inboundTrust;
     }
     /**
-     * Gets the isInMultiTenantOrganization property value. The isInMultiTenantOrganization property
+     * Gets the isInMultiTenantOrganization property value. Identifies whether a tenant is a member of a multi-tenant organization.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -279,7 +279,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         this.inboundTrust = value;
     }
     /**
-     * Sets the isInMultiTenantOrganization property value. The isInMultiTenantOrganization property
+     * Sets the isInMultiTenantOrganization property value. Identifies whether a tenant is a member of a multi-tenant organization.
      * @param value Value to set for the isInMultiTenantOrganization property.
      */
     public void setIsInMultiTenantOrganization(@jakarta.annotation.Nullable final Boolean value) {

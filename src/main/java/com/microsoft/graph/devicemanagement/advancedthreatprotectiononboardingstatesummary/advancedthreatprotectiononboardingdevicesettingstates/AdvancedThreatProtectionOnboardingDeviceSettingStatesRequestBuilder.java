@@ -165,6 +165,16 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a advancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get advancedThreatProtectionOnboardingDeviceSettingStates from deviceManagement
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

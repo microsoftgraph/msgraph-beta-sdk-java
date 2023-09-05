@@ -165,6 +165,16 @@ public class CertificateBasedApplicationConfigurationsRequestBuilder extends Bas
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a certificateBasedApplicationConfigurationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CertificateBasedApplicationConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CertificateBasedApplicationConfigurationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get certificateBasedApplicationConfigurations from directory
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

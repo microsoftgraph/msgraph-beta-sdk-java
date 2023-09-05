@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +12,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
     /**
      * The applicableTo property
      */
-    private SensitivityLabelTarget applicableTo;
+    private EnumSet<SensitivityLabelTarget> applicableTo;
     /**
      * The downgradeSensitivityRequiresJustification property
      */
@@ -63,7 +64,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("applicableTo", (n) -> { this.setApplicableTo(n.getEnumValue(SensitivityLabelTarget.class)); });
+        deserializerMap.put("applicableTo", (n) -> { this.setApplicableTo(n.getEnumSetValue(SensitivityLabelTarget.class)); });
         deserializerMap.put("downgradeSensitivityRequiresJustification", (n) -> { this.setDowngradeSensitivityRequiresJustification(n.getBooleanValue()); });
         deserializerMap.put("helpWebUrl", (n) -> { this.setHelpWebUrl(n.getStringValue()); });
         deserializerMap.put("isMandatory", (n) -> { this.setIsMandatory(n.getBooleanValue()); });
@@ -92,7 +93,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("applicableTo", this.getApplicableTo());
+        writer.writeEnumSetValue("applicableTo", this.getApplicableTo());
         writer.writeBooleanValue("downgradeSensitivityRequiresJustification", this.getDowngradeSensitivityRequiresJustification());
         writer.writeStringValue("helpWebUrl", this.getHelpWebUrl());
         writer.writeBooleanValue("isMandatory", this.getIsMandatory());

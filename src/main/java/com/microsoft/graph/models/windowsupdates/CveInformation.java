@@ -14,7 +14,7 @@ public class CveInformation implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The number property
+     * Identifies the number of the CVE. Read-only.
      */
     private String number;
     /**
@@ -22,7 +22,7 @@ public class CveInformation implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The url property
+     * URL to the full CVE information. Read-only.
      */
     private String url;
     /**
@@ -62,7 +62,7 @@ public class CveInformation implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the number property value. The number property
+     * Gets the number property value. Identifies the number of the CVE. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class CveInformation implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the url property value. The url property
+     * Gets the url property value. URL to the full CVE information. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class CveInformation implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the number property value. The number property
+     * Sets the number property value. Identifies the number of the CVE. Read-only.
      * @param value Value to set for the number property.
      */
     public void setNumber(@jakarta.annotation.Nullable final String value) {
@@ -118,7 +118,7 @@ public class CveInformation implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the url property value. The url property
+     * Sets the url property value. URL to the full CVE information. Read-only.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {

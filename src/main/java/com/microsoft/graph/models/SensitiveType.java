@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public class SensitiveType extends Entity implements Parsable {
     /**
      * The scope property
      */
-    private SensitiveTypeScope scope;
+    private EnumSet<SensitiveTypeScope> scope;
     /**
      * The sensitiveTypeSource property
      */
@@ -89,7 +90,7 @@ public class SensitiveType extends Entity implements Parsable {
         deserializerMap.put("publisherName", (n) -> { this.setPublisherName(n.getStringValue()); });
         deserializerMap.put("rulePackageId", (n) -> { this.setRulePackageId(n.getStringValue()); });
         deserializerMap.put("rulePackageType", (n) -> { this.setRulePackageType(n.getStringValue()); });
-        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumValue(SensitiveTypeScope.class)); });
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumSetValue(SensitiveTypeScope.class)); });
         deserializerMap.put("sensitiveTypeSource", (n) -> { this.setSensitiveTypeSource(n.getEnumValue(SensitiveTypeSource.class)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getStringValue()); });
         return deserializerMap;
@@ -163,7 +164,7 @@ public class SensitiveType extends Entity implements Parsable {
         writer.writeStringValue("publisherName", this.getPublisherName());
         writer.writeStringValue("rulePackageId", this.getRulePackageId());
         writer.writeStringValue("rulePackageType", this.getRulePackageType());
-        writer.writeEnumValue("scope", this.getScope());
+        writer.writeEnumSetValue("scope", this.getScope());
         writer.writeEnumValue("sensitiveTypeSource", this.getSensitiveTypeSource());
         writer.writeStringValue("state", this.getState());
     }

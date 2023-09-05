@@ -167,6 +167,16 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a decisionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DecisionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DecisionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object. Note that a recurring access review will not have a decisions relationship.  Instead, the caller must navigate the instance relationship to find an accessReview object for a current or past instance of the access review.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

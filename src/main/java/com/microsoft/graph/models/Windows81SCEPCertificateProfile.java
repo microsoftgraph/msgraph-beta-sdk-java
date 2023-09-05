@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     /**
      * Hash Algorithm Options.
      */
-    private HashAlgorithms hashAlgorithm;
+    private EnumSet<HashAlgorithms> hashAlgorithm;
     /**
      * Key Size Options.
      */
@@ -26,7 +27,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     /**
      * Key Usage Options.
      */
-    private KeyUsages keyUsage;
+    private EnumSet<KeyUsages> keyUsage;
     /**
      * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      */
@@ -80,9 +81,9 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
-        deserializerMap.put("hashAlgorithm", (n) -> { this.setHashAlgorithm(n.getEnumValue(HashAlgorithms.class)); });
+        deserializerMap.put("hashAlgorithm", (n) -> { this.setHashAlgorithm(n.getEnumSetValue(HashAlgorithms.class)); });
         deserializerMap.put("keySize", (n) -> { this.setKeySize(n.getEnumValue(KeySize.class)); });
-        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumValue(KeyUsages.class)); });
+        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumSetValue(KeyUsages.class)); });
         deserializerMap.put("managedDeviceCertificateStates", (n) -> { this.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
         deserializerMap.put("rootCertificate", (n) -> { this.setRootCertificate(n.getObjectValue(Windows81TrustedRootCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("scepServerUrls", (n) -> { this.setScepServerUrls(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -162,9 +163,9 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("certificateStore", this.getCertificateStore());
-        writer.writeEnumValue("hashAlgorithm", this.getHashAlgorithm());
+        writer.writeEnumSetValue("hashAlgorithm", this.getHashAlgorithm());
         writer.writeEnumValue("keySize", this.getKeySize());
-        writer.writeEnumValue("keyUsage", this.getKeyUsage());
+        writer.writeEnumSetValue("keyUsage", this.getKeyUsage());
         writer.writeCollectionOfObjectValues("managedDeviceCertificateStates", this.getManagedDeviceCertificateStates());
         writer.writeObjectValue("rootCertificate", this.getRootCertificate());
         writer.writeCollectionOfPrimitiveValues("scepServerUrls", this.getScepServerUrls());

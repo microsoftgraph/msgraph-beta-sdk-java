@@ -142,6 +142,16 @@ public class OwnedObjectsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a ownedObjectsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public OwnedObjectsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new OwnedObjectsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of objects owned by the servicePrincipal.  This could include applications or groups.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

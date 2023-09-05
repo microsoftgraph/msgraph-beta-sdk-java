@@ -87,6 +87,16 @@ public class DefinitionValueRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a definitionValueRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DefinitionValueRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DefinitionValueRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The group policy definition value associated with the presentation value.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -169,6 +169,16 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a programControlsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ProgramControlsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ProgramControlsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * In the Azure AD access reviews feature, list all the programControl objects, across all programs in the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -165,6 +165,16 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformanceRequestBuilder 
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userExperienceAnalyticsBatteryHealthModelPerformanceRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserExperienceAnalyticsBatteryHealthModelPerformanceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserExperienceAnalyticsBatteryHealthModelPerformanceRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * User Experience Analytics Battery Health Model Performance
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
     /**
      * Contains properties for detection operator.
      */
-    private Win32LobAppDetectionOperator operator;
+    private EnumSet<Win32LobAppDetectionOperator> operator;
     /**
      * The file or folder path to detect Win32 Line of Business (LoB) app
      */
@@ -87,7 +88,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
         deserializerMap.put("detectionType", (n) -> { this.setDetectionType(n.getEnumValue(Win32LobAppFileSystemDetectionType.class)); });
         deserializerMap.put("detectionValue", (n) -> { this.setDetectionValue(n.getStringValue()); });
         deserializerMap.put("fileOrFolderName", (n) -> { this.setFileOrFolderName(n.getStringValue()); });
-        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumValue(Win32LobAppDetectionOperator.class)); });
+        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumSetValue(Win32LobAppDetectionOperator.class)); });
         deserializerMap.put("path", (n) -> { this.setPath(n.getStringValue()); });
         return deserializerMap;
     }
@@ -126,7 +127,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
         writer.writeEnumValue("detectionType", this.getDetectionType());
         writer.writeStringValue("detectionValue", this.getDetectionValue());
         writer.writeStringValue("fileOrFolderName", this.getFileOrFolderName());
-        writer.writeEnumValue("operator", this.getOperator());
+        writer.writeEnumSetValue("operator", this.getOperator());
         writer.writeStringValue("path", this.getPath());
     }
     /**

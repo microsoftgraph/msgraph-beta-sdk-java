@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -67,7 +68,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     /**
      * The managedBy property
      */
-    private CloudPcManagementService managedBy;
+    private EnumSet<CloudPcManagementService> managedBy;
     /**
      * The specific settings for the Microsoft Managed Desktop, which enables customers to get a managed device experience for the Cloud PC. Before you can enable Microsoft Managed Desktop, an admin must configure it.
      */
@@ -193,7 +194,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         deserializerMap.put("imageId", (n) -> { this.setImageId(n.getStringValue()); });
         deserializerMap.put("imageType", (n) -> { this.setImageType(n.getEnumValue(CloudPcProvisioningPolicyImageType.class)); });
         deserializerMap.put("localAdminEnabled", (n) -> { this.setLocalAdminEnabled(n.getBooleanValue()); });
-        deserializerMap.put("managedBy", (n) -> { this.setManagedBy(n.getEnumValue(CloudPcManagementService.class)); });
+        deserializerMap.put("managedBy", (n) -> { this.setManagedBy(n.getEnumSetValue(CloudPcManagementService.class)); });
         deserializerMap.put("microsoftManagedDesktop", (n) -> { this.setMicrosoftManagedDesktop(n.getObjectValue(MicrosoftManagedDesktop::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesConnectionId", (n) -> { this.setOnPremisesConnectionId(n.getStringValue()); });
         deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPcProvisioningType.class)); });
@@ -301,7 +302,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         writer.writeStringValue("imageId", this.getImageId());
         writer.writeEnumValue("imageType", this.getImageType());
         writer.writeBooleanValue("localAdminEnabled", this.getLocalAdminEnabled());
-        writer.writeEnumValue("managedBy", this.getManagedBy());
+        writer.writeEnumSetValue("managedBy", this.getManagedBy());
         writer.writeObjectValue("microsoftManagedDesktop", this.getMicrosoftManagedDesktop());
         writer.writeStringValue("onPremisesConnectionId", this.getOnPremisesConnectionId());
         writer.writeEnumValue("provisioningType", this.getProvisioningType());

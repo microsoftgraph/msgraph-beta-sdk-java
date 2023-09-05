@@ -165,6 +165,16 @@ public class ClassifyFileJobsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a classifyFileJobsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ClassifyFileJobsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ClassifyFileJobsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get classifyFileJobs from dataClassification
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

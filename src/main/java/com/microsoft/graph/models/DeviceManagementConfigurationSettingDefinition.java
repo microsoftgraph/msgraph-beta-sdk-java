@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,9 +12,9 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     /**
      * The accessTypes property
      */
-    private DeviceManagementConfigurationSettingAccessTypes accessTypes;
+    private EnumSet<DeviceManagementConfigurationSettingAccessTypes> accessTypes;
     /**
-     * Details which device setting is applicable on. Supports: $filters.
+     * Details which device setting is applicable on
      */
     private DeviceManagementConfigurationSettingApplicability applicability;
     /**
@@ -21,23 +22,23 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     private String baseUri;
     /**
-     * Specify category in which the setting is under. Support $filters.
+     * Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
      */
     private String categoryId;
     /**
-     * Description of the setting.
+     * Description of the item
      */
     private String description;
     /**
-     * Name of the setting. For example: Allow Toast.
+     * Display name of the item
      */
     private String displayName;
     /**
-     * Help text of the setting. Give more details of the setting.
+     * Help text of the item
      */
     private String helpText;
     /**
-     * List of links more info for the setting can be found at.
+     * List of links more info for the setting can be found at
      */
     private java.util.List<String> infoUrls;
     /**
@@ -61,13 +62,13 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     private java.util.List<DeviceManagementConfigurationReferredSettingInformation> referredSettingInformationList;
     /**
-     * Root setting definition id if the setting is a child setting.
+     * Root setting definition if the setting is a child setting.
      */
     private String rootDefinitionId;
     /**
      * Supported setting types
      */
-    private DeviceManagementConfigurationSettingUsage settingUsage;
+    private EnumSet<DeviceManagementConfigurationSettingUsage> settingUsage;
     /**
      * Setting control type representation in the UX
      */
@@ -79,7 +80,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     /**
      * Supported setting types
      */
-    private DeviceManagementConfigurationSettingVisibility visibility;
+    private EnumSet<DeviceManagementConfigurationSettingVisibility> visibility;
     /**
      * Instantiates a new deviceManagementConfigurationSettingDefinition and sets the default values.
      */
@@ -118,7 +119,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.accessTypes;
     }
     /**
-     * Gets the applicability property value. Details which device setting is applicable on. Supports: $filters.
+     * Gets the applicability property value. Details which device setting is applicable on
      * @return a deviceManagementConfigurationSettingApplicability
      */
     @jakarta.annotation.Nullable
@@ -134,7 +135,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.baseUri;
     }
     /**
-     * Gets the categoryId property value. Specify category in which the setting is under. Support $filters.
+     * Gets the categoryId property value. Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -142,7 +143,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.categoryId;
     }
     /**
-     * Gets the description property value. Description of the setting.
+     * Gets the description property value. Description of the item
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -150,7 +151,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.description;
     }
     /**
-     * Gets the displayName property value. Name of the setting. For example: Allow Toast.
+     * Gets the displayName property value. Display name of the item
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -164,7 +165,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("accessTypes", (n) -> { this.setAccessTypes(n.getEnumValue(DeviceManagementConfigurationSettingAccessTypes.class)); });
+        deserializerMap.put("accessTypes", (n) -> { this.setAccessTypes(n.getEnumSetValue(DeviceManagementConfigurationSettingAccessTypes.class)); });
         deserializerMap.put("applicability", (n) -> { this.setApplicability(n.getObjectValue(DeviceManagementConfigurationSettingApplicability::createFromDiscriminatorValue)); });
         deserializerMap.put("baseUri", (n) -> { this.setBaseUri(n.getStringValue()); });
         deserializerMap.put("categoryId", (n) -> { this.setCategoryId(n.getStringValue()); });
@@ -178,14 +179,14 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         deserializerMap.put("offsetUri", (n) -> { this.setOffsetUri(n.getStringValue()); });
         deserializerMap.put("referredSettingInformationList", (n) -> { this.setReferredSettingInformationList(n.getCollectionOfObjectValues(DeviceManagementConfigurationReferredSettingInformation::createFromDiscriminatorValue)); });
         deserializerMap.put("rootDefinitionId", (n) -> { this.setRootDefinitionId(n.getStringValue()); });
-        deserializerMap.put("settingUsage", (n) -> { this.setSettingUsage(n.getEnumValue(DeviceManagementConfigurationSettingUsage.class)); });
+        deserializerMap.put("settingUsage", (n) -> { this.setSettingUsage(n.getEnumSetValue(DeviceManagementConfigurationSettingUsage.class)); });
         deserializerMap.put("uxBehavior", (n) -> { this.setUxBehavior(n.getEnumValue(DeviceManagementConfigurationControlType.class)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
-        deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getEnumValue(DeviceManagementConfigurationSettingVisibility.class)); });
+        deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getEnumSetValue(DeviceManagementConfigurationSettingVisibility.class)); });
         return deserializerMap;
     }
     /**
-     * Gets the helpText property value. Help text of the setting. Give more details of the setting.
+     * Gets the helpText property value. Help text of the item
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -193,7 +194,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.helpText;
     }
     /**
-     * Gets the infoUrls property value. List of links more info for the setting can be found at.
+     * Gets the infoUrls property value. List of links more info for the setting can be found at
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -241,7 +242,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.referredSettingInformationList;
     }
     /**
-     * Gets the rootDefinitionId property value. Root setting definition id if the setting is a child setting.
+     * Gets the rootDefinitionId property value. Root setting definition if the setting is a child setting.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -287,7 +288,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("accessTypes", this.getAccessTypes());
+        writer.writeEnumSetValue("accessTypes", this.getAccessTypes());
         writer.writeObjectValue("applicability", this.getApplicability());
         writer.writeStringValue("baseUri", this.getBaseUri());
         writer.writeStringValue("categoryId", this.getCategoryId());
@@ -301,10 +302,10 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         writer.writeStringValue("offsetUri", this.getOffsetUri());
         writer.writeCollectionOfObjectValues("referredSettingInformationList", this.getReferredSettingInformationList());
         writer.writeStringValue("rootDefinitionId", this.getRootDefinitionId());
-        writer.writeEnumValue("settingUsage", this.getSettingUsage());
+        writer.writeEnumSetValue("settingUsage", this.getSettingUsage());
         writer.writeEnumValue("uxBehavior", this.getUxBehavior());
         writer.writeStringValue("version", this.getVersion());
-        writer.writeEnumValue("visibility", this.getVisibility());
+        writer.writeEnumSetValue("visibility", this.getVisibility());
     }
     /**
      * Sets the accessTypes property value. The accessTypes property
@@ -314,7 +315,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         this.accessTypes = value;
     }
     /**
-     * Sets the applicability property value. Details which device setting is applicable on. Supports: $filters.
+     * Sets the applicability property value. Details which device setting is applicable on
      * @param value Value to set for the applicability property.
      */
     public void setApplicability(@jakarta.annotation.Nullable final DeviceManagementConfigurationSettingApplicability value) {
@@ -328,35 +329,35 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         this.baseUri = value;
     }
     /**
-     * Sets the categoryId property value. Specify category in which the setting is under. Support $filters.
+     * Sets the categoryId property value. Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
      * @param value Value to set for the categoryId property.
      */
     public void setCategoryId(@jakarta.annotation.Nullable final String value) {
         this.categoryId = value;
     }
     /**
-     * Sets the description property value. Description of the setting.
+     * Sets the description property value. Description of the item
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
-     * Sets the displayName property value. Name of the setting. For example: Allow Toast.
+     * Sets the displayName property value. Display name of the item
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
-     * Sets the helpText property value. Help text of the setting. Give more details of the setting.
+     * Sets the helpText property value. Help text of the item
      * @param value Value to set for the helpText property.
      */
     public void setHelpText(@jakarta.annotation.Nullable final String value) {
         this.helpText = value;
     }
     /**
-     * Sets the infoUrls property value. List of links more info for the setting can be found at.
+     * Sets the infoUrls property value. List of links more info for the setting can be found at
      * @param value Value to set for the infoUrls property.
      */
     public void setInfoUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -398,7 +399,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         this.referredSettingInformationList = value;
     }
     /**
-     * Sets the rootDefinitionId property value. Root setting definition id if the setting is a child setting.
+     * Sets the rootDefinitionId property value. Root setting definition if the setting is a child setting.
      * @param value Value to set for the rootDefinitionId property.
      */
     public void setRootDefinitionId(@jakarta.annotation.Nullable final String value) {

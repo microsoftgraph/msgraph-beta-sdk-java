@@ -13,6 +13,10 @@ public class AttachmentContentProperties extends ContentProperties implements Pa
      */
     private CurrentLabel currentLabel;
     /**
+     * The discoveredSensitiveTypes property
+     */
+    private java.util.List<DiscoveredSensitiveType> discoveredSensitiveTypes;
+    /**
      * Instantiates a new attachmentContentProperties and sets the default values.
      */
     public AttachmentContentProperties() {
@@ -38,6 +42,14 @@ public class AttachmentContentProperties extends ContentProperties implements Pa
         return this.currentLabel;
     }
     /**
+     * Gets the discoveredSensitiveTypes property value. The discoveredSensitiveTypes property
+     * @return a discoveredSensitiveType
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DiscoveredSensitiveType> getDiscoveredSensitiveTypes() {
+        return this.discoveredSensitiveTypes;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
@@ -45,6 +57,7 @@ public class AttachmentContentProperties extends ContentProperties implements Pa
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("currentLabel", (n) -> { this.setCurrentLabel(n.getObjectValue(CurrentLabel::createFromDiscriminatorValue)); });
+        deserializerMap.put("discoveredSensitiveTypes", (n) -> { this.setDiscoveredSensitiveTypes(n.getCollectionOfObjectValues(DiscoveredSensitiveType::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -55,6 +68,7 @@ public class AttachmentContentProperties extends ContentProperties implements Pa
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("currentLabel", this.getCurrentLabel());
+        writer.writeCollectionOfObjectValues("discoveredSensitiveTypes", this.getDiscoveredSensitiveTypes());
     }
     /**
      * Sets the currentLabel property value. The currentLabel property
@@ -62,5 +76,12 @@ public class AttachmentContentProperties extends ContentProperties implements Pa
      */
     public void setCurrentLabel(@jakarta.annotation.Nullable final CurrentLabel value) {
         this.currentLabel = value;
+    }
+    /**
+     * Sets the discoveredSensitiveTypes property value. The discoveredSensitiveTypes property
+     * @param value Value to set for the discoveredSensitiveTypes property.
+     */
+    public void setDiscoveredSensitiveTypes(@jakarta.annotation.Nullable final java.util.List<DiscoveredSensitiveType> value) {
+        this.discoveredSensitiveTypes = value;
     }
 }

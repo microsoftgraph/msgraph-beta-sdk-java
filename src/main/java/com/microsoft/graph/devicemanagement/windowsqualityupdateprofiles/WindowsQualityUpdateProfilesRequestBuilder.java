@@ -165,6 +165,16 @@ public class WindowsQualityUpdateProfilesRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a windowsQualityUpdateProfilesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public WindowsQualityUpdateProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new WindowsQualityUpdateProfilesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * A collection of windows quality update profiles
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

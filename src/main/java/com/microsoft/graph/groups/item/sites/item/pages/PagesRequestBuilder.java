@@ -169,6 +169,16 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a pagesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PagesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

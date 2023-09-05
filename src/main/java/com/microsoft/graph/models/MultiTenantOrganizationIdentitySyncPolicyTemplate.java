@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,9 +12,9 @@ public class MultiTenantOrganizationIdentitySyncPolicyTemplate extends Entity im
     /**
      * The templateApplicationLevel property
      */
-    private TemplateApplicationLevel templateApplicationLevel;
+    private EnumSet<TemplateApplicationLevel> templateApplicationLevel;
     /**
-     * The userSyncInbound property
+     * Defines whether users can be synchronized from the partner tenant.
      */
     private CrossTenantUserSyncInbound userSyncInbound;
     /**
@@ -39,7 +40,7 @@ public class MultiTenantOrganizationIdentitySyncPolicyTemplate extends Entity im
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("templateApplicationLevel", (n) -> { this.setTemplateApplicationLevel(n.getEnumValue(TemplateApplicationLevel.class)); });
+        deserializerMap.put("templateApplicationLevel", (n) -> { this.setTemplateApplicationLevel(n.getEnumSetValue(TemplateApplicationLevel.class)); });
         deserializerMap.put("userSyncInbound", (n) -> { this.setUserSyncInbound(n.getObjectValue(CrossTenantUserSyncInbound::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -52,7 +53,7 @@ public class MultiTenantOrganizationIdentitySyncPolicyTemplate extends Entity im
         return this.templateApplicationLevel;
     }
     /**
-     * Gets the userSyncInbound property value. The userSyncInbound property
+     * Gets the userSyncInbound property value. Defines whether users can be synchronized from the partner tenant.
      * @return a crossTenantUserSyncInbound
      */
     @jakarta.annotation.Nullable
@@ -66,7 +67,7 @@ public class MultiTenantOrganizationIdentitySyncPolicyTemplate extends Entity im
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("templateApplicationLevel", this.getTemplateApplicationLevel());
+        writer.writeEnumSetValue("templateApplicationLevel", this.getTemplateApplicationLevel());
         writer.writeObjectValue("userSyncInbound", this.getUserSyncInbound());
     }
     /**
@@ -77,7 +78,7 @@ public class MultiTenantOrganizationIdentitySyncPolicyTemplate extends Entity im
         this.templateApplicationLevel = value;
     }
     /**
-     * Sets the userSyncInbound property value. The userSyncInbound property
+     * Sets the userSyncInbound property value. Defines whether users can be synchronized from the partner tenant.
      * @param value Value to set for the userSyncInbound property.
      */
     public void setUserSyncInbound(@jakarta.annotation.Nullable final CrossTenantUserSyncInbound value) {

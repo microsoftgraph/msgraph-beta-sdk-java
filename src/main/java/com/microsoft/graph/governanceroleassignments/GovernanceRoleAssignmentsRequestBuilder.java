@@ -173,6 +173,16 @@ public class GovernanceRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a governanceRoleAssignmentsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GovernanceRoleAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GovernanceRoleAssignmentsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get entities from governanceRoleAssignments
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

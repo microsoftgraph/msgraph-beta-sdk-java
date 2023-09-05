@@ -3,6 +3,7 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +16,7 @@ public class AllowFileResponseAction extends ResponseAction implements Parsable 
     /**
      * The identifier property
      */
-    private FileEntityIdentifier identifier;
+    private EnumSet<FileEntityIdentifier> identifier;
     /**
      * Instantiates a new allowFileResponseAction and sets the default values.
      */
@@ -49,7 +50,7 @@ public class AllowFileResponseAction extends ResponseAction implements Parsable 
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceGroupNames", (n) -> { this.setDeviceGroupNames(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumValue(FileEntityIdentifier.class)); });
+        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumSetValue(FileEntityIdentifier.class)); });
         return deserializerMap;
     }
     /**
@@ -68,7 +69,7 @@ public class AllowFileResponseAction extends ResponseAction implements Parsable 
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("deviceGroupNames", this.getDeviceGroupNames());
-        writer.writeEnumValue("identifier", this.getIdentifier());
+        writer.writeEnumSetValue("identifier", this.getIdentifier());
     }
     /**
      * Sets the deviceGroupNames property value. The deviceGroupNames property

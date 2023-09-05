@@ -23,11 +23,11 @@ import com.microsoft.graph.models.ediscovery.NoncustodialDataSource;
 import com.microsoft.graph.models.ediscovery.PurgeDataOperation;
 import com.microsoft.graph.models.ediscovery.ReviewSet;
 import com.microsoft.graph.models.ediscovery.ReviewSetQuery;
-import com.microsoft.graph.models.ediscovery.SiteSource;
 import com.microsoft.graph.models.ediscovery.SourceCollection;
 import com.microsoft.graph.models.ediscovery.Tag;
 import com.microsoft.graph.models.ediscovery.TagOperation;
 import com.microsoft.graph.models.ediscovery.UnifiedGroupSource;
+import com.microsoft.graph.models.ediscovery.UserSource;
 import com.microsoft.graph.models.externalconnectors.ConnectionOperation;
 import com.microsoft.graph.models.externalconnectors.ConnectionQuota;
 import com.microsoft.graph.models.externalconnectors.ExternalActivity;
@@ -195,6 +195,7 @@ import com.microsoft.graph.models.security.RetentionLabel;
 import com.microsoft.graph.models.security.Search;
 import com.microsoft.graph.models.security.Security;
 import com.microsoft.graph.models.security.SensitivityLabel;
+import com.microsoft.graph.models.security.SiteSource;
 import com.microsoft.graph.models.security.SslCertificate;
 import com.microsoft.graph.models.security.SubCategoryTemplate;
 import com.microsoft.graph.models.security.Subdomain;
@@ -205,7 +206,6 @@ import com.microsoft.graph.models.security.TriggersRoot;
 import com.microsoft.graph.models.security.TriggerTypesRoot;
 import com.microsoft.graph.models.security.UnclassifiedArtifact;
 import com.microsoft.graph.models.security.UrlThreatSubmission;
-import com.microsoft.graph.models.security.UserSource;
 import com.microsoft.graph.models.security.Vulnerability;
 import com.microsoft.graph.models.security.VulnerabilityComponent;
 import com.microsoft.graph.models.security.WhoisBaseRecord;
@@ -949,6 +949,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.groupPolicySettingMapping": return new GroupPolicySettingMapping();
             case "#microsoft.graph.groupPolicyUploadedDefinitionFile": return new GroupPolicyUploadedDefinitionFile();
             case "#microsoft.graph.groupPolicyUploadedPresentation": return new GroupPolicyUploadedPresentation();
+            case "#microsoft.graph.hardwareOathAuthenticationMethodConfiguration": return new HardwareOathAuthenticationMethodConfiguration();
             case "#microsoft.graph.homeRealmDiscoveryPolicy": return new HomeRealmDiscoveryPolicy();
             case "#microsoft.graph.horizontalSection": return new HorizontalSection();
             case "#microsoft.graph.horizontalSectionColumn": return new HorizontalSectionColumn();
@@ -1309,7 +1310,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.openTypeExtension": return new OpenTypeExtension();
             case "#microsoft.graph.operation": return new Operation();
             case "#microsoft.graph.organization": return new Organization();
-            case "#microsoft.graph.organizationalBranding": return new OrganizationalBranding();
         }
         return null;
     }
@@ -1321,6 +1321,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.organizationalBranding": return new OrganizationalBranding();
             case "#microsoft.graph.organizationalBrandingLocalization": return new OrganizationalBrandingLocalization();
             case "#microsoft.graph.organizationalBrandingProperties": return new OrganizationalBrandingProperties();
             case "#microsoft.graph.organizationSettings": return new OrganizationSettings();
@@ -1820,7 +1821,6 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.virtualEventRegistrationConfiguration": return new VirtualEventRegistrationConfiguration();
             case "#microsoft.graph.virtualEventRegistrationQuestion": return new VirtualEventRegistrationQuestion();
             case "#microsoft.graph.virtualEventSession": return new VirtualEventSession();
-            case "#microsoft.graph.virtualEventsRoot": return new VirtualEventsRoot();
         }
         return null;
     }
@@ -1832,6 +1832,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_3(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.virtualEventsRoot": return new VirtualEventsRoot();
             case "#microsoft.graph.virtualEventWebinar": return new VirtualEventWebinar();
             case "#microsoft.graph.virtualEventWebinarRegistrationConfiguration": return new VirtualEventWebinarRegistrationConfiguration();
             case "#microsoft.graph.voiceAuthenticationMethodConfiguration": return new VoiceAuthenticationMethodConfiguration();
@@ -1909,6 +1910,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
             case "#microsoft.graph.windowsKioskConfiguration": return new WindowsKioskConfiguration();
             case "#microsoft.graph.windowsMalwareInformation": return new WindowsMalwareInformation();
             case "#microsoft.graph.windowsManagedAppProtection": return new WindowsManagedAppProtection();
+            case "#microsoft.graph.windowsManagedAppRegistration": return new WindowsManagedAppRegistration();
             case "#microsoft.graph.windowsManagedDevice": return new WindowsManagedDevice();
             case "#microsoft.graph.windowsManagementApp": return new WindowsManagementApp();
             case "#microsoft.graph.windowsManagementAppHealthState": return new WindowsManagementAppHealthState();

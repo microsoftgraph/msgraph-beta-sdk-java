@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +15,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     /**
      * Advanced BitLocker State. Possible values are: success, noUserConsent, osVolumeUnprotected, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeEncryptionMethodMismatch, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError.
      */
-    private AdvancedBitLockerState advancedBitLockerStates;
+    private EnumSet<AdvancedBitLockerState> advancedBitLockerStates;
     /**
      * Device name
      */
@@ -38,7 +39,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     /**
      * FileVault State. Possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled.
      */
-    private FileVaultState fileVaultStates;
+    private EnumSet<FileVaultState> fileVaultStates;
     /**
      * Operating system version of the device
      */
@@ -126,13 +127,13 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("advancedBitLockerStates", (n) -> { this.setAdvancedBitLockerStates(n.getEnumValue(AdvancedBitLockerState.class)); });
+        deserializerMap.put("advancedBitLockerStates", (n) -> { this.setAdvancedBitLockerStates(n.getEnumSetValue(AdvancedBitLockerState.class)); });
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
         deserializerMap.put("deviceType", (n) -> { this.setDeviceType(n.getEnumValue(DeviceTypes.class)); });
         deserializerMap.put("encryptionPolicySettingState", (n) -> { this.setEncryptionPolicySettingState(n.getEnumValue(ComplianceStatus.class)); });
         deserializerMap.put("encryptionReadinessState", (n) -> { this.setEncryptionReadinessState(n.getEnumValue(EncryptionReadinessState.class)); });
         deserializerMap.put("encryptionState", (n) -> { this.setEncryptionState(n.getEnumValue(EncryptionState.class)); });
-        deserializerMap.put("fileVaultStates", (n) -> { this.setFileVaultStates(n.getEnumValue(FileVaultState.class)); });
+        deserializerMap.put("fileVaultStates", (n) -> { this.setFileVaultStates(n.getEnumSetValue(FileVaultState.class)); });
         deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getStringValue()); });
         deserializerMap.put("policyDetails", (n) -> { this.setPolicyDetails(n.getCollectionOfObjectValues(EncryptionReportPolicyDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("tpmSpecificationVersion", (n) -> { this.setTpmSpecificationVersion(n.getStringValue()); });
@@ -186,13 +187,13 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("advancedBitLockerStates", this.getAdvancedBitLockerStates());
+        writer.writeEnumSetValue("advancedBitLockerStates", this.getAdvancedBitLockerStates());
         writer.writeStringValue("deviceName", this.getDeviceName());
         writer.writeEnumValue("deviceType", this.getDeviceType());
         writer.writeEnumValue("encryptionPolicySettingState", this.getEncryptionPolicySettingState());
         writer.writeEnumValue("encryptionReadinessState", this.getEncryptionReadinessState());
         writer.writeEnumValue("encryptionState", this.getEncryptionState());
-        writer.writeEnumValue("fileVaultStates", this.getFileVaultStates());
+        writer.writeEnumSetValue("fileVaultStates", this.getFileVaultStates());
         writer.writeStringValue("osVersion", this.getOsVersion());
         writer.writeCollectionOfObjectValues("policyDetails", this.getPolicyDetails());
         writer.writeStringValue("tpmSpecificationVersion", this.getTpmSpecificationVersion());

@@ -82,21 +82,21 @@ public class DataConnectorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, IndustryDataConnectorCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new azureDataLakeConnector object.
+     * Create a new industryDataConnector object.
      * @param body The request body
      * @return a CompletableFuture of industryDataConnector
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataConnector> post(@jakarta.annotation.Nonnull final IndustryDataConnector body) {
         return post(body, null);
     }
     /**
-     * Create a new azureDataLakeConnector object.
+     * Create a new industryDataConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of industryDataConnector
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataConnector> post(@jakarta.annotation.Nonnull final IndustryDataConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -137,7 +137,7 @@ public class DataConnectorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new azureDataLakeConnector object.
+     * Create a new industryDataConnector object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class DataConnectorsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new azureDataLakeConnector object.
+     * Create a new industryDataConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -167,6 +167,16 @@ public class DataConnectorsRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a dataConnectorsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DataConnectorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DataConnectorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Get the industryDataConnector resources from the dataConnector navigation property.

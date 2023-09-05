@@ -5,6 +5,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -53,7 +54,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     /**
      * The notificationFinalDestinations property
      */
-    private NotificationDestination notificationFinalDestinations;
+    private EnumSet<NotificationDestination> notificationFinalDestinations;
     /**
      * The ruleDefinition property
      */
@@ -159,7 +160,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
         deserializerMap.put("lastActionByUserId", (n) -> { this.setLastActionByUserId(n.getStringValue()); });
         deserializerMap.put("lastActionDateTime", (n) -> { this.setLastActionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastRunDateTime", (n) -> { this.setLastRunDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("notificationFinalDestinations", (n) -> { this.setNotificationFinalDestinations(n.getEnumValue(NotificationDestination.class)); });
+        deserializerMap.put("notificationFinalDestinations", (n) -> { this.setNotificationFinalDestinations(n.getEnumSetValue(NotificationDestination.class)); });
         deserializerMap.put("ruleDefinition", (n) -> { this.setRuleDefinition(n.getObjectValue(ManagedTenantAlertRuleDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertSeverity.class)); });
         deserializerMap.put("targets", (n) -> { this.setTargets(n.getCollectionOfObjectValues(NotificationTarget::createFromDiscriminatorValue)); });
@@ -247,7 +248,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
         writer.writeStringValue("lastActionByUserId", this.getLastActionByUserId());
         writer.writeOffsetDateTimeValue("lastActionDateTime", this.getLastActionDateTime());
         writer.writeOffsetDateTimeValue("lastRunDateTime", this.getLastRunDateTime());
-        writer.writeEnumValue("notificationFinalDestinations", this.getNotificationFinalDestinations());
+        writer.writeEnumSetValue("notificationFinalDestinations", this.getNotificationFinalDestinations());
         writer.writeObjectValue("ruleDefinition", this.getRuleDefinition());
         writer.writeEnumValue("severity", this.getSeverity());
         writer.writeCollectionOfObjectValues("targets", this.getTargets());

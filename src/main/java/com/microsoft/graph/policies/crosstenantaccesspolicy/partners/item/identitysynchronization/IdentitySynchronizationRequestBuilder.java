@@ -231,6 +231,19 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a identitySynchronizationRequestBuilder
+     * @deprecated
+     *  as of 2022-04/PrivatePreview:CrossTenantSyncPolicy on 2022-03-24 and will be removed 2023-06-06
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public IdentitySynchronizationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new IdentitySynchronizationRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

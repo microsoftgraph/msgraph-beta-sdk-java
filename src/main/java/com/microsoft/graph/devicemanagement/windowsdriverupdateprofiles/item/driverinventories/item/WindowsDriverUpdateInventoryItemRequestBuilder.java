@@ -189,6 +189,16 @@ public class WindowsDriverUpdateInventoryItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a WindowsDriverUpdateInventoryItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public WindowsDriverUpdateInventoryItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new WindowsDriverUpdateInventoryItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     /**
      * Hash Algorithm Options.
      */
-    private HashAlgorithms hashAlgorithm;
+    private EnumSet<HashAlgorithms> hashAlgorithm;
     /**
      * Key Size Options.
      */
@@ -34,7 +35,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     /**
      * Key Usage Options.
      */
-    private KeyUsages keyUsage;
+    private EnumSet<KeyUsages> keyUsage;
     /**
      * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      */
@@ -106,9 +107,9 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
         deserializerMap.put("certificateAccessType", (n) -> { this.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType.class)); });
         deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
         deserializerMap.put("customSubjectAlternativeNames", (n) -> { this.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
-        deserializerMap.put("hashAlgorithm", (n) -> { this.setHashAlgorithm(n.getEnumValue(HashAlgorithms.class)); });
+        deserializerMap.put("hashAlgorithm", (n) -> { this.setHashAlgorithm(n.getEnumSetValue(HashAlgorithms.class)); });
         deserializerMap.put("keySize", (n) -> { this.setKeySize(n.getEnumValue(KeySize.class)); });
-        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumValue(KeyUsages.class)); });
+        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumSetValue(KeyUsages.class)); });
         deserializerMap.put("managedDeviceCertificateStates", (n) -> { this.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
         deserializerMap.put("scepServerUrls", (n) -> { this.setScepServerUrls(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("silentCertificateAccessDetails", (n) -> { this.setSilentCertificateAccessDetails(n.getCollectionOfObjectValues(AndroidDeviceOwnerSilentCertificateAccess::createFromDiscriminatorValue)); });
@@ -190,9 +191,9 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
         writer.writeEnumValue("certificateAccessType", this.getCertificateAccessType());
         writer.writeEnumValue("certificateStore", this.getCertificateStore());
         writer.writeCollectionOfObjectValues("customSubjectAlternativeNames", this.getCustomSubjectAlternativeNames());
-        writer.writeEnumValue("hashAlgorithm", this.getHashAlgorithm());
+        writer.writeEnumSetValue("hashAlgorithm", this.getHashAlgorithm());
         writer.writeEnumValue("keySize", this.getKeySize());
-        writer.writeEnumValue("keyUsage", this.getKeyUsage());
+        writer.writeEnumSetValue("keyUsage", this.getKeyUsage());
         writer.writeCollectionOfObjectValues("managedDeviceCertificateStates", this.getManagedDeviceCertificateStates());
         writer.writeCollectionOfPrimitiveValues("scepServerUrls", this.getScepServerUrls());
         writer.writeCollectionOfObjectValues("silentCertificateAccessDetails", this.getSilentCertificateAccessDetails());

@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -246,7 +247,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     /**
      * Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility.
      */
-    private MacOSSoftwareUpdateDelayPolicy updateDelayPolicy;
+    private EnumSet<MacOSSoftwareUpdateDelayPolicy> updateDelayPolicy;
     /**
      * TRUE prevents the wallpaper from being changed. FALSE allows the wallpaper to be changed. Available for devices running macOS versions 10.13 and later.
      */
@@ -461,7 +462,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         deserializerMap.put("softwareUpdatesEnforcedDelayInDays", (n) -> { this.setSoftwareUpdatesEnforcedDelayInDays(n.getIntegerValue()); });
         deserializerMap.put("spotlightBlockInternetResults", (n) -> { this.setSpotlightBlockInternetResults(n.getBooleanValue()); });
         deserializerMap.put("touchIdTimeoutInHours", (n) -> { this.setTouchIdTimeoutInHours(n.getIntegerValue()); });
-        deserializerMap.put("updateDelayPolicy", (n) -> { this.setUpdateDelayPolicy(n.getEnumValue(MacOSSoftwareUpdateDelayPolicy.class)); });
+        deserializerMap.put("updateDelayPolicy", (n) -> { this.setUpdateDelayPolicy(n.getEnumSetValue(MacOSSoftwareUpdateDelayPolicy.class)); });
         deserializerMap.put("wallpaperModificationBlocked", (n) -> { this.setWallpaperModificationBlocked(n.getBooleanValue()); });
         return deserializerMap;
     }
@@ -882,7 +883,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         writer.writeIntegerValue("softwareUpdatesEnforcedDelayInDays", this.getSoftwareUpdatesEnforcedDelayInDays());
         writer.writeBooleanValue("spotlightBlockInternetResults", this.getSpotlightBlockInternetResults());
         writer.writeIntegerValue("touchIdTimeoutInHours", this.getTouchIdTimeoutInHours());
-        writer.writeEnumValue("updateDelayPolicy", this.getUpdateDelayPolicy());
+        writer.writeEnumSetValue("updateDelayPolicy", this.getUpdateDelayPolicy());
         writer.writeBooleanValue("wallpaperModificationBlocked", this.getWallpaperModificationBlocked());
     }
     /**

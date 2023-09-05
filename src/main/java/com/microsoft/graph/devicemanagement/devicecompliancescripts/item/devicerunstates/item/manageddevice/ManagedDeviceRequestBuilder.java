@@ -87,6 +87,16 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a managedDeviceRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ManagedDeviceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ManagedDeviceRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The managed device on which the device compliance script executed
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

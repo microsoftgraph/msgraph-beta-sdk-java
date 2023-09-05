@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public class CustomSubjectAlternativeName implements AdditionalDataHolder, Parsa
     /**
      * Subject Alternative Name Options.
      */
-    private SubjectAlternativeNameType sanType;
+    private EnumSet<SubjectAlternativeNameType> sanType;
     /**
      * Instantiates a new customSubjectAlternativeName and sets the default values.
      */
@@ -61,7 +62,7 @@ public class CustomSubjectAlternativeName implements AdditionalDataHolder, Parsa
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("sanType", (n) -> { this.setSanType(n.getEnumValue(SubjectAlternativeNameType.class)); });
+        deserializerMap.put("sanType", (n) -> { this.setSanType(n.getEnumSetValue(SubjectAlternativeNameType.class)); });
         return deserializerMap;
     }
     /**
@@ -96,7 +97,7 @@ public class CustomSubjectAlternativeName implements AdditionalDataHolder, Parsa
         Objects.requireNonNull(writer);
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeEnumValue("sanType", this.getSanType());
+        writer.writeEnumSetValue("sanType", this.getSanType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**

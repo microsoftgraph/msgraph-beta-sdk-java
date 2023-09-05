@@ -87,6 +87,16 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a AccessPackageAssignmentItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AccessPackageAssignmentItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AccessPackageAssignmentItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The access package assignments resulting in this role assignment. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

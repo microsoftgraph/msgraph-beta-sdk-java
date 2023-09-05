@@ -167,6 +167,16 @@ public class AppCredentialSignInActivitiesRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a appCredentialSignInActivitiesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AppCredentialSignInActivitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AppCredentialSignInActivitiesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

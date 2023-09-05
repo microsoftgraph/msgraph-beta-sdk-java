@@ -87,6 +87,16 @@ public class YearRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a yearRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public YearRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new YearRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The year that the data brought in via this flow applies to.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

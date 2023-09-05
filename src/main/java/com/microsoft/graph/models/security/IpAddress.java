@@ -13,7 +13,7 @@ public class IpAddress extends Host implements Parsable {
      */
     private AutonomousSystem autonomousSystem;
     /**
-     * The country or region for this IP address.
+     * The country/region for this IP address.
      */
     private String countryOrRegion;
     /**
@@ -50,7 +50,7 @@ public class IpAddress extends Host implements Parsable {
         return this.autonomousSystem;
     }
     /**
-     * Gets the countryOrRegion property value. The country or region for this IP address.
+     * Gets the countryOrRegion property value. The country/region for this IP address.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class IpAddress extends Host implements Parsable {
         this.autonomousSystem = value;
     }
     /**
-     * Sets the countryOrRegion property value. The country or region for this IP address.
+     * Sets the countryOrRegion property value. The country/region for this IP address.
      * @param value Value to set for the countryOrRegion property.
      */
     public void setCountryOrRegion(@jakarta.annotation.Nullable final String value) {

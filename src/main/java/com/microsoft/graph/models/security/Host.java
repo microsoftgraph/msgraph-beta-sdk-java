@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Host extends Artifact implements Parsable {
     /**
-     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      */
     private java.util.List<HostPair> childHostPairs;
     /**
@@ -62,7 +62,7 @@ public class Host extends Artifact implements Parsable {
      */
     private java.util.List<HostTracker> trackers;
     /**
-     * The whois property
+     * The most recent whoisRecord for this host.
      */
     private WhoisRecord whois;
     /**
@@ -91,7 +91,7 @@ public class Host extends Artifact implements Parsable {
         return new Host();
     }
     /**
-     * Gets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * Gets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      * @return a hostPair
      */
     @jakarta.annotation.Nullable
@@ -218,7 +218,7 @@ public class Host extends Artifact implements Parsable {
         return this.trackers;
     }
     /**
-     * Gets the whois property value. The whois property
+     * Gets the whois property value. The most recent whoisRecord for this host.
      * @return a whoisRecord
      */
     @jakarta.annotation.Nullable
@@ -248,7 +248,7 @@ public class Host extends Artifact implements Parsable {
         writer.writeObjectValue("whois", this.getWhois());
     }
     /**
-     * Sets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
+     * Sets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a childHost.
      * @param value Value to set for the childHostPairs property.
      */
     public void setChildHostPairs(@jakarta.annotation.Nullable final java.util.List<HostPair> value) {
@@ -339,7 +339,7 @@ public class Host extends Artifact implements Parsable {
         this.trackers = value;
     }
     /**
-     * Sets the whois property value. The whois property
+     * Sets the whois property value. The most recent whoisRecord for this host.
      * @param value Value to set for the whois property.
      */
     public void setWhois(@jakarta.annotation.Nullable final WhoisRecord value) {

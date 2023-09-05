@@ -108,6 +108,16 @@ public class TransitiveReportsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a transitiveReportsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TransitiveReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TransitiveReportsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The transitive reports for a user. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

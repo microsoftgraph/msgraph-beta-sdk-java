@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +12,7 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
     /**
      * The matchTolerance property
      */
-    private MlClassificationMatchTolerance matchTolerance;
+    private EnumSet<MlClassificationMatchTolerance> matchTolerance;
     /**
      * The modelVersion property
      */
@@ -39,7 +40,7 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("matchTolerance", (n) -> { this.setMatchTolerance(n.getEnumValue(MlClassificationMatchTolerance.class)); });
+        deserializerMap.put("matchTolerance", (n) -> { this.setMatchTolerance(n.getEnumSetValue(MlClassificationMatchTolerance.class)); });
         deserializerMap.put("modelVersion", (n) -> { this.setModelVersion(n.getStringValue()); });
         return deserializerMap;
     }
@@ -66,7 +67,7 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("matchTolerance", this.getMatchTolerance());
+        writer.writeEnumSetValue("matchTolerance", this.getMatchTolerance());
         writer.writeStringValue("modelVersion", this.getModelVersion());
     }
     /**

@@ -3,6 +3,7 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
     /**
      * The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags. The fileInfo member is deprecated and will stop returning data on April 30th, 2023. Going forward, the summary and load file are always included.
      */
-    private ExportOptions exportOptions;
+    private EnumSet<ExportOptions> exportOptions;
     /**
      * The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
      */
@@ -123,7 +124,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         deserializerMap.put("azureBlobToken", (n) -> { this.setAzureBlobToken(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("exportFileMetadata", (n) -> { this.setExportFileMetadata(n.getCollectionOfObjectValues(ExportFileMetadata::createFromDiscriminatorValue)); });
-        deserializerMap.put("exportOptions", (n) -> { this.setExportOptions(n.getEnumValue(ExportOptions.class)); });
+        deserializerMap.put("exportOptions", (n) -> { this.setExportOptions(n.getEnumSetValue(ExportOptions.class)); });
         deserializerMap.put("exportStructure", (n) -> { this.setExportStructure(n.getEnumValue(ExportFileStructure.class)); });
         deserializerMap.put("outputFolderId", (n) -> { this.setOutputFolderId(n.getStringValue()); });
         deserializerMap.put("outputName", (n) -> { this.setOutputName(n.getStringValue()); });
@@ -174,7 +175,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         writer.writeStringValue("azureBlobToken", this.getAzureBlobToken());
         writer.writeStringValue("description", this.getDescription());
         writer.writeCollectionOfObjectValues("exportFileMetadata", this.getExportFileMetadata());
-        writer.writeEnumValue("exportOptions", this.getExportOptions());
+        writer.writeEnumSetValue("exportOptions", this.getExportOptions());
         writer.writeEnumValue("exportStructure", this.getExportStructure());
         writer.writeStringValue("outputFolderId", this.getOutputFolderId());
         writer.writeStringValue("outputName", this.getOutputName());

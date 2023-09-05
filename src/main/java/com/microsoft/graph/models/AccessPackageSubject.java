@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -12,6 +13,10 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * Not Supported.
      */
     private String altSecId;
+    /**
+     * The cleanupScheduledDateTime property
+     */
+    private OffsetDateTime cleanupScheduledDateTime;
     /**
      * The connected organization of the subject. Read-only. Nullable.
      */
@@ -73,6 +78,14 @@ public class AccessPackageSubject extends Entity implements Parsable {
         return this.altSecId;
     }
     /**
+     * Gets the cleanupScheduledDateTime property value. The cleanupScheduledDateTime property
+     * @return a OffsetDateTime
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getCleanupScheduledDateTime() {
+        return this.cleanupScheduledDateTime;
+    }
+    /**
      * Gets the connectedOrganization property value. The connected organization of the subject. Read-only. Nullable.
      * @return a connectedOrganization
      */
@@ -112,6 +125,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("altSecId", (n) -> { this.setAltSecId(n.getStringValue()); });
+        deserializerMap.put("cleanupScheduledDateTime", (n) -> { this.setCleanupScheduledDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("connectedOrganization", (n) -> { this.setConnectedOrganization(n.getObjectValue(ConnectedOrganization::createFromDiscriminatorValue)); });
         deserializerMap.put("connectedOrganizationId", (n) -> { this.setConnectedOrganizationId(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -171,6 +185,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("altSecId", this.getAltSecId());
+        writer.writeOffsetDateTimeValue("cleanupScheduledDateTime", this.getCleanupScheduledDateTime());
         writer.writeObjectValue("connectedOrganization", this.getConnectedOrganization());
         writer.writeStringValue("connectedOrganizationId", this.getConnectedOrganizationId());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -187,6 +202,13 @@ public class AccessPackageSubject extends Entity implements Parsable {
      */
     public void setAltSecId(@jakarta.annotation.Nullable final String value) {
         this.altSecId = value;
+    }
+    /**
+     * Sets the cleanupScheduledDateTime property value. The cleanupScheduledDateTime property
+     * @param value Value to set for the cleanupScheduledDateTime property.
+     */
+    public void setCleanupScheduledDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.cleanupScheduledDateTime = value;
     }
     /**
      * Sets the connectedOrganization property value. The connected organization of the subject. Read-only. Nullable.

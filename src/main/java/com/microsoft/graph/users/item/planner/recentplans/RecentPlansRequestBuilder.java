@@ -110,6 +110,16 @@ public class RecentPlansRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a recentPlansRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RecentPlansRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RecentPlansRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of plannerPlans recently viewed by a user. You can update recently viewed plans by updating the plannerUser resource.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

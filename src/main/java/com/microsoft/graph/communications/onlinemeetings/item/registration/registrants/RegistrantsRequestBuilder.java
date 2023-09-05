@@ -165,6 +165,16 @@ public class RegistrantsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a registrantsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RegistrantsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RegistrantsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Registrants of the online meeting.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

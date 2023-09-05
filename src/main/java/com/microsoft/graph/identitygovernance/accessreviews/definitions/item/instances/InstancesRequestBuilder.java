@@ -178,6 +178,16 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a instancesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public InstancesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new InstancesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the accessReviewInstance objects for a specific accessReviewScheduleDefinition. A list of zero or more accessReviewInstance objects are returned, including all of their nested properties. Returned objects do not include associated accessReviewInstanceDecisionItems. To retrieve the decisions on the instance, use List accessReviewInstanceDecisionItem.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

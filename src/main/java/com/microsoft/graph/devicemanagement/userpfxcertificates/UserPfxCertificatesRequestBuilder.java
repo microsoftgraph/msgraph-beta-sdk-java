@@ -165,6 +165,16 @@ public class UserPfxCertificatesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userPfxCertificatesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserPfxCertificatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserPfxCertificatesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Collection of PFX certificates associated with a user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

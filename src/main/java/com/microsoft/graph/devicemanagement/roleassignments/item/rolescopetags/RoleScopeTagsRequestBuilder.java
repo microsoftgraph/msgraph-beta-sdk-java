@@ -108,6 +108,16 @@ public class RoleScopeTagsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a roleScopeTagsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RoleScopeTagsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RoleScopeTagsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The set of Role Scope Tags defined on the Role Assignment.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
     /**
      * The responseType property
      */
-    private OpenIdConnectResponseTypes responseType;
+    private EnumSet<OpenIdConnectResponseTypes> responseType;
     /**
      * Scope defines the information and permissions you are looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users are not able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended, separated by a space. For more details about the scope limitations see RFC6749 Section 3.3. Required.
      */
@@ -102,7 +103,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
         deserializerMap.put("domainHint", (n) -> { this.setDomainHint(n.getStringValue()); });
         deserializerMap.put("metadataUrl", (n) -> { this.setMetadataUrl(n.getStringValue()); });
         deserializerMap.put("responseMode", (n) -> { this.setResponseMode(n.getEnumValue(OpenIdConnectResponseMode.class)); });
-        deserializerMap.put("responseType", (n) -> { this.setResponseType(n.getEnumValue(OpenIdConnectResponseTypes.class)); });
+        deserializerMap.put("responseType", (n) -> { this.setResponseType(n.getEnumSetValue(OpenIdConnectResponseTypes.class)); });
         deserializerMap.put("scope", (n) -> { this.setScope(n.getStringValue()); });
         return deserializerMap;
     }
@@ -151,7 +152,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
         writer.writeStringValue("domainHint", this.getDomainHint());
         writer.writeStringValue("metadataUrl", this.getMetadataUrl());
         writer.writeEnumValue("responseMode", this.getResponseMode());
-        writer.writeEnumValue("responseType", this.getResponseType());
+        writer.writeEnumSetValue("responseType", this.getResponseType());
         writer.writeStringValue("scope", this.getScope());
     }
     /**

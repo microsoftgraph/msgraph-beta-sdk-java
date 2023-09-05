@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public class AndroidCertificateProfileBase extends DeviceConfiguration implement
     /**
      * Subject Alternative Name Options.
      */
-    private SubjectAlternativeNameType subjectAlternativeNameType;
+    private EnumSet<SubjectAlternativeNameType> subjectAlternativeNameType;
     /**
      * Subject Name Format Options.
      */
@@ -102,7 +103,7 @@ public class AndroidCertificateProfileBase extends DeviceConfiguration implement
         deserializerMap.put("extendedKeyUsages", (n) -> { this.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
         deserializerMap.put("renewalThresholdPercentage", (n) -> { this.setRenewalThresholdPercentage(n.getIntegerValue()); });
         deserializerMap.put("rootCertificate", (n) -> { this.setRootCertificate(n.getObjectValue(AndroidTrustedRootCertificate::createFromDiscriminatorValue)); });
-        deserializerMap.put("subjectAlternativeNameType", (n) -> { this.setSubjectAlternativeNameType(n.getEnumValue(SubjectAlternativeNameType.class)); });
+        deserializerMap.put("subjectAlternativeNameType", (n) -> { this.setSubjectAlternativeNameType(n.getEnumSetValue(SubjectAlternativeNameType.class)); });
         deserializerMap.put("subjectNameFormat", (n) -> { this.setSubjectNameFormat(n.getEnumValue(SubjectNameFormat.class)); });
         return deserializerMap;
     }
@@ -150,7 +151,7 @@ public class AndroidCertificateProfileBase extends DeviceConfiguration implement
         writer.writeCollectionOfObjectValues("extendedKeyUsages", this.getExtendedKeyUsages());
         writer.writeIntegerValue("renewalThresholdPercentage", this.getRenewalThresholdPercentage());
         writer.writeObjectValue("rootCertificate", this.getRootCertificate());
-        writer.writeEnumValue("subjectAlternativeNameType", this.getSubjectAlternativeNameType());
+        writer.writeEnumSetValue("subjectAlternativeNameType", this.getSubjectAlternativeNameType());
         writer.writeEnumValue("subjectNameFormat", this.getSubjectNameFormat());
     }
     /**

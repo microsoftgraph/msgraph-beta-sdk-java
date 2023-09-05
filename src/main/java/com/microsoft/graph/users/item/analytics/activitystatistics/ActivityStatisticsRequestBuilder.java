@@ -165,6 +165,16 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a activityStatisticsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ActivityStatisticsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ActivityStatisticsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

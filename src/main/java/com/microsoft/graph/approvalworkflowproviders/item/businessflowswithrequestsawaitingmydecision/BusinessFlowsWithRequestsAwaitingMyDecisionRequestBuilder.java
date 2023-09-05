@@ -165,6 +165,16 @@ public class BusinessFlowsWithRequestsAwaitingMyDecisionRequestBuilder extends B
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a businessFlowsWithRequestsAwaitingMyDecisionRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public BusinessFlowsWithRequestsAwaitingMyDecisionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new BusinessFlowsWithRequestsAwaitingMyDecisionRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get businessFlowsWithRequestsAwaitingMyDecision from approvalWorkflowProviders
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

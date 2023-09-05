@@ -87,6 +87,16 @@ public class AlertDefinitionRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a alertDefinitionRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AlertDefinitionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AlertDefinitionRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The definition of the alert that contains its description, impact, and measures to mitigate or prevent it. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

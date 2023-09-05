@@ -199,6 +199,19 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a customAccessPackageWorkflowExtensionsRequestBuilder
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public CustomAccessPackageWorkflowExtensionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CustomAccessPackageWorkflowExtensionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the customAccessPackageWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
