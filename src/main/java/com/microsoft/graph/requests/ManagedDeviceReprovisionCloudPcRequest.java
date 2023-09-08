@@ -18,7 +18,9 @@ import com.microsoft.graph.core.IBaseClient;
 
 /**
  * The class for the Managed Device Reprovision Cloud Pc Request.
+ * @deprecated The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead
  */
+@Deprecated
 public class ManagedDeviceReprovisionCloudPcRequest extends BaseRequest<Void> {
     /**
      * The request for this ManagedDeviceReprovisionCloudPc

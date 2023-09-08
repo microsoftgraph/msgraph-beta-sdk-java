@@ -66,26 +66,6 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder<Organ
     public com.microsoft.graph.requests.MicrosoftApplicationDataAccessSettingsRequestBuilder microsoftApplicationDataAccess() {
         return new com.microsoft.graph.requests.MicrosoftApplicationDataAccessSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftApplicationDataAccess"), getClient(), null);
     }
-    /**
-     *  Gets a request builder for the ProfileCardProperty collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.ProfileCardPropertyCollectionRequestBuilder profileCardProperties() {
-        return new com.microsoft.graph.requests.ProfileCardPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("profileCardProperties"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the ProfileCardProperty item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.ProfileCardPropertyRequestBuilder profileCardProperties(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.ProfileCardPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("profileCardProperties") + "/" + id, getClient(), null);
-    }
 
     /**
      * Gets the request builder for PronounsSettings

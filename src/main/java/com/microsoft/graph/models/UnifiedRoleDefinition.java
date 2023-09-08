@@ -76,7 +76,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Privileged.
-     * 
+     * Flag indicating if the role is privileged. Azure AD defines a role as privileged if it contains at least one sensitive resource action in the rolePermissions and allowedResourceActions objects. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
      */
     @SerializedName(value = "isPrivileged", alternate = {"IsPrivileged"})
     @Expose

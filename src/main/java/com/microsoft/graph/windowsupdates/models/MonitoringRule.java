@@ -41,7 +41,7 @@ public class MonitoringRule implements IJsonBackedObject {
 
     /**
      * The Action.
-     * The action triggered when the threshold for the given signal is met. Possible values are: alertError, pauseDeployment, unknownFutureValue.
+     * The action triggered when the threshold for the given signal is reached. Possible values are: alertError, pauseDeployment, offerFallback, unknownFutureValue. The offerFallback member is only supported on feature update deployments of Windows 11 and must be paired with the ineligible signal. The fallback version offered is the version 22H2 of Windows 10.
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose
@@ -50,7 +50,7 @@ public class MonitoringRule implements IJsonBackedObject {
 
     /**
      * The Signal.
-     * The signal to monitor. Possible values are: rollback, unknownFutureValue.
+     * The signal to monitor. Possible values are: rollback, ineligible, unknownFutureValue. The ineligible member is only supported on feature update deployments of Windows 11 and must be paired with the offerFallback action.
      */
     @SerializedName(value = "signal", alternate = {"Signal"})
     @Expose
@@ -59,7 +59,7 @@ public class MonitoringRule implements IJsonBackedObject {
 
     /**
      * The Threshold.
-     * The threshold for a signal at which to trigger action. An integer from 1 to 100 (inclusive).
+     * The threshold for a signal at which to trigger the action. An integer from 1 to 100 (inclusive). This value is ignored when the signal is ineligible and the action is offerFallback.
      */
     @SerializedName(value = "threshold", alternate = {"Threshold"})
     @Expose

@@ -12,6 +12,8 @@ import com.microsoft.graph.models.VirtualEventSession;
 import com.microsoft.graph.models.ChatInfo;
 import com.microsoft.graph.models.MeetingParticipants;
 import com.microsoft.graph.models.OnlineMeeting;
+import com.microsoft.graph.models.CallRecording;
+import com.microsoft.graph.models.CallTranscript;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -21,6 +23,8 @@ import com.microsoft.graph.requests.VirtualEventSessionCollectionRequestBuilder;
 import com.microsoft.graph.requests.VirtualEventSessionRequestBuilder;
 import com.microsoft.graph.requests.VirtualEventSessionCollectionRequest;
 import com.microsoft.graph.requests.OnlineMeetingCreateOrGetRequestBuilder;
+import com.microsoft.graph.requests.OnlineMeetingGetAllRecordingsCollectionRequestBuilder;
+import com.microsoft.graph.requests.OnlineMeetingGetAllTranscriptsCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
@@ -53,6 +57,24 @@ public class VirtualEventSessionCollectionRequestBuilder extends BaseCollectionR
     @Nonnull
     public OnlineMeetingCreateOrGetRequestBuilder createOrGet(@Nonnull final OnlineMeetingCreateOrGetParameterSet parameters) {
         return new OnlineMeetingCreateOrGetRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createOrGet"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public OnlineMeetingGetAllRecordingsCollectionRequestBuilder getAllRecordings() {
+        return new OnlineMeetingGetAllRecordingsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAllRecordings"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public OnlineMeetingGetAllTranscriptsCollectionRequestBuilder getAllTranscripts() {
+        return new OnlineMeetingGetAllTranscriptsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAllTranscripts"), getClient(), null);
     }
 
     /**

@@ -85,7 +85,7 @@ public class KubernetesServicePort implements IJsonBackedObject {
 
     /**
      * The Target Port.
-     * The name or number of the port to access on the pods targeted by the service. The port number must be in the range 1 to 65535. The name must be an IANASVCNAME.
+     * The name or number of the port to access on the pods targeted by the service. The port number must be in the range 1 to 65535. The name must be an IANA_SVC_NAME.
      */
     @SerializedName(value = "targetPort", alternate = {"TargetPort"})
     @Expose

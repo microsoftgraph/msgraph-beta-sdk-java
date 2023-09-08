@@ -306,7 +306,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Subscriptions.
-     * Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intuneEDU, intuneSMB.
+     * Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB.
      */
     @SerializedName(value = "subscriptions", alternate = {"Subscriptions"})
     @Expose

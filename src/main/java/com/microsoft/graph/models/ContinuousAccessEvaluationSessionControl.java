@@ -40,7 +40,7 @@ public class ContinuousAccessEvaluationSessionControl implements IJsonBackedObje
 
     /**
      * The Mode.
-     * Specifies continuous access evaluation settings. The possible values are: strictEnforcement, disabled, unknownFutureValue.
+     * Specifies continuous access evaluation settings. The possible values are: strictEnforcement, disabled, unknownFutureValue, strictLocation. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: strictLocation.
      */
     @SerializedName(value = "mode", alternate = {"Mode"})
     @Expose

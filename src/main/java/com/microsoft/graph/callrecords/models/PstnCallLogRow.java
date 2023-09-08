@@ -274,7 +274,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types (ucapin, ucapout).
+     * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

@@ -30,7 +30,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
 
     /**
      * The Connection Settings.
-     * The [OAuth 1.0][onerosteroauth1] or [OAuth 2.0][onerosteroauth2] settings for the OneRoster instance.
+     * 
      */
     @SerializedName(value = "connectionSettings", alternate = {"ConnectionSettings"})
     @Expose
@@ -39,7 +39,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
 
     /**
      * The Connection Url.
-     * The connection URL to the OneRoster instance.
+     * 
      */
     @SerializedName(value = "connectionUrl", alternate = {"ConnectionUrl"})
     @Expose
@@ -48,7 +48,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
 
     /**
      * The Customizations.
-     * Optional customization to be applied to the synchronization profile.
+     * 
      */
     @SerializedName(value = "customizations", alternate = {"Customizations"})
     @Expose
@@ -57,7 +57,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
 
     /**
      * The Provider Name.
-     * The OneRoster Service Provider name as defined by the [OneRoster specification][oneroster].
+     * 
      */
     @SerializedName(value = "providerName", alternate = {"ProviderName"})
     @Expose
@@ -66,7 +66,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
 
     /**
      * The Schools Ids.
-     * The list of [School/Org][orgs] sourcedId to sync.
+     * 
      */
     @SerializedName(value = "schoolsIds", alternate = {"SchoolsIds"})
     @Expose
@@ -75,7 +75,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
 
     /**
      * The Term Ids.
-     * The list of [academic sessions][terms] to sync.
+     * 
      */
     @SerializedName(value = "termIds", alternate = {"TermIds"})
     @Expose

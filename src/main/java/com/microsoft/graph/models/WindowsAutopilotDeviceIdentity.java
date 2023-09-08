@@ -12,6 +12,7 @@ import com.microsoft.graph.models.WindowsAutopilotProfileAssignmentDetailedStatu
 import com.microsoft.graph.models.WindowsAutopilotProfileAssignmentStatus;
 import com.microsoft.graph.models.EnrollmentState;
 import com.microsoft.graph.models.WindowsAutopilotDeviceRemediationState;
+import com.microsoft.graph.models.WindowsAutopilotUserlessEnrollmentStatus;
 import com.microsoft.graph.models.WindowsAutopilotDeploymentProfile;
 import com.microsoft.graph.models.Entity;
 
@@ -245,6 +246,15 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements IJsonBacke
     @Expose
 	@Nullable
     public String systemFamily;
+
+    /**
+     * The Userless Enrollment Status.
+     * Enrollment status for userless enrollments.
+     */
+    @SerializedName(value = "userlessEnrollmentStatus", alternate = {"UserlessEnrollmentStatus"})
+    @Expose
+	@Nullable
+    public WindowsAutopilotUserlessEnrollmentStatus userlessEnrollmentStatus;
 
     /**
      * The User Principal Name.

@@ -65,7 +65,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements IJsonBa
 
     /**
      * The Targeted Platforms.
-     * The platforms to which the application can be targeted. If not specified, will defauilt to Android Device Administrator.
+     * The platforms to which the application can be targeted. If not specified, will defauilt to Android Device Administrator. Possible values are: androidDeviceAdministrator, androidOpenSourceProject, unknownFutureValue.
      */
     @SerializedName(value = "targetedPlatforms", alternate = {"TargetedPlatforms"})
     @Expose

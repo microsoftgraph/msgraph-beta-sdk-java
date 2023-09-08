@@ -57,43 +57,23 @@ public class VirtualEventRegistrationRequestBuilder extends BaseRequestBuilder<V
 
 
     /**
-     *  Gets a request builder for the VirtualEventRegistrationQuestion collection
+     *  Gets a request builder for the VirtualEventSession collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public com.microsoft.graph.requests.VirtualEventRegistrationQuestionCollectionRequestBuilder questions() {
-        return new com.microsoft.graph.requests.VirtualEventRegistrationQuestionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("questions"), getClient(), null);
+    public com.microsoft.graph.requests.VirtualEventSessionCollectionWithReferencesRequestBuilder sessions() {
+        return new com.microsoft.graph.requests.VirtualEventSessionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("sessions"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the VirtualEventRegistrationQuestion item
+     * Gets a request builder for the VirtualEventSession item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public com.microsoft.graph.requests.VirtualEventRegistrationQuestionRequestBuilder questions(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.VirtualEventRegistrationQuestionRequestBuilder(getRequestUrlWithAdditionalSegment("questions") + "/" + id, getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the VirtualEventRegistrant collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.VirtualEventRegistrantCollectionRequestBuilder registrants() {
-        return new com.microsoft.graph.requests.VirtualEventRegistrantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("registrants"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the VirtualEventRegistrant item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.VirtualEventRegistrantRequestBuilder registrants(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.VirtualEventRegistrantRequestBuilder(getRequestUrlWithAdditionalSegment("registrants") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.VirtualEventSessionWithReferenceRequestBuilder sessions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.VirtualEventSessionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("sessions") + "/" + id, getClient(), null);
     }
 }

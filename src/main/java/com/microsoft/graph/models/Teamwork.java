@@ -43,7 +43,7 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
     /**
      * The Deleted Chats.
-     * 
+     * A collection of deleted chats.
      */
     @SerializedName(value = "deletedChats", alternate = {"DeletedChats"})
     @Expose

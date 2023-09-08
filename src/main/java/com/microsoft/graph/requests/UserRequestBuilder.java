@@ -1506,6 +1506,16 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
+     * Gets the request builder for UserVirtualEventsRoot
+     *
+     * @return the UserVirtualEventsRootRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserVirtualEventsRootRequestBuilder virtualEvents() {
+        return new com.microsoft.graph.requests.UserVirtualEventsRootRequestBuilder(getRequestUrlWithAdditionalSegment("virtualEvents"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for Authentication
      *
      * @return the AuthenticationRequestBuilder instance

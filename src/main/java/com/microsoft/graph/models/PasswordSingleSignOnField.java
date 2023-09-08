@@ -57,7 +57,7 @@ public class PasswordSingleSignOnField implements IJsonBackedObject {
 
     /**
      * The Field Id.
-     * Id used to identity the field type. This is an internal id and possible values are param1, param2, paramuserName, parampassword.
+     * Id used to identity the field type. This is an internal id and possible values are param_1, param_2, param_userName, param_password.
      */
     @SerializedName(value = "fieldId", alternate = {"FieldId"})
     @Expose

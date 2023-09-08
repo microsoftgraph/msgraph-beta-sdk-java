@@ -29,7 +29,7 @@ public class TeamTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Definitions.
-     * A generic representation of a team template definition for a team with a specific structure and configuration.
+     * 
      */
     @SerializedName(value = "definitions", alternate = {"Definitions"})
     @Expose

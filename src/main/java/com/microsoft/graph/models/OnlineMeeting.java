@@ -16,13 +16,13 @@ import com.microsoft.graph.models.AudioConferencing;
 import com.microsoft.graph.models.BroadcastMeetingSettings;
 import com.microsoft.graph.models.MeetingCapabilities;
 import com.microsoft.graph.models.ChatInfo;
+import com.microsoft.graph.models.ChatRestrictions;
 import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.JoinMeetingIdSettings;
 import com.microsoft.graph.models.LobbyBypassSettings;
 import com.microsoft.graph.models.MeetingParticipants;
 import com.microsoft.graph.models.MeetingChatHistoryDefaultMode;
 import com.microsoft.graph.models.WatermarkProtectionValues;
-import com.microsoft.graph.models.VirtualAppointment;
 import com.microsoft.graph.models.MeetingAttendanceReport;
 import com.microsoft.graph.models.MeetingRegistration;
 import com.microsoft.graph.models.Entity;
@@ -160,6 +160,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ChatInfo chatInfo;
+
+    /**
+     * The Chat Restrictions.
+     * 
+     */
+    @SerializedName(value = "chatRestrictions", alternate = {"ChatRestrictions"})
+    @Expose
+	@Nullable
+    public ChatRestrictions chatRestrictions;
 
     /**
      * The Creation Date Time.
@@ -313,17 +322,6 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public WatermarkProtectionValues watermarkProtection;
-
-    /**
-     * The Virtual Appointment.
-     * 
-     * @deprecated The Virtual appointment resource is deprecated and will stop returning data on May 31, 2023. Existing apps that use this feature should be updated to the new getVirtualAppointmentJoinWebUrl API.
-     */
-    @Deprecated
-    @SerializedName(value = "virtualAppointment", alternate = {"VirtualAppointment"})
-    @Expose
-	@Nullable
-    public VirtualAppointment virtualAppointment;
 
     /**
      * The Attendance Reports.

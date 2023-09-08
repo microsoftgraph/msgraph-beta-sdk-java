@@ -44,7 +44,7 @@ public class CryptographySuite implements IJsonBackedObject {
 
     /**
      * The Authentication Transform Constants.
-     * Authentication Transform Constants. Possible values are: md596, sha196, sha256128, aes128Gcm, aes192Gcm, aes256Gcm.
+     * Authentication Transform Constants. Possible values are: md5_96, sha1_96, sha_256_128, aes128Gcm, aes192Gcm, aes256Gcm.
      */
     @SerializedName(value = "authenticationTransformConstants", alternate = {"AuthenticationTransformConstants"})
     @Expose
@@ -80,7 +80,7 @@ public class CryptographySuite implements IJsonBackedObject {
 
     /**
      * The Integrity Check Method.
-     * Integrity Check Method. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
+     * Integrity Check Method. Possible values are: sha2_256, sha1_96, sha1_160, sha2_384, sha2_512, md5.
      */
     @SerializedName(value = "integrityCheckMethod", alternate = {"IntegrityCheckMethod"})
     @Expose

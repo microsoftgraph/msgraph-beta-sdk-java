@@ -8,12 +8,10 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MicrosoftApplicationDataAccessSettings;
 import com.microsoft.graph.models.PronounsSettings;
 import com.microsoft.graph.models.InsightsSettings;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.ProfileCardPropertyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -38,15 +36,6 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public MicrosoftApplicationDataAccessSettings microsoftApplicationDataAccess;
-
-    /**
-     * The Profile Card Properties.
-     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization.
-     */
-    @SerializedName(value = "profileCardProperties", alternate = {"ProfileCardProperties"})
-    @Expose
-	@Nullable
-    public com.microsoft.graph.requests.ProfileCardPropertyCollectionPage profileCardProperties;
 
     /**
      * The Pronouns.
@@ -93,9 +82,5 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
-
-        if (json.has("profileCardProperties")) {
-            profileCardProperties = serializer.deserializeObject(json.get("profileCardProperties"), com.microsoft.graph.requests.ProfileCardPropertyCollectionPage.class);
-        }
     }
 }
