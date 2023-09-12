@@ -41,7 +41,7 @@ public class MultiTenantOrganizationJoinRequestTransitionDetails implements IJso
 
     /**
      * The Desired Member State.
-     * 
+     * State of the tenant in the multi-tenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "desiredMemberState", alternate = {"DesiredMemberState"})
     @Expose
@@ -50,7 +50,7 @@ public class MultiTenantOrganizationJoinRequestTransitionDetails implements IJso
 
     /**
      * The Details.
-     * 
+     * Details that explain the processing status if any. Read-only.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
@@ -59,7 +59,7 @@ public class MultiTenantOrganizationJoinRequestTransitionDetails implements IJso
 
     /**
      * The Status.
-     * 
+     * Processing state of the asynchronous job. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

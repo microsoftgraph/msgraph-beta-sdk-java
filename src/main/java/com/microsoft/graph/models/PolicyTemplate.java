@@ -29,7 +29,7 @@ public class PolicyTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Multi Tenant Organization Identity Synchronization.
-     * 
+     * Defines an optional cross-tenant access policy template with user synchronization settings for a multi-tenant organization.
      */
     @SerializedName(value = "multiTenantOrganizationIdentitySynchronization", alternate = {"MultiTenantOrganizationIdentitySynchronization"})
     @Expose
@@ -38,7 +38,7 @@ public class PolicyTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Multi Tenant Organization Partner Configuration.
-     * 
+     * Defines an optional cross-tenant access policy template with inbound and outbound partner configuration settings for a multi-tenant organization.
      */
     @SerializedName(value = "multiTenantOrganizationPartnerConfiguration", alternate = {"MultiTenantOrganizationPartnerConfiguration"})
     @Expose

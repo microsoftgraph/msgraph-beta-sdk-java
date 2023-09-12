@@ -18,7 +18,9 @@ import java.util.ArrayList;
 
 /**
  * The class for the Managed Device Reprovision Cloud Pc Parameter Set.
+ * @deprecated The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead
  */
+@Deprecated
 public class ManagedDeviceReprovisionCloudPcParameterSet {
 
     /**

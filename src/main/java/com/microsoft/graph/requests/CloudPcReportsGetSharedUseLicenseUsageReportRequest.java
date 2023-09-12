@@ -19,7 +19,9 @@ import com.microsoft.graph.models.CloudPcReportsGetSharedUseLicenseUsageReportPa
 
 /**
  * The class for the Cloud Pc Reports Get Shared Use License Usage Report Request.
+ * @deprecated The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead.
  */
+@Deprecated
 public class CloudPcReportsGetSharedUseLicenseUsageReportRequest extends BaseRequest<java.io.InputStream> {
     /**
      * The request for this CloudPcReportsGetSharedUseLicenseUsageReport

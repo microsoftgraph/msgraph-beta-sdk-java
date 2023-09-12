@@ -32,7 +32,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
 
     /**
      * The Applicable Architectures.
-     * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral; default value is none. Possible values are: none, x86, x64, arm, neutral, arm64.
      */
     @SerializedName(value = "applicableArchitectures", alternate = {"ApplicableArchitectures"})
     @Expose
@@ -41,7 +41,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
 
     /**
      * The Applicable Device Types.
-     * The Windows device type(s) for which this app can run on. Possible values are: none, desktop, mobile, holographic, team.
+     * The Windows device type(s) for which this app can run on. Possible values are: none, desktop, mobile, holographic, team; default value is none. Possible values are: none, desktop, mobile, holographic, team, unknownFutureValue.
      */
     @SerializedName(value = "applicableDeviceTypes", alternate = {"ApplicableDeviceTypes"})
     @Expose
@@ -50,7 +50,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
 
     /**
      * The Identity Name.
-     * The Identity Name.
+     * The Identity Name of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'Contoso.DemoApp'.
      */
     @SerializedName(value = "identityName", alternate = {"IdentityName"})
     @Expose
@@ -59,7 +59,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
 
     /**
      * The Identity Publisher Hash.
-     * The Identity Publisher Hash.
+     * The Identity Publisher Hash of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'AB82CD0XYZ'.
      */
     @SerializedName(value = "identityPublisherHash", alternate = {"IdentityPublisherHash"})
     @Expose
@@ -68,7 +68,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
 
     /**
      * The Identity Resource Identifier.
-     * The Identity Resource Identifier.
+     * The Identity Resource Identifier of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'TestResourceId'.
      */
     @SerializedName(value = "identityResourceIdentifier", alternate = {"IdentityResourceIdentifier"})
     @Expose
@@ -77,7 +77,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
 
     /**
      * The Identity Version.
-     * The identity version.
+     * The Identity Version of the app, parsed from the appx file when it is uploaded through the Intune MEM console.  For example: '1.0.0.0'.
      */
     @SerializedName(value = "identityVersion", alternate = {"IdentityVersion"})
     @Expose
@@ -86,7 +86,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
 
     /**
      * The Is Bundle.
-     * Whether or not the app is a bundle.
+     * Whether or not the app is a bundle. If TRUE, app is a bundle; if FALSE, app is not a bundle.
      */
     @SerializedName(value = "isBundle", alternate = {"IsBundle"})
     @Expose
@@ -95,7 +95,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
 
     /**
      * The Minimum Supported Operating System.
-     * The value for the minimum applicable operating system.
+     * The value for the minimum applicable Windows operating system.
      */
     @SerializedName(value = "minimumSupportedOperatingSystem", alternate = {"MinimumSupportedOperatingSystem"})
     @Expose

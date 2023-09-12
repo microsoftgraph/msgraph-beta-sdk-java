@@ -59,7 +59,7 @@ public class CloudPcPartnerAgentInstallResult implements IJsonBackedObject {
 
     /**
      * The Partner Agent Name.
-     * Indicates the name of a partner agent and includes first-party and third-party. Currently, Citrix is the only third-party value. Read-Only.
+     * The name of the partner agent, whether first party or third party. Possible values for third-party partners are Citrix and VMware. Read-Only.
      */
     @SerializedName(value = "partnerAgentName", alternate = {"PartnerAgentName"})
     @Expose

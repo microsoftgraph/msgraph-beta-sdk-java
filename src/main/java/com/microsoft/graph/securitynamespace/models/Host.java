@@ -111,7 +111,7 @@ public class Host extends Artifact implements IJsonBackedObject {
 
     /**
      * The Ssl Certificates.
-     * 
+     * The hostSslCertificates that are associated with this host.
      */
 	@Nullable
     public com.microsoft.graph.security.requests.HostSslCertificateCollectionPage sslCertificates;
@@ -132,7 +132,7 @@ public class Host extends Artifact implements IJsonBackedObject {
 
     /**
      * The Whois.
-     * 
+     * The most recent whoisRecord for this host.
      */
     @SerializedName(value = "whois", alternate = {"Whois"})
     @Expose

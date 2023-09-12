@@ -42,7 +42,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements IJsonBack
 
     /**
      * The Desired Role.
-     * 
+     * Role of the tenant in the multi-tenant organization. The possible values are: owner, member, unknownFutureValue.
      */
     @SerializedName(value = "desiredRole", alternate = {"DesiredRole"})
     @Expose
@@ -51,7 +51,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements IJsonBack
 
     /**
      * The Desired State.
-     * 
+     * State of the tenant in the multi-tenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "desiredState", alternate = {"DesiredState"})
     @Expose
@@ -60,7 +60,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements IJsonBack
 
     /**
      * The Details.
-     * 
+     * Details that explain the processing status if any. Read-only.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
@@ -69,7 +69,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements IJsonBack
 
     /**
      * The Status.
-     * 
+     * Processing state of the asynchronous job. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

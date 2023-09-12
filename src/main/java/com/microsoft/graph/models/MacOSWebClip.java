@@ -27,7 +27,7 @@ public class MacOSWebClip extends MobileApp implements IJsonBackedObject {
 
     /**
      * The App Url.
-     * The web app URL starting with http:// or https://, such as https://learn.microsoft.com/en-us/mem/.
+     * The web app URL starting with http:// or https://, such as https://learn.microsoft.com/mem/.
      */
     @SerializedName(value = "appUrl", alternate = {"AppUrl"})
     @Expose
@@ -45,7 +45,7 @@ public class MacOSWebClip extends MobileApp implements IJsonBackedObject {
 
     /**
      * The Pre Composed Icon Enabled.
-     * Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding "shine" to the icon. If FALSE, SpringBoard can add "shine".
+     * Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding 'shine' to the icon. If FALSE, SpringBoard can add 'shine'.
      */
     @SerializedName(value = "preComposedIconEnabled", alternate = {"PreComposedIconEnabled"})
     @Expose
