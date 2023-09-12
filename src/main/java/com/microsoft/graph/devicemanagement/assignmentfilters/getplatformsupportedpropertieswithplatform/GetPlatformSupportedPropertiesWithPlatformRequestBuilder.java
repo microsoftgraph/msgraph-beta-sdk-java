@@ -88,6 +88,16 @@ public class GetPlatformSupportedPropertiesWithPlatformRequestBuilder extends Ba
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a getPlatformSupportedPropertiesWithPlatformRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GetPlatformSupportedPropertiesWithPlatformRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GetPlatformSupportedPropertiesWithPlatformRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function getPlatformSupportedProperties
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

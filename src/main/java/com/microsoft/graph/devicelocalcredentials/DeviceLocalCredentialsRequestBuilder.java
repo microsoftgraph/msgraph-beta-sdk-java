@@ -159,6 +159,16 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a deviceLocalCredentialsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceLocalCredentialsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeviceLocalCredentialsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

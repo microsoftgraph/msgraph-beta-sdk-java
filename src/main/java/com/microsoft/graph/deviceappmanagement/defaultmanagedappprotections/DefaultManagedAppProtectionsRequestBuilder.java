@@ -165,6 +165,16 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a defaultManagedAppProtectionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DefaultManagedAppProtectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DefaultManagedAppProtectionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Default managed app policies.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

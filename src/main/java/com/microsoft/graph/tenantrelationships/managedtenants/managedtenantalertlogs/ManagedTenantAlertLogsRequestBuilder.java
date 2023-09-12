@@ -165,6 +165,16 @@ public class ManagedTenantAlertLogsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a managedTenantAlertLogsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ManagedTenantAlertLogsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ManagedTenantAlertLogsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get managedTenantAlertLogs from tenantRelationships
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

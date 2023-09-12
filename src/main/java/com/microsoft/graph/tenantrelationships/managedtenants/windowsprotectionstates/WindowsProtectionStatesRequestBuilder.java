@@ -167,6 +167,16 @@ public class WindowsProtectionStatesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a windowsProtectionStatesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public WindowsProtectionStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new WindowsProtectionStatesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the windowsProtectionState objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -15,11 +15,11 @@ public class Identity implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The display name of the identity. This property is read-only.
+     * The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
      */
     private String displayName;
     /**
-     * The identifier of the identity. This property is read-only.
+     * Unique identifier for the identity.
      */
     private String id;
     /**
@@ -79,7 +79,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the displayName property value. The display name of the identity. This property is read-only.
+     * Gets the displayName property value. The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The identifier of the identity. This property is read-only.
+     * Gets the id property value. Unique identifier for the identity.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -133,14 +133,14 @@ public class Identity implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the displayName property value. The display name of the identity. This property is read-only.
+     * Sets the displayName property value. The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
-     * Sets the id property value. The identifier of the identity. This property is read-only.
+     * Sets the id property value. Unique identifier for the identity.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {

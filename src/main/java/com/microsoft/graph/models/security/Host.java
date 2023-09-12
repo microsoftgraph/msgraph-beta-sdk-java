@@ -50,7 +50,7 @@ public class Host extends Artifact implements Parsable {
      */
     private HostReputation reputation;
     /**
-     * The sslCertificates property
+     * The hostSslCertificates that are associated with this host.
      */
     private java.util.List<HostSslCertificate> sslCertificates;
     /**
@@ -62,7 +62,7 @@ public class Host extends Artifact implements Parsable {
      */
     private java.util.List<HostTracker> trackers;
     /**
-     * The whois property
+     * The most recent whoisRecord for this host.
      */
     private WhoisRecord whois;
     /**
@@ -194,7 +194,7 @@ public class Host extends Artifact implements Parsable {
         return this.reputation;
     }
     /**
-     * Gets the sslCertificates property value. The sslCertificates property
+     * Gets the sslCertificates property value. The hostSslCertificates that are associated with this host.
      * @return a hostSslCertificate
      */
     @jakarta.annotation.Nullable
@@ -218,7 +218,7 @@ public class Host extends Artifact implements Parsable {
         return this.trackers;
     }
     /**
-     * Gets the whois property value. The whois property
+     * Gets the whois property value. The most recent whoisRecord for this host.
      * @return a whoisRecord
      */
     @jakarta.annotation.Nullable
@@ -318,7 +318,7 @@ public class Host extends Artifact implements Parsable {
         this.reputation = value;
     }
     /**
-     * Sets the sslCertificates property value. The sslCertificates property
+     * Sets the sslCertificates property value. The hostSslCertificates that are associated with this host.
      * @param value Value to set for the sslCertificates property.
      */
     public void setSslCertificates(@jakarta.annotation.Nullable final java.util.List<HostSslCertificate> value) {
@@ -339,7 +339,7 @@ public class Host extends Artifact implements Parsable {
         this.trackers = value;
     }
     /**
-     * Sets the whois property value. The whois property
+     * Sets the whois property value. The most recent whoisRecord for this host.
      * @param value Value to set for the whois property.
      */
     public void setWhois(@jakarta.annotation.Nullable final WhoisRecord value) {

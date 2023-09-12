@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationChoiceSettingDefinition extends DeviceManagementConfigurationSettingDefinition implements Parsable {
     /**
-     * Default option for the choice setting.
+     * Default option for choice setting
      */
     private String defaultOptionId;
     /**
-     * Options for the setting that can be selected.
+     * Options for the setting that can be selected
      */
     private java.util.List<DeviceManagementConfigurationOptionDefinition> options;
     /**
@@ -40,7 +40,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
         return new DeviceManagementConfigurationChoiceSettingDefinition();
     }
     /**
-     * Gets the defaultOptionId property value. Default option for the choice setting.
+     * Gets the defaultOptionId property value. Default option for choice setting
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
         return deserializerMap;
     }
     /**
-     * Gets the options property value. Options for the setting that can be selected.
+     * Gets the options property value. Options for the setting that can be selected
      * @return a deviceManagementConfigurationOptionDefinition
      */
     @jakarta.annotation.Nullable
@@ -77,14 +77,14 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
         writer.writeCollectionOfObjectValues("options", this.getOptions());
     }
     /**
-     * Sets the defaultOptionId property value. Default option for the choice setting.
+     * Sets the defaultOptionId property value. Default option for choice setting
      * @param value Value to set for the defaultOptionId property.
      */
     public void setDefaultOptionId(@jakarta.annotation.Nullable final String value) {
         this.defaultOptionId = value;
     }
     /**
-     * Sets the options property value. Options for the setting that can be selected.
+     * Sets the options property value. Options for the setting that can be selected
      * @param value Value to set for the options property.
      */
     public void setOptions(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationOptionDefinition> value) {

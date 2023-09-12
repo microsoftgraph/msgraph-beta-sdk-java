@@ -59,7 +59,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostSslCertificates{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get hostSslCertificates from security
+     * Get the properties and relationships of a hostSslCertificate object.
      * @return a CompletableFuture of hostSslCertificateCollectionResponse
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get hostSslCertificates from security
+     * Get the properties and relationships of a hostSslCertificate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of hostSslCertificateCollectionResponse
      */
@@ -104,7 +104,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, HostSslCertificate::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get hostSslCertificates from security
+     * Get the properties and relationships of a hostSslCertificate object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get hostSslCertificates from security
+     * Get the properties and relationships of a hostSslCertificate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -165,7 +165,17 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get hostSslCertificates from security
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a hostSslCertificatesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public HostSslCertificatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new HostSslCertificatesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Get the properties and relationships of a hostSslCertificate object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

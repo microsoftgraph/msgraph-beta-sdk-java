@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ThreatIntelligence extends Entity implements Parsable {
     /**
-     * Refers to indicators of threat or compromise highlighted in an microsoft.graph.security.article.Note: List retrieval is not yet supported.
+     * Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
      */
     private java.util.List<ArticleIndicator> articleIndicators;
     /**
@@ -18,27 +18,27 @@ public class ThreatIntelligence extends Entity implements Parsable {
      */
     private java.util.List<Article> articles;
     /**
-     * Retrieve details about microsoft.graph.security.hostComponent objects.Note: List retrieval is not yet supported.
+     * Retrieve details about hostComponent objects.Note: List retrieval is not yet supported.
      */
     private java.util.List<HostComponent> hostComponents;
     /**
-     * Retrieve details about microsoft.graph.security.hostCookie objects.Note: List retrieval is not yet supported.
+     * Retrieve details about hostCookie objects.Note: List retrieval is not yet supported.
      */
     private java.util.List<HostCookie> hostCookies;
     /**
-     * Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
      */
     private java.util.List<HostPair> hostPairs;
     /**
-     * Refers to microsoft.graph.security.host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
+     * Refers to host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
      */
     private java.util.List<Host> hosts;
     /**
-     * The hostSslCertificates property
+     * Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
      */
     private java.util.List<HostSslCertificate> hostSslCertificates;
     /**
-     * Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
      */
     private java.util.List<HostTracker> hostTrackers;
     /**
@@ -50,27 +50,27 @@ public class ThreatIntelligence extends Entity implements Parsable {
      */
     private java.util.List<IntelligenceProfile> intelProfiles;
     /**
-     * Retrieve details about microsoft.graph.security.passiveDnsRecord objects.Note: List retrieval is not yet supported.
+     * Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
      */
     private java.util.List<PassiveDnsRecord> passiveDnsRecords;
     /**
-     * The sslCertificates property
+     * Retrieve details about sslCertificate objects.Note: List retrieval is not yet supported.
      */
     private java.util.List<SslCertificate> sslCertificates;
     /**
-     * Retrieve details about the microsoft.graph.security.subdomain.Note: List retrieval is not yet supported.
+     * Retrieve details about the subdomain.Note: List retrieval is not yet supported.
      */
     private java.util.List<Subdomain> subdomains;
     /**
-     * Retrieve details about microsoft.graph.security.vulnerabilities.Note: List retrieval is not yet supported.
+     * Retrieve details about vulnerabilities.Note: List retrieval is not yet supported.
      */
     private java.util.List<Vulnerability> vulnerabilities;
     /**
-     * The whoisHistoryRecords property
+     * Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
      */
     private java.util.List<WhoisHistoryRecord> whoisHistoryRecords;
     /**
-     * The whoisRecords property
+     * A list of whoisRecord objects.
      */
     private java.util.List<WhoisRecord> whoisRecords;
     /**
@@ -90,7 +90,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
         return new ThreatIntelligence();
     }
     /**
-     * Gets the articleIndicators property value. Refers to indicators of threat or compromise highlighted in an microsoft.graph.security.article.Note: List retrieval is not yet supported.
+     * Gets the articleIndicators property value. Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
      * @return a articleIndicator
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the hostComponents property value. Retrieve details about microsoft.graph.security.hostComponent objects.Note: List retrieval is not yet supported.
+     * Gets the hostComponents property value. Retrieve details about hostComponent objects.Note: List retrieval is not yet supported.
      * @return a hostComponent
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
         return this.hostComponents;
     }
     /**
-     * Gets the hostCookies property value. Retrieve details about microsoft.graph.security.hostCookie objects.Note: List retrieval is not yet supported.
+     * Gets the hostCookies property value. Retrieve details about hostCookie objects.Note: List retrieval is not yet supported.
      * @return a hostCookie
      */
     @jakarta.annotation.Nullable
@@ -147,7 +147,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
         return this.hostCookies;
     }
     /**
-     * Gets the hostPairs property value. Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+     * Gets the hostPairs property value. Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
      * @return a hostPair
      */
     @jakarta.annotation.Nullable
@@ -155,7 +155,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
         return this.hostPairs;
     }
     /**
-     * Gets the hosts property value. Refers to microsoft.graph.security.host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
+     * Gets the hosts property value. Refers to host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
      * @return a host
      */
     @jakarta.annotation.Nullable
@@ -163,7 +163,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
         return this.hosts;
     }
     /**
-     * Gets the hostSslCertificates property value. The hostSslCertificates property
+     * Gets the hostSslCertificates property value. Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
      * @return a hostSslCertificate
      */
     @jakarta.annotation.Nullable
@@ -171,7 +171,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
         return this.hostSslCertificates;
     }
     /**
-     * Gets the hostTrackers property value. Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+     * Gets the hostTrackers property value. Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
      * @return a hostTracker
      */
     @jakarta.annotation.Nullable
@@ -195,7 +195,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
         return this.intelProfiles;
     }
     /**
-     * Gets the passiveDnsRecords property value. Retrieve details about microsoft.graph.security.passiveDnsRecord objects.Note: List retrieval is not yet supported.
+     * Gets the passiveDnsRecords property value. Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
      * @return a passiveDnsRecord
      */
     @jakarta.annotation.Nullable
@@ -203,7 +203,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
         return this.passiveDnsRecords;
     }
     /**
-     * Gets the sslCertificates property value. The sslCertificates property
+     * Gets the sslCertificates property value. Retrieve details about sslCertificate objects.Note: List retrieval is not yet supported.
      * @return a sslCertificate
      */
     @jakarta.annotation.Nullable
@@ -211,7 +211,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
         return this.sslCertificates;
     }
     /**
-     * Gets the subdomains property value. Retrieve details about the microsoft.graph.security.subdomain.Note: List retrieval is not yet supported.
+     * Gets the subdomains property value. Retrieve details about the subdomain.Note: List retrieval is not yet supported.
      * @return a subdomain
      */
     @jakarta.annotation.Nullable
@@ -219,7 +219,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
         return this.subdomains;
     }
     /**
-     * Gets the vulnerabilities property value. Retrieve details about microsoft.graph.security.vulnerabilities.Note: List retrieval is not yet supported.
+     * Gets the vulnerabilities property value. Retrieve details about vulnerabilities.Note: List retrieval is not yet supported.
      * @return a vulnerability
      */
     @jakarta.annotation.Nullable
@@ -227,7 +227,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
         return this.vulnerabilities;
     }
     /**
-     * Gets the whoisHistoryRecords property value. The whoisHistoryRecords property
+     * Gets the whoisHistoryRecords property value. Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
      * @return a whoisHistoryRecord
      */
     @jakarta.annotation.Nullable
@@ -235,7 +235,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
         return this.whoisHistoryRecords;
     }
     /**
-     * Gets the whoisRecords property value. The whoisRecords property
+     * Gets the whoisRecords property value. A list of whoisRecord objects.
      * @return a whoisRecord
      */
     @jakarta.annotation.Nullable
@@ -267,7 +267,7 @@ public class ThreatIntelligence extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("whoisRecords", this.getWhoisRecords());
     }
     /**
-     * Sets the articleIndicators property value. Refers to indicators of threat or compromise highlighted in an microsoft.graph.security.article.Note: List retrieval is not yet supported.
+     * Sets the articleIndicators property value. Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
      * @param value Value to set for the articleIndicators property.
      */
     public void setArticleIndicators(@jakarta.annotation.Nullable final java.util.List<ArticleIndicator> value) {
@@ -281,42 +281,42 @@ public class ThreatIntelligence extends Entity implements Parsable {
         this.articles = value;
     }
     /**
-     * Sets the hostComponents property value. Retrieve details about microsoft.graph.security.hostComponent objects.Note: List retrieval is not yet supported.
+     * Sets the hostComponents property value. Retrieve details about hostComponent objects.Note: List retrieval is not yet supported.
      * @param value Value to set for the hostComponents property.
      */
     public void setHostComponents(@jakarta.annotation.Nullable final java.util.List<HostComponent> value) {
         this.hostComponents = value;
     }
     /**
-     * Sets the hostCookies property value. Retrieve details about microsoft.graph.security.hostCookie objects.Note: List retrieval is not yet supported.
+     * Sets the hostCookies property value. Retrieve details about hostCookie objects.Note: List retrieval is not yet supported.
      * @param value Value to set for the hostCookies property.
      */
     public void setHostCookies(@jakarta.annotation.Nullable final java.util.List<HostCookie> value) {
         this.hostCookies = value;
     }
     /**
-     * Sets the hostPairs property value. Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+     * Sets the hostPairs property value. Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
      * @param value Value to set for the hostPairs property.
      */
     public void setHostPairs(@jakarta.annotation.Nullable final java.util.List<HostPair> value) {
         this.hostPairs = value;
     }
     /**
-     * Sets the hosts property value. Refers to microsoft.graph.security.host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
+     * Sets the hosts property value. Refers to host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
      * @param value Value to set for the hosts property.
      */
     public void setHosts(@jakarta.annotation.Nullable final java.util.List<Host> value) {
         this.hosts = value;
     }
     /**
-     * Sets the hostSslCertificates property value. The hostSslCertificates property
+     * Sets the hostSslCertificates property value. Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
      * @param value Value to set for the hostSslCertificates property.
      */
     public void setHostSslCertificates(@jakarta.annotation.Nullable final java.util.List<HostSslCertificate> value) {
         this.hostSslCertificates = value;
     }
     /**
-     * Sets the hostTrackers property value. Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+     * Sets the hostTrackers property value. Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
      * @param value Value to set for the hostTrackers property.
      */
     public void setHostTrackers(@jakarta.annotation.Nullable final java.util.List<HostTracker> value) {
@@ -337,42 +337,42 @@ public class ThreatIntelligence extends Entity implements Parsable {
         this.intelProfiles = value;
     }
     /**
-     * Sets the passiveDnsRecords property value. Retrieve details about microsoft.graph.security.passiveDnsRecord objects.Note: List retrieval is not yet supported.
+     * Sets the passiveDnsRecords property value. Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
      * @param value Value to set for the passiveDnsRecords property.
      */
     public void setPassiveDnsRecords(@jakarta.annotation.Nullable final java.util.List<PassiveDnsRecord> value) {
         this.passiveDnsRecords = value;
     }
     /**
-     * Sets the sslCertificates property value. The sslCertificates property
+     * Sets the sslCertificates property value. Retrieve details about sslCertificate objects.Note: List retrieval is not yet supported.
      * @param value Value to set for the sslCertificates property.
      */
     public void setSslCertificates(@jakarta.annotation.Nullable final java.util.List<SslCertificate> value) {
         this.sslCertificates = value;
     }
     /**
-     * Sets the subdomains property value. Retrieve details about the microsoft.graph.security.subdomain.Note: List retrieval is not yet supported.
+     * Sets the subdomains property value. Retrieve details about the subdomain.Note: List retrieval is not yet supported.
      * @param value Value to set for the subdomains property.
      */
     public void setSubdomains(@jakarta.annotation.Nullable final java.util.List<Subdomain> value) {
         this.subdomains = value;
     }
     /**
-     * Sets the vulnerabilities property value. Retrieve details about microsoft.graph.security.vulnerabilities.Note: List retrieval is not yet supported.
+     * Sets the vulnerabilities property value. Retrieve details about vulnerabilities.Note: List retrieval is not yet supported.
      * @param value Value to set for the vulnerabilities property.
      */
     public void setVulnerabilities(@jakarta.annotation.Nullable final java.util.List<Vulnerability> value) {
         this.vulnerabilities = value;
     }
     /**
-     * Sets the whoisHistoryRecords property value. The whoisHistoryRecords property
+     * Sets the whoisHistoryRecords property value. Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
      * @param value Value to set for the whoisHistoryRecords property.
      */
     public void setWhoisHistoryRecords(@jakarta.annotation.Nullable final java.util.List<WhoisHistoryRecord> value) {
         this.whoisHistoryRecords = value;
     }
     /**
-     * Sets the whoisRecords property value. The whoisRecords property
+     * Sets the whoisRecords property value. A list of whoisRecord objects.
      * @param value Value to set for the whoisRecords property.
      */
     public void setWhoisRecords(@jakarta.annotation.Nullable final java.util.List<WhoisRecord> value) {

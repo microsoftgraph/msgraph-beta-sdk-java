@@ -167,6 +167,16 @@ public class CloudPcDevicesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a cloudPcDevicesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CloudPcDevicesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CloudPcDevicesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the cloudPcDevice objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

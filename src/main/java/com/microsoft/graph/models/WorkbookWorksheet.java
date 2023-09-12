@@ -37,11 +37,11 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     private java.util.List<WorkbookTable> tables;
     /**
-     * The tasks property
+     * Collection of document tasks on this worksheet. Read-only.
      */
     private java.util.List<WorkbookDocumentTask> tasks;
     /**
-     * The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
+     * The visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
      */
     private String visibility;
     /**
@@ -135,7 +135,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
         return this.tables;
     }
     /**
-     * Gets the tasks property value. The tasks property
+     * Gets the tasks property value. Collection of document tasks on this worksheet. Read-only.
      * @return a workbookDocumentTask
      */
     @jakarta.annotation.Nullable
@@ -143,7 +143,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
         return this.tasks;
     }
     /**
-     * Gets the visibility property value. The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
+     * Gets the visibility property value. The visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -217,14 +217,14 @@ public class WorkbookWorksheet extends Entity implements Parsable {
         this.tables = value;
     }
     /**
-     * Sets the tasks property value. The tasks property
+     * Sets the tasks property value. Collection of document tasks on this worksheet. Read-only.
      * @param value Value to set for the tasks property.
      */
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<WorkbookDocumentTask> value) {
         this.tasks = value;
     }
     /**
-     * Sets the visibility property value. The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
+     * Sets the visibility property value. The visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
      * @param value Value to set for the visibility property.
      */
     public void setVisibility(@jakarta.annotation.Nullable final String value) {

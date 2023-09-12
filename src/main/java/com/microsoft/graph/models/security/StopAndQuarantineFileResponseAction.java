@@ -3,6 +3,7 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +12,7 @@ public class StopAndQuarantineFileResponseAction extends ResponseAction implemen
     /**
      * The identifier property
      */
-    private StopAndQuarantineFileEntityIdentifier identifier;
+    private EnumSet<StopAndQuarantineFileEntityIdentifier> identifier;
     /**
      * Instantiates a new stopAndQuarantineFileResponseAction and sets the default values.
      */
@@ -36,7 +37,7 @@ public class StopAndQuarantineFileResponseAction extends ResponseAction implemen
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumValue(StopAndQuarantineFileEntityIdentifier.class)); });
+        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumSetValue(StopAndQuarantineFileEntityIdentifier.class)); });
         return deserializerMap;
     }
     /**
@@ -44,7 +45,7 @@ public class StopAndQuarantineFileResponseAction extends ResponseAction implemen
      * @return a stopAndQuarantineFileEntityIdentifier
      */
     @jakarta.annotation.Nullable
-    public StopAndQuarantineFileEntityIdentifier getIdentifier() {
+    public EnumSet<StopAndQuarantineFileEntityIdentifier> getIdentifier() {
         return this.identifier;
     }
     /**
@@ -54,13 +55,13 @@ public class StopAndQuarantineFileResponseAction extends ResponseAction implemen
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("identifier", this.getIdentifier());
+        writer.writeEnumSetValue("identifier", this.getIdentifier());
     }
     /**
      * Sets the identifier property value. The identifier property
      * @param value Value to set for the identifier property.
      */
-    public void setIdentifier(@jakarta.annotation.Nullable final StopAndQuarantineFileEntityIdentifier value) {
+    public void setIdentifier(@jakarta.annotation.Nullable final EnumSet<StopAndQuarantineFileEntityIdentifier> value) {
         this.identifier = value;
     }
 }

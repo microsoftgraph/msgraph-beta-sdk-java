@@ -165,6 +165,16 @@ public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends B
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a microsoftTunnelServerLogCollectionResponsesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftTunnelServerLogCollectionResponsesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MicrosoftTunnelServerLogCollectionResponsesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

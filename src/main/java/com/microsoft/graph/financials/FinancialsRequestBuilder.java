@@ -151,6 +151,16 @@ public class FinancialsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a financialsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public FinancialsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new FinancialsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get financials
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

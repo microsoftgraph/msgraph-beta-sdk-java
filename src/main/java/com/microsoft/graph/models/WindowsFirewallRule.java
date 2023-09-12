@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -39,7 +40,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     /**
      * Flags representing firewall rule interface types.
      */
-    private WindowsFirewallRuleInterfaceTypes interfaceTypes;
+    private EnumSet<WindowsFirewallRuleInterfaceTypes> interfaceTypes;
     /**
      * List of local addresses covered by the rule. Default is any address. Valid tokens include:'' indicates any local address. If present, this must be the only token included.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of 'start address - end address' with no spaces included.An IPv6 address range in the format of 'start address - end address' with no spaces included.
      */
@@ -63,7 +64,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     /**
      * Flags representing which network profile types apply to a firewall rule.
      */
-    private WindowsFirewallRuleNetworkProfileTypes profileTypes;
+    private EnumSet<WindowsFirewallRuleNetworkProfileTypes> profileTypes;
     /**
      * 0-255 number representing the IP protocol (TCP = 6, UDP = 17). If not specified, the default is All. Valid values 0 to 255
      */
@@ -152,13 +153,13 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("edgeTraversal", (n) -> { this.setEdgeTraversal(n.getEnumValue(StateManagementSetting.class)); });
         deserializerMap.put("filePath", (n) -> { this.setFilePath(n.getStringValue()); });
-        deserializerMap.put("interfaceTypes", (n) -> { this.setInterfaceTypes(n.getEnumValue(WindowsFirewallRuleInterfaceTypes.class)); });
+        deserializerMap.put("interfaceTypes", (n) -> { this.setInterfaceTypes(n.getEnumSetValue(WindowsFirewallRuleInterfaceTypes.class)); });
         deserializerMap.put("localAddressRanges", (n) -> { this.setLocalAddressRanges(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("localPortRanges", (n) -> { this.setLocalPortRanges(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("localUserAuthorizations", (n) -> { this.setLocalUserAuthorizations(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("packageFamilyName", (n) -> { this.setPackageFamilyName(n.getStringValue()); });
-        deserializerMap.put("profileTypes", (n) -> { this.setProfileTypes(n.getEnumValue(WindowsFirewallRuleNetworkProfileTypes.class)); });
+        deserializerMap.put("profileTypes", (n) -> { this.setProfileTypes(n.getEnumSetValue(WindowsFirewallRuleNetworkProfileTypes.class)); });
         deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getIntegerValue()); });
         deserializerMap.put("remoteAddressRanges", (n) -> { this.setRemoteAddressRanges(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("remotePortRanges", (n) -> { this.setRemotePortRanges(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -179,7 +180,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @return a windowsFirewallRuleInterfaceTypes
      */
     @jakarta.annotation.Nullable
-    public WindowsFirewallRuleInterfaceTypes getInterfaceTypes() {
+    public EnumSet<WindowsFirewallRuleInterfaceTypes> getInterfaceTypes() {
         return this.interfaceTypes;
     }
     /**
@@ -227,7 +228,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @return a windowsFirewallRuleNetworkProfileTypes
      */
     @jakarta.annotation.Nullable
-    public WindowsFirewallRuleNetworkProfileTypes getProfileTypes() {
+    public EnumSet<WindowsFirewallRuleNetworkProfileTypes> getProfileTypes() {
         return this.profileTypes;
     }
     /**
@@ -281,13 +282,13 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeEnumValue("edgeTraversal", this.getEdgeTraversal());
         writer.writeStringValue("filePath", this.getFilePath());
-        writer.writeEnumValue("interfaceTypes", this.getInterfaceTypes());
+        writer.writeEnumSetValue("interfaceTypes", this.getInterfaceTypes());
         writer.writeCollectionOfPrimitiveValues("localAddressRanges", this.getLocalAddressRanges());
         writer.writeCollectionOfPrimitiveValues("localPortRanges", this.getLocalPortRanges());
         writer.writeStringValue("localUserAuthorizations", this.getLocalUserAuthorizations());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("packageFamilyName", this.getPackageFamilyName());
-        writer.writeEnumValue("profileTypes", this.getProfileTypes());
+        writer.writeEnumSetValue("profileTypes", this.getProfileTypes());
         writer.writeIntegerValue("protocol", this.getProtocol());
         writer.writeCollectionOfPrimitiveValues("remoteAddressRanges", this.getRemoteAddressRanges());
         writer.writeCollectionOfPrimitiveValues("remotePortRanges", this.getRemotePortRanges());
@@ -341,7 +342,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * Sets the interfaceTypes property value. Flags representing firewall rule interface types.
      * @param value Value to set for the interfaceTypes property.
      */
-    public void setInterfaceTypes(@jakarta.annotation.Nullable final WindowsFirewallRuleInterfaceTypes value) {
+    public void setInterfaceTypes(@jakarta.annotation.Nullable final EnumSet<WindowsFirewallRuleInterfaceTypes> value) {
         this.interfaceTypes = value;
     }
     /**
@@ -383,7 +384,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * Sets the profileTypes property value. Flags representing which network profile types apply to a firewall rule.
      * @param value Value to set for the profileTypes property.
      */
-    public void setProfileTypes(@jakarta.annotation.Nullable final WindowsFirewallRuleNetworkProfileTypes value) {
+    public void setProfileTypes(@jakarta.annotation.Nullable final EnumSet<WindowsFirewallRuleNetworkProfileTypes> value) {
         this.profileTypes = value;
     }
     /**

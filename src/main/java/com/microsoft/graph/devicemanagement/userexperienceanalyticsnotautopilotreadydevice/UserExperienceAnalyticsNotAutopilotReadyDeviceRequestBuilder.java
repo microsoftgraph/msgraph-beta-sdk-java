@@ -165,6 +165,16 @@ public class UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder extend
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * User experience analytics devices not Windows Autopilot ready.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

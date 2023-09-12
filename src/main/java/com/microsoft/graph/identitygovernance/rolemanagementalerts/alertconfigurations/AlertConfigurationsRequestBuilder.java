@@ -167,6 +167,16 @@ public class AlertConfigurationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a alertConfigurationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AlertConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AlertConfigurationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the alert configurations. The alert configurations are a collection of following types that are derived from the unifiedRoleManagementAlertConfiguration object:
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

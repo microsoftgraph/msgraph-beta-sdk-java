@@ -165,6 +165,16 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a acceptanceStatusesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AcceptanceStatusesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AcceptanceStatusesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The list of acceptance statuses for this T&C policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

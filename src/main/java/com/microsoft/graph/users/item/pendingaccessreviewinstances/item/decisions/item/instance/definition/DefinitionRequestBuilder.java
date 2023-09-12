@@ -87,6 +87,16 @@ public class DefinitionRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a definitionRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DefinitionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DefinitionRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * There is exactly one accessReviewScheduleDefinition associated with each instance. It is the parent schedule for the instance, where instances are created for each recurrence of a review definition and each group selected to review by the definition.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

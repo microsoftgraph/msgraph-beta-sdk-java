@@ -60,6 +60,18 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     private Boolean earlyLaunchAntiMalwareDriverEnabled;
     /**
+     * When TRUE, indicates that Firmware protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Firmware protection is not required to be reported as healthy. Devices that support either Dynamic Root of Trust for Measurement (DRTM) or Firmware Attack Surface Reduction (FASR) will report compliant for this setting. Default value is FALSE.
+     */
+    private Boolean firmwareProtectionEnabled;
+    /**
+     * When TRUE, indicates that Kernel Direct Memory Access (DMA) protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Kernel DMA Protection is not required to be reported as healthy. Default value is FALSE.
+     */
+    private Boolean kernelDmaProtectionEnabled;
+    /**
+     * When TRUE, indicates that Memory Integrity as known as Hypervisor-protected Code Integrity (HVCI) or Hypervisor Enforced Code Integrity protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Memory Integrity Protection is not required to be reported as healthy. Default value is FALSE.
+     */
+    private Boolean memoryIntegrityEnabled;
+    /**
      * Maximum Windows Phone version.
      */
     private String mobileOsMaximumVersion;
@@ -139,6 +151,10 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * The valid operating system build ranges on Windows devices. This collection can contain a maximum of 10000 elements.
      */
     private java.util.List<OperatingSystemVersionRange> validOperatingSystemBuildRanges;
+    /**
+     * When TRUE, indicates that Virtualization-based Security is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Virtualization-based Security is not required to be reported as healthy. Default value is FALSE.
+     */
+    private Boolean virtualizationBasedSecurityEnabled;
     /**
      * Instantiates a new windows10CompliancePolicy and sets the default values.
      */
@@ -271,6 +287,9 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
         deserializerMap.put("deviceThreatProtectionEnabled", (n) -> { this.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
         deserializerMap.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { this.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
         deserializerMap.put("earlyLaunchAntiMalwareDriverEnabled", (n) -> { this.setEarlyLaunchAntiMalwareDriverEnabled(n.getBooleanValue()); });
+        deserializerMap.put("firmwareProtectionEnabled", (n) -> { this.setFirmwareProtectionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("kernelDmaProtectionEnabled", (n) -> { this.setKernelDmaProtectionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("memoryIntegrityEnabled", (n) -> { this.setMemoryIntegrityEnabled(n.getBooleanValue()); });
         deserializerMap.put("mobileOsMaximumVersion", (n) -> { this.setMobileOsMaximumVersion(n.getStringValue()); });
         deserializerMap.put("mobileOsMinimumVersion", (n) -> { this.setMobileOsMinimumVersion(n.getStringValue()); });
         deserializerMap.put("osMaximumVersion", (n) -> { this.setOsMaximumVersion(n.getStringValue()); });
@@ -291,7 +310,32 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
         deserializerMap.put("storageRequireEncryption", (n) -> { this.setStorageRequireEncryption(n.getBooleanValue()); });
         deserializerMap.put("tpmRequired", (n) -> { this.setTpmRequired(n.getBooleanValue()); });
         deserializerMap.put("validOperatingSystemBuildRanges", (n) -> { this.setValidOperatingSystemBuildRanges(n.getCollectionOfObjectValues(OperatingSystemVersionRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("virtualizationBasedSecurityEnabled", (n) -> { this.setVirtualizationBasedSecurityEnabled(n.getBooleanValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the firmwareProtectionEnabled property value. When TRUE, indicates that Firmware protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Firmware protection is not required to be reported as healthy. Devices that support either Dynamic Root of Trust for Measurement (DRTM) or Firmware Attack Surface Reduction (FASR) will report compliant for this setting. Default value is FALSE.
+     * @return a boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getFirmwareProtectionEnabled() {
+        return this.firmwareProtectionEnabled;
+    }
+    /**
+     * Gets the kernelDmaProtectionEnabled property value. When TRUE, indicates that Kernel Direct Memory Access (DMA) protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Kernel DMA Protection is not required to be reported as healthy. Default value is FALSE.
+     * @return a boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getKernelDmaProtectionEnabled() {
+        return this.kernelDmaProtectionEnabled;
+    }
+    /**
+     * Gets the memoryIntegrityEnabled property value. When TRUE, indicates that Memory Integrity as known as Hypervisor-protected Code Integrity (HVCI) or Hypervisor Enforced Code Integrity protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Memory Integrity Protection is not required to be reported as healthy. Default value is FALSE.
+     * @return a boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getMemoryIntegrityEnabled() {
+        return this.memoryIntegrityEnabled;
     }
     /**
      * Gets the mobileOsMaximumVersion property value. Maximum Windows Phone version.
@@ -454,6 +498,14 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
         return this.validOperatingSystemBuildRanges;
     }
     /**
+     * Gets the virtualizationBasedSecurityEnabled property value. When TRUE, indicates that Virtualization-based Security is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Virtualization-based Security is not required to be reported as healthy. Default value is FALSE.
+     * @return a boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getVirtualizationBasedSecurityEnabled() {
+        return this.virtualizationBasedSecurityEnabled;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -472,6 +524,9 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
         writer.writeBooleanValue("deviceThreatProtectionEnabled", this.getDeviceThreatProtectionEnabled());
         writer.writeEnumValue("deviceThreatProtectionRequiredSecurityLevel", this.getDeviceThreatProtectionRequiredSecurityLevel());
         writer.writeBooleanValue("earlyLaunchAntiMalwareDriverEnabled", this.getEarlyLaunchAntiMalwareDriverEnabled());
+        writer.writeBooleanValue("firmwareProtectionEnabled", this.getFirmwareProtectionEnabled());
+        writer.writeBooleanValue("kernelDmaProtectionEnabled", this.getKernelDmaProtectionEnabled());
+        writer.writeBooleanValue("memoryIntegrityEnabled", this.getMemoryIntegrityEnabled());
         writer.writeStringValue("mobileOsMaximumVersion", this.getMobileOsMaximumVersion());
         writer.writeStringValue("mobileOsMinimumVersion", this.getMobileOsMinimumVersion());
         writer.writeStringValue("osMaximumVersion", this.getOsMaximumVersion());
@@ -492,6 +547,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
         writer.writeBooleanValue("storageRequireEncryption", this.getStorageRequireEncryption());
         writer.writeBooleanValue("tpmRequired", this.getTpmRequired());
         writer.writeCollectionOfObjectValues("validOperatingSystemBuildRanges", this.getValidOperatingSystemBuildRanges());
+        writer.writeBooleanValue("virtualizationBasedSecurityEnabled", this.getVirtualizationBasedSecurityEnabled());
     }
     /**
      * Sets the activeFirewallRequired property value. Require active firewall on Windows devices.
@@ -576,6 +632,27 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     public void setEarlyLaunchAntiMalwareDriverEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.earlyLaunchAntiMalwareDriverEnabled = value;
+    }
+    /**
+     * Sets the firmwareProtectionEnabled property value. When TRUE, indicates that Firmware protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Firmware protection is not required to be reported as healthy. Devices that support either Dynamic Root of Trust for Measurement (DRTM) or Firmware Attack Surface Reduction (FASR) will report compliant for this setting. Default value is FALSE.
+     * @param value Value to set for the firmwareProtectionEnabled property.
+     */
+    public void setFirmwareProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.firmwareProtectionEnabled = value;
+    }
+    /**
+     * Sets the kernelDmaProtectionEnabled property value. When TRUE, indicates that Kernel Direct Memory Access (DMA) protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Kernel DMA Protection is not required to be reported as healthy. Default value is FALSE.
+     * @param value Value to set for the kernelDmaProtectionEnabled property.
+     */
+    public void setKernelDmaProtectionEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.kernelDmaProtectionEnabled = value;
+    }
+    /**
+     * Sets the memoryIntegrityEnabled property value. When TRUE, indicates that Memory Integrity as known as Hypervisor-protected Code Integrity (HVCI) or Hypervisor Enforced Code Integrity protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Memory Integrity Protection is not required to be reported as healthy. Default value is FALSE.
+     * @param value Value to set for the memoryIntegrityEnabled property.
+     */
+    public void setMemoryIntegrityEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.memoryIntegrityEnabled = value;
     }
     /**
      * Sets the mobileOsMaximumVersion property value. Maximum Windows Phone version.
@@ -716,5 +793,12 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     public void setValidOperatingSystemBuildRanges(@jakarta.annotation.Nullable final java.util.List<OperatingSystemVersionRange> value) {
         this.validOperatingSystemBuildRanges = value;
+    }
+    /**
+     * Sets the virtualizationBasedSecurityEnabled property value. When TRUE, indicates that Virtualization-based Security is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Virtualization-based Security is not required to be reported as healthy. Default value is FALSE.
+     * @param value Value to set for the virtualizationBasedSecurityEnabled property.
+     */
+    public void setVirtualizationBasedSecurityEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.virtualizationBasedSecurityEnabled = value;
     }
 }

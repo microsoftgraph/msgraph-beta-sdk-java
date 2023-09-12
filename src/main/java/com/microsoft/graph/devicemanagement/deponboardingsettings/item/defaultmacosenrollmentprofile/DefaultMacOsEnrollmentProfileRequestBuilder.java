@@ -87,6 +87,16 @@ public class DefaultMacOsEnrollmentProfileRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a defaultMacOsEnrollmentProfileRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DefaultMacOsEnrollmentProfileRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DefaultMacOsEnrollmentProfileRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Default MacOs Enrollment Profile
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

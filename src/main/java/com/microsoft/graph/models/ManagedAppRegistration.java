@@ -108,6 +108,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
             switch (mappingValue) {
                 case "#microsoft.graph.androidManagedAppRegistration": return new AndroidManagedAppRegistration();
                 case "#microsoft.graph.iosManagedAppRegistration": return new IosManagedAppRegistration();
+                case "#microsoft.graph.windowsManagedAppRegistration": return new WindowsManagedAppRegistration();
             }
         }
         return new ManagedAppRegistration();

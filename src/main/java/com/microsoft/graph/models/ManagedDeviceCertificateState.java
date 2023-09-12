@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -44,7 +45,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
     /**
      * Key Usage Options.
      */
-    private KeyUsages certificateKeyUsage;
+    private EnumSet<KeyUsages> certificateKeyUsage;
     /**
      * Last certificate issuance state change
      */
@@ -64,7 +65,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
     /**
      * Subject Alternative Name Options.
      */
-    private SubjectAlternativeNameType certificateSubjectAlternativeNameFormat;
+    private EnumSet<SubjectAlternativeNameType> certificateSubjectAlternativeNameFormat;
     /**
      * Subject alternative name format string for custom formats
      */
@@ -190,7 +191,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
      * @return a keyUsages
      */
     @jakarta.annotation.Nullable
-    public KeyUsages getCertificateKeyUsage() {
+    public EnumSet<KeyUsages> getCertificateKeyUsage() {
         return this.certificateKeyUsage;
     }
     /**
@@ -230,7 +231,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
      * @return a subjectAlternativeNameType
      */
     @jakarta.annotation.Nullable
-    public SubjectAlternativeNameType getCertificateSubjectAlternativeNameFormat() {
+    public EnumSet<SubjectAlternativeNameType> getCertificateSubjectAlternativeNameFormat() {
         return this.certificateSubjectAlternativeNameFormat;
     }
     /**
@@ -312,12 +313,12 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         deserializerMap.put("certificateIssuer", (n) -> { this.setCertificateIssuer(n.getStringValue()); });
         deserializerMap.put("certificateKeyLength", (n) -> { this.setCertificateKeyLength(n.getIntegerValue()); });
         deserializerMap.put("certificateKeyStorageProvider", (n) -> { this.setCertificateKeyStorageProvider(n.getEnumValue(KeyStorageProviderOption.class)); });
-        deserializerMap.put("certificateKeyUsage", (n) -> { this.setCertificateKeyUsage(n.getEnumValue(KeyUsages.class)); });
+        deserializerMap.put("certificateKeyUsage", (n) -> { this.setCertificateKeyUsage(n.getEnumSetValue(KeyUsages.class)); });
         deserializerMap.put("certificateLastIssuanceStateChangedDateTime", (n) -> { this.setCertificateLastIssuanceStateChangedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("certificateProfileDisplayName", (n) -> { this.setCertificateProfileDisplayName(n.getStringValue()); });
         deserializerMap.put("certificateRevokeStatus", (n) -> { this.setCertificateRevokeStatus(n.getEnumValue(CertificateRevocationStatus.class)); });
         deserializerMap.put("certificateSerialNumber", (n) -> { this.setCertificateSerialNumber(n.getStringValue()); });
-        deserializerMap.put("certificateSubjectAlternativeNameFormat", (n) -> { this.setCertificateSubjectAlternativeNameFormat(n.getEnumValue(SubjectAlternativeNameType.class)); });
+        deserializerMap.put("certificateSubjectAlternativeNameFormat", (n) -> { this.setCertificateSubjectAlternativeNameFormat(n.getEnumSetValue(SubjectAlternativeNameType.class)); });
         deserializerMap.put("certificateSubjectAlternativeNameFormatString", (n) -> { this.setCertificateSubjectAlternativeNameFormatString(n.getStringValue()); });
         deserializerMap.put("certificateSubjectNameFormat", (n) -> { this.setCertificateSubjectNameFormat(n.getEnumValue(SubjectNameFormat.class)); });
         deserializerMap.put("certificateSubjectNameFormatString", (n) -> { this.setCertificateSubjectNameFormatString(n.getStringValue()); });
@@ -361,12 +362,12 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
         writer.writeStringValue("certificateIssuer", this.getCertificateIssuer());
         writer.writeIntegerValue("certificateKeyLength", this.getCertificateKeyLength());
         writer.writeEnumValue("certificateKeyStorageProvider", this.getCertificateKeyStorageProvider());
-        writer.writeEnumValue("certificateKeyUsage", this.getCertificateKeyUsage());
+        writer.writeEnumSetValue("certificateKeyUsage", this.getCertificateKeyUsage());
         writer.writeOffsetDateTimeValue("certificateLastIssuanceStateChangedDateTime", this.getCertificateLastIssuanceStateChangedDateTime());
         writer.writeStringValue("certificateProfileDisplayName", this.getCertificateProfileDisplayName());
         writer.writeEnumValue("certificateRevokeStatus", this.getCertificateRevokeStatus());
         writer.writeStringValue("certificateSerialNumber", this.getCertificateSerialNumber());
-        writer.writeEnumValue("certificateSubjectAlternativeNameFormat", this.getCertificateSubjectAlternativeNameFormat());
+        writer.writeEnumSetValue("certificateSubjectAlternativeNameFormat", this.getCertificateSubjectAlternativeNameFormat());
         writer.writeStringValue("certificateSubjectAlternativeNameFormatString", this.getCertificateSubjectAlternativeNameFormatString());
         writer.writeEnumValue("certificateSubjectNameFormat", this.getCertificateSubjectNameFormat());
         writer.writeStringValue("certificateSubjectNameFormatString", this.getCertificateSubjectNameFormatString());
@@ -438,7 +439,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
      * Sets the certificateKeyUsage property value. Key Usage Options.
      * @param value Value to set for the certificateKeyUsage property.
      */
-    public void setCertificateKeyUsage(@jakarta.annotation.Nullable final KeyUsages value) {
+    public void setCertificateKeyUsage(@jakarta.annotation.Nullable final EnumSet<KeyUsages> value) {
         this.certificateKeyUsage = value;
     }
     /**
@@ -473,7 +474,7 @@ public class ManagedDeviceCertificateState extends Entity implements Parsable {
      * Sets the certificateSubjectAlternativeNameFormat property value. Subject Alternative Name Options.
      * @param value Value to set for the certificateSubjectAlternativeNameFormat property.
      */
-    public void setCertificateSubjectAlternativeNameFormat(@jakarta.annotation.Nullable final SubjectAlternativeNameType value) {
+    public void setCertificateSubjectAlternativeNameFormat(@jakarta.annotation.Nullable final EnumSet<SubjectAlternativeNameType> value) {
         this.certificateSubjectAlternativeNameFormat = value;
     }
     /**

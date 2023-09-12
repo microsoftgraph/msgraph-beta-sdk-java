@@ -72,17 +72,19 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get multiTenantOrganization from tenantRelationships
+     * Get properties of the multi-tenant organization.
      * @return a CompletableFuture of multiTenantOrganization
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MultiTenantOrganization> get() {
         return get(null);
     }
     /**
-     * Get multiTenantOrganization from tenantRelationships
+     * Get properties of the multi-tenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of multiTenantOrganization
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MultiTenantOrganization> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -93,24 +95,26 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, MultiTenantOrganization::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the navigation property multiTenantOrganization in tenantRelationships
+     * Update the properties of a multi-tenant organization.
      * @param body The request body
      * @return a CompletableFuture of multiTenantOrganization
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MultiTenantOrganization> put(@jakarta.annotation.Nonnull final MultiTenantOrganization body) {
-        return put(body, null);
+    public java.util.concurrent.CompletableFuture<MultiTenantOrganization> patch(@jakarta.annotation.Nonnull final MultiTenantOrganization body) {
+        return patch(body, null);
     }
     /**
-     * Update the navigation property multiTenantOrganization in tenantRelationships
+     * Update the properties of a multi-tenant organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of multiTenantOrganization
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<MultiTenantOrganization> put(@jakarta.annotation.Nonnull final MultiTenantOrganization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<MultiTenantOrganization> patch(@jakarta.annotation.Nonnull final MultiTenantOrganization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
+        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -144,7 +148,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get multiTenantOrganization from tenantRelationships
+     * Get properties of the multi-tenant organization.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -152,7 +156,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get multiTenantOrganization from tenantRelationships
+     * Get properties of the multi-tenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -173,36 +177,46 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property multiTenantOrganization in tenantRelationships
+     * Update the properties of a multi-tenant organization.
      * @param body The request body
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final MultiTenantOrganization body) {
-        return toPutRequestInformation(body, null);
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MultiTenantOrganization body) {
+        return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property multiTenantOrganization in tenantRelationships
+     * Update the properties of a multi-tenant organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final MultiTenantOrganization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MultiTenantOrganization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PUT;
+        requestInfo.httpMethod = HttpMethod.PATCH;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.headers.add("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PutRequestConfiguration requestConfig = new PutRequestConfiguration();
+            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a multiTenantOrganizationRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MultiTenantOrganizationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MultiTenantOrganizationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
@@ -211,7 +225,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get multiTenantOrganization from tenantRelationships
+     * Get properties of the multi-tenant organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
@@ -243,6 +257,6 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class PutRequestConfiguration extends BaseRequestConfiguration {
+    public class PatchRequestConfiguration extends BaseRequestConfiguration {
     }
 }

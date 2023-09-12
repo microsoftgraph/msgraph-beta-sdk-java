@@ -1,4 +1,4 @@
-package com.microsoft.graph.devicemanagement.reports.getautopilotdeploymentdeviceinformation;
+package com.microsoft.graph.devicemanagement.virtualendpoint.reports.getfrontlinereport;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -15,43 +15,43 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to call the getAutopilotDeploymentDeviceInformation method.
+ * Provides operations to call the getFrontlineReport method.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class GetAutopilotDeploymentDeviceInformationRequestBuilder extends BaseRequestBuilder {
+public class GetFrontlineReportRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new GetAutopilotDeploymentDeviceInformationRequestBuilder and sets the default values.
+     * Instantiates a new GetFrontlineReportRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public GetAutopilotDeploymentDeviceInformationRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/reports/getAutopilotDeploymentDeviceInformation", pathParameters);
+    public GetFrontlineReportRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/reports/getFrontlineReport", pathParameters);
     }
     /**
-     * Instantiates a new GetAutopilotDeploymentDeviceInformationRequestBuilder and sets the default values.
+     * Instantiates a new GetFrontlineReportRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public GetAutopilotDeploymentDeviceInformationRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/reports/getAutopilotDeploymentDeviceInformation", rawUrl);
+    public GetFrontlineReportRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/reports/getFrontlineReport", rawUrl);
     }
     /**
-     * Invoke action getAutopilotDeploymentDeviceInformation
+     * Invoke action getFrontlineReport
      * @param body The request body
      * @return a CompletableFuture of InputStream
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> post(@jakarta.annotation.Nonnull final GetAutopilotDeploymentDeviceInformationPostRequestBody body) {
+    public java.util.concurrent.CompletableFuture<InputStream> post(@jakarta.annotation.Nonnull final GetFrontlineReportPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action getAutopilotDeploymentDeviceInformation
+     * Invoke action getFrontlineReport
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> post(@jakarta.annotation.Nonnull final GetAutopilotDeploymentDeviceInformationPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<InputStream> post(@jakarta.annotation.Nonnull final GetFrontlineReportPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -60,22 +60,22 @@ public class GetAutopilotDeploymentDeviceInformationRequestBuilder extends BaseR
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
     }
     /**
-     * Invoke action getAutopilotDeploymentDeviceInformation
+     * Invoke action getFrontlineReport
      * @param body The request body
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GetAutopilotDeploymentDeviceInformationPostRequestBody body) {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GetFrontlineReportPostRequestBody body) {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action getAutopilotDeploymentDeviceInformation
+     * Invoke action getFrontlineReport
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GetAutopilotDeploymentDeviceInformationPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GetFrontlineReportPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.POST;
@@ -89,6 +89,16 @@ public class GetAutopilotDeploymentDeviceInformationRequestBuilder extends BaseR
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a getFrontlineReportRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GetFrontlineReportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GetFrontlineReportRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

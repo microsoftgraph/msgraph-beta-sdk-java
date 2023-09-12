@@ -56,7 +56,7 @@ public class WorkbookDocumentTaskChangeItemRequestBuilder extends BaseRequestBui
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get changes from drives
+     * A collection of task change histories.
      * @return a CompletableFuture of workbookDocumentTaskChange
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class WorkbookDocumentTaskChangeItemRequestBuilder extends BaseRequestBui
         return get(null);
     }
     /**
-     * Get changes from drives
+     * A collection of task change histories.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookDocumentTaskChange
      */
@@ -128,7 +128,7 @@ public class WorkbookDocumentTaskChangeItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Get changes from drives
+     * A collection of task change histories.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +136,7 @@ public class WorkbookDocumentTaskChangeItemRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Get changes from drives
+     * A collection of task change histories.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,13 +189,23 @@ public class WorkbookDocumentTaskChangeItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a WorkbookDocumentTaskChangeItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public WorkbookDocumentTaskChangeItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new WorkbookDocumentTaskChangeItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get changes from drives
+     * A collection of task change histories.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

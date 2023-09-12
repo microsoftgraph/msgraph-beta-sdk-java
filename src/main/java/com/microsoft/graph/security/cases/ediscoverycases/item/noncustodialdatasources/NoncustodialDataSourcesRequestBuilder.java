@@ -7,6 +7,7 @@ import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatas
 import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.item.EdiscoveryNoncustodialDataSourceItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.microsoftgraphsecurityapplyhold.MicrosoftGraphSecurityApplyHoldRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.microsoftgraphsecurityremovehold.MicrosoftGraphSecurityRemoveHoldRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.noncustodialdatasources.microsoftgraphsecurityupdateindex.MicrosoftGraphSecurityUpdateIndexRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -45,6 +46,13 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityRemoveHoldRequestBuilder microsoftGraphSecurityRemoveHold() {
         return new MicrosoftGraphSecurityRemoveHoldRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the updateIndex method.
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityUpdateIndexRequestBuilder microsoftGraphSecurityUpdateIndex() {
+        return new MicrosoftGraphSecurityUpdateIndexRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the noncustodialDataSources property of the microsoft.graph.security.ediscoveryCase entity.
@@ -181,6 +189,16 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a noncustodialDataSourcesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public NoncustodialDataSourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new NoncustodialDataSourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Returns a list of case ediscoveryNoncustodialDataSource objects for this case.

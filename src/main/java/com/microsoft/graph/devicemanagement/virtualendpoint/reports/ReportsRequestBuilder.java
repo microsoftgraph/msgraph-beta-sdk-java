@@ -3,7 +3,9 @@ package com.microsoft.graph.devicemanagement.virtualendpoint.reports;
 import com.microsoft.graph.devicemanagement.virtualendpoint.reports.exportjobs.ExportJobsRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getconnectionqualityreports.GetConnectionQualityReportsRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getdailyaggregatedremoteconnectionreports.GetDailyAggregatedRemoteConnectionReportsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getfrontlinereport.GetFrontlineReportRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getinaccessiblecloudpcreports.GetInaccessibleCloudPcReportsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getrawremoteconnectionreports.GetRawRemoteConnectionReportsRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getrealtimeremoteconnectionlatencywithcloudpcid.GetRealTimeRemoteConnectionLatencyWithCloudPcIdRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getrealtimeremoteconnectionstatuswithcloudpcid.GetRealTimeRemoteConnectionStatusWithCloudPcIdRequestBuilder;
 import com.microsoft.graph.devicemanagement.virtualendpoint.reports.getremoteconnectionhistoricalreports.GetRemoteConnectionHistoricalReportsRequestBuilder;
@@ -51,11 +53,25 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return new GetDailyAggregatedRemoteConnectionReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the getFrontlineReport method.
+     */
+    @jakarta.annotation.Nonnull
+    public GetFrontlineReportRequestBuilder getFrontlineReport() {
+        return new GetFrontlineReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the getInaccessibleCloudPcReports method.
      */
     @jakarta.annotation.Nonnull
     public GetInaccessibleCloudPcReportsRequestBuilder getInaccessibleCloudPcReports() {
         return new GetInaccessibleCloudPcReportsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getRawRemoteConnectionReports method.
+     */
+    @jakarta.annotation.Nonnull
+    public GetRawRemoteConnectionReportsRequestBuilder getRawRemoteConnectionReports() {
+        return new GetRawRemoteConnectionReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getRemoteConnectionHistoricalReports method.
@@ -265,6 +281,16 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a reportsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ReportsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

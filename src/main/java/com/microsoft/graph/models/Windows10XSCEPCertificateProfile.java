@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -43,7 +44,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     /**
      * Key Usage Options.
      */
-    private KeyUsages keyUsage;
+    private EnumSet<KeyUsages> keyUsage;
     /**
      * Certificate renewal threshold percentage
      */
@@ -127,7 +128,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
         deserializerMap.put("hashAlgorithm", (n) -> { this.setHashAlgorithm(n.getCollectionOfEnumValues(HashAlgorithms.class)); });
         deserializerMap.put("keySize", (n) -> { this.setKeySize(n.getEnumValue(KeySize.class)); });
         deserializerMap.put("keyStorageProvider", (n) -> { this.setKeyStorageProvider(n.getEnumValue(KeyStorageProviderOption.class)); });
-        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumValue(KeyUsages.class)); });
+        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumSetValue(KeyUsages.class)); });
         deserializerMap.put("renewalThresholdPercentage", (n) -> { this.setRenewalThresholdPercentage(n.getIntegerValue()); });
         deserializerMap.put("rootCertificateId", (n) -> { this.setRootCertificateId(n.getUUIDValue()); });
         deserializerMap.put("scepServerUrls", (n) -> { this.setScepServerUrls(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -164,7 +165,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * @return a keyUsages
      */
     @jakarta.annotation.Nullable
-    public KeyUsages getKeyUsage() {
+    public EnumSet<KeyUsages> getKeyUsage() {
         return this.keyUsage;
     }
     /**
@@ -221,7 +222,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
         writer.writeCollectionOfEnumValues("hashAlgorithm", this.getHashAlgorithm());
         writer.writeEnumValue("keySize", this.getKeySize());
         writer.writeEnumValue("keyStorageProvider", this.getKeyStorageProvider());
-        writer.writeEnumValue("keyUsage", this.getKeyUsage());
+        writer.writeEnumSetValue("keyUsage", this.getKeyUsage());
         writer.writeIntegerValue("renewalThresholdPercentage", this.getRenewalThresholdPercentage());
         writer.writeUUIDValue("rootCertificateId", this.getRootCertificateId());
         writer.writeCollectionOfPrimitiveValues("scepServerUrls", this.getScepServerUrls());
@@ -281,7 +282,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * Sets the keyUsage property value. Key Usage Options.
      * @param value Value to set for the keyUsage property.
      */
-    public void setKeyUsage(@jakarta.annotation.Nullable final KeyUsages value) {
+    public void setKeyUsage(@jakarta.annotation.Nullable final EnumSet<KeyUsages> value) {
         this.keyUsage = value;
     }
     /**

@@ -166,6 +166,16 @@ public class JournalLinesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a journalLinesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public JournalLinesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new JournalLinesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get journalLines from financials
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

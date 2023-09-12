@@ -167,6 +167,16 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a synchronizationProfilesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SynchronizationProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SynchronizationProfilesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the collection of school data synchronization profiles in the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

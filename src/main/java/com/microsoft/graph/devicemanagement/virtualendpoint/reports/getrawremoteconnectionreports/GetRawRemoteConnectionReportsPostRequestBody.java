@@ -1,4 +1,4 @@
-package com.microsoft.graph.devicemanagement.reports.getautopilotdeploymentdeviceinformation;
+package com.microsoft.graph.devicemanagement.virtualendpoint.reports.getrawremoteconnectionreports;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class GetAutopilotDeploymentDeviceInformationPostRequestBody implements AdditionalDataHolder, Parsable {
+public class GetRawRemoteConnectionReportsPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      */
@@ -22,10 +22,6 @@ public class GetAutopilotDeploymentDeviceInformationPostRequestBody implements A
      */
     private java.util.List<String> groupBy;
     /**
-     * The name property
-     */
-    private String name;
-    /**
      * The orderBy property
      */
     private java.util.List<String> orderBy;
@@ -38,10 +34,6 @@ public class GetAutopilotDeploymentDeviceInformationPostRequestBody implements A
      */
     private java.util.List<String> select;
     /**
-     * The sessionId property
-     */
-    private String sessionId;
-    /**
      * The skip property
      */
     private Integer skip;
@@ -50,20 +42,20 @@ public class GetAutopilotDeploymentDeviceInformationPostRequestBody implements A
      */
     private Integer top;
     /**
-     * Instantiates a new getAutopilotDeploymentDeviceInformationPostRequestBody and sets the default values.
+     * Instantiates a new getRawRemoteConnectionReportsPostRequestBody and sets the default values.
      */
-    public GetAutopilotDeploymentDeviceInformationPostRequestBody() {
+    public GetRawRemoteConnectionReportsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getAutopilotDeploymentDeviceInformationPostRequestBody
+     * @return a getRawRemoteConnectionReportsPostRequestBody
      */
     @jakarta.annotation.Nonnull
-    public static GetAutopilotDeploymentDeviceInformationPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static GetRawRemoteConnectionReportsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new GetAutopilotDeploymentDeviceInformationPostRequestBody();
+        return new GetRawRemoteConnectionReportsPostRequestBody();
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -79,14 +71,12 @@ public class GetAutopilotDeploymentDeviceInformationPostRequestBody implements A
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("filter", (n) -> { this.setFilter(n.getStringValue()); });
         deserializerMap.put("groupBy", (n) -> { this.setGroupBy(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("orderBy", (n) -> { this.setOrderBy(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("search", (n) -> { this.setSearch(n.getStringValue()); });
         deserializerMap.put("select", (n) -> { this.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("sessionId", (n) -> { this.setSessionId(n.getStringValue()); });
         deserializerMap.put("skip", (n) -> { this.setSkip(n.getIntegerValue()); });
         deserializerMap.put("top", (n) -> { this.setTop(n.getIntegerValue()); });
         return deserializerMap;
@@ -106,14 +96,6 @@ public class GetAutopilotDeploymentDeviceInformationPostRequestBody implements A
     @jakarta.annotation.Nullable
     public java.util.List<String> getGroupBy() {
         return this.groupBy;
-    }
-    /**
-     * Gets the name property value. The name property
-     * @return a string
-     */
-    @jakarta.annotation.Nullable
-    public String getName() {
-        return this.name;
     }
     /**
      * Gets the orderBy property value. The orderBy property
@@ -140,14 +122,6 @@ public class GetAutopilotDeploymentDeviceInformationPostRequestBody implements A
         return this.select;
     }
     /**
-     * Gets the sessionId property value. The sessionId property
-     * @return a string
-     */
-    @jakarta.annotation.Nullable
-    public String getSessionId() {
-        return this.sessionId;
-    }
-    /**
      * Gets the skip property value. The skip property
      * @return a integer
      */
@@ -171,11 +145,9 @@ public class GetAutopilotDeploymentDeviceInformationPostRequestBody implements A
         Objects.requireNonNull(writer);
         writer.writeStringValue("filter", this.getFilter());
         writer.writeCollectionOfPrimitiveValues("groupBy", this.getGroupBy());
-        writer.writeStringValue("name", this.getName());
         writer.writeCollectionOfPrimitiveValues("orderBy", this.getOrderBy());
         writer.writeStringValue("search", this.getSearch());
         writer.writeCollectionOfPrimitiveValues("select", this.getSelect());
-        writer.writeStringValue("sessionId", this.getSessionId());
         writer.writeIntegerValue("skip", this.getSkip());
         writer.writeIntegerValue("top", this.getTop());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -202,13 +174,6 @@ public class GetAutopilotDeploymentDeviceInformationPostRequestBody implements A
         this.groupBy = value;
     }
     /**
-     * Sets the name property value. The name property
-     * @param value Value to set for the name property.
-     */
-    public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
-    }
-    /**
      * Sets the orderBy property value. The orderBy property
      * @param value Value to set for the orderBy property.
      */
@@ -228,13 +193,6 @@ public class GetAutopilotDeploymentDeviceInformationPostRequestBody implements A
      */
     public void setSelect(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.select = value;
-    }
-    /**
-     * Sets the sessionId property value. The sessionId property
-     * @param value Value to set for the sessionId property.
-     */
-    public void setSessionId(@jakarta.annotation.Nullable final String value) {
-        this.sessionId = value;
     }
     /**
      * Sets the skip property value. The skip property

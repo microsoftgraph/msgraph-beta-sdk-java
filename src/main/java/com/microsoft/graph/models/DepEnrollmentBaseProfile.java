@@ -97,6 +97,10 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     private Boolean touchIdDisabled;
     /**
+     * Indicates if the device will need to wait for configured confirmation
+     */
+    private Boolean waitForDeviceConfiguredConfirmation;
+    /**
      * Instantiates a new depEnrollmentBaseProfile and sets the default values.
      */
     public DepEnrollmentBaseProfile() {
@@ -213,6 +217,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
         deserializerMap.put("supportPhoneNumber", (n) -> { this.setSupportPhoneNumber(n.getStringValue()); });
         deserializerMap.put("termsAndConditionsDisabled", (n) -> { this.setTermsAndConditionsDisabled(n.getBooleanValue()); });
         deserializerMap.put("touchIdDisabled", (n) -> { this.setTouchIdDisabled(n.getBooleanValue()); });
+        deserializerMap.put("waitForDeviceConfiguredConfirmation", (n) -> { this.setWaitForDeviceConfiguredConfirmation(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
@@ -320,6 +325,14 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
         return this.touchIdDisabled;
     }
     /**
+     * Gets the waitForDeviceConfiguredConfirmation property value. Indicates if the device will need to wait for configured confirmation
+     * @return a boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getWaitForDeviceConfiguredConfirmation() {
+        return this.waitForDeviceConfiguredConfirmation;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -347,6 +360,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
         writer.writeStringValue("supportPhoneNumber", this.getSupportPhoneNumber());
         writer.writeBooleanValue("termsAndConditionsDisabled", this.getTermsAndConditionsDisabled());
         writer.writeBooleanValue("touchIdDisabled", this.getTouchIdDisabled());
+        writer.writeBooleanValue("waitForDeviceConfiguredConfirmation", this.getWaitForDeviceConfiguredConfirmation());
     }
     /**
      * Sets the appleIdDisabled property value. Indicates if Apple id setup pane is disabled
@@ -494,5 +508,12 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     public void setTouchIdDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.touchIdDisabled = value;
+    }
+    /**
+     * Sets the waitForDeviceConfiguredConfirmation property value. Indicates if the device will need to wait for configured confirmation
+     * @param value Value to set for the waitForDeviceConfiguredConfirmation property.
+     */
+    public void setWaitForDeviceConfiguredConfirmation(@jakarta.annotation.Nullable final Boolean value) {
+        this.waitForDeviceConfiguredConfirmation = value;
     }
 }

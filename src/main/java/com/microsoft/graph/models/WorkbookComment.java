@@ -21,7 +21,7 @@ public class WorkbookComment extends Entity implements Parsable {
      */
     private java.util.List<WorkbookCommentReply> replies;
     /**
-     * The task property
+     * The task associated with the comment. Read-only. Nullable.
      */
     private WorkbookDocumentTask task;
     /**
@@ -78,7 +78,7 @@ public class WorkbookComment extends Entity implements Parsable {
         return this.replies;
     }
     /**
-     * Gets the task property value. The task property
+     * Gets the task property value. The task associated with the comment. Read-only. Nullable.
      * @return a workbookDocumentTask
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class WorkbookComment extends Entity implements Parsable {
         this.replies = value;
     }
     /**
-     * Sets the task property value. The task property
+     * Sets the task property value. The task associated with the comment. Read-only. Nullable.
      * @param value Value to set for the task property.
      */
     public void setTask(@jakarta.annotation.Nullable final WorkbookDocumentTask value) {

@@ -181,6 +181,16 @@ public class ChromeOSOnboardingSettingsRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a chromeOSOnboardingSettingsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ChromeOSOnboardingSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ChromeOSOnboardingSettingsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Collection of ChromeOSOnboardingSettings settings associated with account.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

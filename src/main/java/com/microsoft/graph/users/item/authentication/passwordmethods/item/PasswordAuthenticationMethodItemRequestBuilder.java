@@ -89,6 +89,16 @@ public class PasswordAuthenticationMethodItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a PasswordAuthenticationMethodItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PasswordAuthenticationMethodItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PasswordAuthenticationMethodItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the properties and relationships of a password authentication method object. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

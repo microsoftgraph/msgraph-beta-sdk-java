@@ -89,21 +89,21 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ComplianceChange::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a contentApproval object.
+     * Update the properties of a complianceChange object.
      * @param body The request body
      * @return a CompletableFuture of complianceChange
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-contentapproval-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-compliancechange-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComplianceChange> patch(@jakarta.annotation.Nonnull final ComplianceChange body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a contentApproval object.
+     * Update the properties of a complianceChange object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of complianceChange
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-contentapproval-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-compliancechange-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComplianceChange> patch(@jakarta.annotation.Nonnull final ComplianceChange body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -171,7 +171,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a contentApproval object.
+     * Update the properties of a complianceChange object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +180,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a contentApproval object.
+     * Update the properties of a complianceChange object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,6 +201,16 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a ComplianceChangeItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ComplianceChangeItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ComplianceChangeItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

@@ -59,7 +59,7 @@ public class DeletedChatsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/deletedChats{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get deletedChats from teamwork
+     * Read the properties and relationships of a deletedChat object.
      * @return a CompletableFuture of deletedChatCollectionResponse
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DeletedChatsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get deletedChats from teamwork
+     * Read the properties and relationships of a deletedChat object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deletedChatCollectionResponse
      */
@@ -104,7 +104,7 @@ public class DeletedChatsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, DeletedChat::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get deletedChats from teamwork
+     * Read the properties and relationships of a deletedChat object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class DeletedChatsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get deletedChats from teamwork
+     * Read the properties and relationships of a deletedChat object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -165,7 +165,17 @@ public class DeletedChatsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get deletedChats from teamwork
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a deletedChatsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeletedChatsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeletedChatsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Read the properties and relationships of a deletedChat object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

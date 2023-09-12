@@ -88,6 +88,16 @@ public class GetOffice365GroupsActivityCountsWithPeriodRequestBuilder extends Ba
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a getOffice365GroupsActivityCountsWithPeriodRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GetOffice365GroupsActivityCountsWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GetOffice365GroupsActivityCountsWithPeriodRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function getOffice365GroupsActivityCounts
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

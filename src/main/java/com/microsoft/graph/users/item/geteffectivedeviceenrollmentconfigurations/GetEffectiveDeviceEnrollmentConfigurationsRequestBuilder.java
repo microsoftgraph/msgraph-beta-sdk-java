@@ -86,6 +86,16 @@ public class GetEffectiveDeviceEnrollmentConfigurationsRequestBuilder extends Ba
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a getEffectiveDeviceEnrollmentConfigurationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GetEffectiveDeviceEnrollmentConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GetEffectiveDeviceEnrollmentConfigurationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function getEffectiveDeviceEnrollmentConfigurations
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -51,19 +51,19 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/riskDetections{?%24top,%24search,%24filter,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties of a riskDetection object.
+     * Retrieve the properties of a collection of riskDetection objects.
      * @return a CompletableFuture of riskDetectionCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetectionCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Retrieve the properties of a riskDetection object.
+     * Retrieve the properties of a collection of riskDetection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of riskDetectionCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetectionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,7 +98,7 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, RiskDetection::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the properties of a riskDetection object.
+     * Retrieve the properties of a collection of riskDetection objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -106,7 +106,7 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of a riskDetection object.
+     * Retrieve the properties of a collection of riskDetection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -159,7 +159,17 @@ public class RiskDetectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties of a riskDetection object.
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a riskDetectionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RiskDetectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RiskDetectionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Retrieve the properties of a collection of riskDetection objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

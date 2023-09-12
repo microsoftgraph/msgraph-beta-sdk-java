@@ -1,4 +1,4 @@
-package com.microsoft.graph.organization.item.settings.profilecardproperties.count;
+package com.microsoft.graph.solutions.virtualevents.webinars.item.sessions.item.transcripts.delta;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -15,49 +15,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to count the resources in the collection.
+ * Provides operations to call the delta method.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CountRequestBuilder extends BaseRequestBuilder {
+public class DeltaRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new CountRequestBuilder and sets the default values.
+     * Instantiates a new DeltaRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public CountRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/settings/profileCardProperties/$count{?%24search,%24filter}", pathParameters);
+    public DeltaRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/sessions/{virtualEventSession%2Did}/transcripts/delta(){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", pathParameters);
     }
     /**
-     * Instantiates a new CountRequestBuilder and sets the default values.
+     * Instantiates a new DeltaRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public CountRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/settings/profileCardProperties/$count{?%24search,%24filter}", rawUrl);
+    public DeltaRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/sessions/{virtualEventSession%2Did}/transcripts/delta(){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", rawUrl);
     }
     /**
-     * Get the number of the resource
-     * @return a CompletableFuture of integer
+     * Invoke function delta
+     * @return a CompletableFuture of deltaResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Integer> get() {
+    public java.util.concurrent.CompletableFuture<DeltaResponse> get() {
         return get(null);
     }
     /**
-     * Get the number of the resource
+     * Invoke function delta
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of integer
+     * @return a CompletableFuture of deltaResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Integer> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<DeltaResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Integer.class, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, DeltaResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the number of the resource
+     * Invoke function delta
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -65,7 +65,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the number of the resource
+     * Invoke function delta
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -75,7 +75,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
         requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "text/plain");
+        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -86,10 +86,26 @@ public class CountRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the number of the resource
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a deltaRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeltaRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeltaRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Invoke function delta
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
+        /**
+         * Include count of items
+         */
+        @QueryParameter(name = "%24count")
+        @jakarta.annotation.Nullable
+        public Boolean count;
         /**
          * Filter items by property values
          */
@@ -97,11 +113,35 @@ public class CountRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nullable
         public String filter;
         /**
+         * Order items by property values
+         */
+        @QueryParameter(name = "%24orderby")
+        @jakarta.annotation.Nullable
+        public String[] orderby;
+        /**
          * Search items by search phrases
          */
         @QueryParameter(name = "%24search")
         @jakarta.annotation.Nullable
         public String search;
+        /**
+         * Select properties to be returned
+         */
+        @QueryParameter(name = "%24select")
+        @jakarta.annotation.Nullable
+        public String[] select;
+        /**
+         * Skip the first n items
+         */
+        @QueryParameter(name = "%24skip")
+        @jakarta.annotation.Nullable
+        public Integer skip;
+        /**
+         * Show only the first n items
+         */
+        @QueryParameter(name = "%24top")
+        @jakarta.annotation.Nullable
+        public Integer top;
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

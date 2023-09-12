@@ -14,15 +14,15 @@ public class BuildVersionDetails implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The buildNumber property
+     * The build number of the product release. Read-only.
      */
     private Integer buildNumber;
     /**
-     * The majorVersion property
+     * The major version of the product release. Read-only.
      */
     private Integer majorVersion;
     /**
-     * The minorVersion property
+     * The minor version of the product release. Read-only.
      */
     private Integer minorVersion;
     /**
@@ -30,7 +30,7 @@ public class BuildVersionDetails implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The updateBuildRevision property
+     * The update build revision number of the product revision. Read-only.
      */
     private Integer updateBuildRevision;
     /**
@@ -58,7 +58,7 @@ public class BuildVersionDetails implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the buildNumber property value. The buildNumber property
+     * Gets the buildNumber property value. The build number of the product release. Read-only.
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class BuildVersionDetails implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the majorVersion property value. The majorVersion property
+     * Gets the majorVersion property value. The major version of the product release. Read-only.
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class BuildVersionDetails implements AdditionalDataHolder, Parsable {
         return this.majorVersion;
     }
     /**
-     * Gets the minorVersion property value. The minorVersion property
+     * Gets the minorVersion property value. The minor version of the product release. Read-only.
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class BuildVersionDetails implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the updateBuildRevision property value. The updateBuildRevision property
+     * Gets the updateBuildRevision property value. The update build revision number of the product revision. Read-only.
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -132,21 +132,21 @@ public class BuildVersionDetails implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the buildNumber property value. The buildNumber property
+     * Sets the buildNumber property value. The build number of the product release. Read-only.
      * @param value Value to set for the buildNumber property.
      */
     public void setBuildNumber(@jakarta.annotation.Nullable final Integer value) {
         this.buildNumber = value;
     }
     /**
-     * Sets the majorVersion property value. The majorVersion property
+     * Sets the majorVersion property value. The major version of the product release. Read-only.
      * @param value Value to set for the majorVersion property.
      */
     public void setMajorVersion(@jakarta.annotation.Nullable final Integer value) {
         this.majorVersion = value;
     }
     /**
-     * Sets the minorVersion property value. The minorVersion property
+     * Sets the minorVersion property value. The minor version of the product release. Read-only.
      * @param value Value to set for the minorVersion property.
      */
     public void setMinorVersion(@jakarta.annotation.Nullable final Integer value) {
@@ -160,7 +160,7 @@ public class BuildVersionDetails implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the updateBuildRevision property value. The updateBuildRevision property
+     * Sets the updateBuildRevision property value. The update build revision number of the product revision. Read-only.
      * @param value Value to set for the updateBuildRevision property.
      */
     public void setUpdateBuildRevision(@jakarta.annotation.Nullable final Integer value) {

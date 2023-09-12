@@ -165,6 +165,16 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilde
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The user experience analytics anomaly correlation group overview entity contains the information for each correlation group of an anomaly.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

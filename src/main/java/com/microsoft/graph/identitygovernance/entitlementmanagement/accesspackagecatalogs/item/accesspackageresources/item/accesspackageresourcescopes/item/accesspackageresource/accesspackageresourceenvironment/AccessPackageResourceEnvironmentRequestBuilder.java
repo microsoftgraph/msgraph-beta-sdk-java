@@ -99,6 +99,19 @@ public class AccessPackageResourceEnvironmentRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a accessPackageResourceEnvironmentRequestBuilder
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public AccessPackageResourceEnvironmentRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AccessPackageResourceEnvironmentRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

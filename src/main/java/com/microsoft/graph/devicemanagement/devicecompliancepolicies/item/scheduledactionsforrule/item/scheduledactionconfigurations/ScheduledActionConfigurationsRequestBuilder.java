@@ -165,6 +165,16 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a scheduledActionConfigurationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ScheduledActionConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ScheduledActionConfigurationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

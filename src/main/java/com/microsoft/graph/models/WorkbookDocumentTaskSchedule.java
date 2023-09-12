@@ -15,7 +15,7 @@ public class WorkbookDocumentTaskSchedule implements AdditionalDataHolder, Parsa
      */
     private Map<String, Object> additionalData;
     /**
-     * The dueDateTime property
+     * The due date and time for the task. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime dueDateTime;
     /**
@@ -23,7 +23,7 @@ public class WorkbookDocumentTaskSchedule implements AdditionalDataHolder, Parsa
      */
     private String odataType;
     /**
-     * The startDateTime property
+     * The start date and time for the task. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime startDateTime;
     /**
@@ -51,7 +51,7 @@ public class WorkbookDocumentTaskSchedule implements AdditionalDataHolder, Parsa
         return this.additionalData;
     }
     /**
-     * Gets the dueDateTime property value. The dueDateTime property
+     * Gets the dueDateTime property value. The due date and time for the task. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class WorkbookDocumentTaskSchedule implements AdditionalDataHolder, Parsa
         return this.odataType;
     }
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. The start date and time for the task. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class WorkbookDocumentTaskSchedule implements AdditionalDataHolder, Parsa
         this.additionalData = value;
     }
     /**
-     * Sets the dueDateTime property value. The dueDateTime property
+     * Sets the dueDateTime property value. The due date and time for the task. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the dueDateTime property.
      */
     public void setDueDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -119,7 +119,7 @@ public class WorkbookDocumentTaskSchedule implements AdditionalDataHolder, Parsa
         this.odataType = value;
     }
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. The start date and time for the task. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

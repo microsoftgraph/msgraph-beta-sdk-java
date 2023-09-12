@@ -167,6 +167,16 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a servicePrincipalSignInActivitiesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ServicePrincipalSignInActivitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ServicePrincipalSignInActivitiesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in an Azure Active Directory tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

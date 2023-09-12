@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
     /**
      * Contains properties for Windows architecture.
      */
-    private WindowsArchitecture applicableArchitectures;
+    private EnumSet<WindowsArchitecture> applicableArchitectures;
     /**
      * The detection rules to detect Win32 Line of Business (LoB) app.
      */
@@ -113,7 +114,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * @return a windowsArchitecture
      */
     @jakarta.annotation.Nullable
-    public WindowsArchitecture getApplicableArchitectures() {
+    public EnumSet<WindowsArchitecture> getApplicableArchitectures() {
         return this.applicableArchitectures;
     }
     /**
@@ -140,7 +141,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowAvailableUninstall", (n) -> { this.setAllowAvailableUninstall(n.getBooleanValue()); });
-        deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumValue(WindowsArchitecture.class)); });
+        deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumSetValue(WindowsArchitecture.class)); });
         deserializerMap.put("detectionRules", (n) -> { this.setDetectionRules(n.getCollectionOfObjectValues(Win32LobAppDetection::createFromDiscriminatorValue)); });
         deserializerMap.put("displayVersion", (n) -> { this.setDisplayVersion(n.getStringValue()); });
         deserializerMap.put("installCommandLine", (n) -> { this.setInstallCommandLine(n.getStringValue()); });
@@ -279,7 +280,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("allowAvailableUninstall", this.getAllowAvailableUninstall());
-        writer.writeEnumValue("applicableArchitectures", this.getApplicableArchitectures());
+        writer.writeEnumSetValue("applicableArchitectures", this.getApplicableArchitectures());
         writer.writeCollectionOfObjectValues("detectionRules", this.getDetectionRules());
         writer.writeStringValue("displayVersion", this.getDisplayVersion());
         writer.writeStringValue("installCommandLine", this.getInstallCommandLine());
@@ -308,7 +309,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
      * Sets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @param value Value to set for the applicableArchitectures property.
      */
-    public void setApplicableArchitectures(@jakarta.annotation.Nullable final WindowsArchitecture value) {
+    public void setApplicableArchitectures(@jakarta.annotation.Nullable final EnumSet<WindowsArchitecture> value) {
         this.applicableArchitectures = value;
     }
     /**

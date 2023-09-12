@@ -165,6 +165,16 @@ public class AndroidForWorkAppConfigurationSchemasRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a androidForWorkAppConfigurationSchemasRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AndroidForWorkAppConfigurationSchemasRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AndroidForWorkAppConfigurationSchemasRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Android for Work app configuration schema entities.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

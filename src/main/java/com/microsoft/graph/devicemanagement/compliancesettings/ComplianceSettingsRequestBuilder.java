@@ -165,6 +165,16 @@ public class ComplianceSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a complianceSettingsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ComplianceSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ComplianceSettingsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List of all ComplianceSettings
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

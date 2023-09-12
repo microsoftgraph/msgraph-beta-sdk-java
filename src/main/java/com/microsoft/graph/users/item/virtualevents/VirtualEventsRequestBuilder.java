@@ -1,7 +1,8 @@
-package com.microsoft.graph.organization.item.settings.pronouns;
+package com.microsoft.graph.users.item.virtualevents;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.models.PronounsSettings;
+import com.microsoft.graph.models.UserVirtualEventsRoot;
+import com.microsoft.graph.users.item.virtualevents.webinars.WebinarsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -16,35 +17,42 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the pronouns property of the microsoft.graph.organizationSettings entity.
+ * Provides operations to manage the virtualEvents property of the microsoft.graph.user entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PronounsRequestBuilder extends BaseRequestBuilder {
+public class VirtualEventsRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new PronounsRequestBuilder and sets the default values.
+     * Provides operations to manage the webinars property of the microsoft.graph.userVirtualEventsRoot entity.
+     */
+    @jakarta.annotation.Nonnull
+    public WebinarsRequestBuilder webinars() {
+        return new WebinarsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Instantiates a new VirtualEventsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public PronounsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/settings/pronouns{?%24select,%24expand}", pathParameters);
+    public VirtualEventsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/virtualEvents{?%24select,%24expand}", pathParameters);
     }
     /**
-     * Instantiates a new PronounsRequestBuilder and sets the default values.
+     * Instantiates a new VirtualEventsRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public PronounsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/settings/pronouns{?%24select,%24expand}", rawUrl);
+    public VirtualEventsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/virtualEvents{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property pronouns for organization
+     * Delete navigation property virtualEvents for users
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         return delete(null);
     }
     /**
-     * Delete navigation property pronouns for organization
+     * Delete navigation property virtualEvents for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Nonnull
@@ -56,52 +64,52 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get pronouns from organization
-     * @return a CompletableFuture of pronounsSettings
+     * Get virtualEvents from users
+     * @return a CompletableFuture of userVirtualEventsRoot
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PronounsSettings> get() {
+    public java.util.concurrent.CompletableFuture<UserVirtualEventsRoot> get() {
         return get(null);
     }
     /**
-     * Get pronouns from organization
+     * Get virtualEvents from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of pronounsSettings
+     * @return a CompletableFuture of userVirtualEventsRoot
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PronounsSettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<UserVirtualEventsRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PronounsSettings::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, UserVirtualEventsRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the navigation property pronouns in organization
+     * Update the navigation property virtualEvents in users
      * @param body The request body
-     * @return a CompletableFuture of pronounsSettings
+     * @return a CompletableFuture of userVirtualEventsRoot
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PronounsSettings> patch(@jakarta.annotation.Nonnull final PronounsSettings body) {
+    public java.util.concurrent.CompletableFuture<UserVirtualEventsRoot> patch(@jakarta.annotation.Nonnull final UserVirtualEventsRoot body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property pronouns in organization
+     * Update the navigation property virtualEvents in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of pronounsSettings
+     * @return a CompletableFuture of userVirtualEventsRoot
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PronounsSettings> patch(@jakarta.annotation.Nonnull final PronounsSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<UserVirtualEventsRoot> patch(@jakarta.annotation.Nonnull final UserVirtualEventsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PronounsSettings::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, UserVirtualEventsRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete navigation property pronouns for organization
+     * Delete navigation property virtualEvents for users
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +117,7 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property pronouns for organization
+     * Delete navigation property virtualEvents for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +136,7 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get pronouns from organization
+     * Get virtualEvents from users
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +144,7 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get pronouns from organization
+     * Get virtualEvents from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -157,22 +165,22 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property pronouns in organization
+     * Update the navigation property virtualEvents in users
      * @param body The request body
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PronounsSettings body) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UserVirtualEventsRoot body) {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property pronouns in organization
+     * Update the navigation property virtualEvents in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PronounsSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UserVirtualEventsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.PATCH;
@@ -189,13 +197,23 @@ public class PronounsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a virtualEventsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public VirtualEventsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new VirtualEventsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get pronouns from organization
+     * Get virtualEvents from users
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -165,6 +165,16 @@ public class UserExperienceAnalyticsDeviceTimelineEventRequestBuilder extends Ba
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userExperienceAnalyticsDeviceTimelineEventRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserExperienceAnalyticsDeviceTimelineEventRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserExperienceAnalyticsDeviceTimelineEventRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The user experience analytics device events entity contains NRT device timeline event details.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

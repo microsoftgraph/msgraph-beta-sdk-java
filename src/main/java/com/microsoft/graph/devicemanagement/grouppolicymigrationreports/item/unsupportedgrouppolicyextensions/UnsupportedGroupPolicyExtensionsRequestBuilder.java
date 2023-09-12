@@ -165,6 +165,16 @@ public class UnsupportedGroupPolicyExtensionsRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a unsupportedGroupPolicyExtensionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UnsupportedGroupPolicyExtensionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UnsupportedGroupPolicyExtensionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * A list of unsupported group policy extensions inside the Group Policy Object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -19,11 +20,11 @@ public class TextClassificationRequest extends Entity implements Parsable {
     /**
      * The matchTolerancesToInclude property
      */
-    private MlClassificationMatchTolerance matchTolerancesToInclude;
+    private EnumSet<MlClassificationMatchTolerance> matchTolerancesToInclude;
     /**
      * The scopesToRun property
      */
-    private SensitiveTypeScope scopesToRun;
+    private EnumSet<SensitiveTypeScope> scopesToRun;
     /**
      * The sensitiveTypeIds property
      */
@@ -65,8 +66,8 @@ public class TextClassificationRequest extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contentMetaData", (n) -> { this.setContentMetaData(n.getObjectValue(ClassificationRequestContentMetaData::createFromDiscriminatorValue)); });
         deserializerMap.put("fileExtension", (n) -> { this.setFileExtension(n.getStringValue()); });
-        deserializerMap.put("matchTolerancesToInclude", (n) -> { this.setMatchTolerancesToInclude(n.getEnumValue(MlClassificationMatchTolerance.class)); });
-        deserializerMap.put("scopesToRun", (n) -> { this.setScopesToRun(n.getEnumValue(SensitiveTypeScope.class)); });
+        deserializerMap.put("matchTolerancesToInclude", (n) -> { this.setMatchTolerancesToInclude(n.getEnumSetValue(MlClassificationMatchTolerance.class)); });
+        deserializerMap.put("scopesToRun", (n) -> { this.setScopesToRun(n.getEnumSetValue(SensitiveTypeScope.class)); });
         deserializerMap.put("sensitiveTypeIds", (n) -> { this.setSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("text", (n) -> { this.setText(n.getStringValue()); });
         return deserializerMap;
@@ -84,7 +85,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * @return a mlClassificationMatchTolerance
      */
     @jakarta.annotation.Nullable
-    public MlClassificationMatchTolerance getMatchTolerancesToInclude() {
+    public EnumSet<MlClassificationMatchTolerance> getMatchTolerancesToInclude() {
         return this.matchTolerancesToInclude;
     }
     /**
@@ -92,7 +93,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * @return a sensitiveTypeScope
      */
     @jakarta.annotation.Nullable
-    public SensitiveTypeScope getScopesToRun() {
+    public EnumSet<SensitiveTypeScope> getScopesToRun() {
         return this.scopesToRun;
     }
     /**
@@ -120,8 +121,8 @@ public class TextClassificationRequest extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("contentMetaData", this.getContentMetaData());
         writer.writeStringValue("fileExtension", this.getFileExtension());
-        writer.writeEnumValue("matchTolerancesToInclude", this.getMatchTolerancesToInclude());
-        writer.writeEnumValue("scopesToRun", this.getScopesToRun());
+        writer.writeEnumSetValue("matchTolerancesToInclude", this.getMatchTolerancesToInclude());
+        writer.writeEnumSetValue("scopesToRun", this.getScopesToRun());
         writer.writeCollectionOfPrimitiveValues("sensitiveTypeIds", this.getSensitiveTypeIds());
         writer.writeStringValue("text", this.getText());
     }
@@ -143,14 +144,14 @@ public class TextClassificationRequest extends Entity implements Parsable {
      * Sets the matchTolerancesToInclude property value. The matchTolerancesToInclude property
      * @param value Value to set for the matchTolerancesToInclude property.
      */
-    public void setMatchTolerancesToInclude(@jakarta.annotation.Nullable final MlClassificationMatchTolerance value) {
+    public void setMatchTolerancesToInclude(@jakarta.annotation.Nullable final EnumSet<MlClassificationMatchTolerance> value) {
         this.matchTolerancesToInclude = value;
     }
     /**
      * Sets the scopesToRun property value. The scopesToRun property
      * @param value Value to set for the scopesToRun property.
      */
-    public void setScopesToRun(@jakarta.annotation.Nullable final SensitiveTypeScope value) {
+    public void setScopesToRun(@jakarta.annotation.Nullable final EnumSet<SensitiveTypeScope> value) {
         this.scopesToRun = value;
     }
     /**

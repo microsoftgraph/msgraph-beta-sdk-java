@@ -45,7 +45,7 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/inferenceClassification{?%24select}", rawUrl);
     }
     /**
-     * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
+     * Relevance classification of the user's messages based on explicit designations that override inferred relevance or importance.
      * @return a CompletableFuture of inferenceClassification
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
+     * Relevance classification of the user's messages based on explicit designations that override inferred relevance or importance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of inferenceClassification
      */
@@ -90,7 +90,7 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, InferenceClassification::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
+     * Relevance classification of the user's messages based on explicit designations that override inferred relevance or importance.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -98,7 +98,7 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
+     * Relevance classification of the user's messages based on explicit designations that override inferred relevance or importance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -151,7 +151,17 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a inferenceClassificationRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public InferenceClassificationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new InferenceClassificationRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Relevance classification of the user's messages based on explicit designations that override inferred relevance or importance.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

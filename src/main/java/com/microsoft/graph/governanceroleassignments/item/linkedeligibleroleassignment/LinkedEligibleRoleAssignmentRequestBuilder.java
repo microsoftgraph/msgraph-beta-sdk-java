@@ -87,6 +87,16 @@ public class LinkedEligibleRoleAssignmentRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a linkedEligibleRoleAssignmentRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public LinkedEligibleRoleAssignmentRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new LinkedEligibleRoleAssignmentRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Read-only. If this is an active assignment and created due to activation on an eligible assignment, it represents the object of that eligible assignment; Otherwise, the value is null.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

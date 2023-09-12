@@ -165,6 +165,16 @@ public class RecommendedSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a recommendedSettingsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RecommendedSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RecommendedSettingsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The settings this category contains
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

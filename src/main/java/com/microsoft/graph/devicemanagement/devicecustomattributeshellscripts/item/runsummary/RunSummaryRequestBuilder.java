@@ -87,6 +87,16 @@ public class RunSummaryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a runSummaryRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RunSummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RunSummaryRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Run summary for device management script.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

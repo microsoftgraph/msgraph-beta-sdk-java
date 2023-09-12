@@ -176,6 +176,16 @@ public class UserExperienceAnalyticsRemoteConnectionRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userExperienceAnalyticsRemoteConnectionRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserExperienceAnalyticsRemoteConnectionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserExperienceAnalyticsRemoteConnectionRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * User experience analytics remote connection
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

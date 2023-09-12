@@ -197,6 +197,19 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a credentialUserRegistrationDetailsRequestBuilder
+     * @deprecated
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public CredentialUserRegistrationDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CredentialUserRegistrationDetailsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of credentialUserRegistrationDetails objects for a given tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -90,6 +90,16 @@ public class DeletePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a deletePasswordSingleSignOnCredentialsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeletePasswordSingleSignOnCredentialsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeletePasswordSingleSignOnCredentialsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

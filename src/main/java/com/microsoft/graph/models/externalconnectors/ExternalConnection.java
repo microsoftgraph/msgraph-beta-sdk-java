@@ -4,6 +4,7 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -32,7 +33,7 @@ public class ExternalConnection extends Entity implements Parsable {
     /**
      * The list of content experiences the connection will participate in. Possible values are search.
      */
-    private ContentExperienceType enabledContentExperiences;
+    private EnumSet<ContentExperienceType> enabledContentExperiences;
     /**
      * The groups property
      */
@@ -130,7 +131,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * @return a contentExperienceType
      */
     @jakarta.annotation.Nullable
-    public ContentExperienceType getEnabledContentExperiences() {
+    public EnumSet<ContentExperienceType> getEnabledContentExperiences() {
         return this.enabledContentExperiences;
     }
     /**
@@ -145,7 +146,7 @@ public class ExternalConnection extends Entity implements Parsable {
         deserializerMap.put("configuration", (n) -> { this.setConfiguration(n.getObjectValue(Configuration::createFromDiscriminatorValue)); });
         deserializerMap.put("connectorId", (n) -> { this.setConnectorId(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
-        deserializerMap.put("enabledContentExperiences", (n) -> { this.setEnabledContentExperiences(n.getEnumValue(ContentExperienceType.class)); });
+        deserializerMap.put("enabledContentExperiences", (n) -> { this.setEnabledContentExperiences(n.getEnumSetValue(ContentExperienceType.class)); });
         deserializerMap.put("groups", (n) -> { this.setGroups(n.getCollectionOfObjectValues(ExternalGroup::createFromDiscriminatorValue)); });
         deserializerMap.put("ingestedItemsCount", (n) -> { this.setIngestedItemsCount(n.getLongValue()); });
         deserializerMap.put("items", (n) -> { this.setItems(n.getCollectionOfObjectValues(ExternalItem::createFromDiscriminatorValue)); });
@@ -241,7 +242,7 @@ public class ExternalConnection extends Entity implements Parsable {
         writer.writeObjectValue("configuration", this.getConfiguration());
         writer.writeStringValue("connectorId", this.getConnectorId());
         writer.writeStringValue("description", this.getDescription());
-        writer.writeEnumValue("enabledContentExperiences", this.getEnabledContentExperiences());
+        writer.writeEnumSetValue("enabledContentExperiences", this.getEnabledContentExperiences());
         writer.writeCollectionOfObjectValues("groups", this.getGroups());
         writer.writeLongValue("ingestedItemsCount", this.getIngestedItemsCount());
         writer.writeCollectionOfObjectValues("items", this.getItems());
@@ -290,7 +291,7 @@ public class ExternalConnection extends Entity implements Parsable {
      * Sets the enabledContentExperiences property value. The list of content experiences the connection will participate in. Possible values are search.
      * @param value Value to set for the enabledContentExperiences property.
      */
-    public void setEnabledContentExperiences(@jakarta.annotation.Nullable final ContentExperienceType value) {
+    public void setEnabledContentExperiences(@jakarta.annotation.Nullable final EnumSet<ContentExperienceType> value) {
         this.enabledContentExperiences = value;
     }
     /**

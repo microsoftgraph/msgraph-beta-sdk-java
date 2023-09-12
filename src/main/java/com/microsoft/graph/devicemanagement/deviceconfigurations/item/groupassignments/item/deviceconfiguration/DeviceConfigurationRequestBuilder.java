@@ -87,6 +87,16 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a deviceConfigurationRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceConfigurationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeviceConfigurationRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The navigation link to the Device Configuration being targeted.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

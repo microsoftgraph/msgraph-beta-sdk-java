@@ -169,6 +169,16 @@ public class ModulesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a modulesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ModulesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ModulesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of module objects. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can see all module objects for the class. Students can only see published modules.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

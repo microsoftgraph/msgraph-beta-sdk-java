@@ -87,6 +87,16 @@ public class CategoryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a categoryRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CategoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CategoryRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The group policy category associated with the definition.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

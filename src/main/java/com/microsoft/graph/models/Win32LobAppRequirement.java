@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, Parsable {
     /**
      * Contains properties for detection operator.
      */
-    private Win32LobAppDetectionOperator operator;
+    private EnumSet<Win32LobAppDetectionOperator> operator;
     /**
      * Instantiates a new win32LobAppRequirement and sets the default values.
      */
@@ -78,7 +79,7 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("detectionValue", (n) -> { this.setDetectionValue(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumValue(Win32LobAppDetectionOperator.class)); });
+        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumSetValue(Win32LobAppDetectionOperator.class)); });
         return deserializerMap;
     }
     /**
@@ -94,7 +95,7 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, Parsable {
      * @return a win32LobAppDetectionOperator
      */
     @jakarta.annotation.Nullable
-    public Win32LobAppDetectionOperator getOperator() {
+    public EnumSet<Win32LobAppDetectionOperator> getOperator() {
         return this.operator;
     }
     /**
@@ -105,7 +106,7 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("detectionValue", this.getDetectionValue());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeEnumValue("operator", this.getOperator());
+        writer.writeEnumSetValue("operator", this.getOperator());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -133,7 +134,7 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, Parsable {
      * Sets the operator property value. Contains properties for detection operator.
      * @param value Value to set for the operator property.
      */
-    public void setOperator(@jakarta.annotation.Nullable final Win32LobAppDetectionOperator value) {
+    public void setOperator(@jakarta.annotation.Nullable final EnumSet<Win32LobAppDetectionOperator> value) {
         this.operator = value;
     }
 }

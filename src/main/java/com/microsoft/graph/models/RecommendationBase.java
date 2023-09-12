@@ -82,6 +82,10 @@ public class RecommendationBase extends Entity implements Parsable {
      */
     private RecommendationType recommendationType;
     /**
+     * The current release type of the recommendation. The possible values are: preview or generallyAvailable.
+     */
+    private String releaseType;
+    /**
      * Description of the impact on users of the remediation. Only applies to recommendations with category set to identitySecureScore.
      */
     private String remediationImpact;
@@ -193,6 +197,7 @@ public class RecommendationBase extends Entity implements Parsable {
         deserializerMap.put("postponeUntilDateTime", (n) -> { this.setPostponeUntilDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getEnumValue(RecommendationPriority.class)); });
         deserializerMap.put("recommendationType", (n) -> { this.setRecommendationType(n.getEnumValue(RecommendationType.class)); });
+        deserializerMap.put("releaseType", (n) -> { this.setReleaseType(n.getStringValue()); });
         deserializerMap.put("remediationImpact", (n) -> { this.setRemediationImpact(n.getStringValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(RecommendationStatus.class)); });
         return deserializerMap;
@@ -286,6 +291,14 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.recommendationType;
     }
     /**
+     * Gets the releaseType property value. The current release type of the recommendation. The possible values are: preview or generallyAvailable.
+     * @return a string
+     */
+    @jakarta.annotation.Nullable
+    public String getReleaseType() {
+        return this.releaseType;
+    }
+    /**
      * Gets the remediationImpact property value. Description of the impact on users of the remediation. Only applies to recommendations with category set to identitySecureScore.
      * @return a string
      */
@@ -326,6 +339,7 @@ public class RecommendationBase extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("postponeUntilDateTime", this.getPostponeUntilDateTime());
         writer.writeEnumValue("priority", this.getPriority());
         writer.writeEnumValue("recommendationType", this.getRecommendationType());
+        writer.writeStringValue("releaseType", this.getReleaseType());
         writer.writeStringValue("remediationImpact", this.getRemediationImpact());
         writer.writeEnumValue("status", this.getStatus());
     }
@@ -454,6 +468,13 @@ public class RecommendationBase extends Entity implements Parsable {
      */
     public void setRecommendationType(@jakarta.annotation.Nullable final RecommendationType value) {
         this.recommendationType = value;
+    }
+    /**
+     * Sets the releaseType property value. The current release type of the recommendation. The possible values are: preview or generallyAvailable.
+     * @param value Value to set for the releaseType property.
+     */
+    public void setReleaseType(@jakarta.annotation.Nullable final String value) {
+        this.releaseType = value;
     }
     /**
      * Sets the remediationImpact property value. Description of the impact on users of the remediation. Only applies to recommendations with category set to identitySecureScore.
