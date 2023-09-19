@@ -87,6 +87,16 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a PlannerPlanItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PlannerPlanItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PlannerPlanItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Read-only. Nullable. Returns the plannerPlans that the user marked as favorites.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

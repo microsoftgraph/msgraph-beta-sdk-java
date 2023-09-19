@@ -4,6 +4,7 @@ import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -83,7 +84,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /**
      * Type of managed browser
      */
-    private ManagedBrowserType managedBrowser;
+    private EnumSet<ManagedBrowserType> managedBrowser;
     /**
      * Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android)
      */
@@ -367,7 +368,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         deserializerMap.put("disableAppPinIfDevicePinIsSet", (n) -> { this.setDisableAppPinIfDevicePinIsSet(n.getBooleanValue()); });
         deserializerMap.put("fingerprintBlocked", (n) -> { this.setFingerprintBlocked(n.getBooleanValue()); });
         deserializerMap.put("gracePeriodToBlockAppsDuringOffClockHours", (n) -> { this.setGracePeriodToBlockAppsDuringOffClockHours(n.getPeriodAndDurationValue()); });
-        deserializerMap.put("managedBrowser", (n) -> { this.setManagedBrowser(n.getEnumValue(ManagedBrowserType.class)); });
+        deserializerMap.put("managedBrowser", (n) -> { this.setManagedBrowser(n.getEnumSetValue(ManagedBrowserType.class)); });
         deserializerMap.put("managedBrowserToOpenLinksRequired", (n) -> { this.setManagedBrowserToOpenLinksRequired(n.getBooleanValue()); });
         deserializerMap.put("maximumAllowedDeviceThreatLevel", (n) -> { this.setMaximumAllowedDeviceThreatLevel(n.getEnumValue(ManagedAppDeviceThreatLevel.class)); });
         deserializerMap.put("maximumPinRetries", (n) -> { this.setMaximumPinRetries(n.getIntegerValue()); });
@@ -419,7 +420,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @return a managedBrowserType
      */
     @jakarta.annotation.Nullable
-    public ManagedBrowserType getManagedBrowser() {
+    public EnumSet<ManagedBrowserType> getManagedBrowser() {
         return this.managedBrowser;
     }
     /**
@@ -670,7 +671,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         writer.writeBooleanValue("disableAppPinIfDevicePinIsSet", this.getDisableAppPinIfDevicePinIsSet());
         writer.writeBooleanValue("fingerprintBlocked", this.getFingerprintBlocked());
         writer.writePeriodAndDurationValue("gracePeriodToBlockAppsDuringOffClockHours", this.getGracePeriodToBlockAppsDuringOffClockHours());
-        writer.writeEnumValue("managedBrowser", this.getManagedBrowser());
+        writer.writeEnumSetValue("managedBrowser", this.getManagedBrowser());
         writer.writeBooleanValue("managedBrowserToOpenLinksRequired", this.getManagedBrowserToOpenLinksRequired());
         writer.writeEnumValue("maximumAllowedDeviceThreatLevel", this.getMaximumAllowedDeviceThreatLevel());
         writer.writeIntegerValue("maximumPinRetries", this.getMaximumPinRetries());
@@ -823,7 +824,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * Sets the managedBrowser property value. Type of managed browser
      * @param value Value to set for the managedBrowser property.
      */
-    public void setManagedBrowser(@jakarta.annotation.Nullable final ManagedBrowserType value) {
+    public void setManagedBrowser(@jakarta.annotation.Nullable final EnumSet<ManagedBrowserType> value) {
         this.managedBrowser = value;
     }
     /**

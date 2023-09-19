@@ -14,7 +14,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
+     * Description of the NIC (for example, Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
      */
     private String description;
     /**
@@ -22,7 +22,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
      */
     private String ipV4Address;
     /**
-     * Last Public (aka global) IPv6 address associated with this NIC.
+     * Last Public (also known as global) IPv6 address associated with this NIC.
      */
     private String ipV6Address;
     /**
@@ -62,7 +62,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the description property value. Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
+     * Gets the description property value. Description of the NIC (for example, Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
         return this.ipV4Address;
     }
     /**
-     * Gets the ipV6Address property value. Last Public (aka global) IPv6 address associated with this NIC.
+     * Gets the ipV6Address property value. Last Public (also known as global) IPv6 address associated with this NIC.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -146,7 +146,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the description property value. Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
+     * Sets the description property value. Description of the NIC (for example, Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
@@ -160,7 +160,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
         this.ipV4Address = value;
     }
     /**
-     * Sets the ipV6Address property value. Last Public (aka global) IPv6 address associated with this NIC.
+     * Sets the ipV6Address property value. Last Public (also known as global) IPv6 address associated with this NIC.
      * @param value Value to set for the ipV6Address property.
      */
     public void setIpV6Address(@jakarta.annotation.Nullable final String value) {

@@ -72,7 +72,7 @@ public class TaskRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get task from drives
+     * The task associated with the comment. Read-only. Nullable.
      * @return a CompletableFuture of workbookDocumentTask
      */
     @jakarta.annotation.Nonnull
@@ -80,7 +80,7 @@ public class TaskRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get task from drives
+     * The task associated with the comment. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookDocumentTask
      */
@@ -144,7 +144,7 @@ public class TaskRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get task from drives
+     * The task associated with the comment. Read-only. Nullable.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -152,7 +152,7 @@ public class TaskRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get task from drives
+     * The task associated with the comment. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,13 +205,23 @@ public class TaskRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a taskRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TaskRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TaskRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get task from drives
+     * The task associated with the comment. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

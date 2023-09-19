@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implements Parsable {
     /**
-     * The catalogName property
+     * The catalog name of the content. Read-only.
      */
     private String catalogName;
     /**
-     * The cveSeverityInformation property
+     * Severity information of the Common Vulnerabilities and Exposures associated with the content.
      */
     private QualityUpdateCveSeverityInformation cveSeverityInformation;
     /**
@@ -21,11 +21,11 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      */
     private Boolean isExpeditable;
     /**
-     * The productRevisions property
+     * The operating system product revisions that are released as part of this quality update.
      */
     private java.util.List<ProductRevision> productRevisions;
     /**
-     * The qualityUpdateCadence property
+     * The publishing cadence of the quality update. Possible values are: monthly, outOfBand, unknownFutureValue. Read-only.
      */
     private QualityUpdateCadence qualityUpdateCadence;
     /**
@@ -33,7 +33,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      */
     private QualityUpdateClassification qualityUpdateClassification;
     /**
-     * The shortName property
+     * The short name of the content. Read-only.
      */
     private String shortName;
     /**
@@ -54,7 +54,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
         return new QualityUpdateCatalogEntry();
     }
     /**
-     * Gets the catalogName property value. The catalogName property
+     * Gets the catalogName property value. The catalog name of the content. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
         return this.catalogName;
     }
     /**
-     * Gets the cveSeverityInformation property value. The cveSeverityInformation property
+     * Gets the cveSeverityInformation property value. Severity information of the Common Vulnerabilities and Exposures associated with the content.
      * @return a qualityUpdateCveSeverityInformation
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
         return this.isExpeditable;
     }
     /**
-     * Gets the productRevisions property value. The productRevisions property
+     * Gets the productRevisions property value. The operating system product revisions that are released as part of this quality update.
      * @return a productRevision
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
         return this.productRevisions;
     }
     /**
-     * Gets the qualityUpdateCadence property value. The qualityUpdateCadence property
+     * Gets the qualityUpdateCadence property value. The publishing cadence of the quality update. Possible values are: monthly, outOfBand, unknownFutureValue. Read-only.
      * @return a qualityUpdateCadence
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
         return this.qualityUpdateClassification;
     }
     /**
-     * Gets the shortName property value. The shortName property
+     * Gets the shortName property value. The short name of the content. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -141,14 +141,14 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
         writer.writeStringValue("shortName", this.getShortName());
     }
     /**
-     * Sets the catalogName property value. The catalogName property
+     * Sets the catalogName property value. The catalog name of the content. Read-only.
      * @param value Value to set for the catalogName property.
      */
     public void setCatalogName(@jakarta.annotation.Nullable final String value) {
         this.catalogName = value;
     }
     /**
-     * Sets the cveSeverityInformation property value. The cveSeverityInformation property
+     * Sets the cveSeverityInformation property value. Severity information of the Common Vulnerabilities and Exposures associated with the content.
      * @param value Value to set for the cveSeverityInformation property.
      */
     public void setCveSeverityInformation(@jakarta.annotation.Nullable final QualityUpdateCveSeverityInformation value) {
@@ -162,14 +162,14 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
         this.isExpeditable = value;
     }
     /**
-     * Sets the productRevisions property value. The productRevisions property
+     * Sets the productRevisions property value. The operating system product revisions that are released as part of this quality update.
      * @param value Value to set for the productRevisions property.
      */
     public void setProductRevisions(@jakarta.annotation.Nullable final java.util.List<ProductRevision> value) {
         this.productRevisions = value;
     }
     /**
-     * Sets the qualityUpdateCadence property value. The qualityUpdateCadence property
+     * Sets the qualityUpdateCadence property value. The publishing cadence of the quality update. Possible values are: monthly, outOfBand, unknownFutureValue. Read-only.
      * @param value Value to set for the qualityUpdateCadence property.
      */
     public void setQualityUpdateCadence(@jakarta.annotation.Nullable final QualityUpdateCadence value) {
@@ -183,7 +183,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
         this.qualityUpdateClassification = value;
     }
     /**
-     * Sets the shortName property value. The shortName property
+     * Sets the shortName property value. The short name of the content. Read-only.
      * @param value Value to set for the shortName property.
      */
     public void setShortName(@jakarta.annotation.Nullable final String value) {

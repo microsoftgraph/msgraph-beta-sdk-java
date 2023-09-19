@@ -11,35 +11,35 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MultiTenantOrganizationMember extends DirectoryObject implements Parsable {
     /**
-     * The addedByTenantId property
+     * Tenant ID of the tenant that added the tenant to the multi-tenant organization. Read-only.
      */
     private UUID addedByTenantId;
     /**
-     * The addedDateTime property
+     * Date and time when the tenant was added to the multi-tenant organization. Read-only.
      */
     private OffsetDateTime addedDateTime;
     /**
-     * The displayName property
+     * Display name of the tenant added to the multi-tenant organization.
      */
     private String displayName;
     /**
-     * The joinedDateTime property
+     * Date and time when the tenant joined the multi-tenant organization. Read-only.
      */
     private OffsetDateTime joinedDateTime;
     /**
-     * The role property
+     * Role of the tenant in the multi-tenant organization. The possible values are: owner, member (default), unknownFutureValue. Tenants with the owner role can manage the multi-tenant organization but tenants with the member role can only participate in a multi-tenant organization. There can be multiple tenants with the owner role in a multi-tenant organization.
      */
     private MultiTenantOrganizationMemberRole role;
     /**
-     * The state property
+     * State of the tenant in the multi-tenant organization. The possible values are: pending, active, removed, unknownFutureValue. Tenants in the pending state must join the multi-tenant organization to participate in the multi-tenant organization. Tenants in the active state can participate in the multi-tenant organization. Tenants in the removed state are in the process of being removed from the multi-tenant organization. Read-only.
      */
     private MultiTenantOrganizationMemberState state;
     /**
-     * The tenantId property
+     * Tenant ID of the Azure Active Directory tenant added to the multi-tenant organization. Set at the time tenant is added.Supports $filter. Key.
      */
     private String tenantId;
     /**
-     * The transitionDetails property
+     * Details of the processing status for a tenant in a multi-tenant organization. Read-only. Nullable.
      */
     private MultiTenantOrganizationMemberTransitionDetails transitionDetails;
     /**
@@ -60,7 +60,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
         return new MultiTenantOrganizationMember();
     }
     /**
-     * Gets the addedByTenantId property value. The addedByTenantId property
+     * Gets the addedByTenantId property value. Tenant ID of the tenant that added the tenant to the multi-tenant organization. Read-only.
      * @return a UUID
      */
     @jakarta.annotation.Nullable
@@ -68,7 +68,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
         return this.addedByTenantId;
     }
     /**
-     * Gets the addedDateTime property value. The addedDateTime property
+     * Gets the addedDateTime property value. Date and time when the tenant was added to the multi-tenant organization. Read-only.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
         return this.addedDateTime;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of the tenant added to the multi-tenant organization.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
         return deserializerMap;
     }
     /**
-     * Gets the joinedDateTime property value. The joinedDateTime property
+     * Gets the joinedDateTime property value. Date and time when the tenant joined the multi-tenant organization. Read-only.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
         return this.joinedDateTime;
     }
     /**
-     * Gets the role property value. The role property
+     * Gets the role property value. Role of the tenant in the multi-tenant organization. The possible values are: owner, member (default), unknownFutureValue. Tenants with the owner role can manage the multi-tenant organization but tenants with the member role can only participate in a multi-tenant organization. There can be multiple tenants with the owner role in a multi-tenant organization.
      * @return a multiTenantOrganizationMemberRole
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
         return this.role;
     }
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. State of the tenant in the multi-tenant organization. The possible values are: pending, active, removed, unknownFutureValue. Tenants in the pending state must join the multi-tenant organization to participate in the multi-tenant organization. Tenants in the active state can participate in the multi-tenant organization. Tenants in the removed state are in the process of being removed from the multi-tenant organization. Read-only.
      * @return a multiTenantOrganizationMemberState
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
         return this.state;
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. Tenant ID of the Azure Active Directory tenant added to the multi-tenant organization. Set at the time tenant is added.Supports $filter. Key.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
         return this.tenantId;
     }
     /**
-     * Gets the transitionDetails property value. The transitionDetails property
+     * Gets the transitionDetails property value. Details of the processing status for a tenant in a multi-tenant organization. Read-only. Nullable.
      * @return a multiTenantOrganizationMemberTransitionDetails
      */
     @jakarta.annotation.Nullable
@@ -157,56 +157,56 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
         writer.writeObjectValue("transitionDetails", this.getTransitionDetails());
     }
     /**
-     * Sets the addedByTenantId property value. The addedByTenantId property
+     * Sets the addedByTenantId property value. Tenant ID of the tenant that added the tenant to the multi-tenant organization. Read-only.
      * @param value Value to set for the addedByTenantId property.
      */
     public void setAddedByTenantId(@jakarta.annotation.Nullable final UUID value) {
         this.addedByTenantId = value;
     }
     /**
-     * Sets the addedDateTime property value. The addedDateTime property
+     * Sets the addedDateTime property value. Date and time when the tenant was added to the multi-tenant organization. Read-only.
      * @param value Value to set for the addedDateTime property.
      */
     public void setAddedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.addedDateTime = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of the tenant added to the multi-tenant organization.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
-     * Sets the joinedDateTime property value. The joinedDateTime property
+     * Sets the joinedDateTime property value. Date and time when the tenant joined the multi-tenant organization. Read-only.
      * @param value Value to set for the joinedDateTime property.
      */
     public void setJoinedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.joinedDateTime = value;
     }
     /**
-     * Sets the role property value. The role property
+     * Sets the role property value. Role of the tenant in the multi-tenant organization. The possible values are: owner, member (default), unknownFutureValue. Tenants with the owner role can manage the multi-tenant organization but tenants with the member role can only participate in a multi-tenant organization. There can be multiple tenants with the owner role in a multi-tenant organization.
      * @param value Value to set for the role property.
      */
     public void setRole(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberRole value) {
         this.role = value;
     }
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. State of the tenant in the multi-tenant organization. The possible values are: pending, active, removed, unknownFutureValue. Tenants in the pending state must join the multi-tenant organization to participate in the multi-tenant organization. Tenants in the active state can participate in the multi-tenant organization. Tenants in the removed state are in the process of being removed from the multi-tenant organization. Read-only.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberState value) {
         this.state = value;
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. Tenant ID of the Azure Active Directory tenant added to the multi-tenant organization. Set at the time tenant is added.Supports $filter. Key.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.tenantId = value;
     }
     /**
-     * Sets the transitionDetails property value. The transitionDetails property
+     * Sets the transitionDetails property value. Details of the processing status for a tenant in a multi-tenant organization. Read-only. Nullable.
      * @param value Value to set for the transitionDetails property.
      */
     public void setTransitionDetails(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberTransitionDetails value) {

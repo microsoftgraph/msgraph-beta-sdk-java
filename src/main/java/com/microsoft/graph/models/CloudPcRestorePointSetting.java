@@ -22,7 +22,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
      */
     private String odataType;
     /**
-     * If true, the user has the ability to use snapshots to restore Cloud PCs. If false, non-admin users cannot use snapshots to restore the Cloud PC.
+     * If true, the user has the ability to use snapshots to restore Cloud PCs. If false, non-admin users can't use snapshots to restore the Cloud PC.
      */
     private Boolean userRestoreEnabled;
     /**
@@ -78,7 +78,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
         return this.odataType;
     }
     /**
-     * Gets the userRestoreEnabled property value. If true, the user has the ability to use snapshots to restore Cloud PCs. If false, non-admin users cannot use snapshots to restore the Cloud PC.
+     * Gets the userRestoreEnabled property value. If true, the user has the ability to use snapshots to restore Cloud PCs. If false, non-admin users can't use snapshots to restore the Cloud PC.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
         this.odataType = value;
     }
     /**
-     * Sets the userRestoreEnabled property value. If true, the user has the ability to use snapshots to restore Cloud PCs. If false, non-admin users cannot use snapshots to restore the Cloud PC.
+     * Sets the userRestoreEnabled property value. If true, the user has the ability to use snapshots to restore Cloud PCs. If false, non-admin users can't use snapshots to restore the Cloud PC.
      * @param value Value to set for the userRestoreEnabled property.
      */
     public void setUserRestoreEnabled(@jakarta.annotation.Nullable final Boolean value) {

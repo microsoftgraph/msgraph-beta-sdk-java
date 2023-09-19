@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
     /**
      * Key Usage Options.
      */
-    private KeyUsages keyUsage;
+    private EnumSet<KeyUsages> keyUsage;
     /**
      * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      */
@@ -103,7 +104,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
         deserializerMap.put("customSubjectAlternativeNames", (n) -> { this.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
         deserializerMap.put("extendedKeyUsages", (n) -> { this.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
         deserializerMap.put("keySize", (n) -> { this.setKeySize(n.getEnumValue(KeySize.class)); });
-        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumValue(KeyUsages.class)); });
+        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumSetValue(KeyUsages.class)); });
         deserializerMap.put("managedDeviceCertificateStates", (n) -> { this.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
         deserializerMap.put("rootCertificate", (n) -> { this.setRootCertificate(n.getObjectValue(IosTrustedRootCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("scepServerUrls", (n) -> { this.setScepServerUrls(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -124,7 +125,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      * @return a keyUsages
      */
     @jakarta.annotation.Nullable
-    public KeyUsages getKeyUsage() {
+    public EnumSet<KeyUsages> getKeyUsage() {
         return this.keyUsage;
     }
     /**
@@ -178,7 +179,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
         writer.writeCollectionOfObjectValues("customSubjectAlternativeNames", this.getCustomSubjectAlternativeNames());
         writer.writeCollectionOfObjectValues("extendedKeyUsages", this.getExtendedKeyUsages());
         writer.writeEnumValue("keySize", this.getKeySize());
-        writer.writeEnumValue("keyUsage", this.getKeyUsage());
+        writer.writeEnumSetValue("keyUsage", this.getKeyUsage());
         writer.writeCollectionOfObjectValues("managedDeviceCertificateStates", this.getManagedDeviceCertificateStates());
         writer.writeObjectValue("rootCertificate", this.getRootCertificate());
         writer.writeCollectionOfPrimitiveValues("scepServerUrls", this.getScepServerUrls());
@@ -217,7 +218,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      * Sets the keyUsage property value. Key Usage Options.
      * @param value Value to set for the keyUsage property.
      */
-    public void setKeyUsage(@jakarta.annotation.Nullable final KeyUsages value) {
+    public void setKeyUsage(@jakarta.annotation.Nullable final EnumSet<KeyUsages> value) {
         this.keyUsage = value;
     }
     /**

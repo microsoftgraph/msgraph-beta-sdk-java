@@ -169,6 +169,16 @@ public class SkillsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a skillsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SkillsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SkillsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of skillProficiency objects in a user's profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

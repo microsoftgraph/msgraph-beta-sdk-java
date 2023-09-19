@@ -86,6 +86,16 @@ public class GetCustomizedSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a getCustomizedSettingsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GetCustomizedSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GetCustomizedSettingsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function getCustomizedSettings
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -95,6 +95,19 @@ public class MicrosoftGraphEdiscoveryCloseRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a microsoftGraphEdiscoveryCloseRequestBuilder
+     * @deprecated
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public MicrosoftGraphEdiscoveryCloseRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MicrosoftGraphEdiscoveryCloseRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookDocumentTaskChange extends Entity implements Parsable {
     /**
-     * The assignee property
+     * The user identity the task is assigned to. Only present when the type property is assign. Nullable.
      */
     private WorkbookEmailIdentity assignee;
     /**
@@ -18,39 +18,39 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
      */
     private WorkbookEmailIdentity changedBy;
     /**
-     * The commentId property
+     * The identifier of the associated comment.
      */
     private String commentId;
     /**
-     * The createdDateTime property
+     * Date and time when the task was changed. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime createdDateTime;
     /**
-     * The dueDateTime property
+     * The due date and time for the task. Only present when the type property is setSchedule. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime dueDateTime;
     /**
-     * The percentComplete property
+     * An integer value from 0 to 100 that represents the percentage of the completion of the task and associated comment. 100 means that the task and associated comment are completed. If you change the completion from 100 to a lower value, the associated task and comment are reactivated. Only present when the type property is setPercentComplete. Nullable.
      */
     private Integer percentComplete;
     /**
-     * The priority property
+     * An integer value from 0 to 10 that represents the priority of the task. A lower value indicates a higher priority. 5 indicates the default priority if not set. Only present when the type property is setPriority. Nullable.
      */
     private Integer priority;
     /**
-     * The startDateTime property
+     * The start date and time for the task. Only present when the type property is setSchedule. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime startDateTime;
     /**
-     * The title property
+     * The title of the task. Only present when the type property is setTitle. Nullable.
      */
     private String title;
     /**
-     * The type property
+     * The type of the change history. Possible values are: create, assign, unassign, unassignAll, setPriority, setTitle, setPercentComplete, setSchedule, remove, restore, undo.
      */
     private String type;
     /**
-     * The undoChangeId property
+     * The ID of the workbookDocumentTaskChange that was undone for the undo change action. Only exists on an undo change history. Nullable.
      */
     private String undoChangeId;
     /**
@@ -70,7 +70,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
         return new WorkbookDocumentTaskChange();
     }
     /**
-     * Gets the assignee property value. The assignee property
+     * Gets the assignee property value. The user identity the task is assigned to. Only present when the type property is assign. Nullable.
      * @return a workbookEmailIdentity
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
         return this.changedBy;
     }
     /**
-     * Gets the commentId property value. The commentId property
+     * Gets the commentId property value. The identifier of the associated comment.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
         return this.commentId;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date and time when the task was changed. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
-     * Gets the dueDateTime property value. The dueDateTime property
+     * Gets the dueDateTime property value. The due date and time for the task. Only present when the type property is setSchedule. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the percentComplete property value. The percentComplete property
+     * Gets the percentComplete property value. An integer value from 0 to 100 that represents the percentage of the completion of the task and associated comment. 100 means that the task and associated comment are completed. If you change the completion from 100 to a lower value, the associated task and comment are reactivated. Only present when the type property is setPercentComplete. Nullable.
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
         return this.percentComplete;
     }
     /**
-     * Gets the priority property value. The priority property
+     * Gets the priority property value. An integer value from 0 to 10 that represents the priority of the task. A lower value indicates a higher priority. 5 indicates the default priority if not set. Only present when the type property is setPriority. Nullable.
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -146,7 +146,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
         return this.priority;
     }
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. The start date and time for the task. Only present when the type property is setSchedule. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -154,7 +154,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
         return this.startDateTime;
     }
     /**
-     * Gets the title property value. The title property
+     * Gets the title property value. The title of the task. Only present when the type property is setTitle. Nullable.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -162,7 +162,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
         return this.title;
     }
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The type of the change history. Possible values are: create, assign, unassign, unassignAll, setPriority, setTitle, setPercentComplete, setSchedule, remove, restore, undo.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -170,7 +170,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
         return this.type;
     }
     /**
-     * Gets the undoChangeId property value. The undoChangeId property
+     * Gets the undoChangeId property value. The ID of the workbookDocumentTaskChange that was undone for the undo change action. Only exists on an undo change history. Nullable.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -197,7 +197,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
         writer.writeStringValue("undoChangeId", this.getUndoChangeId());
     }
     /**
-     * Sets the assignee property value. The assignee property
+     * Sets the assignee property value. The user identity the task is assigned to. Only present when the type property is assign. Nullable.
      * @param value Value to set for the assignee property.
      */
     public void setAssignee(@jakarta.annotation.Nullable final WorkbookEmailIdentity value) {
@@ -211,63 +211,63 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
         this.changedBy = value;
     }
     /**
-     * Sets the commentId property value. The commentId property
+     * Sets the commentId property value. The identifier of the associated comment.
      * @param value Value to set for the commentId property.
      */
     public void setCommentId(@jakarta.annotation.Nullable final String value) {
         this.commentId = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date and time when the task was changed. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
-     * Sets the dueDateTime property value. The dueDateTime property
+     * Sets the dueDateTime property value. The due date and time for the task. Only present when the type property is setSchedule. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the dueDateTime property.
      */
     public void setDueDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.dueDateTime = value;
     }
     /**
-     * Sets the percentComplete property value. The percentComplete property
+     * Sets the percentComplete property value. An integer value from 0 to 100 that represents the percentage of the completion of the task and associated comment. 100 means that the task and associated comment are completed. If you change the completion from 100 to a lower value, the associated task and comment are reactivated. Only present when the type property is setPercentComplete. Nullable.
      * @param value Value to set for the percentComplete property.
      */
     public void setPercentComplete(@jakarta.annotation.Nullable final Integer value) {
         this.percentComplete = value;
     }
     /**
-     * Sets the priority property value. The priority property
+     * Sets the priority property value. An integer value from 0 to 10 that represents the priority of the task. A lower value indicates a higher priority. 5 indicates the default priority if not set. Only present when the type property is setPriority. Nullable.
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.priority = value;
     }
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. The start date and time for the task. Only present when the type property is setSchedule. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.startDateTime = value;
     }
     /**
-     * Sets the title property value. The title property
+     * Sets the title property value. The title of the task. Only present when the type property is setTitle. Nullable.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.title = value;
     }
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The type of the change history. Possible values are: create, assign, unassign, unassignAll, setPriority, setTitle, setPercentComplete, setSchedule, remove, restore, undo.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.type = value;
     }
     /**
-     * Sets the undoChangeId property value. The undoChangeId property
+     * Sets the undoChangeId property value. The ID of the workbookDocumentTaskChange that was undone for the undo change action. Only exists on an undo change history. Nullable.
      * @param value Value to set for the undoChangeId property.
      */
     public void setUndoChangeId(@jakarta.annotation.Nullable final String value) {

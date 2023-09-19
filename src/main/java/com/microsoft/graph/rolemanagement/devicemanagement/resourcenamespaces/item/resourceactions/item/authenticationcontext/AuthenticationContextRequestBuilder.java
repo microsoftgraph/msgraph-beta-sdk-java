@@ -87,6 +87,16 @@ public class AuthenticationContextRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a authenticationContextRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AuthenticationContextRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AuthenticationContextRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get authenticationContext from roleManagement
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

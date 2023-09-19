@@ -33,7 +33,7 @@ public class DriveItem extends BaseItem implements Parsable {
      */
     private byte[] content;
     /**
-     * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+     * An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.
      */
     private String cTag;
     /**
@@ -89,7 +89,7 @@ public class DriveItem extends BaseItem implements Parsable {
      */
     private Photo photo;
     /**
-     * Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
+     * Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only.
      */
     private PublicationFacet publication;
     /**
@@ -97,7 +97,7 @@ public class DriveItem extends BaseItem implements Parsable {
      */
     private RemoteItem remoteItem;
     /**
-     * The retentionLabel property
+     * Information about retention label and settings enforced on the driveItem. Read-write.
      */
     private ItemRetentionLabel retentionLabel;
     /**
@@ -149,7 +149,7 @@ public class DriveItem extends BaseItem implements Parsable {
      */
     private String webDavUrl;
     /**
-     * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
      */
     private Workbook workbook;
     /**
@@ -218,7 +218,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.content;
     }
     /**
-     * Gets the cTag property value. An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+     * Gets the cTag property value. An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -375,7 +375,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.photo;
     }
     /**
-     * Gets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
+     * Gets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only.
      * @return a publicationFacet
      */
     @jakarta.annotation.Nullable
@@ -391,7 +391,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.remoteItem;
     }
     /**
-     * Gets the retentionLabel property value. The retentionLabel property
+     * Gets the retentionLabel property value. Information about retention label and settings enforced on the driveItem. Read-write.
      * @return a itemRetentionLabel
      */
     @jakarta.annotation.Nullable
@@ -495,7 +495,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.webDavUrl;
     }
     /**
-     * Gets the workbook property value. For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     * Gets the workbook property value. For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
      * @return a workbook
      */
     @jakarta.annotation.Nullable
@@ -589,7 +589,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this.content = value;
     }
     /**
-     * Sets the cTag property value. An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+     * Sets the cTag property value. An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.
      * @param value Value to set for the cTag property.
      */
     public void setCTag(@jakarta.annotation.Nullable final String value) {
@@ -687,7 +687,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this.photo = value;
     }
     /**
-     * Sets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
+     * Sets the publication property value. Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only.
      * @param value Value to set for the publication property.
      */
     public void setPublication(@jakarta.annotation.Nullable final PublicationFacet value) {
@@ -701,7 +701,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this.remoteItem = value;
     }
     /**
-     * Sets the retentionLabel property value. The retentionLabel property
+     * Sets the retentionLabel property value. Information about retention label and settings enforced on the driveItem. Read-write.
      * @param value Value to set for the retentionLabel property.
      */
     public void setRetentionLabel(@jakarta.annotation.Nullable final ItemRetentionLabel value) {
@@ -792,7 +792,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this.webDavUrl = value;
     }
     /**
-     * Sets the workbook property value. For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     * Sets the workbook property value. For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
      * @param value Value to set for the workbook property.
      */
     public void setWorkbook(@jakarta.annotation.Nullable final Workbook value) {

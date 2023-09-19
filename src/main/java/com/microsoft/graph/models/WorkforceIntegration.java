@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
     /**
      * The eligibilityFilteringEnabledEntities property
      */
-    private EligibilityFilteringEnabledEntities eligibilityFilteringEnabledEntities;
+    private EnumSet<EligibilityFilteringEnabledEntities> eligibilityFilteringEnabledEntities;
     /**
      * The workforce integration encryption resource.
      */
@@ -31,11 +32,11 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
     /**
      * This property has replaced supports in v1.0. We recommend that you use this property instead of supports. The supports property is still supported in beta for the time being. The possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard, timeOffReason, timeOff, timeOffRequest. If selecting more than one value, all values must start with the first letter in uppercase.
      */
-    private WorkforceIntegrationSupportedEntities supportedEntities;
+    private EnumSet<WorkforceIntegrationSupportedEntities> supportedEntities;
     /**
      * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. The possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard, timeOffReason, timeOff, timeOffRequest. If selecting more than one value, all values must start with the first letter in uppercase.
      */
-    private WorkforceIntegrationSupportedEntities supports;
+    private EnumSet<WorkforceIntegrationSupportedEntities> supports;
     /**
      * Workforce Integration URL for callbacks from the Shifts service.
      */
@@ -78,7 +79,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @return a eligibilityFilteringEnabledEntities
      */
     @jakarta.annotation.Nullable
-    public EligibilityFilteringEnabledEntities getEligibilityFilteringEnabledEntities() {
+    public EnumSet<EligibilityFilteringEnabledEntities> getEligibilityFilteringEnabledEntities() {
         return this.eligibilityFilteringEnabledEntities;
     }
     /**
@@ -98,11 +99,11 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("apiVersion", (n) -> { this.setApiVersion(n.getIntegerValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("eligibilityFilteringEnabledEntities", (n) -> { this.setEligibilityFilteringEnabledEntities(n.getEnumValue(EligibilityFilteringEnabledEntities.class)); });
+        deserializerMap.put("eligibilityFilteringEnabledEntities", (n) -> { this.setEligibilityFilteringEnabledEntities(n.getEnumSetValue(EligibilityFilteringEnabledEntities.class)); });
         deserializerMap.put("encryption", (n) -> { this.setEncryption(n.getObjectValue(WorkforceIntegrationEncryption::createFromDiscriminatorValue)); });
         deserializerMap.put("isActive", (n) -> { this.setIsActive(n.getBooleanValue()); });
-        deserializerMap.put("supportedEntities", (n) -> { this.setSupportedEntities(n.getEnumValue(WorkforceIntegrationSupportedEntities.class)); });
-        deserializerMap.put("supports", (n) -> { this.setSupports(n.getEnumValue(WorkforceIntegrationSupportedEntities.class)); });
+        deserializerMap.put("supportedEntities", (n) -> { this.setSupportedEntities(n.getEnumSetValue(WorkforceIntegrationSupportedEntities.class)); });
+        deserializerMap.put("supports", (n) -> { this.setSupports(n.getEnumSetValue(WorkforceIntegrationSupportedEntities.class)); });
         deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
         return deserializerMap;
     }
@@ -119,7 +120,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @return a workforceIntegrationSupportedEntities
      */
     @jakarta.annotation.Nullable
-    public WorkforceIntegrationSupportedEntities getSupportedEntities() {
+    public EnumSet<WorkforceIntegrationSupportedEntities> getSupportedEntities() {
         return this.supportedEntities;
     }
     /**
@@ -127,7 +128,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * @return a workforceIntegrationSupportedEntities
      */
     @jakarta.annotation.Nullable
-    public WorkforceIntegrationSupportedEntities getSupports() {
+    public EnumSet<WorkforceIntegrationSupportedEntities> getSupports() {
         return this.supports;
     }
     /**
@@ -147,11 +148,11 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
         super.serialize(writer);
         writer.writeIntegerValue("apiVersion", this.getApiVersion());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeEnumValue("eligibilityFilteringEnabledEntities", this.getEligibilityFilteringEnabledEntities());
+        writer.writeEnumSetValue("eligibilityFilteringEnabledEntities", this.getEligibilityFilteringEnabledEntities());
         writer.writeObjectValue("encryption", this.getEncryption());
         writer.writeBooleanValue("isActive", this.getIsActive());
-        writer.writeEnumValue("supportedEntities", this.getSupportedEntities());
-        writer.writeEnumValue("supports", this.getSupports());
+        writer.writeEnumSetValue("supportedEntities", this.getSupportedEntities());
+        writer.writeEnumSetValue("supports", this.getSupports());
         writer.writeStringValue("url", this.getUrl());
     }
     /**
@@ -172,7 +173,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * Sets the eligibilityFilteringEnabledEntities property value. The eligibilityFilteringEnabledEntities property
      * @param value Value to set for the eligibilityFilteringEnabledEntities property.
      */
-    public void setEligibilityFilteringEnabledEntities(@jakarta.annotation.Nullable final EligibilityFilteringEnabledEntities value) {
+    public void setEligibilityFilteringEnabledEntities(@jakarta.annotation.Nullable final EnumSet<EligibilityFilteringEnabledEntities> value) {
         this.eligibilityFilteringEnabledEntities = value;
     }
     /**
@@ -193,14 +194,14 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      * Sets the supportedEntities property value. This property has replaced supports in v1.0. We recommend that you use this property instead of supports. The supports property is still supported in beta for the time being. The possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard, timeOffReason, timeOff, timeOffRequest. If selecting more than one value, all values must start with the first letter in uppercase.
      * @param value Value to set for the supportedEntities property.
      */
-    public void setSupportedEntities(@jakarta.annotation.Nullable final WorkforceIntegrationSupportedEntities value) {
+    public void setSupportedEntities(@jakarta.annotation.Nullable final EnumSet<WorkforceIntegrationSupportedEntities> value) {
         this.supportedEntities = value;
     }
     /**
      * Sets the supports property value. The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. The possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard, timeOffReason, timeOff, timeOffRequest. If selecting more than one value, all values must start with the first letter in uppercase.
      * @param value Value to set for the supports property.
      */
-    public void setSupports(@jakarta.annotation.Nullable final WorkforceIntegrationSupportedEntities value) {
+    public void setSupports(@jakarta.annotation.Nullable final EnumSet<WorkforceIntegrationSupportedEntities> value) {
         this.supports = value;
     }
     /**

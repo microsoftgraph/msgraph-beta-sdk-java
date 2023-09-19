@@ -165,6 +165,16 @@ public class TransitiveRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a transitiveRoleAssignmentsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TransitiveRoleAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TransitiveRoleAssignmentsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Resource to grant access to users or groups that are transitive.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

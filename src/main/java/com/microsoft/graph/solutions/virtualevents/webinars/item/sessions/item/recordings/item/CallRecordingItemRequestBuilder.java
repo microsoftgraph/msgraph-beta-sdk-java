@@ -64,7 +64,7 @@ public class CallRecordingItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get a callRecording object associated with an onlineMeeting. For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of text associated with the recording.
+     * Get a callRecording object associated with a scheduled onlineMeeting. This API does not support getting call recordings from channel meetings.  For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of bytes associated with the recording.
      * @return a CompletableFuture of callRecording
      * @see <a href="https://learn.microsoft.com/graph/api/callrecording-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -73,7 +73,7 @@ public class CallRecordingItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a callRecording object associated with an onlineMeeting. For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of text associated with the recording.
+     * Get a callRecording object associated with a scheduled onlineMeeting. This API does not support getting call recordings from channel meetings.  For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of bytes associated with the recording.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of callRecording
      * @see <a href="https://learn.microsoft.com/graph/api/callrecording-get?view=graph-rest-1.0">Find more info here</a>
@@ -138,7 +138,7 @@ public class CallRecordingItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a callRecording object associated with an onlineMeeting. For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of text associated with the recording.
+     * Get a callRecording object associated with a scheduled onlineMeeting. This API does not support getting call recordings from channel meetings.  For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of bytes associated with the recording.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class CallRecordingItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a callRecording object associated with an onlineMeeting. For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of text associated with the recording.
+     * Get a callRecording object associated with a scheduled onlineMeeting. This API does not support getting call recordings from channel meetings.  For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of bytes associated with the recording.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,13 +199,23 @@ public class CallRecordingItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a CallRecordingItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CallRecordingItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CallRecordingItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a callRecording object associated with an onlineMeeting. For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of text associated with the recording.
+     * Get a callRecording object associated with a scheduled onlineMeeting. This API does not support getting call recordings from channel meetings.  For a recording, this API returns the metadata of the single recording associated with the online meeting. For the content of a recording, this API returns the stream of bytes associated with the recording.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

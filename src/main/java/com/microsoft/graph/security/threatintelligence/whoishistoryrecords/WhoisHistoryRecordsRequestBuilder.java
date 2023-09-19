@@ -59,7 +59,7 @@ public class WhoisHistoryRecordsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/whoisHistoryRecords{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get whoisHistoryRecords from security
+     * Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
      * @return a CompletableFuture of whoisHistoryRecordCollectionResponse
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class WhoisHistoryRecordsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get whoisHistoryRecords from security
+     * Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of whoisHistoryRecordCollectionResponse
      */
@@ -104,7 +104,7 @@ public class WhoisHistoryRecordsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WhoisHistoryRecord::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get whoisHistoryRecords from security
+     * Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class WhoisHistoryRecordsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get whoisHistoryRecords from security
+     * Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -165,7 +165,17 @@ public class WhoisHistoryRecordsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get whoisHistoryRecords from security
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a whoisHistoryRecordsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public WhoisHistoryRecordsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new WhoisHistoryRecordsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

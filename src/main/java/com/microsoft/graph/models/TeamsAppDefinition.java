@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -12,7 +13,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     /**
      * A collection of scopes where the Teams app can be installed. Possible values are:team  Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat   Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal  Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
      */
-    private TeamsAppInstallationScopes allowedInstallationScopes;
+    private EnumSet<TeamsAppInstallationScopes> allowedInstallationScopes;
     /**
      * Authorization requirements specified in the Teams app manifest.
      */
@@ -86,7 +87,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * @return a teamsAppInstallationScopes
      */
     @jakarta.annotation.Nullable
-    public TeamsAppInstallationScopes getAllowedInstallationScopes() {
+    public EnumSet<TeamsAppInstallationScopes> getAllowedInstallationScopes() {
         return this.allowedInstallationScopes;
     }
     /**
@@ -152,7 +153,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("allowedInstallationScopes", (n) -> { this.setAllowedInstallationScopes(n.getEnumValue(TeamsAppInstallationScopes.class)); });
+        deserializerMap.put("allowedInstallationScopes", (n) -> { this.setAllowedInstallationScopes(n.getEnumSetValue(TeamsAppInstallationScopes.class)); });
         deserializerMap.put("authorization", (n) -> { this.setAuthorization(n.getObjectValue(TeamsAppAuthorization::createFromDiscriminatorValue)); });
         deserializerMap.put("azureADAppId", (n) -> { this.setAzureADAppId(n.getStringValue()); });
         deserializerMap.put("bot", (n) -> { this.setBot(n.getObjectValue(TeamworkBot::createFromDiscriminatorValue)); });
@@ -223,7 +224,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("allowedInstallationScopes", this.getAllowedInstallationScopes());
+        writer.writeEnumSetValue("allowedInstallationScopes", this.getAllowedInstallationScopes());
         writer.writeObjectValue("authorization", this.getAuthorization());
         writer.writeStringValue("azureADAppId", this.getAzureADAppId());
         writer.writeObjectValue("bot", this.getBot());
@@ -242,7 +243,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Sets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:team  Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat   Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal  Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
      * @param value Value to set for the allowedInstallationScopes property.
      */
-    public void setAllowedInstallationScopes(@jakarta.annotation.Nullable final TeamsAppInstallationScopes value) {
+    public void setAllowedInstallationScopes(@jakarta.annotation.Nullable final EnumSet<TeamsAppInstallationScopes> value) {
         this.allowedInstallationScopes = value;
     }
     /**

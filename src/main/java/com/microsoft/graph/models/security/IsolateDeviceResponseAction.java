@@ -3,6 +3,7 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +12,7 @@ public class IsolateDeviceResponseAction extends ResponseAction implements Parsa
     /**
      * The identifier property
      */
-    private DeviceIdEntityIdentifier identifier;
+    private EnumSet<DeviceIdEntityIdentifier> identifier;
     /**
      * The isolationType property
      */
@@ -40,7 +41,7 @@ public class IsolateDeviceResponseAction extends ResponseAction implements Parsa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumValue(DeviceIdEntityIdentifier.class)); });
+        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumSetValue(DeviceIdEntityIdentifier.class)); });
         deserializerMap.put("isolationType", (n) -> { this.setIsolationType(n.getEnumValue(IsolationType.class)); });
         return deserializerMap;
     }
@@ -49,7 +50,7 @@ public class IsolateDeviceResponseAction extends ResponseAction implements Parsa
      * @return a deviceIdEntityIdentifier
      */
     @jakarta.annotation.Nullable
-    public DeviceIdEntityIdentifier getIdentifier() {
+    public EnumSet<DeviceIdEntityIdentifier> getIdentifier() {
         return this.identifier;
     }
     /**
@@ -67,14 +68,14 @@ public class IsolateDeviceResponseAction extends ResponseAction implements Parsa
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("identifier", this.getIdentifier());
+        writer.writeEnumSetValue("identifier", this.getIdentifier());
         writer.writeEnumValue("isolationType", this.getIsolationType());
     }
     /**
      * Sets the identifier property value. The identifier property
      * @param value Value to set for the identifier property.
      */
-    public void setIdentifier(@jakarta.annotation.Nullable final DeviceIdEntityIdentifier value) {
+    public void setIdentifier(@jakarta.annotation.Nullable final EnumSet<DeviceIdEntityIdentifier> value) {
         this.identifier = value;
     }
     /**

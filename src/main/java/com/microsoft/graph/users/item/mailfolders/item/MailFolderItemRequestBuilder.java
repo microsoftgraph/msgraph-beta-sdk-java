@@ -129,21 +129,21 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, MailFolder::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of mailFolder object.
+     * Update the writable properties of a mailSearchFolder object.
      * @param body The request body
      * @return a CompletableFuture of mailFolder
-     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/mailsearchfolder-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> patch(@jakarta.annotation.Nonnull final MailFolder body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of mailFolder object.
+     * Update the writable properties of a mailSearchFolder object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of mailFolder
-     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/mailsearchfolder-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> patch(@jakarta.annotation.Nonnull final MailFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -211,7 +211,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of mailFolder object.
+     * Update the writable properties of a mailSearchFolder object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -220,7 +220,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of mailFolder object.
+     * Update the writable properties of a mailSearchFolder object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -241,6 +241,16 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a MailFolderItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MailFolderItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MailFolderItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

@@ -3,6 +3,7 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +16,7 @@ public class BlockFileResponseAction extends ResponseAction implements Parsable 
     /**
      * The identifier property
      */
-    private FileEntityIdentifier identifier;
+    private EnumSet<FileEntityIdentifier> identifier;
     /**
      * Instantiates a new blockFileResponseAction and sets the default values.
      */
@@ -49,7 +50,7 @@ public class BlockFileResponseAction extends ResponseAction implements Parsable 
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deviceGroupNames", (n) -> { this.setDeviceGroupNames(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumValue(FileEntityIdentifier.class)); });
+        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumSetValue(FileEntityIdentifier.class)); });
         return deserializerMap;
     }
     /**
@@ -57,7 +58,7 @@ public class BlockFileResponseAction extends ResponseAction implements Parsable 
      * @return a fileEntityIdentifier
      */
     @jakarta.annotation.Nullable
-    public FileEntityIdentifier getIdentifier() {
+    public EnumSet<FileEntityIdentifier> getIdentifier() {
         return this.identifier;
     }
     /**
@@ -68,7 +69,7 @@ public class BlockFileResponseAction extends ResponseAction implements Parsable 
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("deviceGroupNames", this.getDeviceGroupNames());
-        writer.writeEnumValue("identifier", this.getIdentifier());
+        writer.writeEnumSetValue("identifier", this.getIdentifier());
     }
     /**
      * Sets the deviceGroupNames property value. The deviceGroupNames property
@@ -81,7 +82,7 @@ public class BlockFileResponseAction extends ResponseAction implements Parsable 
      * Sets the identifier property value. The identifier property
      * @param value Value to set for the identifier property.
      */
-    public void setIdentifier(@jakarta.annotation.Nullable final FileEntityIdentifier value) {
+    public void setIdentifier(@jakarta.annotation.Nullable final EnumSet<FileEntityIdentifier> value) {
         this.identifier = value;
     }
 }

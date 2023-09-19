@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TrustedCertificateAuthorityAsEntityBase extends DirectoryObject implements Parsable {
     /**
-     * The trustedCertificateAuthorities property
+     * Collection of trusted certificate authorities.
      */
     private java.util.List<CertificateAuthorityAsEntity> trustedCertificateAuthorities;
     /**
@@ -47,7 +47,7 @@ public class TrustedCertificateAuthorityAsEntityBase extends DirectoryObject imp
         return deserializerMap;
     }
     /**
-     * Gets the trustedCertificateAuthorities property value. The trustedCertificateAuthorities property
+     * Gets the trustedCertificateAuthorities property value. Collection of trusted certificate authorities.
      * @return a certificateAuthorityAsEntity
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class TrustedCertificateAuthorityAsEntityBase extends DirectoryObject imp
         writer.writeCollectionOfObjectValues("trustedCertificateAuthorities", this.getTrustedCertificateAuthorities());
     }
     /**
-     * Sets the trustedCertificateAuthorities property value. The trustedCertificateAuthorities property
+     * Sets the trustedCertificateAuthorities property value. Collection of trusted certificate authorities.
      * @param value Value to set for the trustedCertificateAuthorities property.
      */
     public void setTrustedCertificateAuthorities(@jakarta.annotation.Nullable final java.util.List<CertificateAuthorityAsEntity> value) {

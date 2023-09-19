@@ -13,7 +13,7 @@ public class AppScope extends Entity implements Parsable {
      */
     private String displayName;
     /**
-     * Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. This property is read only.
+     * Describes the type of app-specific resource represented by the app scope and is provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. This property is read only.
      */
     private String type;
     /**
@@ -59,7 +59,7 @@ public class AppScope extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the type property value. Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. This property is read only.
+     * Gets the type property value. Describes the type of app-specific resource represented by the app scope and is provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. This property is read only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class AppScope extends Entity implements Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the type property value. Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. This property is read only.
+     * Sets the type property value. Describes the type of app-specific resource represented by the app scope and is provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. This property is read only.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

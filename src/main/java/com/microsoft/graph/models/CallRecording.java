@@ -22,6 +22,10 @@ public class CallRecording extends Entity implements Parsable {
      */
     private String meetingId;
     /**
+     * The meetingOrganizer property
+     */
+    private IdentitySet meetingOrganizer;
+    /**
      * The unique identifier of the organizer of the onlineMeeting related to this recording. Read-only.
      */
     private String meetingOrganizerId;
@@ -71,6 +75,7 @@ public class CallRecording extends Entity implements Parsable {
         deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("meetingId", (n) -> { this.setMeetingId(n.getStringValue()); });
+        deserializerMap.put("meetingOrganizer", (n) -> { this.setMeetingOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("meetingOrganizerId", (n) -> { this.setMeetingOrganizerId(n.getStringValue()); });
         deserializerMap.put("recordingContentUrl", (n) -> { this.setRecordingContentUrl(n.getStringValue()); });
         return deserializerMap;
@@ -82,6 +87,14 @@ public class CallRecording extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getMeetingId() {
         return this.meetingId;
+    }
+    /**
+     * Gets the meetingOrganizer property value. The meetingOrganizer property
+     * @return a identitySet
+     */
+    @jakarta.annotation.Nullable
+    public IdentitySet getMeetingOrganizer() {
+        return this.meetingOrganizer;
     }
     /**
      * Gets the meetingOrganizerId property value. The unique identifier of the organizer of the onlineMeeting related to this recording. Read-only.
@@ -109,6 +122,7 @@ public class CallRecording extends Entity implements Parsable {
         writer.writeByteArrayValue("content", this.getContent());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("meetingId", this.getMeetingId());
+        writer.writeObjectValue("meetingOrganizer", this.getMeetingOrganizer());
         writer.writeStringValue("meetingOrganizerId", this.getMeetingOrganizerId());
         writer.writeStringValue("recordingContentUrl", this.getRecordingContentUrl());
     }
@@ -132,6 +146,13 @@ public class CallRecording extends Entity implements Parsable {
      */
     public void setMeetingId(@jakarta.annotation.Nullable final String value) {
         this.meetingId = value;
+    }
+    /**
+     * Sets the meetingOrganizer property value. The meetingOrganizer property
+     * @param value Value to set for the meetingOrganizer property.
+     */
+    public void setMeetingOrganizer(@jakarta.annotation.Nullable final IdentitySet value) {
+        this.meetingOrganizer = value;
     }
     /**
      * Sets the meetingOrganizerId property value. The unique identifier of the organizer of the onlineMeeting related to this recording. Read-only.

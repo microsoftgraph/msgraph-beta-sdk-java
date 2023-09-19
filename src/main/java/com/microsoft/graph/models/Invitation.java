@@ -17,7 +17,7 @@ public class Invitation extends Entity implements Parsable {
      */
     private String invitedUserDisplayName;
     /**
-     * The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
+     * The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
      */
     private String invitedUserEmailAddress;
     /**
@@ -29,7 +29,7 @@ public class Invitation extends Entity implements Parsable {
      */
     private java.util.List<DirectoryObject> invitedUserSponsors;
     /**
-     * The userType of the user being invited. By default, this is Guest. You can invite as Member if you're are company administrator. The default is false.
+     * The userType of the user being invited. By default, this is Guest. You can invite as Member if you're a company administrator. The default is false.
      */
     private String invitedUserType;
     /**
@@ -105,7 +105,7 @@ public class Invitation extends Entity implements Parsable {
         return this.invitedUserDisplayName;
     }
     /**
-     * Gets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
+     * Gets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class Invitation extends Entity implements Parsable {
         return this.invitedUserSponsors;
     }
     /**
-     * Gets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you're are company administrator. The default is false.
+     * Gets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you're a company administrator. The default is false.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -210,7 +210,7 @@ public class Invitation extends Entity implements Parsable {
         this.invitedUserDisplayName = value;
     }
     /**
-     * Sets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
+     * Sets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
      * @param value Value to set for the invitedUserEmailAddress property.
      */
     public void setInvitedUserEmailAddress(@jakarta.annotation.Nullable final String value) {
@@ -231,7 +231,7 @@ public class Invitation extends Entity implements Parsable {
         this.invitedUserSponsors = value;
     }
     /**
-     * Sets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you're are company administrator. The default is false.
+     * Sets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you're a company administrator. The default is false.
      * @param value Value to set for the invitedUserType property.
      */
     public void setInvitedUserType(@jakarta.annotation.Nullable final String value) {

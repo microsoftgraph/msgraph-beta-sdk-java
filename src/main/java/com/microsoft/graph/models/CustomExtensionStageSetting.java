@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomExtensionStageSetting extends Entity implements Parsable {
     /**
-     * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
+     * Indicates the custom workflow extension that is executed at this stage. Nullable. Supports $expand.
      */
     private CustomCalloutExtension customExtension;
     /**
@@ -33,7 +33,7 @@ public class CustomExtensionStageSetting extends Entity implements Parsable {
         return new CustomExtensionStageSetting();
     }
     /**
-     * Gets the customExtension property value. Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
+     * Gets the customExtension property value. Indicates the custom workflow extension that is executed at this stage. Nullable. Supports $expand.
      * @return a customCalloutExtension
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class CustomExtensionStageSetting extends Entity implements Parsable {
         writer.writeEnumValue("stage", this.getStage());
     }
     /**
-     * Sets the customExtension property value. Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
+     * Sets the customExtension property value. Indicates the custom workflow extension that is executed at this stage. Nullable. Supports $expand.
      * @param value Value to set for the customExtension property.
      */
     public void setCustomExtension(@jakarta.annotation.Nullable final CustomCalloutExtension value) {

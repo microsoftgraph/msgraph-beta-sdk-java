@@ -18,11 +18,11 @@ public class Contract extends DirectoryObject implements Parsable {
      */
     private UUID customerId;
     /**
-     * A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
+     * A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It isn't automatically updated if the customer tenant's default domain name changes.
      */
     private String defaultDomainName;
     /**
-     * A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
+     * A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It isn't automatically updated if the customer tenant's display name changes.
      */
     private String displayName;
     /**
@@ -59,7 +59,7 @@ public class Contract extends DirectoryObject implements Parsable {
         return this.customerId;
     }
     /**
-     * Gets the defaultDomainName property value. A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
+     * Gets the defaultDomainName property value. A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It isn't automatically updated if the customer tenant's default domain name changes.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class Contract extends DirectoryObject implements Parsable {
         return this.defaultDomainName;
     }
     /**
-     * Gets the displayName property value. A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
+     * Gets the displayName property value. A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It isn't automatically updated if the customer tenant's display name changes.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -114,14 +114,14 @@ public class Contract extends DirectoryObject implements Parsable {
         this.customerId = value;
     }
     /**
-     * Sets the defaultDomainName property value. A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
+     * Sets the defaultDomainName property value. A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It isn't automatically updated if the customer tenant's default domain name changes.
      * @param value Value to set for the defaultDomainName property.
      */
     public void setDefaultDomainName(@jakarta.annotation.Nullable final String value) {
         this.defaultDomainName = value;
     }
     /**
-     * Sets the displayName property value. A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
+     * Sets the displayName property value. A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It isn't automatically updated if the customer tenant's display name changes.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

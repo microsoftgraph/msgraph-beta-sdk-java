@@ -46,11 +46,15 @@ public class Host extends Artifact implements Parsable {
      */
     private java.util.List<PassiveDnsRecord> passiveDnsReverse;
     /**
+     * The ports property
+     */
+    private java.util.List<HostPort> ports;
+    /**
      * Represents a calculated reputation of this host.
      */
     private HostReputation reputation;
     /**
-     * The sslCertificates property
+     * The hostSslCertificates that are associated with this host.
      */
     private java.util.List<HostSslCertificate> sslCertificates;
     /**
@@ -62,7 +66,7 @@ public class Host extends Artifact implements Parsable {
      */
     private java.util.List<HostTracker> trackers;
     /**
-     * The whois property
+     * The most recent whoisRecord for this host.
      */
     private WhoisRecord whois;
     /**
@@ -130,6 +134,7 @@ public class Host extends Artifact implements Parsable {
         deserializerMap.put("parentHostPairs", (n) -> { this.setParentHostPairs(n.getCollectionOfObjectValues(HostPair::createFromDiscriminatorValue)); });
         deserializerMap.put("passiveDns", (n) -> { this.setPassiveDns(n.getCollectionOfObjectValues(PassiveDnsRecord::createFromDiscriminatorValue)); });
         deserializerMap.put("passiveDnsReverse", (n) -> { this.setPassiveDnsReverse(n.getCollectionOfObjectValues(PassiveDnsRecord::createFromDiscriminatorValue)); });
+        deserializerMap.put("ports", (n) -> { this.setPorts(n.getCollectionOfObjectValues(HostPort::createFromDiscriminatorValue)); });
         deserializerMap.put("reputation", (n) -> { this.setReputation(n.getObjectValue(HostReputation::createFromDiscriminatorValue)); });
         deserializerMap.put("sslCertificates", (n) -> { this.setSslCertificates(n.getCollectionOfObjectValues(HostSslCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("subdomains", (n) -> { this.setSubdomains(n.getCollectionOfObjectValues(Subdomain::createFromDiscriminatorValue)); });
@@ -186,6 +191,14 @@ public class Host extends Artifact implements Parsable {
         return this.passiveDnsReverse;
     }
     /**
+     * Gets the ports property value. The ports property
+     * @return a hostPort
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<HostPort> getPorts() {
+        return this.ports;
+    }
+    /**
      * Gets the reputation property value. Represents a calculated reputation of this host.
      * @return a hostReputation
      */
@@ -194,7 +207,7 @@ public class Host extends Artifact implements Parsable {
         return this.reputation;
     }
     /**
-     * Gets the sslCertificates property value. The sslCertificates property
+     * Gets the sslCertificates property value. The hostSslCertificates that are associated with this host.
      * @return a hostSslCertificate
      */
     @jakarta.annotation.Nullable
@@ -218,7 +231,7 @@ public class Host extends Artifact implements Parsable {
         return this.trackers;
     }
     /**
-     * Gets the whois property value. The whois property
+     * Gets the whois property value. The most recent whoisRecord for this host.
      * @return a whoisRecord
      */
     @jakarta.annotation.Nullable
@@ -241,6 +254,7 @@ public class Host extends Artifact implements Parsable {
         writer.writeCollectionOfObjectValues("parentHostPairs", this.getParentHostPairs());
         writer.writeCollectionOfObjectValues("passiveDns", this.getPassiveDns());
         writer.writeCollectionOfObjectValues("passiveDnsReverse", this.getPassiveDnsReverse());
+        writer.writeCollectionOfObjectValues("ports", this.getPorts());
         writer.writeObjectValue("reputation", this.getReputation());
         writer.writeCollectionOfObjectValues("sslCertificates", this.getSslCertificates());
         writer.writeCollectionOfObjectValues("subdomains", this.getSubdomains());
@@ -311,6 +325,13 @@ public class Host extends Artifact implements Parsable {
         this.passiveDnsReverse = value;
     }
     /**
+     * Sets the ports property value. The ports property
+     * @param value Value to set for the ports property.
+     */
+    public void setPorts(@jakarta.annotation.Nullable final java.util.List<HostPort> value) {
+        this.ports = value;
+    }
+    /**
      * Sets the reputation property value. Represents a calculated reputation of this host.
      * @param value Value to set for the reputation property.
      */
@@ -318,7 +339,7 @@ public class Host extends Artifact implements Parsable {
         this.reputation = value;
     }
     /**
-     * Sets the sslCertificates property value. The sslCertificates property
+     * Sets the sslCertificates property value. The hostSslCertificates that are associated with this host.
      * @param value Value to set for the sslCertificates property.
      */
     public void setSslCertificates(@jakarta.annotation.Nullable final java.util.List<HostSslCertificate> value) {
@@ -339,7 +360,7 @@ public class Host extends Artifact implements Parsable {
         this.trackers = value;
     }
     /**
-     * Sets the whois property value. The whois property
+     * Sets the whois property value. The most recent whoisRecord for this host.
      * @param value Value to set for the whois property.
      */
     public void setWhois(@jakarta.annotation.Nullable final WhoisRecord value) {

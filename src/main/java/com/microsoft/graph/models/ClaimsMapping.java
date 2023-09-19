@@ -14,7 +14,7 @@ public class ClaimsMapping implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The claim that provides the display name or full name for the user. It is a required propoerty.
+     * The claim that provides the display name or full name for the user. It's a required property.
      */
     private String displayName;
     /**
@@ -34,7 +34,7 @@ public class ClaimsMapping implements AdditionalDataHolder, Parsable {
      */
     private String surname;
     /**
-     * The claim that provides the unique identifier for the signed-in user. It is a required propoerty.
+     * The claim that provides the unique identifier for the signed-in user. It is a required property.
      */
     private String userId;
     /**
@@ -62,7 +62,7 @@ public class ClaimsMapping implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the displayName property value. The claim that provides the display name or full name for the user. It is a required propoerty.
+     * Gets the displayName property value. The claim that provides the display name or full name for the user. It's a required property.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class ClaimsMapping implements AdditionalDataHolder, Parsable {
         return this.surname;
     }
     /**
-     * Gets the userId property value. The claim that provides the unique identifier for the signed-in user. It is a required propoerty.
+     * Gets the userId property value. The claim that provides the unique identifier for the signed-in user. It is a required property.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -146,7 +146,7 @@ public class ClaimsMapping implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the displayName property value. The claim that provides the display name or full name for the user. It is a required propoerty.
+     * Sets the displayName property value. The claim that provides the display name or full name for the user. It's a required property.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -181,7 +181,7 @@ public class ClaimsMapping implements AdditionalDataHolder, Parsable {
         this.surname = value;
     }
     /**
-     * Sets the userId property value. The claim that provides the unique identifier for the signed-in user. It is a required propoerty.
+     * Sets the userId property value. The claim that provides the unique identifier for the signed-in user. It is a required property.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {

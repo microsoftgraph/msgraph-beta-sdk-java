@@ -15,19 +15,19 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The address property
+     * The physical address of the entity.
      */
     private PhysicalAddress address;
     /**
-     * The email property
+     * The email of this WHOIS contact.
      */
     private String email;
     /**
-     * The fax property
+     * The fax of this WHOIS contact. No format is guaranteed.
      */
     private String fax;
     /**
-     * The name property
+     * The name of this WHOIS contact.
      */
     private String name;
     /**
@@ -35,11 +35,11 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The organization property
+     * The organization of this WHOIS contact.
      */
     private String organization;
     /**
-     * The telephone property
+     * The telephone of this WHOIS contact. No format is guaranteed.
      */
     private String telephone;
     /**
@@ -67,7 +67,7 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the address property value. The address property
+     * Gets the address property value. The physical address of the entity.
      * @return a physicalAddress
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
         return this.address;
     }
     /**
-     * Gets the email property value. The email property
+     * Gets the email property value. The email of this WHOIS contact.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
         return this.email;
     }
     /**
-     * Gets the fax property value. The fax property
+     * Gets the fax property value. The fax of this WHOIS contact. No format is guaranteed.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The name of this WHOIS contact.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the organization property value. The organization property
+     * Gets the organization property value. The organization of this WHOIS contact.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
         return this.organization;
     }
     /**
-     * Gets the telephone property value. The telephone property
+     * Gets the telephone property value. The telephone of this WHOIS contact. No format is guaranteed.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -161,28 +161,28 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the address property value. The address property
+     * Sets the address property value. The physical address of the entity.
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.address = value;
     }
     /**
-     * Sets the email property value. The email property
+     * Sets the email property value. The email of this WHOIS contact.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
-     * Sets the fax property value. The fax property
+     * Sets the fax property value. The fax of this WHOIS contact. No format is guaranteed.
      * @param value Value to set for the fax property.
      */
     public void setFax(@jakarta.annotation.Nullable final String value) {
         this.fax = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The name of this WHOIS contact.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -196,14 +196,14 @@ public class WhoisContact implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the organization property value. The organization property
+     * Sets the organization property value. The organization of this WHOIS contact.
      * @param value Value to set for the organization property.
      */
     public void setOrganization(@jakarta.annotation.Nullable final String value) {
         this.organization = value;
     }
     /**
-     * Sets the telephone property value. The telephone property
+     * Sets the telephone property value. The telephone of this WHOIS contact. No format is guaranteed.
      * @param value Value to set for the telephone property.
      */
     public void setTelephone(@jakarta.annotation.Nullable final String value) {

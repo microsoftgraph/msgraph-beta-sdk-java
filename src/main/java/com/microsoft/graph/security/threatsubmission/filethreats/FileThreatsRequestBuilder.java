@@ -167,6 +167,16 @@ public class FileThreatsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a fileThreatsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public FileThreatsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new FileThreatsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the fileThreatSubmission objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

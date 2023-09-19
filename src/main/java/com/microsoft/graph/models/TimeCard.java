@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
     /**
      * Indicates whether this timeCard entry is confirmed. Possible values are none, user, manager, unknownFutureValue.
      */
-    private ConfirmedBy confirmedBy;
+    private EnumSet<ConfirmedBy> confirmedBy;
     /**
      * Notes about the timeCard.
      */
@@ -86,7 +87,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
      * @return a confirmedBy
      */
     @jakarta.annotation.Nullable
-    public ConfirmedBy getConfirmedBy() {
+    public EnumSet<ConfirmedBy> getConfirmedBy() {
         return this.confirmedBy;
     }
     /**
@@ -99,7 +100,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
         deserializerMap.put("breaks", (n) -> { this.setBreaks(n.getCollectionOfObjectValues(TimeCardBreak::createFromDiscriminatorValue)); });
         deserializerMap.put("clockInEvent", (n) -> { this.setClockInEvent(n.getObjectValue(TimeCardEvent::createFromDiscriminatorValue)); });
         deserializerMap.put("clockOutEvent", (n) -> { this.setClockOutEvent(n.getObjectValue(TimeCardEvent::createFromDiscriminatorValue)); });
-        deserializerMap.put("confirmedBy", (n) -> { this.setConfirmedBy(n.getEnumValue(ConfirmedBy.class)); });
+        deserializerMap.put("confirmedBy", (n) -> { this.setConfirmedBy(n.getEnumSetValue(ConfirmedBy.class)); });
         deserializerMap.put("notes", (n) -> { this.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("originalEntry", (n) -> { this.setOriginalEntry(n.getObjectValue(TimeCardEntry::createFromDiscriminatorValue)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(TimeCardState.class)); });
@@ -148,7 +149,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
         writer.writeCollectionOfObjectValues("breaks", this.getBreaks());
         writer.writeObjectValue("clockInEvent", this.getClockInEvent());
         writer.writeObjectValue("clockOutEvent", this.getClockOutEvent());
-        writer.writeEnumValue("confirmedBy", this.getConfirmedBy());
+        writer.writeEnumSetValue("confirmedBy", this.getConfirmedBy());
         writer.writeObjectValue("notes", this.getNotes());
         writer.writeObjectValue("originalEntry", this.getOriginalEntry());
         writer.writeEnumValue("state", this.getState());
@@ -179,7 +180,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
      * Sets the confirmedBy property value. Indicates whether this timeCard entry is confirmed. Possible values are none, user, manager, unknownFutureValue.
      * @param value Value to set for the confirmedBy property.
      */
-    public void setConfirmedBy(@jakarta.annotation.Nullable final ConfirmedBy value) {
+    public void setConfirmedBy(@jakarta.annotation.Nullable final EnumSet<ConfirmedBy> value) {
         this.confirmedBy = value;
     }
     /**

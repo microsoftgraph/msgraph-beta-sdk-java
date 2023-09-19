@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Connectivity extends Entity implements Parsable {
     /**
-     * Branch represent locations for connectivity.
+     * Branches represent locations for connectivity.
      */
     private java.util.List<BranchSite> branches;
     /**
@@ -30,7 +30,7 @@ public class Connectivity extends Entity implements Parsable {
         return new Connectivity();
     }
     /**
-     * Gets the branches property value. Branch represent locations for connectivity.
+     * Gets the branches property value. Branches represent locations for connectivity.
      * @return a branchSite
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class Connectivity extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("branches", this.getBranches());
     }
     /**
-     * Sets the branches property value. Branch represent locations for connectivity.
+     * Sets the branches property value. Branches represent locations for connectivity.
      * @param value Value to set for the branches property.
      */
     public void setBranches(@jakarta.annotation.Nullable final java.util.List<BranchSite> value) {

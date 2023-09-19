@@ -128,19 +128,19 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Return the metadata for a [list][].
+     * Get the list of richLongRunningOperations associated with a list.
      * @return a CompletableFuture of list
-     * @see <a href="https://learn.microsoft.com/graph/api/list-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/list-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<List> get() {
         return get(null);
     }
     /**
-     * Return the metadata for a [list][].
+     * Get the list of richLongRunningOperations associated with a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of list
-     * @see <a href="https://learn.microsoft.com/graph/api/list-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/list-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<List> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -202,7 +202,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Return the metadata for a [list][].
+     * Get the list of richLongRunningOperations associated with a list.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -210,7 +210,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Return the metadata for a [list][].
+     * Get the list of richLongRunningOperations associated with a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -263,13 +263,23 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a ListItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ListItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ListItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Return the metadata for a [list][].
+     * Get the list of richLongRunningOperations associated with a list.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

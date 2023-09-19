@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationChoiceSettingCollectionDefinition extends DeviceManagementConfigurationChoiceSettingDefinition implements Parsable {
     /**
-     * Maximum number of choices in the collection
+     * Maximum number of choices in the collection. Valid values 1 to 100
      */
     private Integer maximumCount;
     /**
-     * Minimum number of choices in the collection
+     * Minimum number of choices in the collection. Valid values 1 to 100
      */
     private Integer minimumCount;
     /**
@@ -44,7 +44,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionDefinition exte
         return deserializerMap;
     }
     /**
-     * Gets the maximumCount property value. Maximum number of choices in the collection
+     * Gets the maximumCount property value. Maximum number of choices in the collection. Valid values 1 to 100
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionDefinition exte
         return this.maximumCount;
     }
     /**
-     * Gets the minimumCount property value. Minimum number of choices in the collection
+     * Gets the minimumCount property value. Minimum number of choices in the collection. Valid values 1 to 100
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -70,14 +70,14 @@ public class DeviceManagementConfigurationChoiceSettingCollectionDefinition exte
         writer.writeIntegerValue("minimumCount", this.getMinimumCount());
     }
     /**
-     * Sets the maximumCount property value. Maximum number of choices in the collection
+     * Sets the maximumCount property value. Maximum number of choices in the collection. Valid values 1 to 100
      * @param value Value to set for the maximumCount property.
      */
     public void setMaximumCount(@jakarta.annotation.Nullable final Integer value) {
         this.maximumCount = value;
     }
     /**
-     * Sets the minimumCount property value. Minimum number of choices in the collection
+     * Sets the minimumCount property value. Minimum number of choices in the collection. Valid values 1 to 100
      * @param value Value to set for the minimumCount property.
      */
     public void setMinimumCount(@jakarta.annotation.Nullable final Integer value) {

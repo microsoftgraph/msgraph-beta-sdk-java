@@ -189,6 +189,16 @@ public class MacOSSoftwareUpdateStateSummaryItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a MacOSSoftwareUpdateStateSummaryItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MacOSSoftwareUpdateStateSummaryItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MacOSSoftwareUpdateStateSummaryItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

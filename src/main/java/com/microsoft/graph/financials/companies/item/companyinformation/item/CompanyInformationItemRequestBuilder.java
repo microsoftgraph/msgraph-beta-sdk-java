@@ -151,6 +151,16 @@ public class CompanyInformationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a CompanyInformationItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CompanyInformationItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CompanyInformationItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get companyInformation from financials
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

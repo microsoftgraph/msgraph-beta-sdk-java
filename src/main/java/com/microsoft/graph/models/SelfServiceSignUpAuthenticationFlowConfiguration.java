@@ -14,7 +14,7 @@ public class SelfServiceSignUpAuthenticationFlowConfiguration implements Additio
      */
     private Map<String, Object> additionalData;
     /**
-     * Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property is not a key. Required.
+     * Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property isn't a key. Required.
      */
     private Boolean isEnabled;
     /**
@@ -57,7 +57,7 @@ public class SelfServiceSignUpAuthenticationFlowConfiguration implements Additio
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property is not a key. Required.
+     * Gets the isEnabled property value. Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property isn't a key. Required.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class SelfServiceSignUpAuthenticationFlowConfiguration implements Additio
         this.additionalData = value;
     }
     /**
-     * Sets the isEnabled property value. Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property is not a key. Required.
+     * Sets the isEnabled property value. Indicates whether self-service sign-up flow is enabled or disabled. The default value is false. This property isn't a key. Required.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {

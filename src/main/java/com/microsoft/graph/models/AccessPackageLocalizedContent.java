@@ -14,7 +14,7 @@ public class AccessPackageLocalizedContent implements AdditionalDataHolder, Pars
      */
     private Map<String, Object> additionalData;
     /**
-     * The fallback string, which is used when a requested localization is not available. Required.
+     * The fallback string, which is used when a requested localization isn't available. Required.
      */
     private String defaultText;
     /**
@@ -50,7 +50,7 @@ public class AccessPackageLocalizedContent implements AdditionalDataHolder, Pars
         return this.additionalData;
     }
     /**
-     * Gets the defaultText property value. The fallback string, which is used when a requested localization is not available. Required.
+     * Gets the defaultText property value. The fallback string, which is used when a requested localization isn't available. Required.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class AccessPackageLocalizedContent implements AdditionalDataHolder, Pars
         this.additionalData = value;
     }
     /**
-     * Sets the defaultText property value. The fallback string, which is used when a requested localization is not available. Required.
+     * Sets the defaultText property value. The fallback string, which is used when a requested localization isn't available. Required.
      * @param value Value to set for the defaultText property.
      */
     public void setDefaultText(@jakarta.annotation.Nullable final String value) {

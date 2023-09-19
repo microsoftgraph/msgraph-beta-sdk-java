@@ -10,47 +10,47 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookDocumentTask extends Entity implements Parsable {
     /**
-     * The assignees property
+     * A collection of user identities the task is assigned to.
      */
     private java.util.List<WorkbookEmailIdentity> assignees;
     /**
-     * The changes property
+     * A collection of task change histories.
      */
     private java.util.List<WorkbookDocumentTaskChange> changes;
     /**
-     * The comment property
+     * The comment that the task is associated with.
      */
     private WorkbookComment comment;
     /**
-     * The completedBy property
+     * The identity of the user who completed the task. Nullable.
      */
     private WorkbookEmailIdentity completedBy;
     /**
-     * The completedDateTime property
+     * Date and time when the task was completed. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime completedDateTime;
     /**
-     * The createdBy property
+     * A user identity that creates the task. Nullable.
      */
     private WorkbookEmailIdentity createdBy;
     /**
-     * The createdDateTime property
+     * Date and time when the task was created. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime createdDateTime;
     /**
-     * The percentComplete property
+     * An integer value from 0 to 100 that represents the percentage of the completion of the task. 100 means that the task is completed. Nullable.
      */
     private Integer percentComplete;
     /**
-     * The priority property
+     * An integer value from 0 to 10 that represents the priority of the task. A lower value indicates a higher priority. Nullable.
      */
     private Integer priority;
     /**
-     * The startAndDueDateTime property
+     * Start and due date of the task. Nullable.
      */
     private WorkbookDocumentTaskSchedule startAndDueDateTime;
     /**
-     * The title property
+     * The title of the task.
      */
     private String title;
     /**
@@ -70,7 +70,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
         return new WorkbookDocumentTask();
     }
     /**
-     * Gets the assignees property value. The assignees property
+     * Gets the assignees property value. A collection of user identities the task is assigned to.
      * @return a workbookEmailIdentity
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
         return this.assignees;
     }
     /**
-     * Gets the changes property value. The changes property
+     * Gets the changes property value. A collection of task change histories.
      * @return a workbookDocumentTaskChange
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
         return this.changes;
     }
     /**
-     * Gets the comment property value. The comment property
+     * Gets the comment property value. The comment that the task is associated with.
      * @return a workbookComment
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
         return this.comment;
     }
     /**
-     * Gets the completedBy property value. The completedBy property
+     * Gets the completedBy property value. The identity of the user who completed the task. Nullable.
      * @return a workbookEmailIdentity
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
         return this.completedBy;
     }
     /**
-     * Gets the completedDateTime property value. The completedDateTime property
+     * Gets the completedDateTime property value. Date and time when the task was completed. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
         return this.completedDateTime;
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. A user identity that creates the task. Nullable.
      * @return a workbookEmailIdentity
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
         return this.createdBy;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date and time when the task was created. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -146,7 +146,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the percentComplete property value. The percentComplete property
+     * Gets the percentComplete property value. An integer value from 0 to 100 that represents the percentage of the completion of the task. 100 means that the task is completed. Nullable.
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -154,7 +154,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
         return this.percentComplete;
     }
     /**
-     * Gets the priority property value. The priority property
+     * Gets the priority property value. An integer value from 0 to 10 that represents the priority of the task. A lower value indicates a higher priority. Nullable.
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -162,7 +162,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
         return this.priority;
     }
     /**
-     * Gets the startAndDueDateTime property value. The startAndDueDateTime property
+     * Gets the startAndDueDateTime property value. Start and due date of the task. Nullable.
      * @return a workbookDocumentTaskSchedule
      */
     @jakarta.annotation.Nullable
@@ -170,7 +170,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
         return this.startAndDueDateTime;
     }
     /**
-     * Gets the title property value. The title property
+     * Gets the title property value. The title of the task.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -197,77 +197,77 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
         writer.writeStringValue("title", this.getTitle());
     }
     /**
-     * Sets the assignees property value. The assignees property
+     * Sets the assignees property value. A collection of user identities the task is assigned to.
      * @param value Value to set for the assignees property.
      */
     public void setAssignees(@jakarta.annotation.Nullable final java.util.List<WorkbookEmailIdentity> value) {
         this.assignees = value;
     }
     /**
-     * Sets the changes property value. The changes property
+     * Sets the changes property value. A collection of task change histories.
      * @param value Value to set for the changes property.
      */
     public void setChanges(@jakarta.annotation.Nullable final java.util.List<WorkbookDocumentTaskChange> value) {
         this.changes = value;
     }
     /**
-     * Sets the comment property value. The comment property
+     * Sets the comment property value. The comment that the task is associated with.
      * @param value Value to set for the comment property.
      */
     public void setComment(@jakarta.annotation.Nullable final WorkbookComment value) {
         this.comment = value;
     }
     /**
-     * Sets the completedBy property value. The completedBy property
+     * Sets the completedBy property value. The identity of the user who completed the task. Nullable.
      * @param value Value to set for the completedBy property.
      */
     public void setCompletedBy(@jakarta.annotation.Nullable final WorkbookEmailIdentity value) {
         this.completedBy = value;
     }
     /**
-     * Sets the completedDateTime property value. The completedDateTime property
+     * Sets the completedDateTime property value. Date and time when the task was completed. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.completedDateTime = value;
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. A user identity that creates the task. Nullable.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final WorkbookEmailIdentity value) {
         this.createdBy = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date and time when the task was created. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
-     * Sets the percentComplete property value. The percentComplete property
+     * Sets the percentComplete property value. An integer value from 0 to 100 that represents the percentage of the completion of the task. 100 means that the task is completed. Nullable.
      * @param value Value to set for the percentComplete property.
      */
     public void setPercentComplete(@jakarta.annotation.Nullable final Integer value) {
         this.percentComplete = value;
     }
     /**
-     * Sets the priority property value. The priority property
+     * Sets the priority property value. An integer value from 0 to 10 that represents the priority of the task. A lower value indicates a higher priority. Nullable.
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.priority = value;
     }
     /**
-     * Sets the startAndDueDateTime property value. The startAndDueDateTime property
+     * Sets the startAndDueDateTime property value. Start and due date of the task. Nullable.
      * @param value Value to set for the startAndDueDateTime property.
      */
     public void setStartAndDueDateTime(@jakarta.annotation.Nullable final WorkbookDocumentTaskSchedule value) {
         this.startAndDueDateTime = value;
     }
     /**
-     * Sets the title property value. The title property
+     * Sets the title property value. The title of the task.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {

@@ -7,6 +7,7 @@ import com.microsoft.graph.security.threatintelligence.articles.ArticlesRequestB
 import com.microsoft.graph.security.threatintelligence.hostcomponents.HostComponentsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hostcookies.HostCookiesRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hostpairs.HostPairsRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.hostports.HostPortsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.HostsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hostsslcertificates.HostSslCertificatesRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosttrackers.HostTrackersRequestBuilder;
@@ -70,6 +71,13 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public HostPairsRequestBuilder hostPairs() {
         return new HostPairsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the hostPorts property of the microsoft.graph.security.threatIntelligence entity.
+     */
+    @jakarta.annotation.Nonnull
+    public HostPortsRequestBuilder hostPorts() {
+        return new HostPortsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the hosts property of the microsoft.graph.security.threatIntelligence entity.
@@ -315,6 +323,16 @@ public class ThreatIntelligenceRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a threatIntelligenceRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ThreatIntelligenceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ThreatIntelligenceRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

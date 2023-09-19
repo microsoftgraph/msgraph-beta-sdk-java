@@ -165,6 +165,16 @@ public class ZebraFotaDeploymentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a zebraFotaDeploymentsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ZebraFotaDeploymentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ZebraFotaDeploymentsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Collection of ZebraFotaDeployments associated with account.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

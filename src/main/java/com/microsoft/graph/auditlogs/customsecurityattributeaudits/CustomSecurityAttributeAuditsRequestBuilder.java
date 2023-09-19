@@ -165,6 +165,16 @@ public class CustomSecurityAttributeAuditsRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a customSecurityAttributeAuditsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CustomSecurityAttributeAuditsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CustomSecurityAttributeAuditsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get customSecurityAttributeAudits from auditLogs
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

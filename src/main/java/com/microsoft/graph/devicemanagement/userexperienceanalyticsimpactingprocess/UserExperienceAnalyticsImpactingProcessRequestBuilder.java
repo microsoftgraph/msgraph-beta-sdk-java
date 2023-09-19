@@ -165,6 +165,16 @@ public class UserExperienceAnalyticsImpactingProcessRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userExperienceAnalyticsImpactingProcessRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserExperienceAnalyticsImpactingProcessRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserExperienceAnalyticsImpactingProcessRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * User experience analytics impacting process
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

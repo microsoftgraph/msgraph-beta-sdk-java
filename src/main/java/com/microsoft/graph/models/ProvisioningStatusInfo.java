@@ -14,7 +14,7 @@ public class ProvisioningStatusInfo implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * If status is not success/ skipped details for the error are contained in this.
+     * If status isn't success/ skipped details for the error are contained in this.
      */
     private ProvisioningErrorInfo errorInformation;
     /**
@@ -50,7 +50,7 @@ public class ProvisioningStatusInfo implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the errorInformation property value. If status is not success/ skipped details for the error are contained in this.
+     * Gets the errorInformation property value. If status isn't success/ skipped details for the error are contained in this.
      * @return a provisioningErrorInfo
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class ProvisioningStatusInfo implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the errorInformation property value. If status is not success/ skipped details for the error are contained in this.
+     * Sets the errorInformation property value. If status isn't success/ skipped details for the error are contained in this.
      * @param value Value to set for the errorInformation property.
      */
     public void setErrorInformation(@jakarta.annotation.Nullable final ProvisioningErrorInfo value) {

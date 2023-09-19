@@ -9,6 +9,10 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationAssignmentResource extends Entity implements Parsable {
     /**
+     * The dependentResources property
+     */
+    private java.util.List<EducationAssignmentResource> dependentResources;
+    /**
      * Indicates whether this resource should be copied to each student submission for modification and submission. Required
      */
     private Boolean distributeForStudentWork;
@@ -33,6 +37,14 @@ public class EducationAssignmentResource extends Entity implements Parsable {
         return new EducationAssignmentResource();
     }
     /**
+     * Gets the dependentResources property value. The dependentResources property
+     * @return a educationAssignmentResource
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<EducationAssignmentResource> getDependentResources() {
+        return this.dependentResources;
+    }
+    /**
      * Gets the distributeForStudentWork property value. Indicates whether this resource should be copied to each student submission for modification and submission. Required
      * @return a boolean
      */
@@ -47,6 +59,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("dependentResources", (n) -> { this.setDependentResources(n.getCollectionOfObjectValues(EducationAssignmentResource::createFromDiscriminatorValue)); });
         deserializerMap.put("distributeForStudentWork", (n) -> { this.setDistributeForStudentWork(n.getBooleanValue()); });
         deserializerMap.put("resource", (n) -> { this.setResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -66,8 +79,16 @@ public class EducationAssignmentResource extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("dependentResources", this.getDependentResources());
         writer.writeBooleanValue("distributeForStudentWork", this.getDistributeForStudentWork());
         writer.writeObjectValue("resource", this.getResource());
+    }
+    /**
+     * Sets the dependentResources property value. The dependentResources property
+     * @param value Value to set for the dependentResources property.
+     */
+    public void setDependentResources(@jakarta.annotation.Nullable final java.util.List<EducationAssignmentResource> value) {
+        this.dependentResources = value;
     }
     /**
      * Sets the distributeForStudentWork property value. Indicates whether this resource should be copied to each student submission for modification and submission. Required

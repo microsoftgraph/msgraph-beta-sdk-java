@@ -87,6 +87,16 @@ public class PrivilegedRoleAssignmentItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a PrivilegedRoleAssignmentItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PrivilegedRoleAssignmentItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PrivilegedRoleAssignmentItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get assignments from privilegedRoleAssignmentRequests
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -60,7 +60,7 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tasks/{workbookDocumentTask%2Did}/comment/task/changes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get changes from drives
+     * A collection of task change histories.
      * @return a CompletableFuture of workbookDocumentTaskChangeCollectionResponse
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get changes from drives
+     * A collection of task change histories.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookDocumentTaskChangeCollectionResponse
      */
@@ -115,7 +115,7 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WorkbookDocumentTaskChange::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get changes from drives
+     * A collection of task change histories.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get changes from drives
+     * A collection of task change histories.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -176,7 +176,17 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get changes from drives
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a changesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ChangesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ChangesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * A collection of task change histories.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

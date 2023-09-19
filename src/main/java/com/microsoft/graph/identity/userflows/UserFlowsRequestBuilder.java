@@ -199,6 +199,19 @@ public class UserFlowsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userFlowsRequestBuilder
+     * @deprecated
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public UserFlowsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserFlowsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of userflows.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -22,7 +22,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
      */
     private Boolean ignoreNumbers;
     /**
-     * Indicates whether themes is enabled for the case.
+     * Indicates whether themes are enabled for the case.
      */
     private Boolean isEnabled;
     /**
@@ -88,7 +88,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         return this.ignoreNumbers;
     }
     /**
-     * Gets the isEnabled property value. Indicates whether themes is enabled for the case.
+     * Gets the isEnabled property value. Indicates whether themes are enabled for the case.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -146,7 +146,7 @@ public class TopicModelingSettings implements AdditionalDataHolder, Parsable {
         this.ignoreNumbers = value;
     }
     /**
-     * Sets the isEnabled property value. Indicates whether themes is enabled for the case.
+     * Sets the isEnabled property value. Indicates whether themes are enabled for the case.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {

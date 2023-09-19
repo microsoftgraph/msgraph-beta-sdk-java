@@ -87,6 +87,16 @@ public class ResourceRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a resourceRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ResourceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ResourceRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Read-only. The associated resource for this role setting.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

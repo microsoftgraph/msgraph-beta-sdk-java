@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * The exportOptions property
      */
-    private ExportOptions exportOptions;
+    private EnumSet<ExportOptions> exportOptions;
     /**
      * The exportStructure property
      */
@@ -92,7 +93,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * @return a exportOptions
      */
     @jakarta.annotation.Nullable
-    public ExportOptions getExportOptions() {
+    public EnumSet<ExportOptions> getExportOptions() {
         return this.exportOptions;
     }
     /**
@@ -113,7 +114,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
         deserializerMap.put("azureBlobContainer", (n) -> { this.setAzureBlobContainer(n.getStringValue()); });
         deserializerMap.put("azureBlobToken", (n) -> { this.setAzureBlobToken(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
-        deserializerMap.put("exportOptions", (n) -> { this.setExportOptions(n.getEnumValue(ExportOptions.class)); });
+        deserializerMap.put("exportOptions", (n) -> { this.setExportOptions(n.getEnumSetValue(ExportOptions.class)); });
         deserializerMap.put("exportStructure", (n) -> { this.setExportStructure(n.getEnumValue(ExportFileStructure.class)); });
         deserializerMap.put("outputName", (n) -> { this.setOutputName(n.getStringValue()); });
         return deserializerMap;
@@ -135,7 +136,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("azureBlobContainer", this.getAzureBlobContainer());
         writer.writeStringValue("azureBlobToken", this.getAzureBlobToken());
         writer.writeStringValue("description", this.getDescription());
-        writer.writeEnumValue("exportOptions", this.getExportOptions());
+        writer.writeEnumSetValue("exportOptions", this.getExportOptions());
         writer.writeEnumValue("exportStructure", this.getExportStructure());
         writer.writeStringValue("outputName", this.getOutputName());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -172,7 +173,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * Sets the exportOptions property value. The exportOptions property
      * @param value Value to set for the exportOptions property.
      */
-    public void setExportOptions(@jakarta.annotation.Nullable final ExportOptions value) {
+    public void setExportOptions(@jakarta.annotation.Nullable final EnumSet<ExportOptions> value) {
         this.exportOptions = value;
     }
     /**

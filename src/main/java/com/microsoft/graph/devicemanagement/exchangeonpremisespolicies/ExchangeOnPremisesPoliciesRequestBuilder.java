@@ -165,6 +165,16 @@ public class ExchangeOnPremisesPoliciesRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a exchangeOnPremisesPoliciesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ExchangeOnPremisesPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ExchangeOnPremisesPoliciesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The list of Exchange On Premisis policies configured by the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

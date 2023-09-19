@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -12,7 +13,7 @@ public class ItemFacet extends Entity implements Parsable {
     /**
      * The audiences that are able to see the values contained within the associated entity. Possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue.
      */
-    private AllowedAudiences allowedAudiences;
+    private EnumSet<AllowedAudiences> allowedAudiences;
     /**
      * The createdBy property
      */
@@ -88,7 +89,7 @@ public class ItemFacet extends Entity implements Parsable {
      * @return a allowedAudiences
      */
     @jakarta.annotation.Nullable
-    public AllowedAudiences getAllowedAudiences() {
+    public EnumSet<AllowedAudiences> getAllowedAudiences() {
         return this.allowedAudiences;
     }
     /**
@@ -114,7 +115,7 @@ public class ItemFacet extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("allowedAudiences", (n) -> { this.setAllowedAudiences(n.getEnumValue(AllowedAudiences.class)); });
+        deserializerMap.put("allowedAudiences", (n) -> { this.setAllowedAudiences(n.getEnumSetValue(AllowedAudiences.class)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("inference", (n) -> { this.setInference(n.getObjectValue(InferenceData::createFromDiscriminatorValue)); });
@@ -171,7 +172,7 @@ public class ItemFacet extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("allowedAudiences", this.getAllowedAudiences());
+        writer.writeEnumSetValue("allowedAudiences", this.getAllowedAudiences());
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("inference", this.getInference());
@@ -184,7 +185,7 @@ public class ItemFacet extends Entity implements Parsable {
      * Sets the allowedAudiences property value. The audiences that are able to see the values contained within the associated entity. Possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue.
      * @param value Value to set for the allowedAudiences property.
      */
-    public void setAllowedAudiences(@jakarta.annotation.Nullable final AllowedAudiences value) {
+    public void setAllowedAudiences(@jakarta.annotation.Nullable final EnumSet<AllowedAudiences> value) {
         this.allowedAudiences = value;
     }
     /**

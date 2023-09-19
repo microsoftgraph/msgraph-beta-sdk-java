@@ -141,15 +141,17 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete entity from chats
+     * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         return delete(null);
     }
     /**
-     * Delete entity from chats
+     * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -209,7 +211,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Chat::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete entity from chats
+     * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -217,7 +219,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete entity from chats
+     * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -295,6 +297,16 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a ChatItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ChatItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ChatItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

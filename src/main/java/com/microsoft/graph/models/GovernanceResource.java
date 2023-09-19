@@ -38,7 +38,7 @@ public class GovernanceResource extends Entity implements Parsable {
      */
     private java.util.List<GovernanceRoleAssignment> roleAssignments;
     /**
-     * The collection of role defintions for the resource.
+     * The collection of role definitions for the resource.
      */
     private java.util.List<GovernanceRoleDefinition> roleDefinitions;
     /**
@@ -146,7 +146,7 @@ public class GovernanceResource extends Entity implements Parsable {
         return this.roleAssignments;
     }
     /**
-     * Gets the roleDefinitions property value. The collection of role defintions for the resource.
+     * Gets the roleDefinitions property value. The collection of role definitions for the resource.
      * @return a governanceRoleDefinition
      */
     @jakarta.annotation.Nullable
@@ -246,7 +246,7 @@ public class GovernanceResource extends Entity implements Parsable {
         this.roleAssignments = value;
     }
     /**
-     * Sets the roleDefinitions property value. The collection of role defintions for the resource.
+     * Sets the roleDefinitions property value. The collection of role definitions for the resource.
      * @param value Value to set for the roleDefinitions property.
      */
     public void setRoleDefinitions(@jakarta.annotation.Nullable final java.util.List<GovernanceRoleDefinition> value) {

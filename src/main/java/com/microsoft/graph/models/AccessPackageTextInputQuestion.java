@@ -13,7 +13,7 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
      */
     private Boolean isSingleLineQuestion;
     /**
-     * This is the regex pattern that the corresponding text answer must follow.
+     * The regex pattern that the corresponding text answer must follow.
      */
     private String regexPattern;
     /**
@@ -53,7 +53,7 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
         return this.isSingleLineQuestion;
     }
     /**
-     * Gets the regexPattern property value. This is the regex pattern that the corresponding text answer must follow.
+     * Gets the regexPattern property value. The regex pattern that the corresponding text answer must follow.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
         this.isSingleLineQuestion = value;
     }
     /**
-     * Sets the regexPattern property value. This is the regex pattern that the corresponding text answer must follow.
+     * Sets the regexPattern property value. The regex pattern that the corresponding text answer must follow.
      * @param value Value to set for the regexPattern property.
      */
     public void setRegexPattern(@jakarta.annotation.Nullable final String value) {

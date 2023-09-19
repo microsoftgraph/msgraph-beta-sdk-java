@@ -167,6 +167,16 @@ public class OutboundSharedUserProfilesRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a outboundSharedUserProfilesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public OutboundSharedUserProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new OutboundSharedUserProfilesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the properties of all outboundSharedUserProfiles.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

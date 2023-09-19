@@ -93,32 +93,30 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CrossTenantIdentitySyncPolicyPartner::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the user synchronization policy of a partner-specific configuration.
+     * Update the navigation property identitySynchronization in policies
      * @param body The request body
      * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
      * @deprecated
      *  as of 2022-04/PrivatePreview:CrossTenantSyncPolicy on 2022-03-24 and will be removed 2023-06-06
-     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     @Deprecated
-    public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> patch(@jakarta.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body) {
-        return patch(body, null);
+    public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> put(@jakarta.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body) {
+        return put(body, null);
     }
     /**
-     * Update the user synchronization policy of a partner-specific configuration.
+     * Update the navigation property identitySynchronization in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of crossTenantIdentitySyncPolicyPartner
      * @deprecated
      *  as of 2022-04/PrivatePreview:CrossTenantSyncPolicy on 2022-03-24 and will be removed 2023-06-06
-     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     @Deprecated
-    public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> patch(@jakarta.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<CrossTenantIdentitySyncPolicyPartner> put(@jakarta.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
+        final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
@@ -193,7 +191,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the user synchronization policy of a partner-specific configuration.
+     * Update the navigation property identitySynchronization in policies
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -201,11 +199,11 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     @Deprecated
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body) {
-        return toPatchRequestInformation(body, null);
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body) {
+        return toPutRequestInformation(body, null);
     }
     /**
-     * Update the user synchronization policy of a partner-specific configuration.
+     * Update the navigation property identitySynchronization in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -214,21 +212,34 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     @Deprecated
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final CrossTenantIdentitySyncPolicyPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.httpMethod = HttpMethod.PUT;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.headers.add("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            final PutRequestConfiguration requestConfig = new PutRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a identitySynchronizationRequestBuilder
+     * @deprecated
+     *  as of 2022-04/PrivatePreview:CrossTenantSyncPolicy on 2022-03-24 and will be removed 2023-06-06
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public IdentitySynchronizationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new IdentitySynchronizationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
@@ -269,6 +280,6 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class PatchRequestConfiguration extends BaseRequestConfiguration {
+    public class PutRequestConfiguration extends BaseRequestConfiguration {
     }
 }

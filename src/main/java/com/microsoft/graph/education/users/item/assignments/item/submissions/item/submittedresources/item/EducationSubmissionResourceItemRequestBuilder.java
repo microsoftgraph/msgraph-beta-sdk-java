@@ -1,5 +1,6 @@
 package com.microsoft.graph.education.users.item.assignments.item.submissions.item.submittedresources.item;
 
+import com.microsoft.graph.education.users.item.assignments.item.submissions.item.submittedresources.item.dependentresources.DependentResourcesRequestBuilder;
 import com.microsoft.graph.models.EducationSubmissionResource;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +21,13 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the dependentResources property of the microsoft.graph.educationSubmissionResource entity.
+     */
+    @jakarta.annotation.Nonnull
+    public DependentResourcesRequestBuilder dependentResources() {
+        return new DependentResourcesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new EducationSubmissionResourceItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -187,6 +195,16 @@ public class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBu
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a EducationSubmissionResourceItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public EducationSubmissionResourceItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new EducationSubmissionResourceItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

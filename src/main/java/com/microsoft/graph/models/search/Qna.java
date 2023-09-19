@@ -11,11 +11,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Qna extends SearchAnswer implements Parsable {
     /**
-     * Timestamp of when the qna will stop to appear as a search result. Set as null for always available.
+     * Timestamp of when the qna stops to appear as a search result. Set as null for always available.
      */
     private OffsetDateTime availabilityEndDateTime;
     /**
-     * Timestamp of when the qna will start to appear as a search result. Set as null for always available.
+     * Timestamp of when the qna starts to appear as a search result. Set as null for always available.
      */
     private OffsetDateTime availabilityStartDateTime;
     /**
@@ -23,7 +23,7 @@ public class Qna extends SearchAnswer implements Parsable {
      */
     private java.util.List<String> groupIds;
     /**
-     * True if this qna was suggested to the admin by a user or was mined and suggested by Microsoft. Read-only.
+     * True if a user or Microsoft suggested this qna to the admin. Read-only.
      */
     private Boolean isSuggested;
     /**
@@ -43,7 +43,7 @@ public class Qna extends SearchAnswer implements Parsable {
      */
     private AnswerState state;
     /**
-     * Variations of a qna for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations.
+     * Variations of a qna for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings apply to all variations.
      */
     private java.util.List<AnswerVariant> targetedVariations;
     /**
@@ -63,7 +63,7 @@ public class Qna extends SearchAnswer implements Parsable {
         return new Qna();
     }
     /**
-     * Gets the availabilityEndDateTime property value. Timestamp of when the qna will stop to appear as a search result. Set as null for always available.
+     * Gets the availabilityEndDateTime property value. Timestamp of when the qna stops to appear as a search result. Set as null for always available.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -71,7 +71,7 @@ public class Qna extends SearchAnswer implements Parsable {
         return this.availabilityEndDateTime;
     }
     /**
-     * Gets the availabilityStartDateTime property value. Timestamp of when the qna will start to appear as a search result. Set as null for always available.
+     * Gets the availabilityStartDateTime property value. Timestamp of when the qna starts to appear as a search result. Set as null for always available.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class Qna extends SearchAnswer implements Parsable {
         return this.groupIds;
     }
     /**
-     * Gets the isSuggested property value. True if this qna was suggested to the admin by a user or was mined and suggested by Microsoft. Read-only.
+     * Gets the isSuggested property value. True if a user or Microsoft suggested this qna to the admin. Read-only.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class Qna extends SearchAnswer implements Parsable {
         return this.state;
     }
     /**
-     * Gets the targetedVariations property value. Variations of a qna for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations.
+     * Gets the targetedVariations property value. Variations of a qna for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings apply to all variations.
      * @return a answerVariant
      */
     @jakarta.annotation.Nullable
@@ -170,14 +170,14 @@ public class Qna extends SearchAnswer implements Parsable {
         writer.writeCollectionOfObjectValues("targetedVariations", this.getTargetedVariations());
     }
     /**
-     * Sets the availabilityEndDateTime property value. Timestamp of when the qna will stop to appear as a search result. Set as null for always available.
+     * Sets the availabilityEndDateTime property value. Timestamp of when the qna stops to appear as a search result. Set as null for always available.
      * @param value Value to set for the availabilityEndDateTime property.
      */
     public void setAvailabilityEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.availabilityEndDateTime = value;
     }
     /**
-     * Sets the availabilityStartDateTime property value. Timestamp of when the qna will start to appear as a search result. Set as null for always available.
+     * Sets the availabilityStartDateTime property value. Timestamp of when the qna starts to appear as a search result. Set as null for always available.
      * @param value Value to set for the availabilityStartDateTime property.
      */
     public void setAvailabilityStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -191,7 +191,7 @@ public class Qna extends SearchAnswer implements Parsable {
         this.groupIds = value;
     }
     /**
-     * Sets the isSuggested property value. True if this qna was suggested to the admin by a user or was mined and suggested by Microsoft. Read-only.
+     * Sets the isSuggested property value. True if a user or Microsoft suggested this qna to the admin. Read-only.
      * @param value Value to set for the isSuggested property.
      */
     public void setIsSuggested(@jakarta.annotation.Nullable final Boolean value) {
@@ -226,7 +226,7 @@ public class Qna extends SearchAnswer implements Parsable {
         this.state = value;
     }
     /**
-     * Sets the targetedVariations property value. Variations of a qna for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations.
+     * Sets the targetedVariations property value. Variations of a qna for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings apply to all variations.
      * @param value Value to set for the targetedVariations property.
      */
     public void setTargetedVariations(@jakarta.annotation.Nullable final java.util.List<AnswerVariant> value) {

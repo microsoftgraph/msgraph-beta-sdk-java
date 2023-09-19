@@ -87,6 +87,16 @@ public class DataConnectorRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a dataConnectorRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DataConnectorRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DataConnectorRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The data connector in the context of which this flow pulls in data from a source system.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -3,6 +3,7 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -25,11 +26,11 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      */
     private java.util.List<ExportFileMetadata> exportFileMetadata;
     /**
-     * The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags. The fileInfo member is deprecated and will stop returning data on April 30th, 2023. Going forward, the summary and load file are always included.
+     * The options provided for the export. For more information, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags. The fileInfo member is deprecated and will stop returning data on April 30, 2023. Going forward, the summary and load file are always included.
      */
-    private ExportOptions exportOptions;
+    private EnumSet<ExportOptions> exportOptions;
     /**
-     * The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
+     * The options provided that specify the structure of the export. For more information, see reviewSet: export. Possible values are: none, directory, pst.
      */
     private ExportFileStructure exportStructure;
     /**
@@ -45,7 +46,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
      */
     private EdiscoveryReviewSet reviewSet;
     /**
-     * The review set query which is used to filter the documents for export.
+     * The review set query that is used to filter the documents for export.
      */
     private EdiscoveryReviewSetQuery reviewSetQuery;
     /**
@@ -97,15 +98,15 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         return this.exportFileMetadata;
     }
     /**
-     * Gets the exportOptions property value. The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags. The fileInfo member is deprecated and will stop returning data on April 30th, 2023. Going forward, the summary and load file are always included.
+     * Gets the exportOptions property value. The options provided for the export. For more information, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags. The fileInfo member is deprecated and will stop returning data on April 30, 2023. Going forward, the summary and load file are always included.
      * @return a exportOptions
      */
     @jakarta.annotation.Nullable
-    public ExportOptions getExportOptions() {
+    public EnumSet<ExportOptions> getExportOptions() {
         return this.exportOptions;
     }
     /**
-     * Gets the exportStructure property value. The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
+     * Gets the exportStructure property value. The options provided that specify the structure of the export. For more information, see reviewSet: export. Possible values are: none, directory, pst.
      * @return a exportFileStructure
      */
     @jakarta.annotation.Nullable
@@ -123,7 +124,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         deserializerMap.put("azureBlobToken", (n) -> { this.setAzureBlobToken(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("exportFileMetadata", (n) -> { this.setExportFileMetadata(n.getCollectionOfObjectValues(ExportFileMetadata::createFromDiscriminatorValue)); });
-        deserializerMap.put("exportOptions", (n) -> { this.setExportOptions(n.getEnumValue(ExportOptions.class)); });
+        deserializerMap.put("exportOptions", (n) -> { this.setExportOptions(n.getEnumSetValue(ExportOptions.class)); });
         deserializerMap.put("exportStructure", (n) -> { this.setExportStructure(n.getEnumValue(ExportFileStructure.class)); });
         deserializerMap.put("outputFolderId", (n) -> { this.setOutputFolderId(n.getStringValue()); });
         deserializerMap.put("outputName", (n) -> { this.setOutputName(n.getStringValue()); });
@@ -156,7 +157,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         return this.reviewSet;
     }
     /**
-     * Gets the reviewSetQuery property value. The review set query which is used to filter the documents for export.
+     * Gets the reviewSetQuery property value. The review set query that is used to filter the documents for export.
      * @return a ediscoveryReviewSetQuery
      */
     @jakarta.annotation.Nullable
@@ -174,7 +175,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         writer.writeStringValue("azureBlobToken", this.getAzureBlobToken());
         writer.writeStringValue("description", this.getDescription());
         writer.writeCollectionOfObjectValues("exportFileMetadata", this.getExportFileMetadata());
-        writer.writeEnumValue("exportOptions", this.getExportOptions());
+        writer.writeEnumSetValue("exportOptions", this.getExportOptions());
         writer.writeEnumValue("exportStructure", this.getExportStructure());
         writer.writeStringValue("outputFolderId", this.getOutputFolderId());
         writer.writeStringValue("outputName", this.getOutputName());
@@ -210,14 +211,14 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         this.exportFileMetadata = value;
     }
     /**
-     * Sets the exportOptions property value. The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags. The fileInfo member is deprecated and will stop returning data on April 30th, 2023. Going forward, the summary and load file are always included.
+     * Sets the exportOptions property value. The options provided for the export. For more information, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags. The fileInfo member is deprecated and will stop returning data on April 30, 2023. Going forward, the summary and load file are always included.
      * @param value Value to set for the exportOptions property.
      */
-    public void setExportOptions(@jakarta.annotation.Nullable final ExportOptions value) {
+    public void setExportOptions(@jakarta.annotation.Nullable final EnumSet<ExportOptions> value) {
         this.exportOptions = value;
     }
     /**
-     * Sets the exportStructure property value. The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
+     * Sets the exportStructure property value. The options provided that specify the structure of the export. For more information, see reviewSet: export. Possible values are: none, directory, pst.
      * @param value Value to set for the exportStructure property.
      */
     public void setExportStructure(@jakarta.annotation.Nullable final ExportFileStructure value) {
@@ -245,7 +246,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         this.reviewSet = value;
     }
     /**
-     * Sets the reviewSetQuery property value. The review set query which is used to filter the documents for export.
+     * Sets the reviewSetQuery property value. The review set query that is used to filter the documents for export.
      * @param value Value to set for the reviewSetQuery property.
      */
     public void setReviewSetQuery(@jakarta.annotation.Nullable final EdiscoveryReviewSetQuery value) {

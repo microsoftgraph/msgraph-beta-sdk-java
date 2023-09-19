@@ -195,6 +195,19 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a jobsRequestBuilder
+     * @deprecated
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public JobsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new JobsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get jobs from print
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

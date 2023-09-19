@@ -14,7 +14,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
+     * Additional recipients the invitation message should be sent to. Currently only one additional recipient is supported.
      */
     private java.util.List<Recipient> ccRecipients;
     /**
@@ -54,7 +54,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
+     * Gets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only one additional recipient is supported.
      * @return a recipient
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class InvitedUserMessageInfo implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
+     * Sets the ccRecipients property value. Additional recipients the invitation message should be sent to. Currently only one additional recipient is supported.
      * @param value Value to set for the ccRecipients property.
      */
     public void setCcRecipients(@jakarta.annotation.Nullable final java.util.List<Recipient> value) {

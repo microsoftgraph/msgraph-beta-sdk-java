@@ -17,7 +17,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
      */
     private String contentType;
     /**
-     * The task property
+     * The task associated with the comment thread.
      */
     private WorkbookDocumentTask task;
     /**
@@ -65,7 +65,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the task property value. The task property
+     * Gets the task property value. The task associated with the comment thread.
      * @return a workbookDocumentTask
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class WorkbookCommentReply extends Entity implements Parsable {
         this.contentType = value;
     }
     /**
-     * Sets the task property value. The task property
+     * Sets the task property value. The task associated with the comment thread.
      * @param value Value to set for the task property.
      */
     public void setTask(@jakarta.annotation.Nullable final WorkbookDocumentTask value) {

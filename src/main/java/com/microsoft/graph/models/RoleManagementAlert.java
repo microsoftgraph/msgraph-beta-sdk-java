@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RoleManagementAlert extends Entity implements Parsable {
     /**
-     * The various configurations of an alert for Azure AD roles. The configurations are pre-defined and cannot be created or deleted, but some of the configurations can be modified.
+     * The various configurations of an alert for Azure AD roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
      */
     private java.util.List<UnifiedRoleManagementAlertConfiguration> alertConfigurations;
     /**
@@ -41,7 +41,7 @@ public class RoleManagementAlert extends Entity implements Parsable {
         return new RoleManagementAlert();
     }
     /**
-     * Gets the alertConfigurations property value. The various configurations of an alert for Azure AD roles. The configurations are pre-defined and cannot be created or deleted, but some of the configurations can be modified.
+     * Gets the alertConfigurations property value. The various configurations of an alert for Azure AD roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
      * @return a unifiedRoleManagementAlertConfiguration
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class RoleManagementAlert extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
     }
     /**
-     * Sets the alertConfigurations property value. The various configurations of an alert for Azure AD roles. The configurations are pre-defined and cannot be created or deleted, but some of the configurations can be modified.
+     * Sets the alertConfigurations property value. The various configurations of an alert for Azure AD roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
      * @param value Value to set for the alertConfigurations property.
      */
     public void setAlertConfigurations(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementAlertConfiguration> value) {

@@ -167,6 +167,16 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
         return new WithIdWithPolicyIdWithDeviceIdRequestBuilder(pathParameters, requestAdapter, deviceId, id, policyId);
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a deviceHealthScriptStatesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceHealthScriptStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeviceHealthScriptStatesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

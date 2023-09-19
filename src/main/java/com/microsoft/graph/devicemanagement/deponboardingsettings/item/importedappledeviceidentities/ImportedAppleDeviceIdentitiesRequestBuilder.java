@@ -173,6 +173,16 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a importedAppleDeviceIdentitiesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ImportedAppleDeviceIdentitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ImportedAppleDeviceIdentitiesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The imported Apple device identities.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

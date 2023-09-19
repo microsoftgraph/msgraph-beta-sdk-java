@@ -189,6 +189,16 @@ public class DeviceManagementScriptAssignmentItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a DeviceManagementScriptAssignmentItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceManagementScriptAssignmentItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeviceManagementScriptAssignmentItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantStatus extends Entity implements Parsable {
     /**
-     * Reflects a message to the user in case of an error.
+     * Reflects a message to the user if there's an error.
      */
     private String onboardingErrorMessage;
     /**
@@ -45,7 +45,7 @@ public class TenantStatus extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the onboardingErrorMessage property value. Reflects a message to the user in case of an error.
+     * Gets the onboardingErrorMessage property value. Reflects a message to the user if there's an error.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -71,7 +71,7 @@ public class TenantStatus extends Entity implements Parsable {
         writer.writeEnumValue("onboardingStatus", this.getOnboardingStatus());
     }
     /**
-     * Sets the onboardingErrorMessage property value. Reflects a message to the user in case of an error.
+     * Sets the onboardingErrorMessage property value. Reflects a message to the user if there's an error.
      * @param value Value to set for the onboardingErrorMessage property.
      */
     public void setOnboardingErrorMessage(@jakarta.annotation.Nullable final String value) {

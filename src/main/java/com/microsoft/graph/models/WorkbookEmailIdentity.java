@@ -14,15 +14,15 @@ public class WorkbookEmailIdentity implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The displayName property
+     * Display name of the user.
      */
     private String displayName;
     /**
-     * The email property
+     * Email address of the user.
      */
     private String email;
     /**
-     * The id property
+     * The unique identifier of the user.
      */
     private String id;
     /**
@@ -54,7 +54,7 @@ public class WorkbookEmailIdentity implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of the user.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class WorkbookEmailIdentity implements AdditionalDataHolder, Parsable {
         return this.displayName;
     }
     /**
-     * Gets the email property value. The email property
+     * Gets the email property value. Email address of the user.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class WorkbookEmailIdentity implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. The unique identifier of the user.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -118,21 +118,21 @@ public class WorkbookEmailIdentity implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of the user.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
-     * Sets the email property value. The email property
+     * Sets the email property value. Email address of the user.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.email = value;
     }
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. The unique identifier of the user.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {

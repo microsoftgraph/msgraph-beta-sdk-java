@@ -14,7 +14,7 @@ public class CloudPcResizeValidationResult implements AdditionalDataHolder, Pars
      */
     private Map<String, Object> additionalData;
     /**
-     * The cloudPC id that corresponds to its unique identifier.
+     * The cloudPC ID that corresponds to its unique identifier.
      */
     private String cloudPcId;
     /**
@@ -50,7 +50,7 @@ public class CloudPcResizeValidationResult implements AdditionalDataHolder, Pars
         return this.additionalData;
     }
     /**
-     * Gets the cloudPcId property value. The cloudPC id that corresponds to its unique identifier.
+     * Gets the cloudPcId property value. The cloudPC ID that corresponds to its unique identifier.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class CloudPcResizeValidationResult implements AdditionalDataHolder, Pars
         this.additionalData = value;
     }
     /**
-     * Sets the cloudPcId property value. The cloudPC id that corresponds to its unique identifier.
+     * Sets the cloudPcId property value. The cloudPC ID that corresponds to its unique identifier.
      * @param value Value to set for the cloudPcId property.
      */
     public void setCloudPcId(@jakarta.annotation.Nullable final String value) {

@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     /**
      * Management levels for apps
      */
-    private AppManagementLevel targetedAppManagementLevels;
+    private EnumSet<AppManagementLevel> targetedAppManagementLevels;
     /**
      * Instantiates a new targetedManagedAppProtection and sets the default values.
      */
@@ -78,7 +79,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
         deserializerMap.put("appGroupType", (n) -> { this.setAppGroupType(n.getEnumValue(TargetedManagedAppGroupType.class)); });
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("isAssigned", (n) -> { this.setIsAssigned(n.getBooleanValue()); });
-        deserializerMap.put("targetedAppManagementLevels", (n) -> { this.setTargetedAppManagementLevels(n.getEnumValue(AppManagementLevel.class)); });
+        deserializerMap.put("targetedAppManagementLevels", (n) -> { this.setTargetedAppManagementLevels(n.getEnumSetValue(AppManagementLevel.class)); });
         return deserializerMap;
     }
     /**
@@ -94,7 +95,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      * @return a appManagementLevel
      */
     @jakarta.annotation.Nullable
-    public AppManagementLevel getTargetedAppManagementLevels() {
+    public EnumSet<AppManagementLevel> getTargetedAppManagementLevels() {
         return this.targetedAppManagementLevels;
     }
     /**
@@ -107,7 +108,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
         writer.writeEnumValue("appGroupType", this.getAppGroupType());
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
         writer.writeBooleanValue("isAssigned", this.getIsAssigned());
-        writer.writeEnumValue("targetedAppManagementLevels", this.getTargetedAppManagementLevels());
+        writer.writeEnumSetValue("targetedAppManagementLevels", this.getTargetedAppManagementLevels());
     }
     /**
      * Sets the appGroupType property value. Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps
@@ -134,7 +135,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      * Sets the targetedAppManagementLevels property value. Management levels for apps
      * @param value Value to set for the targetedAppManagementLevels property.
      */
-    public void setTargetedAppManagementLevels(@jakarta.annotation.Nullable final AppManagementLevel value) {
+    public void setTargetedAppManagementLevels(@jakarta.annotation.Nullable final EnumSet<AppManagementLevel> value) {
         this.targetedAppManagementLevels = value;
     }
 }

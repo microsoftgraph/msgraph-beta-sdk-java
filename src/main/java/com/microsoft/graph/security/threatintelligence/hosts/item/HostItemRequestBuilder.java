@@ -9,6 +9,7 @@ import com.microsoft.graph.security.threatintelligence.hosts.item.hostpairs.Host
 import com.microsoft.graph.security.threatintelligence.hosts.item.parenthostpairs.ParentHostPairsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.passivedns.PassiveDnsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.passivednsreverse.PassiveDnsReverseRequestBuilder;
+import com.microsoft.graph.security.threatintelligence.hosts.item.ports.PortsRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.reputation.ReputationRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.sslcertificates.SslCertificatesRequestBuilder;
 import com.microsoft.graph.security.threatintelligence.hosts.item.subdomains.SubdomainsRequestBuilder;
@@ -80,6 +81,13 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PassiveDnsReverseRequestBuilder passiveDnsReverse() {
         return new PassiveDnsReverseRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the ports property of the microsoft.graph.security.host entity.
+     */
+    @jakarta.annotation.Nonnull
+    public PortsRequestBuilder ports() {
+        return new PortsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the reputation property of the microsoft.graph.security.host entity.
@@ -285,6 +293,16 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a HostItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public HostItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new HostItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

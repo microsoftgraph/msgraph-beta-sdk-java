@@ -3,8 +3,27 @@ package com.microsoft.graph.deviceappmanagement.mobileapps.item;
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.assign.AssignRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.assignments.AssignmentsRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.categories.CategoriesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphandroidforworkapp.GraphAndroidForWorkAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphandroidlobapp.GraphAndroidLobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphandroidmanagedstoreapp.GraphAndroidManagedStoreAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphandroidstoreapp.GraphAndroidStoreAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphioslobapp.GraphIosLobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphiosstoreapp.GraphIosStoreAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphiosvppapp.GraphIosVppAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmacosdmgapp.GraphMacOSDmgAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmacoslobapp.GraphMacOSLobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmacospkgapp.GraphMacOSPkgAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmanagedandroidlobapp.GraphManagedAndroidLobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmanagedioslobapp.GraphManagedIOSLobAppRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmanagedmobilelobapp.GraphManagedMobileLobAppRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmobilelobapp.GraphMobileLobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmicrosoftstoreforbusinessapp.GraphMicrosoftStoreForBusinessAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwin32lobapp.GraphWin32LobAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwindowsappx.GraphWindowsAppXRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwindowsmobilemsi.GraphWindowsMobileMSIRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwindowsstoreapp.GraphWindowsStoreAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwindowsuniversalappx.GraphWindowsUniversalAppXRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwindowswebapp.GraphWindowsWebAppRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwingetapp.GraphWinGetAppRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.relationships.RelationshipsRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.mobileapps.item.updaterelationships.UpdateRelationshipsRequestBuilder;
 import com.microsoft.graph.models.MobileApp;
@@ -49,6 +68,90 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return new CategoriesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Casts the previous resource to androidForWorkApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphAndroidForWorkAppRequestBuilder graphAndroidForWorkApp() {
+        return new GraphAndroidForWorkAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to androidLobApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphAndroidLobAppRequestBuilder graphAndroidLobApp() {
+        return new GraphAndroidLobAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to androidManagedStoreApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphAndroidManagedStoreAppRequestBuilder graphAndroidManagedStoreApp() {
+        return new GraphAndroidManagedStoreAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to androidStoreApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphAndroidStoreAppRequestBuilder graphAndroidStoreApp() {
+        return new GraphAndroidStoreAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to iosLobApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphIosLobAppRequestBuilder graphIosLobApp() {
+        return new GraphIosLobAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to iosStoreApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphIosStoreAppRequestBuilder graphIosStoreApp() {
+        return new GraphIosStoreAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to iosVppApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphIosVppAppRequestBuilder graphIosVppApp() {
+        return new GraphIosVppAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to macOSDmgApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphMacOSDmgAppRequestBuilder graphMacOSDmgApp() {
+        return new GraphMacOSDmgAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to macOSLobApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphMacOSLobAppRequestBuilder graphMacOSLobApp() {
+        return new GraphMacOSLobAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to macOSPkgApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphMacOSPkgAppRequestBuilder graphMacOSPkgApp() {
+        return new GraphMacOSPkgAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to managedAndroidLobApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphManagedAndroidLobAppRequestBuilder graphManagedAndroidLobApp() {
+        return new GraphManagedAndroidLobAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to managedIOSLobApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphManagedIOSLobAppRequestBuilder graphManagedIOSLobApp() {
+        return new GraphManagedIOSLobAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Casts the previous resource to managedMobileLobApp.
      */
     @jakarta.annotation.Nonnull
@@ -56,11 +159,60 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
         return new GraphManagedMobileLobAppRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Casts the previous resource to mobileLobApp.
+     * Casts the previous resource to microsoftStoreForBusinessApp.
      */
     @jakarta.annotation.Nonnull
-    public GraphMobileLobAppRequestBuilder graphMobileLobApp() {
-        return new GraphMobileLobAppRequestBuilder(pathParameters, requestAdapter);
+    public GraphMicrosoftStoreForBusinessAppRequestBuilder graphMicrosoftStoreForBusinessApp() {
+        return new GraphMicrosoftStoreForBusinessAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to win32LobApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphWin32LobAppRequestBuilder graphWin32LobApp() {
+        return new GraphWin32LobAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to windowsAppX.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphWindowsAppXRequestBuilder graphWindowsAppX() {
+        return new GraphWindowsAppXRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to windowsMobileMSI.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphWindowsMobileMSIRequestBuilder graphWindowsMobileMSI() {
+        return new GraphWindowsMobileMSIRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to windowsStoreApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphWindowsStoreAppRequestBuilder graphWindowsStoreApp() {
+        return new GraphWindowsStoreAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to windowsUniversalAppX.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphWindowsUniversalAppXRequestBuilder graphWindowsUniversalAppX() {
+        return new GraphWindowsUniversalAppXRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to windowsWebApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphWindowsWebAppRequestBuilder graphWindowsWebApp() {
+        return new GraphWindowsWebAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to winGetApp.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphWinGetAppRequestBuilder graphWinGetApp() {
+        return new GraphWinGetAppRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the relationships property of the microsoft.graph.mobileApp entity.
@@ -243,6 +395,16 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a MobileAppItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MobileAppItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MobileAppItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

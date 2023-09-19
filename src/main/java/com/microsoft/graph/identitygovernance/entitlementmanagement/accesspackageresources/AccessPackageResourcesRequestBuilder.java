@@ -165,6 +165,16 @@ public class AccessPackageResourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a accessPackageResourcesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AccessPackageResourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AccessPackageResourcesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * A reference to a resource associated with an access package catalog.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

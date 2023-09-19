@@ -13,7 +13,7 @@ public class M365ForwardingRule extends ForwardingRule implements Parsable {
      */
     private ForwardingCategory category;
     /**
-     * The port(s) used by a forwarding rule for M365 traffic are specified to determine the specific network port(s) through which the Microsoft 365 traffic is directed and forwarded.
+     * The port(s) used by a forwarding rule for Microsoft 365 traffic are specified to determine the specific network port(s) through which the Microsoft 365 traffic is directed and forwarded.
      */
     private java.util.List<String> ports;
     /**
@@ -58,7 +58,7 @@ public class M365ForwardingRule extends ForwardingRule implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the ports property value. The port(s) used by a forwarding rule for M365 traffic are specified to determine the specific network port(s) through which the Microsoft 365 traffic is directed and forwarded.
+     * Gets the ports property value. The port(s) used by a forwarding rule for Microsoft 365 traffic are specified to determine the specific network port(s) through which the Microsoft 365 traffic is directed and forwarded.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class M365ForwardingRule extends ForwardingRule implements Parsable {
         this.category = value;
     }
     /**
-     * Sets the ports property value. The port(s) used by a forwarding rule for M365 traffic are specified to determine the specific network port(s) through which the Microsoft 365 traffic is directed and forwarded.
+     * Sets the ports property value. The port(s) used by a forwarding rule for Microsoft 365 traffic are specified to determine the specific network port(s) through which the Microsoft 365 traffic is directed and forwarded.
      * @param value Value to set for the ports property.
      */
     public void setPorts(@jakarta.annotation.Nullable final java.util.List<String> value) {

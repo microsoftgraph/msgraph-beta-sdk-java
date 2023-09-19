@@ -100,11 +100,11 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
+     * The telecommunications operator that provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
      */
     private String operator;
     /**
-     * Country code of the caller in case of an incoming call, or callee in case of an outgoing call. For details, see ISO 3166-1 alpha-2.
+     * Country code of the caller for an incoming call, or callee for an outgoing call. For details, see ISO 3166-1 alpha-2.
      */
     private String otherPartyCountryCode;
     /**
@@ -362,7 +362,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the operator property value. The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
+     * Gets the operator property value. The telecommunications operator that provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -370,7 +370,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         return this.operator;
     }
     /**
-     * Gets the otherPartyCountryCode property value. Country code of the caller in case of an incoming call, or callee in case of an outgoing call. For details, see ISO 3166-1 alpha-2.
+     * Gets the otherPartyCountryCode property value. Country code of the caller for an incoming call, or callee for an outgoing call. For details, see ISO 3166-1 alpha-2.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -617,14 +617,14 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the operator property value. The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
+     * Sets the operator property value. The telecommunications operator that provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
      * @param value Value to set for the operator property.
      */
     public void setOperator(@jakarta.annotation.Nullable final String value) {
         this.operator = value;
     }
     /**
-     * Sets the otherPartyCountryCode property value. Country code of the caller in case of an incoming call, or callee in case of an outgoing call. For details, see ISO 3166-1 alpha-2.
+     * Sets the otherPartyCountryCode property value. Country code of the caller for an incoming call, or callee for an outgoing call. For details, see ISO 3166-1 alpha-2.
      * @param value Value to set for the otherPartyCountryCode property.
      */
     public void setOtherPartyCountryCode(@jakarta.annotation.Nullable final String value) {

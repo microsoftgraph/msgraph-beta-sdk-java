@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class KnowledgeBaseArticle extends Entity implements Parsable {
     /**
-     * The url property
+     * The URL of the knowledge base article. Read-only.
      */
     private String url;
     /**
@@ -40,7 +40,7 @@ public class KnowledgeBaseArticle extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the url property value. The url property
+     * Gets the url property value. The URL of the knowledge base article. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class KnowledgeBaseArticle extends Entity implements Parsable {
         writer.writeStringValue("url", this.getUrl());
     }
     /**
-     * Sets the url property value. The url property
+     * Sets the url property value. The URL of the knowledge base article. Read-only.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {

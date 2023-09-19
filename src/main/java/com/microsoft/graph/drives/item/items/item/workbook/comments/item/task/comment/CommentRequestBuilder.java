@@ -64,7 +64,7 @@ public class CommentRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get comment from drives
+     * The comment that the task is associated with.
      * @return a CompletableFuture of workbookComment
      */
     @jakarta.annotation.Nonnull
@@ -72,7 +72,7 @@ public class CommentRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get comment from drives
+     * The comment that the task is associated with.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookComment
      */
@@ -136,7 +136,7 @@ public class CommentRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get comment from drives
+     * The comment that the task is associated with.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -144,7 +144,7 @@ public class CommentRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get comment from drives
+     * The comment that the task is associated with.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -197,13 +197,23 @@ public class CommentRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a commentRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CommentRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CommentRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get comment from drives
+     * The comment that the task is associated with.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

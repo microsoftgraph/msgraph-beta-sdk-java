@@ -118,6 +118,16 @@ public class IncludedGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a includedGroupsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public IncludedGroupsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new IncludedGroupsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get the list of groups that are included in a mobile app management policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

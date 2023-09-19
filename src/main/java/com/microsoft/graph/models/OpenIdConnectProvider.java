@@ -3,13 +3,14 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OpenIdConnectProvider extends IdentityProvider implements Parsable {
     /**
-     * After the OIDC provider sends an ID token back to Azure AD, Azure AD needs to be able to map the claims from the received token to the claims that Azure AD recognizes and uses. This complex type captures that mapping. It is a required property.
+     * After the OIDC provider sends an ID token back to Azure AD, Azure AD needs to be able to map the claims from the received token to the claims that Azure AD recognizes and uses. This complex type captures that mapping. It's a required property.
      */
     private ClaimsMapping claimsMapping;
     /**
@@ -17,7 +18,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
      */
     private String domainHint;
     /**
-     * The URL for the metadata document of the OpenID Connect identity provider. Every OpenID Connect identity provider describes a metadata document that contains most of the information required to perform sign-in. This includes information such as the URLs to use and the location of the service's public signing keys. The OpenID Connect metadata document is always located at an endpoint that ends in .well-known/openid-configuration . For the OpenID Connect identity provider you are looking to add, you will need to provide the metadata URL. It is a required property and is read only after creation.
+     * The URL for the metadata document of the OpenID Connect identity provider. Every OpenID Connect identity provider describes a metadata document that contains most of the information required to perform sign-in. This includes information such as the URLs to use and the location of the service's public signing keys. The OpenID Connect metadata document is always located at an endpoint that ends in a well-known/openid-configuration. For the OpenID Connect identity provider you're looking to add, you need to provide the metadata URL. It's a required property and is read only after creation.
      */
     private String metadataUrl;
     /**
@@ -27,9 +28,9 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
     /**
      * The responseType property
      */
-    private OpenIdConnectResponseTypes responseType;
+    private EnumSet<OpenIdConnectResponseTypes> responseType;
     /**
-     * Scope defines the information and permissions you are looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users are not able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended separated by space. For more details about the scope limitations see RFC6749 Section 3.3. It is a required property.
+     * Scope defines the information and permissions you're looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users aren't able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended separated by space. For more information about the scope limitations, see RFC6749 Section 3.3. It's a required property.
      */
     private String scope;
     /**
@@ -49,7 +50,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
         return new OpenIdConnectProvider();
     }
     /**
-     * Gets the claimsMapping property value. After the OIDC provider sends an ID token back to Azure AD, Azure AD needs to be able to map the claims from the received token to the claims that Azure AD recognizes and uses. This complex type captures that mapping. It is a required property.
+     * Gets the claimsMapping property value. After the OIDC provider sends an ID token back to Azure AD, Azure AD needs to be able to map the claims from the received token to the claims that Azure AD recognizes and uses. This complex type captures that mapping. It's a required property.
      * @return a claimsMapping
      */
     @jakarta.annotation.Nullable
@@ -75,12 +76,12 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
         deserializerMap.put("domainHint", (n) -> { this.setDomainHint(n.getStringValue()); });
         deserializerMap.put("metadataUrl", (n) -> { this.setMetadataUrl(n.getStringValue()); });
         deserializerMap.put("responseMode", (n) -> { this.setResponseMode(n.getEnumValue(OpenIdConnectResponseMode.class)); });
-        deserializerMap.put("responseType", (n) -> { this.setResponseType(n.getEnumValue(OpenIdConnectResponseTypes.class)); });
+        deserializerMap.put("responseType", (n) -> { this.setResponseType(n.getEnumSetValue(OpenIdConnectResponseTypes.class)); });
         deserializerMap.put("scope", (n) -> { this.setScope(n.getStringValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the metadataUrl property value. The URL for the metadata document of the OpenID Connect identity provider. Every OpenID Connect identity provider describes a metadata document that contains most of the information required to perform sign-in. This includes information such as the URLs to use and the location of the service's public signing keys. The OpenID Connect metadata document is always located at an endpoint that ends in .well-known/openid-configuration . For the OpenID Connect identity provider you are looking to add, you will need to provide the metadata URL. It is a required property and is read only after creation.
+     * Gets the metadataUrl property value. The URL for the metadata document of the OpenID Connect identity provider. Every OpenID Connect identity provider describes a metadata document that contains most of the information required to perform sign-in. This includes information such as the URLs to use and the location of the service's public signing keys. The OpenID Connect metadata document is always located at an endpoint that ends in a well-known/openid-configuration. For the OpenID Connect identity provider you're looking to add, you need to provide the metadata URL. It's a required property and is read only after creation.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -100,11 +101,11 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
      * @return a openIdConnectResponseTypes
      */
     @jakarta.annotation.Nullable
-    public OpenIdConnectResponseTypes getResponseType() {
+    public EnumSet<OpenIdConnectResponseTypes> getResponseType() {
         return this.responseType;
     }
     /**
-     * Gets the scope property value. Scope defines the information and permissions you are looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users are not able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended separated by space. For more details about the scope limitations see RFC6749 Section 3.3. It is a required property.
+     * Gets the scope property value. Scope defines the information and permissions you're looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users aren't able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended separated by space. For more information about the scope limitations, see RFC6749 Section 3.3. It's a required property.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -122,11 +123,11 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
         writer.writeStringValue("domainHint", this.getDomainHint());
         writer.writeStringValue("metadataUrl", this.getMetadataUrl());
         writer.writeEnumValue("responseMode", this.getResponseMode());
-        writer.writeEnumValue("responseType", this.getResponseType());
+        writer.writeEnumSetValue("responseType", this.getResponseType());
         writer.writeStringValue("scope", this.getScope());
     }
     /**
-     * Sets the claimsMapping property value. After the OIDC provider sends an ID token back to Azure AD, Azure AD needs to be able to map the claims from the received token to the claims that Azure AD recognizes and uses. This complex type captures that mapping. It is a required property.
+     * Sets the claimsMapping property value. After the OIDC provider sends an ID token back to Azure AD, Azure AD needs to be able to map the claims from the received token to the claims that Azure AD recognizes and uses. This complex type captures that mapping. It's a required property.
      * @param value Value to set for the claimsMapping property.
      */
     public void setClaimsMapping(@jakarta.annotation.Nullable final ClaimsMapping value) {
@@ -140,7 +141,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
         this.domainHint = value;
     }
     /**
-     * Sets the metadataUrl property value. The URL for the metadata document of the OpenID Connect identity provider. Every OpenID Connect identity provider describes a metadata document that contains most of the information required to perform sign-in. This includes information such as the URLs to use and the location of the service's public signing keys. The OpenID Connect metadata document is always located at an endpoint that ends in .well-known/openid-configuration . For the OpenID Connect identity provider you are looking to add, you will need to provide the metadata URL. It is a required property and is read only after creation.
+     * Sets the metadataUrl property value. The URL for the metadata document of the OpenID Connect identity provider. Every OpenID Connect identity provider describes a metadata document that contains most of the information required to perform sign-in. This includes information such as the URLs to use and the location of the service's public signing keys. The OpenID Connect metadata document is always located at an endpoint that ends in a well-known/openid-configuration. For the OpenID Connect identity provider you're looking to add, you need to provide the metadata URL. It's a required property and is read only after creation.
      * @param value Value to set for the metadataUrl property.
      */
     public void setMetadataUrl(@jakarta.annotation.Nullable final String value) {
@@ -157,11 +158,11 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
      * Sets the responseType property value. The responseType property
      * @param value Value to set for the responseType property.
      */
-    public void setResponseType(@jakarta.annotation.Nullable final OpenIdConnectResponseTypes value) {
+    public void setResponseType(@jakarta.annotation.Nullable final EnumSet<OpenIdConnectResponseTypes> value) {
         this.responseType = value;
     }
     /**
-     * Sets the scope property value. Scope defines the information and permissions you are looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users are not able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended separated by space. For more details about the scope limitations see RFC6749 Section 3.3. It is a required property.
+     * Sets the scope property value. Scope defines the information and permissions you're looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users aren't able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended separated by space. For more information about the scope limitations, see RFC6749 Section 3.3. It's a required property.
      * @param value Value to set for the scope property.
      */
     public void setScope(@jakarta.annotation.Nullable final String value) {

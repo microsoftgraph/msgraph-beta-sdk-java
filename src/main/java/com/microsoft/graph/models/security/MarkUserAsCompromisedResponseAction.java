@@ -3,6 +3,7 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +12,7 @@ public class MarkUserAsCompromisedResponseAction extends ResponseAction implemen
     /**
      * The identifier property
      */
-    private MarkUserAsCompromisedEntityIdentifier identifier;
+    private EnumSet<MarkUserAsCompromisedEntityIdentifier> identifier;
     /**
      * Instantiates a new markUserAsCompromisedResponseAction and sets the default values.
      */
@@ -36,7 +37,7 @@ public class MarkUserAsCompromisedResponseAction extends ResponseAction implemen
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumValue(MarkUserAsCompromisedEntityIdentifier.class)); });
+        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumSetValue(MarkUserAsCompromisedEntityIdentifier.class)); });
         return deserializerMap;
     }
     /**
@@ -44,7 +45,7 @@ public class MarkUserAsCompromisedResponseAction extends ResponseAction implemen
      * @return a markUserAsCompromisedEntityIdentifier
      */
     @jakarta.annotation.Nullable
-    public MarkUserAsCompromisedEntityIdentifier getIdentifier() {
+    public EnumSet<MarkUserAsCompromisedEntityIdentifier> getIdentifier() {
         return this.identifier;
     }
     /**
@@ -54,13 +55,13 @@ public class MarkUserAsCompromisedResponseAction extends ResponseAction implemen
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("identifier", this.getIdentifier());
+        writer.writeEnumSetValue("identifier", this.getIdentifier());
     }
     /**
      * Sets the identifier property value. The identifier property
      * @param value Value to set for the identifier property.
      */
-    public void setIdentifier(@jakarta.annotation.Nullable final MarkUserAsCompromisedEntityIdentifier value) {
+    public void setIdentifier(@jakarta.annotation.Nullable final EnumSet<MarkUserAsCompromisedEntityIdentifier> value) {
         this.identifier = value;
     }
 }

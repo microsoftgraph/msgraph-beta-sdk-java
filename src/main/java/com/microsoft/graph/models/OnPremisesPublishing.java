@@ -14,11 +14,11 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * If you are configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that will point to the traffic manager.
+     * If you're configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that points to the traffic manager.
      */
     private String alternateUrl;
     /**
-     * The duration the connector will wait for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
+     * The duration the connector waits for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
      */
     private String applicationServerTimeout;
     /**
@@ -26,7 +26,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      */
     private String applicationType;
     /**
-     * Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Passthru does not require authentication. Possible values are: passthru, aadPreAuthentication.
+     * Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Pass through doesn't require authentication. Possible values are: passthru, aadPreAuthentication.
      */
     private ExternalAuthenticationType externalAuthenticationType;
     /**
@@ -42,7 +42,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      */
     private Boolean isAccessibleViaZTNAClient;
     /**
-     * Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property will be set to true by default. For all existing apps, the property will be set to false.
+     * Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property is set to true by default. For all existing apps, the property is set to false.
      */
     private Boolean isBackendCertificateValidationEnabled;
     /**
@@ -50,7 +50,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      */
     private Boolean isHttpOnlyCookieEnabled;
     /**
-     * Indicates if the application is currently being published via Application Proxy or not. This is pre-set by the system. Read-only.
+     * Indicates if the application is currently being published via Application Proxy or not. This is preset by the system. Read-only.
      */
     private Boolean isOnPremPublishingEnabled;
     /**
@@ -66,7 +66,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      */
     private Boolean isStateSessionEnabled;
     /**
-     * Indicates if the application should translate urls in the reponse headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
+     * Indicates if the application should translate urls in the response headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
      */
     private Boolean isTranslateHostHeaderEnabled;
     /**
@@ -130,7 +130,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the alternateUrl property value. If you are configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that will point to the traffic manager.
+     * Gets the alternateUrl property value. If you're configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that points to the traffic manager.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         return this.alternateUrl;
     }
     /**
-     * Gets the applicationServerTimeout property value. The duration the connector will wait for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
+     * Gets the applicationServerTimeout property value. The duration the connector waits for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -154,7 +154,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         return this.applicationType;
     }
     /**
-     * Gets the externalAuthenticationType property value. Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Passthru does not require authentication. Possible values are: passthru, aadPreAuthentication.
+     * Gets the externalAuthenticationType property value. Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Pass through doesn't require authentication. Possible values are: passthru, aadPreAuthentication.
      * @return a externalAuthenticationType
      */
     @jakarta.annotation.Nullable
@@ -218,7 +218,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         return this.isAccessibleViaZTNAClient;
     }
     /**
-     * Gets the isBackendCertificateValidationEnabled property value. Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property will be set to true by default. For all existing apps, the property will be set to false.
+     * Gets the isBackendCertificateValidationEnabled property value. Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property is set to true by default. For all existing apps, the property is set to false.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -234,7 +234,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         return this.isHttpOnlyCookieEnabled;
     }
     /**
-     * Gets the isOnPremPublishingEnabled property value. Indicates if the application is currently being published via Application Proxy or not. This is pre-set by the system. Read-only.
+     * Gets the isOnPremPublishingEnabled property value. Indicates if the application is currently being published via Application Proxy or not. This is preset by the system. Read-only.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -266,7 +266,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         return this.isStateSessionEnabled;
     }
     /**
-     * Gets the isTranslateHostHeaderEnabled property value. Indicates if the application should translate urls in the reponse headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
+     * Gets the isTranslateHostHeaderEnabled property value. Indicates if the application should translate urls in the response headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -384,14 +384,14 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the alternateUrl property value. If you are configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that will point to the traffic manager.
+     * Sets the alternateUrl property value. If you're configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that points to the traffic manager.
      * @param value Value to set for the alternateUrl property.
      */
     public void setAlternateUrl(@jakarta.annotation.Nullable final String value) {
         this.alternateUrl = value;
     }
     /**
-     * Sets the applicationServerTimeout property value. The duration the connector will wait for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
+     * Sets the applicationServerTimeout property value. The duration the connector waits for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
      * @param value Value to set for the applicationServerTimeout property.
      */
     public void setApplicationServerTimeout(@jakarta.annotation.Nullable final String value) {
@@ -405,7 +405,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         this.applicationType = value;
     }
     /**
-     * Sets the externalAuthenticationType property value. Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Passthru does not require authentication. Possible values are: passthru, aadPreAuthentication.
+     * Sets the externalAuthenticationType property value. Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Pass through doesn't require authentication. Possible values are: passthru, aadPreAuthentication.
      * @param value Value to set for the externalAuthenticationType property.
      */
     public void setExternalAuthenticationType(@jakarta.annotation.Nullable final ExternalAuthenticationType value) {
@@ -433,7 +433,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         this.isAccessibleViaZTNAClient = value;
     }
     /**
-     * Sets the isBackendCertificateValidationEnabled property value. Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property will be set to true by default. For all existing apps, the property will be set to false.
+     * Sets the isBackendCertificateValidationEnabled property value. Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property is set to true by default. For all existing apps, the property is set to false.
      * @param value Value to set for the isBackendCertificateValidationEnabled property.
      */
     public void setIsBackendCertificateValidationEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -447,7 +447,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         this.isHttpOnlyCookieEnabled = value;
     }
     /**
-     * Sets the isOnPremPublishingEnabled property value. Indicates if the application is currently being published via Application Proxy or not. This is pre-set by the system. Read-only.
+     * Sets the isOnPremPublishingEnabled property value. Indicates if the application is currently being published via Application Proxy or not. This is preset by the system. Read-only.
      * @param value Value to set for the isOnPremPublishingEnabled property.
      */
     public void setIsOnPremPublishingEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -475,7 +475,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         this.isStateSessionEnabled = value;
     }
     /**
-     * Sets the isTranslateHostHeaderEnabled property value. Indicates if the application should translate urls in the reponse headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
+     * Sets the isTranslateHostHeaderEnabled property value. Indicates if the application should translate urls in the response headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
      * @param value Value to set for the isTranslateHostHeaderEnabled property.
      */
     public void setIsTranslateHostHeaderEnabled(@jakarta.annotation.Nullable final Boolean value) {

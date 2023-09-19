@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CertificateAuthorityPath extends Entity implements Parsable {
     /**
-     * The certificateBasedApplicationConfigurations property
+     * Defines the trusted certificate authorities for certificates that can be added to apps and service principals in the tenant.
      */
     private java.util.List<CertificateBasedApplicationConfiguration> certificateBasedApplicationConfigurations;
     /**
@@ -29,7 +29,7 @@ public class CertificateAuthorityPath extends Entity implements Parsable {
         return new CertificateAuthorityPath();
     }
     /**
-     * Gets the certificateBasedApplicationConfigurations property value. The certificateBasedApplicationConfigurations property
+     * Gets the certificateBasedApplicationConfigurations property value. Defines the trusted certificate authorities for certificates that can be added to apps and service principals in the tenant.
      * @return a certificateBasedApplicationConfiguration
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class CertificateAuthorityPath extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("certificateBasedApplicationConfigurations", this.getCertificateBasedApplicationConfigurations());
     }
     /**
-     * Sets the certificateBasedApplicationConfigurations property value. The certificateBasedApplicationConfigurations property
+     * Sets the certificateBasedApplicationConfigurations property value. Defines the trusted certificate authorities for certificates that can be added to apps and service principals in the tenant.
      * @param value Value to set for the certificateBasedApplicationConfigurations property.
      */
     public void setCertificateBasedApplicationConfigurations(@jakarta.annotation.Nullable final java.util.List<CertificateBasedApplicationConfiguration> value) {

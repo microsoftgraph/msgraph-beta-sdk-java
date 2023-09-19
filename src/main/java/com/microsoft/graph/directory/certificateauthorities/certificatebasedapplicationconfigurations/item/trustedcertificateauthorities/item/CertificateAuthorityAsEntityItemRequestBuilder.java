@@ -56,7 +56,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get trustedCertificateAuthorities from directory
+     * Collection of trusted certificate authorities.
      * @return a CompletableFuture of certificateAuthorityAsEntity
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * Get trustedCertificateAuthorities from directory
+     * Collection of trusted certificate authorities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of certificateAuthorityAsEntity
      */
@@ -128,7 +128,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Get trustedCertificateAuthorities from directory
+     * Collection of trusted certificate authorities.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +136,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Get trustedCertificateAuthorities from directory
+     * Collection of trusted certificate authorities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,13 +189,23 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a CertificateAuthorityAsEntityItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CertificateAuthorityAsEntityItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CertificateAuthorityAsEntityItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get trustedCertificateAuthorities from directory
+     * Collection of trusted certificate authorities.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

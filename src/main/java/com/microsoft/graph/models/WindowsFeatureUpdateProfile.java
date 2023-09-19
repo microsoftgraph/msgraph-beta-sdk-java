@@ -41,6 +41,10 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      */
     private String featureUpdateVersion;
     /**
+     * If true, the latest Microsoft Windows 10 update will be installed on devices ineligible for Microsoft Windows 11
+     */
+    private Boolean installLatestWindows10OnWindows11IneligibleDevice;
+    /**
      * The date time that the profile was last modified.
      */
     private OffsetDateTime lastModifiedDateTime;
@@ -138,10 +142,19 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("endOfSupportDate", (n) -> { this.setEndOfSupportDate(n.getOffsetDateTimeValue()); });
         deserializerMap.put("featureUpdateVersion", (n) -> { this.setFeatureUpdateVersion(n.getStringValue()); });
+        deserializerMap.put("installLatestWindows10OnWindows11IneligibleDevice", (n) -> { this.setInstallLatestWindows10OnWindows11IneligibleDevice(n.getBooleanValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("rolloutSettings", (n) -> { this.setRolloutSettings(n.getObjectValue(WindowsUpdateRolloutSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the installLatestWindows10OnWindows11IneligibleDevice property value. If true, the latest Microsoft Windows 10 update will be installed on devices ineligible for Microsoft Windows 11
+     * @return a boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getInstallLatestWindows10OnWindows11IneligibleDevice() {
+        return this.installLatestWindows10OnWindows11IneligibleDevice;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date time that the profile was last modified.
@@ -181,6 +194,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("endOfSupportDate", this.getEndOfSupportDate());
         writer.writeStringValue("featureUpdateVersion", this.getFeatureUpdateVersion());
+        writer.writeBooleanValue("installLatestWindows10OnWindows11IneligibleDevice", this.getInstallLatestWindows10OnWindows11IneligibleDevice());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
         writer.writeObjectValue("rolloutSettings", this.getRolloutSettings());
@@ -233,6 +247,13 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
      */
     public void setFeatureUpdateVersion(@jakarta.annotation.Nullable final String value) {
         this.featureUpdateVersion = value;
+    }
+    /**
+     * Sets the installLatestWindows10OnWindows11IneligibleDevice property value. If true, the latest Microsoft Windows 10 update will be installed on devices ineligible for Microsoft Windows 11
+     * @param value Value to set for the installLatestWindows10OnWindows11IneligibleDevice property.
+     */
+    public void setInstallLatestWindows10OnWindows11IneligibleDevice(@jakarta.annotation.Nullable final Boolean value) {
+        this.installLatestWindows10OnWindows11IneligibleDevice = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date time that the profile was last modified.

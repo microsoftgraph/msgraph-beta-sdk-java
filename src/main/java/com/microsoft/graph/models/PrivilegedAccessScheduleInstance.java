@@ -10,11 +10,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccessScheduleInstance extends Entity implements Parsable {
     /**
-     * When the schedule instance ends. Required.
+     * When the schedule instance ends, and is required.
      */
     private OffsetDateTime endDateTime;
     /**
-     * When this instance starts. Required.
+     * When this instance starts, and is required.
      */
     private OffsetDateTime startDateTime;
     /**
@@ -42,7 +42,7 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
         return new PrivilegedAccessScheduleInstance();
     }
     /**
-     * Gets the endDateTime property value. When the schedule instance ends. Required.
+     * Gets the endDateTime property value. When the schedule instance ends, and is required.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -61,7 +61,7 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
         return deserializerMap;
     }
     /**
-     * Gets the startDateTime property value. When this instance starts. Required.
+     * Gets the startDateTime property value. When this instance starts, and is required.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -79,14 +79,14 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
     }
     /**
-     * Sets the endDateTime property value. When the schedule instance ends. Required.
+     * Sets the endDateTime property value. When the schedule instance ends, and is required.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.endDateTime = value;
     }
     /**
-     * Sets the startDateTime property value. When this instance starts. Required.
+     * Sets the startDateTime property value. When this instance starts, and is required.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

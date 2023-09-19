@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
     /**
-     * The list of media to pre-fetch.
+     * The list of media to prefetch.
      */
     private java.util.List<MediaInfo> preFetchMedia;
     /**
@@ -40,7 +40,7 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the preFetchMedia property value. The list of media to pre-fetch.
+     * Gets the preFetchMedia property value. The list of media to prefetch.
      * @return a mediaInfo
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
         writer.writeCollectionOfObjectValues("preFetchMedia", this.getPreFetchMedia());
     }
     /**
-     * Sets the preFetchMedia property value. The list of media to pre-fetch.
+     * Sets the preFetchMedia property value. The list of media to prefetch.
      * @param value Value to set for the preFetchMedia property.
      */
     public void setPreFetchMedia(@jakarta.annotation.Nullable final java.util.List<MediaInfo> value) {

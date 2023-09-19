@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Attendee extends AttendeeBase implements Parsable {
     /**
-     * An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
+     * An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property isn't included in a response of a GET event.
      */
     private TimeSlot proposedNewTime;
     /**
@@ -45,7 +45,7 @@ public class Attendee extends AttendeeBase implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the proposedNewTime property value. An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
+     * Gets the proposedNewTime property value. An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property isn't included in a response of a GET event.
      * @return a timeSlot
      */
     @jakarta.annotation.Nullable
@@ -71,7 +71,7 @@ public class Attendee extends AttendeeBase implements Parsable {
         writer.writeObjectValue("status", this.getStatus());
     }
     /**
-     * Sets the proposedNewTime property value. An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
+     * Sets the proposedNewTime property value. An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property isn't included in a response of a GET event.
      * @param value Value to set for the proposedNewTime property.
      */
     public void setProposedNewTime(@jakarta.annotation.Nullable final TimeSlot value) {

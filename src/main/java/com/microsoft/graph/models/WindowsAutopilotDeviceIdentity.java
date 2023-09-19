@@ -117,6 +117,10 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      */
     private String systemFamily;
     /**
+     * Userless enrollment block status, indicating whether the next device enrollment will be blocked.
+     */
+    private WindowsAutopilotUserlessEnrollmentStatus userlessEnrollmentStatus;
+    /**
      * User Principal Name.
      */
     private String userPrincipalName;
@@ -265,6 +269,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
         deserializerMap.put("serialNumber", (n) -> { this.setSerialNumber(n.getStringValue()); });
         deserializerMap.put("skuNumber", (n) -> { this.setSkuNumber(n.getStringValue()); });
         deserializerMap.put("systemFamily", (n) -> { this.setSystemFamily(n.getStringValue()); });
+        deserializerMap.put("userlessEnrollmentStatus", (n) -> { this.setUserlessEnrollmentStatus(n.getEnumValue(WindowsAutopilotUserlessEnrollmentStatus.class)); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -381,6 +386,14 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
         return this.systemFamily;
     }
     /**
+     * Gets the userlessEnrollmentStatus property value. Userless enrollment block status, indicating whether the next device enrollment will be blocked.
+     * @return a windowsAutopilotUserlessEnrollmentStatus
+     */
+    @jakarta.annotation.Nullable
+    public WindowsAutopilotUserlessEnrollmentStatus getUserlessEnrollmentStatus() {
+        return this.userlessEnrollmentStatus;
+    }
+    /**
      * Gets the userPrincipalName property value. User Principal Name.
      * @return a string
      */
@@ -421,6 +434,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
         writer.writeStringValue("serialNumber", this.getSerialNumber());
         writer.writeStringValue("skuNumber", this.getSkuNumber());
         writer.writeStringValue("systemFamily", this.getSystemFamily());
+        writer.writeEnumValue("userlessEnrollmentStatus", this.getUserlessEnrollmentStatus());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
@@ -604,6 +618,13 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      */
     public void setSystemFamily(@jakarta.annotation.Nullable final String value) {
         this.systemFamily = value;
+    }
+    /**
+     * Sets the userlessEnrollmentStatus property value. Userless enrollment block status, indicating whether the next device enrollment will be blocked.
+     * @param value Value to set for the userlessEnrollmentStatus property.
+     */
+    public void setUserlessEnrollmentStatus(@jakarta.annotation.Nullable final WindowsAutopilotUserlessEnrollmentStatus value) {
+        this.userlessEnrollmentStatus = value;
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name.

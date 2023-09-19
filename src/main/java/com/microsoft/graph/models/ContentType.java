@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContentType extends Entity implements Parsable {
     /**
-     * List of canonical URLs for hub sites with which this content type is associated to. This will contain all hubsites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
+     * List of canonical URLs for hub sites with which this content type is associated to. This contains all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
      */
     private java.util.List<String> associatedHubsUrls;
     /**
@@ -77,11 +77,11 @@ public class ContentType extends Entity implements Parsable {
      */
     private Boolean propagateChanges;
     /**
-     * If true, the content type cannot be modified unless this value is first set to false.
+     * If true, the content type can't be modified unless this value is first set to false.
      */
     private Boolean readOnly;
     /**
-     * If true, the content type cannot be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
+     * If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
      */
     private Boolean sealed;
     /**
@@ -101,7 +101,7 @@ public class ContentType extends Entity implements Parsable {
         return new ContentType();
     }
     /**
-     * Gets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This will contain all hubsites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
+     * Gets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This contains all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -265,7 +265,7 @@ public class ContentType extends Entity implements Parsable {
         return this.propagateChanges;
     }
     /**
-     * Gets the readOnly property value. If true, the content type cannot be modified unless this value is first set to false.
+     * Gets the readOnly property value. If true, the content type can't be modified unless this value is first set to false.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -273,7 +273,7 @@ public class ContentType extends Entity implements Parsable {
         return this.readOnly;
     }
     /**
-     * Gets the sealed property value. If true, the content type cannot be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
+     * Gets the sealed property value. If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -308,7 +308,7 @@ public class ContentType extends Entity implements Parsable {
         writer.writeBooleanValue("sealed", this.getSealed());
     }
     /**
-     * Sets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This will contain all hubsites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
+     * Sets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This contains all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
      * @param value Value to set for the associatedHubsUrls property.
      */
     public void setAssociatedHubsUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -427,14 +427,14 @@ public class ContentType extends Entity implements Parsable {
         this.propagateChanges = value;
     }
     /**
-     * Sets the readOnly property value. If true, the content type cannot be modified unless this value is first set to false.
+     * Sets the readOnly property value. If true, the content type can't be modified unless this value is first set to false.
      * @param value Value to set for the readOnly property.
      */
     public void setReadOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.readOnly = value;
     }
     /**
-     * Sets the sealed property value. If true, the content type cannot be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
+     * Sets the sealed property value. If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
      * @param value Value to set for the sealed property.
      */
     public void setSealed(@jakarta.annotation.Nullable final Boolean value) {

@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public class Windows10XCustomSubjectAlternativeName implements AdditionalDataHol
     /**
      * Subject Alternative Name Options.
      */
-    private SubjectAlternativeNameType sanType;
+    private EnumSet<SubjectAlternativeNameType> sanType;
     /**
      * Instantiates a new windows10XCustomSubjectAlternativeName and sets the default values.
      */
@@ -61,7 +62,7 @@ public class Windows10XCustomSubjectAlternativeName implements AdditionalDataHol
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("sanType", (n) -> { this.setSanType(n.getEnumValue(SubjectAlternativeNameType.class)); });
+        deserializerMap.put("sanType", (n) -> { this.setSanType(n.getEnumSetValue(SubjectAlternativeNameType.class)); });
         return deserializerMap;
     }
     /**
@@ -85,7 +86,7 @@ public class Windows10XCustomSubjectAlternativeName implements AdditionalDataHol
      * @return a subjectAlternativeNameType
      */
     @jakarta.annotation.Nullable
-    public SubjectAlternativeNameType getSanType() {
+    public EnumSet<SubjectAlternativeNameType> getSanType() {
         return this.sanType;
     }
     /**
@@ -96,7 +97,7 @@ public class Windows10XCustomSubjectAlternativeName implements AdditionalDataHol
         Objects.requireNonNull(writer);
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeEnumValue("sanType", this.getSanType());
+        writer.writeEnumSetValue("sanType", this.getSanType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -124,7 +125,7 @@ public class Windows10XCustomSubjectAlternativeName implements AdditionalDataHol
      * Sets the sanType property value. Subject Alternative Name Options.
      * @param value Value to set for the sanType property.
      */
-    public void setSanType(@jakarta.annotation.Nullable final SubjectAlternativeNameType value) {
+    public void setSanType(@jakarta.annotation.Nullable final EnumSet<SubjectAlternativeNameType> value) {
         this.sanType = value;
     }
 }

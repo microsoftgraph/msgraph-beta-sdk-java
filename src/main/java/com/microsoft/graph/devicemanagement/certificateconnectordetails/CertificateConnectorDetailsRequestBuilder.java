@@ -165,6 +165,16 @@ public class CertificateConnectorDetailsRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a certificateConnectorDetailsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CertificateConnectorDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CertificateConnectorDetailsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Collection of certificate connector details, each associated with a corresponding Intune Certificate Connector.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

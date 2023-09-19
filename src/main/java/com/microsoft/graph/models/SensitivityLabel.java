@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +12,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     /**
      * The applicableTo property
      */
-    private SensitivityLabelTarget applicableTo;
+    private EnumSet<SensitivityLabelTarget> applicableTo;
     /**
      * The applicationMode property
      */
@@ -81,7 +82,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      * @return a sensitivityLabelTarget
      */
     @jakarta.annotation.Nullable
-    public SensitivityLabelTarget getApplicableTo() {
+    public EnumSet<SensitivityLabelTarget> getApplicableTo() {
         return this.applicableTo;
     }
     /**
@@ -131,7 +132,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("applicableTo", (n) -> { this.setApplicableTo(n.getEnumValue(SensitivityLabelTarget.class)); });
+        deserializerMap.put("applicableTo", (n) -> { this.setApplicableTo(n.getEnumSetValue(SensitivityLabelTarget.class)); });
         deserializerMap.put("applicationMode", (n) -> { this.setApplicationMode(n.getEnumValue(ApplicationMode.class)); });
         deserializerMap.put("assignedPolicies", (n) -> { this.setAssignedPolicies(n.getCollectionOfObjectValues(LabelPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("autoLabeling", (n) -> { this.setAutoLabeling(n.getObjectValue(AutoLabeling::createFromDiscriminatorValue)); });
@@ -209,7 +210,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("applicableTo", this.getApplicableTo());
+        writer.writeEnumSetValue("applicableTo", this.getApplicableTo());
         writer.writeEnumValue("applicationMode", this.getApplicationMode());
         writer.writeCollectionOfObjectValues("assignedPolicies", this.getAssignedPolicies());
         writer.writeObjectValue("autoLabeling", this.getAutoLabeling());
@@ -227,7 +228,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      * Sets the applicableTo property value. The applicableTo property
      * @param value Value to set for the applicableTo property.
      */
-    public void setApplicableTo(@jakarta.annotation.Nullable final SensitivityLabelTarget value) {
+    public void setApplicableTo(@jakarta.annotation.Nullable final EnumSet<SensitivityLabelTarget> value) {
         this.applicableTo = value;
     }
     /**

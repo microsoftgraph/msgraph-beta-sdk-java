@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Teamwork extends Entity implements Parsable {
     /**
-     * The deletedChats property
+     * A collection of deleted chats.
      */
     private java.util.List<DeletedChat> deletedChats;
     /**
@@ -49,7 +49,7 @@ public class Teamwork extends Entity implements Parsable {
         return new Teamwork();
     }
     /**
-     * Gets the deletedChats property value. The deletedChats property
+     * Gets the deletedChats property value. A collection of deleted chats.
      * @return a deletedChat
      */
     @jakarta.annotation.Nullable
@@ -126,7 +126,7 @@ public class Teamwork extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("workforceIntegrations", this.getWorkforceIntegrations());
     }
     /**
-     * Sets the deletedChats property value. The deletedChats property
+     * Sets the deletedChats property value. A collection of deleted chats.
      * @param value Value to set for the deletedChats property.
      */
     public void setDeletedChats(@jakarta.annotation.Nullable final java.util.List<DeletedChat> value) {

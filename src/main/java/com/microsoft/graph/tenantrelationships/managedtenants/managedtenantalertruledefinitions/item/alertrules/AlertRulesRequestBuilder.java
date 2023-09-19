@@ -108,6 +108,16 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a alertRulesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AlertRulesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AlertRulesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get alertRules from tenantRelationships
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

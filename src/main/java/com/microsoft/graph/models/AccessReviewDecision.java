@@ -14,11 +14,11 @@ public class AccessReviewDecision extends Entity implements Parsable {
      */
     private String accessRecommendation;
     /**
-     * The feature-generated id of the access review.
+     * The feature-generated ID of the access review.
      */
     private String accessReviewId;
     /**
-     * When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was auto-applied, the userPrincipalName is empty.
+     * When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was autoapplied, the userPrincipalName is empty.
      */
     private UserIdentity appliedBy;
     /**
@@ -70,7 +70,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
         return this.accessRecommendation;
     }
     /**
-     * Gets the accessReviewId property value. The feature-generated id of the access review.
+     * Gets the accessReviewId property value. The feature-generated ID of the access review.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
         return this.accessReviewId;
     }
     /**
-     * Gets the appliedBy property value. When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was auto-applied, the userPrincipalName is empty.
+     * Gets the appliedBy property value. When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was autoapplied, the userPrincipalName is empty.
      * @return a userIdentity
      */
     @jakarta.annotation.Nullable
@@ -176,14 +176,14 @@ public class AccessReviewDecision extends Entity implements Parsable {
         this.accessRecommendation = value;
     }
     /**
-     * Sets the accessReviewId property value. The feature-generated id of the access review.
+     * Sets the accessReviewId property value. The feature-generated ID of the access review.
      * @param value Value to set for the accessReviewId property.
      */
     public void setAccessReviewId(@jakarta.annotation.Nullable final String value) {
         this.accessReviewId = value;
     }
     /**
-     * Sets the appliedBy property value. When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was auto-applied, the userPrincipalName is empty.
+     * Sets the appliedBy property value. When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was autoapplied, the userPrincipalName is empty.
      * @param value Value to set for the appliedBy property.
      */
     public void setAppliedBy(@jakarta.annotation.Nullable final UserIdentity value) {

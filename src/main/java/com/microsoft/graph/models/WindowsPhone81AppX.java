@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +15,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
     /**
      * Contains properties for Windows architecture.
      */
-    private WindowsArchitecture applicableArchitectures;
+    private EnumSet<WindowsArchitecture> applicableArchitectures;
     /**
      * The Identity Name.
      */
@@ -72,7 +73,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
      * @return a windowsArchitecture
      */
     @jakarta.annotation.Nullable
-    public WindowsArchitecture getApplicableArchitectures() {
+    public EnumSet<WindowsArchitecture> getApplicableArchitectures() {
         return this.applicableArchitectures;
     }
     /**
@@ -82,7 +83,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumValue(WindowsArchitecture.class)); });
+        deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumSetValue(WindowsArchitecture.class)); });
         deserializerMap.put("identityName", (n) -> { this.setIdentityName(n.getStringValue()); });
         deserializerMap.put("identityPublisherHash", (n) -> { this.setIdentityPublisherHash(n.getStringValue()); });
         deserializerMap.put("identityResourceIdentifier", (n) -> { this.setIdentityResourceIdentifier(n.getStringValue()); });
@@ -155,7 +156,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("applicableArchitectures", this.getApplicableArchitectures());
+        writer.writeEnumSetValue("applicableArchitectures", this.getApplicableArchitectures());
         writer.writeStringValue("identityName", this.getIdentityName());
         writer.writeStringValue("identityPublisherHash", this.getIdentityPublisherHash());
         writer.writeStringValue("identityResourceIdentifier", this.getIdentityResourceIdentifier());
@@ -168,7 +169,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
      * Sets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @param value Value to set for the applicableArchitectures property.
      */
-    public void setApplicableArchitectures(@jakarta.annotation.Nullable final WindowsArchitecture value) {
+    public void setApplicableArchitectures(@jakarta.annotation.Nullable final EnumSet<WindowsArchitecture> value) {
         this.applicableArchitectures = value;
     }
     /**

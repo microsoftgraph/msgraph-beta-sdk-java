@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -43,7 +44,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     /**
      * Supported platform types.
      */
-    private DeviceManagementConfigurationPlatforms platforms;
+    private EnumSet<DeviceManagementConfigurationPlatforms> platforms;
     /**
      * Indicates the priority of each policies that are selected by the admin during enrollment process
      */
@@ -63,7 +64,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     /**
      * Describes which technology this setting can be deployed with
      */
-    private DeviceManagementConfigurationTechnologies technologies;
+    private EnumSet<DeviceManagementConfigurationTechnologies> technologies;
     /**
      * Template reference information
      */
@@ -130,12 +131,12 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
         deserializerMap.put("isAssigned", (n) -> { this.setIsAssigned(n.getBooleanValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
-        deserializerMap.put("platforms", (n) -> { this.setPlatforms(n.getEnumValue(DeviceManagementConfigurationPlatforms.class)); });
+        deserializerMap.put("platforms", (n) -> { this.setPlatforms(n.getEnumSetValue(DeviceManagementConfigurationPlatforms.class)); });
         deserializerMap.put("priorityMetaData", (n) -> { this.setPriorityMetaData(n.getObjectValue(DeviceManagementPriorityMetaData::createFromDiscriminatorValue)); });
         deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("settingCount", (n) -> { this.setSettingCount(n.getIntegerValue()); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getCollectionOfObjectValues(DeviceManagementConfigurationSetting::createFromDiscriminatorValue)); });
-        deserializerMap.put("technologies", (n) -> { this.setTechnologies(n.getEnumValue(DeviceManagementConfigurationTechnologies.class)); });
+        deserializerMap.put("technologies", (n) -> { this.setTechnologies(n.getEnumSetValue(DeviceManagementConfigurationTechnologies.class)); });
         deserializerMap.put("templateReference", (n) -> { this.setTemplateReference(n.getObjectValue(DeviceManagementConfigurationPolicyTemplateReference::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -168,7 +169,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * @return a deviceManagementConfigurationPlatforms
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementConfigurationPlatforms getPlatforms() {
+    public EnumSet<DeviceManagementConfigurationPlatforms> getPlatforms() {
         return this.platforms;
     }
     /**
@@ -208,7 +209,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * @return a deviceManagementConfigurationTechnologies
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementConfigurationTechnologies getTechnologies() {
+    public EnumSet<DeviceManagementConfigurationTechnologies> getTechnologies() {
         return this.technologies;
     }
     /**
@@ -232,12 +233,12 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
         writer.writeStringValue("description", this.getDescription());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("name", this.getName());
-        writer.writeEnumValue("platforms", this.getPlatforms());
+        writer.writeEnumSetValue("platforms", this.getPlatforms());
         writer.writeObjectValue("priorityMetaData", this.getPriorityMetaData());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
         writer.writeIntegerValue("settingCount", this.getSettingCount());
         writer.writeCollectionOfObjectValues("settings", this.getSettings());
-        writer.writeEnumValue("technologies", this.getTechnologies());
+        writer.writeEnumSetValue("technologies", this.getTechnologies());
         writer.writeObjectValue("templateReference", this.getTemplateReference());
     }
     /**
@@ -293,7 +294,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * Sets the platforms property value. Supported platform types.
      * @param value Value to set for the platforms property.
      */
-    public void setPlatforms(@jakarta.annotation.Nullable final DeviceManagementConfigurationPlatforms value) {
+    public void setPlatforms(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationPlatforms> value) {
         this.platforms = value;
     }
     /**
@@ -328,7 +329,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      * Sets the technologies property value. Describes which technology this setting can be deployed with
      * @param value Value to set for the technologies property.
      */
-    public void setTechnologies(@jakarta.annotation.Nullable final DeviceManagementConfigurationTechnologies value) {
+    public void setTechnologies(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationTechnologies> value) {
         this.technologies = value;
     }
     /**

@@ -165,6 +165,16 @@ public class AppScopesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a appScopesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AppScopesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AppScopesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Read-only collection with details of the app specific scopes when the assignment scopes are app specific. Containment entity. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

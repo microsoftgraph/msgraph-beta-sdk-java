@@ -40,11 +40,11 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
      */
     private WorkflowExecutionConditions executionConditions;
     /**
-     * Whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true.
+     * Determines whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true.
      */
     private Boolean isEnabled;
     /**
-     * If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
+     * If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can't be true for a disabled workflow (where isEnabled is false).
      */
     private Boolean isSchedulingEnabled;
     /**
@@ -165,7 +165,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. Whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true.
+     * Gets the isEnabled property value. Determines whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         return this.isEnabled;
     }
     /**
-     * Gets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
+     * Gets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can't be true for a disabled workflow (where isEnabled is false).
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -282,14 +282,14 @@ public class WorkflowBase implements AdditionalDataHolder, Parsable {
         this.executionConditions = value;
     }
     /**
-     * Sets the isEnabled property value. Whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true.
+     * Sets the isEnabled property value. Determines whether the workflow is enabled or disabled. If this setting is true, the workflow can be run on demand or on schedule when isSchedulingEnabled is true.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.isEnabled = value;
     }
     /**
-     * Sets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Cannot be true for a disabled workflow (where isEnabled is false).
+     * Sets the isSchedulingEnabled property value. If true, the Lifecycle Workflow engine executes the workflow based on the schedule defined by tenant settings. Can't be true for a disabled workflow (where isEnabled is false).
      * @param value Value to set for the isSchedulingEnabled property.
      */
     public void setIsSchedulingEnabled(@jakarta.annotation.Nullable final Boolean value) {

@@ -18,7 +18,7 @@ public class CaseSettings extends Entity implements Parsable {
      */
     private RedundancyDetectionSettings redundancyDetection;
     /**
-     * The Topic Modeling (Themes) settings for the case.
+     * The article Modeling (Themes) settings for the case.
      */
     private TopicModelingSettings topicModeling;
     /**
@@ -66,7 +66,7 @@ public class CaseSettings extends Entity implements Parsable {
         return this.redundancyDetection;
     }
     /**
-     * Gets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
+     * Gets the topicModeling property value. The article Modeling (Themes) settings for the case.
      * @return a topicModelingSettings
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class CaseSettings extends Entity implements Parsable {
         this.redundancyDetection = value;
     }
     /**
-     * Sets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
+     * Sets the topicModeling property value. The article Modeling (Themes) settings for the case.
      * @param value Value to set for the topicModeling property.
      */
     public void setTopicModeling(@jakarta.annotation.Nullable final TopicModelingSettings value) {

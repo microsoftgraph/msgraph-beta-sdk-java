@@ -18,7 +18,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      */
     private CloudPcPartnerAgentInstallStatus installStatus;
     /**
-     * Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent.  When 'FALSE', the agent is a Microsoft agent or is not known.  The default value is 'FALSE'.
+     * Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known.  The default value is 'FALSE'
      */
     private Boolean isThirdPartyPartner;
     /**
@@ -26,11 +26,11 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
      */
     private String odataType;
     /**
-     * Indicates the name of a partner agent and includes first-party and third-party. Currently, Citrix is the only third-party value. Read-Only.
+     * The name of the partner agent, whether first party or third party. Possible values for third-party partners are Citrix and VMware. Read-Only.
      */
     private CloudPcPartnerAgentName partnerAgentName;
     /**
-     * Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent. When 'FALSE', the agent is a Microsoft agent or is not known. The default value is 'FALSE'.
+     * Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known. The default value is 'FALSE'
      */
     private Boolean retriable;
     /**
@@ -80,7 +80,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
         return this.installStatus;
     }
     /**
-     * Gets the isThirdPartyPartner property value. Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent.  When 'FALSE', the agent is a Microsoft agent or is not known.  The default value is 'FALSE'.
+     * Gets the isThirdPartyPartner property value. Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known.  The default value is 'FALSE'
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
         return this.odataType;
     }
     /**
-     * Gets the partnerAgentName property value. Indicates the name of a partner agent and includes first-party and third-party. Currently, Citrix is the only third-party value. Read-Only.
+     * Gets the partnerAgentName property value. The name of the partner agent, whether first party or third party. Possible values for third-party partners are Citrix and VMware. Read-Only.
      * @return a cloudPcPartnerAgentName
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
         return this.partnerAgentName;
     }
     /**
-     * Gets the retriable property value. Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent. When 'FALSE', the agent is a Microsoft agent or is not known. The default value is 'FALSE'.
+     * Gets the retriable property value. Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known. The default value is 'FALSE'
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
         this.installStatus = value;
     }
     /**
-     * Sets the isThirdPartyPartner property value. Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent.  When 'FALSE', the agent is a Microsoft agent or is not known.  The default value is 'FALSE'.
+     * Sets the isThirdPartyPartner property value. Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known.  The default value is 'FALSE'
      * @param value Value to set for the isThirdPartyPartner property.
      */
     public void setIsThirdPartyPartner(@jakarta.annotation.Nullable final Boolean value) {
@@ -153,14 +153,14 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, P
         this.odataType = value;
     }
     /**
-     * Sets the partnerAgentName property value. Indicates the name of a partner agent and includes first-party and third-party. Currently, Citrix is the only third-party value. Read-Only.
+     * Sets the partnerAgentName property value. The name of the partner agent, whether first party or third party. Possible values for third-party partners are Citrix and VMware. Read-Only.
      * @param value Value to set for the partnerAgentName property.
      */
     public void setPartnerAgentName(@jakarta.annotation.Nullable final CloudPcPartnerAgentName value) {
         this.partnerAgentName = value;
     }
     /**
-     * Sets the retriable property value. Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent. When 'FALSE', the agent is a Microsoft agent or is not known. The default value is 'FALSE'.
+     * Sets the retriable property value. Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known. The default value is 'FALSE'
      * @param value Value to set for the retriable property.
      */
     public void setRetriable(@jakarta.annotation.Nullable final Boolean value) {

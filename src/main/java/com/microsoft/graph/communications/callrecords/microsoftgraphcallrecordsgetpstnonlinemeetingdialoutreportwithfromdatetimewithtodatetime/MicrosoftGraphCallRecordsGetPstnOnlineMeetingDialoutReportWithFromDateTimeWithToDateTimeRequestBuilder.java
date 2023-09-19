@@ -91,6 +91,16 @@ public class MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromD
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a microsoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromDateTimeWithToDateTimeRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromDateTimeWithToDateTimeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromDateTimeWithToDateTimeRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function getPstnOnlineMeetingDialoutReport
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

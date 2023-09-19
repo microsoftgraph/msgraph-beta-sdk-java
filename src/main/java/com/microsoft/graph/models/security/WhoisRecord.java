@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WhoisRecord extends WhoisBaseRecord implements Parsable {
     /**
-     * The history property
+     * The collection of historical records associated to this WHOIS object.
      */
     private java.util.List<WhoisHistoryRecord> history;
     /**
@@ -40,7 +40,7 @@ public class WhoisRecord extends WhoisBaseRecord implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the history property value. The history property
+     * Gets the history property value. The collection of historical records associated to this WHOIS object.
      * @return a whoisHistoryRecord
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class WhoisRecord extends WhoisBaseRecord implements Parsable {
         writer.writeCollectionOfObjectValues("history", this.getHistory());
     }
     /**
-     * Sets the history property value. The history property
+     * Sets the history property value. The collection of historical records associated to this WHOIS object.
      * @param value Value to set for the history property.
      */
     public void setHistory(@jakarta.annotation.Nullable final java.util.List<WhoisHistoryRecord> value) {

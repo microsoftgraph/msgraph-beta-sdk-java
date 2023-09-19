@@ -26,7 +26,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      */
     private OffsetDateTime firstSeenDateTime;
     /**
-     * The health state of the device.The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
+     * The health state of the device. The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
      */
     private DeviceHealthStatus healthStatus;
     /**
@@ -42,7 +42,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      */
     private String mdeDeviceId;
     /**
-     * The status of the machine onboarding to Microsoft Defender for Endpoint.The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
+     * The status of the machine onboarding to Microsoft Defender for Endpoint. The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
      */
     private OnboardingStatus onboardingStatus;
     /**
@@ -54,11 +54,11 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
      */
     private String osPlatform;
     /**
-     * The ID of the role-based access control (RBAC) device group.
+     * The ID of the role-based access control device group.
      */
     private Integer rbacGroupId;
     /**
-     * The name of the RBAC device group.
+     * The name of the role-based access control device group.
      */
     private String rbacGroupName;
     /**
@@ -148,7 +148,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this.firstSeenDateTime;
     }
     /**
-     * Gets the healthStatus property value. The health state of the device.The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
+     * Gets the healthStatus property value. The health state of the device. The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
      * @return a deviceHealthStatus
      */
     @jakarta.annotation.Nullable
@@ -180,7 +180,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this.mdeDeviceId;
     }
     /**
-     * Gets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint.The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
+     * Gets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint. The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
      * @return a onboardingStatus
      */
     @jakarta.annotation.Nullable
@@ -204,7 +204,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this.osPlatform;
     }
     /**
-     * Gets the rbacGroupId property value. The ID of the role-based access control (RBAC) device group.
+     * Gets the rbacGroupId property value. The ID of the role-based access control device group.
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -212,7 +212,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         return this.rbacGroupId;
     }
     /**
-     * Gets the rbacGroupName property value. The name of the RBAC device group.
+     * Gets the rbacGroupName property value. The name of the role-based access control device group.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -296,7 +296,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this.firstSeenDateTime = value;
     }
     /**
-     * Sets the healthStatus property value. The health state of the device.The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
+     * Sets the healthStatus property value. The health state of the device. The possible values are: active, inactive, impairedCommunication, noSensorData, noSensorDataImpairedCommunication, unknown, unknownFutureValue.
      * @param value Value to set for the healthStatus property.
      */
     public void setHealthStatus(@jakarta.annotation.Nullable final DeviceHealthStatus value) {
@@ -324,7 +324,7 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this.mdeDeviceId = value;
     }
     /**
-     * Sets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint.The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
+     * Sets the onboardingStatus property value. The status of the machine onboarding to Microsoft Defender for Endpoint. The possible values are: insufficientInfo, onboarded, canBeOnboarded, unsupported, unknownFutureValue.
      * @param value Value to set for the onboardingStatus property.
      */
     public void setOnboardingStatus(@jakarta.annotation.Nullable final OnboardingStatus value) {
@@ -345,14 +345,14 @@ public class DeviceEvidence extends AlertEvidence implements Parsable {
         this.osPlatform = value;
     }
     /**
-     * Sets the rbacGroupId property value. The ID of the role-based access control (RBAC) device group.
+     * Sets the rbacGroupId property value. The ID of the role-based access control device group.
      * @param value Value to set for the rbacGroupId property.
      */
     public void setRbacGroupId(@jakarta.annotation.Nullable final Integer value) {
         this.rbacGroupId = value;
     }
     /**
-     * Sets the rbacGroupName property value. The name of the RBAC device group.
+     * Sets the rbacGroupName property value. The name of the role-based access control device group.
      * @param value Value to set for the rbacGroupName property.
      */
     public void setRbacGroupName(@jakarta.annotation.Nullable final String value) {

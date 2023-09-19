@@ -18,7 +18,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     private String conferenceId;
     /**
-     * The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
+     * The external link that launches the online meeting. This is a URL that clients launch into a browser and will redirect the user to join the meeting.
      */
     private String joinUrl;
     /**
@@ -30,7 +30,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<Phone> phones;
     /**
-     * The pre-formatted quickdial for this call.
+     * The preformatted quick dial for this call.
      */
     private String quickDial;
     /**
@@ -90,7 +90,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
+     * Gets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients launch into a browser and will redirect the user to join the meeting.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
         return this.phones;
     }
     /**
-     * Gets the quickDial property value. The pre-formatted quickdial for this call.
+     * Gets the quickDial property value. The preformatted quick dial for this call.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -167,7 +167,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
         this.conferenceId = value;
     }
     /**
-     * Sets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
+     * Sets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients launch into a browser and will redirect the user to join the meeting.
      * @param value Value to set for the joinUrl property.
      */
     public void setJoinUrl(@jakarta.annotation.Nullable final String value) {
@@ -188,7 +188,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
         this.phones = value;
     }
     /**
-     * Sets the quickDial property value. The pre-formatted quickdial for this call.
+     * Sets the quickDial property value. The preformatted quick dial for this call.
      * @param value Value to set for the quickDial property.
      */
     public void setQuickDial(@jakarta.annotation.Nullable final String value) {

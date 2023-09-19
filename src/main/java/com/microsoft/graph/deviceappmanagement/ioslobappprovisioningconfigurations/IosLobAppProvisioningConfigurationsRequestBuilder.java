@@ -173,6 +173,16 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a iosLobAppProvisioningConfigurationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public IosLobAppProvisioningConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new IosLobAppProvisioningConfigurationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The IOS Lob App Provisioning Configurations.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
     /**
      * Certificate Subject Alternative Name type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      */
-    private SubjectAlternativeNameType subjectAlternativeNameType;
+    private EnumSet<SubjectAlternativeNameType> subjectAlternativeNameType;
     /**
      * Subject Name Format Options for Apple devices.
      */
@@ -82,7 +83,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
         deserializerMap.put("certificateValidityPeriodScale", (n) -> { this.setCertificateValidityPeriodScale(n.getEnumValue(CertificateValidityPeriodScale.class)); });
         deserializerMap.put("certificateValidityPeriodValue", (n) -> { this.setCertificateValidityPeriodValue(n.getIntegerValue()); });
         deserializerMap.put("renewalThresholdPercentage", (n) -> { this.setRenewalThresholdPercentage(n.getIntegerValue()); });
-        deserializerMap.put("subjectAlternativeNameType", (n) -> { this.setSubjectAlternativeNameType(n.getEnumValue(SubjectAlternativeNameType.class)); });
+        deserializerMap.put("subjectAlternativeNameType", (n) -> { this.setSubjectAlternativeNameType(n.getEnumSetValue(SubjectAlternativeNameType.class)); });
         deserializerMap.put("subjectNameFormat", (n) -> { this.setSubjectNameFormat(n.getEnumValue(AppleSubjectNameFormat.class)); });
         return deserializerMap;
     }
@@ -99,7 +100,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
      * @return a subjectAlternativeNameType
      */
     @jakarta.annotation.Nullable
-    public SubjectAlternativeNameType getSubjectAlternativeNameType() {
+    public EnumSet<SubjectAlternativeNameType> getSubjectAlternativeNameType() {
         return this.subjectAlternativeNameType;
     }
     /**
@@ -120,7 +121,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
         writer.writeEnumValue("certificateValidityPeriodScale", this.getCertificateValidityPeriodScale());
         writer.writeIntegerValue("certificateValidityPeriodValue", this.getCertificateValidityPeriodValue());
         writer.writeIntegerValue("renewalThresholdPercentage", this.getRenewalThresholdPercentage());
-        writer.writeEnumValue("subjectAlternativeNameType", this.getSubjectAlternativeNameType());
+        writer.writeEnumSetValue("subjectAlternativeNameType", this.getSubjectAlternativeNameType());
         writer.writeEnumValue("subjectNameFormat", this.getSubjectNameFormat());
     }
     /**
@@ -148,7 +149,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
      * Sets the subjectAlternativeNameType property value. Certificate Subject Alternative Name type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      * @param value Value to set for the subjectAlternativeNameType property.
      */
-    public void setSubjectAlternativeNameType(@jakarta.annotation.Nullable final SubjectAlternativeNameType value) {
+    public void setSubjectAlternativeNameType(@jakarta.annotation.Nullable final EnumSet<SubjectAlternativeNameType> value) {
         this.subjectAlternativeNameType = value;
     }
     /**

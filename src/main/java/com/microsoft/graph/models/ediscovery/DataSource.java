@@ -20,7 +20,7 @@ public class DataSource extends Entity implements Parsable {
      */
     private OffsetDateTime createdDateTime;
     /**
-     * The display name of the dataSource. This will be the name of the SharePoint site.
+     * The display name of the dataSource, and is the name of the SharePoint site.
      */
     private String displayName;
     /**
@@ -69,7 +69,7 @@ public class DataSource extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
-     * Gets the displayName property value. The display name of the dataSource. This will be the name of the SharePoint site.
+     * Gets the displayName property value. The display name of the dataSource, and is the name of the SharePoint site.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class DataSource extends Entity implements Parsable {
         this.createdDateTime = value;
     }
     /**
-     * Sets the displayName property value. The display name of the dataSource. This will be the name of the SharePoint site.
+     * Sets the displayName property value. The display name of the dataSource, and is the name of the SharePoint site.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

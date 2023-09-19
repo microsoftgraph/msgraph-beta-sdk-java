@@ -167,6 +167,16 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a settingsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SettingsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

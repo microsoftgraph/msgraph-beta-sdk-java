@@ -62,7 +62,7 @@ public class DataSourceRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * User source or SharePoint site data source as non-custodial data source.
+     * User source or SharePoint site data source as noncustodial data source.
      * @return a CompletableFuture of dataSource
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -73,7 +73,7 @@ public class DataSourceRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * User source or SharePoint site data source as non-custodial data source.
+     * User source or SharePoint site data source as noncustodial data source.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of dataSource
      * @deprecated
@@ -152,7 +152,7 @@ public class DataSourceRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * User source or SharePoint site data source as non-custodial data source.
+     * User source or SharePoint site data source as noncustodial data source.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -163,7 +163,7 @@ public class DataSourceRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * User source or SharePoint site data source as non-custodial data source.
+     * User source or SharePoint site data source as noncustodial data source.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -225,13 +225,26 @@ public class DataSourceRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a dataSourceRequestBuilder
+     * @deprecated
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public DataSourceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DataSourceRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * User source or SharePoint site data source as non-custodial data source.
+     * User source or SharePoint site data source as noncustodial data source.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

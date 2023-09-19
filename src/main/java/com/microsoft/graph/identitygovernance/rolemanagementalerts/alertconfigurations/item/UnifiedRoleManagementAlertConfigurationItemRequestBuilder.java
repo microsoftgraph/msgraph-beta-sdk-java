@@ -64,7 +64,7 @@ public class UnifiedRoleManagementAlertConfigurationItemRequestBuilder extends B
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * The various configurations of an alert for Azure AD roles. The configurations are pre-defined and cannot be created or deleted, but some of the configurations can be modified.
+     * The various configurations of an alert for Azure AD roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
      * @return a CompletableFuture of unifiedRoleManagementAlertConfiguration
      */
     @jakarta.annotation.Nonnull
@@ -72,7 +72,7 @@ public class UnifiedRoleManagementAlertConfigurationItemRequestBuilder extends B
         return get(null);
     }
     /**
-     * The various configurations of an alert for Azure AD roles. The configurations are pre-defined and cannot be created or deleted, but some of the configurations can be modified.
+     * The various configurations of an alert for Azure AD roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleManagementAlertConfiguration
      */
@@ -136,7 +136,7 @@ public class UnifiedRoleManagementAlertConfigurationItemRequestBuilder extends B
         return requestInfo;
     }
     /**
-     * The various configurations of an alert for Azure AD roles. The configurations are pre-defined and cannot be created or deleted, but some of the configurations can be modified.
+     * The various configurations of an alert for Azure AD roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -144,7 +144,7 @@ public class UnifiedRoleManagementAlertConfigurationItemRequestBuilder extends B
         return toGetRequestInformation(null);
     }
     /**
-     * The various configurations of an alert for Azure AD roles. The configurations are pre-defined and cannot be created or deleted, but some of the configurations can be modified.
+     * The various configurations of an alert for Azure AD roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -197,13 +197,23 @@ public class UnifiedRoleManagementAlertConfigurationItemRequestBuilder extends B
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a UnifiedRoleManagementAlertConfigurationItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UnifiedRoleManagementAlertConfigurationItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UnifiedRoleManagementAlertConfigurationItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The various configurations of an alert for Azure AD roles. The configurations are pre-defined and cannot be created or deleted, but some of the configurations can be modified.
+     * The various configurations of an alert for Azure AD roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

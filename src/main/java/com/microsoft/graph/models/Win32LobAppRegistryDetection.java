@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
     /**
      * Contains properties for detection operator.
      */
-    private Win32LobAppDetectionOperator operator;
+    private EnumSet<Win32LobAppDetectionOperator> operator;
     /**
      * The registry value name
      */
@@ -87,7 +88,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
         deserializerMap.put("detectionType", (n) -> { this.setDetectionType(n.getEnumValue(Win32LobAppRegistryDetectionType.class)); });
         deserializerMap.put("detectionValue", (n) -> { this.setDetectionValue(n.getStringValue()); });
         deserializerMap.put("keyPath", (n) -> { this.setKeyPath(n.getStringValue()); });
-        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumValue(Win32LobAppDetectionOperator.class)); });
+        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumSetValue(Win32LobAppDetectionOperator.class)); });
         deserializerMap.put("valueName", (n) -> { this.setValueName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -104,7 +105,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
      * @return a win32LobAppDetectionOperator
      */
     @jakarta.annotation.Nullable
-    public Win32LobAppDetectionOperator getOperator() {
+    public EnumSet<Win32LobAppDetectionOperator> getOperator() {
         return this.operator;
     }
     /**
@@ -126,7 +127,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
         writer.writeEnumValue("detectionType", this.getDetectionType());
         writer.writeStringValue("detectionValue", this.getDetectionValue());
         writer.writeStringValue("keyPath", this.getKeyPath());
-        writer.writeEnumValue("operator", this.getOperator());
+        writer.writeEnumSetValue("operator", this.getOperator());
         writer.writeStringValue("valueName", this.getValueName());
     }
     /**
@@ -161,7 +162,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
      * Sets the operator property value. Contains properties for detection operator.
      * @param value Value to set for the operator property.
      */
-    public void setOperator(@jakarta.annotation.Nullable final Win32LobAppDetectionOperator value) {
+    public void setOperator(@jakarta.annotation.Nullable final EnumSet<Win32LobAppDetectionOperator> value) {
         this.operator = value;
     }
     /**

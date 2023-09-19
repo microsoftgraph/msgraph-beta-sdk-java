@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     /**
      * Contains properties for Windows architecture.
      */
-    private WindowsArchitecture applicableArchitecture;
+    private EnumSet<WindowsArchitecture> applicableArchitecture;
     /**
      * The Display Name.
      */
@@ -77,7 +78,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * @return a windowsArchitecture
      */
     @jakarta.annotation.Nullable
-    public WindowsArchitecture getApplicableArchitecture() {
+    public EnumSet<WindowsArchitecture> getApplicableArchitecture() {
         return this.applicableArchitecture;
     }
     /**
@@ -95,7 +96,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
-        deserializerMap.put("applicableArchitecture", (n) -> { this.setApplicableArchitecture(n.getEnumValue(WindowsArchitecture.class)); });
+        deserializerMap.put("applicableArchitecture", (n) -> { this.setApplicableArchitecture(n.getEnumSetValue(WindowsArchitecture.class)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("identityName", (n) -> { this.setIdentityName(n.getStringValue()); });
         deserializerMap.put("identityPublisher", (n) -> { this.setIdentityPublisher(n.getStringValue()); });
@@ -159,7 +160,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeEnumValue("applicableArchitecture", this.getApplicableArchitecture());
+        writer.writeEnumSetValue("applicableArchitecture", this.getApplicableArchitecture());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("identityName", this.getIdentityName());
         writer.writeStringValue("identityPublisher", this.getIdentityPublisher());
@@ -180,7 +181,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * Sets the applicableArchitecture property value. Contains properties for Windows architecture.
      * @param value Value to set for the applicableArchitecture property.
      */
-    public void setApplicableArchitecture(@jakarta.annotation.Nullable final WindowsArchitecture value) {
+    public void setApplicableArchitecture(@jakarta.annotation.Nullable final EnumSet<WindowsArchitecture> value) {
         this.applicableArchitecture = value;
     }
     /**

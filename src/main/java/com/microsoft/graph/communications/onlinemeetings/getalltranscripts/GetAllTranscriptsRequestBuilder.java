@@ -86,6 +86,16 @@ public class GetAllTranscriptsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a getAllTranscriptsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GetAllTranscriptsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GetAllTranscriptsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function getAllTranscripts
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -61,7 +61,7 @@ public class ApiConnectorConfigurationRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/apiConnectorConfiguration{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
+     * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      * @return a CompletableFuture of userFlowApiConnectorConfiguration
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class ApiConnectorConfigurationRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
+     * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of userFlowApiConnectorConfiguration
      */
@@ -82,7 +82,7 @@ public class ApiConnectorConfigurationRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.sendAsync(requestInfo, UserFlowApiConnectorConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
+     * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -90,7 +90,7 @@ public class ApiConnectorConfigurationRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
+     * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -111,7 +111,17 @@ public class ApiConnectorConfigurationRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a apiConnectorConfigurationRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ApiConnectorConfigurationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ApiConnectorConfigurationRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
