@@ -27,7 +27,7 @@ public class CertificateBasedApplicationConfiguration extends TrustedCertificate
 
     /**
      * The Description.
-     * 
+     * The description of the trusted certificate authorities.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -36,7 +36,7 @@ public class CertificateBasedApplicationConfiguration extends TrustedCertificate
 
     /**
      * The Display Name.
-     * 
+     * The display name of the trusted certificate authorities.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

@@ -57,7 +57,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
 
     /**
      * The Directory Scope Ids.
-     * Ids of the directory objects representing the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
+     * Ids of the directory objects that represent the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
      */
     @SerializedName(value = "directoryScopeIds", alternate = {"DirectoryScopeIds"})
     @Expose
@@ -102,14 +102,14 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
 
     /**
      * The Directory Scopes.
-     * Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
+     * Read-only collection that references the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage directoryScopes;
 
     /**
      * The Principals.
-     * Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
+     * Read-only collection that references the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage principals;

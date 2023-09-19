@@ -29,7 +29,7 @@ public class MultiTenantOrganizationIdentitySyncPolicyTemplate extends Entity im
 
     /**
      * The Template Application Level.
-     * 
+     * Specifies whether the template will be applied to user synchronization settings of certain tenants. The possible values are: none, newPartners, existingPartners, unknownFutureValue. You can also specify multiple values like newPartners,existingPartners (default). none indicates the template is not applied to any new or existing partner tenants. newPartners indicates the template is applied to new partner tenants. existingPartners indicates the template is applied to existing partner tenants, those who already had partner-specific user synchronization settings in place.
      */
     @SerializedName(value = "templateApplicationLevel", alternate = {"TemplateApplicationLevel"})
     @Expose
@@ -38,7 +38,7 @@ public class MultiTenantOrganizationIdentitySyncPolicyTemplate extends Entity im
 
     /**
      * The User Sync Inbound.
-     * 
+     * Defines whether users can be synchronized from the partner tenant.
      */
     @SerializedName(value = "userSyncInbound", alternate = {"UserSyncInbound"})
     @Expose

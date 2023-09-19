@@ -46,7 +46,7 @@ public class WorkbookCommentReply extends Entity implements IJsonBackedObject {
 
     /**
      * The Task.
-     * 
+     * The task associated with the comment thread.
      */
     @SerializedName(value = "task", alternate = {"Task"})
     @Expose

@@ -39,7 +39,7 @@ public class OnPremisesSipInfo implements IJsonBackedObject {
 
     /**
      * The Is Sip Enabled.
-     * 
+     * Indicates whether the user is currently enabled for on-premises Skype for Business.
      */
     @SerializedName(value = "isSipEnabled", alternate = {"IsSipEnabled"})
     @Expose
@@ -48,7 +48,7 @@ public class OnPremisesSipInfo implements IJsonBackedObject {
 
     /**
      * The Sip Deployment Location.
-     * 
+     * Indicates a fully qualified DNS name of the Microsoft Online Communications Server deployment.
      */
     @SerializedName(value = "sipDeploymentLocation", alternate = {"SipDeploymentLocation"})
     @Expose
@@ -57,7 +57,7 @@ public class OnPremisesSipInfo implements IJsonBackedObject {
 
     /**
      * The Sip Primary Address.
-     * 
+     * Serves as a unique identifier for each user on the on-premises Skype for Business.
      */
     @SerializedName(value = "sipPrimaryAddress", alternate = {"SipPrimaryAddress"})
     @Expose

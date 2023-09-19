@@ -44,7 +44,7 @@ public class TenantRelationship implements IJsonBackedObject {
 
     /**
      * The Multi Tenant Organization.
-     * 
+     * Defines an organization with more than one instance of Azure Active Directory (Azure AD).
      */
     @SerializedName(value = "multiTenantOrganization", alternate = {"MultiTenantOrganization"})
     @Expose

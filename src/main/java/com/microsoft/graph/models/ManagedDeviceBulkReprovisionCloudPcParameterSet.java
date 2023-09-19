@@ -18,7 +18,9 @@ import java.util.ArrayList;
 
 /**
  * The class for the Managed Device Bulk Reprovision Cloud Pc Parameter Set.
+ * @deprecated The bulkReprovisionCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api.
  */
+@Deprecated
 public class ManagedDeviceBulkReprovisionCloudPcParameterSet {
     /**
      * The managed Device Ids.

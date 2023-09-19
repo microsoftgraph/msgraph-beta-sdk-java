@@ -62,6 +62,15 @@ public class Site extends BaseItem implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Is Personal Site.
+     * 
+     */
+    @SerializedName(value = "isPersonalSite", alternate = {"IsPersonalSite"})
+    @Expose
+	@Nullable
+    public Boolean isPersonalSite;
+
+    /**
      * The Root.
      * If present, indicates that this is the root site in the site collection. Read-only.
      */

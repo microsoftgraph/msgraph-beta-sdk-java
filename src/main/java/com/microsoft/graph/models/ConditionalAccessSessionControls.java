@@ -90,7 +90,7 @@ public class ConditionalAccessSessionControls implements IJsonBackedObject {
 
     /**
      * The Secure Sign In Session.
-     * 
+     * Session control to require sign in sessions to be bound to a device.
      */
     @SerializedName(value = "secureSignInSession", alternate = {"SecureSignInSession"})
     @Expose

@@ -293,7 +293,9 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     * @deprecated The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead
      */
+    @Deprecated
     @Nonnull
     public ManagedDeviceReprovisionCloudPcRequestBuilder reprovisionCloudPc() {
         return new ManagedDeviceReprovisionCloudPcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reprovisionCloudPc"), getClient(), null);
@@ -303,7 +305,9 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead
      */
+    @Deprecated
     @Nonnull
     public ManagedDeviceResizeCloudPcRequestBuilder resizeCloudPc(@Nonnull final ManagedDeviceResizeCloudPcParameterSet parameters) {
         return new ManagedDeviceResizeCloudPcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resizeCloudPc"), getClient(), null, parameters);
@@ -313,7 +317,9 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead
      */
+    @Deprecated
     @Nonnull
     public ManagedDeviceRestoreCloudPcRequestBuilder restoreCloudPc(@Nonnull final ManagedDeviceRestoreCloudPcParameterSet parameters) {
         return new ManagedDeviceRestoreCloudPcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restoreCloudPc"), getClient(), null, parameters);

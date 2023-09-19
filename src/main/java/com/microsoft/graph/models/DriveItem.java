@@ -77,7 +77,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The CTag.
-     * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+     * An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.
      */
     @SerializedName(value = "cTag", alternate = {"CTag"})
     @Expose
@@ -185,7 +185,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Publication.
-     * Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
+     * Provides information about the published or checked-out state of an item, in locations that support such actions. This property isn't returned by default. Read-only.
      */
     @SerializedName(value = "publication", alternate = {"Publication"})
     @Expose
@@ -284,7 +284,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Workbook.
-     * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     * For files that are Excel spreadsheets, access to the workbook API to work with the spreadsheet's contents. Nullable.
      */
     @SerializedName(value = "workbook", alternate = {"Workbook"})
     @Expose
@@ -338,7 +338,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Retention Label.
-     * 
+     * Information about retention label and settings enforced on the driveItem. Read-write.
      */
     @SerializedName(value = "retentionLabel", alternate = {"RetentionLabel"})
     @Expose

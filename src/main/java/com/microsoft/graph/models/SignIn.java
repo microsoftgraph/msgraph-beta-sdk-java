@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AppliedConditionalAccessPolicy;
 import com.microsoft.graph.models.AppliedAuthenticationEventListener;
+import com.microsoft.graph.models.TokenProtectionStatus;
 import com.microsoft.graph.models.AuthenticationAppDeviceDetails;
 import com.microsoft.graph.models.AuthenticationAppPolicyDetails;
 import com.microsoft.graph.models.AuthenticationContext;
@@ -27,6 +28,7 @@ import com.microsoft.graph.models.SignInLocation;
 import com.microsoft.graph.models.ManagedIdentity;
 import com.microsoft.graph.models.MfaDetail;
 import com.microsoft.graph.models.NetworkLocationDetail;
+import com.microsoft.graph.models.OriginalTransferMethods;
 import com.microsoft.graph.models.PrivateLinkDetails;
 import com.microsoft.graph.models.RiskDetail;
 import com.microsoft.graph.models.RiskLevel;
@@ -55,7 +57,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The App Display Name.
-     * The application name displayed in the Azure Portal.  Supports $filter (eq, startsWith).
+     * The application name displayed in the Azure portal.  Supports $filter (eq, startsWith).
      */
     @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose
@@ -90,6 +92,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     public java.util.List<AppliedAuthenticationEventListener> appliedEventListeners;
 
     /**
+     * The App Token Protection Status.
+     * 
+     */
+    @SerializedName(value = "appTokenProtectionStatus", alternate = {"AppTokenProtectionStatus"})
+    @Expose
+	@Nullable
+    public TokenProtectionStatus appTokenProtectionStatus;
+
+    /**
      * The Authentication App Device Details.
      * Provides details about the app and device used during an Azure AD authentication step.
      */
@@ -118,7 +129,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Authentication Details.
-     * The result of the authentication attempt and additional details on the authentication method.
+     * The result of the authentication attempt and more details on the authentication method.
      */
     @SerializedName(value = "authenticationDetails", alternate = {"AuthenticationDetails"})
     @Expose
@@ -136,7 +147,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Authentication Processing Details.
-     * Additional authentication processing details, such as the agent name in case of PTA/PHS or Server/farm name in case of federated authentication.
+     * Extra authentication processing details, such as the agent name for PTA/PHS or Server/farm name for federated authentication.
      */
     @SerializedName(value = "authenticationProcessingDetails", alternate = {"AuthenticationProcessingDetails"})
     @Expose
@@ -235,7 +246,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Cross Tenant Access Type.
-     * Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue. If the sign in did not cross tenant boundaries, the value is none.
+     * Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue. If the sign in didn't cross tenant boundaries, the value is none.
      */
     @SerializedName(value = "crossTenantAccessType", alternate = {"CrossTenantAccessType"})
     @Expose
@@ -262,7 +273,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Flagged For Review.
-     * During a failed sign in, a user may click a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true.
+     * During a failed sign in, a user may select a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true.
      */
     @SerializedName(value = "flaggedForReview", alternate = {"FlaggedForReview"})
     @Expose
@@ -289,7 +300,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Incoming Token Type.
-     * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
+     * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
      */
     @SerializedName(value = "incomingTokenType", alternate = {"IncomingTokenType"})
     @Expose
@@ -334,7 +345,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Location.
-     * The city, state, and 2 letter country code from where the sign-in occurred.  Supports $filter (eq, startsWith) on city, state, and countryOrRegion properties.
+     * The city, state, and two letter country code from where the sign-in occurred.  Supports $filter (eq, startsWith) on city, state, and countryOrRegion properties.
      */
     @SerializedName(value = "location", alternate = {"Location"})
     @Expose
@@ -343,7 +354,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Managed Service Identity.
-     * Contains information about the managed identity used for the sign in, including its type and associated Azure Resource Manager (ARM) resource ID.
+     * Contains information about the managed identity used for the sign in, including its type, associated Azure Resource Manager (ARM) resource ID, and federated token information.
      */
     @SerializedName(value = "managedServiceIdentity", alternate = {"ManagedServiceIdentity"})
     @Expose
@@ -376,6 +387,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String originalRequestId;
+
+    /**
+     * The Original Transfer Method.
+     * Transfer method used to initiate a session throughout all subsequent request. The possible values are: none, deviceCodeFlow, authenticationTransfer, unknownFutureValue.
+     */
+    @SerializedName(value = "originalTransferMethod", alternate = {"OriginalTransferMethod"})
+    @Expose
+	@Nullable
+    public OriginalTransferMethods originalTransferMethod;
 
     /**
      * The Private Link Details.
@@ -460,7 +480,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Level During Sign In.
-     * The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
      */
     @SerializedName(value = "riskLevelDuringSignIn", alternate = {"RiskLevelDuringSignIn"})
     @Expose
@@ -496,7 +516,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Principal Id.
-     * The application identifier used for sign-in. This field is populated when you are signing in using an application.  Supports $filter (eq, startsWith).
+     * The application identifier used for sign-in. This field is populated when you're signing in using an application.  Supports $filter (eq, startsWith).
      */
     @SerializedName(value = "servicePrincipalId", alternate = {"ServicePrincipalId"})
     @Expose
@@ -505,7 +525,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Principal Name.
-     * The application name used for sign-in. This field is populated when you are signing in using an application.  Supports $filter (eq, startsWith).
+     * The application name used for sign-in. This field is populated when you're signing in using an application.  Supports $filter (eq, startsWith).
      */
     @SerializedName(value = "servicePrincipalName", alternate = {"ServicePrincipalName"})
     @Expose
@@ -549,8 +569,17 @@ public class SignIn extends Entity implements IJsonBackedObject {
     public SignInIdentifierType signInIdentifierType;
 
     /**
+     * The Sign In Token Protection Status.
+     * Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
+     */
+    @SerializedName(value = "signInTokenProtectionStatus", alternate = {"SignInTokenProtectionStatus"})
+    @Expose
+	@Nullable
+    public TokenProtectionStatus signInTokenProtectionStatus;
+
+    /**
      * The Status.
-     * The sign-in status. Includes the error code and description of the error (in case of a sign-in failure).  Supports $filter (eq) on errorCode property.
+     * The sign-in status. Includes the error code and description of the error (for a sign-in failure).  Supports $filter (eq) on errorCode property.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -568,7 +597,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Token Issuer Type.
-     * The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension.
+     * The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension.
      */
     @SerializedName(value = "tokenIssuerType", alternate = {"TokenIssuerType"})
     @Expose
@@ -577,7 +606,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Unique Token Identifier.
-     * A unique base64 encoded request identifier used to track tokens issued by Azure AD as they are redeemed at resource providers.
+     * A unique base64 encoded request identifier used to track tokens issued by Azure AD as they're redeemed at resource providers.
      */
     @SerializedName(value = "uniqueTokenIdentifier", alternate = {"UniqueTokenIdentifier"})
     @Expose

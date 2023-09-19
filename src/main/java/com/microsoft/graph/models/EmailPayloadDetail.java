@@ -45,7 +45,7 @@ public class EmailPayloadDetail extends PayloadDetail implements IJsonBackedObje
 
     /**
      * The Is External Sender.
-     * Indicates whether the sender is not from the user's organization.
+     * Indicates whether the sender isn't from the user's organization.
      */
     @SerializedName(value = "isExternalSender", alternate = {"IsExternalSender"})
     @Expose

@@ -105,7 +105,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name for the group. Required. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * The display name for the group. Required. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -383,8 +383,17 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public String theme;
 
     /**
+     * The Unique Name.
+     * 
+     */
+    @SerializedName(value = "uniqueName", alternate = {"UniqueName"})
+    @Expose
+	@Nullable
+    public String uniqueName;
+
+    /**
      * The Visibility.
-     * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
+     * Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. To learn more, see group visibility options. Returned by default. Nullable.
      */
     @SerializedName(value = "visibility", alternate = {"Visibility"})
     @Expose

@@ -53,7 +53,7 @@ public class SubmissionResult implements IJsonBackedObject {
 
     /**
      * The Detail.
-     * Specifies the additional details provided by Microsoft to substantiate their analysis result.
+     * Specifies the extra details provided by Microsoft to substantiate their analysis result.
      */
     @SerializedName(value = "detail", alternate = {"Detail"})
     @Expose
@@ -71,7 +71,7 @@ public class SubmissionResult implements IJsonBackedObject {
 
     /**
      * The Detected Urls.
-     * Specifes the URLs detected by Microsoft in the submitted email.
+     * Specifies the URLs detected by Microsoft in the submitted email.
      */
     @SerializedName(value = "detectedUrls", alternate = {"DetectedUrls"})
     @Expose

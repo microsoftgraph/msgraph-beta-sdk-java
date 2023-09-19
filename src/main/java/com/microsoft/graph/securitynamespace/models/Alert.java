@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.security.models.Dictionary;
 import com.microsoft.graph.security.models.AlertClassification;
 import com.microsoft.graph.security.models.AlertComment;
 import com.microsoft.graph.security.models.DetectionSource;
@@ -44,6 +45,24 @@ public class Alert extends Entity implements IJsonBackedObject {
     public String actorDisplayName;
 
     /**
+     * The Additional Data.
+     * 
+     */
+    @SerializedName(value = "additionalData", alternate = {"AdditionalData"})
+    @Expose
+	@Nullable
+    public Dictionary additionalData;
+
+    /**
+     * The Alert Policy Id.
+     * 
+     */
+    @SerializedName(value = "alertPolicyId", alternate = {"AlertPolicyId"})
+    @Expose
+	@Nullable
+    public String alertPolicyId;
+
+    /**
      * The Alert Web Url.
      * URL for the alert page in the Microsoft 365 Defender portal.
      */
@@ -72,7 +91,7 @@ public class Alert extends Entity implements IJsonBackedObject {
 
     /**
      * The Classification.
-     * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, benignPositive, unknownFutureValue.
+     * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
      */
     @SerializedName(value = "classification", alternate = {"Classification"})
     @Expose

@@ -29,7 +29,7 @@ public class CertificateAuthorityPath extends Entity implements IJsonBackedObjec
 
     /**
      * The Certificate Based Application Configurations.
-     * 
+     * Defines the trusted certificate authorities for certificates that can be added to apps and service principals in the tenant.
      */
     @SerializedName(value = "certificateBasedApplicationConfigurations", alternate = {"CertificateBasedApplicationConfigurations"})
     @Expose

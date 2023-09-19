@@ -20,6 +20,15 @@ import java.util.ArrayList;
  * The class for the Ediscovery Custodian Update Index Parameter Set.
  */
 public class EdiscoveryCustodianUpdateIndexParameterSet {
+    /**
+     * The ids.
+     * 
+     */
+    @SerializedName(value = "ids", alternate = {"Ids"})
+    @Expose
+	@Nullable
+    public java.util.List<String> ids;
+
 
     /**
      * Instiaciates a new EdiscoveryCustodianUpdateIndexParameterSet
@@ -30,6 +39,7 @@ public class EdiscoveryCustodianUpdateIndexParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected EdiscoveryCustodianUpdateIndexParameterSet(@Nonnull final EdiscoveryCustodianUpdateIndexParameterSetBuilder builder) {
+        this.ids = builder.ids;
     }
     /**
      * Gets a new builder for the body
@@ -43,6 +53,21 @@ public class EdiscoveryCustodianUpdateIndexParameterSet {
      * Fluent builder for the EdiscoveryCustodianUpdateIndexParameterSet
      */
     public static final class EdiscoveryCustodianUpdateIndexParameterSetBuilder {
+        /**
+         * The ids parameter value
+         */
+        @Nullable
+        protected java.util.List<String> ids;
+        /**
+         * Sets the Ids
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public EdiscoveryCustodianUpdateIndexParameterSetBuilder withIds(@Nullable final java.util.List<String> val) {
+            this.ids = val;
+            return this;
+        }
         /**
          * Instanciates a new EdiscoveryCustodianUpdateIndexParameterSetBuilder
          */
@@ -64,6 +89,9 @@ public class EdiscoveryCustodianUpdateIndexParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.ids != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("ids", ids));
+        }
         return result;
     }
 }
