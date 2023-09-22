@@ -15,11 +15,11 @@ public class TenantAllowBlockListEntryResult implements AdditionalDataHolder, Pa
      */
     private Map<String, Object> additionalData;
     /**
-     * The entry type of tenant allow block list. The possible values are: url, fileHash, sender, recipient and unkownFutureValue.
+     * The tenant allow-block list entry type. The possible values are: url, fileHash, sender, recipient and unkownFutureValue.
      */
     private TenantAllowBlockListEntryType entryType;
     /**
-     * Specifies when will this entry expire in date time.
+     * Specifies the date and time when the entry expires.
      */
     private OffsetDateTime expirationDateTime;
     /**
@@ -63,7 +63,7 @@ public class TenantAllowBlockListEntryResult implements AdditionalDataHolder, Pa
         return this.additionalData;
     }
     /**
-     * Gets the entryType property value. The entry type of tenant allow block list. The possible values are: url, fileHash, sender, recipient and unkownFutureValue.
+     * Gets the entryType property value. The tenant allow-block list entry type. The possible values are: url, fileHash, sender, recipient and unkownFutureValue.
      * @return a tenantAllowBlockListEntryType
      */
     @jakarta.annotation.Nullable
@@ -71,7 +71,7 @@ public class TenantAllowBlockListEntryResult implements AdditionalDataHolder, Pa
         return this.entryType;
     }
     /**
-     * Gets the expirationDateTime property value. Specifies when will this entry expire in date time.
+     * Gets the expirationDateTime property value. Specifies the date and time when the entry expires.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -147,14 +147,14 @@ public class TenantAllowBlockListEntryResult implements AdditionalDataHolder, Pa
         this.additionalData = value;
     }
     /**
-     * Sets the entryType property value. The entry type of tenant allow block list. The possible values are: url, fileHash, sender, recipient and unkownFutureValue.
+     * Sets the entryType property value. The tenant allow-block list entry type. The possible values are: url, fileHash, sender, recipient and unkownFutureValue.
      * @param value Value to set for the entryType property.
      */
     public void setEntryType(@jakarta.annotation.Nullable final TenantAllowBlockListEntryType value) {
         this.entryType = value;
     }
     /**
-     * Sets the expirationDateTime property value. Specifies when will this entry expire in date time.
+     * Sets the expirationDateTime property value. Specifies the date and time when the entry expires.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

@@ -165,6 +165,16 @@ public class AndroidForWorkEnrollmentProfilesRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a androidForWorkEnrollmentProfilesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AndroidForWorkEnrollmentProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AndroidForWorkEnrollmentProfilesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Android for Work enrollment profile entities.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

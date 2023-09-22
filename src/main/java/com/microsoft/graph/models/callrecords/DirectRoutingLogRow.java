@@ -15,7 +15,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Number of the user or bot who received the call (E.164 format, but may include additional data).
+     * Number of the user or bot who received the call (E.164 format, but may include more data).
      */
     private String calleeNumber;
     /**
@@ -23,7 +23,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     private Integer callEndSubReason;
     /**
-     * Number of the user or bot who made the call (E.164 format, but may include additional data).
+     * Number of the user or bot who made the call (E.164 format, but may include more data).
      */
     private String callerNumber;
     /**
@@ -59,7 +59,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     private String id;
     /**
-     * When the initial invite was sent.
+     * The date and time when the initial invite was sent.
      */
     private OffsetDateTime inviteDateTime;
     /**
@@ -75,7 +75,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Country code of the caller in case of an incoming call, or callee in case of an outgoing call. For details, see ISO 3166-1 alpha-2.
+     * Country code of the caller for an incoming call, or callee for an outgoing call. For details, see ISO 3166-1 alpha-2.
      */
     private String otherPartyCountryCode;
     /**
@@ -103,11 +103,11 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     private String userDisplayName;
     /**
-     * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types.
+     * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info is null/empty for bot call types.
      */
     private String userId;
     /**
-     * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * The user principal name (sign-in name) in Azure Active Directory, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      */
     private String userPrincipalName;
     /**
@@ -135,7 +135,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the calleeNumber property value. Number of the user or bot who received the call (E.164 format, but may include additional data).
+     * Gets the calleeNumber property value. Number of the user or bot who received the call (E.164 format, but may include more data).
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -151,7 +151,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return this.callEndSubReason;
     }
     /**
-     * Gets the callerNumber property value. Number of the user or bot who made the call (E.164 format, but may include additional data).
+     * Gets the callerNumber property value. Number of the user or bot who made the call (E.164 format, but may include more data).
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -256,7 +256,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return this.id;
     }
     /**
-     * Gets the inviteDateTime property value. When the initial invite was sent.
+     * Gets the inviteDateTime property value. The date and time when the initial invite was sent.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -288,7 +288,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the otherPartyCountryCode property value. Country code of the caller in case of an incoming call, or callee in case of an outgoing call. For details, see ISO 3166-1 alpha-2.
+     * Gets the otherPartyCountryCode property value. Country code of the caller for an incoming call, or callee for an outgoing call. For details, see ISO 3166-1 alpha-2.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -344,7 +344,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return this.userDisplayName;
     }
     /**
-     * Gets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types.
+     * Gets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory. This and other user info is null/empty for bot call types.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -352,7 +352,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return this.userId;
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -399,7 +399,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the calleeNumber property value. Number of the user or bot who received the call (E.164 format, but may include additional data).
+     * Sets the calleeNumber property value. Number of the user or bot who received the call (E.164 format, but may include more data).
      * @param value Value to set for the calleeNumber property.
      */
     public void setCalleeNumber(@jakarta.annotation.Nullable final String value) {
@@ -413,7 +413,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         this.callEndSubReason = value;
     }
     /**
-     * Sets the callerNumber property value. Number of the user or bot who made the call (E.164 format, but may include additional data).
+     * Sets the callerNumber property value. Number of the user or bot who made the call (E.164 format, but may include more data).
      * @param value Value to set for the callerNumber property.
      */
     public void setCallerNumber(@jakarta.annotation.Nullable final String value) {
@@ -476,7 +476,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         this.id = value;
     }
     /**
-     * Sets the inviteDateTime property value. When the initial invite was sent.
+     * Sets the inviteDateTime property value. The date and time when the initial invite was sent.
      * @param value Value to set for the inviteDateTime property.
      */
     public void setInviteDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -504,7 +504,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the otherPartyCountryCode property value. Country code of the caller in case of an incoming call, or callee in case of an outgoing call. For details, see ISO 3166-1 alpha-2.
+     * Sets the otherPartyCountryCode property value. Country code of the caller for an incoming call, or callee for an outgoing call. For details, see ISO 3166-1 alpha-2.
      * @param value Value to set for the otherPartyCountryCode property.
      */
     public void setOtherPartyCountryCode(@jakarta.annotation.Nullable final String value) {
@@ -553,14 +553,14 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         this.userDisplayName = value;
     }
     /**
-     * Sets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types.
+     * Sets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory. This and other user info is null/empty for bot call types.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

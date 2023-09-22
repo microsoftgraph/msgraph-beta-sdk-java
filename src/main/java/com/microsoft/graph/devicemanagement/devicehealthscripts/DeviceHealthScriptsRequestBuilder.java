@@ -189,6 +189,16 @@ public class DeviceHealthScriptsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a deviceHealthScriptsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceHealthScriptsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeviceHealthScriptsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The list of device health scripts associated with the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

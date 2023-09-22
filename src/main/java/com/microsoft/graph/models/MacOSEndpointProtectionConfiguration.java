@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -82,7 +83,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     /**
      * Recovery key types for macOS FileVault
      */
-    private MacOSFileVaultRecoveryKeyTypes fileVaultSelectedRecoveryKeyTypes;
+    private EnumSet<MacOSFileVaultRecoveryKeyTypes> fileVaultSelectedRecoveryKeyTypes;
     /**
      * List of applications with firewall settings. Firewall settings for applications not on this list are determined by the user. This collection can contain a maximum of 500 elements.
      */
@@ -212,7 +213,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         deserializerMap.put("fileVaultNumberOfTimesUserCanIgnore", (n) -> { this.setFileVaultNumberOfTimesUserCanIgnore(n.getIntegerValue()); });
         deserializerMap.put("fileVaultPersonalRecoveryKeyHelpMessage", (n) -> { this.setFileVaultPersonalRecoveryKeyHelpMessage(n.getStringValue()); });
         deserializerMap.put("fileVaultPersonalRecoveryKeyRotationInMonths", (n) -> { this.setFileVaultPersonalRecoveryKeyRotationInMonths(n.getIntegerValue()); });
-        deserializerMap.put("fileVaultSelectedRecoveryKeyTypes", (n) -> { this.setFileVaultSelectedRecoveryKeyTypes(n.getEnumValue(MacOSFileVaultRecoveryKeyTypes.class)); });
+        deserializerMap.put("fileVaultSelectedRecoveryKeyTypes", (n) -> { this.setFileVaultSelectedRecoveryKeyTypes(n.getEnumSetValue(MacOSFileVaultRecoveryKeyTypes.class)); });
         deserializerMap.put("firewallApplications", (n) -> { this.setFirewallApplications(n.getCollectionOfObjectValues(MacOSFirewallApplication::createFromDiscriminatorValue)); });
         deserializerMap.put("firewallBlockAllIncoming", (n) -> { this.setFirewallBlockAllIncoming(n.getBooleanValue()); });
         deserializerMap.put("firewallEnabled", (n) -> { this.setFirewallEnabled(n.getBooleanValue()); });
@@ -298,7 +299,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @return a macOSFileVaultRecoveryKeyTypes
      */
     @jakarta.annotation.Nullable
-    public MacOSFileVaultRecoveryKeyTypes getFileVaultSelectedRecoveryKeyTypes() {
+    public EnumSet<MacOSFileVaultRecoveryKeyTypes> getFileVaultSelectedRecoveryKeyTypes() {
         return this.fileVaultSelectedRecoveryKeyTypes;
     }
     /**
@@ -373,7 +374,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         writer.writeIntegerValue("fileVaultNumberOfTimesUserCanIgnore", this.getFileVaultNumberOfTimesUserCanIgnore());
         writer.writeStringValue("fileVaultPersonalRecoveryKeyHelpMessage", this.getFileVaultPersonalRecoveryKeyHelpMessage());
         writer.writeIntegerValue("fileVaultPersonalRecoveryKeyRotationInMonths", this.getFileVaultPersonalRecoveryKeyRotationInMonths());
-        writer.writeEnumValue("fileVaultSelectedRecoveryKeyTypes", this.getFileVaultSelectedRecoveryKeyTypes());
+        writer.writeEnumSetValue("fileVaultSelectedRecoveryKeyTypes", this.getFileVaultSelectedRecoveryKeyTypes());
         writer.writeCollectionOfObjectValues("firewallApplications", this.getFirewallApplications());
         writer.writeBooleanValue("firewallBlockAllIncoming", this.getFirewallBlockAllIncoming());
         writer.writeBooleanValue("firewallEnabled", this.getFirewallEnabled());
@@ -504,7 +505,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * Sets the fileVaultSelectedRecoveryKeyTypes property value. Recovery key types for macOS FileVault
      * @param value Value to set for the fileVaultSelectedRecoveryKeyTypes property.
      */
-    public void setFileVaultSelectedRecoveryKeyTypes(@jakarta.annotation.Nullable final MacOSFileVaultRecoveryKeyTypes value) {
+    public void setFileVaultSelectedRecoveryKeyTypes(@jakarta.annotation.Nullable final EnumSet<MacOSFileVaultRecoveryKeyTypes> value) {
         this.fileVaultSelectedRecoveryKeyTypes = value;
     }
     /**

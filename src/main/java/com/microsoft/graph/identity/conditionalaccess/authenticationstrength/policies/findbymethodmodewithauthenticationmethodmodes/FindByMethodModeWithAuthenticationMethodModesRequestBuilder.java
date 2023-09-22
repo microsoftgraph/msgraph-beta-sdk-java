@@ -100,6 +100,19 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a findByMethodModeWithAuthenticationMethodModesRequestBuilder
+     * @deprecated
+     * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove on 2023-02-01 and will be removed 2023-03-31
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public FindByMethodModeWithAuthenticationMethodModesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new FindByMethodModeWithAuthenticationMethodModesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Invoke function findByMethodMode
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -10,11 +10,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailThreatSubmission extends ThreatSubmission implements Parsable {
     /**
-     * If the email is phishing simulation, this field will not be null.
+     * If the email is phishing simulation, this field won't be null.
      */
     private AttackSimulationInfo attackSimulationInfo;
     /**
-     * Specifies the internet message id of the email being submitted. This information is present in the email header.
+     * Specifies the internet message ID of the email being submitted. This information is present in the email header.
      */
     private String internetMessageId;
     /**
@@ -38,11 +38,11 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      */
     private String senderIP;
     /**
-     * Specifies the subject of the email .
+     * Specifies the subject of the email.
      */
     private String subject;
     /**
-     * It is used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
+     * It's used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
      */
     private TenantAllowOrBlockListAction tenantAllowOrBlockListAction;
     /**
@@ -71,7 +71,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         return new EmailThreatSubmission();
     }
     /**
-     * Gets the attackSimulationInfo property value. If the email is phishing simulation, this field will not be null.
+     * Gets the attackSimulationInfo property value. If the email is phishing simulation, this field won't be null.
      * @return a attackSimulationInfo
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         return deserializerMap;
     }
     /**
-     * Gets the internetMessageId property value. Specifies the internet message id of the email being submitted. This information is present in the email header.
+     * Gets the internetMessageId property value. Specifies the internet message ID of the email being submitted. This information is present in the email header.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         return this.senderIP;
     }
     /**
-     * Gets the subject property value. Specifies the subject of the email .
+     * Gets the subject property value. Specifies the subject of the email.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         return this.subject;
     }
     /**
-     * Gets the tenantAllowOrBlockListAction property value. It is used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
+     * Gets the tenantAllowOrBlockListAction property value. It's used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
      * @return a tenantAllowOrBlockListAction
      */
     @jakarta.annotation.Nullable
@@ -178,14 +178,14 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         writer.writeObjectValue("tenantAllowOrBlockListAction", this.getTenantAllowOrBlockListAction());
     }
     /**
-     * Sets the attackSimulationInfo property value. If the email is phishing simulation, this field will not be null.
+     * Sets the attackSimulationInfo property value. If the email is phishing simulation, this field won't be null.
      * @param value Value to set for the attackSimulationInfo property.
      */
     public void setAttackSimulationInfo(@jakarta.annotation.Nullable final AttackSimulationInfo value) {
         this.attackSimulationInfo = value;
     }
     /**
-     * Sets the internetMessageId property value. Specifies the internet message id of the email being submitted. This information is present in the email header.
+     * Sets the internetMessageId property value. Specifies the internet message ID of the email being submitted. This information is present in the email header.
      * @param value Value to set for the internetMessageId property.
      */
     public void setInternetMessageId(@jakarta.annotation.Nullable final String value) {
@@ -227,14 +227,14 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         this.senderIP = value;
     }
     /**
-     * Sets the subject property value. Specifies the subject of the email .
+     * Sets the subject property value. Specifies the subject of the email.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.subject = value;
     }
     /**
-     * Sets the tenantAllowOrBlockListAction property value. It is used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
+     * Sets the tenantAllowOrBlockListAction property value. It's used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
      * @param value Value to set for the tenantAllowOrBlockListAction property.
      */
     public void setTenantAllowOrBlockListAction(@jakarta.annotation.Nullable final TenantAllowOrBlockListAction value) {

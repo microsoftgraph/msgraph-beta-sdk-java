@@ -87,6 +87,16 @@ public class LandingPageRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a landingPageRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public LandingPageRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new LandingPageRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get landingPage from security
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

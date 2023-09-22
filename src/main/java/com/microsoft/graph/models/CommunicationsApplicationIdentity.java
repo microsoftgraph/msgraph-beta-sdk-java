@@ -13,7 +13,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
      */
     private String applicationType;
     /**
-     * True if the participant would not like to be shown in other participants' rosters.
+     * True if the participant wouldn't like to be shown in other participants' rosters.
      */
     private Boolean hidden;
     /**
@@ -53,7 +53,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
         return deserializerMap;
     }
     /**
-     * Gets the hidden property value. True if the participant would not like to be shown in other participants' rosters.
+     * Gets the hidden property value. True if the participant wouldn't like to be shown in other participants' rosters.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
         this.applicationType = value;
     }
     /**
-     * Sets the hidden property value. True if the participant would not like to be shown in other participants' rosters.
+     * Sets the hidden property value. True if the participant wouldn't like to be shown in other participants' rosters.
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {

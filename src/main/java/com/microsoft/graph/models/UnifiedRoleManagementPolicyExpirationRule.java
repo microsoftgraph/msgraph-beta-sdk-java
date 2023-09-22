@@ -14,7 +14,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
      */
     private Boolean isExpirationRequired;
     /**
-     * The maximum duration allowed for eligibility or assignment which is not permanent. Required when isExpirationRequired is true.
+     * The maximum duration allowed for eligibility or assignment that isn't permanent. Required when isExpirationRequired is true.
      */
     private PeriodAndDuration maximumDuration;
     /**
@@ -54,7 +54,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
         return this.isExpirationRequired;
     }
     /**
-     * Gets the maximumDuration property value. The maximum duration allowed for eligibility or assignment which is not permanent. Required when isExpirationRequired is true.
+     * Gets the maximumDuration property value. The maximum duration allowed for eligibility or assignment that isn't permanent. Required when isExpirationRequired is true.
      * @return a PeriodAndDuration
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
         this.isExpirationRequired = value;
     }
     /**
-     * Sets the maximumDuration property value. The maximum duration allowed for eligibility or assignment which is not permanent. Required when isExpirationRequired is true.
+     * Sets the maximumDuration property value. The maximum duration allowed for eligibility or assignment that isn't permanent. Required when isExpirationRequired is true.
      * @param value Value to set for the maximumDuration property.
      */
     public void setMaximumDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {

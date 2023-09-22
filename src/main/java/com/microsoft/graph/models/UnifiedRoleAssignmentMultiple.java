@@ -25,11 +25,11 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      */
     private String description;
     /**
-     * Ids of the directory objects representing the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
+     * Ids of the directory objects that represent the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
      */
     private java.util.List<String> directoryScopeIds;
     /**
-     * Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
+     * Read-only collection that references the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      */
     private java.util.List<DirectoryObject> directoryScopes;
     /**
@@ -41,7 +41,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      */
     private java.util.List<String> principalIds;
     /**
-     * Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
+     * Read-only collection that references the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      */
     private java.util.List<DirectoryObject> principals;
     /**
@@ -101,7 +101,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
         return this.description;
     }
     /**
-     * Gets the directoryScopeIds property value. Ids of the directory objects representing the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
+     * Gets the directoryScopeIds property value. Ids of the directory objects that represent the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
         return this.directoryScopeIds;
     }
     /**
-     * Gets the directoryScopes property value. Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
+     * Gets the directoryScopes property value. Read-only collection that references the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      * @return a directoryObject
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
         return this.principalIds;
     }
     /**
-     * Gets the principals property value. Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
+     * Gets the principals property value. Read-only collection that references the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      * @return a directoryObject
      */
     @jakarta.annotation.Nullable
@@ -224,14 +224,14 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
         this.description = value;
     }
     /**
-     * Sets the directoryScopeIds property value. Ids of the directory objects representing the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
+     * Sets the directoryScopeIds property value. Ids of the directory objects that represent the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
      * @param value Value to set for the directoryScopeIds property.
      */
     public void setDirectoryScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.directoryScopeIds = value;
     }
     /**
-     * Sets the directoryScopes property value. Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
+     * Sets the directoryScopes property value. Read-only collection that references the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      * @param value Value to set for the directoryScopes property.
      */
     public void setDirectoryScopes(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
@@ -252,7 +252,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
         this.principalIds = value;
     }
     /**
-     * Sets the principals property value. Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
+     * Sets the principals property value. Read-only collection that references the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      * @param value Value to set for the principals property.
      */
     public void setPrincipals(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {

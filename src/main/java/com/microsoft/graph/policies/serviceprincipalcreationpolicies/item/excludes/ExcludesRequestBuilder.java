@@ -165,6 +165,16 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a excludesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ExcludesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ExcludesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get excludes from policies
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

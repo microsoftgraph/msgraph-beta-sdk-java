@@ -87,6 +87,16 @@ public class PrincipalRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a principalRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PrincipalRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PrincipalRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * References the principal that's in the scope of the membership or ownership eligibility request through the group that's governed by PIM. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

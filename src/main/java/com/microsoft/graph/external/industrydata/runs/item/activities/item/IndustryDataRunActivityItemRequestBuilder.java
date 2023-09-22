@@ -95,6 +95,16 @@ public class IndustryDataRunActivityItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a IndustryDataRunActivityItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public IndustryDataRunActivityItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new IndustryDataRunActivityItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The set of activities performed during the run.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

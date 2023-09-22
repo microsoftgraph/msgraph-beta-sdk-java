@@ -15,7 +15,7 @@ public class RetentionEventStatus implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The error if the status is not successful.
+     * The error if the status isn't successful.
      */
     private PublicError error;
     /**
@@ -51,7 +51,7 @@ public class RetentionEventStatus implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the error property value. The error if the status is not successful.
+     * Gets the error property value. The error if the status isn't successful.
      * @return a publicError
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class RetentionEventStatus implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the error property value. The error if the status is not successful.
+     * Sets the error property value. The error if the status isn't successful.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final PublicError value) {

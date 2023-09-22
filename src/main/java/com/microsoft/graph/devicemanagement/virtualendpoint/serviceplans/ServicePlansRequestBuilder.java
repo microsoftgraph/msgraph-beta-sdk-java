@@ -167,6 +167,16 @@ public class ServicePlansRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a servicePlansRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ServicePlansRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ServicePlansRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * List the currently available service plans that an organization can purchase for their Cloud PCs. For examples of currently available service plans, see Windows 365 compare plans and pricing. Currently, Microsoft Graph API is available for Windows 365 Enterprise.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

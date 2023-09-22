@@ -38,7 +38,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
+     * Host Operating System. (For example, Windows 10, macOS, RHEL, etc.).
      */
     private String os;
     /**
@@ -145,7 +145,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the os property value. Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
+     * Gets the os property value. Host Operating System. (For example, Windows 10, macOS, RHEL, etc.).
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -244,7 +244,7 @@ public class HostSecurityState implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the os property value. Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
+     * Sets the os property value. Host Operating System. (For example, Windows 10, macOS, RHEL, etc.).
      * @param value Value to set for the os property.
      */
     public void setOs(@jakarta.annotation.Nullable final String value) {

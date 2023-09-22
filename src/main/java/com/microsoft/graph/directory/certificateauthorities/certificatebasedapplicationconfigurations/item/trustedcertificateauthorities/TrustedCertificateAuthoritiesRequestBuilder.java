@@ -59,7 +59,7 @@ public class TrustedCertificateAuthoritiesRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/directory/certificateAuthorities/certificateBasedApplicationConfigurations/{certificateBasedApplicationConfiguration%2Did}/trustedCertificateAuthorities{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get trustedCertificateAuthorities from directory
+     * Collection of trusted certificate authorities.
      * @return a CompletableFuture of certificateAuthorityAsEntityCollectionResponse
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class TrustedCertificateAuthoritiesRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Get trustedCertificateAuthorities from directory
+     * Collection of trusted certificate authorities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of certificateAuthorityAsEntityCollectionResponse
      */
@@ -104,7 +104,7 @@ public class TrustedCertificateAuthoritiesRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.sendAsync(requestInfo, CertificateAuthorityAsEntity::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get trustedCertificateAuthorities from directory
+     * Collection of trusted certificate authorities.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class TrustedCertificateAuthoritiesRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Get trustedCertificateAuthorities from directory
+     * Collection of trusted certificate authorities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -165,7 +165,17 @@ public class TrustedCertificateAuthoritiesRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Get trustedCertificateAuthorities from directory
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a trustedCertificateAuthoritiesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TrustedCertificateAuthoritiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TrustedCertificateAuthoritiesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Collection of trusted certificate authorities.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

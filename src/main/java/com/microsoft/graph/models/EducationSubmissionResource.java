@@ -9,9 +9,13 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSubmissionResource extends Entity implements Parsable {
     /**
-     * Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
+     * Pointer to the assignment from which the resource was copied. If the value is null, the student uploaded the resource.
      */
     private String assignmentResourceUrl;
+    /**
+     * The dependentResources property
+     */
+    private java.util.List<EducationSubmissionResource> dependentResources;
     /**
      * Resource object.
      */
@@ -33,12 +37,20 @@ public class EducationSubmissionResource extends Entity implements Parsable {
         return new EducationSubmissionResource();
     }
     /**
-     * Gets the assignmentResourceUrl property value. Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
+     * Gets the assignmentResourceUrl property value. Pointer to the assignment from which the resource was copied. If the value is null, the student uploaded the resource.
      * @return a string
      */
     @jakarta.annotation.Nullable
     public String getAssignmentResourceUrl() {
         return this.assignmentResourceUrl;
+    }
+    /**
+     * Gets the dependentResources property value. The dependentResources property
+     * @return a educationSubmissionResource
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<EducationSubmissionResource> getDependentResources() {
+        return this.dependentResources;
     }
     /**
      * The deserialization information for the current model
@@ -48,6 +60,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignmentResourceUrl", (n) -> { this.setAssignmentResourceUrl(n.getStringValue()); });
+        deserializerMap.put("dependentResources", (n) -> { this.setDependentResources(n.getCollectionOfObjectValues(EducationSubmissionResource::createFromDiscriminatorValue)); });
         deserializerMap.put("resource", (n) -> { this.setResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -67,14 +80,22 @@ public class EducationSubmissionResource extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("assignmentResourceUrl", this.getAssignmentResourceUrl());
+        writer.writeCollectionOfObjectValues("dependentResources", this.getDependentResources());
         writer.writeObjectValue("resource", this.getResource());
     }
     /**
-     * Sets the assignmentResourceUrl property value. Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
+     * Sets the assignmentResourceUrl property value. Pointer to the assignment from which the resource was copied. If the value is null, the student uploaded the resource.
      * @param value Value to set for the assignmentResourceUrl property.
      */
     public void setAssignmentResourceUrl(@jakarta.annotation.Nullable final String value) {
         this.assignmentResourceUrl = value;
+    }
+    /**
+     * Sets the dependentResources property value. The dependentResources property
+     * @param value Value to set for the dependentResources property.
+     */
+    public void setDependentResources(@jakarta.annotation.Nullable final java.util.List<EducationSubmissionResource> value) {
+        this.dependentResources = value;
     }
     /**
      * Sets the resource property value. Resource object.

@@ -3,6 +3,7 @@ package com.microsoft.graph.users.item.cloudpcs.item;
 import com.microsoft.graph.models.CloudPC;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.cloudpcs.item.changeuseraccounttype.ChangeUserAccountTypeRequestBuilder;
+import com.microsoft.graph.users.item.cloudpcs.item.createsnapshot.CreateSnapshotRequestBuilder;
 import com.microsoft.graph.users.item.cloudpcs.item.endgraceperiod.EndGracePeriodRequestBuilder;
 import com.microsoft.graph.users.item.cloudpcs.item.getcloudpcconnectivityhistory.GetCloudPcConnectivityHistoryRequestBuilder;
 import com.microsoft.graph.users.item.cloudpcs.item.getcloudpclaunchinfo.GetCloudPcLaunchInfoRequestBuilder;
@@ -13,6 +14,7 @@ import com.microsoft.graph.users.item.cloudpcs.item.poweron.PowerOnRequestBuilde
 import com.microsoft.graph.users.item.cloudpcs.item.reboot.RebootRequestBuilder;
 import com.microsoft.graph.users.item.cloudpcs.item.rename.RenameRequestBuilder;
 import com.microsoft.graph.users.item.cloudpcs.item.reprovision.ReprovisionRequestBuilder;
+import com.microsoft.graph.users.item.cloudpcs.item.resize.ResizeRequestBuilder;
 import com.microsoft.graph.users.item.cloudpcs.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.users.item.cloudpcs.item.retrypartneragentinstallation.RetryPartnerAgentInstallationRequestBuilder;
 import com.microsoft.graph.users.item.cloudpcs.item.start.StartRequestBuilder;
@@ -42,6 +44,13 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ChangeUserAccountTypeRequestBuilder changeUserAccountType() {
         return new ChangeUserAccountTypeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the createSnapshot method.
+     */
+    @jakarta.annotation.Nonnull
+    public CreateSnapshotRequestBuilder createSnapshot() {
+        return new CreateSnapshotRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the endGracePeriod method.
@@ -112,6 +121,13 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ReprovisionRequestBuilder reprovision() {
         return new ReprovisionRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the resize method.
+     */
+    @jakarta.annotation.Nonnull
+    public ResizeRequestBuilder resize() {
+        return new ResizeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the restore method.
@@ -317,6 +333,16 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a CloudPCItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CloudPCItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CloudPCItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

@@ -18,7 +18,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     private Integer enabled;
     /**
-     * The number of units that are locked out because the customer cancelled their subscription of the service SKU.
+     * The number of units that are locked out because the customer canceled their subscription of the service SKU.
      */
     private Integer lockedOut;
     /**
@@ -26,11 +26,11 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
+     * The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
      */
     private Integer suspended;
     /**
-     * The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state).
+     * The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
      */
     private Integer warning;
     /**
@@ -80,7 +80,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lockedOut property value. The number of units that are locked out because the customer cancelled their subscription of the service SKU.
+     * Gets the lockedOut property value. The number of units that are locked out because the customer canceled their subscription of the service SKU.
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
+     * Gets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         return this.suspended;
     }
     /**
-     * Gets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state).
+     * Gets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         this.enabled = value;
     }
     /**
-     * Sets the lockedOut property value. The number of units that are locked out because the customer cancelled their subscription of the service SKU.
+     * Sets the lockedOut property value. The number of units that are locked out because the customer canceled their subscription of the service SKU.
      * @param value Value to set for the lockedOut property.
      */
     public void setLockedOut(@jakarta.annotation.Nullable final Integer value) {
@@ -153,14 +153,14 @@ public class LicenseUnitsDetail implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
+     * Sets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been canceled. The units can't be assigned but can still be reactivated before they're deleted.
      * @param value Value to set for the suspended property.
      */
     public void setSuspended(@jakarta.annotation.Nullable final Integer value) {
         this.suspended = value;
     }
     /**
-     * Sets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state).
+     * Sets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it's canceled (moved to a suspended state).
      * @param value Value to set for the warning property.
      */
     public void setWarning(@jakarta.annotation.Nullable final Integer value) {

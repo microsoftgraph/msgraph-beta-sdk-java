@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
     /**
      * Supported values for the notification type to use.
      */
-    private DeviceManagementDerivedCredentialNotificationType notificationType;
+    private EnumSet<DeviceManagementDerivedCredentialNotificationType> notificationType;
     /**
      * The nominal percentage of time before certificate renewal is initiated by the client.
      */
@@ -65,7 +66,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("helpUrl", (n) -> { this.setHelpUrl(n.getStringValue()); });
         deserializerMap.put("issuer", (n) -> { this.setIssuer(n.getEnumValue(DeviceManagementDerivedCredentialIssuer.class)); });
-        deserializerMap.put("notificationType", (n) -> { this.setNotificationType(n.getEnumValue(DeviceManagementDerivedCredentialNotificationType.class)); });
+        deserializerMap.put("notificationType", (n) -> { this.setNotificationType(n.getEnumSetValue(DeviceManagementDerivedCredentialNotificationType.class)); });
         deserializerMap.put("renewalThresholdPercentage", (n) -> { this.setRenewalThresholdPercentage(n.getIntegerValue()); });
         return deserializerMap;
     }
@@ -90,7 +91,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * @return a deviceManagementDerivedCredentialNotificationType
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementDerivedCredentialNotificationType getNotificationType() {
+    public EnumSet<DeviceManagementDerivedCredentialNotificationType> getNotificationType() {
         return this.notificationType;
     }
     /**
@@ -111,7 +112,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("helpUrl", this.getHelpUrl());
         writer.writeEnumValue("issuer", this.getIssuer());
-        writer.writeEnumValue("notificationType", this.getNotificationType());
+        writer.writeEnumSetValue("notificationType", this.getNotificationType());
         writer.writeIntegerValue("renewalThresholdPercentage", this.getRenewalThresholdPercentage());
     }
     /**
@@ -139,7 +140,7 @@ public class DeviceManagementDerivedCredentialSettings extends Entity implements
      * Sets the notificationType property value. Supported values for the notification type to use.
      * @param value Value to set for the notificationType property.
      */
-    public void setNotificationType(@jakarta.annotation.Nullable final DeviceManagementDerivedCredentialNotificationType value) {
+    public void setNotificationType(@jakarta.annotation.Nullable final EnumSet<DeviceManagementDerivedCredentialNotificationType> value) {
         this.notificationType = value;
     }
     /**

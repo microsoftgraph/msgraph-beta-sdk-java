@@ -64,17 +64,19 @@ public class DeletedChatItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get deletedChats from teamwork
+     * Read the properties and relationships of a deletedChat object.
      * @return a CompletableFuture of deletedChat
+     * @see <a href="https://learn.microsoft.com/graph/api/deletedchat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeletedChat> get() {
         return get(null);
     }
     /**
-     * Get deletedChats from teamwork
+     * Read the properties and relationships of a deletedChat object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deletedChat
+     * @see <a href="https://learn.microsoft.com/graph/api/deletedchat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeletedChat> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -136,7 +138,7 @@ public class DeletedChatItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get deletedChats from teamwork
+     * Read the properties and relationships of a deletedChat object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -144,7 +146,7 @@ public class DeletedChatItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get deletedChats from teamwork
+     * Read the properties and relationships of a deletedChat object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -197,13 +199,23 @@ public class DeletedChatItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a DeletedChatItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeletedChatItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeletedChatItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get deletedChats from teamwork
+     * Read the properties and relationships of a deletedChat object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

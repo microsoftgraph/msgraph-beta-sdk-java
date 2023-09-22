@@ -97,21 +97,21 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, InboundFlow::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an inboundFileFlow object.
+     * Update the properties of an inboundFlow object.
      * @param body The request body
      * @return a CompletableFuture of inboundFlow
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InboundFlow> patch(@jakarta.annotation.Nonnull final InboundFlow body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an inboundFileFlow object.
+     * Update the properties of an inboundFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of inboundFlow
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InboundFlow> patch(@jakarta.annotation.Nonnull final InboundFlow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -179,7 +179,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an inboundFileFlow object.
+     * Update the properties of an inboundFlow object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -188,7 +188,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an inboundFileFlow object.
+     * Update the properties of an inboundFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -209,6 +209,16 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a InboundFlowItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public InboundFlowItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new InboundFlowItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

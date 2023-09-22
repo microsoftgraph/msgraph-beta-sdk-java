@@ -165,6 +165,16 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a trainingsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TrainingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TrainingsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get trainings from security
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

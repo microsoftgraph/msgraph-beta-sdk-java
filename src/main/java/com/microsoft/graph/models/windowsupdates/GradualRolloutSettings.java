@@ -15,7 +15,7 @@ public class GradualRolloutSettings implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The duration between each set of devices being offered the update. The value is represented in ISO 8601 format for duration. Default value is P1D (1 day).
+     * The duration between each set of devices being offered the update. The value is represented in ISO 8601 format for duration. Default value is P1D (one day).
      */
     private PeriodAndDuration durationBetweenOffers;
     /**
@@ -56,7 +56,7 @@ public class GradualRolloutSettings implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the durationBetweenOffers property value. The duration between each set of devices being offered the update. The value is represented in ISO 8601 format for duration. Default value is P1D (1 day).
+     * Gets the durationBetweenOffers property value. The duration between each set of devices being offered the update. The value is represented in ISO 8601 format for duration. Default value is P1D (one day).
      * @return a PeriodAndDuration
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class GradualRolloutSettings implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the durationBetweenOffers property value. The duration between each set of devices being offered the update. The value is represented in ISO 8601 format for duration. Default value is P1D (1 day).
+     * Sets the durationBetweenOffers property value. The duration between each set of devices being offered the update. The value is represented in ISO 8601 format for duration. Default value is P1D (one day).
      * @param value Value to set for the durationBetweenOffers property.
      */
     public void setDurationBetweenOffers(@jakarta.annotation.Nullable final PeriodAndDuration value) {

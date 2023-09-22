@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     /**
      * Supported platform types.
      */
-    private DeviceManagementConfigurationPlatforms platforms;
+    private EnumSet<DeviceManagementConfigurationPlatforms> platforms;
     /**
      * Number of setting templates. Valid values 0 to 2147483647. This property is read-only.
      */
@@ -50,7 +51,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     /**
      * Describes which technology this setting can be deployed with
      */
-    private DeviceManagementConfigurationTechnologies technologies;
+    private EnumSet<DeviceManagementConfigurationTechnologies> technologies;
     /**
      * Describes the TemplateFamily for the Template entity
      */
@@ -128,10 +129,10 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("displayVersion", (n) -> { this.setDisplayVersion(n.getStringValue()); });
         deserializerMap.put("lifecycleState", (n) -> { this.setLifecycleState(n.getEnumValue(DeviceManagementTemplateLifecycleState.class)); });
-        deserializerMap.put("platforms", (n) -> { this.setPlatforms(n.getEnumValue(DeviceManagementConfigurationPlatforms.class)); });
+        deserializerMap.put("platforms", (n) -> { this.setPlatforms(n.getEnumSetValue(DeviceManagementConfigurationPlatforms.class)); });
         deserializerMap.put("settingTemplateCount", (n) -> { this.setSettingTemplateCount(n.getIntegerValue()); });
         deserializerMap.put("settingTemplates", (n) -> { this.setSettingTemplates(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingTemplate::createFromDiscriminatorValue)); });
-        deserializerMap.put("technologies", (n) -> { this.setTechnologies(n.getEnumValue(DeviceManagementConfigurationTechnologies.class)); });
+        deserializerMap.put("technologies", (n) -> { this.setTechnologies(n.getEnumSetValue(DeviceManagementConfigurationTechnologies.class)); });
         deserializerMap.put("templateFamily", (n) -> { this.setTemplateFamily(n.getEnumValue(DeviceManagementConfigurationTemplateFamily.class)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getIntegerValue()); });
         return deserializerMap;
@@ -149,7 +150,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * @return a deviceManagementConfigurationPlatforms
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementConfigurationPlatforms getPlatforms() {
+    public EnumSet<DeviceManagementConfigurationPlatforms> getPlatforms() {
         return this.platforms;
     }
     /**
@@ -173,7 +174,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * @return a deviceManagementConfigurationTechnologies
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementConfigurationTechnologies getTechnologies() {
+    public EnumSet<DeviceManagementConfigurationTechnologies> getTechnologies() {
         return this.technologies;
     }
     /**
@@ -205,9 +206,9 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("displayVersion", this.getDisplayVersion());
         writer.writeEnumValue("lifecycleState", this.getLifecycleState());
-        writer.writeEnumValue("platforms", this.getPlatforms());
+        writer.writeEnumSetValue("platforms", this.getPlatforms());
         writer.writeCollectionOfObjectValues("settingTemplates", this.getSettingTemplates());
-        writer.writeEnumValue("technologies", this.getTechnologies());
+        writer.writeEnumSetValue("technologies", this.getTechnologies());
         writer.writeEnumValue("templateFamily", this.getTemplateFamily());
     }
     /**
@@ -256,7 +257,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * Sets the platforms property value. Supported platform types.
      * @param value Value to set for the platforms property.
      */
-    public void setPlatforms(@jakarta.annotation.Nullable final DeviceManagementConfigurationPlatforms value) {
+    public void setPlatforms(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationPlatforms> value) {
         this.platforms = value;
     }
     /**
@@ -277,7 +278,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      * Sets the technologies property value. Describes which technology this setting can be deployed with
      * @param value Value to set for the technologies property.
      */
-    public void setTechnologies(@jakarta.annotation.Nullable final DeviceManagementConfigurationTechnologies value) {
+    public void setTechnologies(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationTechnologies> value) {
         this.technologies = value;
     }
     /**

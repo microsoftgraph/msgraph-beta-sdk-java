@@ -17,11 +17,11 @@ public class DomainDnsRecord extends Entity implements Parsable {
      */
     private String label;
     /**
-     * Indicates what type of DNS record this entity represents.The value can be one of the following: CName, Mx, Srv, Txt.
+     * Indicates what type of DNS record this entity represents. The value can be one of the following: CName, Mx, Srv, Txt.
      */
     private String recordType;
     /**
-     * Microsoft Online Service or feature that has a dependency on this DNS record.Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
+     * Microsoft Online Service or feature that has a dependency on this DNS record. Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
      */
     private String supportedService;
     /**
@@ -86,7 +86,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
         return this.label;
     }
     /**
-     * Gets the recordType property value. Indicates what type of DNS record this entity represents.The value can be one of the following: CName, Mx, Srv, Txt.
+     * Gets the recordType property value. Indicates what type of DNS record this entity represents. The value can be one of the following: CName, Mx, Srv, Txt.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class DomainDnsRecord extends Entity implements Parsable {
         return this.recordType;
     }
     /**
-     * Gets the supportedService property value. Microsoft Online Service or feature that has a dependency on this DNS record.Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
+     * Gets the supportedService property value. Microsoft Online Service or feature that has a dependency on this DNS record. Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -137,14 +137,14 @@ public class DomainDnsRecord extends Entity implements Parsable {
         this.label = value;
     }
     /**
-     * Sets the recordType property value. Indicates what type of DNS record this entity represents.The value can be one of the following: CName, Mx, Srv, Txt.
+     * Sets the recordType property value. Indicates what type of DNS record this entity represents. The value can be one of the following: CName, Mx, Srv, Txt.
      * @param value Value to set for the recordType property.
      */
     public void setRecordType(@jakarta.annotation.Nullable final String value) {
         this.recordType = value;
     }
     /**
-     * Sets the supportedService property value. Microsoft Online Service or feature that has a dependency on this DNS record.Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
+     * Sets the supportedService property value. Microsoft Online Service or feature that has a dependency on this DNS record. Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
      * @param value Value to set for the supportedService property.
      */
     public void setSupportedService(@jakarta.annotation.Nullable final String value) {

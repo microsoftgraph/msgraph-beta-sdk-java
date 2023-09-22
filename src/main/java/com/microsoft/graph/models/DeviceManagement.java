@@ -5,6 +5,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -449,7 +450,7 @@ public class DeviceManagement extends Entity implements Parsable {
     /**
      * Tenant mobile device management subscriptions.
      */
-    private DeviceManagementSubscriptions subscriptions;
+    private EnumSet<DeviceManagementSubscriptions> subscriptions;
     /**
      * Tenant mobile device management subscription state.
      */
@@ -1353,7 +1354,7 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("settingDefinitions", (n) -> { this.setSettingDefinitions(n.getCollectionOfObjectValues(DeviceManagementSettingDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(DeviceManagementSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("softwareUpdateStatusSummary", (n) -> { this.setSoftwareUpdateStatusSummary(n.getObjectValue(SoftwareUpdateStatusSummary::createFromDiscriminatorValue)); });
-        deserializerMap.put("subscriptions", (n) -> { this.setSubscriptions(n.getEnumValue(DeviceManagementSubscriptions.class)); });
+        deserializerMap.put("subscriptions", (n) -> { this.setSubscriptions(n.getEnumSetValue(DeviceManagementSubscriptions.class)); });
         deserializerMap.put("subscriptionState", (n) -> { this.setSubscriptionState(n.getEnumValue(DeviceManagementSubscriptionState.class)); });
         deserializerMap.put("telecomExpenseManagementPartners", (n) -> { this.setTelecomExpenseManagementPartners(n.getCollectionOfObjectValues(TelecomExpenseManagementPartner::createFromDiscriminatorValue)); });
         deserializerMap.put("templateInsights", (n) -> { this.setTemplateInsights(n.getCollectionOfObjectValues(DeviceManagementTemplateInsightsDefinition::createFromDiscriminatorValue)); });
@@ -1808,7 +1809,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @return a deviceManagementSubscriptions
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementSubscriptions getSubscriptions() {
+    public EnumSet<DeviceManagementSubscriptions> getSubscriptions() {
         return this.subscriptions;
     }
     /**
@@ -2491,7 +2492,7 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("settingDefinitions", this.getSettingDefinitions());
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeObjectValue("softwareUpdateStatusSummary", this.getSoftwareUpdateStatusSummary());
-        writer.writeEnumValue("subscriptions", this.getSubscriptions());
+        writer.writeEnumSetValue("subscriptions", this.getSubscriptions());
         writer.writeEnumValue("subscriptionState", this.getSubscriptionState());
         writer.writeCollectionOfObjectValues("telecomExpenseManagementPartners", this.getTelecomExpenseManagementPartners());
         writer.writeCollectionOfObjectValues("templateInsights", this.getTemplateInsights());
@@ -3323,7 +3324,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * Sets the subscriptions property value. Tenant mobile device management subscriptions.
      * @param value Value to set for the subscriptions property.
      */
-    public void setSubscriptions(@jakarta.annotation.Nullable final DeviceManagementSubscriptions value) {
+    public void setSubscriptions(@jakarta.annotation.Nullable final EnumSet<DeviceManagementSubscriptions> value) {
         this.subscriptions = value;
     }
     /**

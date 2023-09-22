@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implements Parsable {
     /**
-     * The buildNumber property
+     * The build number of the feature update. Read-only.
      */
     private String buildNumber;
     /**
@@ -34,7 +34,7 @@ public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
         return new FeatureUpdateCatalogEntry();
     }
     /**
-     * Gets the buildNumber property value. The buildNumber property
+     * Gets the buildNumber property value. The build number of the feature update. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -71,7 +71,7 @@ public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the buildNumber property value. The buildNumber property
+     * Sets the buildNumber property value. The build number of the feature update. Read-only.
      * @param value Value to set for the buildNumber property.
      */
     public void setBuildNumber(@jakarta.annotation.Nullable final String value) {

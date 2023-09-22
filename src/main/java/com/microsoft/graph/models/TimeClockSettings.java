@@ -14,7 +14,7 @@ public class TimeClockSettings implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The aprroved location of the timeClock.
+     * The approved location of the timeClock.
      */
     private GeoCoordinates approvedLocation;
     /**
@@ -46,7 +46,7 @@ public class TimeClockSettings implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the approvedLocation property value. The aprroved location of the timeClock.
+     * Gets the approvedLocation property value. The approved location of the timeClock.
      * @return a geoCoordinates
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class TimeClockSettings implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the approvedLocation property value. The aprroved location of the timeClock.
+     * Sets the approvedLocation property value. The approved location of the timeClock.
      * @param value Value to set for the approvedLocation property.
      */
     public void setApprovedLocation(@jakarta.annotation.Nullable final GeoCoordinates value) {

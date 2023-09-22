@@ -167,6 +167,16 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userCredentialUsageDetailsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserCredentialUsageDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserCredentialUsageDetailsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of userCredentialUsageDetails objects for a given tenant. Details include user information, status of the reset, and the reason for failure.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

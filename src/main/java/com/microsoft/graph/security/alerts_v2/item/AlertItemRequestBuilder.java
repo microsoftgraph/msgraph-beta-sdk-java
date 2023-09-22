@@ -2,6 +2,7 @@ package com.microsoft.graph.security.alerts_v2.item;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.security.Alert;
+import com.microsoft.graph.security.alerts_v2.item.comments.CommentsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -20,6 +21,13 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AlertItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * The comments property
+     */
+    @jakarta.annotation.Nonnull
+    public CommentsRequestBuilder comments() {
+        return new CommentsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new AlertItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -191,6 +199,16 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a AlertItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AlertItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AlertItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

@@ -165,6 +165,16 @@ public class SubjectsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a subjectsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SubjectsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SubjectsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Represents the subjects within entitlement management.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -18,7 +18,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     private java.util.List<AlternativeSecurityId> alternativeSecurityIds;
     /**
-     * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderBy.
+     * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderby.
      */
     private OffsetDateTime approximateLastSignInDateTime;
     /**
@@ -50,7 +50,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     private Integer deviceVersion;
     /**
-     * The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      */
     private String displayName;
     /**
@@ -125,6 +125,10 @@ public class Device extends DirectoryObject implements Parsable {
      * The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only. Supports $filter (eq, ne, not, ge, le, in).
      */
     private OffsetDateTime onPremisesLastSyncDateTime;
+    /**
+     * The onPremisesSecurityIdentifier property
+     */
+    private String onPremisesSecurityIdentifier;
     /**
      * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
      */
@@ -215,7 +219,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.alternativeSecurityIds;
     }
     /**
-     * Gets the approximateLastSignInDateTime property value. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderBy.
+     * Gets the approximateLastSignInDateTime property value. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderby.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -279,7 +283,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.deviceVersion;
     }
     /**
-     * Gets the displayName property value. The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * Gets the displayName property value. The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -362,6 +366,7 @@ public class Device extends DirectoryObject implements Parsable {
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("onPremisesLastSyncDateTime", (n) -> { this.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { this.setOnPremisesSecurityIdentifier(n.getStringValue()); });
         deserializerMap.put("onPremisesSyncEnabled", (n) -> { this.setOnPremisesSyncEnabled(n.getBooleanValue()); });
         deserializerMap.put("operatingSystem", (n) -> { this.setOperatingSystem(n.getStringValue()); });
         deserializerMap.put("operatingSystemVersion", (n) -> { this.setOperatingSystemVersion(n.getStringValue()); });
@@ -481,6 +486,14 @@ public class Device extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getOnPremisesLastSyncDateTime() {
         return this.onPremisesLastSyncDateTime;
+    }
+    /**
+     * Gets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
+     * @return a string
+     */
+    @jakarta.annotation.Nullable
+    public String getOnPremisesSecurityIdentifier() {
+        return this.onPremisesSecurityIdentifier;
     }
     /**
      * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
@@ -630,6 +643,7 @@ public class Device extends DirectoryObject implements Parsable {
         writer.writeStringValue("model", this.getModel());
         writer.writeStringValue("name", this.getName());
         writer.writeOffsetDateTimeValue("onPremisesLastSyncDateTime", this.getOnPremisesLastSyncDateTime());
+        writer.writeStringValue("onPremisesSecurityIdentifier", this.getOnPremisesSecurityIdentifier());
         writer.writeBooleanValue("onPremisesSyncEnabled", this.getOnPremisesSyncEnabled());
         writer.writeStringValue("operatingSystem", this.getOperatingSystem());
         writer.writeStringValue("operatingSystemVersion", this.getOperatingSystemVersion());
@@ -660,7 +674,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.alternativeSecurityIds = value;
     }
     /**
-     * Sets the approximateLastSignInDateTime property value. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderBy.
+     * Sets the approximateLastSignInDateTime property value. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderby.
      * @param value Value to set for the approximateLastSignInDateTime property.
      */
     public void setApproximateLastSignInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -716,7 +730,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.deviceVersion = value;
     }
     /**
-     * Sets the displayName property value. The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * Sets the displayName property value. The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -847,6 +861,13 @@ public class Device extends DirectoryObject implements Parsable {
      */
     public void setOnPremisesLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.onPremisesLastSyncDateTime = value;
+    }
+    /**
+     * Sets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
+     * @param value Value to set for the onPremisesSecurityIdentifier property.
+     */
+    public void setOnPremisesSecurityIdentifier(@jakarta.annotation.Nullable final String value) {
+        this.onPremisesSecurityIdentifier = value;
     }
     /**
      * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).

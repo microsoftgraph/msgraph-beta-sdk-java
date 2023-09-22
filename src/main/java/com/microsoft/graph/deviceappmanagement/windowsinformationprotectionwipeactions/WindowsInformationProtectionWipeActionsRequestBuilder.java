@@ -165,6 +165,16 @@ public class WindowsInformationProtectionWipeActionsRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a windowsInformationProtectionWipeActionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public WindowsInformationProtectionWipeActionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new WindowsInformationProtectionWipeActionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Windows information protection wipe actions.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

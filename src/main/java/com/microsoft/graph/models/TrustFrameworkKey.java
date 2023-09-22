@@ -14,15 +14,15 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * RSA Key - private exponent. Field cannot be read back.
+     * RSA Key - private exponent. Field can't be read back.
      */
     private String d;
     /**
-     * RSA Key - first exponent. Field cannot be read back.
+     * RSA Key - first exponent. Field can't be read back.
      */
     private String dp;
     /**
-     * RSA Key - second exponent. Field cannot be read back.
+     * RSA Key - second exponent. Field can't be read back.
      */
     private String dq;
     /**
@@ -34,7 +34,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     private Long exp;
     /**
-     * Symmetric Key for oct key type. Field cannot be read back.
+     * Symmetric Key for oct key type. Field can't be read back.
      */
     private String k;
     /**
@@ -58,15 +58,15 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * RSA Key - first prime. Field cannot be read back.
+     * RSA Key - first prime. Field can't be read back.
      */
     private String p;
     /**
-     * RSA Key - second prime. Field cannot be read back.
+     * RSA Key - second prime. Field can't be read back.
      */
     private String q;
     /**
-     * RSA Key - Coefficient. Field cannot be read back.
+     * RSA Key - Coefficient. Field can't be read back.
      */
     private String qi;
     /**
@@ -78,7 +78,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<String> x5c;
     /**
-     * The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
+     * The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (also known as digest) of the DER encoding of an X.509 certificate RFC 5280.
      */
     private String x5t;
     /**
@@ -106,7 +106,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the d property value. RSA Key - private exponent. Field cannot be read back.
+     * Gets the d property value. RSA Key - private exponent. Field can't be read back.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
         return this.d;
     }
     /**
-     * Gets the dp property value. RSA Key - first exponent. Field cannot be read back.
+     * Gets the dp property value. RSA Key - first exponent. Field can't be read back.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
         return this.dp;
     }
     /**
-     * Gets the dq property value. RSA Key - second exponent. Field cannot be read back.
+     * Gets the dq property value. RSA Key - second exponent. Field can't be read back.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -172,7 +172,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the k property value. Symmetric Key for oct key type. Field cannot be read back.
+     * Gets the k property value. Symmetric Key for oct key type. Field can't be read back.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -220,7 +220,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the p property value. RSA Key - first prime. Field cannot be read back.
+     * Gets the p property value. RSA Key - first prime. Field can't be read back.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -228,7 +228,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
         return this.p;
     }
     /**
-     * Gets the q property value. RSA Key - second prime. Field cannot be read back.
+     * Gets the q property value. RSA Key - second prime. Field can't be read back.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -236,7 +236,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
         return this.q;
     }
     /**
-     * Gets the qi property value. RSA Key - Coefficient. Field cannot be read back.
+     * Gets the qi property value. RSA Key - Coefficient. Field can't be read back.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -260,7 +260,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
         return this.x5c;
     }
     /**
-     * Gets the x5t property value. The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
+     * Gets the x5t property value. The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (also known as digest) of the DER encoding of an X.509 certificate RFC 5280.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -300,21 +300,21 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the d property value. RSA Key - private exponent. Field cannot be read back.
+     * Sets the d property value. RSA Key - private exponent. Field can't be read back.
      * @param value Value to set for the d property.
      */
     public void setD(@jakarta.annotation.Nullable final String value) {
         this.d = value;
     }
     /**
-     * Sets the dp property value. RSA Key - first exponent. Field cannot be read back.
+     * Sets the dp property value. RSA Key - first exponent. Field can't be read back.
      * @param value Value to set for the dp property.
      */
     public void setDp(@jakarta.annotation.Nullable final String value) {
         this.dp = value;
     }
     /**
-     * Sets the dq property value. RSA Key - second exponent. Field cannot be read back.
+     * Sets the dq property value. RSA Key - second exponent. Field can't be read back.
      * @param value Value to set for the dq property.
      */
     public void setDq(@jakarta.annotation.Nullable final String value) {
@@ -335,7 +335,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
         this.exp = value;
     }
     /**
-     * Sets the k property value. Symmetric Key for oct key type. Field cannot be read back.
+     * Sets the k property value. Symmetric Key for oct key type. Field can't be read back.
      * @param value Value to set for the k property.
      */
     public void setK(@jakarta.annotation.Nullable final String value) {
@@ -377,21 +377,21 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the p property value. RSA Key - first prime. Field cannot be read back.
+     * Sets the p property value. RSA Key - first prime. Field can't be read back.
      * @param value Value to set for the p property.
      */
     public void setP(@jakarta.annotation.Nullable final String value) {
         this.p = value;
     }
     /**
-     * Sets the q property value. RSA Key - second prime. Field cannot be read back.
+     * Sets the q property value. RSA Key - second prime. Field can't be read back.
      * @param value Value to set for the q property.
      */
     public void setQ(@jakarta.annotation.Nullable final String value) {
         this.q = value;
     }
     /**
-     * Sets the qi property value. RSA Key - Coefficient. Field cannot be read back.
+     * Sets the qi property value. RSA Key - Coefficient. Field can't be read back.
      * @param value Value to set for the qi property.
      */
     public void setQi(@jakarta.annotation.Nullable final String value) {
@@ -412,7 +412,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
         this.x5c = value;
     }
     /**
-     * Sets the x5t property value. The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
+     * Sets the x5t property value. The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (also known as digest) of the DER encoding of an X.509 certificate RFC 5280.
      * @param value Value to set for the x5t property.
      */
     public void setX5t(@jakarta.annotation.Nullable final String value) {

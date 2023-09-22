@@ -165,6 +165,16 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a sessionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SessionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SessionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Sessions of the virtual event.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

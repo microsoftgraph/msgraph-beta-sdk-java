@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BasicAuthentication extends ApiAuthenticationConfigurationBase implements Parsable {
     /**
-     * The password. It is not returned in the responses.
+     * The password. It isn't returned in the responses.
      */
     private String password;
     /**
@@ -45,7 +45,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
         return deserializerMap;
     }
     /**
-     * Gets the password property value. The password. It is not returned in the responses.
+     * Gets the password property value. The password. It isn't returned in the responses.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -71,7 +71,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
         writer.writeStringValue("username", this.getUsername());
     }
     /**
-     * Sets the password property value. The password. It is not returned in the responses.
+     * Sets the password property value. The password. It isn't returned in the responses.
      * @param value Value to set for the password property.
      */
     public void setPassword(@jakarta.annotation.Nullable final String value) {

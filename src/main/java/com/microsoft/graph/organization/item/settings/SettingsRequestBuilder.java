@@ -6,8 +6,6 @@ import com.microsoft.graph.organization.item.settings.contactinsights.ContactIns
 import com.microsoft.graph.organization.item.settings.iteminsights.ItemInsightsRequestBuilder;
 import com.microsoft.graph.organization.item.settings.microsoftapplicationdataaccess.MicrosoftApplicationDataAccessRequestBuilder;
 import com.microsoft.graph.organization.item.settings.peopleinsights.PeopleInsightsRequestBuilder;
-import com.microsoft.graph.organization.item.settings.profilecardproperties.ProfileCardPropertiesRequestBuilder;
-import com.microsoft.graph.organization.item.settings.pronouns.PronounsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -53,20 +51,6 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PeopleInsightsRequestBuilder peopleInsights() {
         return new PeopleInsightsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the profileCardProperties property of the microsoft.graph.organizationSettings entity.
-     */
-    @jakarta.annotation.Nonnull
-    public ProfileCardPropertiesRequestBuilder profileCardProperties() {
-        return new ProfileCardPropertiesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the pronouns property of the microsoft.graph.organizationSettings entity.
-     */
-    @jakarta.annotation.Nonnull
-    public PronounsRequestBuilder pronouns() {
-        return new PronounsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new SettingsRequestBuilder and sets the default values.
@@ -235,6 +219,16 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a settingsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SettingsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

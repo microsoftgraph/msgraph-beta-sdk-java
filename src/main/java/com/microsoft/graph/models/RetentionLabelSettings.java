@@ -15,27 +15,27 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The behaviorDuringRetentionPeriod property
+     * Describes the item behavior during retention period. Possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
      */
     private BehaviorDuringRetentionPeriod behaviorDuringRetentionPeriod;
     /**
-     * The isContentUpdateAllowed property
+     * Specifies whether updates to document content are allowed. Read-only.
      */
     private Boolean isContentUpdateAllowed;
     /**
-     * The isDeleteAllowed property
+     * Specifies whether the document deletion is allowed. Read-only.
      */
     private Boolean isDeleteAllowed;
     /**
-     * The isLabelUpdateAllowed property
+     * Specifies whether you're allowed to change the retention label on the document. Read-only.
      */
     private Boolean isLabelUpdateAllowed;
     /**
-     * The isMetadataUpdateAllowed property
+     * Specifies whether updates to the item metadata (for example, the Title field) are blocked. Read-only.
      */
     private Boolean isMetadataUpdateAllowed;
     /**
-     * The isRecordLocked property
+     * Specifies whether the item is locked. Read-write.
      */
     private Boolean isRecordLocked;
     /**
@@ -67,7 +67,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the behaviorDuringRetentionPeriod property value. The behaviorDuringRetentionPeriod property
+     * Gets the behaviorDuringRetentionPeriod property value. Describes the item behavior during retention period. Possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
      * @return a behaviorDuringRetentionPeriod
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isContentUpdateAllowed property value. The isContentUpdateAllowed property
+     * Gets the isContentUpdateAllowed property value. Specifies whether updates to document content are allowed. Read-only.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
         return this.isContentUpdateAllowed;
     }
     /**
-     * Gets the isDeleteAllowed property value. The isDeleteAllowed property
+     * Gets the isDeleteAllowed property value. Specifies whether the document deletion is allowed. Read-only.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
         return this.isDeleteAllowed;
     }
     /**
-     * Gets the isLabelUpdateAllowed property value. The isLabelUpdateAllowed property
+     * Gets the isLabelUpdateAllowed property value. Specifies whether you're allowed to change the retention label on the document. Read-only.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
         return this.isLabelUpdateAllowed;
     }
     /**
-     * Gets the isMetadataUpdateAllowed property value. The isMetadataUpdateAllowed property
+     * Gets the isMetadataUpdateAllowed property value. Specifies whether updates to the item metadata (for example, the Title field) are blocked. Read-only.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
         return this.isMetadataUpdateAllowed;
     }
     /**
-     * Gets the isRecordLocked property value. The isRecordLocked property
+     * Gets the isRecordLocked property value. Specifies whether the item is locked. Read-write.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -161,42 +161,42 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the behaviorDuringRetentionPeriod property value. The behaviorDuringRetentionPeriod property
+     * Sets the behaviorDuringRetentionPeriod property value. Describes the item behavior during retention period. Possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
      * @param value Value to set for the behaviorDuringRetentionPeriod property.
      */
     public void setBehaviorDuringRetentionPeriod(@jakarta.annotation.Nullable final BehaviorDuringRetentionPeriod value) {
         this.behaviorDuringRetentionPeriod = value;
     }
     /**
-     * Sets the isContentUpdateAllowed property value. The isContentUpdateAllowed property
+     * Sets the isContentUpdateAllowed property value. Specifies whether updates to document content are allowed. Read-only.
      * @param value Value to set for the isContentUpdateAllowed property.
      */
     public void setIsContentUpdateAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.isContentUpdateAllowed = value;
     }
     /**
-     * Sets the isDeleteAllowed property value. The isDeleteAllowed property
+     * Sets the isDeleteAllowed property value. Specifies whether the document deletion is allowed. Read-only.
      * @param value Value to set for the isDeleteAllowed property.
      */
     public void setIsDeleteAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.isDeleteAllowed = value;
     }
     /**
-     * Sets the isLabelUpdateAllowed property value. The isLabelUpdateAllowed property
+     * Sets the isLabelUpdateAllowed property value. Specifies whether you're allowed to change the retention label on the document. Read-only.
      * @param value Value to set for the isLabelUpdateAllowed property.
      */
     public void setIsLabelUpdateAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.isLabelUpdateAllowed = value;
     }
     /**
-     * Sets the isMetadataUpdateAllowed property value. The isMetadataUpdateAllowed property
+     * Sets the isMetadataUpdateAllowed property value. Specifies whether updates to the item metadata (for example, the Title field) are blocked. Read-only.
      * @param value Value to set for the isMetadataUpdateAllowed property.
      */
     public void setIsMetadataUpdateAllowed(@jakarta.annotation.Nullable final Boolean value) {
         this.isMetadataUpdateAllowed = value;
     }
     /**
-     * Sets the isRecordLocked property value. The isRecordLocked property
+     * Sets the isRecordLocked property value. Specifies whether the item is locked. Read-write.
      * @param value Value to set for the isRecordLocked property.
      */
     public void setIsRecordLocked(@jakarta.annotation.Nullable final Boolean value) {

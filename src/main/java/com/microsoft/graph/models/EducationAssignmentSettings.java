@@ -13,7 +13,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
      */
     private java.util.List<EducationGradingCategory> gradingCategories;
     /**
-     * Indicates whether turn-in celebration animation will be shown. If true, the animation will not be shown. The default value is false.
+     * Indicates whether turn-in celebration animation will be shown. If true, the animation won't be shown. The default value is false.
      */
     private Boolean submissionAnimationDisabled;
     /**
@@ -52,7 +52,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
         return this.gradingCategories;
     }
     /**
-     * Gets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation will be shown. If true, the animation will not be shown. The default value is false.
+     * Gets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation will be shown. If true, the animation won't be shown. The default value is false.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
         this.gradingCategories = value;
     }
     /**
-     * Sets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation will be shown. If true, the animation will not be shown. The default value is false.
+     * Sets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation will be shown. If true, the animation won't be shown. The default value is false.
      * @param value Value to set for the submissionAnimationDisabled property.
      */
     public void setSubmissionAnimationDisabled(@jakarta.annotation.Nullable final Boolean value) {

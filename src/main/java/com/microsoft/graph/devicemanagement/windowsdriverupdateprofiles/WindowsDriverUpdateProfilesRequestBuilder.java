@@ -165,6 +165,16 @@ public class WindowsDriverUpdateProfilesRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a windowsDriverUpdateProfilesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public WindowsDriverUpdateProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new WindowsDriverUpdateProfilesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * A collection of windows driver update profiles
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

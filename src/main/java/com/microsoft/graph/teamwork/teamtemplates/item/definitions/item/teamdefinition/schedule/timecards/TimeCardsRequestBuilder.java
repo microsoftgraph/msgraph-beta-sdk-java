@@ -177,6 +177,16 @@ public class TimeCardsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a timeCardsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TimeCardsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TimeCardsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of timeCard entries in a schedule.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

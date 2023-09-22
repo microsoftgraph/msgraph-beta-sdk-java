@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChatMessageInfo extends Entity implements Parsable {
     /**
-     * Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object does not return @mentions and attachments.
+     * Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object doesn't return @mentions and attachments.
      */
     private ItemBody body;
     /**
@@ -18,7 +18,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      */
     private OffsetDateTime createdDateTime;
     /**
-     * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
+     * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property is set to systemEventMessage.
      */
     private EventMessageDetail eventDetail;
     /**
@@ -50,7 +50,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
         return new ChatMessageInfo();
     }
     /**
-     * Gets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object does not return @mentions and attachments.
+     * Gets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object doesn't return @mentions and attachments.
      * @return a itemBody
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
-     * Gets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
+     * Gets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property is set to systemEventMessage.
      * @return a eventMessageDetail
      */
     @jakarta.annotation.Nullable
@@ -127,7 +127,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
         writer.writeEnumValue("messageType", this.getMessageType());
     }
     /**
-     * Sets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object does not return @mentions and attachments.
+     * Sets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object doesn't return @mentions and attachments.
      * @param value Value to set for the body property.
      */
     public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
@@ -141,7 +141,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
         this.createdDateTime = value;
     }
     /**
-     * Sets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
+     * Sets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property is set to systemEventMessage.
      * @param value Value to set for the eventDetail property.
      */
     public void setEventDetail(@jakarta.annotation.Nullable final EventMessageDetail value) {

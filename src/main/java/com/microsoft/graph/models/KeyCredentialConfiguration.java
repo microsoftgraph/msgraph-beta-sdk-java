@@ -16,7 +16,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
      */
     private Map<String, Object> additionalData;
     /**
-     * The certificateBasedApplicationConfigurationIds property
+     * Collection of GUIDs that point to the certificateBasedApplicationConfiguration that contains the collection of allowed root and intermediate certificate authorities.
      */
     private java.util.List<String> certificateBasedApplicationConfigurationIds;
     /**
@@ -60,7 +60,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
         return this.additionalData;
     }
     /**
-     * Gets the certificateBasedApplicationConfigurationIds property value. The certificateBasedApplicationConfigurationIds property
+     * Gets the certificateBasedApplicationConfigurationIds property value. Collection of GUIDs that point to the certificateBasedApplicationConfiguration that contains the collection of allowed root and intermediate certificate authorities.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -134,7 +134,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, Parsabl
         this.additionalData = value;
     }
     /**
-     * Sets the certificateBasedApplicationConfigurationIds property value. The certificateBasedApplicationConfigurationIds property
+     * Sets the certificateBasedApplicationConfigurationIds property value. Collection of GUIDs that point to the certificateBasedApplicationConfiguration that contains the collection of allowed root and intermediate certificate authorities.
      * @param value Value to set for the certificateBasedApplicationConfigurationIds property.
      */
     public void setCertificateBasedApplicationConfigurationIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

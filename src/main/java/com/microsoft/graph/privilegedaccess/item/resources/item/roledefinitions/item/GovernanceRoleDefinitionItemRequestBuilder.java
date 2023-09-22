@@ -72,7 +72,7 @@ public class GovernanceRoleDefinitionItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * The collection of role defintions for the resource.
+     * The collection of role definitions for the resource.
      * @return a CompletableFuture of governanceRoleDefinition
      */
     @jakarta.annotation.Nonnull
@@ -80,7 +80,7 @@ public class GovernanceRoleDefinitionItemRequestBuilder extends BaseRequestBuild
         return get(null);
     }
     /**
-     * The collection of role defintions for the resource.
+     * The collection of role definitions for the resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of governanceRoleDefinition
      */
@@ -144,7 +144,7 @@ public class GovernanceRoleDefinitionItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * The collection of role defintions for the resource.
+     * The collection of role definitions for the resource.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -152,7 +152,7 @@ public class GovernanceRoleDefinitionItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of role defintions for the resource.
+     * The collection of role definitions for the resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,13 +205,23 @@ public class GovernanceRoleDefinitionItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a GovernanceRoleDefinitionItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GovernanceRoleDefinitionItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GovernanceRoleDefinitionItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of role defintions for the resource.
+     * The collection of role definitions for the resource.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

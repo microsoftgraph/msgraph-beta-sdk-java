@@ -14,11 +14,11 @@ public class DowngradeJustification implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Indicates whether the downgrade is or is not justified.
+     * Indicates whether the downgrade is or isn't justified.
      */
     private Boolean isDowngradeJustified;
     /**
-     * Message that indicates why a downgrade is justified. The message will appear in administrative logs.
+     * Message that indicates why a downgrade is justified. The message appears in administrative logs.
      */
     private String justificationMessage;
     /**
@@ -62,7 +62,7 @@ public class DowngradeJustification implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isDowngradeJustified property value. Indicates whether the downgrade is or is not justified.
+     * Gets the isDowngradeJustified property value. Indicates whether the downgrade is or isn't justified.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class DowngradeJustification implements AdditionalDataHolder, Parsable {
         return this.isDowngradeJustified;
     }
     /**
-     * Gets the justificationMessage property value. Message that indicates why a downgrade is justified. The message will appear in administrative logs.
+     * Gets the justificationMessage property value. Message that indicates why a downgrade is justified. The message appears in administrative logs.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -104,14 +104,14 @@ public class DowngradeJustification implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the isDowngradeJustified property value. Indicates whether the downgrade is or is not justified.
+     * Sets the isDowngradeJustified property value. Indicates whether the downgrade is or isn't justified.
      * @param value Value to set for the isDowngradeJustified property.
      */
     public void setIsDowngradeJustified(@jakarta.annotation.Nullable final Boolean value) {
         this.isDowngradeJustified = value;
     }
     /**
-     * Sets the justificationMessage property value. Message that indicates why a downgrade is justified. The message will appear in administrative logs.
+     * Sets the justificationMessage property value. Message that indicates why a downgrade is justified. The message appears in administrative logs.
      * @param value Value to set for the justificationMessage property.
      */
     public void setJustificationMessage(@jakarta.annotation.Nullable final String value) {

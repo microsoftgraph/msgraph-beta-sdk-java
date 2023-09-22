@@ -95,6 +95,16 @@ public class CreatedByUserRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a createdByUserRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CreatedByUserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CreatedByUserRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get createdByUser from shares
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

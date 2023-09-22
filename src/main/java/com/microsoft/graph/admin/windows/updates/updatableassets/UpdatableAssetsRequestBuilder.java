@@ -201,6 +201,16 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a updatableAssetsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UpdatableAssetsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UpdatableAssetsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of updatableAsset objects and their properties. Listing updatable assets returns updatableAsset resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

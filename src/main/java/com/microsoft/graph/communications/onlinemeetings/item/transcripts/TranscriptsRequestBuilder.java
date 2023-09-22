@@ -1,6 +1,7 @@
 package com.microsoft.graph.communications.onlinemeetings.item.transcripts;
 
 import com.microsoft.graph.communications.onlinemeetings.item.transcripts.count.CountRequestBuilder;
+import com.microsoft.graph.communications.onlinemeetings.item.transcripts.delta.DeltaRequestBuilder;
 import com.microsoft.graph.communications.onlinemeetings.item.transcripts.item.CallTranscriptItemRequestBuilder;
 import com.microsoft.graph.models.CallTranscript;
 import com.microsoft.graph.models.CallTranscriptCollectionResponse;
@@ -31,6 +32,13 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the delta method.
+     */
+    @jakarta.annotation.Nonnull
+    public DeltaRequestBuilder delta() {
+        return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the transcripts property of the microsoft.graph.onlineMeeting entity.
      * @param callTranscriptId The unique identifier of callTranscript
      * @return a CallTranscriptItemRequestBuilder
@@ -59,7 +67,7 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}/transcripts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the list of callTranscript objects associated with an onlineMeeting.
+     * Retrieve the list of callTranscript objects associated with a scheduled onlineMeeting. This API does not support getting call transcripts from channel meetings. 
      * @return a CompletableFuture of callTranscriptCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-list-transcripts?view=graph-rest-1.0">Find more info here</a>
      */
@@ -68,7 +76,7 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the list of callTranscript objects associated with an onlineMeeting.
+     * Retrieve the list of callTranscript objects associated with a scheduled onlineMeeting. This API does not support getting call transcripts from channel meetings. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of callTranscriptCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-list-transcripts?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +114,7 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CallTranscript::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the list of callTranscript objects associated with an onlineMeeting.
+     * Retrieve the list of callTranscript objects associated with a scheduled onlineMeeting. This API does not support getting call transcripts from channel meetings. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +122,7 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the list of callTranscript objects associated with an onlineMeeting.
+     * Retrieve the list of callTranscript objects associated with a scheduled onlineMeeting. This API does not support getting call transcripts from channel meetings. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +175,17 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the list of callTranscript objects associated with an onlineMeeting.
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a transcriptsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TranscriptsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TranscriptsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Retrieve the list of callTranscript objects associated with a scheduled onlineMeeting. This API does not support getting call transcripts from channel meetings. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

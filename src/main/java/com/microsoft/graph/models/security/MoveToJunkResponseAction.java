@@ -3,6 +3,7 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +12,7 @@ public class MoveToJunkResponseAction extends ResponseAction implements Parsable
     /**
      * The identifier property
      */
-    private EmailEntityIdentifier identifier;
+    private EnumSet<EmailEntityIdentifier> identifier;
     /**
      * Instantiates a new moveToJunkResponseAction and sets the default values.
      */
@@ -36,7 +37,7 @@ public class MoveToJunkResponseAction extends ResponseAction implements Parsable
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumValue(EmailEntityIdentifier.class)); });
+        deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getEnumSetValue(EmailEntityIdentifier.class)); });
         return deserializerMap;
     }
     /**
@@ -44,7 +45,7 @@ public class MoveToJunkResponseAction extends ResponseAction implements Parsable
      * @return a emailEntityIdentifier
      */
     @jakarta.annotation.Nullable
-    public EmailEntityIdentifier getIdentifier() {
+    public EnumSet<EmailEntityIdentifier> getIdentifier() {
         return this.identifier;
     }
     /**
@@ -54,13 +55,13 @@ public class MoveToJunkResponseAction extends ResponseAction implements Parsable
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("identifier", this.getIdentifier());
+        writer.writeEnumSetValue("identifier", this.getIdentifier());
     }
     /**
      * Sets the identifier property value. The identifier property
      * @param value Value to set for the identifier property.
      */
-    public void setIdentifier(@jakarta.annotation.Nullable final EmailEntityIdentifier value) {
+    public void setIdentifier(@jakarta.annotation.Nullable final EnumSet<EmailEntityIdentifier> value) {
         this.identifier = value;
     }
 }

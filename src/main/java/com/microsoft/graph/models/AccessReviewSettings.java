@@ -26,11 +26,11 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
      */
     private Boolean autoApplyReviewResultsEnabled;
     /**
-     * Indicates whether a decision should be set if the reviewer did not supply one. For use when auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
+     * Indicates whether a decision should be set if the reviewer didn't supply one. For use when, auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
      */
     private Boolean autoReviewEnabled;
     /**
-     * Detailed settings for how the feature should set the review decision. For use when auto-apply is enabled.
+     * Detailed settings for how the feature should set the review decision. For use when, auto-apply is enabled.
      */
     private AutoReviewSettings autoReviewSettings;
     /**
@@ -109,7 +109,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
         return this.autoApplyReviewResultsEnabled;
     }
     /**
-     * Gets the autoReviewEnabled property value. Indicates whether a decision should be set if the reviewer did not supply one. For use when auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
+     * Gets the autoReviewEnabled property value. Indicates whether a decision should be set if the reviewer didn't supply one. For use when, auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
         return this.autoReviewEnabled;
     }
     /**
-     * Gets the autoReviewSettings property value. Detailed settings for how the feature should set the review decision. For use when auto-apply is enabled.
+     * Gets the autoReviewSettings property value. Detailed settings for how the feature should set the review decision. For use when, auto-apply is enabled.
      * @return a autoReviewSettings
      */
     @jakarta.annotation.Nullable
@@ -230,14 +230,14 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
         this.autoApplyReviewResultsEnabled = value;
     }
     /**
-     * Sets the autoReviewEnabled property value. Indicates whether a decision should be set if the reviewer did not supply one. For use when auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
+     * Sets the autoReviewEnabled property value. Indicates whether a decision should be set if the reviewer didn't supply one. For use when, auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
      * @param value Value to set for the autoReviewEnabled property.
      */
     public void setAutoReviewEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.autoReviewEnabled = value;
     }
     /**
-     * Sets the autoReviewSettings property value. Detailed settings for how the feature should set the review decision. For use when auto-apply is enabled.
+     * Sets the autoReviewSettings property value. Detailed settings for how the feature should set the review decision. For use when, auto-apply is enabled.
      * @param value Value to set for the autoReviewSettings property.
      */
     public void setAutoReviewSettings(@jakarta.annotation.Nullable final AutoReviewSettings value) {

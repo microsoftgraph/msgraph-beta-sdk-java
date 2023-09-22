@@ -27,7 +27,7 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
      */
     private ManagedTenant managedTenants;
     /**
-     * The multiTenantOrganization property
+     * Defines an organization with more than one instance of Azure Active Directory (Azure AD).
      */
     private MultiTenantOrganization multiTenantOrganization;
     /**
@@ -97,7 +97,7 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
         return this.managedTenants;
     }
     /**
-     * Gets the multiTenantOrganization property value. The multiTenantOrganization property
+     * Gets the multiTenantOrganization property value. Defines an organization with more than one instance of Azure Active Directory (Azure AD).
      * @return a multiTenantOrganization
      */
     @jakarta.annotation.Nullable
@@ -154,7 +154,7 @@ public class TenantRelationship implements AdditionalDataHolder, Parsable {
         this.managedTenants = value;
     }
     /**
-     * Sets the multiTenantOrganization property value. The multiTenantOrganization property
+     * Sets the multiTenantOrganization property value. Defines an organization with more than one instance of Azure Active Directory (Azure AD).
      * @param value Value to set for the multiTenantOrganization property.
      */
     public void setMultiTenantOrganization(@jakarta.annotation.Nullable final MultiTenantOrganization value) {

@@ -18,7 +18,7 @@ public class SignInLocation implements AdditionalDataHolder, Parsable {
      */
     private String city;
     /**
-     * Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
+     * Provides the country code info (two letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
      */
     private String countryOrRegion;
     /**
@@ -66,7 +66,7 @@ public class SignInLocation implements AdditionalDataHolder, Parsable {
         return this.city;
     }
     /**
-     * Gets the countryOrRegion property value. Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
+     * Gets the countryOrRegion property value. Provides the country code info (two letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class SignInLocation implements AdditionalDataHolder, Parsable {
         this.city = value;
     }
     /**
-     * Sets the countryOrRegion property value. Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
+     * Sets the countryOrRegion property value. Provides the country code info (two letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
      * @param value Value to set for the countryOrRegion property.
      */
     public void setCountryOrRegion(@jakarta.annotation.Nullable final String value) {

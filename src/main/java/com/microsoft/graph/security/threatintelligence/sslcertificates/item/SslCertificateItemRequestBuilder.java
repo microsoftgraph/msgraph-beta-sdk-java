@@ -64,17 +64,19 @@ public class SslCertificateItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get sslCertificates from security
+     * Get the properties and relationships of an sslCertificate object.
      * @return a CompletableFuture of sslCertificate
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sslcertificate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SslCertificate> get() {
         return get(null);
     }
     /**
-     * Get sslCertificates from security
+     * Get the properties and relationships of an sslCertificate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of sslCertificate
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sslcertificate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SslCertificate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -136,7 +138,7 @@ public class SslCertificateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get sslCertificates from security
+     * Get the properties and relationships of an sslCertificate object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -144,7 +146,7 @@ public class SslCertificateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get sslCertificates from security
+     * Get the properties and relationships of an sslCertificate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -197,13 +199,23 @@ public class SslCertificateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a SslCertificateItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SslCertificateItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SslCertificateItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get sslCertificates from security
+     * Get the properties and relationships of an sslCertificate object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

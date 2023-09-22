@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -28,11 +29,11 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
     /**
      * Supported platform types.
      */
-    private DeviceManagementConfigurationPlatforms platform;
+    private EnumSet<DeviceManagementConfigurationPlatforms> platform;
     /**
      * Describes which technology this setting can be deployed with
      */
-    private DeviceManagementConfigurationTechnologies technologies;
+    private EnumSet<DeviceManagementConfigurationTechnologies> technologies;
     /**
      * Instantiates a new deviceManagementConfigurationSettingApplicability and sets the default values.
      */
@@ -92,8 +93,8 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("deviceMode", (n) -> { this.setDeviceMode(n.getEnumValue(DeviceManagementConfigurationDeviceMode.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(DeviceManagementConfigurationPlatforms.class)); });
-        deserializerMap.put("technologies", (n) -> { this.setTechnologies(n.getEnumValue(DeviceManagementConfigurationTechnologies.class)); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumSetValue(DeviceManagementConfigurationPlatforms.class)); });
+        deserializerMap.put("technologies", (n) -> { this.setTechnologies(n.getEnumSetValue(DeviceManagementConfigurationTechnologies.class)); });
         return deserializerMap;
     }
     /**
@@ -109,7 +110,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * @return a deviceManagementConfigurationPlatforms
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementConfigurationPlatforms getPlatform() {
+    public EnumSet<DeviceManagementConfigurationPlatforms> getPlatform() {
         return this.platform;
     }
     /**
@@ -117,7 +118,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * @return a deviceManagementConfigurationTechnologies
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementConfigurationTechnologies getTechnologies() {
+    public EnumSet<DeviceManagementConfigurationTechnologies> getTechnologies() {
         return this.technologies;
     }
     /**
@@ -129,8 +130,8 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
         writer.writeStringValue("description", this.getDescription());
         writer.writeEnumValue("deviceMode", this.getDeviceMode());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeEnumValue("platform", this.getPlatform());
-        writer.writeEnumValue("technologies", this.getTechnologies());
+        writer.writeEnumSetValue("platform", this.getPlatform());
+        writer.writeEnumSetValue("technologies", this.getTechnologies());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -165,14 +166,14 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * Sets the platform property value. Supported platform types.
      * @param value Value to set for the platform property.
      */
-    public void setPlatform(@jakarta.annotation.Nullable final DeviceManagementConfigurationPlatforms value) {
+    public void setPlatform(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationPlatforms> value) {
         this.platform = value;
     }
     /**
      * Sets the technologies property value. Describes which technology this setting can be deployed with
      * @param value Value to set for the technologies property.
      */
-    public void setTechnologies(@jakarta.annotation.Nullable final DeviceManagementConfigurationTechnologies value) {
+    public void setTechnologies(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationTechnologies> value) {
         this.technologies = value;
     }
 }

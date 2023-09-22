@@ -173,6 +173,16 @@ public class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a mdmWindowsInformationProtectionPoliciesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public MdmWindowsInformationProtectionPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MdmWindowsInformationProtectionPoliciesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Windows information protection for apps running on devices which are MDM enrolled.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

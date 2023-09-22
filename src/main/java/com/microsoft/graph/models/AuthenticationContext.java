@@ -18,7 +18,7 @@ public class AuthenticationContext implements AdditionalDataHolder, Parsable {
      */
     private AuthenticationContextDetail detail;
     /**
-     * The identifier of a authentication context in your tenant.
+     * The identifier of an authentication context in your tenant.
      */
     private String id;
     /**
@@ -70,7 +70,7 @@ public class AuthenticationContext implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The identifier of a authentication context in your tenant.
+     * Gets the id property value. The identifier of an authentication context in your tenant.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class AuthenticationContext implements AdditionalDataHolder, Parsable {
         this.detail = value;
     }
     /**
-     * Sets the id property value. The identifier of a authentication context in your tenant.
+     * Sets the id property value. The identifier of an authentication context in your tenant.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {

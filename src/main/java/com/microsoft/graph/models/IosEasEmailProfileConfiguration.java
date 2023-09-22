@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -42,7 +43,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     /**
      * Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders.
      */
-    private EasServices easServices;
+    private EnumSet<EasServices> easServices;
     /**
      * Allow users to change sync settings.
      */
@@ -197,7 +198,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @return a easServices
      */
     @jakarta.annotation.Nullable
-    public EasServices getEasServices() {
+    public EnumSet<EasServices> getEasServices() {
         return this.easServices;
     }
     /**
@@ -238,7 +239,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
         deserializerMap.put("blockSyncingRecentlyUsedEmailAddresses", (n) -> { this.setBlockSyncingRecentlyUsedEmailAddresses(n.getBooleanValue()); });
         deserializerMap.put("derivedCredentialSettings", (n) -> { this.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("durationOfEmailToSync", (n) -> { this.setDurationOfEmailToSync(n.getEnumValue(EmailSyncDuration.class)); });
-        deserializerMap.put("easServices", (n) -> { this.setEasServices(n.getEnumValue(EasServices.class)); });
+        deserializerMap.put("easServices", (n) -> { this.setEasServices(n.getEnumSetValue(EasServices.class)); });
         deserializerMap.put("easServicesUserOverrideEnabled", (n) -> { this.setEasServicesUserOverrideEnabled(n.getBooleanValue()); });
         deserializerMap.put("emailAddressSource", (n) -> { this.setEmailAddressSource(n.getEnumValue(UserEmailSource.class)); });
         deserializerMap.put("encryptionCertificateType", (n) -> { this.setEncryptionCertificateType(n.getEnumValue(EmailCertificateType.class)); });
@@ -402,7 +403,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
         writer.writeBooleanValue("blockSyncingRecentlyUsedEmailAddresses", this.getBlockSyncingRecentlyUsedEmailAddresses());
         writer.writeObjectValue("derivedCredentialSettings", this.getDerivedCredentialSettings());
         writer.writeEnumValue("durationOfEmailToSync", this.getDurationOfEmailToSync());
-        writer.writeEnumValue("easServices", this.getEasServices());
+        writer.writeEnumSetValue("easServices", this.getEasServices());
         writer.writeBooleanValue("easServicesUserOverrideEnabled", this.getEasServicesUserOverrideEnabled());
         writer.writeEnumValue("emailAddressSource", this.getEmailAddressSource());
         writer.writeEnumValue("encryptionCertificateType", this.getEncryptionCertificateType());
@@ -476,7 +477,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Sets the easServices property value. Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders.
      * @param value Value to set for the easServices property.
      */
-    public void setEasServices(@jakarta.annotation.Nullable final EasServices value) {
+    public void setEasServices(@jakarta.annotation.Nullable final EnumSet<EasServices> value) {
         this.easServices = value;
     }
     /**

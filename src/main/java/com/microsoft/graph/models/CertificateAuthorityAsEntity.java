@@ -9,19 +9,19 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CertificateAuthorityAsEntity extends Entity implements Parsable {
     /**
-     * The certificate property
+     * The trusted certificate.
      */
     private byte[] certificate;
     /**
-     * The isRootAuthority property
+     * Indicates if the certificate is a root authority. In a certificateBasedApplicationConfiguration object, at least one object in the trustedCertificateAuthorities collection must be a root authority.
      */
     private Boolean isRootAuthority;
     /**
-     * The issuer property
+     * The issuer of the trusted certificate.
      */
     private String issuer;
     /**
-     * The issuerSubjectKeyIdentifier property
+     * The subject key identifier of the trusted certificate.
      */
     private String issuerSubjectKeyIdentifier;
     /**
@@ -41,7 +41,7 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
         return new CertificateAuthorityAsEntity();
     }
     /**
-     * Gets the certificate property value. The certificate property
+     * Gets the certificate property value. The trusted certificate.
      * @return a base64url
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isRootAuthority property value. The isRootAuthority property
+     * Gets the isRootAuthority property value. Indicates if the certificate is a root authority. In a certificateBasedApplicationConfiguration object, at least one object in the trustedCertificateAuthorities collection must be a root authority.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
         return this.isRootAuthority;
     }
     /**
-     * Gets the issuer property value. The issuer property
+     * Gets the issuer property value. The issuer of the trusted certificate.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
         return this.issuer;
     }
     /**
-     * Gets the issuerSubjectKeyIdentifier property value. The issuerSubjectKeyIdentifier property
+     * Gets the issuerSubjectKeyIdentifier property value. The subject key identifier of the trusted certificate.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -98,28 +98,28 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
         writer.writeStringValue("issuerSubjectKeyIdentifier", this.getIssuerSubjectKeyIdentifier());
     }
     /**
-     * Sets the certificate property value. The certificate property
+     * Sets the certificate property value. The trusted certificate.
      * @param value Value to set for the certificate property.
      */
     public void setCertificate(@jakarta.annotation.Nullable final byte[] value) {
         this.certificate = value;
     }
     /**
-     * Sets the isRootAuthority property value. The isRootAuthority property
+     * Sets the isRootAuthority property value. Indicates if the certificate is a root authority. In a certificateBasedApplicationConfiguration object, at least one object in the trustedCertificateAuthorities collection must be a root authority.
      * @param value Value to set for the isRootAuthority property.
      */
     public void setIsRootAuthority(@jakarta.annotation.Nullable final Boolean value) {
         this.isRootAuthority = value;
     }
     /**
-     * Sets the issuer property value. The issuer property
+     * Sets the issuer property value. The issuer of the trusted certificate.
      * @param value Value to set for the issuer property.
      */
     public void setIssuer(@jakarta.annotation.Nullable final String value) {
         this.issuer = value;
     }
     /**
-     * Sets the issuerSubjectKeyIdentifier property value. The issuerSubjectKeyIdentifier property
+     * Sets the issuerSubjectKeyIdentifier property value. The subject key identifier of the trusted certificate.
      * @param value Value to set for the issuerSubjectKeyIdentifier property.
      */
     public void setIssuerSubjectKeyIdentifier(@jakarta.annotation.Nullable final String value) {

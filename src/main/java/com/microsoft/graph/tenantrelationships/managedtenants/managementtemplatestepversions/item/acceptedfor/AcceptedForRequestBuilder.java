@@ -87,6 +87,16 @@ public class AcceptedForRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a acceptedForRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AcceptedForRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AcceptedForRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get acceptedFor from tenantRelationships
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

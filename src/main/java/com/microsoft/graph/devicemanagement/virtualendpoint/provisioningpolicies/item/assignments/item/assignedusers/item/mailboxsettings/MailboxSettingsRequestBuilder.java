@@ -167,6 +167,19 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a mailboxSettingsRequestBuilder
+     * @deprecated
+     * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public MailboxSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new MailboxSettingsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. For more information, see User preferences for languages and regional formats. Returned only on $select.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

@@ -15,7 +15,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The service does not have source data before the specified time.
+     * The service doesn't have source data before the specified time.
      */
     private OffsetDateTime missingDataBeforeDateTime;
     /**
@@ -23,7 +23,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Some data was not recorded due to excessive activity.
+     * Some data wasn't recorded due to excessive activity.
      */
     private Boolean wasThrottled;
     /**
@@ -63,7 +63,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the missingDataBeforeDateTime property value. The service does not have source data before the specified time.
+     * Gets the missingDataBeforeDateTime property value. The service doesn't have source data before the specified time.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the wasThrottled property value. Some data was not recorded due to excessive activity.
+     * Gets the wasThrottled property value. Some data wasn't recorded due to excessive activity.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the missingDataBeforeDateTime property value. The service does not have source data before the specified time.
+     * Sets the missingDataBeforeDateTime property value. The service doesn't have source data before the specified time.
      * @param value Value to set for the missingDataBeforeDateTime property.
      */
     public void setMissingDataBeforeDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -119,7 +119,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the wasThrottled property value. Some data was not recorded due to excessive activity.
+     * Sets the wasThrottled property value. Some data wasn't recorded due to excessive activity.
      * @param value Value to set for the wasThrottled property.
      */
     public void setWasThrottled(@jakarta.annotation.Nullable final Boolean value) {

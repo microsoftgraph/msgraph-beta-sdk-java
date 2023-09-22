@@ -178,6 +178,16 @@ public class PendingAccessReviewInstancesRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a pendingAccessReviewInstancesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PendingAccessReviewInstancesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PendingAccessReviewInstancesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve the accessReviewInstance objects pending approval by the calling user. A list of zero or more accessReviewInstance objects are returned, of which the calling user is an assigned reviewer.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

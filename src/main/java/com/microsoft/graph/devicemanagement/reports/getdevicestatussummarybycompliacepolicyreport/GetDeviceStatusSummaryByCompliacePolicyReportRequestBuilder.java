@@ -91,6 +91,16 @@ public class GetDeviceStatusSummaryByCompliacePolicyReportRequestBuilder extends
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a getDeviceStatusSummaryByCompliacePolicyReportRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GetDeviceStatusSummaryByCompliacePolicyReportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new GetDeviceStatusSummaryByCompliacePolicyReportRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

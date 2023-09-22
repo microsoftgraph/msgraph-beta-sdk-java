@@ -25,14 +25,6 @@ public class OrganizationSettings extends Entity implements Parsable {
      */
     private InsightsSettings peopleInsights;
     /**
-     * The profileCardProperties property
-     */
-    private java.util.List<ProfileCardProperty> profileCardProperties;
-    /**
-     * The pronouns property
-     */
-    private PronounsSettings pronouns;
-    /**
      * Instantiates a new organizationSettings and sets the default values.
      */
     public OrganizationSettings() {
@@ -67,8 +59,6 @@ public class OrganizationSettings extends Entity implements Parsable {
         deserializerMap.put("itemInsights", (n) -> { this.setItemInsights(n.getObjectValue(InsightsSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("microsoftApplicationDataAccess", (n) -> { this.setMicrosoftApplicationDataAccess(n.getObjectValue(MicrosoftApplicationDataAccessSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("peopleInsights", (n) -> { this.setPeopleInsights(n.getObjectValue(InsightsSettings::createFromDiscriminatorValue)); });
-        deserializerMap.put("profileCardProperties", (n) -> { this.setProfileCardProperties(n.getCollectionOfObjectValues(ProfileCardProperty::createFromDiscriminatorValue)); });
-        deserializerMap.put("pronouns", (n) -> { this.setPronouns(n.getObjectValue(PronounsSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -96,22 +86,6 @@ public class OrganizationSettings extends Entity implements Parsable {
         return this.peopleInsights;
     }
     /**
-     * Gets the profileCardProperties property value. The profileCardProperties property
-     * @return a profileCardProperty
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<ProfileCardProperty> getProfileCardProperties() {
-        return this.profileCardProperties;
-    }
-    /**
-     * Gets the pronouns property value. The pronouns property
-     * @return a pronounsSettings
-     */
-    @jakarta.annotation.Nullable
-    public PronounsSettings getPronouns() {
-        return this.pronouns;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -122,8 +96,6 @@ public class OrganizationSettings extends Entity implements Parsable {
         writer.writeObjectValue("itemInsights", this.getItemInsights());
         writer.writeObjectValue("microsoftApplicationDataAccess", this.getMicrosoftApplicationDataAccess());
         writer.writeObjectValue("peopleInsights", this.getPeopleInsights());
-        writer.writeCollectionOfObjectValues("profileCardProperties", this.getProfileCardProperties());
-        writer.writeObjectValue("pronouns", this.getPronouns());
     }
     /**
      * Sets the contactInsights property value. Contains the properties that are configured by an administrator as a tenant-level privacy control whether to identify duplicate contacts among a user's contacts list and suggest the user to merge those contacts to have a cleaner contacts list. List contactInsights returns the settings to display or return contact insights in an organization.
@@ -152,19 +124,5 @@ public class OrganizationSettings extends Entity implements Parsable {
      */
     public void setPeopleInsights(@jakarta.annotation.Nullable final InsightsSettings value) {
         this.peopleInsights = value;
-    }
-    /**
-     * Sets the profileCardProperties property value. The profileCardProperties property
-     * @param value Value to set for the profileCardProperties property.
-     */
-    public void setProfileCardProperties(@jakarta.annotation.Nullable final java.util.List<ProfileCardProperty> value) {
-        this.profileCardProperties = value;
-    }
-    /**
-     * Sets the pronouns property value. The pronouns property
-     * @param value Value to set for the pronouns property.
-     */
-    public void setPronouns(@jakarta.annotation.Nullable final PronounsSettings value) {
-        this.pronouns = value;
     }
 }

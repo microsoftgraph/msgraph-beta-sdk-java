@@ -14,7 +14,7 @@ public class WorkbookSessionInfo implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Id of the workbook session.
+     * ID of the workbook session.
      */
     private String id;
     /**
@@ -62,7 +62,7 @@ public class WorkbookSessionInfo implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the id property value. Id of the workbook session.
+     * Gets the id property value. ID of the workbook session.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class WorkbookSessionInfo implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the id property value. Id of the workbook session.
+     * Sets the id property value. ID of the workbook session.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {

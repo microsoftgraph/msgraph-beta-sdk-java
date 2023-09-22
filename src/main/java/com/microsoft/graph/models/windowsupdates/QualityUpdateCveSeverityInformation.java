@@ -18,7 +18,7 @@ public class QualityUpdateCveSeverityInformation implements AdditionalDataHolder
      */
     private java.util.List<CveInformation> exploitedCves;
     /**
-     * The maxBaseScore property
+     * Highest base score that occurs of any CVE addressed by the quality update. Read-only.
      */
     private Double maxBaseScore;
     /**
@@ -75,7 +75,7 @@ public class QualityUpdateCveSeverityInformation implements AdditionalDataHolder
         return deserializerMap;
     }
     /**
-     * Gets the maxBaseScore property value. The maxBaseScore property
+     * Gets the maxBaseScore property value. Highest base score that occurs of any CVE addressed by the quality update. Read-only.
      * @return a double
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class QualityUpdateCveSeverityInformation implements AdditionalDataHolder
         this.exploitedCves = value;
     }
     /**
-     * Sets the maxBaseScore property value. The maxBaseScore property
+     * Sets the maxBaseScore property value. Highest base score that occurs of any CVE addressed by the quality update. Read-only.
      * @param value Value to set for the maxBaseScore property.
      */
     public void setMaxBaseScore(@jakarta.annotation.Nullable final Double value) {

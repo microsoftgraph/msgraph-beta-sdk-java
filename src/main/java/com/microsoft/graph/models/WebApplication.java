@@ -22,7 +22,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      */
     private ImplicitGrantSettings implicitGrantSettings;
     /**
-     * Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols.
+     * Specifies the URL that will be used by Microsoft's authorization service to logout a user using front-channel, back-channel or SAML logout protocols.
      */
     private String logoutUrl;
     /**
@@ -98,7 +98,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
         return this.implicitGrantSettings;
     }
     /**
-     * Gets the logoutUrl property value. Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols.
+     * Gets the logoutUrl property value. Specifies the URL that will be used by Microsoft's authorization service to logout a user using front-channel, back-channel or SAML logout protocols.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -174,7 +174,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
         this.implicitGrantSettings = value;
     }
     /**
-     * Sets the logoutUrl property value. Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols.
+     * Sets the logoutUrl property value. Specifies the URL that will be used by Microsoft's authorization service to logout a user using front-channel, back-channel or SAML logout protocols.
      * @param value Value to set for the logoutUrl property.
      */
     public void setLogoutUrl(@jakarta.annotation.Nullable final String value) {

@@ -4,13 +4,14 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SignIn extends Entity implements Parsable {
     /**
-     * The application name displayed in the Azure Portal.  Supports $filter (eq, startsWith).
+     * The application name displayed in the Azure portal.  Supports $filter (eq, startsWith).
      */
     private String appDisplayName;
     /**
@@ -42,7 +43,7 @@ public class SignIn extends Entity implements Parsable {
      */
     private java.util.List<AuthenticationContext> authenticationContextClassReferences;
     /**
-     * The result of the authentication attempt and additional details on the authentication method.
+     * The result of the authentication attempt and more details on the authentication method.
      */
     private java.util.List<AuthenticationDetail> authenticationDetails;
     /**
@@ -50,13 +51,13 @@ public class SignIn extends Entity implements Parsable {
      */
     private java.util.List<String> authenticationMethodsUsed;
     /**
-     * Additional authentication processing details, such as the agent name in case of PTA/PHS or Server/farm name in case of federated authentication.
+     * Extra authentication processing details, such as the agent name for PTA/PHS or Server/farm name for federated authentication.
      */
     private java.util.List<KeyValue> authenticationProcessingDetails;
     /**
      * Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue. For authentications that use protocols other than the possible values listed, the protocol type is listed as none.
      */
-    private ProtocolType authenticationProtocol;
+    private EnumSet<ProtocolType> authenticationProtocol;
     /**
      * This holds the highest level of authentication needed through all the sign-in steps, for sign-in to succeed.  Supports $filter (eq, startsWith).
      */
@@ -94,9 +95,9 @@ public class SignIn extends Entity implements Parsable {
      */
     private OffsetDateTime createdDateTime;
     /**
-     * Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue. If the sign in did not cross tenant boundaries, the value is none.
+     * Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue. If the sign in didn't cross tenant boundaries, the value is none.
      */
-    private SignInAccessType crossTenantAccessType;
+    private EnumSet<SignInAccessType> crossTenantAccessType;
     /**
      * The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser.  Supports $filter (eq, startsWith) on browser and operatingSystem properties.
      */
@@ -106,7 +107,7 @@ public class SignIn extends Entity implements Parsable {
      */
     private String federatedCredentialId;
     /**
-     * During a failed sign in, a user may click a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true.
+     * During a failed sign in, a user may select a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true.
      */
     private Boolean flaggedForReview;
     /**
@@ -118,9 +119,9 @@ public class SignIn extends Entity implements Parsable {
      */
     private String homeTenantName;
     /**
-     * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
+     * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
      */
-    private IncomingTokenType incomingTokenType;
+    private EnumSet<IncomingTokenType> incomingTokenType;
     /**
      * The IP address of the client from where the sign-in occurred.  Supports $filter (eq, startsWith).
      */
@@ -138,7 +139,7 @@ public class SignIn extends Entity implements Parsable {
      */
     private Boolean isTenantRestricted;
     /**
-     * The city, state, and 2 letter country code from where the sign-in occurred.  Supports $filter (eq, startsWith) on city, state, and countryOrRegion properties.
+     * The city, state, and two letter country code from where the sign-in occurred.  Supports $filter (eq, startsWith) on city, state, and countryOrRegion properties.
      */
     private SignInLocation location;
     /**
@@ -158,7 +159,7 @@ public class SignIn extends Entity implements Parsable {
      */
     private String originalRequestId;
     /**
-     * The originalTransferMethod property
+     * Transfer method used to initiate a session throughout all subsequent request. The possible values are: none, deviceCodeFlow, authenticationTransfer, unknownFutureValue.
      */
     private OriginalTransferMethods originalTransferMethod;
     /**
@@ -198,7 +199,7 @@ public class SignIn extends Entity implements Parsable {
      */
     private RiskLevel riskLevelAggregated;
     /**
-     * The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
      */
     private RiskLevel riskLevelDuringSignIn;
     /**
@@ -214,11 +215,11 @@ public class SignIn extends Entity implements Parsable {
      */
     private String servicePrincipalCredentialThumbprint;
     /**
-     * The application identifier used for sign-in. This field is populated when you are signing in using an application.  Supports $filter (eq, startsWith).
+     * The application identifier used for sign-in. This field is populated when you're signing in using an application.  Supports $filter (eq, startsWith).
      */
     private String servicePrincipalId;
     /**
-     * The application name used for sign-in. This field is populated when you are signing in using an application.  Supports $filter (eq, startsWith).
+     * The application name used for sign-in. This field is populated when you're signing in using an application.  Supports $filter (eq, startsWith).
      */
     private String servicePrincipalName;
     /**
@@ -238,11 +239,11 @@ public class SignIn extends Entity implements Parsable {
      */
     private SignInIdentifierType signInIdentifierType;
     /**
-     * The signInTokenProtectionStatus property
+     * Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
      */
     private TokenProtectionStatus signInTokenProtectionStatus;
     /**
-     * The sign-in status. Includes the error code and description of the error (in case of a sign-in failure).  Supports $filter (eq) on errorCode property.
+     * The sign-in status. Includes the error code and description of the error (for a sign-in failure).  Supports $filter (eq) on errorCode property.
      */
     private SignInStatus status;
     /**
@@ -250,11 +251,11 @@ public class SignIn extends Entity implements Parsable {
      */
     private String tokenIssuerName;
     /**
-     * The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension.
+     * The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension.
      */
     private TokenIssuerType tokenIssuerType;
     /**
-     * A unique base64 encoded request identifier used to track tokens issued by Azure AD as they are redeemed at resource providers.
+     * A unique base64 encoded request identifier used to track tokens issued by Azure AD as they're redeemed at resource providers.
      */
     private String uniqueTokenIdentifier;
     /**
@@ -294,7 +295,7 @@ public class SignIn extends Entity implements Parsable {
         return new SignIn();
     }
     /**
-     * Gets the appDisplayName property value. The application name displayed in the Azure Portal.  Supports $filter (eq, startsWith).
+     * Gets the appDisplayName property value. The application name displayed in the Azure portal.  Supports $filter (eq, startsWith).
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -358,7 +359,7 @@ public class SignIn extends Entity implements Parsable {
         return this.authenticationContextClassReferences;
     }
     /**
-     * Gets the authenticationDetails property value. The result of the authentication attempt and additional details on the authentication method.
+     * Gets the authenticationDetails property value. The result of the authentication attempt and more details on the authentication method.
      * @return a authenticationDetail
      */
     @jakarta.annotation.Nullable
@@ -374,7 +375,7 @@ public class SignIn extends Entity implements Parsable {
         return this.authenticationMethodsUsed;
     }
     /**
-     * Gets the authenticationProcessingDetails property value. Additional authentication processing details, such as the agent name in case of PTA/PHS or Server/farm name in case of federated authentication.
+     * Gets the authenticationProcessingDetails property value. Extra authentication processing details, such as the agent name for PTA/PHS or Server/farm name for federated authentication.
      * @return a keyValue
      */
     @jakarta.annotation.Nullable
@@ -386,7 +387,7 @@ public class SignIn extends Entity implements Parsable {
      * @return a protocolType
      */
     @jakarta.annotation.Nullable
-    public ProtocolType getAuthenticationProtocol() {
+    public EnumSet<ProtocolType> getAuthenticationProtocol() {
         return this.authenticationProtocol;
     }
     /**
@@ -462,11 +463,11 @@ public class SignIn extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
-     * Gets the crossTenantAccessType property value. Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue. If the sign in did not cross tenant boundaries, the value is none.
+     * Gets the crossTenantAccessType property value. Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue. If the sign in didn't cross tenant boundaries, the value is none.
      * @return a signInAccessType
      */
     @jakarta.annotation.Nullable
-    public SignInAccessType getCrossTenantAccessType() {
+    public EnumSet<SignInAccessType> getCrossTenantAccessType() {
         return this.crossTenantAccessType;
     }
     /**
@@ -503,7 +504,7 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("authenticationDetails", (n) -> { this.setAuthenticationDetails(n.getCollectionOfObjectValues(AuthenticationDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationMethodsUsed", (n) -> { this.setAuthenticationMethodsUsed(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("authenticationProcessingDetails", (n) -> { this.setAuthenticationProcessingDetails(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
-        deserializerMap.put("authenticationProtocol", (n) -> { this.setAuthenticationProtocol(n.getEnumValue(ProtocolType.class)); });
+        deserializerMap.put("authenticationProtocol", (n) -> { this.setAuthenticationProtocol(n.getEnumSetValue(ProtocolType.class)); });
         deserializerMap.put("authenticationRequirement", (n) -> { this.setAuthenticationRequirement(n.getStringValue()); });
         deserializerMap.put("authenticationRequirementPolicies", (n) -> { this.setAuthenticationRequirementPolicies(n.getCollectionOfObjectValues(AuthenticationRequirementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("autonomousSystemNumber", (n) -> { this.setAutonomousSystemNumber(n.getIntegerValue()); });
@@ -513,13 +514,13 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("conditionalAccessStatus", (n) -> { this.setConditionalAccessStatus(n.getEnumValue(ConditionalAccessStatus.class)); });
         deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("crossTenantAccessType", (n) -> { this.setCrossTenantAccessType(n.getEnumValue(SignInAccessType.class)); });
+        deserializerMap.put("crossTenantAccessType", (n) -> { this.setCrossTenantAccessType(n.getEnumSetValue(SignInAccessType.class)); });
         deserializerMap.put("deviceDetail", (n) -> { this.setDeviceDetail(n.getObjectValue(DeviceDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("federatedCredentialId", (n) -> { this.setFederatedCredentialId(n.getStringValue()); });
         deserializerMap.put("flaggedForReview", (n) -> { this.setFlaggedForReview(n.getBooleanValue()); });
         deserializerMap.put("homeTenantId", (n) -> { this.setHomeTenantId(n.getStringValue()); });
         deserializerMap.put("homeTenantName", (n) -> { this.setHomeTenantName(n.getStringValue()); });
-        deserializerMap.put("incomingTokenType", (n) -> { this.setIncomingTokenType(n.getEnumValue(IncomingTokenType.class)); });
+        deserializerMap.put("incomingTokenType", (n) -> { this.setIncomingTokenType(n.getEnumSetValue(IncomingTokenType.class)); });
         deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
         deserializerMap.put("ipAddressFromResourceProvider", (n) -> { this.setIpAddressFromResourceProvider(n.getStringValue()); });
         deserializerMap.put("isInteractive", (n) -> { this.setIsInteractive(n.getBooleanValue()); });
@@ -562,7 +563,7 @@ public class SignIn extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the flaggedForReview property value. During a failed sign in, a user may click a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true.
+     * Gets the flaggedForReview property value. During a failed sign in, a user may select a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true.
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -586,11 +587,11 @@ public class SignIn extends Entity implements Parsable {
         return this.homeTenantName;
     }
     /**
-     * Gets the incomingTokenType property value. Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
+     * Gets the incomingTokenType property value. Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
      * @return a incomingTokenType
      */
     @jakarta.annotation.Nullable
-    public IncomingTokenType getIncomingTokenType() {
+    public EnumSet<IncomingTokenType> getIncomingTokenType() {
         return this.incomingTokenType;
     }
     /**
@@ -626,7 +627,7 @@ public class SignIn extends Entity implements Parsable {
         return this.isTenantRestricted;
     }
     /**
-     * Gets the location property value. The city, state, and 2 letter country code from where the sign-in occurred.  Supports $filter (eq, startsWith) on city, state, and countryOrRegion properties.
+     * Gets the location property value. The city, state, and two letter country code from where the sign-in occurred.  Supports $filter (eq, startsWith) on city, state, and countryOrRegion properties.
      * @return a signInLocation
      */
     @jakarta.annotation.Nullable
@@ -666,7 +667,7 @@ public class SignIn extends Entity implements Parsable {
         return this.originalRequestId;
     }
     /**
-     * Gets the originalTransferMethod property value. The originalTransferMethod property
+     * Gets the originalTransferMethod property value. Transfer method used to initiate a session throughout all subsequent request. The possible values are: none, deviceCodeFlow, authenticationTransfer, unknownFutureValue.
      * @return a originalTransferMethods
      */
     @jakarta.annotation.Nullable
@@ -746,7 +747,7 @@ public class SignIn extends Entity implements Parsable {
         return this.riskLevelAggregated;
     }
     /**
-     * Gets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * Gets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
      * @return a riskLevel
      */
     @jakarta.annotation.Nullable
@@ -778,7 +779,7 @@ public class SignIn extends Entity implements Parsable {
         return this.servicePrincipalCredentialThumbprint;
     }
     /**
-     * Gets the servicePrincipalId property value. The application identifier used for sign-in. This field is populated when you are signing in using an application.  Supports $filter (eq, startsWith).
+     * Gets the servicePrincipalId property value. The application identifier used for sign-in. This field is populated when you're signing in using an application.  Supports $filter (eq, startsWith).
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -786,7 +787,7 @@ public class SignIn extends Entity implements Parsable {
         return this.servicePrincipalId;
     }
     /**
-     * Gets the servicePrincipalName property value. The application name used for sign-in. This field is populated when you are signing in using an application.  Supports $filter (eq, startsWith).
+     * Gets the servicePrincipalName property value. The application name used for sign-in. This field is populated when you're signing in using an application.  Supports $filter (eq, startsWith).
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -826,7 +827,7 @@ public class SignIn extends Entity implements Parsable {
         return this.signInIdentifierType;
     }
     /**
-     * Gets the signInTokenProtectionStatus property value. The signInTokenProtectionStatus property
+     * Gets the signInTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
      * @return a tokenProtectionStatus
      */
     @jakarta.annotation.Nullable
@@ -834,7 +835,7 @@ public class SignIn extends Entity implements Parsable {
         return this.signInTokenProtectionStatus;
     }
     /**
-     * Gets the status property value. The sign-in status. Includes the error code and description of the error (in case of a sign-in failure).  Supports $filter (eq) on errorCode property.
+     * Gets the status property value. The sign-in status. Includes the error code and description of the error (for a sign-in failure).  Supports $filter (eq) on errorCode property.
      * @return a signInStatus
      */
     @jakarta.annotation.Nullable
@@ -850,7 +851,7 @@ public class SignIn extends Entity implements Parsable {
         return this.tokenIssuerName;
     }
     /**
-     * Gets the tokenIssuerType property value. The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension.
+     * Gets the tokenIssuerType property value. The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension.
      * @return a tokenIssuerType
      */
     @jakarta.annotation.Nullable
@@ -858,7 +859,7 @@ public class SignIn extends Entity implements Parsable {
         return this.tokenIssuerType;
     }
     /**
-     * Gets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Azure AD as they are redeemed at resource providers.
+     * Gets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Azure AD as they're redeemed at resource providers.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -923,7 +924,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("authenticationDetails", this.getAuthenticationDetails());
         writer.writeCollectionOfPrimitiveValues("authenticationMethodsUsed", this.getAuthenticationMethodsUsed());
         writer.writeCollectionOfObjectValues("authenticationProcessingDetails", this.getAuthenticationProcessingDetails());
-        writer.writeEnumValue("authenticationProtocol", this.getAuthenticationProtocol());
+        writer.writeEnumSetValue("authenticationProtocol", this.getAuthenticationProtocol());
         writer.writeStringValue("authenticationRequirement", this.getAuthenticationRequirement());
         writer.writeCollectionOfObjectValues("authenticationRequirementPolicies", this.getAuthenticationRequirementPolicies());
         writer.writeIntegerValue("autonomousSystemNumber", this.getAutonomousSystemNumber());
@@ -933,13 +934,13 @@ public class SignIn extends Entity implements Parsable {
         writer.writeEnumValue("conditionalAccessStatus", this.getConditionalAccessStatus());
         writer.writeStringValue("correlationId", this.getCorrelationId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
-        writer.writeEnumValue("crossTenantAccessType", this.getCrossTenantAccessType());
+        writer.writeEnumSetValue("crossTenantAccessType", this.getCrossTenantAccessType());
         writer.writeObjectValue("deviceDetail", this.getDeviceDetail());
         writer.writeStringValue("federatedCredentialId", this.getFederatedCredentialId());
         writer.writeBooleanValue("flaggedForReview", this.getFlaggedForReview());
         writer.writeStringValue("homeTenantId", this.getHomeTenantId());
         writer.writeStringValue("homeTenantName", this.getHomeTenantName());
-        writer.writeEnumValue("incomingTokenType", this.getIncomingTokenType());
+        writer.writeEnumSetValue("incomingTokenType", this.getIncomingTokenType());
         writer.writeStringValue("ipAddress", this.getIpAddress());
         writer.writeStringValue("ipAddressFromResourceProvider", this.getIpAddressFromResourceProvider());
         writer.writeBooleanValue("isInteractive", this.getIsInteractive());
@@ -981,7 +982,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeEnumValue("userType", this.getUserType());
     }
     /**
-     * Sets the appDisplayName property value. The application name displayed in the Azure Portal.  Supports $filter (eq, startsWith).
+     * Sets the appDisplayName property value. The application name displayed in the Azure portal.  Supports $filter (eq, startsWith).
      * @param value Value to set for the appDisplayName property.
      */
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -1037,7 +1038,7 @@ public class SignIn extends Entity implements Parsable {
         this.authenticationContextClassReferences = value;
     }
     /**
-     * Sets the authenticationDetails property value. The result of the authentication attempt and additional details on the authentication method.
+     * Sets the authenticationDetails property value. The result of the authentication attempt and more details on the authentication method.
      * @param value Value to set for the authenticationDetails property.
      */
     public void setAuthenticationDetails(@jakarta.annotation.Nullable final java.util.List<AuthenticationDetail> value) {
@@ -1051,7 +1052,7 @@ public class SignIn extends Entity implements Parsable {
         this.authenticationMethodsUsed = value;
     }
     /**
-     * Sets the authenticationProcessingDetails property value. Additional authentication processing details, such as the agent name in case of PTA/PHS or Server/farm name in case of federated authentication.
+     * Sets the authenticationProcessingDetails property value. Extra authentication processing details, such as the agent name for PTA/PHS or Server/farm name for federated authentication.
      * @param value Value to set for the authenticationProcessingDetails property.
      */
     public void setAuthenticationProcessingDetails(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
@@ -1061,7 +1062,7 @@ public class SignIn extends Entity implements Parsable {
      * Sets the authenticationProtocol property value. Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue. For authentications that use protocols other than the possible values listed, the protocol type is listed as none.
      * @param value Value to set for the authenticationProtocol property.
      */
-    public void setAuthenticationProtocol(@jakarta.annotation.Nullable final ProtocolType value) {
+    public void setAuthenticationProtocol(@jakarta.annotation.Nullable final EnumSet<ProtocolType> value) {
         this.authenticationProtocol = value;
     }
     /**
@@ -1128,10 +1129,10 @@ public class SignIn extends Entity implements Parsable {
         this.createdDateTime = value;
     }
     /**
-     * Sets the crossTenantAccessType property value. Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue. If the sign in did not cross tenant boundaries, the value is none.
+     * Sets the crossTenantAccessType property value. Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue. If the sign in didn't cross tenant boundaries, the value is none.
      * @param value Value to set for the crossTenantAccessType property.
      */
-    public void setCrossTenantAccessType(@jakarta.annotation.Nullable final SignInAccessType value) {
+    public void setCrossTenantAccessType(@jakarta.annotation.Nullable final EnumSet<SignInAccessType> value) {
         this.crossTenantAccessType = value;
     }
     /**
@@ -1149,7 +1150,7 @@ public class SignIn extends Entity implements Parsable {
         this.federatedCredentialId = value;
     }
     /**
-     * Sets the flaggedForReview property value. During a failed sign in, a user may click a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true.
+     * Sets the flaggedForReview property value. During a failed sign in, a user may select a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true.
      * @param value Value to set for the flaggedForReview property.
      */
     public void setFlaggedForReview(@jakarta.annotation.Nullable final Boolean value) {
@@ -1170,10 +1171,10 @@ public class SignIn extends Entity implements Parsable {
         this.homeTenantName = value;
     }
     /**
-     * Sets the incomingTokenType property value. Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Do not infer the lack of a token if it is not one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
+     * Sets the incomingTokenType property value. Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
      * @param value Value to set for the incomingTokenType property.
      */
-    public void setIncomingTokenType(@jakarta.annotation.Nullable final IncomingTokenType value) {
+    public void setIncomingTokenType(@jakarta.annotation.Nullable final EnumSet<IncomingTokenType> value) {
         this.incomingTokenType = value;
     }
     /**
@@ -1205,7 +1206,7 @@ public class SignIn extends Entity implements Parsable {
         this.isTenantRestricted = value;
     }
     /**
-     * Sets the location property value. The city, state, and 2 letter country code from where the sign-in occurred.  Supports $filter (eq, startsWith) on city, state, and countryOrRegion properties.
+     * Sets the location property value. The city, state, and two letter country code from where the sign-in occurred.  Supports $filter (eq, startsWith) on city, state, and countryOrRegion properties.
      * @param value Value to set for the location property.
      */
     public void setLocation(@jakarta.annotation.Nullable final SignInLocation value) {
@@ -1240,7 +1241,7 @@ public class SignIn extends Entity implements Parsable {
         this.originalRequestId = value;
     }
     /**
-     * Sets the originalTransferMethod property value. The originalTransferMethod property
+     * Sets the originalTransferMethod property value. Transfer method used to initiate a session throughout all subsequent request. The possible values are: none, deviceCodeFlow, authenticationTransfer, unknownFutureValue.
      * @param value Value to set for the originalTransferMethod property.
      */
     public void setOriginalTransferMethod(@jakarta.annotation.Nullable final OriginalTransferMethods value) {
@@ -1310,7 +1311,7 @@ public class SignIn extends Entity implements Parsable {
         this.riskLevelAggregated = value;
     }
     /**
-     * Sets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * Sets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
      * @param value Value to set for the riskLevelDuringSignIn property.
      */
     public void setRiskLevelDuringSignIn(@jakarta.annotation.Nullable final RiskLevel value) {
@@ -1338,14 +1339,14 @@ public class SignIn extends Entity implements Parsable {
         this.servicePrincipalCredentialThumbprint = value;
     }
     /**
-     * Sets the servicePrincipalId property value. The application identifier used for sign-in. This field is populated when you are signing in using an application.  Supports $filter (eq, startsWith).
+     * Sets the servicePrincipalId property value. The application identifier used for sign-in. This field is populated when you're signing in using an application.  Supports $filter (eq, startsWith).
      * @param value Value to set for the servicePrincipalId property.
      */
     public void setServicePrincipalId(@jakarta.annotation.Nullable final String value) {
         this.servicePrincipalId = value;
     }
     /**
-     * Sets the servicePrincipalName property value. The application name used for sign-in. This field is populated when you are signing in using an application.  Supports $filter (eq, startsWith).
+     * Sets the servicePrincipalName property value. The application name used for sign-in. This field is populated when you're signing in using an application.  Supports $filter (eq, startsWith).
      * @param value Value to set for the servicePrincipalName property.
      */
     public void setServicePrincipalName(@jakarta.annotation.Nullable final String value) {
@@ -1380,14 +1381,14 @@ public class SignIn extends Entity implements Parsable {
         this.signInIdentifierType = value;
     }
     /**
-     * Sets the signInTokenProtectionStatus property value. The signInTokenProtectionStatus property
+     * Sets the signInTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
      * @param value Value to set for the signInTokenProtectionStatus property.
      */
     public void setSignInTokenProtectionStatus(@jakarta.annotation.Nullable final TokenProtectionStatus value) {
         this.signInTokenProtectionStatus = value;
     }
     /**
-     * Sets the status property value. The sign-in status. Includes the error code and description of the error (in case of a sign-in failure).  Supports $filter (eq) on errorCode property.
+     * Sets the status property value. The sign-in status. Includes the error code and description of the error (for a sign-in failure).  Supports $filter (eq) on errorCode property.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final SignInStatus value) {
@@ -1401,14 +1402,14 @@ public class SignIn extends Entity implements Parsable {
         this.tokenIssuerName = value;
     }
     /**
-     * Sets the tokenIssuerType property value. The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension.
+     * Sets the tokenIssuerType property value. The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension.
      * @param value Value to set for the tokenIssuerType property.
      */
     public void setTokenIssuerType(@jakarta.annotation.Nullable final TokenIssuerType value) {
         this.tokenIssuerType = value;
     }
     /**
-     * Sets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Azure AD as they are redeemed at resource providers.
+     * Sets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Azure AD as they're redeemed at resource providers.
      * @param value Value to set for the uniqueTokenIdentifier property.
      */
     public void setUniqueTokenIdentifier(@jakarta.annotation.Nullable final String value) {

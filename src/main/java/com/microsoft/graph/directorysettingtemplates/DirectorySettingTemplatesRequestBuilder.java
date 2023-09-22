@@ -199,6 +199,16 @@ public class DirectorySettingTemplatesRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a directorySettingTemplatesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DirectorySettingTemplatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DirectorySettingTemplatesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available directorySettingTemplates objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

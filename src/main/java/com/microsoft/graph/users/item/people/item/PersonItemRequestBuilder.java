@@ -87,6 +87,16 @@ public class PersonItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a PersonItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public PersonItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new PersonItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration and business relationships. A person is an aggregation of information from across mail, contacts and social networks.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

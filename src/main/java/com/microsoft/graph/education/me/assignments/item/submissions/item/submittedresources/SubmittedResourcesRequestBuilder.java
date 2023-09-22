@@ -165,6 +165,16 @@ public class SubmittedResourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a submittedResourcesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SubmittedResourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new SubmittedResourcesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get submittedResources from education
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

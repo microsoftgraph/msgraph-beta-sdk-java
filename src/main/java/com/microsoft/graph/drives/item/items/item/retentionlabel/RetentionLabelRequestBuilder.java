@@ -37,15 +37,17 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/retentionLabel{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property retentionLabel for drives
+     * Remove a retention label from a driveItem. For information about retention labels from an administrator's perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-removeretentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         return delete(null);
     }
     /**
-     * Delete navigation property retentionLabel for drives
+     * Remove a retention label from a driveItem. For information about retention labels from an administrator's perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-removeretentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -56,7 +58,7 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get retentionLabel from drives
+     * Information about retention label and settings enforced on the driveItem. Read-write.
      * @return a CompletableFuture of itemRetentionLabel
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +66,7 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get retentionLabel from drives
+     * Information about retention label and settings enforced on the driveItem. Read-write.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of itemRetentionLabel
      */
@@ -77,19 +79,21 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ItemRetentionLabel::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the navigation property retentionLabel in drives
+     * Apply (set) a retention label on a driveItem (files and folders). Retention labels don't need to be published in a retention label policy to be applied using this method. When a retention label is applied to a folder, all the items in the folder are tagged with the same retention label. Conflict resolution is based on the following principle: explicit wins over implicit. For example, if a file in the folder has already been explicitly tagged with a label, that file doesn't inherit the label of the parent. For information about retention labels from an administrator's perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
      * @param body The request body
      * @return a CompletableFuture of itemRetentionLabel
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-setretentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemRetentionLabel> patch(@jakarta.annotation.Nonnull final ItemRetentionLabel body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property retentionLabel in drives
+     * Apply (set) a retention label on a driveItem (files and folders). Retention labels don't need to be published in a retention label policy to be applied using this method. When a retention label is applied to a folder, all the items in the folder are tagged with the same retention label. Conflict resolution is based on the following principle: explicit wins over implicit. For example, if a file in the folder has already been explicitly tagged with a label, that file doesn't inherit the label of the parent. For information about retention labels from an administrator's perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of itemRetentionLabel
+     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-setretentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemRetentionLabel> patch(@jakarta.annotation.Nonnull final ItemRetentionLabel body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -101,7 +105,7 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ItemRetentionLabel::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete navigation property retentionLabel for drives
+     * Remove a retention label from a driveItem. For information about retention labels from an administrator's perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +113,7 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property retentionLabel for drives
+     * Remove a retention label from a driveItem. For information about retention labels from an administrator's perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +132,7 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get retentionLabel from drives
+     * Information about retention label and settings enforced on the driveItem. Read-write.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +140,7 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get retentionLabel from drives
+     * Information about retention label and settings enforced on the driveItem. Read-write.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -157,7 +161,7 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property retentionLabel in drives
+     * Apply (set) a retention label on a driveItem (files and folders). Retention labels don't need to be published in a retention label policy to be applied using this method. When a retention label is applied to a folder, all the items in the folder are tagged with the same retention label. Conflict resolution is based on the following principle: explicit wins over implicit. For example, if a file in the folder has already been explicitly tagged with a label, that file doesn't inherit the label of the parent. For information about retention labels from an administrator's perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -166,7 +170,7 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property retentionLabel in drives
+     * Apply (set) a retention label on a driveItem (files and folders). Retention labels don't need to be published in a retention label policy to be applied using this method. When a retention label is applied to a folder, all the items in the folder are tagged with the same retention label. Conflict resolution is based on the following principle: explicit wins over implicit. For example, if a file in the folder has already been explicitly tagged with a label, that file doesn't inherit the label of the parent. For information about retention labels from an administrator's perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -189,13 +193,23 @@ public class RetentionLabelRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a retentionLabelRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RetentionLabelRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RetentionLabelRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get retentionLabel from drives
+     * Information about retention label and settings enforced on the driveItem. Read-write.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

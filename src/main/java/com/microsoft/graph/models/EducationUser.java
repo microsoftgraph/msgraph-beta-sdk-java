@@ -50,7 +50,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     private EducationExternalSource externalSource;
     /**
-     * The name of the external source this resources was generated from.
+     * The name of the external source this resource was generated from.
      */
     private String externalSourceDetail;
     /**
@@ -62,7 +62,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     private String mail;
     /**
-     * Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.
+     * Mail address of user. Note: type and postOfficeBox aren't supported for educationUser resources.
      */
     private PhysicalAddress mailingAddress;
     /**
@@ -82,15 +82,15 @@ public class EducationUser extends Entity implements Parsable {
      */
     private String officeLocation;
     /**
-     * Additional information used to associate the AAD user with it's Active Directory counterpart.
+     * Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
      */
     private EducationOnPremisesInfo onPremisesInfo;
     /**
-     * Specifies password policies for the user. See standard [user] resource for additional details.
+     * Specifies password policies for the user. See standard [user] resource for more details.
      */
     private String passwordPolicies;
     /**
-     * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for additional details.
+     * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for more details.
      */
     private PasswordProfile passwordProfile;
     /**
@@ -114,7 +114,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     private java.util.List<RelatedContact> relatedContacts;
     /**
-     * Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.
+     * Address where user lives. Note: type and postOfficeBox aren't supported for educationUser resources.
      */
     private PhysicalAddress residenceAddress;
     /**
@@ -130,7 +130,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     private Boolean showInAddressList;
     /**
-     * If the primary role is student, this block will contain student specific data.
+     * If the primary role is student, this block contains student specific data.
      */
     private EducationStudent student;
     /**
@@ -258,7 +258,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.externalSource;
     }
     /**
-     * Gets the externalSourceDetail property value. The name of the external source this resources was generated from.
+     * Gets the externalSourceDetail property value. The name of the external source this resource was generated from.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -329,7 +329,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.mail;
     }
     /**
-     * Gets the mailingAddress property value. Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.
+     * Gets the mailingAddress property value. Mail address of user. Note: type and postOfficeBox aren't supported for educationUser resources.
      * @return a physicalAddress
      */
     @jakarta.annotation.Nullable
@@ -369,7 +369,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.officeLocation;
     }
     /**
-     * Gets the onPremisesInfo property value. Additional information used to associate the AAD user with it's Active Directory counterpart.
+     * Gets the onPremisesInfo property value. Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
      * @return a educationOnPremisesInfo
      */
     @jakarta.annotation.Nullable
@@ -377,7 +377,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.onPremisesInfo;
     }
     /**
-     * Gets the passwordPolicies property value. Specifies password policies for the user. See standard [user] resource for additional details.
+     * Gets the passwordPolicies property value. Specifies password policies for the user. See standard [user] resource for more details.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -385,7 +385,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.passwordPolicies;
     }
     /**
-     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for additional details.
+     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for more details.
      * @return a passwordProfile
      */
     @jakarta.annotation.Nullable
@@ -433,7 +433,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.relatedContacts;
     }
     /**
-     * Gets the residenceAddress property value. Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.
+     * Gets the residenceAddress property value. Address where user lives. Note: type and postOfficeBox aren't supported for educationUser resources.
      * @return a physicalAddress
      */
     @jakarta.annotation.Nullable
@@ -465,7 +465,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.showInAddressList;
     }
     /**
-     * Gets the student property value. If the primary role is student, this block will contain student specific data.
+     * Gets the student property value. If the primary role is student, this block contains student specific data.
      * @return a educationStudent
      */
     @jakarta.annotation.Nullable
@@ -645,7 +645,7 @@ public class EducationUser extends Entity implements Parsable {
         this.externalSource = value;
     }
     /**
-     * Sets the externalSourceDetail property value. The name of the external source this resources was generated from.
+     * Sets the externalSourceDetail property value. The name of the external source this resource was generated from.
      * @param value Value to set for the externalSourceDetail property.
      */
     public void setExternalSourceDetail(@jakarta.annotation.Nullable final String value) {
@@ -666,7 +666,7 @@ public class EducationUser extends Entity implements Parsable {
         this.mail = value;
     }
     /**
-     * Sets the mailingAddress property value. Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.
+     * Sets the mailingAddress property value. Mail address of user. Note: type and postOfficeBox aren't supported for educationUser resources.
      * @param value Value to set for the mailingAddress property.
      */
     public void setMailingAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
@@ -701,21 +701,21 @@ public class EducationUser extends Entity implements Parsable {
         this.officeLocation = value;
     }
     /**
-     * Sets the onPremisesInfo property value. Additional information used to associate the AAD user with it's Active Directory counterpart.
+     * Sets the onPremisesInfo property value. Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
      * @param value Value to set for the onPremisesInfo property.
      */
     public void setOnPremisesInfo(@jakarta.annotation.Nullable final EducationOnPremisesInfo value) {
         this.onPremisesInfo = value;
     }
     /**
-     * Sets the passwordPolicies property value. Specifies password policies for the user. See standard [user] resource for additional details.
+     * Sets the passwordPolicies property value. Specifies password policies for the user. See standard [user] resource for more details.
      * @param value Value to set for the passwordPolicies property.
      */
     public void setPasswordPolicies(@jakarta.annotation.Nullable final String value) {
         this.passwordPolicies = value;
     }
     /**
-     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for additional details.
+     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for more details.
      * @param value Value to set for the passwordProfile property.
      */
     public void setPasswordProfile(@jakarta.annotation.Nullable final PasswordProfile value) {
@@ -757,7 +757,7 @@ public class EducationUser extends Entity implements Parsable {
         this.relatedContacts = value;
     }
     /**
-     * Sets the residenceAddress property value. Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.
+     * Sets the residenceAddress property value. Address where user lives. Note: type and postOfficeBox aren't supported for educationUser resources.
      * @param value Value to set for the residenceAddress property.
      */
     public void setResidenceAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
@@ -785,7 +785,7 @@ public class EducationUser extends Entity implements Parsable {
         this.showInAddressList = value;
     }
     /**
-     * Sets the student property value. If the primary role is student, this block will contain student specific data.
+     * Sets the student property value. If the primary role is student, this block contains student specific data.
      * @param value Value to set for the student property.
      */
     public void setStudent(@jakarta.annotation.Nullable final EducationStudent value) {

@@ -165,6 +165,16 @@ public class DeviceConfigurationRestrictedAppsViolationsRequestBuilder extends B
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a deviceConfigurationRestrictedAppsViolationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceConfigurationRestrictedAppsViolationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeviceConfigurationRestrictedAppsViolationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Restricted apps violations for this account.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

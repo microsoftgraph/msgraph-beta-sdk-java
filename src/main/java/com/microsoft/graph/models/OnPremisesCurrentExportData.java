@@ -14,7 +14,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
      */
     private Map<String, Object> additionalData;
     /**
-     * The name of the onPremises client machine which ran the last export.
+     * The name of the onPremises client machine that ran the last export.
      */
     private String clientMachineName;
     /**
@@ -34,7 +34,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
      */
     private Integer pendingObjectsUpdate;
     /**
-     * The name of the dirsync service account which is configured to connect to the directory.
+     * The name of the dirsync service account that is configured to connect to the directory.
      */
     private String serviceAccount;
     /**
@@ -42,7 +42,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
      */
     private Long successfulLinksProvisioningCount;
     /**
-     * The count of objects which were successfully provisioned during the current directory sync export run.
+     * The count of objects that were successfully provisioned during the current directory sync export run.
      */
     private Integer successfulObjectsProvisioningCount;
     /**
@@ -74,7 +74,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
         return this.additionalData;
     }
     /**
-     * Gets the clientMachineName property value. The name of the onPremises client machine which ran the last export.
+     * Gets the clientMachineName property value. The name of the onPremises client machine that ran the last export.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
         return this.pendingObjectsUpdate;
     }
     /**
-     * Gets the serviceAccount property value. The name of the dirsync service account which is configured to connect to the directory.
+     * Gets the serviceAccount property value. The name of the dirsync service account that is configured to connect to the directory.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
         return this.successfulLinksProvisioningCount;
     }
     /**
-     * Gets the successfulObjectsProvisioningCount property value. The count of objects which were successfully provisioned during the current directory sync export run.
+     * Gets the successfulObjectsProvisioningCount property value. The count of objects that were successfully provisioned during the current directory sync export run.
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -188,7 +188,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
         this.additionalData = value;
     }
     /**
-     * Sets the clientMachineName property value. The name of the onPremises client machine which ran the last export.
+     * Sets the clientMachineName property value. The name of the onPremises client machine that ran the last export.
      * @param value Value to set for the clientMachineName property.
      */
     public void setClientMachineName(@jakarta.annotation.Nullable final String value) {
@@ -223,7 +223,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
         this.pendingObjectsUpdate = value;
     }
     /**
-     * Sets the serviceAccount property value. The name of the dirsync service account which is configured to connect to the directory.
+     * Sets the serviceAccount property value. The name of the dirsync service account that is configured to connect to the directory.
      * @param value Value to set for the serviceAccount property.
      */
     public void setServiceAccount(@jakarta.annotation.Nullable final String value) {
@@ -237,7 +237,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
         this.successfulLinksProvisioningCount = value;
     }
     /**
-     * Sets the successfulObjectsProvisioningCount property value. The count of objects which were successfully provisioned during the current directory sync export run.
+     * Sets the successfulObjectsProvisioningCount property value. The count of objects that were successfully provisioned during the current directory sync export run.
      * @param value Value to set for the successfulObjectsProvisioningCount property.
      */
     public void setSuccessfulObjectsProvisioningCount(@jakarta.annotation.Nullable final Integer value) {

@@ -167,6 +167,16 @@ public class ManagementActionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a managementActionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ManagementActionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ManagementActionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the managementAction objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

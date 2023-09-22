@@ -169,6 +169,16 @@ public class AwardsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a awardsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AwardsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AwardsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Retrieve a list of personAward objects from a user's profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

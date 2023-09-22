@@ -29,7 +29,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      */
     private Boolean isAuthenticationContextSettable;
     /**
-     * The isPrivileged property
+     * Flag indicating if the action is a sensitive resource action. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
      */
     private Boolean isPrivileged;
     /**
@@ -119,7 +119,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
         return this.isAuthenticationContextSettable;
     }
     /**
-     * Gets the isPrivileged property value. The isPrivileged property
+     * Gets the isPrivileged property value. Flag indicating if the action is a sensitive resource action. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -203,7 +203,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
         this.isAuthenticationContextSettable = value;
     }
     /**
-     * Sets the isPrivileged property value. The isPrivileged property
+     * Sets the isPrivileged property value. Flag indicating if the action is a sensitive resource action. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
      * @param value Value to set for the isPrivileged property.
      */
     public void setIsPrivileged(@jakarta.annotation.Nullable final Boolean value) {

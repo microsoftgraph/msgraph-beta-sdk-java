@@ -15,11 +15,11 @@ public class HostSslCertificatePort implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The firstSeenDateTime property
+     * The first date and time that this port was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime firstSeenDateTime;
     /**
-     * The lastSeenDateTime property
+     * The most recent date and time that this port was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime lastSeenDateTime;
     /**
@@ -27,7 +27,7 @@ public class HostSslCertificatePort implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The port property
+     * The port number.
      */
     private Integer port;
     /**
@@ -68,7 +68,7 @@ public class HostSslCertificatePort implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the firstSeenDateTime property value. The firstSeenDateTime property
+     * Gets the firstSeenDateTime property value. The first date and time that this port was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class HostSslCertificatePort implements AdditionalDataHolder, Parsable {
         return this.firstSeenDateTime;
     }
     /**
-     * Gets the lastSeenDateTime property value. The lastSeenDateTime property
+     * Gets the lastSeenDateTime property value. The most recent date and time that this port was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class HostSslCertificatePort implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the port property value. The port property
+     * Gets the port property value. The port number.
      * @return a integer
      */
     @jakarta.annotation.Nullable
@@ -119,14 +119,14 @@ public class HostSslCertificatePort implements AdditionalDataHolder, Parsable {
         this.additionalData = value;
     }
     /**
-     * Sets the firstSeenDateTime property value. The firstSeenDateTime property
+     * Sets the firstSeenDateTime property value. The first date and time that this port was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstSeenDateTime property.
      */
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstSeenDateTime = value;
     }
     /**
-     * Sets the lastSeenDateTime property value. The lastSeenDateTime property
+     * Sets the lastSeenDateTime property value. The most recent date and time that this port was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSeenDateTime property.
      */
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -140,7 +140,7 @@ public class HostSslCertificatePort implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the port property value. The port property
+     * Sets the port property value. The port number.
      * @param value Value to set for the port property.
      */
     public void setPort(@jakarta.annotation.Nullable final Integer value) {

@@ -87,6 +87,16 @@ public class HostPairItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a HostPairItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public HostPairItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new HostPairItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

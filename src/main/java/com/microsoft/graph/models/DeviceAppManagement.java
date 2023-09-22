@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -79,7 +80,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     /**
      * Portal to which admin syncs available Microsoft Store for Business apps. This is available in the Intune Admin Console.
      */
-    private MicrosoftStoreForBusinessPortalSelectionOptions microsoftStoreForBusinessPortalSelection;
+    private EnumSet<MicrosoftStoreForBusinessPortalSelectionOptions> microsoftStoreForBusinessPortalSelection;
     /**
      * The mobile app categories.
      */
@@ -203,7 +204,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
         deserializerMap.put("microsoftStoreForBusinessLanguage", (n) -> { this.setMicrosoftStoreForBusinessLanguage(n.getStringValue()); });
         deserializerMap.put("microsoftStoreForBusinessLastCompletedApplicationSyncTime", (n) -> { this.setMicrosoftStoreForBusinessLastCompletedApplicationSyncTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("microsoftStoreForBusinessLastSuccessfulSyncDateTime", (n) -> { this.setMicrosoftStoreForBusinessLastSuccessfulSyncDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("microsoftStoreForBusinessPortalSelection", (n) -> { this.setMicrosoftStoreForBusinessPortalSelection(n.getEnumValue(MicrosoftStoreForBusinessPortalSelectionOptions.class)); });
+        deserializerMap.put("microsoftStoreForBusinessPortalSelection", (n) -> { this.setMicrosoftStoreForBusinessPortalSelection(n.getEnumSetValue(MicrosoftStoreForBusinessPortalSelectionOptions.class)); });
         deserializerMap.put("mobileAppCategories", (n) -> { this.setMobileAppCategories(n.getCollectionOfObjectValues(MobileAppCategory::createFromDiscriminatorValue)); });
         deserializerMap.put("mobileAppConfigurations", (n) -> { this.setMobileAppConfigurations(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("mobileApps", (n) -> { this.setMobileApps(n.getCollectionOfObjectValues(MobileApp::createFromDiscriminatorValue)); });
@@ -320,7 +321,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * @return a microsoftStoreForBusinessPortalSelectionOptions
      */
     @jakarta.annotation.Nullable
-    public MicrosoftStoreForBusinessPortalSelectionOptions getMicrosoftStoreForBusinessPortalSelection() {
+    public EnumSet<MicrosoftStoreForBusinessPortalSelectionOptions> getMicrosoftStoreForBusinessPortalSelection() {
         return this.microsoftStoreForBusinessPortalSelection;
     }
     /**
@@ -450,7 +451,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
         writer.writeStringValue("microsoftStoreForBusinessLanguage", this.getMicrosoftStoreForBusinessLanguage());
         writer.writeOffsetDateTimeValue("microsoftStoreForBusinessLastCompletedApplicationSyncTime", this.getMicrosoftStoreForBusinessLastCompletedApplicationSyncTime());
         writer.writeOffsetDateTimeValue("microsoftStoreForBusinessLastSuccessfulSyncDateTime", this.getMicrosoftStoreForBusinessLastSuccessfulSyncDateTime());
-        writer.writeEnumValue("microsoftStoreForBusinessPortalSelection", this.getMicrosoftStoreForBusinessPortalSelection());
+        writer.writeEnumSetValue("microsoftStoreForBusinessPortalSelection", this.getMicrosoftStoreForBusinessPortalSelection());
         writer.writeCollectionOfObjectValues("mobileAppCategories", this.getMobileAppCategories());
         writer.writeCollectionOfObjectValues("mobileAppConfigurations", this.getMobileAppConfigurations());
         writer.writeCollectionOfObjectValues("mobileApps", this.getMobileApps());
@@ -581,7 +582,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
      * Sets the microsoftStoreForBusinessPortalSelection property value. Portal to which admin syncs available Microsoft Store for Business apps. This is available in the Intune Admin Console.
      * @param value Value to set for the microsoftStoreForBusinessPortalSelection property.
      */
-    public void setMicrosoftStoreForBusinessPortalSelection(@jakarta.annotation.Nullable final MicrosoftStoreForBusinessPortalSelectionOptions value) {
+    public void setMicrosoftStoreForBusinessPortalSelection(@jakarta.annotation.Nullable final EnumSet<MicrosoftStoreForBusinessPortalSelectionOptions> value) {
         this.microsoftStoreForBusinessPortalSelection = value;
     }
     /**

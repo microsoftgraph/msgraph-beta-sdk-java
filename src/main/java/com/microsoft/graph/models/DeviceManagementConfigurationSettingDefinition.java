@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +12,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     /**
      * The accessTypes property
      */
-    private DeviceManagementConfigurationSettingAccessTypes accessTypes;
+    private EnumSet<DeviceManagementConfigurationSettingAccessTypes> accessTypes;
     /**
      * Details which device setting is applicable on. Supports: $filters.
      */
@@ -67,7 +68,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     /**
      * Supported setting types
      */
-    private DeviceManagementConfigurationSettingUsage settingUsage;
+    private EnumSet<DeviceManagementConfigurationSettingUsage> settingUsage;
     /**
      * Setting control type representation in the UX
      */
@@ -79,7 +80,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     /**
      * Supported setting types
      */
-    private DeviceManagementConfigurationSettingVisibility visibility;
+    private EnumSet<DeviceManagementConfigurationSettingVisibility> visibility;
     /**
      * Instantiates a new deviceManagementConfigurationSettingDefinition and sets the default values.
      */
@@ -114,7 +115,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @return a deviceManagementConfigurationSettingAccessTypes
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementConfigurationSettingAccessTypes getAccessTypes() {
+    public EnumSet<DeviceManagementConfigurationSettingAccessTypes> getAccessTypes() {
         return this.accessTypes;
     }
     /**
@@ -164,7 +165,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("accessTypes", (n) -> { this.setAccessTypes(n.getEnumValue(DeviceManagementConfigurationSettingAccessTypes.class)); });
+        deserializerMap.put("accessTypes", (n) -> { this.setAccessTypes(n.getEnumSetValue(DeviceManagementConfigurationSettingAccessTypes.class)); });
         deserializerMap.put("applicability", (n) -> { this.setApplicability(n.getObjectValue(DeviceManagementConfigurationSettingApplicability::createFromDiscriminatorValue)); });
         deserializerMap.put("baseUri", (n) -> { this.setBaseUri(n.getStringValue()); });
         deserializerMap.put("categoryId", (n) -> { this.setCategoryId(n.getStringValue()); });
@@ -178,10 +179,10 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         deserializerMap.put("offsetUri", (n) -> { this.setOffsetUri(n.getStringValue()); });
         deserializerMap.put("referredSettingInformationList", (n) -> { this.setReferredSettingInformationList(n.getCollectionOfObjectValues(DeviceManagementConfigurationReferredSettingInformation::createFromDiscriminatorValue)); });
         deserializerMap.put("rootDefinitionId", (n) -> { this.setRootDefinitionId(n.getStringValue()); });
-        deserializerMap.put("settingUsage", (n) -> { this.setSettingUsage(n.getEnumValue(DeviceManagementConfigurationSettingUsage.class)); });
+        deserializerMap.put("settingUsage", (n) -> { this.setSettingUsage(n.getEnumSetValue(DeviceManagementConfigurationSettingUsage.class)); });
         deserializerMap.put("uxBehavior", (n) -> { this.setUxBehavior(n.getEnumValue(DeviceManagementConfigurationControlType.class)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
-        deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getEnumValue(DeviceManagementConfigurationSettingVisibility.class)); });
+        deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getEnumSetValue(DeviceManagementConfigurationSettingVisibility.class)); });
         return deserializerMap;
     }
     /**
@@ -253,7 +254,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @return a deviceManagementConfigurationSettingUsage
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementConfigurationSettingUsage getSettingUsage() {
+    public EnumSet<DeviceManagementConfigurationSettingUsage> getSettingUsage() {
         return this.settingUsage;
     }
     /**
@@ -277,7 +278,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @return a deviceManagementConfigurationSettingVisibility
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementConfigurationSettingVisibility getVisibility() {
+    public EnumSet<DeviceManagementConfigurationSettingVisibility> getVisibility() {
         return this.visibility;
     }
     /**
@@ -287,7 +288,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("accessTypes", this.getAccessTypes());
+        writer.writeEnumSetValue("accessTypes", this.getAccessTypes());
         writer.writeObjectValue("applicability", this.getApplicability());
         writer.writeStringValue("baseUri", this.getBaseUri());
         writer.writeStringValue("categoryId", this.getCategoryId());
@@ -301,16 +302,16 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         writer.writeStringValue("offsetUri", this.getOffsetUri());
         writer.writeCollectionOfObjectValues("referredSettingInformationList", this.getReferredSettingInformationList());
         writer.writeStringValue("rootDefinitionId", this.getRootDefinitionId());
-        writer.writeEnumValue("settingUsage", this.getSettingUsage());
+        writer.writeEnumSetValue("settingUsage", this.getSettingUsage());
         writer.writeEnumValue("uxBehavior", this.getUxBehavior());
         writer.writeStringValue("version", this.getVersion());
-        writer.writeEnumValue("visibility", this.getVisibility());
+        writer.writeEnumSetValue("visibility", this.getVisibility());
     }
     /**
      * Sets the accessTypes property value. The accessTypes property
      * @param value Value to set for the accessTypes property.
      */
-    public void setAccessTypes(@jakarta.annotation.Nullable final DeviceManagementConfigurationSettingAccessTypes value) {
+    public void setAccessTypes(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationSettingAccessTypes> value) {
         this.accessTypes = value;
     }
     /**
@@ -408,7 +409,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * Sets the settingUsage property value. Supported setting types
      * @param value Value to set for the settingUsage property.
      */
-    public void setSettingUsage(@jakarta.annotation.Nullable final DeviceManagementConfigurationSettingUsage value) {
+    public void setSettingUsage(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationSettingUsage> value) {
         this.settingUsage = value;
     }
     /**
@@ -429,7 +430,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * Sets the visibility property value. Supported setting types
      * @param value Value to set for the visibility property.
      */
-    public void setVisibility(@jakarta.annotation.Nullable final DeviceManagementConfigurationSettingVisibility value) {
+    public void setVisibility(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationSettingVisibility> value) {
         this.visibility = value;
     }
 }

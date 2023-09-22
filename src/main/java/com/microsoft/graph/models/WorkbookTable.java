@@ -21,7 +21,7 @@ public class WorkbookTable extends Entity implements Parsable {
      */
     private Boolean highlightLastColumn;
     /**
-     * Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only.
+     * Legacy Id used in older Excel clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and shouldn't be parsed to any other type. Read-only.
      */
     private String legacyId;
     /**
@@ -57,7 +57,7 @@ public class WorkbookTable extends Entity implements Parsable {
      */
     private WorkbookTableSort sort;
     /**
-     * Constant value that represents the Table style. Possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
+     * Constant value that represents the Table style. Possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      */
     private String style;
     /**
@@ -128,7 +128,7 @@ public class WorkbookTable extends Entity implements Parsable {
         return this.highlightLastColumn;
     }
     /**
-     * Gets the legacyId property value. Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only.
+     * Gets the legacyId property value. Legacy Id used in older Excel clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and shouldn't be parsed to any other type. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -200,7 +200,7 @@ public class WorkbookTable extends Entity implements Parsable {
         return this.sort;
     }
     /**
-     * Gets the style property value. Constant value that represents the Table style. Possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
+     * Gets the style property value. Constant value that represents the Table style. Possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -259,7 +259,7 @@ public class WorkbookTable extends Entity implements Parsable {
         this.highlightLastColumn = value;
     }
     /**
-     * Sets the legacyId property value. Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only.
+     * Sets the legacyId property value. Legacy Id used in older Excel clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and shouldn't be parsed to any other type. Read-only.
      * @param value Value to set for the legacyId property.
      */
     public void setLegacyId(@jakarta.annotation.Nullable final String value) {
@@ -322,7 +322,7 @@ public class WorkbookTable extends Entity implements Parsable {
         this.sort = value;
     }
     /**
-     * Sets the style property value. Constant value that represents the Table style. Possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
+     * Sets the style property value. Constant value that represents the Table style. Possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      * @param value Value to set for the style property.
      */
     public void setStyle(@jakarta.annotation.Nullable final String value) {

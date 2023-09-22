@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class NoncustodialDataSource extends DataSourceContainer implements Parsable {
     /**
-     * Indicates if hold is applied to non-custodial data source (such as mailbox or site).
+     * Indicates if hold is applied to noncustodial data source (such as mailbox or site).
      */
     private Boolean applyHoldToSource;
     /**
-     * User source or SharePoint site data source as non-custodial data source.
+     * User source or SharePoint site data source as noncustodial data source.
      */
     private DataSource dataSource;
     /**
@@ -34,7 +34,7 @@ public class NoncustodialDataSource extends DataSourceContainer implements Parsa
         return new NoncustodialDataSource();
     }
     /**
-     * Gets the applyHoldToSource property value. Indicates if hold is applied to non-custodial data source (such as mailbox or site).
+     * Gets the applyHoldToSource property value. Indicates if hold is applied to noncustodial data source (such as mailbox or site).
      * @return a boolean
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class NoncustodialDataSource extends DataSourceContainer implements Parsa
         return this.applyHoldToSource;
     }
     /**
-     * Gets the dataSource property value. User source or SharePoint site data source as non-custodial data source.
+     * Gets the dataSource property value. User source or SharePoint site data source as noncustodial data source.
      * @return a dataSource
      */
     @jakarta.annotation.Nullable
@@ -71,14 +71,14 @@ public class NoncustodialDataSource extends DataSourceContainer implements Parsa
         writer.writeObjectValue("dataSource", this.getDataSource());
     }
     /**
-     * Sets the applyHoldToSource property value. Indicates if hold is applied to non-custodial data source (such as mailbox or site).
+     * Sets the applyHoldToSource property value. Indicates if hold is applied to noncustodial data source (such as mailbox or site).
      * @param value Value to set for the applyHoldToSource property.
      */
     public void setApplyHoldToSource(@jakarta.annotation.Nullable final Boolean value) {
         this.applyHoldToSource = value;
     }
     /**
-     * Sets the dataSource property value. User source or SharePoint site data source as non-custodial data source.
+     * Sets the dataSource property value. User source or SharePoint site data source as noncustodial data source.
      * @param value Value to set for the dataSource property.
      */
     public void setDataSource(@jakarta.annotation.Nullable final DataSource value) {

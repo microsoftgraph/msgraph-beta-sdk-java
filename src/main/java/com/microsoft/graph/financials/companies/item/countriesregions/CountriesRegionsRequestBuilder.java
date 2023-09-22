@@ -166,6 +166,16 @@ public class CountriesRegionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a countriesRegionsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CountriesRegionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CountriesRegionsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get countriesRegions from financials
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

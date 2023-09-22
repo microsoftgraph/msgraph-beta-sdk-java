@@ -1,5 +1,6 @@
 package com.microsoft.graph.devicemanagement.windowsautopilotdeviceidentities.item;
 
+import com.microsoft.graph.devicemanagement.windowsautopilotdeviceidentities.item.allownextenrollment.AllowNextEnrollmentRequestBuilder;
 import com.microsoft.graph.devicemanagement.windowsautopilotdeviceidentities.item.assignresourceaccounttodevice.AssignResourceAccountToDeviceRequestBuilder;
 import com.microsoft.graph.devicemanagement.windowsautopilotdeviceidentities.item.assignusertodevice.AssignUserToDeviceRequestBuilder;
 import com.microsoft.graph.devicemanagement.windowsautopilotdeviceidentities.item.deploymentprofile.DeploymentProfileRequestBuilder;
@@ -27,6 +28,13 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the allowNextEnrollment method.
+     */
+    @jakarta.annotation.Nonnull
+    public AllowNextEnrollmentRequestBuilder allowNextEnrollment() {
+        return new AllowNextEnrollmentRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the assignResourceAccountToDevice method.
      */
@@ -243,6 +251,16 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a WindowsAutopilotDeviceIdentityItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public WindowsAutopilotDeviceIdentityItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new WindowsAutopilotDeviceIdentityItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

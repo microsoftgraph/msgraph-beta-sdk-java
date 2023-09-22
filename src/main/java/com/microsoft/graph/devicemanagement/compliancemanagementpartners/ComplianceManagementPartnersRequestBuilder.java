@@ -165,6 +165,16 @@ public class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a complianceManagementPartnersRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ComplianceManagementPartnersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ComplianceManagementPartnersRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The list of Compliance Management Partners configured by the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

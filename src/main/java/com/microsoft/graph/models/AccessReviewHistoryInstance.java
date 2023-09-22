@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewHistoryInstance extends Entity implements Parsable {
     /**
-     * Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
+     * Uri that can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
      */
     private String downloadUri;
     /**
@@ -22,11 +22,11 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
      */
     private OffsetDateTime fulfilledDateTime;
     /**
-     * Timestamp, reviews ending on or before this date will be included in the fetched history data.
+     * Timestamp, reviews ending on or before this date are in the fetched history data.
      */
     private OffsetDateTime reviewHistoryPeriodEndDateTime;
     /**
-     * Timestamp, reviews starting on or after this date will be included in the fetched history data.
+     * Timestamp, reviews starting on or after this date are in the fetched history data.
      */
     private OffsetDateTime reviewHistoryPeriodStartDateTime;
     /**
@@ -54,7 +54,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         return new AccessReviewHistoryInstance();
     }
     /**
-     * Gets the downloadUri property value. Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
+     * Gets the downloadUri property value. Uri that can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         return this.fulfilledDateTime;
     }
     /**
-     * Gets the reviewHistoryPeriodEndDateTime property value. Timestamp, reviews ending on or before this date will be included in the fetched history data.
+     * Gets the reviewHistoryPeriodEndDateTime property value. Timestamp, reviews ending on or before this date are in the fetched history data.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         return this.reviewHistoryPeriodEndDateTime;
     }
     /**
-     * Gets the reviewHistoryPeriodStartDateTime property value. Timestamp, reviews starting on or after this date will be included in the fetched history data.
+     * Gets the reviewHistoryPeriodStartDateTime property value. Timestamp, reviews starting on or after this date are in the fetched history data.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -141,7 +141,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the downloadUri property value. Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
+     * Sets the downloadUri property value. Uri that can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
      * @param value Value to set for the downloadUri property.
      */
     public void setDownloadUri(@jakarta.annotation.Nullable final String value) {
@@ -162,14 +162,14 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         this.fulfilledDateTime = value;
     }
     /**
-     * Sets the reviewHistoryPeriodEndDateTime property value. Timestamp, reviews ending on or before this date will be included in the fetched history data.
+     * Sets the reviewHistoryPeriodEndDateTime property value. Timestamp, reviews ending on or before this date are in the fetched history data.
      * @param value Value to set for the reviewHistoryPeriodEndDateTime property.
      */
     public void setReviewHistoryPeriodEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.reviewHistoryPeriodEndDateTime = value;
     }
     /**
-     * Sets the reviewHistoryPeriodStartDateTime property value. Timestamp, reviews starting on or after this date will be included in the fetched history data.
+     * Sets the reviewHistoryPeriodStartDateTime property value. Timestamp, reviews starting on or after this date are in the fetched history data.
      * @param value Value to set for the reviewHistoryPeriodStartDateTime property.
      */
     public void setReviewHistoryPeriodStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

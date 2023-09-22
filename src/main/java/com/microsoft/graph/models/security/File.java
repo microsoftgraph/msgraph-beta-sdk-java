@@ -5,6 +5,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -53,7 +54,7 @@ public class File extends Entity implements Parsable {
     /**
      * The sourceType property
      */
-    private SourceType sourceType;
+    private EnumSet<SourceType> sourceType;
     /**
      * The subjectTitle property
      */
@@ -130,7 +131,7 @@ public class File extends Entity implements Parsable {
         deserializerMap.put("processingStatus", (n) -> { this.setProcessingStatus(n.getEnumValue(FileProcessingStatus.class)); });
         deserializerMap.put("senderOrAuthors", (n) -> { this.setSenderOrAuthors(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("size", (n) -> { this.setSize(n.getLongValue()); });
-        deserializerMap.put("sourceType", (n) -> { this.setSourceType(n.getEnumValue(SourceType.class)); });
+        deserializerMap.put("sourceType", (n) -> { this.setSourceType(n.getEnumSetValue(SourceType.class)); });
         deserializerMap.put("subjectTitle", (n) -> { this.setSubjectTitle(n.getStringValue()); });
         return deserializerMap;
     }
@@ -187,7 +188,7 @@ public class File extends Entity implements Parsable {
      * @return a sourceType
      */
     @jakarta.annotation.Nullable
-    public SourceType getSourceType() {
+    public EnumSet<SourceType> getSourceType() {
         return this.sourceType;
     }
     /**
@@ -215,7 +216,7 @@ public class File extends Entity implements Parsable {
         writer.writeEnumValue("processingStatus", this.getProcessingStatus());
         writer.writeCollectionOfPrimitiveValues("senderOrAuthors", this.getSenderOrAuthors());
         writer.writeLongValue("size", this.getSize());
-        writer.writeEnumValue("sourceType", this.getSourceType());
+        writer.writeEnumSetValue("sourceType", this.getSourceType());
         writer.writeStringValue("subjectTitle", this.getSubjectTitle());
     }
     /**
@@ -292,7 +293,7 @@ public class File extends Entity implements Parsable {
      * Sets the sourceType property value. The sourceType property
      * @param value Value to set for the sourceType property.
      */
-    public void setSourceType(@jakarta.annotation.Nullable final SourceType value) {
+    public void setSourceType(@jakarta.annotation.Nullable final EnumSet<SourceType> value) {
         this.sourceType = value;
     }
     /**

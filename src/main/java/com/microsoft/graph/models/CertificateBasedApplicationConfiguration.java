@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CertificateBasedApplicationConfiguration extends TrustedCertificateAuthorityAsEntityBase implements Parsable {
     /**
-     * The description property
+     * The description of the trusted certificate authorities.
      */
     private String description;
     /**
-     * The displayName property
+     * The display name of the trusted certificate authorities.
      */
     private String displayName;
     /**
@@ -34,7 +34,7 @@ public class CertificateBasedApplicationConfiguration extends TrustedCertificate
         return new CertificateBasedApplicationConfiguration();
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the trusted certificate authorities.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class CertificateBasedApplicationConfiguration extends TrustedCertificate
         return this.description;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the trusted certificate authorities.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -71,14 +71,14 @@ public class CertificateBasedApplicationConfiguration extends TrustedCertificate
         writer.writeStringValue("displayName", this.getDisplayName());
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the trusted certificate authorities.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the trusted certificate authorities.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

@@ -75,6 +75,10 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      */
     private String earlyLaunchAntiMalwareDriverProtection;
     /**
+     * A list of possible Firmware protection type for a device. Firmware protection is a set of features that helps to ensure attackers can't get your device to start with untrusted or malicious firmware. Firmware protection type is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "systemGuardSecureLaunch" or "firmwareAttackSurfaceReduction" or "disabled". Windows 10 devices will have value "notApplicable".
+     */
+    private FirmwareProtectionType firmwareProtection;
+    /**
      * This attribute indicates if DHA is supported for the device
      */
     private String healthAttestationSupportedStatus;
@@ -90,6 +94,14 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * The Timestamp of the last update.
      */
     private String lastUpdateDateTime;
+    /**
+     * A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     */
+    private AzureAttestationSettingStatus memoryAccessProtection;
+    /**
+     * A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     */
+    private AzureAttestationSettingStatus memoryIntegrityProtection;
     /**
      * The OdataType property
      */
@@ -131,6 +143,14 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      */
     private String secureBootConfigurationPolicyFingerPrint;
     /**
+     * A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     */
+    private AzureAttestationSettingStatus securedCorePC;
+    /**
+     * A list of possible System Management Mode levels for a device. System Management Mode levels is determined by report sent from Microsoft Azure Attestation service. Only specific hardwares support System Management Mode. Windows 11 devices will have values "notApplicable", "level1", "level2" or "level3". Windows 10 devices will have value "notApplicable".
+     */
+    private SystemManagementModeLevel systemManagementMode;
+    /**
      * When test signing is allowed, the device does not enforce signature validation during boot
      */
     private String testSigning;
@@ -138,6 +158,10 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * The security version number of the Boot Application
      */
     private String tpmVersion;
+    /**
+     * A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     */
+    private AzureAttestationSettingStatus virtualizationBasedSecurity;
     /**
      * VSM is a container that protects high value assets from a compromised kernel
      */
@@ -296,7 +320,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(33);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(39);
         deserializerMap.put("attestationIdentityKey", (n) -> { this.setAttestationIdentityKey(n.getStringValue()); });
         deserializerMap.put("bitLockerStatus", (n) -> { this.setBitLockerStatus(n.getStringValue()); });
         deserializerMap.put("bootAppSecurityVersion", (n) -> { this.setBootAppSecurityVersion(n.getStringValue()); });
@@ -312,10 +336,13 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
         deserializerMap.put("dataExcutionPolicy", (n) -> { this.setDataExcutionPolicy(n.getStringValue()); });
         deserializerMap.put("deviceHealthAttestationStatus", (n) -> { this.setDeviceHealthAttestationStatus(n.getStringValue()); });
         deserializerMap.put("earlyLaunchAntiMalwareDriverProtection", (n) -> { this.setEarlyLaunchAntiMalwareDriverProtection(n.getStringValue()); });
+        deserializerMap.put("firmwareProtection", (n) -> { this.setFirmwareProtection(n.getEnumValue(FirmwareProtectionType.class)); });
         deserializerMap.put("healthAttestationSupportedStatus", (n) -> { this.setHealthAttestationSupportedStatus(n.getStringValue()); });
         deserializerMap.put("healthStatusMismatchInfo", (n) -> { this.setHealthStatusMismatchInfo(n.getStringValue()); });
         deserializerMap.put("issuedDateTime", (n) -> { this.setIssuedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastUpdateDateTime", (n) -> { this.setLastUpdateDateTime(n.getStringValue()); });
+        deserializerMap.put("memoryAccessProtection", (n) -> { this.setMemoryAccessProtection(n.getEnumValue(AzureAttestationSettingStatus.class)); });
+        deserializerMap.put("memoryIntegrityProtection", (n) -> { this.setMemoryIntegrityProtection(n.getEnumValue(AzureAttestationSettingStatus.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("operatingSystemKernelDebugging", (n) -> { this.setOperatingSystemKernelDebugging(n.getStringValue()); });
         deserializerMap.put("operatingSystemRevListInfo", (n) -> { this.setOperatingSystemRevListInfo(n.getStringValue()); });
@@ -326,11 +353,22 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
         deserializerMap.put("safeMode", (n) -> { this.setSafeMode(n.getStringValue()); });
         deserializerMap.put("secureBoot", (n) -> { this.setSecureBoot(n.getStringValue()); });
         deserializerMap.put("secureBootConfigurationPolicyFingerPrint", (n) -> { this.setSecureBootConfigurationPolicyFingerPrint(n.getStringValue()); });
+        deserializerMap.put("securedCorePC", (n) -> { this.setSecuredCorePC(n.getEnumValue(AzureAttestationSettingStatus.class)); });
+        deserializerMap.put("systemManagementMode", (n) -> { this.setSystemManagementMode(n.getEnumValue(SystemManagementModeLevel.class)); });
         deserializerMap.put("testSigning", (n) -> { this.setTestSigning(n.getStringValue()); });
         deserializerMap.put("tpmVersion", (n) -> { this.setTpmVersion(n.getStringValue()); });
+        deserializerMap.put("virtualizationBasedSecurity", (n) -> { this.setVirtualizationBasedSecurity(n.getEnumValue(AzureAttestationSettingStatus.class)); });
         deserializerMap.put("virtualSecureMode", (n) -> { this.setVirtualSecureMode(n.getStringValue()); });
         deserializerMap.put("windowsPE", (n) -> { this.setWindowsPE(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the firmwareProtection property value. A list of possible Firmware protection type for a device. Firmware protection is a set of features that helps to ensure attackers can't get your device to start with untrusted or malicious firmware. Firmware protection type is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "systemGuardSecureLaunch" or "firmwareAttackSurfaceReduction" or "disabled". Windows 10 devices will have value "notApplicable".
+     * @return a firmwareProtectionType
+     */
+    @jakarta.annotation.Nullable
+    public FirmwareProtectionType getFirmwareProtection() {
+        return this.firmwareProtection;
     }
     /**
      * Gets the healthAttestationSupportedStatus property value. This attribute indicates if DHA is supported for the device
@@ -363,6 +401,22 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     @jakarta.annotation.Nullable
     public String getLastUpdateDateTime() {
         return this.lastUpdateDateTime;
+    }
+    /**
+     * Gets the memoryAccessProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     * @return a azureAttestationSettingStatus
+     */
+    @jakarta.annotation.Nullable
+    public AzureAttestationSettingStatus getMemoryAccessProtection() {
+        return this.memoryAccessProtection;
+    }
+    /**
+     * Gets the memoryIntegrityProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     * @return a azureAttestationSettingStatus
+     */
+    @jakarta.annotation.Nullable
+    public AzureAttestationSettingStatus getMemoryIntegrityProtection() {
+        return this.memoryIntegrityProtection;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -445,6 +499,22 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
         return this.secureBootConfigurationPolicyFingerPrint;
     }
     /**
+     * Gets the securedCorePC property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     * @return a azureAttestationSettingStatus
+     */
+    @jakarta.annotation.Nullable
+    public AzureAttestationSettingStatus getSecuredCorePC() {
+        return this.securedCorePC;
+    }
+    /**
+     * Gets the systemManagementMode property value. A list of possible System Management Mode levels for a device. System Management Mode levels is determined by report sent from Microsoft Azure Attestation service. Only specific hardwares support System Management Mode. Windows 11 devices will have values "notApplicable", "level1", "level2" or "level3". Windows 10 devices will have value "notApplicable".
+     * @return a systemManagementModeLevel
+     */
+    @jakarta.annotation.Nullable
+    public SystemManagementModeLevel getSystemManagementMode() {
+        return this.systemManagementMode;
+    }
+    /**
      * Gets the testSigning property value. When test signing is allowed, the device does not enforce signature validation during boot
      * @return a string
      */
@@ -459,6 +529,14 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     @jakarta.annotation.Nullable
     public String getTpmVersion() {
         return this.tpmVersion;
+    }
+    /**
+     * Gets the virtualizationBasedSecurity property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     * @return a azureAttestationSettingStatus
+     */
+    @jakarta.annotation.Nullable
+    public AzureAttestationSettingStatus getVirtualizationBasedSecurity() {
+        return this.virtualizationBasedSecurity;
     }
     /**
      * Gets the virtualSecureMode property value. VSM is a container that protects high value assets from a compromised kernel
@@ -497,10 +575,13 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
         writer.writeStringValue("dataExcutionPolicy", this.getDataExcutionPolicy());
         writer.writeStringValue("deviceHealthAttestationStatus", this.getDeviceHealthAttestationStatus());
         writer.writeStringValue("earlyLaunchAntiMalwareDriverProtection", this.getEarlyLaunchAntiMalwareDriverProtection());
+        writer.writeEnumValue("firmwareProtection", this.getFirmwareProtection());
         writer.writeStringValue("healthAttestationSupportedStatus", this.getHealthAttestationSupportedStatus());
         writer.writeStringValue("healthStatusMismatchInfo", this.getHealthStatusMismatchInfo());
         writer.writeOffsetDateTimeValue("issuedDateTime", this.getIssuedDateTime());
         writer.writeStringValue("lastUpdateDateTime", this.getLastUpdateDateTime());
+        writer.writeEnumValue("memoryAccessProtection", this.getMemoryAccessProtection());
+        writer.writeEnumValue("memoryIntegrityProtection", this.getMemoryIntegrityProtection());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("operatingSystemKernelDebugging", this.getOperatingSystemKernelDebugging());
         writer.writeStringValue("operatingSystemRevListInfo", this.getOperatingSystemRevListInfo());
@@ -511,8 +592,11 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
         writer.writeStringValue("safeMode", this.getSafeMode());
         writer.writeStringValue("secureBoot", this.getSecureBoot());
         writer.writeStringValue("secureBootConfigurationPolicyFingerPrint", this.getSecureBootConfigurationPolicyFingerPrint());
+        writer.writeEnumValue("securedCorePC", this.getSecuredCorePC());
+        writer.writeEnumValue("systemManagementMode", this.getSystemManagementMode());
         writer.writeStringValue("testSigning", this.getTestSigning());
         writer.writeStringValue("tpmVersion", this.getTpmVersion());
+        writer.writeEnumValue("virtualizationBasedSecurity", this.getVirtualizationBasedSecurity());
         writer.writeStringValue("virtualSecureMode", this.getVirtualSecureMode());
         writer.writeStringValue("windowsPE", this.getWindowsPE());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -630,6 +714,13 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
         this.earlyLaunchAntiMalwareDriverProtection = value;
     }
     /**
+     * Sets the firmwareProtection property value. A list of possible Firmware protection type for a device. Firmware protection is a set of features that helps to ensure attackers can't get your device to start with untrusted or malicious firmware. Firmware protection type is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "systemGuardSecureLaunch" or "firmwareAttackSurfaceReduction" or "disabled". Windows 10 devices will have value "notApplicable".
+     * @param value Value to set for the firmwareProtection property.
+     */
+    public void setFirmwareProtection(@jakarta.annotation.Nullable final FirmwareProtectionType value) {
+        this.firmwareProtection = value;
+    }
+    /**
      * Sets the healthAttestationSupportedStatus property value. This attribute indicates if DHA is supported for the device
      * @param value Value to set for the healthAttestationSupportedStatus property.
      */
@@ -656,6 +747,20 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      */
     public void setLastUpdateDateTime(@jakarta.annotation.Nullable final String value) {
         this.lastUpdateDateTime = value;
+    }
+    /**
+     * Sets the memoryAccessProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     * @param value Value to set for the memoryAccessProtection property.
+     */
+    public void setMemoryAccessProtection(@jakarta.annotation.Nullable final AzureAttestationSettingStatus value) {
+        this.memoryAccessProtection = value;
+    }
+    /**
+     * Sets the memoryIntegrityProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     * @param value Value to set for the memoryIntegrityProtection property.
+     */
+    public void setMemoryIntegrityProtection(@jakarta.annotation.Nullable final AzureAttestationSettingStatus value) {
+        this.memoryIntegrityProtection = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -728,6 +833,20 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
         this.secureBootConfigurationPolicyFingerPrint = value;
     }
     /**
+     * Sets the securedCorePC property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     * @param value Value to set for the securedCorePC property.
+     */
+    public void setSecuredCorePC(@jakarta.annotation.Nullable final AzureAttestationSettingStatus value) {
+        this.securedCorePC = value;
+    }
+    /**
+     * Sets the systemManagementMode property value. A list of possible System Management Mode levels for a device. System Management Mode levels is determined by report sent from Microsoft Azure Attestation service. Only specific hardwares support System Management Mode. Windows 11 devices will have values "notApplicable", "level1", "level2" or "level3". Windows 10 devices will have value "notApplicable".
+     * @param value Value to set for the systemManagementMode property.
+     */
+    public void setSystemManagementMode(@jakarta.annotation.Nullable final SystemManagementModeLevel value) {
+        this.systemManagementMode = value;
+    }
+    /**
      * Sets the testSigning property value. When test signing is allowed, the device does not enforce signature validation during boot
      * @param value Value to set for the testSigning property.
      */
@@ -740,6 +859,13 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      */
     public void setTpmVersion(@jakarta.annotation.Nullable final String value) {
         this.tpmVersion = value;
+    }
+    /**
+     * Sets the virtualizationBasedSecurity property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     * @param value Value to set for the virtualizationBasedSecurity property.
+     */
+    public void setVirtualizationBasedSecurity(@jakarta.annotation.Nullable final AzureAttestationSettingStatus value) {
+        this.virtualizationBasedSecurity = value;
     }
     /**
      * Sets the virtualSecureMode property value. VSM is a container that protects high value assets from a compromised kernel

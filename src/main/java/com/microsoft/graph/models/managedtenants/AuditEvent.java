@@ -11,11 +11,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuditEvent extends Entity implements Parsable {
     /**
-     * A string which uniquely represents the operation that occurred. Required. Read-only.
+     * A string that uniquely represents the operation that occurred. Required. Read-only.
      */
     private String activity;
     /**
-     * The time when the activity ocurred. Required. Read-only.
+     * The time when the activity occurred. Required. Read-only.
      */
     private OffsetDateTime activityDateTime;
     /**
@@ -23,7 +23,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     private String activityId;
     /**
-     * A category which represents a logical grouping of activities. Required. Read-only.
+     * A category that represents a logical grouping of activities. Required. Read-only.
      */
     private String category;
     /**
@@ -55,11 +55,11 @@ public class AuditEvent extends Entity implements Parsable {
      */
     private String requestUrl;
     /**
-     * The collection of Azure Active Directory tenant identifiers for the managed tenants that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
+     * The collection of Azure Active Directory tenant identifiers for the managed tenants that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
      */
     private String tenantIds;
     /**
-     * The collection of tenant names that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
+     * The collection of tenant names that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
      */
     private String tenantNames;
     /**
@@ -79,7 +79,7 @@ public class AuditEvent extends Entity implements Parsable {
         return new AuditEvent();
     }
     /**
-     * Gets the activity property value. A string which uniquely represents the operation that occurred. Required. Read-only.
+     * Gets the activity property value. A string that uniquely represents the operation that occurred. Required. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class AuditEvent extends Entity implements Parsable {
         return this.activity;
     }
     /**
-     * Gets the activityDateTime property value. The time when the activity ocurred. Required. Read-only.
+     * Gets the activityDateTime property value. The time when the activity occurred. Required. Read-only.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class AuditEvent extends Entity implements Parsable {
         return this.activityId;
     }
     /**
-     * Gets the category property value. A category which represents a logical grouping of activities. Required. Read-only.
+     * Gets the category property value. A category that represents a logical grouping of activities. Required. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -189,7 +189,7 @@ public class AuditEvent extends Entity implements Parsable {
         return this.requestUrl;
     }
     /**
-     * Gets the tenantIds property value. The collection of Azure Active Directory tenant identifiers for the managed tenants that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
+     * Gets the tenantIds property value. The collection of Azure Active Directory tenant identifiers for the managed tenants that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -197,7 +197,7 @@ public class AuditEvent extends Entity implements Parsable {
         return this.tenantIds;
     }
     /**
-     * Gets the tenantNames property value. The collection of tenant names that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
+     * Gets the tenantNames property value. The collection of tenant names that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -226,14 +226,14 @@ public class AuditEvent extends Entity implements Parsable {
         writer.writeStringValue("tenantNames", this.getTenantNames());
     }
     /**
-     * Sets the activity property value. A string which uniquely represents the operation that occurred. Required. Read-only.
+     * Sets the activity property value. A string that uniquely represents the operation that occurred. Required. Read-only.
      * @param value Value to set for the activity property.
      */
     public void setActivity(@jakarta.annotation.Nullable final String value) {
         this.activity = value;
     }
     /**
-     * Sets the activityDateTime property value. The time when the activity ocurred. Required. Read-only.
+     * Sets the activityDateTime property value. The time when the activity occurred. Required. Read-only.
      * @param value Value to set for the activityDateTime property.
      */
     public void setActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -247,7 +247,7 @@ public class AuditEvent extends Entity implements Parsable {
         this.activityId = value;
     }
     /**
-     * Sets the category property value. A category which represents a logical grouping of activities. Required. Read-only.
+     * Sets the category property value. A category that represents a logical grouping of activities. Required. Read-only.
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final String value) {
@@ -303,14 +303,14 @@ public class AuditEvent extends Entity implements Parsable {
         this.requestUrl = value;
     }
     /**
-     * Sets the tenantIds property value. The collection of Azure Active Directory tenant identifiers for the managed tenants that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
+     * Sets the tenantIds property value. The collection of Azure Active Directory tenant identifiers for the managed tenants that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
      * @param value Value to set for the tenantIds property.
      */
     public void setTenantIds(@jakarta.annotation.Nullable final String value) {
         this.tenantIds = value;
     }
     /**
-     * Sets the tenantNames property value. The collection of tenant names that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
+     * Sets the tenantNames property value. The collection of tenant names that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
      * @param value Value to set for the tenantNames property.
      */
     public void setTenantNames(@jakarta.annotation.Nullable final String value) {

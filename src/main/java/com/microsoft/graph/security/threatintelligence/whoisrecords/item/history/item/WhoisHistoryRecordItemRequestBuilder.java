@@ -37,7 +37,7 @@ public class WhoisHistoryRecordItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/whoisRecords/{whoisRecord%2Did}/history/{whoisHistoryRecord%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get history from security
+     * The collection of historical records associated to this WHOIS object.
      * @return a CompletableFuture of whoisHistoryRecord
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class WhoisHistoryRecordItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get history from security
+     * The collection of historical records associated to this WHOIS object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of whoisHistoryRecord
      */
@@ -58,7 +58,7 @@ public class WhoisHistoryRecordItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WhoisHistoryRecord::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get history from security
+     * The collection of historical records associated to this WHOIS object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class WhoisHistoryRecordItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get history from security
+     * The collection of historical records associated to this WHOIS object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -87,7 +87,17 @@ public class WhoisHistoryRecordItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get history from security
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a WhoisHistoryRecordItemRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public WhoisHistoryRecordItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new WhoisHistoryRecordItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * The collection of historical records associated to this WHOIS object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceProvisioningXmlError extends ServiceProvisioningError implements Parsable {
     /**
-     * Error Information published by the Federated Service as an xml string .
+     * Error Information published by the Federated Service as an xml string.
      */
     private String errorDetail;
     /**
@@ -30,7 +30,7 @@ public class ServiceProvisioningXmlError extends ServiceProvisioningError implem
         return new ServiceProvisioningXmlError();
     }
     /**
-     * Gets the errorDetail property value. Error Information published by the Federated Service as an xml string .
+     * Gets the errorDetail property value. Error Information published by the Federated Service as an xml string.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class ServiceProvisioningXmlError extends ServiceProvisioningError implem
         writer.writeStringValue("errorDetail", this.getErrorDetail());
     }
     /**
-     * Sets the errorDetail property value. Error Information published by the Federated Service as an xml string .
+     * Sets the errorDetail property value. Error Information published by the Federated Service as an xml string.
      * @param value Value to set for the errorDetail property.
      */
     public void setErrorDetail(@jakarta.annotation.Nullable final String value) {

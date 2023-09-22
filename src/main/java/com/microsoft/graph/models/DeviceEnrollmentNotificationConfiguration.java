@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +16,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     /**
      * Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
      */
-    private EnrollmentNotificationBrandingOptions brandingOptions;
+    private EnumSet<EnrollmentNotificationBrandingOptions> brandingOptions;
     /**
      * DefaultLocale for the Enrollment Notification
      */
@@ -58,7 +59,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
      * @return a enrollmentNotificationBrandingOptions
      */
     @jakarta.annotation.Nullable
-    public EnrollmentNotificationBrandingOptions getBrandingOptions() {
+    public EnumSet<EnrollmentNotificationBrandingOptions> getBrandingOptions() {
         return this.brandingOptions;
     }
     /**
@@ -76,7 +77,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("brandingOptions", (n) -> { this.setBrandingOptions(n.getEnumValue(EnrollmentNotificationBrandingOptions.class)); });
+        deserializerMap.put("brandingOptions", (n) -> { this.setBrandingOptions(n.getEnumSetValue(EnrollmentNotificationBrandingOptions.class)); });
         deserializerMap.put("defaultLocale", (n) -> { this.setDefaultLocale(n.getStringValue()); });
         deserializerMap.put("notificationMessageTemplateId", (n) -> { this.setNotificationMessageTemplateId(n.getUUIDValue()); });
         deserializerMap.put("notificationTemplates", (n) -> { this.setNotificationTemplates(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -123,7 +124,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("brandingOptions", this.getBrandingOptions());
+        writer.writeEnumSetValue("brandingOptions", this.getBrandingOptions());
         writer.writeStringValue("defaultLocale", this.getDefaultLocale());
         writer.writeUUIDValue("notificationMessageTemplateId", this.getNotificationMessageTemplateId());
         writer.writeCollectionOfPrimitiveValues("notificationTemplates", this.getNotificationTemplates());
@@ -134,7 +135,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
      * Sets the brandingOptions property value. Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
      * @param value Value to set for the brandingOptions property.
      */
-    public void setBrandingOptions(@jakarta.annotation.Nullable final EnrollmentNotificationBrandingOptions value) {
+    public void setBrandingOptions(@jakarta.annotation.Nullable final EnumSet<EnrollmentNotificationBrandingOptions> value) {
         this.brandingOptions = value;
     }
     /**

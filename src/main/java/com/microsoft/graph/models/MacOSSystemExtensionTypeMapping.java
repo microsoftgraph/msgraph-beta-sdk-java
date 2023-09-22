@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public class MacOSSystemExtensionTypeMapping implements AdditionalDataHolder, Pa
     /**
      * Flag enum representing the allowed macOS system extension types.
      */
-    private MacOSSystemExtensionType allowedTypes;
+    private EnumSet<MacOSSystemExtensionType> allowedTypes;
     /**
      * The OdataType property
      */
@@ -57,7 +58,7 @@ public class MacOSSystemExtensionTypeMapping implements AdditionalDataHolder, Pa
      * @return a macOSSystemExtensionType
      */
     @jakarta.annotation.Nullable
-    public MacOSSystemExtensionType getAllowedTypes() {
+    public EnumSet<MacOSSystemExtensionType> getAllowedTypes() {
         return this.allowedTypes;
     }
     /**
@@ -67,7 +68,7 @@ public class MacOSSystemExtensionTypeMapping implements AdditionalDataHolder, Pa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("allowedTypes", (n) -> { this.setAllowedTypes(n.getEnumValue(MacOSSystemExtensionType.class)); });
+        deserializerMap.put("allowedTypes", (n) -> { this.setAllowedTypes(n.getEnumSetValue(MacOSSystemExtensionType.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("teamIdentifier", (n) -> { this.setTeamIdentifier(n.getStringValue()); });
         return deserializerMap;
@@ -94,7 +95,7 @@ public class MacOSSystemExtensionTypeMapping implements AdditionalDataHolder, Pa
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeEnumValue("allowedTypes", this.getAllowedTypes());
+        writer.writeEnumSetValue("allowedTypes", this.getAllowedTypes());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("teamIdentifier", this.getTeamIdentifier());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -110,7 +111,7 @@ public class MacOSSystemExtensionTypeMapping implements AdditionalDataHolder, Pa
      * Sets the allowedTypes property value. Flag enum representing the allowed macOS system extension types.
      * @param value Value to set for the allowedTypes property.
      */
-    public void setAllowedTypes(@jakarta.annotation.Nullable final MacOSSystemExtensionType value) {
+    public void setAllowedTypes(@jakarta.annotation.Nullable final EnumSet<MacOSSystemExtensionType> value) {
         this.allowedTypes = value;
     }
     /**

@@ -9,15 +9,15 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationFlowsPolicy extends Entity implements Parsable {
     /**
-     * Inherited property. A description of the policy. This property is not a key. Optional. Read-only.
+     * Inherited property. A description of the policy. This property isn't a key. Optional. Read-only.
      */
     private String description;
     /**
-     * Inherited property. The human-readable name of the policy. This property is not a key. Optional. Read-only.
+     * Inherited property. The human-readable name of the policy. This property isn't a key. Optional. Read-only.
      */
     private String displayName;
     /**
-     * Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. This property is not a key. Optional. Read-only.
+     * Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. This property isn't a key. Optional. Read-only.
      */
     private SelfServiceSignUpAuthenticationFlowConfiguration selfServiceSignUp;
     /**
@@ -37,7 +37,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
         return new AuthenticationFlowsPolicy();
     }
     /**
-     * Gets the description property value. Inherited property. A description of the policy. This property is not a key. Optional. Read-only.
+     * Gets the description property value. Inherited property. A description of the policy. This property isn't a key. Optional. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
         return this.description;
     }
     /**
-     * Gets the displayName property value. Inherited property. The human-readable name of the policy. This property is not a key. Optional. Read-only.
+     * Gets the displayName property value. Inherited property. The human-readable name of the policy. This property isn't a key. Optional. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the selfServiceSignUp property value. Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. This property is not a key. Optional. Read-only.
+     * Gets the selfServiceSignUp property value. Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. This property isn't a key. Optional. Read-only.
      * @return a selfServiceSignUpAuthenticationFlowConfiguration
      */
     @jakarta.annotation.Nullable
@@ -84,21 +84,21 @@ public class AuthenticationFlowsPolicy extends Entity implements Parsable {
         writer.writeObjectValue("selfServiceSignUp", this.getSelfServiceSignUp());
     }
     /**
-     * Sets the description property value. Inherited property. A description of the policy. This property is not a key. Optional. Read-only.
+     * Sets the description property value. Inherited property. A description of the policy. This property isn't a key. Optional. Read-only.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
-     * Sets the displayName property value. Inherited property. The human-readable name of the policy. This property is not a key. Optional. Read-only.
+     * Sets the displayName property value. Inherited property. The human-readable name of the policy. This property isn't a key. Optional. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
-     * Sets the selfServiceSignUp property value. Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. This property is not a key. Optional. Read-only.
+     * Sets the selfServiceSignUp property value. Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. This property isn't a key. Optional. Read-only.
      * @param value Value to set for the selfServiceSignUp property.
      */
     public void setSelfServiceSignUp(@jakarta.annotation.Nullable final SelfServiceSignUpAuthenticationFlowConfiguration value) {

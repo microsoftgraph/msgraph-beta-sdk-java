@@ -58,7 +58,7 @@ public class RelatedHostsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/sslCertificates/{sslCertificate%2Did}/relatedHosts{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get relatedHosts from security
+     * The hosts related with this sslCertificate.
      * @return a CompletableFuture of hostCollectionResponse
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class RelatedHostsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get relatedHosts from security
+     * The hosts related with this sslCertificate.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of hostCollectionResponse
      */
@@ -79,7 +79,7 @@ public class RelatedHostsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, HostCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get relatedHosts from security
+     * The hosts related with this sslCertificate.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class RelatedHostsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get relatedHosts from security
+     * The hosts related with this sslCertificate.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -108,7 +108,17 @@ public class RelatedHostsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get relatedHosts from security
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a relatedHostsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RelatedHostsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RelatedHostsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * The hosts related with this sslCertificate.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

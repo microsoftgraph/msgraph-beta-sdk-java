@@ -18,7 +18,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
      */
     private DateTimeTimeZone completedDateTime;
     /**
-     * The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response.
+     * The date and time that the follow-up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you get a 400 Bad Request response.
      */
     private DateTimeTimeZone dueDateTime;
     /**
@@ -66,7 +66,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
         return this.completedDateTime;
     }
     /**
-     * Gets the dueDateTime property value. The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response.
+     * Gets the dueDateTime property value. The date and time that the follow-up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you get a 400 Bad Request response.
      * @return a dateTimeTimeZone
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class FollowupFlag implements AdditionalDataHolder, Parsable {
         this.completedDateTime = value;
     }
     /**
-     * Sets the dueDateTime property value. The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response.
+     * Sets the dueDateTime property value. The date and time that the follow-up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you get a 400 Bad Request response.
      * @param value Value to set for the dueDateTime property.
      */
     public void setDueDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {

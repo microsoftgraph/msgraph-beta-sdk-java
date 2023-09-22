@@ -11,11 +11,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProductRevision extends Entity implements Parsable {
     /**
-     * The displayName property
+     * The display name of the content. Read-only.
      */
     private String displayName;
     /**
-     * The knowledgeBaseArticle property
+     * The knowledge base article associated with the product revision.
      */
     private KnowledgeBaseArticle knowledgeBaseArticle;
     /**
@@ -23,15 +23,15 @@ public class ProductRevision extends Entity implements Parsable {
      */
     private BuildVersionDetails osBuild;
     /**
-     * The product property
+     * The product of the revision. Possible values are: Windows 10, Windows 11. Read-only.
      */
     private String product;
     /**
-     * The releaseDateTime property
+     * The release date for the content. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     private OffsetDateTime releaseDateTime;
     /**
-     * The version property
+     * The version of the feature update. Read-only.
      */
     private String version;
     /**
@@ -51,7 +51,7 @@ public class ProductRevision extends Entity implements Parsable {
         return new ProductRevision();
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the content. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class ProductRevision extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the knowledgeBaseArticle property value. The knowledgeBaseArticle property
+     * Gets the knowledgeBaseArticle property value. The knowledge base article associated with the product revision.
      * @return a knowledgeBaseArticle
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class ProductRevision extends Entity implements Parsable {
         return this.osBuild;
     }
     /**
-     * Gets the product property value. The product property
+     * Gets the product property value. The product of the revision. Possible values are: Windows 10, Windows 11. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class ProductRevision extends Entity implements Parsable {
         return this.product;
     }
     /**
-     * Gets the releaseDateTime property value. The releaseDateTime property
+     * Gets the releaseDateTime property value. The release date for the content. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class ProductRevision extends Entity implements Parsable {
         return this.releaseDateTime;
     }
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. The version of the feature update. Read-only.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -128,14 +128,14 @@ public class ProductRevision extends Entity implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the content. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
-     * Sets the knowledgeBaseArticle property value. The knowledgeBaseArticle property
+     * Sets the knowledgeBaseArticle property value. The knowledge base article associated with the product revision.
      * @param value Value to set for the knowledgeBaseArticle property.
      */
     public void setKnowledgeBaseArticle(@jakarta.annotation.Nullable final KnowledgeBaseArticle value) {
@@ -149,21 +149,21 @@ public class ProductRevision extends Entity implements Parsable {
         this.osBuild = value;
     }
     /**
-     * Sets the product property value. The product property
+     * Sets the product property value. The product of the revision. Possible values are: Windows 10, Windows 11. Read-only.
      * @param value Value to set for the product property.
      */
     public void setProduct(@jakarta.annotation.Nullable final String value) {
         this.product = value;
     }
     /**
-     * Sets the releaseDateTime property value. The releaseDateTime property
+     * Sets the releaseDateTime property value. The release date for the content. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the releaseDateTime property.
      */
     public void setReleaseDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.releaseDateTime = value;
     }
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. The version of the feature update. Read-only.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {

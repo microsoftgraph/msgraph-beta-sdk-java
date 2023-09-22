@@ -59,17 +59,19 @@ public class CertificateBasedApplicationConfigurationsRequestBuilder extends Bas
         super(requestAdapter, "{+baseurl}/directory/certificateAuthorities/certificateBasedApplicationConfigurations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get certificateBasedApplicationConfigurations from directory
+     * Get a list of certificateBasedApplicationConfiguration objects.
      * @return a CompletableFuture of certificateBasedApplicationConfigurationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/certificateauthoritypath-list-certificatebasedapplicationconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateBasedApplicationConfigurationCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Get certificateBasedApplicationConfigurations from directory
+     * Get a list of certificateBasedApplicationConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of certificateBasedApplicationConfigurationCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/certificateauthoritypath-list-certificatebasedapplicationconfigurations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateBasedApplicationConfigurationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -104,7 +106,7 @@ public class CertificateBasedApplicationConfigurationsRequestBuilder extends Bas
         return this.requestAdapter.sendAsync(requestInfo, CertificateBasedApplicationConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get certificateBasedApplicationConfigurations from directory
+     * Get a list of certificateBasedApplicationConfiguration objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +114,7 @@ public class CertificateBasedApplicationConfigurationsRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * Get certificateBasedApplicationConfigurations from directory
+     * Get a list of certificateBasedApplicationConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -165,7 +167,17 @@ public class CertificateBasedApplicationConfigurationsRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Get certificateBasedApplicationConfigurations from directory
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a certificateBasedApplicationConfigurationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CertificateBasedApplicationConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CertificateBasedApplicationConfigurationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Get a list of certificateBasedApplicationConfiguration objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

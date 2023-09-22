@@ -3,6 +3,7 @@ package com.microsoft.graph.models.ediscovery;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     /**
      * The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
      */
-    private ExportOptions exportOptions;
+    private EnumSet<ExportOptions> exportOptions;
     /**
      * The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
      */
@@ -85,7 +86,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * @return a exportOptions
      */
     @jakarta.annotation.Nullable
-    public ExportOptions getExportOptions() {
+    public EnumSet<ExportOptions> getExportOptions() {
         return this.exportOptions;
     }
     /**
@@ -106,7 +107,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
         deserializerMap.put("azureBlobContainer", (n) -> { this.setAzureBlobContainer(n.getStringValue()); });
         deserializerMap.put("azureBlobToken", (n) -> { this.setAzureBlobToken(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
-        deserializerMap.put("exportOptions", (n) -> { this.setExportOptions(n.getEnumValue(ExportOptions.class)); });
+        deserializerMap.put("exportOptions", (n) -> { this.setExportOptions(n.getEnumSetValue(ExportOptions.class)); });
         deserializerMap.put("exportStructure", (n) -> { this.setExportStructure(n.getEnumValue(ExportFileStructure.class)); });
         deserializerMap.put("outputFolderId", (n) -> { this.setOutputFolderId(n.getStringValue()); });
         deserializerMap.put("outputName", (n) -> { this.setOutputName(n.getStringValue()); });
@@ -147,7 +148,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
         writer.writeStringValue("azureBlobContainer", this.getAzureBlobContainer());
         writer.writeStringValue("azureBlobToken", this.getAzureBlobToken());
         writer.writeStringValue("description", this.getDescription());
-        writer.writeEnumValue("exportOptions", this.getExportOptions());
+        writer.writeEnumSetValue("exportOptions", this.getExportOptions());
         writer.writeEnumValue("exportStructure", this.getExportStructure());
         writer.writeStringValue("outputFolderId", this.getOutputFolderId());
         writer.writeStringValue("outputName", this.getOutputName());
@@ -178,7 +179,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * Sets the exportOptions property value. The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
      * @param value Value to set for the exportOptions property.
      */
-    public void setExportOptions(@jakarta.annotation.Nullable final ExportOptions value) {
+    public void setExportOptions(@jakarta.annotation.Nullable final EnumSet<ExportOptions> value) {
         this.exportOptions = value;
     }
     /**

@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     /**
      * The supportedSolution property
      */
-    private CloudPcManagementService supportedSolution;
+    private EnumSet<CloudPcManagementService> supportedSolution;
     /**
      * The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
      */
@@ -75,7 +76,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
         deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPcProvisioningType.class)); });
         deserializerMap.put("ramInGB", (n) -> { this.setRamInGB(n.getIntegerValue()); });
         deserializerMap.put("storageInGB", (n) -> { this.setStorageInGB(n.getIntegerValue()); });
-        deserializerMap.put("supportedSolution", (n) -> { this.setSupportedSolution(n.getEnumValue(CloudPcManagementService.class)); });
+        deserializerMap.put("supportedSolution", (n) -> { this.setSupportedSolution(n.getEnumSetValue(CloudPcManagementService.class)); });
         deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(CloudPcServicePlanType.class)); });
         deserializerMap.put("userProfileInGB", (n) -> { this.setUserProfileInGB(n.getIntegerValue()); });
         deserializerMap.put("vCpuCount", (n) -> { this.setVCpuCount(n.getIntegerValue()); });
@@ -110,7 +111,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * @return a cloudPcManagementService
      */
     @jakarta.annotation.Nullable
-    public CloudPcManagementService getSupportedSolution() {
+    public EnumSet<CloudPcManagementService> getSupportedSolution() {
         return this.supportedSolution;
     }
     /**
@@ -148,7 +149,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
         writer.writeEnumValue("provisioningType", this.getProvisioningType());
         writer.writeIntegerValue("ramInGB", this.getRamInGB());
         writer.writeIntegerValue("storageInGB", this.getStorageInGB());
-        writer.writeEnumValue("supportedSolution", this.getSupportedSolution());
+        writer.writeEnumSetValue("supportedSolution", this.getSupportedSolution());
         writer.writeEnumValue("type", this.getType());
         writer.writeIntegerValue("userProfileInGB", this.getUserProfileInGB());
         writer.writeIntegerValue("vCpuCount", this.getVCpuCount());
@@ -185,7 +186,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * Sets the supportedSolution property value. The supportedSolution property
      * @param value Value to set for the supportedSolution property.
      */
-    public void setSupportedSolution(@jakarta.annotation.Nullable final CloudPcManagementService value) {
+    public void setSupportedSolution(@jakarta.annotation.Nullable final EnumSet<CloudPcManagementService> value) {
         this.supportedSolution = value;
     }
     /**

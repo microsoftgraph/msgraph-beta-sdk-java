@@ -33,6 +33,10 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     private CrossTenantAccessPolicyInboundTrust inboundTrust;
     /**
+     * The invitationRedemptionIdentityProviderConfiguration property
+     */
+    private DefaultInvitationRedemptionIdentityProviderConfiguration invitationRedemptionIdentityProviderConfiguration;
+    /**
      * If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
      */
     private Boolean isServiceDefault;
@@ -109,6 +113,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         deserializerMap.put("b2bDirectConnectInbound", (n) -> { this.setB2bDirectConnectInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bDirectConnectOutbound", (n) -> { this.setB2bDirectConnectOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("inboundTrust", (n) -> { this.setInboundTrust(n.getObjectValue(CrossTenantAccessPolicyInboundTrust::createFromDiscriminatorValue)); });
+        deserializerMap.put("invitationRedemptionIdentityProviderConfiguration", (n) -> { this.setInvitationRedemptionIdentityProviderConfiguration(n.getObjectValue(DefaultInvitationRedemptionIdentityProviderConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("isServiceDefault", (n) -> { this.setIsServiceDefault(n.getBooleanValue()); });
         deserializerMap.put("tenantRestrictions", (n) -> { this.setTenantRestrictions(n.getObjectValue(CrossTenantAccessPolicyTenantRestrictions::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -120,6 +125,14 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyInboundTrust getInboundTrust() {
         return this.inboundTrust;
+    }
+    /**
+     * Gets the invitationRedemptionIdentityProviderConfiguration property value. The invitationRedemptionIdentityProviderConfiguration property
+     * @return a defaultInvitationRedemptionIdentityProviderConfiguration
+     */
+    @jakarta.annotation.Nullable
+    public DefaultInvitationRedemptionIdentityProviderConfiguration getInvitationRedemptionIdentityProviderConfiguration() {
+        return this.invitationRedemptionIdentityProviderConfiguration;
     }
     /**
      * Gets the isServiceDefault property value. If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
@@ -150,6 +163,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         writer.writeObjectValue("b2bDirectConnectInbound", this.getB2bDirectConnectInbound());
         writer.writeObjectValue("b2bDirectConnectOutbound", this.getB2bDirectConnectOutbound());
         writer.writeObjectValue("inboundTrust", this.getInboundTrust());
+        writer.writeObjectValue("invitationRedemptionIdentityProviderConfiguration", this.getInvitationRedemptionIdentityProviderConfiguration());
         writer.writeBooleanValue("isServiceDefault", this.getIsServiceDefault());
         writer.writeObjectValue("tenantRestrictions", this.getTenantRestrictions());
     }
@@ -194,6 +208,13 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     public void setInboundTrust(@jakarta.annotation.Nullable final CrossTenantAccessPolicyInboundTrust value) {
         this.inboundTrust = value;
+    }
+    /**
+     * Sets the invitationRedemptionIdentityProviderConfiguration property value. The invitationRedemptionIdentityProviderConfiguration property
+     * @param value Value to set for the invitationRedemptionIdentityProviderConfiguration property.
+     */
+    public void setInvitationRedemptionIdentityProviderConfiguration(@jakarta.annotation.Nullable final DefaultInvitationRedemptionIdentityProviderConfiguration value) {
+        this.invitationRedemptionIdentityProviderConfiguration = value;
     }
     /**
      * Sets the isServiceDefault property value. If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.

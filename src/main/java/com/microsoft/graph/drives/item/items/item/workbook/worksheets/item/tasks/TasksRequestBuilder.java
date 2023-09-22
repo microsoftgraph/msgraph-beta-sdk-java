@@ -60,7 +60,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tasks{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get tasks from drives
+     * Collection of document tasks on this worksheet. Read-only.
      * @return a CompletableFuture of workbookDocumentTaskCollectionResponse
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get tasks from drives
+     * Collection of document tasks on this worksheet. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of workbookDocumentTaskCollectionResponse
      */
@@ -115,7 +115,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WorkbookDocumentTask::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get tasks from drives
+     * Collection of document tasks on this worksheet. Read-only.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get tasks from drives
+     * Collection of document tasks on this worksheet. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -176,7 +176,17 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get tasks from drives
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a tasksRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public TasksRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new TasksRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Collection of document tasks on this worksheet. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

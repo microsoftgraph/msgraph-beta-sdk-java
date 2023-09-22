@@ -26,7 +26,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type is not Function, this property will be null/empty array.
+     * If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type isn't Function, this property is null/empty array.
      */
     private java.util.List<StringKeyAttributeMappingSourceValuePair> parameters;
     /**
@@ -96,7 +96,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
         return this.odataType;
     }
     /**
-     * Gets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type is not Function, this property will be null/empty array.
+     * Gets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type isn't Function, this property is null/empty array.
      * @return a stringKeyAttributeMappingSourceValuePair
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class AttributeMappingSource implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type is not Function, this property will be null/empty array.
+     * Sets the parameters property value. If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type isn't Function, this property is null/empty array.
      * @param value Value to set for the parameters property.
      */
     public void setParameters(@jakarta.annotation.Nullable final java.util.List<StringKeyAttributeMappingSourceValuePair> value) {

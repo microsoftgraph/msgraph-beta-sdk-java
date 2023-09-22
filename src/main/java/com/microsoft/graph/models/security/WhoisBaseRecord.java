@@ -11,27 +11,27 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WhoisBaseRecord extends Entity implements Parsable {
     /**
-     * The abuse property
+     * The contact information for the abuse contact.
      */
     private WhoisContact abuse;
     /**
-     * The admin property
+     * The contact information for the admin contact.
      */
     private WhoisContact admin;
     /**
-     * The billing property
+     * The contact information for the billing contact.
      */
     private WhoisContact billing;
     /**
-     * The domainStatus property
+     * The domain status for this WHOIS object.
      */
     private String domainStatus;
     /**
-     * The expirationDateTime property
+     * The date and time when this WHOIS record expires with the registrar. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime expirationDateTime;
     /**
-     * The firstSeenDateTime property
+     * The first seen date and time of this WHOIS record. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime firstSeenDateTime;
     /**
@@ -39,47 +39,47 @@ public class WhoisBaseRecord extends Entity implements Parsable {
      */
     private Host host;
     /**
-     * The lastSeenDateTime property
+     * The last seen date and time of this WHOIS record. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime lastSeenDateTime;
     /**
-     * The lastUpdateDateTime property
+     * The date and time when this WHOIS record was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime lastUpdateDateTime;
     /**
-     * The nameservers property
+     * The nameservers for this WHOIS object.
      */
     private java.util.List<WhoisNameserver> nameservers;
     /**
-     * The noc property
+     * The contact information for the noc contact.
      */
     private WhoisContact noc;
     /**
-     * The rawWhoisText property
+     * The raw WHOIS details for this WHOIS object.
      */
     private String rawWhoisText;
     /**
-     * The registrant property
+     * The contact information for the registrant contact.
      */
     private WhoisContact registrant;
     /**
-     * The registrar property
+     * The contact information for the registrar contact.
      */
     private WhoisContact registrar;
     /**
-     * The registrationDateTime property
+     * The date and time when this WHOIS record was registered with a registrar. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime registrationDateTime;
     /**
-     * The technical property
+     * The contact information for the technical contact.
      */
     private WhoisContact technical;
     /**
-     * The whoisServer property
+     * The WHOIS server that provides the details.
      */
     private String whoisServer;
     /**
-     * The zone property
+     * The contact information for the zone contact.
      */
     private WhoisContact zone;
     /**
@@ -107,7 +107,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         return new WhoisBaseRecord();
     }
     /**
-     * Gets the abuse property value. The abuse property
+     * Gets the abuse property value. The contact information for the abuse contact.
      * @return a whoisContact
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         return this.abuse;
     }
     /**
-     * Gets the admin property value. The admin property
+     * Gets the admin property value. The contact information for the admin contact.
      * @return a whoisContact
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         return this.admin;
     }
     /**
-     * Gets the billing property value. The billing property
+     * Gets the billing property value. The contact information for the billing contact.
      * @return a whoisContact
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         return this.billing;
     }
     /**
-     * Gets the domainStatus property value. The domainStatus property
+     * Gets the domainStatus property value. The domain status for this WHOIS object.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         return this.domainStatus;
     }
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. The date and time when this WHOIS record expires with the registrar. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -174,7 +174,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the firstSeenDateTime property value. The firstSeenDateTime property
+     * Gets the firstSeenDateTime property value. The first seen date and time of this WHOIS record. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -190,7 +190,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         return this.host;
     }
     /**
-     * Gets the lastSeenDateTime property value. The lastSeenDateTime property
+     * Gets the lastSeenDateTime property value. The last seen date and time of this WHOIS record. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -198,7 +198,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         return this.lastSeenDateTime;
     }
     /**
-     * Gets the lastUpdateDateTime property value. The lastUpdateDateTime property
+     * Gets the lastUpdateDateTime property value. The date and time when this WHOIS record was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -206,7 +206,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         return this.lastUpdateDateTime;
     }
     /**
-     * Gets the nameservers property value. The nameservers property
+     * Gets the nameservers property value. The nameservers for this WHOIS object.
      * @return a whoisNameserver
      */
     @jakarta.annotation.Nullable
@@ -214,7 +214,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         return this.nameservers;
     }
     /**
-     * Gets the noc property value. The noc property
+     * Gets the noc property value. The contact information for the noc contact.
      * @return a whoisContact
      */
     @jakarta.annotation.Nullable
@@ -222,7 +222,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         return this.noc;
     }
     /**
-     * Gets the rawWhoisText property value. The rawWhoisText property
+     * Gets the rawWhoisText property value. The raw WHOIS details for this WHOIS object.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -230,7 +230,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         return this.rawWhoisText;
     }
     /**
-     * Gets the registrant property value. The registrant property
+     * Gets the registrant property value. The contact information for the registrant contact.
      * @return a whoisContact
      */
     @jakarta.annotation.Nullable
@@ -238,7 +238,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         return this.registrant;
     }
     /**
-     * Gets the registrar property value. The registrar property
+     * Gets the registrar property value. The contact information for the registrar contact.
      * @return a whoisContact
      */
     @jakarta.annotation.Nullable
@@ -246,7 +246,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         return this.registrar;
     }
     /**
-     * Gets the registrationDateTime property value. The registrationDateTime property
+     * Gets the registrationDateTime property value. The date and time when this WHOIS record was registered with a registrar. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -254,7 +254,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         return this.registrationDateTime;
     }
     /**
-     * Gets the technical property value. The technical property
+     * Gets the technical property value. The contact information for the technical contact.
      * @return a whoisContact
      */
     @jakarta.annotation.Nullable
@@ -262,7 +262,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         return this.technical;
     }
     /**
-     * Gets the whoisServer property value. The whoisServer property
+     * Gets the whoisServer property value. The WHOIS server that provides the details.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -270,7 +270,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         return this.whoisServer;
     }
     /**
-     * Gets the zone property value. The zone property
+     * Gets the zone property value. The contact information for the zone contact.
      * @return a whoisContact
      */
     @jakarta.annotation.Nullable
@@ -304,42 +304,42 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         writer.writeObjectValue("zone", this.getZone());
     }
     /**
-     * Sets the abuse property value. The abuse property
+     * Sets the abuse property value. The contact information for the abuse contact.
      * @param value Value to set for the abuse property.
      */
     public void setAbuse(@jakarta.annotation.Nullable final WhoisContact value) {
         this.abuse = value;
     }
     /**
-     * Sets the admin property value. The admin property
+     * Sets the admin property value. The contact information for the admin contact.
      * @param value Value to set for the admin property.
      */
     public void setAdmin(@jakarta.annotation.Nullable final WhoisContact value) {
         this.admin = value;
     }
     /**
-     * Sets the billing property value. The billing property
+     * Sets the billing property value. The contact information for the billing contact.
      * @param value Value to set for the billing property.
      */
     public void setBilling(@jakarta.annotation.Nullable final WhoisContact value) {
         this.billing = value;
     }
     /**
-     * Sets the domainStatus property value. The domainStatus property
+     * Sets the domainStatus property value. The domain status for this WHOIS object.
      * @param value Value to set for the domainStatus property.
      */
     public void setDomainStatus(@jakarta.annotation.Nullable final String value) {
         this.domainStatus = value;
     }
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. The date and time when this WHOIS record expires with the registrar. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.expirationDateTime = value;
     }
     /**
-     * Sets the firstSeenDateTime property value. The firstSeenDateTime property
+     * Sets the firstSeenDateTime property value. The first seen date and time of this WHOIS record. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstSeenDateTime property.
      */
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -353,77 +353,77 @@ public class WhoisBaseRecord extends Entity implements Parsable {
         this.host = value;
     }
     /**
-     * Sets the lastSeenDateTime property value. The lastSeenDateTime property
+     * Sets the lastSeenDateTime property value. The last seen date and time of this WHOIS record. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSeenDateTime property.
      */
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastSeenDateTime = value;
     }
     /**
-     * Sets the lastUpdateDateTime property value. The lastUpdateDateTime property
+     * Sets the lastUpdateDateTime property value. The date and time when this WHOIS record was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastUpdateDateTime property.
      */
     public void setLastUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastUpdateDateTime = value;
     }
     /**
-     * Sets the nameservers property value. The nameservers property
+     * Sets the nameservers property value. The nameservers for this WHOIS object.
      * @param value Value to set for the nameservers property.
      */
     public void setNameservers(@jakarta.annotation.Nullable final java.util.List<WhoisNameserver> value) {
         this.nameservers = value;
     }
     /**
-     * Sets the noc property value. The noc property
+     * Sets the noc property value. The contact information for the noc contact.
      * @param value Value to set for the noc property.
      */
     public void setNoc(@jakarta.annotation.Nullable final WhoisContact value) {
         this.noc = value;
     }
     /**
-     * Sets the rawWhoisText property value. The rawWhoisText property
+     * Sets the rawWhoisText property value. The raw WHOIS details for this WHOIS object.
      * @param value Value to set for the rawWhoisText property.
      */
     public void setRawWhoisText(@jakarta.annotation.Nullable final String value) {
         this.rawWhoisText = value;
     }
     /**
-     * Sets the registrant property value. The registrant property
+     * Sets the registrant property value. The contact information for the registrant contact.
      * @param value Value to set for the registrant property.
      */
     public void setRegistrant(@jakarta.annotation.Nullable final WhoisContact value) {
         this.registrant = value;
     }
     /**
-     * Sets the registrar property value. The registrar property
+     * Sets the registrar property value. The contact information for the registrar contact.
      * @param value Value to set for the registrar property.
      */
     public void setRegistrar(@jakarta.annotation.Nullable final WhoisContact value) {
         this.registrar = value;
     }
     /**
-     * Sets the registrationDateTime property value. The registrationDateTime property
+     * Sets the registrationDateTime property value. The date and time when this WHOIS record was registered with a registrar. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the registrationDateTime property.
      */
     public void setRegistrationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.registrationDateTime = value;
     }
     /**
-     * Sets the technical property value. The technical property
+     * Sets the technical property value. The contact information for the technical contact.
      * @param value Value to set for the technical property.
      */
     public void setTechnical(@jakarta.annotation.Nullable final WhoisContact value) {
         this.technical = value;
     }
     /**
-     * Sets the whoisServer property value. The whoisServer property
+     * Sets the whoisServer property value. The WHOIS server that provides the details.
      * @param value Value to set for the whoisServer property.
      */
     public void setWhoisServer(@jakarta.annotation.Nullable final String value) {
         this.whoisServer = value;
     }
     /**
-     * Sets the zone property value. The zone property
+     * Sets the zone property value. The contact information for the zone contact.
      * @param value Value to set for the zone property.
      */
     public void setZone(@jakarta.annotation.Nullable final WhoisContact value) {

@@ -13,7 +13,7 @@ public class VirtualEventWebinar extends VirtualEvent implements Parsable {
      */
     private MeetingAudience audience;
     /**
-     * Identity information of co-organizers of the webinar.
+     * Identity information of coorganizers of the webinar.
      */
     private java.util.List<CommunicationsUserIdentity> coOrganizers;
     /**
@@ -49,7 +49,7 @@ public class VirtualEventWebinar extends VirtualEvent implements Parsable {
         return this.audience;
     }
     /**
-     * Gets the coOrganizers property value. Identity information of co-organizers of the webinar.
+     * Gets the coOrganizers property value. Identity information of coorganizers of the webinar.
      * @return a communicationsUserIdentity
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class VirtualEventWebinar extends VirtualEvent implements Parsable {
         this.audience = value;
     }
     /**
-     * Sets the coOrganizers property value. Identity information of co-organizers of the webinar.
+     * Sets the coOrganizers property value. Identity information of coorganizers of the webinar.
      * @param value Value to set for the coOrganizers property.
      */
     public void setCoOrganizers(@jakarta.annotation.Nullable final java.util.List<CommunicationsUserIdentity> value) {

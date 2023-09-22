@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public class AospDeviceOwnerCertificateProfileBase extends DeviceConfiguration i
     /**
      * Certificate Subject Alternative Name Type. This collection can contain a maximum of 500 elements. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      */
-    private SubjectAlternativeNameType subjectAlternativeNameType;
+    private EnumSet<SubjectAlternativeNameType> subjectAlternativeNameType;
     /**
      * Certificate Subject Name Format. This collection can contain a maximum of 500 elements. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
      */
@@ -100,7 +101,7 @@ public class AospDeviceOwnerCertificateProfileBase extends DeviceConfiguration i
         deserializerMap.put("extendedKeyUsages", (n) -> { this.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
         deserializerMap.put("renewalThresholdPercentage", (n) -> { this.setRenewalThresholdPercentage(n.getIntegerValue()); });
         deserializerMap.put("rootCertificate", (n) -> { this.setRootCertificate(n.getObjectValue(AospDeviceOwnerTrustedRootCertificate::createFromDiscriminatorValue)); });
-        deserializerMap.put("subjectAlternativeNameType", (n) -> { this.setSubjectAlternativeNameType(n.getEnumValue(SubjectAlternativeNameType.class)); });
+        deserializerMap.put("subjectAlternativeNameType", (n) -> { this.setSubjectAlternativeNameType(n.getEnumSetValue(SubjectAlternativeNameType.class)); });
         deserializerMap.put("subjectNameFormat", (n) -> { this.setSubjectNameFormat(n.getEnumValue(SubjectNameFormat.class)); });
         return deserializerMap;
     }
@@ -125,7 +126,7 @@ public class AospDeviceOwnerCertificateProfileBase extends DeviceConfiguration i
      * @return a subjectAlternativeNameType
      */
     @jakarta.annotation.Nullable
-    public SubjectAlternativeNameType getSubjectAlternativeNameType() {
+    public EnumSet<SubjectAlternativeNameType> getSubjectAlternativeNameType() {
         return this.subjectAlternativeNameType;
     }
     /**
@@ -148,7 +149,7 @@ public class AospDeviceOwnerCertificateProfileBase extends DeviceConfiguration i
         writer.writeCollectionOfObjectValues("extendedKeyUsages", this.getExtendedKeyUsages());
         writer.writeIntegerValue("renewalThresholdPercentage", this.getRenewalThresholdPercentage());
         writer.writeObjectValue("rootCertificate", this.getRootCertificate());
-        writer.writeEnumValue("subjectAlternativeNameType", this.getSubjectAlternativeNameType());
+        writer.writeEnumSetValue("subjectAlternativeNameType", this.getSubjectAlternativeNameType());
         writer.writeEnumValue("subjectNameFormat", this.getSubjectNameFormat());
     }
     /**
@@ -190,7 +191,7 @@ public class AospDeviceOwnerCertificateProfileBase extends DeviceConfiguration i
      * Sets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. This collection can contain a maximum of 500 elements. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      * @param value Value to set for the subjectAlternativeNameType property.
      */
-    public void setSubjectAlternativeNameType(@jakarta.annotation.Nullable final SubjectAlternativeNameType value) {
+    public void setSubjectAlternativeNameType(@jakarta.annotation.Nullable final EnumSet<SubjectAlternativeNameType> value) {
         this.subjectAlternativeNameType = value;
     }
     /**

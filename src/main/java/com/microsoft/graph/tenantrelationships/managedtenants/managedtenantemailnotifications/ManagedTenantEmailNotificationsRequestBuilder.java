@@ -165,6 +165,16 @@ public class ManagedTenantEmailNotificationsRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a managedTenantEmailNotificationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ManagedTenantEmailNotificationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new ManagedTenantEmailNotificationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get managedTenantEmailNotifications from tenantRelationships
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

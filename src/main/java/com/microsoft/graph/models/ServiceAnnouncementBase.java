@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceAnnouncementBase extends Entity implements Parsable {
     /**
-     * Additional details about service event. This property doesn't support filters.
+     * Extra details about service event. This property doesn't support filters.
      */
     private java.util.List<KeyValuePair> details;
     /**
@@ -54,7 +54,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
         return new ServiceAnnouncementBase();
     }
     /**
-     * Gets the details property value. Additional details about service event. This property doesn't support filters.
+     * Gets the details property value. Extra details about service event. This property doesn't support filters.
      * @return a keyValuePair
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
         writer.writeStringValue("title", this.getTitle());
     }
     /**
-     * Sets the details property value. Additional details about service event. This property doesn't support filters.
+     * Sets the details property value. Extra details about service event. This property doesn't support filters.
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {

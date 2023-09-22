@@ -165,6 +165,16 @@ public class AllowedDataLocationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a allowedDataLocationsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AllowedDataLocationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new AllowedDataLocationsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get entities from allowedDataLocations
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

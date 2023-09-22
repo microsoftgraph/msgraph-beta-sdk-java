@@ -165,6 +165,16 @@ public class EmbeddedSIMActivationCodePoolsRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a embeddedSIMActivationCodePoolsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public EmbeddedSIMActivationCodePoolsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new EmbeddedSIMActivationCodePoolsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * The embedded SIM activation code pools created by this account.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

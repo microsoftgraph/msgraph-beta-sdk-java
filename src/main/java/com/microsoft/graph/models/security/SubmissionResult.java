@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      */
     private SubmissionResultCategory category;
     /**
-     * Specifies the additional details provided by Microsoft to substantiate their analysis result.
+     * Specifies the extra details provided by Microsoft to substantiate their analysis result.
      */
     private SubmissionResultDetail detail;
     /**
@@ -26,7 +27,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<SubmissionDetectedFile> detectedFiles;
     /**
-     * Specifes the URLs detected by Microsoft in the submitted email.
+     * Specifies the URLs detected by Microsoft in the submitted email.
      */
     private java.util.List<String> detectedUrls;
     /**
@@ -36,7 +37,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
     /**
      * Specifies the setting for user mailbox denoted by a comma-separated string.
      */
-    private UserMailboxSetting userMailboxSetting;
+    private EnumSet<UserMailboxSetting> userMailboxSetting;
     /**
      * Instantiates a new submissionResult and sets the default values.
      */
@@ -70,7 +71,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         return this.category;
     }
     /**
-     * Gets the detail property value. Specifies the additional details provided by Microsoft to substantiate their analysis result.
+     * Gets the detail property value. Specifies the extra details provided by Microsoft to substantiate their analysis result.
      * @return a submissionResultDetail
      */
     @jakarta.annotation.Nullable
@@ -86,7 +87,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         return this.detectedFiles;
     }
     /**
-     * Gets the detectedUrls property value. Specifes the URLs detected by Microsoft in the submitted email.
+     * Gets the detectedUrls property value. Specifies the URLs detected by Microsoft in the submitted email.
      * @return a string
      */
     @jakarta.annotation.Nullable
@@ -105,7 +106,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         deserializerMap.put("detectedFiles", (n) -> { this.setDetectedFiles(n.getCollectionOfObjectValues(SubmissionDetectedFile::createFromDiscriminatorValue)); });
         deserializerMap.put("detectedUrls", (n) -> { this.setDetectedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("userMailboxSetting", (n) -> { this.setUserMailboxSetting(n.getEnumValue(UserMailboxSetting.class)); });
+        deserializerMap.put("userMailboxSetting", (n) -> { this.setUserMailboxSetting(n.getEnumSetValue(UserMailboxSetting.class)); });
         return deserializerMap;
     }
     /**
@@ -121,7 +122,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * @return a userMailboxSetting
      */
     @jakarta.annotation.Nullable
-    public UserMailboxSetting getUserMailboxSetting() {
+    public EnumSet<UserMailboxSetting> getUserMailboxSetting() {
         return this.userMailboxSetting;
     }
     /**
@@ -135,7 +136,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("detectedFiles", this.getDetectedFiles());
         writer.writeCollectionOfPrimitiveValues("detectedUrls", this.getDetectedUrls());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeEnumValue("userMailboxSetting", this.getUserMailboxSetting());
+        writer.writeEnumSetValue("userMailboxSetting", this.getUserMailboxSetting());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -153,7 +154,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         this.category = value;
     }
     /**
-     * Sets the detail property value. Specifies the additional details provided by Microsoft to substantiate their analysis result.
+     * Sets the detail property value. Specifies the extra details provided by Microsoft to substantiate their analysis result.
      * @param value Value to set for the detail property.
      */
     public void setDetail(@jakarta.annotation.Nullable final SubmissionResultDetail value) {
@@ -167,7 +168,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         this.detectedFiles = value;
     }
     /**
-     * Sets the detectedUrls property value. Specifes the URLs detected by Microsoft in the submitted email.
+     * Sets the detectedUrls property value. Specifies the URLs detected by Microsoft in the submitted email.
      * @param value Value to set for the detectedUrls property.
      */
     public void setDetectedUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -184,7 +185,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * Sets the userMailboxSetting property value. Specifies the setting for user mailbox denoted by a comma-separated string.
      * @param value Value to set for the userMailboxSetting property.
      */
-    public void setUserMailboxSetting(@jakarta.annotation.Nullable final UserMailboxSetting value) {
+    public void setUserMailboxSetting(@jakarta.annotation.Nullable final EnumSet<UserMailboxSetting> value) {
         this.userMailboxSetting = value;
     }
 }

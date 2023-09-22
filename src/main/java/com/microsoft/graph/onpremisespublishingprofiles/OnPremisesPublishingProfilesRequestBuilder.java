@@ -165,6 +165,16 @@ public class OnPremisesPublishingProfilesRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a onPremisesPublishingProfilesRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public OnPremisesPublishingProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new OnPremisesPublishingProfilesRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get entities from onPremisesPublishingProfiles
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

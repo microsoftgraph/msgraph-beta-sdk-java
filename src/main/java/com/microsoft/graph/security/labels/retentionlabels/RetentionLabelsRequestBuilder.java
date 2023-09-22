@@ -169,6 +169,16 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a retentionLabelsRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public RetentionLabelsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new RetentionLabelsRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Get a list of the retentionLabel objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

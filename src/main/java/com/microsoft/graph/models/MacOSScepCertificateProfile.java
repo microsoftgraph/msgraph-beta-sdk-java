@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     /**
      * SCEP Hash Algorithm. Possible values are: sha1, sha2.
      */
-    private HashAlgorithms hashAlgorithm;
+    private EnumSet<HashAlgorithms> hashAlgorithm;
     /**
      * Key Size Options.
      */
@@ -38,7 +39,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     /**
      * Key Usage Options.
      */
-    private KeyUsages keyUsage;
+    private EnumSet<KeyUsages> keyUsage;
     /**
      * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      */
@@ -119,9 +120,9 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
         deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
         deserializerMap.put("customSubjectAlternativeNames", (n) -> { this.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
         deserializerMap.put("extendedKeyUsages", (n) -> { this.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
-        deserializerMap.put("hashAlgorithm", (n) -> { this.setHashAlgorithm(n.getEnumValue(HashAlgorithms.class)); });
+        deserializerMap.put("hashAlgorithm", (n) -> { this.setHashAlgorithm(n.getEnumSetValue(HashAlgorithms.class)); });
         deserializerMap.put("keySize", (n) -> { this.setKeySize(n.getEnumValue(KeySize.class)); });
-        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumValue(KeyUsages.class)); });
+        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumSetValue(KeyUsages.class)); });
         deserializerMap.put("managedDeviceCertificateStates", (n) -> { this.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
         deserializerMap.put("rootCertificate", (n) -> { this.setRootCertificate(n.getObjectValue(MacOSTrustedRootCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("scepServerUrls", (n) -> { this.setScepServerUrls(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -134,7 +135,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * @return a hashAlgorithms
      */
     @jakarta.annotation.Nullable
-    public HashAlgorithms getHashAlgorithm() {
+    public EnumSet<HashAlgorithms> getHashAlgorithm() {
         return this.hashAlgorithm;
     }
     /**
@@ -150,7 +151,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * @return a keyUsages
      */
     @jakarta.annotation.Nullable
-    public KeyUsages getKeyUsage() {
+    public EnumSet<KeyUsages> getKeyUsage() {
         return this.keyUsage;
     }
     /**
@@ -204,9 +205,9 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
         writer.writeEnumValue("certificateStore", this.getCertificateStore());
         writer.writeCollectionOfObjectValues("customSubjectAlternativeNames", this.getCustomSubjectAlternativeNames());
         writer.writeCollectionOfObjectValues("extendedKeyUsages", this.getExtendedKeyUsages());
-        writer.writeEnumValue("hashAlgorithm", this.getHashAlgorithm());
+        writer.writeEnumSetValue("hashAlgorithm", this.getHashAlgorithm());
         writer.writeEnumValue("keySize", this.getKeySize());
-        writer.writeEnumValue("keyUsage", this.getKeyUsage());
+        writer.writeEnumSetValue("keyUsage", this.getKeyUsage());
         writer.writeCollectionOfObjectValues("managedDeviceCertificateStates", this.getManagedDeviceCertificateStates());
         writer.writeObjectValue("rootCertificate", this.getRootCertificate());
         writer.writeCollectionOfPrimitiveValues("scepServerUrls", this.getScepServerUrls());
@@ -245,7 +246,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * Sets the hashAlgorithm property value. SCEP Hash Algorithm. Possible values are: sha1, sha2.
      * @param value Value to set for the hashAlgorithm property.
      */
-    public void setHashAlgorithm(@jakarta.annotation.Nullable final HashAlgorithms value) {
+    public void setHashAlgorithm(@jakarta.annotation.Nullable final EnumSet<HashAlgorithms> value) {
         this.hashAlgorithm = value;
     }
     /**
@@ -259,7 +260,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * Sets the keyUsage property value. Key Usage Options.
      * @param value Value to set for the keyUsage property.
      */
-    public void setKeyUsage(@jakarta.annotation.Nullable final KeyUsages value) {
+    public void setKeyUsage(@jakarta.annotation.Nullable final EnumSet<KeyUsages> value) {
         this.keyUsage = value;
     }
     /**

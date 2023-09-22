@@ -87,6 +87,16 @@ public class DeploymentProfileRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a deploymentProfileRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DeploymentProfileRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new DeploymentProfileRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * Deployment profile currently assigned to the Windows autopilot device.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

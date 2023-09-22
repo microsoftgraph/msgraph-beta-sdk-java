@@ -7,6 +7,7 @@ import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.count.
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.item.EdiscoveryCustodianItemRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.microsoftgraphsecurityapplyhold.MicrosoftGraphSecurityApplyHoldRequestBuilder;
 import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.microsoftgraphsecurityremovehold.MicrosoftGraphSecurityRemoveHoldRequestBuilder;
+import com.microsoft.graph.security.cases.ediscoverycases.item.custodians.microsoftgraphsecurityupdateindex.MicrosoftGraphSecurityUpdateIndexRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -45,6 +46,13 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityRemoveHoldRequestBuilder microsoftGraphSecurityRemoveHold() {
         return new MicrosoftGraphSecurityRemoveHoldRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the updateIndex method.
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityUpdateIndexRequestBuilder microsoftGraphSecurityUpdateIndex() {
+        return new MicrosoftGraphSecurityUpdateIndexRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity.
@@ -183,6 +191,16 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
+    }
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a custodiansRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public CustodiansRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CustodiansRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Get a list of the custodian objects and their properties.

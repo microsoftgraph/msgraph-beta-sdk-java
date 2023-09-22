@@ -30,7 +30,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
      */
     private String prefixFilter;
     /**
-     * Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
+     * Specifies the manual ranges to compute the aggregations. This is only valid for nonstring refiners of date or numeric type. Optional.
      */
     private java.util.List<BucketAggregationRange> ranges;
     /**
@@ -109,7 +109,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
         return this.prefixFilter;
     }
     /**
-     * Gets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
+     * Gets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for nonstring refiners of date or numeric type. Optional.
      * @return a bucketAggregationRange
      */
     @jakarta.annotation.Nullable
@@ -174,7 +174,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
         this.prefixFilter = value;
     }
     /**
-     * Sets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
+     * Sets the ranges property value. Specifies the manual ranges to compute the aggregations. This is only valid for nonstring refiners of date or numeric type. Optional.
      * @param value Value to set for the ranges property.
      */
     public void setRanges(@jakarta.annotation.Nullable final java.util.List<BucketAggregationRange> value) {

@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -14,13 +15,13 @@ public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHol
      */
     private Map<String, Object> additionalData;
     /**
-     * The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes is not null or an empty String.
+     * The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes isn't null or an empty String.
      */
     private ConditionalAccessExternalTenants externalTenants;
     /**
      * The guestOrExternalUserTypes property
      */
-    private ConditionalAccessGuestOrExternalUserTypes guestOrExternalUserTypes;
+    private EnumSet<ConditionalAccessGuestOrExternalUserTypes> guestOrExternalUserTypes;
     /**
      * The OdataType property
      */
@@ -50,7 +51,7 @@ public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHol
         return this.additionalData;
     }
     /**
-     * Gets the externalTenants property value. The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes is not null or an empty String.
+     * Gets the externalTenants property value. The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes isn't null or an empty String.
      * @return a conditionalAccessExternalTenants
      */
     @jakarta.annotation.Nullable
@@ -65,7 +66,7 @@ public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHol
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("externalTenants", (n) -> { this.setExternalTenants(n.getObjectValue(ConditionalAccessExternalTenants::createFromDiscriminatorValue)); });
-        deserializerMap.put("guestOrExternalUserTypes", (n) -> { this.setGuestOrExternalUserTypes(n.getEnumValue(ConditionalAccessGuestOrExternalUserTypes.class)); });
+        deserializerMap.put("guestOrExternalUserTypes", (n) -> { this.setGuestOrExternalUserTypes(n.getEnumSetValue(ConditionalAccessGuestOrExternalUserTypes.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -74,7 +75,7 @@ public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHol
      * @return a conditionalAccessGuestOrExternalUserTypes
      */
     @jakarta.annotation.Nullable
-    public ConditionalAccessGuestOrExternalUserTypes getGuestOrExternalUserTypes() {
+    public EnumSet<ConditionalAccessGuestOrExternalUserTypes> getGuestOrExternalUserTypes() {
         return this.guestOrExternalUserTypes;
     }
     /**
@@ -92,7 +93,7 @@ public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHol
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("externalTenants", this.getExternalTenants());
-        writer.writeEnumValue("guestOrExternalUserTypes", this.getGuestOrExternalUserTypes());
+        writer.writeEnumSetValue("guestOrExternalUserTypes", this.getGuestOrExternalUserTypes());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -104,7 +105,7 @@ public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHol
         this.additionalData = value;
     }
     /**
-     * Sets the externalTenants property value. The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes is not null or an empty String.
+     * Sets the externalTenants property value. The tenant IDs of the selected types of external users. Either all B2B tenant or a collection of tenant IDs. External tenants can be specified only when the property guestOrExternalUserTypes isn't null or an empty String.
      * @param value Value to set for the externalTenants property.
      */
     public void setExternalTenants(@jakarta.annotation.Nullable final ConditionalAccessExternalTenants value) {
@@ -114,7 +115,7 @@ public class ConditionalAccessGuestsOrExternalUsers implements AdditionalDataHol
      * Sets the guestOrExternalUserTypes property value. The guestOrExternalUserTypes property
      * @param value Value to set for the guestOrExternalUserTypes property.
      */
-    public void setGuestOrExternalUserTypes(@jakarta.annotation.Nullable final ConditionalAccessGuestOrExternalUserTypes value) {
+    public void setGuestOrExternalUserTypes(@jakarta.annotation.Nullable final EnumSet<ConditionalAccessGuestOrExternalUserTypes> value) {
         this.guestOrExternalUserTypes = value;
     }
     /**

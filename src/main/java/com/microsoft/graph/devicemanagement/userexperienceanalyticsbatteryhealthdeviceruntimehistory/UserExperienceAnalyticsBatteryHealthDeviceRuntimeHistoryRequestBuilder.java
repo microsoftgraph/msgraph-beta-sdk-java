@@ -165,6 +165,16 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryRequestBuil
         return requestInfo;
     }
     /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a userExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
      * User Experience Analytics Battery Health Device Runtime History
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")

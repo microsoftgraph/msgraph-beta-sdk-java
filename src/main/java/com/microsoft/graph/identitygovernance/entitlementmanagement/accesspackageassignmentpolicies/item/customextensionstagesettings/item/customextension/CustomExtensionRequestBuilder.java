@@ -37,7 +37,7 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignmentPolicies/{accessPackageAssignmentPolicy%2Did}/customExtensionStageSettings/{customExtensionStageSetting%2Did}/customExtension{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
+     * Indicates the custom workflow extension that is executed at this stage. Nullable. Supports $expand.
      * @return a CompletableFuture of customCalloutExtension
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
@@ -48,7 +48,7 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
+     * Indicates the custom workflow extension that is executed at this stage. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of customCalloutExtension
      * @deprecated
@@ -64,7 +64,7 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CustomCalloutExtension::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
+     * Indicates the custom workflow extension that is executed at this stage. Nullable. Supports $expand.
      * @return a RequestInformation
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
@@ -75,7 +75,7 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
+     * Indicates the custom workflow extension that is executed at this stage. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -99,7 +99,20 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @return a customExtensionRequestBuilder
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public CustomExtensionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+        Objects.requireNonNull(rawUrl);
+        return new CustomExtensionRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Indicates the custom workflow extension that is executed at this stage. Nullable. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {
